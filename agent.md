@@ -1,6 +1,8 @@
 # AI Frontier: maintenance guide
 
-This document describes repository implementation and maintenance for agents and contributors. The root `README.md` is the English public entry point; `README_CN.md` is its separate Chinese edition. Do not mix languages within either edition. Lead with reader value, show verified collection counts, provide direct report links, and invite readers to star or contribute. Keep claims grounded in what is available. Keep setup commands, downloader behavior, and implementation details here.
+This document describes repository implementation and maintenance for agents and contributors. The root `README.md` is the English public entry point; `README_CN.md` is its separate Chinese edition. Do not mix languages within either edition. Lead with reader value, show verified collection counts, provide complete publisher and document-type navigation, and invite readers to star or contribute. Do not feature a selective shortlist of models or publishers. Keep claims grounded in what is available. Keep setup commands, downloader behavior, and implementation details here.
+
+Nested READMEs under `pdfs/<vendor>/` and `pdfs/<vendor>/<type>/` are English-first bilingual within one file. Put English before Chinese in navigation, explanations, headings, table labels, empty-category messages, and metadata notes. Share one report table between languages and preserve original report titles; do not create duplicate translated report rows. The separate root README language editions remain unchanged by this nested-directory convention.
 
 ## Current scope
 
@@ -16,9 +18,11 @@ Use ordinary Git. Do not enable Git LFS. A PDF larger than 100 MiB is recorded a
 | --- | --- |
 | `sources.json` | Curated source inputs, edited after checking the report identity and official provenance |
 | `catalog.csv` | Download results and historical archives, including sources, dates, versions, hashes, sizes, page counts, and gaps |
-| `pdfs/<vendor>/` | Original PDFs and generated publisher directories |
+| `pdfs/<vendor>/` | Publisher overview with links to all three document-type directories |
+| `pdfs/<vendor>/<type>/` | Original PDFs and a generated index; type is `technical-reports`, `model-cards`, or `system-cards` |
+| `reports/` | Generated cross-publisher indexes for Technical Reports, Model Cards, and System Cards |
 | `coverage-notes.md` | Manually maintained coverage boundaries and follow-up areas, included in `GAPS.md` |
-| `README.md` | Generated English public introduction, selected report links, and publisher summary |
+| `README.md` | Generated English public introduction and complete publisher table with linked counts for all three document types and total PDFs |
 | `README_CN.md` | Generated Chinese public edition with corresponding content and language navigation |
 | `GAPS.md` | Generated list of unarchived entries, uncertain dates, refresh failures, and coverage notes |
 | `scripts/archive_reports.py` | Fetching, PDF inspection, catalog maintenance, and Markdown rendering |
@@ -59,7 +63,7 @@ python scripts/archive_reports.py render
 python -m unittest discover -s tests
 ```
 
-`fetch` also writes the catalog and renders Markdown. `render` rewrites both root README editions, all publisher READMEs, and `GAPS.md`. Change public README wording in `render()` in `scripts/archive_reports.py`, then run `render`; editing only the generated files will be overwritten. Update both editions together and preserve their language-switch links. `agent.md` is maintained manually.
+`fetch` also writes the catalog and renders Markdown. `render` rewrites both root README editions, all publisher and publisher/type READMEs, the document-type indexes in `reports/`, and `GAPS.md`. Each publisher always has all three type directories, including an index for categories with no reports yet. Change public README wording in `render()` in `scripts/archive_reports.py`, then run `render`; editing only the generated files will be overwritten. Update both editions together and preserve their language-switch links. `agent.md` is maintained manually.
 
 ## Source curation
 
@@ -84,6 +88,8 @@ Each source record uses these fields:
 
 Prefer publisher websites, official repositories, and author-submitted arXiv papers. Confirm the PDF title and model identity, not just its filename. Do not guess CDN paths or archive an unrelated PDF linked from a model-card page.
 
+Distinguish document types by the publisher's designation and primary purpose. A Technical Report primarily explains a model or training method through implementation details and experiments. A Model Card describes a model's capabilities, limitations, intended uses, evaluations, and safety information. A System Card primarily describes product or system risks, safety evaluations, mitigations, and deployment constraints. These categories can overlap, and cards can cover model families; do not relabel a document solely because it contains benchmarks or safety sections. Public directories display readable type labels linked to their corresponding cross-publisher indexes; machine-readable identifiers remain in the source and catalog.
+
 For arXiv records, check official metadata and use a versioned URL such as `https://arxiv.org/pdf/<id>vN` with a matching explicit version label, such as `arxiv-vN`. At initial collection, select the latest verified revision; retain previously archived revisions when updating. The first submission date is the catalog's first publication date for arXiv entries, not necessarily the earliest appearance across all channels.
 
 Keep first publication, source revision, and retrieval time separate. A page's "Updated" date is not proof of first publication. Preserve month-only precision and leave unconfirmed dates empty. Record HTML-only cards as gaps; do not manufacture a PDF from HTML or Markdown. A failed search at one official entry point does not establish that no PDF exists elsewhere.
@@ -94,7 +100,7 @@ The downloader processes up to four sources concurrently and retries failed requ
 
 For pinned arXiv PDFs, fallback endpoints must show the requested arXiv ID and revision in the first two pages. The script does not automatically discover newer papers or revisions; update the curated input after checking official sources.
 
-Files are stored as `pdfs/<vendor>/<slug>--<version>.pdf`. When the target filename already exists with different bytes, a hash suffix is added rather than overwriting the older file. Catalog maintenance retains historical archived entries. A failed refresh retains the previous archived result and records the refresh error in its notes.
+Files without an explicit publisher revision are stored as `pdfs/<vendor>/<type>/<slug>.pdf`. The `document_type` input selects `technical-reports`, `model-cards`, or `system-cards`. Retrieval-date snapshot labels remain in the catalog only and do not appear in filenames or publisher tables. Explicit revisions, such as arXiv versions, use `pdfs/<vendor>/<type>/<slug>--<version>.pdf`. When the target filename already exists with different bytes, a short hash suffix is added rather than overwriting the older file. Catalog maintenance retains historical archived entries. A failed refresh retains the previous archived result and records the refresh error in its notes. When moving or renaming archived PDFs, update catalog paths and regenerate all Markdown links; preserve PDF bytes, hashes, and date metadata.
 
 Without `--refresh`, `fetch` reuses existing indexed PDFs after validating their hash and page count. Use `--refresh` when checking whether a registered URL has changed.
 

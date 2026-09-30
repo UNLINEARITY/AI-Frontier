@@ -22,6 +22,11 @@ VENDORS = {
     "deepseek": "DeepSeek", "qwen": "Alibaba / Qwen", "moonshot": "Moonshot AI / Kimi",
     "zai": "智谱 / Z.ai", "minimax": "MiniMax",
 }
+DOCUMENT_TYPES = {
+    "technical_report": ("Technical Report", "technical-reports.md"),
+    "model_card": ("Model Card", "model-cards.md"),
+    "system_card": ("System Card", "system-cards.md"),
+}
 FIELDS = ["vendor", "title", "document_type", "published_date", "source_updated_date",
           "version", "source_url", "pdf_url", "resolved_url", "local_path", "retrieved_at",
           "sha256", "size_bytes", "pages", "status", "notes"]
@@ -99,7 +104,10 @@ def fetch_one(source, previous, refresh):
             raise ValueError("Invalid report slug")
         if not re.fullmatch(r"[a-zA-Z0-9][a-zA-Z0-9._-]*", version):
             raise ValueError("Invalid version")
-        path = ROOT / "pdfs" / row["vendor"] / f"{source['slug']}--{version}.pdf"
+        # Retrieval dates belong in the catalog, not in the public filename.
+        name = source["slug"] if re.fullmatch(r"snapshot-\d{4}-\d{2}-\d{2}", version) else f"{source['slug']}--{version}"
+        type_directory = Path(DOCUMENT_TYPES[row["document_type"]][1]).stem
+        path = ROOT / "pdfs" / row["vendor"] / type_directory / f"{name}.pdf"
         if path.exists() and hashlib.sha256(path.read_bytes()).hexdigest() != digest:
             path = path.with_stem(f"{path.stem}--{digest[:8]}")
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -138,54 +146,107 @@ def render(rows):
              "collected in one place. A reference shelf for researchers, engineers, and anyone "
              "who wants to understand how models are built, evaluated, and released.", "",
              f"**{len(archived)} original PDFs · {publisher_count} publishers · 2022 onward**", "",
-             "**Star this repo to keep the reports within reach.**", "",
-             "## Start reading", "",
-             "Open a report below, or browse a publisher's full collection.", ""]
+             "**Star this repo to keep the reports within reach.**", ""]
     cn_lines = ["# AI Frontier", "", "**读懂前沿 AI，从原始报告开始。**", "",
                 "[英文版](README.md) · [按厂商浏览](#按厂商浏览) · [完整索引](catalog.csv)", "",
                 "把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡，整理成一份随时可查的资料库。"
                 "为研究者、工程师和关心 AI 技术的人，保留理解模型如何训练、评测与发布的第一手材料。", "",
                 f"**{len(archived)} 份原始 PDF · {publisher_count} 家厂商 · 2022 年起**", "",
-                "**如果这份资料库对你有用，欢迎 Star 收藏，给下一次读报告留一个入口。**", "",
-                "## 从这些报告开始", "",
-                "直接打开下面的代表性报告，或进入厂商目录浏览更多资料。", ""]
-    featured = [
-        ("GPT-4 Technical Report", "GPT-4"),
-        ("DeepSeek-V3 Technical Report", "DeepSeek-V3"),
-        ("DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning", "DeepSeek-R1"),
-        ("The Llama 3 Herd of Models", "Llama 3"),
-        ("Qwen3 Technical Report", "Qwen3"),
-    ]
-    by_title = {row["title"]: row for row in archived}
-    links = [f"[{label}]({by_title[title]['local_path']})" for title, label in featured if title in by_title]
-    if links:
-        lines += [" · ".join(links), ""]
-        cn_lines += [" · ".join(links), ""]
+                "**如果这份资料库对你有用，欢迎 Star 收藏，给下一次读报告留一个入口。**", ""]
+    type_counts = {kind: sum(row["document_type"] == kind for row in archived) for kind in DOCUMENT_TYPES}
+    lines += ["## Choose the right document", "",
+              "Looking for implementation details, model boundaries, or deployment safety? Start with the corresponding document type.", "",
+              "| Type | Main subject | Focus | Typical contents | PDFs |",
+              "| --- | --- | --- | --- | ---: |",
+              f"| [Technical Report](reports/technical-reports.md) | Model / training method | Implementation and experiments | Architecture, data, training, post-training, inference, benchmarks | {type_counts['technical_report']} |",
+              f"| [Model Card](reports/model-cards.md) | Individual model | Model description and usage boundaries | Capabilities, limitations, intended and unsuitable uses, evaluations, safety information | {type_counts['model_card']} |",
+              f"| [System Card](reports/system-cards.md) | Complete product / system | Risk, safety, and deployment behavior | Red teaming, dangerous capability evaluations, jailbreaks, safety mitigations, deployment restrictions | {type_counts['system_card']} |", "",
+              "These are typical distinctions, not rigid boundaries. Documents can overlap or cover a model family; "
+              "classification follows the publisher's designation and the document's primary purpose.", ""]
+    cn_lines += ["## 按类型找报告", "",
+                 "想看技术实现、模型使用边界，还是产品部署安全？从对应类型开始。", "",
+                 "| 类型 | 主要对象 | 重点 | 常见内容 | PDF 数量 |",
+                 "| --- | --- | --- | --- | ---: |",
+                 f"| [Technical Report](reports/technical-reports.md) | 模型/训练方法 | 技术实现与实验 | 架构、数据、训练、后训练、推理、benchmark | {type_counts['technical_report']} |",
+                 f"| [Model Card](reports/model-cards.md) | 单个模型 | 模型说明与使用边界 | 能力、限制、适用场景、不适用场景、评测、安全信息 | {type_counts['model_card']} |",
+                 f"| [System Card](reports/system-cards.md) | 完整产品/系统 | 风险、安全、部署表现 | red teaming、危险能力评估、越狱、安全 mitigations、部署限制 | {type_counts['system_card']} |", "",
+                 "这是常见区分，文档内容可能交叉，也可能覆盖整个模型家族；分类以官方命名与文档主要用途为准。", ""]
     lines += ["## Browse by publisher", "",
               "Pick a lab to find its archived reports and official source links. "
+              "Each publisher has separate Technical Report, Model Card, and System Card folders. "
               "Each directory is ordered by recorded first publication date, newest first.", "",
-              "| Publisher | PDFs |", "| --- | ---: |"]
+              "Click a count to open that publisher's collection for the document type. Counts include archived PDFs only.", "",
+              "| Publisher | Technical Reports | Model Cards | System Cards | Total PDFs |", "| --- | ---: | ---: | ---: | ---: |"]
     cn_lines += ["## 按厂商浏览", "",
-                 "点击厂商名称，查看归档 PDF 与官方来源。目录按已记录的首次发布日期从新到旧排列。", "",
-                 "| 厂商 | PDF 数量 |", "| --- | ---: |"]
+                 "点击厂商名称，查看归档 PDF 与官方来源。每家厂商下按 Technical Report、Model Card、System Card 设独立子目录，"
+                 "目录按已记录的首次发布日期从新到旧排列。", "",
+                 "点击数量可进入该厂商对应类型的目录，数量仅统计已归档 PDF。", "",
+                 "| 厂商 | 技术报告 | 模型卡 | 系统卡 | PDF 总数 |", "| --- | ---: | ---: | ---: | ---: |"]
+    type_labels_cn = {"technical_report": "技术报告", "model_card": "模型卡", "system_card": "系统卡"}
     for vendor, label in VENDORS.items():
         vendor_rows = [row for row in rows if row["vendor"] == vendor]
         good = [row for row in vendor_rows if row["status"] == "archived"]
         english_label = "Z.ai / Zhipu AI" if vendor == "zai" else label
-        lines.append(f"| [{english_label}](pdfs/{vendor}/README.md) | {len(good)} |")
-        cn_lines.append(f"| [{label}](pdfs/{vendor}/README.md) | {len(good)} |")
+        count_links = []
+        for kind, (_, filename) in DOCUMENT_TYPES.items():
+            count = sum(row["document_type"] == kind for row in good)
+            count_links.append(f"[{count}](pdfs/{vendor}/{Path(filename).stem}/README.md)")
+        counts = " | ".join(count_links)
+        lines.append(f"| [{english_label}](pdfs/{vendor}/README.md) | {counts} | {len(good)} |")
+        cn_lines.append(f"| [{label}](pdfs/{vendor}/README.md) | {counts} | {len(good)} |")
         directory = ROOT / "pdfs" / vendor
         directory.mkdir(parents=True, exist_ok=True)
-        detail = [f"# {label}", "", "按报告首次发布日期从新到旧排列；日期不明的条目置于最后。",
-                  "日期仅精确到月份时保留 YYYY-MM，不推测具体日。", "",
-                  "| 首次发布日期 | 报告 | 类型 | 归档版本 | 官方来源 |",
+        detail = [f"# {english_label}", "", "[Home](../../README.md) · [中文首页](../../README_CN.md)", "",
+                  "Reports are ordered by recorded first publication date, newest first; unknown dates appear last. "
+                  "Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).", "",
+                  "按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。"
+                  "类型说明见 [公众文档](../../README_CN.md#按类型找报告)。", "",
+                  "## Browse by type / 按类型浏览", "", "| Type / 类型 | Archived PDFs / 已归档 PDF |", "| --- | ---: |"]
+        indexes = [(directory, detail, vendor_rows)]
+        for kind, (type_label, filename) in DOCUMENT_TYPES.items():
+            type_directory = directory / Path(filename).stem
+            type_directory.mkdir(parents=True, exist_ok=True)
+            entries = [row for row in vendor_rows if row["document_type"] == kind]
+            count = sum(row["status"] == "archived" for row in entries)
+            detail.append(f"| [{type_label} / {type_labels_cn[kind]}]({type_directory.name}/README.md) | {count} |")
+            type_detail = [f"# {english_label} — {type_label}", "", "[Back to publisher / 返回厂商目录](../README.md)", "",
+                           f"**{count} archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.", "",
+                           f"已归档 **{count} 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。", ""]
+            if not entries:
+                type_detail += ["No documents of this type have been added yet. Contributions with official source links are welcome.", "",
+                                "此类文档暂未收录，欢迎补充官方来源。", ""]
+            indexes.append((type_directory, type_detail, entries))
+        detail += ["", "## All reports / 全部报告", ""]
+        for index_directory, index_lines, entries in indexes:
+            prefix = "../../" if index_directory == directory else "../../../"
+            index_lines += ["| First published / 首次发布日期 | Report / 报告 | Type / 类型 | Official source / 官方来源 |", "| --- | --- | --- | --- |"]
+            for row in sorted(entries, key=lambda x: (x["published_date"], x["title"]), reverse=True):
+                title = row["title"].replace("|", "\\|")
+                if row["status"] == "archived":
+                    relative_path = (ROOT / row["local_path"]).relative_to(index_directory).as_posix()
+                    link = f"[{title}]({relative_path})"
+                else:
+                    link = title + " (Pending / 待补齐)"
+                type_label, type_file = DOCUMENT_TYPES[row["document_type"]]
+                index_lines.append(f"| {row['published_date'] or 'Unknown / 未确认'} | {link} | [{type_label} / {type_labels_cn[row['document_type']]}]({prefix}reports/{type_file}) | [Source / 来源]({row['source_url']}) |")
+            index_lines += ["", f"Archive versions, checksums, retrieval times, and revision dates: [catalog.csv]({prefix}catalog.csv).", "",
+                            f"归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv]({prefix}catalog.csv)。", ""]
+            (index_directory / "README.md").write_text("\n".join(index_lines), encoding="utf-8")
+    report_directory = ROOT / "reports"
+    report_directory.mkdir(parents=True, exist_ok=True)
+    for kind, (type_label, filename) in DOCUMENT_TYPES.items():
+        entries = [row for row in rows if row["document_type"] == kind]
+        detail = [f"# {type_label}", "", "[All reports](../README.md) · [Document types](../README.md#choose-the-right-document)", "",
+                  f"**{type_counts[kind]} archived PDFs**. Listed by recorded first publication date, newest first; unknown dates appear last.", "",
+                  "| First published | Publisher | Report | Status | Official source |",
                   "| --- | --- | --- | --- | --- |"]
-        for row in sorted(vendor_rows, key=lambda x: (x["published_date"], x["title"]), reverse=True):
+        for row in sorted(entries, key=lambda x: (x["published_date"], x["title"]), reverse=True):
             title = row["title"].replace("|", "\\|")
-            link = f"[{title}]({Path(row['local_path']).name})" if row["status"] == "archived" else title + "（待补齐）"
-            detail.append(f"| {row['published_date'] or '未确认'} | {link} | {row['document_type']} | {row['version'] or '—'} | [来源]({row['source_url']}) |")
-        detail += ["", "文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../catalog.csv)。", ""]
-        (directory / "README.md").write_text("\n".join(detail), encoding="utf-8")
+            link = f"[{title}](../{row['local_path']})" if row["status"] == "archived" else title
+            label = "Z.ai / Zhipu AI" if row["vendor"] == "zai" else VENDORS[row["vendor"]]
+            detail.append(f"| {row['published_date'] or 'Unknown'} | {label} | {link} | {row['status']} | [Source]({row['source_url']}) |")
+        detail += ["", "Versions, retrieval dates, and verification details: [catalog.csv](../catalog.csv).", ""]
+        (report_directory / filename).write_text("\n".join(detail), encoding="utf-8")
     lines += ["", "## Why keep this archive handy?", "",
               "- **Go straight to the source.** Original publisher PDFs and official links, together in one index.",
               "- **Compare across labs.** Find training methods, evaluation results, and safety disclosures "
@@ -194,7 +255,7 @@ def render(rows):
               "older archived versions are retained when reports are updated.", "",
               "The [full catalog](catalog.csv) includes dates, versions, sources, and file verification details. "
               "Known omissions and uncertain dates are listed in [coverage and gaps](GAPS.md) "
-              "(currently maintained in Chinese). Publisher directory notes are also currently in Chinese; "
+              "(currently maintained in Chinese). Publisher and document-type directory READMEs are English-first bilingual; "
               "report titles and original PDFs retain their source language.", "",
               "## Help build the reference shelf", "",
               "Found a missing report, a newer revision, or a broken link? "
@@ -296,8 +357,9 @@ def main():
     if args.command == "fetch":
         sources = json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))
         keys = [(s["vendor"], s["slug"]) for s in sources]
-        if len(keys) != len(set(keys)) or any(s["vendor"] not in VENDORS for s in sources):
-            raise ValueError("Duplicate source slugs or unsupported vendor")
+        if (len(keys) != len(set(keys)) or any(s["vendor"] not in VENDORS for s in sources)
+                or any(s["document_type"] not in DOCUMENT_TYPES for s in sources)):
+            raise ValueError("Duplicate source slugs, unsupported vendor, or unsupported document type")
         selected = [s for s in sources if not args.vendor or s["vendor"] == args.vendor]
         previous = {(r["vendor"], r["pdf_url"]): r for r in rows}
         results = []

@@ -39,6 +39,7 @@ class ArchiveTests(unittest.TestCase):
         self.patcher.start()
         self.addCleanup(self.patcher.stop)
         self.source = dict(vendor="openai", title="Example", slug="example",
+                           document_type="technical_report",
                            pdf_url="https://example.org/report.pdf", version="snapshot-test")
 
     def download(self, data, previous=None, refresh=False):
@@ -64,6 +65,42 @@ class ArchiveTests(unittest.TestCase):
         self.assertNotEqual(first["local_path"], second["local_path"])
         self.assertEqual((self.root / first["local_path"]).read_bytes(), pdf())
         self.assertEqual((self.root / second["local_path"]).read_bytes(), pdf(200))
+
+    def test_retrieval_snapshot_uses_short_filename(self):
+        self.source.pop("version")
+        row = self.download(pdf())
+        self.assertEqual(row["local_path"], "pdfs/openai/technical-reports/example.pdf")
+        self.assertRegex(row["version"], r"^snapshot-\d{4}-\d{2}-\d{2}$")
+
+    def test_short_filename_keeps_changed_and_repeated_refreshes(self):
+        self.source.pop("version")
+        first = self.download(pdf())
+        previous = {("openai", self.source["pdf_url"]): first}
+        second = self.download(pdf(200), previous, refresh=True)
+        self.assertEqual(first["local_path"], "pdfs/openai/technical-reports/example.pdf")
+        self.assertEqual(second["local_path"], f"pdfs/openai/technical-reports/example--{second['sha256'][:8]}.pdf")
+        previous = {("openai", self.source["pdf_url"]): second}
+        repeated = self.download(pdf(200), previous, refresh=True)
+        self.assertEqual(repeated["local_path"], second["local_path"])
+        self.assertEqual(len(list(self.root.rglob("*.pdf"))), 2)
+        self.assertEqual((self.root / first["local_path"]).read_bytes(), pdf())
+        self.assertEqual((self.root / second["local_path"]).read_bytes(), pdf(200))
+
+    def test_explicit_revision_stays_in_filename(self):
+        self.source["version"] = "arxiv-v2"
+        row = self.download(pdf())
+        self.assertEqual(row["local_path"], "pdfs/openai/technical-reports/example--arxiv-v2.pdf")
+
+    def test_downloads_go_to_their_document_type_directory(self):
+        self.source.pop("version")
+        for kind, directory in [("technical_report", "technical-reports"),
+                                ("model_card", "model-cards"), ("system_card", "system-cards")]:
+            with self.subTest(document_type=kind):
+                self.source["document_type"] = kind
+                row = self.download(pdf())
+                self.assertEqual(row["status"], "archived")
+                self.assertEqual(row["local_path"], f"pdfs/openai/{directory}/example.pdf")
+                self.assertTrue((self.root / row["local_path"]).is_file())
 
     def test_failed_refresh_keeps_previous_archive(self):
         first = self.download(pdf())
