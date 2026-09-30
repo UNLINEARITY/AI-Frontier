@@ -140,19 +140,24 @@ def write_catalog(rows):
 def render(rows):
     archived = [row for row in rows if row["status"] == "archived"]
     publisher_count = len({row["vendor"] for row in archived})
-    lines = ["# AI Frontier", "", "**Read the reports behind frontier AI.**", "",
-             "[Chinese](README_CN.md) · [Browse reports](#browse-by-publisher) · [Full catalog](catalog.csv)", "",
-             "Official technical reports, model cards, and system cards from leading AI labs, "
-             "collected in one place. A reference shelf for researchers, engineers, and anyone "
-             "who wants to understand how models are built, evaluated, and released.", "",
+    brand = json.loads((ROOT / ".github" / "brand.json").read_text(encoding="utf-8"))
+    lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline']}**", "",
+             "[Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Full catalog](catalog.csv)", "",
+             "An open research archive for understanding how frontier AI models are built, evaluated, and deployed. "
+             "We bring official technical reports, model cards, and system cards into one place, "
+             "and are building toward readable sources, grounded technical analysis, and ongoing release tracking.", "",
              f"**{len(archived)} original PDFs · {publisher_count} publishers · 2022 onward**", "",
-             "**Star this repo to keep the reports within reach.**", ""]
-    cn_lines = ["# AI Frontier", "", "**读懂前沿 AI，从原始报告开始。**", "",
-                "[英文版](README.md) · [按厂商浏览](#按厂商浏览) · [完整索引](catalog.csv)", "",
-                "把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡，整理成一份随时可查的资料库。"
-                "为研究者、工程师和关心 AI 技术的人，保留理解模型如何训练、评测与发布的第一手材料。", "",
+             "**Available today:** the original PDF archive and its verified source index. "
+             "Markdown editions, structured analysis, and automated tracking are the next stages.", "",
+             "**Star AI Frontier to keep the sources close and follow the archive as it grows.**", ""]
+    cn_lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline_cn']}**", "",
+                "[英文版](README.md) · [按厂商浏览](#按厂商浏览) · [按类型浏览](#按类型找报告) · [完整索引](catalog.csv)", "",
+                "一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。"
+                "我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，"
+                "并逐步推进可读原文、基于来源的技术分析与模型发布追踪。", "",
                 f"**{len(archived)} 份原始 PDF · {publisher_count} 家厂商 · 2022 年起**", "",
-                "**如果这份资料库对你有用，欢迎 Star 收藏，给下一次读报告留一个入口。**", ""]
+                "**当前已提供：**原始 PDF 归档与经过核对的来源索引。Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
+                "**Star 收藏 AI Frontier，把原始资料留在手边，也关注它如何逐步成为技术研究入口。**", ""]
     type_counts = {kind: sum(row["document_type"] == kind for row in archived) for kind in DOCUMENT_TYPES}
     lines += ["## Choose the right document", "",
               "Looking for implementation details, model boundaries, or deployment safety? Start with the corresponding document type.", "",
@@ -247,7 +252,7 @@ def render(rows):
             detail.append(f"| {row['published_date'] or 'Unknown'} | {label} | {link} | {row['status']} | [Source]({row['source_url']}) |")
         detail += ["", "Versions, retrieval dates, and verification details: [catalog.csv](../catalog.csv).", ""]
         (report_directory / filename).write_text("\n".join(detail), encoding="utf-8")
-    lines += ["", "## Why keep this archive handy?", "",
+    lines += ["", "## Why follow AI Frontier?", "",
               "- **Go straight to the source.** Original publisher PDFs and official links, together in one index.",
               "- **Compare across labs.** Find training methods, evaluation results, and safety disclosures "
               "across technical reports and model cards.",
@@ -262,12 +267,16 @@ def render(rows):
               "Open an issue or pull request with the report title, publisher, and official source. "
               "A single good source link helps make the collection more useful for everyone.", "",
               "If this archive saves you a search, give it a **Star** or share it with someone reading AI papers.", "",
-              "## Where this is heading", "",
-              "The foundation is the original PDF archive. Planned next steps:", "",
-              "- Readable Markdown versions that preserve tables, formulas, and figures.",
-              "- Structured extraction of the technical details disclosed in each report.",
-              "- A GitHub Pages interface for browsing by publisher and publication date.", "",
-              "These are planned additions; the current collection provides PDFs and their index.", "",
+              "## From sources to insight", "",
+              "The original reports are the foundation. The longer-term goal is a research workflow "
+              "that helps readers follow releases, inspect technical evidence, and understand what changed.", "",
+              "| Stage | What it helps you do | Status |", "| --- | --- | --- |",
+              "| Original sources | Find official reports, source links, dates, and archived revisions | Available |",
+              "| Readable sources | Read and process Markdown with tables, formulas, and figures preserved | Planned |",
+              "| Technical analysis | Examine architecture, data, training, post-training, inference, and evaluation details with source references | Planned |",
+              "| Continuous tracking | Follow new model releases and report revisions through automated monitoring and update histories | Planned |", "",
+              "A GitHub Pages browsing experience is also planned. Today, sources are curated manually; "
+              "the archive provides original PDFs, indexes, and explicit coverage gaps.", "",
               "## Scope and attribution", "",
               "This growing collection covers official model and model-family reports from 2022 onward, "
               "including technical reports, model cards, and system cards. Sources are publisher websites, "
@@ -277,7 +286,7 @@ def render(rows):
               "PDFs are preserved as provided by their publishers. Copyrights and terms of use remain "
               "with the original rights holders; this repository does not relicense the reports.", "",
               "Maintenance and implementation notes: [agent.md](agent.md).", ""]
-    cn_lines += ["", "## 为什么值得收藏？", "",
+    cn_lines += ["", "## 为什么值得持续关注？", "",
                  "- **直接读原文。** 原始 PDF 与官方来源集中整理，减少在官网、仓库和论文页面之间来回查找。",
                  "- **横向看技术。** 对照不同厂商披露的训练方法、评测结果与安全信息，为自己的研究和判断找到依据。",
                  "- **回看演进。** 首次发布与修订日期分别记录，报告更新时保留已有归档版本，方便追溯变化。", "",
@@ -287,12 +296,14 @@ def render(rows):
                  "发现遗漏报告、新修订版本或失效链接？欢迎通过 Issue 或 Pull Request 提供报告标题、厂商和官方来源。"
                  "一条可靠的线索，就能帮助更多人找到原始材料。", "",
                  "如果它帮你省下了一次搜索，欢迎 **Star**，也可以分享给正在读 AI 论文的朋友。", "",
-                 "## 接下来，我们想做到", "",
-                 "先把原始资料留好，再逐步让它更容易阅读和研究：", "",
-                 "- 转为便于阅读和处理的 Markdown，保留表格、公式与图片。",
-                 "- 结构化提取每份报告实际披露的技术细节。",
-                 "- 建立 GitHub Pages 页面，按厂商和发布时间浏览。", "",
-                 "以上为后续计划；当前已提供原始 PDF 与报告索引。", "",
+                 "## 从原始资料走向技术洞察", "",
+                 "原始报告是基础。我们希望逐步建立一条研究路径，帮助读者跟进发布、核对技术证据、理解模型发生了什么变化。", "",
+                 "| 阶段 | 帮助你做什么 | 状态 |", "| --- | --- | --- |",
+                 "| 原始资料 | 查找官方报告、来源链接、日期与归档版本 | 已提供 |",
+                 "| 可读原文 | 阅读和处理 Markdown，保留表格、公式与图片 | 计划中 |",
+                 "| 技术分析 | 结合原文出处，研究架构、数据、训练、后训练、推理与评测细节 | 计划中 |",
+                 "| 持续跟进 | 通过自动监测与更新记录，追踪新模型发布及报告修订 | 计划中 |", "",
+                 "GitHub Pages 浏览页面也在规划中。当前来源由人工核对与维护，已提供原始 PDF、索引和明确的覆盖缺口。", "",
                  "## 收录范围与版权", "",
                  "收录 2022 年起模型及模型家族的官方技术报告、模型卡与系统卡，来源包括厂商官网、官方仓库和作者提交的 arXiv 论文。"
                  "资料库仍在补齐，不代表已穷尽所有历史报告。arXiv 条目以首次提交日作为已记录的首次发布日期，未知日期不作推测。", "",

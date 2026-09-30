@@ -1,14 +1,18 @@
 # AI Frontier
 
-**Read the reports behind frontier AI.**
+![AI Frontier](assets/branding/ai-frontier-banner.png)
 
-[Chinese](README_CN.md) · [Browse reports](#browse-by-publisher) · [Full catalog](catalog.csv)
+**Track frontier AI, from original reports to technical insight.**
 
-Official technical reports, model cards, and system cards from leading AI labs, collected in one place. A reference shelf for researchers, engineers, and anyone who wants to understand how models are built, evaluated, and released.
+[Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Full catalog](catalog.csv)
+
+An open research archive for understanding how frontier AI models are built, evaluated, and deployed. We bring official technical reports, model cards, and system cards into one place, and are building toward readable sources, grounded technical analysis, and ongoing release tracking.
 
 **225 original PDFs · 12 publishers · 2022 onward**
 
-**Star this repo to keep the reports within reach.**
+**Available today:** the original PDF archive and its verified source index. Markdown editions, structured analysis, and automated tracking are the next stages.
+
+**Star AI Frontier to keep the sources close and follow the archive as it grows.**
 
 ## Choose the right document
 
@@ -43,7 +47,7 @@ Click a count to open that publisher's collection for the document type. Counts 
 | [Z.ai / Zhipu AI](pdfs/zai/README.md) | [16](pdfs/zai/technical-reports/README.md) | [0](pdfs/zai/model-cards/README.md) | [0](pdfs/zai/system-cards/README.md) | 16 |
 | [MiniMax](pdfs/minimax/README.md) | [3](pdfs/minimax/technical-reports/README.md) | [0](pdfs/minimax/model-cards/README.md) | [0](pdfs/minimax/system-cards/README.md) | 3 |
 
-## Why keep this archive handy?
+## Why follow AI Frontier?
 
 - **Go straight to the source.** Original publisher PDFs and official links, together in one index.
 - **Compare across labs.** Find training methods, evaluation results, and safety disclosures across technical reports and model cards.
@@ -57,15 +61,18 @@ Found a missing report, a newer revision, or a broken link? Open an issue or pul
 
 If this archive saves you a search, give it a **Star** or share it with someone reading AI papers.
 
-## Where this is heading
+## From sources to insight
 
-The foundation is the original PDF archive. Planned next steps:
+The original reports are the foundation. The longer-term goal is a research workflow that helps readers follow releases, inspect technical evidence, and understand what changed.
 
-- Readable Markdown versions that preserve tables, formulas, and figures.
-- Structured extraction of the technical details disclosed in each report.
-- A GitHub Pages interface for browsing by publisher and publication date.
+| Stage | What it helps you do | Status |
+| --- | --- | --- |
+| Original sources | Find official reports, source links, dates, and archived revisions | Available |
+| Readable sources | Read and process Markdown with tables, formulas, and figures preserved | Planned |
+| Technical analysis | Examine architecture, data, training, post-training, inference, and evaluation details with source references | Planned |
+| Continuous tracking | Follow new model releases and report revisions through automated monitoring and update histories | Planned |
 
-These are planned additions; the current collection provides PDFs and their index.
+A GitHub Pages browsing experience is also planned. Today, sources are curated manually; the archive provides original PDFs, indexes, and explicit coverage gaps.
 
 ## Scope and attribution
 
