@@ -1,0 +1,7 @@
+.cache/
+.venv/
+__pycache__/
+*.part
+.DS_Store
+log.md
+git-log.md
