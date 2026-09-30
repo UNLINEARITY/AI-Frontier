@@ -4,6 +4,14 @@ This document describes repository implementation and maintenance for agents and
 
 Nested READMEs under `pdfs/<vendor>/` and `pdfs/<vendor>/<type>/` are English-first bilingual within one file. Put English before Chinese in navigation, explanations, headings, table labels, empty-category messages, and metadata notes. Share one report table between languages and preserve original report titles; do not create duplicate translated report rows. The separate root README language editions remain unchanged by this nested-directory convention.
 
+## Brand and public positioning
+
+The project name is **AI Frontier**. Its purpose is to help readers follow frontier AI from original reports to technical insight. The long-term scope covers source preservation, readable Markdown, source-grounded technical analysis, and ongoing release and revision tracking. The current delivered capability is the original PDF archive and its curated indexes; the later stages are explicitly planned.
+
+`.github/brand.json` is the shared source for the name, English and Chinese taglines, GitHub description, and repository topics. The renderer reads the name and taglines from it. Keep the GitHub description and topics aligned with that file when updating repository metadata through `gh`.
+
+Lead public copy with reader value and verified evidence, then offer complete publisher/type navigation and a concise invitation to star or contribute. Present the future workflow without claiming that OCR, technical analysis, real-time updates, or automated monitoring already exist. Topics describe the project's research domain and document types, rather than selecting a few publishers. Preserve the project banner in both public README editions. Generation prompts and internal image metadata stay local and ignored; third-party publisher marks remain a separate pending task.
+
 ## Current scope
 
 Archive original, official AI model PDFs from 2022 onward, grouped by publisher. Accepted document types are `technical_report`, `model_card`, and `system_card`. Include reports on models or model families; do not substitute unrelated method papers, news posts, or marketing material for a missing model report.
@@ -21,6 +29,7 @@ Use ordinary Git. Do not enable Git LFS. A PDF larger than 100 MiB is recorded a
 | `pdfs/<vendor>/` | Publisher overview with links to all three document-type directories |
 | `pdfs/<vendor>/<type>/` | Original PDFs and a generated index; type is `technical-reports`, `model-cards`, or `system-cards` |
 | `reports/` | Generated cross-publisher indexes for Technical Reports, Model Cards, and System Cards |
+| `.github/brand.json` | Shared project name, public taglines, GitHub description, and discovery topics |
 | `coverage-notes.md` | Manually maintained coverage boundaries and follow-up areas, included in `GAPS.md` |
 | `README.md` | Generated English public introduction and complete publisher table with linked counts for all three document types and total PDFs |
 | `README_CN.md` | Generated Chinese public edition with corresponding content and language navigation |

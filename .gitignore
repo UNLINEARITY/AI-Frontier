@@ -5,3 +5,5 @@ __pycache__/
 .DS_Store
 log.md
 git-log.md
+assets/branding/prompt.md
+assets/branding/metadata.json
