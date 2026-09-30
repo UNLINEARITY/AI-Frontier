@@ -10,30 +10,38 @@
 
 **如果这份资料库对你有用，欢迎 Star 收藏，给下一次读报告留一个入口。**
 
-## 从这些报告开始
+## 按类型找报告
 
-直接打开下面的代表性报告，或进入厂商目录浏览更多资料。
+想看技术实现、模型使用边界，还是产品部署安全？从对应类型开始。
 
-[GPT-4](pdfs/openai/gpt-4-technical-report--arxiv-v6.pdf) · [DeepSeek-V3](pdfs/deepseek/deepseek-v3-technical-report--arxiv-v2.pdf) · [DeepSeek-R1](pdfs/deepseek/deepseek-r1-incentivizing-reasoning-capability-in-llms-via-reinforcement-learning--arxiv-v2.pdf) · [Llama 3](pdfs/meta/the-llama-3-herd-of-models--arxiv-v3.pdf) · [Qwen3](pdfs/qwen/qwen3-technical-report--arxiv-v1.pdf)
+| 类型 | 主要对象 | 重点 | 常见内容 | PDF 数量 |
+| --- | --- | --- | --- | ---: |
+| [Technical Report](reports/technical-reports.md) | 模型/训练方法 | 技术实现与实验 | 架构、数据、训练、后训练、推理、benchmark | 135 |
+| [Model Card](reports/model-cards.md) | 单个模型 | 模型说明与使用边界 | 能力、限制、适用场景、不适用场景、评测、安全信息 | 43 |
+| [System Card](reports/system-cards.md) | 完整产品/系统 | 风险、安全、部署表现 | red teaming、危险能力评估、越狱、安全 mitigations、部署限制 | 47 |
+
+这是常见区分，文档内容可能交叉，也可能覆盖整个模型家族；分类以官方命名与文档主要用途为准。
 
 ## 按厂商浏览
 
-点击厂商名称，查看归档 PDF 与官方来源。目录按已记录的首次发布日期从新到旧排列。
+点击厂商名称，查看归档 PDF 与官方来源。每家厂商下按 Technical Report、Model Card、System Card 设独立子目录，目录按已记录的首次发布日期从新到旧排列。
 
-| 厂商 | PDF 数量 |
-| --- | ---: |
-| [OpenAI](pdfs/openai/README.md) | 35 |
-| [Anthropic](pdfs/anthropic/README.md) | 20 |
-| [Google / DeepMind](pdfs/google/README.md) | 57 |
-| [Meta](pdfs/meta/README.md) | 12 |
-| [xAI](pdfs/xai/README.md) | 7 |
-| [Mistral AI](pdfs/mistral/README.md) | 9 |
-| [NVIDIA](pdfs/nvidia/README.md) | 10 |
-| [DeepSeek](pdfs/deepseek/README.md) | 20 |
-| [Alibaba / Qwen](pdfs/qwen/README.md) | 26 |
-| [Moonshot AI / Kimi](pdfs/moonshot/README.md) | 10 |
-| [智谱 / Z.ai](pdfs/zai/README.md) | 16 |
-| [MiniMax](pdfs/minimax/README.md) | 3 |
+点击数量可进入该厂商对应类型的目录，数量仅统计已归档 PDF。
+
+| 厂商 | 技术报告 | 模型卡 | 系统卡 | PDF 总数 |
+| --- | ---: | ---: | ---: | ---: |
+| [OpenAI](pdfs/openai/README.md) | [4](pdfs/openai/technical-reports/README.md) | [1](pdfs/openai/model-cards/README.md) | [30](pdfs/openai/system-cards/README.md) | 35 |
+| [Anthropic](pdfs/anthropic/README.md) | [0](pdfs/anthropic/technical-reports/README.md) | [4](pdfs/anthropic/model-cards/README.md) | [16](pdfs/anthropic/system-cards/README.md) | 20 |
+| [Google / DeepMind](pdfs/google/README.md) | [25](pdfs/google/technical-reports/README.md) | [32](pdfs/google/model-cards/README.md) | [0](pdfs/google/system-cards/README.md) | 57 |
+| [Meta](pdfs/meta/README.md) | [12](pdfs/meta/technical-reports/README.md) | [0](pdfs/meta/model-cards/README.md) | [0](pdfs/meta/system-cards/README.md) | 12 |
+| [xAI](pdfs/xai/README.md) | [0](pdfs/xai/technical-reports/README.md) | [6](pdfs/xai/model-cards/README.md) | [1](pdfs/xai/system-cards/README.md) | 7 |
+| [Mistral AI](pdfs/mistral/README.md) | [9](pdfs/mistral/technical-reports/README.md) | [0](pdfs/mistral/model-cards/README.md) | [0](pdfs/mistral/system-cards/README.md) | 9 |
+| [NVIDIA](pdfs/nvidia/README.md) | [10](pdfs/nvidia/technical-reports/README.md) | [0](pdfs/nvidia/model-cards/README.md) | [0](pdfs/nvidia/system-cards/README.md) | 10 |
+| [DeepSeek](pdfs/deepseek/README.md) | [20](pdfs/deepseek/technical-reports/README.md) | [0](pdfs/deepseek/model-cards/README.md) | [0](pdfs/deepseek/system-cards/README.md) | 20 |
+| [Alibaba / Qwen](pdfs/qwen/README.md) | [26](pdfs/qwen/technical-reports/README.md) | [0](pdfs/qwen/model-cards/README.md) | [0](pdfs/qwen/system-cards/README.md) | 26 |
+| [Moonshot AI / Kimi](pdfs/moonshot/README.md) | [10](pdfs/moonshot/technical-reports/README.md) | [0](pdfs/moonshot/model-cards/README.md) | [0](pdfs/moonshot/system-cards/README.md) | 10 |
+| [智谱 / Z.ai](pdfs/zai/README.md) | [16](pdfs/zai/technical-reports/README.md) | [0](pdfs/zai/model-cards/README.md) | [0](pdfs/zai/system-cards/README.md) | 16 |
+| [MiniMax](pdfs/minimax/README.md) | [3](pdfs/minimax/technical-reports/README.md) | [0](pdfs/minimax/model-cards/README.md) | [0](pdfs/minimax/system-cards/README.md) | 3 |
 
 ## 为什么值得收藏？
 
