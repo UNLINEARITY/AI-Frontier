@@ -31,6 +31,8 @@ Use ordinary Git. Do not enable Git LFS. A PDF larger than 100 MiB is recorded a
 | `reports/` | Generated English and Chinese cross-publisher indexes for Technical Reports, Model Cards, and System Cards |
 | `.github/brand.json` | Shared project name, public taglines, GitHub description, and discovery topics |
 | `coverage-notes.md` | Manually maintained coverage boundaries and follow-up areas, included in `GAPS.md` |
+| `model-coverage.json` | Manually reviewed recent model families, official evidence, report slugs, and bilingual coverage notes |
+| `LATEST_MODELS.md` / `LATEST_MODELS_CN.md` | Generated recent-model coverage pages linking archived PDFs and official web-only or pending entries |
 | `README.md` | Generated English public introduction and complete publisher table with linked counts for all three document types and total PDFs |
 | `README_CN.md` | Generated Chinese public edition with corresponding content and language navigation |
 | `GAPS.md` | Generated list of unarchived entries, uncertain dates, refresh failures, and coverage notes |
@@ -125,6 +127,8 @@ Catalog statuses are:
 Unarchived entries are deliberate catalog results. A successful `fetch` process does not imply complete coverage or that every download succeeded; review catalog statuses and `GAPS.md`.
 
 ## Update workflow and validation
+
+Review recent releases against `model-coverage.json`, not just existing report entries. A missing report entry does not establish that a model has no report. Keep all supported publishers represented when updating the review. Each model record has `vendor`, `model`, `source_url`, `status`, `report_slugs`, `note_en`, and `note_cn`; the document has a manual `checked_at` date. Status is `archived`, `family_report`, `web_only`, `pending`, or `unconfirmed`. `pending` requires an official promise of a forthcoming report; `web_only` means a web card was found but no corresponding PDF was located in the checked sources. Never infer that no report exists from a failed search. Report slugs resolve through `sources.json`; the renderer links actual archived catalog files and shows a PDF as not yet archived when downloading has not succeeded. Update both language notes and run `render` to refresh the separate public coverage pages. This is manual coverage review, not automated release monitoring or an exhaustive model inventory.
 
 1. Check official source pages and repositories. Verify report identity, revision, dates, and PDF URL.
 2. Update `sources.json` and, where coverage boundaries change, `coverage-notes.md`.

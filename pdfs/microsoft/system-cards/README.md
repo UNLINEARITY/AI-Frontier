@@ -1,4 +1,4 @@
-# Microsoft / Phi — System Card
+# Microsoft / Phi / MAI — System Card
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 

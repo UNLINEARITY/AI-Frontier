@@ -1,4 +1,4 @@
-# Microsoft / Phi — 系统卡
+# Microsoft / Phi / MAI — 系统卡
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 

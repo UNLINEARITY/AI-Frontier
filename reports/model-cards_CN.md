@@ -2,13 +2,15 @@
 
 [首页](../README_CN.md) · [文档类型](../README_CN.md#按类型找报告) · [英文版](model-cards.md)
 
-已归档 **49 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已归档 **56 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 厂商 | 报告 | 状态 | 官方来源 |
 | --- | --- | --- | --- | --- |
 | 2026-09-21 | [xAI](../pdfs/xai/README_CN.md) | [Grok 4.7 Model Card](../pdfs/xai/model-cards/grok-4-7-model-card.pdf) | 已归档 | [来源](https://x.ai/safety) |
 | 2026-08-12 | [xAI](../pdfs/xai/README_CN.md) | [Grok 4.6 Model Card](../pdfs/xai/model-cards/grok-4-6-model-card.pdf) | 已归档 | [来源](https://x.ai/safety) |
 | 2026-07-14 | [xAI](../pdfs/xai/README_CN.md) | [Grok 4.5 Model Card](../pdfs/xai/model-cards/grok-4-5-model-card.pdf) | 已归档 | [来源](https://x.ai/safety) |
+| 2026-04-27 | [DeepSeek](../pdfs/deepseek/README_CN.md) | [DeepSeek V4 Technical Documentation (Model Card)](../pdfs/deepseek/model-cards/deepseek-v4-model-card.pdf) | 已归档 | [来源](https://www.deepseek.com/en/transparency/) |
+| 2026-04-17 | [DeepSeek](../pdfs/deepseek/README_CN.md) | [DeepSeek V3.2 Technical Documentation (Model Card)](../pdfs/deepseek/model-cards/deepseek-v3-2-model-card.pdf) | 已归档 | [来源](https://www.deepseek.com/en/transparency/) |
 | 2025-12-17 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [Seed1.8 Model Card: Towards Generalized Real-World Agency](../pdfs/bytedance/model-cards/seed1-8-model-card.pdf) | 已归档 | [来源](https://seed.bytedance.com/en/seed_model_portfolio) |
 | 2025-12-15 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [Seedance 1.5 pro: A Native Audio-Visual Joint Generation Foundation Model](../pdfs/bytedance/model-cards/seedance-1-5-pro-model-card--arxiv-v3.pdf) | 已归档 | [来源](https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro) |
 | 2025-11-17 | [xAI](../pdfs/xai/README_CN.md) | [Grok 4.1 Model Card](../pdfs/xai/model-cards/grok-4-1-model-card.pdf) | 已归档 | [来源](https://x.ai/news/grok-4-1) |
@@ -24,17 +26,31 @@
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | TxGemma Model Card | 暂无独立 PDF | [来源](https://developers.google.com/health-ai-developer-foundations/txgemma/model-card) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | TranslateGemma Model Card | 暂无独立 PDF | [来源](https://huggingface.co/google/translategemma-4b-it) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | T5Gemma Model Card | 暂无独立 PDF | [来源](https://huggingface.co/google/t5gemma-2b-2b-ul2) |
+| 未确认 | [StepFun](../pdfs/stepfun/README_CN.md) | Step-3.7-Flash Model Card | 暂无独立 PDF | [来源](https://huggingface.co/stepfun-ai/Step-3.7-Flash) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | ShieldGemma 2 Model Card | 暂无独立 PDF | [来源](https://ai.google.dev/gemma/docs/shieldgemma/model_card_2) |
 | 未确认 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [Seed2.1 Model Card: Agentic Intelligence for Productivity](../pdfs/bytedance/model-cards/seed2-1-model-card.pdf) | 已归档 | [来源](https://seed.bytedance.com/en/seed_model_portfolio) |
 | 未确认 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [Seed2.0 Model Card: Towards Intelligence Frontier for Real-World Complexity](../pdfs/bytedance/model-cards/seed2-0-model-card.pdf) | 已归档 | [来源](https://seed.bytedance.com/en/seed_model_portfolio) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | RecurrentGemma Model Card | 暂无独立 PDF | [来源](https://ai.google.dev/gemma/docs/recurrentgemma/model_card) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | PaliGemma 2 Model Card | 暂无独立 PDF | [来源](https://ai.google.dev/gemma/docs/paligemma/model-card-2) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | PaliGemma 1 Model Card | 暂无独立 PDF | [来源](https://ai.google.dev/gemma/docs/paligemma/model-card) |
+| 未确认 | [Cohere](../pdfs/cohere/README_CN.md) | North Mini Code 1.0 Model Card | 暂无独立 PDF | [来源](https://huggingface.co/CohereLabs/North-Mini-Code-1.0) |
+| 未确认 | [Cohere](../pdfs/cohere/README_CN.md) | North Micro Vision Instruct Model Card | 暂无独立 PDF | [来源](https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct) |
 | 未确认 | [NVIDIA](../pdfs/nvidia/README_CN.md) | NVIDIA Nemotron 3 Nano 30B A3B Model Card | 暂无独立 PDF | [来源](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16) |
+| 未确认 | [Meta](../pdfs/meta/README_CN.md) | Muse Glimmer 30B Model Card | 暂无独立 PDF | [来源](https://huggingface.co/meta-models/Muse-Glimmer-30B) |
 | 未确认 | [Mistral AI](../pdfs/mistral/README_CN.md) | Mistral-Small-4-119B-2603 Model Card | 暂无独立 PDF | [来源](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) |
 | 未确认 | [Mistral AI](../pdfs/mistral/README_CN.md) | Mistral-Large-3-675B-Instruct-2512 Model Card | 暂无独立 PDF | [来源](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) |
+| 未确认 | [Mistral AI](../pdfs/mistral/README_CN.md) | Mistral Medium 3.5 Model Card | 暂无独立 PDF | [来源](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) |
+| 未确认 | [MiniMax](../pdfs/minimax/README_CN.md) | MiniMax-Music3 Model Card | 暂无独立 PDF | [来源](https://huggingface.co/MiniMaxAI/MiniMax-Music3) |
+| 未确认 | [MiniMax](../pdfs/minimax/README_CN.md) | MiniMax-M3 Model Card | 暂无独立 PDF | [来源](https://huggingface.co/MiniMaxAI/MiniMax-M3) |
+| 未确认 | [MiniMax](../pdfs/minimax/README_CN.md) | MiniMax-H3 Model Card | 暂无独立 PDF | [来源](https://huggingface.co/MiniMaxAI/MiniMax-H3) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | MedGemma 1.5 Model Card | 暂无独立 PDF | [来源](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | MedGemma 1 Model Card | 暂无独立 PDF | [来源](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card-v1) |
+| 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Voice-2 Model Card](../pdfs/microsoft/model-cards/mai-voice-2-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/models/mai-voice-2/) |
+| 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Transcribe-2 Model Card](../pdfs/microsoft/model-cards/mai-transcribe-2-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/models/mai-transcribe-2/) |
+| 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | MAI-Thinking-1 Model Card | 暂无独立 PDF | [来源](https://ai.azure.com/catalog/models/MAI-Thinking-1) |
+| 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Image-2.6 / MAI-Image-2.6-Flash Model Card](../pdfs/microsoft/model-cards/mai-image-2-6-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/models/mai-image-2-6/) |
+| 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Cyber-1-Flash Model Card](../pdfs/microsoft/model-cards/mai-cyber-1-flash-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/models/mai-cyber-1-flash/) |
+| 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Code-1.1-Flash Model Card](../pdfs/microsoft/model-cards/mai-code-1-1-flash-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/models/mai-code-1-flash/) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Lyria 3.5 Model Card](../pdfs/google/model-cards/lyria-3-5-model-card.pdf) | 已归档 | [来源](https://deepmind.google/models/model-cards/lyria-3-5/) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Lyria 3 Model Card](../pdfs/google/model-cards/lyria-3-model-card.pdf) | 已归档 | [来源](https://deepmind.google/models/model-cards/lyria-3/) |
 | 未确认 | [Meta](../pdfs/meta/README_CN.md) | Llama 4 Model Card | 暂无独立 PDF | [来源](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md) |
@@ -80,11 +96,16 @@
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Gemini 2.5 Computer Use Model Card](../pdfs/google/model-cards/gemini-2-5-computer-use-model-card.pdf) | 已归档 | [来源](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Computer-Use-Model-Card.pdf) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Gemini 2.0 Flash-Lite Model Card](../pdfs/google/model-cards/gemini-2-0-flash-lite-model-card.pdf) | 已归档 | [来源](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Lite-Model-Card.pdf) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Gemini 2.0 Flash Model Card](../pdfs/google/model-cards/gemini-2-0-flash-model-card.pdf) | 已归档 | [来源](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf) |
+| 未确认 | [智谱 / Z.ai](../pdfs/zai/README_CN.md) | GLM-5.3-Flash Model Card | 暂无独立 PDF | [来源](https://huggingface.co/zai-org/GLM-5.3-Flash) |
+| 未确认 | [智谱 / Z.ai](../pdfs/zai/README_CN.md) | GLM-5.3 Model Card | 暂无独立 PDF | [来源](https://huggingface.co/zai-org/GLM-5.3) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | FunctionGemma Model Card | 暂无独立 PDF | [来源](https://ai.google.dev/gemma/docs/functiongemma/model_card) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | EmbeddingGemma Model Card | 暂无独立 PDF | [来源](https://ai.google.dev/gemma/docs/embeddinggemma/model_card) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | DiffusionGemma Model Card | 暂无独立 PDF | [来源](https://ai.google.dev/gemma/docs/diffusiongemma/model_card?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content) |
 | 未确认 | [Mistral AI](../pdfs/mistral/README_CN.md) | Devstral-2-123B-Instruct-2512 Model Card | 暂无独立 PDF | [来源](https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512) |
 | 未确认 | [NVIDIA](../pdfs/nvidia/README_CN.md) | Cosmos-Reason1 7B Model Card | 暂无独立 PDF | [来源](https://huggingface.co/nvidia/Cosmos-Reason1-7B) |
+| 未确认 | [Cohere](../pdfs/cohere/README_CN.md) | Command A+ Model Card | 暂无独立 PDF | [来源](https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16) |
+| 未确认 | [Cohere](../pdfs/cohere/README_CN.md) | Cohere Transcribe Model Card | 暂无独立 PDF | [来源](https://huggingface.co/CohereLabs/cohere-transcribe-03-2026) |
+| 未确认 | [Cohere](../pdfs/cohere/README_CN.md) | Cohere Transcribe Arabic Model Card | 暂无独立 PDF | [来源](https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | CodeGemma Model Card | 暂无独立 PDF | [来源](https://ai.google.dev/gemma/docs/codegemma/model_card) |
 | 未确认 | [Amazon / Nova](../pdfs/amazon/README_CN.md) | Amazon Nova Premier Model Card | 暂无独立 PDF | [来源](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-premier.html) |
 

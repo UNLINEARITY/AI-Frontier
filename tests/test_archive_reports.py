@@ -2,6 +2,7 @@
 
 import importlib.util
 import io
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -118,6 +119,27 @@ class ArchiveTests(unittest.TestCase):
         previous = {("openai", self.source["pdf_url"]): first}
         with self.assertRaisesRegex(ValueError, "hash mismatch"):
             archive.fetch_one(self.source, previous, False)
+
+    def test_coverage_does_not_claim_failed_pdf_is_archived(self):
+        (self.root / "sources.json").write_text(json.dumps([self.source]))
+        model = dict(vendor="openai", model="Example model", status="archived",
+                     source_url=self.source["pdf_url"], report_slugs=["example"],
+                     note_en="Report date unknown.", note_cn="报告日期未确认。")
+        (self.root / "model-coverage.json").write_text(json.dumps(
+            dict(checked_at="2026-10-01", models=[model])))
+        archive.render_model_coverage([])
+        english = (self.root / "LATEST_MODELS.md").read_text()
+        chinese = (self.root / "LATEST_MODELS_CN.md").read_text()
+        self.assertIn("PDF not yet archived", english)
+        self.assertNotIn("PDF archived", english)
+        self.assertIn("PDF 待收录", chinese)
+        self.assertIn("pdfs/openai/README_CN.md", chinese)
+        row = dict(vendor="openai", title="Example", status="archived",
+                   local_path="pdfs/openai/technical-reports/example.pdf",
+                   source_updated_date="", retrieved_at="2026-10-01")
+        archive.render_model_coverage([row])
+        self.assertIn("[Example](pdfs/openai/technical-reports/example.pdf)",
+                      (self.root / "LATEST_MODELS.md").read_text())
 
 
 if __name__ == "__main__":

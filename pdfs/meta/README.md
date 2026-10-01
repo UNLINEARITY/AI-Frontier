@@ -1,6 +1,6 @@
 # Meta
 
-[Home](../../README.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 
@@ -10,12 +10,13 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | --- | ---: |
 | [Technical Report](technical-reports/README.md) | 28 |
 | [Model Card](model-cards/README.md) | 0 |
-| [System Card](system-cards/README.md) | 0 |
+| [System Card](system-cards/README.md) | 2 |
 
 ## All reports
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-05-14 | [Muse Spark Safety & Preparedness Report](system-cards/muse-spark-safety-and-preparedness-report--arxiv-v1.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://arxiv.org/abs/2606.12429) |
 | 2026-03-15 | [V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning](technical-reports/v-jepa-2-1-technical-report--arxiv-v3.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2603.14482) |
 | 2026-02-17 | [SAM 3D Body: Robust Full-Body Human Mesh Recovery](technical-reports/sam-3d-body-technical-report--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2602.15989) |
 | 2025-12-22 | [Pushing the Frontier of Audiovisual Perception with Large-Scale Multimodal Correspondence Learning](technical-reports/perception-encoder-audiovisual-technical-report--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2512.19687) |
@@ -44,6 +45,8 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | 2022-11-16 | [Galactica: A Large Language Model for Science](technical-reports/galactica-a-large-language-model-for-science--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2211.09085) |
 | 2022-07-11 | [No Language Left Behind: Scaling Human-Centered Machine Translation](technical-reports/nllb-200-technical-report--arxiv-v3.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2207.04672) |
 | 2022-05-02 | [OPT: Open Pre-trained Transformer Language Models](technical-reports/opt-open-pre-trained-transformer-language-models--arxiv-v4.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2205.01068) |
+| Unknown | [Muse Spark 1.1 Evaluation Report](system-cards/muse-spark-1-1-evaluation-report.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://research.meta.ai/blog/introducing-muse-spark-meta-model-api) |
+| Unknown | Muse Glimmer 30B Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://huggingface.co/meta-models/Muse-Glimmer-30B) |
 | Unknown | Llama 4 Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md) |
 | Unknown | Llama 3.3 Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md) |
 | Unknown | Llama 3.2 Vision Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md) |

@@ -2,10 +2,11 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已归档 **22 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已归档 **23 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-09-17 | [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](deepseek-v4-1-flash-technical-report--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2609.19969) |
 | 2026-04-26 | [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](deepseek-v4--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2606.19348) |
 | 2026-01-28 | [DeepSeek-OCR 2: Visual Causal Flow](deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/deepseek-ai/DeepSeek-OCR-2) |
 | 2025-12-02 | [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](deepseek-v3-2-pushing-the-frontier-of-open-large-language-models--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.02556) |

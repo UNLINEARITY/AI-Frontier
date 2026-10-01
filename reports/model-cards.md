@@ -2,13 +2,15 @@
 
 [All reports](../README.md) · [Document types](../README.md#choose-the-right-document) · [Chinese](model-cards_CN.md)
 
-**49 archived PDFs**. Listed by recorded first publication date, newest first; unknown dates appear last.
+**56 archived PDFs**. Listed by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Publisher | Report | Status | Official source |
 | --- | --- | --- | --- | --- |
 | 2026-09-21 | [xAI](../pdfs/xai/README.md) | [Grok 4.7 Model Card](../pdfs/xai/model-cards/grok-4-7-model-card.pdf) | archived | [Source](https://x.ai/safety) |
 | 2026-08-12 | [xAI](../pdfs/xai/README.md) | [Grok 4.6 Model Card](../pdfs/xai/model-cards/grok-4-6-model-card.pdf) | archived | [Source](https://x.ai/safety) |
 | 2026-07-14 | [xAI](../pdfs/xai/README.md) | [Grok 4.5 Model Card](../pdfs/xai/model-cards/grok-4-5-model-card.pdf) | archived | [Source](https://x.ai/safety) |
+| 2026-04-27 | [DeepSeek](../pdfs/deepseek/README.md) | [DeepSeek V4 Technical Documentation (Model Card)](../pdfs/deepseek/model-cards/deepseek-v4-model-card.pdf) | archived | [Source](https://www.deepseek.com/en/transparency/) |
+| 2026-04-17 | [DeepSeek](../pdfs/deepseek/README.md) | [DeepSeek V3.2 Technical Documentation (Model Card)](../pdfs/deepseek/model-cards/deepseek-v3-2-model-card.pdf) | archived | [Source](https://www.deepseek.com/en/transparency/) |
 | 2025-12-17 | [ByteDance / Seed](../pdfs/bytedance/README.md) | [Seed1.8 Model Card: Towards Generalized Real-World Agency](../pdfs/bytedance/model-cards/seed1-8-model-card.pdf) | archived | [Source](https://seed.bytedance.com/en/seed_model_portfolio) |
 | 2025-12-15 | [ByteDance / Seed](../pdfs/bytedance/README.md) | [Seedance 1.5 pro: A Native Audio-Visual Joint Generation Foundation Model](../pdfs/bytedance/model-cards/seedance-1-5-pro-model-card--arxiv-v3.pdf) | archived | [Source](https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro) |
 | 2025-11-17 | [xAI](../pdfs/xai/README.md) | [Grok 4.1 Model Card](../pdfs/xai/model-cards/grok-4-1-model-card.pdf) | archived | [Source](https://x.ai/news/grok-4-1) |
@@ -24,17 +26,31 @@
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | TxGemma Model Card | missing_pdf | [Source](https://developers.google.com/health-ai-developer-foundations/txgemma/model-card) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | TranslateGemma Model Card | missing_pdf | [Source](https://huggingface.co/google/translategemma-4b-it) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | T5Gemma Model Card | missing_pdf | [Source](https://huggingface.co/google/t5gemma-2b-2b-ul2) |
+| Unknown | [StepFun](../pdfs/stepfun/README.md) | Step-3.7-Flash Model Card | missing_pdf | [Source](https://huggingface.co/stepfun-ai/Step-3.7-Flash) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | ShieldGemma 2 Model Card | missing_pdf | [Source](https://ai.google.dev/gemma/docs/shieldgemma/model_card_2) |
 | Unknown | [ByteDance / Seed](../pdfs/bytedance/README.md) | [Seed2.1 Model Card: Agentic Intelligence for Productivity](../pdfs/bytedance/model-cards/seed2-1-model-card.pdf) | archived | [Source](https://seed.bytedance.com/en/seed_model_portfolio) |
 | Unknown | [ByteDance / Seed](../pdfs/bytedance/README.md) | [Seed2.0 Model Card: Towards Intelligence Frontier for Real-World Complexity](../pdfs/bytedance/model-cards/seed2-0-model-card.pdf) | archived | [Source](https://seed.bytedance.com/en/seed_model_portfolio) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | RecurrentGemma Model Card | missing_pdf | [Source](https://ai.google.dev/gemma/docs/recurrentgemma/model_card) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | PaliGemma 2 Model Card | missing_pdf | [Source](https://ai.google.dev/gemma/docs/paligemma/model-card-2) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | PaliGemma 1 Model Card | missing_pdf | [Source](https://ai.google.dev/gemma/docs/paligemma/model-card) |
+| Unknown | [Cohere](../pdfs/cohere/README.md) | North Mini Code 1.0 Model Card | missing_pdf | [Source](https://huggingface.co/CohereLabs/North-Mini-Code-1.0) |
+| Unknown | [Cohere](../pdfs/cohere/README.md) | North Micro Vision Instruct Model Card | missing_pdf | [Source](https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct) |
 | Unknown | [NVIDIA](../pdfs/nvidia/README.md) | NVIDIA Nemotron 3 Nano 30B A3B Model Card | missing_pdf | [Source](https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16) |
+| Unknown | [Meta](../pdfs/meta/README.md) | Muse Glimmer 30B Model Card | missing_pdf | [Source](https://huggingface.co/meta-models/Muse-Glimmer-30B) |
 | Unknown | [Mistral AI](../pdfs/mistral/README.md) | Mistral-Small-4-119B-2603 Model Card | missing_pdf | [Source](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) |
 | Unknown | [Mistral AI](../pdfs/mistral/README.md) | Mistral-Large-3-675B-Instruct-2512 Model Card | missing_pdf | [Source](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) |
+| Unknown | [Mistral AI](../pdfs/mistral/README.md) | Mistral Medium 3.5 Model Card | missing_pdf | [Source](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) |
+| Unknown | [MiniMax](../pdfs/minimax/README.md) | MiniMax-Music3 Model Card | missing_pdf | [Source](https://huggingface.co/MiniMaxAI/MiniMax-Music3) |
+| Unknown | [MiniMax](../pdfs/minimax/README.md) | MiniMax-M3 Model Card | missing_pdf | [Source](https://huggingface.co/MiniMaxAI/MiniMax-M3) |
+| Unknown | [MiniMax](../pdfs/minimax/README.md) | MiniMax-H3 Model Card | missing_pdf | [Source](https://huggingface.co/MiniMaxAI/MiniMax-H3) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | MedGemma 1.5 Model Card | missing_pdf | [Source](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | MedGemma 1 Model Card | missing_pdf | [Source](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card-v1) |
+| Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Voice-2 Model Card](../pdfs/microsoft/model-cards/mai-voice-2-model-card.pdf) | archived | [Source](https://microsoft.ai/models/mai-voice-2/) |
+| Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Transcribe-2 Model Card](../pdfs/microsoft/model-cards/mai-transcribe-2-model-card.pdf) | archived | [Source](https://microsoft.ai/models/mai-transcribe-2/) |
+| Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | MAI-Thinking-1 Model Card | missing_pdf | [Source](https://ai.azure.com/catalog/models/MAI-Thinking-1) |
+| Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Image-2.6 / MAI-Image-2.6-Flash Model Card](../pdfs/microsoft/model-cards/mai-image-2-6-model-card.pdf) | archived | [Source](https://microsoft.ai/models/mai-image-2-6/) |
+| Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Cyber-1-Flash Model Card](../pdfs/microsoft/model-cards/mai-cyber-1-flash-model-card.pdf) | archived | [Source](https://microsoft.ai/models/mai-cyber-1-flash/) |
+| Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Code-1.1-Flash Model Card](../pdfs/microsoft/model-cards/mai-code-1-1-flash-model-card.pdf) | archived | [Source](https://microsoft.ai/models/mai-code-1-flash/) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | [Lyria 3.5 Model Card](../pdfs/google/model-cards/lyria-3-5-model-card.pdf) | archived | [Source](https://deepmind.google/models/model-cards/lyria-3-5/) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | [Lyria 3 Model Card](../pdfs/google/model-cards/lyria-3-model-card.pdf) | archived | [Source](https://deepmind.google/models/model-cards/lyria-3/) |
 | Unknown | [Meta](../pdfs/meta/README.md) | Llama 4 Model Card | missing_pdf | [Source](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md) |
@@ -80,11 +96,16 @@
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | [Gemini 2.5 Computer Use Model Card](../pdfs/google/model-cards/gemini-2-5-computer-use-model-card.pdf) | archived | [Source](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Computer-Use-Model-Card.pdf) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | [Gemini 2.0 Flash-Lite Model Card](../pdfs/google/model-cards/gemini-2-0-flash-lite-model-card.pdf) | archived | [Source](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Lite-Model-Card.pdf) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | [Gemini 2.0 Flash Model Card](../pdfs/google/model-cards/gemini-2-0-flash-model-card.pdf) | archived | [Source](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf) |
+| Unknown | [Z.ai / Zhipu AI](../pdfs/zai/README.md) | GLM-5.3-Flash Model Card | missing_pdf | [Source](https://huggingface.co/zai-org/GLM-5.3-Flash) |
+| Unknown | [Z.ai / Zhipu AI](../pdfs/zai/README.md) | GLM-5.3 Model Card | missing_pdf | [Source](https://huggingface.co/zai-org/GLM-5.3) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | FunctionGemma Model Card | missing_pdf | [Source](https://ai.google.dev/gemma/docs/functiongemma/model_card) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | EmbeddingGemma Model Card | missing_pdf | [Source](https://ai.google.dev/gemma/docs/embeddinggemma/model_card) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | DiffusionGemma Model Card | missing_pdf | [Source](https://ai.google.dev/gemma/docs/diffusiongemma/model_card?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content) |
 | Unknown | [Mistral AI](../pdfs/mistral/README.md) | Devstral-2-123B-Instruct-2512 Model Card | missing_pdf | [Source](https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512) |
 | Unknown | [NVIDIA](../pdfs/nvidia/README.md) | Cosmos-Reason1 7B Model Card | missing_pdf | [Source](https://huggingface.co/nvidia/Cosmos-Reason1-7B) |
+| Unknown | [Cohere](../pdfs/cohere/README.md) | Command A+ Model Card | missing_pdf | [Source](https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16) |
+| Unknown | [Cohere](../pdfs/cohere/README.md) | Cohere Transcribe Model Card | missing_pdf | [Source](https://huggingface.co/CohereLabs/cohere-transcribe-03-2026) |
+| Unknown | [Cohere](../pdfs/cohere/README.md) | Cohere Transcribe Arabic Model Card | missing_pdf | [Source](https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | CodeGemma Model Card | missing_pdf | [Source](https://ai.google.dev/gemma/docs/codegemma/model_card) |
 | Unknown | [Amazon / Nova](../pdfs/amazon/README.md) | Amazon Nova Premier Model Card | missing_pdf | [Source](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-premier.html) |
 

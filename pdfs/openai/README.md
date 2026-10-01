@@ -1,6 +1,6 @@
 # OpenAI
 
-[Home](../../README.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 
@@ -10,7 +10,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | --- | ---: |
 | [Technical Report](technical-reports/README.md) | 6 |
 | [Model Card](model-cards/README.md) | 1 |
-| [System Card](system-cards/README.md) | 34 |
+| [System Card](system-cards/README.md) | 35 |
 
 ## All reports
 
@@ -19,6 +19,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | 2026-09-29 | [Addendum to GPT-6 Astra System Card: GPT-6.1 Sol](system-cards/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-6-1-sol) |
 | 2026-09-08 | [ChatGPT Images 2.5 System Card](system-cards/chatgpt-images-2-5-system-card.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/chatgpt-images-2-5) |
 | 2026-09-03 | [GPT-6 Astra System Card](system-cards/gpt-6-astra-system-card.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-6-astra) |
+| 2026-08-06 | [GPT-5.6 — August Updates](system-cards/gpt-5-6-august-updates.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-5-6-august-update) |
 | 2026-07-09 | [GPT-5.6 System Card](system-cards/gpt-5-6-system-card.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-5-6) |
 | 2026-07-08 | [GPT-Live System Card](system-cards/gpt-live-system-card.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-live) |
 | 2026-06-26 | [GPT-5.6 Preview System Card](system-cards/gpt-5-6-preview-system-card.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-5-6-preview) |

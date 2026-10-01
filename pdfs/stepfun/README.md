@@ -1,6 +1,6 @@
 # StepFun
 
-[Home](../../README.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 
@@ -30,5 +30,6 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | 2025-07-22 | [Step-Audio 2 Technical Report](technical-reports/step-audio-2--arxiv-v3.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://github.com/stepfun-ai/Step-Audio2) |
 | 2025-06-10 | [Step-Audio-AQAA: a Fully End-to-End Expressive Large Audio Language Model](technical-reports/step-audio-aqaa--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://github.com/stepfun-ai/Step-Audio) |
 | 2025-02-17 | [Step-Audio: Unified Understanding and Generation in Intelligent Speech Interaction](technical-reports/step-audio--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://github.com/stepfun-ai/Step-Audio) |
+| Unknown | Step-3.7-Flash Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://huggingface.co/stepfun-ai/Step-3.7-Flash) |
 
 Archive versions, checksums, retrieval times, and revision dates: [catalog.csv](../../catalog.csv).

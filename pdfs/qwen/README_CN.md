@@ -1,6 +1,6 @@
 # Alibaba / Qwen / Wan
 
-[首页](../../README_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -8,7 +8,7 @@
 
 | 类型 | 已归档 PDF |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 39 |
+| [技术报告](technical-reports/README_CN.md) | 40 |
 | [模型卡](model-cards/README_CN.md) | 0 |
 | [系统卡](system-cards/README_CN.md) | 0 |
 
@@ -18,6 +18,7 @@
 | --- | --- | --- | --- |
 | 2026-09-07 | [Qwen-Audio-3.0-ASR Technical Report](technical-reports/qwen-audio-3-0-asr--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2609.07549) |
 | 2026-08-31 | [Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving](technical-reports/qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/QwenLM/Qwen-Drive-1.0) |
+| 2026-08-26 | [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](technical-reports/qwen3-8-flash-next.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/QwenLM/Qwen3.8-Flash-Next) |
 | 2026-08-06 | [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](technical-reports/wan-animate-2--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.06009) |
 | 2026-07-30 | [Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents](technical-reports/qwen-ui-agent--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.28227) |
 | 2026-07-10 | [Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation](technical-reports/wan-dancer--arxiv-v3.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.09581) |

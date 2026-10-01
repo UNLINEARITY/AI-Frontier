@@ -1,6 +1,6 @@
 # MiniMax
 
-[首页](../../README_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -22,7 +22,10 @@
 | 2025-06-16 | [MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention](technical-reports/minimax-m1-scaling-test-time-compute-efficiently-with-lightning-attention--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-M1) |
 | 2025-05-12 | [MiniMax-Speech: Intrinsic Zero-Shot Text-to-Speech with a Learnable Speaker Encoder](technical-reports/minimax-speech--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2505.07916) |
 | 2025-01-14 | [MiniMax-01: Scaling Foundation Models with Lightning Attention](technical-reports/minimax-01-scaling-foundation-models-with-lightning-attention--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-01) |
+| 未确认 | MiniMax-Music3 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/MiniMaxAI/MiniMax-Music3) |
+| 未确认 | MiniMax-M3 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/MiniMaxAI/MiniMax-M3) |
 | 未确认 | MiniMax-M2.1 Technical Report（待补齐） | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-M2.1) |
 | 未确认 | MiniMax-H3 Technical Report（待补齐） | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-H3) |
+| 未确认 | MiniMax-H3 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/MiniMaxAI/MiniMax-H3) |
 
 归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../catalog.csv)。

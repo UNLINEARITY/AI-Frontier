@@ -1,6 +1,6 @@
 # Tencent / Hunyuan
 
-[首页](../../README_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -8,7 +8,7 @@
 
 | 类型 | 已归档 PDF |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 11 |
+| [技术报告](technical-reports/README_CN.md) | 14 |
 | [模型卡](model-cards/README_CN.md) | 0 |
 | [系统卡](system-cards/README_CN.md) | 0 |
 
@@ -16,7 +16,10 @@
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-08-05 | [WorldClaw: Agentic 3D Open-World Generation at Scale](technical-reports/hunyuan3d-worldclaw--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.05248) |
+| 2026-08-03 | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](technical-reports/hunyuan3d-buffalo-1-0--arxiv-v3.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.02711) |
 | 2026-07-06 | [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](technical-reports/hunyuan-ocr-1-5--arxiv-v3.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
+| 2026-05-21 | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](technical-reports/hy-mt2--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.22064) |
 | 2025-11-24 | [HunyuanVideo 1.5 Technical Report](technical-reports/hunyuan-video-1-5--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |
 | 2025-11-24 | [HunyuanOCR Technical Report](technical-reports/hunyuan-ocr--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
 | 2025-09-28 | [HunyuanImage 3.0 Technical Report](technical-reports/hunyuan-image-3--arxiv-v3.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) |

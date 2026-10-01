@@ -6,6 +6,7 @@
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 未确认 | Muse Glimmer 30B Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://huggingface.co/meta-models/Muse-Glimmer-30B) |
 | 未确认 | Llama 4 Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md) |
 | 未确认 | Llama 3.3 Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md) |
 | 未确认 | Llama 3.2 Vision Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md) |

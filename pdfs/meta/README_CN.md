@@ -1,6 +1,6 @@
 # Meta
 
-[首页](../../README_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -10,12 +10,13 @@
 | --- | ---: |
 | [技术报告](technical-reports/README_CN.md) | 28 |
 | [模型卡](model-cards/README_CN.md) | 0 |
-| [系统卡](system-cards/README_CN.md) | 0 |
+| [系统卡](system-cards/README_CN.md) | 2 |
 
 ## 全部报告
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-05-14 | [Muse Spark Safety & Preparedness Report](system-cards/muse-spark-safety-and-preparedness-report--arxiv-v1.pdf) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://arxiv.org/abs/2606.12429) |
 | 2026-03-15 | [V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning](technical-reports/v-jepa-2-1-technical-report--arxiv-v3.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2603.14482) |
 | 2026-02-17 | [SAM 3D Body: Robust Full-Body Human Mesh Recovery](technical-reports/sam-3d-body-technical-report--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2602.15989) |
 | 2025-12-22 | [Pushing the Frontier of Audiovisual Perception with Large-Scale Multimodal Correspondence Learning](technical-reports/perception-encoder-audiovisual-technical-report--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.19687) |
@@ -44,6 +45,8 @@
 | 2022-11-16 | [Galactica: A Large Language Model for Science](technical-reports/galactica-a-large-language-model-for-science--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2211.09085) |
 | 2022-07-11 | [No Language Left Behind: Scaling Human-Centered Machine Translation](technical-reports/nllb-200-technical-report--arxiv-v3.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2207.04672) |
 | 2022-05-02 | [OPT: Open Pre-trained Transformer Language Models](technical-reports/opt-open-pre-trained-transformer-language-models--arxiv-v4.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2205.01068) |
+| 未确认 | [Muse Spark 1.1 Evaluation Report](system-cards/muse-spark-1-1-evaluation-report.pdf) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://research.meta.ai/blog/introducing-muse-spark-meta-model-api) |
+| 未确认 | Muse Glimmer 30B Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/meta-models/Muse-Glimmer-30B) |
 | 未确认 | Llama 4 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md) |
 | 未确认 | Llama 3.3 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md) |
 | 未确认 | Llama 3.2 Vision Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md) |

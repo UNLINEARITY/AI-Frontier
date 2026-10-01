@@ -2,11 +2,14 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**11 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**14 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-08-05 | [WorldClaw: Agentic 3D Open-World Generation at Scale](hunyuan3d-worldclaw--arxiv-v1.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2608.05248) |
+| 2026-08-03 | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](hunyuan3d-buffalo-1-0--arxiv-v3.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2608.02711) |
 | 2026-07-06 | [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](hunyuan-ocr-1-5--arxiv-v3.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
+| 2026-05-21 | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](hy-mt2--arxiv-v2.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2605.22064) |
 | 2025-11-24 | [HunyuanVideo 1.5 Technical Report](hunyuan-video-1-5--arxiv-v2.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |
 | 2025-11-24 | [HunyuanOCR Technical Report](hunyuan-ocr--arxiv-v2.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
 | 2025-09-28 | [HunyuanImage 3.0 Technical Report](hunyuan-image-3--arxiv-v3.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) |

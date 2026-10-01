@@ -1,6 +1,6 @@
 # Mistral AI
 
-[Home](../../README.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 
@@ -29,6 +29,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | 2023-10-10 | [Mistral 7B](technical-reports/mistral-7b--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2310.06825) |
 | Unknown | Mistral-Small-4-119B-2603 Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) |
 | Unknown | Mistral-Large-3-675B-Instruct-2512 Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) |
+| Unknown | Mistral Medium 3.5 Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) |
 | Unknown | Leanstral-1.5-119B-A6B Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B) |
 | Unknown | Devstral-2-123B-Instruct-2512 Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512) |
 

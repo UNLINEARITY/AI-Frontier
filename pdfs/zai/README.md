@@ -1,6 +1,6 @@
 # Z.ai / Zhipu AI
 
-[Home](../../README.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 
@@ -34,5 +34,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | 2022-10-05 | [GLM-130B: An Open Bilingual Pre-trained Model](technical-reports/glm-130b-an-open-bilingual-pre-trained-model--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://github.com/zai-org/GLM-130B) |
 | 2022-05-29 | [CogVideo: Large-scale Pretraining for Text-to-Video Generation via Transformers](technical-reports/cogvideo-large-scale-pretraining-for-text-to-video-generation-via-transformers--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://github.com/zai-org/CogVideo) |
 | 2022-04-28 | [CogView2: Faster and Better Text-to-Image Generation via Hierarchical Transformers](technical-reports/cogview2-faster-and-better-text-to-image-generation-via-hierarchical-transformers--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://github.com/zai-org/CogView2) |
+| Unknown | GLM-5.3-Flash Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://huggingface.co/zai-org/GLM-5.3-Flash) |
+| Unknown | GLM-5.3 Model Card (Pending) | [Model Card](../../reports/model-cards.md) | [Source](https://huggingface.co/zai-org/GLM-5.3) |
 
 Archive versions, checksums, retrieval times, and revision dates: [catalog.csv](../../catalog.csv).

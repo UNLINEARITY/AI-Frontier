@@ -2,13 +2,14 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**34 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**35 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
 | 2026-09-29 | [Addendum to GPT-6 Astra System Card: GPT-6.1 Sol](addendum-to-gpt-6-astra-system-card-gpt-6-1-sol.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-6-1-sol) |
 | 2026-09-08 | [ChatGPT Images 2.5 System Card](chatgpt-images-2-5-system-card.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/chatgpt-images-2-5) |
 | 2026-09-03 | [GPT-6 Astra System Card](gpt-6-astra-system-card.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-6-astra) |
+| 2026-08-06 | [GPT-5.6 — August Updates](gpt-5-6-august-updates.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-5-6-august-update) |
 | 2026-07-09 | [GPT-5.6 System Card](gpt-5-6-system-card.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-5-6) |
 | 2026-07-08 | [GPT-Live System Card](gpt-live-system-card.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-live) |
 | 2026-06-26 | [GPT-5.6 Preview System Card](gpt-5-6-preview-system-card.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-5-6-preview) |
