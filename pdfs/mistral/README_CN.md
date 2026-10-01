@@ -1,6 +1,6 @@
 # Mistral AI
 
-[首页](../../README_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -29,6 +29,7 @@
 | 2023-10-10 | [Mistral 7B](technical-reports/mistral-7b--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2310.06825) |
 | 未确认 | Mistral-Small-4-119B-2603 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) |
 | 未确认 | Mistral-Large-3-675B-Instruct-2512 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) |
+| 未确认 | Mistral Medium 3.5 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) |
 | 未确认 | Leanstral-1.5-119B-A6B Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B) |
 | 未确认 | Devstral-2-123B-Instruct-2512 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512) |
 

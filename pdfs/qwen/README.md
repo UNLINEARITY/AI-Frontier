@@ -1,6 +1,6 @@
 # Alibaba / Qwen / Wan
 
-[Home](../../README.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 
@@ -8,7 +8,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 
 | Type | Archived PDFs |
 | --- | ---: |
-| [Technical Report](technical-reports/README.md) | 39 |
+| [Technical Report](technical-reports/README.md) | 40 |
 | [Model Card](model-cards/README.md) | 0 |
 | [System Card](system-cards/README.md) | 0 |
 
@@ -18,6 +18,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | --- | --- | --- | --- |
 | 2026-09-07 | [Qwen-Audio-3.0-ASR Technical Report](technical-reports/qwen-audio-3-0-asr--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2609.07549) |
 | 2026-08-31 | [Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving](technical-reports/qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://github.com/QwenLM/Qwen-Drive-1.0) |
+| 2026-08-26 | [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](technical-reports/qwen3-8-flash-next.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://github.com/QwenLM/Qwen3.8-Flash-Next) |
 | 2026-08-06 | [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](technical-reports/wan-animate-2--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2608.06009) |
 | 2026-07-30 | [Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents](technical-reports/qwen-ui-agent--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2607.28227) |
 | 2026-07-10 | [Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation](technical-reports/wan-dancer--arxiv-v3.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2607.09581) |

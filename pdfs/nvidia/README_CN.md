@@ -1,6 +1,6 @@
 # NVIDIA
 
-[首页](../../README_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -8,7 +8,7 @@
 
 | 类型 | 已归档 PDF |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 20 |
+| [技术报告](technical-reports/README_CN.md) | 21 |
 | [模型卡](model-cards/README_CN.md) | 0 |
 | [系统卡](system-cards/README_CN.md) | 0 |
 
@@ -16,6 +16,7 @@
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-07-06 | [Unified Audio Intelligence Without Regressing on Text Intelligence](technical-reports/nemotron-audex-technical-report--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.05196) |
 | 2026-06-01 | [Cosmos 3: Omnimodal World Models for Physical AI](technical-reports/cosmos-3-omnimodal-world-models-for-physical-ai.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) |
 | 2026-03-19 | [Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation](technical-reports/nemotron-cascade-2-technical-report--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2603.19220) |
 | 2025-12-15 | [Nemotron-Cascade: Scaling Cascaded Reinforcement Learning for General-Purpose Reasoning Models](technical-reports/nemotron-cascade-technical-report--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.13607) |

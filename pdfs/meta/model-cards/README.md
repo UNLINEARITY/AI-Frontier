@@ -6,6 +6,7 @@
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| Unknown | Muse Glimmer 30B Model Card (Pending) | [Model Card](../../../reports/model-cards.md) | [Source](https://huggingface.co/meta-models/Muse-Glimmer-30B) |
 | Unknown | Llama 4 Model Card (Pending) | [Model Card](../../../reports/model-cards.md) | [Source](https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md) |
 | Unknown | Llama 3.3 Model Card (Pending) | [Model Card](../../../reports/model-cards.md) | [Source](https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md) |
 | Unknown | Llama 3.2 Vision Model Card (Pending) | [Model Card](../../../reports/model-cards.md) | [Source](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md) |

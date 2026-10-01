@@ -10,7 +10,7 @@
 | Mistral AI | Mistral 7B、Mixtral、Pixtral、Magistral、Voxtral、Ministral 3 等作者报告 | 继续检查 [官方模型文档](https://docs.mistral.ai/) 与历史发布页，尤其尚未登记的 HTML / Markdown 模型卡 |
 | NVIDIA | Nemotron 4、Nemotron Nano 2、Nemotron 3 系列，以及 Cosmos 1 / 3 报告 | 继续核对 [Research](https://research.nvidia.com/) 的其他 Nemotron 与 Cosmos 版本及模态分支 |
 | DeepSeek | LLM、Coder、Math、MoE、V2 / V3 / V3.2、R1、VL、Janus、Prover、OCR 系列的作者报告与 [官方仓库](https://github.com/deepseek-ai) PDF | 继续逐仓库核对版本；V3.2-Exp 与正式 V3.2 分开登记，避免以文件名推断身份 |
-| Alibaba / Qwen / Wan | Qwen 主系列及各模态报告，并补入 Wan2.1、VACE、S2V、Animate / Animate 2、Dancer、Move 和 Tongyi DeepResearch | 继续检查 [官方仓库](https://github.com/QwenLM) 新增报告；Qwen3.8 在本轮检查的仓库中未找到报告 PDF |
+| Alibaba / Qwen / Wan | Qwen 主系列及各模态报告，并补入 Wan2.1、VACE、S2V、Animate / Animate 2、Dancer、Move 和 Tongyi DeepResearch | 继续检查 [官方仓库](https://github.com/QwenLM) 新增报告；Qwen3.8 通用家族独立报告仍未找到；Qwen3.8-Flash-Next 的独立架构报告已补收，二者不混同 |
 | Moonshot AI / Kimi | Kimi k1.5、K2、K2.5、K3、Audio、VL、Dev、Linear、Kimina-Prover、Moonlight 官方报告 | 继续核对 [官方仓库](https://github.com/MoonshotAI) 历史版本与缺失日期；仓库修订日期不等于报告首次发布日 |
 | 智谱 / Z.ai | GLM 主系列及视觉、语音、OCR，CogVLM、CogAgent、CogView、CogVideo、CodeGeeX 作者报告 | 继续检查 [官方仓库](https://github.com/zai-org) 的新模态报告，包括 GLM-Image / ASR；确认下载失败条目的替代官方入口 |
 | MiniMax | MiniMax-01、M1、Sparse Attention，以及补查发现的 Speech、M2 系列家族报告和 VTP 模型报告 | M2、M2.5、M2.7 由一份家族报告明确覆盖，不重复保存；M2.1 独立报告与 H3 报告仍待核实，M3 入口保留所链接报告的原始题名 |
@@ -18,7 +18,7 @@
 | 腾讯 / Hunyuan | [官方仓库](https://github.com/Tencent-Hunyuan) 的 Large、A13B、MT、OCR、DiT、Image、Video、3D 模型报告 | 继续扩展历史版本、HunyuanWorld 与其他模态分支；仓库首次报告公告与后来的 arXiv 提交分开记录 |
 | ByteDance / Seed | [官方模型目录](https://seed.bytedance.com/en/seed_model_portfolio) 的 Seed1.8 / 2.0 / 2.1 模型卡，以及 Thinking、VL、Diffusion、Seedream、Seedance、Seed3D 作者报告 | Seed-OSS 仓库报告入口仍标为 Coming Soon；官网 Transparency 的训练内容摘要属于监管文档，不自动归入三类模型报告 |
 | Cohere | [官方研究目录](https://cohere.com/research/aya) 与 Command A、Aya / 23 / Expanse / Vision / Tiny Aya 作者报告 | 继续核查 Command A+、Reasoning、Vision 及 Embed / Rerank 的独立原始报告；模型页面或使用文档不替代 PDF |
-| Microsoft / Phi | Phi-1、1.5、3、4、4-Mini、4-Reasoning、Reasoning-Vision，以及官方模型卡链接的 Mini-Flash 架构报告 | [Microsoft Research](https://www.microsoft.com/en-us/research/) 的其他模型家族尚未全面覆盖；不把 Phi-4-Mini 报告重复计为两个模态报告 |
+| Microsoft / Phi / MAI | Phi-1、1.5、3、4、4-Mini、4-Reasoning、Reasoning-Vision，以及官方模型卡链接的 Mini-Flash 架构报告 | [Microsoft Research](https://www.microsoft.com/en-us/research/) 的其他模型家族尚未全面覆盖；不把 Phi-4-Mini 报告重复计为两个模态报告 |
 | Amazon / Nova | [Amazon Science](https://www.amazon.science/) 的 Nova 家族、Nova Sonic、Nova 2 原始报告，以及 Nova Act 官方 AI Service Card | 技术报告与模型卡合并发布时归档一次；Premier HTML 卡片单独登记缺口；Nova Act Service Card 按完整服务的风险与部署范围归类为 System Card 并保留官方原始题名；继续核查其他系列 |
 
 arXiv 条目的首次发布日期取其官方元数据中的首次提交日，修订日期与归档版本另记；这不保证是所有发布渠道中最早出现的日期。官网目录只给出 Updated 时，仅填写修订日期。PDF 以原始字节保存，解析采用宽松模式；发布者原文件的结构警告不通过重写文件来消除。
@@ -36,3 +36,18 @@ Google 补查医疗、嵌入、翻译、视觉语言和机器人模型；Meta �
 MiniMax M2、M2.5、M2.7 的旧版“未找到 PDF”记录由已验证家族报告替代；报告未明确讨论 M2.1，因此保留其独立报告缺口。家族覆盖不代表每次模型发布均有独立报告。DeepSeek-V4 的 arXiv 编号月份与官方首次提交历史不一致，按实际提交历史记录并保留异常说明。未将 Engram、MoBA、Attention Residuals 等独立方法论文自动视为新的产品模型报告。
 
 Alibaba 的 Wan2.2 官方 Paper 入口链接 Wan2.1 家族报告，未重复归档为 Wan2.2 专属报告。Seed2.0 / 2.1 模型卡目录给出的模型发布日期未作为报告首次发布日期；尚未确认的文档日期留空。
+
+
+## 最新模型逐项核查（2026-10-01）
+
+最新模型覆盖现独立维护为 [英文页面](LATEST_MODELS.md) 与 [中文页面](LATEST_MODELS_CN.md)，按厂商列出近期主要模型与模态分支、官方入口、可读 PDF 与未解决的报告缺口。它是人工核查清单，尚非完整发布历史，也不是自动监测。
+
+本轮从最新模型入口反查报告，补收 DeepSeek-V4.1-Flash 技术报告、DeepSeek V4 / V3.2 独立模型卡、Qwen3.8-Flash-Next 架构报告，以及 Hy-MT2、Hunyuan3D-Buffalo 1.0、WorldClaw 模型报告。DeepSeek 两份卡片封面都列出早于 Publication date 的 Updated date，保留发布者原文并在索引说明，不以模型发布日期代替报告日期。
+
+GLM-5.3 / Flash、Step-3.7-Flash 与 MiniMax M3 / H3 / Music3 的官方网页或 Markdown 模型卡登记为 PDF 缺口。Seedance2.5、Seedream5.0Pro、SeedRealtime / SeedAudio1.0 的模型入口纳入核查，但本轮未找到对应原始 PDF；不以 Seedance2、Seedream4.5 或其他旧模型报告替代。MiniMax H3 官方发布文明确预告完整技术报告，登记为待发布，未将网页说明转换为 PDF。
+
+已收录原文但报告日期未确认的 Gemini3.8、KimiK3、Seed2.1 等模型也从新页面直接链接。先检查报告身份和实际内容，再认定新发布版本是否被家族报告覆盖；无目录记录、未找到 PDF、厂商预告待发布是不同情况。
+
+OpenAI 补收 GPT-5.6 的 August Updates 安全报告，与 7 月系统卡分别归档；更新日期不代表新增模型发布日期。Cohere 补收 North Small Translate 与 Command-A-Translate 技术报告，Command A+、North Mini Code / Micro Vision、Transcribe 系列及 Mistral Medium 3.5 的网页模型卡登记原始 PDF 缺口。Cohere Transcribe 的原始仓库文件需授权访问，未断言不可访问文件中没有 PDF。Embed5、Rerank4、Parse5 和 Grok 的图像、视频、语音分支已有官方模型入口，但独立报告仍待核实。
+
+Meta 补收 Muse Spark 安全与准备度报告和 Muse Spark1.1 完整评估报告；Muse Spark1.3 / 1.2、Muse Code 及其他新模态分支仍逐项标注待核实，未把短篇评测方法附件计为核心模型报告。Microsoft 补入 MAI-Thinking-1 技术报告及 Transcribe2、Cyber1Flash、Image2.6、Voice2、Code1.1Flash 模型卡，厂商目录扩展为 Phi / MAI。NVIDIA 补收 Nemotron Labs Audex 技术报告；GR00T N1.7 的新版本独立报告不以旧 N1 报告替代。Amazon 补入 Nova2Lite 与 NovaPremier 的前沿安全报告；NovaAct 原始 AI Service Card 保持已归档。

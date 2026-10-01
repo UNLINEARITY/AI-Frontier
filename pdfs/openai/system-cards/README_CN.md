@@ -2,13 +2,14 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已归档 **34 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已归档 **35 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
 | 2026-09-29 | [Addendum to GPT-6 Astra System Card: GPT-6.1 Sol](addendum-to-gpt-6-astra-system-card-gpt-6-1-sol.pdf) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://deploymentsafety.openai.com/gpt-6-1-sol) |
 | 2026-09-08 | [ChatGPT Images 2.5 System Card](chatgpt-images-2-5-system-card.pdf) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://deploymentsafety.openai.com/chatgpt-images-2-5) |
 | 2026-09-03 | [GPT-6 Astra System Card](gpt-6-astra-system-card.pdf) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://deploymentsafety.openai.com/gpt-6-astra) |
+| 2026-08-06 | [GPT-5.6 — August Updates](gpt-5-6-august-updates.pdf) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://deploymentsafety.openai.com/gpt-5-6-august-update) |
 | 2026-07-09 | [GPT-5.6 System Card](gpt-5-6-system-card.pdf) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://deploymentsafety.openai.com/gpt-5-6) |
 | 2026-07-08 | [GPT-Live System Card](gpt-live-system-card.pdf) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://deploymentsafety.openai.com/gpt-live) |
 | 2026-06-26 | [GPT-5.6 Preview System Card](gpt-5-6-preview-system-card.pdf) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://deploymentsafety.openai.com/gpt-5-6-preview) |

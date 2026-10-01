@@ -1,6 +1,6 @@
 # DeepSeek
 
-[Home](../../README.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 
@@ -8,15 +8,18 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 
 | Type | Archived PDFs |
 | --- | ---: |
-| [Technical Report](technical-reports/README.md) | 22 |
-| [Model Card](model-cards/README.md) | 0 |
+| [Technical Report](technical-reports/README.md) | 23 |
+| [Model Card](model-cards/README.md) | 2 |
 | [System Card](system-cards/README.md) | 0 |
 
 ## All reports
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-09-17 | [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2609.19969) |
+| 2026-04-27 | [DeepSeek V4 Technical Documentation (Model Card)](model-cards/deepseek-v4-model-card.pdf) | [Model Card](../../reports/model-cards.md) | [Source](https://www.deepseek.com/en/transparency/) |
 | 2026-04-26 | [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](technical-reports/deepseek-v4--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2606.19348) |
+| 2026-04-17 | [DeepSeek V3.2 Technical Documentation (Model Card)](model-cards/deepseek-v3-2-model-card.pdf) | [Model Card](../../reports/model-cards.md) | [Source](https://www.deepseek.com/en/transparency/) |
 | 2026-01-28 | [DeepSeek-OCR 2: Visual Causal Flow](technical-reports/deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://github.com/deepseek-ai/DeepSeek-OCR-2) |
 | 2025-12-02 | [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](technical-reports/deepseek-v3-2-pushing-the-frontier-of-open-large-language-models--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2512.02556) |
 | 2025-11-27 | [DeepSeekMath-V2: Towards Self-Verifiable Mathematical Reasoning](technical-reports/deepseekmath-v2-towards-self-verifiable-mathematical-reasoning.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://github.com/deepseek-ai/DeepSeek-Math-V2) |

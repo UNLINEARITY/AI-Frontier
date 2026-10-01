@@ -1,11 +1,12 @@
-# Microsoft / Phi — Technical Report
+# Microsoft / Phi / MAI — Technical Report
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**8 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**9 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-06-02 | [MAI-Thinking-1: Building a Hill-Climbing Machine](mai-thinking-1-technical-report.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://microsoft.ai/models/mai-thinking-1/) |
 | 2026-03-04 | [Phi-4-reasoning-vision-15B Technical Report](phi-4-reasoning-vision--arxiv-v1.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2603.03975) |
 | 2025-07-09 | [Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation](phi-4-mini-flash-reasoning--arxiv-v3.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) |
 | 2025-04-30 | [Phi-4-reasoning Technical Report](phi-4-reasoning--arxiv-v1.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2504.21318) |

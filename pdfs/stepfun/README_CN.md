@@ -1,6 +1,6 @@
 # StepFun
 
-[首页](../../README_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -30,5 +30,6 @@
 | 2025-07-22 | [Step-Audio 2 Technical Report](technical-reports/step-audio-2--arxiv-v3.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step-Audio2) |
 | 2025-06-10 | [Step-Audio-AQAA: a Fully End-to-End Expressive Large Audio Language Model](technical-reports/step-audio-aqaa--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step-Audio) |
 | 2025-02-17 | [Step-Audio: Unified Understanding and Generation in Intelligent Speech Interaction](technical-reports/step-audio--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step-Audio) |
+| 未确认 | Step-3.7-Flash Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/stepfun-ai/Step-3.7-Flash) |
 
 归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../catalog.csv)。

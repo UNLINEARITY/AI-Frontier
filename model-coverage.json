@@ -1,0 +1,1235 @@
+{
+  "checked_at": "2026-10-01",
+  "models": [
+    {
+      "vendor": "openai",
+      "model": "GPT-6.1 Sol",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "addendum-to-gpt-6-astra-system-card-gpt-6-1-sol"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-6 Astra",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "gpt-6-astra-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "ChatGPT Images 2.5 / Sunburst / Flare",
+      "source_url": "https://deploymentsafety.openai.com/chatgpt-images-2-5",
+      "status": "family_report",
+      "note_en": "One system card covers the image model family.",
+      "note_cn": "同一份系统卡覆盖图像模型家族。",
+      "report_slugs": [
+        "chatgpt-images-2-5-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-Live / GPT-Live mini",
+      "source_url": "https://deploymentsafety.openai.com/gpt-live",
+      "status": "family_report",
+      "note_en": "Shared system card for real-time audio models.",
+      "note_cn": "实时音频模型由同一份系统卡覆盖。",
+      "report_slugs": [
+        "gpt-live-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.6 August safety update",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-6-august-update",
+      "status": "archived",
+      "note_en": "Additional safety report dated August 6; this date is a report update, not a model release.",
+      "note_cn": "8 月 6 日的补充安全报告；该日期是报告更新日期，并非模型发布日期。",
+      "report_slugs": [
+        "gpt-5-6-august-updates"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-Rosalind-5.5",
+      "source_url": "https://deploymentsafety.openai.com/gpt-rosalind-5-5",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "gpt-rosalind-5-5-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "Sora 2",
+      "source_url": "https://deploymentsafety.openai.com/sora-2",
+      "status": "archived",
+      "note_en": "Historical video branch. PDF preserved; official page says Sora was discontinued April 26, 2026.",
+      "note_cn": "历史视频分支。保留原始 PDF；官方页面说明 Sora 已于 2026 年 4 月 26 日停用。",
+      "report_slugs": [
+        "sora-2-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Opus 5.5",
+      "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "claude-opus-5-5-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Fable 5.1 / Mythos 5.1",
+      "source_url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
+      "status": "family_report",
+      "note_en": "Combined system card covers both models.",
+      "note_cn": "联合系统卡覆盖两个模型。",
+      "report_slugs": [
+        "claude-fable-5-1-and-mythos-5-1-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Sonnet 5",
+      "source_url": "https://anthropic.com/claude-sonnet-5-system-card",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "claude-sonnet-5-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Haiku 4.5",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "claude-haiku-4-5-system-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.8 Flash",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "gemini-3-8-flash-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.8 Audio: Live, extended thinking, TTS",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini Omni Flash",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "gemini-omni-flash-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.5 Audio: Translate, Transcribe, Transcribe Live",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.7 Flash",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "gemini-3-7-flash-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.1 Pro",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "gemini-3-1-pro-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.1 Flash Lite Image",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "gemini-3-1-flash-lite-image-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Lyria 3.5",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "lyria-3-5-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Veo 3.1 Lite",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "veo-3-1-lite-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Veo 3 / 3.1",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "veo-3-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Imagen 4",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "imagen-4-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini Robotics ER 2",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "gemini-robotics-er-2-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini Robotics On Device 2",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Official model-card PDF archived; directory update dates are not assumed to be first publication dates.",
+      "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
+      "report_slugs": [
+        "gemini-robotics-on-device-2-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemma 4",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "archived",
+      "note_en": "Technical report archived; official model card is web only. Technical report archived; the separate model card is web-only.",
+      "note_cn": "已收录技术报告；官方模型卡为网页。 已收录技术报告；独立模型卡目前仅有网页版本。",
+      "report_slugs": [
+        "gemma-4-technical-report",
+        "gemma-4-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "DiffusionGemma",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "web_only",
+      "note_en": "Official web model card recorded; no standalone PDF located in this audit.",
+      "note_cn": "已登记官方网页模型卡；本轮未找到独立 PDF。",
+      "report_slugs": [
+        "diffusiongemma-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "FunctionGemma",
+      "source_url": "https://deepmind.google/models/model-cards/",
+      "status": "web_only",
+      "note_en": "Official web model card recorded; no standalone PDF located in this audit.",
+      "note_cn": "已登记官方网页模型卡；本轮未找到独立 PDF。",
+      "report_slugs": [
+        "functiongemma-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "MedGemma 1.5",
+      "source_url": "https://developers.google.com/health-ai-developer-foundations/medgemma/model-card",
+      "status": "archived",
+      "note_en": "Technical report archived; web model card tracked separately. Technical report archived; the separate model card is web-only.",
+      "note_cn": "已收录技术报告；另行追踪网页模型卡。 已收录技术报告；独立模型卡目前仅有网页版本。",
+      "report_slugs": [
+        "medgemma-1-5-technical-report",
+        "medgemma-1-5-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "TranslateGemma",
+      "source_url": "https://ai.google.dev/gemma/docs/translategemma/model_card",
+      "status": "archived",
+      "note_en": "Translation family technical report archived.",
+      "note_cn": "已收录翻译模型家族技术报告。",
+      "report_slugs": [
+        "translategemma-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Muse Spark 1.3",
+      "source_url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "status": "unconfirmed",
+      "note_en": "Latest flagship release confirmed. Linked 4-page evaluation methodology is a companion, not a full technical/safety report; earlier Spark reports do not establish 1.3 coverage.",
+      "note_cn": "已核实最新旗舰发布。所附 4 页评测方法为配套文件，不能用早期 Spark 报告表示已覆盖 1.3。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "meta",
+      "model": "Muse Spark 1.2 / Muse Code",
+      "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "status": "unconfirmed",
+      "note_en": "Official release and short evaluation-methodology companions found; no standalone full model or safety report verified.",
+      "note_cn": "已找到官方发布及简短评测方法文件；未核实完整模型或安全报告。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "meta",
+      "model": "Muse Spark 1.1",
+      "source_url": "https://research.meta.ai/blog/introducing-muse-spark-meta-model-api",
+      "status": "archived",
+      "note_en": "112-page full capability/safety evaluation report verified.",
+      "note_cn": "已核实 112 页完整能力及安全评估报告。",
+      "report_slugs": [
+        "muse-spark-1-1-evaluation-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Muse Spark",
+      "source_url": "https://arxiv.org/abs/2606.12429",
+      "status": "archived",
+      "note_en": "Safety & Preparedness Report verified; publication date May 14 is distinct from April launch.",
+      "note_cn": "已核实安全与准备度报告；5 月 14 日报告日期不同于 4 月模型发布。",
+      "report_slugs": [
+        "muse-spark-safety-and-preparedness-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Muse Glimmer 30B",
+      "source_url": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "status": "web_only",
+      "note_en": "Official Markdown model card found; short evaluation methodology excluded from core archive.",
+      "note_cn": "已找到官方 Markdown 模型卡；简短评测方法不计入核心报告。",
+      "report_slugs": [
+        "muse-glimmer-30b-model-card"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Muse Image",
+      "source_url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+      "status": "unconfirmed",
+      "note_en": "Official release/safety page located; no standalone report/card PDF verified in this bounded audit.",
+      "note_cn": "已找到官方发布或安全说明页面；本轮尚未核实独立报告或卡片 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "meta",
+      "model": "Muse Video",
+      "source_url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+      "status": "unconfirmed",
+      "note_en": "Official release/safety page located; no standalone report/card PDF verified in this bounded audit.",
+      "note_cn": "已找到官方发布或安全说明页面；本轮尚未核实独立报告或卡片 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "meta",
+      "model": "Muse Voice Transcribe",
+      "source_url": "https://research.meta.ai/blog/introducing-muse-voice-transcribe",
+      "status": "unconfirmed",
+      "note_en": "Official release/safety page located; no standalone report/card PDF verified in this bounded audit.",
+      "note_cn": "已找到官方发布或安全说明页面；本轮尚未核实独立报告或卡片 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "meta",
+      "model": "Muse personal AI agent",
+      "source_url": "https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "status": "unconfirmed",
+      "note_en": "Official release/safety page located; no standalone report/card PDF verified in this bounded audit.",
+      "note_cn": "已找到官方发布或安全说明页面；本轮尚未核实独立报告或卡片 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama 4 Scout / Maverick",
+      "source_url": "https://www.llama.com/models/llama-4/",
+      "status": "web_only",
+      "note_en": "Official family/model web cards tracked; no standalone original PDF located.",
+      "note_cn": "已追踪官方家族及模型网页卡片；未找到独立原始 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok 4.7",
+      "source_url": "https://x.ai/safety",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "grok-4-7-model-card"
+      ]
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok Imagine Image 2.0",
+      "source_url": "https://docs.x.ai/developers/models",
+      "status": "unconfirmed",
+      "note_en": "Image generation/editing model confirmed in official model table; no corresponding report/card located.",
+      "note_cn": "官方模型表已确认图像生成与编辑模型；尚未找到对应报告或模型卡。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok Imagine Video 1.5",
+      "source_url": "https://docs.x.ai/developers/models",
+      "status": "unconfirmed",
+      "note_en": "Video model confirmed in official model table; no corresponding report/card located.",
+      "note_cn": "官方模型表已确认视频模型；尚未找到对应报告或模型卡。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok Voice API",
+      "source_url": "https://docs.x.ai/developers/models",
+      "status": "unconfirmed",
+      "note_en": "Audio branch confirmed in official documentation; no corresponding report/card located.",
+      "note_cn": "官方文档已确认音频分支；尚未找到对应报告或模型卡。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "mistral",
+      "model": "Mistral Medium 3.5",
+      "source_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+      "status": "web_only",
+      "note_en": "Official HTML model card identified; original PDF not located.",
+      "note_cn": "已确认官方网页模型卡；尚未找到原始 PDF。",
+      "report_slugs": [
+        "mistral-medium-3-5-model-card"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Mistral Small 4",
+      "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+      "status": "web_only",
+      "note_en": "Official HTML model card identified; original PDF not located.",
+      "note_cn": "已确认官方网页模型卡；尚未找到原始 PDF。",
+      "report_slugs": [
+        "mistral-small-4-model-card"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Mistral Large 3",
+      "source_url": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512",
+      "status": "web_only",
+      "note_en": "Official HTML model card identified; original PDF not located.",
+      "note_cn": "已确认官方网页模型卡；尚未找到原始 PDF。",
+      "report_slugs": [
+        "mistral-large-3-model-card"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Devstral 2",
+      "source_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512",
+      "status": "web_only",
+      "note_en": "Official HTML model card identified; original PDF not located.",
+      "note_cn": "已确认官方网页模型卡；尚未找到原始 PDF。",
+      "report_slugs": [
+        "devstral-2-model-card"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Leanstral 1.5",
+      "source_url": "https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B",
+      "status": "web_only",
+      "note_en": "Official HTML model card identified; original PDF not located.",
+      "note_cn": "已确认官方网页模型卡；尚未找到原始 PDF。",
+      "report_slugs": [
+        "leanstral-1-5-model-card"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Ministral 3",
+      "source_url": "https://mistral.ai/news/mistral-3/",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "ministral-3"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Voxtral TTS",
+      "source_url": "https://arxiv.org/abs/2603.25551",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "voxtral-tts"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Voxtral Realtime",
+      "source_url": "https://arxiv.org/abs/2602.11298",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "voxtral-realtime"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Shieldstral",
+      "source_url": "https://arxiv.org/abs/2607.25857",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "shieldstral"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Robostral Navigate",
+      "source_url": "https://arxiv.org/abs/2607.20785",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "robostral-navigate"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Mistral OCR 4.1",
+      "source_url": "https://docs.mistral.ai/models/ocr-4-1",
+      "status": "unconfirmed",
+      "note_en": "Official model documentation identified; no designated report/card PDF located.",
+      "note_cn": "已确认官方模型文档；尚未找到明确标注为报告或模型卡的 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron 3 Nano",
+      "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
+      "status": "archived",
+      "note_en": "Official technical report archived; model-launch dates kept separate from document chronology.",
+      "note_cn": "已收录官方技术报告；模型发布与文档时间线保持区分。",
+      "report_slugs": [
+        "nvidia-nemotron-3-nano-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron 3 Super",
+      "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3-Super/",
+      "status": "archived",
+      "note_en": "Official technical report archived; model-launch dates kept separate from document chronology.",
+      "note_cn": "已收录官方技术报告；模型发布与文档时间线保持区分。",
+      "report_slugs": [
+        "nvidia-nemotron-3-super-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron 3 Ultra",
+      "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/",
+      "status": "archived",
+      "note_en": "Official technical report archived; model-launch dates kept separate from document chronology.",
+      "note_cn": "已收录官方技术报告；模型发布与文档时间线保持区分。",
+      "report_slugs": [
+        "nvidia-nemotron-3-ultra-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Cosmos 3",
+      "source_url": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/",
+      "status": "archived",
+      "note_en": "Official technical report archived; model-launch dates kept separate from document chronology.",
+      "note_cn": "已收录官方技术报告；模型发布与文档时间线保持区分。",
+      "report_slugs": [
+        "cosmos-3-omnimodal-world-models-for-physical-ai"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron Cascade 2",
+      "source_url": "https://arxiv.org/abs/2603.19220",
+      "status": "archived",
+      "note_en": "Official technical report archived; model-launch dates kept separate from document chronology.",
+      "note_cn": "已收录官方技术报告；模型发布与文档时间线保持区分。",
+      "report_slugs": [
+        "nemotron-cascade-2-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron Labs Audex 30B A3B",
+      "source_url": "https://huggingface.co/nvidia/Nemotron-Labs-Audex-30B-A3B",
+      "status": "archived",
+      "note_en": "Unified audio/text model report verified, arXiv v2 July 7.",
+      "note_cn": "已核实统一音频与文本模型报告，arXiv v2 为 7 月 7 日。",
+      "report_slugs": [
+        "nemotron-audex-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Cosmos Reason 2 (2B / 8B / 32B)",
+      "source_url": "https://github.com/nvidia-cosmos/cosmos-reason2",
+      "status": "web_only",
+      "note_en": "Official repository/model documentation confirmed; older family papers do not constitute a current-version report. No standalone current-version PDF verified.",
+      "note_cn": "已核实官方仓库及模型文档；早期家族论文不代表当前版本报告，未核实当前版本独立 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "nvidia",
+      "model": "GR00T N1.7",
+      "source_url": "https://github.com/NVIDIA/Isaac-GR00T",
+      "status": "unconfirmed",
+      "note_en": "Official repository/model documentation confirmed; older family papers do not constitute a current-version report. No standalone current-version PDF verified.",
+      "note_cn": "已核实官方仓库及模型文档；早期家族论文不代表当前版本报告，未核实当前版本独立 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-V4.1-Flash",
+      "source_url": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/",
+      "status": "archived",
+      "report_slugs": [
+        "deepseek-v4-1-flash-technical-report"
+      ],
+      "note_en": "Technical report verified. Official model announcement is dated September 10; arXiv first submission is September 17. The launch page describes V4.1-Pro as forthcoming, not released.",
+      "note_cn": "已核验技术报告。官方模型公告为 9 月 10 日，arXiv 首次提交为 9 月 17 日；公告中的 V4.1-Pro 仍属未来计划，不记为已发布。"
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek V4 / V3.2 model cards",
+      "source_url": "https://www.deepseek.com/en/transparency/",
+      "status": "archived",
+      "report_slugs": [
+        "deepseek-v4-model-card",
+        "deepseek-v3-2-model-card"
+      ],
+      "note_en": "Separate official cards, not the technical reports. Both have Technical Documentation on the cover and Model Card on page 2; conflicting cover date order is preserved in the catalog.",
+      "note_cn": "独立官方模型卡，与技术报告分开归档。封面为 Technical Documentation，第二页为 Model Card；封面日期先后异常按原文保留。"
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3.8",
+      "source_url": "https://github.com/QwenLM/Qwen3.8",
+      "status": "web_only",
+      "note_en": "Official model repository available; separate general-model PDF report not located.",
+      "note_cn": "官方模型仓库已发布；尚未找到对应通用模型原始 PDF 报告。",
+      "report_slugs": [
+        "qwen3-8-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3.8-Flash-Next",
+      "source_url": "https://github.com/QwenLM/Qwen3.8-Flash-Next",
+      "status": "archived",
+      "note_en": "Original architecture report verified; cover dated 2026-08-26, not a general Qwen3.8 report.",
+      "note_cn": "已核实原始架构报告，封面日期为 2026-08-26；与 Qwen3.8 通用模型报告区分。",
+      "report_slugs": [
+        "qwen3-8-flash-next"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-Image-2.1",
+      "source_url": "https://github.com/QwenLM/Qwen-Image-2.1",
+      "status": "web_only",
+      "note_en": "Official model repository has no report PDF; Qwen-Image-2.0 report remains an earlier release.",
+      "note_cn": "官方模型仓库尚无报告 PDF；Qwen-Image-2.0 报告属于更早版本。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "qwen",
+      "model": "Wan video / Wan-Dancer / Wan-Animate-2",
+      "source_url": "https://github.com/Wan-Video",
+      "status": "family_report",
+      "note_en": "Latest reviewed official Wan branches include Dancer v3 and Animate-2 v2 reports; Wan2.2 points to Wan2.1 family report.",
+      "note_cn": "已检查 Wan 最新官方分支，含 Dancer v3 与 Animate-2 v2 报告；Wan2.2 入口仍链接 Wan2.1 家族报告。",
+      "report_slugs": [
+        "wan-2-1",
+        "wan-dancer",
+        "wan-animate-2"
+      ]
+    },
+    {
+      "vendor": "moonshot",
+      "model": "Kimi K3",
+      "source_url": "https://github.com/MoonshotAI/Kimi-K3",
+      "status": "archived",
+      "note_en": "Latest reviewed flagship; original k3_tech_report.pdf already indexed.",
+      "note_cn": "已检查最新旗舰，原始 k3_tech_report.pdf 已收录。",
+      "report_slugs": [
+        "kimi-k3-technical-report"
+      ]
+    },
+    {
+      "vendor": "moonshot",
+      "model": "Kimi Audio / Kimi VL",
+      "source_url": "https://github.com/MoonshotAI",
+      "status": "archived",
+      "note_en": "Reviewed official modality repositories; existing original reports cover their named releases.",
+      "note_cn": "已检查官方语音与视觉分支；已有原始报告覆盖对应已命名版本。",
+      "report_slugs": [
+        "kimi-audio-technical-report",
+        "kimi-vl-technical-report"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-5.3",
+      "source_url": "https://z.ai/blog/glm-5.3",
+      "status": "web_only",
+      "note_en": "Official release 2026-08-14 and HTML model card available; linked GLM-5 paper is an older release, not a 5.3 report.",
+      "note_cn": "2026-08-14 官方发布，已有 HTML 模型卡；所链接 GLM-5 论文属于更早版本，不能视为 5.3 报告。",
+      "report_slugs": [
+        "glm-5-3-model-card"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-5.3-Flash",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "status": "web_only",
+      "note_en": "Official native-multimodal model card and files reviewed; no original report/card PDF.",
+      "note_cn": "已检查官方原生多模态模型卡和文件列表；尚无对应原始报告或模型卡 PDF。",
+      "report_slugs": [
+        "glm-5-3-flash-model-card"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-OCR / GLM-TTS",
+      "source_url": "https://github.com/zai-org",
+      "status": "archived",
+      "note_en": "Latest reviewed dedicated OCR/TTS branches have original indexed reports.",
+      "note_cn": "已检查 OCR 与 TTS 独立分支，已有对应原始报告。",
+      "report_slugs": [
+        "glm-ocr-technical-report",
+        "glm-tts-technical-report"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-Image / GLM-ASR-Nano",
+      "source_url": "https://github.com/zai-org",
+      "status": "web_only",
+      "note_en": "Official image/ASR repositories exist; standalone PDF reports not located in reviewed entry points.",
+      "note_cn": "官方图像与 ASR 模型仓库已发布；已检查入口尚未找到独立 PDF 报告。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "minimax",
+      "model": "MiniMax-M3",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+      "status": "web_only",
+      "note_en": "Official HTML model card links existing MSA architecture paper; separate full M3 PDF not located.",
+      "note_cn": "官方 HTML 模型卡链接已有 MSA 架构论文；尚未找到独立的完整 M3 PDF。",
+      "report_slugs": [
+        "minimax-m3-model-card"
+      ]
+    },
+    {
+      "vendor": "minimax",
+      "model": "MiniMax-H3",
+      "source_url": "https://www.minimax.io/blog/minimax-h3",
+      "status": "pending",
+      "note_en": "Official release on 2026-07-31 promises full technical report; reviewed model card/repository have no PDF.",
+      "note_cn": "2026-07-31 官方发布文称完整技术报告将后续提供；已检查模型卡与仓库，尚无 PDF。",
+      "report_slugs": [
+        "minimax-h3-technical-report",
+        "minimax-h3-model-card"
+      ]
+    },
+    {
+      "vendor": "minimax",
+      "model": "MiniMax Music 3.0",
+      "source_url": "https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model",
+      "status": "web_only",
+      "note_en": "Official release 2026-08-13 and HTML model card explain architecture; no original PDF located.",
+      "note_cn": "2026-08-13 官方发布文与 HTML 模型卡说明架构；尚未找到原始 PDF。",
+      "report_slugs": [
+        "minimax-music3-model-card"
+      ]
+    },
+    {
+      "vendor": "minimax",
+      "model": "MiniMax Speech 2.8",
+      "source_url": "https://www.minimax.io/news/minimax-speech-28",
+      "status": "unconfirmed",
+      "note_en": "Official release 2026-01-23; original MiniMax-Speech report is earlier and not proof of 2.8-specific coverage.",
+      "note_cn": "2026-01-23 官方发布；更早的 MiniMax-Speech 报告不能证明已覆盖 2.8 的具体实现。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step 3.7 Flash",
+      "source_url": "https://github.com/stepfun-ai/Step-3.7-Flash",
+      "status": "web_only",
+      "note_en": "Latest reviewed text flagship has official repository/card, with no original PDF found.",
+      "note_cn": "已检查最新文本旗舰官方仓库与模型卡，尚未找到原始 PDF。",
+      "report_slugs": [
+        "step-3-7-flash-model-card"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "StepAudio 3 Gen / Realtime / Music",
+      "source_url": "https://github.com/stepfun-ai",
+      "status": "archived",
+      "note_en": "September 2026 modality reports already indexed; model release dates remain separate from report submission dates.",
+      "note_cn": "2026 年 9 月各语音模态报告已收录；模型发布日期与报告提交日期独立保留。",
+      "report_slugs": [
+        "step-audio-3-gen",
+        "step-audio-3-realtime",
+        "step-audio-3-music"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hy4-preview",
+      "source_url": "https://github.com/Tencent-Hunyuan/Hy4-preview",
+      "status": "web_only",
+      "note_en": "Latest reviewed text-preview repository provides model documentation; cited DSA/mHC method papers are not Hy4 reports.",
+      "note_cn": "已检查最新文本预览版仓库，提供模型说明；引用的 DSA/mHC 方法论文不能替代 Hy4 报告。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hy3",
+      "source_url": "https://github.com/Tencent-Hunyuan/Hy3",
+      "status": "web_only",
+      "note_en": "Official release repository available, with no original model-report PDF located.",
+      "note_cn": "官方发布仓库已提供，尚未找到对应模型原始报告 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hy-MT2",
+      "source_url": "https://github.com/Tencent-Hunyuan/Hy-MT2",
+      "status": "archived",
+      "note_en": "Latest translation family report verified as arXiv v2.",
+      "note_cn": "已核实最新翻译家族报告 arXiv v2。",
+      "report_slugs": [
+        "hy-mt2"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hunyuan3D Buffalo 1.0 / WorldClaw",
+      "source_url": "https://github.com/Tencent-Hunyuan",
+      "status": "archived",
+      "note_en": "August 2026 original 3D model reports verified; Buffalo v3 and WorldClaw v1.",
+      "note_cn": "已核实 2026 年 8 月原始 3D 模型报告，Buffalo v3 与 WorldClaw v1。",
+      "report_slugs": [
+        "hunyuan3d-buffalo-1-0",
+        "hunyuan3d-worldclaw"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "HunyuanImage 3.0 / HunyuanVideo 1.5 / HunyuanOCR 1.5",
+      "source_url": "https://github.com/Tencent-Hunyuan",
+      "status": "archived",
+      "note_en": "Reviewed image/video/OCR branches; original reports already indexed.",
+      "note_cn": "已检查图像、视频与 OCR 分支，对应原始报告已收录。",
+      "report_slugs": [
+        "hunyuan-image-3",
+        "hunyuan-video-1-5",
+        "hunyuan-ocr-1-5"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seed2.1",
+      "source_url": "https://seed.bytedance.com/en/research",
+      "status": "archived",
+      "note_en": "Latest official model-navigation text flagship; original Seed2.1 Model Card already indexed.",
+      "note_cn": "官方模型导航列出的最新文本旗舰；原始 Seed2.1 Model Card 已收录。",
+      "report_slugs": [
+        "seed2-1-model-card"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seedance 2.5",
+      "source_url": "https://seed.bytedance.com/en/seedance2_5",
+      "status": "unconfirmed",
+      "note_en": "Official release 2026-07-31 and model page available; no original 2.5 report/card PDF located.",
+      "note_cn": "2026-07-31 官方发布与模型页已提供；尚未找到 2.5 原始报告或模型卡 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seedream 5.0 Pro",
+      "source_url": "https://seed.bytedance.com/en/seedream5_0_pro",
+      "status": "unconfirmed",
+      "note_en": "Official release 2026-07-08 and model page available; no original report/card PDF located.",
+      "note_cn": "2026-07-08 官方发布与模型页已提供；尚未找到对应原始报告或模型卡 PDF。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "bytedance",
+      "model": "SeedRealtime / Seed Audio 1.0",
+      "source_url": "https://seed.bytedance.com/en/research",
+      "status": "unconfirmed",
+      "note_en": "Latest official audio and audiovisual model pages reviewed; no original PDF report located.",
+      "note_cn": "已检查最新官方语音与视听模型页；尚未找到原始 PDF 报告。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "cohere",
+      "model": "Command A+",
+      "source_url": "https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16",
+      "status": "web_only",
+      "note_en": "Official HTML model card identified; original publisher PDF not located.",
+      "note_cn": "已确认官方网页模型卡；尚未找到厂商原始 PDF。",
+      "report_slugs": [
+        "command-a-plus-model-card"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "North Mini Code 1.0",
+      "source_url": "https://huggingface.co/CohereLabs/North-Mini-Code-1.0",
+      "status": "web_only",
+      "note_en": "Official HTML model card identified; original publisher PDF not located.",
+      "note_cn": "已确认官方网页模型卡；尚未找到厂商原始 PDF。",
+      "report_slugs": [
+        "north-mini-code-1-0-model-card"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "North Micro Vision Instruct",
+      "source_url": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct",
+      "status": "web_only",
+      "note_en": "Official HTML model card identified; original publisher PDF not located.",
+      "note_cn": "已确认官方网页模型卡；尚未找到厂商原始 PDF。",
+      "report_slugs": [
+        "north-micro-vision-instruct-model-card"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "Cohere Transcribe",
+      "source_url": "https://huggingface.co/CohereLabs/cohere-transcribe-03-2026",
+      "status": "web_only",
+      "note_en": "Official HTML model card identified; original publisher PDF not located. Raw repository files are gated; absence within inaccessible files is not established.",
+      "note_cn": "已确认官方网页模型卡；尚未找到厂商原始 PDF。 原始仓库文件需授权访问，不能断言不可访问文件中不存在 PDF。",
+      "report_slugs": [
+        "cohere-transcribe-model-card"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "Cohere Transcribe Arabic",
+      "source_url": "https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026",
+      "status": "web_only",
+      "note_en": "Official HTML model card identified; original publisher PDF not located. Raw repository files are gated; absence within inaccessible files is not established.",
+      "note_cn": "已确认官方网页模型卡；尚未找到厂商原始 PDF。 原始仓库文件需授权访问，不能断言不可访问文件中不存在 PDF。",
+      "report_slugs": [
+        "cohere-transcribe-arabic-model-card"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "North Small Translate 1.0",
+      "source_url": "https://arxiv.org/abs/2609.13916",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "north-small-translate"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "Command A Translate",
+      "source_url": "https://aclanthology.org/2025.wmt-1.55/",
+      "status": "archived",
+      "note_en": "Original publisher PDF archived.",
+      "note_cn": "已收录厂商原始 PDF。",
+      "report_slugs": [
+        "command-a-translate"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "Tiny Aya",
+      "source_url": "https://cohere.com/research/aya",
+      "status": "family_report",
+      "note_en": "One technical report covers base and instruction-tuned regional variants.",
+      "note_cn": "同一份技术报告覆盖基础模型与各地区指令微调版本。",
+      "report_slugs": [
+        "tiny-aya"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "Embed 5 (pro / fast)",
+      "source_url": "https://docs.cohere.com/docs/models",
+      "status": "unconfirmed",
+      "note_en": "Released September 30, 2026; official model table confirms both variants. No designated report/card located.",
+      "note_cn": "2026 年 9 月 30 日发布；官方模型表确认两种版本。尚未找到明确标注的报告或模型卡。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "cohere",
+      "model": "Rerank 4 (pro / fast)",
+      "source_url": "https://docs.cohere.com/docs/models",
+      "status": "unconfirmed",
+      "note_en": "Both variants confirmed by the current official model table; no designated report/card located.",
+      "note_cn": "当前官方模型表已确认两种版本；尚未找到明确标注的报告或模型卡。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "cohere",
+      "model": "Parse 5",
+      "source_url": "https://docs.cohere.com/docs/models",
+      "status": "unconfirmed",
+      "note_en": "Live document parsing model confirmed by the current official model table; no designated report/card located.",
+      "note_cn": "当前官方模型表确认文档解析模型已上线；尚未找到明确标注的报告或模型卡。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI Thinking 1",
+      "source_url": "https://microsoft.ai/models/mai-thinking-1/",
+      "status": "archived",
+      "note_en": "Official report/model-card PDF verified.",
+      "note_cn": "已核实官方报告或模型卡 PDF。",
+      "report_slugs": [
+        "mai-thinking-1-technical-report"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI Code 1.1 Flash",
+      "source_url": "https://microsoft.ai/models/mai-code-1-flash/",
+      "status": "archived",
+      "note_en": "Official report/model-card PDF verified.",
+      "note_cn": "已核实官方报告或模型卡 PDF。",
+      "report_slugs": [
+        "mai-code-1-1-flash-model-card"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI Image 2.6 / 2.6 Flash",
+      "source_url": "https://microsoft.ai/models/mai-image-2-6/",
+      "status": "archived",
+      "note_en": "Official report/model-card PDF verified.",
+      "note_cn": "已核实官方报告或模型卡 PDF。",
+      "report_slugs": [
+        "mai-image-2-6-model-card"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI Transcribe 2",
+      "source_url": "https://microsoft.ai/models/mai-transcribe-2/",
+      "status": "archived",
+      "note_en": "Official report/model-card PDF verified.",
+      "note_cn": "已核实官方报告或模型卡 PDF。",
+      "report_slugs": [
+        "mai-transcribe-2-model-card"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI Voice 2",
+      "source_url": "https://microsoft.ai/models/mai-voice-2/",
+      "status": "archived",
+      "note_en": "Official report/model-card PDF verified.",
+      "note_cn": "已核实官方报告或模型卡 PDF。",
+      "report_slugs": [
+        "mai-voice-2-model-card"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI Cyber 1 Flash",
+      "source_url": "https://microsoft.ai/models/mai-cyber-1-flash/",
+      "status": "archived",
+      "note_en": "Official report/model-card PDF verified.",
+      "note_cn": "已核实官方报告或模型卡 PDF。",
+      "report_slugs": [
+        "mai-cyber-1-flash-model-card"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI Voice 2 Flash",
+      "source_url": "https://microsoft.ai/models/",
+      "status": "unconfirmed",
+      "note_en": "Flash release announced; the verified Voice 2 card does not independently establish coverage of Flash.",
+      "note_cn": "已宣布 Flash 发布；现有 Voice 2 卡片不能独立证明覆盖 Flash。",
+      "report_slugs": []
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Phi 4 Reasoning Vision",
+      "source_url": "https://arxiv.org/abs/2603.03975",
+      "status": "archived",
+      "note_en": "Latest reasoning/vision branch report archived.",
+      "note_cn": "已收录最新推理与视觉分支报告。",
+      "report_slugs": [
+        "phi-4-reasoning-vision"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Phi 4 Mini Flash Reasoning",
+      "source_url": "https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning",
+      "status": "archived",
+      "note_en": "Small reasoning branch technical report archived.",
+      "note_cn": "已收录小型推理分支技术报告。",
+      "report_slugs": [
+        "phi-4-mini-flash-reasoning"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova 2 Lite",
+      "source_url": "https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models",
+      "status": "family_report",
+      "note_en": "Covered by archived Nova 2 family technical report; a family report is not a separate per-model card.",
+      "note_cn": "已由 Nova 2 家族技术报告覆盖；家族报告不等同各模型独立卡片。",
+      "report_slugs": [
+        "nova-2-family",
+        "nova-2-lite-frontier-safety-report"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova 2 Pro",
+      "source_url": "https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models",
+      "status": "family_report",
+      "note_en": "Covered by archived Nova 2 family technical report; a family report is not a separate per-model card.",
+      "note_cn": "已由 Nova 2 家族技术报告覆盖；家族报告不等同各模型独立卡片。",
+      "report_slugs": [
+        "nova-2-family"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova 2 Omni",
+      "source_url": "https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models",
+      "status": "family_report",
+      "note_en": "Covered by archived Nova 2 family technical report; a family report is not a separate per-model card.",
+      "note_cn": "已由 Nova 2 家族技术报告覆盖；家族报告不等同各模型独立卡片。",
+      "report_slugs": [
+        "nova-2-family"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova 2 Sonic",
+      "source_url": "https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models",
+      "status": "family_report",
+      "note_en": "Covered by archived Nova 2 family technical report; a family report is not a separate per-model card.",
+      "note_cn": "已由 Nova 2 家族技术报告覆盖；家族报告不等同各模型独立卡片。",
+      "report_slugs": [
+        "nova-2-family"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova Premier",
+      "source_url": "https://www.amazon.science/publications/amazon-nova-premier-technical-report-and-model-card",
+      "status": "family_report",
+      "note_en": "Existing Nova family addendum covers Premier; separate frontier-safety report verified. A referenced standalone technical-report PDF URL returns 404.",
+      "note_cn": "现有 Nova 家族附录覆盖 Premier；已核实独立前沿安全报告。被引用的独立技术报告 PDF 地址返回 404。",
+      "report_slugs": [
+        "nova-family",
+        "nova-premier-frontier-safety-report"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova Act",
+      "source_url": "https://docs.aws.amazon.com/pdfs/ai/responsible-ai/nova-act/nova-act.pdf",
+      "status": "archived",
+      "note_en": "Original 16-page AI Service Card is archived. Classified as System Card by its service risk and deployment scope; publisher title preserved.",
+      "note_cn": "已收录 16 页原始 AI Service Card；按服务风险与部署范围归为 System Card，保留发布者原题名。",
+      "report_slugs": [
+        "nova-act-service-card"
+      ]
+    }
+  ]
+}

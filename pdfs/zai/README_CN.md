@@ -1,6 +1,6 @@
 # 智谱 / Z.ai
 
-[首页](../../README_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -34,5 +34,7 @@
 | 2022-10-05 | [GLM-130B: An Open Bilingual Pre-trained Model](technical-reports/glm-130b-an-open-bilingual-pre-trained-model--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/zai-org/GLM-130B) |
 | 2022-05-29 | [CogVideo: Large-scale Pretraining for Text-to-Video Generation via Transformers](technical-reports/cogvideo-large-scale-pretraining-for-text-to-video-generation-via-transformers--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/zai-org/CogVideo) |
 | 2022-04-28 | [CogView2: Faster and Better Text-to-Image Generation via Hierarchical Transformers](technical-reports/cogview2-faster-and-better-text-to-image-generation-via-hierarchical-transformers--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/zai-org/CogView2) |
+| 未确认 | GLM-5.3-Flash Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/zai-org/GLM-5.3-Flash) |
+| 未确认 | GLM-5.3 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/zai-org/GLM-5.3) |
 
 归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../catalog.csv)。

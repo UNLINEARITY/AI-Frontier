@@ -4,9 +4,8 @@
 
 已归档 **0 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
-此类文档暂未收录，欢迎补充官方来源。
-
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 未确认 | Step-3.7-Flash Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://huggingface.co/stepfun-ai/Step-3.7-Flash) |
 
 归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../../catalog.csv)。

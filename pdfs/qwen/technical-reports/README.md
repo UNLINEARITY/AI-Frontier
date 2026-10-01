@@ -2,12 +2,13 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**39 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**40 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
 | 2026-09-07 | [Qwen-Audio-3.0-ASR Technical Report](qwen-audio-3-0-asr--arxiv-v2.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2609.07549) |
 | 2026-08-31 | [Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving](qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving--arxiv-v1.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://github.com/QwenLM/Qwen-Drive-1.0) |
+| 2026-08-26 | [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](qwen3-8-flash-next.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://github.com/QwenLM/Qwen3.8-Flash-Next) |
 | 2026-08-06 | [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](wan-animate-2--arxiv-v2.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2608.06009) |
 | 2026-07-30 | [Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents](qwen-ui-agent--arxiv-v1.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2607.28227) |
 | 2026-07-10 | [Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation](wan-dancer--arxiv-v3.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2607.09581) |

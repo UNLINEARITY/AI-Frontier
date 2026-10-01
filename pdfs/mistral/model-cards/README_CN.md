@@ -8,6 +8,7 @@
 | --- | --- | --- | --- |
 | 未确认 | Mistral-Small-4-119B-2603 Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) |
 | 未确认 | Mistral-Large-3-675B-Instruct-2512 Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) |
+| 未确认 | Mistral Medium 3.5 Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) |
 | 未确认 | Leanstral-1.5-119B-A6B Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B) |
 | 未确认 | Devstral-2-123B-Instruct-2512 Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512) |
 
