@@ -1,0 +1,11 @@
+# xAI — 系统卡
+
+[首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
+
+已归档 **1 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+
+| 首次发布日期 | 报告 | 类型 | 官方来源 |
+| --- | --- | --- | --- |
+| 2026-04-07 | [Grok 4.20 System Card](grok-4-20-system-card.pdf) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf) |
+
+归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../../catalog.csv)。

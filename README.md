@@ -8,7 +8,7 @@
 
 An open research archive for understanding how frontier AI models are built, evaluated, and deployed. We bring official technical reports, model cards, and system cards into one place, and are building toward readable sources, grounded technical analysis, and ongoing release tracking.
 
-**225 original PDFs · 12 publishers · 2022 onward**
+**349 original PDFs · 18 publishers · 2022 onward**
 
 **Available today:** the original PDF archive and its verified source index. Markdown editions, structured analysis, and automated tracking are the next stages.
 
@@ -20,9 +20,9 @@ Looking for implementation details, model boundaries, or deployment safety? Star
 
 | Type | Main subject | Focus | Typical contents | PDFs |
 | --- | --- | --- | --- | ---: |
-| [Technical Report](reports/technical-reports.md) | Model / training method | Implementation and experiments | Architecture, data, training, post-training, inference, benchmarks | 135 |
-| [Model Card](reports/model-cards.md) | Individual model | Model description and usage boundaries | Capabilities, limitations, intended and unsuitable uses, evaluations, safety information | 43 |
-| [System Card](reports/system-cards.md) | Complete product / system | Risk, safety, and deployment behavior | Red teaming, dangerous capability evaluations, jailbreaks, safety mitigations, deployment restrictions | 47 |
+| [Technical Report](reports/technical-reports.md) | Model / training method | Implementation and experiments | Architecture, data, training, post-training, inference, benchmarks | 248 |
+| [Model Card](reports/model-cards.md) | Individual model | Model description and usage boundaries | Capabilities, limitations, intended and unsuitable uses, evaluations, safety information | 49 |
+| [System Card](reports/system-cards.md) | Complete product / system | Risk, safety, and deployment behavior | Red teaming, dangerous capability evaluations, jailbreaks, safety mitigations, deployment restrictions | 52 |
 
 These are typical distinctions, not rigid boundaries. Documents can overlap or cover a model family; classification follows the publisher's designation and the document's primary purpose.
 
@@ -34,18 +34,24 @@ Click a count to open that publisher's collection for the document type. Counts 
 
 | Publisher | Technical Reports | Model Cards | System Cards | Total PDFs |
 | --- | ---: | ---: | ---: | ---: |
-| [OpenAI](pdfs/openai/README.md) | [4](pdfs/openai/technical-reports/README.md) | [1](pdfs/openai/model-cards/README.md) | [30](pdfs/openai/system-cards/README.md) | 35 |
-| [Anthropic](pdfs/anthropic/README.md) | [0](pdfs/anthropic/technical-reports/README.md) | [4](pdfs/anthropic/model-cards/README.md) | [16](pdfs/anthropic/system-cards/README.md) | 20 |
-| [Google / DeepMind](pdfs/google/README.md) | [25](pdfs/google/technical-reports/README.md) | [32](pdfs/google/model-cards/README.md) | [0](pdfs/google/system-cards/README.md) | 57 |
-| [Meta](pdfs/meta/README.md) | [12](pdfs/meta/technical-reports/README.md) | [0](pdfs/meta/model-cards/README.md) | [0](pdfs/meta/system-cards/README.md) | 12 |
-| [xAI](pdfs/xai/README.md) | [0](pdfs/xai/technical-reports/README.md) | [6](pdfs/xai/model-cards/README.md) | [1](pdfs/xai/system-cards/README.md) | 7 |
-| [Mistral AI](pdfs/mistral/README.md) | [9](pdfs/mistral/technical-reports/README.md) | [0](pdfs/mistral/model-cards/README.md) | [0](pdfs/mistral/system-cards/README.md) | 9 |
-| [NVIDIA](pdfs/nvidia/README.md) | [10](pdfs/nvidia/technical-reports/README.md) | [0](pdfs/nvidia/model-cards/README.md) | [0](pdfs/nvidia/system-cards/README.md) | 10 |
-| [DeepSeek](pdfs/deepseek/README.md) | [20](pdfs/deepseek/technical-reports/README.md) | [0](pdfs/deepseek/model-cards/README.md) | [0](pdfs/deepseek/system-cards/README.md) | 20 |
-| [Alibaba / Qwen](pdfs/qwen/README.md) | [26](pdfs/qwen/technical-reports/README.md) | [0](pdfs/qwen/model-cards/README.md) | [0](pdfs/qwen/system-cards/README.md) | 26 |
+| [OpenAI](pdfs/openai/README.md) | [6](pdfs/openai/technical-reports/README.md) | [1](pdfs/openai/model-cards/README.md) | [34](pdfs/openai/system-cards/README.md) | 41 |
+| [Anthropic](pdfs/anthropic/README.md) | [0](pdfs/anthropic/technical-reports/README.md) | [5](pdfs/anthropic/model-cards/README.md) | [16](pdfs/anthropic/system-cards/README.md) | 21 |
+| [Google / DeepMind](pdfs/google/README.md) | [37](pdfs/google/technical-reports/README.md) | [32](pdfs/google/model-cards/README.md) | [0](pdfs/google/system-cards/README.md) | 69 |
+| [Meta](pdfs/meta/README.md) | [28](pdfs/meta/technical-reports/README.md) | [0](pdfs/meta/model-cards/README.md) | [0](pdfs/meta/system-cards/README.md) | 28 |
+| [xAI](pdfs/xai/README.md) | [0](pdfs/xai/technical-reports/README.md) | [7](pdfs/xai/model-cards/README.md) | [1](pdfs/xai/system-cards/README.md) | 8 |
+| [Mistral AI](pdfs/mistral/README.md) | [11](pdfs/mistral/technical-reports/README.md) | [0](pdfs/mistral/model-cards/README.md) | [0](pdfs/mistral/system-cards/README.md) | 11 |
+| [NVIDIA](pdfs/nvidia/README.md) | [20](pdfs/nvidia/technical-reports/README.md) | [0](pdfs/nvidia/model-cards/README.md) | [0](pdfs/nvidia/system-cards/README.md) | 20 |
+| [DeepSeek](pdfs/deepseek/README.md) | [22](pdfs/deepseek/technical-reports/README.md) | [0](pdfs/deepseek/model-cards/README.md) | [0](pdfs/deepseek/system-cards/README.md) | 22 |
+| [Alibaba / Qwen / Wan](pdfs/qwen/README.md) | [39](pdfs/qwen/technical-reports/README.md) | [0](pdfs/qwen/model-cards/README.md) | [0](pdfs/qwen/system-cards/README.md) | 39 |
 | [Moonshot AI / Kimi](pdfs/moonshot/README.md) | [10](pdfs/moonshot/technical-reports/README.md) | [0](pdfs/moonshot/model-cards/README.md) | [0](pdfs/moonshot/system-cards/README.md) | 10 |
-| [Z.ai / Zhipu AI](pdfs/zai/README.md) | [16](pdfs/zai/technical-reports/README.md) | [0](pdfs/zai/model-cards/README.md) | [0](pdfs/zai/system-cards/README.md) | 16 |
-| [MiniMax](pdfs/minimax/README.md) | [3](pdfs/minimax/technical-reports/README.md) | [0](pdfs/minimax/model-cards/README.md) | [0](pdfs/minimax/system-cards/README.md) | 3 |
+| [Z.ai / Zhipu AI](pdfs/zai/README.md) | [18](pdfs/zai/technical-reports/README.md) | [0](pdfs/zai/model-cards/README.md) | [0](pdfs/zai/system-cards/README.md) | 18 |
+| [MiniMax](pdfs/minimax/README.md) | [6](pdfs/minimax/technical-reports/README.md) | [0](pdfs/minimax/model-cards/README.md) | [0](pdfs/minimax/system-cards/README.md) | 6 |
+| [StepFun](pdfs/stepfun/README.md) | [14](pdfs/stepfun/technical-reports/README.md) | [0](pdfs/stepfun/model-cards/README.md) | [0](pdfs/stepfun/system-cards/README.md) | 14 |
+| [Tencent / Hunyuan](pdfs/tencent/README.md) | [11](pdfs/tencent/technical-reports/README.md) | [0](pdfs/tencent/model-cards/README.md) | [0](pdfs/tencent/system-cards/README.md) | 11 |
+| [ByteDance / Seed](pdfs/bytedance/README.md) | [9](pdfs/bytedance/technical-reports/README.md) | [4](pdfs/bytedance/model-cards/README.md) | [0](pdfs/bytedance/system-cards/README.md) | 13 |
+| [Cohere](pdfs/cohere/README.md) | [6](pdfs/cohere/technical-reports/README.md) | [0](pdfs/cohere/model-cards/README.md) | [0](pdfs/cohere/system-cards/README.md) | 6 |
+| [Microsoft / Phi](pdfs/microsoft/README.md) | [8](pdfs/microsoft/technical-reports/README.md) | [0](pdfs/microsoft/model-cards/README.md) | [0](pdfs/microsoft/system-cards/README.md) | 8 |
+| [Amazon / Nova](pdfs/amazon/README.md) | [3](pdfs/amazon/technical-reports/README.md) | [0](pdfs/amazon/model-cards/README.md) | [1](pdfs/amazon/system-cards/README.md) | 4 |
 
 ## Why follow AI Frontier?
 
@@ -53,7 +59,7 @@ Click a count to open that publisher's collection for the document type. Counts 
 - **Compare across labs.** Find training methods, evaluation results, and safety disclosures across technical reports and model cards.
 - **Trace what changed.** Publication dates and revisions are recorded separately; older archived versions are retained when reports are updated.
 
-The [full catalog](catalog.csv) includes dates, versions, sources, and file verification details. Known omissions and uncertain dates are listed in [coverage and gaps](GAPS.md) (currently maintained in Chinese). Publisher and document-type directory READMEs are English-first bilingual; report titles and original PDFs retain their source language.
+The [full catalog](catalog.csv) includes dates, versions, sources, and file verification details. Known omissions and uncertain dates are listed in [coverage and gaps](GAPS.md) (currently maintained in Chinese). Publisher and document-type directories have separate English and Chinese READMEs; report titles and original PDFs retain their source language.
 
 ## Help build the reference shelf
 

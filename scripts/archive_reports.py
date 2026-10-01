@@ -19,8 +19,11 @@ LIMIT = 100 * 1024 * 1024
 VENDORS = {
     "openai": "OpenAI", "anthropic": "Anthropic", "google": "Google / DeepMind",
     "meta": "Meta", "xai": "xAI", "mistral": "Mistral AI", "nvidia": "NVIDIA",
-    "deepseek": "DeepSeek", "qwen": "Alibaba / Qwen", "moonshot": "Moonshot AI / Kimi",
+    "deepseek": "DeepSeek", "qwen": "Alibaba / Qwen / Wan", "moonshot": "Moonshot AI / Kimi",
     "zai": "智谱 / Z.ai", "minimax": "MiniMax",
+    "stepfun": "StepFun", "tencent": "Tencent / Hunyuan",
+    "bytedance": "ByteDance / Seed", "cohere": "Cohere",
+    "microsoft": "Microsoft / Phi", "amazon": "Amazon / Nova",
 }
 DOCUMENT_TYPES = {
     "technical_report": ("Technical Report", "technical-reports.md"),
@@ -172,9 +175,9 @@ def render(rows):
                  "想看技术实现、模型使用边界，还是产品部署安全？从对应类型开始。", "",
                  "| 类型 | 主要对象 | 重点 | 常见内容 | PDF 数量 |",
                  "| --- | --- | --- | --- | ---: |",
-                 f"| [Technical Report](reports/technical-reports.md) | 模型/训练方法 | 技术实现与实验 | 架构、数据、训练、后训练、推理、benchmark | {type_counts['technical_report']} |",
-                 f"| [Model Card](reports/model-cards.md) | 单个模型 | 模型说明与使用边界 | 能力、限制、适用场景、不适用场景、评测、安全信息 | {type_counts['model_card']} |",
-                 f"| [System Card](reports/system-cards.md) | 完整产品/系统 | 风险、安全、部署表现 | red teaming、危险能力评估、越狱、安全 mitigations、部署限制 | {type_counts['system_card']} |", "",
+                 f"| [Technical Report](reports/technical-reports_CN.md) | 模型/训练方法 | 技术实现与实验 | 架构、数据、训练、后训练、推理、benchmark | {type_counts['technical_report']} |",
+                 f"| [Model Card](reports/model-cards_CN.md) | 单个模型 | 模型说明与使用边界 | 能力、限制、适用场景、不适用场景、评测、安全信息 | {type_counts['model_card']} |",
+                 f"| [System Card](reports/system-cards_CN.md) | 完整产品/系统 | 风险、安全、部署表现 | red teaming、危险能力评估、越狱、安全 mitigations、部署限制 | {type_counts['system_card']} |", "",
                  "这是常见区分，文档内容可能交叉，也可能覆盖整个模型家族；分类以官方命名与文档主要用途为准。", ""]
     lines += ["## Browse by publisher", "",
               "Pick a lab to find its archived reports and official source links. "
@@ -192,66 +195,101 @@ def render(rows):
         vendor_rows = [row for row in rows if row["vendor"] == vendor]
         good = [row for row in vendor_rows if row["status"] == "archived"]
         english_label = "Z.ai / Zhipu AI" if vendor == "zai" else label
-        count_links = []
-        for kind, (_, filename) in DOCUMENT_TYPES.items():
-            count = sum(row["document_type"] == kind for row in good)
-            count_links.append(f"[{count}](pdfs/{vendor}/{Path(filename).stem}/README.md)")
-        counts = " | ".join(count_links)
-        lines.append(f"| [{english_label}](pdfs/{vendor}/README.md) | {counts} | {len(good)} |")
-        cn_lines.append(f"| [{label}](pdfs/{vendor}/README.md) | {counts} | {len(good)} |")
         directory = ROOT / "pdfs" / vendor
         directory.mkdir(parents=True, exist_ok=True)
-        detail = [f"# {english_label}", "", "[Home](../../README.md) · [中文首页](../../README_CN.md)", "",
-                  "Reports are ordered by recorded first publication date, newest first; unknown dates appear last. "
-                  "Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).", "",
-                  "按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。"
-                  "类型说明见 [公众文档](../../README_CN.md#按类型找报告)。", "",
-                  "## Browse by type / 按类型浏览", "", "| Type / 类型 | Archived PDFs / 已归档 PDF |", "| --- | ---: |"]
-        indexes = [(directory, detail, vendor_rows)]
-        for kind, (type_label, filename) in DOCUMENT_TYPES.items():
-            type_directory = directory / Path(filename).stem
-            type_directory.mkdir(parents=True, exist_ok=True)
-            entries = [row for row in vendor_rows if row["document_type"] == kind]
-            count = sum(row["status"] == "archived" for row in entries)
-            detail.append(f"| [{type_label} / {type_labels_cn[kind]}]({type_directory.name}/README.md) | {count} |")
-            type_detail = [f"# {english_label} — {type_label}", "", "[Back to publisher / 返回厂商目录](../README.md)", "",
-                           f"**{count} archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.", "",
-                           f"已归档 **{count} 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。", ""]
-            if not entries:
-                type_detail += ["No documents of this type have been added yet. Contributions with official source links are welcome.", "",
-                                "此类文档暂未收录，欢迎补充官方来源。", ""]
-            indexes.append((type_directory, type_detail, entries))
-        detail += ["", "## All reports / 全部报告", ""]
-        for index_directory, index_lines, entries in indexes:
-            prefix = "../../" if index_directory == directory else "../../../"
-            index_lines += ["| First published / 首次发布日期 | Report / 报告 | Type / 类型 | Official source / 官方来源 |", "| --- | --- | --- | --- |"]
-            for row in sorted(entries, key=lambda x: (x["published_date"], x["title"]), reverse=True):
-                title = row["title"].replace("|", "\\|")
-                if row["status"] == "archived":
-                    relative_path = (ROOT / row["local_path"]).relative_to(index_directory).as_posix()
-                    link = f"[{title}]({relative_path})"
+        for chinese, root_lines in [(False, lines), (True, cn_lines)]:
+            readme = "README_CN.md" if chinese else "README.md"
+            publisher = label if chinese else english_label
+            count_links = []
+            for kind, (_, filename) in DOCUMENT_TYPES.items():
+                count = sum(row["document_type"] == kind for row in good)
+                count_links.append(f"[{count}](pdfs/{vendor}/{Path(filename).stem}/{readme})")
+            root_lines.append(f"| [{publisher}](pdfs/{vendor}/{readme}) | {' | '.join(count_links)} | {len(good)} |")
+            detail = [f"# {publisher}", ""]
+            if chinese:
+                detail += ["[首页](../../README_CN.md) · [英文版](README.md)", "",
+                           "按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。"
+                           "类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。", "",
+                           "## 按类型浏览", "", "| 类型 | 已归档 PDF |", "| --- | ---: |"]
+            else:
+                detail += ["[Home](../../README.md) · [Chinese](README_CN.md)", "",
+                           "Reports are ordered by recorded first publication date, newest first; unknown dates appear last. "
+                           "Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).", "",
+                           "## Browse by type", "", "| Type | Archived PDFs |", "| --- | ---: |"]
+            indexes = [(directory, detail, vendor_rows)]
+            for kind, (type_label, filename) in DOCUMENT_TYPES.items():
+                type_directory = directory / Path(filename).stem
+                type_directory.mkdir(parents=True, exist_ok=True)
+                entries = [row for row in vendor_rows if row["document_type"] == kind]
+                count = sum(row["status"] == "archived" for row in entries)
+                displayed_type = type_labels_cn[kind] if chinese else type_label
+                detail.append(f"| [{displayed_type}]({type_directory.name}/{readme}) | {count} |")
+                type_detail = [f"# {publisher} — {displayed_type}", ""]
+                if chinese:
+                    type_detail += ["[首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)", "",
+                                    f"已归档 **{count} 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。", ""]
                 else:
-                    link = title + " (Pending / 待补齐)"
-                type_label, type_file = DOCUMENT_TYPES[row["document_type"]]
-                index_lines.append(f"| {row['published_date'] or 'Unknown / 未确认'} | {link} | [{type_label} / {type_labels_cn[row['document_type']]}]({prefix}reports/{type_file}) | [Source / 来源]({row['source_url']}) |")
-            index_lines += ["", f"Archive versions, checksums, retrieval times, and revision dates: [catalog.csv]({prefix}catalog.csv).", "",
-                            f"归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv]({prefix}catalog.csv)。", ""]
-            (index_directory / "README.md").write_text("\n".join(index_lines), encoding="utf-8")
+                    type_detail += ["[Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)", "",
+                                    f"**{count} archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.", ""]
+                if not entries:
+                    type_detail += ["此类文档暂未收录，欢迎补充官方来源。" if chinese else
+                                    "No documents of this type have been added yet. Contributions with official source links are welcome.", ""]
+                indexes.append((type_directory, type_detail, entries))
+            detail += ["", "## 全部报告" if chinese else "## All reports", ""]
+            for index_directory, index_lines, entries in indexes:
+                prefix = "../../" if index_directory == directory else "../../../"
+                index_lines += ["| 首次发布日期 | 报告 | 类型 | 官方来源 |" if chinese else
+                                "| First published | Report | Type | Official source |", "| --- | --- | --- | --- |"]
+                for row in sorted(entries, key=lambda x: (x["published_date"], x["title"]), reverse=True):
+                    title = row["title"].replace("|", "\\|")
+                    if row["status"] == "archived":
+                        relative_path = (ROOT / row["local_path"]).relative_to(index_directory).as_posix()
+                        link = f"[{title}]({relative_path})"
+                    else:
+                        link = title + ("（待补齐）" if chinese else " (Pending)")
+                    type_label, type_file = DOCUMENT_TYPES[row["document_type"]]
+                    if chinese:
+                        type_label = type_labels_cn[row["document_type"]]
+                        type_file = f"{Path(type_file).stem}_CN.md"
+                    date = row["published_date"] or ("未确认" if chinese else "Unknown")
+                    source_label = "来源" if chinese else "Source"
+                    index_lines.append(f"| {date} | {link} | [{type_label}]({prefix}reports/{type_file}) | [{source_label}]({row['source_url']}) |")
+                index_lines += ["", f"归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv]({prefix}catalog.csv)。" if chinese else
+                                f"Archive versions, checksums, retrieval times, and revision dates: [catalog.csv]({prefix}catalog.csv).", ""]
+                (index_directory / readme).write_text("\n".join(index_lines), encoding="utf-8")
     report_directory = ROOT / "reports"
     report_directory.mkdir(parents=True, exist_ok=True)
+    statuses_cn = {"archived": "已归档", "missing_pdf": "暂无独立 PDF", "oversized": "超过文件限制", "failed": "下载失败"}
     for kind, (type_label, filename) in DOCUMENT_TYPES.items():
         entries = [row for row in rows if row["document_type"] == kind]
-        detail = [f"# {type_label}", "", "[All reports](../README.md) · [Document types](../README.md#choose-the-right-document)", "",
-                  f"**{type_counts[kind]} archived PDFs**. Listed by recorded first publication date, newest first; unknown dates appear last.", "",
-                  "| First published | Publisher | Report | Status | Official source |",
-                  "| --- | --- | --- | --- | --- |"]
-        for row in sorted(entries, key=lambda x: (x["published_date"], x["title"]), reverse=True):
-            title = row["title"].replace("|", "\\|")
-            link = f"[{title}](../{row['local_path']})" if row["status"] == "archived" else title
-            label = "Z.ai / Zhipu AI" if row["vendor"] == "zai" else VENDORS[row["vendor"]]
-            detail.append(f"| {row['published_date'] or 'Unknown'} | {label} | {link} | {row['status']} | [Source]({row['source_url']}) |")
-        detail += ["", "Versions, retrieval dates, and verification details: [catalog.csv](../catalog.csv).", ""]
-        (report_directory / filename).write_text("\n".join(detail), encoding="utf-8")
+        chinese_filename = f"{Path(filename).stem}_CN.md"
+        for chinese in [False, True]:
+            target = chinese_filename if chinese else filename
+            displayed_type = type_labels_cn[kind] if chinese else type_label
+            detail = [f"# {displayed_type}", ""]
+            if chinese:
+                detail += [f"[首页](../README_CN.md) · [文档类型](../README_CN.md#按类型找报告) · [英文版]({filename})", "",
+                           f"已归档 **{type_counts[kind]} 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。", "",
+                           "| 首次发布日期 | 厂商 | 报告 | 状态 | 官方来源 |", "| --- | --- | --- | --- | --- |"]
+            else:
+                detail += [f"[All reports](../README.md) · [Document types](../README.md#choose-the-right-document) · [Chinese]({chinese_filename})", "",
+                           f"**{type_counts[kind]} archived PDFs**. Listed by recorded first publication date, newest first; unknown dates appear last.", "",
+                           "| First published | Publisher | Report | Status | Official source |", "| --- | --- | --- | --- | --- |"]
+            for row in sorted(entries, key=lambda x: (x["published_date"], x["title"]), reverse=True):
+                title = row["title"].replace("|", "\\|")
+                link = f"[{title}](../{row['local_path']})" if row["status"] == "archived" else title
+                label = VENDORS[row["vendor"]]
+                if not chinese and row["vendor"] == "zai":
+                    label = "Z.ai / Zhipu AI"
+                readme = "README_CN.md" if chinese else "README.md"
+                publisher_link = f"[{label}](../pdfs/{row['vendor']}/{readme})"
+                date = row["published_date"] or ("未确认" if chinese else "Unknown")
+                status = statuses_cn.get(row["status"], row["status"]) if chinese else row["status"]
+                source_label = "来源" if chinese else "Source"
+                detail.append(f"| {date} | {publisher_link} | {link} | {status} | [{source_label}]({row['source_url']}) |")
+            detail += ["", "版本、抓取日期与文件校验信息见 [catalog.csv](../catalog.csv)。" if chinese else
+                       "Versions, retrieval dates, and verification details: [catalog.csv](../catalog.csv).", ""]
+            (report_directory / target).write_text("\n".join(detail), encoding="utf-8")
     lines += ["", "## Why follow AI Frontier?", "",
               "- **Go straight to the source.** Original publisher PDFs and official links, together in one index.",
               "- **Compare across labs.** Find training methods, evaluation results, and safety disclosures "
@@ -260,7 +298,7 @@ def render(rows):
               "older archived versions are retained when reports are updated.", "",
               "The [full catalog](catalog.csv) includes dates, versions, sources, and file verification details. "
               "Known omissions and uncertain dates are listed in [coverage and gaps](GAPS.md) "
-              "(currently maintained in Chinese). Publisher and document-type directory READMEs are English-first bilingual; "
+              "(currently maintained in Chinese). Publisher and document-type directories have separate English and Chinese READMEs; "
               "report titles and original PDFs retain their source language.", "",
               "## Help build the reference shelf", "",
               "Found a missing report, a newer revision, or a broken link? "
