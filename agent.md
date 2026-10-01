@@ -2,7 +2,7 @@
 
 This document describes repository implementation and maintenance for agents and contributors. The root `README.md` is the English public entry point; `README_CN.md` is its separate Chinese edition. Do not mix languages within either edition. Lead with reader value, show verified collection counts, provide complete publisher and document-type navigation, and invite readers to star or contribute. Do not feature a selective shortlist of models or publishers. Keep claims grounded in what is available. Keep setup commands, downloader behavior, and implementation details here.
 
-Nested READMEs under `pdfs/<vendor>/` and `pdfs/<vendor>/<type>/` are English-first bilingual within one file. Put English before Chinese in navigation, explanations, headings, table labels, empty-category messages, and metadata notes. Share one report table between languages and preserve original report titles; do not create duplicate translated report rows. The separate root README language editions remain unchanged by this nested-directory convention.
+Every publisher and document-type directory has an English `README.md` and a separate Chinese `README_CN.md`. Keep navigation, explanations, headings, table labels, empty-category messages, and metadata notes in the edition's language. Both editions list the same report records and preserve original report titles. Language-switch links target the sibling edition; home, publisher, category, and type-guide links stay in the current language. Cross-publisher indexes likewise have English `<type>.md` and Chinese `<type>_CN.md` editions.
 
 ## Brand and public positioning
 
@@ -28,7 +28,7 @@ Use ordinary Git. Do not enable Git LFS. A PDF larger than 100 MiB is recorded a
 | `catalog.csv` | Download results and historical archives, including sources, dates, versions, hashes, sizes, page counts, and gaps |
 | `pdfs/<vendor>/` | Publisher overview with links to all three document-type directories |
 | `pdfs/<vendor>/<type>/` | Original PDFs and a generated index; type is `technical-reports`, `model-cards`, or `system-cards` |
-| `reports/` | Generated cross-publisher indexes for Technical Reports, Model Cards, and System Cards |
+| `reports/` | Generated English and Chinese cross-publisher indexes for Technical Reports, Model Cards, and System Cards |
 | `.github/brand.json` | Shared project name, public taglines, GitHub description, and discovery topics |
 | `coverage-notes.md` | Manually maintained coverage boundaries and follow-up areas, included in `GAPS.md` |
 | `README.md` | Generated English public introduction and complete publisher table with linked counts for all three document types and total PDFs |
@@ -72,11 +72,13 @@ python scripts/archive_reports.py render
 python -m unittest discover -s tests
 ```
 
-`fetch` also writes the catalog and renders Markdown. `render` rewrites both root README editions, all publisher and publisher/type READMEs, the document-type indexes in `reports/`, and `GAPS.md`. Each publisher always has all three type directories, including an index for categories with no reports yet. Change public README wording in `render()` in `scripts/archive_reports.py`, then run `render`; editing only the generated files will be overwritten. Update both editions together and preserve their language-switch links. `agent.md` is maintained manually.
+`fetch` also writes the catalog and renders Markdown. `render` rewrites both root README editions, both language editions of all publisher and publisher/type READMEs, both editions of the document-type indexes in `reports/`, and `GAPS.md`. Each publisher always has all three type directories, including both language editions of indexes for categories with no reports yet. Change public README wording in `render()` in `scripts/archive_reports.py`, then run `render`; editing only the generated files will be overwritten. Update both editions together and preserve their language-switch links. `agent.md` is maintained manually.
 
 ## Source curation
 
-Supported publisher identifiers are `openai`, `anthropic`, `google`, `meta`, `xai`, `mistral`, `nvidia`, `deepseek`, `qwen`, `moonshot`, `zai`, and `minimax`.
+Supported publisher identifiers are `openai`, `anthropic`, `google`, `meta`, `xai`, `mistral`, `nvidia`, `deepseek`, `qwen`, `moonshot`, `zai`, `minimax`, `stepfun`, `tencent`, `bytedance`, `cohere`, `microsoft`, and `amazon`.
+
+The historical `qwen` directory identifier groups Alibaba publisher reports, including Qwen, Wan, and Tongyi model families. Keep existing paths stable when broadening publisher coverage. A family report can replace a release-specific missing entry only when its contents support that release; preserve unresolved release details as a gap rather than assuming every intermediate checkpoint is documented.
 
 Each source record uses these fields:
 
