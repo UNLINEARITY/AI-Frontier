@@ -2,10 +2,11 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**16 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**17 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-09-28 | [System Card: Claude Sonnet 5.5](claude-sonnet-5-5-system-card.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://www.anthropic.com/claude-sonnet-5-5-system-card) |
 | 2026-09-22 | [Claude Opus 5.5 System Card](claude-opus-5-5-system-card.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://www.anthropic.com/claude-opus-5-5-system-card) |
 | 2026-09-01 | [Claude Fable 5.1 and Mythos 5.1 System Card](claude-fable-5-1-and-mythos-5-1-system-card.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card) |
 | 2026-07-24 | [Claude Opus 5 System Card](claude-opus-5-system-card.pdf) | [System Card](../../../reports/system-cards.md) | [Source](https://anthropic.com/claude-opus-5-system-card) |

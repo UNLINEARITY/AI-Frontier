@@ -1,6 +1,6 @@
 # Microsoft / Phi / MAI
 
-[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [前沿模型](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -9,7 +9,7 @@
 | 类型 | 已归档 PDF |
 | --- | ---: |
 | [技术报告](technical-reports/README_CN.md) | 9 |
-| [模型卡](model-cards/README_CN.md) | 5 |
+| [模型卡](model-cards/README_CN.md) | 8 |
 | [系统卡](system-cards/README_CN.md) | 0 |
 
 ## 全部报告
@@ -25,7 +25,10 @@
 | 2024-04-22 | [Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone](technical-reports/phi-3--arxiv-v4.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2404.14219) |
 | 2023-09-11 | [Textbooks Are All You Need II: phi-1.5 technical report](technical-reports/phi-1-5--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://www.microsoft.com/en-us/research/publication/textbooks-are-all-you-need-ii-phi-1-5-technical-report/) |
 | 2023-06-20 | [Textbooks Are All You Need](technical-reports/phi-1--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2306.11644) |
+| 未确认 | [MAI-Voice-2.1-Flash Model Card](model-cards/mai-voice-2-1-flash-model-card.pdf) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
+| 未确认 | [MAI-Voice-2.1 Model Card](model-cards/mai-voice-2-1-model-card.pdf) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
 | 未确认 | [MAI-Voice-2 Model Card](model-cards/mai-voice-2-model-card.pdf) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://microsoft.ai/models/mai-voice-2/) |
+| 未确认 | [MAI-Transcribe-2-Streaming Model Card](model-cards/mai-transcribe-2-streaming-model-card.pdf) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
 | 未确认 | [MAI-Transcribe-2 Model Card](model-cards/mai-transcribe-2-model-card.pdf) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://microsoft.ai/models/mai-transcribe-2/) |
 | 未确认 | MAI-Thinking-1 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://ai.azure.com/catalog/models/MAI-Thinking-1) |
 | 未确认 | [MAI-Image-2.6 / MAI-Image-2.6-Flash Model Card](model-cards/mai-image-2-6-model-card.pdf) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://microsoft.ai/models/mai-image-2-6/) |

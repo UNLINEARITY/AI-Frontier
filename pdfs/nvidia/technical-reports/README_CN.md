@@ -2,12 +2,15 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已归档 **21 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已归档 **24 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-09-02 | [Post-Training Language Models for Gold-Medal Performance in Coding Competitions](nemotron-3-competitive-coding--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2609.02849) |
 | 2026-07-06 | [Unified Audio Intelligence Without Regressing on Text Intelligence](nemotron-audex-technical-report--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.05196) |
+| 2026-07-05 | [Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs](nemotron-labs-3-puzzle-75b-a9b--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.04371) |
 | 2026-06-01 | [Cosmos 3: Omnimodal World Models for Physical AI](cosmos-3-omnimodal-world-models-for-physical-ai.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) |
+| 2026-04-27 | [Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence](nemotron-3-nano-omni--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2604.24954) |
 | 2026-03-19 | [Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation](nemotron-cascade-2-technical-report--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2603.19220) |
 | 2025-12-15 | [Nemotron-Cascade: Scaling Cascaded Reinforcement Learning for General-Purpose Reasoning Models](nemotron-cascade-technical-report--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.13607) |
 | 2025-12-15 | [NVIDIA Nemotron 3: Efficient and Open Intelligence](nvidia-nemotron-3-efficient-and-open-intelligence.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://research.nvidia.com/labs/nemotron/Nemotron-3/) |

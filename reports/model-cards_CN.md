@@ -2,7 +2,7 @@
 
 [首页](../README_CN.md) · [文档类型](../README_CN.md#按类型找报告) · [英文版](model-cards.md)
 
-已归档 **56 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已归档 **59 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 厂商 | 报告 | 状态 | 官方来源 |
 | --- | --- | --- | --- | --- |
@@ -45,7 +45,10 @@
 | 未确认 | [MiniMax](../pdfs/minimax/README_CN.md) | MiniMax-H3 Model Card | 暂无独立 PDF | [来源](https://huggingface.co/MiniMaxAI/MiniMax-H3) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | MedGemma 1.5 Model Card | 暂无独立 PDF | [来源](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | MedGemma 1 Model Card | 暂无独立 PDF | [来源](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card-v1) |
+| 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Voice-2.1-Flash Model Card](../pdfs/microsoft/model-cards/mai-voice-2-1-flash-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
+| 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Voice-2.1 Model Card](../pdfs/microsoft/model-cards/mai-voice-2-1-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
 | 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Voice-2 Model Card](../pdfs/microsoft/model-cards/mai-voice-2-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/models/mai-voice-2/) |
+| 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Transcribe-2-Streaming Model Card](../pdfs/microsoft/model-cards/mai-transcribe-2-streaming-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
 | 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Transcribe-2 Model Card](../pdfs/microsoft/model-cards/mai-transcribe-2-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/models/mai-transcribe-2/) |
 | 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | MAI-Thinking-1 Model Card | 暂无独立 PDF | [来源](https://ai.azure.com/catalog/models/MAI-Thinking-1) |
 | 未确认 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [MAI-Image-2.6 / MAI-Image-2.6-Flash Model Card](../pdfs/microsoft/model-cards/mai-image-2-6-model-card.pdf) | 已归档 | [来源](https://microsoft.ai/models/mai-image-2-6/) |

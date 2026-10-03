@@ -1,6 +1,6 @@
 # Google / DeepMind
 
-[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Frontier models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 
@@ -8,7 +8,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 
 | Type | Archived PDFs |
 | --- | ---: |
-| [Technical Report](technical-reports/README.md) | 37 |
+| [Technical Report](technical-reports/README.md) | 39 |
 | [Model Card](model-cards/README.md) | 32 |
 | [System Card](system-cards/README.md) | 0 |
 
@@ -16,7 +16,9 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-09-03 | [WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations](technical-reports/weathernext-3-technical-report--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2609.03582) |
 | 2026-07-02 | [Gemma 4 Technical Report](technical-reports/gemma-4-technical-report--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2607.02770) |
+| 2026-05-26 | [Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini](technical-reports/gemini-embedding-2--arxiv-v1.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2605.27295) |
 | 2026-04-06 | [MedGemma 1.5 Technical Report](technical-reports/medgemma-1-5-technical-report--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2604.05081) |
 | 2026-01-13 | [TranslateGemma Technical Report](technical-reports/translategemma-technical-report--arxiv-v3.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2601.09012) |
 | 2025-12-16 | [T5Gemma 2: Seeing, Reading, and Understanding Longer](technical-reports/t5gemma-2-seeing-reading-and-understanding-longer--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://deepmind.google/models/gemma/t5gemma/) |

@@ -1,6 +1,6 @@
 # Google / DeepMind
 
-[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [前沿模型](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -8,7 +8,7 @@
 
 | 类型 | 已归档 PDF |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 37 |
+| [技术报告](technical-reports/README_CN.md) | 39 |
 | [模型卡](model-cards/README_CN.md) | 32 |
 | [系统卡](system-cards/README_CN.md) | 0 |
 
@@ -16,7 +16,9 @@
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-09-03 | [WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations](technical-reports/weathernext-3-technical-report--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2609.03582) |
 | 2026-07-02 | [Gemma 4 Technical Report](technical-reports/gemma-4-technical-report--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.02770) |
+| 2026-05-26 | [Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini](technical-reports/gemini-embedding-2--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.27295) |
 | 2026-04-06 | [MedGemma 1.5 Technical Report](technical-reports/medgemma-1-5-technical-report--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2604.05081) |
 | 2026-01-13 | [TranslateGemma Technical Report](technical-reports/translategemma-technical-report--arxiv-v3.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2601.09012) |
 | 2025-12-16 | [T5Gemma 2: Seeing, Reading, and Understanding Longer](technical-reports/t5gemma-2-seeing-reading-and-understanding-longer--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://deepmind.google/models/gemma/t5gemma/) |

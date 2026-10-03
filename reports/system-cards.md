@@ -2,11 +2,12 @@
 
 [All reports](../README.md) · [Document types](../README.md#choose-the-right-document) · [Chinese](system-cards_CN.md)
 
-**57 archived PDFs**. Listed by recorded first publication date, newest first; unknown dates appear last.
+**58 archived PDFs**. Listed by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Publisher | Report | Status | Official source |
 | --- | --- | --- | --- | --- |
 | 2026-09-29 | [OpenAI](../pdfs/openai/README.md) | [Addendum to GPT-6 Astra System Card: GPT-6.1 Sol](../pdfs/openai/system-cards/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol.pdf) | archived | [Source](https://deploymentsafety.openai.com/gpt-6-1-sol) |
+| 2026-09-28 | [Anthropic](../pdfs/anthropic/README.md) | [System Card: Claude Sonnet 5.5](../pdfs/anthropic/system-cards/claude-sonnet-5-5-system-card.pdf) | archived | [Source](https://www.anthropic.com/claude-sonnet-5-5-system-card) |
 | 2026-09-22 | [Anthropic](../pdfs/anthropic/README.md) | [Claude Opus 5.5 System Card](../pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf) | archived | [Source](https://www.anthropic.com/claude-opus-5-5-system-card) |
 | 2026-09-08 | [OpenAI](../pdfs/openai/README.md) | [ChatGPT Images 2.5 System Card](../pdfs/openai/system-cards/chatgpt-images-2-5-system-card.pdf) | archived | [Source](https://deploymentsafety.openai.com/chatgpt-images-2-5) |
 | 2026-09-03 | [OpenAI](../pdfs/openai/README.md) | [GPT-6 Astra System Card](../pdfs/openai/system-cards/gpt-6-astra-system-card.pdf) | archived | [Source](https://deploymentsafety.openai.com/gpt-6-astra) |

@@ -1,6 +1,6 @@
 # NVIDIA
 
-[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Frontier models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 
@@ -8,7 +8,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 
 | Type | Archived PDFs |
 | --- | ---: |
-| [Technical Report](technical-reports/README.md) | 21 |
+| [Technical Report](technical-reports/README.md) | 24 |
 | [Model Card](model-cards/README.md) | 0 |
 | [System Card](system-cards/README.md) | 0 |
 
@@ -16,8 +16,11 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-09-02 | [Post-Training Language Models for Gold-Medal Performance in Coding Competitions](technical-reports/nemotron-3-competitive-coding--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2609.02849) |
 | 2026-07-06 | [Unified Audio Intelligence Without Regressing on Text Intelligence](technical-reports/nemotron-audex-technical-report--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2607.05196) |
+| 2026-07-05 | [Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs](technical-reports/nemotron-labs-3-puzzle-75b-a9b--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2607.04371) |
 | 2026-06-01 | [Cosmos 3: Omnimodal World Models for Physical AI](technical-reports/cosmos-3-omnimodal-world-models-for-physical-ai.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) |
+| 2026-04-27 | [Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence](technical-reports/nemotron-3-nano-omni--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2604.24954) |
 | 2026-03-19 | [Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation](technical-reports/nemotron-cascade-2-technical-report--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2603.19220) |
 | 2025-12-15 | [Nemotron-Cascade: Scaling Cascaded Reinforcement Learning for General-Purpose Reasoning Models](technical-reports/nemotron-cascade-technical-report--arxiv-v2.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2512.13607) |
 | 2025-12-15 | [NVIDIA Nemotron 3: Efficient and Open Intelligence](technical-reports/nvidia-nemotron-3-efficient-and-open-intelligence.pdf) | [Technical Report](../../reports/technical-reports.md) | [Source](https://research.nvidia.com/labs/nemotron/Nemotron-3/) |

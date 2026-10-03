@@ -2,10 +2,11 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已归档 **14 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已归档 **15 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-09-17 | [WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing](wevisdoc--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://huggingface.co/tencent/WeVisDoc-4B) |
 | 2026-08-05 | [WorldClaw: Agentic 3D Open-World Generation at Scale](hunyuan3d-worldclaw--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.05248) |
 | 2026-08-03 | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](hunyuan3d-buffalo-1-0--arxiv-v3.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.02711) |
 | 2026-07-06 | [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](hunyuan-ocr-1-5--arxiv-v3.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |

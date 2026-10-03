@@ -2,7 +2,7 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已归档 **14 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已归档 **18 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
@@ -14,11 +14,15 @@
 | 2026-02-11 | [Step 3.5 Flash: Open Frontier-Level Intelligence with 11B Active Parameters](step-3-5-flash--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step-3.5-Flash) |
 | 2026-01-14 | [STEP3-VL-10B Technical Report](step3-vl-10b--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step3-VL-10B) |
 | 2025-12-23 | [Step-DeepResearch Technical Report](step-deepresearch--arxiv-v4.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/StepDeepResearch) |
+| 2025-11-27 | [ReasonEdit: Towards Reasoning-Enhanced Image Editing Models](reasonedit--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step1X-Edit) |
 | 2025-11-19 | [Step-Audio-R1 Technical Report](step-audio-r1--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step-Audio-R1) |
 | 2025-11-05 | [Step-Audio-EditX Technical Report](step-audio-editx--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step-Audio-EditX) |
+| 2025-08-14 | [NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale](nextstep-1--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/NextStep-1) |
 | 2025-07-25 | [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](step-3--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step3) |
 | 2025-07-22 | [Step-Audio 2 Technical Report](step-audio-2--arxiv-v3.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step-Audio2) |
 | 2025-06-10 | [Step-Audio-AQAA: a Fully End-to-End Expressive Large Audio Language Model](step-audio-aqaa--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step-Audio) |
+| 2025-05-12 | [Step1X-3D: Towards High-Fidelity and Controllable Generation of Textured 3D Assets](step1x-3d--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step1X-3D) |
+| 2025-03-14 | [Step-Video-TI2V Technical Report: A State-of-the-Art Text-Driven Image-to-Video Generation Model](step-video-ti2v--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step-Video-TI2V) |
 | 2025-02-17 | [Step-Audio: Unified Understanding and Generation in Intelligent Speech Interaction](step-audio--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/stepfun-ai/Step-Audio) |
 
 归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../../catalog.csv)。

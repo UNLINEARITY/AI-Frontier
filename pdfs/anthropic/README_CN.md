@@ -1,6 +1,6 @@
 # Anthropic
 
-[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)
+[首页](../../README_CN.md) · [前沿模型](../../LATEST_MODELS_CN.md) · [英文版](README.md)
 
 按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。
 
@@ -10,12 +10,13 @@
 | --- | ---: |
 | [技术报告](technical-reports/README_CN.md) | 0 |
 | [模型卡](model-cards/README_CN.md) | 5 |
-| [系统卡](system-cards/README_CN.md) | 16 |
+| [系统卡](system-cards/README_CN.md) | 17 |
 
 ## 全部报告
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-09-28 | [System Card: Claude Sonnet 5.5](system-cards/claude-sonnet-5-5-system-card.pdf) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://www.anthropic.com/claude-sonnet-5-5-system-card) |
 | 2026-09-22 | [Claude Opus 5.5 System Card](system-cards/claude-opus-5-5-system-card.pdf) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://www.anthropic.com/claude-opus-5-5-system-card) |
 | 2026-09-01 | [Claude Fable 5.1 and Mythos 5.1 System Card](system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card) |
 | 2026-07-24 | [Claude Opus 5 System Card](system-cards/claude-opus-5-system-card.pdf) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://anthropic.com/claude-opus-5-system-card) |
