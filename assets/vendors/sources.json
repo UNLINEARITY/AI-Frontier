@@ -1,0 +1,517 @@
+[
+  {
+    "vendor": "openai",
+    "label": "OpenAI",
+    "local_path": "assets/vendors/openai.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "b6aa1492b780d3d60cd9d656c2ecacdeab102818bf2cf79ede1e509ac38c0ab5",
+    "size_bytes": 1708,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "anthropic",
+    "label": "Anthropic",
+    "local_path": "assets/vendors/anthropic.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "e0b2fa9ef34204cf09eea5c996ddd557746d0221d2031fce2f2513ea9ee835da",
+    "size_bytes": 369,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "meta",
+    "label": "Meta",
+    "local_path": "assets/vendors/meta.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "bf7099be19c85a1f5e9369cf0a4769721691f25db5f2d9924e4fae3aaa82d3e5",
+    "size_bytes": 5997,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "xai",
+    "label": "xAI",
+    "local_path": "assets/vendors/xai.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "20fe1ecc8fe5dd37ffaa0e1786fcff1a17dfb16ae3213b770b6c850feec6ee13",
+    "size_bytes": 373,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "xai",
+    "label": "Grok",
+    "local_path": "assets/vendors/grok.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "5ec337ba8a9b98d9ffbfd8f53707168d23502f417102e03e4a8c602034f089f4",
+    "size_bytes": 757,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "mistral",
+    "label": "Mistral AI",
+    "local_path": "assets/vendors/mistral.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "eadc349d9809587e4049949fda3912529b10891471e0f1b38659f5786c326158",
+    "size_bytes": 656,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "nvidia",
+    "label": "NVIDIA",
+    "local_path": "assets/vendors/nvidia.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "2f1c8102ec9401327412d977555351493a1fbb52e02f08fc00e6ac303582ba73",
+    "size_bytes": 1026,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "deepseek",
+    "label": "DeepSeek",
+    "local_path": "assets/vendors/deepseek.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "08a3a860de4f7d0fd24e522f482f9ea01285201353dad83e5d1465d41bbade9a",
+    "size_bytes": 2165,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "qwen",
+    "label": "Alibaba",
+    "local_path": "assets/vendors/alibaba.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "09b4ca6e882cfc08db773d44116c8d2f514c471aacecb2b9349960a70b2fffec",
+    "size_bytes": 1408,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "qwen",
+    "label": "Qwen",
+    "local_path": "assets/vendors/qwen.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "a494fdfa13dc4c7d46a4158b3df854ccf84e79096d38f865df547a0a3950d7d1",
+    "size_bytes": 2043,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "moonshot",
+    "label": "Kimi",
+    "local_path": "assets/vendors/kimi.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "1cb6d2b7c6a75f79bd5441cf90b47ddd0a61b4cd519b70a94ec87ca00cf7fc44",
+    "size_bytes": 712,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "zai",
+    "label": "Zhipu AI",
+    "local_path": "assets/vendors/zhipu.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "7981c7cdf55659eed80142ee421b7532ee84dd137800963c58644bc956c563d0",
+    "size_bytes": 3598,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "minimax",
+    "label": "MiniMax",
+    "local_path": "assets/vendors/minimax.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "4857fbb749c25582cc90764c45790f10f4dbd09d2e9b3d59d497c0a9c8a92cc0",
+    "size_bytes": 1569,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "stepfun",
+    "label": "StepFun",
+    "local_path": "assets/vendors/stepfun.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "f40addf6346bf131517fb89f82988508180433511db1803a6ff5f729e956b62e",
+    "size_bytes": 592,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "tencent",
+    "label": "Tencent",
+    "local_path": "assets/vendors/tencent.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "6defe708cdfd106283b4c175e0f97042e12d41f8f2a3c2e7563a9a41f9977956",
+    "size_bytes": 278,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "tencent",
+    "label": "Hunyuan",
+    "local_path": "assets/vendors/hunyuan.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "d2a20932347114d7910e3fd1d7a90788a14ae51b0107da5d55a29350115eb7d4",
+    "size_bytes": 1116,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "bytedance",
+    "label": "ByteDance",
+    "local_path": "assets/vendors/bytedance.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "ef161cd5ac4675acb18619545ab503aac01a7b1c15281fca852940137b587fcd",
+    "size_bytes": 954,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "bytedance",
+    "label": "Doubao",
+    "local_path": "assets/vendors/doubao.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "619644768bb22d6f5c51360538a4f8ebcb83afa66424fd608d78f900820a3eec",
+    "size_bytes": 1154,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "cohere",
+    "label": "Cohere",
+    "local_path": "assets/vendors/cohere.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "19c5b638ad8e228f1117598240b2c8eca2337ccc88131bc9c65f3e5c5a971143",
+    "size_bytes": 770,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "amazon",
+    "label": "AWS",
+    "local_path": "assets/vendors/aws.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "f21f4148267a966258ecf1ff5863d45616dd25f03019a2e7ff24fd1f7563274f",
+    "size_bytes": 3243,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "google",
+    "label": "Google",
+    "local_path": "assets/vendors/google.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-1.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "da3fe3810c8f5a7a653b132091869804db447b587a62ba3ff5c35a2bf1a1473f",
+    "size_bytes": 921,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "google",
+    "label": "Gemini",
+    "local_path": "assets/vendors/gemini.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-2.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "52f12481e36178a1ae6132ac06f0a6747126dc144653cc8c530fefa23c0adc93",
+    "size_bytes": 2837,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "google",
+    "label": "Antigravity",
+    "local_path": "assets/vendors/antigravity.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-2.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "574c20b9f0f796d42b69b0b0ba25322f58797201f530b9abb6e929bc3cf6bbc5",
+    "size_bytes": 7635,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "google",
+    "label": "Gemma",
+    "local_path": "assets/vendors/gemma.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-2.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "e1ae1ded9ebbb56559274e5c549a1639ebb1cc676580bddef249e2d675db2ad3",
+    "size_bytes": 2369,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "anthropic",
+    "label": "Claude",
+    "local_path": "assets/vendors/claude.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-2.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "afe46969aa12066f4ba87193d3e34cddd99027976303754ee9ede84fe71c17d7",
+    "size_bytes": 1697,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "anthropic",
+    "label": "Claude Code",
+    "local_path": "assets/vendors/claude-code.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-2.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "edd2a15bfe4da99e8ff587afa2928535470985a948933345ced722d7f30d0aba",
+    "size_bytes": 425,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "openai",
+    "label": "Codex",
+    "local_path": "assets/vendors/codex.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-2.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "c81bb7eff49ec9e0cd372bea2ffd6e4a0f918fadd125fd63973272faa29aa198",
+    "size_bytes": 1770,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "moonshot",
+    "label": "Moonshot AI",
+    "local_path": "assets/vendors/moonshot.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-2.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "cfe7605b74baa6bd8a844065b76e10f0a3aca6845cd21568a14d1d517a3eb1c2",
+    "size_bytes": 4029,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "zai",
+    "label": "Z.ai",
+    "local_path": "assets/vendors/zai.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-2.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "18b355d7ef22c698ad9faf701fd304e29eb7ebe6f27fe87c79510fdb9d489533",
+    "size_bytes": 320,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "microsoft",
+    "label": "Microsoft",
+    "local_path": "assets/vendors/microsoft.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-2.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "13b84c2f4acb093075fa8aa94e319b65b794888733e3c2e25144a435790231de",
+    "size_bytes": 400,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 24 24"
+    }
+  },
+  {
+    "vendor": "amazon",
+    "label": "Nova",
+    "local_path": "assets/vendors/nova.svg",
+    "source": "Open-source community",
+    "license_path": "assets/vendors/licenses/license-2.txt",
+    "retrieved_at": "2026-10-03",
+    "sha256": "c442505d711d22024c4a3d6f99072b86db849fdda70a2112655f9c4763948c11",
+    "size_bytes": 2053,
+    "content_type": "image/svg+xml",
+    "dimensions": {
+      "width": "264",
+      "height": "256",
+      "viewBox": "0 0 33 32"
+    }
+  },
+  {
+    "vendor": "google",
+    "label": "Google DeepMind",
+    "kind": "website-icon",
+    "local_path": "assets/vendors/deepmind.svg",
+    "source_page": "https://deepmind.google/",
+    "asset_url": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/icons/google_deepmind_48dp.svg",
+    "resolved_url": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/icons/google_deepmind_48dp.svg",
+    "retrieved_at": "2026-09-30T16:57:26+00:00",
+    "sha256": "baacad975994f252571c21e78569e4d5fbf9a961ea89f04cb39e1cd44a16faab",
+    "size_bytes": 852,
+    "content_type": "image/svg+xml",
+    "notes": "Official Google DeepMind website icon; default display size set to 256 px without changing vector geometry.",
+    "intrinsic_dimensions": {
+      "width": "256",
+      "height": "256",
+      "viewBox": "0 0 192 192"
+    }
+  }
+]
