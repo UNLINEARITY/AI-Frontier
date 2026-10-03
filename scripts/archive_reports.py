@@ -245,21 +245,24 @@ def render(rows):
     publisher_count = len({row["vendor"] for row in archived})
     brand = json.loads((ROOT / ".github" / "brand.json").read_text(encoding="utf-8"))
     lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline']}**", "",
-             "[Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)", "",
+             f"[Website]({brand['homepage_url']}) · [Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)", "",
              "An open research archive for understanding how frontier AI models are built, evaluated, and deployed. "
              "We bring official technical reports, model cards, and system cards into one place, "
              "and are building toward readable sources, grounded technical analysis, and ongoing release tracking.", "",
              f"**{len(archived)} original PDFs · {publisher_count} publishers · 2022 onward**", "",
-             "**Available today:** the original PDF archive and its verified source index. "
+             f"[Explore the website]({brand['homepage_url']}) to search reports, filter by publisher and document type, "
+             "and browse current frontier models in English or Chinese.", "",
+             "**Available today:** the original PDF archive, its verified source index, and a searchable bilingual website. "
              "Markdown editions, structured analysis, and automated tracking are the next stages.", "",
              "**Star AI Frontier to keep the sources close and follow the archive as it grows.**", ""]
     cn_lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline_cn']}**", "",
-                "[英文版](README.md) · [按厂商浏览](#按厂商浏览) · [按类型浏览](#按类型找报告) · [前沿模型](LATEST_MODELS_CN.md) · [完整索引](catalog.csv)", "",
+                f"[在线浏览]({brand['homepage_url']}cn/) · [英文版](README.md) · [按厂商浏览](#按厂商浏览) · [按类型浏览](#按类型找报告) · [前沿模型](LATEST_MODELS_CN.md) · [完整索引](catalog.csv)", "",
                 "一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。"
                 "我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，"
                 "并逐步推进可读原文、基于来源的技术分析与模型发布追踪。", "",
                 f"**{len(archived)} 份原始 PDF · {publisher_count} 家厂商 · 2022 年起**", "",
-                "**当前已提供：**原始 PDF 归档与经过核对的来源索引。Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
+                f"[打开在线网站]({brand['homepage_url']}cn/)，搜索报告、按厂商和文档类型筛选，或浏览当前前沿模型。支持独立中英文页面。", "",
+                "**当前已提供：**原始 PDF 归档、经过核对的来源索引与可搜索的双语网站。Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
                 "**Star 收藏 AI Frontier，把原始资料留在手边，也关注它如何逐步成为技术研究入口。**", ""]
     type_counts = {kind: sum(row["document_type"] == kind for row in archived) for kind in DOCUMENT_TYPES}
     lines += ["## Choose the right document", "",

@@ -4,13 +4,15 @@
 
 **Track frontier AI, from original reports to technical insight.**
 
-[Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)
+[Website](https://unlinearity.github.io/AI-Frontier/) · [Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)
 
 An open research archive for understanding how frontier AI models are built, evaluated, and deployed. We bring official technical reports, model cards, and system cards into one place, and are building toward readable sources, grounded technical analysis, and ongoing release tracking.
 
 **385 original PDFs · 18 publishers · 2022 onward**
 
-**Available today:** the original PDF archive and its verified source index. Markdown editions, structured analysis, and automated tracking are the next stages.
+[Explore the website](https://unlinearity.github.io/AI-Frontier/) to search reports, filter by publisher and document type, and browse current frontier models in English or Chinese.
+
+**Available today:** the original PDF archive, its verified source index, and a searchable bilingual website. Markdown editions, structured analysis, and automated tracking are the next stages.
 
 **Star AI Frontier to keep the sources close and follow the archive as it grows.**
 
