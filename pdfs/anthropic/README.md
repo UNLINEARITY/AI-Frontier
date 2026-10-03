@@ -1,6 +1,6 @@
 # Anthropic
 
-[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Frontier models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 
@@ -10,12 +10,13 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | --- | ---: |
 | [Technical Report](technical-reports/README.md) | 0 |
 | [Model Card](model-cards/README.md) | 5 |
-| [System Card](system-cards/README.md) | 16 |
+| [System Card](system-cards/README.md) | 17 |
 
 ## All reports
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-09-28 | [System Card: Claude Sonnet 5.5](system-cards/claude-sonnet-5-5-system-card.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://www.anthropic.com/claude-sonnet-5-5-system-card) |
 | 2026-09-22 | [Claude Opus 5.5 System Card](system-cards/claude-opus-5-5-system-card.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://www.anthropic.com/claude-opus-5-5-system-card) |
 | 2026-09-01 | [Claude Fable 5.1 and Mythos 5.1 System Card](system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card) |
 | 2026-07-24 | [Claude Opus 5 System Card](system-cards/claude-opus-5-system-card.pdf) | [System Card](../../reports/system-cards.md) | [Source](https://anthropic.com/claude-opus-5-system-card) |

@@ -2,11 +2,14 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**5 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**8 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| Unknown | [MAI-Voice-2.1-Flash Model Card](mai-voice-2-1-flash-model-card.pdf) | [Model Card](../../../reports/model-cards.md) | [Source](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
+| Unknown | [MAI-Voice-2.1 Model Card](mai-voice-2-1-model-card.pdf) | [Model Card](../../../reports/model-cards.md) | [Source](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
 | Unknown | [MAI-Voice-2 Model Card](mai-voice-2-model-card.pdf) | [Model Card](../../../reports/model-cards.md) | [Source](https://microsoft.ai/models/mai-voice-2/) |
+| Unknown | [MAI-Transcribe-2-Streaming Model Card](mai-transcribe-2-streaming-model-card.pdf) | [Model Card](../../../reports/model-cards.md) | [Source](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
 | Unknown | [MAI-Transcribe-2 Model Card](mai-transcribe-2-model-card.pdf) | [Model Card](../../../reports/model-cards.md) | [Source](https://microsoft.ai/models/mai-transcribe-2/) |
 | Unknown | MAI-Thinking-1 Model Card (Pending) | [Model Card](../../../reports/model-cards.md) | [Source](https://ai.azure.com/catalog/models/MAI-Thinking-1) |
 | Unknown | [MAI-Image-2.6 / MAI-Image-2.6-Flash Model Card](mai-image-2-6-model-card.pdf) | [Model Card](../../../reports/model-cards.md) | [Source](https://microsoft.ai/models/mai-image-2-6/) |

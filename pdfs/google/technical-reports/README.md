@@ -2,11 +2,13 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**37 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**39 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-09-03 | [WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations](weathernext-3-technical-report--arxiv-v1.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2609.03582) |
 | 2026-07-02 | [Gemma 4 Technical Report](gemma-4-technical-report--arxiv-v2.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2607.02770) |
+| 2026-05-26 | [Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini](gemini-embedding-2--arxiv-v1.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2605.27295) |
 | 2026-04-06 | [MedGemma 1.5 Technical Report](medgemma-1-5-technical-report--arxiv-v2.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2604.05081) |
 | 2026-01-13 | [TranslateGemma Technical Report](translategemma-technical-report--arxiv-v3.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2601.09012) |
 | 2025-12-16 | [T5Gemma 2: Seeing, Reading, and Understanding Longer](t5gemma-2-seeing-reading-and-understanding-longer--arxiv-v2.pdf) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://deepmind.google/models/gemma/t5gemma/) |

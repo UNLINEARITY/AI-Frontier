@@ -124,22 +124,66 @@ class ArchiveTests(unittest.TestCase):
         (self.root / "sources.json").write_text(json.dumps([self.source]))
         model = dict(vendor="openai", model="Example model", status="archived",
                      source_url=self.source["pdf_url"], report_slugs=["example"],
-                     note_en="Report date unknown.", note_cn="报告日期未确认。")
+                     note_en="Report date unknown.", note_cn="报告日期未确认。",
+                     latest_categories=["general"])
         (self.root / "model-coverage.json").write_text(json.dumps(
             dict(checked_at="2026-10-01", models=[model])))
         archive.render_model_coverage([])
         english = (self.root / "LATEST_MODELS.md").read_text()
         chinese = (self.root / "LATEST_MODELS_CN.md").read_text()
-        self.assertIn("PDF not yet archived", english)
+        self.assertIn("Example model", english)
+        self.assertNotIn("technical-reports/example.pdf", english)
         self.assertNotIn("PDF archived", english)
-        self.assertIn("PDF 待收录", chinese)
+        self.assertNotIn("Report date unknown", english)
         self.assertIn("pdfs/openai/README_CN.md", chinese)
         row = dict(vendor="openai", title="Example", status="archived",
                    local_path="pdfs/openai/technical-reports/example.pdf",
                    source_updated_date="", retrieved_at="2026-10-01")
         archive.render_model_coverage([row])
-        self.assertIn("[Example](pdfs/openai/technical-reports/example.pdf)",
+        self.assertIn("[Technical Report](pdfs/openai/technical-reports/example.pdf)",
                       (self.root / "LATEST_MODELS.md").read_text())
+
+    def test_frontier_excludes_historical_and_discontinued_models(self):
+        (self.root / "sources.json").write_text("[]")
+        models = [dict(vendor="openai", model="Current model", source_url="https://example.org/current",
+                       latest_categories=["general", "coding"]),
+                  dict(vendor="openai", model="Earlier model", source_url="https://example.org/earlier"),
+                  dict(vendor="openai", model="Retired video", source_url="https://example.org/video",
+                       latest_categories=["video"], frontier_categories=["video"], lifecycle="discontinued")]
+        (self.root / "model-coverage.json").write_text(json.dumps(
+            dict(checked_at="2026-10-03", models=models)))
+        archive.render_model_coverage([])
+        for name in ("LATEST_MODELS.md", "LATEST_MODELS_CN.md"):
+            text = (self.root / name).read_text()
+            self.assertIn("Current model", text)
+            self.assertEqual(text.count("Current model"), 1)
+            self.assertNotIn("Earlier model", text)
+            self.assertNotIn("Retired video", text)
+
+    def test_frontier_rejects_two_latest_models_in_one_category(self):
+        (self.root / "sources.json").write_text("[]")
+        models = [dict(vendor="openai", model=name, source_url="https://example.org",
+                       latest_categories=["general"]) for name in ("One", "Two")]
+        (self.root / "model-coverage.json").write_text(json.dumps(
+            dict(checked_at="2026-10-03", models=models)))
+        with self.assertRaisesRegex(ValueError, "duplicate latest model category"):
+            archive.render_model_coverage([])
+
+    def test_frontier_keeps_flagships_alongside_a_newer_model(self):
+        (self.root / "sources.json").write_text("[]")
+        models = [dict(vendor="anthropic", model=name, source_url="https://example.org/model",
+                       frontier_categories=["general", "coding"])
+                  for name in ("Flagship Opus", "Flagship Fable")]
+        models.append(dict(vendor="anthropic", model="New Sonnet", source_url="https://example.org/new",
+                           latest_categories=["general", "coding"], frontier_categories=["general"]))
+        (self.root / "model-coverage.json").write_text(json.dumps(
+            dict(checked_at="2026-10-03", models=models)))
+        archive.render_model_coverage([])
+        for name in ("LATEST_MODELS.md", "LATEST_MODELS_CN.md"):
+            text = (self.root / name).read_text()
+            for model in ("Flagship Opus", "Flagship Fable", "New Sonnet"):
+                self.assertEqual(text.count(model), 1)
+            self.assertNotIn("Latest model", text)
 
 
 if __name__ == "__main__":

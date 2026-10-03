@@ -1,129 +1,298 @@
-# Recent models and report coverage
+# Frontier models
 
 [中文](LATEST_MODELS_CN.md) · [Home](README.md)
 
-Last checked: **2026-10-01**.
+Updated **2026-10-03**.
 
-A manual review of recent major model families and modality branches, showing where original reports are available. This is not a complete release inventory. A PDF not found during review does not establish that no report exists.
+Current flagships and important new models, with original reports and official introductions.
 
-Model release dates and report publication dates are distinct. Family reports do not automatically cover later releases. Web cards retain their official links without manufactured PDFs. Archived reports with unknown publication dates remain accessible here. Coverage refers to the linked documents, not availability of all three document types.
+[OpenAI](#openai) · [Anthropic](#anthropic) · [Google / DeepMind](#google) · [Meta](#meta) · [xAI](#xai) · [Mistral AI](#mistral) · [NVIDIA](#nvidia) · [DeepSeek](#deepseek) · [Alibaba / Qwen / Wan](#qwen) · [Moonshot AI / Kimi](#moonshot) · [Z.ai / Zhipu AI](#zai) · [MiniMax](#minimax) · [StepFun](#stepfun) · [Tencent / Hunyuan](#tencent) · [ByteDance / Seed](#bytedance) · [Cohere](#cohere) · [Microsoft / Phi / MAI](#microsoft) · [Amazon / Nova](#amazon)
 
-| Publisher | Model / family | Coverage | Reports / official entry | Notes |
-| --- | --- | --- | --- | --- |
-| [OpenAI](pdfs/openai/README.md) | GPT-6.1 Sol | PDF archived | [Addendum to GPT-6 Astra System Card: GPT-6.1 Sol](pdfs/openai/system-cards/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol.pdf)<br>[Official](https://deploymentsafety.openai.com/gpt-6-1-sol) | Original publisher PDF archived. |
-| [OpenAI](pdfs/openai/README.md) | GPT-6 Astra | PDF archived | [GPT-6 Astra System Card](pdfs/openai/system-cards/gpt-6-astra-system-card.pdf)<br>[Official](https://deploymentsafety.openai.com/gpt-6-astra) | Original publisher PDF archived. |
-| [OpenAI](pdfs/openai/README.md) | ChatGPT Images 2.5 / Sunburst / Flare | Family report; see scope | [ChatGPT Images 2.5 System Card](pdfs/openai/system-cards/chatgpt-images-2-5-system-card.pdf)<br>[Official](https://deploymentsafety.openai.com/chatgpt-images-2-5) | One system card covers the image model family. |
-| [OpenAI](pdfs/openai/README.md) | GPT-Live / GPT-Live mini | Family report; see scope | [GPT-Live System Card](pdfs/openai/system-cards/gpt-live-system-card.pdf)<br>[Official](https://deploymentsafety.openai.com/gpt-live) | Shared system card for real-time audio models. |
-| [OpenAI](pdfs/openai/README.md) | GPT-5.6 August safety update | PDF archived | [GPT-5.6 — August Updates](pdfs/openai/system-cards/gpt-5-6-august-updates.pdf)<br>[Official](https://deploymentsafety.openai.com/gpt-5-6-august-update) | Additional safety report dated August 6; this date is a report update, not a model release. |
-| [OpenAI](pdfs/openai/README.md) | GPT-Rosalind-5.5 | PDF archived | [GPT-Rosalind-5.5 System Card](pdfs/openai/system-cards/gpt-rosalind-5-5-system-card.pdf)<br>[Official](https://deploymentsafety.openai.com/gpt-rosalind-5-5) | Original publisher PDF archived. |
-| [OpenAI](pdfs/openai/README.md) | Sora 2 | PDF archived | [Sora 2 System Card](pdfs/openai/system-cards/sora-2-system-card.pdf)<br>[Official](https://deploymentsafety.openai.com/sora-2) | Historical video branch. PDF preserved; official page says Sora was discontinued April 26, 2026. |
-| [Anthropic](pdfs/anthropic/README.md) | Claude Opus 5.5 | PDF archived | [Claude Opus 5.5 System Card](pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf)<br>[Official](https://www.anthropic.com/claude-opus-5-5-system-card) | Original publisher PDF archived. |
-| [Anthropic](pdfs/anthropic/README.md) | Claude Fable 5.1 / Mythos 5.1 | Family report; see scope | [Claude Fable 5.1 and Mythos 5.1 System Card](pdfs/anthropic/system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf)<br>[Official](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card) | Combined system card covers both models. |
-| [Anthropic](pdfs/anthropic/README.md) | Claude Sonnet 5 | PDF archived | [Claude Sonnet 5 System Card](pdfs/anthropic/system-cards/claude-sonnet-5-system-card.pdf)<br>[Official](https://anthropic.com/claude-sonnet-5-system-card) | Original publisher PDF archived. |
-| [Anthropic](pdfs/anthropic/README.md) | Claude Haiku 4.5 | PDF archived | [Claude Haiku 4.5 System Card](pdfs/anthropic/system-cards/claude-haiku-4-5-system-card.pdf)<br>[Official](https://www.anthropic.com/system-cards) | Original publisher PDF archived. |
-| [Google / DeepMind](pdfs/google/README.md) | Gemini 3.8 Flash | PDF archived | [Gemini 3.8 Flash Model Card](pdfs/google/model-cards/gemini-3-8-flash-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Gemini 3.8 Audio: Live, extended thinking, TTS | PDF archived | [Gemini 3.8 Audio (Live, Live Extended Thinking, Flash TTS, Flash-Lite TTS) Model Card](pdfs/google/model-cards/gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Gemini Omni Flash | PDF archived | [Gemini Omni Flash Model Card](pdfs/google/model-cards/gemini-omni-flash-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Gemini 3.5 Audio: Translate, Transcribe, Transcribe Live | PDF archived | [Gemini 3.5 Audio (Live Translate, Transcribe, Transcribe Live) Model Card](pdfs/google/model-cards/gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Gemini 3.7 Flash | PDF archived | [Gemini 3.7 Flash Model Card](pdfs/google/model-cards/gemini-3-7-flash-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Gemini 3.1 Pro | PDF archived | [Gemini 3.1 Pro Model Card](pdfs/google/model-cards/gemini-3-1-pro-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Gemini 3.1 Flash Lite Image | PDF archived | [Gemini 3.1 Flash-Lite Image Model Card](pdfs/google/model-cards/gemini-3-1-flash-lite-image-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Lyria 3.5 | PDF archived | [Lyria 3.5 Model Card](pdfs/google/model-cards/lyria-3-5-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Veo 3.1 Lite | PDF archived | [Veo 3.1 Lite Model Card](pdfs/google/model-cards/veo-3-1-lite-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Veo 3 / 3.1 | PDF archived | [Veo 3 Model Card](pdfs/google/model-cards/veo-3-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Imagen 4 | PDF archived | [Imagen 4 Model Card](pdfs/google/model-cards/imagen-4-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Gemini Robotics ER 2 | PDF archived | [Gemini Robotics-ER 2 Model Card](pdfs/google/model-cards/gemini-robotics-er-2-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Gemini Robotics On Device 2 | PDF archived | [Gemini Robotics On-Device 2 Model Card](pdfs/google/model-cards/gemini-robotics-on-device-2-model-card.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Official model-card PDF archived; directory update dates are not assumed to be first publication dates. |
-| [Google / DeepMind](pdfs/google/README.md) | Gemma 4 | PDF archived | [Gemma 4 Technical Report](pdfs/google/technical-reports/gemma-4-technical-report--arxiv-v2.pdf)<br>[Official](https://deepmind.google/models/model-cards/) | Technical report archived; official model card is web only. Technical report archived; the separate model card is web-only. |
-| [Google / DeepMind](pdfs/google/README.md) | DiffusionGemma | Web card; PDF not found | [Official](https://deepmind.google/models/model-cards/) | Official web model card recorded; no standalone PDF located in this audit. |
-| [Google / DeepMind](pdfs/google/README.md) | FunctionGemma | Web card; PDF not found | [Official](https://deepmind.google/models/model-cards/) | Official web model card recorded; no standalone PDF located in this audit. |
-| [Google / DeepMind](pdfs/google/README.md) | MedGemma 1.5 | PDF archived | [MedGemma 1.5 Technical Report](pdfs/google/technical-reports/medgemma-1-5-technical-report--arxiv-v2.pdf)<br>[Official](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card) | Technical report archived; web model card tracked separately. Technical report archived; the separate model card is web-only. |
-| [Google / DeepMind](pdfs/google/README.md) | TranslateGemma | PDF archived | [TranslateGemma Technical Report](pdfs/google/technical-reports/translategemma-technical-report--arxiv-v3.pdf)<br>[Official](https://ai.google.dev/gemma/docs/translategemma/model_card) | Translation family technical report archived. |
-| [Meta](pdfs/meta/README.md) | Muse Spark 1.3 | Standalone report unconfirmed | [Official](https://research.meta.ai/blog/introducing-muse-spark-1-3) | Latest flagship release confirmed. Linked 4-page evaluation methodology is a companion, not a full technical/safety report; earlier Spark reports do not establish 1.3 coverage. |
-| [Meta](pdfs/meta/README.md) | Muse Spark 1.2 / Muse Code | Standalone report unconfirmed | [Official](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2) | Official release and short evaluation-methodology companions found; no standalone full model or safety report verified. |
-| [Meta](pdfs/meta/README.md) | Muse Spark 1.1 | PDF archived | [Muse Spark 1.1 Evaluation Report](pdfs/meta/system-cards/muse-spark-1-1-evaluation-report.pdf)<br>[Official](https://research.meta.ai/blog/introducing-muse-spark-meta-model-api) | 112-page full capability/safety evaluation report verified. |
-| [Meta](pdfs/meta/README.md) | Muse Spark | PDF archived | [Muse Spark Safety & Preparedness Report](pdfs/meta/system-cards/muse-spark-safety-and-preparedness-report--arxiv-v1.pdf)<br>[Official](https://arxiv.org/abs/2606.12429) | Safety & Preparedness Report verified; publication date May 14 is distinct from April launch. |
-| [Meta](pdfs/meta/README.md) | Muse Glimmer 30B | Web card; PDF not found | [Official](https://huggingface.co/meta-models/Muse-Glimmer-30B) | Official Markdown model card found; short evaluation methodology excluded from core archive. |
-| [Meta](pdfs/meta/README.md) | Muse Image | Standalone report unconfirmed | [Official](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) | Official release/safety page located; no standalone report/card PDF verified in this bounded audit. |
-| [Meta](pdfs/meta/README.md) | Muse Video | Standalone report unconfirmed | [Official](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) | Official release/safety page located; no standalone report/card PDF verified in this bounded audit. |
-| [Meta](pdfs/meta/README.md) | Muse Voice Transcribe | Standalone report unconfirmed | [Official](https://research.meta.ai/blog/introducing-muse-voice-transcribe) | Official release/safety page located; no standalone report/card PDF verified in this bounded audit. |
-| [Meta](pdfs/meta/README.md) | Muse personal AI agent | Standalone report unconfirmed | [Official](https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse) | Official release/safety page located; no standalone report/card PDF verified in this bounded audit. |
-| [Meta](pdfs/meta/README.md) | Llama 4 Scout / Maverick | Web card; PDF not found | [Official](https://www.llama.com/models/llama-4/) | Official family/model web cards tracked; no standalone original PDF located. |
-| [xAI](pdfs/xai/README.md) | Grok 4.7 | PDF archived | [Grok 4.7 Model Card](pdfs/xai/model-cards/grok-4-7-model-card.pdf)<br>[Official](https://x.ai/safety) | Original publisher PDF archived. |
-| [xAI](pdfs/xai/README.md) | Grok Imagine Image 2.0 | Standalone report unconfirmed | [Official](https://docs.x.ai/developers/models) | Image generation/editing model confirmed in official model table; no corresponding report/card located. |
-| [xAI](pdfs/xai/README.md) | Grok Imagine Video 1.5 | Standalone report unconfirmed | [Official](https://docs.x.ai/developers/models) | Video model confirmed in official model table; no corresponding report/card located. |
-| [xAI](pdfs/xai/README.md) | Grok Voice API | Standalone report unconfirmed | [Official](https://docs.x.ai/developers/models) | Audio branch confirmed in official documentation; no corresponding report/card located. |
-| [Mistral AI](pdfs/mistral/README.md) | Mistral Medium 3.5 | Web card; PDF not found | [Official](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) | Official HTML model card identified; original PDF not located. |
-| [Mistral AI](pdfs/mistral/README.md) | Mistral Small 4 | Web card; PDF not found | [Official](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) | Official HTML model card identified; original PDF not located. |
-| [Mistral AI](pdfs/mistral/README.md) | Mistral Large 3 | Web card; PDF not found | [Official](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) | Official HTML model card identified; original PDF not located. |
-| [Mistral AI](pdfs/mistral/README.md) | Devstral 2 | Web card; PDF not found | [Official](https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512) | Official HTML model card identified; original PDF not located. |
-| [Mistral AI](pdfs/mistral/README.md) | Leanstral 1.5 | Web card; PDF not found | [Official](https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B) | Official HTML model card identified; original PDF not located. |
-| [Mistral AI](pdfs/mistral/README.md) | Ministral 3 | PDF archived | [Ministral 3](pdfs/mistral/technical-reports/ministral-3--arxiv-v1.pdf)<br>[Official](https://mistral.ai/news/mistral-3/) | Original publisher PDF archived. |
-| [Mistral AI](pdfs/mistral/README.md) | Voxtral TTS | PDF archived | [Voxtral TTS](pdfs/mistral/technical-reports/voxtral-tts--arxiv-v2.pdf)<br>[Official](https://arxiv.org/abs/2603.25551) | Original publisher PDF archived. |
-| [Mistral AI](pdfs/mistral/README.md) | Voxtral Realtime | PDF archived | [Voxtral Realtime](pdfs/mistral/technical-reports/voxtral-realtime--arxiv-v3.pdf)<br>[Official](https://arxiv.org/abs/2602.11298) | Original publisher PDF archived. |
-| [Mistral AI](pdfs/mistral/README.md) | Shieldstral | PDF archived | [Shieldstral](pdfs/mistral/technical-reports/shieldstral--arxiv-v2.pdf)<br>[Official](https://arxiv.org/abs/2607.25857) | Original publisher PDF archived. |
-| [Mistral AI](pdfs/mistral/README.md) | Robostral Navigate | PDF archived | [Robostral Navigate](pdfs/mistral/technical-reports/robostral-navigate--arxiv-v3.pdf)<br>[Official](https://arxiv.org/abs/2607.20785) | Original publisher PDF archived. |
-| [Mistral AI](pdfs/mistral/README.md) | Mistral OCR 4.1 | Standalone report unconfirmed | [Official](https://docs.mistral.ai/models/ocr-4-1) | Official model documentation identified; no designated report/card PDF located. |
-| [NVIDIA](pdfs/nvidia/README.md) | Nemotron 3 Nano | PDF archived | [NVIDIA Nemotron 3 Nano Technical Report](pdfs/nvidia/technical-reports/nvidia-nemotron-3-nano-technical-report.pdf)<br>[Official](https://research.nvidia.com/labs/nemotron/Nemotron-3/) | Official technical report archived; model-launch dates kept separate from document chronology. |
-| [NVIDIA](pdfs/nvidia/README.md) | Nemotron 3 Super | PDF archived | [NVIDIA Nemotron 3 Super Technical Report](pdfs/nvidia/technical-reports/nvidia-nemotron-3-super-technical-report.pdf)<br>[Official](https://research.nvidia.com/labs/nemotron/Nemotron-3-Super/) | Official technical report archived; model-launch dates kept separate from document chronology. |
-| [NVIDIA](pdfs/nvidia/README.md) | Nemotron 3 Ultra | PDF archived | [NVIDIA Nemotron 3 Ultra Technical Report](pdfs/nvidia/technical-reports/nvidia-nemotron-3-ultra-technical-report.pdf)<br>[Official](https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/) | Official technical report archived; model-launch dates kept separate from document chronology. |
-| [NVIDIA](pdfs/nvidia/README.md) | Cosmos 3 | PDF archived | [Cosmos 3: Omnimodal World Models for Physical AI](pdfs/nvidia/technical-reports/cosmos-3-omnimodal-world-models-for-physical-ai.pdf)<br>[Official](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) | Official technical report archived; model-launch dates kept separate from document chronology. |
-| [NVIDIA](pdfs/nvidia/README.md) | Nemotron Cascade 2 | PDF archived | [Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation](pdfs/nvidia/technical-reports/nemotron-cascade-2-technical-report--arxiv-v2.pdf)<br>[Official](https://arxiv.org/abs/2603.19220) | Official technical report archived; model-launch dates kept separate from document chronology. |
-| [NVIDIA](pdfs/nvidia/README.md) | Nemotron Labs Audex 30B A3B | PDF archived | [Unified Audio Intelligence Without Regressing on Text Intelligence](pdfs/nvidia/technical-reports/nemotron-audex-technical-report--arxiv-v2.pdf)<br>[Official](https://huggingface.co/nvidia/Nemotron-Labs-Audex-30B-A3B) | Unified audio/text model report verified, arXiv v2 July 7. |
-| [NVIDIA](pdfs/nvidia/README.md) | Cosmos Reason 2 (2B / 8B / 32B) | Web card; PDF not found | [Official](https://github.com/nvidia-cosmos/cosmos-reason2) | Official repository/model documentation confirmed; older family papers do not constitute a current-version report. No standalone current-version PDF verified. |
-| [NVIDIA](pdfs/nvidia/README.md) | GR00T N1.7 | Standalone report unconfirmed | [Official](https://github.com/NVIDIA/Isaac-GR00T) | Official repository/model documentation confirmed; older family papers do not constitute a current-version report. No standalone current-version PDF verified. |
-| [DeepSeek](pdfs/deepseek/README.md) | DeepSeek-V4.1-Flash | PDF archived | [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](pdfs/deepseek/technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf)<br>[Official](https://www.deepseek.com/en/news/deepseek-v4-1-flash/) | Technical report verified. Official model announcement is dated September 10; arXiv first submission is September 17. The launch page describes V4.1-Pro as forthcoming, not released. |
-| [DeepSeek](pdfs/deepseek/README.md) | DeepSeek V4 / V3.2 model cards | PDF archived | [DeepSeek V4 Technical Documentation (Model Card)](pdfs/deepseek/model-cards/deepseek-v4-model-card.pdf)<br>[DeepSeek V3.2 Technical Documentation (Model Card)](pdfs/deepseek/model-cards/deepseek-v3-2-model-card.pdf)<br>[Official](https://www.deepseek.com/en/transparency/) | Separate official cards, not the technical reports. Both have Technical Documentation on the cover and Model Card on page 2; conflicting cover date order is preserved in the catalog. |
-| [Alibaba / Qwen / Wan](pdfs/qwen/README.md) | Qwen3.8 | Web card; PDF not found | [Official](https://github.com/QwenLM/Qwen3.8) | Official model repository available; separate general-model PDF report not located. |
-| [Alibaba / Qwen / Wan](pdfs/qwen/README.md) | Qwen3.8-Flash-Next | PDF archived | [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](pdfs/qwen/technical-reports/qwen3-8-flash-next.pdf)<br>[Official](https://github.com/QwenLM/Qwen3.8-Flash-Next) | Original architecture report verified; cover dated 2026-08-26, not a general Qwen3.8 report. |
-| [Alibaba / Qwen / Wan](pdfs/qwen/README.md) | Qwen-Image-2.1 | Web card; PDF not found | [Official](https://github.com/QwenLM/Qwen-Image-2.1) | Official model repository has no report PDF; Qwen-Image-2.0 report remains an earlier release. |
-| [Alibaba / Qwen / Wan](pdfs/qwen/README.md) | Wan video / Wan-Dancer / Wan-Animate-2 | Family report; see scope | [Wan: Open and Advanced Large-Scale Video Generative Models](pdfs/qwen/technical-reports/wan-2-1--arxiv-v2.pdf)<br>[Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation](pdfs/qwen/technical-reports/wan-dancer--arxiv-v3.pdf)<br>[Wan-Animate-2: Pushing the Application Boundaries of Character Animation](pdfs/qwen/technical-reports/wan-animate-2--arxiv-v2.pdf)<br>[Official](https://github.com/Wan-Video) | Latest reviewed official Wan branches include Dancer v3 and Animate-2 v2 reports; Wan2.2 points to Wan2.1 family report. |
-| [Moonshot AI / Kimi](pdfs/moonshot/README.md) | Kimi K3 | PDF archived | [Kimi K3 Technical Report](pdfs/moonshot/technical-reports/kimi-k3-technical-report.pdf)<br>[Official](https://github.com/MoonshotAI/Kimi-K3) | Latest reviewed flagship; original k3_tech_report.pdf already indexed. |
-| [Moonshot AI / Kimi](pdfs/moonshot/README.md) | Kimi Audio / Kimi VL | PDF archived | [Kimi-Audio Technical Report](pdfs/moonshot/technical-reports/kimi-audio-technical-report--arxiv-v1.pdf)<br>[Kimi-VL Technical Report](pdfs/moonshot/technical-reports/kimi-vl-technical-report--arxiv-v3.pdf)<br>[Official](https://github.com/MoonshotAI) | Reviewed official modality repositories; existing original reports cover their named releases. |
-| [智谱 / Z.ai](pdfs/zai/README.md) | GLM-5.3 | Web card; PDF not found | [Official](https://z.ai/blog/glm-5.3) | Official release 2026-08-14 and HTML model card available; linked GLM-5 paper is an older release, not a 5.3 report. |
-| [智谱 / Z.ai](pdfs/zai/README.md) | GLM-5.3-Flash | Web card; PDF not found | [Official](https://huggingface.co/zai-org/GLM-5.3-Flash) | Official native-multimodal model card and files reviewed; no original report/card PDF. |
-| [智谱 / Z.ai](pdfs/zai/README.md) | GLM-OCR / GLM-TTS | PDF archived | [GLM-OCR Technical Report](pdfs/zai/technical-reports/glm-ocr-technical-report--arxiv-v2.pdf)<br>[GLM-TTS Technical Report](pdfs/zai/technical-reports/glm-tts-technical-report--arxiv-v1.pdf)<br>[Official](https://github.com/zai-org) | Latest reviewed dedicated OCR/TTS branches have original indexed reports. |
-| [智谱 / Z.ai](pdfs/zai/README.md) | GLM-Image / GLM-ASR-Nano | Web card; PDF not found | [Official](https://github.com/zai-org) | Official image/ASR repositories exist; standalone PDF reports not located in reviewed entry points. |
-| [MiniMax](pdfs/minimax/README.md) | MiniMax-M3 | Web card; PDF not found | [Official](https://huggingface.co/MiniMaxAI/MiniMax-M3) | Official HTML model card links existing MSA architecture paper; separate full M3 PDF not located. |
-| [MiniMax](pdfs/minimax/README.md) | MiniMax-H3 | Report announced; awaiting PDF | [Official](https://www.minimax.io/blog/minimax-h3) | Official release on 2026-07-31 promises full technical report; reviewed model card/repository have no PDF. |
-| [MiniMax](pdfs/minimax/README.md) | MiniMax Music 3.0 | Web card; PDF not found | [Official](https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model) | Official release 2026-08-13 and HTML model card explain architecture; no original PDF located. |
-| [MiniMax](pdfs/minimax/README.md) | MiniMax Speech 2.8 | Standalone report unconfirmed | [Official](https://www.minimax.io/news/minimax-speech-28) | Official release 2026-01-23; original MiniMax-Speech report is earlier and not proof of 2.8-specific coverage. |
-| [StepFun](pdfs/stepfun/README.md) | Step 3.7 Flash | Web card; PDF not found | [Official](https://github.com/stepfun-ai/Step-3.7-Flash) | Latest reviewed text flagship has official repository/card, with no original PDF found. |
-| [StepFun](pdfs/stepfun/README.md) | StepAudio 3 Gen / Realtime / Music | PDF archived | [StepAudio 3 Gen Technical Report](pdfs/stepfun/technical-reports/step-audio-3-gen--arxiv-v1.pdf)<br>[StepAudio 3 Realtime Technical Report](pdfs/stepfun/technical-reports/step-audio-3-realtime--arxiv-v2.pdf)<br>[StepAudio 3 Music Technical Report](pdfs/stepfun/technical-reports/step-audio-3-music--arxiv-v1.pdf)<br>[Official](https://github.com/stepfun-ai) | September 2026 modality reports already indexed; model release dates remain separate from report submission dates. |
-| [Tencent / Hunyuan](pdfs/tencent/README.md) | Hy4-preview | Web card; PDF not found | [Official](https://github.com/Tencent-Hunyuan/Hy4-preview) | Latest reviewed text-preview repository provides model documentation; cited DSA/mHC method papers are not Hy4 reports. |
-| [Tencent / Hunyuan](pdfs/tencent/README.md) | Hy3 | Web card; PDF not found | [Official](https://github.com/Tencent-Hunyuan/Hy3) | Official release repository available, with no original model-report PDF located. |
-| [Tencent / Hunyuan](pdfs/tencent/README.md) | Hy-MT2 | PDF archived | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](pdfs/tencent/technical-reports/hy-mt2--arxiv-v2.pdf)<br>[Official](https://github.com/Tencent-Hunyuan/Hy-MT2) | Latest translation family report verified as arXiv v2. |
-| [Tencent / Hunyuan](pdfs/tencent/README.md) | Hunyuan3D Buffalo 1.0 / WorldClaw | PDF archived | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](pdfs/tencent/technical-reports/hunyuan3d-buffalo-1-0--arxiv-v3.pdf)<br>[WorldClaw: Agentic 3D Open-World Generation at Scale](pdfs/tencent/technical-reports/hunyuan3d-worldclaw--arxiv-v1.pdf)<br>[Official](https://github.com/Tencent-Hunyuan) | August 2026 original 3D model reports verified; Buffalo v3 and WorldClaw v1. |
-| [Tencent / Hunyuan](pdfs/tencent/README.md) | HunyuanImage 3.0 / HunyuanVideo 1.5 / HunyuanOCR 1.5 | PDF archived | [HunyuanImage 3.0 Technical Report](pdfs/tencent/technical-reports/hunyuan-image-3--arxiv-v3.pdf)<br>[HunyuanVideo 1.5 Technical Report](pdfs/tencent/technical-reports/hunyuan-video-1-5--arxiv-v2.pdf)<br>[HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](pdfs/tencent/technical-reports/hunyuan-ocr-1-5--arxiv-v3.pdf)<br>[Official](https://github.com/Tencent-Hunyuan) | Reviewed image/video/OCR branches; original reports already indexed. |
-| [ByteDance / Seed](pdfs/bytedance/README.md) | Seed2.1 | PDF archived | [Seed2.1 Model Card: Agentic Intelligence for Productivity](pdfs/bytedance/model-cards/seed2-1-model-card.pdf)<br>[Official](https://seed.bytedance.com/en/research) | Latest official model-navigation text flagship; original Seed2.1 Model Card already indexed. |
-| [ByteDance / Seed](pdfs/bytedance/README.md) | Seedance 2.5 | Standalone report unconfirmed | [Official](https://seed.bytedance.com/en/seedance2_5) | Official release 2026-07-31 and model page available; no original 2.5 report/card PDF located. |
-| [ByteDance / Seed](pdfs/bytedance/README.md) | Seedream 5.0 Pro | Standalone report unconfirmed | [Official](https://seed.bytedance.com/en/seedream5_0_pro) | Official release 2026-07-08 and model page available; no original report/card PDF located. |
-| [ByteDance / Seed](pdfs/bytedance/README.md) | SeedRealtime / Seed Audio 1.0 | Standalone report unconfirmed | [Official](https://seed.bytedance.com/en/research) | Latest official audio and audiovisual model pages reviewed; no original PDF report located. |
-| [Cohere](pdfs/cohere/README.md) | Command A+ | Web card; PDF not found | [Official](https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16) | Official HTML model card identified; original publisher PDF not located. |
-| [Cohere](pdfs/cohere/README.md) | North Mini Code 1.0 | Web card; PDF not found | [Official](https://huggingface.co/CohereLabs/North-Mini-Code-1.0) | Official HTML model card identified; original publisher PDF not located. |
-| [Cohere](pdfs/cohere/README.md) | North Micro Vision Instruct | Web card; PDF not found | [Official](https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct) | Official HTML model card identified; original publisher PDF not located. |
-| [Cohere](pdfs/cohere/README.md) | Cohere Transcribe | Web card; PDF not found | [Official](https://huggingface.co/CohereLabs/cohere-transcribe-03-2026) | Official HTML model card identified; original publisher PDF not located. Raw repository files are gated; absence within inaccessible files is not established. |
-| [Cohere](pdfs/cohere/README.md) | Cohere Transcribe Arabic | Web card; PDF not found | [Official](https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026) | Official HTML model card identified; original publisher PDF not located. Raw repository files are gated; absence within inaccessible files is not established. |
-| [Cohere](pdfs/cohere/README.md) | North Small Translate 1.0 | PDF archived | [North Small Translate: Advanced Cost-Effective Translation (Cohere CAT+)](pdfs/cohere/technical-reports/north-small-translate--arxiv-v1.pdf)<br>[Official](https://arxiv.org/abs/2609.13916) | Original publisher PDF archived. |
-| [Cohere](pdfs/cohere/README.md) | Command A Translate | PDF archived | [Command-A-Translate: Raising the Bar of Machine Translation with Difficulty Filtering](pdfs/cohere/technical-reports/command-a-translate.pdf)<br>[Official](https://aclanthology.org/2025.wmt-1.55/) | Original publisher PDF archived. |
-| [Cohere](pdfs/cohere/README.md) | Tiny Aya | Family report; see scope | [Tiny Aya: Bridging Scale and Multilingual Depth](pdfs/cohere/technical-reports/tiny-aya--arxiv-v1.pdf)<br>[Official](https://cohere.com/research/aya) | One technical report covers base and instruction-tuned regional variants. |
-| [Cohere](pdfs/cohere/README.md) | Embed 5 (pro / fast) | Standalone report unconfirmed | [Official](https://docs.cohere.com/docs/models) | Released September 30, 2026; official model table confirms both variants. No designated report/card located. |
-| [Cohere](pdfs/cohere/README.md) | Rerank 4 (pro / fast) | Standalone report unconfirmed | [Official](https://docs.cohere.com/docs/models) | Both variants confirmed by the current official model table; no designated report/card located. |
-| [Cohere](pdfs/cohere/README.md) | Parse 5 | Standalone report unconfirmed | [Official](https://docs.cohere.com/docs/models) | Live document parsing model confirmed by the current official model table; no designated report/card located. |
-| [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | MAI Thinking 1 | PDF archived | [MAI-Thinking-1: Building a Hill-Climbing Machine](pdfs/microsoft/technical-reports/mai-thinking-1-technical-report.pdf)<br>[Official](https://microsoft.ai/models/mai-thinking-1/) | Official report/model-card PDF verified. |
-| [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | MAI Code 1.1 Flash | PDF archived | [MAI-Code-1.1-Flash Model Card](pdfs/microsoft/model-cards/mai-code-1-1-flash-model-card.pdf)<br>[Official](https://microsoft.ai/models/mai-code-1-flash/) | Official report/model-card PDF verified. |
-| [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | MAI Image 2.6 / 2.6 Flash | PDF archived | [MAI-Image-2.6 / MAI-Image-2.6-Flash Model Card](pdfs/microsoft/model-cards/mai-image-2-6-model-card.pdf)<br>[Official](https://microsoft.ai/models/mai-image-2-6/) | Official report/model-card PDF verified. |
-| [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | MAI Transcribe 2 | PDF archived | [MAI-Transcribe-2 Model Card](pdfs/microsoft/model-cards/mai-transcribe-2-model-card.pdf)<br>[Official](https://microsoft.ai/models/mai-transcribe-2/) | Official report/model-card PDF verified. |
-| [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | MAI Voice 2 | PDF archived | [MAI-Voice-2 Model Card](pdfs/microsoft/model-cards/mai-voice-2-model-card.pdf)<br>[Official](https://microsoft.ai/models/mai-voice-2/) | Official report/model-card PDF verified. |
-| [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | MAI Cyber 1 Flash | PDF archived | [MAI-Cyber-1-Flash Model Card](pdfs/microsoft/model-cards/mai-cyber-1-flash-model-card.pdf)<br>[Official](https://microsoft.ai/models/mai-cyber-1-flash/) | Official report/model-card PDF verified. |
-| [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | MAI Voice 2 Flash | Standalone report unconfirmed | [Official](https://microsoft.ai/models/) | Flash release announced; the verified Voice 2 card does not independently establish coverage of Flash. |
-| [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | Phi 4 Reasoning Vision | PDF archived | [Phi-4-reasoning-vision-15B Technical Report](pdfs/microsoft/technical-reports/phi-4-reasoning-vision--arxiv-v1.pdf)<br>[Official](https://arxiv.org/abs/2603.03975) | Latest reasoning/vision branch report archived. |
-| [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | Phi 4 Mini Flash Reasoning | PDF archived | [Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation](pdfs/microsoft/technical-reports/phi-4-mini-flash-reasoning--arxiv-v3.pdf)<br>[Official](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) | Small reasoning branch technical report archived. |
-| [Amazon / Nova](pdfs/amazon/README.md) | Nova 2 Lite | Family report; see scope | [Amazon Nova 2: Multimodal Reasoning and Generation Models](pdfs/amazon/technical-reports/nova-2-family.pdf)<br>[Evaluating Nova 2.0 Lite model under Amazon's Frontier Model Safety Framework](pdfs/amazon/system-cards/nova-2-lite-frontier-safety-report--arxiv-v1.pdf)<br>[Official](https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models) | Covered by archived Nova 2 family technical report; a family report is not a separate per-model card. |
-| [Amazon / Nova](pdfs/amazon/README.md) | Nova 2 Pro | Family report; see scope | [Amazon Nova 2: Multimodal Reasoning and Generation Models](pdfs/amazon/technical-reports/nova-2-family.pdf)<br>[Official](https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models) | Covered by archived Nova 2 family technical report; a family report is not a separate per-model card. |
-| [Amazon / Nova](pdfs/amazon/README.md) | Nova 2 Omni | Family report; see scope | [Amazon Nova 2: Multimodal Reasoning and Generation Models](pdfs/amazon/technical-reports/nova-2-family.pdf)<br>[Official](https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models) | Covered by archived Nova 2 family technical report; a family report is not a separate per-model card. |
-| [Amazon / Nova](pdfs/amazon/README.md) | Nova 2 Sonic | Family report; see scope | [Amazon Nova 2: Multimodal Reasoning and Generation Models](pdfs/amazon/technical-reports/nova-2-family.pdf)<br>[Official](https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models) | Covered by archived Nova 2 family technical report; a family report is not a separate per-model card. |
-| [Amazon / Nova](pdfs/amazon/README.md) | Nova Premier | Family report; see scope | [The Amazon Nova Family of Models: Technical Report and Model Card](pdfs/amazon/technical-reports/nova-family.pdf)<br>[Evaluating the Critical Risks of Amazon's Nova Premier under the Frontier Model Safety Framework](pdfs/amazon/system-cards/nova-premier-frontier-safety-report--arxiv-v1.pdf)<br>[Official](https://www.amazon.science/publications/amazon-nova-premier-technical-report-and-model-card) | Existing Nova family addendum covers Premier; separate frontier-safety report verified. A referenced standalone technical-report PDF URL returns 404. |
-| [Amazon / Nova](pdfs/amazon/README.md) | Nova Act | PDF archived | [AWS AI Service Cards: Amazon Nova Act](pdfs/amazon/system-cards/nova-act-service-card.pdf)<br>[Official](https://docs.aws.amazon.com/pdfs/ai/responsible-ai/nova-act/nova-act.pdf) | Original 16-page AI Service Card is archived. Classified as System Card by its service risk and deployment scope; publisher title preserved. |
+<a id="openai"></a>
 
-Report versions and verification details: [full catalog](catalog.csv). Historical gaps and review boundaries: [GAPS.md](GAPS.md), currently in Chinese.
+## OpenAI
+
+[All reports](pdfs/openai/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Coding | GPT-6 Astra | [System Card](pdfs/openai/system-cards/gpt-6-astra-system-card.pdf) · [Official](https://deploymentsafety.openai.com/gpt-6-astra) |
+| General & reasoning / Coding | GPT-6.1 Sol | [System Card](pdfs/openai/system-cards/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol.pdf) · [Official](https://deploymentsafety.openai.com/gpt-6-1-sol) |
+| Image generation | ChatGPT Images 2.5 / Sunburst / Flare | [System Card](pdfs/openai/system-cards/chatgpt-images-2-5-system-card.pdf) · [Official](https://deploymentsafety.openai.com/chatgpt-images-2-5) |
+| Real-time audio | GPT-Live-1 | [System Card](pdfs/openai/system-cards/gpt-live-system-card.pdf) · [Official](https://openai.com/index/introducing-gpt-live-1-in-the-api/) |
+| Speech recognition | GPT-Transcribe / GPT-Live-Transcribe | [Official](https://developers.openai.com/api/docs/changelog) |
+| Speech generation | GPT-4o Mini TTS | [Official](https://developers.openai.com/api/docs/models/gpt-4o-mini-tts) |
+| Translation | GPT-Realtime-Translate | [Official](https://developers.openai.com/api/docs/models/gpt-realtime-translate) |
+| Scientific research | GPT-Rosalind-5.5 | [System Card](pdfs/openai/system-cards/gpt-rosalind-5-5-system-card.pdf) · [Official](https://deploymentsafety.openai.com/gpt-rosalind-5-5) |
+| Security | GPT-5.6 Cyber | [Official](https://developers.openai.com/api/docs/models/gpt-5.6-cyber) |
+
+<a id="anthropic"></a>
+
+## Anthropic
+
+[All reports](pdfs/anthropic/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Coding | Claude Opus 5.5 | [System Card](pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf) · [Official](https://www.anthropic.com/claude-opus-5-5) |
+| General & reasoning / Coding / Security | Claude Fable 5.1 / Mythos 5.1 | [System Card](pdfs/anthropic/system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf) · [Official](https://www.anthropic.com/claude-fable-and-mythos-5-1) |
+| General & reasoning / Coding | Claude Sonnet 5.5 | [System Card](pdfs/anthropic/system-cards/claude-sonnet-5-5-system-card.pdf) · [Official](https://www.anthropic.com/claude-sonnet-5-5) |
+
+<a id="google"></a>
+
+## Google / DeepMind
+
+[All reports](pdfs/google/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Coding / Vision | Gemini 3.8 Flash | [Model Card](pdfs/google/model-cards/gemini-3-8-flash-model-card.pdf) · [Official](https://deepmind.google/models/gemini/flash/) |
+| General & reasoning / Coding / Vision | Gemini 3.1 Pro | [Model Card](pdfs/google/model-cards/gemini-3-1-pro-model-card.pdf) · [Official](https://deepmind.google/models/gemini/pro/) |
+| General & reasoning / Vision | Gemma 4 | [Technical Report](pdfs/google/technical-reports/gemma-4-technical-report--arxiv-v2.pdf) · [Official](https://ai.google.dev/gemma/docs/core/model_card_4) |
+| General & reasoning / Coding / Vision / Security | Gemini 4 Argon (limited release) | [Official](https://deepmind.google/models/) |
+| Image generation | Nano Banana 2 Lite / Gemini 3.1 Flash-Lite Image | [Model Card](pdfs/google/model-cards/gemini-3-1-flash-lite-image-model-card.pdf) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
+| Video generation | Gemini Omni 1.1 Flash | [Model Card](pdfs/google/model-cards/gemini-omni-flash-model-card.pdf) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
+| Real-time audio | Gemini 3.8 Live / Live Extended Thinking | [Model Card](pdfs/google/model-cards/gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card.pdf) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
+| Speech recognition | Gemini 3.5 Transcribe / Transcribe Live | [Model Card](pdfs/google/model-cards/gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card.pdf) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
+| Speech generation | Gemini 3.8 Flash TTS / Flash-Lite TTS | [Model Card](pdfs/google/model-cards/gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card.pdf) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
+| Music generation | Lyria 3.5 | [Model Card](pdfs/google/model-cards/lyria-3-5-model-card.pdf) · [Official](https://deepmind.google/models/model-cards/) |
+| Translation | TranslateGemma | [Technical Report](pdfs/google/technical-reports/translategemma-technical-report--arxiv-v3.pdf) · [Official](https://ai.google.dev/gemma/docs/translategemma/model_card) |
+| Embeddings | Gemini Embedding 2 | [Technical Report](pdfs/google/technical-reports/gemini-embedding-2--arxiv-v1.pdf) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
+| Robotics | Gemini Robotics 2 / ER 2 / On-Device 2 | [Gemini Robotics-ER 2 Model Card](pdfs/google/model-cards/gemini-robotics-er-2-model-card.pdf) · [Gemini Robotics On-Device 2 Model Card](pdfs/google/model-cards/gemini-robotics-on-device-2-model-card.pdf) · [Official](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
+| World models | Genie 3 | [Official](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) |
+| Scientific research | WeatherNext 3 | [Technical Report](pdfs/google/technical-reports/weathernext-3-technical-report--arxiv-v1.pdf) · [Official](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/) |
+| Medical | MedGemma 1.5 | [Technical Report](pdfs/google/technical-reports/medgemma-1-5-technical-report--arxiv-v2.pdf) · [Official](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card) |
+
+<a id="meta"></a>
+
+## Meta
+
+[All reports](pdfs/meta/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning | Muse Glimmer 30B | [Official](https://huggingface.co/meta-models/Muse-Glimmer-30B) |
+| General & reasoning / Vision | Llama 4 Scout / Maverick | [Official](https://www.llama.com/models/llama-4/) |
+| General & reasoning / Coding / Vision | Muse Spark 1.3 | [Official](https://research.meta.ai/blog/introducing-muse-spark-1-3) |
+| Image generation | Muse Image | [Official](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
+| Video generation | Muse Video | [Official](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
+| Speech recognition | Muse Voice Transcribe | [Official](https://research.meta.ai/blog/introducing-muse-voice-transcribe) |
+| 3D generation | SAM 3D Objects / Body | [SAM 3D: 3Dfy Anything in Images](pdfs/meta/technical-reports/sam-3d-technical-report--arxiv-v2.pdf) · [SAM 3D Body: Robust Full-Body Human Mesh Recovery](pdfs/meta/technical-reports/sam-3d-body-technical-report--arxiv-v1.pdf) · [Official](https://about.fb.com/news/2025/11/new-sam-models-detect-objects-create-3d-reconstructions/) |
+
+<a id="xai"></a>
+
+## xAI
+
+[All reports](pdfs/xai/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Coding | Grok 4.7 | [Model Card](pdfs/xai/model-cards/grok-4-7-model-card.pdf) · [Official](https://x.ai/safety) |
+| Image generation | Grok Imagine Image 2.0 | [Official](https://docs.x.ai/developers/models) |
+| Video generation | Grok Imagine Video 1.5 | [Official](https://docs.x.ai/developers/models) |
+| Real-time audio | Grok Voice Think Fast 2.0 | [Official](https://docs.x.ai/developers/release-notes) |
+| Speech recognition | Grok Voice Transcribe 2.0 | [Official](https://docs.x.ai/developers/release-notes) |
+
+<a id="mistral"></a>
+
+## Mistral AI
+
+[All reports](pdfs/mistral/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Vision | Mistral Large 3 | [Official](https://mistral.ai/models/) |
+| General & reasoning / Coding | Mistral Medium 3.5 | [Official](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) |
+| Real-time audio / Speech recognition | Voxtral Realtime | [Technical Report](pdfs/mistral/technical-reports/voxtral-realtime--arxiv-v3.pdf) · [Official](https://arxiv.org/abs/2602.11298) |
+| Speech generation | Voxtral TTS | [Technical Report](pdfs/mistral/technical-reports/voxtral-tts--arxiv-v2.pdf) · [Official](https://arxiv.org/abs/2603.25551) |
+| Document understanding | Mistral OCR 4.1 | [Official](https://docs.mistral.ai/models/ocr-4-1) |
+| Embeddings | Codestral Embed | [Official](https://docs.mistral.ai/models/codestral-embed-25-05) |
+| Robotics | Robostral Navigate | [Technical Report](pdfs/mistral/technical-reports/robostral-navigate--arxiv-v3.pdf) · [Official](https://arxiv.org/abs/2607.20785) |
+| Security | Shieldstral | [Technical Report](pdfs/mistral/technical-reports/shieldstral--arxiv-v2.pdf) · [Official](https://arxiv.org/abs/2607.25857) |
+
+<a id="nvidia"></a>
+
+## NVIDIA
+
+[All reports](pdfs/nvidia/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Coding | Nemotron 3 Super | [Technical Report](pdfs/nvidia/technical-reports/nvidia-nemotron-3-super-technical-report.pdf) · [Official](https://research.nvidia.com/labs/nemotron/Nemotron-3-Super/) |
+| General & reasoning / Coding | Nemotron 3 Ultra | [Technical Report](pdfs/nvidia/technical-reports/nvidia-nemotron-3-ultra-technical-report.pdf) · [Official](https://research.nvidia.com/labs/nemotron/Nemotron-3-Ultra/) |
+| General & reasoning | Nemotron 3.5 Lightning | [Official](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16) |
+| Coding | Nemotron Labs 3 Competitive Coding 550B-A55B | [Technical Report](pdfs/nvidia/technical-reports/nemotron-3-competitive-coding--arxiv-v2.pdf) · [Official](https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-3-Competitive-Coding-550B-A55B-NVFP4) |
+| Vision | Nemotron 3 Nano Omni | [Technical Report](pdfs/nvidia/technical-reports/nemotron-3-nano-omni--arxiv-v2.pdf) · [Official](https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/) |
+| Real-time audio | Nemotron Labs VoiceChat 11B | [Official](https://catalog.ngc.nvidia.com/orgs/nim/nvidia/containers/nemotron-labs-voicechat/1.0.0) |
+| Speech recognition | Nemotron 3.5 ASR Streaming 0.6B | [Official](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b) |
+| Speech generation | MagpieTTS Multilingual 357M v2607 | [Official](https://huggingface.co/nvidia/magpie_tts_multilingual_357m) |
+| Document understanding | Nemotron Parse 2.0 | [Official](https://huggingface.co/nvidia/NVIDIA-Nemotron-Parse-2.0) |
+| Embeddings | Nemotron 3 Embed 1B / 8B | [Official](https://huggingface.co/nvidia/Nemotron-3-Embed-8B-BF16) |
+| Robotics | GR00T N1.7 | [Official](https://github.com/NVIDIA/Isaac-GR00T) |
+| World models | Cosmos 3 Edge | [Official](https://huggingface.co/nvidia/Cosmos3-Edge) |
+
+<a id="deepseek"></a>
+
+## DeepSeek
+
+[All reports](pdfs/deepseek/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Coding | DeepSeek-V4-Pro | [Model Card](pdfs/deepseek/model-cards/deepseek-v4-model-card.pdf) · [Official](https://api-docs.deepseek.com/news/news260813/) |
+| General & reasoning / Vision | DeepSeek-V4.1-Flash | [Technical Report](pdfs/deepseek/technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf) · [Official](https://www.deepseek.com/en/news/deepseek-v4-1-flash/) |
+| Document understanding | DeepSeek-OCR-2 | [Technical Report](pdfs/deepseek/technical-reports/deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf) · [Official](https://github.com/deepseek-ai/DeepSeek-OCR-2) |
+
+<a id="qwen"></a>
+
+## Alibaba / Qwen / Wan
+
+[All reports](pdfs/qwen/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning | Qwen3.8-Flash-Next | [Technical Report](pdfs/qwen/technical-reports/qwen3-8-flash-next.pdf) · [Official](https://github.com/QwenLM/Qwen3.8-Flash-Next) |
+| General & reasoning / Coding / Vision | Qwen3.8-Max | [Official](https://help.aliyun.com/en/model-studio/qwen3-8-max) |
+| General & reasoning / Vision | Qwen3.8-Omni-Flash | [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| Coding | Qwen3-Coder-Next | [Technical Report](pdfs/qwen/technical-reports/qwen3-coder-next-technical-report--arxiv-v1.pdf) · [Official](https://github.com/QwenLM/Qwen3-Coder) |
+| Image generation | Qwen-Image-2.1-Pro | [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| Video generation | Wan3.0-Video-Prime | [Official](https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference) |
+| Real-time audio | Qwen3.8-Omni-Flash-Realtime | [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| Speech recognition | Qwen-Audio-3.0-ASR | [Technical Report](pdfs/qwen/technical-reports/qwen-audio-3-0-asr--arxiv-v2.pdf) · [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| Speech generation | Qwen-Audio-3.0-TTS-Plus / Flash | [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| Translation | Qwen-MT-Uni | [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+
+<a id="moonshot"></a>
+
+## Moonshot AI / Kimi
+
+[All reports](pdfs/moonshot/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Vision | Kimi K3 | [Technical Report](pdfs/moonshot/technical-reports/kimi-k3-technical-report.pdf) · [Official](https://github.com/MoonshotAI/Kimi-K3) |
+| Coding | Kimi K2.8 Preview | [Official](https://www.kimi.com/code/docs/en/kimi-code/whats-new.html) |
+| Audio understanding | Kimi-Audio | [Technical Report](pdfs/moonshot/technical-reports/kimi-audio-technical-report--arxiv-v1.pdf) · [Official](https://github.com/MoonshotAI/Kimi-Audio) |
+
+<a id="zai"></a>
+
+## Z.ai / Zhipu AI
+
+[All reports](pdfs/zai/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Coding | GLM-5.3 | [Official](https://z.ai/blog/glm-5.3) |
+| General & reasoning / Vision | GLM-5.3-FlashX | [Official](https://docs.z.ai/guides/vlm/glm-5.3-flash) |
+| Image generation | GLM-Image | [Official](https://github.com/zai-org/GLM-Image) |
+| Speech recognition | GLM-ASR-Nano | [Official](https://github.com/zai-org/GLM-ASR) |
+| Speech generation | GLM-TTS | [Technical Report](pdfs/zai/technical-reports/glm-tts-technical-report--arxiv-v1.pdf) · [Official](https://github.com/zai-org/GLM-TTS) |
+| Document understanding | GLM-OCR | [Technical Report](pdfs/zai/technical-reports/glm-ocr-technical-report--arxiv-v2.pdf) · [Official](https://github.com/zai-org/GLM-OCR) |
+
+<a id="minimax"></a>
+
+## MiniMax
+
+[All reports](pdfs/minimax/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Coding | MiniMax-M3 | [Official](https://huggingface.co/MiniMaxAI/MiniMax-M3) |
+| Video generation | MiniMax-H3 | [Official](https://www.minimax.io/blog/minimax-h3) |
+| Speech generation | MiniMax Speech 2.8 | [Official](https://www.minimax.io/news/minimax-speech-28) |
+| Music generation | MiniMax Music 3.0 | [Official](https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model) |
+
+<a id="stepfun"></a>
+
+## StepFun
+
+[All reports](pdfs/stepfun/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning | Step 3.7 Flash | [Official](https://github.com/stepfun-ai/Step-3.7-Flash) |
+| General & reasoning / Vision | Step 5 Preview | [Official](https://platform.stepfun.com/docs/zh/guides/models/step-5-preview) |
+| Image generation | NextStep-1.1 | [Official](https://github.com/stepfun-ai/NextStep-1) |
+| Video generation | Step-Video-TI2V | [Technical Report](pdfs/stepfun/technical-reports/step-video-ti2v--arxiv-v1.pdf) · [Official](https://github.com/stepfun-ai/Step-Video-TI2V) |
+| Real-time audio | StepAudio 3 Realtime | [Technical Report](pdfs/stepfun/technical-reports/step-audio-3-realtime--arxiv-v2.pdf) · [Official](https://github.com/stepfun-ai) |
+| Speech recognition | StepAudio 3 ASR Max | [Official](https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-asr) |
+| Speech generation | StepAudio 3 TTS | [Technical Report](pdfs/stepfun/technical-reports/step-audio-3-gen--arxiv-v1.pdf) · [Official](https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-tts) |
+| Music generation | StepAudio 3 Music | [Technical Report](pdfs/stepfun/technical-reports/step-audio-3-music--arxiv-v1.pdf) · [Official](https://github.com/stepfun-ai) |
+| 3D generation | Step1X-3D | [Technical Report](pdfs/stepfun/technical-reports/step1x-3d--arxiv-v1.pdf) · [Official](https://github.com/stepfun-ai/Step1X-3D) |
+
+<a id="tencent"></a>
+
+## Tencent / Hunyuan
+
+[All reports](pdfs/tencent/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning | Hy4-preview | [Official](https://github.com/Tencent-Hunyuan/Hy4-preview) |
+| Image generation | HunyuanImage 3.0 | [Technical Report](pdfs/tencent/technical-reports/hunyuan-image-3--arxiv-v3.pdf) · [Official](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) |
+| Video generation | HunyuanVideo 1.5 | [Technical Report](pdfs/tencent/technical-reports/hunyuan-video-1-5--arxiv-v2.pdf) · [Official](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |
+| Translation | Hy-MT2 | [Technical Report](pdfs/tencent/technical-reports/hy-mt2--arxiv-v2.pdf) · [Official](https://github.com/Tencent-Hunyuan/Hy-MT2) |
+| Document understanding | WeVisDoc-4B / 2B | [Technical Report](pdfs/tencent/technical-reports/wevisdoc--arxiv-v1.pdf) · [Official](https://huggingface.co/tencent/WeVisDoc-4B) |
+| 3D generation | Hunyuan3D 3.1 | [Official](https://cloud.tencent.com/document/product/1804/123447) |
+
+<a id="bytedance"></a>
+
+## ByteDance / Seed
+
+[All reports](pdfs/bytedance/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning / Vision | Seed2.1 | [Model Card](pdfs/bytedance/model-cards/seed2-1-model-card.pdf) · [Official](https://seed.bytedance.com/en/research) |
+| Image generation | Seedream 5.0 Pro | [Official](https://seed.bytedance.com/en/seedream5_0_pro) |
+| Video generation | Seedance 2.5 | [Official](https://seed.bytedance.com/en/seedance2_5) |
+| Real-time audio | SeedRealtime | [Official](https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction) |
+| Audio understanding | Seed Audio 1.0 | [Official](https://seed.bytedance.com/en/research) |
+
+<a id="cohere"></a>
+
+## Cohere
+
+[All reports](pdfs/cohere/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning | Command A+ | [Official](https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16) |
+| Coding | North Mini Code 1.0 | [Official](https://huggingface.co/CohereLabs/North-Mini-Code-1.0) |
+| Vision | North Micro Vision Instruct | [Official](https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct) |
+| Speech recognition | Cohere Transcribe Arabic | [Official](https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026) |
+| Translation | North Small Translate 1.0 | [Technical Report](pdfs/cohere/technical-reports/north-small-translate--arxiv-v1.pdf) · [Official](https://arxiv.org/abs/2609.13916) |
+| Document understanding | Parse 5 | [Official](https://docs.cohere.com/docs/models) |
+| Embeddings | Embed 5 (pro / fast) | [Official](https://docs.cohere.com/docs/models) |
+| Reranking | Rerank 4 (pro / fast) | [Official](https://docs.cohere.com/docs/models) |
+
+<a id="microsoft"></a>
+
+## Microsoft / Phi / MAI
+
+[All reports](pdfs/microsoft/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning | MAI Thinking 1 | [Technical Report](pdfs/microsoft/technical-reports/mai-thinking-1-technical-report.pdf) · [Official](https://microsoft.ai/models/mai-thinking-1/) |
+| Coding | MAI Code 1.1 Flash | [Model Card](pdfs/microsoft/model-cards/mai-code-1-1-flash-model-card.pdf) · [Official](https://microsoft.ai/models/mai-code-1-flash/) |
+| Vision | Phi 4 Reasoning Vision | [Technical Report](pdfs/microsoft/technical-reports/phi-4-reasoning-vision--arxiv-v1.pdf) · [Official](https://arxiv.org/abs/2603.03975) |
+| Image generation | MAI Image 2.6 / 2.6 Flash | [Model Card](pdfs/microsoft/model-cards/mai-image-2-6-model-card.pdf) · [Official](https://microsoft.ai/models/mai-image-2-6/) |
+| Speech recognition | MAI-Transcribe-2-Streaming | [Model Card](pdfs/microsoft/model-cards/mai-transcribe-2-streaming-model-card.pdf) · [Official](https://microsoft.ai/models/mai-transcribe-2/) |
+| Speech generation | MAI-Voice-2.1 / Flash | [MAI-Voice-2.1 Model Card](pdfs/microsoft/model-cards/mai-voice-2-1-model-card.pdf) · [MAI-Voice-2.1-Flash Model Card](pdfs/microsoft/model-cards/mai-voice-2-1-flash-model-card.pdf) · [Official](https://microsoft.ai/models/mai-voice-2-1/) |
+| Security | MAI Cyber 1 Flash | [Model Card](pdfs/microsoft/model-cards/mai-cyber-1-flash-model-card.pdf) · [Official](https://microsoft.ai/models/mai-cyber-1-flash/) |
+
+<a id="amazon"></a>
+
+## Amazon / Nova
+
+[All reports](pdfs/amazon/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| General & reasoning | Nova 2 Lite / Pro Preview | [Technical Report](pdfs/amazon/technical-reports/nova-2-family.pdf) · [System Card](pdfs/amazon/system-cards/nova-2-lite-frontier-safety-report--arxiv-v1.pdf) · [Official](https://aws.amazon.com/about-aws/whats-new/2025/12/nova-2-foundation-models-amazon-bedrock/) |
+| Image generation | Nova 2 Omni Preview | [Technical Report](pdfs/amazon/technical-reports/nova-2-family.pdf) · [Official](https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-nova-2-omni-preview/) |
+| Real-time audio | Nova 2 Sonic | [Technical Report](pdfs/amazon/technical-reports/nova-2-family.pdf) · [Official](https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models) |
+| Embeddings | Nova Multimodal Embeddings | [Technical Report](pdfs/amazon/technical-reports/nova-multimodal-embeddings.pdf) · [Official](https://www.amazon.science/publications/amazon-nova-multimodal-embeddings-technical-report-and-model-card) |
+
+Explore earlier models and reports in the [publisher archives](README.md#browse-by-publisher).

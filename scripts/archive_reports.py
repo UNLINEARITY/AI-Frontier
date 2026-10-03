@@ -30,6 +30,28 @@ DOCUMENT_TYPES = {
     "model_card": ("Model Card", "model-cards.md"),
     "system_card": ("System Card", "system-cards.md"),
 }
+MODEL_CATEGORIES = {
+    "general": ("General & reasoning", "通用与推理"),
+    "coding": ("Coding", "编程"),
+    "vision": ("Vision", "视觉理解"),
+    "image": ("Image generation", "图像生成"),
+    "video": ("Video generation", "视频生成"),
+    "realtime": ("Real-time audio", "实时语音"),
+    "audio": ("Audio understanding", "语音理解"),
+    "transcription": ("Speech recognition", "语音识别"),
+    "speech": ("Speech generation", "语音生成"),
+    "music": ("Music generation", "音乐生成"),
+    "translation": ("Translation", "翻译"),
+    "ocr": ("Document understanding", "文档理解"),
+    "embedding": ("Embeddings", "向量嵌入"),
+    "reranking": ("Reranking", "重排序"),
+    "robotics": ("Robotics", "机器人"),
+    "world": ("World models", "世界模型"),
+    "3d": ("3D generation", "3D 生成"),
+    "science": ("Scientific research", "科学研究"),
+    "medical": ("Medical", "医疗"),
+    "security": ("Security", "安全"),
+}
 FIELDS = ["vendor", "title", "document_type", "published_date", "source_updated_date",
           "version", "source_url", "pdf_url", "resolved_url", "local_path", "retrieved_at",
           "sha256", "size_bytes", "pages", "status", "notes"]
@@ -147,56 +169,73 @@ def render_model_coverage(rows):
     coverage = json.loads(path.read_text(encoding="utf-8"))
     sources = {(s["vendor"], s["slug"]): s for s in
                json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))}
-    labels = {
-        "archived": ("PDF archived", "PDF 已收录"),
-        "family_report": ("Family report; see scope", "家族报告覆盖，见说明"),
-        "web_only": ("Web card; PDF not found", "网页卡片，未找到 PDF"),
-        "pending": ("Report announced; awaiting PDF", "官方预告报告，待发布 PDF"),
-        "unconfirmed": ("Standalone report unconfirmed", "独立报告仍待核实"),
-    }
+    latest = {}
+    for model in coverage["models"]:
+        if model.get("lifecycle", "active") != "active":
+            continue
+        for category in model.get("frontier_categories", []):
+            if model["vendor"] not in VENDORS or category not in MODEL_CATEGORIES:
+                raise ValueError(f"Invalid frontier model category: {model['vendor']}, {category}")
+        for category in model.get("latest_categories", []):
+            key = (model["vendor"], category)
+            if model["vendor"] not in VENDORS or category not in MODEL_CATEGORIES or key in latest:
+                raise ValueError(f"Invalid or duplicate latest model category: {key}")
+            latest[key] = model
     for chinese in (False, True):
+        publisher_labels = {vendor: label if chinese or vendor != "zai" else "Z.ai / Zhipu AI"
+                            for vendor, label in VENDORS.items()}
         home = "README_CN.md" if chinese else "README.md"
         target = "LATEST_MODELS_CN.md" if chinese else "LATEST_MODELS.md"
         sibling = "LATEST_MODELS.md" if chinese else "LATEST_MODELS_CN.md"
-        lines = ["# 最新模型与报告覆盖" if chinese else "# Recent models and report coverage", "",
+        lines = ["# 前沿模型" if chinese else "# Frontier models", "",
                  f"[English]({sibling}) · [首页]({home})" if chinese else
                  f"[中文]({sibling}) · [Home]({home})", "",
-                 f"核对日期：**{coverage['checked_at']}**。" if chinese else
-                 f"Last checked: **{coverage['checked_at']}**.", "",
-                 "按厂商核对近期主要模型与模态分支，说明原始报告是否可读、是否有独立 PDF。"
-                 "这是一份人工核查清单，尚未覆盖所有模型发布；仅凭搜索未找到不能断言厂商没有报告。" if chinese else
-                 "A manual review of recent major model families and modality branches, showing where original reports are available. "
-                 "This is not a complete release inventory. A PDF not found during review does not establish that no report exists.", "",
-                 "模型发布日期与报告发布日期分别处理。家族报告不自动代表所有后续版本；网页卡片保留官方入口，不制作自制 PDF。"
-                 "报告日期未确认时仍可从本页访问已收录原文。覆盖状态针对所链接文档，不表示三类报告均已公开。" if chinese else
-                 "Model release dates and report publication dates are distinct. Family reports do not automatically cover later releases. "
-                 "Web cards retain their official links without manufactured PDFs. Archived reports with unknown publication dates remain accessible here. "
-                 "Coverage refers to the linked documents, not availability of all three document types.", "",
-                 "| 厂商 | 模型 / 家族 | 覆盖状态 | 原文 / 官方入口 | 说明 |" if chinese else
-                 "| Publisher | Model / family | Coverage | Reports / official entry | Notes |",
-                 "| --- | --- | --- | --- | --- |"]
-        for model in coverage["models"]:
-            vendor = model["vendor"]
-            if model["status"] in ("archived", "family_report") and not model.get("report_slugs"):
-                raise ValueError(f"Missing report references for {model['model']}")
-            status = labels[model["status"]][int(chinese)]
-            links = []
-            for slug in model.get("report_slugs", []):
-                source = sources[(vendor, slug)]
-                archived = [r for r in rows if r["vendor"] == vendor and
-                            r["title"] == source["title"] and r["status"] == "archived"]
-                if archived:
-                    row = max(archived, key=lambda r: (r["source_updated_date"], r["retrieved_at"]))
-                    links.append(f"[{source['title']}]({row['local_path']})")
-            if not links and model["status"] in ("archived", "family_report"):
-                status = "PDF 待收录" if chinese else "PDF not yet archived"
-            official = "官方" if chinese else "Official"
-            links.append(f"[{official}]({model['source_url']})")
-            publisher = f"[{VENDORS[vendor]}](pdfs/{vendor}/{home})"
-            note = model["note_cn" if chinese else "note_en"].replace("|", "\\|")
-            lines.append(f"| {publisher} | {model['model']} | {status} | {'<br>'.join(links)} | {note} |")
-        lines += ["", "文件版本与校验信息见 [完整索引](catalog.csv)，历史缺口与边界见 [待补清单](GAPS.md)。" if chinese else
-                  "Report versions and verification details: [full catalog](catalog.csv). Historical gaps and review boundaries: [GAPS.md](GAPS.md), currently in Chinese.", ""]
+                 f"更新于 **{coverage['checked_at']}**。" if chinese else
+                 f"Updated **{coverage['checked_at']}**.", "",
+                 "按厂商浏览当前旗舰与重要新模型，直达原始报告与官方介绍。" if chinese else
+                 "Current flagships and important new models, with original reports and official introductions.", "",
+                 " · ".join(f"[{label}](#{vendor})" for vendor, label in publisher_labels.items()), ""]
+        for vendor, label in publisher_labels.items():
+            models = {}
+            for category in MODEL_CATEGORIES:
+                candidates = [model for model in coverage["models"] if model["vendor"] == vendor
+                              and model.get("lifecycle", "active") == "active"
+                              and category in model.get("frontier_categories", [])]
+                if (vendor, category) in latest:
+                    candidates.append(latest[(vendor, category)])
+                for model in candidates:
+                    entry = models.setdefault(id(model), {"model": model, "categories": []})
+                    category_label = MODEL_CATEGORIES[category][int(chinese)]
+                    if category_label not in entry["categories"]:
+                        entry["categories"].append(category_label)
+            if not models:
+                continue
+            lines += [f'<a id="{vendor}"></a>', "", f"## {label}", "",
+                      f"[全部报告](pdfs/{vendor}/{home})" if chinese else
+                      f"[All reports](pdfs/{vendor}/{home})", "",
+                      "| 类别 | 模型 | 阅读 |" if chinese else
+                      "| Category | Model | Read |", "| --- | --- | --- |"]
+            for entry in models.values():
+                model = entry["model"]
+                links = []
+                report_types = [sources[(vendor, slug)]["document_type"]
+                                for slug in model.get("report_slugs", [])]
+                for slug in model.get("report_slugs", []):
+                    source = sources[(vendor, slug)]
+                    archived = [r for r in rows if r["vendor"] == vendor and
+                                r["title"] == source["title"] and r["status"] == "archived"]
+                    if archived:
+                        row = max(archived, key=lambda r: (r["source_updated_date"], r["retrieved_at"]))
+                        kind = source["document_type"]
+                        title = source["title"] if report_types.count(kind) > 1 else DOCUMENT_TYPES[kind][0]
+                        links.append(f"[{title}]({row['local_path']})")
+                official = "官方介绍" if chinese else "Official"
+                links.append(f"[{official}]({model.get('frontier_source_url', model['source_url'])})")
+                name = model["model"].replace("|", "\\|")
+                lines.append(f"| {' / '.join(entry['categories'])} | {name} | {' · '.join(links)} |")
+            lines.append("")
+        lines += ["历史模型与报告见[厂商归档](README_CN.md#按厂商浏览)。" if chinese else
+                  "Explore earlier models and reports in the [publisher archives](README.md#browse-by-publisher).", ""]
         (ROOT / target).write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -206,7 +245,7 @@ def render(rows):
     publisher_count = len({row["vendor"] for row in archived})
     brand = json.loads((ROOT / ".github" / "brand.json").read_text(encoding="utf-8"))
     lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline']}**", "",
-             "[Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Recent models](LATEST_MODELS.md) · [Full catalog](catalog.csv)", "",
+             "[Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)", "",
              "An open research archive for understanding how frontier AI models are built, evaluated, and deployed. "
              "We bring official technical reports, model cards, and system cards into one place, "
              "and are building toward readable sources, grounded technical analysis, and ongoing release tracking.", "",
@@ -215,7 +254,7 @@ def render(rows):
              "Markdown editions, structured analysis, and automated tracking are the next stages.", "",
              "**Star AI Frontier to keep the sources close and follow the archive as it grows.**", ""]
     cn_lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline_cn']}**", "",
-                "[英文版](README.md) · [按厂商浏览](#按厂商浏览) · [按类型浏览](#按类型找报告) · [最新模型覆盖](LATEST_MODELS_CN.md) · [完整索引](catalog.csv)", "",
+                "[英文版](README.md) · [按厂商浏览](#按厂商浏览) · [按类型浏览](#按类型找报告) · [前沿模型](LATEST_MODELS_CN.md) · [完整索引](catalog.csv)", "",
                 "一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。"
                 "我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，"
                 "并逐步推进可读原文、基于来源的技术分析与模型发布追踪。", "",
@@ -268,12 +307,12 @@ def render(rows):
             root_lines.append(f"| [{publisher}](pdfs/{vendor}/{readme}) | {' | '.join(count_links)} | {len(good)} |")
             detail = [f"# {publisher}", ""]
             if chinese:
-                detail += ["[首页](../../README_CN.md) · [最新模型覆盖](../../LATEST_MODELS_CN.md) · [英文版](README.md)", "",
+                detail += ["[首页](../../README_CN.md) · [前沿模型](../../LATEST_MODELS_CN.md) · [英文版](README.md)", "",
                            "按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。"
                            "类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。", "",
                            "## 按类型浏览", "", "| 类型 | 已归档 PDF |", "| --- | ---: |"]
             else:
-                detail += ["[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)", "",
+                detail += ["[Home](../../README.md) · [Frontier models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)", "",
                            "Reports are ordered by recorded first publication date, newest first; unknown dates appear last. "
                            "Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).", "",
                            "## Browse by type", "", "| Type | Archived PDFs |", "| --- | ---: |"]

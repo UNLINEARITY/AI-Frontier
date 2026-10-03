@@ -2,7 +2,7 @@
 
 [All reports](../README.md) · [Document types](../README.md#choose-the-right-document) · [Chinese](model-cards_CN.md)
 
-**56 archived PDFs**. Listed by recorded first publication date, newest first; unknown dates appear last.
+**59 archived PDFs**. Listed by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Publisher | Report | Status | Official source |
 | --- | --- | --- | --- | --- |
@@ -45,7 +45,10 @@
 | Unknown | [MiniMax](../pdfs/minimax/README.md) | MiniMax-H3 Model Card | missing_pdf | [Source](https://huggingface.co/MiniMaxAI/MiniMax-H3) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | MedGemma 1.5 Model Card | missing_pdf | [Source](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | MedGemma 1 Model Card | missing_pdf | [Source](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card-v1) |
+| Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Voice-2.1-Flash Model Card](../pdfs/microsoft/model-cards/mai-voice-2-1-flash-model-card.pdf) | archived | [Source](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
+| Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Voice-2.1 Model Card](../pdfs/microsoft/model-cards/mai-voice-2-1-model-card.pdf) | archived | [Source](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
 | Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Voice-2 Model Card](../pdfs/microsoft/model-cards/mai-voice-2-model-card.pdf) | archived | [Source](https://microsoft.ai/models/mai-voice-2/) |
+| Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Transcribe-2-Streaming Model Card](../pdfs/microsoft/model-cards/mai-transcribe-2-streaming-model-card.pdf) | archived | [Source](https://microsoft.ai/news/our-first-streaming-transcription-model/) |
 | Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Transcribe-2 Model Card](../pdfs/microsoft/model-cards/mai-transcribe-2-model-card.pdf) | archived | [Source](https://microsoft.ai/models/mai-transcribe-2/) |
 | Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | MAI-Thinking-1 Model Card | missing_pdf | [Source](https://ai.azure.com/catalog/models/MAI-Thinking-1) |
 | Unknown | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [MAI-Image-2.6 / MAI-Image-2.6-Flash Model Card](../pdfs/microsoft/model-cards/mai-image-2-6-model-card.pdf) | archived | [Source](https://microsoft.ai/models/mai-image-2-6/) |

@@ -1,6 +1,6 @@
 # Mistral AI
 
-[Home](../../README.md) · [Recent models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
+[Home](../../README.md) · [Frontier models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)
 
 Reports are ordered by recorded first publication date, newest first; unknown dates appear last. Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).
 

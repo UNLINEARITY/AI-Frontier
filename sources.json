@@ -5075,5 +5075,183 @@
     "source_url": "https://ai.azure.com/catalog/models/MAI-Thinking-1",
     "pdf_url": "",
     "notes": "Official model page links https://aka.ms/mai-thinking-1-foundrycard to this web card. Technical-report PDF is separately recorded; no standalone model-card PDF found."
+  },
+  {
+    "vendor": "microsoft",
+    "title": "MAI-Voice-2.1 Model Card",
+    "slug": "mai-voice-2-1-model-card",
+    "document_type": "model_card",
+    "published_date": "",
+    "source_updated_date": "2026-10-01",
+    "source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+    "pdf_url": "https://microsoft.ai/pdf/MAI-Voice-2.1-Model-Card-Memo.pdf",
+    "notes": "Official PDF linked by current Microsoft AI model pages. Card last updated October 1, 2026; model launch on the same date is independently documented. First report publication date unconfirmed."
+  },
+  {
+    "vendor": "microsoft",
+    "title": "MAI-Voice-2.1-Flash Model Card",
+    "slug": "mai-voice-2-1-flash-model-card",
+    "document_type": "model_card",
+    "published_date": "",
+    "source_updated_date": "2026-10-01",
+    "source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+    "pdf_url": "https://microsoft.ai/pdf/MAI-Voice-2.1-Flash-Model-Card-Memo.pdf",
+    "notes": "Official PDF linked by current Microsoft AI model pages. Card last updated October 1, 2026; model launch on the same date is independently documented. First report publication date unconfirmed."
+  },
+  {
+    "vendor": "microsoft",
+    "title": "MAI-Transcribe-2-Streaming Model Card",
+    "slug": "mai-transcribe-2-streaming-model-card",
+    "document_type": "model_card",
+    "published_date": "",
+    "source_updated_date": "2026-10-01",
+    "source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+    "pdf_url": "https://microsoft.ai/pdf/MAI-Transcribe-2-Streaming-Model-Card-Memo.pdf",
+    "notes": "Official PDF linked by current Microsoft AI model pages. Card last updated October 1, 2026; model launch on the same date is independently documented. First report publication date unconfirmed."
+  },
+  {
+    "vendor": "amazon",
+    "title": "Amazon Nova Multimodal Embeddings: Technical Report and Model Card",
+    "slug": "nova-multimodal-embeddings",
+    "document_type": "technical_report",
+    "published_date": "2025-10-28",
+    "source_updated_date": "",
+    "source_url": "https://www.amazon.science/publications/amazon-nova-multimodal-embeddings-technical-report-and-model-card",
+    "pdf_url": "https://cdn.amazon.science/ba/f2/d0af272848748a24ba6ba45af3a7/nova-mme-technical-report-14.pdf",
+    "notes": "Official publication page explicitly states report publication on October 28, 2025. Combined technical report and model card archived once as technical_report."
+  },
+  {
+    "vendor": "nvidia",
+    "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
+    "slug": "nemotron-3-competitive-coding",
+    "document_type": "technical_report",
+    "published_date": "2026-09-02",
+    "source_updated_date": "2026-09-04",
+    "source_url": "https://arxiv.org/abs/2609.02849",
+    "pdf_url": "https://arxiv.org/pdf/2609.02849v2",
+    "version": "arxiv-v2",
+    "notes": "Model report linked from official NVIDIA Hugging Face model card; arXiv submission and revision dates verified separately from model release."
+  },
+  {
+    "vendor": "nvidia",
+    "title": "Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs",
+    "slug": "nemotron-labs-3-puzzle-75b-a9b",
+    "document_type": "technical_report",
+    "published_date": "2026-07-05",
+    "source_updated_date": "2026-07-07",
+    "source_url": "https://arxiv.org/abs/2607.04371",
+    "pdf_url": "https://arxiv.org/pdf/2607.04371v2",
+    "version": "arxiv-v2",
+    "notes": "Model report linked from official NVIDIA Hugging Face model card; arXiv submission and revision dates verified separately from model release."
+  },
+  {
+    "vendor": "anthropic",
+    "title": "System Card: Claude Sonnet 5.5",
+    "slug": "claude-sonnet-5-5-system-card",
+    "document_type": "system_card",
+    "published_date": "2026-09-28",
+    "source_updated_date": "",
+    "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+    "pdf_url": "https://www-cdn.anthropic.com/870c8f525702625d2c62fc6dd04c857e3250bec1/Claude%20Sonnet%205.5%20System%20Card.pdf",
+    "notes": "Publication date confirmed by PDF cover and official launch. Original 148-page system card."
+  },
+  {
+    "vendor": "nvidia",
+    "title": "Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence",
+    "slug": "nemotron-3-nano-omni",
+    "document_type": "technical_report",
+    "published_date": "2026-04-27",
+    "source_updated_date": "2026-05-11",
+    "source_url": "https://arxiv.org/abs/2604.24954",
+    "pdf_url": "https://arxiv.org/pdf/2604.24954v2",
+    "version": "arxiv-v2",
+    "notes": "Full model report linked from official NVIDIA model release and model card. arXiv submission and revision dates recorded separately from April 28 model launch."
+  },
+  {
+    "vendor": "tencent",
+    "title": "WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing",
+    "slug": "wevisdoc",
+    "document_type": "technical_report",
+    "published_date": "2026-09-17",
+    "source_updated_date": "",
+    "source_url": "https://huggingface.co/tencent/WeVisDoc-4B",
+    "pdf_url": "https://arxiv.org/pdf/2609.20423v1",
+    "version": "arxiv-v1",
+    "notes": "Original model report linked by official publisher repository/model card; arXiv submission and revision dates independently verified, distinct from model release."
+  },
+  {
+    "vendor": "stepfun",
+    "title": "ReasonEdit: Towards Reasoning-Enhanced Image Editing Models",
+    "slug": "reasonedit",
+    "document_type": "technical_report",
+    "published_date": "2025-11-27",
+    "source_updated_date": "2025-12-01",
+    "source_url": "https://github.com/stepfun-ai/Step1X-Edit",
+    "pdf_url": "https://arxiv.org/pdf/2511.22625v2",
+    "version": "arxiv-v2",
+    "notes": "Original model report linked by official publisher repository/model card; arXiv submission and revision dates independently verified, distinct from model release."
+  },
+  {
+    "vendor": "stepfun",
+    "title": "Step1X-3D: Towards High-Fidelity and Controllable Generation of Textured 3D Assets",
+    "slug": "step1x-3d",
+    "document_type": "technical_report",
+    "published_date": "2025-05-12",
+    "source_updated_date": "",
+    "source_url": "https://github.com/stepfun-ai/Step1X-3D",
+    "pdf_url": "https://arxiv.org/pdf/2505.07747v1",
+    "version": "arxiv-v1",
+    "notes": "Original model report linked by official publisher repository/model card; arXiv submission and revision dates independently verified, distinct from model release."
+  },
+  {
+    "vendor": "stepfun",
+    "title": "Step-Video-TI2V Technical Report: A State-of-the-Art Text-Driven Image-to-Video Generation Model",
+    "slug": "step-video-ti2v",
+    "document_type": "technical_report",
+    "published_date": "2025-03-14",
+    "source_updated_date": "",
+    "source_url": "https://github.com/stepfun-ai/Step-Video-TI2V",
+    "pdf_url": "https://arxiv.org/pdf/2503.11251v1",
+    "version": "arxiv-v1",
+    "notes": "Original model report linked by official publisher repository/model card; arXiv submission and revision dates independently verified, distinct from model release."
+  },
+  {
+    "vendor": "google",
+    "title": "Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini",
+    "slug": "gemini-embedding-2",
+    "document_type": "technical_report",
+    "published_date": "2026-05-26",
+    "source_updated_date": "",
+    "source_url": "https://arxiv.org/abs/2605.27295",
+    "pdf_url": "https://arxiv.org/pdf/2605.27295v1",
+    "version": "arxiv-v1",
+    "notes": "Official Google Gemini Embedding Team model report. arXiv first submission May 26, 2026; cover date May 27 is recorded separately from March 10 preview and April 22 GA model release."
+  },
+  {
+    "vendor": "google",
+    "title": "WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations",
+    "slug": "weathernext-3-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2026-09-03",
+    "source_updated_date": "",
+    "source_url": "https://arxiv.org/abs/2609.03582",
+    "pdf_url": "https://arxiv.org/pdf/2609.03582v1",
+    "version": "arxiv-v1",
+    "notes": "Official DeepMind model report; arXiv first submission September 3, 2026. Official developer model overview gives model release as August 2026 with month-only precision; September 3 public announcement is distinct.",
+    "alternate_pdf_urls": [
+      "https://storage.googleapis.com/deepmind-media/papers/weathernext_3.pdf"
+    ]
+  },
+  {
+    "vendor": "stepfun",
+    "title": "NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale",
+    "slug": "nextstep-1",
+    "document_type": "technical_report",
+    "published_date": "2025-08-14",
+    "source_updated_date": "2025-08-18",
+    "source_url": "https://github.com/stepfun-ai/NextStep-1",
+    "pdf_url": "https://arxiv.org/pdf/2508.10711v2",
+    "version": "arxiv-v2",
+    "notes": "Original NextStep-1 model report linked by official StepFun repository; arXiv dates verified. Repository recommends the newer NextStep-1.1, released December 24, 2025 with separate post-training blog; this older report is not presented as a NextStep-1.1-specific report."
   }
 ]

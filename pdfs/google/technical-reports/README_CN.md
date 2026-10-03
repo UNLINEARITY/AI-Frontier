@@ -2,11 +2,13 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已归档 **37 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已归档 **39 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-09-03 | [WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations](weathernext-3-technical-report--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2609.03582) |
 | 2026-07-02 | [Gemma 4 Technical Report](gemma-4-technical-report--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.02770) |
+| 2026-05-26 | [Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini](gemini-embedding-2--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.27295) |
 | 2026-04-06 | [MedGemma 1.5 Technical Report](medgemma-1-5-technical-report--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2604.05081) |
 | 2026-01-13 | [TranslateGemma Technical Report](translategemma-technical-report--arxiv-v3.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2601.09012) |
 | 2025-12-16 | [T5Gemma 2: Seeing, Reading, and Understanding Longer](t5gemma-2-seeing-reading-and-understanding-longer--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://deepmind.google/models/gemma/t5gemma/) |
