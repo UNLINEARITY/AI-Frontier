@@ -16,7 +16,7 @@ Lead public copy with reader value and verified evidence, then offer complete pu
 
 Archive original, official AI model PDFs from 2022 onward, grouped by publisher. Accepted document types are `technical_report`, `model_card`, and `system_card`. Include reports on models or model families; do not substitute unrelated method papers, news posts, or marketing material for a missing model report.
 
-The current stage is PDF collection and indexing. OCR, technical-detail extraction, automatic discovery, and GitHub Pages publication are future work, not implemented features.
+The current stage is PDF collection and indexing. OCR, technical-detail extraction, and automatic discovery are future work. A static GitHub Pages browser is implemented; deployment status must be verified separately.
 
 Use ordinary Git. Do not enable Git LFS. A PDF larger than 100 MiB is recorded as `oversized` with its official link; do not compress, split, or rewrite the publisher's original file to fit the limit.
 
@@ -141,4 +141,12 @@ The frontier pages are reader-facing entry points: publisher sections, category,
 5. Run `verify`. It checks PDF parsing, checksums, sizes, page counts, duplicate bytes under different paths, and PDFs missing from the catalog. Empty archives fail verification. Recorded gaps alone do not make verification fail.
 6. When changing downloader code, run the regression checks. When changing rendering or public documentation, run `render` and inspect generated Markdown, local links, and counts. PDF integrity verification does not check Markdown links or establish report identity.
 
-Keep public copy accurate: do not claim exhaustive coverage, continuous automatic updates, available OCR, or a deployed Pages site before those exist. Preserve publisher copyright and terms; the repository does not relicense PDFs. Future Pages publishing should build a browsing interface from the catalog and link to the archived documents.
+Keep public copy accurate: do not claim exhaustive coverage, continuous automatic updates, available OCR, or a deployed Pages site before those exist. Preserve publisher copyright and terms; the repository does not relicense PDFs. The Pages browser is generated from the catalog and links to repository PDFs; do not copy the PDF archive into the Pages artifact.
+
+## GitHub Pages browser
+
+`site/` contains the bilingual HTML template, responsive CSS, and browser filtering script. `scripts/build_pages.py` reads the catalog, curated active frontier selections, sources, and brand data to generate separate English and Chinese pages. Build with `uv run --with-requirements requirements.txt python scripts/build_pages.py`; the default output `.cache/pages/` is local-only. Preview with `python -m http.server 8000 --directory .cache/pages`.
+
+The generated site includes only pages, styles, scripts, and the existing project banner. PDF reading links target the repository on GitHub; official introductions and source links remain available. No PDF, paired log, internal prompt, or discovery cache is copied into the site. Search, publisher shortcuts, task/type filters, date/title sorting, and reset controls run entirely in the browser. Query parameters preserve selections across language switches and shared links. Apply a saved light/dark/system theme before stylesheet rendering; store optional preferences locally and follow system changes in system mode. Theme choice persists across language changes. Respect reduced-motion preferences for theme, entry, card, hover, and scroll animations. Animate reordered visible cards without replaying the entry animation on every search keystroke. Frontiers follow the same active lifecycle and task selection rules as the Markdown editions.
+
+`.github/workflows/pages.yml` builds and deploys on relevant changes to `main` or manual dispatch. Enable **Settings → Pages → Source → GitHub Actions** before the first deployment. The workflow performs a sparse checkout of build inputs and uploads only `_site/`. A configured workflow or local build is not proof of a live deployment; check the workflow result and the public site before advertising its URL.
