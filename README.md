@@ -12,7 +12,7 @@ An open research archive for understanding how frontier AI models are built, eva
 
 [Explore the website](https://unlinearity.github.io/AI-Frontier/) to search reports, filter by publisher and document type, and browse current frontier models in English or Chinese.
 
-**Available today:** original PDFs, a searchable bilingual website, and [frontier report summaries with core figures](abstracts/README.md). Full-document Markdown, structured analysis, and automated tracking are the next stages.
+**Available today:** original PDFs, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). Full-document Markdown, structured analysis, and automated tracking are the next stages.
 
 **Star AI Frontier to keep the sources close and follow the archive as it grows.**
 

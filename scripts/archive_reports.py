@@ -257,7 +257,7 @@ def render(rows):
              f"**{len(archived)} original PDFs · {publisher_count} publishers · 2022 onward**", "",
              f"[Explore the website]({brand['homepage_url']}) to search reports, filter by publisher and document type, "
              "and browse current frontier models in English or Chinese.", "",
-             "**Available today:** original PDFs, a searchable bilingual website, and [frontier report summaries with core figures](abstracts/README.md). "
+             "**Available today:** original PDFs, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). "
              "Full-document Markdown, structured analysis, and automated tracking are the next stages.", "",
              "**Star AI Frontier to keep the sources close and follow the archive as it grows.**", ""]
     cn_lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline_cn']}**", "",
@@ -267,7 +267,7 @@ def render(rows):
                 "并逐步推进可读原文、基于来源的技术分析与模型发布追踪。", "",
                 f"**{len(archived)} 份原始 PDF · {publisher_count} 家厂商 · 2022 年起**", "",
                 f"[打开在线网站]({brand['homepage_url']}cn/)，搜索报告、按厂商和文档类型筛选，或浏览当前前沿模型。支持独立中英文页面。", "",
-                "**当前已提供：**原始 PDF、可搜索的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
+                "**当前已提供：**原始 PDF、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
                 "**Star 收藏 AI Frontier，把原始资料留在手边，也关注它如何逐步成为技术研究入口。**", ""]
     type_counts = {kind: sum(row["document_type"] == kind for row in archived) for kind in DOCUMENT_TYPES}
     lines += ["## Choose the right document", "",

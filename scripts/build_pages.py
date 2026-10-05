@@ -7,6 +7,7 @@ import shutil
 from pathlib import Path
 from urllib.parse import quote
 
+from build_readers import build_readers, reader_path
 from archive_reports import DOCUMENT_TYPES, MODEL_CATEGORIES, VENDORS
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,6 +32,9 @@ def build(output):
     sources = {(s['vendor'], s['slug']): s for s in json.loads((ROOT / 'sources.json').read_text())}
     summary_file = ROOT / 'abstracts/index.json'
     summaries = {r['source_pdf']: r for r in json.loads(summary_file.read_text())['reports']} if summary_file.exists() else {}
+    figure_file = ROOT / 'figures/index.json'
+    figure_reports = {r['id']: r for r in json.loads(figure_file.read_text())['reports']} if figure_file.exists() else {}
+    reader_count, preview_count = build_readers(ROOT, output, summaries, figure_reports, reports, VENDORS, DOCUMENT_TYPES)
     brand = json.loads((ROOT / '.github/brand.json').read_text())
     models = [m for m in coverage['models'] if m.get('lifecycle', 'active') == 'active'
               and (m.get('latest_categories') or m.get('frontier_categories'))]
@@ -51,7 +55,7 @@ def build(output):
             official = link(r['source_url'], '官方来源' if chinese else 'Official source')
             summary = summaries.get(r['local_path'])
             if summary and summary['source_sha256'] == r['sha256']:
-                read += link(REPOSITORY + '/blob/main/' + quote(summary['markdown_path']), '概要与图片' if chinese else 'Summary & figures')
+                read += link(reader_path(summary), '概要与图片' if chinese else 'Summary & figures')
             cards.append(f'<article class="card" data-view="reports" data-vendor="{r["vendor"]}" data-type="{r["document_type"]}" data-category="" data-date="{r["published_date"]}" data-title="{escape(r["title"])}" data-search="{escape(r["title"] + " " + labels[r["vendor"]] + " " + date)}"><div class="card-heading"><div class="publisher">{publisher_mark(r["vendor"])}<span>{escape(labels[r["vendor"]])}</span></div><span class="document-badge" data-kind="{r["document_type"]}">{kind}</span></div><h3>{escape(r["title"])}</h3><p class="date">{escape(date + revision)} · {r["pages"]} {"页" if chinese else "pages"}</p><div class="links">{read}{official}</div></article>')
         for m in models:
             categories = [c for c in MODEL_CATEGORIES if c in m.get('latest_categories', []) or c in m.get('frontier_categories', [])]
@@ -64,7 +68,7 @@ def build(output):
                     links.append(link(REPOSITORY + '/blob/main/' + quote(row['local_path']), source['title']))
                     summary = summaries.get(row['local_path'])
                     if summary and summary['source_sha256'] == row['sha256']:
-                        links.append(link(REPOSITORY + '/blob/main/' + quote(summary['markdown_path']), '概要与图片' if chinese else 'Summary & figures'))
+                        links.append(link(reader_path(summary), '概要与图片' if chinese else 'Summary & figures'))
             links.append(link(m.get('frontier_source_url', m['source_url']), '官方介绍' if chinese else 'Official introduction'))
             cards.append(f'<article class="card" data-date="" data-title="{escape(m["model"])}" data-view="models" data-vendor="{m["vendor"]}" data-type="" data-category="{escape(" ".join(categories))}" data-search="{escape(m["model"] + " " + labels[m["vendor"]])}" hidden><div class="card-heading"><div class="publisher">{publisher_mark(m["vendor"])}<span>{escape(labels[m["vendor"]])}</span></div><span class="model-indicator" aria-hidden="true"></span></div><h3>{escape(m["model"])}</h3><p class="date">{escape(" / ".join(MODEL_CATEGORIES[c][int(chinese)] for c in categories))}</p><div class="links">{"".join(links)}</div></article>')
         publisher_options = ''.join(f'<option value="{v}">{escape(label)}</option>' for v, label in labels.items())
@@ -110,13 +114,13 @@ def build(output):
         target = output / ('cn/index.html' if chinese else 'index.html')
         target.parent.mkdir(exist_ok=True)
         target.write_text(page, encoding='utf-8')
-    for name in ('style.css', 'app.js', 'theme-init.js'):
+    for name in ('style.css', 'app.js', 'theme-init.js', 'shared.js', 'reader.css', 'reader.js'):
         shutil.copyfile(ROOT / 'site' / name, output / name)
     (output / 'assets').mkdir(exist_ok=True)
     shutil.copyfile(ROOT / 'assets/branding/ai-frontier-banner.png', output / 'assets/banner.png')
     shutil.copytree(ROOT / 'assets/vendors', output / 'assets/vendors', dirs_exist_ok=True)
     (output / '.nojekyll').touch()
-    print(f'Built {len(reports)} reports and {len(models)} frontier entries in {output}')
+    print(f'Built {reader_count} reading pages and {preview_count} figure previews; {len(reports)} reports and {len(models)} frontier entries in {output}')
 
 
 if __name__ == '__main__':
