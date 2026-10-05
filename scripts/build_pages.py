@@ -29,6 +29,8 @@ def build(output):
                      key=lambda r: (r['published_date'], r['title']), reverse=True)
     coverage = json.loads((ROOT / 'model-coverage.json').read_text())
     sources = {(s['vendor'], s['slug']): s for s in json.loads((ROOT / 'sources.json').read_text())}
+    summary_file = ROOT / 'abstracts/index.json'
+    summaries = {r['source_pdf']: r for r in json.loads(summary_file.read_text())['reports']} if summary_file.exists() else {}
     brand = json.loads((ROOT / '.github/brand.json').read_text())
     models = [m for m in coverage['models'] if m.get('lifecycle', 'active') == 'active'
               and (m.get('latest_categories') or m.get('frontier_categories'))]
@@ -47,6 +49,9 @@ def build(output):
             revision = f" · {r['version']}" if r['version'].startswith('arxiv-') else ''
             read = link(REPOSITORY + '/blob/main/' + quote(r['local_path']), '阅读 PDF' if chinese else 'Read PDF')
             official = link(r['source_url'], '官方来源' if chinese else 'Official source')
+            summary = summaries.get(r['local_path'])
+            if summary and summary['source_sha256'] == r['sha256']:
+                read += link(REPOSITORY + '/blob/main/' + quote(summary['markdown_path']), '概要与图片' if chinese else 'Summary & figures')
             cards.append(f'<article class="card" data-view="reports" data-vendor="{r["vendor"]}" data-type="{r["document_type"]}" data-category="" data-date="{r["published_date"]}" data-title="{escape(r["title"])}" data-search="{escape(r["title"] + " " + labels[r["vendor"]] + " " + date)}"><div class="card-heading"><div class="publisher">{publisher_mark(r["vendor"])}<span>{escape(labels[r["vendor"]])}</span></div><span class="document-badge" data-kind="{r["document_type"]}">{kind}</span></div><h3>{escape(r["title"])}</h3><p class="date">{escape(date + revision)} · {r["pages"]} {"页" if chinese else "pages"}</p><div class="links">{read}{official}</div></article>')
         for m in models:
             categories = [c for c in MODEL_CATEGORIES if c in m.get('latest_categories', []) or c in m.get('frontier_categories', [])]
@@ -57,6 +62,9 @@ def build(output):
                 if archived:
                     row = max(archived, key=lambda r: (r['source_updated_date'], r['retrieved_at']))
                     links.append(link(REPOSITORY + '/blob/main/' + quote(row['local_path']), source['title']))
+                    summary = summaries.get(row['local_path'])
+                    if summary and summary['source_sha256'] == row['sha256']:
+                        links.append(link(REPOSITORY + '/blob/main/' + quote(summary['markdown_path']), '概要与图片' if chinese else 'Summary & figures'))
             links.append(link(m.get('frontier_source_url', m['source_url']), '官方介绍' if chinese else 'Official introduction'))
             cards.append(f'<article class="card" data-date="" data-title="{escape(m["model"])}" data-view="models" data-vendor="{m["vendor"]}" data-type="" data-category="{escape(" ".join(categories))}" data-search="{escape(m["model"] + " " + labels[m["vendor"]])}" hidden><div class="card-heading"><div class="publisher">{publisher_mark(m["vendor"])}<span>{escape(labels[m["vendor"]])}</span></div><span class="model-indicator" aria-hidden="true"></span></div><h3>{escape(m["model"])}</h3><p class="date">{escape(" / ".join(MODEL_CATEGORIES[c][int(chinese)] for c in categories))}</p><div class="links">{"".join(links)}</div></article>')
         publisher_options = ''.join(f'<option value="{v}">{escape(label)}</option>' for v, label in labels.items())
@@ -77,7 +85,7 @@ def build(output):
             'all_categories': '全部模型类别' if chinese else 'All model categories',
             'publisher_options': publisher_options, 'type_options': type_options, 'category_options': category_options,
             'cards': '\n'.join(cards), 'empty': '未找到匹配结果，请调整搜索或筛选条件。' if chinese else 'No matches. Try a different search or filter.',
-            'footer': '保留厂商原始文档。Markdown 与技术分析正在规划中。' if chinese else 'Original publisher documents preserved. Markdown editions and technical analysis are planned.',
+            'footer': '原始报告、概要原文与核心图片。继续推进全文 Markdown 与技术分析。' if chinese else 'Original reports, source summaries, and core figures. Full-document Markdown and technical analysis are next.',
             'results': '条结果' if chinese else 'results',
             'explore': '探索报告' if chinese else 'Explore the archive',
             'browse_labs': '追踪每一家厂商' if chinese else 'Follow every frontier lab',

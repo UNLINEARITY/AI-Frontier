@@ -167,6 +167,8 @@ def render_model_coverage(rows):
     if not path.exists():
         return
     coverage = json.loads(path.read_text(encoding="utf-8"))
+    summary_file = ROOT / 'abstracts/index.json'
+    summaries = {r['source_pdf']: r for r in json.loads(summary_file.read_text())['reports']} if summary_file.exists() else {}
     sources = {(s["vendor"], s["slug"]): s for s in
                json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))}
     latest = {}
@@ -229,6 +231,9 @@ def render_model_coverage(rows):
                         kind = source["document_type"]
                         title = source["title"] if report_types.count(kind) > 1 else DOCUMENT_TYPES[kind][0]
                         links.append(f"[{title}]({row['local_path']})")
+                        summary = summaries.get(row['local_path'])
+                        if summary and summary['source_sha256'] == row['sha256']:
+                            links.append(f"[{'概要与图片' if chinese else 'Summary & figures'}]({summary['markdown_path']})")
                 official = "官方介绍" if chinese else "Official"
                 links.append(f"[{official}]({model.get('frontier_source_url', model['source_url'])})")
                 name = model["model"].replace("|", "\\|")
@@ -245,24 +250,24 @@ def render(rows):
     publisher_count = len({row["vendor"] for row in archived})
     brand = json.loads((ROOT / ".github" / "brand.json").read_text(encoding="utf-8"))
     lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline']}**", "",
-             f"[Website]({brand['homepage_url']}) · [Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)", "",
+             f"[Website]({brand['homepage_url']}) · [Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Summaries & figures](abstracts/README.md) · [Full catalog](catalog.csv)", "",
              "An open research archive for understanding how frontier AI models are built, evaluated, and deployed. "
              "We bring official technical reports, model cards, and system cards into one place, "
              "and are building toward readable sources, grounded technical analysis, and ongoing release tracking.", "",
              f"**{len(archived)} original PDFs · {publisher_count} publishers · 2022 onward**", "",
              f"[Explore the website]({brand['homepage_url']}) to search reports, filter by publisher and document type, "
              "and browse current frontier models in English or Chinese.", "",
-             "**Available today:** the original PDF archive, its verified source index, and a searchable bilingual website. "
-             "Markdown editions, structured analysis, and automated tracking are the next stages.", "",
+             "**Available today:** original PDFs, a searchable bilingual website, and [frontier report summaries with core figures](abstracts/README.md). "
+             "Full-document Markdown, structured analysis, and automated tracking are the next stages.", "",
              "**Star AI Frontier to keep the sources close and follow the archive as it grows.**", ""]
     cn_lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline_cn']}**", "",
-                f"[在线浏览]({brand['homepage_url']}cn/) · [英文版](README.md) · [按厂商浏览](#按厂商浏览) · [按类型浏览](#按类型找报告) · [前沿模型](LATEST_MODELS_CN.md) · [完整索引](catalog.csv)", "",
+                f"[在线浏览]({brand['homepage_url']}cn/) · [英文版](README.md) · [按厂商浏览](#按厂商浏览) · [按类型浏览](#按类型找报告) · [前沿模型](LATEST_MODELS_CN.md) · [概要与图片](abstracts/README_CN.md) · [完整索引](catalog.csv)", "",
                 "一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。"
                 "我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，"
                 "并逐步推进可读原文、基于来源的技术分析与模型发布追踪。", "",
                 f"**{len(archived)} 份原始 PDF · {publisher_count} 家厂商 · 2022 年起**", "",
                 f"[打开在线网站]({brand['homepage_url']}cn/)，搜索报告、按厂商和文档类型筛选，或浏览当前前沿模型。支持独立中英文页面。", "",
-                "**当前已提供：**原始 PDF 归档、经过核对的来源索引与可搜索的双语网站。Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
+                "**当前已提供：**原始 PDF、可搜索的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
                 "**Star 收藏 AI Frontier，把原始资料留在手边，也关注它如何逐步成为技术研究入口。**", ""]
     type_counts = {kind: sum(row["document_type"] == kind for row in archived) for kind in DOCUMENT_TYPES}
     lines += ["## Choose the right document", "",
@@ -413,11 +418,10 @@ def render(rows):
               "that helps readers follow releases, inspect technical evidence, and understand what changed.", "",
               "| Stage | What it helps you do | Status |", "| --- | --- | --- |",
               "| Original sources | Find official reports, source links, dates, and archived revisions | Available |",
-              "| Readable sources | Read and process Markdown with tables, formulas, and figures preserved | Planned |",
+              "| Readable sources | Read source summaries and inspect core figures; full-document Markdown is next | Summaries and figures available |",
               "| Technical analysis | Examine architecture, data, training, post-training, inference, and evaluation details with source references | Planned |",
               "| Continuous tracking | Follow new model releases and report revisions through automated monitoring and update histories | Planned |", "",
-              "A GitHub Pages browsing experience is also planned. Today, sources are curated manually; "
-              "the archive provides original PDFs, indexes, and explicit coverage gaps.", "",
+              "The bilingual website makes the archive searchable. Sources and frontier selections are curated manually.", "",
               "## Scope and attribution", "",
               "This growing collection covers official model and model-family reports from 2022 onward, "
               "including technical reports, model cards, and system cards. Sources are publisher websites, "
@@ -441,10 +445,10 @@ def render(rows):
                  "原始报告是基础。我们希望逐步建立一条研究路径，帮助读者跟进发布、核对技术证据、理解模型发生了什么变化。", "",
                  "| 阶段 | 帮助你做什么 | 状态 |", "| --- | --- | --- |",
                  "| 原始资料 | 查找官方报告、来源链接、日期与归档版本 | 已提供 |",
-                 "| 可读原文 | 阅读和处理 Markdown，保留表格、公式与图片 | 计划中 |",
+                 "| 可读原文 | 阅读概要原文，查看核心图片；继续推进全文 Markdown | 概要与图片已提供 |",
                  "| 技术分析 | 结合原文出处，研究架构、数据、训练、后训练、推理与评测细节 | 计划中 |",
                  "| 持续跟进 | 通过自动监测与更新记录，追踪新模型发布及报告修订 | 计划中 |", "",
-                 "GitHub Pages 浏览页面也在规划中。当前来源由人工核对与维护，已提供原始 PDF、索引和明确的覆盖缺口。", "",
+                 "双语网站提供报告搜索与筛选。来源和前沿模型清单由人工核对与维护。", "",
                  "## 收录范围与版权", "",
                  "收录 2022 年起模型及模型家族的官方技术报告、模型卡与系统卡，来源包括厂商官网、官方仓库和作者提交的 arXiv 论文。"
                  "资料库仍在补齐，不代表已穷尽所有历史报告。arXiv 条目以首次提交日作为已记录的首次发布日期，未知日期不作推测。", "",

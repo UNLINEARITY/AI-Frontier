@@ -4,7 +4,7 @@
 
 **Track frontier AI, from original reports to technical insight.**
 
-[Website](https://unlinearity.github.io/AI-Frontier/) · [Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)
+[Website](https://unlinearity.github.io/AI-Frontier/) · [Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Summaries & figures](abstracts/README.md) · [Full catalog](catalog.csv)
 
 An open research archive for understanding how frontier AI models are built, evaluated, and deployed. We bring official technical reports, model cards, and system cards into one place, and are building toward readable sources, grounded technical analysis, and ongoing release tracking.
 
@@ -12,7 +12,7 @@ An open research archive for understanding how frontier AI models are built, eva
 
 [Explore the website](https://unlinearity.github.io/AI-Frontier/) to search reports, filter by publisher and document type, and browse current frontier models in English or Chinese.
 
-**Available today:** the original PDF archive, its verified source index, and a searchable bilingual website. Markdown editions, structured analysis, and automated tracking are the next stages.
+**Available today:** original PDFs, a searchable bilingual website, and [frontier report summaries with core figures](abstracts/README.md). Full-document Markdown, structured analysis, and automated tracking are the next stages.
 
 **Star AI Frontier to keep the sources close and follow the archive as it grows.**
 
@@ -76,11 +76,11 @@ The original reports are the foundation. The longer-term goal is a research work
 | Stage | What it helps you do | Status |
 | --- | --- | --- |
 | Original sources | Find official reports, source links, dates, and archived revisions | Available |
-| Readable sources | Read and process Markdown with tables, formulas, and figures preserved | Planned |
+| Readable sources | Read source summaries and inspect core figures; full-document Markdown is next | Summaries and figures available |
 | Technical analysis | Examine architecture, data, training, post-training, inference, and evaluation details with source references | Planned |
 | Continuous tracking | Follow new model releases and report revisions through automated monitoring and update histories | Planned |
 
-A GitHub Pages browsing experience is also planned. Today, sources are curated manually; the archive provides original PDFs, indexes, and explicit coverage gaps.
+The bilingual website makes the archive searchable. Sources and frontier selections are curated manually.
 
 ## Scope and attribution
 

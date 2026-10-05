@@ -7,6 +7,8 @@ on:
       - 'model-coverage.json'
       - 'sources.json'
       - 'requirements.txt'
+      - 'abstracts/**'
+      - 'figures/**'
       - '.github/brand.json'
       - 'scripts/build_pages.py'
       - 'scripts/archive_reports.py'
@@ -29,6 +31,7 @@ jobs:
           sparse-checkout: |
             scripts
             site
+            abstracts
             assets/branding
             assets/vendors
             .github

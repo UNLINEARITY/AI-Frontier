@@ -1,0 +1,2 @@
+pypdf==6.19.0
+pdfminer.six==20260107

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "reviews": [
+    {
+      "id": "moonshot:kimi-k3-technical-report",
+      "source_sha256": "86fb82a63ced501f0c3f4f404c0c6fa88a7a6cfac17aae81fd1a8f455998067c",
+      "extractor": "pypdf 6.19.0",
+      "page": 1,
+      "start_offset": 77,
+      "end_offset": 1642,
+      "raw_text_sha256": "85a84fa7c608eb51d756c8a9f48b9d45b40d267a267bf59fdf4344d5e2b3f035",
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-05",
+      "note": "Verified the complete abstract and the position of the multiplication sign in 2.5× against PDF page 1."
+    }
+  ]
+}

@@ -1,0 +1,5093 @@
+{
+  "schema_version": 1,
+  "method": "native_pdf_region_export",
+  "reports": [
+    {
+      "id": "openai:addendum-to-gpt-6-astra-system-card-gpt-6-1-sol",
+      "vendor": "openai",
+      "title": "Addendum to GPT-6 Astra System Card: GPT-6.1 Sol",
+      "models": [
+        "GPT-6.1 Sol"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/openai/system-cards/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol.pdf",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+      "source_sha256": "1ae4ad6f0e2425a0f85623d3ccfc2a747c13611432a504ef0a7b5f4228789884",
+      "source_version": "snapshot-2026-09-30",
+      "status": "available",
+      "inspected_pages": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "reason_en": "The addendum has no model architecture diagram; its clearest compact core visuals are the safety frontier and hallucination comparisons.",
+      "reason_cn": "附录没有模型架构图；最清晰、紧凑且适合作为核心配图的是安全前沿图和幻觉对比图。",
+      "figures": [
+        {
+          "page": 6,
+          "figure_number": "1",
+          "role": "safety_evaluation",
+          "caption": "Figure 1",
+          "bbox": [
+            117.0,
+            67.86,
+            495.0,
+            370.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            120.24600219726562,
+            355.0215759277344,
+            155.77276611328125,
+            366.9070129394531
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3150,
+            2518
+          ],
+          "pdf_path": "figures/openai/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol/figure-01.pdf",
+          "png_path": "figures/openai/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol/figure-01.png",
+          "pdf_sha256": "1f6652884f34b10b8a45939d83e051149fc84fb0250b68e0a0541e9aeced892d",
+          "png_sha256": "fc905912501a7a03642dd616e8735904d07dac52c487148aa5032721ed8108f2"
+        },
+        {
+          "page": 14,
+          "figure_number": "5",
+          "role": "safety_evaluation",
+          "caption": "Figure 5",
+          "bbox": [
+            115,
+            42,
+            495,
+            240
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            120.24600219726562,
+            223.21453857421875,
+            157.95458984375,
+            235.0999755859375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3167,
+            1650
+          ],
+          "pdf_path": "figures/openai/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol/figure-02.pdf",
+          "png_path": "figures/openai/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol/figure-02.png",
+          "pdf_sha256": "4a8072148fca1cb2f5a7fe87bce879b8b61a8e8617094233f462e69811d0e715",
+          "png_sha256": "dc0a2e4491febd68d89d4eaf798b8a932b985d9bbfba1d870e216e06ba29e010"
+        }
+      ]
+    },
+    {
+      "id": "openai:gpt-6-astra-system-card",
+      "vendor": "openai",
+      "title": "GPT-6 Astra System Card",
+      "models": [
+        "GPT-6 Astra"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/openai/system-cards/gpt-6-astra-system-card.pdf",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-astra",
+      "source_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895",
+      "source_version": "snapshot-2026-09-30",
+      "status": "available",
+      "inspected_pages": [
+        8,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        26,
+        27,
+        29,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        52,
+        53,
+        54,
+        56,
+        57,
+        60,
+        61,
+        62,
+        64,
+        65,
+        66,
+        67,
+        69,
+        70,
+        71,
+        72,
+        73,
+        75,
+        77,
+        78,
+        79,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        99,
+        101,
+        102,
+        103,
+        104,
+        106,
+        110,
+        111,
+        115,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        166,
+        168,
+        170,
+        171,
+        174
+      ],
+      "reason_en": "The card is an evaluation report; the selected plots summarize safety performance and indirect-prompt-injection robustness.",
+      "reason_cn": "该系统卡主要是评测报告；所选图表概括安全表现和间接提示注入鲁棒性。",
+      "figures": [
+        {
+          "page": 12,
+          "figure_number": "1",
+          "role": "safety_evaluation",
+          "caption": "Figure 1",
+          "bbox": [
+            67.876,
+            56.0,
+            544.117,
+            445.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            429.08355712890625,
+            106.39277648925781,
+            440.968994140625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3969,
+            3242
+          ],
+          "pdf_path": "figures/openai/gpt-6-astra-system-card/figure-01.pdf",
+          "png_path": "figures/openai/gpt-6-astra-system-card/figure-01.png",
+          "pdf_sha256": "8be3782f9478b894a1a5ece4c93e384f1d9da25edd353d4a60ad6c5bc1173a07",
+          "png_sha256": "0ed59dfb8ace0065fe81ed4fde17153fd9ac7850289c1ca06771a2e8465e9e4b"
+        },
+        {
+          "page": 20,
+          "figure_number": "5",
+          "role": "safety_evaluation",
+          "caption": "Figure 5: Indirect prompt injection robustness on the Gray Swan IPI benchmark. Estimated attack",
+          "bbox": [
+            68,
+            68,
+            547,
+            375
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            318.1805725097656,
+            527.38720703125,
+            330.0660095214844
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3992,
+            2559
+          ],
+          "pdf_path": "figures/openai/gpt-6-astra-system-card/figure-02.pdf",
+          "png_path": "figures/openai/gpt-6-astra-system-card/figure-02.png",
+          "pdf_sha256": "b9247bfb341c9c957bb1d3350b3297d096c7300545412ad528951766cf0fe1a9",
+          "png_sha256": "d74fcee97710530598e6dce4731808c34e84fd04104cf0d9f1c0845ec21e8506"
+        }
+      ]
+    },
+    {
+      "id": "openai:chatgpt-images-2-5-system-card",
+      "vendor": "openai",
+      "title": "ChatGPT Images 2.5 System Card",
+      "models": [
+        "ChatGPT Images 2.5 / Sunburst / Flare"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/openai/system-cards/chatgpt-images-2-5-system-card.pdf",
+      "source_url": "https://deploymentsafety.openai.com/chatgpt-images-2-5",
+      "source_sha256": "ba0695a115e0b8a4a0aa528eb776323848be4f2844a698c93ac14e3cedb15c9b",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        4,
+        5,
+        6
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "openai:gpt-rosalind-5-5-system-card",
+      "vendor": "openai",
+      "title": "GPT-Rosalind-5.5 System Card",
+      "models": [
+        "GPT-Rosalind-5.5"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/openai/system-cards/gpt-rosalind-5-5-system-card.pdf",
+      "source_url": "https://deploymentsafety.openai.com/gpt-rosalind-5-5",
+      "source_sha256": "7406f84297f46c901c1a49a5626f256c1c48b6abd64a79fbc1633d876146043d",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "anthropic:claude-opus-5-5-system-card",
+      "vendor": "anthropic",
+      "title": "Claude Opus 5.5 System Card",
+      "models": [
+        "Claude Opus 5.5"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf",
+      "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card",
+      "source_sha256": "7311c9c6bbb16d012f1c12c7418b05949fcf7ae3e30d2c40f22050074b2a7378",
+      "source_version": "snapshot-2026-09-30",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        11,
+        12,
+        14,
+        18,
+        22,
+        26,
+        27,
+        29,
+        31,
+        35,
+        37,
+        38,
+        39,
+        40,
+        42,
+        48,
+        50,
+        52,
+        53,
+        54,
+        56,
+        57,
+        59,
+        61,
+        62,
+        63,
+        64,
+        66,
+        67,
+        69,
+        71,
+        72,
+        73,
+        74,
+        76,
+        77,
+        78,
+        80,
+        81,
+        82,
+        83,
+        85,
+        86,
+        87,
+        89,
+        90,
+        93,
+        94,
+        95,
+        96,
+        98,
+        100,
+        101,
+        103,
+        106,
+        107,
+        109,
+        110,
+        112,
+        113,
+        114,
+        115,
+        117,
+        119,
+        120,
+        121,
+        124,
+        125,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        135,
+        136,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        148,
+        150,
+        155,
+        156,
+        159,
+        161,
+        168,
+        170,
+        171,
+        173,
+        174,
+        176,
+        177,
+        180,
+        182,
+        183,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        194,
+        195,
+        196,
+        197,
+        198,
+        200,
+        201,
+        202,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226
+      ],
+      "reason_en": "The selected plots show autonomous research capability and a broad researcher-substitution benchmark comparison.",
+      "reason_cn": "所选图表展示自主研究能力及研究人员替代基准的整体对比。",
+      "figures": [
+        {
+          "page": 31,
+          "figure_number": "2.2.3.2.3.A",
+          "role": "results",
+          "caption": "[Figure 2.2.3.2.3.A] Autonomous research on AAV packaging rate prediction. Trendlines describe the 90th \npercentile of validation set performance across individual attempts (n = 48). We find that our more capable \nmodels rapidly improve using only a small number of scorer calls. Naive ESM-2 achieves a Spearman correlation \nof 0.28 (not shown, to preserve dynamic range of trendlines). Right: The cumulative fraction of attempts that \nexceed the threshold value of 0.52 over the course of the session.​",
+          "bbox": [
+            68,
+            338,
+            545,
+            711
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            628.94921875,
+            541.0113525390625,
+            706.70751953125
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3975,
+            3109
+          ],
+          "pdf_path": "figures/anthropic/claude-opus-5-5-system-card/figure-01.pdf",
+          "png_path": "figures/anthropic/claude-opus-5-5-system-card/figure-01.png",
+          "pdf_sha256": "a33a3f3f12c8758b6bc544cacc82756ff80dd6daf46178f2ed17b86fab44e3a3",
+          "png_sha256": "b5ee2d6c5414452e8c37e9369b7077a864cb2933f064647ecf868a0e8169b908"
+        },
+        {
+          "page": 37,
+          "figure_number": "2.3.4.1.A",
+          "role": "results",
+          "caption": "[Figure 2.3.4.1.A] Claude Opus 5.5, Claude Mythos 5.1, and Claude Opus 5 score within noise of each other on \nCoBench 2.1. Each bar is the percentage of 500 problems that a model solved in one attempt. Claude Opus 5 \nscores 53.2%, Claude Mythos 5.1 scores 53.4%, and Claude Opus 5.5 scores 55.8%. All three models were \nsampled through the API, with the API safety filter off, on the same version of the evaluation code and the same \n500 problems. The Claude Opus 5.5 run took place 13 days after the other two. One change to the environment \nin that interval is estimated to be worth 0 to 1 point, and two others have not been measured. The three scores \nare not statistically distinguishable (a paired test on the same 500 problems gives p ≈ 0.2). These scores are not \ncomparable with the CoBench scores in earlier system cards.",
+          "bbox": [
+            68,
+            170,
+            546,
+            575
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            467.02734375,
+            539.2922973632812,
+            571.8316650390625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3984,
+            3375
+          ],
+          "pdf_path": "figures/anthropic/claude-opus-5-5-system-card/figure-02.pdf",
+          "png_path": "figures/anthropic/claude-opus-5-5-system-card/figure-02.png",
+          "pdf_sha256": "5acde30d946f9fa2483d75cac6550119585e6a3d32a06837b33d785c6c6dfd1b",
+          "png_sha256": "d78523bf71697e3da211c37037c306f2b2213a5ba4af206c941ef84ee9c68ea1"
+        }
+      ]
+    },
+    {
+      "id": "anthropic:claude-fable-5-1-and-mythos-5-1-system-card",
+      "vendor": "anthropic",
+      "title": "Claude Fable 5.1 and Mythos 5.1 System Card",
+      "models": [
+        "Claude Fable 5.1 / Mythos 5.1"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/anthropic/system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf",
+      "source_url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
+      "source_sha256": "b0d59edc7a60eef32a879c13d713cce60c3fefd7e6b5183afdc8b835af3c8c39",
+      "source_version": "snapshot-2026-09-30",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        11,
+        18,
+        19,
+        20,
+        23,
+        24,
+        28,
+        29,
+        31,
+        34,
+        37,
+        39,
+        46,
+        48,
+        49,
+        50,
+        51,
+        53,
+        54,
+        55,
+        57,
+        59,
+        60,
+        61,
+        63,
+        64,
+        65,
+        67,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        78,
+        79,
+        80,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        98,
+        99,
+        101,
+        102,
+        104,
+        107,
+        108,
+        109,
+        111,
+        112,
+        114,
+        115,
+        116,
+        117,
+        118,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        129,
+        130,
+        132,
+        134,
+        135,
+        138,
+        143,
+        149,
+        150,
+        152,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        166,
+        167,
+        168,
+        170,
+        173,
+        174,
+        175,
+        177,
+        178,
+        179,
+        181,
+        182,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        193,
+        194,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210
+      ],
+      "reason_en": "The selected plots summarize biology capability evaluations, including long-form virology and sequence-to-function results.",
+      "reason_cn": "所选图表概括生物能力评测，包括长程病毒学和序列到功能结果。",
+      "figures": [
+        {
+          "page": 23,
+          "figure_number": "2.2.3.1.A",
+          "role": "safety_evaluation",
+          "caption": "[Figure 2.2.3.1.A] Results on the two long-form virology tasks. The dashed line marks the notable-capability \nthreshold of an end-to-end score greater than 0.80.",
+          "bbox": [
+            70,
+            267,
+            550,
+            535
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            493.75067138671875,
+            545.3670043945312,
+            531.76611328125
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4000,
+            2234
+          ],
+          "pdf_path": "figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-01.pdf",
+          "png_path": "figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-01.png",
+          "pdf_sha256": "03aa76f87ccf6fd21ae1465c7893772c72260d4724d10cfc44c4d4a5e574d438",
+          "png_sha256": "298781cc4b5668ee0f7fd67c1cbdb1ddcca4a08d2879a423952e4264fc3129d6"
+        },
+        {
+          "page": 28,
+          "figure_number": "2.2.3.2.1.A",
+          "role": "safety_evaluation",
+          "caption": "[Figure 2.2.3.2.1.A] Sequence-to-function modeling and prediction. [Top row:] Top (left) and median (right) \ndesign scores. Individual model runs are shown as points. Each model executed eight independent attempts at \nthe task. Points corresponding to runs that achieved less-than-median human performance are not displayed. \nHorizontal lines represent the mean for each group. Gray highlighting indicates human benchmark \nperformances when participant data is available for a metric. [Middle row:] Prediction score over all sequences \n(left) and top 5% of sequences (right). [Bottom row:] Score ranges for design and prediction. Lines show the \nrange of scores achieved in runs of the same model; their intersection shows the mean performance across \nruns of the same model.",
+          "bbox": [
+            68,
+            68,
+            545,
+            693
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            584.875,
+            538.3203125,
+            689.13134765625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3975,
+            5209
+          ],
+          "pdf_path": "figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-02.pdf",
+          "png_path": "figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-02.png",
+          "pdf_sha256": "cede122f2532eb59b61f104e543ccf05e474f425b031557bfc863beb7aadd896",
+          "png_sha256": "63587e04c221c7499c89ea7a18833f7934aea070d791228fa43f5d6a9cb4377c"
+        }
+      ]
+    },
+    {
+      "id": "google:gemini-3-8-flash-model-card",
+      "vendor": "google",
+      "title": "Gemini 3.8 Flash Model Card",
+      "models": [
+        "Gemini 3.8 Flash"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/gemini-3-8-flash-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+      "source_sha256": "fd9b9494c8cb0da6dc16777c3df70d9f9226708e08ba7c9337222207c5d482af",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "google:gemini-3-1-pro-model-card",
+      "vendor": "google",
+      "title": "Gemini 3.1 Pro Model Card",
+      "models": [
+        "Gemini 3.1 Pro"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/gemini-3-1-pro-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
+      "source_sha256": "70bcda79a248255d2c858600cb1fecae9ea30278c942684754df0bca71ca8315",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "google:lyria-3-5-model-card",
+      "vendor": "google",
+      "title": "Lyria 3.5 Model Card",
+      "models": [
+        "Lyria 3.5"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/lyria-3-5-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/lyria-3-5/",
+      "source_sha256": "f384089931616399b100493943d436413af7d24013ec1ac40ecccec7d2d8565a",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "google:gemma-4-technical-report",
+      "vendor": "google",
+      "title": "Gemma 4 Technical Report",
+      "models": [
+        "Gemma 4"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/google/technical-reports/gemma-4-technical-report--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2607.02770",
+      "source_sha256": "b20b25f18d76217d0c49c89f9ed1ffe3cf1912cd8ce710e1a325977653c7bfa6",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        16,
+        17
+      ],
+      "reason_en": "Figure 1 is the report’s clearest model-method diagram; other visuals are narrower preprocessing examples.",
+      "reason_cn": "图 1 是报告中最清楚的模型方法示意图；其他配图主要是更局部的预处理示例。",
+      "figures": [
+        {
+          "page": 3,
+          "figure_number": "1",
+          "role": "architecture",
+          "caption": "Figure 1 | The autoregressive MTP drafter (blue\nblocks on the right) is fed activations and KV\ncache from the main model (gray blocks).",
+          "bbox": [
+            298,
+            72,
+            540,
+            324
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            305.1099853515625,
+            282.1102600097656,
+            533.2526245117188,
+            320.36883544921875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            2017,
+            2100
+          ],
+          "pdf_path": "figures/google/gemma-4-technical-report/figure-01.pdf",
+          "png_path": "figures/google/gemma-4-technical-report/figure-01.png",
+          "pdf_sha256": "603818aef81c7b284ddf8dc011b0221c732e34005749662fe59ca9047d581776",
+          "png_sha256": "2e3494e03dd62b23de469304c1b84710e2bb6a986d723faca751b200497f1d4b"
+        }
+      ]
+    },
+    {
+      "id": "google:medgemma-1-5-technical-report",
+      "vendor": "google",
+      "title": "MedGemma 1.5 Technical Report",
+      "models": [
+        "MedGemma 1.5"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/google/technical-reports/medgemma-1-5-technical-report--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2604.05081",
+      "source_sha256": "b004f889b6d25f8c444701ae17f07ec065ec17b050b6d30135b36bc18f70c1d9",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "reason_en": "Figures 1 and 2 provide the clearest model-capability overview and medical-task performance summary.",
+      "reason_cn": "图 1 和图 2 分别清晰概括模型能力和医疗任务表现。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "overview",
+          "caption": "Figure 1 | Overview of model capabilities within the MedGemma collection. The updated MedGemma\n1.5 4B architecture now supports 3D radiology (CT/MRI volumes), pathology whole slide imaging (WSI),\nanatomical localization, and multi-timepoint analysis. The original MedGemma 27B model remains available\nfor complex clinical knowledge and reasoning tasks and MedSigLIP remains available for medical image\nclassification and retrieval tasks.",
+          "bbox": [
+            58.0,
+            342.04,
+            540.0,
+            682.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            61.53499984741211,
+            430.9676208496094,
+            534.294677734375,
+            678.6340942382812
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4017,
+            2833
+          ],
+          "pdf_path": "figures/google/medgemma-1-5-technical-report/figure-01.pdf",
+          "png_path": "figures/google/medgemma-1-5-technical-report/figure-01.png",
+          "pdf_sha256": "067c1d5b5a65d8b6e9b82fb284166490939c3b12234cae0fef4b5260d72c4e0b",
+          "png_sha256": "88d36212cee45dd50487e3dbf2908ea872a3aa4b1670ca15634775d9c2e7f8d5"
+        },
+        {
+          "page": 3,
+          "figure_number": "2",
+          "role": "results",
+          "caption": "Figure 2 | The left panel details accuracy on medical text Q&A tasks (MedQA and EHRQA), while the right panel highlights\nperformance across diverse medical imaging capabilities. Notably, the \"medical image interpretation\" score represents\nan unweighted macro average of the model’s performance across 7 distinct imaging tasks including MIMIC-CXR (both\nRadGraph F1 and report generation macro F1), CheXpert (unweighted average across 5 conditions), CXR 14 (unweighted\naverage across 3 conditions), Path MCQA, DermMCQA, and EyePACS. \"Lab report extraction\" is macro-averaged over results\nfrom EHR dataset 2, 3 and 4 as well as Mendeley Clinical Laboratory Test Reports (macro F1). All scores are reported as\npercentages. While the out-of-the-box performance is highly promising, the model is not meant to be deployed without the\nnecessary clinical fine-tuning. Fine-tuning may improve results and adapt the framework for practical use.",
+          "bbox": [
+            58,
+            68,
+            536,
+            350
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            223.27178955078125,
+            532.9176635742188,
+            345.2038269042969
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3984,
+            2350
+          ],
+          "pdf_path": "figures/google/medgemma-1-5-technical-report/figure-02.pdf",
+          "png_path": "figures/google/medgemma-1-5-technical-report/figure-02.png",
+          "pdf_sha256": "7d92455a584b155283aec51a1b71ca9379f4e865df9a1440c3b78e29d2440209",
+          "png_sha256": "56d4bff1a99ee1e528d8b70d540f361c333c49cb862d1d49131277772a436822"
+        }
+      ]
+    },
+    {
+      "id": "google:translategemma-technical-report",
+      "vendor": "google",
+      "title": "TranslateGemma Technical Report",
+      "models": [
+        "TranslateGemma"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/google/technical-reports/translategemma-technical-report--arxiv-v3.pdf",
+      "source_url": "https://arxiv.org/abs/2601.09012",
+      "source_sha256": "ef250166bd0b2249b43b4438aea93fa135e2d19a30c22d37e5a382d5d12e969b",
+      "source_version": "arxiv-v3",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        10,
+        12
+      ],
+      "reason_en": "Figure 2 clearly explains the reinforcement-learning reward pipeline; other candidates are data-mix and prompt examples.",
+      "reason_cn": "图 2 清楚说明强化学习奖励流程；其他候选图主要是数据分布和提示示例。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Figure 2 | Illustration of how sequence-level and token-level rewards are additively combined during\nadvantage computation in RL. Note that advantage is computed from sequence-level rewards as\n‘reward-to-go’, meaning that rewards are broadcast uniformly to every token.",
+          "bbox": [
+            58,
+            80,
+            536,
+            350
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            61.70800018310547,
+            308.78759765625,
+            532.914306640625,
+            346.7300109863281
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3984,
+            2250
+          ],
+          "pdf_path": "figures/google/translategemma-technical-report/figure-01.pdf",
+          "png_path": "figures/google/translategemma-technical-report/figure-01.png",
+          "pdf_sha256": "bb666502a21b7fbf72812946502baf64ac3f5733af481af86c354d5b42c9844e",
+          "png_sha256": "5cd35e8fedab3eb4e11731896790cf318e75d7c0755e5f2755a040c9e652bfc2"
+        }
+      ]
+    },
+    {
+      "id": "xai:grok-4-7-model-card",
+      "vendor": "xai",
+      "title": "Grok 4.7 Model Card",
+      "models": [
+        "Grok 4.7"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/xai/model-cards/grok-4-7-model-card.pdf",
+      "source_url": "https://x.ai/safety",
+      "source_sha256": "c40541597ac3c461d71a914c922d43b200b468e41434b699fdd11c9a8761c56f",
+      "source_version": "snapshot-2026-09-30",
+      "status": "available",
+      "inspected_pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        22,
+        23,
+        25,
+        26
+      ],
+      "reason_en": "The card has no architecture diagram; the score-versus-cost comparison and DeepSWE benchmark results are its clearest performance figures.",
+      "reason_cn": "该模型卡没有架构图；分数与成本对比图和 DeepSWE 基准结果图是最清晰的性能图表。",
+      "figures": [
+        {
+          "page": 7,
+          "figure_number": null,
+          "role": "results",
+          "caption": "",
+          "bbox": [
+            104.0,
+            65.0,
+            507.149,
+            375.472
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            3360,
+            2588
+          ],
+          "pdf_path": "figures/xai/grok-4-7-model-card/figure-01.pdf",
+          "png_path": "figures/xai/grok-4-7-model-card/figure-01.png",
+          "pdf_sha256": "f8085741169016474e2023d97633f351d1561b4afbeb810f943769c4fea8cbf2",
+          "png_sha256": "88af514d4cca5c8e8b45e5d62bc57b7e004a8f0f341efd9188d94f836329de67"
+        },
+        {
+          "page": 8,
+          "figure_number": null,
+          "role": "results",
+          "caption": "",
+          "bbox": [
+            75,
+            225,
+            510,
+            395
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            3625,
+            1417
+          ],
+          "pdf_path": "figures/xai/grok-4-7-model-card/figure-02.pdf",
+          "png_path": "figures/xai/grok-4-7-model-card/figure-02.png",
+          "pdf_sha256": "0b1891a4a6fe6b4374e0f25efedbea74a626276cd030ee4b209458f89cb85ac6",
+          "png_sha256": "76f17dc08239dcf87ba8047be4a5dd6a8488acf180775c4e176f19f4b822de78"
+        }
+      ]
+    },
+    {
+      "id": "mistral:voxtral-tts",
+      "vendor": "mistral",
+      "title": "Voxtral TTS",
+      "models": [
+        "Voxtral TTS"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/mistral/technical-reports/voxtral-tts--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2603.25551",
+      "source_sha256": "e062e1d3c79833d13bbbabf0fc7e266e811a543a7b17b811f32a11255269a8cf",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3
+      ],
+      "reason_en": "Architecture and human-preference chart are clearly separated from the paper text.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": "1",
+          "role": "results",
+          "caption": "Figure 1: Voxtral TTS is preferred to ElevenLabs Flash v2.5 in human evaluations. We plot the win rate for\nVoxtral TTS against ElevenLabs Flash v2.5 in human evaluations across two categories. For flagship voices, we\nuse the default voices for each model and 77 unique text examples. In the voice cloning set-up, we provide a\nshort audio reference clip and 60 text prompts. In both categories, human annotators blindly rate which audio is\nbetter between the two models. Voxtral TTS is preferred in 58.3 and 68.4% of instances.",
+          "bbox": [
+            104.68,
+            438.0,
+            507.16,
+            639.73
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            107.677001953125,
+            587.8992919921875,
+            504.1564636230469,
+            636.7293701171875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3354,
+            1682
+          ],
+          "pdf_path": "figures/mistral/voxtral-tts/figure-01.pdf",
+          "png_path": "figures/mistral/voxtral-tts/figure-01.png",
+          "pdf_sha256": "f6ab5f557fe977564e5cf85835ad7c7b9955e747b2e3064fcac6144cfc52178f",
+          "png_sha256": "9a8a9747dace0a6ee5345e1130ae3422cc7ffee6966bbc21c170905c17162ff7"
+        },
+        {
+          "page": 3,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Figure 2: Architecture overview of Voxtral TTS. A voice reference ranging from 3s-30s is fed to the Voxtral\nCodec encoder to obtain audio tokens at a frame rate of 12.5 Hz. Each audio frame (labeled A) consists of a\nsemantic token and acoustic tokens. The voice reference audio tokens along with the text prompt tokens (labeled\nT) are fed to the decoder backbone. The decoder auto-regressively generates a sequence of semantic tokens\nuntil it reaches a special End of Audio token (<EOA>). At each timestep, the semantic token from the decoder\nbackbone is fed to a flow-matching transformer, which is run multiple times to predict the acoustic tokens. The\nsemantic and acoustic tokens are fed to the Voxtral Codec decoder to obtain the generated waveform.",
+          "bbox": [
+            104.7,
+            72,
+            507.15,
+            450.77
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            107.7040023803711,
+            378.96533203125,
+            504.1540832519531,
+            447.7723693847656
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3354,
+            3157
+          ],
+          "pdf_path": "figures/mistral/voxtral-tts/figure-02.pdf",
+          "png_path": "figures/mistral/voxtral-tts/figure-02.png",
+          "pdf_sha256": "6a13ba11a2bbd6adc4fbaaec48886075e5362094110dcac949331fe7ae9e42dd",
+          "png_sha256": "8cab395bc8f2e0cb4d51f6753f3aa8405729bdddc3932af50dccfa1ea8d45e9a"
+        }
+      ]
+    },
+    {
+      "id": "mistral:voxtral-realtime",
+      "vendor": "mistral",
+      "title": "Voxtral Realtime",
+      "models": [
+        "Voxtral Realtime"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/mistral/technical-reports/voxtral-realtime--arxiv-v3.pdf",
+      "source_url": "https://arxiv.org/abs/2602.11298",
+      "source_sha256": "ae5719bbffb539113504a4fbe8a36b67c8c85f3b0a74d00ba9d0cdc0fcc9167a",
+      "source_version": "arxiv-v3",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        3,
+        7,
+        8
+      ],
+      "reason_en": "The report contains a readable system diagram and an accuracy-versus-delay chart.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": "1",
+          "role": "results",
+          "caption": "Figure 1: Voxtral Realtime approaches offline accuracy at sub-second latency. Macro-average word error-\nrate (WER) vs. delay on the FLEURS multilingual benchmark for realtime and offline models. Lower is better.\nAt 480 ms delay, Voxtral Realtime is competitive with Scribe v2 Realtime, the leading realtime API model,\nas well as Whisper, the most popular open-source offline model. It surpasses both baselines at 960 ms delay,\napproaching the performance of Voxtral Mini Transcribe V2, a state-of-the-art offline transcription model.",
+          "bbox": [
+            104.68,
+            449,
+            508.57,
+            715.77
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            107.677001953125,
+            663.8632202148438,
+            505.5714111328125,
+            712.7694091796875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3366,
+            2224
+          ],
+          "pdf_path": "figures/mistral/voxtral-realtime/figure-01.pdf",
+          "png_path": "figures/mistral/voxtral-realtime/figure-01.png",
+          "pdf_sha256": "5e9402fc637f0efc44099d565c974cadcbf964f3e8b400db9140de4c2f097314",
+          "png_sha256": "08632c31a4c1a497603f413c279b9fad91ed8375fb90e62fc21b9360f89d9c23"
+        },
+        {
+          "page": 3,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Figure 2: Voxtral Realtime architecture and decoding scheme for a target delay τ = 80 ms. Voxtral\nRealtime consists of a causal audio encoder to embed the input audio stream, an MLP adapter layer to temporally\ndownsample the audio embeddings, and a text decoder to auto-regressively generate the output text stream. The\ndownsampled audio embeddings from the adapter and the embeddings of previously generated tokens have the\nsame frame-rate of 12.5Hz, with each frame representing 80ms of audio. These are summed and processed by\nthe text decoder, which predicts one token per frame. The decoder emits a padding token [P] while waiting\nfor sufficient acoustic evidence. Once a word is acoustically complete and the target delay τ has elapsed, a\nword-boundary token [W] is emitted to initiate generation, followed by the corresponding subword tokens.",
+          "bbox": [
+            104.68,
+            69,
+            507.31,
+            383.81
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            107.677001953125,
+            301.67645263671875,
+            504.314453125,
+            380.8116149902344
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3356,
+            2624
+          ],
+          "pdf_path": "figures/mistral/voxtral-realtime/figure-02.pdf",
+          "png_path": "figures/mistral/voxtral-realtime/figure-02.png",
+          "pdf_sha256": "00d23c9e58ccf4a466916119ae6348a40cc3dcdf6823858bcd9dcea590212e3b",
+          "png_sha256": "bbc3b92281d23dcc085230e458dd657cbb26cbd80c83332cb3ef8be578dce50d"
+        }
+      ]
+    },
+    {
+      "id": "mistral:shieldstral",
+      "vendor": "mistral",
+      "title": "Shieldstral",
+      "models": [
+        "Shieldstral"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/mistral/technical-reports/shieldstral--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2607.25857",
+      "source_sha256": "f0c148495ac18ede73a4db2a884f4ce8a9ff1221efdc1902d2b86e0b8a68c2d5",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason_en": "The architecture diagram and benchmark plots are useful; safety classification results remain labeled as safety evaluation.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "architecture",
+          "caption": "Figure 1: Shieldstral architecture. An instruction, a natural-language query, and content (text, image, or both)\nare composed into a structured prompt, then processed by the model in a single forward pass. The softmax-\nnormalised logits of the “yes” and “no” tokens yield a continuous safety score that is thresholded for binary\nclassification.",
+          "bbox": [
+            105.0,
+            69,
+            508.49,
+            302.96
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            108.0,
+            260.9994812011719,
+            505.4918212890625,
+            299.9563903808594
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3363,
+            1950
+          ],
+          "pdf_path": "figures/mistral/shieldstral/figure-01.pdf",
+          "png_path": "figures/mistral/shieldstral/figure-01.png",
+          "pdf_sha256": "8c59aeaf225eeadabe64f5fe3f66b928e54eedc7f1e2718cb26d13f2672d6c6d",
+          "png_sha256": "c1b5ec49ff2ecdb8f4726496332a9f598c7554a372e751e7dc77e3c6e4952b69"
+        },
+        {
+          "page": 11,
+          "figure_number": "5",
+          "role": "safety_evaluation",
+          "caption": "Figure 5: F1 scores (%) on safety classification benchmarks. PolyGuard and RTPLX are multilingual datasets.\nQwen3Guard results are averaged over strict (controversial=unsafe) and loose (controversial=safe) mappings.\nShieldGemma and Shieldstral use a threshold of 0.5. GPT-OSS-Safeguard-20B uses reasoning_effort=high.\nNemotron-3.5-Safety uses reasoning_effort=none for default categories.",
+          "bbox": [
+            105,
+            69,
+            508.57,
+            601.3
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            108.0,
+            559.1510009765625,
+            505.57177734375,
+            598.3025512695312
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3364,
+            4436
+          ],
+          "pdf_path": "figures/mistral/shieldstral/figure-02.pdf",
+          "png_path": "figures/mistral/shieldstral/figure-02.png",
+          "pdf_sha256": "d1009b0c0c33c74cffc125e52aa8a75c3de96f04115bd1789d287c9e5539a42c",
+          "png_sha256": "5add1957023d09255d9a2043dcf00bdae9af520b3c5babcc08a21e428d7654c2"
+        }
+      ]
+    },
+    {
+      "id": "mistral:robostral-navigate",
+      "vendor": "mistral",
+      "title": "Robostral Navigate",
+      "models": [
+        "Robostral Navigate"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/mistral/technical-reports/robostral-navigate--arxiv-v3.pdf",
+      "source_url": "https://arxiv.org/abs/2607.20785",
+      "source_sha256": "b8cc86d333f57d2904d0f3a003b68e14c4d571ab951593aeaca69419d0b825e0",
+      "source_version": "arxiv-v3",
+      "status": "available",
+      "inspected_pages": [
+        3,
+        6,
+        7
+      ],
+      "reason_en": "Pages 3 and 7 show the complete system and reinforcement-learning workflow diagrams.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 3,
+          "figure_number": "1",
+          "role": "architecture",
+          "caption": "Figure 1: System Architecture. Given a natural language instruction and a stream of RGB observations, the\nVLM predicts the next waypoint at 0.5 hertz via pointing, metric displacement and orientation upon arrival.\nWhen the target lies outside the field of view, pointing is omitted. A diffusion policy takes the waypoint, the\ncontext frame (frame at which the waypoint has been inferred) and the current frame to produce a dense trajectory\nat 10 hertz. Finally, a motion-tracking controller turns this trajectory into high-frequency actuator torques.",
+          "bbox": [
+            104.58,
+            252.1,
+            508.57,
+            504.56
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            107.5790023803711,
+            452.6229248046875,
+            505.57122802734375,
+            501.5633850097656
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3367,
+            2104
+          ],
+          "pdf_path": "figures/mistral/robostral-navigate/figure-01.pdf",
+          "png_path": "figures/mistral/robostral-navigate/figure-01.png",
+          "pdf_sha256": "542ea05c2295339cf0d0720a13de0202759d296011db94d7085b7974114e6d6a",
+          "png_sha256": "8cd861a3bae4c319c27c75780bfc783e8de208ce16ef91c814746a05c796c0cc"
+        },
+        {
+          "page": 7,
+          "figure_number": "5",
+          "role": "architecture",
+          "caption": "Figure 5: Overview of our online reinforcement learning pipeline. The trainer orchestrates the prompt sampling,\nphysical simulator, and action generator (vLLM) in an asynchronous loop, updating the policy via CISPO using\nthe −max(2, dist_to_goal) reward signal upon episode termination.",
+          "bbox": [
+            105.0,
+            69,
+            508.12,
+            345.48
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            108.0,
+            313.5782775878906,
+            505.1228942871094,
+            342.4823913574219
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3360,
+            2304
+          ],
+          "pdf_path": "figures/mistral/robostral-navigate/figure-02.pdf",
+          "png_path": "figures/mistral/robostral-navigate/figure-02.png",
+          "pdf_sha256": "b0b40509160ebf29cbac59a0d57e9b141bd0155a44b4988a2ac4878eef4e399f",
+          "png_sha256": "45c2c49b3641d66efa088d91301c076d2e161e65ad1e5c8c00dbf6a72aa47974"
+        }
+      ]
+    },
+    {
+      "id": "nvidia:nvidia-nemotron-3-super-technical-report",
+      "vendor": "nvidia",
+      "title": "NVIDIA Nemotron 3 Super Technical Report",
+      "models": [
+        "Nemotron 3 Super"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/nvidia/technical-reports/nvidia-nemotron-3-super-technical-report.pdf",
+      "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
+      "source_sha256": "73ea5d737b9c7c62a39ed3edefbecb82e5a23681bc2c4167e202eeee7b3d254d",
+      "source_version": "snapshot-2026-09-30",
+      "status": "available",
+      "inspected_pages": [
+        2,
+        3,
+        5,
+        11,
+        15,
+        18,
+        20,
+        24,
+        25,
+        49
+      ],
+      "reason_en": "Figure 1 summarizes benchmark accuracy and throughput; Figure 12 diagrams the post-training stages.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "results",
+          "caption": "Figure 1 | Accuracy and throughput comparisons of Nemotron 3 Super with GPT-OSS-120B and\nQwen3.5-122B. Nemotron 3 Super achieves comparable accuracies across popular benchmarks but\nprovides the highest inference throughput; on 8k input sequence lengths and 64k output sequence\nlengths, Nemotron 3 Super provides up to 2.2× and 7.5× higher throughput than GPT-OSS-120B\nand Qwen3.5-122B, respectively. We measured throughput on B200 GPUs with vLLM and TRT-LLM\nand use the best out of the two frameworks for each model. For GPT-OSS-120B we use MXFP4\nweights, MXFP8 activations, and FP8 KV-Cache; for Qwen3.5-122B we use BF16. We used the\nOpenHands harness to evaluate SWE-Bench.",
+          "bbox": [
+            58.97,
+            82,
+            536.45,
+            381.18
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            61.96900177001953,
+            272.27484130859375,
+            533.446533203125,
+            378.18280029296875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3979,
+            2494
+          ],
+          "pdf_path": "figures/nvidia/nvidia-nemotron-3-super-technical-report/figure-01.pdf",
+          "png_path": "figures/nvidia/nvidia-nemotron-3-super-technical-report/figure-01.png",
+          "pdf_sha256": "2e3b5b5e7d45687b66d241d034bcc829d8091391c308c13931ea7e5d24f6c100",
+          "png_sha256": "5687d9aa12030db869c6e979a8ef68478f04874826bef67947e0ce3ce547fb4d"
+        },
+        {
+          "page": 18,
+          "figure_number": "12",
+          "role": "architecture",
+          "caption": "Figure 12 | Overview of the post-training pipeline for Nemotron 3 Super.",
+          "bbox": [
+            59.4,
+            247.5,
+            535.9,
+            419.48
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            123.1989974975586,
+            405.4178466796875,
+            472.2356872558594,
+            416.4818115234375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3971,
+            1434
+          ],
+          "pdf_path": "figures/nvidia/nvidia-nemotron-3-super-technical-report/figure-02.pdf",
+          "png_path": "figures/nvidia/nvidia-nemotron-3-super-technical-report/figure-02.png",
+          "pdf_sha256": "6512f2078428ef8e15927ee5aefbb39291e5bb07a1a251386ff0cf1839257972",
+          "png_sha256": "be8f4f8419d6ea7292cc54fb2b0e5d8c7a888520e52f09aaed667a77c51d7a1d"
+        }
+      ]
+    },
+    {
+      "id": "nvidia:nvidia-nemotron-3-ultra-technical-report",
+      "vendor": "nvidia",
+      "title": "NVIDIA Nemotron 3 Ultra Technical Report",
+      "models": [
+        "Nemotron 3 Ultra"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/nvidia/technical-reports/nvidia-nemotron-3-ultra-technical-report.pdf",
+      "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
+      "source_sha256": "b8c5e9bb8f29bdff41f876a24f5da8bc1762e16d12dbece512c443a96cbbc859",
+      "source_version": "snapshot-2026-09-30",
+      "status": "available",
+      "inspected_pages": [
+        2,
+        3,
+        15,
+        21,
+        31,
+        40,
+        45,
+        50
+      ],
+      "reason_en": "The opening page has the accuracy/throughput summary and page 15 has the post-training pipeline.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "results",
+          "caption": "Figure 1 | Accuracy and throughput comparisons for Nemotron 3 Ultra. Our model achieves on-par\naccuracy with other open LLMs while achieving significantly higher inference throughput on the\n8K input / 64K output token setting. All throughput numbers are reported at max-throughput\nusing NVFP4 precision on GB200. For Nemotron 3 Ultra, throughput numbers are obtained from\nTRT-LLM, while all other model numbers use vLLM. We run with and without speculative decoding,\nwhere available, and choose the best numbers for each model.",
+          "bbox": [
+            58.97,
+            82,
+            537.61,
+            447.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            61.96900177001953,
+            365.3497314453125,
+            534.6142578125,
+            444.0048522949219
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3989,
+            3042
+          ],
+          "pdf_path": "figures/nvidia/nvidia-nemotron-3-ultra-technical-report/figure-01.pdf",
+          "png_path": "figures/nvidia/nvidia-nemotron-3-ultra-technical-report/figure-01.png",
+          "pdf_sha256": "e8df6826e98486b8ce4d01255bffbba70310f9429cbd0c3b2d2a65ffef9963d0",
+          "png_sha256": "7f65e4c6c050cc1183fba72b991fd787192f56d0f2195809f105f197ce776ec3"
+        },
+        {
+          "page": 15,
+          "figure_number": "9",
+          "role": "architecture",
+          "caption": "Figure 9 | Overview of the post-training pipeline for Nemotron 3 Ultra.",
+          "bbox": [
+            81.1,
+            240.8,
+            510.6,
+            500.17
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            127.13800048828125,
+            486.20172119140625,
+            468.2764892578125,
+            497.1709289550781
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3580,
+            2162
+          ],
+          "pdf_path": "figures/nvidia/nvidia-nemotron-3-ultra-technical-report/figure-02.pdf",
+          "png_path": "figures/nvidia/nvidia-nemotron-3-ultra-technical-report/figure-02.png",
+          "pdf_sha256": "f28e78a277babc63bd1107c1e2f2c2a5d7b5244cbb4f45ee85d871d6d45de6c2",
+          "png_sha256": "2f865b56ce3dde7113bfe0463661daec384ffdde401132e1746a5fefe7a44a73"
+        }
+      ]
+    },
+    {
+      "id": "deepseek:deepseek-v4-1-flash-technical-report",
+      "vendor": "deepseek",
+      "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
+      "models": [
+        "DeepSeek-V4.1-Flash"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/deepseek/technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2609.19969",
+      "source_sha256": "0cfdda19c8e1691b5226dd0d4949e2397051268e8a823c2fb61db94ea20c4ac0",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        7
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "results",
+          "caption": "Figure 1 | (a) Performance of DeepSeek-V4.1-Flash and its counterparts on agentic benchmarks.\n(b) Global KV cache size per token (in bytes) across generations of DeepSeek models, highlight-\ning DeepSeek’s sustained efforts to reduce context memory requirements. DeepSeek-V4.1-Flash\nachieves approximately 4-fold and 437-fold reductions in per-token global KV cache size relative\nto DeepSeek-V4-Flash and DeepSeek-V1, respectively.",
+          "bbox": [
+            67.51,
+            507.13,
+            530.12,
+            755.54
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.50599670410156,
+            686.2752685546875,
+            526.3206176757812,
+            752.53564453125
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3856,
+            2071
+          ],
+          "pdf_path": "figures/deepseek/deepseek-v4-1-flash-technical-report/figure-01.pdf",
+          "png_path": "figures/deepseek/deepseek-v4-1-flash-technical-report/figure-01.png",
+          "pdf_sha256": "0fba0ab36e61c61def6db48cae407552330a93ccd58618717adb6ae5c81ff1e6",
+          "png_sha256": "e7f8400733a2459efc7a39d1d26221548e98d4d5ddc2a9e5876576b7775c118c"
+        },
+        {
+          "page": 7,
+          "figure_number": 3,
+          "role": "architecture",
+          "caption": "Figure 3 | Overall architecture of DeepSeek-V4.1-Flash. The 40-layer network is divided into\na causal encoder and a decoder, each with 20 layers. All feed-forward layers use standard\nDeepSeekMoE. The first two encoder layers use sliding window attention (SWA); the rest use\nCompressed Sparse Attention 2 (CSA2), with CSA2(ratio, mode) specifying the compression\nratio and mode. The model also uses Single-Pass mHC, Engram, DSpark, and a Hierarchical\nSparse Indexer.",
+          "bbox": [
+            67.87,
+            82.04,
+            527.41,
+            412.07
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            95.55809783935547,
+            524.4139404296875,
+            409.066650390625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3830,
+            2751
+          ],
+          "pdf_path": "figures/deepseek/deepseek-v4-1-flash-technical-report/figure-02.pdf",
+          "png_path": "figures/deepseek/deepseek-v4-1-flash-technical-report/figure-02.png",
+          "pdf_sha256": "63baa3252e39712171a86f0a99536bf6393923a70d074faae14e54d4bd9b2c07",
+          "png_sha256": "ca26d5bdd1db23b0e95269b62347024fdb5b9da6989d44b2b02e69e97fd911b5"
+        }
+      ]
+    },
+    {
+      "id": "qwen:qwen3-8-flash-next",
+      "vendor": "qwen",
+      "title": "On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",
+      "models": [
+        "Qwen3.8-Flash-Next"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/qwen/technical-reports/qwen3-8-flash-next.pdf",
+      "source_url": "https://github.com/QwenLM/Qwen3.8-Flash-Next",
+      "source_sha256": "04f263446d74a35cb7cea368574e0c561f3b05c133be2c777ac884404063655d",
+      "source_version": "snapshot-2026-10-01",
+      "status": "available",
+      "inspected_pages": [
+        2,
+        9
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": 1,
+          "role": "architecture",
+          "caption": "Figure 1: Qwen3.8-Flash-Next architecture. Token mixing alternates three GDN layers with one QSA\nlayer per block of four. Every sublayer reads and writes through GR, which widens the residual stream\nand gates the read elementwise. An n-gram embedding layer at Layer 2 scales capacity off the accelerator\nvia host-memory prefetching. The MTP module reuses QSA indices across speculative decoding steps.",
+          "bbox": [
+            67.59,
+            53.47,
+            527.8,
+            478.5
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.58699798583984,
+            432.65692138671875,
+            524.7960205078125,
+            475.49554443359375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3836,
+            3542
+          ],
+          "pdf_path": "figures/qwen/qwen3-8-flash-next/figure-01.pdf",
+          "png_path": "figures/qwen/qwen3-8-flash-next/figure-01.png",
+          "pdf_sha256": "2d98353542c6ad1f33d50c874b0c3348b22f5f7ce9ef5466caf3b38ea9a9294c",
+          "png_sha256": "954dc91d68830d6444c69109196b9b62a7fa941ae9388229a3a69d7e679211a1"
+        },
+        {
+          "page": 9,
+          "figure_number": 5,
+          "role": "results",
+          "caption": "Figure 5: Architecture ablations of QSA on RULER. (a) QSA performance with different micro-block sizes;\n“Keep x” indicates the number of IndexShare indexer layers retained for computation. (b) Performance\nwith different numbers of indexer query heads after dense distillation and sparse training.",
+          "bbox": [
+            66.37,
+            67.87,
+            528.65,
+            247.81
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            69.37200164794922,
+            212.9339141845703,
+            525.652587890625,
+            244.81356811523438
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3853,
+            1500
+          ],
+          "pdf_path": "figures/qwen/qwen3-8-flash-next/figure-02.pdf",
+          "png_path": "figures/qwen/qwen3-8-flash-next/figure-02.png",
+          "pdf_sha256": "9d7d4535199c3a2dad22c7655bd1ebac44d320fd43471ab1a0c5639e3da7941a",
+          "png_sha256": "ab1fd755bdc2e9233853e91005835cb054d7aab3afb59997919a764522003609"
+        }
+      ]
+    },
+    {
+      "id": "moonshot:kimi-k3-technical-report",
+      "vendor": "moonshot",
+      "title": "Kimi K3 Technical Report",
+      "models": [
+        "Kimi K3"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/moonshot/technical-reports/kimi-k3-technical-report.pdf",
+      "source_url": "https://github.com/MoonshotAI/Kimi-K3",
+      "source_sha256": "86fb82a63ced501f0c3f4f404c0c6fa88a7a6cfac17aae81fd1a8f455998067c",
+      "source_version": "snapshot-2026-09-30",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        3
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "results",
+          "caption": "Figure 1: Kimi K3 main results.",
+          "bbox": [
+            90.9,
+            414.9,
+            524.1,
+            681.4
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            248.4459991455078,
+            667.031005859375,
+            363.5566101074219,
+            677.8355102539062
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3610,
+            2221
+          ],
+          "pdf_path": "figures/moonshot/kimi-k3-technical-report/figure-01.pdf",
+          "png_path": "figures/moonshot/kimi-k3-technical-report/figure-01.png",
+          "pdf_sha256": "9e90893609e6433588367e55e6f220ec8ef1c07abeb8bda9b0a6d950572e315c",
+          "png_sha256": "f23e8d3c0f9e5a45fc5ba56b2b027ba06ab02146683d96cb9efe17a8bdf1ca91"
+        },
+        {
+          "page": 3,
+          "figure_number": 2,
+          "role": "architecture",
+          "caption": "Figure 2: The Kimi K3 architecture, organized around token, channel, and layer mixing, with a native vision pathway at the input.\nEach block contains three Kimi Delta Attention (KDA) layers followed by one Gated MLA layer, with each attention layer paired\nwith a Stable LatentMoE feed-forward network. Attention Residuals (AttnRes) use learned pseudo-queries (w) to derive attention\nweights (α) over the embedding and preceding block outputs, enabling selective information flow across depth. Top left: the Stable\nLatentMoE module with shared and routed experts. Bottom left: the KDA module. Bottom right: the native vision pathway.",
+          "bbox": [
+            68.2,
+            51.9,
+            545.1,
+            495.8
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            71.6780014038086,
+            79.84628295898438,
+            541.5673217773438,
+            492.3325500488281
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3975,
+            3700
+          ],
+          "pdf_path": "figures/moonshot/kimi-k3-technical-report/figure-02.pdf",
+          "png_path": "figures/moonshot/kimi-k3-technical-report/figure-02.png",
+          "pdf_sha256": "4b466e76e33180a2479010d55cf44a5544527d2f2be41cdbdd019e7ee9d5f477",
+          "png_sha256": "29fa04112e413c3df5f1d876e0fb7c05f4825980354bd510103cbdff6fd16397"
+        }
+      ]
+    },
+    {
+      "id": "tencent:hy-mt2",
+      "vendor": "tencent",
+      "title": "Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild",
+      "models": [
+        "Hy-MT2"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/tencent/technical-reports/hy-mt2--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2605.22064",
+      "source_sha256": "1b546445bc9c394846c8e477c8814c7579d4aed1602509a96d15b0d10e4965d6",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        4
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "results",
+          "caption": "Figure 1: Benchmark performance of Hy-MT2 models and state-of-the-art baselines.",
+          "bbox": [
+            67.87,
+            358.33,
+            527.4,
+            751.46
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            113.3759994506836,
+            738.5012817382812,
+            481.9025573730469,
+            748.4639282226562
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3830,
+            3277
+          ],
+          "pdf_path": "figures/tencent/hy-mt2/figure-01.pdf",
+          "png_path": "figures/tencent/hy-mt2/figure-01.png",
+          "pdf_sha256": "9bb67bc74d04a04df27d8cb8e80dafdc7231f5930a889be132f0a83bd83c3122",
+          "png_sha256": "2848470ae41620bcc5b7a2b3ba0d61304e6b08021886881141ecfad0c79754fb"
+        },
+        {
+          "page": 4,
+          "figure_number": 2,
+          "role": "architecture",
+          "caption": "Figure 2: Family-Centric Post-training pipline of Hy-MT2.",
+          "bbox": [
+            67.87,
+            67.87,
+            527.36,
+            256.54
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            170.072998046875,
+            243.5792999267578,
+            425.2052307128906,
+            253.54190063476562
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3830,
+            1573
+          ],
+          "pdf_path": "figures/tencent/hy-mt2/figure-02.pdf",
+          "png_path": "figures/tencent/hy-mt2/figure-02.png",
+          "pdf_sha256": "d7649cc24c161608d4ce80bf1b6d2d1442c850a656496b76fa35ff30740a2e4b",
+          "png_sha256": "38774c40d44bd1eb7d092fe7c0f661d0b62cc729a0f28140a5a245470e970f1a"
+        }
+      ]
+    },
+    {
+      "id": "bytedance:seed2-1-model-card",
+      "vendor": "bytedance",
+      "title": "Seed2.1 Model Card: Agentic Intelligence for Productivity",
+      "models": [
+        "Seed2.1"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/bytedance/model-cards/seed2-1-model-card.pdf",
+      "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
+      "source_sha256": "36e9990979faee86453d567462b3f9d7b0a63c4837764e2d2b1c918be02bd65b",
+      "source_version": "snapshot-2026-10-01",
+      "status": "available",
+      "inspected_pages": [
+        13,
+        28
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 13,
+          "figure_number": 5,
+          "role": "results",
+          "caption": "Figure 5 Efficiency of the Generalist Computer-Use Agent (CUA) setting on OSWorld. For each model, the arrow\npoints from the GUI-only operating point (open marker) to the Generalist CUA setting (filled marker), in which the\nagent may also issue commands and call tools. Both models move up and to the left: higher success rate with fewer\nsteps per task.",
+          "bbox": [
+            67.87,
+            74.95,
+            544.52,
+            326.76
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            79.12211608886719,
+            541.5194091796875,
+            323.7609558105469
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3973,
+            2099
+          ],
+          "pdf_path": "figures/bytedance/seed2-1-model-card/figure-01.pdf",
+          "png_path": "figures/bytedance/seed2-1-model-card/figure-01.png",
+          "pdf_sha256": "6eae522123b8dd4a3bc752a461b63c61a40dc5601c40e663d0a75f7da96c6bf1",
+          "png_sha256": "da16c6b7aa4d51feb25697a2d51e843e5d76dfb1a1895fe44df87620ec1647bc"
+        },
+        {
+          "page": 28,
+          "figure_number": 16,
+          "role": "overview",
+          "caption": "Figure 16 Seed-for-Seed development loop. Seed2.1 participates in evaluation, data, training, and infrastructure loops\nthrough long-horizon execution and continuous target-driven iteration.",
+          "bbox": [
+            67.87,
+            103.9,
+            544.18,
+            693.84
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            669.4915771484375,
+            541.17724609375,
+            690.8369750976562
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3970,
+            4917
+          ],
+          "pdf_path": "figures/bytedance/seed2-1-model-card/figure-02.pdf",
+          "png_path": "figures/bytedance/seed2-1-model-card/figure-02.png",
+          "pdf_sha256": "6030b6b3e5143b8d1d61d662b792e933692577e081f76e2b5224d6fa4f74a71f",
+          "png_sha256": "d84d15f2d0b31493d3e69ea46bca19421715c90f9017d99c70e9cfbe8b4f0156"
+        }
+      ]
+    },
+    {
+      "id": "cohere:north-small-translate",
+      "vendor": "cohere",
+      "title": "North Small Translate: Advanced Cost-Effective Translation (Cohere CAT+)",
+      "models": [
+        "North Small Translate 1.0"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/cohere/technical-reports/north-small-translate--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2609.13916",
+      "source_sha256": "f593e3ab110631bf1f2b5412c482ebb6dd56c38a38fd77c60dcdf10784e621fa",
+      "source_version": "arxiv-v1",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "reason_en": "Pages 2, 8, and 13 contain benchmark comparison matrices; all 14 pages were inspected and no standalone architecture, pipeline, or plotted results figure was present.",
+      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
+      "figures": []
+    },
+    {
+      "id": "microsoft:mai-thinking-1-technical-report",
+      "vendor": "microsoft",
+      "title": "MAI-Thinking-1: Building a Hill-Climbing Machine",
+      "models": [
+        "MAI Thinking 1"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/microsoft/technical-reports/mai-thinking-1-technical-report.pdf",
+      "source_url": "https://microsoft.ai/models/mai-thinking-1/",
+      "source_sha256": "7d4f13dd88ff98d0480645e96b751f0abea00fd99122cabf7626598b29bef26f",
+      "source_version": "snapshot-2026-10-01",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        5,
+        9,
+        12,
+        16,
+        24,
+        31,
+        35,
+        38,
+        50,
+        58,
+        88
+      ],
+      "reason_en": "The report includes a legible base-model architecture and training-performance plot.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 5,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Figure 2. Overview of the MAI-Base-1 architecture. Left: the overall layout of the Transformer body, where we\ninterleave high-sparsity MoE layers with small dense FFNs, and global attention with local attention. Right: The\nMoE layer, in which 8 of 512 experts are activated per token in a compressed latent space.",
+          "bbox": [
+            87.5,
+            302.9,
+            524.2,
+            668.36
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            94.14398193359375,
+            632.6807861328125,
+            517.8616333007812,
+            665.3584594726562
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3640,
+            3046
+          ],
+          "pdf_path": "figures/microsoft/mai-thinking-1-technical-report/figure-01.pdf",
+          "png_path": "figures/microsoft/mai-thinking-1-technical-report/figure-01.png",
+          "pdf_sha256": "e78cff66dd29c850251db3e96e1ab5df8fff9681f4f3e7abb050e06d20ab1ce4",
+          "png_sha256": "db9492f98968a11acac23b8533ead36296edbcde7a7ae2437c61942cc44bd6d1"
+        },
+        {
+          "page": 35,
+          "figure_number": "15",
+          "role": "results",
+          "caption": "Figure 15. Performance on AIME 2025 (left) and a hard subset of LiveCodeBench v6 (right) during our STEM\nclimb. Self-distillation is indicated through ⋆markers; different pre- and mid-trained model versions are shown\nin different colors. Maximum output length throughout training is indicated at the bottom. Self-distillation is an\neffective way of resetting numerics after a collapse (visible through sudden drops in performance) and changing\nthe base policy during our run. As we made infrastructure and algorithmic improvements throughout our climb,\nself-distillation because of run collapses became less frequent.",
+          "bbox": [
+            79.809,
+            84.0,
+            532.4,
+            352.75
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            94.14399719238281,
+            284.1927795410156,
+            519.0260009765625,
+            349.7474365234375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3772,
+            2240
+          ],
+          "pdf_path": "figures/microsoft/mai-thinking-1-technical-report/figure-02.pdf",
+          "png_path": "figures/microsoft/mai-thinking-1-technical-report/figure-02.png",
+          "pdf_sha256": "eb3e6e9369f472d520858e093c24ba8014f539710c41864056b0bd4d6cc2d2f4",
+          "png_sha256": "45c44f3907b40cb0783765b4bd829d9eb7ac212f687442a9bba5b050a16b1a0b"
+        }
+      ]
+    },
+    {
+      "id": "microsoft:mai-code-1-1-flash-model-card",
+      "vendor": "microsoft",
+      "title": "MAI-Code-1.1-Flash Model Card",
+      "models": [
+        "MAI Code 1.1 Flash"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/microsoft/model-cards/mai-code-1-1-flash-model-card.pdf",
+      "source_url": "https://microsoft.ai/models/mai-code-1-flash/",
+      "source_sha256": "9caf4abe4c8eb6c3b5e1dfd5c61238e42139510bf4c5690d6115d9277f59e22f",
+      "source_version": "snapshot-2026-10-01",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "reason_en": "All six pages were inspected; content consists of model-card text and benchmark tables, without a core architecture diagram or plotted result figure.",
+      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
+      "figures": []
+    },
+    {
+      "id": "microsoft:mai-image-2-6-model-card",
+      "vendor": "microsoft",
+      "title": "MAI-Image-2.6 / MAI-Image-2.6-Flash Model Card",
+      "models": [
+        "MAI Image 2.6 / 2.6 Flash"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/microsoft/model-cards/mai-image-2-6-model-card.pdf",
+      "source_url": "https://microsoft.ai/models/mai-image-2-6/",
+      "source_sha256": "0f60c3a58ac49a3ab8f433b72c059bd2fddc52cebd929428d5092a51f4e017af",
+      "source_version": "snapshot-2026-10-01",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "reason_en": "All four pages were inspected; the card is text-only and contains no architecture diagram or plotted results figure.",
+      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
+      "figures": []
+    },
+    {
+      "id": "microsoft:mai-cyber-1-flash-model-card",
+      "vendor": "microsoft",
+      "title": "MAI-Cyber-1-Flash Model Card",
+      "models": [
+        "MAI Cyber 1 Flash"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/microsoft/model-cards/mai-cyber-1-flash-model-card.pdf",
+      "source_url": "https://microsoft.ai/models/mai-cyber-1-flash/",
+      "source_sha256": "e10050344fa3e591745c73ca4dca7a4dfbbf1c525ab5b3146f82e974a9b55ee2",
+      "source_version": "snapshot-2026-10-01",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "reason_en": "All seven pages were inspected; evaluation content is presented in tables and prose, with no standalone core figure.",
+      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
+      "figures": []
+    },
+    {
+      "id": "microsoft:phi-4-reasoning-vision",
+      "vendor": "microsoft",
+      "title": "Phi-4-reasoning-vision-15B Technical Report",
+      "models": [
+        "Phi 4 Reasoning Vision"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/microsoft/technical-reports/phi-4-reasoning-vision--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2603.03975",
+      "source_sha256": "3acb035633a88c6fd8d0518f3ff1a2bee4a719030458aa6c7a6aab8226f67c29",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        3,
+        4
+      ],
+      "reason_en": "The performance Pareto plots and mid-fusion architecture were visually inspected.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 3,
+          "figure_number": "2",
+          "role": "results",
+          "caption": "Figure 2: Phi-4-reasoning-vision-15B presents a compelling option compared to existing models, pushing the Pareto\nfrontier of the trade-off between accuracy and compute costs. We achieve competitive performance with much slower\nmodels that require more time and tokens, and higher accuracy than similarly fast models. These values were computed\nby averaging accuracy, time, and output token counts for a subset of 4 benchmarks: ChartQATEST, MathVistaMINI,\nMMMUVAL, and ScreenSpot_v2.",
+          "bbox": [
+            67.87,
+            67.9,
+            545.25,
+            322.23
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            269.16375732421875,
+            542.2544555664062,
+            319.2295227050781
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3979,
+            2120
+          ],
+          "pdf_path": "figures/microsoft/phi-4-reasoning-vision/figure-01.pdf",
+          "png_path": "figures/microsoft/phi-4-reasoning-vision/figure-01.png",
+          "pdf_sha256": "41ee1a0c3fa90a02ebbf3a8da4a2d477171530687387c54e7f643cd9b654d6ed",
+          "png_sha256": "99afc56e99ad98d384a39eafa343ba9cc98fa3b6e6633ba589406318ce4e503d"
+        },
+        {
+          "page": 4,
+          "figure_number": "3",
+          "role": "architecture",
+          "caption": "Figure 3: Overview of the Phi-4-reasoning-vision-15B mid-fusion architecture. Images are processed by a SigLIP-2 vision\nencoder and projected into the language embedding space via a cross-modality projector (MLP). The resulting visual\n“soft” tokens are interleaved with text tokens and fed into the Phi-4-Reasoning language model.",
+          "bbox": [
+            66.52,
+            67.9,
+            544.14,
+            309.1
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            69.52100372314453,
+            277.2541198730469,
+            541.1384887695312,
+            306.0971374511719
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3981,
+            2010
+          ],
+          "pdf_path": "figures/microsoft/phi-4-reasoning-vision/figure-02.pdf",
+          "png_path": "figures/microsoft/phi-4-reasoning-vision/figure-02.png",
+          "pdf_sha256": "a080bed81c0d404b39ac32ab8fd06d6186aee78d9ecc0fa46667b5d7ce6d0278",
+          "png_sha256": "03e0dcef10789dce867554817460dce0aca00037a8077de5a74940fec736638f"
+        }
+      ]
+    },
+    {
+      "id": "amazon:nova-2-family",
+      "vendor": "amazon",
+      "title": "Amazon Nova 2: Multimodal Reasoning and Generation Models",
+      "models": [
+        "Nova 2 Sonic",
+        "Nova 2 Lite / Pro Preview",
+        "Nova 2 Omni Preview"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/amazon/technical-reports/nova-2-family.pdf",
+      "source_url": "https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models",
+      "source_sha256": "db4da51d88f40e1d6b04e369b22bbf8554232514158ff3a147474606b09ed122",
+      "source_version": "snapshot-2026-10-01",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "reason_en": "The family overview and LiveCodeBench effort-versus-accuracy figure provide useful model and result summaries.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": "1",
+          "role": "overview",
+          "caption": "Figure 1: Amazon Nova 2 Family of Models",
+          "bbox": [
+            127.5,
+            202.6,
+            484.5,
+            409.87
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            215.9029998779297,
+            396.9064636230469,
+            393.8848571777344,
+            406.86907958984375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            2975,
+            1728
+          ],
+          "pdf_path": "figures/amazon/nova-2-family/figure-01.pdf",
+          "png_path": "figures/amazon/nova-2-family/figure-01.png",
+          "pdf_sha256": "02ced5b94857ac1dbdea372dace3790865b67a0e3086b92d9fa8cee049b311f0",
+          "png_sha256": "bd4143050969973475b8fece924370889843697cda0821dddfe00c7df7f96834"
+        },
+        {
+          "page": 3,
+          "figure_number": "2",
+          "role": "results",
+          "caption": "Figure 2: Nova 2 Lite Extended thinking performance on\ncode generation tasks (LiveCodeBench) across reasoning\neffort levels. Accuracy increases as the model allocates\nmore computational resources to reasoning, demonstrating\nthe configurable trade-off between speed and intelligence\nthat Nova 2 provides through its low, medium, and high\nreasoning effort settings.",
+          "bbox": [
+            80.7,
+            69,
+            543.0,
+            416.7
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            306.0,
+            201.11244201660156,
+            540.0007934570312,
+            276.6970520019531
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3853,
+            2898
+          ],
+          "pdf_path": "figures/amazon/nova-2-family/figure-02.pdf",
+          "png_path": "figures/amazon/nova-2-family/figure-02.png",
+          "pdf_sha256": "058d8fc1cc058bac632469bcf2d16f083b448336bef279414147951832affc8d",
+          "png_sha256": "5c36507ed26dfc9548464a393abfcbf6e3c02dde4af5bc604c8341b2a3eb171d"
+        }
+      ]
+    },
+    {
+      "id": "openai:gpt-live-system-card",
+      "vendor": "openai",
+      "title": "GPT-Live System Card",
+      "models": [
+        "GPT-Live-1"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/openai/system-cards/gpt-live-system-card.pdf",
+      "source_url": "https://deploymentsafety.openai.com/gpt-live",
+      "source_sha256": "8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        4,
+        5,
+        7
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "anthropic:claude-sonnet-5-5-system-card",
+      "vendor": "anthropic",
+      "title": "System Card: Claude Sonnet 5.5",
+      "models": [
+        "Claude Sonnet 5.5"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/anthropic/system-cards/claude-sonnet-5-5-system-card.pdf",
+      "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card",
+      "source_sha256": "89cfd6a6d3aa6148eaf23f4a53006950ee7746009f381237c62920c720725785",
+      "source_version": "snapshot-2026-10-03",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        10,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        24,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        48,
+        50,
+        51,
+        52,
+        54,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        68,
+        70,
+        71,
+        73,
+        75,
+        76,
+        77,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        90,
+        91,
+        92,
+        95,
+        96,
+        98,
+        99,
+        100,
+        103,
+        105,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        115,
+        117,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        135,
+        136,
+        137,
+        138,
+        140,
+        141,
+        142
+      ],
+      "reason_en": "Native PDF text identifies many dot-numbered figures. The selected plots summarize the Epoch Capabilities Index and FrontierCode performance across effort and token budgets.",
+      "reason_cn": "原生 PDF 文本显示多张点分编号图表。所选图表概括 Epoch 能力指数，以及 FrontierCode 在不同推理力度和 token 预算下的表现。",
+      "figures": [
+        {
+          "page": 21,
+          "figure_number": "2.3.2.A",
+          "role": "results",
+          "caption": "[Figure 2.3.2.A] The Epoch Capabilities Index (ECI) synthesizes performance across many benchmarks into one \nnumber per model. Our version of this metric, the Anthropic ECI (AECI), is powered by internal benchmark \nresults, so scores are not directly comparable to Epoch’s public ECI leaderboard. Gray dots are previous frontier \nClaude models; colored dots are the most recent models. Thin black error bars are 95% CI over 100 IRT refits, \neach on a random 80% subsample of benchmarks (global error). Thick violet error bars come from the same \nresampled fits but measure each score’s movement relative to the three preceding releases for each model \n(local error). The two lines compare different hypotheses for the frontier trend. Claude Sonnet 3.5 (June 2024) \nanchors the ECI scale at 130, so it has no global CI (its local error bar reflects uncertainty in the models before \nit). Scores of recent models on the new scale are reported for direct comparison.",
+          "bbox": [
+            68,
+            105,
+            545,
+            547
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            424.759765625,
+            541.6322631835938,
+            542.8121337890625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3975,
+            3684
+          ],
+          "pdf_path": "figures/anthropic/claude-sonnet-5-5-system-card/figure-01.pdf",
+          "png_path": "figures/anthropic/claude-sonnet-5-5-system-card/figure-01.png",
+          "pdf_sha256": "3ec0ad02428ed8c9f3f1c8af77005b3def0cdd489b66a3a9896a57725946d83f",
+          "png_sha256": "c883c504f5096de661df5f69866a21e637970146432a61f36a8913b31fc65732"
+        },
+        {
+          "page": 111,
+          "figure_number": "8.4.A",
+          "role": "results",
+          "caption": "[Figure 8.4.A] FrontierCode v1.1 Main score versus average output tokens per task across reasoning effort levels (low, medium, high, xhigh, and max; GPT-6 Astra also at none). Cognition ran the evaluation for every \nmodel shown and reported the results; Claude models were run in Claude Code and GPT models were run in \nCodex CLI. Cognition’s result files report token counts for every model and no cost for Claude Sonnet 5.5, so \nthe x-axis shows average output tokens per task on a logarithmic scale. Each Claude Sonnet 5.5 point is labeled \nwith its effort level; for every other model the labeled points are its lowest and highest effort levels and the level at which it scored highest (GPT-6 Astra also at low). Unlabeled points follow the line in order of effort. The \nresult files carry no uncertainty intervals, so none are shown; Cognition's published figures report error bars. \nNote that the y-axis begins at 27%, not at zero, so differences between points are visually magnified.",
+          "bbox": [
+            52,
+            220,
+            560,
+            715
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            564.6044921875,
+            546.0579833984375,
+            711.53955078125
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4234,
+            4125
+          ],
+          "pdf_path": "figures/anthropic/claude-sonnet-5-5-system-card/figure-02.pdf",
+          "png_path": "figures/anthropic/claude-sonnet-5-5-system-card/figure-02.png",
+          "pdf_sha256": "d038e2f4edef7a9643faba1f0db54edf8915beeb744fd72a98a90b8d875b1f1c",
+          "png_sha256": "faaee205919ba7fc8d2b93e571c847089a711e84e24069fd85578bec732e4629"
+        }
+      ]
+    },
+    {
+      "id": "microsoft:mai-transcribe-2-streaming-model-card",
+      "vendor": "microsoft",
+      "title": "MAI-Transcribe-2-Streaming Model Card",
+      "models": [
+        "MAI-Transcribe-2-Streaming"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/microsoft/model-cards/mai-transcribe-2-streaming-model-card.pdf",
+      "source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+      "source_sha256": "919c213d94e0027ff4c119a7887f0270d018c33126acf2b5f6afaae1318fbf87",
+      "source_version": "snapshot-2026-10-03",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "reason_en": "The card has no numbered figure captions, but page 2 visibly includes a standalone word-error-rate leaderboard plot with model labels and axes.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": null,
+          "role": "results",
+          "caption": "",
+          "bbox": [
+            69,
+            286,
+            543,
+            555
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            3950,
+            2242
+          ],
+          "pdf_path": "figures/microsoft/mai-transcribe-2-streaming-model-card/figure-01.pdf",
+          "png_path": "figures/microsoft/mai-transcribe-2-streaming-model-card/figure-01.png",
+          "pdf_sha256": "5829b118584f090d50b0be6507415af7c3ad8a8973d207d49ca3149a80df7dd8",
+          "png_sha256": "a7e55967d060ae532f2aa0c811a7cce6feec8ba16dc211ee33f3756de101a030"
+        }
+      ]
+    },
+    {
+      "id": "microsoft:mai-voice-2-1-model-card",
+      "vendor": "microsoft",
+      "title": "MAI-Voice-2.1 Model Card",
+      "models": [
+        "MAI-Voice-2.1 / Flash"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/microsoft/model-cards/mai-voice-2-1-model-card.pdf",
+      "source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+      "source_sha256": "779d6bcbfcaebcb556ed7ec4b832bfd7fa9aa6f8329d216177e573ef78e62f32",
+      "source_version": "snapshot-2026-10-03",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "reason_en": "All four pages were inspected; sample voice content is shown as text callouts and there are no core system or results figures.",
+      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
+      "figures": []
+    },
+    {
+      "id": "microsoft:mai-voice-2-1-flash-model-card",
+      "vendor": "microsoft",
+      "title": "MAI-Voice-2.1-Flash Model Card",
+      "models": [
+        "MAI-Voice-2.1 / Flash"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/microsoft/model-cards/mai-voice-2-1-flash-model-card.pdf",
+      "source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+      "source_sha256": "fb9d248dc8d3ae87637a3546acf11d1f9f8a3bb00d25918311e52b965b1f0c63",
+      "source_version": "snapshot-2026-10-03",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "reason_en": "All four pages were inspected; sample voice content is shown as text callouts and there are no core system or results figures.",
+      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
+      "figures": []
+    },
+    {
+      "id": "amazon:nova-2-lite-frontier-safety-report",
+      "vendor": "amazon",
+      "title": "Evaluating Nova 2.0 Lite model under Amazon's Frontier Model Safety Framework",
+      "models": [
+        "Nova 2 Lite / Pro Preview"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/amazon/system-cards/nova-2-lite-frontier-safety-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2601.19134",
+      "source_sha256": "6c2d3c6c33c094721cda4d57467293bf17ae72f9bd2f7de57bd6c346072cc2e7",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "reason_en": "Pages 2 and 4 contain explicit CBRN and cybersecurity evaluation charts; both are labeled as safety evaluation.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "safety_evaluation",
+          "caption": "Figure 1: CBRN automated benchmark results comparing models across four datasets. For Nova 2.0 Lite, we present\nthe best result among all the reasoning modes (low’,’medium’, and ‘high’).",
+          "bbox": [
+            69.0,
+            69,
+            543.0,
+            315.39
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            291.50714111328125,
+            539.9983520507812,
+            312.39007568359375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3950,
+            2054
+          ],
+          "pdf_path": "figures/amazon/nova-2-lite-frontier-safety-report/figure-01.pdf",
+          "png_path": "figures/amazon/nova-2-lite-frontier-safety-report/figure-01.png",
+          "pdf_sha256": "c33f28963063e77d45e13935d3259a9728c0b587bcfd543bc087d004c91c6bcf",
+          "png_sha256": "356dbf6f02681704f89318a1e230e68157b06a08f7b4b9ac51166ba4217c6047"
+        },
+        {
+          "page": 4,
+          "figure_number": "2",
+          "role": "safety_evaluation",
+          "caption": "Figure 2: Offensive Cyber Security Knowledge Benchmarks comparing Nova 2.0 Lite against previous generation\nbaselines. For Nova 2.0 Lite, we present the best result among all the reasoning modes (‘low’, ‘medium’, and ‘high’).",
+          "bbox": [
+            69.0,
+            68.0,
+            543.0,
+            368.5
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            344.55230712890625,
+            540.0042724609375,
+            365.49786376953125
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3950,
+            2505
+          ],
+          "pdf_path": "figures/amazon/nova-2-lite-frontier-safety-report/figure-02.pdf",
+          "png_path": "figures/amazon/nova-2-lite-frontier-safety-report/figure-02.png",
+          "pdf_sha256": "9e605c34a9a7425eaa2c233ff488e8ac2429d64aa6f483889df00a44756ee9b0",
+          "png_sha256": "4913061b5b056fec17a061d53f14285d0aa53c48953abf3d16602827ad1f9a4e"
+        }
+      ]
+    },
+    {
+      "id": "amazon:nova-multimodal-embeddings",
+      "vendor": "amazon",
+      "title": "Amazon Nova Multimodal Embeddings: Technical Report and Model Card",
+      "models": [
+        "Nova Multimodal Embeddings"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/amazon/technical-reports/nova-multimodal-embeddings.pdf",
+      "source_url": "https://www.amazon.science/publications/amazon-nova-multimodal-embeddings-technical-report-and-model-card",
+      "source_sha256": "e48ddfab4981c12c9057750077b06f55bfe8e8a7988d9a86aa7c837195ffadd2",
+      "source_version": "snapshot-2026-10-03",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reason_en": "Page 1 contains the core multimodal embedding architecture; remaining pages show evaluation tables rather than additional plots.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": "1",
+          "role": "architecture",
+          "caption": "Figure 1: Amazon Nova Multimodal Embeddings model.",
+          "bbox": [
+            127.5,
+            202.6,
+            484.5,
+            429.13
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            191.74899291992188,
+            416.16644287109375,
+            420.25115966796875,
+            426.1290588378906
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            2975,
+            1888
+          ],
+          "pdf_path": "figures/amazon/nova-multimodal-embeddings/figure-01.pdf",
+          "png_path": "figures/amazon/nova-multimodal-embeddings/figure-01.png",
+          "pdf_sha256": "959a145b583379b75831a4c054a76dbd0c4cfbdcbfbd3d8ab2fb9576f4185b83",
+          "png_sha256": "6805dde1761cc695b1b5aab0109aeecf61068b61b87e7b8e73a20bca99a9a0f8"
+        }
+      ]
+    },
+    {
+      "id": "deepseek:deepseek-ocr-2-visual-causal-flow",
+      "vendor": "deepseek",
+      "title": "DeepSeek-OCR 2: Visual Causal Flow",
+      "models": [
+        "DeepSeek-OCR-2"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/deepseek/technical-reports/deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR-2",
+      "source_sha256": "7c8aceb1dbe0845b9e1a0c5afd761925913662e2e2c4c79b482198f3e5e1a96b",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        7
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "overview",
+          "caption": "Figure 1 | We substitute the CLIP component in DeepEncoder with an LLM-style architecture.\nBy customizing the attention mask, visual tokens utilize bidirectional attention while learnable\nqueries adopt causal attention. Each query token can thus attend to all visual tokens and\npreceding queries, allowing progressive causal reordering over visual information.",
+          "bbox": [
+            67.54,
+            460.49,
+            529.32,
+            739.24
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.53900146484375,
+            540.3485107421875,
+            526.3155517578125,
+            736.2386474609375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3849,
+            2323
+          ],
+          "pdf_path": "figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-01.pdf",
+          "png_path": "figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-01.png",
+          "pdf_sha256": "716268e0070254b64e155f82ac4c8dae6f726b5733886dacf83c76a597987f21",
+          "png_sha256": "ecd75e9e450338229c98662709241568ea9f6ead4b9f51e3393e88e64dcb5770"
+        },
+        {
+          "page": 7,
+          "figure_number": 5,
+          "role": "architecture",
+          "caption": "Figure 5 | Attention mask architecture of DeepEncoder V2. Concatenation of bidirectional mask\n(vision tokens, ViT-like) and causal triangular mask (flow tokens, LLM decoder-style).",
+          "bbox": [
+            67.51,
+            85.0,
+            527.71,
+            277.51
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.50599670410156,
+            86.8152847290039,
+            524.7142944335938,
+            274.50567626953125
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3835,
+            1605
+          ],
+          "pdf_path": "figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-02.pdf",
+          "png_path": "figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-02.png",
+          "pdf_sha256": "a7aaad10b2b2a875918313f82f0b5228687cba3c36574f1dbb336ad0f62d3784",
+          "png_sha256": "365194d5f337f739df675149009614272ca26e7dc65a49bbecc0dba6382f8b86"
+        }
+      ]
+    },
+    {
+      "id": "qwen:qwen3-coder-next-technical-report",
+      "vendor": "qwen",
+      "title": "Qwen3-Coder-Next Technical Report",
+      "models": [
+        "Qwen3-Coder-Next"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/qwen/technical-reports/qwen3-coder-next-technical-report--arxiv-v1.pdf",
+      "source_url": "https://github.com/QwenLM/Qwen3-Coder",
+      "source_sha256": "4be52e371e59284a0141eb176e4b489a47885046aed43377500cd0935951886b",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        3
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "results",
+          "caption": "Figure 1: Comparison of Qwen3-Coder-Next to other open-weight models on SWE-Bench Verified,\nSWE-Bench Multilingual, SWE-Bench Pro, Terminal-Bench 2.0, and Aider.",
+          "bbox": [
+            67.87,
+            330.44,
+            528.66,
+            527.21
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            468.1202697753906,
+            525.65966796875,
+            524.2079467773438
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3840,
+            1640
+          ],
+          "pdf_path": "figures/qwen/qwen3-coder-next-technical-report/figure-01.pdf",
+          "png_path": "figures/qwen/qwen3-coder-next-technical-report/figure-01.png",
+          "pdf_sha256": "3316f5b6bb51b775edc281292d69dff4ec006ebb6e2219273c6b2ca80292e357",
+          "png_sha256": "71379800dbf7022e24ca8e159a55b111c325617f72ce343381d0c3880c4b4b99"
+        },
+        {
+          "page": 3,
+          "figure_number": 2,
+          "role": "architecture",
+          "caption": "Figure 2: Our pipeline for synthesizing bugs to scale up the number of software engineering tasks.",
+          "bbox": [
+            78.6,
+            67.9,
+            516.7,
+            322.9
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            81.60099792480469,
+            256.8059997558594,
+            513.6790161132812,
+            319.9439392089844
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3651,
+            2125
+          ],
+          "pdf_path": "figures/qwen/qwen3-coder-next-technical-report/figure-02.pdf",
+          "png_path": "figures/qwen/qwen3-coder-next-technical-report/figure-02.png",
+          "pdf_sha256": "4e3bae1da233e61581b7724d27bc21d568cb5d9d5476deb91acdf724949c0ef2",
+          "png_sha256": "aac3e36deb04d70f1132c669ab1ea86492490b22220800c033ef42899f999492"
+        }
+      ]
+    },
+    {
+      "id": "qwen:qwen-audio-3-0-asr",
+      "vendor": "qwen",
+      "title": "Qwen-Audio-3.0-ASR Technical Report",
+      "models": [
+        "Qwen-Audio-3.0-ASR"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/qwen/technical-reports/qwen-audio-3-0-asr--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2609.07549",
+      "source_sha256": "4ee0decb4dff3bf2fe20a3d45f0ee5debf123709a6f1b420f367e7732dcac7ae",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        2,
+        14
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": 1,
+          "role": "overview",
+          "caption": "Figure 1: Overview of Qwen-Audio-3.0-ASR and its production-oriented capabilities. The system\nsupports multilingual and dialectal recognition, low-latency streaming, domain entity recognition,\nlong-audio contextual modeling, hierarchical hotword customization, and native single-pass tran-\nscription polishing. The central ring highlights four system-level properties: instruction-controlled\ndecoding, context awareness, native single-pass generation, and low latency.",
+          "bbox": [
+            105.0,
+            69.0,
+            508.65,
+            339.11
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            108.0,
+            141.99029541015625,
+            505.6537780761719,
+            336.10906982421875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3364,
+            2251
+          ],
+          "pdf_path": "figures/qwen/qwen-audio-3-0-asr/figure-01.pdf",
+          "png_path": "figures/qwen/qwen-audio-3-0-asr/figure-01.png",
+          "pdf_sha256": "3a9c816e0428ba40f6c7a4240934610d03aa7609b2aac4a60f9232df0e441dd4",
+          "png_sha256": "7a35737c48743615f32beea7f4c0ac5737f2d31c795ce9bee97fae5cf1f9a192"
+        },
+        {
+          "page": 14,
+          "figure_number": 6,
+          "role": "results",
+          "caption": "Figure 6: Character error rate (CER, %) on an internal evaluation suite covering 16 Chinese dialects\nunder the ASR and AST settings described in Section 5.2. We compare Doubao-ASR, Tencent\nHy-ASR-3.0-preview, and Qwen-Audio-3.0-ASR. Lower values indicate better performance.",
+          "bbox": [
+            103.98,
+            67.46,
+            508.03,
+            288.7
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            108.0,
+            216.43765258789062,
+            504.00408935546875,
+            285.7010803222656
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3368,
+            1844
+          ],
+          "pdf_path": "figures/qwen/qwen-audio-3-0-asr/figure-02.pdf",
+          "png_path": "figures/qwen/qwen-audio-3-0-asr/figure-02.png",
+          "pdf_sha256": "abcb288ea8ed4a4224d30d3edf1d881d44f6405dc37274db3c893e90d0cd36a5",
+          "png_sha256": "ece2c581db6664da952326b31284c3f0f1485db7b13b1bd0f81903e7e8ea252a"
+        }
+      ]
+    },
+    {
+      "id": "moonshot:kimi-audio-technical-report",
+      "vendor": "moonshot",
+      "title": "Kimi-Audio Technical Report",
+      "models": [
+        "Kimi-Audio"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/moonshot/technical-reports/kimi-audio-technical-report--arxiv-v1.pdf",
+      "source_url": "https://github.com/MoonshotAI/Kimi-Audio",
+      "source_sha256": "b0242652500385de781a0d36d048425518f679c15042037738a8bb513233ea66",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        4
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "results",
+          "caption": "Figure 1: Performance of Kimi-Audio and previous audio langauge models including Qwen2-Audio [11], Baichuan-\nAudio [41], Step-Audio [28], and Qwen2.5-Omni [73] on various benchmarks.",
+          "bbox": [
+            65.0,
+            428.0,
+            500.0,
+            685.368
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": [
+            68.64,
+            686.38,
+            544.66,
+            713.3
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3625,
+            2145
+          ],
+          "pdf_path": "figures/moonshot/kimi-audio-technical-report/figure-01.pdf",
+          "png_path": "figures/moonshot/kimi-audio-technical-report/figure-01.png",
+          "pdf_sha256": "c2025e61b4f1d66db49271e515a0e1ba33a13bdb2068acb4ea33672702f79f2e",
+          "png_sha256": "5698bc961dca54b902644ce71ef096ba9102262bb16c381b1fb3d18a4a96f9f0"
+        },
+        {
+          "page": 4,
+          "figure_number": 2,
+          "role": "architecture",
+          "caption": "Figure 2: Overview of the Kimi-Audio model architecture: (1) an audio tokenizer that extracts discrete semantic tokens\nand a Whisper encoder that generates continuous acoustic features; (2) an audio LLM that processes audio inputs and\ngenerates text and/or audio outputs; (3) an audio detokenizer converts audio tokens into waveforms.",
+          "bbox": [
+            69.0,
+            69.3,
+            543.0,
+            429.2
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            391.49078369140625,
+            540.0029907226562,
+            423.20306396484375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3950,
+            3000
+          ],
+          "pdf_path": "figures/moonshot/kimi-audio-technical-report/figure-02.pdf",
+          "png_path": "figures/moonshot/kimi-audio-technical-report/figure-02.png",
+          "pdf_sha256": "aead468e2e378e43d673c8d7567750dd789162b5b9363597221f1dfeeb583b60",
+          "png_sha256": "751b4a081f87a33b13bb3c0f56634213dca4b9ef2dde9012d35db6df76129e19"
+        }
+      ]
+    },
+    {
+      "id": "zai:glm-tts-technical-report",
+      "vendor": "zai",
+      "title": "GLM-TTS Technical Report",
+      "models": [
+        "GLM-TTS"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/zai/technical-reports/glm-tts-technical-report--arxiv-v1.pdf",
+      "source_url": "https://github.com/zai-org/GLM-TTS",
+      "source_sha256": "eaa9b6e355e05b755016e15f17522ec56c2a027576fa12a0bce27dec9b2fe9f2",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        5
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "architecture",
+          "caption": "Figure 1: Overall Architecture of GLM-TTS",
+          "bbox": [
+            164.4,
+            396.74,
+            447.97,
+            725.4
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            217.0989990234375,
+            539.8941040039062,
+            394.9014587402344,
+            722.3980102539062
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            2364,
+            2739
+          ],
+          "pdf_path": "figures/zai/glm-tts-technical-report/figure-01.pdf",
+          "png_path": "figures/zai/glm-tts-technical-report/figure-01.png",
+          "pdf_sha256": "b1868a5168b36c9de78d2c593ecadcefc2c7331ffcb83dac16d4ce4272c86ffd",
+          "png_sha256": "2481e64868e3994360f454548c64fd53397dd529c0bcf6bf90767a23409de599"
+        },
+        {
+          "page": 5,
+          "figure_number": 3,
+          "role": "architecture",
+          "caption": "Figure 3: An overview of the GLM-TTS-GRPO framework.",
+          "bbox": [
+            105.0,
+            159.04,
+            506.91,
+            331.28
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            186.0659942626953,
+            225.91192626953125,
+            476.7936706542969,
+            328.27606201171875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3350,
+            1436
+          ],
+          "pdf_path": "figures/zai/glm-tts-technical-report/figure-02.pdf",
+          "png_path": "figures/zai/glm-tts-technical-report/figure-02.png",
+          "pdf_sha256": "ff55b97464fb693c098e8e47c54eb2908f7ea8bad397d5da7e7ee6903b9c8907",
+          "png_sha256": "2e678e4692f047a20eb97004ee03c89eccd325d6de91033a406085127729a99c"
+        }
+      ]
+    },
+    {
+      "id": "zai:glm-ocr-technical-report",
+      "vendor": "zai",
+      "title": "GLM-OCR Technical Report",
+      "models": [
+        "GLM-OCR"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/zai/technical-reports/glm-ocr-technical-report--arxiv-v2.pdf",
+      "source_url": "https://github.com/zai-org/GLM-OCR",
+      "source_sha256": "58198ceae993a1f6bd7e690d27fc111c3e8146a04db8bb1294a6f4acfcb38e63",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        4
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "results",
+          "caption": "Figure 1: Performance of GLM-OCR on OmniDocBench v1.5.",
+          "bbox": [
+            105.0,
+            433.62,
+            507.01,
+            722.03
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            122.99745178222656,
+            441.3172302246094,
+            431.7835998535156,
+            719.0280151367188
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3351,
+            2404
+          ],
+          "pdf_path": "figures/zai/glm-ocr-technical-report/figure-01.pdf",
+          "png_path": "figures/zai/glm-ocr-technical-report/figure-01.png",
+          "pdf_sha256": "99a3b13037abd2d9a07237bbbf5719c778c992dd4a5f5e093b0de659f615468c",
+          "png_sha256": "c1b9e75f74f6e00ba82d7a75aac5d6bdd13b9337037cebea63414870d29d1b1a"
+        },
+        {
+          "page": 4,
+          "figure_number": 2,
+          "role": "architecture",
+          "caption": "Figure 2: Overall architecture and workflow of the GLM-OCR framework. This system supports two\nprimary tasks: Document Parsing (Task 1), which combines layout detection and region cropping to\nproduce structured Markdown and JSON outputs; and Key Information Extraction (Task 2), which\ndirectly extracts structured JSON data based on input visual prompts.",
+          "bbox": [
+            102.0,
+            239.0,
+            510.0,
+            445.7
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            108.0,
+            283.656005859375,
+            504.0032958984375,
+            439.6410217285156
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3400,
+            1723
+          ],
+          "pdf_path": "figures/zai/glm-ocr-technical-report/figure-02.pdf",
+          "png_path": "figures/zai/glm-ocr-technical-report/figure-02.png",
+          "pdf_sha256": "15d500dd6c3876c5b03fac08d2c5f1ab4862c3cc782d1e95f5c5867a8d43f11f",
+          "png_sha256": "7693892f44edfe38265e51b36ff7e1bfbac95364ee00c261b07fdb0c9a9dd756"
+        }
+      ]
+    },
+    {
+      "id": "stepfun:step-video-ti2v",
+      "vendor": "stepfun",
+      "title": "Step-Video-TI2V Technical Report: A State-of-the-Art Text-Driven Image-to-Video Generation Model",
+      "models": [
+        "Step-Video-TI2V"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/stepfun/technical-reports/step-video-ti2v--arxiv-v1.pdf",
+      "source_url": "https://github.com/stepfun-ai/Step-Video-TI2V",
+      "source_sha256": "840bd9d252ce84d9eb7c665f5ffdd4609932ceb62c0918f0a3e7bc8aac99a4ca",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        2
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": 1,
+          "role": "overview",
+          "caption": "Figure 1: Overview of Step-Video-TI2V. Based on the pre-trained T2V model, we introduce two key\nmodifications: Image Conditioning and Motion Conditioning. These enhancements enable video\ngeneration from a given image while allowing users to adjust the dynamic level of the output video.",
+          "bbox": [
+            105.0,
+            69.0,
+            507.35,
+            389.66
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            108.0,
+            354.9365539550781,
+            504.3533020019531,
+            386.6616516113281
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3353,
+            2673
+          ],
+          "pdf_path": "figures/stepfun/step-video-ti2v/figure-01.pdf",
+          "png_path": "figures/stepfun/step-video-ti2v/figure-01.png",
+          "pdf_sha256": "138707b2c4f8bff6be768cb4668bac8dc15d0604e7a9d56ff1988857bc4ae778",
+          "png_sha256": "426e4b5b245fcb32afe482233dae9601c431709dfe9d18383811f765bd5e6d5a"
+        }
+      ]
+    },
+    {
+      "id": "stepfun:step1x-3d",
+      "vendor": "stepfun",
+      "title": "Step1X-3D: Towards High-Fidelity and Controllable Generation of Textured 3D Assets",
+      "models": [
+        "Step1X-3D"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/stepfun/technical-reports/step1x-3d--arxiv-v1.pdf",
+      "source_url": "https://github.com/stepfun-ai/Step1X-3D",
+      "source_sha256": "0890d4cabe9d401dae3883f8ea6439c790cc45025c1598d2aa8f2d8c0de8f094",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        8,
+        16
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 8,
+          "figure_number": 4,
+          "role": "architecture",
+          "caption": "Figure 4: Step1X-3D geometry diffusion framework. The framework enables seamless integration\nof diverse conditions, allowing fine-tuning for various downstream tasks.",
+          "bbox": [
+            105.0,
+            69.0,
+            507.0,
+            288.7
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            108.0,
+            264.8173828125,
+            504.0020446777344,
+            285.70306396484375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3350,
+            1831
+          ],
+          "pdf_path": "figures/stepfun/step1x-3d/figure-01.pdf",
+          "png_path": "figures/stepfun/step1x-3d/figure-01.png",
+          "pdf_sha256": "25f9404344bc3039c15458ac8bed3134b1bf30d069feeca1dcbbd490d9f6e9f6",
+          "png_sha256": "78d7772b3bc9da21cea67accb767ab72a1daa20f7262997c0ab825e6f6a0e157"
+        },
+        {
+          "page": 16,
+          "figure_number": 10,
+          "role": "results",
+          "caption": "Figure 10: User study. Average user preference score\nis reported.",
+          "bbox": [
+            283.2,
+            181.33,
+            507.0,
+            340.37
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            286.1990051269531,
+            316.36859130859375,
+            503.99530029296875,
+            337.3730773925781
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            1865,
+            1326
+          ],
+          "pdf_path": "figures/stepfun/step1x-3d/figure-02.pdf",
+          "png_path": "figures/stepfun/step1x-3d/figure-02.png",
+          "pdf_sha256": "129ed43f4ece9ded21f51c2f8078e38dd068a8580c03905c77c70582a80ec849",
+          "png_sha256": "cbbc13c6da889360a2705026f453fa3829a468dbdef888b31ec66a89737eeb99"
+        }
+      ]
+    },
+    {
+      "id": "stepfun:step-audio-3-gen",
+      "vendor": "stepfun",
+      "title": "StepAudio 3 Gen Technical Report",
+      "models": [
+        "StepAudio 3 TTS"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/stepfun/technical-reports/step-audio-3-gen--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2609.12945",
+      "source_sha256": "ed42faaa96fe32e249da832ae439e29cb6e3f31e789197f77aa32565a1e9248d",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        4,
+        12
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": 1,
+          "role": "architecture",
+          "caption": "Figure 1: Overview of the StepAudio 3 Gen architecture. At each audio frame, the LLM predicts c0, and the RVQ Code\nPredictor conditions on the LLM hidden state and c0 to predict c1, . . . , c15. All sixteen codes form the full RVQ frame\nused for waveform decoding. ⊕denotes element-wise addition: at audio positions, the RVQ Adaptor output is added to\nthe corresponding token embedding (§2.2).",
+          "bbox": [
+            69.0,
+            69.0,
+            543.0,
+            386.36
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            165.36746215820312,
+            540.0023803710938,
+            383.3570861816406
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3950,
+            2645
+          ],
+          "pdf_path": "figures/stepfun/step-audio-3-gen/figure-01.pdf",
+          "png_path": "figures/stepfun/step-audio-3-gen/figure-01.png",
+          "pdf_sha256": "cdadc568c88bfd6fcde0f88e292f2aa0bfc65f0a604f99c11a7d7ca121296ab8",
+          "png_sha256": "1c3e8e8f5525aa3ef4f002611c5c6a94ea82e9a54f9c2a4e8e119196799d9717"
+        },
+        {
+          "page": 12,
+          "figure_number": 2,
+          "role": "results",
+          "caption": "Figure 2: Human evaluation on the Chinese human-likeness test set.",
+          "bbox": [
+            69,
+            425.9,
+            543,
+            632.5
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            170.41000366210938,
+            619.5064697265625,
+            441.5919189453125,
+            629.4690551757812
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3950,
+            1722
+          ],
+          "pdf_path": "figures/stepfun/step-audio-3-gen/figure-02.pdf",
+          "png_path": "figures/stepfun/step-audio-3-gen/figure-02.png",
+          "pdf_sha256": "048d8518d75f32d4e62ba5feb0b4b3992214a687a6dca13b5c925f78956a971d",
+          "png_sha256": "615f8a5030138d793dc2ac6a6510db943fb4800e5aa5435fed4b9ef8d8dc61a2"
+        }
+      ]
+    },
+    {
+      "id": "stepfun:step-audio-3-realtime",
+      "vendor": "stepfun",
+      "title": "StepAudio 3 Realtime Technical Report",
+      "models": [
+        "StepAudio 3 Realtime"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/stepfun/technical-reports/step-audio-3-realtime--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2609.14005",
+      "source_sha256": "bd8a58d49f1d01fa2a4413795953fc0bdaccd2bca4d8afe9a02e1b81ad682a6b",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        4
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "results",
+          "caption": "Figure 1: Benchmark results for StepAudio 3 ASR Max and StepAudio 3 Realtime (blue), compared with baselines (gray). Lower\nis better for ASR error rates, and higher is better elsewhere. Dialogue averages eight dimensions, full duplex reports Overall, and\nτ-Voice averages three domains. See Tables 1 and 10.",
+          "bbox": [
+            69.0,
+            430.7,
+            543.16,
+            722.17
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            440.049560546875,
+            540.1614990234375,
+            719.1729125976562
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3952,
+            2429
+          ],
+          "pdf_path": "figures/stepfun/step-audio-3-realtime/figure-01.pdf",
+          "png_path": "figures/stepfun/step-audio-3-realtime/figure-01.png",
+          "pdf_sha256": "9816b75bd8885045850b9a6e5b26731f5995d0766698a1c2341e89a7786d127b",
+          "png_sha256": "fb1a18b859fbf8782ccd35346fdea8bc5159cb09730628111d9836c0ac7418d4"
+        },
+        {
+          "page": 4,
+          "figure_number": 3,
+          "role": "architecture",
+          "caption": "Figure 3: System architecture of StepAudio 3 Realtime. The LLM decoder receives audio representations through the audio\nencoder and adapter, together with a separate text input. User and model audio form the two full-duplex streams, with generator\noutput returning to the model audio stream. Waveforms are schematic.",
+          "bbox": [
+            69.0,
+            103.47,
+            543.15,
+            321.26
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            289.2969970703125,
+            540.153564453125,
+            318.264892578125
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3952,
+            1815
+          ],
+          "pdf_path": "figures/stepfun/step-audio-3-realtime/figure-02.pdf",
+          "png_path": "figures/stepfun/step-audio-3-realtime/figure-02.png",
+          "pdf_sha256": "81f30a4e788079c37e9724b623a9ece1e750d7cc39930bcb8a887acaf7e590d6",
+          "png_sha256": "8bf07c73b1512e3b40d3819dced64ab96f2f39ebbf1a4f3ef7702db3abc9746b"
+        }
+      ]
+    },
+    {
+      "id": "stepfun:step-audio-3-music",
+      "vendor": "stepfun",
+      "title": "StepAudio 3 Music Technical Report",
+      "models": [
+        "StepAudio 3 Music"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/stepfun/technical-reports/step-audio-3-music--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2609.16034",
+      "source_sha256": "830babae673bfbbfec6f996095b9f3a2fa275d4a5fc2dff01ff877ee46e090ab",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        4
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "results",
+          "caption": "Figure 1: Relative performance across MuQ-MuLan, AudioBox-Aesthetics, and SongBench. Outer arcs identify the three\nbenchmark families. Scores are divided by the best observed score per metric (1.0), not a theoretical maximum; the radial axis is\ntruncated to 0.60–1.00. Purple denotes StepAudio 3 Music. Compare systems within each metric; polygon area is not an aggregate\nscore. Curves provide a visual approximation; exact scores are in table 3.",
+          "bbox": [
+            69.0,
+            395.51,
+            543.01,
+            677.39
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            635.4609985351562,
+            540.0100708007812,
+            674.3909301757812
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3951,
+            2349
+          ],
+          "pdf_path": "figures/stepfun/step-audio-3-music/figure-01.pdf",
+          "png_path": "figures/stepfun/step-audio-3-music/figure-01.png",
+          "pdf_sha256": "06f8737bd8aef82eaede788003a4fbd9e4b4f4119bcc99e861c495a394af7c51",
+          "png_sha256": "aaec0a214edf6c11201e7afc3929ed438913f38b472fb50c53cd9793f1c9eca6"
+        },
+        {
+          "page": 4,
+          "figure_number": 2,
+          "role": "overview",
+          "caption": "Figure 2: Overview of StepAudio 3 Music. Lyrics, a text prompt, and optional task-speciﬁc references are serialized for a\ntrainable Mixture-of-Experts autoregressive model. In ABC-CoT mode, the model ﬁrst produces an explicit arrangement plan and\nthen predicts a 50-Hz sequence from a 65536-entry single codebook. A separately trained renderer generates 50-Hz StepAudio VAE\nlatents with a ﬂow-matching DiT and decodes them into 48-kHz waveform audio. The renderer is held ﬁxed during autoregressive-\nmodel training.",
+          "bbox": [
+            69.0,
+            69.0,
+            544.5,
+            385.69
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            333.7980041503906,
+            541.4986572265625,
+            382.68994140625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3963,
+            2640
+          ],
+          "pdf_path": "figures/stepfun/step-audio-3-music/figure-02.pdf",
+          "png_path": "figures/stepfun/step-audio-3-music/figure-02.png",
+          "pdf_sha256": "5f0647167c684300519810316bc3a5bf3b9feb71daaf9fe9898fc7ba18d5509d",
+          "png_sha256": "6c029cc3ee6db3f343fb077d154f5b4313bf5cd6d5b57ad295de2ba9f4adeaa9"
+        }
+      ]
+    },
+    {
+      "id": "tencent:hunyuan-image-3",
+      "vendor": "tencent",
+      "title": "HunyuanImage 3.0 Technical Report",
+      "models": [
+        "HunyuanImage 3.0"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/tencent/technical-reports/hunyuan-image-3--arxiv-v3.pdf",
+      "source_url": "https://github.com/Tencent-Hunyuan/HunyuanImage-3.0",
+      "source_sha256": "76bff23c08cfa4b86beb19ae89b9d81bb57590915c41744111194b79c506e4d8",
+      "source_version": "arxiv-v3",
+      "status": "available",
+      "inspected_pages": [
+        6,
+        12
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 6,
+          "figure_number": 3,
+          "role": "overview",
+          "caption": "Figure 3: Illustration of HunyuanImage 3.0.",
+          "bbox": [
+            85.63,
+            69.0,
+            527.22,
+            238.54
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            218.4739990234375,
+            225.5724639892578,
+            393.5267333984375,
+            235.53506469726562
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3680,
+            1413
+          ],
+          "pdf_path": "figures/tencent/hunyuan-image-3/figure-01.pdf",
+          "png_path": "figures/tencent/hunyuan-image-3/figure-01.png",
+          "pdf_sha256": "6842e66712adb843af1b374b705a747f2eb14598dccb01a47f783c41295e22d4",
+          "png_sha256": "987433aeabae7a335af0dfd7dba6b5faedfac973df2e618790d7465c3988d78e"
+        },
+        {
+          "page": 12,
+          "figure_number": 7,
+          "role": "results",
+          "caption": "Figure 7: GSB evaluation results.",
+          "bbox": [
+            105.0,
+            103.6,
+            506.99,
+            244.94
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            239.39599609375,
+            231.9794464111328,
+            372.60589599609375,
+            241.94204711914062
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3350,
+            1178
+          ],
+          "pdf_path": "figures/tencent/hunyuan-image-3/figure-02.pdf",
+          "png_path": "figures/tencent/hunyuan-image-3/figure-02.png",
+          "pdf_sha256": "be2ad808926baa0fec1e63e3291f2e8d100a8702c033eecb7cfbe690b625cabc",
+          "png_sha256": "ac0a8037b825866d304d410f3944e5036427d4f396fe6b74373a7fb528a37464"
+        }
+      ]
+    },
+    {
+      "id": "tencent:hunyuan-video-1-5",
+      "vendor": "tencent",
+      "title": "HunyuanVideo 1.5 Technical Report",
+      "models": [
+        "HunyuanVideo 1.5"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/tencent/technical-reports/hunyuan-video-1-5--arxiv-v2.pdf",
+      "source_url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5",
+      "source_sha256": "d730db8544e641f9ec14e9905110dad7ae393a8c8ffa8383c2a64b395e656ff2",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        3,
+        4
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 3,
+          "figure_number": 1,
+          "role": "architecture",
+          "caption": "Figure 1: Caption Model Post-training Pipeline.",
+          "bbox": [
+            115.23,
+            465.42,
+            495.66,
+            667.07
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            210.49899291992188,
+            530.9505615234375,
+            401.5018615722656,
+            664.0740356445312
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3171,
+            1681
+          ],
+          "pdf_path": "figures/tencent/hunyuan-video-1-5/figure-01.pdf",
+          "png_path": "figures/tencent/hunyuan-video-1-5/figure-01.png",
+          "pdf_sha256": "f5ecf0acc47bfbedec4f25972f8aa9287e0d8077b3de87c7d832a9069a7abee7",
+          "png_sha256": "beeed92068642f11f1a1f5a6b920469f9f3fd0c03d0a2f18a04513ecd69d718c"
+        },
+        {
+          "page": 4,
+          "figure_number": 2,
+          "role": "architecture",
+          "caption": "Figure 2: Architecture of the Unified Diffusion Transformer.",
+          "bbox": [
+            110.0,
+            270.0,
+            454.0,
+            559.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            185.36399841308594,
+            545.6824951171875,
+            426.63818359375,
+            555.6450805664062
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            2867,
+            2409
+          ],
+          "pdf_path": "figures/tencent/hunyuan-video-1-5/figure-02.pdf",
+          "png_path": "figures/tencent/hunyuan-video-1-5/figure-02.png",
+          "pdf_sha256": "fdc6e27c482bbd6b942d2f3249b114fd1a862c9dca74421a2f1b49da0c4dcec4",
+          "png_sha256": "7a2bc7a85cef4d852b4ec9e90b5c082696a9f1af25dfe835993279aee8094fd2"
+        }
+      ]
+    },
+    {
+      "id": "tencent:wevisdoc",
+      "vendor": "tencent",
+      "title": "WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing",
+      "models": [
+        "WeVisDoc-4B / 2B"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/tencent/technical-reports/wevisdoc--arxiv-v1.pdf",
+      "source_url": "https://huggingface.co/tencent/WeVisDoc-4B",
+      "source_sha256": "9b3cf6c80d20ba93f3d94d14426511dfa1d9b196944110687e7e57a98725badc",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        6
+      ],
+      "reason_en": "Selected the clearest core architecture/framework/overview and/or headline benchmark figures from the report.",
+      "reason_cn": "已从报告中选择最清晰的核心架构/框架/总览图及/或主要基准结果图。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": 1,
+          "role": "results",
+          "caption": "Figure 1 WeVisDoc-4B leads the compared end-to-end parsers across all four reported settings. Bars show\nscores on OmniDocBench v1.6 and the three PureDocBench robustness tracks; WeVisDoc-2B delivers top-tier end-to-\nend performance at half the parameter count.",
+          "bbox": [
+            67.87,
+            547.0,
+            545.68,
+            688.65
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            654.7610473632812,
+            542.6779174804688,
+            685.6454467773438
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3982,
+            1181
+          ],
+          "pdf_path": "figures/tencent/wevisdoc/figure-01.pdf",
+          "png_path": "figures/tencent/wevisdoc/figure-01.png",
+          "pdf_sha256": "9ed1f52accebd3ba613c61d9745b7834bf1c0b1c94d1c90addd4b2611ebecc06",
+          "png_sha256": "28e7d3143a46af7e29aa9fb4ea79c9266346b10c34abc10b9ca05487ba74f4a5"
+        },
+        {
+          "page": 6,
+          "figure_number": 2,
+          "role": "architecture",
+          "caption": "Figure 2 Stage I data construction. Collected sources are normalized through multi-model labeling, while general\nsynthesis generates exact semantic and structural targets. Both data sources enter a shared clean pool. Appearance\naugmentation is then applied according to the source to form the Stage I mixture.",
+          "bbox": [
+            67.87,
+            74.96,
+            544.14,
+            437.98
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            404.0940856933594,
+            541.1358642578125,
+            434.9784851074219
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3969,
+            3026
+          ],
+          "pdf_path": "figures/tencent/wevisdoc/figure-02.pdf",
+          "png_path": "figures/tencent/wevisdoc/figure-02.png",
+          "pdf_sha256": "fdb54765861b301706bdfcccb0c5d8649bd904db8faec02251e7b231853cb329",
+          "png_sha256": "2568dd7b66b7aed87c0c5dc639986368d555b032ef885273725a83c1ffd80e9d"
+        }
+      ]
+    },
+    {
+      "id": "google:gemini-3-1-flash-lite-image-model-card",
+      "vendor": "google",
+      "title": "Gemini 3.1 Flash-Lite Image Model Card",
+      "models": [
+        "Nano Banana 2 Lite / Gemini 3.1 Flash-Lite Image"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/gemini-3-1-flash-lite-image-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-lite-image/",
+      "source_sha256": "f03d4a695a24c480f5ace904589072919f65f4d23cca91c666811c1dcc984f80",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "google:gemini-omni-flash-model-card",
+      "vendor": "google",
+      "title": "Gemini Omni Flash Model Card",
+      "models": [
+        "Gemini Omni 1.1 Flash"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/gemini-omni-flash-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-omni-flash/",
+      "source_sha256": "6cc6e2aafcb8202d367ae36a85e12af0db7c4007b5c029b24a0559f7523475ef",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "google:gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card",
+      "vendor": "google",
+      "title": "Gemini 3.8 Audio (Live, Live Extended Thinking, Flash TTS, Flash-Lite TTS) Model Card",
+      "models": [
+        "Gemini 3.8 Live / Live Extended Thinking",
+        "Gemini 3.8 Flash TTS / Flash-Lite TTS"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
+      "source_sha256": "24499259e9f202cf2264bd9cdd1f9155d5f648e86daf58e1126586d84738b411",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "google:gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card",
+      "vendor": "google",
+      "title": "Gemini 3.5 Audio (Live Translate, Transcribe, Transcribe Live) Model Card",
+      "models": [
+        "Gemini 3.5 Transcribe / Transcribe Live"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-audio/",
+      "source_sha256": "5e53491613a6f3b78d1f308b02b63526ccea79fc74bc5334eb1fbd34dd348085",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "google:gemini-embedding-2",
+      "vendor": "google",
+      "title": "Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini",
+      "models": [
+        "Gemini Embedding 2"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/google/technical-reports/gemini-embedding-2--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2605.27295",
+      "source_sha256": "f8844b01afdea7eaeaa0abd3f89f01c3e311cc505f1d83e4cd58e193c8cf76e7",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        18
+      ],
+      "reason_en": "Figures 1 and 2 pair the multimodal embedding workflow with cross-modal retrieval results.",
+      "reason_cn": "图 1 和图 2 分别展示多模态嵌入流程和跨模态检索结果。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "architecture",
+          "caption": "Figure 1 | Conceptual overview of the Gemini Embedding 2 workflow. The model natively processes\nheterogeneous inputs—text, images, video, audio, documents, and their combinations—mapping\nthem into a single, unified high-dimensional vector space where cross-modal semantic relationships\nare preserved.",
+          "bbox": [
+            60,
+            88,
+            540,
+            360
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            92.03532409667969,
+            532.9126586914062,
+            355.6090087890625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4000,
+            2267
+          ],
+          "pdf_path": "figures/google/gemini-embedding-2/figure-01.pdf",
+          "png_path": "figures/google/gemini-embedding-2/figure-01.png",
+          "pdf_sha256": "fc3e823281c9849980d240c11d528a7f390c44e93100085a761d6edc06e5991a",
+          "png_sha256": "cb1802ff9b3407855eb5b4f187d36708f81e4eed449c84876054b9a86dfd62de"
+        },
+        {
+          "page": 3,
+          "figure_number": "2",
+          "role": "results",
+          "caption": "Figure 2 | Gemini Embedding 2 shows strong performance across multimodal retrieval tasks spanning\nimage, text, video, and document modalities.\n∗MTEB number is reported for Voyage-3.5 since Voyage-3.5-multimodal does not report MTEB.",
+          "bbox": [
+            60,
+            70,
+            540,
+            535
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            493.383544921875,
+            532.9179077148438,
+            531.281005859375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4000,
+            3875
+          ],
+          "pdf_path": "figures/google/gemini-embedding-2/figure-02.pdf",
+          "png_path": "figures/google/gemini-embedding-2/figure-02.png",
+          "pdf_sha256": "912539e2e9fd2392220fa60e0d18c44d07d14f01dcca2ed759136fb4f395d4d3",
+          "png_sha256": "27e2aec373aae4c46b92a638f2c71e63294c480512e36736114114445df02a2b"
+        }
+      ]
+    },
+    {
+      "id": "google:gemini-robotics-er-2-model-card",
+      "vendor": "google",
+      "title": "Gemini Robotics-ER 2 Model Card",
+      "models": [
+        "Gemini Robotics 2 / ER 2 / On-Device 2"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/gemini-robotics-er-2-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-robotics-er-2/",
+      "source_sha256": "ee70c1f2fed8ff9f57327eff04a6c252adee215e564524de5fd7dd018751c63b",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "google:gemini-robotics-on-device-2-model-card",
+      "vendor": "google",
+      "title": "Gemini Robotics On-Device 2 Model Card",
+      "models": [
+        "Gemini Robotics 2 / ER 2 / On-Device 2"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/gemini-robotics-on-device-2-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-robotics-on-device-2/",
+      "source_sha256": "d7fe703c0fba456137c7e9cd7c22c997c78e67a24be6a44ed1078b25a492a568",
+      "source_version": "snapshot-2026-09-30",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        3,
+        4
+      ],
+      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
+      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "figures": []
+    },
+    {
+      "id": "google:weathernext-3-technical-report",
+      "vendor": "google",
+      "title": "WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations",
+      "models": [
+        "WeatherNext 3"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/google/technical-reports/weathernext-3-technical-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2609.03582",
+      "source_sha256": "111cd32ff40ca75dcb2a765d70865b8d74fecb22defe7b2f018860383e978c89",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        5,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        27,
+        28,
+        29,
+        32,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "reason_en": "Figures 1 and 2 pair the model’s input/output workflow with its broad CRPS comparison results.",
+      "reason_cn": "图 1 和图 2 分别展示模型输入输出流程和整体 CRPS 对比结果。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "architecture",
+          "caption": "Figure 1 | Model overview. Schematic showing the different input and output modalities, and\nspatiotemporal resolutions of WeatherNext 3 (WN3). WN3 takes two sources of input: (a) two analysis\nframes (6 hours apart), with an operational latency of 5 hours, and (b) the 12 most recent geostationary\nsatellite mosaic frames, which are available every hour and the most recent of which has an operational\nlatency of just under 1 hour. Analysis inputs are 0.1◦resolution for a subset of key atmospheric variables\nand surface variables, and 0.25◦for other variables. WN3 predicts precipitation, surface variables\nand some atmospheric variables at hourly temporal resolution, with the remaining variables predicted\nin 6 hour timesteps. WN3’s station output head predicts 2m temperature and 2m relative humidity\nat arbitrary spatial and temporal resolution (i.e. is continuously query-able in space and time). WN3\nalso produces off-grid sparse or tabular cyclone predictions at 6-hourly temporal resolution.",
+          "bbox": [
+            60,
+            85,
+            540,
+            738
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            600.813232421875,
+            533.1898193359375,
+            733.9158325195312
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4000,
+            5442
+          ],
+          "pdf_path": "figures/google/weathernext-3-technical-report/figure-01.pdf",
+          "png_path": "figures/google/weathernext-3-technical-report/figure-01.png",
+          "pdf_sha256": "95dba106bd750321c8cd4424c7fde07d349d80c1093182ad3f5d7c303027afc1",
+          "png_sha256": "a8cadcb27d299699fd045321c7e6ceac9fbd94ec7c731a4b4a02e0c0fc414c39"
+        },
+        {
+          "page": 11,
+          "figure_number": "2",
+          "role": "results",
+          "caption": "Figure 2 | Analysis results. (a) Upper-level CRPS scorecard comparing WN3 to the previous state-\nof-the-art model WN2 at 0.25◦. Blue squares indicate improvement. (b) Single-level variable CRPS\nscorecard of WN2 vs WN3 evaluated at 0.1◦. WN2 forecasts were interpolated bilinearly. (c) Scorecard\nof variables not in WN2 against ECMWF ENS at 0.1◦. The ground truth for (a), (b) and (c) is HRES-fc0.\nAll scores computed for 00/12 UTC initializations in 2024.",
+          "bbox": [
+            60,
+            70,
+            540,
+            545
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.01300048828125,
+            476.5652770996094,
+            534.7357788085938,
+            541.9228515625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4000,
+            3959
+          ],
+          "pdf_path": "figures/google/weathernext-3-technical-report/figure-02.pdf",
+          "png_path": "figures/google/weathernext-3-technical-report/figure-02.png",
+          "pdf_sha256": "0d0bda0e8949e985149dccfff2fc3cdecf06d29d21b3c8a5c0fa194edd513b2d",
+          "png_sha256": "4dfcc2dc75674ebac67ea44f8c6b6216cae2b49cbe5a58443f71b1085d1c889c"
+        }
+      ]
+    },
+    {
+      "id": "meta:sam-3d-technical-report",
+      "vendor": "meta",
+      "title": "SAM 3D: 3Dfy Anything in Images",
+      "models": [
+        "SAM 3D Objects / Body"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/meta/technical-reports/sam-3d-technical-report--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2511.16624",
+      "source_sha256": "e0b8cf4668efa243227d28ebcf3e02adcce3a84d3d20eb42951e66cc084b82c4",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        23,
+        24,
+        25,
+        27,
+        28,
+        35,
+        36,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "reason_en": "Figure 2 shows the two-stage SAM 3D architecture; Figure 8 summarizes human preference results.",
+      "reason_cn": "图 2 展示 SAM 3D 的两阶段架构；图 8 概括人工偏好结果。",
+      "figures": [
+        {
+          "page": 3,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Figure 2 SAM 3D architecture. (top) SAM 3D first predicts coarse shape and layout with the Geometry model; (right)\nthe mixture of transformers architecture apply a two-stream approach with information sharing in the multi-modal\nself-attention layer. (bottom) The voxels predicted by the Geometry model are passed to the Texture & Refinement\nmodel, which adds higher resolution detail and textures.",
+          "bbox": [
+            68,
+            60,
+            545,
+            288
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            240.79888916015625,
+            542.25390625,
+            283.708984375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3975,
+            1900
+          ],
+          "pdf_path": "figures/meta/sam-3d-technical-report/figure-01.pdf",
+          "png_path": "figures/meta/sam-3d-technical-report/figure-01.png",
+          "pdf_sha256": "b7e4f1d1a779fbe5f8bfdbb6c6b9c3f2071b54e0e94824b84421eaff1e53101e",
+          "png_sha256": "8a481ad64493437102ad3acf46365ee5aa6872accced28c6bac55847d5a8e99a"
+        },
+        {
+          "page": 10,
+          "figure_number": "8",
+          "role": "results",
+          "caption": "Figure 8 Preference comparison on scene-level and object-level reconstruction. Numbers indicate human preference rates.\nObjects comparisons are done on textured meshes. SAM 3D is significantly preferred over others on all fronts.",
+          "bbox": [
+            68,
+            270,
+            545,
+            444
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86373901367188,
+            418.62890625,
+            542.9354858398438,
+            439.6219787597656
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3975,
+            1450
+          ],
+          "pdf_path": "figures/meta/sam-3d-technical-report/figure-02.pdf",
+          "png_path": "figures/meta/sam-3d-technical-report/figure-02.png",
+          "pdf_sha256": "2436113b27377bfd98c7194bad6bc56a1fd7ab38204b24ccf634273005292161",
+          "png_sha256": "b83bb30cce34f439f5dc1d249f49bb29a824251ff6894f6747f3b43f436c2106"
+        }
+      ]
+    },
+    {
+      "id": "meta:sam-3d-body-technical-report",
+      "vendor": "meta",
+      "title": "SAM 3D Body: Robust Full-Body Human Mesh Recovery",
+      "models": [
+        "SAM 3D Objects / Body"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/meta/technical-reports/sam-3d-body-technical-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2602.15989",
+      "source_sha256": "65609925ce841e41a62f77c0d091a241159446a4f4df72bb18814983b4a85a94",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        3,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        19,
+        20
+      ],
+      "reason_en": "Figure 2 shows the encoder-decoder model architecture; Figure 8 compares human preference win rates.",
+      "reason_cn": "图 2 展示编码器-解码器架构；图 8 对比人工偏好胜率。",
+      "figures": [
+        {
+          "page": 3,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Figure 2 SAM 3D Body Model Architecture. We employ a promptable encoder–decoder architecture with a shared\nimage encoder and separate decoders for body and hand pose estimation.",
+          "bbox": [
+            68.0,
+            50.806,
+            545.0,
+            238.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            214.43389892578125,
+            541.199462890625,
+            235.42694091796875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3975,
+            1560
+          ],
+          "pdf_path": "figures/meta/sam-3d-body-technical-report/figure-01.pdf",
+          "png_path": "figures/meta/sam-3d-body-technical-report/figure-01.png",
+          "pdf_sha256": "4164e00369bf1d667dfba8fbf64972152de9d43d5841500523e9fded5237893c",
+          "png_sha256": "853b594d151d97add25fc31f252594668fb423cf31d24febcd0f7a987544afe3"
+        },
+        {
+          "page": 13,
+          "figure_number": "8",
+          "role": "results",
+          "caption": "Figure 8 Comparison of 3DB win rate against baselines for human preference study. Win rate (%) and number of wins\nout of 80.",
+          "bbox": [
+            68.0,
+            188.81,
+            545.0,
+            344.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            226.86805725097656,
+            541.1585693359375,
+            340.4599609375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3975,
+            1294
+          ],
+          "pdf_path": "figures/meta/sam-3d-body-technical-report/figure-02.pdf",
+          "png_path": "figures/meta/sam-3d-body-technical-report/figure-02.png",
+          "pdf_sha256": "b64c4a3bd9e4a7aec3aa6506007a66b6c1d40f6997210c0d02a935a6e8a2914b",
+          "png_sha256": "4a79ab9ec2fa45b426cfc10dc830feabbc435029c7f458575d7fce9251bae21f"
+        }
+      ]
+    },
+    {
+      "id": "nvidia:nemotron-3-competitive-coding",
+      "vendor": "nvidia",
+      "title": "Post-Training Language Models for Gold-Medal Performance in Coding Competitions",
+      "models": [
+        "Nemotron Labs 3 Competitive Coding 550B-A55B"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/nvidia/technical-reports/nemotron-3-competitive-coding--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2609.02849",
+      "source_sha256": "928e37df7f1dec171eb73aa42a15a22c5fda8928bb0c2dabefa7f1ac07a199e3",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "reason_en": "The opening result overview and competitive-programming pipeline are visually distinct and central to the report.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "results",
+          "caption": "Figure 1 | Performance of our pipeline and models on IOI 2025 and IOI 2026.",
+          "bbox": [
+            54.7,
+            86.7,
+            539.1,
+            287.38
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            112.2449951171875,
+            273.31787109375,
+            483.17620849609375,
+            284.3818359375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4037,
+            1673
+          ],
+          "pdf_path": "figures/nvidia/nemotron-3-competitive-coding/figure-01.pdf",
+          "png_path": "figures/nvidia/nemotron-3-competitive-coding/figure-01.png",
+          "pdf_sha256": "ea69d7f1493d8b21bb79626728c8933b63e52cd30f39600b2d04a3318ec93761",
+          "png_sha256": "863c1c68356f532dd8e9bd5ee133d057c26cdcbfdd673adf6b7564416ccc2147"
+        },
+        {
+          "page": 3,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Figure 2 | Our competitive-programming pipeline. Nemotron-3-Nano-CC undergoes supervised\nfine-tuning and reinforcement learning, while Nemotron-3-Ultra-CC uses supervised fine-tuning only.\nBoth models use GenCorrect at inference time.",
+          "bbox": [
+            59.36,
+            83,
+            538.23,
+            219.24
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            178.0758514404297,
+            535.2330322265625,
+            216.23883056640625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3991,
+            1136
+          ],
+          "pdf_path": "figures/nvidia/nemotron-3-competitive-coding/figure-02.pdf",
+          "png_path": "figures/nvidia/nemotron-3-competitive-coding/figure-02.png",
+          "pdf_sha256": "0a0111e5d7aad85d5da298c55cc8f0011a7e83a27054240e5a59cff3bc4bf7ac",
+          "png_sha256": "0a6dce038e4ca5a5a9147f191867218469380092802625947583e66f9f1d2ba2"
+        }
+      ]
+    },
+    {
+      "id": "nvidia:nemotron-3-nano-omni",
+      "vendor": "nvidia",
+      "title": "Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence",
+      "models": [
+        "Nemotron 3 Nano Omni"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/nvidia/technical-reports/nemotron-3-nano-omni--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2604.24954",
+      "source_sha256": "dd00e605fd69e3e45b4143f147a95649e9f47a52fb983313e1d1bd212fcd3f5a",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        3,
+        4
+      ],
+      "reason_en": "Pages 3 and 4 show the multimodal architecture and staged training recipe.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 3,
+          "figure_number": "1",
+          "role": "architecture",
+          "caption": "Figure 1 | Nemotron 3 Nano Omni architecture. For encoding images and videos we use dynamic\nresolution. Additionally, videos use Conv3D and optionally Efficient Video Sampling for higher\nthroughput. Audio inputs are encoded using Parakeet v2 audio encoder. Visual, audio, and text\ntokens are concatenated and fed to the LLM.",
+          "bbox": [
+            59.36,
+            82.707,
+            536.47,
+            353.37
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            298.65582275390625,
+            533.4686279296875,
+            350.3667907714844
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3976,
+            2256
+          ],
+          "pdf_path": "figures/nvidia/nemotron-3-nano-omni/figure-01.pdf",
+          "png_path": "figures/nvidia/nemotron-3-nano-omni/figure-01.png",
+          "pdf_sha256": "5114ed590be0177db6245d9306c0106114be5a4c86a562af064b4e028053b0af",
+          "png_sha256": "c9eb2079d34f1babdfdf3124fd2533a69e92cb5ee69c20646e9cc1afa158e8f1"
+        },
+        {
+          "page": 4,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Figure 2 | Staged training recipe for the v3 omni-modal model. The pipeline first performs vision\nSFT, then joint omni SFT while progressively extending context length, followed by omni-modal RL\ntraining.",
+          "bbox": [
+            59.36,
+            82.0,
+            548.7,
+            398.9
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            357.7348327636719,
+            533.457275390625,
+            395.8977966308594
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4078,
+            2641
+          ],
+          "pdf_path": "figures/nvidia/nemotron-3-nano-omni/figure-02.pdf",
+          "png_path": "figures/nvidia/nemotron-3-nano-omni/figure-02.png",
+          "pdf_sha256": "3625de19280af53d9ac5cc89411b265806c2ba2a8c4787914f06b3f8fa12cc70",
+          "png_sha256": "f54ee3ce110e6efd5d3fae64405662f2c160f8d16f9b511f81e1e7c00ec5d2c3"
+        }
+      ]
+    },
+    {
+      "id": "deepseek:deepseek-v4-model-card",
+      "vendor": "deepseek",
+      "title": "DeepSeek V4 Technical Documentation (Model Card)",
+      "models": [
+        "DeepSeek-V4-Pro"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/deepseek/model-cards/deepseek-v4-model-card.pdf",
+      "source_url": "https://www.deepseek.com/en/transparency/",
+      "source_sha256": "c225d71e3d3d21f263f6f4c2fda2f05757c61eb575a9d263cb9fee291576d5b0",
+      "source_version": "snapshot-2026-10-01",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7
+      ],
+      "reason_en": "The inspected pages contain a textual model-property description and specification/use tables, but no standalone architecture, framework, pipeline, benchmark, or safety-evaluation figure suitable for figure extraction. The model architecture is described in prose on page 3.",
+      "reason_cn": "已检查第1、2、3、5、6、7页：内容为文字版模型属性、规格/使用表格，没有适合提取的独立架构、框架、流程、基准或安全评测图。第3页的模型架构仅以正文描述。",
+      "figures": []
+    }
+  ]
+}

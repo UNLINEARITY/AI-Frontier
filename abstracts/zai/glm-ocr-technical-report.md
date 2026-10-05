@@ -1,0 +1,36 @@
+# GLM-OCR Technical Report
+
+Models: GLM-OCR
+
+[Source summaries](../README.md) · [中文索引](../README_CN.md)
+
+[Original PDF](../../pdfs/zai/technical-reports/glm-ocr-technical-report--arxiv-v2.pdf#page=1) · [Official source](https://github.com/zai-org/GLM-OCR)
+
+PDF pages: 1 · Source text cross-checked with two extractors; not manually verified.
+
+## ABSTRACT
+
+GLM-OCR is an efficient 0.9B-parameter compact multimodal model designed for real-world document understanding. It combines a 0.4B-parameter CogViT visual encoder with a 0.5B-parameter GLM language decoder, achieving a strong balance between computational efficiency and recognition performance. To ad- dress the inefficiency of standard autoregressive decoding in deterministic OCR tasks, GLM-OCR introduces a Multi-Token Prediction (MTP) mechanism that predicts multiple tokens per step, significantly improving decoding throughput while keeping memory overhead low through shared parameters. At the system level, a two-stage pipeline is adopted: PP-DocLayout-V3 first performs layout analysis, followed by parallel region-level recognition. Extensive evaluations on public benchmarks and industrial scenarios show that GLM-OCR achieves com- petitive or state-of-the-art performance in document parsing, text and formula transcription, table structure recovery, and key information extraction. Its com- pact architecture and structured generation make it suitable for both resource- constrained edge deployment and large-scale production systems.
+
+## Core figures
+
+[All figures and original captions](../../figures/zai/glm-ocr-technical-report/README.md) · [中文](../../figures/zai/glm-ocr-technical-report/README_CN.md)
+
+### Results · Figure 1
+
+Source page: 1 · [Original graphics PDF](../../figures/zai/glm-ocr-technical-report/figure-01.pdf) · [High-resolution PNG](../../figures/zai/glm-ocr-technical-report/figure-01.png)
+
+![Results](../../figures/zai/glm-ocr-technical-report/figure-01.png)
+
+Figure 1: Performance of GLM-OCR on OmniDocBench v1.5.
+
+### Architecture · Figure 2
+
+Source page: 4 · [Original graphics PDF](../../figures/zai/glm-ocr-technical-report/figure-02.pdf) · [High-resolution PNG](../../figures/zai/glm-ocr-technical-report/figure-02.png)
+
+![Architecture](../../figures/zai/glm-ocr-technical-report/figure-02.png)
+
+Figure 2: Overall architecture and workflow of the GLM-OCR framework. This system supports two
+primary tasks: Document Parsing (Task 1), which combines layout detection and region cropping to
+produce structured Markdown and JSON outputs; and Key Information Extraction (Task 2), which
+directly extracts structured JSON data based on input visual prompts.
