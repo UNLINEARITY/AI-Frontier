@@ -23,6 +23,13 @@ def link(url, label):
     return f'<a href="{escape(url)}">{escape(label)}</a>'
 
 
+def publisher_mark(vendor, prefix=''):
+    filename = f'{MARKS[vendor]}.svg'
+    if not (ROOT / 'assets/vendors' / filename).is_file():
+        return ''
+    return f'<img class="publisher-mark" src="{prefix}assets/vendors/{filename}" alt="" loading="lazy">'
+
+
 def report_target(row, summaries):
     summary = summaries.get(row['local_path'])
     if summary and summary['source_sha256'] == row['sha256']:
@@ -51,15 +58,15 @@ def build(output):
         if not chinese:
             labels['zai'] = 'Z.ai / Zhipu AI'
         prefix = '../' if chinese else ''
-        def publisher_mark(vendor):
-            return f'<img class="publisher-mark" src="{prefix}assets/vendors/{MARKS[vendor]}.svg" alt="" loading="lazy">'
+        def mark(vendor):
+            return publisher_mark(vendor, prefix)
         cards = []
         for r in reports:
             date = r['published_date'] or ('日期待确认' if chinese else 'Date unconfirmed')
             kind = DOCUMENT_TYPES[r['document_type']][0]
             revision = f" · {r['version']}" if r['version'].startswith('arxiv-') else ''
             target = report_target(r, summaries)
-            cards.append(f'<article class="card" data-view="reports" data-vendor="{r["vendor"]}" data-type="{r["document_type"]}" data-category="" data-date="{r["published_date"]}" data-title="{escape(r["title"])}" data-search="{escape(r["title"] + " " + labels[r["vendor"]] + " " + date)}"><div class="card-heading"><div class="publisher">{publisher_mark(r["vendor"])}<span>{escape(labels[r["vendor"]])}</span></div><span class="document-badge" data-kind="{r["document_type"]}">{kind}</span></div><h3><a class="card-link" href="{escape(target)}">{escape(r["title"])}</a></h3><p class="date">{escape(date + revision)} · {r["pages"]} {"页" if chinese else "pages"}</p></article>')
+            cards.append(f'<article class="card" data-view="reports" data-vendor="{r["vendor"]}" data-type="{r["document_type"]}" data-category="" data-date="{r["published_date"]}" data-title="{escape(r["title"])}" data-search="{escape(r["title"] + " " + labels[r["vendor"]] + " " + date)}"><div class="card-heading"><div class="publisher">{mark(r["vendor"])}<span>{escape(labels[r["vendor"]])}</span></div><span class="document-badge" data-kind="{r["document_type"]}">{kind}</span></div><h3><a class="card-link" href="{escape(target)}">{escape(r["title"])}</a></h3><p class="date">{escape(date + revision)} · {r["pages"]} {"页" if chinese else "pages"}</p></article>')
         for m in models:
             categories = [c for c in MODEL_CATEGORIES if c in m.get('latest_categories', []) or c in m.get('frontier_categories', [])]
             documents = []
@@ -72,17 +79,19 @@ def build(output):
                     available = summary and summary['source_sha256'] == row['sha256']
                     target = report_target(row, summaries)
                     documents.append((not bool(available), list(DOCUMENT_TYPES).index(row['document_type']), target, source['title']))
+                elif source.get('pdf_url'):
+                    documents.append((True, list(DOCUMENT_TYPES).index(source['document_type']), source['source_url'], source['title']))
             documents.sort(key=lambda d: d[:2])
             target = documents[0][2] if documents else m.get('frontier_source_url', m['source_url'])
             additional = '<div class="links">' + ''.join(link(d[2], d[3]) for d in documents[1:]) + '</div>' if len(documents) > 1 else ''
-            cards.append(f'<article class="card" data-date="" data-title="{escape(m["model"])}" data-view="models" data-vendor="{m["vendor"]}" data-type="" data-category="{escape(" ".join(categories))}" data-search="{escape(m["model"] + " " + labels[m["vendor"]])}" hidden><div class="card-heading"><div class="publisher">{publisher_mark(m["vendor"])}<span>{escape(labels[m["vendor"]])}</span></div><span class="model-indicator" aria-hidden="true"></span></div><h3><a class="card-link" href="{escape(target)}">{escape(m["model"])}</a></h3><p class="date">{escape(" / ".join(MODEL_CATEGORIES[c][int(chinese)] for c in categories))}</p>{additional}</article>')
+            cards.append(f'<article class="card" data-date="" data-title="{escape(m["model"])}" data-view="models" data-vendor="{m["vendor"]}" data-type="" data-category="{escape(" ".join(categories))}" data-search="{escape(m["model"] + " " + labels[m["vendor"]])}" hidden><div class="card-heading"><div class="publisher">{mark(m["vendor"])}<span>{escape(labels[m["vendor"]])}</span></div><span class="model-indicator" aria-hidden="true"></span></div><h3><a class="card-link" href="{escape(target)}">{escape(m["model"])}</a></h3><p class="date">{escape(" / ".join(MODEL_CATEGORIES[c][int(chinese)] for c in categories))}</p>{additional}</article>')
         publisher_options = ''.join(f'<option value="{v}">{escape(label)}</option>' for v, label in labels.items())
         type_options = ''.join(f'<option value="{k}">{v[0]}</option>' for k, v in DOCUMENT_TYPES.items())
         category_options = ''.join(f'<option value="{k}">{escape(v[int(chinese)])}</option>' for k, v in MODEL_CATEGORIES.items())
         values = {
             'lang': 'zh-CN' if chinese else 'en', 'prefix': '../' if chinese else '',
             'name': escape(brand['name']), 'tagline': escape(brand['tagline_cn' if chinese else 'tagline']),
-            'intro': '原始报告，前沿模型，技术洞察。按厂商与类别探索 AI 的演进。' if chinese else 'Original reports. Frontier models. Technical insight. Explore how AI evolves across labs and model families.',
+            'intro': '原始报告，前沿模型。从语言与多模态 AI，到机器人与世界模型。' if chinese else 'Original reports. Frontier models. From language and multimodal AI to robotics and world models.',
             'switch': '../index.html' if chinese else 'cn/index.html', 'switch_label': 'English' if chinese else '中文',
             'repository': REPOSITORY, 'star': '在 GitHub 上 Star' if chinese else 'Star on GitHub',
             'date_range': f"{min(r['published_date'][:4] for r in reports if r['published_date'])} — {max(r['published_date'][:4] for r in reports if r['published_date'])}",
@@ -111,7 +120,7 @@ def build(output):
             'top': '回到顶部' if chinese else 'Back to top',
             'skip': '跳到内容' if chinese else 'Skip to content',
             'evidence': '原始文档 · 清晰分类 · 来源可追溯' if chinese else 'Original documents · Clear categories · Traceable sources',
-            'publisher_buttons': ''.join(f'<button class="lab" data-publisher="{v}" aria-pressed="false">{publisher_mark(v)}<span>{escape(label.split(" / ")[0])}</span><span class="lab-count">{sum(r["vendor"] == v for r in reports)}</span></button>' for v, label in labels.items()),
+            'publisher_buttons': ''.join(f'<button class="lab" data-publisher="{v}" aria-pressed="false">{mark(v)}<span>{escape(label.split(" / ")[0])}</span><span class="lab-count">{sum(r["vendor"] == v for r in reports)}</span></button>' for v, label in labels.items()),
         }
         page = template
         for key, value in values.items():

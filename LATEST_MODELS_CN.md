@@ -6,7 +6,7 @@
 
 按厂商浏览当前旗舰与重要新模型，直达原始报告与官方介绍。
 
-[OpenAI](#openai) · [Anthropic](#anthropic) · [Google / DeepMind](#google) · [Meta](#meta) · [xAI](#xai) · [Mistral AI](#mistral) · [NVIDIA](#nvidia) · [DeepSeek](#deepseek) · [Alibaba / Qwen / Wan](#qwen) · [Moonshot AI / Kimi](#moonshot) · [智谱 / Z.ai](#zai) · [MiniMax](#minimax) · [StepFun](#stepfun) · [Tencent / Hunyuan](#tencent) · [ByteDance / Seed](#bytedance) · [Cohere](#cohere) · [Microsoft / Phi / MAI](#microsoft) · [Amazon / Nova](#amazon)
+[OpenAI](#openai) · [Anthropic](#anthropic) · [Google / DeepMind](#google) · [Meta](#meta) · [xAI](#xai) · [Mistral AI](#mistral) · [NVIDIA](#nvidia) · [DeepSeek](#deepseek) · [Alibaba / Qwen / Wan](#qwen) · [Moonshot AI / Kimi](#moonshot) · [智谱 / Z.ai](#zai) · [MiniMax](#minimax) · [StepFun](#stepfun) · [Tencent / Hunyuan](#tencent) · [ByteDance / Seed](#bytedance) · [Cohere](#cohere) · [Microsoft / Phi / MAI](#microsoft) · [Amazon / Nova](#amazon) · [Physical Intelligence](#physical_intelligence) · [Figure AI](#figure) · [Skild AI](#skild) · [AgiBot](#agibot) · [Galaxea AI](#galaxea)
 
 <a id="openai"></a>
 
@@ -58,8 +58,8 @@
 | 音乐生成 | Lyria 3.5 | [Model Card](abstracts/google/lyria-3-5-model-card.md) · [官方介绍](https://deepmind.google/models/model-cards/) |
 | 翻译 | TranslateGemma | [Technical Report](abstracts/google/translategemma-technical-report.md) · [官方介绍](https://ai.google.dev/gemma/docs/translategemma/model_card) |
 | 向量嵌入 | Gemini Embedding 2 | [Technical Report](abstracts/google/gemini-embedding-2.md) · [官方介绍](https://ai.google.dev/gemini-api/docs/changelog) |
-| 机器人 | Gemini Robotics 2 / ER 2 / On-Device 2 | [Gemini Robotics-ER 2 Model Card](abstracts/google/gemini-robotics-er-2-model-card.md) · [Gemini Robotics On-Device 2 Model Card](abstracts/google/gemini-robotics-on-device-2-model-card.md) · [官方介绍](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
-| 世界模型 | Genie 3 | [官方介绍](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) |
+| 机器人与 VLA / 具身推理与规划 | Gemini Robotics 2 / ER 2 / On-Device 2 | [Gemini Robotics-ER 2 Model Card](abstracts/google/gemini-robotics-er-2-model-card.md) · [Gemini Robotics On-Device 2 Model Card](abstracts/google/gemini-robotics-on-device-2-model-card.md) · [Technical Report](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) · [官方介绍](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
+| 世界模型与仿真 | Genie 3 | [官方介绍](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) |
 | 科学研究 | WeatherNext 3 | [Technical Report](abstracts/google/weathernext-3-technical-report.md) · [官方介绍](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/) |
 | 医疗 | MedGemma 1.5 | [Technical Report](abstracts/google/medgemma-1-5-technical-report.md) · [官方介绍](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card) |
 
@@ -107,7 +107,7 @@
 | 语音生成 | Voxtral TTS | [Technical Report](abstracts/mistral/voxtral-tts.md) · [官方介绍](https://arxiv.org/abs/2603.25551) |
 | 文档理解 | Mistral OCR 4.1 | [官方介绍](https://docs.mistral.ai/models/ocr-4-1) |
 | 向量嵌入 | Codestral Embed | [官方介绍](https://docs.mistral.ai/models/codestral-embed-25-05) |
-| 机器人 | Robostral Navigate | [Technical Report](abstracts/mistral/robostral-navigate.md) · [官方介绍](https://arxiv.org/abs/2607.20785) |
+| 机器人与 VLA | Robostral Navigate | [Technical Report](abstracts/mistral/robostral-navigate.md) · [官方介绍](https://arxiv.org/abs/2607.20785) |
 | 安全 | Shieldstral | [Technical Report](abstracts/mistral/shieldstral.md) · [官方介绍](https://arxiv.org/abs/2607.25857) |
 
 <a id="nvidia"></a>
@@ -128,8 +128,8 @@
 | 语音生成 | MagpieTTS Multilingual 357M v2607 | [官方介绍](https://huggingface.co/nvidia/magpie_tts_multilingual_357m) |
 | 文档理解 | Nemotron Parse 2.0 | [官方介绍](https://huggingface.co/nvidia/NVIDIA-Nemotron-Parse-2.0) |
 | 向量嵌入 | Nemotron 3 Embed 1B / 8B | [官方介绍](https://huggingface.co/nvidia/Nemotron-3-Embed-8B-BF16) |
-| 机器人 | GR00T N1.7 | [官方介绍](https://github.com/NVIDIA/Isaac-GR00T) |
-| 世界模型 | Cosmos 3 Edge | [官方介绍](https://huggingface.co/nvidia/Cosmos3-Edge) |
+| 机器人与 VLA | GR00T N1.7 | [官方介绍](https://github.com/NVIDIA/Isaac-GR00T) |
+| 世界模型与仿真 | Cosmos 3 Edge | [官方介绍](https://huggingface.co/nvidia/Cosmos3-Edge) |
 
 <a id="deepseek"></a>
 
@@ -294,5 +294,57 @@
 | 图像生成 | Nova 2 Omni Preview | [Technical Report](abstracts/amazon/nova-2-family.md) · [官方介绍](https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-nova-2-omni-preview/) |
 | 实时语音 | Nova 2 Sonic | [Technical Report](abstracts/amazon/nova-2-family.md) · [官方介绍](https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models) |
 | 向量嵌入 | Nova Multimodal Embeddings | [Technical Report](abstracts/amazon/nova-multimodal-embeddings.md) · [官方介绍](https://www.amazon.science/publications/amazon-nova-multimodal-embeddings-technical-report-and-model-card) |
+
+<a id="physical_intelligence"></a>
+
+## Physical Intelligence
+
+[全部报告](pdfs/physical_intelligence/README_CN.md)
+
+| 类别 | 模型 | 阅读 |
+| --- | --- | --- |
+| 机器人与 VLA | π0.7 | [Technical Report](https://www.pi.website/download/pi07.pdf) · [官方介绍](https://www.pi.website/blog/pi07) |
+
+<a id="figure"></a>
+
+## Figure AI
+
+[全部报告](pdfs/figure/README_CN.md)
+
+| 类别 | 模型 | 阅读 |
+| --- | --- | --- |
+| 机器人与 VLA | Helix 2.5 | [官方介绍](https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization) |
+
+<a id="skild"></a>
+
+## Skild AI
+
+[全部报告](pdfs/skild/README_CN.md)
+
+| 类别 | 模型 | 阅读 |
+| --- | --- | --- |
+| 机器人与 VLA | S1 | [官方介绍](https://skild.ai/blogs/s1) |
+
+<a id="agibot"></a>
+
+## AgiBot
+
+[全部报告](pdfs/agibot/README_CN.md)
+
+| 类别 | 模型 | 阅读 |
+| --- | --- | --- |
+| 机器人与 VLA | GE-Act 2.0 | [Technical Report](https://arxiv.org/abs/2609.05588) · [官方介绍](https://ge-act-v2.github.io/) |
+| 具身推理与规划 | GenieReasoner | [Technical Report](https://arxiv.org/abs/2512.24125) · [官方介绍](https://geniereasoner.github.io/GenieReasoner/) |
+| 世界模型与仿真 | GE-Sim 2.0 | [Technical Report](https://arxiv.org/abs/2605.27491) · [官方介绍](https://ge-sim-v2.github.io/) |
+
+<a id="galaxea"></a>
+
+## Galaxea AI
+
+[全部报告](pdfs/galaxea/README_CN.md)
+
+| 类别 | 模型 | 阅读 |
+| --- | --- | --- |
+| 机器人与 VLA / 具身推理与规划 | G0.5 | [Technical Report](https://arxiv.org/abs/2608.11739) · [官方介绍](https://github.com/OpenGalaxea/GalaxeaVLA) |
 
 历史模型与报告见[厂商归档](README_CN.md#按厂商浏览)。

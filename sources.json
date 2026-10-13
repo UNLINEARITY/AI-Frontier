@@ -5253,5 +5253,80 @@
     "pdf_url": "https://arxiv.org/pdf/2508.10711v2",
     "version": "arxiv-v2",
     "notes": "Original NextStep-1 model report linked by official StepFun repository; arXiv dates verified. Repository recommends the newer NextStep-1.1, released December 24, 2025 with separate post-training blog; this older report is not presented as a NextStep-1.1-specific report."
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities",
+    "slug": "pi-0-7",
+    "document_type": "technical_report",
+    "published_date": "",
+    "source_updated_date": "",
+    "source_url": "https://www.pi.website/download/pi07.pdf",
+    "pdf_url": "https://www.pi.website/download/pi07.pdf",
+    "notes": "Scoped review 2026-10-13: official blog announces the model on 2026-04-16; official PDF search index confirms this title/download URL. Direct page/PDF retrieval returned 403 during web review. Report first-publication date and local bytes not verified; do not infer them from the model announcement.",
+    "metadata_url": "https://www.pi.website/blog/pi07"
+  },
+  {
+    "vendor": "agibot",
+    "title": "GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation",
+    "slug": "ge-act-2-0",
+    "document_type": "technical_report",
+    "published_date": "2026-09-04",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2609.05588",
+    "pdf_url": "https://arxiv.org/pdf/2609.05588v1",
+    "metadata_url": "https://ge-act-v2.github.io/",
+    "notes": "Scoped review 2026-10-13: title, first submission and v1 confirmed from author-submitted arXiv; official AgibotTech Genie-Envisioner-V1 README links the project and records model release on 2026-09-10. Paper submission and model announcement are distinct. Original PDF not yet collected."
+  },
+  {
+    "vendor": "agibot",
+    "title": "GE-Sim 2.0: A Roadmap Towards Comprehensive Closed-loop Video World Simulators for Robotic Manipulation",
+    "slug": "ge-sim-2-0",
+    "document_type": "technical_report",
+    "published_date": "2026-05-26",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2605.27491",
+    "pdf_url": "https://arxiv.org/pdf/2605.27491v1",
+    "metadata_url": "https://ge-sim-v2.github.io/",
+    "notes": "Scoped review 2026-10-13: official author project links this paper; arXiv confirms title, first submission and v1. Official AgibotTech README records release on 2026-05-28. This learned action-conditioned world simulator is distinct from the Genie Sim platform. Original PDF not yet collected."
+  },
+  {
+    "vendor": "agibot",
+    "title": "Unified Embodied VLM Reasoning with Robotic Action via Autoregressive Discretized Pre-training",
+    "slug": "genie-reasoner",
+    "document_type": "technical_report",
+    "published_date": "2025-12-30",
+    "source_updated_date": "2026-07-26",
+    "version": "arxiv-v3",
+    "source_url": "https://arxiv.org/abs/2512.24125",
+    "pdf_url": "https://arxiv.org/pdf/2512.24125v3",
+    "metadata_url": "https://geniereasoner.github.io/GenieReasoner/",
+    "notes": "Scoped review 2026-10-13: AgiBot Research project identifies GenieReasoner and links this author paper. arXiv confirms v1 2025-12-30 and latest v3 2026-07-26. ERIQ is its benchmark; FACT is its action tokenizer, not separate frontier models. Original PDF not yet collected."
+  },
+  {
+    "vendor": "galaxea",
+    "title": "G0.5: One Autoregressive Stream for Robot Reasoning and Action",
+    "slug": "g0-5",
+    "document_type": "technical_report",
+    "published_date": "2026-08-12",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2608.11739",
+    "pdf_url": "https://arxiv.org/pdf/2608.11739v1",
+    "metadata_url": "https://github.com/OpenGalaxea/GalaxeaVLA",
+    "notes": "Scoped review 2026-10-13: official GalaxeaVLA README links this paper; arXiv confirms title, first submission and v1. README distinguishes model introduction 2026-06-01, base checkpoint release 2026-06-16, and paper publication 2026-08-12. Original PDF not yet collected."
+  },
+  {
+    "vendor": "google",
+    "title": "Gemini Robotics 2: Safety Evaluations",
+    "slug": "gemini-robotics-2-safety-evaluations",
+    "document_type": "technical_report",
+    "published_date": "2026-07-29",
+    "source_updated_date": "",
+    "source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-2-Safety.pdf",
+    "notes": "Scoped review 2026-10-13: official release article explicitly links this as a Safety Technical Report. PDF cover verifies title, Google DeepMind authorship and document date 2026-07-29 (18 pages in web preview). Covers ER 2 safety orchestration and family stopping evaluations; not a general VLA architecture report or hardware safety certification. Classification follows official Technical Report designation. Local PDF bytes not yet collected."
   }
 ]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Collect Official Reports"
+  short_description: "Register and download verified official model reports into A"
+  default_prompt: "Use $af-collect-reports to complete the requested AI Frontier task within the current scope."

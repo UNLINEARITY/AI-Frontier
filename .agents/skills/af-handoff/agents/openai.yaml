@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hand Off AI Frontier Work"
+  short_description: "Prepare a factual continuation handoff or an explicitly requ"
+  default_prompt: "Use $af-handoff to complete the requested AI Frontier task within the current scope."

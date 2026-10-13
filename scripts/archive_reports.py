@@ -24,6 +24,8 @@ VENDORS = {
     "stepfun": "StepFun", "tencent": "Tencent / Hunyuan",
     "bytedance": "ByteDance / Seed", "cohere": "Cohere",
     "microsoft": "Microsoft / Phi / MAI", "amazon": "Amazon / Nova",
+    "physical_intelligence": "Physical Intelligence", "figure": "Figure AI",
+    "skild": "Skild AI", "agibot": "AgiBot", "galaxea": "Galaxea AI",
 }
 DOCUMENT_TYPES = {
     "technical_report": ("Technical Report", "technical-reports.md"),
@@ -45,8 +47,9 @@ MODEL_CATEGORIES = {
     "ocr": ("Document understanding", "文档理解"),
     "embedding": ("Embeddings", "向量嵌入"),
     "reranking": ("Reranking", "重排序"),
-    "robotics": ("Robotics", "机器人"),
-    "world": ("World models", "世界模型"),
+    "robotics": ("Robotics & VLA", "机器人与 VLA"),
+    "embodied_reasoning": ("Embodied reasoning & planning", "具身推理与规划"),
+    "world": ("World models & simulation", "世界模型与仿真"),
     "3d": ("3D generation", "3D 生成"),
     "science": ("Scientific research", "科学研究"),
     "medical": ("Medical", "医疗"),
@@ -235,6 +238,10 @@ def render_model_coverage(rows):
                             links.append(f"[{title}]({summary['markdown_path']})")
                         else:
                             links.append(f"[{title}]({row['source_url']})")
+                    elif source.get("pdf_url"):
+                        kind = source["document_type"]
+                        title = source["title"] if report_types.count(kind) > 1 else DOCUMENT_TYPES[kind][0]
+                        links.append(f"[{title}]({source.get('source_url') or source['pdf_url']})")
                 official = "官方介绍" if chinese else "Official"
                 links.append(f"[{official}]({model.get('frontier_source_url', model['source_url'])})")
                 name = model["model"].replace("|", "\\|")
@@ -248,11 +255,12 @@ def render_model_coverage(rows):
 def render(rows):
     render_model_coverage(rows)
     archived = [row for row in rows if row["status"] == "archived"]
-    publisher_count = len({row["vendor"] for row in archived})
+    publisher_count = len(VENDORS)
     brand = json.loads((ROOT / ".github" / "brand.json").read_text(encoding="utf-8"))
     lines = [f"# {brand['name']}", "", "[中文](README_CN.md)", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline']}**", "",
              f"[Website]({brand['homepage_url']}) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)", "",
              "An open research archive for understanding how frontier AI models are built, evaluated, and deployed. "
+             "Coverage spans language and multimodal models, robotics and VLA, embodied reasoning, and world models. "
              "We bring official technical reports, model cards, and system cards into one place, "
              "and are building toward readable sources, grounded technical analysis, and ongoing release tracking.", "",
              f"**{len(archived)} reports · {publisher_count} publishers · 2022 onward**", "",
@@ -262,6 +270,7 @@ def render(rows):
     cn_lines = [f"# {brand['name']}", "", "[英文版](README.md)", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline_cn']}**", "",
                 f"[在线浏览]({brand['homepage_url']}cn/) · [前沿模型](LATEST_MODELS_CN.md) · [完整索引](catalog.csv)", "",
                 "一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。"
+                "覆盖语言与多模态模型、机器人与 VLA、具身推理以及世界模型。"
                 "我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，"
                 "并逐步推进可读原文、基于来源的技术分析与模型发布追踪。", "",
                 f"**{len(archived)} 份报告 · {publisher_count} 家厂商 · 2022 年起**", "",

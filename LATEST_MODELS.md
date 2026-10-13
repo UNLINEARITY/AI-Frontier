@@ -6,7 +6,7 @@ Updated **2026-10-03**.
 
 Current flagships and important new models, with original reports and official introductions.
 
-[OpenAI](#openai) · [Anthropic](#anthropic) · [Google / DeepMind](#google) · [Meta](#meta) · [xAI](#xai) · [Mistral AI](#mistral) · [NVIDIA](#nvidia) · [DeepSeek](#deepseek) · [Alibaba / Qwen / Wan](#qwen) · [Moonshot AI / Kimi](#moonshot) · [Z.ai / Zhipu AI](#zai) · [MiniMax](#minimax) · [StepFun](#stepfun) · [Tencent / Hunyuan](#tencent) · [ByteDance / Seed](#bytedance) · [Cohere](#cohere) · [Microsoft / Phi / MAI](#microsoft) · [Amazon / Nova](#amazon)
+[OpenAI](#openai) · [Anthropic](#anthropic) · [Google / DeepMind](#google) · [Meta](#meta) · [xAI](#xai) · [Mistral AI](#mistral) · [NVIDIA](#nvidia) · [DeepSeek](#deepseek) · [Alibaba / Qwen / Wan](#qwen) · [Moonshot AI / Kimi](#moonshot) · [Z.ai / Zhipu AI](#zai) · [MiniMax](#minimax) · [StepFun](#stepfun) · [Tencent / Hunyuan](#tencent) · [ByteDance / Seed](#bytedance) · [Cohere](#cohere) · [Microsoft / Phi / MAI](#microsoft) · [Amazon / Nova](#amazon) · [Physical Intelligence](#physical_intelligence) · [Figure AI](#figure) · [Skild AI](#skild) · [AgiBot](#agibot) · [Galaxea AI](#galaxea)
 
 <a id="openai"></a>
 
@@ -58,8 +58,8 @@ Current flagships and important new models, with original reports and official i
 | Music generation | Lyria 3.5 | [Model Card](abstracts/google/lyria-3-5-model-card.md) · [Official](https://deepmind.google/models/model-cards/) |
 | Translation | TranslateGemma | [Technical Report](abstracts/google/translategemma-technical-report.md) · [Official](https://ai.google.dev/gemma/docs/translategemma/model_card) |
 | Embeddings | Gemini Embedding 2 | [Technical Report](abstracts/google/gemini-embedding-2.md) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
-| Robotics | Gemini Robotics 2 / ER 2 / On-Device 2 | [Gemini Robotics-ER 2 Model Card](abstracts/google/gemini-robotics-er-2-model-card.md) · [Gemini Robotics On-Device 2 Model Card](abstracts/google/gemini-robotics-on-device-2-model-card.md) · [Official](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
-| World models | Genie 3 | [Official](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) |
+| Robotics & VLA / Embodied reasoning & planning | Gemini Robotics 2 / ER 2 / On-Device 2 | [Gemini Robotics-ER 2 Model Card](abstracts/google/gemini-robotics-er-2-model-card.md) · [Gemini Robotics On-Device 2 Model Card](abstracts/google/gemini-robotics-on-device-2-model-card.md) · [Technical Report](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) · [Official](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
+| World models & simulation | Genie 3 | [Official](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) |
 | Scientific research | WeatherNext 3 | [Technical Report](abstracts/google/weathernext-3-technical-report.md) · [Official](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/) |
 | Medical | MedGemma 1.5 | [Technical Report](abstracts/google/medgemma-1-5-technical-report.md) · [Official](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card) |
 
@@ -107,7 +107,7 @@ Current flagships and important new models, with original reports and official i
 | Speech generation | Voxtral TTS | [Technical Report](abstracts/mistral/voxtral-tts.md) · [Official](https://arxiv.org/abs/2603.25551) |
 | Document understanding | Mistral OCR 4.1 | [Official](https://docs.mistral.ai/models/ocr-4-1) |
 | Embeddings | Codestral Embed | [Official](https://docs.mistral.ai/models/codestral-embed-25-05) |
-| Robotics | Robostral Navigate | [Technical Report](abstracts/mistral/robostral-navigate.md) · [Official](https://arxiv.org/abs/2607.20785) |
+| Robotics & VLA | Robostral Navigate | [Technical Report](abstracts/mistral/robostral-navigate.md) · [Official](https://arxiv.org/abs/2607.20785) |
 | Security | Shieldstral | [Technical Report](abstracts/mistral/shieldstral.md) · [Official](https://arxiv.org/abs/2607.25857) |
 
 <a id="nvidia"></a>
@@ -128,8 +128,8 @@ Current flagships and important new models, with original reports and official i
 | Speech generation | MagpieTTS Multilingual 357M v2607 | [Official](https://huggingface.co/nvidia/magpie_tts_multilingual_357m) |
 | Document understanding | Nemotron Parse 2.0 | [Official](https://huggingface.co/nvidia/NVIDIA-Nemotron-Parse-2.0) |
 | Embeddings | Nemotron 3 Embed 1B / 8B | [Official](https://huggingface.co/nvidia/Nemotron-3-Embed-8B-BF16) |
-| Robotics | GR00T N1.7 | [Official](https://github.com/NVIDIA/Isaac-GR00T) |
-| World models | Cosmos 3 Edge | [Official](https://huggingface.co/nvidia/Cosmos3-Edge) |
+| Robotics & VLA | GR00T N1.7 | [Official](https://github.com/NVIDIA/Isaac-GR00T) |
+| World models & simulation | Cosmos 3 Edge | [Official](https://huggingface.co/nvidia/Cosmos3-Edge) |
 
 <a id="deepseek"></a>
 
@@ -294,5 +294,57 @@ Current flagships and important new models, with original reports and official i
 | Image generation | Nova 2 Omni Preview | [Technical Report](abstracts/amazon/nova-2-family.md) · [Official](https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-nova-2-omni-preview/) |
 | Real-time audio | Nova 2 Sonic | [Technical Report](abstracts/amazon/nova-2-family.md) · [Official](https://www.amazon.science/publications/the-amazon-nova-2-0-family-of-models) |
 | Embeddings | Nova Multimodal Embeddings | [Technical Report](abstracts/amazon/nova-multimodal-embeddings.md) · [Official](https://www.amazon.science/publications/amazon-nova-multimodal-embeddings-technical-report-and-model-card) |
+
+<a id="physical_intelligence"></a>
+
+## Physical Intelligence
+
+[All reports](pdfs/physical_intelligence/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| Robotics & VLA | π0.7 | [Technical Report](https://www.pi.website/download/pi07.pdf) · [Official](https://www.pi.website/blog/pi07) |
+
+<a id="figure"></a>
+
+## Figure AI
+
+[All reports](pdfs/figure/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| Robotics & VLA | Helix 2.5 | [Official](https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization) |
+
+<a id="skild"></a>
+
+## Skild AI
+
+[All reports](pdfs/skild/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| Robotics & VLA | S1 | [Official](https://skild.ai/blogs/s1) |
+
+<a id="agibot"></a>
+
+## AgiBot
+
+[All reports](pdfs/agibot/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| Robotics & VLA | GE-Act 2.0 | [Technical Report](https://arxiv.org/abs/2609.05588) · [Official](https://ge-act-v2.github.io/) |
+| Embodied reasoning & planning | GenieReasoner | [Technical Report](https://arxiv.org/abs/2512.24125) · [Official](https://geniereasoner.github.io/GenieReasoner/) |
+| World models & simulation | GE-Sim 2.0 | [Technical Report](https://arxiv.org/abs/2605.27491) · [Official](https://ge-sim-v2.github.io/) |
+
+<a id="galaxea"></a>
+
+## Galaxea AI
+
+[All reports](pdfs/galaxea/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| Robotics & VLA / Embodied reasoning & planning | G0.5 | [Technical Report](https://arxiv.org/abs/2608.11739) · [Official](https://github.com/OpenGalaxea/GalaxeaVLA) |
 
 Explore earlier models and reports in the [publisher archives](README.md#browse-by-publisher).

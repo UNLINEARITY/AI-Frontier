@@ -60,6 +60,17 @@ class ReaderTests(unittest.TestCase):
         self.summary['source_sha256'] = 'stale'
         self.assertEqual(report_target(row, {'pdfs/model.pdf': self.summary}), row['source_url'])
 
+    def test_publisher_without_a_logo_does_not_emit_a_broken_image(self):
+        from build_pages import publisher_mark
+        from unittest.mock import patch
+        import build_pages
+        with patch.object(build_pages, 'ROOT', self.root):
+            self.assertEqual(publisher_mark('agibot'), '')
+            asset = self.root / 'assets/vendors/agibot.svg'
+            asset.parent.mkdir(parents=True)
+            asset.write_text('<svg/>')
+            self.assertIn('src="../assets/vendors/agibot.svg"', publisher_mark('agibot', '../'))
+
     def test_stale_source_and_figure_selection_rejected(self):
         self.summary['source_sha256'] = 'changed'
         with self.assertRaisesRegex(ValueError, 'Stale summary'):

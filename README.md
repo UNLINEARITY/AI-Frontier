@@ -8,9 +8,9 @@
 
 [Website](https://unlinearity.github.io/AI-Frontier/) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)
 
-An open research archive for understanding how frontier AI models are built, evaluated, and deployed. We bring official technical reports, model cards, and system cards into one place, and are building toward readable sources, grounded technical analysis, and ongoing release tracking.
+An open research archive for understanding how frontier AI models are built, evaluated, and deployed. Coverage spans language and multimodal models, robotics and VLA, embodied reasoning, and world models. We bring official technical reports, model cards, and system cards into one place, and are building toward readable sources, grounded technical analysis, and ongoing release tracking.
 
-**385 reports · 18 publishers · 2022 onward**
+**385 reports · 23 publishers · 2022 onward**
 
 **Available today:** official report indexes, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). Full-document Markdown, structured analysis, and automated tracking are the next stages.
 
@@ -54,6 +54,11 @@ Click a count to open that publisher's collection for the document type. Counts 
 | [Cohere](pdfs/cohere/README.md) | [8](pdfs/cohere/technical-reports/README.md) | [0](pdfs/cohere/model-cards/README.md) | [0](pdfs/cohere/system-cards/README.md) | 8 |
 | [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | [9](pdfs/microsoft/technical-reports/README.md) | [8](pdfs/microsoft/model-cards/README.md) | [0](pdfs/microsoft/system-cards/README.md) | 17 |
 | [Amazon / Nova](pdfs/amazon/README.md) | [4](pdfs/amazon/technical-reports/README.md) | [0](pdfs/amazon/model-cards/README.md) | [3](pdfs/amazon/system-cards/README.md) | 7 |
+| [Physical Intelligence](pdfs/physical_intelligence/README.md) | [0](pdfs/physical_intelligence/technical-reports/README.md) | [0](pdfs/physical_intelligence/model-cards/README.md) | [0](pdfs/physical_intelligence/system-cards/README.md) | 0 |
+| [Figure AI](pdfs/figure/README.md) | [0](pdfs/figure/technical-reports/README.md) | [0](pdfs/figure/model-cards/README.md) | [0](pdfs/figure/system-cards/README.md) | 0 |
+| [Skild AI](pdfs/skild/README.md) | [0](pdfs/skild/technical-reports/README.md) | [0](pdfs/skild/model-cards/README.md) | [0](pdfs/skild/system-cards/README.md) | 0 |
+| [AgiBot](pdfs/agibot/README.md) | [0](pdfs/agibot/technical-reports/README.md) | [0](pdfs/agibot/model-cards/README.md) | [0](pdfs/agibot/system-cards/README.md) | 0 |
+| [Galaxea AI](pdfs/galaxea/README.md) | [0](pdfs/galaxea/technical-reports/README.md) | [0](pdfs/galaxea/model-cards/README.md) | [0](pdfs/galaxea/system-cards/README.md) | 0 |
 
 ## Why follow AI Frontier?
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract Core Figures"
+  short_description: "Locate, visually review, and export source-bound architectur"
+  default_prompt: "Use $af-extract-figures to complete the requested AI Frontier task within the current scope."

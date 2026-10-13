@@ -1,0 +1,4 @@
+interface:
+  display_name: "Track Frontier Models"
+  short_description: "Verify new AI model releases, current flagships, and retired"
+  default_prompt: "Use $af-track-models to complete the requested AI Frontier task within the current scope."

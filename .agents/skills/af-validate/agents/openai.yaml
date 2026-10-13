@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate AI Frontier"
+  short_description: "Check AI Frontier data consistency, source/image provenance,"
+  default_prompt: "Use $af-validate to complete the requested AI Frontier task within the current scope."

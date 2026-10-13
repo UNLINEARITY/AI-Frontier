@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract Source Summaries"
+  short_description: "Extract and cross-check original abstract or overview passag"
+  default_prompt: "Use $af-extract-summaries to complete the requested AI Frontier task within the current scope."

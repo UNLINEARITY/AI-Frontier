@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update AI Frontier"
+  short_description: "Coordinate a scoped AI Frontier model update through discove"
+  default_prompt: "Use $af-update to complete the requested AI Frontier task within the current scope."

@@ -16,6 +16,34 @@ Lead public copy with reader value and verified evidence, then offer complete pu
 
 Archive original, official AI model PDFs from 2022 onward, grouped by publisher. Accepted document types are `technical_report`, `model_card`, and `system_card`. Include reports on models or model families; do not substitute unrelated method papers, news posts, or marketing material for a missing model report.
 
+### Embodied AI
+
+The research scope also covers embodied AI from both existing frontier labs and specialist publishers. Keep the current publisher/type directory layout and the single `abstracts/` reader layer. There is no separate robotics archive or gallery.
+
+| Task identifier | Include | Boundary |
+| --- | --- | --- |
+| `robotics` | VLA, learned robot policies, manipulation, navigation, locomotion, whole-body control | A robot hardware generation is not a model version; identify the policy and embodiment separately |
+| `embodied_reasoning` | Spatial reasoning, task planning, grounding, recovery, human–robot interaction | Require explicit embodied tasks/evidence; general VLM capability alone is insufficient |
+| `world` | Learned world models, action-conditioned prediction, embodied world simulators | Video generation alone does not imply a world model; conventional simulators are not learned model releases |
+
+Official specialist starting points (not a complete inventory):
+
+| Publisher identifier | Official discovery sources |
+| --- | --- |
+| `physical_intelligence` | [Research](https://www.pi.website/), [openpi](https://github.com/Physical-Intelligence/openpi) |
+| `figure` | [Research/news](https://www.figure.ai/news), [Helix](https://www.figure.ai/helix) |
+| `skild` | [Research blog](https://skild.ai/blogs) |
+| `agibot` | [Official repositories](https://github.com/AgibotTech), model-specific author project pages linked there |
+| `galaxea` | [GalaxeaVLA](https://github.com/OpenGalaxea/GalaxeaVLA), author project pages linked there |
+
+Also review relevant families under existing publishers, including Gemini Robotics/RT/PaLM-E, GR00T/Cosmos, Qwen robotics, and other officially documented robot/world models. These are discovery leads, not assertions of current version or completeness. Extend the publisher vocabulary only after verifying the institution's official model/report provenance. Do not require or invent a publisher logo to add coverage.
+
+Use `af-track-models` for identity, release, flagship, access, and lifecycle checks; `af-collect-reports` for formal source PDFs; and the existing extraction/validation skills for reader documents. Official technical HTML can establish a model entry without becoming a PDF Technical Report. Keep a verified but not downloaded PDF in `sources.json`; do not fabricate an archived catalog row or source hash. A failed download does not mean no paper exists. Record scoped review evidence/date in model notes; optional `reviewed_at` records that entry's review without advancing the global inventory date. Optional `release_date` is a verified model announcement date, never inferred from a paper revision.
+
+Datasets and benchmarks may support a model report but are not frontier model entries. Training/simulation frameworks count only when a specific learned model is documented. Preserve the difference between a research demonstration, available API, released weights, and promised code. A newer paper revision or additional benchmark result does not create a successor model.
+
+For future source-grounded technical analysis, record the embodiment, action representation/space, sensing/proprioception, control frequency and latency hardware, training data, adaptation regime, and real-world versus simulation protocol. Keep task/trial counts, success definitions, resets/human interventions, seen/unseen environments/objects, and zero-shot versus fine-tuned conditions attached to results. Separate execution evidence from video realism; retain reported failure/contact/safety limits. Describe provider claims as reported results rather than establishing a cross-lab ranking from incompatible tasks or selected demo videos. Do not add these analysis fields to public summaries until they have actually been extracted and verified.
+
 The current stage includes PDF collection, indexing, native source-summary extraction, and visually selected core-figure export. Full-document OCR, technical-detail analysis, and automatic discovery remain future work. A static GitHub Pages browser is implemented; deployment status must be verified separately.
 
 All PDFs, including original reports and cropped figure PDFs, are local-only and ignored by Git. Public Markdown and Pages link to official sources and publish derived PNG figures; never create a link to a repository PDF. Use ordinary Git. Do not enable Git LFS. A PDF larger than 100 MiB is recorded as `oversized` with its official link; do not compress, split, or rewrite the publisher's original file to fit the limit.
@@ -78,7 +106,7 @@ python -m unittest discover -s tests
 
 ## Source curation
 
-Supported publisher identifiers are `openai`, `anthropic`, `google`, `meta`, `xai`, `mistral`, `nvidia`, `deepseek`, `qwen`, `moonshot`, `zai`, `minimax`, `stepfun`, `tencent`, `bytedance`, `cohere`, `microsoft`, and `amazon`.
+Supported publisher identifiers and task labels are defined in `VENDORS` and `MODEL_CATEGORIES` in `scripts/archive_reports.py`. Reuse those identifiers rather than maintaining a second vocabulary here. Specialist embodied publishers use the same schemas and three report types as existing labs.
 
 The historical `qwen` directory identifier groups Alibaba publisher reports, including Qwen, Wan, and Tongyi model families. Keep existing paths stable when broadening publisher coverage. A family report can replace a release-specific missing entry only when its contents support that release; preserve unresolved release details as a gap rather than assuming every intermediate checkpoint is documented.
 
@@ -168,7 +196,7 @@ Run `uv run --with-requirements requirements-abstracts.txt python scripts/extrac
 
 Run `uv run --with-requirements requirements-figures.txt python scripts/extract_figures.py`, then rerun `scripts/extract_abstracts.py` and the archive renderer to refresh reader navigation. Source selection requires actual rendered-page inspection; native text and drawing bounds aid localization. Local OCR is an optional independent check, not an authoritative caption transcription. OCR can miss small notes or confuse mathematical symbols. Do not claim that every figure was OCR-checked unless evidence exists.
 
-Exports copy original PDF content into a clipped page and render PNGs at up to 600 DPI (10,000 pixels maximum on either axis). They preserve native vector geometry and original bitmaps without AI redrawing or enhancement. Raster source detail is not improved by rendering at higher DPI. No SVG is generated in batch: cropped PDF is the vector-preserving downloadable master. Publishers retain the original rights and terms. Original source PDFs are never modified. Repeated exports use stable PDF serialization without regenerated document IDs, avoiding binary churn in Git.
+Exports copy original PDF content into a clipped page and render PNGs at up to 600 DPI (10,000 pixels maximum on either axis). They preserve native vector geometry and original bitmaps without AI redrawing or enhancement. Raster source detail is not improved by rendering at higher DPI. No SVG is generated in batch: cropped PDF is the local-only vector-preserving master. Publishers retain the original rights and terms. Original source PDFs are never modified. Repeated exports use stable PDF serialization without regenerated document IDs, avoiding binary churn in Git.
 
 A selection checksum mismatch, changed source PDF, invalid crop bounds, unsupported role, missing visual review, caption mismatch or truncation, duplicate region, clipped native text, or incomplete report coverage stops export. Review source pages and all exported crops before publishing. Explicit no-suitable-figure records preserve coverage without inventing illustrations. Paired local logs, discovery screenshots, and OCR diagnostics remain ignored.
 
@@ -178,4 +206,16 @@ A selection checksum mismatch, changed source PDF, invalid crop bounds, unsuppor
 
 `scripts/build_readers.py` renders those same Markdown files through the pinned Marked package in `site/`. Install with `npm ci --prefix site --ignore-scripts`, then build with `uv run --with-requirements requirements-pages.txt python scripts/build_pages.py`. Generated URLs are `abstracts/<vendor>/<slug>.html` and their `cn/` equivalents; old `read/` URLs redirect to these pages. English and Chinese interfaces share the original-language body. Cards link directly to the document, without a separate summary button. If a document has not been extracted, link its official report or model page without fabricating a summary.
 
-Preserve source SHA-256 checks, figure checksums, and the original 600 DPI PNG/cropped PDF files. Create shared 1800-pixel WebP previews for the website only; original downloads stay in GitHub. `shared.js` handles appearance and scrolling, and `reader.js` enlarges inline images without a separate gallery. Never commit or publish a local preview before user approval when requested.
+Preserve source SHA-256 checks, figure checksums, and the original 600 DPI PNG/cropped PDF files. Create shared 1800-pixel WebP previews for the website only; original PNG downloads stay in GitHub; cropped PDFs stay local. `shared.js` handles appearance and scrolling, and `reader.js` enlarges inline images without a separate gallery. Never commit or publish a local preview before user approval when requested.
+
+## Project skills and cross-agent continuation
+
+Start at [AGENTS.md](AGENTS.md) for the task router and repository-wide invariants. `.agents/skills/` contains seven versionable, plain-Markdown project skills; other AI tools can read their `SKILL.md` files directly when automatic discovery is unavailable. The skills reuse the existing inputs/generators and do not implement background monitoring. Do not put their instructions in public reader navigation.
+
+`python .agents/skills/af-validate/scripts/check_project.py` checks metadata, source bindings, PNG hashes, embedded captions, public links, and Git boundaries without requiring PDFs or parser packages. Add `--site .cache/pages-review` for generated-site checks, or `--local-pdfs` only when the complete local source/crop set should exist. The checker does not replace native PDF parsing, actual visual crop review, browser QA, or official-source research.
+
+`uv run --with-requirements requirements.txt python .agents/skills/af-collect-reports/scripts/collect_reports.py --vendor VENDOR --slug SLUG` downloads only named registered reports with the existing catalog/history rules, then renders indexes. Use repeatable `--slug` and optional `--refresh`; the original archive CLI remains publisher-wide.
+
+`python .agents/skills/af-collect-reports/scripts/restore_pdfs.py` lists absent PDFs needed by the existing abstracts selection. Filters `--vendor` and repeatable `--slug` narrow it; `--download` explicitly restores only the exact catalog bytes using registered URLs. It never updates source metadata or overwrites a mismatched local file. If the official historical bytes are no longer available, report that gap and review the revision explicitly. Current extraction/export CLIs process their entire selected report set, so restore those prerequisites before running a full batch.
+
+Store temporary continuation notes in ignored `.cache/handoffs/`; durable research evidence stays in the existing source/model/catalog notes. No skill invocation independently grants permission to commit, push, publish, or rewrite history.

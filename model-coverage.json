@@ -2139,14 +2139,17 @@
       "source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
       "report_slugs": [
         "gemini-robotics-er-2-model-card",
-        "gemini-robotics-on-device-2-model-card"
+        "gemini-robotics-on-device-2-model-card",
+        "gemini-robotics-2-safety-evaluations"
       ],
       "status": "family_report",
-      "note_en": "Archived cards cover ER 2 and On-Device 2; no VLA 2-specific PDF verified.",
-      "note_cn": "已收录模型卡覆盖 ER 2 与 On-Device 2；尚未核实 VLA 2 独立 PDF。",
+      "note_en": "Archived cards cover ER 2 and On-Device 2; no VLA 2-specific PDF verified. Scoped category review 2026-10-13: official release page identifies ER 2 as the embodied reasoning branch; existing family cards remain attached only to ER 2 and On-Device 2. Newly verified Safety Evaluations technical report registered but not locally collected; safety evaluation scope is not a general VLA architecture report.",
+      "note_cn": "已收录模型卡覆盖 ER 2 与 On-Device 2；尚未核实 VLA 2 独立 PDF。 2026-10-13 局部类别核查：官方发布页明确 ER 2 的具身推理定位，现有家族模型卡仅对应 ER 2 与 On-Device 2。 新核实 Safety Evaluations 技术报告并登记，本地归档待完成；安全评测范围不等同于通用 VLA 架构报告。",
       "latest_categories": [
-        "robotics"
-      ]
+        "robotics",
+        "embodied_reasoning"
+      ],
+      "reviewed_at": "2026-10-13"
     },
     {
       "vendor": "google",
@@ -2329,6 +2332,114 @@
         "general",
         "coding"
       ]
+    },
+    {
+      "vendor": "physical_intelligence",
+      "model": "π0.7",
+      "source_url": "https://www.pi.website/blog/pi07",
+      "status": "unconfirmed",
+      "report_slugs": [
+        "pi-0-7"
+      ],
+      "note_en": "Scoped review 2026-10-13: official model announcement dated 2026-04-16 and official indexed PDF title confirmed. Direct PDF fetch returned 403; local capture and source extraction pending. This research model is distinct from openpi released checkpoints.",
+      "note_cn": "2026-10-13 局部核查：官方模型公告日期为 2026-04-16，官方索引可核实报告题名。直接获取 PDF 返回 403；本地归档与原文提取待完成。该研究模型与 openpi 已发布权重区分。",
+      "reviewed_at": "2026-10-13",
+      "latest_categories": [
+        "robotics"
+      ],
+      "release_date": "2026-04-16"
+    },
+    {
+      "vendor": "figure",
+      "model": "Helix 2.5",
+      "source_url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization",
+      "status": "web_only",
+      "report_slugs": [],
+      "note_en": "Scoped review 2026-10-13: official technical article introduces Helix 2.5 on 2026-09-17; methods/evaluations are on the web, with no corresponding standalone PDF verified in the checked article. Figure 03 hardware and Index dataset are separate objects; provider internal success results do not establish a cross-lab ranking.",
+      "note_cn": "2026-10-13 局部核查：官方技术文章于 2026-09-17 介绍 Helix 2.5；方法与评测为网页资料，在该文章中未核实对应独立 PDF。Figure 03 硬件及 Index 数据集单独区分，厂商内部成功率不构成跨厂商排名。",
+      "reviewed_at": "2026-10-13",
+      "latest_categories": [
+        "robotics"
+      ],
+      "release_date": "2026-09-17"
+    },
+    {
+      "vendor": "skild",
+      "model": "S1",
+      "source_url": "https://skild.ai/blogs/s1",
+      "status": "web_only",
+      "report_slugs": [],
+      "note_en": "Scoped review 2026-10-13: official blog index dates S1 introduction to 2026-08-18; the technical article describes it as the flagship in-context robotics model. September 23 physical self-play is a post-training result, not evidence of a separately named successor. No S1 standalone PDF verified in the checked official posts.",
+      "note_cn": "2026-10-13 局部核查：官方博客目录记录 S1 于 2026-08-18 发布，技术文章明确其旗舰及机器人上下文学习定位。9 月 23 日物理自博弈属于后训练结果，并非独立命名的新一代模型；在所查官方文章中未核实 S1 独立 PDF。",
+      "reviewed_at": "2026-10-13",
+      "latest_categories": [
+        "robotics"
+      ],
+      "release_date": "2026-08-18"
+    },
+    {
+      "vendor": "agibot",
+      "model": "GE-Act 2.0",
+      "source_url": "https://ge-act-v2.github.io/",
+      "status": "unconfirmed",
+      "report_slugs": [
+        "ge-act-2-0"
+      ],
+      "note_en": "Scoped review 2026-10-13: official AgibotTech repository announces GE-Act 2.0 on 2026-09-10, linking the author project and arXiv:2609.05588v1. A verified model-specific paper exists; local PDF collection and extraction are pending. Code is described as coming soon; do not imply released weights/code.",
+      "note_cn": "2026-10-13 局部核查：智元官方仓库记录 GE-Act 2.0 于 2026-09-10 发布，并链接作者项目及 arXiv:2609.05588v1。已核实专属论文，本地 PDF 归档和提取待完成；项目代码标为即将开放，不宣称代码或权重已经发布。",
+      "reviewed_at": "2026-10-13",
+      "latest_categories": [
+        "robotics"
+      ],
+      "release_date": "2026-09-10"
+    },
+    {
+      "vendor": "agibot",
+      "model": "GE-Sim 2.0",
+      "source_url": "https://ge-sim-v2.github.io/",
+      "status": "unconfirmed",
+      "report_slugs": [
+        "ge-sim-2-0"
+      ],
+      "note_en": "Scoped review 2026-10-13: official AgibotTech repository records release on 2026-05-28; author project links arXiv:2605.27491v1. Learned video/world simulation includes state and task-evaluation modules. Verified paper exists; local collection/extraction pending.",
+      "note_cn": "2026-10-13 局部核查：智元官方仓库记录发布日为 2026-05-28，作者项目链接 arXiv:2605.27491v1。该学习式视频世界模拟器包含状态与任务评估模块。已核实论文，本地归档与提取待完成。",
+      "reviewed_at": "2026-10-13",
+      "latest_categories": [
+        "world"
+      ],
+      "release_date": "2026-05-28"
+    },
+    {
+      "vendor": "agibot",
+      "model": "GenieReasoner",
+      "source_url": "https://geniereasoner.github.io/GenieReasoner/",
+      "status": "unconfirmed",
+      "report_slugs": [
+        "genie-reasoner"
+      ],
+      "note_en": "Scoped review 2026-10-13: official AgiBot Research project documents an embodied reasoning/action model and links arXiv:2512.24125v3. Retained as a distinct reasoning family; July paper revision is not a model release. No separately verified model announcement date; local PDF collection/extraction pending.",
+      "note_cn": "2026-10-13 局部核查：智元研究项目介绍具身推理与动作模型，链接 arXiv:2512.24125v3。作为独立推理家族保留，7 月论文修订不视为模型发布；模型首次公告日期未单独核实，本地 PDF 归档与提取待完成。",
+      "reviewed_at": "2026-10-13",
+      "frontier_categories": [
+        "embodied_reasoning"
+      ]
+    },
+    {
+      "vendor": "galaxea",
+      "model": "G0.5",
+      "source_url": "https://github.com/OpenGalaxea/GalaxeaVLA",
+      "status": "unconfirmed",
+      "report_slugs": [
+        "g0-5"
+      ],
+      "note_en": "Scoped review 2026-10-13: official README introduces G0.5 on 2026-06-01, releases base checkpoint on June 16, and links the model paper published August 12 (arXiv:2608.11739v1). Unified autoregressive reasoning/action stream; Galaxea Open-World Dataset and R1 hardware are not model versions. Paper verified; local PDF collection/extraction pending.",
+      "note_cn": "2026-10-13 局部核查：官方 README 记录 G0.5 于 2026-06-01 介绍、6 月 16 日发布基础权重、8 月 12 日发表专属论文 arXiv:2608.11739v1。推理与动作采用统一自回归序列；Galaxea Open-World 数据集与 R1 硬件不视为模型版本。已核实论文，本地 PDF 归档与提取待完成。",
+      "reviewed_at": "2026-10-13",
+      "latest_categories": [
+        "robotics",
+        "embodied_reasoning"
+      ],
+      "release_date": "2026-06-01"
     }
   ]
 }

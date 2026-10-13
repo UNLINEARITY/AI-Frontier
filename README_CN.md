@@ -8,9 +8,9 @@
 
 [在线浏览](https://unlinearity.github.io/AI-Frontier/cn/) · [前沿模型](LATEST_MODELS_CN.md) · [完整索引](catalog.csv)
 
-一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，并逐步推进可读原文、基于来源的技术分析与模型发布追踪。
+一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。覆盖语言与多模态模型、机器人与 VLA、具身推理以及世界模型。我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，并逐步推进可读原文、基于来源的技术分析与模型发布追踪。
 
-**385 份报告 · 18 家厂商 · 2022 年起**
+**385 份报告 · 23 家厂商 · 2022 年起**
 
 **当前已提供：**官方报告索引、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。
 
@@ -54,6 +54,11 @@
 | [Cohere](pdfs/cohere/README_CN.md) | [8](pdfs/cohere/technical-reports/README_CN.md) | [0](pdfs/cohere/model-cards/README_CN.md) | [0](pdfs/cohere/system-cards/README_CN.md) | 8 |
 | [Microsoft / Phi / MAI](pdfs/microsoft/README_CN.md) | [9](pdfs/microsoft/technical-reports/README_CN.md) | [8](pdfs/microsoft/model-cards/README_CN.md) | [0](pdfs/microsoft/system-cards/README_CN.md) | 17 |
 | [Amazon / Nova](pdfs/amazon/README_CN.md) | [4](pdfs/amazon/technical-reports/README_CN.md) | [0](pdfs/amazon/model-cards/README_CN.md) | [3](pdfs/amazon/system-cards/README_CN.md) | 7 |
+| [Physical Intelligence](pdfs/physical_intelligence/README_CN.md) | [0](pdfs/physical_intelligence/technical-reports/README_CN.md) | [0](pdfs/physical_intelligence/model-cards/README_CN.md) | [0](pdfs/physical_intelligence/system-cards/README_CN.md) | 0 |
+| [Figure AI](pdfs/figure/README_CN.md) | [0](pdfs/figure/technical-reports/README_CN.md) | [0](pdfs/figure/model-cards/README_CN.md) | [0](pdfs/figure/system-cards/README_CN.md) | 0 |
+| [Skild AI](pdfs/skild/README_CN.md) | [0](pdfs/skild/technical-reports/README_CN.md) | [0](pdfs/skild/model-cards/README_CN.md) | [0](pdfs/skild/system-cards/README_CN.md) | 0 |
+| [AgiBot](pdfs/agibot/README_CN.md) | [0](pdfs/agibot/technical-reports/README_CN.md) | [0](pdfs/agibot/model-cards/README_CN.md) | [0](pdfs/agibot/system-cards/README_CN.md) | 0 |
+| [Galaxea AI](pdfs/galaxea/README_CN.md) | [0](pdfs/galaxea/technical-reports/README_CN.md) | [0](pdfs/galaxea/model-cards/README_CN.md) | [0](pdfs/galaxea/system-cards/README_CN.md) | 0 |
 
 ## 为什么值得持续关注？
 

@@ -170,3 +170,11 @@ GLM-5.3 / Flash、Step-3.7-Flash 与 MiniMax M3 / H3 / Music3 的官方网页或
 OpenAI 补收 GPT-5.6 的 August Updates 安全报告，与 7 月系统卡分别归档；更新日期不代表新增模型发布日期。Cohere 补收 North Small Translate 与 Command-A-Translate 技术报告，Command A+、North Mini Code / Micro Vision、Transcribe 系列及 Mistral Medium 3.5 的网页模型卡登记原始 PDF 缺口。Cohere Transcribe 的原始仓库文件需授权访问，未断言不可访问文件中没有 PDF。Embed5、Rerank4、Parse5 和 Grok 的图像、视频、语音分支已有官方模型入口，但独立报告仍待核实。
 
 Meta 补收 Muse Spark 安全与准备度报告和 Muse Spark1.1 完整评估报告；Muse Spark1.3 / 1.2、Muse Code 及其他新模态分支仍逐项标注待核实，未把短篇评测方法附件计为核心模型报告。Microsoft 补入 MAI-Thinking-1 技术报告及 Transcribe2、Cyber1Flash、Image2.6、Voice2、Code1.1Flash 模型卡，厂商目录扩展为 Phi / MAI。NVIDIA 补收 Nemotron Labs Audex 技术报告；GR00T N1.7 的新版本独立报告不以旧 N1 报告替代。Amazon 补入 Nova2Lite 与 NovaPremier 的前沿安全报告；NovaAct 原始 AI Service Card 保持已归档。
+
+## 具身智能范围扩展（2026-10-13，局部核查）
+
+新增 Physical Intelligence、Figure AI、Skild AI、AgiBot 与 Galaxea AI 的官方模型入口，沿用现有厂商和三类报告目录。涵盖机器人/VLA、具身推理与规划、世界模型与仿真；当前条目不构成具身智能领域的完整性声明，已有大厂条目也尚未在本轮全部重新核查。
+
+已登记 π0.7、GE-Act 2.0、GE-Sim 2.0、GenieReasoner、G0.5 和 Gemini Robotics 2 Safety Evaluations 的报告来源。新增 PDF 尚未完成本地下载、哈希验证或概要/图片提取；官方报告入口可直接阅读。π0.7 的题名和 PDF 入口由官方检索索引核实，直接访问返回 403，报告首次发表日期留空。
+
+Figure Helix 2.5、Skild S1 以官方技术网页为入口，在所查文章中未核实对应独立 PDF；这不表示已穷尽其他渠道。Figure 03 等机器人硬件、Index 等数据集、ERIQ 等评测集单独区分，不计为前沿模型。论文提交、论文修订、模型介绍与权重发布分别记录；例如 G0.5 的模型介绍、基础权重发布和 arXiv 论文发表不是同一天。

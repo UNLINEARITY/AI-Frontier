@@ -160,6 +160,19 @@ class ArchiveTests(unittest.TestCase):
             self.assertNotIn("Earlier model", text)
             self.assertNotIn("Retired video", text)
 
+    def test_registered_embodied_paper_links_to_official_source_before_download(self):
+        source = {**self.source, 'vendor': 'agibot', 'source_url': 'https://example.org/paper'}
+        (self.root / 'sources.json').write_text(json.dumps([source]))
+        model = dict(vendor='agibot', model='Robot policy', source_url='https://example.org/project',
+                     report_slugs=['example'], latest_categories=['robotics', 'embodied_reasoning'])
+        (self.root / 'model-coverage.json').write_text(json.dumps(dict(checked_at='2026-10-03', models=[model])))
+        archive.render_model_coverage([])
+        for name in ('LATEST_MODELS.md', 'LATEST_MODELS_CN.md'):
+            text = (self.root / name).read_text()
+            self.assertEqual(text.count('Robot policy'), 1)
+            self.assertIn('[Technical Report](https://example.org/paper)', text)
+            self.assertNotIn('.pdf)', text)
+
     def test_frontier_rejects_two_latest_models_in_one_category(self):
         (self.root / "sources.json").write_text("[]")
         models = [dict(vendor="openai", model=name, source_url="https://example.org",
