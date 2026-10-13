@@ -1,6 +1,6 @@
 # Step-Video-TI2V Technical Report: A State-of-the-Art Text-Driven Image-to-Video Generation Model
 
-[PDF](../../pdfs/stepfun/technical-reports/step-video-ti2v--arxiv-v1.pdf#page=1) · [Official source](https://github.com/stepfun-ai/Step-Video-TI2V)
+[Official source](https://github.com/stepfun-ai/Step-Video-TI2V)
 
 ## Abstract
 
@@ -12,4 +12,4 @@ Figure 1: Overview of Step-Video-TI2V. Based on the pre-trained T2V model, we in
 modifications: Image Conditioning and Motion Conditioning. These enhancements enable video
 generation from a given image while allowing users to adjust the dynamic level of the output video.
 
-[p. 2](../../pdfs/stepfun/technical-reports/step-video-ti2v--arxiv-v1.pdf#page=2) · [PDF](../../figures/stepfun/step-video-ti2v/figure-01.pdf)
+p. 2

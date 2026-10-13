@@ -1,6 +1,6 @@
 # GPT-Live System Card
 
-[PDF](../../pdfs/openai/system-cards/gpt-live-system-card.pdf#page=2) · [Official source](https://deploymentsafety.openai.com/gpt-live)
+[Official source](https://deploymentsafety.openai.com/gpt-live)
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 # MAI-Voice-2.1 Model Card
 
-[PDF](../../pdfs/microsoft/model-cards/mai-voice-2-1-model-card.pdf#page=1) · [Official source](https://microsoft.ai/news/our-first-streaming-transcription-model/)
+[Official source](https://microsoft.ai/news/our-first-streaming-transcription-model/)
 
 ## Overview
 

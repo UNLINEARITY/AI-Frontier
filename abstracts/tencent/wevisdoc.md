@@ -1,6 +1,6 @@
 # WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing
 
-[PDF](../../pdfs/tencent/technical-reports/wevisdoc--arxiv-v1.pdf#page=1) · [Official source](https://huggingface.co/tencent/WeVisDoc-4B)
+[Official source](https://huggingface.co/tencent/WeVisDoc-4B)
 
 ## Abstract
 
@@ -12,7 +12,7 @@ Figure 1 WeVisDoc-4B leads the compared end-to-end parsers across all four repor
 scores on OmniDocBench v1.6 and the three PureDocBench robustness tracks; WeVisDoc-2B delivers top-tier end-to-
 end performance at half the parameter count.
 
-[p. 1](../../pdfs/tencent/technical-reports/wevisdoc--arxiv-v1.pdf#page=1) · [PDF](../../figures/tencent/wevisdoc/figure-01.pdf)
+p. 1
 
 ![Figure 2](../../figures/tencent/wevisdoc/figure-02.png)
 
@@ -20,4 +20,4 @@ Figure 2 Stage I data construction. Collected sources are normalized through mul
 synthesis generates exact semantic and structural targets. Both data sources enter a shared clean pool. Appearance
 augmentation is then applied according to the source to form the Stage I mixture.
 
-[p. 6](../../pdfs/tencent/technical-reports/wevisdoc--arxiv-v1.pdf#page=6) · [PDF](../../figures/tencent/wevisdoc/figure-02.pdf)
+p. 6

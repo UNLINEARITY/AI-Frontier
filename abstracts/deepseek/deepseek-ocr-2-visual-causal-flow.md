@@ -1,6 +1,6 @@
 # DeepSeek-OCR 2: Visual Causal Flow
 
-[PDF](../../pdfs/deepseek/technical-reports/deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf#page=1) · [Official source](https://github.com/deepseek-ai/DeepSeek-OCR-2)
+[Official source](https://github.com/deepseek-ai/DeepSeek-OCR-2)
 
 ## Abstract
 
@@ -15,11 +15,11 @@ By customizing the attention mask, visual tokens utilize bidirectional attention
 queries adopt causal attention. Each query token can thus attend to all visual tokens and
 preceding queries, allowing progressive causal reordering over visual information.
 
-[p. 1](../../pdfs/deepseek/technical-reports/deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf#page=1) · [PDF](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-01.pdf)
+p. 1
 
 ![Figure 5](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-02.png)
 
 Figure 5 | Attention mask architecture of DeepEncoder V2. Concatenation of bidirectional mask
 (vision tokens, ViT-like) and causal triangular mask (flow tokens, LLM decoder-style).
 
-[p. 7](../../pdfs/deepseek/technical-reports/deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf#page=7) · [PDF](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-02.pdf)
+p. 7

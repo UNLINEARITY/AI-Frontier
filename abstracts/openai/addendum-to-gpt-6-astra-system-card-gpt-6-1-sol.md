@@ -1,6 +1,6 @@
 # Addendum to GPT-6 Astra System Card: GPT-6.1 Sol
 
-[PDF](../../pdfs/openai/system-cards/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol.pdf#page=4) · [Official source](https://deploymentsafety.openai.com/gpt-6-1-sol)
+[Official source](https://deploymentsafety.openai.com/gpt-6-1-sol)
 
 ## Introduction
 
@@ -14,10 +14,10 @@ Under our Preparedness Framework, we are treating GPT-6.1 Sol as Critical in cyb
 
 Figure 1
 
-[p. 6](../../pdfs/openai/system-cards/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol.pdf#page=6) · [PDF](../../figures/openai/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol/figure-01.pdf)
+p. 6
 
 ![Figure 5](../../figures/openai/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol/figure-02.png)
 
 Figure 5
 
-[p. 14](../../pdfs/openai/system-cards/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol.pdf#page=14) · [PDF](../../figures/openai/addendum-to-gpt-6-astra-system-card-gpt-6-1-sol/figure-02.pdf)
+p. 14

@@ -1,6 +1,6 @@
 # StepAudio 3 Music Technical Report
 
-[PDF](../../pdfs/stepfun/technical-reports/step-audio-3-music--arxiv-v1.pdf#page=1) · [Official source](https://arxiv.org/abs/2609.16034)
+[Official source](https://arxiv.org/abs/2609.16034)
 
 ## Abstract
 
@@ -13,7 +13,7 @@ benchmark families. Scores are divided by the best observed score per metric (1.
 truncated to 0.60–1.00. Purple denotes StepAudio 3 Music. Compare systems within each metric; polygon area is not an aggregate
 score. Curves provide a visual approximation; exact scores are in table 3.
 
-[p. 1](../../pdfs/stepfun/technical-reports/step-audio-3-music--arxiv-v1.pdf#page=1) · [PDF](../../figures/stepfun/step-audio-3-music/figure-01.pdf)
+p. 1
 
 ![Figure 2](../../figures/stepfun/step-audio-3-music/figure-02.png)
 
@@ -23,4 +23,4 @@ then predicts a 50-Hz sequence from a 65536-entry single codebook. A separately 
 latents with a ﬂow-matching DiT and decodes them into 48-kHz waveform audio. The renderer is held ﬁxed during autoregressive-
 model training.
 
-[p. 4](../../pdfs/stepfun/technical-reports/step-audio-3-music--arxiv-v1.pdf#page=4) · [PDF](../../figures/stepfun/step-audio-3-music/figure-02.pdf)
+p. 4

@@ -1,6 +1,6 @@
 # MAI-Thinking-1: Building a Hill-Climbing Machine
 
-[PDF](../../pdfs/microsoft/technical-reports/mai-thinking-1-technical-report.pdf#page=1) · [Official source](https://microsoft.ai/models/mai-thinking-1/)
+[Official source](https://microsoft.ai/models/mai-thinking-1/)
 
 ## Abstract
 
@@ -12,7 +12,7 @@ Figure 2. Overview of the MAI-Base-1 architecture. Left: the overall layout of t
 interleave high-sparsity MoE layers with small dense FFNs, and global attention with local attention. Right: The
 MoE layer, in which 8 of 512 experts are activated per token in a compressed latent space.
 
-[p. 5](../../pdfs/microsoft/technical-reports/mai-thinking-1-technical-report.pdf#page=5) · [PDF](../../figures/microsoft/mai-thinking-1-technical-report/figure-01.pdf)
+p. 5
 
 ![Figure 15](../../figures/microsoft/mai-thinking-1-technical-report/figure-02.png)
 
@@ -23,4 +23,4 @@ effective way of resetting numerics after a collapse (visible through sudden dro
 the base policy during our run. As we made infrastructure and algorithmic improvements throughout our climb,
 self-distillation because of run collapses became less frequent.
 
-[p. 35](../../pdfs/microsoft/technical-reports/mai-thinking-1-technical-report.pdf#page=35) · [PDF](../../figures/microsoft/mai-thinking-1-technical-report/figure-02.pdf)
+p. 35

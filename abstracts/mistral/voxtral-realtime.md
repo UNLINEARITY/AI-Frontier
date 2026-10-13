@@ -1,6 +1,6 @@
 # Voxtral Realtime
 
-[PDF](../../pdfs/mistral/technical-reports/voxtral-realtime--arxiv-v3.pdf#page=1) · [Official source](https://arxiv.org/abs/2602.11298)
+[Official source](https://arxiv.org/abs/2602.11298)
 
 ## Abstract
 
@@ -14,7 +14,7 @@ At 480 ms delay, Voxtral Realtime is competitive with Scribe v2 Realtime, the le
 as well as Whisper, the most popular open-source offline model. It surpasses both baselines at 960 ms delay,
 approaching the performance of Voxtral Mini Transcribe V2, a state-of-the-art offline transcription model.
 
-[p. 1](../../pdfs/mistral/technical-reports/voxtral-realtime--arxiv-v3.pdf#page=1) · [PDF](../../figures/mistral/voxtral-realtime/figure-01.pdf)
+p. 1
 
 ![Figure 2](../../figures/mistral/voxtral-realtime/figure-02.png)
 
@@ -27,4 +27,4 @@ the text decoder, which predicts one token per frame. The decoder emits a paddin
 for sufficient acoustic evidence. Once a word is acoustically complete and the target delay τ has elapsed, a
 word-boundary token [W] is emitted to initiate generation, followed by the corresponding subword tokens.
 
-[p. 3](../../pdfs/mistral/technical-reports/voxtral-realtime--arxiv-v3.pdf#page=3) · [PDF](../../figures/mistral/voxtral-realtime/figure-02.pdf)
+p. 3

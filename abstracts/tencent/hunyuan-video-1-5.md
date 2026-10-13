@@ -1,6 +1,6 @@
 # HunyuanVideo 1.5 Technical Report
 
-[PDF](../../pdfs/tencent/technical-reports/hunyuan-video-1-5--arxiv-v2.pdf#page=1) · [Official source](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5)
+[Official source](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5)
 
 ## Abstract
 
@@ -10,10 +10,10 @@ We present HunyuanVideo 1.5, a lightweight yet powerful open-source video genera
 
 Figure 1: Caption Model Post-training Pipeline.
 
-[p. 3](../../pdfs/tencent/technical-reports/hunyuan-video-1-5--arxiv-v2.pdf#page=3) · [PDF](../../figures/tencent/hunyuan-video-1-5/figure-01.pdf)
+p. 3
 
 ![Figure 2](../../figures/tencent/hunyuan-video-1-5/figure-02.png)
 
 Figure 2: Architecture of the Unified Diffusion Transformer.
 
-[p. 4](../../pdfs/tencent/technical-reports/hunyuan-video-1-5--arxiv-v2.pdf#page=4) · [PDF](../../figures/tencent/hunyuan-video-1-5/figure-02.pdf)
+p. 4

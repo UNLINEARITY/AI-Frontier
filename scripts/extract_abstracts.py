@@ -287,9 +287,8 @@ def write_outputs(output, reports, missing, write_index=True):
         target = output / report['vendor'] / f'{slug}.md'
         target.parent.mkdir(exist_ok=True)
         report['markdown_path'] = str(target.relative_to(ROOT))
-        source = f"../../{report['source_pdf']}" + (f"#page={report['pages'][0]}" if report['pages'] else '')
         lines = [f"# {report['title']}", '',
-                 f"[PDF]({source}) · [Official source]({report['source_url']})", '']
+                 f"[Official source]({report['source_url']})", '']
         if report['text']:
             if report['source_heading']:
                 lines += [f"## {report['source_heading']}", '']
@@ -299,7 +298,7 @@ def write_outputs(output, reports, missing, write_index=True):
             for figure in selected.get('figures', []):
                 number = f"Figure {figure['figure_number']}" if figure['figure_number'] is not None else 'Figure'
                 lines += [f"![{number}](../../{figure['png_path']})", '', figure['caption'], '',
-                          f"[p. {figure['page']}](../../{report['source_pdf']}#page={figure['page']}) · [PDF](../../{figure['pdf_path']})", '']
+                          f"p. {figure['page']}", '']
         target.write_text('\n'.join(line.rstrip() for line in '\n'.join(lines).splitlines()).rstrip() + '\n')
     payload = dict(schema_version=1, extracted_at=date.today().isoformat(), reports=reports,
                    models_without_archived_reports=missing)

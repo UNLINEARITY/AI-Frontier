@@ -1,6 +1,6 @@
 # Gemini 3.8 Flash Model Card
 
-[PDF](../../pdfs/google/model-cards/gemini-3-8-flash-model-card.pdf#page=2) · [Official source](https://deepmind.google/models/model-cards/gemini-3-8-flash/)
+[Official source](https://deepmind.google/models/model-cards/gemini-3-8-flash/)
 
 ## Description
 

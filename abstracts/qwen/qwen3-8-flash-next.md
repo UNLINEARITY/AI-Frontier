@@ -1,6 +1,6 @@
 # On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability
 
-[PDF](../../pdfs/qwen/technical-reports/qwen3-8-flash-next.pdf#page=1) · [Official source](https://github.com/QwenLM/Qwen3.8-Flash-Next)
+[Official source](https://github.com/QwenLM/Qwen3.8-Flash-Next)
 
 ## Abstract
 
@@ -13,7 +13,7 @@ layer per block of four. Every sublayer reads and writes through GR, which widen
 and gates the read elementwise. An n-gram embedding layer at Layer 2 scales capacity off the accelerator
 via host-memory prefetching. The MTP module reuses QSA indices across speculative decoding steps.
 
-[p. 2](../../pdfs/qwen/technical-reports/qwen3-8-flash-next.pdf#page=2) · [PDF](../../figures/qwen/qwen3-8-flash-next/figure-01.pdf)
+p. 2
 
 ![Figure 5](../../figures/qwen/qwen3-8-flash-next/figure-02.png)
 
@@ -21,4 +21,4 @@ Figure 5: Architecture ablations of QSA on RULER. (a) QSA performance with diffe
 “Keep x” indicates the number of IndexShare indexer layers retained for computation. (b) Performance
 with different numbers of indexer query heads after dense distillation and sparse training.
 
-[p. 9](../../pdfs/qwen/technical-reports/qwen3-8-flash-next.pdf#page=9) · [PDF](../../figures/qwen/qwen3-8-flash-next/figure-02.pdf)
+p. 9

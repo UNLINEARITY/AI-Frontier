@@ -52,6 +52,14 @@ class ReaderTests(unittest.TestCase):
         self.assertIn('../../../abstracts/lab/model.html', old)
         self.assertEqual(reader_path(self.summary), 'abstracts/lab/model.html')
 
+    def test_cards_use_official_sources_without_a_summary(self):
+        from build_pages import report_target
+        row = dict(local_path='pdfs/model.pdf', sha256='source', source_url='https://example.org/report')
+        self.assertEqual(report_target(row, {}), row['source_url'])
+        self.assertEqual(report_target(row, {'pdfs/model.pdf': self.summary}), 'abstracts/lab/model.html')
+        self.summary['source_sha256'] = 'stale'
+        self.assertEqual(report_target(row, {'pdfs/model.pdf': self.summary}), row['source_url'])
+
     def test_stale_source_and_figure_selection_rejected(self):
         self.summary['source_sha256'] = 'changed'
         with self.assertRaisesRegex(ValueError, 'Stale summary'):
@@ -76,7 +84,8 @@ class ReaderTests(unittest.TestCase):
         self.assertIn('Figure 7', en)
         self.assertIn('Original caption &lt;&amp;&gt;', en)
         self.assertIn('/raw/refs/heads/main/figures/lab/model/figure-01.png', en)
-        self.assertIn('/blob/main/figures/lab/model/figure-01.pdf', en)
+        self.assertNotIn('/blob/main/figures/lab/model/figure-01.pdf', en)
+        self.assertNotIn('/blob/main/pdfs/model.pdf', en)
         self.assertIn('class="inline-image"', en)
         self.assertNotIn('figure-card', en)
         self.assertFalse(list(self.output.rglob('*.pdf')))

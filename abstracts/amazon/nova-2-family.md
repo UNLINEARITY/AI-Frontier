@@ -1,6 +1,6 @@
 # Amazon Nova 2: Multimodal Reasoning and Generation Models
 
-[PDF](../../pdfs/amazon/technical-reports/nova-2-family.pdf#page=1) · [Official source](https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models)
+[Official source](https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models)
 
 ## Abstract
 
@@ -10,7 +10,7 @@ We present Amazon Nova 2, a family of four foundation models designed to meet di
 
 Figure 1: Amazon Nova 2 Family of Models
 
-[p. 1](../../pdfs/amazon/technical-reports/nova-2-family.pdf#page=1) · [PDF](../../figures/amazon/nova-2-family/figure-01.pdf)
+p. 1
 
 ![Figure 2](../../figures/amazon/nova-2-family/figure-02.png)
 
@@ -22,4 +22,4 @@ the configurable trade-off between speed and intelligence
 that Nova 2 provides through its low, medium, and high
 reasoning effort settings.
 
-[p. 3](../../pdfs/amazon/technical-reports/nova-2-family.pdf#page=3) · [PDF](../../figures/amazon/nova-2-family/figure-02.pdf)
+p. 3

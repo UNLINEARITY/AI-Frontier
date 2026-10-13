@@ -1,6 +1,6 @@
 # StepAudio 3 Gen Technical Report
 
-[PDF](../../pdfs/stepfun/technical-reports/step-audio-3-gen--arxiv-v1.pdf#page=1) · [Official source](https://arxiv.org/abs/2609.12945)
+[Official source](https://arxiv.org/abs/2609.12945)
 
 ## Abstract
 
@@ -13,10 +13,10 @@ Predictor conditions on the LLM hidden state and c0 to predict c1, . . . , c15. 
 used for waveform decoding. ⊕denotes element-wise addition: at audio positions, the RVQ Adaptor output is added to
 the corresponding token embedding (§2.2).
 
-[p. 4](../../pdfs/stepfun/technical-reports/step-audio-3-gen--arxiv-v1.pdf#page=4) · [PDF](../../figures/stepfun/step-audio-3-gen/figure-01.pdf)
+p. 4
 
 ![Figure 2](../../figures/stepfun/step-audio-3-gen/figure-02.png)
 
 Figure 2: Human evaluation on the Chinese human-likeness test set.
 
-[p. 12](../../pdfs/stepfun/technical-reports/step-audio-3-gen--arxiv-v1.pdf#page=12) · [PDF](../../figures/stepfun/step-audio-3-gen/figure-02.pdf)
+p. 12

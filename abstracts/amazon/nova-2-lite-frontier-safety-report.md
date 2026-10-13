@@ -1,6 +1,6 @@
 # Evaluating Nova 2.0 Lite model under Amazon's Frontier Model Safety Framework
 
-[PDF](../../pdfs/amazon/system-cards/nova-2-lite-frontier-safety-report--arxiv-v1.pdf#page=1) · [Official source](https://arxiv.org/abs/2601.19134)
+[Official source](https://arxiv.org/abs/2601.19134)
 
 ## Abstract
 
@@ -11,11 +11,11 @@ Amazon published its Frontier Model Safety Framework (FMSF) as part of the Paris
 Figure 1: CBRN automated benchmark results comparing models across four datasets. For Nova 2.0 Lite, we present
 the best result among all the reasoning modes (low’,’medium’, and ‘high’).
 
-[p. 2](../../pdfs/amazon/system-cards/nova-2-lite-frontier-safety-report--arxiv-v1.pdf#page=2) · [PDF](../../figures/amazon/nova-2-lite-frontier-safety-report/figure-01.pdf)
+p. 2
 
 ![Figure 2](../../figures/amazon/nova-2-lite-frontier-safety-report/figure-02.png)
 
 Figure 2: Offensive Cyber Security Knowledge Benchmarks comparing Nova 2.0 Lite against previous generation
 baselines. For Nova 2.0 Lite, we present the best result among all the reasoning modes (‘low’, ‘medium’, and ‘high’).
 
-[p. 4](../../pdfs/amazon/system-cards/nova-2-lite-frontier-safety-report--arxiv-v1.pdf#page=4) · [PDF](../../figures/amazon/nova-2-lite-frontier-safety-report/figure-02.pdf)
+p. 4

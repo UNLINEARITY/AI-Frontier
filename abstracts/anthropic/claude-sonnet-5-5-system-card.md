@@ -1,6 +1,6 @@
 # System Card: Claude Sonnet 5.5
 
-[PDF](../../pdfs/anthropic/system-cards/claude-sonnet-5-5-system-card.pdf#page=2) · [Official source](https://www.anthropic.com/claude-sonnet-5-5-system-card)
+[Official source](https://www.anthropic.com/claude-sonnet-5-5-system-card)
 
 ## Executive summary
 
@@ -44,7 +44,7 @@ resampled fits but measure each score’s movement relative to the three precedi
 anchors the ECI scale at 130, so it has no global CI (its local error bar reflects uncertainty in the models before
 it). Scores of recent models on the new scale are reported for direct comparison.
 
-[p. 21](../../pdfs/anthropic/system-cards/claude-sonnet-5-5-system-card.pdf#page=21) · [PDF](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-01.pdf)
+p. 21
 
 ![Figure 8.4.A](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-02.png)
 
@@ -56,4 +56,4 @@ with its effort level; for every other model the labeled points are its lowest a
 result files carry no uncertainty intervals, so none are shown; Cognition's published figures report error bars.
 Note that the y-axis begins at 27%, not at zero, so differences between points are visually magnified.
 
-[p. 111](../../pdfs/anthropic/system-cards/claude-sonnet-5-5-system-card.pdf#page=111) · [PDF](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-02.pdf)
+p. 111

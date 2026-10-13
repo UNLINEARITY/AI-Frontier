@@ -2,7 +2,7 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**0 archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**0 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 No documents of this type have been added yet. Contributions with official source links are welcome.
 

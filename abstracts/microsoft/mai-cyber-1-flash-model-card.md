@@ -1,6 +1,6 @@
 # MAI-Cyber-1-Flash Model Card
 
-[PDF](../../pdfs/microsoft/model-cards/mai-cyber-1-flash-model-card.pdf#page=2) · [Official source](https://microsoft.ai/models/mai-cyber-1-flash/)
+[Official source](https://microsoft.ai/models/mai-cyber-1-flash/)
 
 ## 1. Model overview
 

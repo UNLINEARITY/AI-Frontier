@@ -6,7 +6,7 @@
 
 ## 按类型浏览
 
-| 类型 | 已归档 PDF |
+| 类型 | 已收录报告 |
 | --- | ---: |
 | [技术报告](technical-reports/README_CN.md) | 11 |
 | [模型卡](model-cards/README_CN.md) | 0 |
@@ -16,17 +16,17 @@
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
-| 2026-07-28 | [Shieldstral](technical-reports/shieldstral--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.25857) |
-| 2026-07-22 | [Robostral Navigate](technical-reports/robostral-navigate--arxiv-v3.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.20785) |
-| 2026-07-02 | [Leanstral](technical-reports/leanstral.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://mistral.ai/news/leanstral-1-5/) |
-| 2026-03-26 | [Voxtral TTS](technical-reports/voxtral-tts--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2603.25551) |
-| 2026-02-11 | [Voxtral Realtime](technical-reports/voxtral-realtime--arxiv-v3.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2602.11298) |
-| 2026-01-13 | [Ministral 3](technical-reports/ministral-3--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://mistral.ai/news/mistral-3/) |
-| 2025-07-17 | [Voxtral](technical-reports/voxtral--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2507.13264) |
-| 2025-06-12 | [Magistral](technical-reports/magistral--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2506.10910) |
-| 2024-10-09 | [Pixtral 12B](technical-reports/pixtral-12b--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2410.07073) |
-| 2024-01-08 | [Mixtral of Experts](technical-reports/mixtral-of-experts--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2401.04088) |
-| 2023-10-10 | [Mistral 7B](technical-reports/mistral-7b--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2310.06825) |
+| 2026-07-28 | [Shieldstral](https://arxiv.org/abs/2607.25857) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.25857) |
+| 2026-07-22 | [Robostral Navigate](https://arxiv.org/abs/2607.20785) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.20785) |
+| 2026-07-02 | [Leanstral](https://mistral.ai/news/leanstral-1-5/) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://mistral.ai/news/leanstral-1-5/) |
+| 2026-03-26 | [Voxtral TTS](https://arxiv.org/abs/2603.25551) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2603.25551) |
+| 2026-02-11 | [Voxtral Realtime](https://arxiv.org/abs/2602.11298) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2602.11298) |
+| 2026-01-13 | [Ministral 3](https://mistral.ai/news/mistral-3/) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://mistral.ai/news/mistral-3/) |
+| 2025-07-17 | [Voxtral](https://arxiv.org/abs/2507.13264) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2507.13264) |
+| 2025-06-12 | [Magistral](https://arxiv.org/abs/2506.10910) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2506.10910) |
+| 2024-10-09 | [Pixtral 12B](https://arxiv.org/abs/2410.07073) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2410.07073) |
+| 2024-01-08 | [Mixtral of Experts](https://arxiv.org/abs/2401.04088) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2401.04088) |
+| 2023-10-10 | [Mistral 7B](https://arxiv.org/abs/2310.06825) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2310.06825) |
 | 未确认 | Mistral-Small-4-119B-2603 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Mistral-Small-4-119B-2603) |
 | 未确认 | Mistral-Large-3-675B-Instruct-2512 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512) |
 | 未确认 | Mistral Medium 3.5 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) |

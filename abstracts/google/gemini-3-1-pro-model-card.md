@@ -1,6 +1,6 @@
 # Gemini 3.1 Pro Model Card
 
-[PDF](../../pdfs/google/model-cards/gemini-3-1-pro-model-card.pdf#page=2) · [Official source](https://deepmind.google/models/model-cards/gemini-3-1-pro/)
+[Official source](https://deepmind.google/models/model-cards/gemini-3-1-pro/)
 
 ## Description:
 

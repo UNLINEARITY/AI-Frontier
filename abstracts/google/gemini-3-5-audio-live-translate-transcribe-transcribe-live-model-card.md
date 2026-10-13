@@ -1,6 +1,6 @@
 # Gemini 3.5 Audio (Live Translate, Transcribe, Transcribe Live) Model Card
 
-[PDF](../../pdfs/google/model-cards/gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card.pdf#page=2) · [Official source](https://deepmind.google/models/model-cards/gemini-3-5-audio/)
+[Official source](https://deepmind.google/models/model-cards/gemini-3-5-audio/)
 
 ## Description
 

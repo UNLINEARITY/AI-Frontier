@@ -1,6 +1,6 @@
 # DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression
 
-[PDF](../../pdfs/deepseek/technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf#page=1) · [Official source](https://arxiv.org/abs/2609.19969)
+[Official source](https://arxiv.org/abs/2609.19969)
 
 ## Abstract
 
@@ -16,7 +16,7 @@ ing DeepSeek’s sustained efforts to reduce context memory requirements. DeepSe
 achieves approximately 4-fold and 437-fold reductions in per-token global KV cache size relative
 to DeepSeek-V4-Flash and DeepSeek-V1, respectively.
 
-[p. 1](../../pdfs/deepseek/technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf#page=1) · [PDF](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-01.pdf)
+p. 1
 
 ![Figure 3](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-02.png)
 
@@ -27,4 +27,4 @@ Compressed Sparse Attention 2 (CSA2), with CSA2(ratio, mode) specifying the comp
 ratio and mode. The model also uses Single-Pass mHC, Engram, DSpark, and a Hierarchical
 Sparse Indexer.
 
-[p. 7](../../pdfs/deepseek/technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf#page=7) · [PDF](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-02.pdf)
+p. 7

@@ -1,6 +1,6 @@
 # Claude Fable 5.1 and Mythos 5.1 System Card
 
-[PDF](../../pdfs/anthropic/system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf#page=2) · [Official source](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card)
+[Official source](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card)
 
 ## Executive Summary
 
@@ -37,7 +37,7 @@ benchmarks. In the life sciences, Mythos 5.1 leads on most of our internal and p
 [Figure 2.2.3.1.A] Results on the two long-form virology tasks. The dashed line marks the notable-capability
 threshold of an end-to-end score greater than 0.80.
 
-[p. 23](../../pdfs/anthropic/system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf#page=23) · [PDF](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-01.pdf)
+p. 23
 
 ![Figure 2.2.3.2.1.A](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-02.png)
 
@@ -50,4 +50,4 @@ performances when participant data is available for a metric. [Middle row:] Pred
 range of scores achieved in runs of the same model; their intersection shows the mean performance across
 runs of the same model.
 
-[p. 28](../../pdfs/anthropic/system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf#page=28) · [PDF](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-02.pdf)
+p. 28

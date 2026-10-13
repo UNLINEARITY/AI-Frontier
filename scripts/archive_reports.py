@@ -234,7 +234,7 @@ def render_model_coverage(rows):
                         if summary and summary['source_sha256'] == row['sha256']:
                             links.append(f"[{title}]({summary['markdown_path']})")
                         else:
-                            links.append(f"[{title}]({row['local_path']})")
+                            links.append(f"[{title}]({row['source_url']})")
                 official = "官方介绍" if chinese else "Official"
                 links.append(f"[{official}]({model.get('frontier_source_url', model['source_url'])})")
                 name = model["model"].replace("|", "\\|")
@@ -255,8 +255,8 @@ def render(rows):
              "An open research archive for understanding how frontier AI models are built, evaluated, and deployed. "
              "We bring official technical reports, model cards, and system cards into one place, "
              "and are building toward readable sources, grounded technical analysis, and ongoing release tracking.", "",
-             f"**{len(archived)} original PDFs · {publisher_count} publishers · 2022 onward**", "",
-             "**Available today:** original PDFs, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). "
+             f"**{len(archived)} reports · {publisher_count} publishers · 2022 onward**", "",
+             "**Available today:** official report indexes, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). "
              "Full-document Markdown, structured analysis, and automated tracking are the next stages.", "",
              "**Star AI Frontier to keep the sources close and follow the archive as it grows.**", ""]
     cn_lines = [f"# {brand['name']}", "", "[英文版](README.md)", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline_cn']}**", "",
@@ -264,13 +264,13 @@ def render(rows):
                 "一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。"
                 "我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，"
                 "并逐步推进可读原文、基于来源的技术分析与模型发布追踪。", "",
-                f"**{len(archived)} 份原始 PDF · {publisher_count} 家厂商 · 2022 年起**", "",
-                "**当前已提供：**原始 PDF、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
+                f"**{len(archived)} 份报告 · {publisher_count} 家厂商 · 2022 年起**", "",
+                "**当前已提供：**官方报告索引、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
                 "**Star 收藏 AI Frontier，把原始资料留在手边，也关注它如何逐步成为技术研究入口。**", ""]
     type_counts = {kind: sum(row["document_type"] == kind for row in archived) for kind in DOCUMENT_TYPES}
     lines += ["## Choose the right document", "",
               "Looking for implementation details, model boundaries, or deployment safety? Start with the corresponding document type.", "",
-              "| Type | Main subject | Focus | Typical contents | PDFs |",
+              "| Type | Main subject | Focus | Typical contents | Reports |",
               "| --- | --- | --- | --- | ---: |",
               f"| [Technical Report](reports/technical-reports.md) | Model / training method | Implementation and experiments | Architecture, data, training, post-training, inference, benchmarks | {type_counts['technical_report']} |",
               f"| [Model Card](reports/model-cards.md) | Individual model | Model description and usage boundaries | Capabilities, limitations, intended and unsuitable uses, evaluations, safety information | {type_counts['model_card']} |",
@@ -279,23 +279,23 @@ def render(rows):
               "classification follows the publisher's designation and the document's primary purpose.", ""]
     cn_lines += ["## 按类型找报告", "",
                  "想看技术实现、模型使用边界，还是产品部署安全？从对应类型开始。", "",
-                 "| 类型 | 主要对象 | 重点 | 常见内容 | PDF 数量 |",
+                 "| 类型 | 主要对象 | 重点 | 常见内容 | 报告数量 |",
                  "| --- | --- | --- | --- | ---: |",
                  f"| [Technical Report](reports/technical-reports_CN.md) | 模型/训练方法 | 技术实现与实验 | 架构、数据、训练、后训练、推理、benchmark | {type_counts['technical_report']} |",
                  f"| [Model Card](reports/model-cards_CN.md) | 单个模型 | 模型说明与使用边界 | 能力、限制、适用场景、不适用场景、评测、安全信息 | {type_counts['model_card']} |",
                  f"| [System Card](reports/system-cards_CN.md) | 完整产品/系统 | 风险、安全、部署表现 | red teaming、危险能力评估、越狱、安全 mitigations、部署限制 | {type_counts['system_card']} |", "",
                  "这是常见区分，文档内容可能交叉，也可能覆盖整个模型家族；分类以官方命名与文档主要用途为准。", ""]
     lines += ["## Browse by publisher", "",
-              "Pick a lab to find its archived reports and official source links. "
+              "Pick a lab to find its reports and official source links. "
               "Each publisher has separate Technical Report, Model Card, and System Card folders. "
               "Each directory is ordered by recorded first publication date, newest first.", "",
-              "Click a count to open that publisher's collection for the document type. Counts include archived PDFs only.", "",
-              "| Publisher | Technical Reports | Model Cards | System Cards | Total PDFs |", "| --- | ---: | ---: | ---: | ---: |"]
+              "Click a count to open that publisher's collection for the document type. Counts include indexed reports.", "",
+              "| Publisher | Technical Reports | Model Cards | System Cards | Total reports |", "| --- | ---: | ---: | ---: | ---: |"]
     cn_lines += ["## 按厂商浏览", "",
-                 "点击厂商名称，查看归档 PDF 与官方来源。每家厂商下按 Technical Report、Model Card、System Card 设独立子目录，"
+                 "点击厂商名称，查看报告与官方来源。每家厂商下按 Technical Report、Model Card、System Card 设独立子目录，"
                  "目录按已记录的首次发布日期从新到旧排列。", "",
-                 "点击数量可进入该厂商对应类型的目录，数量仅统计已归档 PDF。", "",
-                 "| 厂商 | 技术报告 | 模型卡 | 系统卡 | PDF 总数 |", "| --- | ---: | ---: | ---: | ---: |"]
+                 "点击数量可进入该厂商对应类型的目录，数量仅统计已收录报告。", "",
+                 "| 厂商 | 技术报告 | 模型卡 | 系统卡 | 报告总数 |", "| --- | ---: | ---: | ---: | ---: |"]
     type_labels_cn = {"technical_report": "技术报告", "model_card": "模型卡", "system_card": "系统卡"}
     for vendor, label in VENDORS.items():
         vendor_rows = [row for row in rows if row["vendor"] == vendor]
@@ -316,12 +316,12 @@ def render(rows):
                 detail += ["[首页](../../README_CN.md) · [前沿模型](../../LATEST_MODELS_CN.md) · [英文版](README.md)", "",
                            "按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。日期仅精确到月份时保留 YYYY-MM，不推测具体日。"
                            "类型说明见 [文档类型指南](../../README_CN.md#按类型找报告)。", "",
-                           "## 按类型浏览", "", "| 类型 | 已归档 PDF |", "| --- | ---: |"]
+                           "## 按类型浏览", "", "| 类型 | 已收录报告 |", "| --- | ---: |"]
             else:
                 detail += ["[Home](../../README.md) · [Frontier models](../../LATEST_MODELS.md) · [Chinese](README_CN.md)", "",
                            "Reports are ordered by recorded first publication date, newest first; unknown dates appear last. "
                            "Month-only dates retain YYYY-MM precision. See the [document-type guide](../../README.md#choose-the-right-document).", "",
-                           "## Browse by type", "", "| Type | Archived PDFs |", "| --- | ---: |"]
+                           "## Browse by type", "", "| Type | Reports |", "| --- | ---: |"]
             indexes = [(directory, detail, vendor_rows)]
             for kind, (type_label, filename) in DOCUMENT_TYPES.items():
                 type_directory = directory / Path(filename).stem
@@ -333,10 +333,10 @@ def render(rows):
                 type_detail = [f"# {publisher} — {displayed_type}", ""]
                 if chinese:
                     type_detail += ["[首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)", "",
-                                    f"已归档 **{count} 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。", ""]
+                                    f"已收录 **{count} 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。", ""]
                 else:
                     type_detail += ["[Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)", "",
-                                    f"**{count} archived PDFs**. Ordered by recorded first publication date, newest first; unknown dates appear last.", ""]
+                                    f"**{count} reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.", ""]
                 if not entries:
                     type_detail += ["此类文档暂未收录，欢迎补充官方来源。" if chinese else
                                     "No documents of this type have been added yet. Contributions with official source links are welcome.", ""]
@@ -349,8 +349,7 @@ def render(rows):
                 for row in sorted(entries, key=lambda x: (x["published_date"], x["title"]), reverse=True):
                     title = row["title"].replace("|", "\\|")
                     if row["status"] == "archived":
-                        relative_path = (ROOT / row["local_path"]).relative_to(index_directory).as_posix()
-                        link = f"[{title}]({relative_path})"
+                        link = f"[{title}]({row['source_url']})"
                     else:
                         link = title + ("（待补齐）" if chinese else " (Pending)")
                     type_label, type_file = DOCUMENT_TYPES[row["document_type"]]
@@ -375,15 +374,15 @@ def render(rows):
             detail = [f"# {displayed_type}", ""]
             if chinese:
                 detail += [f"[首页](../README_CN.md) · [文档类型](../README_CN.md#按类型找报告) · [英文版]({filename})", "",
-                           f"已归档 **{type_counts[kind]} 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。", "",
+                           f"已收录 **{type_counts[kind]} 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。", "",
                            "| 首次发布日期 | 厂商 | 报告 | 状态 | 官方来源 |", "| --- | --- | --- | --- | --- |"]
             else:
                 detail += [f"[All reports](../README.md) · [Document types](../README.md#choose-the-right-document) · [Chinese]({chinese_filename})", "",
-                           f"**{type_counts[kind]} archived PDFs**. Listed by recorded first publication date, newest first; unknown dates appear last.", "",
+                           f"**{type_counts[kind]} reports**. Listed by recorded first publication date, newest first; unknown dates appear last.", "",
                            "| First published | Publisher | Report | Status | Official source |", "| --- | --- | --- | --- | --- |"]
             for row in sorted(entries, key=lambda x: (x["published_date"], x["title"]), reverse=True):
                 title = row["title"].replace("|", "\\|")
-                link = f"[{title}](../{row['local_path']})" if row["status"] == "archived" else title
+                link = f"[{title}]({row['source_url']})" if row["status"] == "archived" else title
                 label = VENDORS[row["vendor"]]
                 if not chinese and row["vendor"] == "zai":
                     label = "Z.ai / Zhipu AI"
@@ -397,7 +396,7 @@ def render(rows):
                        "Versions, retrieval dates, and verification details: [catalog.csv](../catalog.csv).", ""]
             (report_directory / target).write_text("\n".join(detail), encoding="utf-8")
     lines += ["", "## Why follow AI Frontier?", "",
-              "- **Go straight to the source.** Original publisher PDFs and official links, together in one index.",
+              "- **Go straight to the source.** Official publisher reports and links, together in one index.",
               "- **Compare across labs.** Find training methods, evaluation results, and safety disclosures "
               "across technical reports and model cards.",
               "- **Trace what changed.** Publication dates and revisions are recorded separately; "
@@ -426,10 +425,10 @@ def render(rows):
               "official repositories, and author-submitted arXiv papers. Coverage is not yet exhaustive. "
               "For arXiv entries, the recorded first publication date is the first submission date; "
               "unknown dates are left unspecified.", "",
-              "PDFs are preserved as provided by their publishers. Copyrights and terms of use remain "
+              "Original reports are available from their publishers. Copyrights and terms of use remain "
               "with the original rights holders; this repository does not relicense the reports.", ""]
     cn_lines += ["", "## 为什么值得持续关注？", "",
-                 "- **直接读原文。** 原始 PDF 与官方来源集中整理，减少在官网、仓库和论文页面之间来回查找。",
+                 "- **直接读原文。** 官方报告与来源集中整理，减少在官网、仓库和论文页面之间来回查找。",
                  "- **横向看技术。** 对照不同厂商披露的训练方法、评测结果与安全信息，为自己的研究和判断找到依据。",
                  "- **回看演进。** 首次发布与修订日期分别记录，报告更新时保留已有归档版本，方便追溯变化。", "",
                  "[完整索引](catalog.csv) 提供日期、版本、来源及文件校验信息；"
@@ -449,7 +448,7 @@ def render(rows):
                  "## 收录范围与版权", "",
                  "收录 2022 年起模型及模型家族的官方技术报告、模型卡与系统卡，来源包括厂商官网、官方仓库和作者提交的 arXiv 论文。"
                  "资料库仍在补齐，不代表已穷尽所有历史报告。arXiv 条目以首次提交日作为已记录的首次发布日期，未知日期不作推测。", "",
-                 "PDF 保留发布者提供的原始内容，版权及使用条款归原权利人所有，本仓库不另行授权这些报告。", ""]
+                 "原始报告请通过官方来源获取，版权及使用条款归原权利人所有，本仓库不另行授权这些报告。", ""]
     (ROOT / "README.md").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     (ROOT / "README_CN.md").write_text("\n".join(cn_lines).rstrip() + "\n", encoding="utf-8")
     gaps = ["# 待补齐清单", "", "本清单区分已发现的缺口和首轮尚未覆盖的范围；不把未核对的资料标为已收齐。", "",

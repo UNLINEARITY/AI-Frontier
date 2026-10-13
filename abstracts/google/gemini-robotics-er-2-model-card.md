@@ -1,6 +1,6 @@
 # Gemini Robotics-ER 2 Model Card
 
-[PDF](../../pdfs/google/model-cards/gemini-robotics-er-2-model-card.pdf#page=2) · [Official source](https://deepmind.google/models/model-cards/gemini-robotics-er-2/)
+[Official source](https://deepmind.google/models/model-cards/gemini-robotics-er-2/)
 
 ## Description
 

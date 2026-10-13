@@ -1,6 +1,6 @@
 # MAI-Code-1.1-Flash Model Card
 
-[PDF](../../pdfs/microsoft/model-cards/mai-code-1-1-flash-model-card.pdf#page=1) · [Official source](https://microsoft.ai/models/mai-code-1-flash/)
+[Official source](https://microsoft.ai/models/mai-code-1-flash/)
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Post-Training Language Models for Gold-Medal Performance in Coding Competitions
 
-[PDF](../../pdfs/nvidia/technical-reports/nemotron-3-competitive-coding--arxiv-v2.pdf#page=1) · [Official source](https://arxiv.org/abs/2609.02849)
+[Official source](https://arxiv.org/abs/2609.02849)
 
 ## Abstract.
 
@@ -10,7 +10,7 @@ Competitive programming has become a key test of large language model reasoning,
 
 Figure 1 | Performance of our pipeline and models on IOI 2025 and IOI 2026.
 
-[p. 2](../../pdfs/nvidia/technical-reports/nemotron-3-competitive-coding--arxiv-v2.pdf#page=2) · [PDF](../../figures/nvidia/nemotron-3-competitive-coding/figure-01.pdf)
+p. 2
 
 ![Figure 2](../../figures/nvidia/nemotron-3-competitive-coding/figure-02.png)
 
@@ -18,4 +18,4 @@ Figure 2 | Our competitive-programming pipeline. Nemotron-3-Nano-CC undergoes su
 fine-tuning and reinforcement learning, while Nemotron-3-Ultra-CC uses supervised fine-tuning only.
 Both models use GenCorrect at inference time.
 
-[p. 3](../../pdfs/nvidia/technical-reports/nemotron-3-competitive-coding--arxiv-v2.pdf#page=3) · [PDF](../../figures/nvidia/nemotron-3-competitive-coding/figure-02.pdf)
+p. 3

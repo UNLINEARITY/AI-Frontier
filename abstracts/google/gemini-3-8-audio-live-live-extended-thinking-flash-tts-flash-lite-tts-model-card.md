@@ -1,6 +1,6 @@
 # Gemini 3.8 Audio (Live, Live Extended Thinking, Flash TTS, Flash-Lite TTS) Model Card
 
-[PDF](../../pdfs/google/model-cards/gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card.pdf#page=2) · [Official source](https://deepmind.google/models/model-cards/gemini-3-8-audio/)
+[Official source](https://deepmind.google/models/model-cards/gemini-3-8-audio/)
 
 ## Description
 

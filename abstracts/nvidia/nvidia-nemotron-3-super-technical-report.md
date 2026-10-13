@@ -1,6 +1,6 @@
 # NVIDIA Nemotron 3 Super Technical Report
 
-[PDF](../../pdfs/nvidia/technical-reports/nvidia-nemotron-3-super-technical-report.pdf#page=1) · [Official source](https://research.nvidia.com/labs/nemotron/Nemotron-3/)
+[Official source](https://research.nvidia.com/labs/nemotron/Nemotron-3/)
 
 ## Abstract.
 
@@ -17,10 +17,10 @@ and use the best out of the two frameworks for each model. For GPT-OSS-120B we u
 weights, MXFP8 activations, and FP8 KV-Cache; for Qwen3.5-122B we use BF16. We used the
 OpenHands harness to evaluate SWE-Bench.
 
-[p. 2](../../pdfs/nvidia/technical-reports/nvidia-nemotron-3-super-technical-report.pdf#page=2) · [PDF](../../figures/nvidia/nvidia-nemotron-3-super-technical-report/figure-01.pdf)
+p. 2
 
 ![Figure 12](../../figures/nvidia/nvidia-nemotron-3-super-technical-report/figure-02.png)
 
 Figure 12 | Overview of the post-training pipeline for Nemotron 3 Super.
 
-[p. 18](../../pdfs/nvidia/technical-reports/nvidia-nemotron-3-super-technical-report.pdf#page=18) · [PDF](../../figures/nvidia/nvidia-nemotron-3-super-technical-report/figure-02.pdf)
+p. 18

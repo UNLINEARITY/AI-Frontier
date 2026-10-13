@@ -1,6 +1,6 @@
 # Kimi K3 Technical Report
 
-[PDF](../../pdfs/moonshot/technical-reports/kimi-k3-technical-report.pdf#page=1) · [Official source](https://github.com/MoonshotAI/Kimi-K3)
+[Official source](https://github.com/MoonshotAI/Kimi-K3)
 
 ## ABSTRACT
 
@@ -10,7 +10,7 @@ We introduce Kimi K3, a 2.8T parameter Mixture-of-Experts model with 104 billion
 
 Figure 1: Kimi K3 main results.
 
-[p. 1](../../pdfs/moonshot/technical-reports/kimi-k3-technical-report.pdf#page=1) · [PDF](../../figures/moonshot/kimi-k3-technical-report/figure-01.pdf)
+p. 1
 
 ![Figure 2](../../figures/moonshot/kimi-k3-technical-report/figure-02.png)
 
@@ -20,4 +20,4 @@ with a Stable LatentMoE feed-forward network. Attention Residuals (AttnRes) use 
 weights (α) over the embedding and preceding block outputs, enabling selective information flow across depth. Top left: the Stable
 LatentMoE module with shared and routed experts. Bottom left: the KDA module. Bottom right: the native vision pathway.
 
-[p. 3](../../pdfs/moonshot/technical-reports/kimi-k3-technical-report.pdf#page=3) · [PDF](../../figures/moonshot/kimi-k3-technical-report/figure-02.pdf)
+p. 3

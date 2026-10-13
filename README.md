@@ -10,9 +10,9 @@
 
 An open research archive for understanding how frontier AI models are built, evaluated, and deployed. We bring official technical reports, model cards, and system cards into one place, and are building toward readable sources, grounded technical analysis, and ongoing release tracking.
 
-**385 original PDFs · 18 publishers · 2022 onward**
+**385 reports · 18 publishers · 2022 onward**
 
-**Available today:** original PDFs, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). Full-document Markdown, structured analysis, and automated tracking are the next stages.
+**Available today:** official report indexes, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). Full-document Markdown, structured analysis, and automated tracking are the next stages.
 
 **Star AI Frontier to keep the sources close and follow the archive as it grows.**
 
@@ -20,7 +20,7 @@ An open research archive for understanding how frontier AI models are built, eva
 
 Looking for implementation details, model boundaries, or deployment safety? Start with the corresponding document type.
 
-| Type | Main subject | Focus | Typical contents | PDFs |
+| Type | Main subject | Focus | Typical contents | Reports |
 | --- | --- | --- | --- | ---: |
 | [Technical Report](reports/technical-reports.md) | Model / training method | Implementation and experiments | Architecture, data, training, post-training, inference, benchmarks | 268 |
 | [Model Card](reports/model-cards.md) | Individual model | Model description and usage boundaries | Capabilities, limitations, intended and unsuitable uses, evaluations, safety information | 59 |
@@ -30,11 +30,11 @@ These are typical distinctions, not rigid boundaries. Documents can overlap or c
 
 ## Browse by publisher
 
-Pick a lab to find its archived reports and official source links. Each publisher has separate Technical Report, Model Card, and System Card folders. Each directory is ordered by recorded first publication date, newest first.
+Pick a lab to find its reports and official source links. Each publisher has separate Technical Report, Model Card, and System Card folders. Each directory is ordered by recorded first publication date, newest first.
 
-Click a count to open that publisher's collection for the document type. Counts include archived PDFs only.
+Click a count to open that publisher's collection for the document type. Counts include indexed reports.
 
-| Publisher | Technical Reports | Model Cards | System Cards | Total PDFs |
+| Publisher | Technical Reports | Model Cards | System Cards | Total reports |
 | --- | ---: | ---: | ---: | ---: |
 | [OpenAI](pdfs/openai/README.md) | [6](pdfs/openai/technical-reports/README.md) | [1](pdfs/openai/model-cards/README.md) | [35](pdfs/openai/system-cards/README.md) | 42 |
 | [Anthropic](pdfs/anthropic/README.md) | [0](pdfs/anthropic/technical-reports/README.md) | [5](pdfs/anthropic/model-cards/README.md) | [17](pdfs/anthropic/system-cards/README.md) | 22 |
@@ -57,7 +57,7 @@ Click a count to open that publisher's collection for the document type. Counts 
 
 ## Why follow AI Frontier?
 
-- **Go straight to the source.** Original publisher PDFs and official links, together in one index.
+- **Go straight to the source.** Official publisher reports and links, together in one index.
 - **Compare across labs.** Find training methods, evaluation results, and safety disclosures across technical reports and model cards.
 - **Trace what changed.** Publication dates and revisions are recorded separately; older archived versions are retained when reports are updated.
 
@@ -86,4 +86,4 @@ The bilingual website makes the archive searchable. Sources and frontier selecti
 
 This growing collection covers official model and model-family reports from 2022 onward, including technical reports, model cards, and system cards. Sources are publisher websites, official repositories, and author-submitted arXiv papers. Coverage is not yet exhaustive. For arXiv entries, the recorded first publication date is the first submission date; unknown dates are left unspecified.
 
-PDFs are preserved as provided by their publishers. Copyrights and terms of use remain with the original rights holders; this repository does not relicense the reports.
+Original reports are available from their publishers. Copyrights and terms of use remain with the original rights holders; this repository does not relicense the reports.

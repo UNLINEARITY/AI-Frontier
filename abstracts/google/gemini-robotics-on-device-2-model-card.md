@@ -1,6 +1,6 @@
 # Gemini Robotics On-Device 2 Model Card
 
-[PDF](../../pdfs/google/model-cards/gemini-robotics-on-device-2-model-card.pdf#page=2) · [Official source](https://deepmind.google/models/model-cards/gemini-robotics-on-device-2/)
+[Official source](https://deepmind.google/models/model-cards/gemini-robotics-on-device-2/)
 
 ## Description
 

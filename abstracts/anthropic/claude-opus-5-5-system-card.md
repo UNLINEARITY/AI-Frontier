@@ -1,6 +1,6 @@
 # Claude Opus 5.5 System Card
 
-[PDF](../../pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf#page=2) · [Official source](https://www.anthropic.com/claude-opus-5-5-system-card)
+[Official source](https://www.anthropic.com/claude-opus-5-5-system-card)
 
 ## Executive Summary
 
@@ -40,7 +40,7 @@ models rapidly improve using only a small number of scorer calls. Naive ESM-2 ac
 of 0.28 (not shown, to preserve dynamic range of trendlines). Right: The cumulative fraction of attempts that
 exceed the threshold value of 0.52 over the course of the session.​
 
-[p. 31](../../pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf#page=31) · [PDF](../../figures/anthropic/claude-opus-5-5-system-card/figure-01.pdf)
+p. 31
 
 ![Figure 2.3.4.1.A](../../figures/anthropic/claude-opus-5-5-system-card/figure-02.png)
 
@@ -53,4 +53,4 @@ in that interval is estimated to be worth 0 to 1 point, and two others have not 
 are not statistically distinguishable (a paired test on the same 500 problems gives p ≈ 0.2). These scores are not
 comparable with the CoBench scores in earlier system cards.
 
-[p. 37](../../pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf#page=37) · [PDF](../../figures/anthropic/claude-opus-5-5-system-card/figure-02.pdf)
+p. 37

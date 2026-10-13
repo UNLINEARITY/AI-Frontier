@@ -1,6 +1,6 @@
 # Step1X-3D: Towards High-Fidelity and Controllable Generation of Textured 3D Assets
 
-[PDF](../../pdfs/stepfun/technical-reports/step1x-3d--arxiv-v1.pdf#page=1) · [Official source](https://github.com/stepfun-ai/Step1X-3D)
+[Official source](https://github.com/stepfun-ai/Step1X-3D)
 
 ## Abstract
 
@@ -11,11 +11,11 @@ While generative artificial intelligence has advanced significantly across text,
 Figure 4: Step1X-3D geometry diffusion framework. The framework enables seamless integration
 of diverse conditions, allowing fine-tuning for various downstream tasks.
 
-[p. 8](../../pdfs/stepfun/technical-reports/step1x-3d--arxiv-v1.pdf#page=8) · [PDF](../../figures/stepfun/step1x-3d/figure-01.pdf)
+p. 8
 
 ![Figure 10](../../figures/stepfun/step1x-3d/figure-02.png)
 
 Figure 10: User study. Average user preference score
 is reported.
 
-[p. 16](../../pdfs/stepfun/technical-reports/step1x-3d--arxiv-v1.pdf#page=16) · [PDF](../../figures/stepfun/step1x-3d/figure-02.pdf)
+p. 16

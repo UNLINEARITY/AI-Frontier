@@ -1,6 +1,6 @@
 # GLM-OCR Technical Report
 
-[PDF](../../pdfs/zai/technical-reports/glm-ocr-technical-report--arxiv-v2.pdf#page=1) · [Official source](https://github.com/zai-org/GLM-OCR)
+[Official source](https://github.com/zai-org/GLM-OCR)
 
 ## ABSTRACT
 
@@ -10,7 +10,7 @@ GLM-OCR is an efficient 0.9B-parameter compact multimodal model designed for rea
 
 Figure 1: Performance of GLM-OCR on OmniDocBench v1.5.
 
-[p. 1](../../pdfs/zai/technical-reports/glm-ocr-technical-report--arxiv-v2.pdf#page=1) · [PDF](../../figures/zai/glm-ocr-technical-report/figure-01.pdf)
+p. 1
 
 ![Figure 2](../../figures/zai/glm-ocr-technical-report/figure-02.png)
 
@@ -19,4 +19,4 @@ primary tasks: Document Parsing (Task 1), which combines layout detection and re
 produce structured Markdown and JSON outputs; and Key Information Extraction (Task 2), which
 directly extracts structured JSON data based on input visual prompts.
 
-[p. 4](../../pdfs/zai/technical-reports/glm-ocr-technical-report--arxiv-v2.pdf#page=4) · [PDF](../../figures/zai/glm-ocr-technical-report/figure-02.pdf)
+p. 4

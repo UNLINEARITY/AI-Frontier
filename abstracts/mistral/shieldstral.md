@@ -1,6 +1,6 @@
 # Shieldstral
 
-[PDF](../../pdfs/mistral/technical-reports/shieldstral--arxiv-v2.pdf#page=1) · [Official source](https://arxiv.org/abs/2607.25857)
+[Official source](https://arxiv.org/abs/2607.25857)
 
 ## Abstract
 
@@ -13,7 +13,7 @@ are composed into a structured prompt, then processed by the model in a single f
 normalised logits of the “yes” and “no” tokens yield a continuous safety score that is thresholded for binary
 classification.
 
-[p. 2](../../pdfs/mistral/technical-reports/shieldstral--arxiv-v2.pdf#page=2) · [PDF](../../figures/mistral/shieldstral/figure-01.pdf)
+p. 2
 
 ![Figure 5](../../figures/mistral/shieldstral/figure-02.png)
 
@@ -22,4 +22,4 @@ Qwen3Guard results are averaged over strict (controversial=unsafe) and loose (co
 ShieldGemma and Shieldstral use a threshold of 0.5. GPT-OSS-Safeguard-20B uses reasoning_effort=high.
 Nemotron-3.5-Safety uses reasoning_effort=none for default categories.
 
-[p. 11](../../pdfs/mistral/technical-reports/shieldstral--arxiv-v2.pdf#page=11) · [PDF](../../figures/mistral/shieldstral/figure-02.pdf)
+p. 11

@@ -23,6 +23,13 @@ def link(url, label):
     return f'<a href="{escape(url)}">{escape(label)}</a>'
 
 
+def report_target(row, summaries):
+    summary = summaries.get(row['local_path'])
+    if summary and summary['source_sha256'] == row['sha256']:
+        return reader_path(summary)
+    return row['source_url']
+
+
 def build(output):
     output.mkdir(parents=True, exist_ok=True)
     rows = list(csv.DictReader((ROOT / 'catalog.csv').open(encoding='utf-8', newline='')))
@@ -51,8 +58,7 @@ def build(output):
             date = r['published_date'] or ('日期待确认' if chinese else 'Date unconfirmed')
             kind = DOCUMENT_TYPES[r['document_type']][0]
             revision = f" · {r['version']}" if r['version'].startswith('arxiv-') else ''
-            summary = summaries.get(r['local_path'])
-            target = reader_path(summary) if summary and summary['source_sha256'] == r['sha256'] else REPOSITORY + '/blob/main/' + quote(r['local_path'])
+            target = report_target(r, summaries)
             cards.append(f'<article class="card" data-view="reports" data-vendor="{r["vendor"]}" data-type="{r["document_type"]}" data-category="" data-date="{r["published_date"]}" data-title="{escape(r["title"])}" data-search="{escape(r["title"] + " " + labels[r["vendor"]] + " " + date)}"><div class="card-heading"><div class="publisher">{publisher_mark(r["vendor"])}<span>{escape(labels[r["vendor"]])}</span></div><span class="document-badge" data-kind="{r["document_type"]}">{kind}</span></div><h3><a class="card-link" href="{escape(target)}">{escape(r["title"])}</a></h3><p class="date">{escape(date + revision)} · {r["pages"]} {"页" if chinese else "pages"}</p></article>')
         for m in models:
             categories = [c for c in MODEL_CATEGORIES if c in m.get('latest_categories', []) or c in m.get('frontier_categories', [])]
@@ -64,7 +70,7 @@ def build(output):
                     row = max(archived, key=lambda r: (r['source_updated_date'], r['retrieved_at']))
                     summary = summaries.get(row['local_path'])
                     available = summary and summary['source_sha256'] == row['sha256']
-                    target = reader_path(summary) if available else REPOSITORY + '/blob/main/' + quote(row['local_path'])
+                    target = report_target(row, summaries)
                     documents.append((not bool(available), list(DOCUMENT_TYPES).index(row['document_type']), target, source['title']))
             documents.sort(key=lambda d: d[:2])
             target = documents[0][2] if documents else m.get('frontier_source_url', m['source_url'])

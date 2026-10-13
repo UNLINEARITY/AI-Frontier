@@ -18,6 +18,8 @@ const results = pages.map(page => {
       const [file, fragment] = href.split('#', 2);
       const resolved = path.posix.normalize(path.posix.join(path.posix.dirname(page.markdown_path), file));
       if (resolved.startsWith('../') || resolved.startsWith('/')) return text;
+      // PDF originals and crops are local-only; never create repository download links.
+      if (/\.pdf(?:\?|$)/i.test(resolved)) return text;
       target = page.repository + '/blob/main/' + resolved.split('/').map(encodeURIComponent).join('/') + (fragment ? '#' + fragment : '');
     }
     return `<a href="${escape(target)}">${text}</a>`;

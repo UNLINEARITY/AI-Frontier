@@ -1,6 +1,6 @@
 # GPT-Rosalind-5.5 System Card
 
-[PDF](../../pdfs/openai/system-cards/gpt-rosalind-5-5-system-card.pdf#page=3) · [Official source](https://deploymentsafety.openai.com/gpt-rosalind-5-5)
+[Official source](https://deploymentsafety.openai.com/gpt-rosalind-5-5)
 
 ## Introduction
 

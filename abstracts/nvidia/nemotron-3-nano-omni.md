@@ -1,6 +1,6 @@
 # Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence
 
-[PDF](../../pdfs/nvidia/technical-reports/nemotron-3-nano-omni--arxiv-v2.pdf#page=1) · [Official source](https://arxiv.org/abs/2604.24954)
+[Official source](https://arxiv.org/abs/2604.24954)
 
 ## Abstract.
 
@@ -13,7 +13,7 @@ resolution. Additionally, videos use Conv3D and optionally Efficient Video Sampl
 throughput. Audio inputs are encoded using Parakeet v2 audio encoder. Visual, audio, and text
 tokens are concatenated and fed to the LLM.
 
-[p. 3](../../pdfs/nvidia/technical-reports/nemotron-3-nano-omni--arxiv-v2.pdf#page=3) · [PDF](../../figures/nvidia/nemotron-3-nano-omni/figure-01.pdf)
+p. 3
 
 ![Figure 2](../../figures/nvidia/nemotron-3-nano-omni/figure-02.png)
 
@@ -21,4 +21,4 @@ Figure 2 | Staged training recipe for the v3 omni-modal model. The pipeline firs
 SFT, then joint omni SFT while progressively extending context length, followed by omni-modal RL
 training.
 
-[p. 4](../../pdfs/nvidia/technical-reports/nemotron-3-nano-omni--arxiv-v2.pdf#page=4) · [PDF](../../figures/nvidia/nemotron-3-nano-omni/figure-02.pdf)
+p. 4

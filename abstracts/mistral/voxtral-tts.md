@@ -1,6 +1,6 @@
 # Voxtral TTS
 
-[PDF](../../pdfs/mistral/technical-reports/voxtral-tts--arxiv-v2.pdf#page=1) · [Official source](https://arxiv.org/abs/2603.25551)
+[Official source](https://arxiv.org/abs/2603.25551)
 
 ## Abstract
 
@@ -14,7 +14,7 @@ use the default voices for each model and 77 unique text examples. In the voice 
 short audio reference clip and 60 text prompts. In both categories, human annotators blindly rate which audio is
 better between the two models. Voxtral TTS is preferred in 58.3 and 68.4% of instances.
 
-[p. 1](../../pdfs/mistral/technical-reports/voxtral-tts--arxiv-v2.pdf#page=1) · [PDF](../../figures/mistral/voxtral-tts/figure-01.pdf)
+p. 1
 
 ![Figure 2](../../figures/mistral/voxtral-tts/figure-02.png)
 
@@ -26,4 +26,4 @@ until it reaches a special End of Audio token (<EOA>). At each timestep, the sem
 backbone is fed to a flow-matching transformer, which is run multiple times to predict the acoustic tokens. The
 semantic and acoustic tokens are fed to the Voxtral Codec decoder to obtain the generated waveform.
 
-[p. 3](../../pdfs/mistral/technical-reports/voxtral-tts--arxiv-v2.pdf#page=3) · [PDF](../../figures/mistral/voxtral-tts/figure-02.pdf)
+p. 3

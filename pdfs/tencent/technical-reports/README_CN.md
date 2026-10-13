@@ -2,24 +2,24 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已归档 **15 份 PDF**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **15 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
-| 2026-09-17 | [WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing](wevisdoc--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://huggingface.co/tencent/WeVisDoc-4B) |
-| 2026-08-05 | [WorldClaw: Agentic 3D Open-World Generation at Scale](hunyuan3d-worldclaw--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.05248) |
-| 2026-08-03 | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](hunyuan3d-buffalo-1-0--arxiv-v3.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.02711) |
-| 2026-07-06 | [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](hunyuan-ocr-1-5--arxiv-v3.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
-| 2026-05-21 | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](hy-mt2--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.22064) |
-| 2025-11-24 | [HunyuanVideo 1.5 Technical Report](hunyuan-video-1-5--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |
-| 2025-11-24 | [HunyuanOCR Technical Report](hunyuan-ocr--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
-| 2025-09-28 | [HunyuanImage 3.0 Technical Report](hunyuan-image-3--arxiv-v3.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) |
-| 2025-09-05 | [Hunyuan-MT Technical Report](hunyuan-mt--arxiv-v2.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/Hunyuan-MT) |
-| 2025-06-27 | [Hunyuan-A13B Technical Report](hunyuan-a13b.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/Hunyuan-A13B) |
-| 2025-06-18 | [Hunyuan3D 2.1: From Images to High-Fidelity 3D Assets with Production-Ready PBR Material](hunyuan-3d-2-1--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1) |
-| 2025-01-21 | [Hunyuan3D 2.0: Scaling Diffusion Models for High Resolution Textured 3D Assets Generation](hunyuan-3d-2--arxiv-v5.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/Hunyuan3D-2) |
-| 2024-12-03 | [HunyuanVideo: A Systematic Framework For Large Video Generative Models](hunyuan-video--arxiv-v6.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanVideo) |
-| 2024-11-04 | [Hunyuan-Large: An Open-Source MoE Model with 52 Billion Activated Parameters by Tencent](hunyuan-large--arxiv-v3.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/Tencent-Hunyuan-Large) |
-| 2024-05-14 | [Hunyuan-DiT: A Powerful Multi-Resolution Diffusion Transformer with Fine-Grained Chinese Understanding](hunyuan-dit--arxiv-v1.pdf) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent/HunyuanDiT) |
+| 2026-09-17 | [WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing](https://huggingface.co/tencent/WeVisDoc-4B) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://huggingface.co/tencent/WeVisDoc-4B) |
+| 2026-08-05 | [WorldClaw: Agentic 3D Open-World Generation at Scale](https://arxiv.org/abs/2608.05248) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.05248) |
+| 2026-08-03 | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](https://arxiv.org/abs/2608.02711) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.02711) |
+| 2026-07-06 | [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](https://github.com/Tencent-Hunyuan/HunyuanOCR) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
+| 2026-05-21 | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](https://arxiv.org/abs/2605.22064) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.22064) |
+| 2025-11-24 | [HunyuanVideo 1.5 Technical Report](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |
+| 2025-11-24 | [HunyuanOCR Technical Report](https://github.com/Tencent-Hunyuan/HunyuanOCR) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
+| 2025-09-28 | [HunyuanImage 3.0 Technical Report](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) |
+| 2025-09-05 | [Hunyuan-MT Technical Report](https://github.com/Tencent-Hunyuan/Hunyuan-MT) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/Hunyuan-MT) |
+| 2025-06-27 | [Hunyuan-A13B Technical Report](https://github.com/Tencent-Hunyuan/Hunyuan-A13B) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/Hunyuan-A13B) |
+| 2025-06-18 | [Hunyuan3D 2.1: From Images to High-Fidelity 3D Assets with Production-Ready PBR Material](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1) |
+| 2025-01-21 | [Hunyuan3D 2.0: Scaling Diffusion Models for High Resolution Textured 3D Assets Generation](https://github.com/Tencent-Hunyuan/Hunyuan3D-2) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/Hunyuan3D-2) |
+| 2024-12-03 | [HunyuanVideo: A Systematic Framework For Large Video Generative Models](https://github.com/Tencent-Hunyuan/HunyuanVideo) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanVideo) |
+| 2024-11-04 | [Hunyuan-Large: An Open-Source MoE Model with 52 Billion Activated Parameters by Tencent](https://github.com/Tencent-Hunyuan/Tencent-Hunyuan-Large) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/Tencent-Hunyuan-Large) |
+| 2024-05-14 | [Hunyuan-DiT: A Powerful Multi-Resolution Diffusion Transformer with Fine-Grained Chinese Understanding](https://github.com/Tencent/HunyuanDiT) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent/HunyuanDiT) |
 
 归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../../catalog.csv)。

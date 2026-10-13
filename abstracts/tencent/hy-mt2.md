@@ -1,6 +1,6 @@
 # Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild
 
-[PDF](../../pdfs/tencent/technical-reports/hy-mt2--arxiv-v2.pdf#page=1) · [Official source](https://arxiv.org/abs/2605.22064)
+[Official source](https://arxiv.org/abs/2605.22064)
 
 ## Abstract
 
@@ -10,10 +10,10 @@ Hy-MT2 is a family of fast-thinking multilingual translation models designed for
 
 Figure 1: Benchmark performance of Hy-MT2 models and state-of-the-art baselines.
 
-[p. 1](../../pdfs/tencent/technical-reports/hy-mt2--arxiv-v2.pdf#page=1) · [PDF](../../figures/tencent/hy-mt2/figure-01.pdf)
+p. 1
 
 ![Figure 2](../../figures/tencent/hy-mt2/figure-02.png)
 
 Figure 2: Family-Centric Post-training pipline of Hy-MT2.
 
-[p. 4](../../pdfs/tencent/technical-reports/hy-mt2--arxiv-v2.pdf#page=4) · [PDF](../../figures/tencent/hy-mt2/figure-02.pdf)
+p. 4

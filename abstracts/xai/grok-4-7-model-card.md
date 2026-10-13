@@ -1,6 +1,6 @@
 # Grok 4.7 Model Card
 
-[PDF](../../pdfs/xai/model-cards/grok-4-7-model-card.pdf#page=4) · [Official source](https://x.ai/safety)
+[Official source](https://x.ai/safety)
 
 ## 1.1 Overview
 
@@ -38,10 +38,10 @@ SpaceXAI plans to add Grok 4.7 to its consumer surfaces (web, mobile apps, and G
 
 
 
-[p. 7](../../pdfs/xai/model-cards/grok-4-7-model-card.pdf#page=7) · [PDF](../../figures/xai/grok-4-7-model-card/figure-01.pdf)
+p. 7
 
 ![Figure](../../figures/xai/grok-4-7-model-card/figure-02.png)
 
 
 
-[p. 8](../../pdfs/xai/model-cards/grok-4-7-model-card.pdf#page=8) · [PDF](../../figures/xai/grok-4-7-model-card/figure-02.pdf)
+p. 8

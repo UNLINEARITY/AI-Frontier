@@ -1,6 +1,6 @@
 # Qwen3-Coder-Next Technical Report
 
-[PDF](../../pdfs/qwen/technical-reports/qwen3-coder-next-technical-report--arxiv-v1.pdf#page=1) · [Official source](https://github.com/QwenLM/Qwen3-Coder)
+[Official source](https://github.com/QwenLM/Qwen3-Coder)
 
 ## Abstract
 
@@ -11,10 +11,10 @@ We present Qwen3-Coder-Next, an open-weight language model specialized for codin
 Figure 1: Comparison of Qwen3-Coder-Next to other open-weight models on SWE-Bench Verified,
 SWE-Bench Multilingual, SWE-Bench Pro, Terminal-Bench 2.0, and Aider.
 
-[p. 1](../../pdfs/qwen/technical-reports/qwen3-coder-next-technical-report--arxiv-v1.pdf#page=1) · [PDF](../../figures/qwen/qwen3-coder-next-technical-report/figure-01.pdf)
+p. 1
 
 ![Figure 2](../../figures/qwen/qwen3-coder-next-technical-report/figure-02.png)
 
 Figure 2: Our pipeline for synthesizing bugs to scale up the number of software engineering tasks.
 
-[p. 3](../../pdfs/qwen/technical-reports/qwen3-coder-next-technical-report--arxiv-v1.pdf#page=3) · [PDF](../../figures/qwen/qwen3-coder-next-technical-report/figure-02.pdf)
+p. 3

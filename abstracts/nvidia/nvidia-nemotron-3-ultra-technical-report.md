@@ -1,6 +1,6 @@
 # NVIDIA Nemotron 3 Ultra Technical Report
 
-[PDF](../../pdfs/nvidia/technical-reports/nvidia-nemotron-3-ultra-technical-report.pdf#page=1) · [Official source](https://research.nvidia.com/labs/nemotron/Nemotron-3/)
+[Official source](https://research.nvidia.com/labs/nemotron/Nemotron-3/)
 
 ## Abstract.
 
@@ -15,10 +15,10 @@ using NVFP4 precision on GB200. For Nemotron 3 Ultra, throughput numbers are obt
 TRT-LLM, while all other model numbers use vLLM. We run with and without speculative decoding,
 where available, and choose the best numbers for each model.
 
-[p. 2](../../pdfs/nvidia/technical-reports/nvidia-nemotron-3-ultra-technical-report.pdf#page=2) · [PDF](../../figures/nvidia/nvidia-nemotron-3-ultra-technical-report/figure-01.pdf)
+p. 2
 
 ![Figure 9](../../figures/nvidia/nvidia-nemotron-3-ultra-technical-report/figure-02.png)
 
 Figure 9 | Overview of the post-training pipeline for Nemotron 3 Ultra.
 
-[p. 15](../../pdfs/nvidia/technical-reports/nvidia-nemotron-3-ultra-technical-report.pdf#page=15) · [PDF](../../figures/nvidia/nvidia-nemotron-3-ultra-technical-report/figure-02.pdf)
+p. 15

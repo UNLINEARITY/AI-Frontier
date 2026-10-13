@@ -1,6 +1,6 @@
 # ChatGPT Images 2.5 System Card
 
-[PDF](../../pdfs/openai/system-cards/chatgpt-images-2-5-system-card.pdf#page=2) · [Official source](https://deploymentsafety.openai.com/chatgpt-images-2-5)
+[Official source](https://deploymentsafety.openai.com/chatgpt-images-2-5)
 
 ## Introduction
 

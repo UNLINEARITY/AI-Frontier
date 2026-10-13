@@ -138,9 +138,9 @@ class ArchiveTests(unittest.TestCase):
         self.assertIn("pdfs/openai/README_CN.md", chinese)
         row = dict(vendor="openai", title="Example", status="archived",
                    local_path="pdfs/openai/technical-reports/example.pdf",
-                   source_updated_date="", retrieved_at="2026-10-01")
+                   source_updated_date="", retrieved_at="2026-10-01", source_url="https://example.org/report")
         archive.render_model_coverage([row])
-        self.assertIn("[Technical Report](pdfs/openai/technical-reports/example.pdf)",
+        self.assertIn("[Technical Report](https://example.org/report)",
                       (self.root / "LATEST_MODELS.md").read_text())
 
     def test_frontier_excludes_historical_and_discontinued_models(self):

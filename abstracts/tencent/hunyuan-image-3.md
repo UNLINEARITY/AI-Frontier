@@ -1,6 +1,6 @@
 # HunyuanImage 3.0 Technical Report
 
-[PDF](../../pdfs/tencent/technical-reports/hunyuan-image-3--arxiv-v3.pdf#page=1) · [Official source](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0)
+[Official source](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0)
 
 ## Abstract
 
@@ -10,10 +10,10 @@ We present HunyuanImage 3.0, a native multimodal model that unifies multimodal u
 
 Figure 3: Illustration of HunyuanImage 3.0.
 
-[p. 6](../../pdfs/tencent/technical-reports/hunyuan-image-3--arxiv-v3.pdf#page=6) · [PDF](../../figures/tencent/hunyuan-image-3/figure-01.pdf)
+p. 6
 
 ![Figure 7](../../figures/tencent/hunyuan-image-3/figure-02.png)
 
 Figure 7: GSB evaluation results.
 
-[p. 12](../../pdfs/tencent/technical-reports/hunyuan-image-3--arxiv-v3.pdf#page=12) · [PDF](../../figures/tencent/hunyuan-image-3/figure-02.pdf)
+p. 12

@@ -1,6 +1,6 @@
 # GLM-TTS Technical Report
 
-[PDF](../../pdfs/zai/technical-reports/glm-tts-technical-report--arxiv-v1.pdf#page=1) · [Official source](https://github.com/zai-org/GLM-TTS)
+[Official source](https://github.com/zai-org/GLM-TTS)
 
 ## ABSTRACT
 
@@ -10,10 +10,10 @@ This work proposes GLM-TTS, a production-level TTS system designed for ef- ficie
 
 Figure 1: Overall Architecture of GLM-TTS
 
-[p. 1](../../pdfs/zai/technical-reports/glm-tts-technical-report--arxiv-v1.pdf#page=1) · [PDF](../../figures/zai/glm-tts-technical-report/figure-01.pdf)
+p. 1
 
 ![Figure 3](../../figures/zai/glm-tts-technical-report/figure-02.png)
 
 Figure 3: An overview of the GLM-TTS-GRPO framework.
 
-[p. 5](../../pdfs/zai/technical-reports/glm-tts-technical-report--arxiv-v1.pdf#page=5) · [PDF](../../figures/zai/glm-tts-technical-report/figure-02.pdf)
+p. 5

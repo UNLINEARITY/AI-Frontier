@@ -6,7 +6,7 @@
 
 ## 按类型浏览
 
-| 类型 | 已归档 PDF |
+| 类型 | 已收录报告 |
 | --- | ---: |
 | [技术报告](technical-reports/README_CN.md) | 8 |
 | [模型卡](model-cards/README_CN.md) | 0 |
@@ -16,14 +16,14 @@
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
-| 2026-09-12 | [North Small Translate: Advanced Cost-Effective Translation (Cohere CAT+)](technical-reports/north-small-translate--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2609.13916) |
-| 2026-03-12 | [Tiny Aya: Bridging Scale and Multilingual Depth](technical-reports/tiny-aya--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/aya) |
-| 2025-11 | [Command-A-Translate: Raising the Bar of Machine Translation with Difficulty Filtering](technical-reports/command-a-translate.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://aclanthology.org/2025.wmt-1.55/) |
-| 2025-05-13 | [Aya Vision: Advancing the Frontier of Multilingual Multimodality](technical-reports/aya-vision--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/aya) |
-| 2025-04-01 | [Command A: An Enterprise-Ready Large Language Model](technical-reports/command-a--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/papers/command-a-technical-report.pdf) |
-| 2024-12-05 | [Aya Expanse: Combining Research Breakthroughs for a New Multilingual Frontier](technical-reports/aya-expanse--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/aya) |
-| 2024-05-23 | [Aya 23: Open Weight Releases to Further Multilingual Progress](technical-reports/aya-23--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/aya) |
-| 2024-02-12 | [Aya Model: An Instruction Finetuned Open-Access Multilingual Language Model](technical-reports/aya-model--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/aya) |
+| 2026-09-12 | [North Small Translate: Advanced Cost-Effective Translation (Cohere CAT+)](https://arxiv.org/abs/2609.13916) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2609.13916) |
+| 2026-03-12 | [Tiny Aya: Bridging Scale and Multilingual Depth](https://cohere.com/research/aya) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/aya) |
+| 2025-11 | [Command-A-Translate: Raising the Bar of Machine Translation with Difficulty Filtering](https://aclanthology.org/2025.wmt-1.55/) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://aclanthology.org/2025.wmt-1.55/) |
+| 2025-05-13 | [Aya Vision: Advancing the Frontier of Multilingual Multimodality](https://cohere.com/research/aya) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/aya) |
+| 2025-04-01 | [Command A: An Enterprise-Ready Large Language Model](https://cohere.com/research/papers/command-a-technical-report.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/papers/command-a-technical-report.pdf) |
+| 2024-12-05 | [Aya Expanse: Combining Research Breakthroughs for a New Multilingual Frontier](https://cohere.com/research/aya) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/aya) |
+| 2024-05-23 | [Aya 23: Open Weight Releases to Further Multilingual Progress](https://cohere.com/research/aya) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/aya) |
+| 2024-02-12 | [Aya Model: An Instruction Finetuned Open-Access Multilingual Language Model](https://cohere.com/research/aya) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://cohere.com/research/aya) |
 | 未确认 | North Mini Code 1.0 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/CohereLabs/North-Mini-Code-1.0) |
 | 未确认 | North Micro Vision Instruct Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct) |
 | 未确认 | Command A+ Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16) |

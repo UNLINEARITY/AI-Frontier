@@ -1,6 +1,6 @@
 # Gemini 3.1 Flash-Lite Image Model Card
 
-[PDF](../../pdfs/google/model-cards/gemini-3-1-flash-lite-image-model-card.pdf#page=2) · [Official source](https://deepmind.google/models/model-cards/gemini-3-1-flash-lite-image/)
+[Official source](https://deepmind.google/models/model-cards/gemini-3-1-flash-lite-image/)
 
 ## Description:
 

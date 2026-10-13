@@ -6,7 +6,7 @@
 
 ## 按类型浏览
 
-| 类型 | 已归档 PDF |
+| 类型 | 已收录报告 |
 | --- | ---: |
 | [技术报告](technical-reports/README_CN.md) | 4 |
 | [模型卡](model-cards/README_CN.md) | 0 |
@@ -16,13 +16,13 @@
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
-| 2026-01-27 | [Evaluating Nova 2.0 Lite model under Amazon's Frontier Model Safety Framework](system-cards/nova-2-lite-frontier-safety-report--arxiv-v1.pdf) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://arxiv.org/abs/2601.19134) |
-| 2025-12-02 | [Amazon Nova 2: Multimodal Reasoning and Generation Models](technical-reports/nova-2-family.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models) |
-| 2025-10-28 | [Amazon Nova Multimodal Embeddings: Technical Report and Model Card](technical-reports/nova-multimodal-embeddings.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://www.amazon.science/publications/amazon-nova-multimodal-embeddings-technical-report-and-model-card) |
-| 2025-07-07 | [Evaluating the Critical Risks of Amazon's Nova Premier under the Frontier Model Safety Framework](system-cards/nova-premier-frontier-safety-report--arxiv-v1.pdf) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://arxiv.org/abs/2507.06260) |
-| 2025-04-08 | [Amazon Nova Sonic: Technical Report and Model Card](technical-reports/nova-sonic.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://www.amazon.science/publications/amazon-nova-sonic-technical-report-and-model-card) |
-| 2024-12-03 | [The Amazon Nova Family of Models: Technical Report and Model Card](technical-reports/nova-family.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card) |
+| 2026-01-27 | [Evaluating Nova 2.0 Lite model under Amazon's Frontier Model Safety Framework](https://arxiv.org/abs/2601.19134) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://arxiv.org/abs/2601.19134) |
+| 2025-12-02 | [Amazon Nova 2: Multimodal Reasoning and Generation Models](https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models) |
+| 2025-10-28 | [Amazon Nova Multimodal Embeddings: Technical Report and Model Card](https://www.amazon.science/publications/amazon-nova-multimodal-embeddings-technical-report-and-model-card) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://www.amazon.science/publications/amazon-nova-multimodal-embeddings-technical-report-and-model-card) |
+| 2025-07-07 | [Evaluating the Critical Risks of Amazon's Nova Premier under the Frontier Model Safety Framework](https://arxiv.org/abs/2507.06260) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://arxiv.org/abs/2507.06260) |
+| 2025-04-08 | [Amazon Nova Sonic: Technical Report and Model Card](https://www.amazon.science/publications/amazon-nova-sonic-technical-report-and-model-card) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://www.amazon.science/publications/amazon-nova-sonic-technical-report-and-model-card) |
+| 2024-12-03 | [The Amazon Nova Family of Models: Technical Report and Model Card](https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card) |
 | 未确认 | Amazon Nova Premier Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-premier.html) |
-| 未确认 | [AWS AI Service Cards: Amazon Nova Act](system-cards/nova-act-service-card.pdf) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://docs.aws.amazon.com/pdfs/ai/responsible-ai/nova-act/nova-act.pdf) |
+| 未确认 | [AWS AI Service Cards: Amazon Nova Act](https://docs.aws.amazon.com/pdfs/ai/responsible-ai/nova-act/nova-act.pdf) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://docs.aws.amazon.com/pdfs/ai/responsible-ai/nova-act/nova-act.pdf) |
 
 归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../catalog.csv)。

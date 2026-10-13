@@ -6,7 +6,7 @@
 
 ## 按类型浏览
 
-| 类型 | 已归档 PDF |
+| 类型 | 已收录报告 |
 | --- | ---: |
 | [技术报告](technical-reports/README_CN.md) | 6 |
 | [模型卡](model-cards/README_CN.md) | 0 |
@@ -16,12 +16,12 @@
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
-| 2026-06-11 | [MiniMax Sparse Attention](technical-reports/minimax-sparse-attention--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-M3) |
-| 2026-05-26 | [The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence](technical-reports/minimax-m2-series--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.26494) |
-| 2025-12-15 | [Towards Scalable Pre-training of Visual Tokenizers for Generation](technical-reports/vtp-visual-tokenizers--arxiv-v2.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.13687) |
-| 2025-06-16 | [MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention](technical-reports/minimax-m1-scaling-test-time-compute-efficiently-with-lightning-attention--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-M1) |
-| 2025-05-12 | [MiniMax-Speech: Intrinsic Zero-Shot Text-to-Speech with a Learnable Speaker Encoder](technical-reports/minimax-speech--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2505.07916) |
-| 2025-01-14 | [MiniMax-01: Scaling Foundation Models with Lightning Attention](technical-reports/minimax-01-scaling-foundation-models-with-lightning-attention--arxiv-v1.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-01) |
+| 2026-06-11 | [MiniMax Sparse Attention](https://github.com/MiniMax-AI/MiniMax-M3) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-M3) |
+| 2026-05-26 | [The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence](https://arxiv.org/abs/2605.26494) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.26494) |
+| 2025-12-15 | [Towards Scalable Pre-training of Visual Tokenizers for Generation](https://arxiv.org/abs/2512.13687) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.13687) |
+| 2025-06-16 | [MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention](https://github.com/MiniMax-AI/MiniMax-M1) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-M1) |
+| 2025-05-12 | [MiniMax-Speech: Intrinsic Zero-Shot Text-to-Speech with a Learnable Speaker Encoder](https://arxiv.org/abs/2505.07916) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2505.07916) |
+| 2025-01-14 | [MiniMax-01: Scaling Foundation Models with Lightning Attention](https://github.com/MiniMax-AI/MiniMax-01) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-01) |
 | 未确认 | MiniMax-Music3 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/MiniMaxAI/MiniMax-Music3) |
 | 未确认 | MiniMax-M3 Model Card（待补齐） | [模型卡](../../reports/model-cards_CN.md) | [来源](https://huggingface.co/MiniMaxAI/MiniMax-M3) |
 | 未确认 | MiniMax-M2.1 Technical Report（待补齐） | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/MiniMax-AI/MiniMax-M2.1) |

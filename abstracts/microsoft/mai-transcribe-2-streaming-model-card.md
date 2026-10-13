@@ -1,6 +1,6 @@
 # MAI-Transcribe-2-Streaming Model Card
 
-[PDF](../../pdfs/microsoft/model-cards/mai-transcribe-2-streaming-model-card.pdf#page=1) · [Official source](https://microsoft.ai/news/our-first-streaming-transcription-model/)
+[Official source](https://microsoft.ai/news/our-first-streaming-transcription-model/)
 
 ## Overview
 
@@ -10,4 +10,4 @@ MAI-Transcribe-2-Streaming is a low-latency streaming speech recognition model b
 
 
 
-[p. 2](../../pdfs/microsoft/model-cards/mai-transcribe-2-streaming-model-card.pdf#page=2) · [PDF](../../figures/microsoft/mai-transcribe-2-streaming-model-card/figure-01.pdf)
+p. 2

@@ -1,6 +1,6 @@
 # Robostral Navigate
 
-[PDF](../../pdfs/mistral/technical-reports/robostral-navigate--arxiv-v3.pdf#page=2) · [Official source](https://arxiv.org/abs/2607.20785)
+[Official source](https://arxiv.org/abs/2607.20785)
 
 ## Abstract
 
@@ -14,7 +14,7 @@ When the target lies outside the field of view, pointing is omitted. A diffusion
 context frame (frame at which the waypoint has been inferred) and the current frame to produce a dense trajectory
 at 10 hertz. Finally, a motion-tracking controller turns this trajectory into high-frequency actuator torques.
 
-[p. 3](../../pdfs/mistral/technical-reports/robostral-navigate--arxiv-v3.pdf#page=3) · [PDF](../../figures/mistral/robostral-navigate/figure-01.pdf)
+p. 3
 
 ![Figure 5](../../figures/mistral/robostral-navigate/figure-02.png)
 
@@ -22,4 +22,4 @@ Figure 5: Overview of our online reinforcement learning pipeline. The trainer or
 physical simulator, and action generator (vLLM) in an asynchronous loop, updating the policy via CISPO using
 the −max(2, dist_to_goal) reward signal upon episode termination.
 
-[p. 7](../../pdfs/mistral/technical-reports/robostral-navigate--arxiv-v3.pdf#page=7) · [PDF](../../figures/mistral/robostral-navigate/figure-02.pdf)
+p. 7

@@ -1,6 +1,6 @@
 # Gemini Omni Flash Model Card
 
-[PDF](../../pdfs/google/model-cards/gemini-omni-flash-model-card.pdf#page=2) · [Official source](https://deepmind.google/models/model-cards/gemini-omni-flash/)
+[Official source](https://deepmind.google/models/model-cards/gemini-omni-flash/)
 
 ## Description:
 
