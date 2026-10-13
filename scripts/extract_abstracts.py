@@ -278,7 +278,7 @@ def current_reports():
     return list(reports.values()), missing
 
 
-def write_outputs(output, reports, missing):
+def write_outputs(output, reports, missing, write_index=True):
     output.mkdir(parents=True, exist_ok=True)
     figure_index = ROOT / 'figures/index.json'
     figures = {r['id']: r for r in json.loads(figure_index.read_text())['reports']} if figure_index.exists() else {}
@@ -287,65 +287,51 @@ def write_outputs(output, reports, missing):
         target = output / report['vendor'] / f'{slug}.md'
         target.parent.mkdir(exist_ok=True)
         report['markdown_path'] = str(target.relative_to(ROOT))
-        label = report['source_heading'] or ('Unlabelled opening summary' if report['text'] else 'Source summary')
-        note = ('Source passage visually checked against the PDF page.' if report['status'] == 'source_reviewed' else
-                'No dedicated summary section identified.' if report['status'] == 'no_summary_identified' else
-                'Source text cross-checked with two extractors; not manually verified.' if report['status'] == 'cross_checked'
-                else 'Draft source extraction — needs review. Read the linked PDF before quoting.')
         source = f"../../{report['source_pdf']}" + (f"#page={report['pages'][0]}" if report['pages'] else '')
-        lines = [f"# {report['title']}", '', f"Models: {', '.join(report['models'])}", '',
-                 '[Source summaries](../README.md) · [中文索引](../README_CN.md)', '',
-                 f"[Original PDF]({source}) · [Official source]({report['source_url']})", '',
-                 f"PDF pages: {', '.join(map(str, report['pages'])) or 'Not identified'} · {note}", '',
-                 f'## {label}', '', report['text'] or 'No dedicated summary identified in the inspected pages.', '']
+        lines = [f"# {report['title']}", '',
+                 f"[PDF]({source}) · [Official source]({report['source_url']})", '']
+        if report['text']:
+            if report['source_heading']:
+                lines += [f"## {report['source_heading']}", '']
+            lines += [report['text'], '']
         selected = figures.get(report['id'], {})
-        if selected.get('source_sha256') == report['source_sha256'] and selected.get('figures'):
-            lines += ['## Core figures', '', f'[All figures and original captions](../../figures/{report["vendor"]}/{slug}/README.md) · [中文](../../figures/{report["vendor"]}/{slug}/README_CN.md)', '']
-            for figure in selected['figures']:
-                title = figure['role'].replace('_', ' ').title()
-                number = f"Figure {figure['figure_number']}" if figure['figure_number'] is not None else 'Unnumbered graphic'
-                lines += [f'### {title} · {number}', '',
-                          f"Source page: {figure['page']} · [Original graphics PDF](../../{figure['pdf_path']}) · [High-resolution PNG](../../{figure['png_path']})", '',
-                          f"![{title}](../../{figure['png_path']})", '', figure['caption'], '']
+        if selected.get('source_sha256') == report['source_sha256']:
+            for figure in selected.get('figures', []):
+                number = f"Figure {figure['figure_number']}" if figure['figure_number'] is not None else 'Figure'
+                lines += [f"![{number}](../../{figure['png_path']})", '', figure['caption'], '',
+                          f"[p. {figure['page']}](../../{report['source_pdf']}#page={figure['page']}) · [PDF](../../{figure['pdf_path']})", '']
         target.write_text('\n'.join(line.rstrip() for line in '\n'.join(lines).splitlines()).rstrip() + '\n')
     payload = dict(schema_version=1, extracted_at=date.today().isoformat(), reports=reports,
                    models_without_archived_reports=missing)
-    (output / 'index.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n')
+    if write_index:
+        (output / 'index.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n')
     for chinese in (False, True):
         name = 'README_CN.md' if chinese else 'README.md'
-        lines = ['# 前沿模型概要与核心图片' if chinese else '# Frontier model summaries and core figures', '',
+        figure_count = sum(len(figures.get(r['id'], {}).get('figures', [])) for r in reports
+                           if figures.get(r['id'], {}).get('source_sha256') == r['source_sha256'])
+        lines = ['# 前沿报告' if chinese else '# Frontier reports', '',
                  '[English](README.md) · [首页](../README_CN.md)' if chinese else '[中文](README_CN.md) · [Home](../README.md)', '',
-                 '快速阅读前沿模型报告的原文概要，查看架构、主要结果与安全评测图片。保留原始章节名称、图注与 PDF 页码，便于回到原文。概要保持来源语言。' if chinese else
-                 'Read the opening summaries of frontier model reports and explore their architectures, headline results, and safety evaluations. Original passages, captions, and PDF page references. Source text stays in its original language.', '',
-                 f"[{'全部核心图片' if chinese else 'Browse all core figures'}](../figures/{name})" if figures else 'Selected figures will appear alongside each report.', '',
-                 f"**{len(reports)} {'份独立报告' if chinese else 'unique reports'} · {sum(bool(r['text']) for r in reports)} {'份概要原文' if chinese else 'source summaries'} · {sum(len(figures.get(r['id'], {}).get('figures', [])) for r in reports if figures.get(r['id'], {}).get('source_sha256') == r['source_sha256'])} {'张核心图片' if chinese else 'core figures'}**", '']
+                 f"**{len(reports)} {'份报告' if chinese else 'reports'} · {figure_count} {'张核心图片' if chinese else 'core figures'}**", '']
         for vendor, label in VENDORS.items():
             group = [r for r in reports if r['vendor'] == vendor]
-            absent = [m for m in missing if m['vendor'] == vendor]
-            lines += [f"## {label if chinese or vendor != 'zai' else 'Z.ai / Zhipu AI'}", '',
-                      '| 报告 | 原始章节 | 图片 | 核验 |' if chinese else '| Report | Source section | Figures | Check |', '| --- | --- | --- | --- |']
-            for r in group:
-                slug = r['id'].split(':', 1)[1]
-                section = r['source_heading'] or (('无标题开头概述' if chinese else 'Unlabelled opening summary') if r['text'] else ('未识别到摘要章节' if chinese else 'Not identified'))
-                status = ('原页核对' if chinese else 'Source page checked') if r['status'] == 'source_reviewed' else ('未识别到摘要章节' if chinese else 'Not identified') if r['status'] == 'no_summary_identified' else ('文本一致' if chinese else 'Text agrees') if r['status'] == 'cross_checked' else ('待核验' if chinese else 'Needs review')
-                selected = figures.get(r['id'], {})
-                count = len(selected.get('figures', [])) if selected.get('source_sha256') == r['source_sha256'] else 0
-                picture = f'[{count}](../figures/{vendor}/{slug}/{name})' if count else '—'
-                lines.append(f"| [{r['title']}]({vendor}/{slug}.md) | {section} | {picture} | {status} |")
             if not group:
-                lines.append('| — | — | — | — |')
-            if absent:
-                lines += ['', '以下模型尚无已归档的对应 PDF：' if chinese else 'No corresponding PDF archived for these models:', '',
-                          ' · '.join(f"[{m['model']}]({m['source_url']})" for m in absent)]
+                continue
+            lines += [f"## {label if chinese or vendor != 'zai' else 'Z.ai / Zhipu AI'}", '']
+            lines += [f"- [{r['title']}]({vendor}/{r['id'].split(':', 1)[1]}.md)" for r in group]
             lines.append('')
-        (output / name).write_text('\n'.join(lines))
+        (output / name).write_text('\n'.join(lines).rstrip() + '\n')
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT / 'abstracts')
+    parser.add_argument('--render-only', action='store_true', help='Render existing source results without extracting again.')
     parser.add_argument('--scan-pages', type=int, default=12)
     args = parser.parse_args()
+    if args.render_only:
+        payload = json.loads((args.output / 'index.json').read_text())
+        write_outputs(args.output.resolve(), payload['reports'], payload['models_without_archived_reports'], write_index=False)
+        return
     logging.getLogger('pypdf').setLevel(logging.ERROR)
     logging.getLogger('pdfminer').setLevel(logging.ERROR)
     cache = ROOT / '.cache/abstracts'

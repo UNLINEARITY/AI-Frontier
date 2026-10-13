@@ -1,12 +1,6 @@
 # Grok 4.7 Model Card
 
-Models: Grok 4.7
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/xai/model-cards/grok-4-7-model-card.pdf#page=4) · [Official source](https://x.ai/safety)
-
-PDF pages: 4, 5 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/xai/model-cards/grok-4-7-model-card.pdf#page=4) · [Official source](https://x.ai/safety)
 
 ## 1.1 Overview
 
@@ -40,20 +34,14 @@ Databricks Mosaic, and others.
 
 SpaceXAI plans to add Grok 4.7 to its consumer surfaces (web, mobile apps, and Grok-in-X on the X platform) at a later date.
 
-## Core figures
-
-[All figures and original captions](../../figures/xai/grok-4-7-model-card/README.md) · [中文](../../figures/xai/grok-4-7-model-card/README_CN.md)
-
-### Results · Unnumbered graphic
-
-Source page: 7 · [Original graphics PDF](../../figures/xai/grok-4-7-model-card/figure-01.pdf) · [High-resolution PNG](../../figures/xai/grok-4-7-model-card/figure-01.png)
-
-![Results](../../figures/xai/grok-4-7-model-card/figure-01.png)
+![Figure](../../figures/xai/grok-4-7-model-card/figure-01.png)
 
 
 
-### Results · Unnumbered graphic
+[p. 7](../../pdfs/xai/model-cards/grok-4-7-model-card.pdf#page=7) · [PDF](../../figures/xai/grok-4-7-model-card/figure-01.pdf)
 
-Source page: 8 · [Original graphics PDF](../../figures/xai/grok-4-7-model-card/figure-02.pdf) · [High-resolution PNG](../../figures/xai/grok-4-7-model-card/figure-02.png)
+![Figure](../../figures/xai/grok-4-7-model-card/figure-02.png)
 
-![Results](../../figures/xai/grok-4-7-model-card/figure-02.png)
+
+
+[p. 8](../../pdfs/xai/model-cards/grok-4-7-model-card.pdf#page=8) · [PDF](../../figures/xai/grok-4-7-model-card/figure-02.pdf)

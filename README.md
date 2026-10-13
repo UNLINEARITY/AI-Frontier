@@ -1,16 +1,16 @@
 # AI Frontier
 
+[中文](README_CN.md)
+
 ![AI Frontier](assets/branding/ai-frontier-banner.png)
 
 **Track frontier AI, from original reports to technical insight.**
 
-[Website](https://unlinearity.github.io/AI-Frontier/) · [Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Summaries & figures](abstracts/README.md) · [Full catalog](catalog.csv)
+[Website](https://unlinearity.github.io/AI-Frontier/) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)
 
 An open research archive for understanding how frontier AI models are built, evaluated, and deployed. We bring official technical reports, model cards, and system cards into one place, and are building toward readable sources, grounded technical analysis, and ongoing release tracking.
 
 **385 original PDFs · 18 publishers · 2022 onward**
-
-[Explore the website](https://unlinearity.github.io/AI-Frontier/) to search reports, filter by publisher and document type, and browse current frontier models in English or Chinese.
 
 **Available today:** original PDFs, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). Full-document Markdown, structured analysis, and automated tracking are the next stages.
 
@@ -87,5 +87,3 @@ The bilingual website makes the archive searchable. Sources and frontier selecti
 This growing collection covers official model and model-family reports from 2022 onward, including technical reports, model cards, and system cards. Sources are publisher websites, official repositories, and author-submitted arXiv papers. Coverage is not yet exhaustive. For arXiv entries, the recorded first publication date is the first submission date; unknown dates are left unspecified.
 
 PDFs are preserved as provided by their publishers. Copyrights and terms of use remain with the original rights holders; this repository does not relicense the reports.
-
-Maintenance and implementation notes: [agent.md](agent.md).

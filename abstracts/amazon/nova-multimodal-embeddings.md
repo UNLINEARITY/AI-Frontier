@@ -1,12 +1,6 @@
 # Amazon Nova Multimodal Embeddings: Technical Report and Model Card
 
-Models: Nova Multimodal Embeddings
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/amazon/technical-reports/nova-multimodal-embeddings.pdf#page=1) · [Official source](https://www.amazon.science/publications/amazon-nova-multimodal-embeddings-technical-report-and-model-card)
-
-PDF pages: 1, 2 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/amazon/technical-reports/nova-multimodal-embeddings.pdf#page=1) · [Official source](https://www.amazon.science/publications/amazon-nova-multimodal-embeddings-technical-report-and-model-card)
 
 ## Abstract
 
@@ -74,14 +68,8 @@ Amazon Nova MME
 
 ✓
 
-## Core figures
-
-[All figures and original captions](../../figures/amazon/nova-multimodal-embeddings/README.md) · [中文](../../figures/amazon/nova-multimodal-embeddings/README_CN.md)
-
-### Architecture · Figure 1
-
-Source page: 1 · [Original graphics PDF](../../figures/amazon/nova-multimodal-embeddings/figure-01.pdf) · [High-resolution PNG](../../figures/amazon/nova-multimodal-embeddings/figure-01.png)
-
-![Architecture](../../figures/amazon/nova-multimodal-embeddings/figure-01.png)
+![Figure 1](../../figures/amazon/nova-multimodal-embeddings/figure-01.png)
 
 Figure 1: Amazon Nova Multimodal Embeddings model.
+
+[p. 1](../../pdfs/amazon/technical-reports/nova-multimodal-embeddings.pdf#page=1) · [PDF](../../figures/amazon/nova-multimodal-embeddings/figure-01.pdf)

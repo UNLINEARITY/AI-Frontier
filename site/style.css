@@ -39,3 +39,5 @@ body,.filter-bar,header,.lab,.card,input,select,footer{transition:background-col
 .star-compact{display:none}@media(max-width:700px){.star-label{display:none}.star-compact{display:inline}}
 
 :root{--control-line:var(--line)}:root[data-theme=light]{--control-line:#8394a3}input,select{border-color:var(--control-line)}.sort-field select{border:0}
+
+.card-link::after{content:"";position:absolute;inset:0;border-radius:inherit}.card:has(.card-link){cursor:pointer;min-height:185px}.card:has(.card-link) .date{margin-bottom:0}.card .links{position:relative;z-index:1}.card-link:focus-visible{outline:0}.card:has(.card-link:focus-visible){outline:2px solid var(--accent);outline-offset:3px}

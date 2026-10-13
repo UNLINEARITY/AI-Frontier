@@ -1,12 +1,6 @@
 # DeepSeek-OCR 2: Visual Causal Flow
 
-Models: DeepSeek-OCR-2
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/deepseek/technical-reports/deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf#page=1) · [Official source](https://github.com/deepseek-ai/DeepSeek-OCR-2)
-
-PDF pages: 1 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/deepseek/technical-reports/deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf#page=1) · [Official source](https://github.com/deepseek-ai/DeepSeek-OCR-2)
 
 ## Abstract
 
@@ -14,26 +8,18 @@ We present DeepSeek-OCR 2 to investigate the feasibility of a novel encoder—De
 
 Figure 1 | We substitute the CLIP component in DeepEncoder with an LLM-style architecture. By customizing the attention mask, visual tokens utilize bidirectional attention while learnable queries adopt causal attention. Each query token can thus attend to all visual tokens and preceding queries, allowing progressive causal reordering over visual information.
 
-## Core figures
-
-[All figures and original captions](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/README.md) · [中文](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/README_CN.md)
-
-### Overview · Figure 1
-
-Source page: 1 · [Original graphics PDF](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-01.pdf) · [High-resolution PNG](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-01.png)
-
-![Overview](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-01.png)
+![Figure 1](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-01.png)
 
 Figure 1 | We substitute the CLIP component in DeepEncoder with an LLM-style architecture.
 By customizing the attention mask, visual tokens utilize bidirectional attention while learnable
 queries adopt causal attention. Each query token can thus attend to all visual tokens and
 preceding queries, allowing progressive causal reordering over visual information.
 
-### Architecture · Figure 5
+[p. 1](../../pdfs/deepseek/technical-reports/deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf#page=1) · [PDF](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-01.pdf)
 
-Source page: 7 · [Original graphics PDF](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-02.pdf) · [High-resolution PNG](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-02.png)
-
-![Architecture](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-02.png)
+![Figure 5](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-02.png)
 
 Figure 5 | Attention mask architecture of DeepEncoder V2. Concatenation of bidirectional mask
 (vision tokens, ViT-like) and causal triangular mask (flow tokens, LLM decoder-style).
+
+[p. 7](../../pdfs/deepseek/technical-reports/deepseek-ocr-2-visual-causal-flow--arxiv-v1.pdf#page=7) · [PDF](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-02.pdf)

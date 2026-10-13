@@ -1,12 +1,6 @@
 # Seed2.1 Model Card: Agentic Intelligence for Productivity
 
-Models: Seed2.1
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/bytedance/model-cards/seed2-1-model-card.pdf#page=1) · [Official source](https://seed.bytedance.com/en/seed_model_portfolio)
-
-PDF pages: 1 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/bytedance/model-cards/seed2-1-model-card.pdf#page=1) · [Official source](https://seed.bytedance.com/en/seed_model_portfolio)
 
 ## Introduction
 
@@ -22,26 +16,18 @@ As model capabilities continue to evolve, we observe two important changes in ho
 
 To address these changes, the Seed team adopted a product-driven development and evaluation methodology for Seed2.1:
 
-## Core figures
-
-[All figures and original captions](../../figures/bytedance/seed2-1-model-card/README.md) · [中文](../../figures/bytedance/seed2-1-model-card/README_CN.md)
-
-### Results · Figure 5
-
-Source page: 13 · [Original graphics PDF](../../figures/bytedance/seed2-1-model-card/figure-01.pdf) · [High-resolution PNG](../../figures/bytedance/seed2-1-model-card/figure-01.png)
-
-![Results](../../figures/bytedance/seed2-1-model-card/figure-01.png)
+![Figure 5](../../figures/bytedance/seed2-1-model-card/figure-01.png)
 
 Figure 5 Efficiency of the Generalist Computer-Use Agent (CUA) setting on OSWorld. For each model, the arrow
 points from the GUI-only operating point (open marker) to the Generalist CUA setting (filled marker), in which the
 agent may also issue commands and call tools. Both models move up and to the left: higher success rate with fewer
 steps per task.
 
-### Overview · Figure 16
+[p. 13](../../pdfs/bytedance/model-cards/seed2-1-model-card.pdf#page=13) · [PDF](../../figures/bytedance/seed2-1-model-card/figure-01.pdf)
 
-Source page: 28 · [Original graphics PDF](../../figures/bytedance/seed2-1-model-card/figure-02.pdf) · [High-resolution PNG](../../figures/bytedance/seed2-1-model-card/figure-02.png)
-
-![Overview](../../figures/bytedance/seed2-1-model-card/figure-02.png)
+![Figure 16](../../figures/bytedance/seed2-1-model-card/figure-02.png)
 
 Figure 16 Seed-for-Seed development loop. Seed2.1 participates in evaluation, data, training, and infrastructure loops
 through long-horizon execution and continuous target-driven iteration.
+
+[p. 28](../../pdfs/bytedance/model-cards/seed2-1-model-card.pdf#page=28) · [PDF](../../figures/bytedance/seed2-1-model-card/figure-02.pdf)

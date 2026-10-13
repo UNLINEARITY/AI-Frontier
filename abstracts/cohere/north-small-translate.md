@@ -1,12 +1,6 @@
 # North Small Translate: Advanced Cost-Effective Translation (Cohere CAT+)
 
-Models: North Small Translate 1.0
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/cohere/technical-reports/north-small-translate--arxiv-v1.pdf#page=1) · [Official source](https://arxiv.org/abs/2609.13916)
-
-PDF pages: 1 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/cohere/technical-reports/north-small-translate--arxiv-v1.pdf#page=1) · [Official source](https://arxiv.org/abs/2609.13916)
 
 ## Abstract
 

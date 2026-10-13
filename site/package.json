@@ -1,0 +1,8 @@
+{
+  "name": "ai-frontier-pages",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "marked": "18.0.11"
+  }
+}

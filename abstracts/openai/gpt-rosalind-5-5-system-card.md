@@ -1,12 +1,6 @@
 # GPT-Rosalind-5.5 System Card
 
-Models: GPT-Rosalind-5.5
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/openai/system-cards/gpt-rosalind-5-5-system-card.pdf#page=3) · [Official source](https://deploymentsafety.openai.com/gpt-rosalind-5-5)
-
-PDF pages: 3 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/openai/system-cards/gpt-rosalind-5-5-system-card.pdf#page=3) · [Official source](https://deploymentsafety.openai.com/gpt-rosalind-5-5)
 
 ## Introduction
 

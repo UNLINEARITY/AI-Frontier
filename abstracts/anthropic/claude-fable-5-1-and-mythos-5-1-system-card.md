@@ -1,12 +1,6 @@
 # Claude Fable 5.1 and Mythos 5.1 System Card
 
-Models: Claude Fable 5.1 / Mythos 5.1
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/anthropic/system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf#page=2) · [Official source](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card)
-
-PDF pages: 2, 3, 4, 5 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/anthropic/system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf#page=2) · [Official source](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card)
 
 ## Executive Summary
 
@@ -38,24 +32,14 @@ Capabilities. We tested Fable 5.1 and Mythos 5.1 across a range of evaluations c
 
 benchmarks. In the life sciences, Mythos 5.1 leads on most of our internal and partner benchmarks, including in bioinformatics, protein design, and organic chemistry. It is also more cost-efﬁcient than its predecessors on many evaluations, matching or exceeding Fable 5 at roughly half the cost per task on agentic coding benchmarks.
 
-## Core figures
-
-[All figures and original captions](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/README.md) · [中文](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/README_CN.md)
-
-### Safety Evaluation · Figure 2.2.3.1.A
-
-Source page: 23 · [Original graphics PDF](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-01.pdf) · [High-resolution PNG](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-01.png)
-
-![Safety Evaluation](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-01.png)
+![Figure 2.2.3.1.A](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-01.png)
 
 [Figure 2.2.3.1.A] Results on the two long-form virology tasks. The dashed line marks the notable-capability
 threshold of an end-to-end score greater than 0.80.
 
-### Safety Evaluation · Figure 2.2.3.2.1.A
+[p. 23](../../pdfs/anthropic/system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf#page=23) · [PDF](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-01.pdf)
 
-Source page: 28 · [Original graphics PDF](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-02.pdf) · [High-resolution PNG](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-02.png)
-
-![Safety Evaluation](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-02.png)
+![Figure 2.2.3.2.1.A](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-02.png)
 
 [Figure 2.2.3.2.1.A] Sequence-to-function modeling and prediction. [Top row:] Top (left) and median (right)
 design scores. Individual model runs are shown as points. Each model executed eight independent attempts at
@@ -65,3 +49,5 @@ performances when participant data is available for a metric. [Middle row:] Pred
 (left) and top 5% of sequences (right). [Bottom row:] Score ranges for design and prediction. Lines show the
 range of scores achieved in runs of the same model; their intersection shows the mean performance across
 runs of the same model.
+
+[p. 28](../../pdfs/anthropic/system-cards/claude-fable-5-1-and-mythos-5-1-system-card.pdf#page=28) · [PDF](../../figures/anthropic/claude-fable-5-1-and-mythos-5-1-system-card/figure-02.pdf)

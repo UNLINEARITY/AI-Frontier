@@ -104,48 +104,19 @@ def export(output, selections, reports):
 
 
 def write_report(folder, report):
+    slug = report['id'].split(':', 1)[1]
     for cn in (False, True):
         home = 'README_CN.md' if cn else 'README.md'
-        other = 'README.md' if cn else 'README_CN.md'
-        lines = [f"# {report['title']}", '',
-                 f'[English]({other}) · [核心图片](../../{home})' if cn else f'[中文]({other}) · [Core figures](../../{home})', '',
-                 f"[{'原始 PDF' if cn else 'Original PDF'}](../../../{report['source_pdf']}) · [{'官方来源' if cn else 'Official source'}]({report['source_url']})", '']
-        if not report['figures']:
-            lines += ['本报告未选出适合作为核心图片的独立图示。模型信息与评测请阅读原始 PDF。' if cn else
-                      'No standalone core figure selected from this report. Read the original PDF for model details and evaluations.', '']
-        for i, figure in enumerate(report['figures'], 1):
-            number = f"Figure {figure['figure_number']}" if figure['figure_number'] is not None else ('未编号图' if cn else 'Unnumbered graphic')
-            lines += [f"## {LABELS[figure['role']][int(cn)]} · {number}", '',
-                      f"{'原文第' if cn else 'Source page: '}{figure['page']}{'页' if cn else ''} · [PNG](figure-{i:02d}.png) · [{'保留原始图形的 PDF' if cn else 'PDF with original graphics'}](figure-{i:02d}.pdf)", '',
-                      f"[{'查看原页' if cn else 'View source page'}](../../../{report['source_pdf']}#page={figure['page']})", '',
-                      f"![{LABELS[figure['role']][int(cn)]}](figure-{i:02d}.png)", '', figure['caption'], '']
-        (folder / home).write_text('\n'.join(line.rstrip() for line in '\n'.join(lines).splitlines()).rstrip() + '\n')
+        label = '阅读报告' if cn else 'Read report'
+        target = f"../../../abstracts/{report['vendor']}/{slug}.md"
+        (folder / home).write_text(f"# {report['title']}\n\n[{label}]({target})\n")
 
 
 def write_index(output, reports):
     for cn in (False, True):
         home = 'README_CN.md' if cn else 'README.md'
-        sibling = 'README.md' if cn else 'README_CN.md'
-        count = sum(len(r['figures']) for r in reports)
-        available = sum(bool(r['figures']) for r in reports)
-        lines = ['# 前沿模型核心图片' if cn else '# Core figures from frontier reports', '',
-                 f'[English]({sibling}) · [原文概要](../abstracts/{home}) · [首页](../{home})' if cn else f'[中文]({sibling}) · [Source summaries](../abstracts/{home}) · [Home](../{home})', '',
-                 '直接查看报告中的架构、主要结果与安全评测。保留原图和图注，高清 PNG 便于阅读，裁切 PDF 保留原始图形。' if cn else
-                 'See architectures, headline results, and safety evaluations straight from the reports. Original graphics and captions, with high-resolution PNGs and cropped PDFs.', '',
-                 f"**{count} {'张图片' if cn else 'figures'} · {available} {'份报告提供图片' if cn else 'reports with selected figures'} · {len(reports)} {'份报告已检查' if cn else 'reports inspected'}**", '',
-                 'PNG 的像素数不等于原始位图的分辨率；裁切不会增加原图细节。版权与使用条款仍归原发布者所有。' if cn else
-                 'Rendering at high DPI does not add detail to embedded low-resolution bitmaps. Copyright and terms remain with the original publishers.', '']
-        for vendor in dict.fromkeys(r['vendor'] for r in reports):
-            label = 'Z.ai / Zhipu AI' if vendor == 'zai' and not cn else VENDORS[vendor]
-            lines += [f'## {label}', '', '| 报告 | 图片 |' if cn else '| Report | Figures |', '| --- | --- |']
-            for r in reports:
-                if r['vendor'] != vendor:
-                    continue
-                slug = r['id'].split(':', 1)[1]
-                roles = ' · '.join(LABELS[f['role']][int(cn)] for f in r['figures']) or ('未选出合适图片' if cn else 'No suitable figure selected')
-                lines.append(f"| [{r['title']}]({vendor}/{slug}/{home}) | {roles} |")
-            lines.append('')
-        (output / home).write_text('\n'.join(lines))
+        label = '阅读报告' if cn else 'Read reports'
+        (output / home).write_text(f"[{label}](../abstracts/{home})\n")
 
 
 def main():

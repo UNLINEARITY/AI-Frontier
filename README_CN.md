@@ -1,16 +1,16 @@
 # AI Frontier
 
+[英文版](README.md)
+
 ![AI Frontier](assets/branding/ai-frontier-banner.png)
 
 **持续追踪前沿 AI，从原始报告走向技术洞察。**
 
-[在线浏览](https://unlinearity.github.io/AI-Frontier/cn/) · [英文版](README.md) · [按厂商浏览](#按厂商浏览) · [按类型浏览](#按类型找报告) · [前沿模型](LATEST_MODELS_CN.md) · [概要与图片](abstracts/README_CN.md) · [完整索引](catalog.csv)
+[在线浏览](https://unlinearity.github.io/AI-Frontier/cn/) · [前沿模型](LATEST_MODELS_CN.md) · [完整索引](catalog.csv)
 
 一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，并逐步推进可读原文、基于来源的技术分析与模型发布追踪。
 
 **385 份原始 PDF · 18 家厂商 · 2022 年起**
-
-[打开在线网站](https://unlinearity.github.io/AI-Frontier/cn/)，搜索报告、按厂商和文档类型筛选，或浏览当前前沿模型。支持独立中英文页面。
 
 **当前已提供：**原始 PDF、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。
 
@@ -87,5 +87,3 @@
 收录 2022 年起模型及模型家族的官方技术报告、模型卡与系统卡，来源包括厂商官网、官方仓库和作者提交的 arXiv 论文。资料库仍在补齐，不代表已穷尽所有历史报告。arXiv 条目以首次提交日作为已记录的首次发布日期，未知日期不作推测。
 
 PDF 保留发布者提供的原始内容，版权及使用条款归原权利人所有，本仓库不另行授权这些报告。
-
-维护流程与实现说明见 [agent.md](agent.md)（英文）。

@@ -1,27 +1,15 @@
 # Step-Video-TI2V Technical Report: A State-of-the-Art Text-Driven Image-to-Video Generation Model
 
-Models: Step-Video-TI2V
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/stepfun/technical-reports/step-video-ti2v--arxiv-v1.pdf#page=1) · [Official source](https://github.com/stepfun-ai/Step-Video-TI2V)
-
-PDF pages: 1 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/stepfun/technical-reports/step-video-ti2v--arxiv-v1.pdf#page=1) · [Official source](https://github.com/stepfun-ai/Step-Video-TI2V)
 
 ## Abstract
 
 We present Step-Video-TI2V, a state-of-the-art text-driven image-to-video genera- tion model with 30B parameters, capable of generating videos up to 102 frames based on both text and image inputs. We build Step-Video-TI2V-Eval as a new benchmark for the text-driven image-to-video task and compare Step-Video-TI2V with open-source and commercial TI2V engines using this dataset. Experimental results demonstrate the state-of-the-art performance of Step-Video-TI2V in the image-to-video generation task. Both Step-Video-TI2V and Step-Video-TI2V-Eval are available at https://github.com/stepfun-ai/Step-Video-TI2V.
 
-## Core figures
-
-[All figures and original captions](../../figures/stepfun/step-video-ti2v/README.md) · [中文](../../figures/stepfun/step-video-ti2v/README_CN.md)
-
-### Overview · Figure 1
-
-Source page: 2 · [Original graphics PDF](../../figures/stepfun/step-video-ti2v/figure-01.pdf) · [High-resolution PNG](../../figures/stepfun/step-video-ti2v/figure-01.png)
-
-![Overview](../../figures/stepfun/step-video-ti2v/figure-01.png)
+![Figure 1](../../figures/stepfun/step-video-ti2v/figure-01.png)
 
 Figure 1: Overview of Step-Video-TI2V. Based on the pre-trained T2V model, we introduce two key
 modifications: Image Conditioning and Motion Conditioning. These enhancements enable video
 generation from a given image while allowing users to adjust the dynamic level of the output video.
+
+[p. 2](../../pdfs/stepfun/technical-reports/step-video-ti2v--arxiv-v1.pdf#page=2) · [PDF](../../figures/stepfun/step-video-ti2v/figure-01.pdf)

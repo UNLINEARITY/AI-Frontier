@@ -1,12 +1,6 @@
 # Claude Opus 5.5 System Card
 
-Models: Claude Opus 5.5
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf#page=2) · [Official source](https://www.anthropic.com/claude-opus-5-5-system-card)
-
-PDF pages: 2, 3, 4 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf#page=2) · [Official source](https://www.anthropic.com/claude-opus-5-5-system-card)
 
 ## Executive Summary
 
@@ -38,15 +32,7 @@ welfare interventions over helpfulness less often than recent models, reasoning 
 
 Capabilities. Claude Opus 5.5 is a broad capability upgrade over Claude Opus 5. It scored higher on every evaluation in our capability summary (Table 8.1.A), with the largest gains in agentic coding, visual reasoning, computer use, and long-horizon professional knowledge work. It delivers this performance at lower cost: much of the improvement is available below maximum reasoning effort. It also sets the state of the art on Terminal-Bench 4.0 and on several independently run benchmarks, including CursorBench, GDPval-AA, and AA-Briefcase.
 
-## Core figures
-
-[All figures and original captions](../../figures/anthropic/claude-opus-5-5-system-card/README.md) · [中文](../../figures/anthropic/claude-opus-5-5-system-card/README_CN.md)
-
-### Results · Figure 2.2.3.2.3.A
-
-Source page: 31 · [Original graphics PDF](../../figures/anthropic/claude-opus-5-5-system-card/figure-01.pdf) · [High-resolution PNG](../../figures/anthropic/claude-opus-5-5-system-card/figure-01.png)
-
-![Results](../../figures/anthropic/claude-opus-5-5-system-card/figure-01.png)
+![Figure 2.2.3.2.3.A](../../figures/anthropic/claude-opus-5-5-system-card/figure-01.png)
 
 [Figure 2.2.3.2.3.A] Autonomous research on AAV packaging rate prediction. Trendlines describe the 90th
 percentile of validation set performance across individual attempts (n = 48). We find that our more capable
@@ -54,11 +40,9 @@ models rapidly improve using only a small number of scorer calls. Naive ESM-2 ac
 of 0.28 (not shown, to preserve dynamic range of trendlines). Right: The cumulative fraction of attempts that
 exceed the threshold value of 0.52 over the course of the session.​
 
-### Results · Figure 2.3.4.1.A
+[p. 31](../../pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf#page=31) · [PDF](../../figures/anthropic/claude-opus-5-5-system-card/figure-01.pdf)
 
-Source page: 37 · [Original graphics PDF](../../figures/anthropic/claude-opus-5-5-system-card/figure-02.pdf) · [High-resolution PNG](../../figures/anthropic/claude-opus-5-5-system-card/figure-02.png)
-
-![Results](../../figures/anthropic/claude-opus-5-5-system-card/figure-02.png)
+![Figure 2.3.4.1.A](../../figures/anthropic/claude-opus-5-5-system-card/figure-02.png)
 
 [Figure 2.3.4.1.A] Claude Opus 5.5, Claude Mythos 5.1, and Claude Opus 5 score within noise of each other on
 CoBench 2.1. Each bar is the percentage of 500 problems that a model solved in one attempt. Claude Opus 5
@@ -68,3 +52,5 @@ sampled through the API, with the API safety filter off, on the same version of 
 in that interval is estimated to be worth 0 to 1 point, and two others have not been measured. The three scores
 are not statistically distinguishable (a paired test on the same 500 problems gives p ≈ 0.2). These scores are not
 comparable with the CoBench scores in earlier system cards.
+
+[p. 37](../../pdfs/anthropic/system-cards/claude-opus-5-5-system-card.pdf#page=37) · [PDF](../../figures/anthropic/claude-opus-5-5-system-card/figure-02.pdf)

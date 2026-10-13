@@ -1,12 +1,6 @@
 # DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression
 
-Models: DeepSeek-V4.1-Flash
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/deepseek/technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf#page=1) · [Official source](https://arxiv.org/abs/2609.19969)
-
-PDF pages: 1 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/deepseek/technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf#page=1) · [Official source](https://arxiv.org/abs/2609.19969)
 
 ## Abstract
 
@@ -14,15 +8,7 @@ The widespread adoption of long-horizon agents has made model workloads increasi
 
 Figure 1 | (a) Performance of DeepSeek-V4.1-Flash and its counterparts on agentic benchmarks. (b) Global KV cache size per token (in bytes) across generations of DeepSeek models, highlight- ing DeepSeek’s sustained efforts to reduce context memory requirements. DeepSeek-V4.1-Flash achieves approximately 4-fold and 437-fold reductions in per-token global KV cache size relative to DeepSeek-V4-Flash and DeepSeek-V1, respectively.
 
-## Core figures
-
-[All figures and original captions](../../figures/deepseek/deepseek-v4-1-flash-technical-report/README.md) · [中文](../../figures/deepseek/deepseek-v4-1-flash-technical-report/README_CN.md)
-
-### Results · Figure 1
-
-Source page: 1 · [Original graphics PDF](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-01.pdf) · [High-resolution PNG](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-01.png)
-
-![Results](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-01.png)
+![Figure 1](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-01.png)
 
 Figure 1 | (a) Performance of DeepSeek-V4.1-Flash and its counterparts on agentic benchmarks.
 (b) Global KV cache size per token (in bytes) across generations of DeepSeek models, highlight-
@@ -30,11 +16,9 @@ ing DeepSeek’s sustained efforts to reduce context memory requirements. DeepSe
 achieves approximately 4-fold and 437-fold reductions in per-token global KV cache size relative
 to DeepSeek-V4-Flash and DeepSeek-V1, respectively.
 
-### Architecture · Figure 3
+[p. 1](../../pdfs/deepseek/technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf#page=1) · [PDF](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-01.pdf)
 
-Source page: 7 · [Original graphics PDF](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-02.pdf) · [High-resolution PNG](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-02.png)
-
-![Architecture](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-02.png)
+![Figure 3](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-02.png)
 
 Figure 3 | Overall architecture of DeepSeek-V4.1-Flash. The 40-layer network is divided into
 a causal encoder and a decoder, each with 20 layers. All feed-forward layers use standard
@@ -42,3 +26,5 @@ DeepSeekMoE. The first two encoder layers use sliding window attention (SWA); th
 Compressed Sparse Attention 2 (CSA2), with CSA2(ratio, mode) specifying the compression
 ratio and mode. The model also uses Single-Pass mHC, Engram, DSpark, and a Hierarchical
 Sparse Indexer.
+
+[p. 7](../../pdfs/deepseek/technical-reports/deepseek-v4-1-flash-technical-report--arxiv-v1.pdf#page=7) · [PDF](../../figures/deepseek/deepseek-v4-1-flash-technical-report/figure-02.pdf)

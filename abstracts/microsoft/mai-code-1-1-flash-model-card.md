@@ -1,12 +1,6 @@
 # MAI-Code-1.1-Flash Model Card
 
-Models: MAI Code 1.1 Flash
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/microsoft/model-cards/mai-code-1-1-flash-model-card.pdf#page=1) · [Official source](https://microsoft.ai/models/mai-code-1-flash/)
-
-PDF pages: 1 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/microsoft/model-cards/mai-code-1-1-flash-model-card.pdf#page=1) · [Official source](https://microsoft.ai/models/mai-code-1-flash/)
 
 ## Description
 

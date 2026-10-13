@@ -1,12 +1,6 @@
 # MAI-Voice-2.1-Flash Model Card
 
-Models: MAI-Voice-2.1 / Flash
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/microsoft/model-cards/mai-voice-2-1-flash-model-card.pdf#page=1) · [Official source](https://microsoft.ai/news/our-first-streaming-transcription-model/)
-
-PDF pages: 1 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/microsoft/model-cards/mai-voice-2-1-flash-model-card.pdf#page=1) · [Official source](https://microsoft.ai/news/our-first-streaming-transcription-model/)
 
 ## Overview
 

@@ -1,12 +1,6 @@
 # GPT-Live System Card
 
-Models: GPT-Live-1
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/openai/system-cards/gpt-live-system-card.pdf#page=2) · [Official source](https://deploymentsafety.openai.com/gpt-live)
-
-PDF pages: 2 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/openai/system-cards/gpt-live-system-card.pdf#page=2) · [Official source](https://deploymentsafety.openai.com/gpt-live)
 
 ## Introduction
 

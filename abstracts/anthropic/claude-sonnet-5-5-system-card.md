@@ -1,12 +1,6 @@
 # System Card: Claude Sonnet 5.5
 
-Models: Claude Sonnet 5.5
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/anthropic/system-cards/claude-sonnet-5-5-system-card.pdf#page=2) · [Official source](https://www.anthropic.com/claude-sonnet-5-5-system-card)
-
-PDF pages: 2, 3 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/anthropic/system-cards/claude-sonnet-5-5-system-card.pdf#page=2) · [Official source](https://www.anthropic.com/claude-sonnet-5-5-system-card)
 
 ## Executive summary
 
@@ -38,15 +32,7 @@ Welfare investigations into Sonnet 5.5’s stated views and preferences ﬁnd a 
 
 Our assessment of Sonnet 5.5’s capabilities includes a wide range of evaluations, in which the model generally shows large improvements over Sonnet 5 but usually does not reach the level of Opus 5.5 (with some exceptions, such as in some of our healthcare evaluations).
 
-## Core figures
-
-[All figures and original captions](../../figures/anthropic/claude-sonnet-5-5-system-card/README.md) · [中文](../../figures/anthropic/claude-sonnet-5-5-system-card/README_CN.md)
-
-### Results · Figure 2.3.2.A
-
-Source page: 21 · [Original graphics PDF](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-01.pdf) · [High-resolution PNG](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-01.png)
-
-![Results](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-01.png)
+![Figure 2.3.2.A](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-01.png)
 
 [Figure 2.3.2.A] The Epoch Capabilities Index (ECI) synthesizes performance across many benchmarks into one
 number per model. Our version of this metric, the Anthropic ECI (AECI), is powered by internal benchmark
@@ -58,11 +44,9 @@ resampled fits but measure each score’s movement relative to the three precedi
 anchors the ECI scale at 130, so it has no global CI (its local error bar reflects uncertainty in the models before
 it). Scores of recent models on the new scale are reported for direct comparison.
 
-### Results · Figure 8.4.A
+[p. 21](../../pdfs/anthropic/system-cards/claude-sonnet-5-5-system-card.pdf#page=21) · [PDF](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-01.pdf)
 
-Source page: 111 · [Original graphics PDF](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-02.pdf) · [High-resolution PNG](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-02.png)
-
-![Results](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-02.png)
+![Figure 8.4.A](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-02.png)
 
 [Figure 8.4.A] FrontierCode v1.1 Main score versus average output tokens per task across reasoning effort levels (low, medium, high, xhigh, and max; GPT-6 Astra also at none). Cognition ran the evaluation for every
 model shown and reported the results; Claude models were run in Claude Code and GPT models were run in
@@ -71,3 +55,5 @@ the x-axis shows average output tokens per task on a logarithmic scale. Each Cla
 with its effort level; for every other model the labeled points are its lowest and highest effort levels and the level at which it scored highest (GPT-6 Astra also at low). Unlabeled points follow the line in order of effort. The
 result files carry no uncertainty intervals, so none are shown; Cognition's published figures report error bars.
 Note that the y-axis begins at 27%, not at zero, so differences between points are visually magnified.
+
+[p. 111](../../pdfs/anthropic/system-cards/claude-sonnet-5-5-system-card.pdf#page=111) · [PDF](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-02.pdf)

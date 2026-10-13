@@ -34,7 +34,7 @@ def build(output):
     summaries = {r['source_pdf']: r for r in json.loads(summary_file.read_text())['reports']} if summary_file.exists() else {}
     figure_file = ROOT / 'figures/index.json'
     figure_reports = {r['id']: r for r in json.loads(figure_file.read_text())['reports']} if figure_file.exists() else {}
-    reader_count, preview_count = build_readers(ROOT, output, summaries, figure_reports, reports, VENDORS, DOCUMENT_TYPES)
+    reader_count, preview_count = build_readers(ROOT, output, summaries, figure_reports, reports)
     brand = json.loads((ROOT / '.github/brand.json').read_text())
     models = [m for m in coverage['models'] if m.get('lifecycle', 'active') == 'active'
               and (m.get('latest_categories') or m.get('frontier_categories'))]
@@ -51,26 +51,25 @@ def build(output):
             date = r['published_date'] or ('日期待确认' if chinese else 'Date unconfirmed')
             kind = DOCUMENT_TYPES[r['document_type']][0]
             revision = f" · {r['version']}" if r['version'].startswith('arxiv-') else ''
-            read = link(REPOSITORY + '/blob/main/' + quote(r['local_path']), '阅读 PDF' if chinese else 'Read PDF')
-            official = link(r['source_url'], '官方来源' if chinese else 'Official source')
             summary = summaries.get(r['local_path'])
-            if summary and summary['source_sha256'] == r['sha256']:
-                read += link(reader_path(summary), '概要与图片' if chinese else 'Summary & figures')
-            cards.append(f'<article class="card" data-view="reports" data-vendor="{r["vendor"]}" data-type="{r["document_type"]}" data-category="" data-date="{r["published_date"]}" data-title="{escape(r["title"])}" data-search="{escape(r["title"] + " " + labels[r["vendor"]] + " " + date)}"><div class="card-heading"><div class="publisher">{publisher_mark(r["vendor"])}<span>{escape(labels[r["vendor"]])}</span></div><span class="document-badge" data-kind="{r["document_type"]}">{kind}</span></div><h3>{escape(r["title"])}</h3><p class="date">{escape(date + revision)} · {r["pages"]} {"页" if chinese else "pages"}</p><div class="links">{read}{official}</div></article>')
+            target = reader_path(summary) if summary and summary['source_sha256'] == r['sha256'] else REPOSITORY + '/blob/main/' + quote(r['local_path'])
+            cards.append(f'<article class="card" data-view="reports" data-vendor="{r["vendor"]}" data-type="{r["document_type"]}" data-category="" data-date="{r["published_date"]}" data-title="{escape(r["title"])}" data-search="{escape(r["title"] + " " + labels[r["vendor"]] + " " + date)}"><div class="card-heading"><div class="publisher">{publisher_mark(r["vendor"])}<span>{escape(labels[r["vendor"]])}</span></div><span class="document-badge" data-kind="{r["document_type"]}">{kind}</span></div><h3><a class="card-link" href="{escape(target)}">{escape(r["title"])}</a></h3><p class="date">{escape(date + revision)} · {r["pages"]} {"页" if chinese else "pages"}</p></article>')
         for m in models:
             categories = [c for c in MODEL_CATEGORIES if c in m.get('latest_categories', []) or c in m.get('frontier_categories', [])]
-            links = []
+            documents = []
             for slug in m.get('report_slugs', []):
                 source = sources[(m['vendor'], slug)]
                 archived = [r for r in reports if r['vendor'] == m['vendor'] and r['title'] == source['title']]
                 if archived:
                     row = max(archived, key=lambda r: (r['source_updated_date'], r['retrieved_at']))
-                    links.append(link(REPOSITORY + '/blob/main/' + quote(row['local_path']), source['title']))
                     summary = summaries.get(row['local_path'])
-                    if summary and summary['source_sha256'] == row['sha256']:
-                        links.append(link(reader_path(summary), '概要与图片' if chinese else 'Summary & figures'))
-            links.append(link(m.get('frontier_source_url', m['source_url']), '官方介绍' if chinese else 'Official introduction'))
-            cards.append(f'<article class="card" data-date="" data-title="{escape(m["model"])}" data-view="models" data-vendor="{m["vendor"]}" data-type="" data-category="{escape(" ".join(categories))}" data-search="{escape(m["model"] + " " + labels[m["vendor"]])}" hidden><div class="card-heading"><div class="publisher">{publisher_mark(m["vendor"])}<span>{escape(labels[m["vendor"]])}</span></div><span class="model-indicator" aria-hidden="true"></span></div><h3>{escape(m["model"])}</h3><p class="date">{escape(" / ".join(MODEL_CATEGORIES[c][int(chinese)] for c in categories))}</p><div class="links">{"".join(links)}</div></article>')
+                    available = summary and summary['source_sha256'] == row['sha256']
+                    target = reader_path(summary) if available else REPOSITORY + '/blob/main/' + quote(row['local_path'])
+                    documents.append((not bool(available), list(DOCUMENT_TYPES).index(row['document_type']), target, source['title']))
+            documents.sort(key=lambda d: d[:2])
+            target = documents[0][2] if documents else m.get('frontier_source_url', m['source_url'])
+            additional = '<div class="links">' + ''.join(link(d[2], d[3]) for d in documents[1:]) + '</div>' if len(documents) > 1 else ''
+            cards.append(f'<article class="card" data-date="" data-title="{escape(m["model"])}" data-view="models" data-vendor="{m["vendor"]}" data-type="" data-category="{escape(" ".join(categories))}" data-search="{escape(m["model"] + " " + labels[m["vendor"]])}" hidden><div class="card-heading"><div class="publisher">{publisher_mark(m["vendor"])}<span>{escape(labels[m["vendor"]])}</span></div><span class="model-indicator" aria-hidden="true"></span></div><h3><a class="card-link" href="{escape(target)}">{escape(m["model"])}</a></h3><p class="date">{escape(" / ".join(MODEL_CATEGORIES[c][int(chinese)] for c in categories))}</p>{additional}</article>')
         publisher_options = ''.join(f'<option value="{v}">{escape(label)}</option>' for v, label in labels.items())
         type_options = ''.join(f'<option value="{k}">{v[0]}</option>' for k, v in DOCUMENT_TYPES.items())
         category_options = ''.join(f'<option value="{k}">{escape(v[int(chinese)])}</option>' for k, v in MODEL_CATEGORIES.items())
@@ -89,7 +88,7 @@ def build(output):
             'all_categories': '全部模型类别' if chinese else 'All model categories',
             'publisher_options': publisher_options, 'type_options': type_options, 'category_options': category_options,
             'cards': '\n'.join(cards), 'empty': '未找到匹配结果，请调整搜索或筛选条件。' if chinese else 'No matches. Try a different search or filter.',
-            'footer': '原始报告、概要原文与核心图片。继续推进全文 Markdown 与技术分析。' if chinese else 'Original reports, source summaries, and core figures. Full-document Markdown and technical analysis are next.',
+            'footer': '从原始报告走向技术洞察。' if chinese else 'From original reports to technical insight.',
             'results': '条结果' if chinese else 'results',
             'explore': '探索报告' if chinese else 'Explore the archive',
             'browse_labs': '追踪每一家厂商' if chinese else 'Follow every frontier lab',

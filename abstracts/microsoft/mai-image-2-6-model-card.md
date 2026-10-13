@@ -1,12 +1,6 @@
 # MAI-Image-2.6 / MAI-Image-2.6-Flash Model Card
 
-Models: MAI Image 2.6 / 2.6 Flash
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/microsoft/model-cards/mai-image-2-6-model-card.pdf#page=2) · [Official source](https://microsoft.ai/models/mai-image-2-6/)
-
-PDF pages: 2 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/microsoft/model-cards/mai-image-2-6-model-card.pdf#page=2) · [Official source](https://microsoft.ai/models/mai-image-2-6/)
 
 ## Model Overview
 

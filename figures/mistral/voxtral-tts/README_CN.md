@@ -1,35 +1,3 @@
 # Voxtral TTS
 
-[English](README.md) · [核心图片](../../README_CN.md)
-
-[原始 PDF](../../../pdfs/mistral/technical-reports/voxtral-tts--arxiv-v2.pdf) · [官方来源](https://arxiv.org/abs/2603.25551)
-
-## 主要结果 · Figure 1
-
-原文第1页 · [PNG](figure-01.png) · [保留原始图形的 PDF](figure-01.pdf)
-
-[查看原页](../../../pdfs/mistral/technical-reports/voxtral-tts--arxiv-v2.pdf#page=1)
-
-![主要结果](figure-01.png)
-
-Figure 1: Voxtral TTS is preferred to ElevenLabs Flash v2.5 in human evaluations. We plot the win rate for
-Voxtral TTS against ElevenLabs Flash v2.5 in human evaluations across two categories. For flagship voices, we
-use the default voices for each model and 77 unique text examples. In the voice cloning set-up, we provide a
-short audio reference clip and 60 text prompts. In both categories, human annotators blindly rate which audio is
-better between the two models. Voxtral TTS is preferred in 58.3 and 68.4% of instances.
-
-## 架构 · Figure 2
-
-原文第3页 · [PNG](figure-02.png) · [保留原始图形的 PDF](figure-02.pdf)
-
-[查看原页](../../../pdfs/mistral/technical-reports/voxtral-tts--arxiv-v2.pdf#page=3)
-
-![架构](figure-02.png)
-
-Figure 2: Architecture overview of Voxtral TTS. A voice reference ranging from 3s-30s is fed to the Voxtral
-Codec encoder to obtain audio tokens at a frame rate of 12.5 Hz. Each audio frame (labeled A) consists of a
-semantic token and acoustic tokens. The voice reference audio tokens along with the text prompt tokens (labeled
-T) are fed to the decoder backbone. The decoder auto-regressively generates a sequence of semantic tokens
-until it reaches a special End of Audio token (<EOA>). At each timestep, the semantic token from the decoder
-backbone is fed to a flow-matching transformer, which is run multiple times to predict the acoustic tokens. The
-semantic and acoustic tokens are fed to the Voxtral Codec decoder to obtain the generated waveform.
+[阅读报告](../../../abstracts/mistral/voxtral-tts.md)

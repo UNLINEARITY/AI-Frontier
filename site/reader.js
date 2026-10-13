@@ -1,7 +1,8 @@
 const viewer = document.querySelector('.image-viewer');
 const viewerImage = document.querySelector('#viewer-image');
 let opener;
-for (const button of document.querySelectorAll('[data-preview]')) button.addEventListener('click', () => {
+for (const button of document.querySelectorAll('[data-preview]')) button.addEventListener('click', event => {
+  event.preventDefault();
   opener = button;
   viewerImage.src = button.dataset.preview;
   viewerImage.alt = button.querySelector('img').alt;

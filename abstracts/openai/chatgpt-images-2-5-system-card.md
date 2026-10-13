@@ -1,12 +1,6 @@
 # ChatGPT Images 2.5 System Card
 
-Models: ChatGPT Images 2.5 / Sunburst / Flare
-
-[Source summaries](../README.md) · [中文索引](../README_CN.md)
-
-[Original PDF](../../pdfs/openai/system-cards/chatgpt-images-2-5-system-card.pdf#page=2) · [Official source](https://deploymentsafety.openai.com/chatgpt-images-2-5)
-
-PDF pages: 2 · Source text cross-checked with two extractors; not manually verified.
+[PDF](../../pdfs/openai/system-cards/chatgpt-images-2-5-system-card.pdf#page=2) · [Official source](https://deploymentsafety.openai.com/chatgpt-images-2-5)
 
 ## Introduction
 

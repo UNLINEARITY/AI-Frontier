@@ -230,10 +230,11 @@ def render_model_coverage(rows):
                         row = max(archived, key=lambda r: (r["source_updated_date"], r["retrieved_at"]))
                         kind = source["document_type"]
                         title = source["title"] if report_types.count(kind) > 1 else DOCUMENT_TYPES[kind][0]
-                        links.append(f"[{title}]({row['local_path']})")
                         summary = summaries.get(row['local_path'])
                         if summary and summary['source_sha256'] == row['sha256']:
-                            links.append(f"[{'概要与图片' if chinese else 'Summary & figures'}]({summary['markdown_path']})")
+                            links.append(f"[{title}]({summary['markdown_path']})")
+                        else:
+                            links.append(f"[{title}]({row['local_path']})")
                 official = "官方介绍" if chinese else "Official"
                 links.append(f"[{official}]({model.get('frontier_source_url', model['source_url'])})")
                 name = model["model"].replace("|", "\\|")
@@ -241,7 +242,7 @@ def render_model_coverage(rows):
             lines.append("")
         lines += ["历史模型与报告见[厂商归档](README_CN.md#按厂商浏览)。" if chinese else
                   "Explore earlier models and reports in the [publisher archives](README.md#browse-by-publisher).", ""]
-        (ROOT / target).write_text("\n".join(lines), encoding="utf-8")
+        (ROOT / target).write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
 
 def render(rows):
@@ -249,24 +250,21 @@ def render(rows):
     archived = [row for row in rows if row["status"] == "archived"]
     publisher_count = len({row["vendor"] for row in archived})
     brand = json.loads((ROOT / ".github" / "brand.json").read_text(encoding="utf-8"))
-    lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline']}**", "",
-             f"[Website]({brand['homepage_url']}) · [Chinese](README_CN.md) · [Browse publishers](#browse-by-publisher) · [Browse document types](#choose-the-right-document) · [Frontier models](LATEST_MODELS.md) · [Summaries & figures](abstracts/README.md) · [Full catalog](catalog.csv)", "",
+    lines = [f"# {brand['name']}", "", "[中文](README_CN.md)", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline']}**", "",
+             f"[Website]({brand['homepage_url']}) · [Frontier models](LATEST_MODELS.md) · [Full catalog](catalog.csv)", "",
              "An open research archive for understanding how frontier AI models are built, evaluated, and deployed. "
              "We bring official technical reports, model cards, and system cards into one place, "
              "and are building toward readable sources, grounded technical analysis, and ongoing release tracking.", "",
              f"**{len(archived)} original PDFs · {publisher_count} publishers · 2022 onward**", "",
-             f"[Explore the website]({brand['homepage_url']}) to search reports, filter by publisher and document type, "
-             "and browse current frontier models in English or Chinese.", "",
              "**Available today:** original PDFs, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). "
              "Full-document Markdown, structured analysis, and automated tracking are the next stages.", "",
              "**Star AI Frontier to keep the sources close and follow the archive as it grows.**", ""]
-    cn_lines = [f"# {brand['name']}", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline_cn']}**", "",
-                f"[在线浏览]({brand['homepage_url']}cn/) · [英文版](README.md) · [按厂商浏览](#按厂商浏览) · [按类型浏览](#按类型找报告) · [前沿模型](LATEST_MODELS_CN.md) · [概要与图片](abstracts/README_CN.md) · [完整索引](catalog.csv)", "",
+    cn_lines = [f"# {brand['name']}", "", "[英文版](README.md)", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline_cn']}**", "",
+                f"[在线浏览]({brand['homepage_url']}cn/) · [前沿模型](LATEST_MODELS_CN.md) · [完整索引](catalog.csv)", "",
                 "一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。"
                 "我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，"
                 "并逐步推进可读原文、基于来源的技术分析与模型发布追踪。", "",
                 f"**{len(archived)} 份原始 PDF · {publisher_count} 家厂商 · 2022 年起**", "",
-                f"[打开在线网站]({brand['homepage_url']}cn/)，搜索报告、按厂商和文档类型筛选，或浏览当前前沿模型。支持独立中英文页面。", "",
                 "**当前已提供：**原始 PDF、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
                 "**Star 收藏 AI Frontier，把原始资料留在手边，也关注它如何逐步成为技术研究入口。**", ""]
     type_counts = {kind: sum(row["document_type"] == kind for row in archived) for kind in DOCUMENT_TYPES}
@@ -429,8 +427,7 @@ def render(rows):
               "For arXiv entries, the recorded first publication date is the first submission date; "
               "unknown dates are left unspecified.", "",
               "PDFs are preserved as provided by their publishers. Copyrights and terms of use remain "
-              "with the original rights holders; this repository does not relicense the reports.", "",
-              "Maintenance and implementation notes: [agent.md](agent.md).", ""]
+              "with the original rights holders; this repository does not relicense the reports.", ""]
     cn_lines += ["", "## 为什么值得持续关注？", "",
                  "- **直接读原文。** 原始 PDF 与官方来源集中整理，减少在官网、仓库和论文页面之间来回查找。",
                  "- **横向看技术。** 对照不同厂商披露的训练方法、评测结果与安全信息，为自己的研究和判断找到依据。",
@@ -452,10 +449,9 @@ def render(rows):
                  "## 收录范围与版权", "",
                  "收录 2022 年起模型及模型家族的官方技术报告、模型卡与系统卡，来源包括厂商官网、官方仓库和作者提交的 arXiv 论文。"
                  "资料库仍在补齐，不代表已穷尽所有历史报告。arXiv 条目以首次提交日作为已记录的首次发布日期，未知日期不作推测。", "",
-                 "PDF 保留发布者提供的原始内容，版权及使用条款归原权利人所有，本仓库不另行授权这些报告。", "",
-                 "维护流程与实现说明见 [agent.md](agent.md)（英文）。", ""]
-    (ROOT / "README.md").write_text("\n".join(lines), encoding="utf-8")
-    (ROOT / "README_CN.md").write_text("\n".join(cn_lines), encoding="utf-8")
+                 "PDF 保留发布者提供的原始内容，版权及使用条款归原权利人所有，本仓库不另行授权这些报告。", ""]
+    (ROOT / "README.md").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+    (ROOT / "README_CN.md").write_text("\n".join(cn_lines).rstrip() + "\n", encoding="utf-8")
     gaps = ["# 待补齐清单", "", "本清单区分已发现的缺口和首轮尚未覆盖的范围；不把未核对的资料标为已收齐。", "",
             "## 已登记条目", "", "| 厂商 | 报告 | 状态 | 原因 / 来源 |", "| --- | --- | --- | --- |"]
     for row in rows:
