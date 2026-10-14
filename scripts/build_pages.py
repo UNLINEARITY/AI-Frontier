@@ -9,6 +9,7 @@ from urllib.parse import quote
 
 from build_readers import build_readers, reader_path
 from archive_reports import DOCUMENT_TYPES, MODEL_CATEGORIES, VENDORS
+from model_timeline import timeline_models
 
 ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY = 'https://github.com/UNLINEARITY/AI-Frontier'
@@ -37,6 +38,33 @@ def report_target(row, summaries):
     return row['source_url']
 
 
+def model_documents(model, reports, sources, summaries):
+    documents = []
+    for slug in model.get('report_slugs', []):
+        source = sources[(model['vendor'], slug)]
+        archived = [r for r in reports if r['vendor'] == model['vendor'] and r['title'] == source['title']]
+        if archived:
+            row = max(archived, key=lambda r: (r['source_updated_date'], r['retrieved_at']))
+            summary = summaries.get(row['local_path'])
+            available = summary and summary['source_sha256'] == row['sha256']
+            documents.append((not bool(available), list(DOCUMENT_TYPES).index(row['document_type']),
+                              report_target(row, summaries), source['title']))
+        elif source.get('pdf_url'):
+            documents.append((True, list(DOCUMENT_TYPES).index(source['document_type']), source['source_url'], source['title']))
+    return sorted(documents, key=lambda d: d[:2])
+
+
+def model_target(model, documents, web_readers):
+    if documents and documents[0][0] is False:
+        return documents[0][2]
+    for name in [model['model']] + model.get('reading_aliases', []):
+        if (model['vendor'], name) in web_readers:
+            return reader_path(web_readers[(model['vendor'], name)])
+    if documents:
+        return documents[0][2]
+    return model.get('frontier_source_url', model['source_url'])
+
+
 def build(output):
     output.mkdir(parents=True, exist_ok=True)
     rows = list(csv.DictReader((ROOT / 'catalog.csv').open(encoding='utf-8', newline='')))
@@ -48,6 +76,21 @@ def build(output):
     readers = {r['id']: r for r in json.loads(summary_file.read_text())['reports']} if summary_file.exists() else {}
     summaries = {r['source_pdf']: r for r in readers.values() if r.get('source_pdf')}
     web_readers = {(r['vendor'], name): r for r in readers.values() if r.get('source_kind') == 'html' for name in r['models']}
+    history = json.loads((ROOT / 'model-history.json').read_text())
+    timeline = timeline_models(coverage, history, list(sources.values()), VENDORS)
+    # Public browser data contains reader links and release dates, never extraction diagnostics.
+    timeline_data = []
+    for model in timeline:
+        documents = model_documents(model, reports, sources, summaries)
+        timeline_data.append(dict(vendor=model['vendor'], model=model['model'],
+                                  release_date=model['release_date'],
+                                  aliases=model['search_aliases'],
+                                  publisher_en='Z.ai / Zhipu AI' if model['vendor'] == 'zai' else VENDORS[model['vendor']],
+                                  publisher_cn=VENDORS[model['vendor']],
+                                  logo=f'assets/vendors/{MARKS[model["vendor"]]}.svg'
+                                  if (ROOT / f'assets/vendors/{MARKS[model["vendor"]]}.svg').is_file() else '',
+                                  href=model_target(model, documents, web_readers)))
+    (output / 'timeline.json').write_text(json.dumps(timeline_data, ensure_ascii=False) + '\n', encoding='utf-8')
     figure_file = ROOT / 'figures/index.json'
     figure_reports = {r['id']: r for r in json.loads(figure_file.read_text())['reports']} if figure_file.exists() else {}
     reader_count, preview_count = build_readers(ROOT, output, readers, figure_reports, reports)
@@ -71,22 +114,8 @@ def build(output):
             cards.append(f'<article class="card" data-view="reports" data-vendor="{r["vendor"]}" data-type="{r["document_type"]}" data-category="" data-date="{r["published_date"]}" data-title="{escape(r["title"])}" data-search="{escape(r["title"] + " " + labels[r["vendor"]] + " " + date)}"><div class="card-heading"><div class="publisher">{mark(r["vendor"])}<span>{escape(labels[r["vendor"]])}</span></div><span class="document-badge" data-kind="{r["document_type"]}">{kind}</span></div><h3><a class="card-link" href="{escape(target)}">{escape(r["title"])}</a></h3><p class="date">{escape(date + revision)} · {r["pages"]} {"页" if chinese else "pages"}</p></article>')
         for m in models:
             categories = [c for c in MODEL_CATEGORIES if c in m.get('latest_categories', []) or c in m.get('frontier_categories', [])]
-            documents = []
-            for slug in m.get('report_slugs', []):
-                source = sources[(m['vendor'], slug)]
-                archived = [r for r in reports if r['vendor'] == m['vendor'] and r['title'] == source['title']]
-                if archived:
-                    row = max(archived, key=lambda r: (r['source_updated_date'], r['retrieved_at']))
-                    summary = summaries.get(row['local_path'])
-                    available = summary and summary['source_sha256'] == row['sha256']
-                    target = report_target(row, summaries)
-                    documents.append((not bool(available), list(DOCUMENT_TYPES).index(row['document_type']), target, source['title']))
-                elif source.get('pdf_url'):
-                    documents.append((True, list(DOCUMENT_TYPES).index(source['document_type']), source['source_url'], source['title']))
-            documents.sort(key=lambda d: d[:2])
-            target = documents[0][2] if documents else m.get('frontier_source_url', m['source_url'])
-            if not documents and (m['vendor'], m['model']) in web_readers:
-                target = reader_path(web_readers[(m['vendor'], m['model'])])
+            documents = model_documents(m, reports, sources, summaries)
+            target = model_target(m, documents, web_readers)
             additional = '<div class="links">' + ''.join(link(d[2], d[3]) for d in documents[1:]) + '</div>' if len(documents) > 1 else ''
             cards.append(f'<article class="card" data-date="" data-title="{escape(m["model"])}" data-view="models" data-vendor="{m["vendor"]}" data-type="" data-category="{escape(" ".join(categories))}" data-search="{escape(m["model"] + " " + labels[m["vendor"]])}" hidden><div class="card-heading"><div class="publisher">{mark(m["vendor"])}<span>{escape(labels[m["vendor"]])}</span></div><span class="model-indicator" aria-hidden="true"></span></div><h3><a class="card-link" href="{escape(target)}">{escape(m["model"])}</a></h3><p class="date">{escape(" / ".join(MODEL_CATEGORIES[c][int(chinese)] for c in categories))}</p>{additional}</article>')
         publisher_options = ''.join(f'<option value="{v}">{escape(label)}</option>' for v, label in labels.items())
@@ -107,6 +136,18 @@ def build(output):
             'all_publishers': '全部厂商' if chinese else 'All publishers', 'all_types': '全部文档类型' if chinese else 'All document types',
             'all_categories': '全部模型类别' if chinese else 'All model categories',
             'publisher_options': publisher_options, 'type_options': type_options, 'category_options': category_options,
+            'timeline_data': json.dumps(timeline_data, ensure_ascii=False).replace('<', '\\u003c'),
+            'timeline_title': '模型时间线' if chinese else 'Model timeline',
+            'timeline_search': '搜索时间线中的模型或厂商' if chinese else 'Find a model or publisher on the timeline',
+            'timeline_pan': '拖动浏览时间线' if chinese else 'Drag to explore the timeline',
+            'timeline_gesture': '拖动平移 · 双指或 Ctrl/⌘ + 滚轮缩放' if chinese else 'Drag to pan · Pinch or Ctrl/⌘ + scroll to zoom',
+            'timeline_zoom_in': '放大时间线' if chinese else 'Zoom in',
+            'timeline_zoom_out': '缩小时间线' if chinese else 'Zoom out',
+            'timeline_fit': '全览' if chinese else 'Fit all',
+            'timeline_latest': '最新' if chinese else 'Latest',
+            'timeline_undated': '日期待确认' if chinese else 'Date unconfirmed',
+            'timeline_empty': '当前范围内没有已确认日期的模型' if chinese else 'No dated models in this view',
+            'timeline_count_label': '个模型' if chinese else 'models',
             'cards': '\n'.join(cards), 'empty': '未找到匹配结果，请调整搜索或筛选条件。' if chinese else 'No matches. Try a different search or filter.',
             'footer': '从原始报告走向技术洞察。' if chinese else 'From original reports to technical insight.',
             'results': '条结果' if chinese else 'results',
@@ -138,7 +179,7 @@ def build(output):
         target = output / ('cn/index.html' if chinese else 'index.html')
         target.parent.mkdir(exist_ok=True)
         target.write_text(page, encoding='utf-8')
-    for name in ('style.css', 'app.js', 'theme-init.js', 'shared.js', 'reader.css', 'reader.js'):
+    for name in ('style.css', 'app.js', 'theme-init.js', 'shared.js', 'reader.css', 'reader.js', 'timeline.css', 'timeline.js'):
         shutil.copyfile(ROOT / 'site' / name, output / name)
     (output / 'assets').mkdir(exist_ok=True)
     shutil.copyfile(ROOT / 'assets/branding/ai-frontier-banner.png', output / 'assets/banner.png')

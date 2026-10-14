@@ -7,20 +7,14 @@
 :root[data-theme=light] .star:hover{background:var(--accent-soft)}
 :root[data-theme=light] .eyebrow span,:root[data-theme=light] .pulse{box-shadow:0 0 12px #106f6420}
 :root[data-theme=light] .search-field kbd{border-color:var(--line)}
-.theme-menu{position:relative}
-.theme-menu summary{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--muted);cursor:pointer;list-style:none;transition:color .2s,border-color .2s,background .2s}
-.theme-menu summary::-webkit-details-marker{display:none}
-.theme-menu summary:hover,.theme-menu[open] summary{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
-.theme-menu summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-.theme-menu svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.sun-icon{display:none}:root[data-theme=light] .sun-icon{display:block}:root[data-theme=light] .moon-icon{display:none}
-.theme-options{position:absolute;top:46px;right:0;min-width:174px;border:1px solid var(--line);border-radius:12px;background:var(--input-bg);padding:7px;box-shadow:0 16px 35px var(--shadow);animation:menu-enter .18s var(--ease);transform-origin:top right;z-index:35}
-.theme-options>span{display:block;color:var(--muted);font-size:10px;padding:6px 10px 8px;letter-spacing:.5px}
-.theme-options button{width:100%;display:flex;justify-content:space-between;padding:9px 10px;background:none;color:var(--ink);border:0;border-radius:6px;font-size:12px;text-align:left;transition:background .15s}
-.theme-options button:hover{background:var(--surface)}
-.theme-options button[aria-pressed=true]{color:var(--accent);background:var(--accent-soft)}
-.theme-options button span{visibility:hidden}
-.theme-options button[aria-pressed=true] span{visibility:visible}
+/* Theme choices stay visible on both the archive and reader pages. */
+.theme-controls{display:flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line);border-radius:24px;background:var(--input-bg)}
+.theme-controls button{display:grid;place-items:center;width:30px;height:30px;border:0;border-radius:50%;background:none;color:var(--muted);transition:color .2s,background .2s,scale .2s}
+.theme-controls button:hover{color:var(--accent);background:var(--accent-soft)}
+.theme-controls button[aria-pressed=true]{background:var(--surface);color:var(--accent)}
+.theme-controls button:active{scale:.92}
+.theme-controls svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
 .tabs button:active,.lab:active,.primary-button:active,.star:active{scale:.98}
 .lab,.primary-button,.star,.tabs button{transition-property:transform,scale,color,border-color,background,box-shadow;transition-duration:.22s;transition-timing-function:var(--ease)}
 input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
@@ -32,7 +26,7 @@ body,.filter-bar,header,.lab,.card,input,select,footer{transition:background-col
 @keyframes pulse-light{0%,100%{opacity:1}50%{opacity:.45}}
 ::view-transition-old(root){animation:theme-out .22s ease both}::view-transition-new(root){animation:theme-in .3s ease both}
 @keyframes theme-out{to{opacity:0}}@keyframes theme-in{from{opacity:0}to{opacity:1}}
-@media(max-width:700px){nav{gap:10px}.theme-menu summary{width:32px;height:32px}.star{padding:7px 9px;gap:5px}.theme-options{right:-35px}.hero-art{animation-delay:.08s}}
+@media(max-width:700px){nav{gap:10px}.theme-controls{padding:2px;gap:0}.theme-controls button{width:26px;height:28px}.star{padding:7px 9px;gap:5px}.hero-art{animation-delay:.08s}}
 @media(max-width:370px){.star>span:last-child{display:none}.brand{font-size:16px}.brand-symbol{width:23px}.header-inner,main,footer{padding-left:16px;padding-right:16px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}::view-transition-old(root),::view-transition-new(root){animation:none!important}}
 
@@ -48,3 +42,6 @@ body,.filter-bar,header,.lab,.card,input,select,footer{transition:background-col
 @media(max-width:700px){.star-icon{width:14px;height:14px}.language-link{font-size:11px}.lab .lab-count{font-size:10px}}
 
 .language-compact{display:none}@media(max-width:700px){.language-label{display:none}.language-compact{display:inline}}
+
+@media(max-width:420px){nav{gap:6px}.star{width:28px;height:32px;justify-content:center;padding:0;border:0}.star .star-compact,.star>span:last-child{display:none}.brand{font-size:16px;gap:6px}.brand-symbol{width:24px}.header-inner{padding-left:16px;padding-right:16px}.language-link{font-size:10px}.theme-controls svg{width:14px;height:14px}}
+@media(max-width:700px){.hero-art::before{inset:0}.hero{overflow-x:clip}}

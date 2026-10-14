@@ -70,6 +70,7 @@ function filter() {
   document.querySelector('#clear').hidden = !search.value && !vendor.value && !(view === 'reports' ? type.value : category.value);
   for (const lab of document.querySelectorAll('[data-publisher]')) lab.setAttribute('aria-pressed', String(lab.dataset.publisher === vendor.value));
   const state = new URLSearchParams();
+  for (const key of ['model', 'from', 'to']) if (new URLSearchParams(location.search).has(key)) state.set(key, new URLSearchParams(location.search).get(key));
   if (view === 'models') state.set('view', view);
   for (const [key, value] of [['q', search.value], ['publisher', vendor.value], [view === 'reports' ? 'type' : 'category', view === 'reports' ? type.value : category.value]]) if (value) state.set(key, value);
   if (view === 'reports' && sort.value !== 'newest') state.set('sort', sort.value);
@@ -78,9 +79,11 @@ function filter() {
   const language = document.querySelector('.language-link');
   const target = new URL(language.href);
   target.search = state.toString();
+  target.hash = location.hash;
   language.href = target.href;
   if (!firstRender && !reducedMotion.matches) result.animate([{opacity: 0.3, transform: 'translateY(4px)'}, {opacity: 1, transform: 'translateY(0)'}], {duration: 220});
   firstRender = false;
+  document.dispatchEvent(new CustomEvent('frontier:publisher', {detail: vendor.value}));
   scrollFeedback();
 }
 for (const element of [search, vendor, type, category, sort]) element.addEventListener('input', filter);
@@ -106,7 +109,10 @@ for (const lab of document.querySelectorAll('[data-publisher]')) lab.addEventLis
 });
 document.addEventListener('keydown', event => {
   if (event.key === '/' && !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName) && !document.activeElement.isContentEditable) {
-    event.preventDefault(); search.focus();
+    event.preventDefault();
+    const timeline = document.querySelector('#timeline');
+    const bounds = timeline?.getBoundingClientRect();
+    (bounds && bounds.top < innerHeight && bounds.bottom > 0 ? document.querySelector('#timeline-search') : search).focus();
   }
   if (event.key === 'Escape' && document.activeElement === search) {search.value = ''; filter(); search.blur();}
 });

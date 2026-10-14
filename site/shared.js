@@ -1,6 +1,5 @@
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const systemTheme = matchMedia('(prefers-color-scheme: dark)');
-const themeMenu = document.querySelector('.theme-menu');
 let themePreference = document.documentElement.dataset.themePreference || 'system';
 let themeTransition;
 function updateThemeControls() {
@@ -24,18 +23,12 @@ function applyTheme(preference, animate = true) {
   else update();
 }
 for (const button of document.querySelectorAll('[data-theme-choice]')) button.addEventListener('click', () => {
-  themeMenu.open = false;
   applyTheme(button.dataset.themeChoice);
-  themeMenu.querySelector('summary').focus({preventScroll: true});
 });
 addEventListener('storage', event => {
   if (event.key === 'ai-frontier-theme') applyTheme(['system', 'light', 'dark'].includes(event.newValue) ? event.newValue : 'system', false);
 });
 systemTheme.addEventListener('change', () => {if (themePreference === 'system') applyTheme('system', false);});
-document.addEventListener('click', event => {if (!themeMenu.contains(event.target)) themeMenu.open = false;});
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && themeMenu.open) {themeMenu.open = false; themeMenu.querySelector('summary').focus();}
-});
 updateThemeControls();
 let scheduled = false;
 function scrollFeedback() {

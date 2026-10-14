@@ -5,6 +5,7 @@ on:
     paths:
       - 'catalog.csv'
       - 'model-coverage.json'
+      - 'model-history.json'
       - 'sources.json'
       - 'requirements.txt'
       - 'requirements-pages.txt'
@@ -12,6 +13,7 @@ on:
       - 'figures/**'
       - '.github/brand.json'
       - 'scripts/build_pages.py'
+      - 'scripts/model_timeline.py'
       - 'scripts/build_readers.py'
       - 'scripts/archive_reports.py'
       - 'site/**'

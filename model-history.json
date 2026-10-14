@@ -1,0 +1,3728 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-14",
+  "description": "Canonical source-backed historical model identities and explicit mappings from aggregate coverage rows. Release dates require official model announcements; report publication and revision dates are never used as fallbacks.",
+  "models": [
+    {
+      "vendor": "anthropic",
+      "model": "Claude 2",
+      "source_url": "https://www.anthropic.com/news/claude-2-1",
+      "report_slugs": [
+        "claude-2-model-card"
+      ],
+      "release_date": "2023-07-11",
+      "release_source_url": "https://www.anthropic.com/news/claude-2",
+      "release_evidence": "Official newsroom dates the Claude 2 model announcement to July 11, 2023."
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude 3 Opus",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-3-model-card"
+      ],
+      "release_date": "2024-03-04",
+      "release_source_url": "https://www.anthropic.com/news/claude-3-family",
+      "release_evidence": "Official March 4 introduction states that Opus and Sonnet are available that day; Haiku is announced as coming later."
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude 3 Sonnet",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-3-model-card"
+      ],
+      "release_date": "2024-03-04",
+      "release_source_url": "https://www.anthropic.com/news/claude-3-family",
+      "release_evidence": "Official March 4 introduction states that Opus and Sonnet are available that day; Haiku is announced as coming later."
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude 3 Haiku",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-3-model-card"
+      ],
+      "release_date": "2024-03-13",
+      "release_source_url": "https://www.anthropic.com/news/claude-3-haiku",
+      "release_evidence": "Official page dated Mar 13, 2024: “Today we’re releasing Claude 3 Haiku”; says available through the API and claude.ai starting today."
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude 3.5 Sonnet",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-sonnet-3-5-model-card",
+        "claude-3-5-haiku-and-upgraded-sonnet-model-card-addendum"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude 3.5 Haiku",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-3-5-haiku-and-upgraded-sonnet-model-card-addendum"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude 3.7 Sonnet",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-sonnet-3-7-system-card"
+      ],
+      "release_date": "2025-02-24",
+      "release_source_url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+      "release_evidence": "Official February 24 model announcement, not a subsequent system-card revision."
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Sonnet 4",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-sonnet-4-and-opus-4-system-card"
+      ],
+      "release_date": "2025-05-22",
+      "release_source_url": "https://www.anthropic.com/news/claude-4",
+      "release_evidence": "Official May 22 introduction jointly announces Opus 4 and Sonnet 4."
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Opus 4",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-sonnet-4-and-opus-4-system-card"
+      ],
+      "release_date": "2025-05-22",
+      "release_source_url": "https://www.anthropic.com/news/claude-4",
+      "release_evidence": "Official May 22 introduction jointly announces Opus 4 and Sonnet 4."
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Opus 4.1",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-opus-4-1-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Sonnet 4.5",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-sonnet-4-5-system-card"
+      ],
+      "release_date": "2025-09-29",
+      "release_source_url": "https://www.anthropic.com/news/claude-sonnet-4-5",
+      "release_evidence": "Official page dated Sep 29, 2025; states “Claude Sonnet 4.5 is available everywhere today.”"
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Opus 4.5",
+      "source_url": "https://www.anthropic.com/system-cards",
+      "report_slugs": [
+        "claude-opus-4-5-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Opus 4.6",
+      "source_url": "https://anthropic.com/claude-opus-4-6-system-card",
+      "report_slugs": [
+        "claude-opus-4-6-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Sonnet 4.6",
+      "source_url": "https://anthropic.com/claude-sonnet-4-6-system-card",
+      "report_slugs": [
+        "claude-sonnet-4-6-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Mythos Preview",
+      "source_url": "https://www.anthropic.com/claude-mythos-preview-system-card",
+      "report_slugs": [
+        "mythos-preview-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Opus 4.7",
+      "source_url": "https://anthropic.com/claude-opus-4-7-system-card",
+      "report_slugs": [
+        "claude-opus-4-7-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Opus 4.8",
+      "source_url": "https://anthropic.com/claude-opus-4-8-system-card",
+      "report_slugs": [
+        "claude-opus-4-8-system-card"
+      ],
+      "release_date": "2026-05-28",
+      "release_source_url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "release_evidence": "Official page dated May 28, 2026: “We’re upgrading Claude Opus to a new version: Claude Opus 4.8… It’s available today”."
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Fable 5",
+      "source_url": "https://anthropic.com/claude-fable-5-mythos-5-system-card",
+      "report_slugs": [
+        "claude-fable-5-and-mythos-5-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Mythos 5",
+      "source_url": "https://anthropic.com/claude-fable-5-mythos-5-system-card",
+      "report_slugs": [
+        "claude-fable-5-and-mythos-5-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Opus 5",
+      "source_url": "https://anthropic.com/claude-opus-5-system-card",
+      "report_slugs": [
+        "claude-opus-5-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Fable 5.1",
+      "source_url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
+      "report_slugs": [
+        "claude-fable-5-1-and-mythos-5-1-system-card"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Mythos 5.1",
+      "source_url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
+      "report_slugs": [
+        "claude-fable-5-1-and-mythos-5-1-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-4",
+      "source_url": "https://arxiv.org/abs/2303.08774",
+      "report_slugs": [
+        "gpt-4-technical-report",
+        "gpt-4-system-card"
+      ],
+      "release_date": "2023-03-14",
+      "release_source_url": "https://openai.com/index/gpt-4-research/",
+      "release_evidence": "Official March 14 model introduction; distinct from the March 15 arXiv submission."
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-4V",
+      "source_url": "https://openai.com/index/gpt-4v-system-card/",
+      "report_slugs": [
+        "gpt-4v-ision-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-4o",
+      "source_url": "https://openai.com/index/gpt-4o-system-card/",
+      "report_slugs": [
+        "gpt-4o-system-card",
+        "addendum-to-gpt-4o-system-card-native-image-generation"
+      ],
+      "release_date": "2024-05-13",
+      "release_source_url": "https://openai.com/index/hello-gpt-4o/",
+      "release_evidence": "Official May 13 flagship announcement; the later system card is not a new release."
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-4.5",
+      "source_url": "https://openai.com/index/gpt-4-5-system-card/",
+      "report_slugs": [
+        "openai-gpt-4-5-system-card"
+      ],
+      "release_date": "2025-02-27",
+      "release_source_url": "https://openai.com/index/introducing-gpt-4-5/",
+      "release_evidence": "Official post dated February 27, 2025 says ‘We’re releasing a research preview of GPT-4.5.’"
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5",
+      "report_slugs": [
+        "gpt-5-system-card",
+        "addendum-to-gpt-5-system-card-sensitive-conversations"
+      ],
+      "release_date": "2025-08-07",
+      "release_source_url": "https://openai.com/index/introducing-gpt-5/",
+      "release_evidence": "Official release post is dated August 7, 2025, says ‘This post introduced GPT-5,’ and states GPT-5 is available to all users. The developer post on the same date explicitly says ‘Today we’re releasing GPT-5 in our API platform.’"
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5-Codex",
+      "source_url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-codex/",
+      "report_slugs": [
+        "addendum-to-gpt-5-system-card-gpt-5-codex"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.1 Instant",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-1",
+      "report_slugs": [
+        "gpt-5-1-instant-and-gpt-5-1-thinking-system-card-addendum"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.1 Thinking",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-1",
+      "report_slugs": [
+        "gpt-5-1-instant-and-gpt-5-1-thinking-system-card-addendum"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.1-Codex-Max",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-1-codex-max",
+      "report_slugs": [
+        "gpt-5-1-codex-max-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.2",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-2",
+      "report_slugs": [
+        "update-to-gpt-5-system-card-gpt-5-2"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.2-Codex",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-2-codex",
+      "report_slugs": [
+        "addendum-to-gpt-5-2-system-card-gpt-5-2-codex"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.3-Codex",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-3-codex",
+      "report_slugs": [
+        "gpt-5-3-codex-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.3 Instant",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-3-instant",
+      "report_slugs": [
+        "gpt-5-3-instant-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.4 Thinking",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking",
+      "report_slugs": [
+        "gpt-5-4-thinking-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.5",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-5",
+      "report_slugs": [
+        "gpt-5-5-system-card"
+      ],
+      "release_date": "2026-04-23",
+      "release_source_url": "https://openai.com/index/introducing-gpt-5-5/",
+      "release_evidence": "Official release post is dated April 23, 2026, says it introduced GPT-5.5, and states ‘We’re releasing GPT-5.5’; API availability followed Apr 24."
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.5 Instant",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-5-instant",
+      "report_slugs": [
+        "gpt-5-5-instant-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-5.6",
+      "source_url": "https://deploymentsafety.openai.com/gpt-5-6",
+      "report_slugs": [
+        "gpt-5-6-system-card",
+        "gpt-5-6-august-updates",
+        "gpt-5-6-preview-system-card"
+      ],
+      "release_date": "2026-06-26",
+      "release_source_url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "release_evidence": "Official ‘Previewing GPT-5.6 Sol’ post dated June 26, 2026 says ‘We’re beginning a limited preview of the GPT-5.6 series: Sol … Terra … and Luna.’"
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-6 Sol (ChatGPT October)",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-october",
+      "report_slugs": [
+        "gpt-6-sol-and-luna-october-2026-update"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-6 Luna (ChatGPT October)",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-october",
+      "report_slugs": [
+        "gpt-6-sol-and-luna-october-2026-update"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "o1",
+      "source_url": "https://openai.com/index/openai-o1-system-card/",
+      "report_slugs": [
+        "openai-o1-system-card"
+      ],
+      "release_date": "2024-12-05",
+      "release_source_url": "https://openai.com/index/introducing-chatgpt-pro/",
+      "release_evidence": "Official December 5 introduction of ChatGPT Pro already provides full o1 and explicitly distinguishes it from o1-preview. December 17 is an improved API version, not first release."
+    },
+    {
+      "vendor": "openai",
+      "model": "o1-preview",
+      "source_url": "https://openai.com/index/openai-o1-system-card/",
+      "report_slugs": [
+        "openai-o1-preview-and-o1-mini-system-card"
+      ],
+      "release_date": "2024-09-12",
+      "release_source_url": "https://openai.com/index/introducing-openai-o1-preview/",
+      "release_evidence": "Official post is dated September 12, 2024 and says ‘Today, we are releasing the first of this series’ (o1-preview). OpenAI API changelog explicitly records release of o1-preview and o1-mini on Sep 12."
+    },
+    {
+      "vendor": "openai",
+      "model": "o1-mini",
+      "source_url": "https://openai.com/index/openai-o1-system-card/",
+      "report_slugs": [
+        "openai-o1-preview-and-o1-mini-system-card"
+      ],
+      "release_date": "2024-09-12",
+      "release_source_url": "https://developers.openai.com/api/docs/changelog",
+      "release_evidence": "OpenAI API changelog under Sep 12, 2024 says ‘Released o1-preview and o1-mini, new large language models trained with reinforcement learning…’."
+    },
+    {
+      "vendor": "openai",
+      "model": "o3",
+      "source_url": "https://deploymentsafety.openai.com/o3",
+      "report_slugs": [
+        "openai-o3-and-o4-mini-system-card",
+        "addendum-to-o3-and-o4-mini-system-card-codex"
+      ],
+      "release_date": "2025-04-16",
+      "release_source_url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+      "release_evidence": "Official release post says both o3 and o4-mini are available to developers today and available in ChatGPT starting today; OpenAI newsroom lists the release as Apr 16, 2025."
+    },
+    {
+      "vendor": "openai",
+      "model": "o4-mini",
+      "source_url": "https://deploymentsafety.openai.com/o3",
+      "report_slugs": [
+        "openai-o3-and-o4-mini-system-card",
+        "addendum-to-o3-and-o4-mini-system-card-codex"
+      ],
+      "release_date": "2025-04-16",
+      "release_source_url": "https://openai.com/index/introducing-o3-and-o4-mini/",
+      "release_evidence": "Official release post names o4-mini and says it is available to developers and ChatGPT users starting today; newsroom date is Apr 16, 2025."
+    },
+    {
+      "vendor": "openai",
+      "model": "o3-mini",
+      "source_url": "https://openai.com/index/o3-mini-system-card/",
+      "report_slugs": [
+        "openai-o3-mini-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "Sora",
+      "source_url": "https://openai.com/index/sora-system-card/",
+      "report_slugs": [
+        "sora-system-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "DALL-E 2",
+      "source_url": "https://arxiv.org/abs/2204.06125",
+      "report_slugs": [
+        "hierarchical-text-conditional-image-generation-with-clip-latents"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "DALL-E 3",
+      "source_url": "https://openai.com/index/dall-e-3-system-card/",
+      "report_slugs": [
+        "dall-e-3-system-card",
+        "improving-image-generation-with-better-captions"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "Whisper",
+      "source_url": "https://github.com/openai/whisper",
+      "report_slugs": [
+        "robust-speech-recognition-via-large-scale-weak-supervision"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "InstructGPT",
+      "source_url": "https://arxiv.org/abs/2203.02155",
+      "report_slugs": [
+        "training-language-models-to-follow-instructions-with-human-feedback"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "gpt-oss-120b",
+      "source_url": "https://github.com/openai/gpt-oss",
+      "report_slugs": [
+        "gpt-oss-120b-gpt-oss-20b-model-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "gpt-oss-20b",
+      "source_url": "https://github.com/openai/gpt-oss",
+      "report_slugs": [
+        "gpt-oss-120b-gpt-oss-20b-model-card"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "gpt-oss-safeguard-120b",
+      "source_url": "https://openai.com/index/gpt-oss-safeguard-technical-report/",
+      "report_slugs": [
+        "gpt-oss-safeguard-technical-report"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "gpt-oss-safeguard-20b",
+      "source_url": "https://openai.com/index/gpt-oss-safeguard-technical-report/",
+      "report_slugs": [
+        "gpt-oss-safeguard-technical-report"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "model": "ChatGPT Images 2.0",
+      "source_url": "https://deploymentsafety.openai.com/chatgpt-images-2-0",
+      "report_slugs": [
+        "chatgpt-images-2-0-system-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 1.0",
+      "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf#page=71",
+      "report_slugs": [
+        "gemini-1-0-technical-report"
+      ],
+      "release_date": "2023-12-06",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+      "release_evidence": "Official December 6 introduction of the Gemini family; variants have different subsequent access dates."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 1.5",
+      "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=105",
+      "report_slugs": [
+        "gemini-1-5-technical-report"
+      ],
+      "release_date": "2024-02-15",
+      "release_source_url": "https://blog.google/innovation-and-ai/products/google-gemini-next-generation-model-february-2024/",
+      "release_evidence": "Official February 15 introduction of the next-generation Gemini 1.5 family and limited developer testing."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 2.0 Flash",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+      "report_slugs": [
+        "gemini-2-0-flash-model-card"
+      ],
+      "release_date": "2024-12-11",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/google-gemini-ai-update-december-2024/",
+      "release_evidence": "The official launch post is dated Dec 11, 2024 and says, ‘Today, we are releasing the first model in the Gemini 2.0 family of models: an experimental version of Gemini 2.0 Flash.’"
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 2.0 Flash-Lite",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Lite-Model-Card.pdf",
+      "report_slugs": [
+        "gemini-2-0-flash-lite-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 2.5 Pro",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Pro-Model-Card.pdf",
+      "report_slugs": [
+        "gemini-2-5-pro-model-card",
+        "gemini-2-5-pushing-the-frontier-with-advanced-reasoning-multimodality-long-context-and-next-generation-agentic-capabilities"
+      ],
+      "release_date": "2025-03-25",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-thinking-updates-march-2025/",
+      "release_evidence": "The official post dated Mar 25, 2025 says, ‘Today we’re introducing Gemini 2.5’ and identifies the first 2.5 release as an experimental version of 2.5 Pro, available in Google AI Studio and the Gemini app."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 2.5 Flash",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+      "report_slugs": [
+        "gemini-2-5-flash-and-gemini-2-5-flash-image-model-card",
+        "gemini-2-5-pushing-the-frontier-with-advanced-reasoning-multimodality-long-context-and-next-generation-agentic-capabilities"
+      ],
+      "release_date": "2025-04-17",
+      "release_source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-flash-preview/",
+      "release_evidence": "Official post dated Apr 17, 2025: ‘We’re excited to roll out an early version of Gemini 2.5 Flash today in preview’ through Gemini API, AI Studio and Vertex AI."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 2.5 Flash Image",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+      "report_slugs": [
+        "gemini-2-5-flash-and-gemini-2-5-flash-image-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 2.5 Flash-Lite",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+      "report_slugs": [
+        "gemini-2-5-flash-lite-model-card"
+      ],
+      "release_date": "2025-06-17",
+      "release_source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-model-family-expands/",
+      "release_evidence": "Official post dated Jun 17, 2025 says ‘we’re introducing a preview of the new Gemini 2.5 Flash-Lite’ and that the preview is available in AI Studio and Vertex AI."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 2.5 Deep Think",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf",
+      "report_slugs": [
+        "gemini-2-5-deep-think-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 2.5 Computer Use",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Computer-Use-Model-Card.pdf",
+      "report_slugs": [
+        "gemini-2-5-computer-use-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3 Pro",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
+      "report_slugs": [
+        "gemini-3-pro-model-card"
+      ],
+      "release_date": "2025-11-18",
+      "release_source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3/",
+      "release_evidence": "The Nov 18, 2025 official launch says ‘Today we’re introducing Gemini 3’ and describes Gemini 3 Pro as rolling out starting that day; the Google AI Studio developer launch also bears Nov 18."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3 Pro Image",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro-image/",
+      "report_slugs": [
+        "gemini-3-pro-image-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3 Flash",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-flash/",
+      "report_slugs": [
+        "gemini-3-flash-model-card"
+      ],
+      "release_date": "2025-12-17",
+      "release_source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-3-flash/",
+      "release_evidence": "Official post dated Dec 17, 2025 says, ‘Today, we’re expanding the Gemini 3 model family with the release of Gemini 3 Flash.’"
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.1 Flash Image",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-image/",
+      "report_slugs": [
+        "gemini-3-1-flash-image-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.1 Flash-Lite",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-lite/",
+      "report_slugs": [
+        "gemini-3-1-flash-lite-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.1 Flash Live",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-audio/",
+      "report_slugs": [
+        "gemini-3-1-flash-audio-flash-live-tts-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.1 Flash TTS",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-audio/",
+      "report_slugs": [
+        "gemini-3-1-flash-audio-flash-live-tts-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.5 Flash",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
+      "report_slugs": [
+        "gemini-3-5-flash-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.5 Flash-Lite",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/",
+      "report_slugs": [
+        "gemini-3-5-flash-lite-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.6 Flash",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
+      "report_slugs": [
+        "gemini-3-6-flash-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.8 Live",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
+      "report_slugs": [
+        "gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.8 Live Extended Thinking",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
+      "report_slugs": [
+        "gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.8 Flash TTS",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
+      "report_slugs": [
+        "gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.8 Flash-Lite TTS",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
+      "report_slugs": [
+        "gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.5 Live Translate",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-audio/",
+      "report_slugs": [
+        "gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.5 Transcribe",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-audio/",
+      "report_slugs": [
+        "gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.5 Transcribe Live",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-audio/",
+      "report_slugs": [
+        "gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Lyria 3",
+      "source_url": "https://deepmind.google/models/model-cards/lyria-3/",
+      "report_slugs": [
+        "lyria-3-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Veo 3",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf",
+      "report_slugs": [
+        "veo-3-model-card"
+      ],
+      "release_date": "2025-05-20",
+      "release_source_url": "https://blog.google/intl/es-es/noticias-compania/potencia-tu-creatividad-con-nuevos-modelos-y-herramientas-multimedia-generativos/",
+      "release_evidence": "The official Google I/O May 20 announcement introduces Veo 3 as the new video generation model, separate from later Veo 3.1 updates."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini Robotics",
+      "source_url": "https://arxiv.org/abs/2503.20020",
+      "report_slugs": [
+        "gemini-robotics-technical-report"
+      ],
+      "release_date": "2025-03-12",
+      "release_source_url": "https://deepmind.google/blog/gemini-robotics-brings-ai-into-the-physical-world/",
+      "release_evidence": "Official March 12 VLA model introduction, distinct from the paper chronology."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini Robotics 1.5",
+      "source_url": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-1-5-Tech-Report.pdf#page=30",
+      "report_slugs": [
+        "gemini-robotics-1-5-technical-report"
+      ],
+      "release_date": "2025-09-25",
+      "release_source_url": "https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/",
+      "release_evidence": "Google DeepMind’s Sep 25, 2025 post says ‘Today, we’re introducing two models’ and explicitly lists Gemini Robotics 1.5 as the VLA model."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini Robotics On-Device",
+      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-Robotics-On-Device-Model-Card.pdf",
+      "report_slugs": [
+        "gemini-robotics-on-device-model-card"
+      ],
+      "release_date": "2025-06-24",
+      "release_source_url": "https://deepmind.google/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
+      "release_evidence": "Official June 24 on-device VLA introduction."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini Robotics-ER 1.6",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-robotics-er-1-6/",
+      "report_slugs": [
+        "gemini-robotics-er-1-6-model-card"
+      ],
+      "release_date": "2026-04-14",
+      "release_source_url": "https://deepmind.google/blog/gemini-robotics-er-1-6/",
+      "release_evidence": "Google DeepMind’s Apr 14, 2026 post says, ‘Today, we’re introducing Gemini Robotics-ER 1.6,’ and says it is available to developers starting today."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini Robotics 2",
+      "source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "report_slugs": [
+        "gemini-robotics-2-safety-evaluations"
+      ],
+      "release_date": "2026-07-30",
+      "release_source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "release_evidence": "Google DeepMind’s July 30, 2026 post says, ‘Today, we are introducing Gemini Robotics 2’ and lists its VLA model as one of three models in the release."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini Robotics ER 2",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-robotics-er-2/",
+      "report_slugs": [
+        "gemini-robotics-er-2-model-card",
+        "gemini-robotics-2-safety-evaluations"
+      ],
+      "release_date": "2026-07-30",
+      "release_source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "release_evidence": "In the July 30, 2026 Gemini Robotics 2 launch, Google DeepMind explicitly lists ‘Gemini Robotics ER 2’ as the embodied-reasoning model in the three-model release and says it is available in AI Studio/private preview."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini Robotics On-Device 2",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-robotics-on-device-2/",
+      "report_slugs": [
+        "gemini-robotics-on-device-2-model-card",
+        "gemini-robotics-2-safety-evaluations"
+      ],
+      "release_date": "2026-07-30",
+      "release_source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "release_evidence": "The July 30, 2026 Google DeepMind launch explicitly lists ‘Gemini Robotics On-Device 2’ as the efficient VLA in the three-model release, optimized to run locally on robotic devices."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemma 1",
+      "source_url": "https://ai.google.dev/gemma/docs/model_card",
+      "report_slugs": [
+        "gemma-1-model-card",
+        "gemma-open-models-based-on-gemini-research-and-technology"
+      ],
+      "release_date": "2024-02-21",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-open-models/",
+      "release_evidence": "Google’s official Gemma launch, dated Feb 21, 2024, says Gemma is being introduced and ‘Gemma is available worldwide, starting today’; the first released sizes are Gemma 2B and Gemma 7B."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemma 2",
+      "source_url": "https://ai.google.dev/gemma/docs/model_card_2",
+      "report_slugs": [
+        "gemma-2-technical-report"
+      ],
+      "release_date": "2024-06-27",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-gemma-2/",
+      "release_evidence": "Official post dated Jun 27, 2024 is titled ‘Gemma 2 is now available to researchers and developers’ and states Google is officially releasing Gemma 2 in 9B and 27B sizes."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemma 3",
+      "source_url": "https://ai.google.dev/gemma/docs/core/model_card_3",
+      "report_slugs": [
+        "gemma-3-model-card",
+        "gemma-3-technical-report"
+      ],
+      "release_date": "2025-03-12",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-3/",
+      "release_evidence": "Official post dated Mar 12, 2025 states, ‘Today, we’re introducing Gemma 3,’ and identifies the new open-model family and its available sizes."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemma 3n",
+      "source_url": "https://ai.google.dev/gemma/docs/gemma-3n/model_card",
+      "report_slugs": [
+        "gemma-3n-model-card"
+      ],
+      "release_date": "2025-05-20",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-developer-updates-io-2025/",
+      "release_evidence": "Google’s I/O 2025 developer announcement dated May 20, 2025 names Gemma 3n as its latest efficient open multimodal model and says developers can preview the new model that day."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemma 4",
+      "source_url": "https://ai.google.dev/gemma/docs/core/model_card_4?utm_source=deepmind.google&utm_medium=referral&utm_campaign=gdm&utm_content",
+      "report_slugs": [
+        "gemma-4-model-card",
+        "gemma-4-technical-report"
+      ],
+      "release_date": "2026-04-02",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+      "release_evidence": "Official post dated Apr 2, 2026 is titled ‘Gemma 4: Our most capable open models to date’ and says Google is releasing Gemma 4 in four sizes."
+    },
+    {
+      "vendor": "google",
+      "model": "PaliGemma",
+      "source_url": "https://ai.google.dev/gemma/docs/paligemma/model-card",
+      "report_slugs": [
+        "paligemma-1-model-card",
+        "paligemma-a-versatile-3b-vlm-for-transfer"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "PaliGemma 2",
+      "source_url": "https://ai.google.dev/gemma/docs/paligemma/model-card-2",
+      "report_slugs": [
+        "paligemma-2-model-card",
+        "paligemma-2-a-family-of-versatile-vlms-for-transfer"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "CodeGemma",
+      "source_url": "https://ai.google.dev/gemma/docs/codegemma/model_card",
+      "report_slugs": [
+        "codegemma-model-card",
+        "codegemma-open-code-models-based-on-gemma"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "RecurrentGemma",
+      "source_url": "https://ai.google.dev/gemma/docs/recurrentgemma/model_card",
+      "report_slugs": [
+        "recurrentgemma-model-card",
+        "recurrentgemma-moving-past-transformers-for-efficient-open-language-models"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "ShieldGemma",
+      "source_url": "https://ai.google.dev/gemma/docs/shieldgemma/model_card",
+      "report_slugs": [
+        "shieldgemma-1-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "ShieldGemma 2",
+      "source_url": "https://ai.google.dev/gemma/docs/shieldgemma/model_card_2",
+      "report_slugs": [
+        "shieldgemma-2-model-card"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "EmbeddingGemma",
+      "source_url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card",
+      "report_slugs": [
+        "embeddinggemma-model-card",
+        "embeddinggemma-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "MedGemma",
+      "source_url": "https://developers.google.com/health-ai-developer-foundations/medgemma/model-card-v1",
+      "report_slugs": [
+        "medgemma-1-model-card",
+        "medgemma-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "MedGemma 1.5",
+      "source_url": "https://developers.google.com/health-ai-developer-foundations/medgemma/model-card",
+      "report_slugs": [
+        "medgemma-1-5-model-card",
+        "medgemma-1-5-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "T5Gemma",
+      "source_url": "https://huggingface.co/google/t5gemma-2b-2b-ul2",
+      "report_slugs": [
+        "t5gemma-model-card",
+        "t5gemma-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "T5Gemma 2",
+      "source_url": "https://deepmind.google/models/gemma/t5gemma/",
+      "report_slugs": [
+        "t5gemma-2-seeing-reading-and-understanding-longer"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "TxGemma",
+      "source_url": "https://developers.google.com/health-ai-developer-foundations/txgemma/model-card",
+      "report_slugs": [
+        "txgemma-model-card",
+        "txgemma-efficient-and-agentic-llms-for-therapeutics"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "TranslateGemma",
+      "source_url": "https://huggingface.co/google/translategemma-4b-it",
+      "report_slugs": [
+        "translategemma-model-card",
+        "translategemma-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Chinchilla",
+      "source_url": "https://arxiv.org/abs/2203.15556",
+      "report_slugs": [
+        "training-compute-optimal-large-language-models"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "PaLM",
+      "source_url": "https://arxiv.org/abs/2204.02311",
+      "report_slugs": [
+        "palm-scaling-language-modeling-with-pathways"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "PaLM 2",
+      "source_url": "https://arxiv.org/abs/2305.10403",
+      "report_slugs": [
+        "palm-2-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "LaMDA",
+      "source_url": "https://arxiv.org/abs/2201.08239",
+      "report_slugs": [
+        "lamda-language-models-for-dialog-applications"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Imagen",
+      "source_url": "https://arxiv.org/abs/2205.11487",
+      "report_slugs": [
+        "photorealistic-text-to-image-diffusion-models-with-deep-language-understanding"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Imagen Video",
+      "source_url": "https://arxiv.org/abs/2210.02303",
+      "report_slugs": [
+        "imagen-video-high-definition-video-generation-with-diffusion-models"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Parti",
+      "source_url": "https://arxiv.org/abs/2206.10789",
+      "report_slugs": [
+        "scaling-autoregressive-models-for-content-rich-text-to-image-generation"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "MusicLM",
+      "source_url": "https://arxiv.org/abs/2301.11325",
+      "report_slugs": [
+        "musiclm-generating-music-from-text"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "AlphaCode",
+      "source_url": "https://arxiv.org/abs/2203.07814",
+      "report_slugs": [
+        "competition-level-code-generation-with-alphacode"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "AlphaCode 2",
+      "source_url": "https://deepmind.google/AlphaCode2_Tech_Report.pdf",
+      "report_slugs": [
+        "alphacode-2-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "PaLI",
+      "source_url": "https://arxiv.org/abs/2209.06794",
+      "report_slugs": [
+        "pali-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "PaLI-3",
+      "source_url": "https://arxiv.org/abs/2310.09199",
+      "report_slugs": [
+        "pali-3-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Flamingo",
+      "source_url": "https://arxiv.org/abs/2204.14198",
+      "report_slugs": [
+        "flamingo-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "UL2",
+      "source_url": "https://arxiv.org/abs/2205.05131",
+      "report_slugs": [
+        "ul2-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "PaLM-E",
+      "source_url": "https://arxiv.org/abs/2303.03378",
+      "report_slugs": [
+        "palm-e-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "RT-1",
+      "source_url": "https://arxiv.org/abs/2212.06817",
+      "report_slugs": [
+        "rt-1-technical-report"
+      ],
+      "release_date": "2022-12-13",
+      "release_source_url": "https://research.google/blog/rt-1-robotics-transformer-for-real-world-control-at-scale/",
+      "release_evidence": "Official December 13 research-model introduction."
+    },
+    {
+      "vendor": "google",
+      "model": "RT-2",
+      "source_url": "https://arxiv.org/abs/2307.15818",
+      "report_slugs": [
+        "rt-2-technical-report"
+      ],
+      "release_date": "2023-07-28",
+      "release_source_url": "https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/",
+      "release_evidence": "Official July 28 model introduction."
+    },
+    {
+      "vendor": "google",
+      "model": "RT-1-X",
+      "source_url": "https://arxiv.org/abs/2310.08864",
+      "report_slugs": [
+        "rt-x-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "RT-2-X",
+      "source_url": "https://arxiv.org/abs/2310.08864",
+      "report_slugs": [
+        "rt-x-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "RT-H",
+      "source_url": "https://arxiv.org/abs/2403.01823",
+      "report_slugs": [
+        "rt-h-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "RT-Trajectory",
+      "source_url": "https://arxiv.org/abs/2311.01977",
+      "report_slugs": [
+        "rt-trajectory-technical-report"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "RoboCat",
+      "source_url": "https://arxiv.org/abs/2306.11706",
+      "report_slugs": [
+        "robocat-technical-report"
+      ],
+      "release_date": "2023-06-20",
+      "release_source_url": "https://deepmind.google/blog/robocat-a-self-improving-robotic-agent/",
+      "release_evidence": "Official June 20 research-model introduction."
+    },
+    {
+      "vendor": "meta",
+      "model": "OPT",
+      "source_url": "https://arxiv.org/abs/2205.01068",
+      "report_slugs": [
+        "opt-open-pre-trained-transformer-language-models"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Galactica",
+      "source_url": "https://arxiv.org/abs/2211.09085",
+      "report_slugs": [
+        "galactica-a-large-language-model-for-science"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "LLaMA",
+      "source_url": "https://arxiv.org/abs/2302.13971",
+      "report_slugs": [
+        "llama-open-and-efficient-foundation-language-models"
+      ],
+      "release_date": "2023-02-24",
+      "release_source_url": "https://ai.meta.com/blog/large-language-model-Llama-meta-ai/",
+      "release_evidence": "Official post dated February 24, 2023: “today we are publicly releasing LLaMA (Large Language Model Meta AI)”."
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama 2",
+      "source_url": "https://arxiv.org/abs/2307.09288",
+      "report_slugs": [
+        "llama-2-open-foundation-and-fine-tuned-chat-models",
+        "llama2-model-card"
+      ],
+      "release_date": "2023-07-18",
+      "release_source_url": "https://about.fb.com/news/2023/07/llama-2/",
+      "release_evidence": "Official July 18 announcement states that the next generation is available that day."
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama 3",
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3/MODEL_CARD.md",
+      "report_slugs": [
+        "llama3-model-card"
+      ],
+      "release_date": "2024-04-18",
+      "release_source_url": "https://about.fb.com/news/2024/04/meta-ai-assistant-built-with-llama-3/",
+      "release_evidence": "Official April 18 article introduces the deployed Llama 3 generation; July 3 is a page update, not the model release."
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama 3.1",
+      "source_url": "https://arxiv.org/abs/2407.21783",
+      "report_slugs": [
+        "the-llama-3-herd-of-models",
+        "llama3-1-model-card"
+      ],
+      "release_date": "2024-07-23",
+      "release_source_url": "https://ai.meta.com/blog/meta-llama-3-1/",
+      "release_evidence": "Official July 23 post introduces Llama 3.1 and public model availability."
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama 3.2",
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md",
+      "report_slugs": [
+        "llama3-2-model-card"
+      ],
+      "release_date": "2024-09-25",
+      "release_source_url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices",
+      "release_evidence": "Official launch post dated September 25, 2024; takeaway states: “Today, we’re releasing Llama 3.2”."
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama 3.2 Vision",
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md",
+      "report_slugs": [
+        "llama3-2-vision-model-card"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama 3.3",
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md",
+      "report_slugs": [
+        "llama3-3-model-card"
+      ],
+      "release_date": "2024-12-06",
+      "release_source_url": "https://dev.meta.ai/llama/llama3_3/license",
+      "release_evidence": "Meta model license/catalog page states: “Llama 3.3 Version Release Date: December 6, 2024.”"
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama 4 Scout",
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md",
+      "report_slugs": [
+        "llama4-model-card"
+      ],
+      "release_date": "2025-04-05",
+      "release_source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "release_evidence": "Official post dated April 5, 2025 names Scout and Maverick as the “first models in the Llama 4 herd” and says download them “today”."
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama 4 Maverick",
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md",
+      "report_slugs": [
+        "llama4-model-card"
+      ],
+      "release_date": "2025-04-05",
+      "release_source_url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/",
+      "release_evidence": "Official post dated April 5, 2025 names Scout and Maverick as the “first models in the Llama 4 herd” and says download them “today”."
+    },
+    {
+      "vendor": "meta",
+      "model": "Code Llama",
+      "source_url": "https://arxiv.org/abs/2308.12950",
+      "report_slugs": [
+        "code-llama-open-foundation-models-for-code"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Chameleon",
+      "source_url": "https://arxiv.org/abs/2405.09818",
+      "report_slugs": [
+        "chameleon-mixed-modal-early-fusion-foundation-models"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Movie Gen",
+      "source_url": "https://arxiv.org/abs/2410.13720",
+      "report_slugs": [
+        "movie-gen-a-cast-of-media-foundation-models"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "SeamlessM4T",
+      "source_url": "https://arxiv.org/abs/2308.11596",
+      "report_slugs": [
+        "seamlessm4t-massively-multilingual-multimodal-machine-translation"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Seamless",
+      "source_url": "https://arxiv.org/abs/2312.05187",
+      "report_slugs": [
+        "seamless-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "MusicGen",
+      "source_url": "https://arxiv.org/abs/2306.05284",
+      "report_slugs": [
+        "simple-and-controllable-music-generation"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "SAM",
+      "source_url": "https://arxiv.org/abs/2304.02643",
+      "report_slugs": [
+        "segment-anything"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "SAM 2",
+      "source_url": "https://arxiv.org/abs/2408.00714",
+      "report_slugs": [
+        "sam-2-segment-anything-in-images-and-videos"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "SAM 3",
+      "source_url": "https://arxiv.org/abs/2511.16719",
+      "report_slugs": [
+        "sam-3-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "SAM 3D Objects",
+      "source_url": "https://arxiv.org/abs/2511.16624",
+      "report_slugs": [
+        "sam-3d-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "SAM 3D Body",
+      "source_url": "https://arxiv.org/abs/2602.15989",
+      "report_slugs": [
+        "sam-3d-body-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "SAM Audio",
+      "source_url": "https://arxiv.org/abs/2512.18099",
+      "report_slugs": [
+        "sam-audio-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "DINOv2",
+      "source_url": "https://arxiv.org/abs/2304.07193",
+      "report_slugs": [
+        "dinov2-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "DINOv3",
+      "source_url": "https://arxiv.org/abs/2508.10104",
+      "report_slugs": [
+        "dinov3-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama Guard",
+      "source_url": "https://arxiv.org/abs/2312.06674",
+      "report_slugs": [
+        "llama-guard-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Llama Guard 3-1B-INT4",
+      "source_url": "https://arxiv.org/abs/2411.17713",
+      "report_slugs": [
+        "llama-guard-3-1b-int4-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Large Concept Model",
+      "source_url": "https://arxiv.org/abs/2412.08821",
+      "report_slugs": [
+        "large-concept-models-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "V-JEPA",
+      "source_url": "https://arxiv.org/abs/2404.08471",
+      "report_slugs": [
+        "v-jepa-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "V-JEPA 2",
+      "source_url": "https://arxiv.org/abs/2506.09985",
+      "report_slugs": [
+        "v-jepa-2-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "V-JEPA 2-AC",
+      "source_url": "https://arxiv.org/abs/2506.09985",
+      "report_slugs": [
+        "v-jepa-2-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "MMS",
+      "source_url": "https://arxiv.org/abs/2305.13516",
+      "report_slugs": [
+        "mms-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Perception Encoder",
+      "source_url": "https://arxiv.org/abs/2504.13181",
+      "report_slugs": [
+        "perception-encoder-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Perception Encoder Audiovisual",
+      "source_url": "https://arxiv.org/abs/2512.19687",
+      "report_slugs": [
+        "perception-encoder-audiovisual-technical-report"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "NLLB-200",
+      "source_url": "https://arxiv.org/abs/2207.04672",
+      "report_slugs": [
+        "nllb-200-technical-report"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Mistral 7B",
+      "source_url": "https://arxiv.org/abs/2310.06825",
+      "report_slugs": [
+        "mistral-7b"
+      ],
+      "release_date": "2023-09-27",
+      "release_source_url": "https://mistral.ai/news/announcing-mistral-7b/",
+      "release_evidence": "Official September 27 post announces release of Mistral 7B."
+    },
+    {
+      "vendor": "mistral",
+      "model": "Mixtral 8x7B",
+      "source_url": "https://arxiv.org/abs/2401.04088",
+      "report_slugs": [
+        "mixtral-of-experts"
+      ],
+      "release_date": "2023-12-11",
+      "release_source_url": "https://mistral.ai/news/mixtral-of-experts/",
+      "release_evidence": "Official post dated December 11, 2023: “Today, the team is proud to release Mixtral 8x7B”. It explicitly says the Instruct model is released alongside it."
+    },
+    {
+      "vendor": "mistral",
+      "model": "Pixtral 12B",
+      "source_url": "https://arxiv.org/abs/2410.07073",
+      "report_slugs": [
+        "pixtral-12b"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Magistral",
+      "source_url": "https://arxiv.org/abs/2506.10910",
+      "report_slugs": [
+        "magistral"
+      ],
+      "release_date": "2025-06-10",
+      "release_source_url": "https://mistral.ai/fr/news/magistral/",
+      "release_evidence": "Official Mistral post dated June 10, 2025 announces Magistral as Mistral AI’s first reasoning model and says it is released in open and enterprise versions."
+    },
+    {
+      "vendor": "mistral",
+      "model": "Voxtral",
+      "source_url": "https://arxiv.org/abs/2507.13264",
+      "report_slugs": [
+        "voxtral"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Leanstral",
+      "source_url": "https://mistral.ai/news/leanstral-1-5/",
+      "report_slugs": [
+        "leanstral"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron 3 Nano",
+      "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
+      "report_slugs": [
+        "nvidia-nemotron-3-nano-technical-report",
+        "nemotron-3-nano-model-card",
+        "nvidia-nemotron-3-efficient-and-open-intelligence"
+      ],
+      "release_date": "2025-12-15",
+      "release_source_url": "https://nvidianews.nvidia.com/news/nvidia-debuts-nemotron-3-family-of-open-models",
+      "release_evidence": "NVIDIA’s Dec 15, 2025 announcement explicitly says Nemotron 3 Nano is ‘Available today’ on Hugging Face and other providers; Super and Ultra are only expected in H1 2026."
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron 3 Super",
+      "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
+      "report_slugs": [
+        "nvidia-nemotron-3-super-technical-report",
+        "nvidia-nemotron-3-efficient-and-open-intelligence"
+      ],
+      "release_date": "2026-03-11",
+      "release_source_url": "https://blogs.nvidia.com/blog/nemotron-3-super-agentic-ai/",
+      "release_evidence": "NVIDIA’s Mar 11, 2026 post says, ‘Launched today, NVIDIA Nemotron 3 Super’ and ‘Available now.’"
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron 3 Ultra",
+      "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
+      "report_slugs": [
+        "nvidia-nemotron-3-ultra-technical-report",
+        "nvidia-nemotron-3-efficient-and-open-intelligence"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron-4 15B",
+      "source_url": "https://arxiv.org/abs/2402.16819",
+      "report_slugs": [
+        "nemotron-4-15b-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron-4 340B",
+      "source_url": "https://arxiv.org/abs/2406.11704",
+      "report_slugs": [
+        "nemotron-4-340b-technical-report"
+      ],
+      "release_date": "2024-06-14",
+      "release_source_url": "https://blogs.nvidia.com/blog/nemotron-4-synthetic-data-generation-llm-training/",
+      "release_evidence": "NVIDIA’s June 14, 2024 post says, ‘NVIDIA today announced Nemotron-4 340B,’ and identifies base, instruct and reward model variants in the family."
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron Nano 2",
+      "source_url": "https://arxiv.org/abs/2508.14444",
+      "report_slugs": [
+        "nvidia-nemotron-nano-2-an-accurate-and-efficient-hybrid-mamba-transformer-reasoning-model"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron Nano 2 VL",
+      "source_url": "https://research.nvidia.com/labs/adlr/",
+      "report_slugs": [
+        "nvidia-nemotron-nano-v2-vl"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Cosmos",
+      "source_url": "https://arxiv.org/abs/2501.03575",
+      "report_slugs": [
+        "cosmos-world-foundation-model-platform-for-physical-ai"
+      ],
+      "release_date": "2025-01-06",
+      "release_source_url": "https://blogs.nvidia.com/blog/cosmos-world-foundation-models/",
+      "release_evidence": "NVIDIA’s Jan 6, 2025 post says it makes the first wave of Cosmos world foundation models openly available; the Jan 10 note is only an editorial update."
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Llama-Nemotron",
+      "source_url": "https://arxiv.org/abs/2505.00949",
+      "report_slugs": [
+        "llama-nemotron-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron-H",
+      "source_url": "https://arxiv.org/abs/2504.03624",
+      "report_slugs": [
+        "nemotron-h-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron-Cascade",
+      "source_url": "https://arxiv.org/abs/2512.13607",
+      "report_slugs": [
+        "nemotron-cascade-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "GR00T N1",
+      "source_url": "https://arxiv.org/abs/2503.14734",
+      "report_slugs": [
+        "gr00t-n1-technical-report"
+      ],
+      "release_date": "2025-03-18",
+      "release_source_url": "https://nvidianews.nvidia.com/news/nvidia-isaac-gr00t-n1-open-humanoid-robot-foundation-model-simulation-frameworks",
+      "release_evidence": "The NVIDIA newsroom release dated Mar 18, 2025 says NVIDIA announced Isaac GR00T N1 and labels it ‘Now Available.’"
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Cosmos Reason1",
+      "source_url": "https://arxiv.org/abs/2503.15558",
+      "report_slugs": [
+        "cosmos-reason1-technical-report",
+        "cosmos-reason1-7b-model-card"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Jet-Nemotron",
+      "source_url": "https://arxiv.org/abs/2508.15884",
+      "report_slugs": [
+        "jet-nemotron-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "AceReason-Nemotron",
+      "source_url": "https://arxiv.org/abs/2505.16400",
+      "report_slugs": [
+        "acereason-nemotron-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "AceReason-Nemotron 1.1",
+      "source_url": "https://arxiv.org/abs/2506.13284",
+      "report_slugs": [
+        "acereason-nemotron-1-1-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Alpamayo-R1",
+      "source_url": "https://arxiv.org/abs/2511.00088",
+      "report_slugs": [
+        "alpamayo-r1-technical-report"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron Labs 3 Puzzle 75B-A9B",
+      "source_url": "https://arxiv.org/abs/2607.04371",
+      "report_slugs": [
+        "nemotron-labs-3-puzzle-75b-a9b"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Cosmos-Transfer1",
+      "source_url": "https://arxiv.org/abs/2503.14492",
+      "report_slugs": [
+        "cosmos-transfer1-technical-report"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek LLM",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-LLM",
+      "report_slugs": [
+        "deepseek-llm-scaling-open-source-language-models-with-longtermism"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-Coder",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-Coder",
+      "report_slugs": [
+        "deepseek-coder-when-the-large-language-model-meets-programming-the-rise-of-code-intelligence"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-Coder-V2",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-Coder-V2",
+      "report_slugs": [
+        "deepseek-coder-v2-breaking-the-barrier-of-closed-source-models-in-code-intelligence"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeekMath",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-Math",
+      "report_slugs": [
+        "deepseekmath-pushing-the-limits-of-mathematical-reasoning-in-open-language-models"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeekMoE",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-MoE",
+      "report_slugs": [
+        "deepseekmoe-towards-ultimate-expert-specialization-in-mixture-of-experts-language-models"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-V2",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-V2",
+      "report_slugs": [
+        "deepseek-v2-a-strong-economical-and-efficient-mixture-of-experts-language-model"
+      ],
+      "release_date": "2024-05-06",
+      "release_source_url": "https://github.com/deepseek-ai/DeepSeek-V2",
+      "release_evidence": "Official model repository News records 2024.05.06 release of DeepSeek-V2. The May 17 API entry is the V2-0517 update, not the initial model release."
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-V3",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-V3",
+      "report_slugs": [
+        "deepseek-v3-technical-report"
+      ],
+      "release_date": "2024-12-26",
+      "release_source_url": "https://api-docs.deepseek.com/updates/",
+      "release_evidence": "Official changelog identifies this named model introduction on 2024-12-26; subsequent model updates and paper revisions are not separate nodes."
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-R1",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-R1",
+      "report_slugs": [
+        "deepseek-r1-incentivizing-reasoning-capability-in-llms-via-reinforcement-learning"
+      ],
+      "release_date": "2025-01-20",
+      "release_source_url": "https://api-docs.deepseek.com/updates/",
+      "release_evidence": "Official changelog identifies this named model introduction on 2025-01-20; subsequent model updates and paper revisions are not separate nodes."
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-VL",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-VL",
+      "report_slugs": [
+        "deepseek-vl-towards-real-world-vision-language-understanding"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-VL2",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-VL2",
+      "report_slugs": [
+        "deepseek-vl2-mixture-of-experts-vision-language-models-for-advanced-multimodal-understanding"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "Janus",
+      "source_url": "https://github.com/deepseek-ai/Janus",
+      "report_slugs": [
+        "janus-decoupling-visual-encoding-for-unified-multimodal-understanding-and-generation"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "JanusFlow",
+      "source_url": "https://github.com/deepseek-ai/Janus",
+      "report_slugs": [
+        "janusflow-harmonizing-autoregression-and-rectified-flow-for-unified-multimodal-understanding-and-generation"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "Janus-Pro",
+      "source_url": "https://github.com/deepseek-ai/Janus",
+      "report_slugs": [
+        "janus-pro-unified-multimodal-understanding-and-generation-with-data-and-model-scaling"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-Prover-V1.5",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-Prover-V1.5",
+      "report_slugs": [
+        "deepseek-prover-v1-5-harnessing-proof-assistant-feedback-for-reinforcement-learning-and-monte-carlo-tree-search"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-OCR",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR",
+      "report_slugs": [
+        "deepseek-ocr-contexts-optical-compression"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeekMath-V2",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-Math-V2",
+      "report_slugs": [
+        "deepseekmath-v2-towards-self-verifiable-mathematical-reasoning"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-Prover-V2",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-Prover-V2",
+      "report_slugs": [
+        "deepseek-prover-v2-technical-report"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-V3.2-Exp",
+      "source_url": "https://github.com/deepseek-ai/DeepSeek-V3.2-Exp",
+      "report_slugs": [
+        "deepseek-v3-2-exp-technical-report"
+      ],
+      "release_date": "2025-09-29",
+      "release_source_url": "https://api-docs.deepseek.com/updates/",
+      "release_evidence": "Official changelog identifies this named model introduction on 2025-09-29; subsequent model updates and paper revisions are not separate nodes."
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-V3.2",
+      "source_url": "https://arxiv.org/abs/2512.02556",
+      "report_slugs": [
+        "deepseek-v3-2-pushing-the-frontier-of-open-large-language-models",
+        "deepseek-v3-2-model-card"
+      ],
+      "release_date": "2025-12-01",
+      "release_source_url": "https://api-docs.deepseek.com/updates/",
+      "release_evidence": "Official changelog identifies this named model introduction on 2025-12-01; subsequent model updates and paper revisions are not separate nodes."
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-Prover",
+      "source_url": "https://arxiv.org/abs/2405.14333",
+      "report_slugs": [
+        "deepseek-prover"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-V4",
+      "source_url": "https://arxiv.org/abs/2606.19348",
+      "report_slugs": [
+        "deepseek-v4",
+        "deepseek-v4-model-card"
+      ],
+      "release_date": "2026-04-24",
+      "release_source_url": "https://api-docs.deepseek.com/updates/",
+      "release_evidence": "Official changelog identifies this named model introduction on 2026-04-24; subsequent model updates and paper revisions are not separate nodes."
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen",
+      "source_url": "https://github.com/QwenLM/Qwen",
+      "report_slugs": [
+        "qwen-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen2",
+      "source_url": "https://github.com/QwenLM/Qwen3",
+      "report_slugs": [
+        "qwen2-technical-report"
+      ],
+      "release_date": "2024-06-07",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen2/",
+      "release_evidence": "Official June 7 model-family release post; the technical report is a separate publication."
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen2.5",
+      "source_url": "https://github.com/QwenLM/Qwen3",
+      "report_slugs": [
+        "qwen2-5-technical-report"
+      ],
+      "release_date": "2024-09-19",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen2.5/",
+      "release_evidence": "Official September 19 model-family release post."
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3",
+      "source_url": "https://github.com/QwenLM/Qwen3",
+      "report_slugs": [
+        "qwen3-technical-report"
+      ],
+      "release_date": "2025-04-29",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen3/",
+      "release_evidence": "Official April 29 model-family release post."
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-VL",
+      "source_url": "https://github.com/QwenLM/Qwen3-VL",
+      "report_slugs": [
+        "qwen-vl-a-versatile-vision-language-model-for-understanding-localization-text-reading-and-beyond"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen2-VL",
+      "source_url": "https://github.com/QwenLM/Qwen3-VL",
+      "report_slugs": [
+        "qwen2-vl-enhancing-vision-language-model-s-perception-of-the-world-at-any-resolution"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen2.5-VL",
+      "source_url": "https://github.com/QwenLM/Qwen3-VL",
+      "report_slugs": [
+        "qwen2-5-vl-technical-report"
+      ],
+      "release_date": "2025-01-26",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen2.5-vl/",
+      "release_evidence": "Official Qwen release blog dated January 26, 2025 says ‘We release Qwen2.5-VL’ and identifies it as the new flagship vision-language model."
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3-VL",
+      "source_url": "https://github.com/QwenLM/Qwen3-VL",
+      "report_slugs": [
+        "qwen3-vl-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3-TTS",
+      "source_url": "https://github.com/QwenLM/Qwen3-TTS",
+      "report_slugs": [
+        "qwen3-tts-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-Image",
+      "source_url": "https://github.com/QwenLM/Qwen-Image",
+      "report_slugs": [
+        "qwen-image-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3-ASR",
+      "source_url": "https://github.com/QwenLM/Qwen3-ASR",
+      "report_slugs": [
+        "qwen3-asr-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen2-Audio",
+      "source_url": "https://github.com/QwenLM/Qwen2-Audio",
+      "report_slugs": [
+        "qwen2-audio-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3-Omni",
+      "source_url": "https://github.com/QwenLM/Qwen3-Omni",
+      "report_slugs": [
+        "qwen3-omni-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-Audio",
+      "source_url": "https://github.com/QwenLM/Qwen-Audio",
+      "report_slugs": [
+        "qwen-audio-advancing-universal-audio-understanding-via-unified-large-scale-audio-language-models"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3 Embedding",
+      "source_url": "https://github.com/QwenLM/Qwen3-Embedding",
+      "report_slugs": [
+        "qwen3-embedding-advancing-text-embedding-and-reranking-through-foundation-models"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3 Reranker",
+      "source_url": "https://github.com/QwenLM/Qwen3-Embedding",
+      "report_slugs": [
+        "qwen3-embedding-advancing-text-embedding-and-reranking-through-foundation-models"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-Image-Layered",
+      "source_url": "https://github.com/QwenLM/Qwen-Image-Layered",
+      "report_slugs": [
+        "qwen-image-layered-towards-inherent-editability-via-layer-decomposition"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen2.5-Omni",
+      "source_url": "https://github.com/QwenLM/Qwen2.5-Omni",
+      "report_slugs": [
+        "qwen2-5-omni-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3Guard",
+      "source_url": "https://github.com/QwenLM/Qwen3Guard",
+      "report_slugs": [
+        "qwen3guard-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-Drive-1.0",
+      "source_url": "https://github.com/QwenLM/Qwen-Drive-1.0",
+      "report_slugs": [
+        "qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3-VL-Embedding",
+      "source_url": "https://github.com/QwenLM/Qwen3-VL-Embedding",
+      "report_slugs": [
+        "qwen3-vl-embedding-and-qwen3-vl-reranker-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3-VL-Reranker",
+      "source_url": "https://github.com/QwenLM/Qwen3-VL-Embedding",
+      "report_slugs": [
+        "qwen3-vl-embedding-and-qwen3-vl-reranker-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen2.5-Math",
+      "source_url": "https://arxiv.org/abs/2409.12122",
+      "report_slugs": [
+        "qwen2-5-math-technical-report-toward-mathematical-expert-model-via-self-improvement"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen2.5-Coder",
+      "source_url": "https://arxiv.org/abs/2409.12186",
+      "report_slugs": [
+        "qwen2-5-coder-technical-report"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-Image-2.0",
+      "source_url": "https://arxiv.org/abs/2605.10730",
+      "report_slugs": [
+        "qwen-image-2-0"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen UI Agent",
+      "source_url": "https://arxiv.org/abs/2607.28227",
+      "report_slugs": [
+        "qwen-ui-agent"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen3.5-Omni",
+      "source_url": "https://arxiv.org/abs/2604.15804",
+      "report_slugs": [
+        "qwen3-5-omni"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "WorldPM",
+      "source_url": "https://arxiv.org/abs/2505.10527",
+      "report_slugs": [
+        "worldpm"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Wan2.1",
+      "source_url": "https://arxiv.org/abs/2503.20314",
+      "report_slugs": [
+        "wan-2-1"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Wan-VACE",
+      "source_url": "https://arxiv.org/abs/2503.07598",
+      "report_slugs": [
+        "wan-vace"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Wan-S2V",
+      "source_url": "https://arxiv.org/abs/2508.18621",
+      "report_slugs": [
+        "wan-s2v"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Wan-Animate",
+      "source_url": "https://arxiv.org/abs/2509.14055",
+      "report_slugs": [
+        "wan-animate"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Wan-Animate-2",
+      "source_url": "https://arxiv.org/abs/2608.06009",
+      "report_slugs": [
+        "wan-animate-2"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Wan-Dancer",
+      "source_url": "https://arxiv.org/abs/2607.09581",
+      "report_slugs": [
+        "wan-dancer"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Wan-Move",
+      "source_url": "https://arxiv.org/abs/2512.08765",
+      "report_slugs": [
+        "wan-move"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Tongyi DeepResearch",
+      "source_url": "https://arxiv.org/abs/2510.24701",
+      "report_slugs": [
+        "tongyi-deepresearch"
+      ]
+    },
+    {
+      "vendor": "moonshot",
+      "model": "Kimi K1.5",
+      "source_url": "https://github.com/MoonshotAI/Kimi-k1.5",
+      "report_slugs": [
+        "kimi-k1-5-scaling-reinforcement-learning-with-llms"
+      ]
+    },
+    {
+      "vendor": "moonshot",
+      "model": "Kimi K2",
+      "source_url": "https://github.com/MoonshotAI/Kimi-K2",
+      "report_slugs": [
+        "kimi-k2-open-agentic-intelligence"
+      ]
+    },
+    {
+      "vendor": "moonshot",
+      "model": "Kimi K2.5",
+      "source_url": "https://github.com/MoonshotAI/Kimi-K2.5",
+      "report_slugs": [
+        "kimi-k2-5-technical-report"
+      ]
+    },
+    {
+      "vendor": "moonshot",
+      "model": "Kimi-VL",
+      "source_url": "https://github.com/MoonshotAI/Kimi-VL",
+      "report_slugs": [
+        "kimi-vl-technical-report"
+      ]
+    },
+    {
+      "vendor": "moonshot",
+      "model": "Kimi-Dev",
+      "source_url": "https://github.com/MoonshotAI/Kimi-Dev",
+      "report_slugs": [
+        "kimi-dev-agentless-training-as-skill-prior-for-swe-agents"
+      ]
+    },
+    {
+      "vendor": "moonshot",
+      "model": "Kimi Linear",
+      "source_url": "https://github.com/MoonshotAI/Kimi-Linear",
+      "report_slugs": [
+        "kimi-linear-an-expressive-efficient-attention-architecture"
+      ]
+    },
+    {
+      "vendor": "moonshot",
+      "model": "Kimina-Prover Preview",
+      "source_url": "https://github.com/MoonshotAI/Kimina-Prover-Preview",
+      "report_slugs": [
+        "kimina-prover-preview-towards-large-formal-reasoning-models-with-reinforcement-learning"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-130B",
+      "source_url": "https://github.com/zai-org/GLM-130B",
+      "report_slugs": [
+        "glm-130b-an-open-bilingual-pre-trained-model"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "ChatGLM",
+      "source_url": "https://github.com/zai-org/GLM-4",
+      "report_slugs": [
+        "chatglm-a-family-of-large-language-models-from-glm-130b-to-glm-4-all-tools"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-4.5",
+      "source_url": "https://github.com/zai-org/GLM-4.5",
+      "report_slugs": [
+        "glm-4-5-agentic-reasoning-and-coding-arc-foundation-models"
+      ],
+      "release_date": "2025-07-28",
+      "release_source_url": "https://z.ai/blog/glm-4.5",
+      "release_evidence": "Official Z.ai research post dated July 28, 2025 says ‘Today, we introduce two new GLM family members: GLM-4.5 and GLM-4.5-Air’ and states availability on Z.ai/API and open weights."
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-5",
+      "source_url": "https://github.com/zai-org/GLM-5",
+      "report_slugs": [
+        "glm-5-from-vibe-coding-to-agentic-engineering"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-4.5V",
+      "source_url": "https://github.com/zai-org/GLM-V",
+      "report_slugs": [
+        "glm-4-5v-and-glm-4-1v-thinking-towards-versatile-multimodal-reasoning-with-scalable-reinforcement-learning"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-4.1V-Thinking",
+      "source_url": "https://github.com/zai-org/GLM-V",
+      "report_slugs": [
+        "glm-4-5v-and-glm-4-1v-thinking-towards-versatile-multimodal-reasoning-with-scalable-reinforcement-learning"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-4-Voice",
+      "source_url": "https://github.com/zai-org/GLM-4-Voice",
+      "report_slugs": [
+        "glm-4-voice-towards-intelligent-and-human-like-end-to-end-spoken-chatbot"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "CogVLM",
+      "source_url": "https://github.com/zai-org/CogVLM",
+      "report_slugs": [
+        "cogvlm-visual-expert-for-pretrained-language-models"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "CogAgent",
+      "source_url": "https://github.com/zai-org/CogVLM",
+      "report_slugs": [
+        "cogagent-a-visual-language-model-for-gui-agents"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "CogVLM2",
+      "source_url": "https://github.com/zai-org/CogVLM2",
+      "report_slugs": [
+        "cogvlm2-visual-language-models-for-image-and-video-understanding"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "CogVideo",
+      "source_url": "https://github.com/zai-org/CogVideo",
+      "report_slugs": [
+        "cogvideo-large-scale-pretraining-for-text-to-video-generation-via-transformers"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "CogVideoX",
+      "source_url": "https://github.com/zai-org/CogVideo",
+      "report_slugs": [
+        "cogvideox-text-to-video-diffusion-models-with-an-expert-transformer"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "CogView2",
+      "source_url": "https://github.com/zai-org/CogView2",
+      "report_slugs": [
+        "cogview2-faster-and-better-text-to-image-generation-via-hierarchical-transformers"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "CogView3",
+      "source_url": "https://github.com/zai-org/CogView4",
+      "report_slugs": [
+        "cogview3-finer-and-faster-text-to-image-generation-via-relay-diffusion"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "CodeGeeX",
+      "source_url": "https://github.com/zai-org/CodeGeeX",
+      "report_slugs": [
+        "codegeex-a-pre-trained-model-for-code-generation-with-multilingual-benchmarking-on-humaneval-x"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "CogCoM",
+      "source_url": "https://arxiv.org/abs/2402.04236",
+      "report_slugs": [
+        "cogcom"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "model": "Inf-DiT",
+      "source_url": "https://arxiv.org/abs/2405.04312",
+      "report_slugs": [
+        "inf-dit"
+      ]
+    },
+    {
+      "vendor": "minimax",
+      "model": "MiniMax-01",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-01",
+      "report_slugs": [
+        "minimax-01-scaling-foundation-models-with-lightning-attention"
+      ]
+    },
+    {
+      "vendor": "minimax",
+      "model": "MiniMax-M1",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-M1",
+      "report_slugs": [
+        "minimax-m1-scaling-test-time-compute-efficiently-with-lightning-attention"
+      ]
+    },
+    {
+      "vendor": "minimax",
+      "model": "MiniMax-M2",
+      "source_url": "https://arxiv.org/abs/2605.26494",
+      "report_slugs": [
+        "minimax-m2-series"
+      ],
+      "release_date": "2025-10-27",
+      "release_source_url": "https://www.minimax.io/blog/minimax-m2-en-1748600000",
+      "release_evidence": "Official MiniMax post dated 2025-10-27 says ‘Today, we are officially open-sourcing and launching MiniMax M2.’"
+    },
+    {
+      "vendor": "minimax",
+      "model": "MiniMax-M2.1",
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-M2.1",
+      "report_slugs": [
+        "minimax-m2-1-technical-report"
+      ],
+      "release_date": "2025-12-23",
+      "release_source_url": "https://www.minimax.io/news/minimax-m21",
+      "release_evidence": "Official MiniMax announcement is dated 2025.12.23 and says ‘Today we are releasing updates to the model component, namely MiniMax M2.1.’"
+    },
+    {
+      "vendor": "minimax",
+      "model": "MiniMax-Speech",
+      "source_url": "https://arxiv.org/abs/2505.07916",
+      "report_slugs": [
+        "minimax-speech"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step 3",
+      "source_url": "https://github.com/stepfun-ai/Step3",
+      "report_slugs": [
+        "step-3"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step 3.5 Flash",
+      "source_url": "https://github.com/stepfun-ai/Step-3.5-Flash",
+      "report_slugs": [
+        "step-3-5-flash"
+      ],
+      "release_date": "2026-02-02",
+      "release_source_url": "https://www.stepfun.com/news/step-3-5-flash-launch",
+      "release_evidence": "Official StepFun launch notice dated Feb 2, 2026 introduces Step 3.5 Flash as its latest open-source foundation model and says it is fully available; it links official weights and model page."
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step3-VL-10B",
+      "source_url": "https://github.com/stepfun-ai/Step3-VL-10B",
+      "report_slugs": [
+        "step3-vl-10b"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step-Audio",
+      "source_url": "https://github.com/stepfun-ai/Step-Audio",
+      "report_slugs": [
+        "step-audio"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step-Audio-AQAA",
+      "source_url": "https://github.com/stepfun-ai/Step-Audio",
+      "report_slugs": [
+        "step-audio-aqaa"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step-Audio 2",
+      "source_url": "https://github.com/stepfun-ai/Step-Audio2",
+      "report_slugs": [
+        "step-audio-2"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step-Audio-R1",
+      "source_url": "https://github.com/stepfun-ai/Step-Audio-R1",
+      "report_slugs": [
+        "step-audio-r1"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step-Audio-R1.5",
+      "source_url": "https://github.com/stepfun-ai/Step-Audio-R1",
+      "report_slugs": [
+        "step-audio-r1-5"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step-Audio-EditX",
+      "source_url": "https://github.com/stepfun-ai/Step-Audio-EditX",
+      "report_slugs": [
+        "step-audio-editx"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "Step-DeepResearch",
+      "source_url": "https://github.com/stepfun-ai/StepDeepResearch",
+      "report_slugs": [
+        "step-deepresearch"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "StepAudio 3 Gen",
+      "source_url": "https://arxiv.org/abs/2609.12945",
+      "report_slugs": [
+        "step-audio-3-gen"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "StepAudio 2.5",
+      "source_url": "https://arxiv.org/abs/2605.23463",
+      "report_slugs": [
+        "step-audio-2-5"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "ReasonEdit",
+      "source_url": "https://github.com/stepfun-ai/Step1X-Edit",
+      "report_slugs": [
+        "reasonedit"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "model": "NextStep-1",
+      "source_url": "https://github.com/stepfun-ai/NextStep-1",
+      "report_slugs": [
+        "nextstep-1"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hunyuan-Large",
+      "source_url": "https://github.com/Tencent-Hunyuan/Tencent-Hunyuan-Large",
+      "report_slugs": [
+        "hunyuan-large"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hunyuan-MT",
+      "source_url": "https://github.com/Tencent-Hunyuan/Hunyuan-MT",
+      "report_slugs": [
+        "hunyuan-mt"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "HunyuanOCR",
+      "source_url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+      "report_slugs": [
+        "hunyuan-ocr"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "HunyuanOCR 1.5",
+      "source_url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+      "report_slugs": [
+        "hunyuan-ocr-1-5"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "HunyuanVideo",
+      "source_url": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+      "report_slugs": [
+        "hunyuan-video"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hunyuan3D 2.0",
+      "source_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2",
+      "report_slugs": [
+        "hunyuan-3d-2"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hunyuan3D 2.1",
+      "source_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+      "report_slugs": [
+        "hunyuan-3d-2-1"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hunyuan-DiT",
+      "source_url": "https://github.com/Tencent/HunyuanDiT",
+      "report_slugs": [
+        "hunyuan-dit"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hunyuan-A13B",
+      "source_url": "https://github.com/Tencent-Hunyuan/Hunyuan-A13B",
+      "report_slugs": [
+        "hunyuan-a13b"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hunyuan3D Buffalo 1.0",
+      "source_url": "https://arxiv.org/abs/2608.02711",
+      "report_slugs": [
+        "hunyuan3d-buffalo-1-0"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "WorldClaw",
+      "source_url": "https://arxiv.org/abs/2608.05248",
+      "report_slugs": [
+        "hunyuan3d-worldclaw"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seed1.5-Thinking",
+      "source_url": "https://github.com/ByteDance-Seed/Seed-Thinking-v1.5",
+      "report_slugs": [
+        "seed-thinking-v1-5"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seed1.5-VL",
+      "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
+      "report_slugs": [
+        "seed1-5-vl"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seed Diffusion",
+      "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
+      "report_slugs": [
+        "seed-diffusion"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seedream 2.0",
+      "source_url": "https://seed.bytedance.com/en/blog/doubao-text-to-image-technical-report-released-full-disclosure-of-data-processing-pre-training-and-rlhf-workflow",
+      "report_slugs": [
+        "seedream-2"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seedream 3.0",
+      "source_url": "https://arxiv.org/abs/2504.11346",
+      "report_slugs": [
+        "seedream-3"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seedream 4.0",
+      "source_url": "https://arxiv.org/abs/2509.20427",
+      "report_slugs": [
+        "seedream-4"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seedance 1.0",
+      "source_url": "https://arxiv.org/abs/2506.09113",
+      "report_slugs": [
+        "seedance-1"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seedance 1.5 Pro",
+      "source_url": "https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro",
+      "report_slugs": [
+        "seedance-1-5-pro-model-card"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seed2.0",
+      "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
+      "report_slugs": [
+        "seed2-0-model-card"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seed1.8",
+      "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
+      "report_slugs": [
+        "seed1-8-model-card"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seed-OSS",
+      "source_url": "https://github.com/ByteDance-Seed/seed-oss",
+      "report_slugs": [
+        "seed-oss"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seedance 2.0",
+      "source_url": "https://seed.bytedance.com/en/research",
+      "report_slugs": [
+        "seedance-2"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "Seed3D 2.0",
+      "source_url": "https://seed.bytedance.com/en/seed3d_2_0",
+      "report_slugs": [
+        "seed3d-2"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "GR-Dexter",
+      "source_url": "https://arxiv.org/abs/2512.24210",
+      "report_slugs": [
+        "gr-dexter-technical-report"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "GR-2",
+      "source_url": "https://arxiv.org/abs/2410.06158",
+      "report_slugs": [
+        "gr-2-generative-video-language-action-model"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "model": "GR-1",
+      "source_url": "https://arxiv.org/abs/2312.13139",
+      "report_slugs": [
+        "gr-1-large-scale-video-generative-pretraining"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "Command A",
+      "source_url": "https://cohere.com/research/papers/command-a-technical-report.pdf",
+      "report_slugs": [
+        "command-a"
+      ],
+      "release_date": "2025-03-13",
+      "release_source_url": "https://docs.cohere.com/changelog/command-a",
+      "release_evidence": "Official Cohere release notes dated March 13, 2025 announce “the release of Command A” and say it is available today on Cohere Platform and Hugging Face."
+    },
+    {
+      "vendor": "cohere",
+      "model": "Aya",
+      "source_url": "https://cohere.com/research/aya",
+      "report_slugs": [
+        "aya-model"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "Aya 23",
+      "source_url": "https://cohere.com/research/aya",
+      "report_slugs": [
+        "aya-23"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "Aya Expanse",
+      "source_url": "https://cohere.com/research/aya",
+      "report_slugs": [
+        "aya-expanse"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "model": "Aya Vision",
+      "source_url": "https://cohere.com/research/aya",
+      "report_slugs": [
+        "aya-vision"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI Thinking 1",
+      "source_url": "https://microsoft.ai/models/mai-thinking-1/",
+      "report_slugs": [
+        "mai-thinking-1-technical-report",
+        "mai-thinking-1-model-card"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI-Voice-2.1",
+      "source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+      "report_slugs": [
+        "mai-voice-2-1-model-card"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI-Voice-2.1 Flash",
+      "source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+      "report_slugs": [
+        "mai-voice-2-1-flash-model-card"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Phi-1",
+      "source_url": "https://arxiv.org/abs/2306.11644",
+      "report_slugs": [
+        "phi-1"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Phi-1.5",
+      "source_url": "https://www.microsoft.com/en-us/research/publication/textbooks-are-all-you-need-ii-phi-1-5-technical-report/",
+      "report_slugs": [
+        "phi-1-5"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Phi-3",
+      "source_url": "https://arxiv.org/abs/2404.14219",
+      "report_slugs": [
+        "phi-3"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Phi-4",
+      "source_url": "https://www.microsoft.com/en-us/research/publication/phi-4-technical-report/",
+      "report_slugs": [
+        "phi-4"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Phi-4 Mini",
+      "source_url": "https://arxiv.org/abs/2503.01743",
+      "report_slugs": [
+        "phi-4-mini-multimodal"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Phi-4 Multimodal",
+      "source_url": "https://arxiv.org/abs/2503.01743",
+      "report_slugs": [
+        "phi-4-mini-multimodal"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Phi-4 Reasoning",
+      "source_url": "https://arxiv.org/abs/2504.21318",
+      "report_slugs": [
+        "phi-4-reasoning"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Magma",
+      "source_url": "https://arxiv.org/abs/2502.13130",
+      "report_slugs": [
+        "magma-technical-report"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "model": "FLOWER",
+      "source_url": "https://arxiv.org/abs/2509.04996",
+      "report_slugs": [
+        "flower-technical-report"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova Premier",
+      "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
+      "report_slugs": [
+        "nova-family",
+        "nova-premier-model-card",
+        "nova-premier-frontier-safety-report"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova Micro",
+      "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
+      "report_slugs": [
+        "nova-family"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova Lite",
+      "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
+      "report_slugs": [
+        "nova-family"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova Pro",
+      "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
+      "report_slugs": [
+        "nova-family"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova Canvas",
+      "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
+      "report_slugs": [
+        "nova-family"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova Reel",
+      "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
+      "report_slugs": [
+        "nova-family"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova Sonic",
+      "source_url": "https://www.amazon.science/publications/amazon-nova-sonic-technical-report-and-model-card",
+      "report_slugs": [
+        "nova-sonic"
+      ]
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok-1",
+      "source_url": "https://x.ai/news/grok/model-card",
+      "report_slugs": [
+        "grok-1-model-card"
+      ]
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok 4",
+      "source_url": "https://x.ai/safety",
+      "report_slugs": [
+        "grok-4-model-card"
+      ],
+      "release_date": "2025-07-09",
+      "release_source_url": "https://x.ai/news/grok-4",
+      "release_evidence": "Official xAI post dated Jul 9, 2025 introduces Grok 4 and states it “is available now” to subscribers and through the xAI API."
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok 4.1",
+      "source_url": "https://x.ai/news/grok-4-1",
+      "report_slugs": [
+        "grok-4-1-model-card"
+      ],
+      "release_date": "2025-11-17",
+      "release_source_url": "https://x.ai/news/grok-4-1",
+      "release_evidence": "Official post dated Nov 17, 2025 introduces Grok 4.1 and says it is now available to all users. It discloses a prior silent rollout of preliminary builds Nov 1–14; public named-model announcement date used here is Nov 17."
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok 4.20",
+      "source_url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
+      "report_slugs": [
+        "grok-4-20-system-card"
+      ]
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok 4.5",
+      "source_url": "https://x.ai/safety",
+      "report_slugs": [
+        "grok-4-5-model-card"
+      ],
+      "release_date": "2026-07-08",
+      "release_source_url": "https://docs.x.ai/developers/release-notes",
+      "release_evidence": "Official xAI API release notes, July 8 entry: “Grok 4.5 … is now available on the xAI API.” A later product announcement page is dated July 16, so the earlier official model availability date is used."
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok 4.6",
+      "source_url": "https://x.ai/safety",
+      "report_slugs": [
+        "grok-4-6-model-card"
+      ]
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok 4 Fast",
+      "source_url": "https://x.ai/safety",
+      "report_slugs": [
+        "grok-4-fast-model-card"
+      ]
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok Code Fast 1",
+      "source_url": "https://x.ai/safety",
+      "report_slugs": [
+        "grok-code-fast-1-model-card"
+      ]
+    },
+    {
+      "vendor": "physical_intelligence",
+      "model": "π0",
+      "source_url": "https://arxiv.org/abs/2410.24164",
+      "report_slugs": [
+        "pi-0-technical-report",
+        "hi-robot-technical-report"
+      ],
+      "release_date": "2024-10-31",
+      "release_source_url": "https://www.pi.website/blog",
+      "release_evidence": "Official blog index records the named policy introduction on 2024-10-31; methods, tokenizer and weights releases are distinguished."
+    },
+    {
+      "vendor": "physical_intelligence",
+      "model": "π0.5",
+      "source_url": "https://arxiv.org/abs/2504.16054",
+      "report_slugs": [
+        "pi-0-5-technical-report",
+        "knowledge-insulating-vlas-technical-report",
+        "real-time-execution-action-chunking-flow-policies",
+        "emergence-human-to-robot-transfer-vlas"
+      ],
+      "release_date": "2025-04-22",
+      "release_source_url": "https://www.pi.website/blog",
+      "release_evidence": "Official blog index records the named policy introduction on 2025-04-22; methods, tokenizer and weights releases are distinguished."
+    },
+    {
+      "vendor": "physical_intelligence",
+      "model": "π0.6",
+      "source_url": "https://website.pi-asset.com/pi06star/PI06_model_card.pdf",
+      "report_slugs": [
+        "pi-0-6-model-card",
+        "training-time-action-conditioning-rtc",
+        "precise-manipulation-efficient-online-rl"
+      ]
+    },
+    {
+      "vendor": "physical_intelligence",
+      "model": "π*0.6",
+      "source_url": "https://arxiv.org/abs/2511.14759",
+      "report_slugs": [
+        "pi-star-0-6-technical-report"
+      ],
+      "release_date": "2025-11-17",
+      "release_source_url": "https://www.pi.website/blog",
+      "release_evidence": "Official blog index records the named policy introduction on 2025-11-17; methods, tokenizer and weights releases are distinguished."
+    },
+    {
+      "vendor": "physical_intelligence",
+      "model": "π0-FAST",
+      "source_url": "https://arxiv.org/abs/2501.09747",
+      "report_slugs": [
+        "fast-action-tokenization-technical-report"
+      ],
+      "release_date": "2025-02-04",
+      "release_source_url": "https://www.pi.website/blog",
+      "release_evidence": "Official blog index records the named policy introduction on 2025-02-04; methods, tokenizer and weights releases are distinguished."
+    },
+    {
+      "vendor": "physical_intelligence",
+      "model": "π0.6-MEM",
+      "source_url": "https://www.pi.website/research/memory",
+      "report_slugs": [
+        "mem-multi-scale-embodied-memory-technical-report"
+      ]
+    },
+    {
+      "vendor": "agibot",
+      "model": "GE-Base",
+      "source_url": "https://arxiv.org/abs/2508.05635",
+      "report_slugs": [
+        "genie-envisioner"
+      ]
+    },
+    {
+      "vendor": "agibot",
+      "model": "GE-Act",
+      "source_url": "https://arxiv.org/abs/2508.05635",
+      "report_slugs": [
+        "genie-envisioner"
+      ]
+    },
+    {
+      "vendor": "agibot",
+      "model": "GE-Sim",
+      "source_url": "https://arxiv.org/abs/2508.05635",
+      "report_slugs": [
+        "genie-envisioner"
+      ]
+    },
+    {
+      "vendor": "agibot",
+      "model": "GO-1",
+      "source_url": "https://arxiv.org/abs/2503.06669",
+      "report_slugs": [
+        "agibot-world-colosseo-go-1"
+      ]
+    },
+    {
+      "vendor": "galaxea",
+      "model": "G0",
+      "source_url": "https://arxiv.org/abs/2509.00576",
+      "report_slugs": [
+        "galaxea-open-world-dataset-g0-vla"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Opus 5.5",
+      "source_url": "https://www.anthropic.com/claude-opus-5-5",
+      "report_slugs": [
+        "claude-opus-5-5-system-card"
+      ],
+      "release_date": "2026-09-22",
+      "release_source_url": "https://www.anthropic.com/claude-opus-5-5",
+      "release_evidence": "Official page dated September 22, 2026: “We’re introducing Claude Opus 5.5, the first model in our new Claude 5.5 family.”"
+    },
+    {
+      "vendor": "mistral",
+      "model": "Mistral Large 3",
+      "source_url": "https://mistral.ai/news/mistral-3/",
+      "report_slugs": [
+        "mistral-large-3-model-card"
+      ],
+      "release_date": "2025-12-02",
+      "release_source_url": "https://mistral.ai/news/mistral-3/",
+      "release_evidence": "Official post dated December 2, 2025: “Today, we announce Mistral 3” and explicitly names Mistral Large 3 as the most capable model in the announced family; availability stated “today”."
+    },
+    {
+      "vendor": "mistral",
+      "model": "Mistral Small 4",
+      "source_url": "https://mistral.ai/news/mistral-small-4/",
+      "report_slugs": [
+        "mistral-small-4-model-card"
+      ],
+      "release_date": "2026-03-16",
+      "release_source_url": "https://mistral.ai/news/mistral-small-4/",
+      "release_evidence": "Official post dated March 16, 2026: “Today, we are announcing Mistral Small 4”; says it is released under Apache 2.0."
+    },
+    {
+      "vendor": "xai",
+      "model": "Grok 4.7",
+      "source_url": "https://x.ai/news/grok-4-7",
+      "report_slugs": [
+        "grok-4-7-model-card"
+      ],
+      "release_date": "2026-09-21",
+      "release_source_url": "https://x.ai/news/grok-4-7",
+      "release_evidence": "Official xAI page says “Sep 21, 2026” and “Grok 4.7 is available today in Cursor and Grok Build” and through the Grok API."
+    },
+    {
+      "vendor": "cohere",
+      "model": "Command A+",
+      "source_url": "https://cohere.com/blog/cohere-releases-command-a-plus",
+      "report_slugs": [
+        "command-a-plus-model-card"
+      ],
+      "release_date": "2026-05-20",
+      "release_source_url": "https://cohere.com/blog/cohere-releases-command-a-plus",
+      "release_evidence": "Official Cohere launch post dated May 20, 2026: “Today, we’re announcing the release of Command A+”."
+    },
+    {
+      "vendor": "cohere",
+      "model": "Embed 5",
+      "source_url": "https://cohere.com/blog/embed-5",
+      "report_slugs": [],
+      "release_date": "2026-09-30",
+      "release_source_url": "https://cohere.com/blog/embed-5",
+      "release_evidence": "Official Cohere post dated Sep 30, 2026: “Today, we're releasing Embed 5, a new family of embeddings models”."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.1 Pro",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+      "report_slugs": [
+        "gemini-3-1-pro-model-card"
+      ],
+      "release_date": "2026-02-19",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/",
+      "release_evidence": "Official post dated Feb 19, 2026 is titled ‘Gemini 3.1 Pro: A smarter model for your most complex tasks’ and says Gemini 3.1 Pro is here and rolling out across consumer and developer products."
+    },
+    {
+      "vendor": "google",
+      "model": "Gemini 3.8 Flash",
+      "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "report_slugs": [
+        "gemini-3-8-flash-model-card"
+      ],
+      "release_date": "2026-09-02",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "release_evidence": "Official launch dated Sep 2, 2026 says ‘today we’re introducing Gemini 3.8’ and names Gemini 3.8 Flash as one of the two new variants, available through Gemini API and other products."
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Cosmos 3",
+      "source_url": "https://blogs.nvidia.com/blog/cosmos-3-physical-ai-open-world-foundation-model/",
+      "report_slugs": [
+        "cosmos-3-omnimodal-world-models-for-physical-ai"
+      ],
+      "release_date": "2026-05-31",
+      "release_source_url": "https://blogs.nvidia.com/blog/cosmos-3-physical-ai-open-world-foundation-model/",
+      "release_evidence": "NVIDIA’s May 31, 2026 post says Cosmos 3 was ‘announced today at NVIDIA GTC Taipei at COMPUTEX’ and describes the newly announced world foundation model."
+    },
+    {
+      "vendor": "nvidia",
+      "model": "Nemotron 3.5 Lightning",
+      "source_url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+      "report_slugs": [],
+      "release_date": "2026-08-11",
+      "release_source_url": "https://blogs.nvidia.com/blog/nemotron-lightning-switchyard-rtx-dgx/",
+      "release_evidence": "NVIDIA’s Aug 11, 2026 post says, ‘Today, NVIDIA is expanding its Nemotron 3 model family with Nemotron 3.5 Lightning.’"
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-6.1 Sol",
+      "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "report_slugs": [
+        "addendum-to-gpt-6-astra-system-card-gpt-6-1-sol"
+      ],
+      "release_date": "2026-09-29",
+      "release_source_url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+      "release_evidence": "OpenAI newsroom release index dates ‘Introducing GPT-6.1 Sol’ Sep 29, 2026; its post says ‘We’re introducing GPT-6.1 Sol’ and availability begins today. API changelog independently records ‘Released GPT-6.1 Sol’ on Sep 29."
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-6 Astra",
+      "source_url": "https://openai.com/index/gpt-6-astra/",
+      "report_slugs": [
+        "gpt-6-astra-system-card"
+      ],
+      "release_date": "2026-09-03",
+      "release_source_url": "https://openai.com/index/gpt-6-astra/",
+      "release_evidence": "Official post is dated September 3, 2026 and says ‘We’re introducing GPT-6 Astra’; it says limited organizational rollout starts today."
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-6 Sol",
+      "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "report_slugs": [],
+      "release_date": "2026-09-22",
+      "release_source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "release_evidence": "GPT-6 Astra official post records on Sep 22, 2026: ‘We are expanding our GPT-6 family with GPT-6 Sol and GPT-6 Luna’ and links the announcement."
+    },
+    {
+      "vendor": "deepseek",
+      "model": "DeepSeek-V2.5",
+      "source_url": "https://api-docs.deepseek.com/news/news0905/",
+      "report_slugs": [],
+      "release_date": "2024-09-05",
+      "release_source_url": "https://api-docs.deepseek.com/news/news0905/",
+      "release_evidence": "Dated official notice says ‘We’ve officially launched DeepSeek-V2.5’ and that it is available on web and API; changelog labels Sep 5 the V2.5 upgrade/release."
+    },
+    {
+      "vendor": "zai",
+      "model": "GLM-5.3",
+      "source_url": "https://z.ai/blog/glm-5.3",
+      "report_slugs": [
+        "glm-5-3-model-card"
+      ],
+      "release_date": "2026-08-14",
+      "release_source_url": "https://z.ai/blog/glm-5.3",
+      "release_evidence": "Official Z.ai post dated Aug 14, 2026 states ‘Today we are releasing GLM-5.3.’"
+    },
+    {
+      "vendor": "moonshot",
+      "model": "Kimi K3",
+      "source_url": "https://github.com/MoonshotAI/Kimi-K3",
+      "report_slugs": [
+        "kimi-k3-technical-report"
+      ],
+      "release_date": "2026-07-16",
+      "release_source_url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
+      "release_evidence": "The official Model Release entry dated July 16, 2026 explicitly introduces Kimi K3 and its availability in Kimi Code. The July 22 forum notice and July 27 weight release are later milestones; the date does not imply that public weights were available July 16."
+    },
+    {
+      "vendor": "openai",
+      "model": "Sora 2",
+      "source_url": "https://openai.com/index/sora-2/",
+      "report_slugs": [
+        "sora-2-system-card"
+      ],
+      "release_date": "2025-09-30",
+      "release_source_url": "https://openai.com/index/sora-2/",
+      "release_evidence": "The official September 30 release post explicitly introduces and releases Sora 2. Later product discontinuation is retained in coverage and does not remove the historical timeline node."
+    },
+    {
+      "vendor": "google",
+      "model": "Veo 3.1",
+      "source_url": "https://blog.google/innovation-and-ai/products/veo-updates-flow/",
+      "report_slugs": [],
+      "release_date": "2025-10-15",
+      "release_source_url": "https://blog.google/innovation-and-ai/products/veo-updates-flow/",
+      "release_evidence": "Official October 15 announcement introduces Veo 3.1 and its rollout in Flow; January Ingredients-to-Video updates are later enhancements."
+    }
+  ],
+  "coverage_aliases": [
+    {
+      "vendor": "openai",
+      "coverage_model": "GPT-5.6 August safety update",
+      "models": [
+        "GPT-5.6"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "coverage_model": "GPT-Live / GPT-Live mini",
+      "models": [
+        "GPT-Live",
+        "GPT-Live mini"
+      ],
+      "shared_reports": true
+    },
+    {
+      "vendor": "openai",
+      "coverage_model": "ChatGPT Images 2.5 / Sunburst / Flare",
+      "models": [
+        "GPT-Image-2.5-Sunburst",
+        "GPT-Image-2.5-Flare"
+      ],
+      "shared_reports": true
+    },
+    {
+      "vendor": "openai",
+      "coverage_model": "GPT-Transcribe / GPT-Live-Transcribe",
+      "models": [
+        "GPT-Transcribe",
+        "GPT-Live-Transcribe"
+      ]
+    },
+    {
+      "vendor": "openai",
+      "coverage_model": "GPT-6 Sol / Luna (ChatGPT October)",
+      "models": [
+        "GPT-6 Sol (ChatGPT October)",
+        "GPT-6 Luna (ChatGPT October)"
+      ],
+      "shared_reports": true,
+      "shared_release": true
+    },
+    {
+      "vendor": "anthropic",
+      "coverage_model": "Claude Fable 5.1 / Mythos 5.1",
+      "models": [
+        "Claude Fable 5.1",
+        "Claude Mythos 5.1"
+      ],
+      "shared_reports": true
+    },
+    {
+      "vendor": "google",
+      "coverage_model": "Gemini 3.8 Audio: Live, extended thinking, TTS",
+      "models": [
+        "Gemini 3.8 Live",
+        "Gemini 3.8 Live Extended Thinking",
+        "Gemini 3.8 Flash TTS",
+        "Gemini 3.8 Flash-Lite TTS"
+      ],
+      "shared_reports": true
+    },
+    {
+      "vendor": "google",
+      "coverage_model": "Gemini 3.8 Live / Live Extended Thinking",
+      "models": [
+        "Gemini 3.8 Live",
+        "Gemini 3.8 Live Extended Thinking"
+      ],
+      "shared_reports": true
+    },
+    {
+      "vendor": "google",
+      "coverage_model": "Gemini 3.8 Flash TTS / Flash-Lite TTS",
+      "models": [
+        "Gemini 3.8 Flash TTS",
+        "Gemini 3.8 Flash-Lite TTS"
+      ],
+      "shared_reports": true
+    },
+    {
+      "vendor": "google",
+      "coverage_model": "Gemini 3.5 Audio: Translate, Transcribe, Transcribe Live",
+      "models": [
+        "Gemini 3.5 Live Translate",
+        "Gemini 3.5 Transcribe",
+        "Gemini 3.5 Transcribe Live"
+      ],
+      "shared_reports": true
+    },
+    {
+      "vendor": "google",
+      "coverage_model": "Gemini 3.5 Transcribe / Transcribe Live",
+      "models": [
+        "Gemini 3.5 Transcribe",
+        "Gemini 3.5 Transcribe Live"
+      ],
+      "shared_reports": true
+    },
+    {
+      "vendor": "google",
+      "coverage_model": "Gemini 3.1 Flash Lite Image",
+      "models": [
+        "Nano Banana 2 Lite"
+      ]
+    },
+    {
+      "vendor": "google",
+      "coverage_model": "Nano Banana 2 Lite / Gemini 3.1 Flash-Lite Image",
+      "models": [
+        "Nano Banana 2 Lite"
+      ]
+    },
+    {
+      "vendor": "google",
+      "coverage_model": "Veo 3 / 3.1",
+      "models": [
+        "Veo 3",
+        "Veo 3.1"
+      ]
+    },
+    {
+      "vendor": "google",
+      "coverage_model": "Gemini Robotics 2 / ER 2 / On-Device 2",
+      "models": [
+        "Gemini Robotics 2",
+        "Gemini Robotics ER 2",
+        "Gemini Robotics On-Device 2"
+      ]
+    },
+    {
+      "vendor": "google",
+      "coverage_model": "Gemini Robotics On Device 2",
+      "models": [
+        "Gemini Robotics On-Device 2"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "coverage_model": "Muse Spark 1.2 / Muse Code",
+      "models": [
+        "Muse Spark 1.2"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "coverage_model": "Llama 4 Scout / Maverick",
+      "models": [
+        "Llama 4 Scout",
+        "Llama 4 Maverick"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "coverage_model": "SAM 3D Objects / Body",
+      "models": [
+        "SAM 3D Objects",
+        "SAM 3D Body"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "coverage_model": "V-JEPA 2 / 2-AC",
+      "models": [
+        "V-JEPA 2",
+        "V-JEPA 2-AC"
+      ],
+      "shared_reports": true,
+      "shared_release": true
+    },
+    {
+      "vendor": "meta",
+      "coverage_model": "Muse Wonder / Wonder Full",
+      "models": [
+        "Muse Wonder",
+        "Muse Wonder Full"
+      ],
+      "shared_release": true
+    },
+    {
+      "vendor": "nvidia",
+      "coverage_model": "Cosmos Reason 2 (2B / 8B / 32B)",
+      "models": [
+        "Cosmos Reason 2"
+      ]
+    },
+    {
+      "vendor": "nvidia",
+      "coverage_model": "Nemotron 3 Embed 1B / 8B",
+      "models": [
+        "Nemotron 3 Embed"
+      ]
+    },
+    {
+      "vendor": "deepseek",
+      "coverage_model": "DeepSeek V4 / V3.2 model cards",
+      "models": [
+        "DeepSeek-V4",
+        "DeepSeek-V3.2"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "coverage_model": "Wan video / Wan-Dancer / Wan-Animate-2",
+      "models": [
+        "Wan2.1",
+        "Wan-Dancer",
+        "Wan-Animate-2"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "coverage_model": "Qwen-Audio-3.0-TTS-Plus / Flash",
+      "models": [
+        "Qwen-Audio-3.0-TTS-Plus",
+        "Qwen-Audio-3.0-TTS-Flash"
+      ]
+    },
+    {
+      "vendor": "moonshot",
+      "coverage_model": "Kimi Audio / Kimi VL",
+      "models": [
+        "Kimi-Audio",
+        "Kimi-VL"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "coverage_model": "GLM-OCR / GLM-TTS",
+      "models": [
+        "GLM-OCR",
+        "GLM-TTS"
+      ]
+    },
+    {
+      "vendor": "zai",
+      "coverage_model": "GLM-Image / GLM-ASR-Nano",
+      "models": [
+        "GLM-Image",
+        "GLM-ASR-Nano"
+      ]
+    },
+    {
+      "vendor": "stepfun",
+      "coverage_model": "StepAudio 3 Gen / Realtime / Music",
+      "models": [
+        "StepAudio 3 Gen",
+        "StepAudio 3 Realtime",
+        "StepAudio 3 Music"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "coverage_model": "Hunyuan3D Buffalo 1.0 / WorldClaw",
+      "models": [
+        "Hunyuan3D Buffalo 1.0",
+        "WorldClaw"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "coverage_model": "HunyuanImage 3.0 / HunyuanVideo 1.5 / HunyuanOCR 1.5",
+      "models": [
+        "HunyuanImage 3.0",
+        "HunyuanVideo 1.5",
+        "HunyuanOCR 1.5"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "coverage_model": "WeVisDoc-4B / 2B",
+      "models": [
+        "WeVisDoc"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "coverage_model": "HY-World 1.5 / WorldPlay",
+      "models": [
+        "HY-World 1.5"
+      ]
+    },
+    {
+      "vendor": "bytedance",
+      "coverage_model": "SeedRealtime / Seed Audio 1.0",
+      "models": [
+        "SeedRealtime",
+        "Seed Audio 1.0"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "coverage_model": "Embed 5 (pro / fast)",
+      "models": [
+        "Embed 5"
+      ]
+    },
+    {
+      "vendor": "cohere",
+      "coverage_model": "Rerank 4 (pro / fast)",
+      "models": [
+        "Rerank 4"
+      ]
+    },
+    {
+      "vendor": "microsoft",
+      "coverage_model": "MAI Image 2.6 / 2.6 Flash",
+      "models": [
+        "MAI Image 2.6",
+        "MAI Image 2.6 Flash"
+      ],
+      "shared_reports": true
+    },
+    {
+      "vendor": "microsoft",
+      "coverage_model": "MAI-Voice-2.1 / Flash",
+      "models": [
+        "MAI-Voice-2.1",
+        "MAI-Voice-2.1 Flash"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "coverage_model": "Nova 2 Lite / Pro Preview",
+      "models": [
+        "Nova 2 Lite",
+        "Nova 2 Pro"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "coverage_model": "Nova 2 Omni Preview",
+      "models": [
+        "Nova 2 Omni"
+      ]
+    }
+  ]
+}

@@ -71,6 +71,16 @@ class ReaderTests(unittest.TestCase):
             asset.write_text('<svg/>')
             self.assertIn('src="../assets/vendors/agibot.svg"', publisher_mark('agibot', '../'))
 
+    def test_model_alias_opens_available_web_reader_before_external_report(self):
+        from build_pages import model_target
+        model = dict(vendor='lab', model='Variant', source_url='https://example.org/model',
+                     reading_aliases=['Model family'])
+        documents = [(True, 0, 'https://example.org/report', 'Report')]
+        readers = {('lab', 'Model family'): self.summary}
+        self.assertEqual(model_target(model, documents, readers), reader_path(self.summary))
+        documents[0] = (False, 0, 'abstracts/lab/other.html', 'Report')
+        self.assertEqual(model_target(model, documents, readers), 'abstracts/lab/other.html')
+
     def test_stale_source_and_figure_selection_rejected(self):
         self.summary['source_sha256'] = 'changed'
         with self.assertRaisesRegex(ValueError, 'Stale summary'):
