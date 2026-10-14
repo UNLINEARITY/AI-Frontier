@@ -164,7 +164,10 @@
       "source_url": "https://www.anthropic.com/claude-mythos-preview-system-card",
       "report_slugs": [
         "mythos-preview-system-card"
-      ]
+      ],
+      "release_date": "2026-04-07",
+      "release_source_url": "https://www.anthropic.com/research/mythos-preview",
+      "release_evidence": "【联网复核·官方首发确认】Anthropic 2026-04-07 研究文章称当天较早时候已正式宣布 Claude Mythos Preview（Project Glasswing）"
     },
     {
       "vendor": "anthropic",
@@ -216,7 +219,10 @@
       "source_url": "https://anthropic.com/claude-opus-5-system-card",
       "report_slugs": [
         "claude-opus-5-system-card"
-      ]
+      ],
+      "release_date": "2026-07-24",
+      "release_source_url": "https://www.anthropic.com/news/claude-opus-5",
+      "release_evidence": "Anthropic 官方发布公告当日明确写明 Claude Opus 5 available today"
     },
     {
       "vendor": "anthropic",
@@ -258,7 +264,10 @@
       "source_url": "https://openai.com/index/gpt-4v-system-card/",
       "report_slugs": [
         "gpt-4v-ision-system-card"
-      ]
+      ],
+      "release_date": "2023-09-25",
+      "release_source_url": "https://openai.com/index/gpt-4v-system-card/",
+      "release_evidence": "OpenAI 在当日系统卡文章宣布 GPT-4V 视觉能力发布"
     },
     {
       "vendor": "openai",
@@ -301,7 +310,10 @@
       "source_url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-codex/",
       "report_slugs": [
         "addendum-to-gpt-5-system-card-gpt-5-codex"
-      ]
+      ],
+      "release_date": "2025-09-15",
+      "release_source_url": "https://openai.com/index/introducing-upgrades-to-codex/",
+      "release_evidence": "OpenAI 当日宣布发布 GPT-5-Codex"
     },
     {
       "vendor": "openai",
@@ -309,7 +321,10 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-5-1",
       "report_slugs": [
         "gpt-5-1-instant-and-gpt-5-1-thinking-system-card-addendum"
-      ]
+      ],
+      "release_date": "2025-11-12",
+      "release_source_url": "https://openai.com/index/gpt-5-1/",
+      "release_evidence": "OpenAI 当日推出 GPT-5.1 Instant"
     },
     {
       "vendor": "openai",
@@ -317,7 +332,10 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-5-1",
       "report_slugs": [
         "gpt-5-1-instant-and-gpt-5-1-thinking-system-card-addendum"
-      ]
+      ],
+      "release_date": "2025-11-12",
+      "release_source_url": "https://openai.com/index/gpt-5-1/",
+      "release_evidence": "OpenAI 当日推出 GPT-5.1 Thinking"
     },
     {
       "vendor": "openai",
@@ -325,7 +343,10 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-5-1-codex-max",
       "report_slugs": [
         "gpt-5-1-codex-max-system-card"
-      ]
+      ],
+      "release_date": "2025-11-19",
+      "release_source_url": "https://openai.com/index/gpt-5-1-codex-max/",
+      "release_evidence": "OpenAI 当日宣布 GPT-5.1-Codex-Max 上线"
     },
     {
       "vendor": "openai",
@@ -333,7 +354,10 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-5-2",
       "report_slugs": [
         "update-to-gpt-5-system-card-gpt-5-2"
-      ]
+      ],
+      "release_date": "2025-12-11",
+      "release_source_url": "https://openai.com/index/gpt-5-system-card-update-gpt-5-2/",
+      "release_evidence": "OpenAI 当日发表新模型 GPT-5.2 发布配套系统卡，正文确认型号"
     },
     {
       "vendor": "openai",
@@ -341,7 +365,10 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-5-2-codex",
       "report_slugs": [
         "addendum-to-gpt-5-2-system-card-gpt-5-2-codex"
-      ]
+      ],
+      "release_date": "2025-12-18",
+      "release_source_url": "https://openai.com/index/introducing-gpt-5-2-codex/",
+      "release_evidence": "OpenAI 当日发布 GPT-5.2-Codex"
     },
     {
       "vendor": "openai",
@@ -349,7 +376,10 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-5-3-codex",
       "report_slugs": [
         "gpt-5-3-codex-system-card"
-      ]
+      ],
+      "release_date": "2026-02-05",
+      "release_source_url": "https://openai.com/index/introducing-gpt-5-3-codex/",
+      "release_evidence": "OpenAI 当日介绍并发布 GPT-5.3-Codex"
     },
     {
       "vendor": "openai",
@@ -357,7 +387,10 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-5-3-instant",
       "report_slugs": [
         "gpt-5-3-instant-system-card"
-      ]
+      ],
+      "release_date": "2026-03-03",
+      "release_source_url": "https://openai.com/index/gpt-5-3-instant/",
+      "release_evidence": "OpenAI 当日发布 GPT-5.3 Instant"
     },
     {
       "vendor": "openai",
@@ -365,7 +398,10 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking",
       "report_slugs": [
         "gpt-5-4-thinking-system-card"
-      ]
+      ],
+      "release_date": "2026-03-05",
+      "release_source_url": "https://openai.com/index/introducing-gpt-5-4/",
+      "release_evidence": "OpenAI 当日发布 GPT-5.4 Thinking"
     },
     {
       "vendor": "openai",
@@ -384,7 +420,10 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-5-5-instant",
       "report_slugs": [
         "gpt-5-5-instant-system-card"
-      ]
+      ],
+      "release_date": "2026-05-05",
+      "release_source_url": "https://openai.com/index/gpt-5-5-instant/",
+      "release_evidence": "OpenAI 当日宣布更新默认模型 GPT-5.5 Instant"
     },
     {
       "vendor": "openai",
@@ -478,7 +517,10 @@
       "source_url": "https://openai.com/index/o3-mini-system-card/",
       "report_slugs": [
         "openai-o3-mini-system-card"
-      ]
+      ],
+      "release_date": "2025-01-31",
+      "release_source_url": "https://openai.com/index/openai-o3-mini/",
+      "release_evidence": "OpenAI 当日宣布发布 o3-mini"
     },
     {
       "vendor": "openai",
@@ -486,7 +528,10 @@
       "source_url": "https://openai.com/index/sora-system-card/",
       "report_slugs": [
         "sora-system-card"
-      ]
+      ],
+      "release_date": "2024-02-15",
+      "release_source_url": "https://openai.com/index/video-generation-models-as-world-simulators/",
+      "release_evidence": "【说明】OpenAI 2024-02-15 官方公开介绍 Sora（非面向所有用户开放的日期）"
     },
     {
       "vendor": "openai",
@@ -494,7 +539,10 @@
       "source_url": "https://arxiv.org/abs/2204.06125",
       "report_slugs": [
         "hierarchical-text-conditional-image-generation-with-clip-latents"
-      ]
+      ],
+      "release_date": "2022-04-06",
+      "release_source_url": "https://github.com/openai/dalle-2-preview/blob/main/system-card_04062022.md",
+      "release_evidence": "【第三轮联网复核·官方预览基准日】OpenAI DALL·E 2 官方系统卡明言考察日期 as of April 6, 2022 的 DALL·E 2 Preview，能证实这一日存在预览版本；此日不能证明首次向公众正式开放"
     },
     {
       "vendor": "openai",
@@ -503,7 +551,10 @@
       "report_slugs": [
         "dall-e-3-system-card",
         "improving-image-generation-with-better-captions"
-      ]
+      ],
+      "release_date": "2023-09-20",
+      "release_source_url": "https://openai.com/index/dall-e-3/",
+      "release_evidence": "OpenAI 2023-09-20 首次公开介绍 DALL·E 3（非全面开放日）"
     },
     {
       "vendor": "openai",
@@ -511,7 +562,10 @@
       "source_url": "https://github.com/openai/whisper",
       "report_slugs": [
         "robust-speech-recognition-via-large-scale-weak-supervision"
-      ]
+      ],
+      "release_date": "2022-09-21",
+      "release_source_url": "https://openai.com/index/whisper/",
+      "release_evidence": "OpenAI 当日宣布开源发布 Whisper"
     },
     {
       "vendor": "openai",
@@ -519,7 +573,10 @@
       "source_url": "https://arxiv.org/abs/2203.02155",
       "report_slugs": [
         "training-language-models-to-follow-instructions-with-human-feedback"
-      ]
+      ],
+      "release_date": "2022-01-27",
+      "release_source_url": "https://openai.com/index/instruction-following/",
+      "release_evidence": "OpenAI 2022-01-27 发布 InstructGPT 介绍文章并称该模型已成为 API 默认语言模型"
     },
     {
       "vendor": "openai",
@@ -527,7 +584,10 @@
       "source_url": "https://github.com/openai/gpt-oss",
       "report_slugs": [
         "gpt-oss-120b-gpt-oss-20b-model-card"
-      ]
+      ],
+      "release_date": "2025-08-05",
+      "release_source_url": "https://openai.com/index/introducing-gpt-oss/",
+      "release_evidence": "OpenAI 当日正式发布 gpt-oss-120b 开放权重模型"
     },
     {
       "vendor": "openai",
@@ -535,7 +595,10 @@
       "source_url": "https://github.com/openai/gpt-oss",
       "report_slugs": [
         "gpt-oss-120b-gpt-oss-20b-model-card"
-      ]
+      ],
+      "release_date": "2025-08-05",
+      "release_source_url": "https://openai.com/index/introducing-gpt-oss/",
+      "release_evidence": "OpenAI 当日正式发布 gpt-oss-20b 开放权重模型"
     },
     {
       "vendor": "openai",
@@ -543,7 +606,10 @@
       "source_url": "https://openai.com/index/gpt-oss-safeguard-technical-report/",
       "report_slugs": [
         "gpt-oss-safeguard-technical-report"
-      ]
+      ],
+      "release_date": "2025-10-29",
+      "release_source_url": "https://openai.com/index/introducing-gpt-oss-safeguard/",
+      "release_evidence": "OpenAI 当日发布 gpt-oss-safeguard-120b 研究预览"
     },
     {
       "vendor": "openai",
@@ -551,7 +617,10 @@
       "source_url": "https://openai.com/index/gpt-oss-safeguard-technical-report/",
       "report_slugs": [
         "gpt-oss-safeguard-technical-report"
-      ]
+      ],
+      "release_date": "2025-10-29",
+      "release_source_url": "https://openai.com/index/introducing-gpt-oss-safeguard/",
+      "release_evidence": "OpenAI 当日发布 gpt-oss-safeguard-20b 研究预览"
     },
     {
       "vendor": "openai",
@@ -559,7 +628,10 @@
       "source_url": "https://deploymentsafety.openai.com/chatgpt-images-2-0",
       "report_slugs": [
         "chatgpt-images-2-0-system-card"
-      ]
+      ],
+      "release_date": "2026-04-21",
+      "release_source_url": "https://openai.com/index/introducing-chatgpt-images-2-0/",
+      "release_evidence": "OpenAI 当日发布 ChatGPT Images 2.0"
     },
     {
       "vendor": "google",
@@ -600,7 +672,10 @@
       "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Lite-Model-Card.pdf",
       "report_slugs": [
         "gemini-2-0-flash-lite-model-card"
-      ]
+      ],
+      "release_date": "2025-02-05",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-model-updates-february-2025/",
+      "release_evidence": "Google 于当日宣布推出 Gemini 2.0 Flash-Lite 公测版"
     },
     {
       "vendor": "google",
@@ -632,7 +707,10 @@
       "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
       "report_slugs": [
         "gemini-2-5-flash-and-gemini-2-5-flash-image-model-card"
-      ]
+      ],
+      "release_date": "2025-08-26",
+      "release_source_url": "https://developers.googleblog.com/en/introducing-gemini-2-5-flash-image/",
+      "release_evidence": "Google 开发者博客 2025-08-26 正式宣布发布 Gemini 2.5 Flash Image 模型并开放 API"
     },
     {
       "vendor": "google",
@@ -651,7 +729,10 @@
       "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf",
       "report_slugs": [
         "gemini-2-5-deep-think-model-card"
-      ]
+      ],
+      "release_date": "2025-08-01",
+      "release_source_url": "https://blog.google/products-and-platforms/products/gemini/gemini-2-5-deep-think/",
+      "release_evidence": "Google 当日宣布 Gemini 2.5 Deep Think 开放使用"
     },
     {
       "vendor": "google",
@@ -659,7 +740,10 @@
       "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Computer-Use-Model-Card.pdf",
       "report_slugs": [
         "gemini-2-5-computer-use-model-card"
-      ]
+      ],
+      "release_date": "2025-10-07",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/",
+      "release_evidence": "Google 于当日宣布发布 Gemini 2.5 Computer Use 模型"
     },
     {
       "vendor": "google",
@@ -678,7 +762,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro-image/",
       "report_slugs": [
         "gemini-3-pro-image-model-card"
-      ]
+      ],
+      "release_date": "2025-11-20",
+      "release_source_url": "https://blog.google/innovation-and-ai/products/nano-banana-pro/",
+      "release_evidence": "Google 当日介绍 Nano Banana Pro 即 Gemini 3 Pro Image"
     },
     {
       "vendor": "google",
@@ -697,7 +784,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-image/",
       "report_slugs": [
         "gemini-3-1-flash-image-model-card"
-      ]
+      ],
+      "release_date": "2026-02-26",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-nano-banana-2/",
+      "release_evidence": "Google 当日宣布 Nano Banana 2 即 Gemini 3.1 Flash Image"
     },
     {
       "vendor": "google",
@@ -705,7 +795,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-lite/",
       "report_slugs": [
         "gemini-3-1-flash-lite-model-card"
-      ]
+      ],
+      "release_date": "2026-03-03",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/",
+      "release_evidence": "Google 当日推出 Gemini 3.1 Flash-Lite 预览版"
     },
     {
       "vendor": "google",
@@ -713,7 +806,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-audio/",
       "report_slugs": [
         "gemini-3-1-flash-audio-flash-live-tts-model-card"
-      ]
+      ],
+      "release_date": "2026-03-26",
+      "release_source_url": "https://blog.google/products-and-platforms/products/search/search-live-global-expansion/",
+      "release_evidence": "Google 2026-03-26 官方公告介绍新的 Gemini 3.1 Flash Live 模型"
     },
     {
       "vendor": "google",
@@ -721,7 +817,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-audio/",
       "report_slugs": [
         "gemini-3-1-flash-audio-flash-live-tts-model-card"
-      ]
+      ],
+      "release_date": "2026-04-15",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/",
+      "release_evidence": "Google 当日宣布发布 Gemini 3.1 Flash TTS"
     },
     {
       "vendor": "google",
@@ -729,7 +828,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
       "report_slugs": [
         "gemini-3-5-flash-model-card"
-      ]
+      ],
+      "release_date": "2026-05-19",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/",
+      "release_evidence": "Google I/O 2026 官方发布 Gemini 3.5 Flash"
     },
     {
       "vendor": "google",
@@ -737,7 +839,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/",
       "report_slugs": [
         "gemini-3-5-flash-lite-model-card"
-      ]
+      ],
+      "release_date": "2026-07-21",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+      "release_evidence": "Google 2026-07-21 同时介绍 3.5 Flash-Lite 和 3.6 Flash"
     },
     {
       "vendor": "google",
@@ -745,7 +850,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
       "report_slugs": [
         "gemini-3-6-flash-model-card"
-      ]
+      ],
+      "release_date": "2026-07-21",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/",
+      "release_evidence": "Google 2026-07-21 公告明确宣布 Gemini 3.6 Flash"
     },
     {
       "vendor": "google",
@@ -753,7 +861,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
       "report_slugs": [
         "gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card"
-      ]
+      ],
+      "release_date": "2026-09-15",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+      "release_evidence": "Google 2026-09-15 首次介绍 Gemini 3.8 Live"
     },
     {
       "vendor": "google",
@@ -761,7 +872,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
       "report_slugs": [
         "gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card"
-      ]
+      ],
+      "release_date": "2026-09-15",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+      "release_evidence": "Google 2026-09-15 同时介绍 3.8 Live Extended Thinking"
     },
     {
       "vendor": "google",
@@ -769,7 +883,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
       "report_slugs": [
         "gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card"
-      ]
+      ],
+      "release_date": "2026-09-23",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+      "release_evidence": "Google 2026-09-23 同时介绍 Gemini 3.8 Flash TTS 与 Flash-Lite TTS"
     },
     {
       "vendor": "google",
@@ -777,7 +894,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-audio/",
       "report_slugs": [
         "gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card"
-      ]
+      ],
+      "release_date": "2026-09-23",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+      "release_evidence": "Google 2026-09-23 同时介绍 Gemini 3.8 Flash TTS 与 Flash-Lite TTS"
     },
     {
       "vendor": "google",
@@ -785,7 +905,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-audio/",
       "report_slugs": [
         "gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card"
-      ]
+      ],
+      "release_date": "2026-06-09",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-live-3-5-translate/",
+      "release_evidence": "【第三轮联网复核·官方发布】Google 6月9日公告明确称 release of Gemini 3.5 Live Translate"
     },
     {
       "vendor": "google",
@@ -793,7 +916,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-audio/",
       "report_slugs": [
         "gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card"
-      ]
+      ],
+      "release_date": "2026-08-26",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+      "release_evidence": "【第三轮联网复核·官方发布】Google 8月26日公告称 Today we’re introducing Gemini 3.5 Transcribe，并明确列出 gemini-3.5-transcribe 与 gemini-3.5-transcribe-live 两种模型 API"
     },
     {
       "vendor": "google",
@@ -801,7 +927,10 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-audio/",
       "report_slugs": [
         "gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card"
-      ]
+      ],
+      "release_date": "2026-08-26",
+      "release_source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
+      "release_evidence": "【第三轮联网复核·官方发布】Google 8月26日公告称 Today we’re introducing Gemini 3.5 Transcribe，并明确列出 gemini-3.5-transcribe 与 gemini-3.5-transcribe-live 两种模型 API"
     },
     {
       "vendor": "google",
@@ -809,7 +938,10 @@
       "source_url": "https://deepmind.google/models/model-cards/lyria-3/",
       "report_slugs": [
         "lyria-3-model-card"
-      ]
+      ],
+      "release_date": "2026-02-18",
+      "release_source_url": "https://blog.google/intl/en-ie/products/lyria-3/",
+      "release_evidence": "Google 当日宣布 Lyria 3 正在 Gemini 应用测试推出"
     },
     {
       "vendor": "google",
@@ -966,7 +1098,10 @@
       "report_slugs": [
         "paligemma-1-model-card",
         "paligemma-a-versatile-3b-vlm-for-transfer"
-      ]
+      ],
+      "release_date": "2024-05-14",
+      "release_source_url": "https://developers.googleblog.com/en/gemma-family-and-toolkit-expansion-io-2024/",
+      "release_evidence": "Google 开发者博客 2024-05-14 明确宣布推出 PaliGemma 并提供模型下载"
     },
     {
       "vendor": "google",
@@ -975,7 +1110,10 @@
       "report_slugs": [
         "paligemma-2-model-card",
         "paligemma-2-a-family-of-versatile-vlms-for-transfer"
-      ]
+      ],
+      "release_date": "2024-12-05",
+      "release_source_url": "https://developers.googleblog.com/en/introducing-paligemma-2-powerful-vision-language-models-simple-fine-tuning/",
+      "release_evidence": "Google 开发者博客 2024-12-05 首次发布 PaliGemma 2 并提供模型下载"
     },
     {
       "vendor": "google",
@@ -984,7 +1122,10 @@
       "report_slugs": [
         "codegemma-model-card",
         "codegemma-open-code-models-based-on-gemma"
-      ]
+      ],
+      "release_date": "2024-04-09",
+      "release_source_url": "https://developers.googleblog.com/gemma-family-expands-with-models-tailored-for-developers-and-researchers/",
+      "release_evidence": "Google Developers 当日宣布 CodeGemma 加入 Gemma 系列"
     },
     {
       "vendor": "google",
@@ -993,7 +1134,10 @@
       "report_slugs": [
         "recurrentgemma-model-card",
         "recurrentgemma-moving-past-transformers-for-efficient-open-language-models"
-      ]
+      ],
+      "release_date": "2024-04-09",
+      "release_source_url": "https://developers.googleblog.com/gemma-family-expands-with-models-tailored-for-developers-and-researchers/",
+      "release_evidence": "Google Developers 当日宣布 RecurrentGemma 加入 Gemma 系列"
     },
     {
       "vendor": "google",
@@ -1001,7 +1145,10 @@
       "source_url": "https://ai.google.dev/gemma/docs/shieldgemma/model_card",
       "report_slugs": [
         "shieldgemma-1-technical-report"
-      ]
+      ],
+      "release_date": "2024-07-31",
+      "release_source_url": "https://ai.google.dev/gemma/docs/releases",
+      "release_evidence": "【联网复核·官方版本发布日志确认】Google 官方 Gemma releases 历史日志明确 2024-07-31 首次发布 ShieldGemma"
     },
     {
       "vendor": "google",
@@ -1009,7 +1156,10 @@
       "source_url": "https://ai.google.dev/gemma/docs/shieldgemma/model_card_2",
       "report_slugs": [
         "shieldgemma-2-model-card"
-      ]
+      ],
+      "release_date": "2025-03-10",
+      "release_source_url": "https://ai.google.dev/gemma/docs/releases",
+      "release_evidence": "【联网复核·官方版本发布日志确认】Google 官方 Gemma releases 历史日志列 2025-03-10 Release of ShieldGemma 2；优先采用专用日志记录而不是后续博客日期"
     },
     {
       "vendor": "google",
@@ -1018,7 +1168,10 @@
       "report_slugs": [
         "embeddinggemma-model-card",
         "embeddinggemma-technical-report"
-      ]
+      ],
+      "release_date": "2025-09-04",
+      "release_source_url": "https://developers.googleblog.com/en/introducing-embeddinggemma/",
+      "release_evidence": "Google Developers 当日首次介绍 EmbeddingGemma"
     },
     {
       "vendor": "google",
@@ -1027,7 +1180,10 @@
       "report_slugs": [
         "medgemma-1-model-card",
         "medgemma-technical-report"
-      ]
+      ],
+      "release_date": "2025-05-20",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-ai-developer-updates-io-2025/",
+      "release_evidence": "Google I/O 2025 当日公布 MedGemma 已可使用"
     },
     {
       "vendor": "google",
@@ -1045,7 +1201,10 @@
       "report_slugs": [
         "t5gemma-model-card",
         "t5gemma-technical-report"
-      ]
+      ],
+      "release_date": "2025-07-09",
+      "release_source_url": "https://developers.googleblog.com/en/t5gemma/",
+      "release_evidence": "Google Developers 当日首次推出 T5Gemma 模型系列"
     },
     {
       "vendor": "google",
@@ -1053,7 +1212,10 @@
       "source_url": "https://deepmind.google/models/gemma/t5gemma/",
       "report_slugs": [
         "t5gemma-2-seeing-reading-and-understanding-longer"
-      ]
+      ],
+      "release_date": "2025-12-18",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/t5gemma-2/",
+      "release_evidence": "【联网复核·官方首发确认】Google 官方博客 2025-12-18 介绍 T5Gemma 2"
     },
     {
       "vendor": "google",
@@ -1062,7 +1224,10 @@
       "report_slugs": [
         "txgemma-model-card",
         "txgemma-efficient-and-agentic-llms-for-therapeutics"
-      ]
+      ],
+      "release_date": "2025-03-25",
+      "release_source_url": "https://developers.googleblog.com/en/introducing-txgemma-open-models-improving-therapeutics-development/",
+      "release_evidence": "【联网复核·官方首发确认】Google Developers 2025-03-25 明确宣布发布 TxGemma"
     },
     {
       "vendor": "google",
@@ -1079,7 +1244,10 @@
       "source_url": "https://arxiv.org/abs/2203.15556",
       "report_slugs": [
         "training-compute-optimal-large-language-models"
-      ]
+      ],
+      "release_date": "2022-04-12",
+      "release_source_url": "https://deepmind.google/blog/an-empirical-analysis-of-compute-optimal-large-language-model-training/",
+      "release_evidence": "【联网复核·官方首次公开介绍】DeepMind 2022-04-12 研究博客介绍 Chinchilla；为首次公开介绍，不等同权重开放"
     },
     {
       "vendor": "google",
@@ -1087,7 +1255,10 @@
       "source_url": "https://arxiv.org/abs/2204.02311",
       "report_slugs": [
         "palm-scaling-language-modeling-with-pathways"
-      ]
+      ],
+      "release_date": "2022-04-05",
+      "release_source_url": "https://arxiv.org/abs/2204.02311",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2022-04-05；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1095,7 +1266,10 @@
       "source_url": "https://arxiv.org/abs/2305.10403",
       "report_slugs": [
         "palm-2-technical-report"
-      ]
+      ],
+      "release_date": "2023-05-10",
+      "release_source_url": "https://blog.google/innovation-and-ai/products/google-palm-2-ai-large-language-model/",
+      "release_evidence": "Google 当日正式介绍 PaLM 2"
     },
     {
       "vendor": "google",
@@ -1103,7 +1277,10 @@
       "source_url": "https://arxiv.org/abs/2201.08239",
       "report_slugs": [
         "lamda-language-models-for-dialog-applications"
-      ]
+      ],
+      "release_date": "2021-05-18",
+      "release_source_url": "https://blog.google/innovation-and-ai/products/lamda/",
+      "release_evidence": "Google 于 2021-05-18 的官方公告首次介绍 LaMDA 对话语言模型"
     },
     {
       "vendor": "google",
@@ -1111,7 +1288,10 @@
       "source_url": "https://arxiv.org/abs/2205.11487",
       "report_slugs": [
         "photorealistic-text-to-image-diffusion-models-with-deep-language-understanding"
-      ]
+      ],
+      "release_date": "2022-05-23",
+      "release_source_url": "https://arxiv.org/abs/2205.11487",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2022-05-23；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1119,7 +1299,10 @@
       "source_url": "https://arxiv.org/abs/2210.02303",
       "report_slugs": [
         "imagen-video-high-definition-video-generation-with-diffusion-models"
-      ]
+      ],
+      "release_date": "2022-10-05",
+      "release_source_url": "https://arxiv.org/abs/2210.02303",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2022-10-05；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1127,7 +1310,10 @@
       "source_url": "https://arxiv.org/abs/2206.10789",
       "report_slugs": [
         "scaling-autoregressive-models-for-content-rich-text-to-image-generation"
-      ]
+      ],
+      "release_date": "2022-06-22",
+      "release_source_url": "https://arxiv.org/abs/2206.10789",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2022-06-22；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1135,7 +1321,10 @@
       "source_url": "https://arxiv.org/abs/2301.11325",
       "report_slugs": [
         "musiclm-generating-music-from-text"
-      ]
+      ],
+      "release_date": "2023-01-26",
+      "release_source_url": "https://arxiv.org/abs/2301.11325",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2023-01-26；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1143,7 +1332,10 @@
       "source_url": "https://arxiv.org/abs/2203.07814",
       "report_slugs": [
         "competition-level-code-generation-with-alphacode"
-      ]
+      ],
+      "release_date": "2022-02-02",
+      "release_source_url": "https://deepmind.google/blog/competitive-programming-with-alphacode/",
+      "release_evidence": "官方博客注明原文最初发布于 2022-02-02，首次介绍 AlphaCode"
     },
     {
       "vendor": "google",
@@ -1151,7 +1343,10 @@
       "source_url": "https://deepmind.google/AlphaCode2_Tech_Report.pdf",
       "report_slugs": [
         "alphacode-2-technical-report"
-      ]
+      ],
+      "release_date": "2023-12-06",
+      "release_source_url": "https://blog.google/innovation-and-ai/technology/ai/google-gemini-ai/",
+      "release_evidence": "Google 于 2023-12-06 发布 Gemini 公告时首次介绍由 Gemini 驱动的 AlphaCode 2 系统"
     },
     {
       "vendor": "google",
@@ -1159,7 +1354,10 @@
       "source_url": "https://arxiv.org/abs/2209.06794",
       "report_slugs": [
         "pali-technical-report"
-      ]
+      ],
+      "release_date": "2022-09-15",
+      "release_source_url": "https://research.google/blog/pali-scaling-language-image-learning-in-100-languages/",
+      "release_evidence": "Google Research 于 2022-09-15 发表官方文章，首次介绍 PaLI 模型"
     },
     {
       "vendor": "google",
@@ -1167,7 +1365,10 @@
       "source_url": "https://arxiv.org/abs/2310.09199",
       "report_slugs": [
         "pali-3-technical-report"
-      ]
+      ],
+      "release_date": "2023-10-13",
+      "release_source_url": "https://arxiv.org/abs/2310.09199",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2023-10-13；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1175,7 +1376,10 @@
       "source_url": "https://arxiv.org/abs/2204.14198",
       "report_slugs": [
         "flamingo-technical-report"
-      ]
+      ],
+      "release_date": "2022-04-28",
+      "release_source_url": "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/",
+      "release_evidence": "DeepMind 于当日宣布推出 Flamingo 模型"
     },
     {
       "vendor": "google",
@@ -1183,7 +1387,10 @@
       "source_url": "https://arxiv.org/abs/2205.05131",
       "report_slugs": [
         "ul2-technical-report"
-      ]
+      ],
+      "release_date": "2022-05-10",
+      "release_source_url": "https://arxiv.org/abs/2205.05131",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2022-05-10；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1191,7 +1398,10 @@
       "source_url": "https://arxiv.org/abs/2303.03378",
       "report_slugs": [
         "palm-e-technical-report"
-      ]
+      ],
+      "release_date": "2023-03-10",
+      "release_source_url": "https://research.google/blog/palm-e-an-embodied-multimodal-language-model/",
+      "release_evidence": "Google Research 于 2023-03-10 在官方博客正式介绍 PaLM-E 具身多模态语言模型"
     },
     {
       "vendor": "google",
@@ -1221,7 +1431,10 @@
       "source_url": "https://arxiv.org/abs/2310.08864",
       "report_slugs": [
         "rt-x-technical-report"
-      ]
+      ],
+      "release_date": "2023-10-13",
+      "release_source_url": "https://arxiv.org/abs/2310.08864",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2023-10-13；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1229,7 +1442,10 @@
       "source_url": "https://arxiv.org/abs/2310.08864",
       "report_slugs": [
         "rt-x-technical-report"
-      ]
+      ],
+      "release_date": "2023-10-13",
+      "release_source_url": "https://arxiv.org/abs/2310.08864",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2023-10-13；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1237,7 +1453,10 @@
       "source_url": "https://arxiv.org/abs/2403.01823",
       "report_slugs": [
         "rt-h-technical-report"
-      ]
+      ],
+      "release_date": "2024-03-04",
+      "release_source_url": "https://arxiv.org/abs/2403.01823",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2024-03-04；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1245,7 +1464,10 @@
       "source_url": "https://arxiv.org/abs/2311.01977",
       "report_slugs": [
         "rt-trajectory-technical-report"
-      ]
+      ],
+      "release_date": "2023-11-03",
+      "release_source_url": "https://arxiv.org/abs/2311.01977",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2023-11-03；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "google",
@@ -1264,7 +1486,10 @@
       "source_url": "https://arxiv.org/abs/2205.01068",
       "report_slugs": [
         "opt-open-pre-trained-transformer-language-models"
-      ]
+      ],
+      "release_date": "2022-05-03",
+      "release_source_url": "https://ai.meta.com/blog/democratizing-access-to-large-scale-language-models-with-opt-175b/",
+      "release_evidence": "Meta 当日宣布共享 OPT-175B 模型"
     },
     {
       "vendor": "meta",
@@ -1272,7 +1497,10 @@
       "source_url": "https://arxiv.org/abs/2211.09085",
       "report_slugs": [
         "galactica-a-large-language-model-for-science"
-      ]
+      ],
+      "release_date": "2022-11-16",
+      "release_source_url": "https://arxiv.org/abs/2211.09085",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2022-11-16；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "meta",
@@ -1337,7 +1565,10 @@
       "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md",
       "report_slugs": [
         "llama3-2-vision-model-card"
-      ]
+      ],
+      "release_date": "2024-09-25",
+      "release_source_url": "https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices",
+      "release_evidence": "Meta 当日发布含 11B/90B 视觉模型的 Llama 3.2"
     },
     {
       "vendor": "meta",
@@ -1378,7 +1609,10 @@
       "source_url": "https://arxiv.org/abs/2308.12950",
       "report_slugs": [
         "code-llama-open-foundation-models-for-code"
-      ]
+      ],
+      "release_date": "2023-08-24",
+      "release_source_url": "https://ai.meta.com/blog/code-llama-large-language-model-coding/",
+      "release_evidence": "Meta 当日宣布发布 Code Llama"
     },
     {
       "vendor": "meta",
@@ -1386,7 +1620,10 @@
       "source_url": "https://arxiv.org/abs/2405.09818",
       "report_slugs": [
         "chameleon-mixed-modal-early-fusion-foundation-models"
-      ]
+      ],
+      "release_date": "2024-05-16",
+      "release_source_url": "https://arxiv.org/abs/2405.09818",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2024-05-16；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "meta",
@@ -1394,7 +1631,10 @@
       "source_url": "https://arxiv.org/abs/2410.13720",
       "report_slugs": [
         "movie-gen-a-cast-of-media-foundation-models"
-      ]
+      ],
+      "release_date": "2024-10-04",
+      "release_source_url": "https://ai.meta.com/blog/movie-gen-media-foundation-models-generative-ai-video/",
+      "release_evidence": "【联网复核·官方首次介绍】Meta 官方博客 2024-10-04 首次展示 Movie Gen；并非公众开放日"
     },
     {
       "vendor": "meta",
@@ -1402,7 +1642,10 @@
       "source_url": "https://arxiv.org/abs/2308.11596",
       "report_slugs": [
         "seamlessm4t-massively-multilingual-multimodal-machine-translation"
-      ]
+      ],
+      "release_date": "2023-08-22",
+      "release_source_url": "https://ai.meta.com/blog/seamless-m4t/",
+      "release_evidence": "Meta 当日推出 SeamlessM4T 多模态翻译模型"
     },
     {
       "vendor": "meta",
@@ -1410,7 +1653,10 @@
       "source_url": "https://arxiv.org/abs/2312.05187",
       "report_slugs": [
         "seamless-technical-report"
-      ]
+      ],
+      "release_date": "2023-11-30",
+      "release_source_url": "https://about.fb.com/news/2023/11/decade-of-advancing-ai-through-open-research/",
+      "release_evidence": "Meta Newsroom 2023-11-30 宣布推出 Seamless Communication 翻译模型系列"
     },
     {
       "vendor": "meta",
@@ -1418,7 +1664,10 @@
       "source_url": "https://arxiv.org/abs/2306.05284",
       "report_slugs": [
         "simple-and-controllable-music-generation"
-      ]
+      ],
+      "release_date": "2023-06-08",
+      "release_source_url": "https://arxiv.org/abs/2306.05284",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2023-06-08；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "meta",
@@ -1426,7 +1675,10 @@
       "source_url": "https://arxiv.org/abs/2304.02643",
       "report_slugs": [
         "segment-anything"
-      ]
+      ],
+      "release_date": "2023-04-05",
+      "release_source_url": "https://ai.meta.com/blog/segment-anything-foundation-model-image-segmentation/",
+      "release_evidence": "Meta 当日发布 Segment Anything Model"
     },
     {
       "vendor": "meta",
@@ -1434,7 +1686,10 @@
       "source_url": "https://arxiv.org/abs/2408.00714",
       "report_slugs": [
         "sam-2-segment-anything-in-images-and-videos"
-      ]
+      ],
+      "release_date": "2024-07-29",
+      "release_source_url": "https://ai.meta.com/blog/segment-anything-2/",
+      "release_evidence": "Meta 官方文章保留原始发布时间 2024-07-29，明确发布 SAM 2"
     },
     {
       "vendor": "meta",
@@ -1442,7 +1697,10 @@
       "source_url": "https://arxiv.org/abs/2511.16719",
       "report_slugs": [
         "sam-3-technical-report"
-      ]
+      ],
+      "release_date": "2025-11-19",
+      "release_source_url": "https://ai.meta.com/blog/segment-anything-model-3/",
+      "release_evidence": "Meta 官方 SAM 3 首发博客宣布发布模型权重，官方研究主页确认首发日为 2025-11-19（该博客后更新为 SAM 3.1）"
     },
     {
       "vendor": "meta",
@@ -1450,7 +1708,10 @@
       "source_url": "https://arxiv.org/abs/2511.16624",
       "report_slugs": [
         "sam-3d-technical-report"
-      ]
+      ],
+      "release_date": "2025-11-19",
+      "release_source_url": "https://ai.meta.com/blog/sam-3d/",
+      "release_evidence": "Meta 当日发布 SAM 3D 系列，明确包括 SAM 3D Objects"
     },
     {
       "vendor": "meta",
@@ -1458,7 +1719,10 @@
       "source_url": "https://arxiv.org/abs/2602.15989",
       "report_slugs": [
         "sam-3d-body-technical-report"
-      ]
+      ],
+      "release_date": "2025-11-19",
+      "release_source_url": "https://ai.meta.com/blog/sam-3d/",
+      "release_evidence": "Meta 当日发布 SAM 3D 系列，明确包括 SAM 3D Body"
     },
     {
       "vendor": "meta",
@@ -1466,7 +1730,10 @@
       "source_url": "https://arxiv.org/abs/2512.18099",
       "report_slugs": [
         "sam-audio-technical-report"
-      ]
+      ],
+      "release_date": "2025-12-16",
+      "release_source_url": "https://ai.meta.com/blog/sam-audio/",
+      "release_evidence": "Meta 当日推出 SAM Audio 音频分离模型"
     },
     {
       "vendor": "meta",
@@ -1474,7 +1741,10 @@
       "source_url": "https://arxiv.org/abs/2304.07193",
       "report_slugs": [
         "dinov2-technical-report"
-      ]
+      ],
+      "release_date": "2023-04-17",
+      "release_source_url": "https://ai.meta.com/blog/dino-v2-computer-vision-self-supervised-learning/",
+      "release_evidence": "Meta 当日宣布开源 DINOv2"
     },
     {
       "vendor": "meta",
@@ -1482,7 +1752,10 @@
       "source_url": "https://arxiv.org/abs/2508.10104",
       "report_slugs": [
         "dinov3-technical-report"
-      ]
+      ],
+      "release_date": "2025-08-14",
+      "release_source_url": "https://ai.meta.com/blog/dinov3-self-supervised-vision-model/",
+      "release_evidence": "Meta 官方公告当日发布 DINOv3"
     },
     {
       "vendor": "meta",
@@ -1490,7 +1763,10 @@
       "source_url": "https://arxiv.org/abs/2312.06674",
       "report_slugs": [
         "llama-guard-technical-report"
-      ]
+      ],
+      "release_date": "2023-12-07",
+      "release_source_url": "https://ai.meta.com/blog/purple-llama-open-trust-safety-generative-ai/",
+      "release_evidence": "【联网复核·官方首发确认】Meta 2023-12-07 Purple Llama 官方公告宣布发布 Llama Guard"
     },
     {
       "vendor": "meta",
@@ -1498,7 +1774,10 @@
       "source_url": "https://arxiv.org/abs/2411.17713",
       "report_slugs": [
         "llama-guard-3-1b-int4-technical-report"
-      ]
+      ],
+      "release_date": "2024-11-18",
+      "release_source_url": "https://arxiv.org/abs/2411.17713",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2024-11-18；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "meta",
@@ -1506,7 +1785,10 @@
       "source_url": "https://arxiv.org/abs/2412.08821",
       "report_slugs": [
         "large-concept-models-technical-report"
-      ]
+      ],
+      "release_date": "2024-12-11",
+      "release_source_url": "https://arxiv.org/abs/2412.08821",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2024-12-11；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "meta",
@@ -1514,7 +1796,10 @@
       "source_url": "https://arxiv.org/abs/2404.08471",
       "report_slugs": [
         "v-jepa-technical-report"
-      ]
+      ],
+      "release_date": "2024-02-15",
+      "release_source_url": "https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture",
+      "release_evidence": "Meta 当日表示正式公开发布 V-JEPA"
     },
     {
       "vendor": "meta",
@@ -1538,7 +1823,10 @@
       "source_url": "https://arxiv.org/abs/2305.13516",
       "report_slugs": [
         "mms-technical-report"
-      ]
+      ],
+      "release_date": "2023-05-22",
+      "release_source_url": "https://ai.meta.com/blog/multilingual-model-speech-recognition/",
+      "release_evidence": "【联网复核·官方首次介绍】Meta 官方 2023-05-22 介绍 MMS 多语言语音模型"
     },
     {
       "vendor": "meta",
@@ -1546,7 +1834,10 @@
       "source_url": "https://arxiv.org/abs/2504.13181",
       "report_slugs": [
         "perception-encoder-technical-report"
-      ]
+      ],
+      "release_date": "2025-04-17",
+      "release_source_url": "https://arxiv.org/abs/2504.13181",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-04-17；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "meta",
@@ -1554,7 +1845,10 @@
       "source_url": "https://arxiv.org/abs/2512.19687",
       "report_slugs": [
         "perception-encoder-audiovisual-technical-report"
-      ]
+      ],
+      "release_date": "2025-12-16",
+      "release_source_url": "https://ai.meta.com/blog/sam-audio/",
+      "release_evidence": "Meta 同日随 SAM Audio 发布 Perception Encoder Audiovisual (PE-AV)"
     },
     {
       "vendor": "meta",
@@ -1562,7 +1856,10 @@
       "source_url": "https://arxiv.org/abs/2207.04672",
       "report_slugs": [
         "nllb-200-technical-report"
-      ]
+      ],
+      "release_date": "2022-07-06",
+      "release_source_url": "https://about.fb.com/news/2022/07/new-meta-ai-model-translates-200-languages-making-technology-more-accessible/",
+      "release_evidence": "Meta Newsroom 2022-07-06 发布 NLLB-200 模型公告并宣布开放模型和代码"
     },
     {
       "vendor": "mistral",
@@ -1592,7 +1889,10 @@
       "source_url": "https://arxiv.org/abs/2410.07073",
       "report_slugs": [
         "pixtral-12b"
-      ]
+      ],
+      "release_date": "2024-09-17",
+      "release_source_url": "https://mistral.ai/news/pixtral-12b/",
+      "release_evidence": "Mistral AI 当日公告 Pixtral 12B"
     },
     {
       "vendor": "mistral",
@@ -1611,7 +1911,10 @@
       "source_url": "https://arxiv.org/abs/2507.13264",
       "report_slugs": [
         "voxtral"
-      ]
+      ],
+      "release_date": "2025-07-15",
+      "release_source_url": "https://mistral.ai/news/voxtral/",
+      "release_evidence": "Mistral AI 当日公告 Voxtral 模型系列发布"
     },
     {
       "vendor": "mistral",
@@ -1619,7 +1922,10 @@
       "source_url": "https://mistral.ai/news/leanstral-1-5/",
       "report_slugs": [
         "leanstral"
-      ]
+      ],
+      "release_date": "2026-03-16",
+      "release_source_url": "https://mistral.ai/news/leanstral/",
+      "release_evidence": "Mistral AI 当日宣布 Leanstral 开源模型"
     },
     {
       "vendor": "nvidia",
@@ -1661,7 +1967,10 @@
       "source_url": "https://arxiv.org/abs/2402.16819",
       "report_slugs": [
         "nemotron-4-15b-technical-report"
-      ]
+      ],
+      "release_date": "2024-02-26",
+      "release_source_url": "https://arxiv.org/abs/2402.16819",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2024-02-26；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "nvidia",
@@ -1680,7 +1989,10 @@
       "source_url": "https://arxiv.org/abs/2508.14444",
       "report_slugs": [
         "nvidia-nemotron-nano-2-an-accurate-and-efficient-hybrid-mamba-transformer-reasoning-model"
-      ]
+      ],
+      "release_date": "2025-08-19",
+      "release_source_url": "https://developer.nvidia.com/blog/tag/machine-learning-and-artificial-intelligence/",
+      "release_evidence": "NVIDIA 官方技术博客于 2025-08-19 发布介绍 Nemotron Nano 2 开源模型的公告"
     },
     {
       "vendor": "nvidia",
@@ -1688,7 +2000,10 @@
       "source_url": "https://research.nvidia.com/labs/adlr/",
       "report_slugs": [
         "nvidia-nemotron-nano-v2-vl"
-      ]
+      ],
+      "release_date": "2025-10-28",
+      "release_source_url": "https://blogs.nvidia.com/blog/open-models-data-ai/",
+      "release_evidence": "【联网复核·官方同期公告】NVIDIA 2025-10-28 公告列出 Nemotron Nano 2 VL 公开模型；不一定是首次发布日"
     },
     {
       "vendor": "nvidia",
@@ -1707,7 +2022,10 @@
       "source_url": "https://arxiv.org/abs/2505.00949",
       "report_slugs": [
         "llama-nemotron-technical-report"
-      ]
+      ],
+      "release_date": "2025-05-02",
+      "release_source_url": "https://arxiv.org/abs/2505.00949",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-05-02；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "nvidia",
@@ -1715,7 +2033,10 @@
       "source_url": "https://arxiv.org/abs/2504.03624",
       "report_slugs": [
         "nemotron-h-technical-report"
-      ]
+      ],
+      "release_date": "2025-06-06",
+      "release_source_url": "https://developer.nvidia.com/blog/author/adithyare/",
+      "release_evidence": "NVIDIA 官方技术博客归档于 2025-06-06 发布 Nemotron-H 模型系列介绍"
     },
     {
       "vendor": "nvidia",
@@ -1723,7 +2044,10 @@
       "source_url": "https://arxiv.org/abs/2512.13607",
       "report_slugs": [
         "nemotron-cascade-technical-report"
-      ]
+      ],
+      "release_date": "2025-12-15",
+      "release_source_url": "https://arxiv.org/abs/2512.13607",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-12-15；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "nvidia",
@@ -1743,7 +2067,10 @@
       "report_slugs": [
         "cosmos-reason1-technical-report",
         "cosmos-reason1-7b-model-card"
-      ]
+      ],
+      "release_date": "2025-03-18",
+      "release_source_url": "https://arxiv.org/abs/2503.15558",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-03-18；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "nvidia",
@@ -1751,7 +2078,10 @@
       "source_url": "https://arxiv.org/abs/2508.15884",
       "report_slugs": [
         "jet-nemotron-technical-report"
-      ]
+      ],
+      "release_date": "2025-08-21",
+      "release_source_url": "https://arxiv.org/abs/2508.15884",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-08-21；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "nvidia",
@@ -1759,7 +2089,10 @@
       "source_url": "https://arxiv.org/abs/2505.16400",
       "report_slugs": [
         "acereason-nemotron-technical-report"
-      ]
+      ],
+      "release_date": "2025-05-22",
+      "release_source_url": "https://arxiv.org/abs/2505.16400",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-05-22；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "nvidia",
@@ -1767,7 +2100,10 @@
       "source_url": "https://arxiv.org/abs/2506.13284",
       "report_slugs": [
         "acereason-nemotron-1-1-technical-report"
-      ]
+      ],
+      "release_date": "2025-06-16",
+      "release_source_url": "https://arxiv.org/abs/2506.13284",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-06-16；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "nvidia",
@@ -1775,7 +2111,10 @@
       "source_url": "https://arxiv.org/abs/2511.00088",
       "report_slugs": [
         "alpamayo-r1-technical-report"
-      ]
+      ],
+      "release_date": "2025-10-30",
+      "release_source_url": "https://arxiv.org/abs/2511.00088",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-10-30；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "nvidia",
@@ -1783,7 +2122,10 @@
       "source_url": "https://arxiv.org/abs/2607.04371",
       "report_slugs": [
         "nemotron-labs-3-puzzle-75b-a9b"
-      ]
+      ],
+      "release_date": "2026-07-05",
+      "release_source_url": "https://arxiv.org/abs/2607.04371",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2026-07-05；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "nvidia",
@@ -1791,7 +2133,10 @@
       "source_url": "https://arxiv.org/abs/2503.14492",
       "report_slugs": [
         "cosmos-transfer1-technical-report"
-      ]
+      ],
+      "release_date": "2025-03-18",
+      "release_source_url": "https://arxiv.org/abs/2503.14492",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-03-18；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "deepseek",
@@ -1799,7 +2144,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-LLM",
       "report_slugs": [
         "deepseek-llm-scaling-open-source-language-models-with-longtermism"
-      ]
+      ],
+      "release_date": "2023-11-15",
+      "release_source_url": "https://github.com/deepseek-ai/DeepSeek-LLM",
+      "release_evidence": "【未核实占位日期】【估计·低置信度】根据模型系列版本顺序及相关资料，暂估于 2023-11；15 日只是月份占位，所附官方项目页并不证明具体发布日期"
     },
     {
       "vendor": "deepseek",
@@ -1807,7 +2155,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-Coder",
       "report_slugs": [
         "deepseek-coder-when-the-large-language-model-meets-programming-the-rise-of-code-intelligence"
-      ]
+      ],
+      "release_date": "2023-11-15",
+      "release_source_url": "https://github.com/deepseek-ai/DeepSeek-Coder",
+      "release_evidence": "【未核实占位日期】【估计·低置信度】根据模型系列版本顺序及相关资料，暂估于 2023-11；15 日只是月份占位，所附官方项目页并不证明具体发布日期"
     },
     {
       "vendor": "deepseek",
@@ -1815,7 +2166,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-Coder-V2",
       "report_slugs": [
         "deepseek-coder-v2-breaking-the-barrier-of-closed-source-models-in-code-intelligence"
-      ]
+      ],
+      "release_date": "2024-06-14",
+      "release_source_url": "https://api-docs.deepseek.com/zh-cn/updates/",
+      "release_evidence": "【联网复核·官方API上线日期】DeepSeek API 官方日志明确 2024-06-14 将 deepseek-coder 升级至 DeepSeek-Coder-V2-0614；为 API 上线，不保证是模型最早发布"
     },
     {
       "vendor": "deepseek",
@@ -1823,7 +2177,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-Math",
       "report_slugs": [
         "deepseekmath-pushing-the-limits-of-mathematical-reasoning-in-open-language-models"
-      ]
+      ],
+      "release_date": "2024-02-05",
+      "release_source_url": "https://github.com/deepseek-ai/DeepSeek-Math/activity",
+      "release_evidence": "【第四轮联网复核·官方仓库首个提交日】DeepSeek官方DeepSeek-Math GitHub Activity显示2024-02-05 Initial commit并有多个README更新；可以作为仓库建立参照日，不等同模型首次发布日。"
     },
     {
       "vendor": "deepseek",
@@ -1831,7 +2188,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-MoE",
       "report_slugs": [
         "deepseekmoe-towards-ultimate-expert-specialization-in-mixture-of-experts-language-models"
-      ]
+      ],
+      "release_date": "2024-01-15",
+      "release_source_url": "https://github.com/deepseek-ai/DeepSeek-MoE",
+      "release_evidence": "【未核实占位日期】【估计·低置信度】根据模型系列版本顺序及相关资料，暂估于 2024-01；15 日只是月份占位，所附官方项目页并不证明具体发布日期"
     },
     {
       "vendor": "deepseek",
@@ -1872,7 +2232,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-VL",
       "report_slugs": [
         "deepseek-vl-towards-real-world-vision-language-understanding"
-      ]
+      ],
+      "release_date": "2024-03-11",
+      "release_source_url": "https://github.com/deepseek-ai/DeepSeek-VL",
+      "release_evidence": "DeepSeek 官方仓库 Release 小节明确记录于 2024-03-11 发布 DeepSeek-VL 模型系列"
     },
     {
       "vendor": "deepseek",
@@ -1880,7 +2243,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-VL2",
       "report_slugs": [
         "deepseek-vl2-mixture-of-experts-vision-language-models-for-advanced-multimodal-understanding"
-      ]
+      ],
+      "release_date": "2024-12-13",
+      "release_source_url": "https://github.com/deepseek-ai/DeepSeek-VL2",
+      "release_evidence": "DeepSeek 官方仓库 Release 日志明确写明 2024-12-13 发布 VL2 全系列"
     },
     {
       "vendor": "deepseek",
@@ -1888,7 +2254,10 @@
       "source_url": "https://github.com/deepseek-ai/Janus",
       "report_slugs": [
         "janus-decoupling-visual-encoding-for-unified-multimodal-understanding-and-generation"
-      ]
+      ],
+      "release_date": "2024-10-20",
+      "release_source_url": "https://github.com/deepseek-ai/Janus/blob/main/README.md",
+      "release_evidence": "【第四轮联网复核·官方模型演示上线日】DeepSeek Janus官方README News记载2024-10-20修复原有模型权重配置并上线Gradio在线演示，说明原版Janus至迟当日已存在；不代表模型首次发布日。"
     },
     {
       "vendor": "deepseek",
@@ -1896,7 +2265,10 @@
       "source_url": "https://github.com/deepseek-ai/Janus",
       "report_slugs": [
         "janusflow-harmonizing-autoregression-and-rectified-flow-for-unified-multimodal-understanding-and-generation"
-      ]
+      ],
+      "release_date": "2024-11-13",
+      "release_source_url": "https://github.com/deepseek-ai/Janus",
+      "release_evidence": "DeepSeek 官方 Janus 仓库 News 明确记载 JanusFlow 于当日发布"
     },
     {
       "vendor": "deepseek",
@@ -1904,7 +2276,10 @@
       "source_url": "https://github.com/deepseek-ai/Janus",
       "report_slugs": [
         "janus-pro-unified-multimodal-understanding-and-generation-with-data-and-model-scaling"
-      ]
+      ],
+      "release_date": "2025-01-27",
+      "release_source_url": "https://github.com/deepseek-ai/Janus",
+      "release_evidence": "DeepSeek 官方 Janus 仓库 News 明确记载 Janus-Pro 于当日发布"
     },
     {
       "vendor": "deepseek",
@@ -1912,7 +2287,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-Prover-V1.5",
       "report_slugs": [
         "deepseek-prover-v1-5-harnessing-proof-assistant-feedback-for-reinforcement-learning-and-monte-carlo-tree-search"
-      ]
+      ],
+      "release_date": "2024-08-16",
+      "release_source_url": "https://github.com/deepseek-ai/DeepSeek-Prover-V1.5/discussions/categories/announcements",
+      "release_evidence": "【第四轮联网复核·官方仓库已有佐证日】DeepSeek官方DeepSeek-Prover-V1.5仓库Announcements已有2024-08-16管理者欢迎讨论，说明项目至迟该日公开可见，并非型号首次训练完成或权重发布的直接证据。"
     },
     {
       "vendor": "deepseek",
@@ -1920,7 +2298,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-OCR",
       "report_slugs": [
         "deepseek-ocr-contexts-optical-compression"
-      ]
+      ],
+      "release_date": "2025-10-20",
+      "release_source_url": "https://github.com/deepseek-ai/DeepSeek-OCR",
+      "release_evidence": "DeepSeek 官方仓库 Release 时间线明确记载 2025/10/20 发布 DeepSeek-OCR"
     },
     {
       "vendor": "deepseek",
@@ -1928,7 +2309,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-Math-V2",
       "report_slugs": [
         "deepseekmath-v2-towards-self-verifiable-mathematical-reasoning"
-      ]
+      ],
+      "release_date": "2025-11-27",
+      "release_source_url": "https://www.deepseek.com/en/news/",
+      "release_evidence": "【联网复核·官方研究公开日期】DeepSeek 官网研究索引将 DeepSeekMath-V2 首次研究公开日列为 2025-11-27，官方 GitHub 仓库同日首次提交；可证实公开但不必然等于权重上线"
     },
     {
       "vendor": "deepseek",
@@ -1936,7 +2320,10 @@
       "source_url": "https://github.com/deepseek-ai/DeepSeek-Prover-V2",
       "report_slugs": [
         "deepseek-prover-v2-technical-report"
-      ]
+      ],
+      "release_date": "2025-04-30",
+      "release_source_url": "https://github.com/deepseek-ai/DeepSeek-Prover-V2",
+      "release_evidence": "【联网复核·官方模型公开佐证】DeepSeek 官方仓库公开 DeepSeek-Prover-V2 权重；2025-04-30 对应首次公开研究，未找到独立精确首发公告，谨慎按该日记录"
     },
     {
       "vendor": "deepseek",
@@ -1967,7 +2354,10 @@
       "source_url": "https://arxiv.org/abs/2405.14333",
       "report_slugs": [
         "deepseek-prover"
-      ]
+      ],
+      "release_date": "2024-05-23",
+      "release_source_url": "https://arxiv.org/abs/2405.14333",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2024-05-23；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "deepseek",
@@ -1987,7 +2377,10 @@
       "source_url": "https://github.com/QwenLM/Qwen",
       "report_slugs": [
         "qwen-technical-report"
-      ]
+      ],
+      "release_date": "2023-08-03",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen/",
+      "release_evidence": "Qwen 官方博客模型表将首个 Qwen-7B 发布时间列为 23.08.03"
     },
     {
       "vendor": "qwen",
@@ -2028,7 +2421,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3-VL",
       "report_slugs": [
         "qwen-vl-a-versatile-vision-language-model-for-understanding-localization-text-reading-and-beyond"
-      ]
+      ],
+      "release_date": "2023-08-23",
+      "release_source_url": "https://github.com/QwenLM/Qwen-VL/blob/master/LICENSE",
+      "release_evidence": "【联网复核·官方许可证发布日期】Qwen-VL 官方仓库模型许可写明 Release Date: August 23, 2023"
     },
     {
       "vendor": "qwen",
@@ -2036,7 +2432,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3-VL",
       "report_slugs": [
         "qwen2-vl-enhancing-vision-language-model-s-perception-of-the-world-at-any-resolution"
-      ]
+      ],
+      "release_date": "2024-08-29",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen2-vl/",
+      "release_evidence": "Qwen 官方博客当日明确写明发布 Qwen2-VL"
     },
     {
       "vendor": "qwen",
@@ -2055,7 +2454,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3-VL",
       "report_slugs": [
         "qwen3-vl-technical-report"
-      ]
+      ],
+      "release_date": "2025-09-23",
+      "release_source_url": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+      "release_evidence": "阿里云官方新模型清单标注 Qwen3-VL 首批型号 2025-09-23"
     },
     {
       "vendor": "qwen",
@@ -2063,7 +2465,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3-TTS",
       "report_slugs": [
         "qwen3-tts-technical-report"
-      ]
+      ],
+      "release_date": "2026-01-21",
+      "release_source_url": "https://qwen.ai/blog?id=qwen3tts-0115",
+      "release_evidence": "Qwen 2026-01-21 官方博客说明 Qwen3-TTS 系列开源"
     },
     {
       "vendor": "qwen",
@@ -2071,7 +2476,10 @@
       "source_url": "https://github.com/QwenLM/Qwen-Image",
       "report_slugs": [
         "qwen-image-technical-report"
-      ]
+      ],
+      "release_date": "2025-08-04",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen-image/",
+      "release_evidence": "Qwen 官方博客当日明确表示发布 Qwen-Image"
     },
     {
       "vendor": "qwen",
@@ -2079,7 +2487,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3-ASR",
       "report_slugs": [
         "qwen3-asr-technical-report"
-      ]
+      ],
+      "release_date": "2026-01-28",
+      "release_source_url": "https://qwen.ai/blog?id=qwen3asr",
+      "release_evidence": "【联网复核·官方首发确认】Qwen 官方 2026-01-28 公告宣布 Qwen3-ASR 系列开源"
     },
     {
       "vendor": "qwen",
@@ -2087,7 +2498,10 @@
       "source_url": "https://github.com/QwenLM/Qwen2-Audio",
       "report_slugs": [
         "qwen2-audio-technical-report"
-      ]
+      ],
+      "release_date": "2024-08-09",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen2-audio/",
+      "release_evidence": "Qwen 官方博客当日宣布发布 Qwen2-Audio"
     },
     {
       "vendor": "qwen",
@@ -2095,7 +2509,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3-Omni",
       "report_slugs": [
         "qwen3-omni-technical-report"
-      ]
+      ],
+      "release_date": "2025-09-22",
+      "release_source_url": "https://github.com/QwenLM/Qwen3-Omni",
+      "release_evidence": "Qwen 官方仓库 News 栏明确写明 2025-09-22 发布 Qwen3-Omni"
     },
     {
       "vendor": "qwen",
@@ -2103,7 +2520,10 @@
       "source_url": "https://github.com/QwenLM/Qwen-Audio",
       "report_slugs": [
         "qwen-audio-advancing-universal-audio-understanding-via-unified-large-scale-audio-language-models"
-      ]
+      ],
+      "release_date": "2023-11-30",
+      "release_source_url": "https://github.com/QwenLM/Qwen-Audio/blob/main/README_CN.md",
+      "release_evidence": "【第三轮联网复核·官方开源日】Qwen-Audio 官方中文 README 明确记录 2023-11-30 正式开源发布模型；早于此日期的论文公开不作模型发布日"
     },
     {
       "vendor": "qwen",
@@ -2111,7 +2531,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3-Embedding",
       "report_slugs": [
         "qwen3-embedding-advancing-text-embedding-and-reranking-through-foundation-models"
-      ]
+      ],
+      "release_date": "2025-06-05",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen3-embedding/",
+      "release_evidence": "Qwen 当日宣布发布 Qwen3 Embedding 系列"
     },
     {
       "vendor": "qwen",
@@ -2119,7 +2542,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3-Embedding",
       "report_slugs": [
         "qwen3-embedding-advancing-text-embedding-and-reranking-through-foundation-models"
-      ]
+      ],
+      "release_date": "2025-06-05",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen3-embedding/",
+      "release_evidence": "同一官方发布帖列出 Qwen3 Reranker 系列及模型"
     },
     {
       "vendor": "qwen",
@@ -2127,7 +2553,10 @@
       "source_url": "https://github.com/QwenLM/Qwen-Image-Layered",
       "report_slugs": [
         "qwen-image-layered-towards-inherent-editability-via-layer-decomposition"
-      ]
+      ],
+      "release_date": "2025-12-19",
+      "release_source_url": "https://qwen.ai/blog?id=qwen-image-layered",
+      "release_evidence": "【联网复核·官方首次介绍】Qwen 2025-12-19 官方博客宣布介绍 Qwen-Image-Layered"
     },
     {
       "vendor": "qwen",
@@ -2135,7 +2564,10 @@
       "source_url": "https://github.com/QwenLM/Qwen2.5-Omni",
       "report_slugs": [
         "qwen2-5-omni-technical-report"
-      ]
+      ],
+      "release_date": "2025-03-27",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen2.5-omni/",
+      "release_evidence": "Qwen 当日宣布发布 Qwen2.5-Omni"
     },
     {
       "vendor": "qwen",
@@ -2143,7 +2575,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3Guard",
       "report_slugs": [
         "qwen3guard-technical-report"
-      ]
+      ],
+      "release_date": "2025-09-23",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen3guard/",
+      "release_evidence": "Qwen 官方博客当日宣布推出 Qwen3Guard"
     },
     {
       "vendor": "qwen",
@@ -2151,7 +2586,10 @@
       "source_url": "https://github.com/QwenLM/Qwen-Drive-1.0",
       "report_slugs": [
         "qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving"
-      ]
+      ],
+      "release_date": "2026-09-03",
+      "release_source_url": "https://qwen.ai/blog?id=qwen-drive-1.0",
+      "release_evidence": "【第三轮联网复核·官方发布】Qwen Team 官方 Qwen-Drive-1.0 博客标注 2026/09/03 并宣布模型"
     },
     {
       "vendor": "qwen",
@@ -2159,7 +2597,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3-VL-Embedding",
       "report_slugs": [
         "qwen3-vl-embedding-and-qwen3-vl-reranker-technical-report"
-      ]
+      ],
+      "release_date": "2026-01-07",
+      "release_source_url": "https://qwen.ai/blog?id=qwen3-vl-embedding",
+      "release_evidence": "Qwen 2026-01-07 官方博客宣布开放 Qwen3-VL-Embedding"
     },
     {
       "vendor": "qwen",
@@ -2167,7 +2608,10 @@
       "source_url": "https://github.com/QwenLM/Qwen3-VL-Embedding",
       "report_slugs": [
         "qwen3-vl-embedding-and-qwen3-vl-reranker-technical-report"
-      ]
+      ],
+      "release_date": "2026-01-07",
+      "release_source_url": "https://qwen.ai/blog?id=qwen3-vl-embedding",
+      "release_evidence": "Qwen 2026-01-07 官方博客同时宣布 Qwen3-VL-Reranker"
     },
     {
       "vendor": "qwen",
@@ -2175,7 +2619,10 @@
       "source_url": "https://arxiv.org/abs/2409.12122",
       "report_slugs": [
         "qwen2-5-math-technical-report-toward-mathematical-expert-model-via-self-improvement"
-      ]
+      ],
+      "release_date": "2024-09-19",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen2.5-math/",
+      "release_evidence": "Qwen 官方文章当日明确宣布开源 Qwen2.5-Math 系列"
     },
     {
       "vendor": "qwen",
@@ -2183,7 +2630,10 @@
       "source_url": "https://arxiv.org/abs/2409.12186",
       "report_slugs": [
         "qwen2-5-coder-technical-report"
-      ]
+      ],
+      "release_date": "2024-11-12",
+      "release_source_url": "https://qwenlm.github.io/blog/qwen2.5-coder-family/",
+      "release_evidence": "Qwen 当日宣布完整开源 Qwen2.5-Coder 系列"
     },
     {
       "vendor": "qwen",
@@ -2191,7 +2641,10 @@
       "source_url": "https://arxiv.org/abs/2605.10730",
       "report_slugs": [
         "qwen-image-2-0"
-      ]
+      ],
+      "release_date": "2026-02-10",
+      "release_source_url": "https://qwen.ai/blog?id=qwen-image-2.0",
+      "release_evidence": "【联网复核·官方首发确认】Qwen 官方 2026-02-10 明确宣布推出 Qwen-Image-2.0；此前按论文月份估到 5 月有偏差"
     },
     {
       "vendor": "qwen",
@@ -2199,7 +2652,10 @@
       "source_url": "https://arxiv.org/abs/2607.28227",
       "report_slugs": [
         "qwen-ui-agent"
-      ]
+      ],
+      "release_date": "2026-07-30",
+      "release_source_url": "https://arxiv.org/abs/2607.28227",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2026-07-30；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "qwen",
@@ -2207,7 +2663,10 @@
       "source_url": "https://arxiv.org/abs/2604.15804",
       "report_slugs": [
         "qwen3-5-omni"
-      ]
+      ],
+      "release_date": "2026-04-17",
+      "release_source_url": "https://arxiv.org/abs/2604.15804",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2026-04-17；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "qwen",
@@ -2215,7 +2674,10 @@
       "source_url": "https://arxiv.org/abs/2505.10527",
       "report_slugs": [
         "worldpm"
-      ]
+      ],
+      "release_date": "2025-05-15",
+      "release_source_url": "https://arxiv.org/abs/2505.10527",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-05-15；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "qwen",
@@ -2223,7 +2685,10 @@
       "source_url": "https://arxiv.org/abs/2503.20314",
       "report_slugs": [
         "wan-2-1"
-      ]
+      ],
+      "release_date": "2025-02-25",
+      "release_source_url": "https://github.com/Wan-Video/Wan2.1",
+      "release_evidence": "【联网复核·官方开源日期】Wan 官方仓库 News 2025-02-25 记录开放 Wan2.1 推理代码与权重"
     },
     {
       "vendor": "qwen",
@@ -2231,7 +2696,10 @@
       "source_url": "https://arxiv.org/abs/2503.07598",
       "report_slugs": [
         "wan-vace"
-      ]
+      ],
+      "release_date": "2025-05-14",
+      "release_source_url": "https://github.com/Wan-Video/Wan2.1",
+      "release_evidence": "【联网复核·官方开源日期】Wan 官方仓库 News 2025-05-14 记录 Wan2.1 VACE 代码权重与报告开源"
     },
     {
       "vendor": "qwen",
@@ -2239,7 +2707,10 @@
       "source_url": "https://arxiv.org/abs/2508.18621",
       "report_slugs": [
         "wan-s2v"
-      ]
+      ],
+      "release_date": "2025-08-26",
+      "release_source_url": "https://arxiv.org/abs/2508.18621",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-08-26；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "qwen",
@@ -2247,7 +2718,10 @@
       "source_url": "https://arxiv.org/abs/2509.14055",
       "report_slugs": [
         "wan-animate"
-      ]
+      ],
+      "release_date": "2025-09-17",
+      "release_source_url": "https://arxiv.org/abs/2509.14055",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-09-17；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "qwen",
@@ -2255,7 +2729,10 @@
       "source_url": "https://arxiv.org/abs/2608.06009",
       "report_slugs": [
         "wan-animate-2"
-      ]
+      ],
+      "release_date": "2026-08-06",
+      "release_source_url": "https://arxiv.org/abs/2608.06009",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2026-08-06；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "qwen",
@@ -2263,7 +2740,10 @@
       "source_url": "https://arxiv.org/abs/2607.09581",
       "report_slugs": [
         "wan-dancer"
-      ]
+      ],
+      "release_date": "2026-07-10",
+      "release_source_url": "https://arxiv.org/abs/2607.09581",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2026-07-10；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "qwen",
@@ -2271,7 +2751,10 @@
       "source_url": "https://arxiv.org/abs/2512.08765",
       "report_slugs": [
         "wan-move"
-      ]
+      ],
+      "release_date": "2025-12-09",
+      "release_source_url": "https://arxiv.org/abs/2512.08765",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-12-09；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "qwen",
@@ -2279,7 +2762,10 @@
       "source_url": "https://arxiv.org/abs/2510.24701",
       "report_slugs": [
         "tongyi-deepresearch"
-      ]
+      ],
+      "release_date": "2025-10-28",
+      "release_source_url": "https://arxiv.org/abs/2510.24701",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-10-28；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "moonshot",
@@ -2287,7 +2773,10 @@
       "source_url": "https://github.com/MoonshotAI/Kimi-k1.5",
       "report_slugs": [
         "kimi-k1-5-scaling-reinforcement-learning-with-llms"
-      ]
+      ],
+      "release_date": "2025-01-20",
+      "release_source_url": "https://www.kimi.com/en/blog/",
+      "release_evidence": "Moonshot AI 官方研究博客归档 2025-01-20 发布 Kimi K1.5 模型介绍"
     },
     {
       "vendor": "moonshot",
@@ -2295,7 +2784,10 @@
       "source_url": "https://github.com/MoonshotAI/Kimi-K2",
       "report_slugs": [
         "kimi-k2-open-agentic-intelligence"
-      ]
+      ],
+      "release_date": "2025-07-11",
+      "release_source_url": "https://platform.kimi.com/blog/posts/changelog",
+      "release_evidence": "Moonshot AI 官方开放平台更新日志明确记录 2025-07-11 正式发布 Kimi K2"
     },
     {
       "vendor": "moonshot",
@@ -2303,7 +2795,10 @@
       "source_url": "https://github.com/MoonshotAI/Kimi-K2.5",
       "report_slugs": [
         "kimi-k2-5-technical-report"
-      ]
+      ],
+      "release_date": "2026-01-27",
+      "release_source_url": "https://www.kimi.com/en/blog/kimi-k2-5",
+      "release_evidence": "Moonshot AI 官方研究博客归档记载 2026-01-27 发布 Kimi K2.5，新模型公告声明当日推出"
     },
     {
       "vendor": "moonshot",
@@ -2311,7 +2806,10 @@
       "source_url": "https://github.com/MoonshotAI/Kimi-VL",
       "report_slugs": [
         "kimi-vl-technical-report"
-      ]
+      ],
+      "release_date": "2025-04-10",
+      "release_source_url": "https://www.kimi.com/en/blog/",
+      "release_evidence": "Moonshot AI 官方研究博客归档 2025-04-10 发布 Kimi-VL 模型介绍"
     },
     {
       "vendor": "moonshot",
@@ -2319,7 +2817,10 @@
       "source_url": "https://github.com/MoonshotAI/Kimi-Dev",
       "report_slugs": [
         "kimi-dev-agentless-training-as-skill-prior-for-swe-agents"
-      ]
+      ],
+      "release_date": "2025-06-17",
+      "release_source_url": "https://www.kimi.com/en/blog/",
+      "release_evidence": "Moonshot AI 官方研究博客归档 2025-06-17 发布 Kimi-Dev 首篇模型介绍"
     },
     {
       "vendor": "moonshot",
@@ -2327,7 +2828,10 @@
       "source_url": "https://github.com/MoonshotAI/Kimi-Linear",
       "report_slugs": [
         "kimi-linear-an-expressive-efficient-attention-architecture"
-      ]
+      ],
+      "release_date": "2025-10-30",
+      "release_source_url": "https://github.com/MoonshotAI/Kimi-Linear",
+      "release_evidence": "【第四轮联网复核·官方研究公开参照日】MoonshotAI官方Kimi-Linear研究仓库公布同名论文及开源检查点；该论文在Hugging Face论文记录中注明2025-10-30公开，作为架构研究公开参照日，尚缺明示的权重首发公告。"
     },
     {
       "vendor": "moonshot",
@@ -2335,7 +2839,10 @@
       "source_url": "https://github.com/MoonshotAI/Kimina-Prover-Preview",
       "report_slugs": [
         "kimina-prover-preview-towards-large-formal-reasoning-models-with-reinforcement-learning"
-      ]
+      ],
+      "release_date": "2025-04-15",
+      "release_source_url": "https://www.kimi.com/en/blog/",
+      "release_evidence": "Moonshot AI 官方研究博客归档 2025-04-15 发布 Kimina-Prover Preview 模型介绍"
     },
     {
       "vendor": "zai",
@@ -2343,7 +2850,10 @@
       "source_url": "https://github.com/zai-org/GLM-130B",
       "report_slugs": [
         "glm-130b-an-open-bilingual-pre-trained-model"
-      ]
+      ],
+      "release_date": "2022-08-20",
+      "release_source_url": "https://z.ai/company",
+      "release_evidence": "【联网复核·官方官网里程碑确认】智谱 Z.ai 官方发展时间线在 2022 年 8 月 20 日明确写明 GLM-130B 发布并开源；优先于后来 10 月官方仓库的介绍日期"
     },
     {
       "vendor": "zai",
@@ -2351,7 +2861,10 @@
       "source_url": "https://github.com/zai-org/GLM-4",
       "report_slugs": [
         "chatglm-a-family-of-large-language-models-from-glm-130b-to-glm-4-all-tools"
-      ]
+      ],
+      "release_date": "2023-03-15",
+      "release_source_url": "https://z.ai/company",
+      "release_evidence": "【联网复核·官方官网里程碑确认】智谱官方里程碑明确显示 ChatGLM 于 2023-03-15 发布；这条确实是 15 日，并非推测占位"
     },
     {
       "vendor": "zai",
@@ -2381,7 +2894,10 @@
       "source_url": "https://github.com/zai-org/GLM-V",
       "report_slugs": [
         "glm-4-5v-and-glm-4-1v-thinking-towards-versatile-multimodal-reasoning-with-scalable-reinforcement-learning"
-      ]
+      ],
+      "release_date": "2025-08-11",
+      "release_source_url": "https://github.com/zai-org/GLM-V",
+      "release_evidence": "智谱官方 GLM-V 仓库明确记载 2025/08/11 发布 GLM-4.5V"
     },
     {
       "vendor": "zai",
@@ -2389,7 +2905,10 @@
       "source_url": "https://github.com/zai-org/GLM-V",
       "report_slugs": [
         "glm-4-5v-and-glm-4-1v-thinking-towards-versatile-multimodal-reasoning-with-scalable-reinforcement-learning"
-      ]
+      ],
+      "release_date": "2025-07-01",
+      "release_source_url": "https://github.com/zai-org/GLM-V",
+      "release_evidence": "智谱官方 GLM-V 仓库项目更新明确记载 2025/07/01 发布 GLM-4.1V-9B-Thinking"
     },
     {
       "vendor": "zai",
@@ -2397,7 +2916,10 @@
       "source_url": "https://github.com/zai-org/GLM-4-Voice",
       "report_slugs": [
         "glm-4-voice-towards-intelligent-and-human-like-end-to-end-spoken-chatbot"
-      ]
+      ],
+      "release_date": "2024-10-28",
+      "release_source_url": "https://z.ai/company",
+      "release_evidence": "【联网复核·官方官网里程碑确认】智谱官方里程碑显示 2024-10-28 推出 GLM-4-Voice 情感语音模型"
     },
     {
       "vendor": "zai",
@@ -2405,7 +2927,10 @@
       "source_url": "https://github.com/zai-org/CogVLM",
       "report_slugs": [
         "cogvlm-visual-expert-for-pretrained-language-models"
-      ]
+      ],
+      "release_date": "2023-10-05",
+      "release_source_url": "https://github.com/zai-org/CogVLM",
+      "release_evidence": "【第三轮联网复核·官方开源日】智谱 CogVLM 官方仓库 News 标示 2023-10-05 模型开源"
     },
     {
       "vendor": "zai",
@@ -2413,7 +2938,10 @@
       "source_url": "https://github.com/zai-org/CogVLM",
       "report_slugs": [
         "cogagent-a-visual-language-model-for-gui-agents"
-      ]
+      ],
+      "release_date": "2023-12-15",
+      "release_source_url": "https://github.com/zai-org/CogVLM",
+      "release_evidence": "【第三轮联网复核·官方开源日】CogVLM/CogAgent 官方仓库明确 2023-12-15 公布 CogAgent；这是真实的 15 日"
     },
     {
       "vendor": "zai",
@@ -2421,7 +2949,10 @@
       "source_url": "https://github.com/zai-org/CogVLM2",
       "report_slugs": [
         "cogvlm2-visual-language-models-for-image-and-video-understanding"
-      ]
+      ],
+      "release_date": "2024-05-20",
+      "release_source_url": "https://github.com/zai-org/CogVLM",
+      "release_evidence": "【第三轮联网复核·官方开源日】智谱 CogVLM 官方仓库 News 标示 2024-05-20 发布 CogVLM2 系列"
     },
     {
       "vendor": "zai",
@@ -2429,7 +2960,10 @@
       "source_url": "https://github.com/zai-org/CogVideo",
       "report_slugs": [
         "cogvideo-large-scale-pretraining-for-text-to-video-generation-via-transformers"
-      ]
+      ],
+      "release_date": "2022-05-19",
+      "release_source_url": "https://github.com/zai-org/CogVideo",
+      "release_evidence": "【第三轮联网复核·官方公开日】CogVideo 官方仓库时间线明确 2022-05-19 公开 CogVideo"
     },
     {
       "vendor": "zai",
@@ -2437,7 +2971,10 @@
       "source_url": "https://github.com/zai-org/CogVideo",
       "report_slugs": [
         "cogvideox-text-to-video-diffusion-models-with-an-expert-transformer"
-      ]
+      ],
+      "release_date": "2024-08-06",
+      "release_source_url": "https://github.com/zai-org/CogVideo",
+      "release_evidence": "【第三轮联网复核·官方开源日】CogVideoX 官方仓库 News 标示 2024-08-06 公开 CogVideoX 模型"
     },
     {
       "vendor": "zai",
@@ -2445,7 +2982,10 @@
       "source_url": "https://github.com/zai-org/CogView2",
       "report_slugs": [
         "cogview2-faster-and-better-text-to-image-generation-via-hierarchical-transformers"
-      ]
+      ],
+      "release_date": "2022-05-15",
+      "release_source_url": "https://github.com/zai-org/CogView2",
+      "release_evidence": "【未核实占位日期】【估计·低置信度】根据模型系列版本顺序及相关资料，暂估于 2022-05；15 日只是月份占位，所附官方项目页并不证明具体发布日期"
     },
     {
       "vendor": "zai",
@@ -2453,7 +2993,10 @@
       "source_url": "https://github.com/zai-org/CogView4",
       "report_slugs": [
         "cogview3-finer-and-faster-text-to-image-generation-via-relay-diffusion"
-      ]
+      ],
+      "release_date": "2024-09-29",
+      "release_source_url": "https://github.com/zai-org/CogView4",
+      "release_evidence": "【第三轮联网复核·官方开源日】CogView 官方仓库介绍记录 CogView3 模型 2024-09-29 开源（不以较早论文版本替代）"
     },
     {
       "vendor": "zai",
@@ -2461,7 +3004,10 @@
       "source_url": "https://github.com/zai-org/CodeGeeX",
       "report_slugs": [
         "codegeex-a-pre-trained-model-for-code-generation-with-multilingual-benchmarking-on-humaneval-x"
-      ]
+      ],
+      "release_date": "2022-09-30",
+      "release_source_url": "https://github.com/zai-org/CodeGeeX/blob/main/README.md",
+      "release_evidence": "【第三轮联网复核·官方开源日】CodeGeeX 官方仓库记录 2022-09-30 正式发布预训练模型及代码"
     },
     {
       "vendor": "zai",
@@ -2469,7 +3015,10 @@
       "source_url": "https://arxiv.org/abs/2402.04236",
       "report_slugs": [
         "cogcom"
-      ]
+      ],
+      "release_date": "2024-02-06",
+      "release_source_url": "https://arxiv.org/abs/2402.04236",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2024-02-06；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "zai",
@@ -2477,7 +3026,10 @@
       "source_url": "https://arxiv.org/abs/2405.04312",
       "report_slugs": [
         "inf-dit"
-      ]
+      ],
+      "release_date": "2024-05-07",
+      "release_source_url": "https://arxiv.org/abs/2405.04312",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2024-05-07；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "minimax",
@@ -2485,7 +3037,10 @@
       "source_url": "https://github.com/MiniMax-AI/MiniMax-01",
       "report_slugs": [
         "minimax-01-scaling-foundation-models-with-lightning-attention"
-      ]
+      ],
+      "release_date": "2025-01-15",
+      "release_source_url": "https://www.minimax.io/news/minimax-01-series-2",
+      "release_evidence": "【联网复核·官方首发确认】MiniMax 官方 2025-01-15 公告宣布开源 MiniMax-01；这条碰巧真的在 15 日发布"
     },
     {
       "vendor": "minimax",
@@ -2493,7 +3048,10 @@
       "source_url": "https://github.com/MiniMax-AI/MiniMax-M1",
       "report_slugs": [
         "minimax-m1-scaling-test-time-compute-efficiently-with-lightning-attention"
-      ]
+      ],
+      "release_date": "2025-06-16",
+      "release_source_url": "https://www.minimax.io/news/minimaxm1",
+      "release_evidence": "MiniMax 当日宣布推出 MiniMax-M1 开源推理模型"
     },
     {
       "vendor": "minimax",
@@ -2523,7 +3081,10 @@
       "source_url": "https://arxiv.org/abs/2505.07916",
       "report_slugs": [
         "minimax-speech"
-      ]
+      ],
+      "release_date": "2025-05-12",
+      "release_source_url": "https://arxiv.org/abs/2505.07916",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-05-12；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "stepfun",
@@ -2531,7 +3092,10 @@
       "source_url": "https://github.com/stepfun-ai/Step3",
       "report_slugs": [
         "step-3"
-      ]
+      ],
+      "release_date": "2025-07-31",
+      "release_source_url": "https://chat.stepfun.com/research/en/step3",
+      "release_evidence": "阶跃星辰 2025-07-31 官方研究介绍写明 Today we are releasing Step3"
     },
     {
       "vendor": "stepfun",
@@ -2550,7 +3114,10 @@
       "source_url": "https://github.com/stepfun-ai/Step3-VL-10B",
       "report_slugs": [
         "step3-vl-10b"
-      ]
+      ],
+      "release_date": "2026-01-15",
+      "release_source_url": "https://github.com/stepfun-ai/Step3-VL-10B/pulls",
+      "release_evidence": "【第四轮联网复核·官方仓库已有佐证日】阶跃星辰官方Step3-VL-10B仓库于2026-01-15已有模型项目相关PR记录；证明仓库当日已公开存在，不宣称这是模型首发日。"
     },
     {
       "vendor": "stepfun",
@@ -2558,7 +3125,10 @@
       "source_url": "https://github.com/stepfun-ai/Step-Audio",
       "report_slugs": [
         "step-audio"
-      ]
+      ],
+      "release_date": "2025-02-17",
+      "release_source_url": "https://github.com/stepfun-ai/Step-Audio",
+      "release_evidence": "阶跃官方仓库 News 明确记载 2025-02-17 发布 Step-Audio 模型权重和推理代码"
     },
     {
       "vendor": "stepfun",
@@ -2566,7 +3136,10 @@
       "source_url": "https://github.com/stepfun-ai/Step-Audio",
       "report_slugs": [
         "step-audio-aqaa"
-      ]
+      ],
+      "release_date": "2025-06-10",
+      "release_source_url": "https://github.com/stepfun-ai/Step-Audio",
+      "release_evidence": "【第四轮联网复核·官方技术报告公开日】阶跃星辰官方Step-Audio仓库News记载2025-06-10发布Step-Audio-AQAA技术报告；此日仅为报告公开日，不证明独立模型权重或服务上线。"
     },
     {
       "vendor": "stepfun",
@@ -2574,7 +3147,10 @@
       "source_url": "https://github.com/stepfun-ai/Step-Audio2",
       "report_slugs": [
         "step-audio-2"
-      ]
+      ],
+      "release_date": "2025-08-29",
+      "release_source_url": "https://github.com/stepfun-ai/Step-Audio",
+      "release_evidence": "阶跃官方仓库 News 明确记载当日发布 Step-Audio 2 及 mini 开源模型"
     },
     {
       "vendor": "stepfun",
@@ -2582,7 +3158,10 @@
       "source_url": "https://github.com/stepfun-ai/Step-Audio-R1",
       "report_slugs": [
         "step-audio-r1"
-      ]
+      ],
+      "release_date": "2025-11-27",
+      "release_source_url": "https://github.com/stepfun-ai/Step-Audio-R1",
+      "release_evidence": "阶跃官方仓库 News 记载 2025-11-27 发布 Step-Audio-R1 模型权重与推理代码"
     },
     {
       "vendor": "stepfun",
@@ -2590,7 +3169,10 @@
       "source_url": "https://github.com/stepfun-ai/Step-Audio-R1",
       "report_slugs": [
         "step-audio-r1-5"
-      ]
+      ],
+      "release_date": "2026-04-29",
+      "release_source_url": "https://github.com/stepfun-ai/Step-Audio-R1",
+      "release_evidence": "【第三轮联网复核·官方研究公开日】阶跃星辰 Step-Audio-R1 官方仓库 News 2026-04-29 公布 R1.5 技术报告；只作为官方首次研究披露锚点，非模型权重发布时间"
     },
     {
       "vendor": "stepfun",
@@ -2598,7 +3180,10 @@
       "source_url": "https://github.com/stepfun-ai/Step-Audio-EditX",
       "report_slugs": [
         "step-audio-editx"
-      ]
+      ],
+      "release_date": "2025-11-12",
+      "release_source_url": "https://github.com/stepfun-ai/Step-Audio-EditX",
+      "release_evidence": "阶跃官方仓库 News 记载当日发布 Step-Audio-EditX 模型权重和代码"
     },
     {
       "vendor": "stepfun",
@@ -2606,7 +3191,10 @@
       "source_url": "https://github.com/stepfun-ai/StepDeepResearch",
       "report_slugs": [
         "step-deepresearch"
-      ]
+      ],
+      "release_date": "2025-12-24",
+      "release_source_url": "https://github.com/stepfun-ai/StepDeepResearch",
+      "release_evidence": "【第三轮联网复核·官方研究公开日】阶跃星辰 StepDeepResearch 仓库公告 2025-12-24 技术报告发布；仅证明该模型研究披露，非独立模型服务上线"
     },
     {
       "vendor": "stepfun",
@@ -2614,7 +3202,10 @@
       "source_url": "https://arxiv.org/abs/2609.12945",
       "report_slugs": [
         "step-audio-3-gen"
-      ]
+      ],
+      "release_date": "2026-09-15",
+      "release_source_url": "https://www.stepfun.com/news/stepaudio-3",
+      "release_evidence": "阶跃星辰官方新闻当日明确宣布 StepAudio 3 Gen 发布"
     },
     {
       "vendor": "stepfun",
@@ -2622,7 +3213,10 @@
       "source_url": "https://arxiv.org/abs/2605.23463",
       "report_slugs": [
         "step-audio-2-5"
-      ]
+      ],
+      "release_date": "2026-05-22",
+      "release_source_url": "https://arxiv.org/abs/2605.23463",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2026-05-22；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "stepfun",
@@ -2630,7 +3224,10 @@
       "source_url": "https://github.com/stepfun-ai/Step1X-Edit",
       "report_slugs": [
         "reasonedit"
-      ]
+      ],
+      "release_date": "2025-11-26",
+      "release_source_url": "https://github.com/stepfun-ai/Step1X-Edit/blob/main/README.md",
+      "release_evidence": "【第四轮联网复核·官方对应子模型开源日】阶跃星辰官方Step1X-Edit仓库明确记载Nov 26 2025发布Step1X-Edit-v1p2，并特别说明它在论文中被称作ReasonEdit-S；该日针对ReasonEdit-S子型号，并非ReasonEdit全部变体共同发布日期。"
     },
     {
       "vendor": "stepfun",
@@ -2638,7 +3235,10 @@
       "source_url": "https://github.com/stepfun-ai/NextStep-1",
       "report_slugs": [
         "nextstep-1"
-      ]
+      ],
+      "release_date": "2025-08-14",
+      "release_source_url": "https://github.com/stepfun-ai/NextStep-1",
+      "release_evidence": "【第三轮联网复核·官方开源日】阶跃星辰官方仓库 News 明确 Aug. 14, 2025 发布 NextStep-1 推理代码及模型权重"
     },
     {
       "vendor": "tencent",
@@ -2646,7 +3246,10 @@
       "source_url": "https://github.com/Tencent-Hunyuan/Tencent-Hunyuan-Large",
       "report_slugs": [
         "hunyuan-large"
-      ]
+      ],
+      "release_date": "2024-11-05",
+      "release_source_url": "https://github.com/Tencent-Hunyuan/Tencent-Hunyuan-Large",
+      "release_evidence": "【第三轮联网复核·官方开源日】腾讯官方 Hunyuan-Large 仓库 README/许可证记录 2024-11-05 开源"
     },
     {
       "vendor": "tencent",
@@ -2654,7 +3257,10 @@
       "source_url": "https://github.com/Tencent-Hunyuan/Hunyuan-MT",
       "report_slugs": [
         "hunyuan-mt"
-      ]
+      ],
+      "release_date": "2025-09-01",
+      "release_source_url": "https://github.com/Tencent-Hunyuan/Hunyuan-MT",
+      "release_evidence": "腾讯混元官方仓库 News 明确记载 2025-09-01 开源 Hunyuan-MT-7B"
     },
     {
       "vendor": "tencent",
@@ -2662,7 +3268,10 @@
       "source_url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
       "report_slugs": [
         "hunyuan-ocr"
-      ]
+      ],
+      "release_date": "2025-11-25",
+      "release_source_url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+      "release_evidence": "腾讯混元官方仓库存档 News 记录 2025-11-25 发布 HunyuanOCR 权重与推理代码"
     },
     {
       "vendor": "tencent",
@@ -2670,7 +3279,10 @@
       "source_url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
       "report_slugs": [
         "hunyuan-ocr-1-5"
-      ]
+      ],
+      "release_date": "2026-07-07",
+      "release_source_url": "https://github.com/Tencent-Hunyuan/HunyuanOCR",
+      "release_evidence": "腾讯混元官方仓库 News 明确记载 2026-07-07 发布 HunyuanOCR-1.5"
     },
     {
       "vendor": "tencent",
@@ -2678,7 +3290,10 @@
       "source_url": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
       "report_slugs": [
         "hunyuan-video"
-      ]
+      ],
+      "release_date": "2024-12-03",
+      "release_source_url": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+      "release_evidence": "腾讯官方仓库 News 明确记载 2024-12-03 发布 HunyuanVideo 权重与推理代码"
     },
     {
       "vendor": "tencent",
@@ -2686,7 +3301,10 @@
       "source_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2",
       "report_slugs": [
         "hunyuan-3d-2"
-      ]
+      ],
+      "release_date": "2025-01-21",
+      "release_source_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2",
+      "release_evidence": "腾讯混元官方仓库 News 明确记载当日发布 Hunyuan3D 2.0 推理代码与权重"
     },
     {
       "vendor": "tencent",
@@ -2694,7 +3312,10 @@
       "source_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
       "report_slugs": [
         "hunyuan-3d-2-1"
-      ]
+      ],
+      "release_date": "2025-06-13",
+      "release_source_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
+      "release_evidence": "腾讯混元官方仓库 News 明确记载 2025-06-13 正式发布 Hunyuan3D-2.1"
     },
     {
       "vendor": "tencent",
@@ -2702,7 +3323,10 @@
       "source_url": "https://github.com/Tencent/HunyuanDiT",
       "report_slugs": [
         "hunyuan-dit"
-      ]
+      ],
+      "release_date": "2024-05-14",
+      "release_source_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2/blob/main/NOTICE",
+      "release_evidence": "【第四轮联网复核·官方许可证发布日期】腾讯Hunyuan3D-2官方NOTICE引用HunyuanDiT许可证，清楚写 Tencent Hunyuan Release Date: 2024/5/14；这是法律文本内发行日，未另经新闻公告交叉验证。"
     },
     {
       "vendor": "tencent",
@@ -2710,7 +3334,10 @@
       "source_url": "https://github.com/Tencent-Hunyuan/Hunyuan-A13B",
       "report_slugs": [
         "hunyuan-a13b"
-      ]
+      ],
+      "release_date": "2025-06-27",
+      "release_source_url": "https://github.com/Tencent-Hunyuan/Hunyuan-A13B/blob/main/LICENSE",
+      "release_evidence": "【第三轮联网复核·官方许可证发布日期】腾讯 Hunyuan-A13B 仓库正式 LICENSE 标示 Release Date: June 27, 2025"
     },
     {
       "vendor": "tencent",
@@ -2718,7 +3345,10 @@
       "source_url": "https://arxiv.org/abs/2608.02711",
       "report_slugs": [
         "hunyuan3d-buffalo-1-0"
-      ]
+      ],
+      "release_date": "2026-08-03",
+      "release_source_url": "https://arxiv.org/abs/2608.02711",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2026-08-03；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "tencent",
@@ -2726,7 +3356,10 @@
       "source_url": "https://arxiv.org/abs/2608.05248",
       "report_slugs": [
         "hunyuan3d-worldclaw"
-      ]
+      ],
+      "release_date": "2026-08-05",
+      "release_source_url": "https://arxiv.org/abs/2608.05248",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2026-08-05；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "bytedance",
@@ -2734,7 +3367,10 @@
       "source_url": "https://github.com/ByteDance-Seed/Seed-Thinking-v1.5",
       "report_slugs": [
         "seed-thinking-v1-5"
-      ]
+      ],
+      "release_date": "2025-04-10",
+      "release_source_url": "https://seed.bytedance.com/en/public_papers/seed-thinking-v1-5-advancing-superb-reasoning-models-with-reinforcement-learning",
+      "release_evidence": "【第四轮联网复核·官方研究公开日】ByteDance Seed官方研究出版页面精确标注2025-04-10，并介绍Seed-Thinking-v1.5；属于官方研究公开日，不等于开放模型权重日期。"
     },
     {
       "vendor": "bytedance",
@@ -2742,7 +3378,10 @@
       "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
       "report_slugs": [
         "seed1-5-vl"
-      ]
+      ],
+      "release_date": "2025-05-13",
+      "release_source_url": "https://seed.bytedance.com/en/seed1_5_vl",
+      "release_evidence": "【联网复核·官方正式介绍】Seed 2025-05-13 官方模型主页介绍并发布 Seed1.5-VL"
     },
     {
       "vendor": "bytedance",
@@ -2750,7 +3389,10 @@
       "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
       "report_slugs": [
         "seed-diffusion"
-      ]
+      ],
+      "release_date": "2025-07-31",
+      "release_source_url": "https://seed.bytedance.com/en/blog/seed-research-seed-diffusion-preview-released-a-diffusion-language-model-delivering-breakthrough-2-146-tokens-s-inference-speed",
+      "release_evidence": "【联网复核·官方预览版发布】Seed 2025-07-31 官方推出 Seed Diffusion Preview；与后续正式版注意区分"
     },
     {
       "vendor": "bytedance",
@@ -2758,7 +3400,10 @@
       "source_url": "https://seed.bytedance.com/en/blog/doubao-text-to-image-technical-report-released-full-disclosure-of-data-processing-pre-training-and-rlhf-workflow",
       "report_slugs": [
         "seedream-2"
-      ]
+      ],
+      "release_date": "2024-12-15",
+      "release_source_url": "https://seed.bytedance.com/en/blog/doubao-text-to-image-technical-report-released-full-disclosure-of-data-processing-pre-training-and-rlhf-workflow",
+      "release_evidence": "【未核实占位日期】【估计·低置信度】根据模型系列版本顺序及相关资料，暂估于 2024-12；15 日只是月份占位，所附官方项目页并不证明具体发布日期"
     },
     {
       "vendor": "bytedance",
@@ -2766,7 +3411,10 @@
       "source_url": "https://arxiv.org/abs/2504.11346",
       "report_slugs": [
         "seedream-3"
-      ]
+      ],
+      "release_date": "2025-04-16",
+      "release_source_url": "https://seed.bytedance.com/en/tech/seedream3_0",
+      "release_evidence": "字节跳动 Seed 页面列出 2025-04-16 正式推出 Seedream 3.0"
     },
     {
       "vendor": "bytedance",
@@ -2774,7 +3422,10 @@
       "source_url": "https://arxiv.org/abs/2509.20427",
       "report_slugs": [
         "seedream-4"
-      ]
+      ],
+      "release_date": "2025-09-09",
+      "release_source_url": "https://seed.bytedance.com/en/blog/seedream-4-0-officially-released-beyond-drawing-into-imagination",
+      "release_evidence": "字节 Seed 官方文章当日宣布 Seedream 4.0 正式发布"
     },
     {
       "vendor": "bytedance",
@@ -2782,7 +3433,10 @@
       "source_url": "https://arxiv.org/abs/2506.09113",
       "report_slugs": [
         "seedance-1"
-      ]
+      ],
+      "release_date": "2025-06-11",
+      "release_source_url": "https://seed.bytedance.com/zh/blog/tech-report-of-seedance-1-0-is-now-publicly-available",
+      "release_evidence": "Seed 2025-06-11 官方博客明确宣布发布 Seedance 1.0"
     },
     {
       "vendor": "bytedance",
@@ -2790,7 +3444,10 @@
       "source_url": "https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro",
       "report_slugs": [
         "seedance-1-5-pro-model-card"
-      ]
+      ],
+      "release_date": "2025-12-16",
+      "release_source_url": "https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro",
+      "release_evidence": "字节 Seed 官方文章当日宣布 Seedance 1.5 Pro 正式发布"
     },
     {
       "vendor": "bytedance",
@@ -2798,7 +3455,10 @@
       "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
       "report_slugs": [
         "seed2-0-model-card"
-      ]
+      ],
+      "release_date": "2026-02-14",
+      "release_source_url": "https://seed.bytedance.com/en/blog/seed-2-0-official-launch",
+      "release_evidence": "字节跳动 Seed 2026-02-14 官方发布 Seed2.0"
     },
     {
       "vendor": "bytedance",
@@ -2806,7 +3466,10 @@
       "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
       "report_slugs": [
         "seed1-8-model-card"
-      ]
+      ],
+      "release_date": "2025-12-18",
+      "release_source_url": "https://seed.bytedance.com/blog/official-release-of-seed1-8-a-generalized-agentic-model",
+      "release_evidence": "字节 Seed 官方文章当日明确宣布 Seed1.8 正式发布"
     },
     {
       "vendor": "bytedance",
@@ -2814,7 +3477,10 @@
       "source_url": "https://github.com/ByteDance-Seed/seed-oss",
       "report_slugs": [
         "seed-oss"
-      ]
+      ],
+      "release_date": "2025-08-21",
+      "release_source_url": "https://seed.bytedance.com/en/blog/seed-oss-open-source-models-release",
+      "release_evidence": "【联网复核·官方开源日期】字节跳动 Seed 2025-08-21 官方宣布 Seed-OSS 系列开源"
     },
     {
       "vendor": "bytedance",
@@ -2822,7 +3488,10 @@
       "source_url": "https://seed.bytedance.com/en/research",
       "report_slugs": [
         "seedance-2"
-      ]
+      ],
+      "release_date": "2026-02-12",
+      "release_source_url": "https://seed.bytedance.com/en/blog/seedance-2-0-official-launch",
+      "release_evidence": "字节 Seed 当日发表 Seedance 2.0 Official Launch 正式发布公告"
     },
     {
       "vendor": "bytedance",
@@ -2830,7 +3499,10 @@
       "source_url": "https://seed.bytedance.com/en/seed3d_2_0",
       "report_slugs": [
         "seed3d-2"
-      ]
+      ],
+      "release_date": "2026-04-23",
+      "release_source_url": "https://seed.bytedance.com/en/blog/seed3d-2-0-released-higher-precision-and-greater-usability",
+      "release_evidence": "字节 Seed 官方公告当日宣布 Seed3D 2.0 发布"
     },
     {
       "vendor": "bytedance",
@@ -2838,7 +3510,10 @@
       "source_url": "https://arxiv.org/abs/2512.24210",
       "report_slugs": [
         "gr-dexter-technical-report"
-      ]
+      ],
+      "release_date": "2025-12-30",
+      "release_source_url": "https://arxiv.org/abs/2512.24210",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-12-30；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "bytedance",
@@ -2846,7 +3521,10 @@
       "source_url": "https://arxiv.org/abs/2410.06158",
       "report_slugs": [
         "gr-2-generative-video-language-action-model"
-      ]
+      ],
+      "release_date": "2024-10-08",
+      "release_source_url": "https://arxiv.org/abs/2410.06158",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2024-10-08；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "bytedance",
@@ -2854,7 +3532,10 @@
       "source_url": "https://arxiv.org/abs/2312.13139",
       "report_slugs": [
         "gr-1-large-scale-video-generative-pretraining"
-      ]
+      ],
+      "release_date": "2023-12-20",
+      "release_source_url": "https://arxiv.org/abs/2312.13139",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2023-12-20；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "cohere",
@@ -2873,7 +3554,10 @@
       "source_url": "https://cohere.com/research/aya",
       "report_slugs": [
         "aya-model"
-      ]
+      ],
+      "release_date": "2024-02-13",
+      "release_source_url": "https://cohere.com/blog/aya",
+      "release_evidence": "Cohere For AI 官方博客当日宣布发布 Aya 多语种大模型"
     },
     {
       "vendor": "cohere",
@@ -2881,7 +3565,10 @@
       "source_url": "https://cohere.com/research/aya",
       "report_slugs": [
         "aya-23"
-      ]
+      ],
+      "release_date": "2024-05-23",
+      "release_source_url": "https://cohere.com/blog/aya23",
+      "release_evidence": "Cohere For AI 当日宣布开源 Aya 23 系列 8B 与 35B 模型"
     },
     {
       "vendor": "cohere",
@@ -2889,7 +3576,10 @@
       "source_url": "https://cohere.com/research/aya",
       "report_slugs": [
         "aya-expanse"
-      ]
+      ],
+      "release_date": "2024-10-24",
+      "release_source_url": "https://cohere.com/blog/aya-expanse-connecting-our-world",
+      "release_evidence": "Cohere Labs 当日宣布推出 Aya Expanse 多语言模型系列"
     },
     {
       "vendor": "cohere",
@@ -2897,7 +3587,10 @@
       "source_url": "https://cohere.com/research/aya",
       "report_slugs": [
         "aya-vision"
-      ]
+      ],
+      "release_date": "2025-03-04",
+      "release_source_url": "https://cohere.com/blog/aya-vision",
+      "release_evidence": "Cohere Labs 官方文章当日宣布发布 Aya Vision"
     },
     {
       "vendor": "microsoft",
@@ -2914,7 +3607,10 @@
       "source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
       "report_slugs": [
         "mai-voice-2-1-model-card"
-      ]
+      ],
+      "release_date": "2026-10-01",
+      "release_source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+      "release_evidence": "Microsoft AI 当日宣布 MAI-Voice-2.1"
     },
     {
       "vendor": "microsoft",
@@ -2922,7 +3618,10 @@
       "source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
       "report_slugs": [
         "mai-voice-2-1-flash-model-card"
-      ]
+      ],
+      "release_date": "2026-10-01",
+      "release_source_url": "https://microsoft.ai/news/our-first-streaming-transcription-model/",
+      "release_evidence": "Microsoft AI 当日宣布 MAI-Voice-2.1 Flash"
     },
     {
       "vendor": "microsoft",
@@ -2930,7 +3629,10 @@
       "source_url": "https://arxiv.org/abs/2306.11644",
       "report_slugs": [
         "phi-1"
-      ]
+      ],
+      "release_date": "2023-06-20",
+      "release_source_url": "https://arxiv.org/abs/2306.11644",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2023-06-20；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "microsoft",
@@ -2938,7 +3640,10 @@
       "source_url": "https://www.microsoft.com/en-us/research/publication/textbooks-are-all-you-need-ii-phi-1-5-technical-report/",
       "report_slugs": [
         "phi-1-5"
-      ]
+      ],
+      "release_date": "2023-09-13",
+      "release_source_url": "https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/news-and-awards/?pg=16",
+      "release_evidence": "【第四轮联网复核·官方已有报道佐证日】Microsoft Research 官方新闻归档收录2023-09-13关于Phi-1.5的媒体报道；能确认该日模型已被公开报道，但并非微软明确首发公告。"
     },
     {
       "vendor": "microsoft",
@@ -2946,7 +3651,10 @@
       "source_url": "https://arxiv.org/abs/2404.14219",
       "report_slugs": [
         "phi-3"
-      ]
+      ],
+      "release_date": "2024-04-23",
+      "release_source_url": "https://azure.microsoft.com/en-us/blog/introducing-phi-3-redefining-whats-possible-with-slms/",
+      "release_evidence": "微软 Azure 官方博客当日宣布推出 Phi-3，首批 Phi-3-mini 当日可用"
     },
     {
       "vendor": "microsoft",
@@ -2954,7 +3662,10 @@
       "source_url": "https://www.microsoft.com/en-us/research/publication/phi-4-technical-report/",
       "report_slugs": [
         "phi-4"
-      ]
+      ],
+      "release_date": "2024-12-12",
+      "release_source_url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-phi-4-microsoft%E2%80%99s-newest-small-language-model-specializing-in-comple/4357090",
+      "release_evidence": "【联网复核·官方首发确认】Microsoft 2024-12-12 官方博客宣布推出 Phi-4"
     },
     {
       "vendor": "microsoft",
@@ -2962,7 +3673,10 @@
       "source_url": "https://arxiv.org/abs/2503.01743",
       "report_slugs": [
         "phi-4-mini-multimodal"
-      ]
+      ],
+      "release_date": "2025-02-26",
+      "release_source_url": "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/",
+      "release_evidence": "微软官方公告当日明确宣布 Phi-4-mini 发布"
     },
     {
       "vendor": "microsoft",
@@ -2970,7 +3684,10 @@
       "source_url": "https://arxiv.org/abs/2503.01743",
       "report_slugs": [
         "phi-4-mini-multimodal"
-      ]
+      ],
+      "release_date": "2025-02-26",
+      "release_source_url": "https://azure.microsoft.com/en-us/blog/empowering-innovation-the-next-generation-of-the-phi-family/",
+      "release_evidence": "微软官方公告当日宣布 Phi-4-multimodal 发布"
     },
     {
       "vendor": "microsoft",
@@ -2978,7 +3695,10 @@
       "source_url": "https://arxiv.org/abs/2504.21318",
       "report_slugs": [
         "phi-4-reasoning"
-      ]
+      ],
+      "release_date": "2025-04-30",
+      "release_source_url": "https://azure.microsoft.com/en-us/blog/one-year-of-phi-small-language-models-making-big-leaps-in-ai/",
+      "release_evidence": "微软 Azure 官方博客 2025-04-30 宣布推出 Phi-4-reasoning 系列"
     },
     {
       "vendor": "microsoft",
@@ -2986,7 +3706,10 @@
       "source_url": "https://arxiv.org/abs/2502.13130",
       "report_slugs": [
         "magma-technical-report"
-      ]
+      ],
+      "release_date": "2025-02-25",
+      "release_source_url": "https://www.microsoft.com/en-us/research/blog/magma-a-foundation-model-for-multimodal-ai-agents-across-digital-and-physical-worlds/",
+      "release_evidence": "Microsoft Research 当日正式介绍 Magma 模型"
     },
     {
       "vendor": "microsoft",
@@ -2994,7 +3717,10 @@
       "source_url": "https://arxiv.org/abs/2509.04996",
       "report_slugs": [
         "flower-technical-report"
-      ]
+      ],
+      "release_date": "2025-09-05",
+      "release_source_url": "https://arxiv.org/abs/2509.04996",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-09-05；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "amazon",
@@ -3012,7 +3738,10 @@
       "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
       "report_slugs": [
         "nova-family"
-      ]
+      ],
+      "release_date": "2024-12-03",
+      "release_source_url": "https://aws.amazon.com/about-aws/whats-new/2024/12/amazon-nova-foundation-models-bedrock/",
+      "release_evidence": "AWS 当日公告列明 Nova Micro 发布可用"
     },
     {
       "vendor": "amazon",
@@ -3020,7 +3749,10 @@
       "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
       "report_slugs": [
         "nova-family"
-      ]
+      ],
+      "release_date": "2024-12-03",
+      "release_source_url": "https://aws.amazon.com/about-aws/whats-new/2024/12/amazon-nova-foundation-models-bedrock/",
+      "release_evidence": "AWS 当日公告列明 Nova Lite 发布可用"
     },
     {
       "vendor": "amazon",
@@ -3028,7 +3760,10 @@
       "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
       "report_slugs": [
         "nova-family"
-      ]
+      ],
+      "release_date": "2024-12-03",
+      "release_source_url": "https://aws.amazon.com/about-aws/whats-new/2024/12/amazon-nova-foundation-models-bedrock/",
+      "release_evidence": "AWS 当日公告列明 Nova Pro 发布可用"
     },
     {
       "vendor": "amazon",
@@ -3036,7 +3771,10 @@
       "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
       "report_slugs": [
         "nova-family"
-      ]
+      ],
+      "release_date": "2024-12-03",
+      "release_source_url": "https://aws.amazon.com/about-aws/whats-new/2024/12/amazon-nova-foundation-models-bedrock/",
+      "release_evidence": "AWS 当日公告列明 Nova Canvas 发布可用"
     },
     {
       "vendor": "amazon",
@@ -3044,7 +3782,10 @@
       "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
       "report_slugs": [
         "nova-family"
-      ]
+      ],
+      "release_date": "2024-12-03",
+      "release_source_url": "https://aws.amazon.com/about-aws/whats-new/2024/12/amazon-nova-foundation-models-bedrock/",
+      "release_evidence": "AWS 当日公告列明 Nova Reel 发布可用"
     },
     {
       "vendor": "amazon",
@@ -3052,7 +3793,10 @@
       "source_url": "https://www.amazon.science/publications/amazon-nova-sonic-technical-report-and-model-card",
       "report_slugs": [
         "nova-sonic"
-      ]
+      ],
+      "release_date": "2025-04-08",
+      "release_source_url": "https://aws.amazon.com/blogs/aws/introducing-amazon-nova-sonic-human-like-voice-conversations-for-generative-ai-applications/",
+      "release_evidence": "AWS 当日宣布发布 Nova Sonic"
     },
     {
       "vendor": "xai",
@@ -3060,7 +3804,10 @@
       "source_url": "https://x.ai/news/grok/model-card",
       "report_slugs": [
         "grok-1-model-card"
-      ]
+      ],
+      "release_date": "2023-11-03",
+      "release_source_url": "https://x.ai/news/grok/model-card",
+      "release_evidence": "xAI 2023-11-03 原始公告介绍 Grok-1，模型卡确认最初发布于 2023 年 11 月"
     },
     {
       "vendor": "xai",
@@ -3090,7 +3837,10 @@
       "source_url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
       "report_slugs": [
         "grok-4-20-system-card"
-      ]
+      ],
+      "release_date": "2026-04-07",
+      "release_source_url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
+      "release_evidence": "【第四轮联网复核·官方系统卡日期】xAI Grok 4.20官方系统卡封面明确标注April 7, 2026且介绍当时型号的功能与部署；这是系统卡日期和已存在参考，未推定为正式产品首发日。"
     },
     {
       "vendor": "xai",
@@ -3109,7 +3859,10 @@
       "source_url": "https://x.ai/safety",
       "report_slugs": [
         "grok-4-6-model-card"
-      ]
+      ],
+      "release_date": "2026-08-12",
+      "release_source_url": "https://x.ai/news/grok-4-6",
+      "release_evidence": "xAI 官方公告当日明确宣布推出 Grok 4.6"
     },
     {
       "vendor": "xai",
@@ -3117,7 +3870,10 @@
       "source_url": "https://x.ai/safety",
       "report_slugs": [
         "grok-4-fast-model-card"
-      ]
+      ],
+      "release_date": "2025-09-19",
+      "release_source_url": "https://x.ai/news/grok-4-fast",
+      "release_evidence": "xAI 当日正式发布 Grok 4 Fast 高效推理模型"
     },
     {
       "vendor": "xai",
@@ -3125,7 +3881,10 @@
       "source_url": "https://x.ai/safety",
       "report_slugs": [
         "grok-code-fast-1-model-card"
-      ]
+      ],
+      "release_date": "2025-08-28",
+      "release_source_url": "https://x.ai/news/grok-code-fast-1",
+      "release_evidence": "xAI 当日宣布推出 Grok Code Fast 1 编程模型"
     },
     {
       "vendor": "physical_intelligence",
@@ -3161,7 +3920,10 @@
         "pi-0-6-model-card",
         "training-time-action-conditioning-rtc",
         "precise-manipulation-efficient-online-rl"
-      ]
+      ],
+      "release_date": "2025-11-17",
+      "release_source_url": "https://www.pi.website/blog/pistar06",
+      "release_evidence": "【第三轮联网复核·官方首次研究公开日】Physical Intelligence 官方 2025-11-17 博客首次完整介绍基础 π0.6 及基于它强化学习得到的 π*0.6；这是模型官方首次公开介绍日，不代表基础模型权重已开源"
     },
     {
       "vendor": "physical_intelligence",
@@ -3191,7 +3953,10 @@
       "source_url": "https://www.pi.website/research/memory",
       "report_slugs": [
         "mem-multi-scale-embodied-memory-technical-report"
-      ]
+      ],
+      "release_date": "2026-03-03",
+      "release_source_url": "https://www.pi.website/research/memory",
+      "release_evidence": "【第三轮联网复核·官方首次研究公开日】Physical Intelligence 官方研究页 Published March 3, 2026，明确展示 π0.6 with MEM；此日为方案首次公开展示，不证明独立权重开源"
     },
     {
       "vendor": "agibot",
@@ -3199,7 +3964,10 @@
       "source_url": "https://arxiv.org/abs/2508.05635",
       "report_slugs": [
         "genie-envisioner"
-      ]
+      ],
+      "release_date": "2025-08-07",
+      "release_source_url": "https://arxiv.org/abs/2508.05635",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-08-07；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "agibot",
@@ -3207,7 +3975,10 @@
       "source_url": "https://arxiv.org/abs/2508.05635",
       "report_slugs": [
         "genie-envisioner"
-      ]
+      ],
+      "release_date": "2025-08-07",
+      "release_source_url": "https://arxiv.org/abs/2508.05635",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-08-07；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "agibot",
@@ -3215,7 +3986,10 @@
       "source_url": "https://arxiv.org/abs/2508.05635",
       "report_slugs": [
         "genie-envisioner"
-      ]
+      ],
+      "release_date": "2025-08-07",
+      "release_source_url": "https://arxiv.org/abs/2508.05635",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-08-07；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "agibot",
@@ -3223,7 +3997,10 @@
       "source_url": "https://arxiv.org/abs/2503.06669",
       "report_slugs": [
         "agibot-world-colosseo-go-1"
-      ]
+      ],
+      "release_date": "2025-03-09",
+      "release_source_url": "https://arxiv.org/abs/2503.06669",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-03-09；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "galaxea",
@@ -3231,7 +4008,10 @@
       "source_url": "https://arxiv.org/abs/2509.00576",
       "report_slugs": [
         "galaxea-open-world-dataset-g0-vla"
-      ]
+      ],
+      "release_date": "2025-08-30",
+      "release_source_url": "https://arxiv.org/abs/2509.00576",
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-08-30；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
       "vendor": "anthropic",
@@ -3437,7 +4217,8 @@
         "GPT-Live",
         "GPT-Live mini"
       ],
-      "shared_reports": true
+      "shared_reports": true,
+      "shared_release": true
     },
     {
       "vendor": "openai",
@@ -3446,7 +4227,8 @@
         "GPT-Image-2.5-Sunburst",
         "GPT-Image-2.5-Flare"
       ],
-      "shared_reports": true
+      "shared_reports": true,
+      "shared_release": true
     },
     {
       "vendor": "openai",
@@ -3454,7 +4236,8 @@
       "models": [
         "GPT-Transcribe",
         "GPT-Live-Transcribe"
-      ]
+      ],
+      "shared_release": true
     },
     {
       "vendor": "openai",
@@ -3640,7 +4423,8 @@
       "models": [
         "Qwen-Audio-3.0-TTS-Plus",
         "Qwen-Audio-3.0-TTS-Flash"
-      ]
+      ],
+      "shared_release": true
     },
     {
       "vendor": "moonshot",
