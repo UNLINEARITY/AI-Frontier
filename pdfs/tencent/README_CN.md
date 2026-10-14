@@ -8,7 +8,7 @@
 
 | 类型 | 已收录报告 |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 16 |
+| [技术报告](technical-reports/README_CN.md) | 20 |
 | [模型卡](model-cards/README_CN.md) | 0 |
 | [系统卡](system-cards/README_CN.md) | 0 |
 
@@ -19,8 +19,12 @@
 | 2026-09-17 | [WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing](https://huggingface.co/tencent/WeVisDoc-4B) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://huggingface.co/tencent/WeVisDoc-4B) |
 | 2026-08-05 | [WorldClaw: Agentic 3D Open-World Generation at Scale](https://arxiv.org/abs/2608.05248) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.05248) |
 | 2026-08-03 | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](https://arxiv.org/abs/2608.02711) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.02711) |
+| 2026-07-15 | [RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination](https://arxiv.org/abs/2607.14187) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.14187) |
+| 2026-07-14 | [Hy-Embodied-VLM-1.0: Efficient Physical-World Agents](https://arxiv.org/abs/2607.12894) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.12894) |
 | 2026-07-06 | [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](https://github.com/Tencent-Hunyuan/HunyuanOCR) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
+| 2026-06-12 | [Hy-Embodied-0.5-VLA: From Vision-Language-Action Models to a Real-World Robot Learning Stack](https://arxiv.org/abs/2606.14409) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2606.14409) |
 | 2026-05-21 | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](https://arxiv.org/abs/2605.22064) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.22064) |
+| 2026-04-08 | [HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents](https://arxiv.org/abs/2604.07430) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2604.07430) |
 | 2025-12-16 | [WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling](https://arxiv.org/abs/2512.14614) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.14614) |
 | 2025-11-24 | [HunyuanVideo 1.5 Technical Report](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |
 | 2025-11-24 | [HunyuanOCR Technical Report](https://github.com/Tencent-Hunyuan/HunyuanOCR) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |

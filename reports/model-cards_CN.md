@@ -2,7 +2,7 @@
 
 [首页](../README_CN.md) · [文档类型](../README_CN.md#按类型找报告) · [英文版](model-cards.md)
 
-已收录 **61 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **62 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 厂商 | 报告 | 状态 | 官方来源 |
 | --- | --- | --- | --- | --- |
@@ -15,6 +15,7 @@
 | 2026-04-17 | [DeepSeek](../pdfs/deepseek/README_CN.md) | [DeepSeek V3.2 Technical Documentation (Model Card)](https://www.deepseek.com/en/transparency/) | 已归档 | [来源](https://www.deepseek.com/en/transparency/) |
 | 2025-12-17 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [Seed1.8 Model Card: Towards Generalized Real-World Agency](https://seed.bytedance.com/en/seed_model_portfolio) | 已归档 | [来源](https://seed.bytedance.com/en/seed_model_portfolio) |
 | 2025-12-15 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [Seedance 1.5 pro: A Native Audio-Visual Joint Generation Foundation Model](https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro) | 已归档 | [来源](https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro) |
+| 2025-11-17 | [Physical Intelligence](../pdfs/physical_intelligence/README_CN.md) | [π0.6 Model Card](https://website.pi-asset.com/pi06star/PI06_model_card.pdf) | 已归档 | [来源](https://website.pi-asset.com/pi06star/PI06_model_card.pdf) |
 | 2025-11-17 | [xAI](../pdfs/xai/README_CN.md) | [Grok 4.1 Model Card](https://x.ai/news/grok-4-1) | 已归档 | [来源](https://x.ai/news/grok-4-1) |
 | 2025-08-08 | [OpenAI](../pdfs/openai/README_CN.md) | [gpt-oss-120b & gpt-oss-20b Model Card](https://github.com/openai/gpt-oss) | 已归档 | [来源](https://github.com/openai/gpt-oss) |
 | 2024-10 | [Anthropic](../pdfs/anthropic/README_CN.md) | [Model Card Addendum: Claude 3.5 Haiku and Upgraded Claude 3.5 Sonnet](https://www.anthropic.com/system-cards) | 已归档 | [来源](https://www.anthropic.com/system-cards) |

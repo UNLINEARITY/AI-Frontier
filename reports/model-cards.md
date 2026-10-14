@@ -2,7 +2,7 @@
 
 [All reports](../README.md) · [Document types](../README.md#choose-the-right-document) · [Chinese](model-cards_CN.md)
 
-**61 reports**. Listed by recorded first publication date, newest first; unknown dates appear last.
+**62 reports**. Listed by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Publisher | Report | Status | Official source |
 | --- | --- | --- | --- | --- |
@@ -15,6 +15,7 @@
 | 2026-04-17 | [DeepSeek](../pdfs/deepseek/README.md) | [DeepSeek V3.2 Technical Documentation (Model Card)](https://www.deepseek.com/en/transparency/) | archived | [Source](https://www.deepseek.com/en/transparency/) |
 | 2025-12-17 | [ByteDance / Seed](../pdfs/bytedance/README.md) | [Seed1.8 Model Card: Towards Generalized Real-World Agency](https://seed.bytedance.com/en/seed_model_portfolio) | archived | [Source](https://seed.bytedance.com/en/seed_model_portfolio) |
 | 2025-12-15 | [ByteDance / Seed](../pdfs/bytedance/README.md) | [Seedance 1.5 pro: A Native Audio-Visual Joint Generation Foundation Model](https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro) | archived | [Source](https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro) |
+| 2025-11-17 | [Physical Intelligence](../pdfs/physical_intelligence/README.md) | [π0.6 Model Card](https://website.pi-asset.com/pi06star/PI06_model_card.pdf) | archived | [Source](https://website.pi-asset.com/pi06star/PI06_model_card.pdf) |
 | 2025-11-17 | [xAI](../pdfs/xai/README.md) | [Grok 4.1 Model Card](https://x.ai/news/grok-4-1) | archived | [Source](https://x.ai/news/grok-4-1) |
 | 2025-08-08 | [OpenAI](../pdfs/openai/README.md) | [gpt-oss-120b & gpt-oss-20b Model Card](https://github.com/openai/gpt-oss) | archived | [Source](https://github.com/openai/gpt-oss) |
 | 2024-10 | [Anthropic](../pdfs/anthropic/README.md) | [Model Card Addendum: Claude 3.5 Haiku and Upgraded Claude 3.5 Sonnet](https://www.anthropic.com/system-cards) | archived | [Source](https://www.anthropic.com/system-cards) |

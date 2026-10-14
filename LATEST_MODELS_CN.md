@@ -137,6 +137,7 @@
 | 向量嵌入 | Nemotron 3 Embed 1B / 8B | [官方介绍](https://huggingface.co/nvidia/Nemotron-3-Embed-8B-BF16) |
 | 机器人与 VLA | GR00T N1.7 | [阅读](abstracts/nvidia/gr00t-n1-7.md) · [官方介绍](https://github.com/NVIDIA/Isaac-GR00T) |
 | 具身推理与规划 / 世界模型与仿真 | Cosmos 3 | [Technical Report](abstracts/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai.md) · [官方介绍](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) |
+| 世界模型与仿真 | DreamDojo | [Technical Report](abstracts/nvidia/dreamdojo-technical-report.md) · [官方介绍](https://github.com/NVIDIA/DreamDojo) |
 | 世界模型与仿真 | Cosmos 3 Edge | [Technical Report](abstracts/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai.md) · [官方介绍](https://huggingface.co/nvidia/Cosmos3-Edge) |
 
 <a id="deepseek"></a>
@@ -244,6 +245,9 @@
 | 视频生成 | HunyuanVideo 1.5 | [Technical Report](abstracts/tencent/hunyuan-video-1-5.md) · [官方介绍](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |
 | 翻译 | Hy-MT2 | [Technical Report](abstracts/tencent/hy-mt2.md) · [官方介绍](https://github.com/Tencent-Hunyuan/Hy-MT2) |
 | 文档理解 | WeVisDoc-4B / 2B | [Technical Report](abstracts/tencent/wevisdoc.md) · [官方介绍](https://huggingface.co/tencent/WeVisDoc-4B) |
+| 机器人与 VLA / 机器人操作 | Hy-Embodied-0.5-VLA | [Technical Report](abstracts/tencent/hy-embodied-0-5-vla.md) · [官方介绍](https://github.com/Tencent-Hunyuan/Hy-Embodied-0.5-VLA) |
+| 机器人导航 / 具身推理与规划 | Hy-Embodied-VLM-1.0 | [Technical Report](abstracts/tencent/hy-embodied-vlm-1-0.md) · [官方介绍](https://github.com/Tencent-Hunyuan/HY-Embodied) |
+| 具身推理与规划 | Hy-Embodied-RxBrain-1.0 | [Technical Report](abstracts/tencent/hy-embodied-rxbrain-1-0.md) · [官方介绍](https://github.com/Tencent-Hunyuan/Hy-Embodied-RxBrain-1.0) |
 | 世界模型与仿真 | HY-World 1.5 / WorldPlay | [Technical Report](abstracts/tencent/worldplay-technical-report.md) · [官方介绍](https://github.com/Tencent-Hunyuan/HY-WorldPlay) |
 | 3D 生成 | Hunyuan3D 3.1 | [官方介绍](https://cloud.tencent.com/document/product/1804/123447) |
 

@@ -2804,6 +2804,77 @@
       "latest_categories": [
         "realtime"
       ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hy-Embodied-0.5-VLA",
+      "source_url": "https://github.com/Tencent-Hunyuan/Hy-Embodied-0.5-VLA",
+      "status": "archived",
+      "report_slugs": [
+        "hy-embodied-0-5-vla"
+      ],
+      "latest_categories": [
+        "robotics",
+        "manipulation"
+      ],
+      "frontier_categories": [
+        "robotics",
+        "manipulation"
+      ],
+      "release_date": "2026-06-15",
+      "reviewed_at": "2026-10-14",
+      "note_en": "The official dedicated repository lists released UMI and RoboTwin checkpoints and a 2026-06-15 release. The report describes the VLA manipulation policy and full learning stack. VLM and RxBrain branches are separate cognition models, not later replacements for this action policy.",
+      "note_cn": "官方独立仓库列出 UMI 与 RoboTwin 权重及 2026-06-15 发布记录。报告讨论 VLA 操作策略及完整学习流程；VLM 与 RxBrain 是独立认知模型，不视为该动作策略的新版本。"
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hy-Embodied-VLM-1.0",
+      "source_url": "https://github.com/Tencent-Hunyuan/HY-Embodied",
+      "status": "archived",
+      "report_slugs": [
+        "hy-embodied-vlm-1-0"
+      ],
+      "latest_categories": [],
+      "frontier_categories": [
+        "embodied_reasoning",
+        "navigation"
+      ],
+      "release_date": "2026-07-15",
+      "reviewed_at": "2026-10-14",
+      "note_en": "Official HY-Embodied repository records 2026-07-15 release with weights. This is the current embodied VLM branch; preserve it alongside the distinct RxBrain cognition branch without ranking their incompatible evaluations or inventing a release order from papers.",
+      "note_cn": "官方 HY-Embodied 仓库记录 2026-07-15 发布并提供权重。这是当前具身 VLM 分支，与独立 RxBrain 认知分支并列保留，不比较不兼容的评测，也不从论文日期推断二者发布先后。"
+    },
+    {
+      "vendor": "tencent",
+      "model": "Hy-Embodied-RxBrain-1.0",
+      "source_url": "https://github.com/Tencent-Hunyuan/Hy-Embodied-RxBrain-1.0",
+      "status": "archived",
+      "report_slugs": [
+        "hy-embodied-rxbrain-1-0"
+      ],
+      "latest_categories": [],
+      "frontier_categories": [
+        "embodied_reasoning"
+      ],
+      "reviewed_at": "2026-10-14",
+      "note_en": "Official repository states report, inference code and model weights released in July 2026. The cognition model combines language-visual reasoning and imagination; month-only release evidence does not establish a latest-order tie-break against VLM-1.0. Paper first submission is recorded independently.",
+      "note_cn": "官方仓库说明报告、推理代码与模型权重于 2026 年 7 月发布。该认知模型结合语言视觉推理和想象；月份精度的发布证据不足以判定它与 VLM-1.0 的 latest 顺序，论文首次提交另行记录。"
+    },
+    {
+      "vendor": "nvidia",
+      "model": "DreamDojo",
+      "source_url": "https://github.com/NVIDIA/DreamDojo",
+      "status": "archived",
+      "report_slugs": [
+        "dreamdojo-technical-report"
+      ],
+      "latest_categories": [],
+      "frontier_categories": [
+        "world"
+      ],
+      "reviewed_at": "2026-10-14",
+      "note_en": "NVIDIA GEAR-affiliated mixed-collaboration robot world model; official repository links public code/checkpoints/data and records their 2026-02-18 release. It predicts action-conditioned world dynamics and supports policy evaluation, not a VLA action-policy release. Preserve this current specialized family alongside Cosmos; paper dates and model artifact availability are distinct.",
+      "note_cn": "NVIDIA GEAR 参与、多机构合作的机器人世界模型；官方仓库提供代码、权重与数据并记录其 2026-02-18 发布。模型预测动作条件下的世界动态并支持策略评测，不属于 VLA 动作策略。与 Cosmos 并列保留该当前专业分支，论文日期与模型资源公开时间分开记录。"
     }
   ],
   "updated_at": "2026-10-14"

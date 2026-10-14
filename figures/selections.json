@@ -6129,5 +6129,2209 @@
     "figures": [],
     "reason_en": "No core architecture/results figures appear on the captured Aliyun model-info page. Its images are site/app/social branding; model limits and capabilities are represented as native HTML text/tables.",
     "reason_cn": "官方模型文档以文字和 HTML 表格提供规格，本页面没有静态核心图。"
+  },
+  {
+    "id": "google:gemini-robotics-er-1-6-model-card",
+    "source_sha256": "a8e5bd114c0fee3cd25d518a3168579c9e649a39b4f8fe348fb01e82abc29b43",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_no_suitable_figure",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "figures": [],
+    "reason_en": "Visually reviewed the first four physical pages and source-bound core crop. The ER 1.6 card has only text and publisher branding on its four pages.",
+    "reason_cn": "已核对原始前四页及核心裁切；ER 1.6 四页卡片仅有文字及品牌图标。"
+  },
+  {
+    "id": "google:gemini-robotics-1-5-technical-report",
+    "source_sha256": "b41a2f732f4755c7564b973bcc6ff8aebf3bb9a9f163328437e89533d372b2f4",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "figures": [
+      {
+        "page": 2,
+        "figure_number": 1,
+        "role": "overview",
+        "bbox": [
+          58,
+          81,
+          538,
+          421
+        ],
+        "caption": "Figure 1 | The Gemini Robotics 1.5 family of models consists of Gemini Robotics 1.5, a VLA, and Gemini\nRobotics 1.5-ER, a VLM with state-of-the-art embodied reasoning capabilities. They can be combined together\nto form a powerful agentic framework.",
+        "visual_review": true,
+        "caption_in_crop": true,
+        "caption_bbox": [
+          62.36199951171875,
+          381.5119323730469,
+          533.0994873046875,
+          415.3845520019531
+        ]
+      }
+    ],
+    "reason_en": "Selected the source-native overview, model architecture or reported benchmark plot after inspecting the original page and full caption. Selective review, not an all-page audit.",
+    "reason_cn": "核对原始页面和完整图注后选取原生概览、模型架构或评测结果图；属于选择性核查，不宣称逐页审阅。"
+  },
+  {
+    "id": "google:gemini-robotics-on-device-model-card",
+    "source_sha256": "c7289fa5d75d7665c2a7c981ca38393a7350390db65fa572157f0f65247e6207",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "figures": [
+      {
+        "page": 3,
+        "figure_number": null,
+        "role": "results",
+        "bbox": [
+          71,
+          547,
+          524,
+          693
+        ],
+        "caption": "",
+        "visual_review": true,
+        "caption_in_crop": false
+      }
+    ],
+    "reason_en": "Selected the source-native overview, model architecture or reported benchmark plot after inspecting the original page and full caption. Selective review, not an all-page audit.",
+    "reason_cn": "核对原始页面和完整图注后选取原生概览、模型架构或评测结果图；属于选择性核查，不宣称逐页审阅。"
+  },
+  {
+    "id": "nvidia:cosmos-world-foundation-model-platform-for-physical-ai",
+    "source_sha256": "c3c61f0a6f9a32700fc47d9898db573628d72bdea07562ca319ceba046e95c84",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "figures": [
+      {
+        "page": 3,
+        "figure_number": 2,
+        "role": "overview",
+        "bbox": [
+          60,
+          83,
+          538,
+          440
+        ],
+        "caption": "Figure 2: Pre-trained WFMs are world model generalists that are trained with large-scale, diverse video datasets\ncapturing different aspects of real-world physics. These pre-trained world foundation models can be specialized\nto a target Physical AI setup through post-training. Usually, the datasets for post-training are “prompt”-video\npairs collected from the target Physical AI setup. The prompt can be in the form of action commands, trajectory,\ninstructions, etc. As the pre-trained WFM provides a great foundation, the dataset for post-training can be\nmuch smaller. This pre-training-and-post-training yields an efficient strategy for building a Physical AI system.\nIn the figure, the dashed lines represent the data loop.",
+        "visual_review": true,
+        "caption_in_crop": true,
+        "caption_bbox": [
+          62.36199951171875,
+          354.19390869140625,
+          534.5780029296875,
+          435.8875427246094
+        ]
+      }
+    ],
+    "reason_en": "Selected the source-native overview, model architecture or reported benchmark plot after inspecting the original page and full caption. Selective review, not an all-page audit.",
+    "reason_cn": "核对原始页面和完整图注后选取原生概览、模型架构或评测结果图；属于选择性核查，不宣称逐页审阅。"
+  },
+  {
+    "id": "google:gemini-robotics-technical-report",
+    "source_sha256": "f2c1ab4e73a76013b9ebf5a4ff90bb3d291eee0730304d3ebf4531256a204b78",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "figures": [
+      {
+        "page": 2,
+        "figure_number": 1,
+        "role": "overview",
+        "bbox": [
+          53,
+          77,
+          561,
+          423
+        ],
+        "caption": "Figure 1 | Overview of the Gemini Robotics family of embodied AI models. Gemini 2.0 already exhibits\ncapabilities relevant to robotics such as semantic safety understanding and long contexts. The robotics-specific\ntraining and the optional specialization processes enable the Gemini Robotics models to exhibit a variety of\nrobotics-specific capabilities. The models generate dexterous and reactive motions, can be quickly adapted to\nnew embodiments, and use advanced visuo-spatial reasoning to inform actions.",
+        "visual_review": true,
+        "caption_in_crop": true,
+        "caption_bbox": [
+          62.36199951171875,
+          360.0769348144531,
+          532.9154052734375,
+          417.86053466796875
+        ]
+      }
+    ],
+    "reason_en": "Selected the source-native overview, model architecture or reported benchmark plot after inspecting the original page and full caption. Selective review, not an all-page audit.",
+    "reason_cn": "核对原始页面和完整图注后选取原生概览、模型架构或评测结果图；属于选择性核查，不宣称逐页审阅。"
+  },
+  {
+    "id": "nvidia:gr00t-n1-technical-report",
+    "source_sha256": "76e38cf679637b816b16edf7170340883dd09175bf334aeeaed49392777731b9",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": 3,
+        "role": "architecture",
+        "bbox": [
+          58,
+          80,
+          547,
+          415
+        ],
+        "caption": "Figure 3: GR00T N1 Model Architecture. GR00T N1 is trained on a diverse set of embodiments ranging from\nsingle-arm robot arms to bimanual humanoid dexterous hands. To deal with different robot embodiment’s\nstate observation and action, we use DiT blocks with an embodiment-aware state and action encoder to embed\nthe robot’s state and action inputs. GR00T N1 model leverages latent embeddings of the Eagle-2 model to\nincorporate the robot’s visual observation and language instructions. The vision language tokens will then be\nfed into the DiT blocks through cross-attention layers.",
+        "visual_review": true,
+        "caption_in_crop": true,
+        "caption_bbox": [
+          62.36199951171875,
+          339.2599182128906,
+          532.9166259765625,
+          408.9975280761719
+        ]
+      }
+    ],
+    "reason_en": "Selected the source-native overview, model architecture or reported benchmark plot after inspecting the original page and full caption. Selective review, not an all-page audit.",
+    "reason_cn": "核对原始页面和完整图注后选取原生概览、模型架构或评测结果图；属于选择性核查，不宣称逐页审阅。"
+  },
+  {
+    "id": "nvidia:cosmos-reason1-technical-report",
+    "source_sha256": "cd88d0a653bd4979ffa9dbd2e290c55a0ad3260d8647f6cfd3c96e2ff8cf7972",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "figures": [
+      {
+        "page": 2,
+        "figure_number": 1,
+        "role": "overview",
+        "bbox": [
+          58,
+          79,
+          537,
+          342
+        ],
+        "caption": "Figure 1: An overview of Cosmos-Reason1. Cosmos-Reason1 contains two multimodal large language models of\n7B and 56B, trained in two stages, including Physical AI SFT and Physical AI RL. We also define two ontologies\nfor physical common sense and embodied reasoning, and build two benchmarks to evaluate models’ Physical\nAI reasoning capabilities.",
+        "visual_review": true,
+        "caption_in_crop": true,
+        "caption_bbox": [
+          62.042999267578125,
+          291.3795471191406,
+          532.9163818359375,
+          337.1080017089844
+        ]
+      }
+    ],
+    "reason_en": "Selected the source-native overview, model architecture or reported benchmark plot after inspecting the original page and full caption. Selective review, not an all-page audit.",
+    "reason_cn": "核对原始页面和完整图注后选取原生概览、模型架构或评测结果图；属于选择性核查，不宣称逐页审阅。"
+  },
+  {
+    "id": "google:rt-2-technical-report",
+    "source_sha256": "0a62dc36bbbfdea232ad45a0ab75c82e9cf535b55333ff22c02d5da1897ccac3",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "figures": [
+      {
+        "page": 2,
+        "figure_number": 1,
+        "role": "architecture",
+        "bbox": [
+          58,
+          80,
+          551,
+          339
+        ],
+        "caption": "Figure 1 | RT-2 overview: we represent robot actions as another language, which can be cast into text tokens and\ntrained together with Internet-scale vision-language datasets. During inference, the text tokens are de-tokenized\ninto robot actions, enabling closed loop control. This allows us to leverage the backbone and pretraining\nof vision-language models in learning robotic policies, transferring some of their generalization, semantic\nunderstanding, and reasoning to robotic control. We demonstrate examples of RT-2 execution on the project\nwebsite: robotics-transformer2.github.io.",
+        "visual_review": true,
+        "caption_in_crop": true,
+        "caption_bbox": [
+          61.9739990234375,
+          261.49932861328125,
+          533.0830078125,
+          332.4383850097656
+        ]
+      }
+    ],
+    "reason_en": "Selected the source-native overview, model architecture or reported benchmark plot after inspecting the original page and full caption. Selective review, not an all-page audit.",
+    "reason_cn": "核对原始页面和完整图注后选取原生概览、模型架构或评测结果图；属于选择性核查，不宣称逐页审阅。"
+  },
+  {
+    "id": "google:palm-e-technical-report",
+    "source_sha256": "535cc3c7fe1ae7428b9ac7d6a3738a0529975aadc372b2229ea0cb2ce724576a",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "figures": [
+      {
+        "page": 1,
+        "figure_number": 1,
+        "role": "overview",
+        "bbox": [
+          52,
+          180,
+          546,
+          417
+        ],
+        "caption": "Figure 1: PaLM-E is a single general-purpose multimodal language model for embodied reasoning tasks, visual-language tasks,\nand language tasks. PaLM-E transfers knowledge from visual-language domains into embodied reasoning – from robot planning in\nenvironments with complex dynamics and physical constraints, to answering questions about the observable world. PaLM-E operates on\nmultimodal sentences, i.e. sequences of tokens where inputs from arbitrary modalities (e.g. images, neural 3D representations, or states, in\ngreen and blue) are inserted alongside text tokens (in orange) as input to an LLM, trained end-to-end.",
+        "visual_review": true,
+        "caption_in_crop": true,
+        "caption_bbox": [
+          55.439998626708984,
+          362.7273254394531,
+          542.56005859375,
+          411.6123962402344
+        ]
+      }
+    ],
+    "reason_en": "Selected the source-native overview, model architecture or reported benchmark plot after inspecting the original page and full caption. Selective review, not an all-page audit.",
+    "reason_cn": "核对原始页面和完整图注后选取原生概览、模型架构或评测结果图；属于选择性核查，不宣称逐页审阅。"
+  },
+  {
+    "id": "physical_intelligence:pi-0-technical-report",
+    "source_sha256": "fbdfba56258bdbd220207ba63410c6c943e43a73e97a7a5a47ca0bc74204f821",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": 3,
+        "role": "architecture",
+        "caption": "Fig. 3: Overview of our framework. We start with a pre-training mixture, which consists of both our own dexterous manipulation datasets and open-source data. We use this mixture to train our flow matching VLA model, which consists of a larger VLM backbone and a smaller action expert for processing robot states and actions. The VLM backbone weights are initialized from PaliGemma [5], providing representations learned from large-scale Internet pre-training. The resulting π0 model can be used to control multiple robot embodiments with differing action spaces to accomplish a wide variety of tasks.",
+        "bbox": [
+          48.8,
+          50,
+          563.2,
+          263
+        ],
+        "caption_bbox": [
+          48.95899963378906,
+          204.14453125,
+          563.0291748046875,
+          262.0191345214844
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 8,
+        "figure_number": 7,
+        "role": "results",
+        "caption": "Fig. 7: Out-of-box evaluation results: We evaluate π0 trained for the full 700k steps, a version trained for 160k steps that matches the number of updates for baseline models, π0-small, and three baselines: OpenVLA and Octo trained on all of our data, and OpenVLA trained only on the UR5e tasks (which we found to work better on UR5e tasks). Across all tasks and all comparisons, even the “parity” version of our model outperforms all baselines, and the full version of our model achieves the best results by a large margin.",
+        "bbox": [
+          48.8,
+          60.6,
+          300.2,
+          311
+        ],
+        "caption_bbox": [
+          48.95896911621094,
+          204.02391052246094,
+          300.01812744140625,
+          309.85809326171875
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:pi-0-5-technical-report",
+    "source_sha256": "6a1029fd8ab6944b74cf22f5e5d30e60bc15699d964b2900af799b807a34b64c",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      4,
+      10
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": 3,
+        "role": "architecture",
+        "caption": "Fig. 3: Model overview. π0.5 is trained in two stages. First, a pre-training stage combines all of the different data sources to produce an initial VLA with discrete tokens. This stage uses data from diverse robotic platforms, high-level semantic action prediction, and data from the web. Robotic data uses the FAST action tokenizer to represent actions as discrete tokens [64]. Second, a post-training stage specializes the model for low-level and high-level inferences for mobile manipulation, leveraging the most task-relevant data, including verbal instructions from human supervisors. This stage uses flow matching to represent the action distribution, enabling efficient real-time inference and the ability to represent fine-grained continuous action sequences. At inference time, the model first infers a high-level subtask, and then predicts the actions based on this subtask.",
+        "bbox": [
+          48.8,
+          55,
+          563.2,
+          327
+        ],
+        "caption_bbox": [
+          48.95899200439453,
+          273.756103515625,
+          563.0325927734375,
+          326.74267578125
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 10,
+        "figure_number": 12,
+        "role": "results",
+        "caption": "Fig. 12: Comparing π0.5 with other models. Our full model significantly outperforms both π0 and π0-FAST+Flow in the mock home test environments.",
+        "bbox": [
+          311.9,
+          55,
+          563.2,
+          201
+        ],
+        "caption_bbox": [
+          311.9729919433594,
+          181.11810302734375,
+          563.030029296875,
+          199.34564208984375
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:pi-0-6-model-card",
+    "source_sha256": "39b67dafdd0e96576f7cb68bd6208bb92965f4b1c1bcf31c17f6121866a43ce5",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      3
+    ],
+    "figures": [
+      {
+        "page": 2,
+        "figure_number": 1,
+        "role": "architecture",
+        "caption": "Figure 1: π0.6 model architecture.",
+        "bbox": [
+          72,
+          70,
+          540,
+          254
+        ],
+        "caption_bbox": [
+          225.4429931640625,
+          240.66017150878906,
+          386.55682373046875,
+          253.206298828125
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 3,
+        "figure_number": 3,
+        "role": "results",
+        "caption": "Figure 3: Out-of-the-box evaluation results in mobile tasks. The highest y-tick value in task progress is the maximum possible value for the task. π0.6 improves speed in all tasks and also the average task progress if it is not saturated yet.",
+        "bbox": [
+          72,
+          141,
+          540.1,
+          406
+        ],
+        "caption_bbox": [
+          72.0,
+          366.55218505859375,
+          540.0438232421875,
+          404.559326171875
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:pi-star-0-6-technical-report",
+    "source_sha256": "9f4f5a3070ad9549ea7687ea54baa19858820dbcc0834cc805212d68fd6c8cb3",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      9
+    ],
+    "figures": [
+      {
+        "page": 1,
+        "figure_number": 1,
+        "role": "overview",
+        "caption": "Fig. 1: RECAP enables training VLAs with reward feedback and interventions. Our system starts with a pre-trained VLA that incorporates advantage conditioning, allowing the model to learn effectively from real-world experience. For each task, we deploy the model and collect both autonomous rollouts and online human corrections. We then fine-tune the value function on this online data, improving its estimates of how actions influence performance. Fine-tuning and conditioning the VLA on these updated advantage estimates in turn improves policy behavior.",
+        "bbox": [
+          48.8,
+          180,
+          563.2,
+          426
+        ],
+        "caption_bbox": [
+          48.95899963378906,
+          389.47747802734375,
+          563.0306396484375,
+          424.4856872558594
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 9,
+        "figure_number": 8,
+        "role": "results",
+        "caption": "Fig. 8: Success rates. We show the absolute success rates with standard error. Each stage of RECAP improves performance across the tasks, with the challenging diverse laundry and espresso tasks seeing the largest gains success rate, corresponding to more than 2× reduction in failure rates. For the box assembly task we show the success rate for the different subtasks. RECAP leads to the most consistent (and highest) success across all subtasks.",
+        "bbox": [
+          48.8,
+          235,
+          563.2,
+          382
+        ],
+        "caption_bbox": [
+          48.95899963378906,
+          354.96978759765625,
+          563.0321044921875,
+          380.9456787109375
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:hi-robot-technical-report",
+    "source_sha256": "a6400a0353705ae3974dec493bb21867885159133586d53da98bacf055fa4333",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      4,
+      7
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": 2,
+        "role": "architecture",
+        "caption": "Figure 2: Overview of hierarchical VLA. The policy consists of a high-level and a low-level policy. The high-level policy pro- cesses open-ended instructions and images from base and wrist- mounted cameras to generate low-level language commands. The low-level policy uses these commands, images, and robot states to produce actions and optionally verbal responses.",
+        "bbox": [
+          55.4,
+          72,
+          290,
+          303
+        ],
+        "caption_bbox": [
+          55.439998626708984,
+          243.66310119628906,
+          289.445068359375,
+          302.5243835449219
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 7,
+        "figure_number": 5,
+        "role": "results",
+        "caption": "Figure 5: Comparisons to Prior Methods. Hi Robot outperforms GPT-4o and flat VLA on Table Bussing, Sandwich Making, and Grocery Shopping. Hi Robot averages over 40% higher instruction accuracy than GPT-4o, showing stronger alignment with user prompts and real-time observations, and approaches expert human guidance by leveraging its high-level policy.",
+        "bbox": [
+          54,
+          60,
+          542,
+          235
+        ],
+        "caption_bbox": [
+          55.439998626708984,
+          204.2221221923828,
+          541.44580078125,
+          233.19537353515625
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:fast-action-tokenization-technical-report",
+    "source_sha256": "3739b31f5fecdde371509ff5bb13619979734e894a255a9b264253f4cc53934a",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      5,
+      10
+    ],
+    "figures": [
+      {
+        "page": 5,
+        "figure_number": 4,
+        "role": "architecture",
+        "caption": "Fig. 4: Overview of the FAST action tokenization pipeline. Given a normalized chunk of actions, we apply discrete cosine transform (DCT) to convert the signal to the frequency domain. We then quantize the DCT coefficients and use byte-pair encoding (BPE) to compress the flattened sequence of per-dimension DCT coefficients into the final action token sequence. See Section V-B for a detailed description.",
+        "bbox": [
+          48.8,
+          55,
+          563.2,
+          295
+        ],
+        "caption_bbox": [
+          48.958984375,
+          247.64154052734375,
+          563.0365600585938,
+          293.5611267089844
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 10,
+        "figure_number": 11,
+        "role": "results",
+        "caption": "Fig. 11: Comparison of π0-FAST and diffusion π0 [7] generalist policies. π0-FAST matches the performance of diffusion π0 while requiring significantly less compute for training. Reported: mean and 95% CI.",
+        "bbox": [
+          48.8,
+          260,
+          300.2,
+          487
+        ],
+        "caption_bbox": [
+          48.958984375,
+          440.4729309082031,
+          300.0187072753906,
+          486.5310363769531
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:knowledge-insulating-vlas-technical-report",
+    "source_sha256": "105da140f08f71c2e896bfabe7a016e485e519c4f7ebdbfb29199831b37ea071",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      8
+    ],
+    "figures": [
+      {
+        "page": 2,
+        "figure_number": 1,
+        "role": "architecture",
+        "caption": "Figure 1: The key idea of our approach is to train the VLM backbone with a next-token prediction loss on discretized actions and general VLM data to learn good representations, while the action expert is trained with flow-matching on continuous actions. Gradients do not flow from the action expert to the backbone, insulating the knowledge of the backbone. At inference time, generating continuous actions with the smaller action expert is desirable for fast and precise control, while representation learning with discrete actions and general VLM data makes the model train fast and leads to better generalization by transferring knowledge from VLM data into robot actions. As experiments show, having both action representations at training time is crucial.",
+        "bbox": [
+          107.9,
+          65,
+          504.1,
+          256
+        ],
+        "caption_bbox": [
+          108.0,
+          185.97628784179688,
+          504.0035095214844,
+          255.54937744140625
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 8,
+        "figure_number": 4,
+        "role": "results",
+        "caption": "Figure 4: Comparison to baselines for the “items in drawer” task. Our method outperforms all other baselines both in terms of performance and the ability of the model to follow language instructions. Allowing gradients from the action expert to the backbone (joint-training or π0) harms language following. While π0-FAST maintains good language following, its performance is worse than our method. Neither HybridVLA nor freezing the backbone is viable for this task.",
+        "bbox": [
+          107.9,
+          55,
+          504.3,
+          269
+        ],
+        "caption_bbox": [
+          108.0,
+          206.79696655273438,
+          504.2408142089844,
+          268.23138427734375
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:mem-multi-scale-embodied-memory-technical-report",
+    "source_sha256": "63413aa32bb2b070ae0a0cbc5d5a2eb77686308725e48f15bcaa338bd3d644aa",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      4,
+      6
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": 2,
+        "role": "architecture",
+        "caption": "Fig. 2: The MEM memory system equips VLAs like π0.6 with long-horizon memory via two key components: (1) a high-level policy is trained to keep track of long-horizon semantic events by updating a language memory mt (left, Section III-B), (2) the low-level policy uses a short-horizon observation-based memory that is efficiently encoded via a video encoder (right, Section III-C).",
+        "bbox": [
+          48.8,
+          53.9,
+          563.2,
+          234
+        ],
+        "caption_bbox": [
+          48.95899963378906,
+          203.43429565429688,
+          563.0317993164062,
+          233.15740966796875
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 6,
+        "figure_number": 6,
+        "role": "results",
+        "caption": "Fig. 6: Performance of policies on challenging, long-horizon manipu- lation tasks. Without memory, even state-of-the-art generalist policies like π0.6 struggle to perform such tasks. We ablate the memory components and show these tasks are solvable by combining short- horizon, observation-based memory, with long-horizon, language- based memory. Naive memory of past language instructions, without compression, struggles with training-inference distribution shifts.",
+        "bbox": [
+          48.8,
+          290,
+          301.6,
+          509
+        ],
+        "caption_bbox": [
+          48.95899963378906,
+          438.1634216308594,
+          301.510009765625,
+          507.58538818359375
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:real-time-execution-action-chunking-flow-policies",
+    "source_sha256": "dd6d602be1f50b894d88517bf68916c4272885b2e29d96cffc426dacff41898f",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      4,
+      8
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": 3,
+        "role": "architecture",
+        "caption": "Figure 3: A diagram illustrating how action generation attends to the previous action chunk in real-time chunking. If inference starts after the execution of a−1 and the inference delay is d = 4, then the newly generated chunk will not be available until after a3 is consumed. Therefore, a0:3 are “frozen” and are attended to with a full guidance weight of 1. In the intermediate region, a4:10, actions from the previous chunk are available but may be updated, since inference will have finished before a4 is needed. This region is attended to with an exponentially decreasing guidance weight. Finally, the last s = 5 actions are beyond the end of the previous chunk, and need to be freshly generated. The execution horizon, s, is a hyperparameter constrained by d ≤s ≤H −d.",
+        "bbox": [
+          107.5,
+          65,
+          505.8,
+          287
+        ],
+        "caption_bbox": [
+          107.677001953125,
+          217.1353302001953,
+          505.57080078125,
+          285.8083801269531
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 8,
+        "figure_number": 6,
+        "role": "results",
+        "caption": "Figure 6: Top: Controller steps (equivalent to elapsed time with inference pauses removed multiplied by 50Hz) vs. cumulative progress for each task, aggregated across all delays. Progress is measured in discrete steps corresponding to the subsections of each task. Left: Time (including inference pauses) vs. cumulative progress aggregated across all tasks. The x-axis is log scale to better show progress during both short and long-horizon tasks. Right: Inference delay vs. average throughput, defined as the proportion of task completed divided by duration of episode averaged over episodes. Error bars are ±1 SEM. Average throughput gives a balanced view of both speed and performance for each method. Neither TE variant can run at +100 or +200ms of injected latency, causing such high oscillations that the robot’s protective stop is triggered.",
+        "bbox": [
+          107.7,
+          386.6,
+          505,
+          676
+        ],
+        "caption_bbox": [
+          107.7760009765625,
+          595.1361694335938,
+          504.6041564941406,
+          673.8923950195312
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:training-time-action-conditioning-rtc",
+    "source_sha256": "02963d5ae4e060e2be3cc8299f5e63046cdeafcb72127242c79fcb3331fa0108",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      3
+    ],
+    "figures": [
+      {
+        "page": 2,
+        "figure_number": 2,
+        "role": "architecture",
+        "caption": "Fig. 2: An illustration of our conditioning architecture, as applied to a standard diffusion transformer such as the π0.6 action expert. We always feed in ground-truth, non-noisy prefix actions, while learning to denoise the postfix actions. The flow matching timestep differs between tokens, which indicates the inference delay to the model.",
+        "bbox": [
+          311.9,
+          50,
+          563.3,
+          334
+        ],
+        "caption_bbox": [
+          311.9729919433594,
+          288.42333984375,
+          563.227294921875,
+          332.1976623535156
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 3,
+        "figure_number": 5,
+        "role": "results",
+        "caption": "Fig. 5: Real-world results: success rate and duration for espresso making and box building. Training-time and inference-time RTC perform similarly, while both improving speed over synchronous inference. Error bars represent 68% Wilson score intervals for success rate and ±1 SEM for duration.",
+        "bbox": [
+          311.5,
+          415,
+          563.8,
+          657
+        ],
+        "caption_bbox": [
+          311.5989990234375,
+          620.1900024414062,
+          563.6959838867188,
+          655.0196533203125
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:precise-manipulation-efficient-online-rl",
+    "source_sha256": "feecf0f5799bcb3775f42d5de5d5832e61eb379bd47b627ad9a0f6c86f3ebf31",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      4,
+      8
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": 2,
+        "role": "architecture",
+        "caption": "Fig. 2: Details on RL token extraction. RLT adds an encoder-decoder transformer to a pretrained VLA. It produces a compressed embedding of the VLA representation (the RL token). This representation then enables data and parameter efficient fine-tuning during online RL.",
+        "bbox": [
+          48.8,
+          54,
+          300.1,
+          337
+        ],
+        "caption_bbox": [
+          48.958984375,
+          301.0057678222656,
+          300.0171813964844,
+          335.9476623535156
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 8,
+        "figure_number": 5,
+        "role": "results",
+        "caption": "Fig. 5: RLT can boost success rates across multiple tasks. Where the VLA is already competent (e.g., the Ethernet task) it maintains success rate and increases throughput. For tasks that are challenging for the base VLA policy (screwdriver and zip tie) RLT leads to a significant improvement in success.",
+        "bbox": [
+          48.8,
+          210.4,
+          563.2,
+          350
+        ],
+        "caption_bbox": [
+          48.95899963378906,
+          331.456787109375,
+          563.0337524414062,
+          348.4656677246094
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "physical_intelligence:emergence-human-to-robot-transfer-vlas",
+    "source_sha256": "e29e2545d0968988b7591ada7b329b478e879e3f476ef388780e4ad5294cc645",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      4,
+      6
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": 4,
+        "role": "architecture",
+        "caption": "Fig. 4: Model Architecture. We use the π0.5 model. We finetune with a combination of high level sub-task prediction and low level action prediction on both human and robot data. The low level action prediction leverages relative end-effector actions aligned across human and robot.",
+        "bbox": [
+          48.8,
+          55,
+          300.1,
+          238
+        ],
+        "caption_bbox": [
+          48.95899963378906,
+          201.17510986328125,
+          300.0173645019531,
+          236.2286376953125
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 6,
+        "figure_number": 8,
+        "role": "results",
+        "caption": "Fig. 8: Task generalization performance scaling: Performance of Robot Finetuning on Sort Eggs plateaus, even as the pretraining diversity im- proves. In contrast, Human+Robot Finetuning performance scales sharply with pretraining, suggesting that broader pretraining enables more effective transfer from human data.",
+        "bbox": [
+          311.9,
+          405,
+          563.2,
+          592
+        ],
+        "caption_bbox": [
+          311.9729919433594,
+          546.998779296875,
+          563.0313720703125,
+          590.9076538085938
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "google:rt-1-technical-report",
+    "source_sha256": "81efe669c8fa50ffc7097886dc78a442fa7a8f7f2451684b93069cb9fbeda767",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      6,
+      10
+    ],
+    "figures": [
+      {
+        "page": 10,
+        "figure_number": "Table 2",
+        "role": "results",
+        "bbox": [
+          105,
+          60,
+          507,
+          218
+        ],
+        "caption": "Table 2: Overall performance of RT-1 and baselines across seen tasks, generalization to unseen tasks, and robustness to distractors and backgrounds.",
+        "caption_bbox": [
+          108.0,
+          191.7284698486328,
+          504.0032653808594,
+          212.65005493164062
+        ],
+        "caption_in_crop": true,
+        "visual_review": true,
+        "source_kind": "table"
+      },
+      {
+        "page": 6,
+        "figure_number": "3",
+        "role": "architecture",
+        "bbox": [
+          105,
+          75,
+          507,
+          530
+        ],
+        "caption": "Figure 3: The architecture diagram of RT-1. The instruction is transformed into a USE embedding and used to condition a pre-trained EfficientNet via FiLM layers. The resulting vision-language tokens are reduced by the TokenLearner and fed into a decoder-only Transformer, which outputs tokenized actions.",
+        "caption_bbox": [
+          108.0,
+          484.5634460449219,
+          504.0032958984375,
+          527.4030151367188
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "google:rt-x-technical-report",
+    "source_sha256": "13f16aff5afdee583dc25b3c570e9bb0cf6baefb59b539928d919588cd8d9246",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      4,
+      5
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": "3",
+        "role": "architecture",
+        "bbox": [
+          48,
+          35,
+          566,
+          194
+        ],
+        "caption": "Fig. 3: RT-1-X and RT-2-X both take images and a text instruction as input and output discretized end-effector actions. RT-1-X is an architecture designed for robotics, with a FiLM [116] conditioned EfficientNet [117] and a Transformer [118]. RT-2-X builds on a VLM backbone by representing actions as another language, and training action text tokens together with vision-language data.",
+        "caption_bbox": [
+          54.0,
+          164.73300170898438,
+          558.00146484375,
+          193.62542724609375
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 5,
+        "figure_number": "4",
+        "role": "results",
+        "bbox": [
+          48,
+          10,
+          566,
+          180
+        ],
+        "caption": "Fig. 4: RT-1-X mean success rate is 50% higher than that of either the Original Method or RT-1. RT-1 and RT-1-X have the same network architecture. Therefore the performance increase can be attributed to co-training on the robotics data mixture. The lab logos indicate the physical location of real robot evaluation, and the robot pictures indicate the embodiment used for the evaluation.",
+        "caption_bbox": [
+          54.0,
+          147.50047302246094,
+          558.0011596679688,
+          176.599365234375
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "google:rt-h-technical-report",
+    "source_sha256": "e38aaea90d294c347b89ba093b4561e00e8d8fd5875e57b086ed84402605d544",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      4,
+      6
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": "2",
+        "role": "architecture",
+        "bbox": [
+          45,
+          0,
+          567,
+          346
+        ],
+        "caption": "Fig. 2: RT-H Overview. Left: Our method leverages language to create an action hierarchy for policy learning. We separate the action prediction problem into a language motion query (πh), which predicts a fine-grained language motion like “move arm forward” using the image tokens and task description tokens, and an action query (πl), which flexibly decodes this language motion into actions using the context of the task and the scene. We leverage a single VLM for both queries based on RT-2 [4] that encapsulate the broad prior knowledge in internet-scale data at each level of the action hierarchy. Right: a user can intervene directly on the action query to provide language motion corrections to robot behavior, for example “move arm left” instead of “move arm forward” here (top). To learn from corrections, we can update only the language motion query with the newly labeled language motion corrections (bottom). Then we deploy the updated model back to the action hierarchy (orange block).",
+        "caption_bbox": [
+          48.95899963378906,
+          268.3961181640625,
+          563.0359497070312,
+          345.78741455078125
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 6,
+        "figure_number": "3",
+        "role": "results",
+        "bbox": [
+          45,
+          520,
+          567,
+          734
+        ],
+        "caption": "Fig. 3: Results on Diverse+Kitchen multi-task dataset, consisting of eight challenging evaluation tasks. 95% Wilson Score confidence intervals [54] are shown on the average success rates (left). RT-H outperforms RT-2 by 15% on average, getting higher performance on 6/8 of the tasks. Replacing language with class labels (RT-H-OneHot) drops performance significantly. Using action clusters via K-Means [55] instead of the automated motion labeling procedure leads to a minor drop in performance as well (RT-H-Cluster), demonstrating the utility of language motions as the intermediate action layer.",
+        "caption_bbox": [
+          48.95899963378906,
+          684.4714965820312,
+          563.0361938476562,
+          732.6483764648438
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "google:rt-trajectory-technical-report",
+    "source_sha256": "b2b00e9a23ac2ec401eba606e90b3f5009064c51e26b58cdc8b53d1e658363b9",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      7
+    ],
+    "figures": [
+      {
+        "page": 2,
+        "figure_number": "1",
+        "role": "overview",
+        "bbox": [
+          90,
+          70,
+          522,
+          360
+        ],
+        "caption": "Figure 1: We propose RT-Trajectory, a framework for utilizing coarse trajectory sketches for policy conditioning. We train on hindsight trajectory sketches (top left) and evaluate on inference trajectories (bottom left) produced via Trajectory Drawings, Human Videos, or Foundation Models. These trajectory sketches are used as task specification for an RT-1 (Brohan et al., 2023b) policy backbone (right). The trajectories visually describe the end-effector motions (curves) and gripper interactions (circles).",
+        "caption_bbox": [
+          107.6760025024414,
+          301.7800598144531,
+          504.3451843261719,
+          355.8310852050781
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 7,
+        "figure_number": "5",
+        "role": "results",
+        "bbox": [
+          104,
+          83,
+          508,
+          269
+        ],
+        "caption": "Figure 5: Success rates for unseen tasks when conditioning with human drawn sketches. Scenarios contain a variety of difficult settings which require combining seen motions in novel ways or generalizing to new motions. Each policy is evaluated for a total of 64 trials across 7 different scenarios.",
+        "caption_bbox": [
+          108.00499725341797,
+          232.2149658203125,
+          504.3572998046875,
+          264.0310363769531
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "google:robocat-technical-report",
+    "source_sha256": "ec66c1579baaada787820abf4ce99a9a59143b583ddcc6dfc4814623d1969831",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      3,
+      10
+    ],
+    "figures": [
+      {
+        "page": 3,
+        "figure_number": "1",
+        "role": "overview",
+        "bbox": [
+          50,
+          40,
+          560,
+          320
+        ],
+        "caption": "Figure 1: The self-improvement process. RoboCat is a multi-task, multi-embodiment visual goal-conditioned agent that can iteratively self-improve. A diverse training set is used to train an initial version of this generalist agent, which can be fine-tuned to new tasks with 100–1000 demonstrations and then deployed on real robots to generate much more data for these tasks. The resulting trajectories are then added to the training dataset for the next iteration of RoboCat, increasing the generalist’s repertoire of skills and improving performance across tasks. Our experiments demonstrate one successful iteration of this process.",
+        "caption_bbox": [
+          72.0,
+          241.33631896972656,
+          540.0731201171875,
+          305.12188720703125
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 10,
+        "figure_number": "Table 1",
+        "role": "results",
+        "bbox": [
+          70,
+          60,
+          542,
+          355
+        ],
+        "caption": "Table 1: Final RoboCat performance on evaluation tasks. This table lists the tasks used for training and fine-tuning of the final RoboCat agent, and highlights the set of tasks used in the self-improvement process. The success rates are averaged across all the respective evaluation task variations. For fine-tuning experiments, we report success rates when fine-tuning on 500 and 1000 demonstrations, respectively. Note that data from the fine-tuning tasks are unseen during generalist training and the fine-tuned agent only uses up to 1000 demonstrations alone for these new tasks.",
+        "caption_bbox": [
+          71.99998474121094,
+          288.26934814453125,
+          540.02685546875,
+          352.054931640625
+        ],
+        "caption_in_crop": true,
+        "visual_review": true,
+        "source_kind": "table"
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "meta:v-jepa-technical-report",
+    "source_sha256": "fb84f79be128e7425263e8674fbc3f2ec991575c4b5880556cfb8f5fa9fd91ba",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1
+    ],
+    "figures": [
+      {
+        "page": 1,
+        "figure_number": "1",
+        "role": "results",
+        "bbox": [
+          300,
+          370,
+          570,
+          645
+        ],
+        "caption": "Figure 1 V-JEPA models pretrained on video learn versatile visual representations. It performs well on motion-based tasks (Something-Something-v2) and appearance-based tasks (Kinetics 400) without adaptation of the model’s parameters, i.e., using the same frozen backbone for both tasks.",
+        "caption_bbox": [
+          314.135009765625,
+          588.68994140625,
+          556.6140747070312,
+          642.378173828125
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "microsoft:magma-technical-report",
+    "source_sha256": "df8e92d42a6b14f4298711d300fb23547bb95a2a1c9a81d6b3287ce96103b994",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      9
+    ],
+    "figures": [
+      {
+        "page": 1,
+        "figure_number": "1",
+        "role": "overview",
+        "bbox": [
+          55,
+          219,
+          557,
+          490
+        ],
+        "caption": "Figure 1. We introduce Magma, the first foundation model that is capable of interpreting and grounding multimodal inputs within its environment. Given a described goal, Magma is able to formulate plans and execute actions to achieve it. By effectively transferring knowledge from freely available visual and language data, Magma bridges verbal and spatial intelligence to navigate complex tasks.",
+        "caption_bbox": [
+          58.5,
+          456.7329406738281,
+          553.50537109375,
+          488.07635498046875
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 9,
+        "figure_number": "8",
+        "role": "results",
+        "bbox": [
+          55,
+          288,
+          557,
+          452
+        ],
+        "caption": "Figure 8. SimplerEnv performance comparison on Google Robots and Bridge. Magma(OXE) represents our model trained solely on Open-X-Embodiment (OXE) [22], while Magma is our pretrained model. Results for each task are averaged across visual matching and variant aggregation scenarios.",
+        "caption_bbox": [
+          58.499969482421875,
+          420.3499450683594,
+          553.5028686523438,
+          451.6923828125
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "nvidia:cosmos-transfer1-technical-report",
+    "source_sha256": "c9d0256d1a066ed7a165cb1f62b1fee097f15e776a7f792d1998379c6fb0a6d9",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      3,
+      12
+    ],
+    "figures": [
+      {
+        "page": 3,
+        "figure_number": "2",
+        "role": "architecture",
+        "bbox": [
+          55,
+          75,
+          560,
+          397
+        ],
+        "caption": "Figure 2: Cosmos-Transfer1 is a world generator with adaptive multimodal control. It contains multiple control branches to extract control information from different modality inputs such as segmentation, depth, and edge. We apply spatiotemporal control maps w = {w1, w2, ..., w𝑁} to weight the outputs computed by different control branches before channeling them back to the main generation branch. The spatiotemporal control map allows the model to leverage the most relevant modalities in different regions for optimal output quality.",
+        "caption_bbox": [
+          61.90399932861328,
+          338.0635681152344,
+          534.5762939453125,
+          395.74700927734375
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 12,
+        "figure_number": "Table 3",
+        "role": "results",
+        "bbox": [
+          58,
+          422,
+          538,
+          596.2
+        ],
+        "caption": "Table 3: Quantitative evaluation of Cosmos-Transfer1 on robotics Sim2Real data generation task, including single-control models and two multimodal control variants with different spatiotemporal control maps. Best results are in bold; second-best are underlined.",
+        "caption_bbox": [
+          62.0629997253418,
+          426.3785705566406,
+          533.0795288085938,
+          460.1510009765625
+        ],
+        "caption_in_crop": true,
+        "visual_review": true,
+        "source_kind": "table"
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "microsoft:flower-technical-report",
+    "source_sha256": "32093bdca8bd7503071cc08b0ef562efd20d1e06ebe7f482a6a342ee302525e7",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      7
+    ],
+    "figures": [
+      {
+        "page": 2,
+        "figure_number": "1",
+        "role": "architecture",
+        "bbox": [
+          105,
+          74.5,
+          507,
+          350
+        ],
+        "caption": "Figure 1: Intermediate fusion for efficient VLA policies. Our fusion strategy (top-right) strategi- cally prunes VLM layers while enhancing Flow Transformer capacity in parameter-constrained set- tings. This approach informs FLOWER, a novel, 950M VLA that achieves competitive performance across 10 benchmarks using only 1% of the pretraining compute of models like OpenVLA [1], while maintaining a small memory footprint across diverse embodiments and action spaces (bottom).",
+        "caption_bbox": [
+          108.0,
+          289.9825744628906,
+          504.0032958984375,
+          343.672119140625
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 7,
+        "figure_number": "5",
+        "role": "results",
+        "bbox": [
+          105,
+          0,
+          507,
+          247
+        ],
+        "caption": "Figure 5: Simulation Results for FLOWER We report average results for various benchmarks against relevant baselines. For brevity we reduce the shown baselines to most relevant ones but provide detailed results for each benchmark (see Appendix B. C refers to CALVIN and L refers to LIBERO. SGOL refers to average results for LIBERO Object, Goal, Spatial and Long.",
+        "caption_bbox": [
+          108.0,
+          202.56854248046875,
+          504.0033874511719,
+          245.34909057617188
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "google:autort-technical-report",
+    "source_sha256": "bd001b5d9f6259eb3c4afaeb3cbaba881c961d9eeda59091b492fe85b0d748b5",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      4,
+      9
+    ],
+    "figures": [
+      {
+        "page": 4,
+        "figure_number": "1",
+        "role": "overview",
+        "bbox": [
+          105,
+          65,
+          507,
+          419
+        ],
+        "caption": "Figure 1: System diagram for AutoRT. Each robot explores the environment, sampling a random navigation target close to objects. The scene and objects in it are described by a VLM to give text to an LLM, which generates manipulation tasks for the robot. Valid tasks are run by the robot, the episodes are scored, and the process repeats. No part of this requires advance knowledge of the layout of the environment or objects it contains, making it easy to run on a fleet of 20+ robots that are each in novel settings. Green sections are contributions of this work.",
+        "caption_bbox": [
+          107.99998474121094,
+          358.4654541015625,
+          504.00469970703125,
+          417.50341796875
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 9,
+        "figure_number": "Table 4",
+        "role": "safety_evaluation",
+        "bbox": [
+          105,
+          249,
+          507,
+          340
+        ],
+        "caption": "Table 4: Effect of constitutional prompting on safety of proposed tasks",
+        "caption_bbox": [
+          177.4329833984375,
+          251.6983184814453,
+          434.56927490234375,
+          261.6609191894531
+        ],
+        "caption_in_crop": true,
+        "visual_review": true,
+        "source_kind": "table"
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "google:sara-rt-technical-report",
+    "source_sha256": "b9aec586c915b42251651f928a202f1d8b21febc36b5ad4cdd2e45746a422bdd",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      5
+    ],
+    "figures": [
+      {
+        "page": 1,
+        "figure_number": "1",
+        "role": "example",
+        "bbox": [
+          50,
+          220,
+          562,
+          425
+        ],
+        "caption": "Fig. 1: Robotics Transformer policies obtained via Self-Adaptive Robust Attention (SARA) in action for three different modalities: vision, language and point clouds and varying sequence lengths (from ∼200 to few thousand). Left: A 5B vision-language-action model from the RT-2 class [1] (sequence length: L = 196). The manipulation policy is conditioned on the text instruction. Right: A Point Cloud Transformer (PCT) ([2]) for grasping (point cloud sizes L ∈[800, 4000]) and an exemplary PC input. Both policies use linear attention up-trained with SARA and provide computational speedups while maintaining high quality.",
+        "caption_bbox": [
+          54.0,
+          371.25445556640625,
+          558.0022583007812,
+          420.8274230957031
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 5,
+        "figure_number": "6",
+        "role": "results",
+        "bbox": [
+          300,
+          200,
+          565,
+          373.5
+        ],
+        "caption": "Fig. 6: Speed tests for SARA-PCT and regular PCT. Reported are mean inference times (averaged over l = 10 random seeds) for PCT encoders (as well as the corresponding standard deviations; see: shaded regions) as functions of the point cloud size.",
+        "caption_bbox": [
+          313.2,
+          333.7424621582031,
+          558.0039672851562,
+          373.35
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "tencent:hy-embodied-vlm-1-0",
+    "source_sha256": "d39c3dee5a4bd9126b7b65dee63a09d2ea8268c7e000c48f50f41de11496ab68",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      4
+    ],
+    "figures": [
+      {
+        "role": "results",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 1,
+        "bbox": [
+          106.64,
+          515.0,
+          505.0,
+          742.0
+        ],
+        "caption": "Fig. 1: Performance Comparison. Hy-Embodied-VLM-1.0 consistently outperforms strong VLM baselines of comparable scale across the three capability levels of our embodied intelligence taxonomy, achieving the best overall performance across all 38 benchmarks.",
+        "figure_number": 1,
+        "caption_bbox": [
+          107.64,
+          700.41,
+          504.0,
+          732.38
+        ]
+      },
+      {
+        "role": "overview",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 4,
+        "bbox": [
+          103.0,
+          85.0,
+          510.0,
+          435.0
+        ],
+        "caption": "Fig. 2: Capability Taxonomy of Hy-Embodied-VLM-1.0. We organize embodied intelligence into a three-level hierarchy that progresses from action-relevant state understanding, to action-transition reasoning, and finally to sequential and adaptive reasoning. The first level builds an actionable representation of the current physical scene; the second level grounds immediate actions and reasons about the local transitions they induce; and the third level composes and revises decisions over time through planning, navigation, reflection, and recovery. This taxonomy guides our data construction and benchmark evaluation, linking perception, action, and feedback into a unified capability progression.",
+        "figure_number": 2,
+        "caption_bbox": [
+          107.7,
+          339.31,
+          504.0,
+          426.01
+        ]
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "agibot:genie-envisioner",
+    "source_sha256": "d8802a311ff9db058bf8f25cb5ccc03711e32b11cd5f02a1759324ddb3cfbd71",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      10
+    ],
+    "figures": [
+      {
+        "role": "architecture",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 2,
+        "bbox": [
+          65.0,
+          90.0,
+          545.0,
+          540.0
+        ],
+        "caption": "Figure 1: Overview of the Genie Envisioner World Foundation Platform. Genie Envisioner is a unified world foundation platform that integrates manipulation policy learning and evaluation within a single video-generative framework. At its core lies GE-Base, a large-scale world model that encodes the spatial, temporal, and semantic structure of robotic interactions. Built around it are two key functional modules: GE-Act, a world action model that infers instruction-conditioned policies, and GE-Sim, a video-based WORLD SIMULATOR that enables closed-loop execution through action-conditioned generation. The platform is complemented by EWMBench, an integrated evaluation suite that assesses visual fidelity, physical plausibility, and instruction-policy alignment. GE thus provides a practical and scalable foundation for general intelligence embodiment.",
+        "figure_number": 1,
+        "caption_bbox": [
+          70.87,
+          431.05,
+          541.14,
+          524.87
+        ]
+      },
+      {
+        "role": "results",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 10,
+        "bbox": [
+          65.0,
+          385.0,
+          545.0,
+          572.0
+        ],
+        "caption": "Figure 8: Comparison of Task-Specific Real-World Robotic Manipulation Performance on the AgiBot G1 Platform. We compare GE-Act with state-of-the-art VLA baselines across multiple real-world dual-arm robotic tasks, using two evaluation metrics to assess performance.",
+        "figure_number": 8,
+        "caption_bbox": [
+          70.4,
+          535.78,
+          542.88,
+          569.67
+        ]
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "tencent:hy-embodied-rxbrain-1-0",
+    "source_sha256": "47ec36ffe00b17413e6151da4b519fdaa1614115264844a6589c1d04bdbfa3d9",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      5,
+      16
+    ],
+    "figures": [
+      {
+        "role": "architecture",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 5,
+        "bbox": [
+          65.0,
+          100.0,
+          530.0,
+          400.0
+        ],
+        "caption": "Figure 2: Architecture overview of RxBrain. The model adopts a modality-aware MoT architecture to jointly process visual input tokens, text tokens, and generated vision tokens. Visual tokens are handled by a shared vision backbone with full attention, where understanding and generation tokens share attention projections but are routed to separate FFN experts. Text tokens are processed by the Language Transformer with global causal attention for autoregressive generation. Generated vision tokens are decoded through a VAE decoder. Different token colors indicate visual inputs, text inputs/outputs, and generated visual outputs.",
+        "figure_number": 2,
+        "caption_bbox": [
+          70.56,
+          310.35,
+          524.41,
+          386.2
+        ]
+      },
+      {
+        "role": "results",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 16,
+        "bbox": [
+          65.0,
+          60.0,
+          540.0,
+          460.0
+        ],
+        "caption": "Table 1: Main comparison on embodied reasoning and image generation benchmarks. RxBrain is compared against representative open and released vision–language and embodied models across 19 benchmarks, grouped into four families: text-to-image generation, embodied and spatial reasoning, robot affordance/ trajectory/placement, and multi-view/3D understanding. GenEval measures general open-domain text-to-image generation to demonstrate model’s world knowledge generation ability. Larger models, family-specific variants, sparsely evaluated models, diagnostic splits, and benchmarks without reported RxBrain results are included in the full comparison in the appendix. Benchmarks are listed as rows and models as columns; higher is better for all metrics and “–” marks entries that are not applicable or not reported. RoboSpatial-Home is split into its context/compatibility/ configuration sub-rows. Best result per row is in bold, and second-best result is underlined.",
+        "figure_number": "Table 1",
+        "caption_bbox": [
+          70.45,
+          71.22,
+          526.16,
+          179.99
+        ],
+        "source_kind": "table"
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "tencent:hy-embodied-0-5-vla",
+    "source_sha256": "f49c09ef1aa7efbb995cdfc97f6fcf01ee3e8e09b967f61ff4d678992271bd60",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      3,
+      15
+    ],
+    "figures": [
+      {
+        "role": "architecture",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 3,
+        "bbox": [
+          100.0,
+          480.0,
+          515.0,
+          720.0
+        ],
+        "caption": "Fig. 2: Architectural overview of HyVLA-0.5. The framework adopts a MoT architecture to facilitate cross-modal interactions via a shared joint-attention mechanism. To effectively process K-frame multi- view RGB sequences, the image encoder is extended into a compact memory encoder. Specifically, temporal attention blocks are interleaved every four layers to enforce causal masking across the temporal dimension and seamlessly incorporate historical visual context. As depicted on the right, the attention mask demonstrates our block-wise causal attention strategy. Following Hy-Embodied- 0.5 [15], we apply local bidirectional attention to model the multi-view observations.",
+        "figure_number": 2,
+        "caption_bbox": [
+          107.75,
+          637.39,
+          505.67,
+          713.01
+        ]
+      },
+      {
+        "role": "results",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 15,
+        "bbox": [
+          100.0,
+          80.0,
+          515.0,
+          320.0
+        ],
+        "caption": "Fig. 9: Real-robot evaluation on six bimanual manipulation tasks. Left panel: Snapshots of representative task executions captured during rollout. Right panel: Per-task success rates (%) after supervised fine-tuning on tele-operated or UMI demonstrations.",
+        "figure_number": 9,
+        "caption_bbox": [
+          108.0,
+          266.64,
+          504.17,
+          298.62
+        ]
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "galaxea:galaxea-open-world-dataset-g0-vla",
+    "source_sha256": "151aa3493bcf6c52a62a30e0f84a1ba686dd22a84fc7de602a92abd5e49639c1",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      8,
+      10
+    ],
+    "figures": [
+      {
+        "role": "architecture",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 8,
+        "bbox": [
+          90.0,
+          50.0,
+          520.0,
+          370.0
+        ],
+        "caption": "Figure 7: G0-VLA architecture and our 3-stage training pipeline. Stage 1 pre-trains a vision-language model on cross-embodiment data in an autoregressive manner. Stage 2 and post-train share the same model structure, trained on Galaxea open-world data with embodiment-specific views and high-level and subtask instructions, by supervising the Action Transformer’s action reconstruction with a flow-matching loss. Color codes indicate token modalities.",
+        "figure_number": 7,
+        "caption_bbox": [
+          107.64,
+          310.12,
+          504.0,
+          363.65
+        ]
+      },
+      {
+        "role": "results",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 10,
+        "bbox": [
+          48.0,
+          40.0,
+          525.0,
+          270.0
+        ],
+        "caption": "Figure 9: Fine-tuning benchmark results of different pre-trained VLAs. G0 (Full) achieves the highest average progress score, excelling in object-picking tasks such as Table Bussing, Microwave Operation, and Bed Making. G0 (Stage-2) lead in language following, action consistency, and whole-body control. G0 (Stage-1) performs the worst among pre-trained models, highlighting the necessity of uniform-embodiment pre-training.",
+        "figure_number": 9,
+        "caption_bbox": [
+          107.64,
+          200.81,
+          504.0,
+          254.53
+        ]
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "agibot:agibot-world-colosseo-go-1",
+    "source_sha256": "200a3029108f26c3408b827f4d45d16dc19d7468864fb5a46458172756c5e737",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      6,
+      7
+    ],
+    "figures": [
+      {
+        "role": "architecture",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 6,
+        "bbox": [
+          45.0,
+          40.0,
+          570.0,
+          285.0
+        ],
+        "caption": "Fig. 4: We propose GO-1, a generalist policy featuring general reasoning and long-horizon planning capabilities. The latent action model (LAM) learns universal action representations from web-scale video data (i.e., human videos from Ego4D), and quantizes them into discrete latent action tokens. The latent planner conducts temporal reasoning through latent action prediction, bridging the gap between image-text inputs and robot actions generated by the action expert.",
+        "figure_number": 4,
+        "caption_bbox": [
+          54.0,
+          230.3,
+          558.0,
+          276.22
+        ]
+      },
+      {
+        "role": "results",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 7,
+        "bbox": [
+          45.0,
+          40.0,
+          570.0,
+          225.0
+        ],
+        "caption": "Fig. 5: Is GO-1 a more powerful robot generalist policy? We evaluate GO-1 against previous generalist policy RDT-1B and our baseline without the latent planner, with all policies pre-trained on AgiBot World beta. Across all tasks and comparisons, GO-1 outperforms baselines by a large margin. The incorporation of latent planner boosts performance on complex tasks such as “Fold Shorts” and improves generalizability in task “Restock Beverage” in great extent.",
+        "figure_number": 5,
+        "caption_bbox": [
+          54.0,
+          171.27,
+          558.0,
+          217.19
+        ]
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "bytedance:gr-dexter-technical-report",
+    "source_sha256": "5ff86922a33f99488656858bbd49f386d77d933847fd2c60c8d2f0e78de2ac43",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      9
+    ],
+    "figures": [
+      {
+        "role": "overview",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 2,
+        "bbox": [
+          65.0,
+          60.0,
+          545.0,
+          390.0
+        ],
+        "caption": "Figure 1 GR-Dexter performs dexterous long-horizon daily tasks and generalizes to out-of-domain settings by learning from four data sources: vision–language, cross-embodiment, human-trajectory, and robot-trajectory data.",
+        "figure_number": 1,
+        "caption_bbox": [
+          70.87,
+          348.09,
+          541.17,
+          369.43
+        ]
+      },
+      {
+        "role": "results",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 9,
+        "bbox": [
+          85.0,
+          85.0,
+          525.0,
+          422.0
+        ],
+        "caption": "Figure 8 Experiment settings and Results of Generalizable Pick-and-Place.",
+        "figure_number": 8,
+        "caption_bbox": [
+          148.21,
+          408.86,
+          463.79,
+          419.38
+        ]
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "tencent:hy-embodied-0-5",
+    "source_sha256": "6039d1d553836f0483e7fdd037205700c2e1216426fd100a28ceddff0de4765a",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      5,
+      23
+    ],
+    "figures": [
+      {
+        "role": "architecture",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 5,
+        "bbox": [
+          95.0,
+          62.0,
+          515.0,
+          395.0
+        ],
+        "caption": "Fig. 2: HY-Embodied-0.5 Mixture-of-Transformers Architecture. The MoT design decouples the processing of visual and textual tokens by employing modality-specific QKV and FFN layers, alongside distinct attention mechanisms. Visual latent tokens and mixed optimization loss are employed to bridge and stress the relationships between modalities during large- scale training.",
+        "figure_number": 2,
+        "caption_bbox": [
+          108.0,
+          337.21,
+          505.65,
+          391.03
+        ]
+      },
+      {
+        "role": "results",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 23,
+        "bbox": [
+          95.0,
+          75.0,
+          515.0,
+          350.0
+        ],
+        "caption": "Fig. 13: Robot Experimental Setup and Success Rates for the Evaluated Tasks. (a) Real- world setup of three representative tasks. Our platform employs a dual-arm Xtrainer equipped with head-mounted and wrist-mounted cameras. The benchmark includes: (1) Precision Plug-in Packing, (2) Tableware Stacking, and (3) Mug Hanging. Success rates are evaluated over 20 trials per task. (b) Object poses are randomly initialized at the start of each trial. We conduct 20 real-robot trials per task per model. The success rates (%) are summarized above.",
+        "figure_number": 13,
+        "caption_bbox": [
+          107.58,
+          253.17,
+          505.65,
+          329.06
+        ]
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "bytedance:gr-2-generative-video-language-action-model",
+    "source_sha256": "8b9bf7c3de182ce263ca65d103fc3a84aa0c70d13aa88f6b8dd5cdf5df2f5f3a",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      8
+    ],
+    "figures": [
+      {
+        "role": "overview",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 2,
+        "bbox": [
+          85,
+          70,
+          525,
+          386
+        ],
+        "caption": "Figure 1: Overview. GR-2 undegoes two stages of training: video generation pre-training and robot data fine-tuning.",
+        "figure_number": 1,
+        "caption_bbox": [
+          90.0,
+          363.71,
+          522.0,
+          384.75
+        ]
+      },
+      {
+        "role": "results",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 8,
+        "bbox": [
+          320,
+          340,
+          530,
+          496.6
+        ],
+        "caption": "Figure 9: Success Rates of End-to-End Bin Pick- ing.",
+        "figure_number": 9,
+        "caption_bbox": [
+          323.58,
+          474.82,
+          523.66,
+          495.62
+        ]
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "bytedance:gr-1-large-scale-video-generative-pretraining",
+    "source_sha256": "9a623a395e4eb6229e125f9b037603084421fbec775069e13eda71c941599ae5",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      6
+    ],
+    "figures": [
+      {
+        "role": "overview",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 2,
+        "bbox": [
+          100,
+          60,
+          515,
+          325
+        ],
+        "caption": "Figure 1: Overview of GR-1. GR-1 is first pre-trained on the task of video prediction with a large- scale video dataset. It is then finetuned on robot data to learn multi-task visual robot manipulation.",
+        "figure_number": 1,
+        "caption_bbox": [
+          108.0,
+          302.58,
+          504.0,
+          323.59
+        ]
+      },
+      {
+        "role": "results",
+        "caption_in_crop": true,
+        "visual_review": true,
+        "page": 6,
+        "bbox": [
+          100.0,
+          70.0,
+          510.0,
+          370.0
+        ],
+        "caption": "Table 1: CALVIN Benchmark Results.",
+        "figure_number": "Table 1",
+        "caption_bbox": [
+          228.71,
+          81.98,
+          383.3,
+          91.94
+        ],
+        "source_kind": "table"
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "nvidia:dreamdojo-technical-report",
+    "source_sha256": "c8f02e22c8fbe98e0b50215e10e1f6baf2f589b1987e5c6dc07175bfe6fe8587",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      3,
+      12
+    ],
+    "figures": [
+      {
+        "page": 3,
+        "figure_number": 1,
+        "role": "overview",
+        "bbox": [
+          59,
+          78,
+          537,
+          354
+        ],
+        "caption": "Figure 1: DreamDojo overview. DreamDojo acquires comprehensive physical knowledge from large-scale\nhuman datasets by utilizing latent actions as unified labels. After post-training and distillation on the target\nrobots, our model can predict the future world in real time with continuous action controls. DreamDojo\ncan robustly generalize to various objects and environments, facilitating large-scale policy evaluation without\nreal-world deployment. It also enables live teleoperation and online model-based planning.",
+        "caption_bbox": [
+          62.36199951171875,
+          290.9173583984375,
+          533.2216186523438,
+          348.635009765625
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 12,
+        "figure_number": "Table 4",
+        "role": "results",
+        "bbox": [
+          59,
+          81,
+          538,
+          179
+        ],
+        "caption": "Table 4: Human preference evaluation in diverse out-of-distribution scenarios. DreamDojo outperforms\nthe pretrained Cosmos-Predict2.5 by a non-trivial margin. Our DreamDojo-14B demonstrates the most\ncompetitive performance in both physics correctness and action following.",
+        "caption_bbox": [
+          62.0629997253418,
+          140.1513671875,
+          533.079345703125,
+          173.9739990234375
+        ],
+        "caption_in_crop": true,
+        "visual_review": true,
+        "source_kind": "table"
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
+  },
+  {
+    "id": "nvidia:dreamgen-technical-report",
+    "source_sha256": "e4e2c5c9e664d9331adb49c230053a76cf5bb4c3501341f4d9b372ecc585684c",
+    "reviewed_at": "2026-10-14",
+    "status": "reviewed_with_selected_figures",
+    "inspected_pages": [
+      1,
+      2,
+      6
+    ],
+    "figures": [
+      {
+        "page": 2,
+        "figure_number": 2,
+        "role": "overview",
+        "bbox": [
+          69,
+          54,
+          544,
+          387
+        ],
+        "caption": "Figure 2: DREAMGEN Overview. We begin by fine-tuning a video world model on teleoperated robot trajectories.\nGiven an initial frame and a language instruction, the model generates video rollouts depicting the intended behavior.\nAs these videos lack action annotations, we infer pseudo-actions using either a latent action model or an inverse\ndynamics model, forming what we call neural trajectories. Finally, we train visuomotor robot policies on these neural\ntrajectories.",
+        "caption_bbox": [
+          72.0,
+          328.2025146484375,
+          540.0043334960938,
+          381.8920593261719
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      },
+      {
+        "page": 6,
+        "figure_number": 5,
+        "role": "results",
+        "bbox": [
+          69,
+          56,
+          544,
+          488
+        ],
+        "caption": "Figure 5: Real-world Robot Evaluation Results. The red rectangular box shows the range of object randomization\nduring training and evaluation. Low Data denotes training 10% of available training data (only 10 trajectories per task\nexcept for GR1-folding, where we used 25 trajectories), and Low Data + Neural Traj. denotes co-training with neural\ntrajectories.",
+        "caption_bbox": [
+          72.0,
+          439.6675109863281,
+          540.0023193359375,
+          482.44805908203125
+        ],
+        "caption_in_crop": true,
+        "visual_review": true
+      }
+    ],
+    "reason_en": "Selectively inspected source pages and exact figure crops for original architecture, overview and experimental results; full original captions retained. This is not an all-page document audit.",
+    "reason_cn": "选择性核对原始页面与准确裁切图，保留原生架构、概览、实验结果及完整图注，不宣称整篇逐页审查。"
   }
 ]

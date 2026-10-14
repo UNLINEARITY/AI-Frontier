@@ -137,6 +137,7 @@ Current flagships and important new models, with original reports and official i
 | Embeddings | Nemotron 3 Embed 1B / 8B | [Official](https://huggingface.co/nvidia/Nemotron-3-Embed-8B-BF16) |
 | Robotics & VLA | GR00T N1.7 | [Read](abstracts/nvidia/gr00t-n1-7.md) · [Official](https://github.com/NVIDIA/Isaac-GR00T) |
 | Embodied reasoning & planning / World models & simulation | Cosmos 3 | [Technical Report](abstracts/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai.md) · [Official](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) |
+| World models & simulation | DreamDojo | [Technical Report](abstracts/nvidia/dreamdojo-technical-report.md) · [Official](https://github.com/NVIDIA/DreamDojo) |
 | World models & simulation | Cosmos 3 Edge | [Technical Report](abstracts/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai.md) · [Official](https://huggingface.co/nvidia/Cosmos3-Edge) |
 
 <a id="deepseek"></a>
@@ -244,6 +245,9 @@ Current flagships and important new models, with original reports and official i
 | Video generation | HunyuanVideo 1.5 | [Technical Report](abstracts/tencent/hunyuan-video-1-5.md) · [Official](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |
 | Translation | Hy-MT2 | [Technical Report](abstracts/tencent/hy-mt2.md) · [Official](https://github.com/Tencent-Hunyuan/Hy-MT2) |
 | Document understanding | WeVisDoc-4B / 2B | [Technical Report](abstracts/tencent/wevisdoc.md) · [Official](https://huggingface.co/tencent/WeVisDoc-4B) |
+| Robotics & VLA / Robot manipulation | Hy-Embodied-0.5-VLA | [Technical Report](abstracts/tencent/hy-embodied-0-5-vla.md) · [Official](https://github.com/Tencent-Hunyuan/Hy-Embodied-0.5-VLA) |
+| Robot navigation / Embodied reasoning & planning | Hy-Embodied-VLM-1.0 | [Technical Report](abstracts/tencent/hy-embodied-vlm-1-0.md) · [Official](https://github.com/Tencent-Hunyuan/HY-Embodied) |
+| Embodied reasoning & planning | Hy-Embodied-RxBrain-1.0 | [Technical Report](abstracts/tencent/hy-embodied-rxbrain-1-0.md) · [Official](https://github.com/Tencent-Hunyuan/Hy-Embodied-RxBrain-1.0) |
 | World models & simulation | HY-World 1.5 / WorldPlay | [Technical Report](abstracts/tencent/worldplay-technical-report.md) · [Official](https://github.com/Tencent-Hunyuan/HY-WorldPlay) |
 | 3D generation | Hunyuan3D 3.1 | [Official](https://cloud.tencent.com/document/product/1804/123447) |
 

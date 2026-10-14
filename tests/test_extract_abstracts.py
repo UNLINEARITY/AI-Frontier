@@ -30,6 +30,75 @@ def page(*blocks):
 
 
 class AbstractTests(unittest.TestCase):
+    def test_unlabelled_embodied_overview_precedes_introduction(self):
+        text = 'Building capable embodied agents requires physical understanding. ' * 4
+        section = extract.choose_section([page(block('Paper title', 20), block(text, 11),
+                                              block('1 Introduction', 13), block('Longer background discussion. ' * 5, 11))])
+        self.assertEqual(section['section_type'], 'opening_summary')
+        self.assertIsNone(section['source_heading'])
+        self.assertEqual(section['raw_text'], text.strip())
+
+    def test_introduction_continues_below_an_interleaved_figure(self):
+        first = 'This report describes an embodied model and evaluates the model’s'
+        second = 'proficiency in the physical tasks and its measured safety outcomes.'
+        section = extract.choose_section([page(block('1 Introduction', 12), block(first, 10)),
+                                          page(block('Figure 1 | Benchmark setup.', 9), block(second, 10),
+                                               block('2 Evaluation', 12))])
+        self.assertEqual(section['raw_text'], first+'\n\n'+second)
+        self.assertTrue(section['boundary_found'])
+        self.assertNotIn('Benchmark setup', section['raw_text'])
+
+    def test_abbreviated_figure_caption_is_not_an_abstract_continuation(self):
+        opening = 'We present a generalist policy with a complete original abstract. ' * 3
+        ending = 'The original abstract ends with measured task results.'
+        section = extract.choose_section([page(block('Abstract—' + opening, 9)),
+                                          page(block(ending, 9), block('Fig. 2: This is an image caption.', 10),
+                                               block('I. INTRODUCTION', 10))])
+        self.assertEqual(section['raw_text'], opening.strip()+'\n\n'+ending)
+        self.assertTrue(section['boundary_found'])
+        self.assertNotIn('image caption', section['raw_text'])
+
+    def test_roman_ieee_heading_ends_abstract_before_main_text(self):
+        text = 'We present the policy and its measured robot control results. ' * 3
+        section = extract.choose_section([page(block('Abstract—' + text, 9),
+                                              block('I. INTRODUCTION & RELATED WORK', 10),
+                                              block('This is not the abstract.', 10))])
+        self.assertTrue(section['boundary_found'])
+        self.assertEqual(section['raw_text'], text.strip())
+
+    def test_line_positioned_abstract_keeps_smaller_body_font(self):
+        lines = ['The model learns robotic manipulation from diverse tasks and embodiments.',
+                 'Its original evaluation reports generalization across these source tasks.']
+        section = extract.choose_section([page(block('Abstract', 12),
+                                              *(block(line, 10) for line in lines),
+                                              block('1 Introduction', 12))])
+        self.assertEqual(section['raw_text'], '\n\n'.join(lines))
+        self.assertTrue(section['boundary_found'])
+
+    def test_explicit_archive_reader_does_not_require_a_current_model(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = dict(vendor='google', slug='rt-1', title='RT-1', reading_models=['RT-1'])
+            (root/'sources.json').write_text(json.dumps([source]))
+            (root/'model-coverage.json').write_text(json.dumps(dict(models=[])))
+            rows = [dict(vendor='google', title='RT-1', local_path='pdfs/old.pdf', sha256='1'*64,
+                         status='archived', source_updated_date='2022-12-13', retrieved_at='2026-10-14'),
+                    dict(vendor='google', title='RT-1', local_path='pdfs/revised.pdf', sha256='2'*64,
+                         status='archived', source_updated_date='2023-08-03', retrieved_at='2026-10-14')]
+            with (root/'catalog.csv').open('w', newline='') as stream:
+                writer = csv.DictWriter(stream, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
+            with patch.object(extract, 'ROOT', root):
+                reports, missing = extract.current_reports()
+                self.assertEqual(missing, [])
+                self.assertEqual(len(reports), 1)
+                self.assertEqual(reports[0]['reader_scope'], 'archive')
+                self.assertEqual(reports[0]['models'], ['RT-1'])
+                self.assertEqual(reports[0]['row']['local_path'], 'pdfs/revised.pdf')
+                source['reading_models'] = []
+                (root/'sources.json').write_text(json.dumps([source]))
+                with self.assertRaisesRegex(ValueError, 'Invalid archive reading'):
+                    extract.current_reports()
+
     def test_superseded_pdf_reader_is_retained_with_exact_historical_binding(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

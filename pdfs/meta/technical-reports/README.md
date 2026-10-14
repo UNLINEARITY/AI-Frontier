@@ -2,7 +2,7 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**28 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**29 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
@@ -21,6 +21,7 @@
 | 2024-08-01 | [SAM 2: Segment Anything in Images and Videos](https://arxiv.org/abs/2408.00714) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2408.00714) |
 | 2024-07-31 | [The Llama 3 Herd of Models](https://arxiv.org/abs/2407.21783) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2407.21783) |
 | 2024-05-16 | [Chameleon: Mixed-Modal Early-Fusion Foundation Models](https://arxiv.org/abs/2405.09818) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2405.09818) |
+| 2024-02-15 | [Revisiting Feature Prediction for Learning Visual Representations from Video](https://arxiv.org/abs/2404.08471) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2404.08471) |
 | 2023-12-08 | [Seamless: Multilingual Expressive and Streaming Speech Translation](https://arxiv.org/abs/2312.05187) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2312.05187) |
 | 2023-12-07 | [Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations](https://arxiv.org/abs/2312.06674) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2312.06674) |
 | 2023-08-24 | [Code Llama: Open Foundation Models for Code](https://arxiv.org/abs/2308.12950) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2308.12950) |

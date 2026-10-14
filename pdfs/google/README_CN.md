@@ -8,7 +8,7 @@
 
 | 类型 | 已收录报告 |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 41 |
+| [技术报告](technical-reports/README_CN.md) | 48 |
 | [模型卡](model-cards/README_CN.md) | 34 |
 | [系统卡](system-cards/README_CN.md) | 1 |
 
@@ -40,13 +40,20 @@
 | 2024-06-17 | [CodeGemma: Open Code Models Based on Gemma](https://deepmind.google/models/gemma/codegemma/) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://deepmind.google/models/gemma/codegemma/) |
 | 2024-03-13 | [Gemma: Open Models Based on Gemini Research and Technology](https://arxiv.org/abs/2403.08295) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2403.08295) |
 | 2024-03-08 | [Gemini 1.5 Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=105) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=105) |
+| 2024-03-04 | [RT-H: Action Hierarchies Using Language](https://arxiv.org/abs/2403.01823) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2403.01823) |
+| 2024-01-23 | [AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents](https://arxiv.org/abs/2401.12963) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2401.12963) |
 | 2023-12-19 | [Gemini 1.0 Technical Report](https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf#page=71) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf#page=71) |
 | 2023-12-06 | [AlphaCode 2 Technical Report](https://deepmind.google/AlphaCode2_Tech_Report.pdf) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://deepmind.google/AlphaCode2_Tech_Report.pdf) |
+| 2023-12-04 | [SARA-RT: Scaling up Robotics Transformers with Self-Adaptive Robust Attention](https://arxiv.org/abs/2312.01990) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2312.01990) |
+| 2023-11-03 | [Robotic Task Generalization via Hindsight Trajectory Sketches](https://arxiv.org/abs/2311.01977) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2311.01977) |
 | 2023-10-13 | [PaLI-3 Vision Language Models: Smaller, Faster, Stronger](https://arxiv.org/abs/2310.09199) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2310.09199) |
+| 2023-10-13 | [Open X-Embodiment: Robotic Learning Datasets and RT-X Models](https://arxiv.org/abs/2310.08864) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2310.08864) |
 | 2023-07-28 | [RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control](https://arxiv.org/abs/2307.15818) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2307.15818) |
+| 2023-06-20 | [RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation](https://arxiv.org/abs/2306.11706) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2306.11706) |
 | 2023-05-17 | [PaLM 2 Technical Report](https://arxiv.org/abs/2305.10403) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2305.10403) |
 | 2023-03-06 | [PaLM-E: An Embodied Multimodal Language Model](https://arxiv.org/abs/2303.03378) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2303.03378) |
 | 2023-01-26 | [MusicLM: Generating Music From Text](https://arxiv.org/abs/2301.11325) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2301.11325) |
+| 2022-12-13 | [RT-1: Robotics Transformer for Real-World Control at Scale](https://arxiv.org/abs/2212.06817) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2212.06817) |
 | 2022-10-05 | [Imagen Video: High Definition Video Generation with Diffusion Models](https://arxiv.org/abs/2210.02303) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2210.02303) |
 | 2022-09-14 | [PaLI: A Jointly-Scaled Multilingual Language-Image Model](https://arxiv.org/abs/2209.06794) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2209.06794) |
 | 2022-06-22 | [Scaling Autoregressive Models for Content-Rich Text-to-Image Generation](https://arxiv.org/abs/2206.10789) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2206.10789) |

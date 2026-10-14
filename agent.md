@@ -48,6 +48,8 @@ Datasets and benchmarks may support a model report but are not frontier model en
 
 For future source-grounded technical analysis, record the embodiment, action representation/space, sensing/proprioception, control frequency and latency hardware, training data, adaptation regime, and real-world versus simulation protocol. Keep task/trial counts, success definitions, resets/human interventions, seen/unseen environments/objects, and zero-shot versus fine-tuned conditions attached to results. Separate execution evidence from video realism; retain reported failure/contact/safety limits. Describe provider claims as reported results rather than establishing a cross-lab ranking from incompatible tasks or selected demo videos. Do not add these analysis fields to public summaries until they have actually been extracted and verified.
 
+Selected foundational and historical reports may set `reading_models` in the source registry to receive the same unified original overview and figure reader without becoming current frontier entries. These archive readers remain in the reading index; superseded frontier readers retained only for old URLs remain historical.
+
 The current stage includes PDF collection, indexing, native source-summary extraction, and visually selected core-figure export. Full-document OCR, technical-detail analysis, and automatic discovery remain future work. A static GitHub Pages browser is implemented; deployment status must be verified separately.
 
 All PDFs, including original reports and cropped figure PDFs, are local-only and ignored by Git. Public Markdown and Pages link to official sources and publish derived PNG figures; never create a link to a repository PDF. Use ordinary Git. Do not enable Git LFS. A PDF larger than 100 MiB is recorded as `oversized` with its official link; do not compress, split, or rewrite the publisher's original file to fit the limit.
@@ -130,6 +132,7 @@ Each source record uses these fields:
 | `notes` | Evidence, date precision, identity clarifications, and limits of the source search |
 | `alternate_pdf_urls` | Optional verified alternate official download endpoints |
 | `metadata_url` | Optional curation reference; not exported as a catalog column |
+| `reading_models` | Optional nonempty list of verified model/policy names for an explicitly selected archive reader; does not change frontier or lifecycle selections |
 
 Prefer publisher websites, official repositories, and author-submitted arXiv papers. Confirm the PDF title and model identity, not just its filename. Do not guess CDN paths or archive an unrelated PDF linked from a model-card page.
 

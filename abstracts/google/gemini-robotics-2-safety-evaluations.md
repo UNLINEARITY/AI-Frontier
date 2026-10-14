@@ -10,8 +10,6 @@ In Figure 1, we sketch a simplified system diagram for benchmarking such collabo
 
 In this report, we leverage diverse scene and instruction contexts to explicitly quantify the Agent’s
 
-Figure 1 | Benchmark Setup for Safety Orchestration and Uncertainty Resolution
-
 proficiency in making the routing decisions described above — whether delegating to the VLA, querying the human, or triggering safety tools. We design an offline “one-step" and multiturn (using VLA tool emulation) benchmark. We also perform real-world evaluations of safe stopping behaviors on the Apptronik Apollo2 Humanoid, powered by the Gemini Robotics 2 model family.
 
 While we advocate for a broader definition of collaborative safety, this report focuses primarily on the high-level semantic reasoning and orchestration capabilities of the Agent. This work does not evaluate the underlying functional safety architecture – including certified hardware components, redundancy mechanisms, and real-time system guarantees – necessary to safely execute those decisions in a compliant physical deployment.

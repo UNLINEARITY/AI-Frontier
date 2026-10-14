@@ -25,7 +25,7 @@ HEADINGS = {
     'model architecture': ('model_architecture', 6),
 }
 KNOWN_BOUNDARIES = re.compile(r'^(?:model dependencies|model architecture|architecture|modalities|context length|total model size|inputs|outputs|training|training data|limitations|intended use|intended uses|model details|evaluation|evaluations|capabilities|safety|contents|table of contents|open-source code|open-weight model checkpoint|open synthetic dataset|open evaluation benchmark)$', re.I)
-OPENING = re.compile(r'^(?:We (?:introduce|present|describe|propose)|This (?:paper|report)|State[- ]of[- ]the[- ]art)', re.I)
+OPENING = re.compile(r'^(?:We (?:introduce|present|describe|propose)|This (?:paper|report)|State[- ]of[- ]the[- ]art|Building capable|General[- ]purpose robots|The past year has witnessed)', re.I)
 
 
 def compact(text):
@@ -97,11 +97,13 @@ def boundary(block, start_font):
     first = lines[0]
     if heading(block['text']):
         return True
-    if re.match(r'^(?:Figure|Table)\s+\d+[:.]|^(?:Webpage|Model weights):', first, re.I):
+    if re.match(r'^(?:Figure|Fig\.|Table)\s*\d+\s*[:.|]|^(?:Webpage|Model weights):', first, re.I):
         return True
     if KNOWN_BOUNDARIES.fullmatch(first.split(':', 1)[0]):
         return True
     if re.match(r'^\d+(?:\.\d+)*\.?\s+[A-Z]', first) and len(first) < 140:
+        return True
+    if re.match(r'^[IVX]+\.\s*[A-Z]', first) and len(first) < 140:
         return True
     return (len(lines) == 1 and len(first) < 100 and len(first.split()) < 12
             and not re.search(r'[.!?,;:]$', first) and block['font_size'] >= max(start_font * .98, 12))
@@ -132,7 +134,9 @@ def choose_section(pages):
         fragments = []
         start_block = pages[pi]['blocks'][bi]
         start_font = start_block['font_size']
-        body_font = start_font if len(remainder) > 120 else next((b['font_size'] for b in pages[pi]['blocks'][bi+1:] if usable(b, pages[pi]) and len(b['text']) > 120), start_font)
+        body_blocks = [b for b in pages[pi]['blocks'][bi+1:] if usable(b, pages[pi])]
+        short_line_font = next((b['font_size'] for b in body_blocks if len(b['text']) > 40 and len(b['text'].split()) >= 8), start_font)
+        body_font = start_font if len(remainder) > 120 else next((b['font_size'] for b in body_blocks if len(b['text']) > 120), short_line_font)
         # Label/value model-card tables require row geometry rather than text order.
         if kind in {'description', 'model_architecture'} and not remainder and start_block['bbox'][2] < pages[pi]['width'] * .35:
             values = [b for b in pages[pi]['blocks'] if b['bbox'][0] > start_block['bbox'][2] + 15
@@ -149,6 +153,10 @@ def choose_section(pages):
                 break
             for bn in range(bi if pn == pi else 0, len(page['blocks'])):
                 block = page['blocks'][bn]
+                # Introductions can continue across a page-top figure. Its caption
+                # is not prose and must not cut a sentence that resumes below it.
+                if kind == 'introduction' and re.match(r'^(?:Figure|Fig\.|Table)\s*\d+\s*[:.|]', block['text'].strip(), re.I):
+                    continue
                 # IEEE section headings can be smaller than the paragraph font.
                 # Recognize their boundary before filtering small body/annotation text.
                 if (pn != pi or bn != bi) and block['bbox'][2] >= page['width'] * .08 and boundary(block, start_font):
@@ -303,6 +311,18 @@ def current_reports():
         if not found:
             missing.append(dict(vendor=model['vendor'], model=model['model'],
                                 source_url=model.get('frontier_source_url', model['source_url'])))
+    # Explicit archive reading selections do not make historical models current.
+    for (vendor, slug), source in sources.items():
+        names = source.get('reading_models')
+        if names is None:
+            continue
+        if not isinstance(names, list) or not names or any(not isinstance(name, str) or not name.strip() for name in names):
+            raise ValueError(f'Invalid archive reading models: {vendor}:{slug}')
+        matches = [r for r in rows if r['vendor'] == vendor and r['title'] == source['title'] and r['status'] == 'archived']
+        if not matches:
+            continue
+        row = max(matches, key=lambda r: (r['source_updated_date'], r['retrieved_at']))
+        reports.setdefault(row['local_path'], dict(row=row, slug=slug, models=names, reader_scope='archive'))
     # Keep previously extracted report URLs usable when a latest model is superseded.
     # They remain archive readers, separate from the active frontier navigation.
     previous = ROOT / 'abstracts/index.json'

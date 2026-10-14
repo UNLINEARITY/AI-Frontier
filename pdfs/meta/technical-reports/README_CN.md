@@ -2,7 +2,7 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已收录 **28 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **29 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
@@ -21,6 +21,7 @@
 | 2024-08-01 | [SAM 2: Segment Anything in Images and Videos](https://arxiv.org/abs/2408.00714) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2408.00714) |
 | 2024-07-31 | [The Llama 3 Herd of Models](https://arxiv.org/abs/2407.21783) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2407.21783) |
 | 2024-05-16 | [Chameleon: Mixed-Modal Early-Fusion Foundation Models](https://arxiv.org/abs/2405.09818) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2405.09818) |
+| 2024-02-15 | [Revisiting Feature Prediction for Learning Visual Representations from Video](https://arxiv.org/abs/2404.08471) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2404.08471) |
 | 2023-12-08 | [Seamless: Multilingual Expressive and Streaming Speech Translation](https://arxiv.org/abs/2312.05187) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2312.05187) |
 | 2023-12-07 | [Llama Guard: LLM-based Input-Output Safeguard for Human-AI Conversations](https://arxiv.org/abs/2312.06674) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2312.06674) |
 | 2023-08-24 | [Code Llama: Open Foundation Models for Code](https://arxiv.org/abs/2308.12950) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2308.12950) |

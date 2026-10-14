@@ -583,7 +583,10 @@
     "source_updated_date": "2026-04-20",
     "source_url": "https://deepmind.google/models/model-cards/gemini-robotics-er-1-6/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-Robotics-ER-1-6-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-Robotics-ER-1-6-Model-Card.pdf",
+    "reading_models": [
+      "Gemini Robotics-ER 1.6"
+    ]
   },
   {
     "vendor": "google",
@@ -594,7 +597,10 @@
     "source_updated_date": "2025-09-25",
     "source_url": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-1-5-Tech-Report.pdf#page=30",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。 模型卡包含于完整技术报告，归档整份报告。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-1-5-Tech-Report.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-1-5-Tech-Report.pdf",
+    "reading_models": [
+      "Gemini Robotics 1.5"
+    ]
   },
   {
     "vendor": "google",
@@ -605,7 +611,10 @@
     "source_updated_date": "2025-07-01",
     "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-Robotics-On-Device-Model-Card.pdf",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-Robotics-On-Device-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-Robotics-On-Device-Model-Card.pdf",
+    "reading_models": [
+      "Gemini Robotics On-Device"
+    ]
   },
   {
     "vendor": "google",
@@ -2304,7 +2313,10 @@
     "published_date": "2025-01-07",
     "source_updated_date": "2025-07-09",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2501.03575v3"
+    "pdf_url": "https://arxiv.org/pdf/2501.03575v3",
+    "reading_models": [
+      "Cosmos World Foundation Models"
+    ]
   },
   {
     "vendor": "xai",
@@ -3951,7 +3963,10 @@
     "source_url": "https://arxiv.org/abs/2503.20020",
     "pdf_url": "https://arxiv.org/pdf/2503.20020v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "Gemini Robotics"
+    ]
   },
   {
     "vendor": "google",
@@ -4122,6 +4137,9 @@
     "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://research.nvidia.com/labs/lpr/publication/gr00tn1_2025/.",
     "alternate_pdf_urls": [
       "https://export.arxiv.org/pdf/2503.14734v2"
+    ],
+    "reading_models": [
+      "GR00T N1"
     ]
   },
   {
@@ -4134,7 +4152,10 @@
     "source_url": "https://arxiv.org/abs/2503.15558",
     "pdf_url": "https://arxiv.org/pdf/2503.15558v3",
     "version": "arxiv-v3",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "Cosmos-Reason1"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -4230,7 +4251,10 @@
     "source_url": "https://arxiv.org/abs/2307.15818",
     "pdf_url": "https://arxiv.org/pdf/2307.15818v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "RT-2"
+    ]
   },
   {
     "vendor": "google",
@@ -4242,7 +4266,10 @@
     "source_url": "https://arxiv.org/abs/2303.03378",
     "pdf_url": "https://arxiv.org/pdf/2303.03378v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://research.google/blog/palm-e-an-embodied-multimodal-language-model/."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://research.google/blog/palm-e-an-embodied-multimodal-language-model/.",
+    "reading_models": [
+      "PaLM-E"
+    ]
   },
   {
     "vendor": "meta",
@@ -5471,5 +5498,568 @@
     "source_url": "https://docs.aws.amazon.com/ai/responsible-ai/nova-2-5-sonic/overview.html",
     "pdf_url": "",
     "notes": "Official HTML AWS AI Service Card. Applicability date October 5 is not proof of first publication. Classified by complete-service risk/use/mitigation scope, not as a Technical Report; no PDF verified."
+  },
+  {
+    "vendor": "google",
+    "title": "RT-1: Robotics Transformer for Real-World Control at Scale",
+    "slug": "rt-1-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2022-12-13",
+    "source_updated_date": "2023-08-11",
+    "version": "arxiv-v2",
+    "source_url": "https://arxiv.org/abs/2212.06817",
+    "pdf_url": "https://arxiv.org/pdf/2212.06817v2",
+    "metadata_url": "https://research.google/blog/rt-1-robotics-transformer-for-real-world-control-at-scale/",
+    "notes": "Reviewed 2026-10-14: RT-1; learned real-world generalist robot-control policy / Robotics Transformer model class. arXiv page gives exact title and v1/v2 history; Google Research article introduces the same RT-1 model and links its paper. Project-hosted paper is also available at https://robotics-transformer1.github.io/assets/rt1.pdf (version/provenance less explicit than arXiv v2).",
+    "reading_models": [
+      "RT-1"
+    ]
+  },
+  {
+    "vendor": "google",
+    "title": "Open X-Embodiment: Robotic Learning Datasets and RT-X Models",
+    "slug": "rt-x-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2023-10-13",
+    "source_updated_date": "2025-05-14",
+    "version": "arxiv-v9",
+    "source_url": "https://arxiv.org/abs/2310.08864",
+    "pdf_url": "https://arxiv.org/pdf/2310.08864v9",
+    "metadata_url": "https://deepmind.google/blog/scaling-up-learning-across-many-different-robot-types/",
+    "notes": "Reviewed 2026-10-14: RT-X / RT-1-X are learned cross-embodiment robot policies. The paper is explicitly a combined dataset-and-model report; register the learned model report while keeping Open X-Embodiment dataset as a separate object. arXiv title, full submission history, abstract, and paper access; Google DeepMind article describes RT-1-X / RT-2-X and links this research line. Project paper URL also exists at https://robotics-transformer-x.github.io/paper.pdf.",
+    "reading_models": [
+      "RT-1-X",
+      "RT-2-X"
+    ]
+  },
+  {
+    "vendor": "google",
+    "title": "RT-H: Action Hierarchies Using Language",
+    "slug": "rt-h-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2024-03-04",
+    "source_updated_date": "2024-06-01",
+    "version": "arxiv-v2",
+    "source_url": "https://arxiv.org/abs/2403.01823",
+    "pdf_url": "https://arxiv.org/pdf/2403.01823v2",
+    "metadata_url": "https://rt-hierarchy.github.io/",
+    "notes": "Reviewed 2026-10-14: RT-H, learned language-conditioned robot policy with an intermediate language-motion action hierarchy. arXiv page confirms exact title, abstract/model identity, first submission and latest revision. The linked project site is the research project site. Google DeepMind's 2024 robotics overview references the RT research lineage but does not appear to have a dedicated RT-H page in reviewed results.",
+    "reading_models": [
+      "RT-H"
+    ]
+  },
+  {
+    "vendor": "google",
+    "title": "Robotic Task Generalization via Hindsight Trajectory Sketches",
+    "slug": "rt-trajectory-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2023-11-03",
+    "source_updated_date": "2023-11-06",
+    "version": "arxiv-v2",
+    "source_url": "https://arxiv.org/abs/2311.01977",
+    "pdf_url": "https://arxiv.org/pdf/2311.01977v2",
+    "metadata_url": "https://deepmind.google/research/publications/48757/",
+    "notes": "Reviewed 2026-10-14: RT-Trajectory, trajectory-conditioned learned robot policy / policy-conditioning method evaluated on real-world robot tasks. Google DeepMind research page provides exact title, date, abstract, authors, venue (ICLR 2024), and links to arXiv download. arXiv page confirms v1/v2 history. RT-Trajectory is the policy/project name and appears as an arXiv/announcement alias. The downloaded pinned v2 PDF cover omits RT-Trajectory from the paper title; archive uses the exact PDF title.",
+    "reading_models": [
+      "RT-Trajectory"
+    ]
+  },
+  {
+    "vendor": "google",
+    "title": "RoboCat: A Self-Improving Generalist Agent for Robotic Manipulation",
+    "slug": "robocat-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2023-06-20",
+    "source_updated_date": "2023-12-22",
+    "version": "arxiv-v2",
+    "source_url": "https://arxiv.org/abs/2306.11706",
+    "pdf_url": "https://arxiv.org/pdf/2306.11706v2",
+    "metadata_url": "https://deepmind.google/blog/robocat-a-self-improving-robotic-agent/",
+    "notes": "Reviewed 2026-10-14: RoboCat, multi-embodiment, multi-task visual goal-conditioned decision transformer for robotic manipulation. arXiv confirms exact paper title and versions. DeepMind article says its paper introduces RoboCat and links arXiv; DeepMind research page records the later TMLR paper with a different title, 'RoboCat: A Self-Improving Foundation Agent for Robotic Manipulation'. Retain arXiv title when archiving the arXiv PDF; note title discrepancy rather than silently merging titles.",
+    "reading_models": [
+      "RoboCat"
+    ]
+  },
+  {
+    "vendor": "meta",
+    "title": "Revisiting Feature Prediction for Learning Visual Representations from Video",
+    "slug": "v-jepa-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2024-02-15",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2404.08471",
+    "pdf_url": "https://arxiv.org/pdf/2404.08471v1",
+    "metadata_url": "https://ai.meta.com/research/publications/revisiting-feature-prediction-for-learning-visual-representations-from-video/",
+    "notes": "Reviewed 2026-10-14: V-JEPA (first generation), self-supervised video representation/world-model foundation. This paper is not a robot policy and its title does not say V-JEPA; Meta calls the learned model V-JEPA in the abstract and official release materials. Meta publication page explicitly names V-JEPA in the abstract and is dated February 15, 2024; it links the paper. arXiv metadata confirms title, submission date and v1. Meta describes this as an early physical world model, while the paper's tested results are video representations rather than robot control.",
+    "reading_models": [
+      "V-JEPA"
+    ]
+  },
+  {
+    "vendor": "microsoft",
+    "title": "Magma: A Foundation Model for Multimodal AI Agents",
+    "slug": "magma-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-02-18",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2502.13130",
+    "pdf_url": "https://arxiv.org/pdf/2502.13130v1",
+    "metadata_url": "https://www.microsoft.com/en-us/research/blog/magma-a-foundation-model-for-multimodal-ai-agents-across-digital-and-physical-worlds/",
+    "notes": "Reviewed 2026-10-14: Magma, Microsoft Research multimodal agent model for digital/physical environments, including UI navigation and robot manipulation. It is a virtual+physical agent foundation model, not a dedicated robot-only VLA. arXiv title/abstract says '29 pages, 16 figures, technical report from MSR'; Microsoft Research blog announces Magma on February 25, 2025 and describes physical robotic manipulation and digital UI tasks. The MSR blog links the model/project.",
+    "reading_models": [
+      "Magma"
+    ]
+  },
+  {
+    "vendor": "nvidia",
+    "title": "Cosmos-Transfer1: Conditional World Generation with Adaptive Multimodal Control",
+    "slug": "cosmos-transfer1-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-03-18",
+    "source_updated_date": "2025-04-01",
+    "version": "arxiv-v2",
+    "source_url": "https://arxiv.org/abs/2503.14492",
+    "pdf_url": "https://arxiv.org/pdf/2503.14492v2",
+    "metadata_url": "https://research.nvidia.com/publication/2025-03_cosmos-transfer-1-world-world-transfer-adaptive-multi-control-physical-ai",
+    "notes": "Reviewed 2026-10-14: Cosmos-Transfer1 learned conditional world-generation model; used for multi-control world simulation and Sim2Real/robotics scenario generation. Distinct from Cosmos-Predict1 and the Cosmos platform overview. arXiv confirms exact title/version history and its abstract explicitly says 'model' and robotics Sim2Real application. NVIDIA Research publication page names Cosmos Transfer 1, dates it March 18, 2025 and links to Arxiv. Note official research-page display title differs slightly ('World-to-World Transfer with Adaptive Multi-Control for Physical AI') from the exact arXiv PDF title. The downloaded pinned PDF cover is dated 2025-4-3, whereas the arXiv v2 revision history records 2025-04-01; retain both source dates without replacing metadata history.",
+    "reading_models": [
+      "Cosmos-Transfer1"
+    ]
+  },
+  {
+    "vendor": "microsoft",
+    "title": "FLOWER: Democratizing Generalist Robot Policies with Efficient Vision-Language-Action Flow Policies",
+    "slug": "flower-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-09-05",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2509.04996",
+    "pdf_url": "https://arxiv.org/pdf/2509.04996v1",
+    "metadata_url": "https://www.microsoft.com/en-us/research/publication/flower-democratizing-generalist-robot-policies-with-efficient-vision-language-action-flow-policies/",
+    "notes": "Reviewed 2026-10-14: FLOWER is an explicitly learned 950M-parameter generalist VLA robot policy. It spans simulation and real-world tasks and multiple embodiments. Microsoft affiliation is one coauthor's affiliation (Fabian Otto, Microsoft Research); the rest are primarily Karlsruhe Institute of Technology / Intuitive Robots Lab, so attribute as a Microsoft coauthored model report rather than an exclusively Microsoft-built product. Official arXiv page gives title, six authors, September 5, 2025 submission, v1-only history, and comment 'Published at CoRL 2025'. Microsoft Research's official publication page describes a 950M VLA and dates the record September 2025 / arXiv. CoRL 2025 PDF is an OpenReview proceedings/workshop version with the same core model title and authors.",
+    "reading_models": [
+      "FLOWER"
+    ]
+  },
+  {
+    "vendor": "google",
+    "title": "AutoRT: Embodied Foundation Models for Large Scale Orchestration of Robotic Agents",
+    "slug": "autort-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2024-01-23",
+    "source_updated_date": "2024-07-02",
+    "version": "arxiv-v2",
+    "source_url": "https://arxiv.org/abs/2401.12963",
+    "pdf_url": "https://arxiv.org/pdf/2401.12963v2",
+    "metadata_url": "https://deepmind.google/research/publications/48151/",
+    "notes": "Reviewed 2026-10-14: AutoRT is an embodied robot fleet orchestration and real-world data-collection system that combines existing VLM/LLM components with RT-1 or RT-2 robot control policies; it is not a newly trained standalone robot policy. It supports existing policy training by supplying diverse real-world data. arXiv exact title/version history and abstract explicitly call AutoRT a system that leverages existing foundation models. Google DeepMind's research page describes it and links to arXiv; its January 4, 2024 announcement date is separate from the arXiv first-submission date January 23, 2024.",
+    "reading_models": [
+      "RT-1",
+      "RT-2"
+    ]
+  },
+  {
+    "vendor": "google",
+    "title": "SARA-RT: Scaling up Robotics Transformers with Self-Adaptive Robust Attention",
+    "slug": "sara-rt-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2023-12-04",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2312.01990",
+    "pdf_url": "https://arxiv.org/pdf/2312.01990v1",
+    "metadata_url": "https://deepmind.google/blog/shaping-the-future-of-advanced-robotics/",
+    "notes": "Reviewed 2026-10-14: SARA-RT is a model-conversion/up-training method for existing transformer-based robot policies. The paper explicitly applies it to RT-2 VLA policies and Point Cloud Transformer robot policies; it is not a standalone robot model. arXiv page gives exact title, v1 date/history and describes converting pretrained or already fine-tuned robot policies to linear attention while preserving quality. Google DeepMind's official robotics overview explains SARA-RT and results on RT-2; its link to the paper points to arXiv.",
+    "reading_models": [
+      "RT-2",
+      "Point Cloud Transformer"
+    ]
+  },
+  {
+    "vendor": "tencent",
+    "title": "Hy-Embodied-VLM-1.0: Efficient Physical-World Agents",
+    "slug": "hy-embodied-vlm-1-0",
+    "document_type": "technical_report",
+    "published_date": "2026-07-14",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2607.12894",
+    "pdf_url": "https://arxiv.org/pdf/2607.12894v1",
+    "metadata_url": "https://github.com/Tencent-Hunyuan/HY-Embodied",
+    "notes": "Reviewed 2026-10-14: Current embodied foundation VLM for physical-world agents; action-centric reasoning, navigation, perception and long-horizon agent behavior. Distinct from the separate Hy-Embodied-0.5-VLA manipulation policy and RxBrain embodied cognition model. The official Tencent-Hunyuan HY-Embodied repository announces release on 2026-07-15 and cites the exact report title/arXiv ID. arXiv records v1 submitted 2026-07-14, no later revision as of review date. The report identifies the Hy3-A3B and Hy-ViT2 architecture and 38 embodied benchmarks.",
+    "reading_models": [
+      "Hy-Embodied-VLM-1.0"
+    ]
+  },
+  {
+    "vendor": "agibot",
+    "title": "Genie Envisioner: A Unified World Foundation Platform for Robotic Manipulation",
+    "slug": "genie-envisioner",
+    "document_type": "technical_report",
+    "published_date": "2025-08-07",
+    "source_updated_date": "2025-11-04",
+    "version": "arxiv-v3",
+    "source_url": "https://arxiv.org/abs/2508.05635",
+    "pdf_url": "https://arxiv.org/pdf/2508.05635v3",
+    "metadata_url": "https://genie-envisioner.github.io/",
+    "notes": "Reviewed 2026-10-14: Foundational unified robot world model comprising GE-Base video diffusion, GE-Act policy decoding and GE-Sim action-conditioned simulation. Historical core work complementary to already registered GE-Act 2.0 and GE-Sim 2.0; do not treat as a duplicate or as hardware/dataset-only work. The arXiv abstract explicitly describes the GE-Base, GE-Act, and GE-Sim models and the arXiv comments link to the official project page. arXiv history shows v1 2025-08-07, v2 2025-10-17, and current v3 2025-11-04.",
+    "reading_models": [
+      "GE-Base",
+      "GE-Act",
+      "GE-Sim"
+    ]
+  },
+  {
+    "vendor": "tencent",
+    "title": "RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination",
+    "slug": "hy-embodied-rxbrain-1-0",
+    "document_type": "technical_report",
+    "published_date": "2026-07-15",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2607.14187",
+    "pdf_url": "https://arxiv.org/pdf/2607.14187v1",
+    "metadata_url": "https://github.com/Tencent-Hunyuan/Hy-Embodied-RxBrain-1.0",
+    "notes": "Reviewed 2026-10-14: Embodied cognition model combining language reasoning, visual state prediction, joint subgoal planning, and a continuous robot-action extension. Distinct from the Hy embodied VLM and manipulation VLA papers. The official Tencent repository names the model/report, describes the release of report, inference code and weights in July 2026, and cites arXiv:2607.14187. arXiv records v1 submitted 2026-07-15; no later revision as of review date.",
+    "reading_models": [
+      "RxBrain"
+    ]
+  },
+  {
+    "vendor": "tencent",
+    "title": "Hy-Embodied-0.5-VLA: From Vision-Language-Action Models to a Real-World Robot Learning Stack",
+    "slug": "hy-embodied-0-5-vla",
+    "document_type": "technical_report",
+    "published_date": "2026-06-12",
+    "source_updated_date": "2026-07-20",
+    "version": "arxiv-v2",
+    "source_url": "https://arxiv.org/abs/2606.14409",
+    "pdf_url": "https://arxiv.org/pdf/2606.14409v2",
+    "metadata_url": "https://github.com/Tencent-Hunyuan/Hy-Embodied-0.5-VLA",
+    "notes": "Reviewed 2026-10-14: Real-world VLA manipulation system covering data collection, continued pretraining, SFT, RL post-training and deployment. Tencent's official HY-Embodied README lists Hy-Embodied-0.5-VLA as its UMI-trained real-robot VLA and records its 2026-06-15 release; the dedicated official repository cites the same paper. arXiv has v1 2026-06-12 and v2 2026-07-20.",
+    "reading_models": [
+      "Hy-Embodied-0.5-VLA"
+    ]
+  },
+  {
+    "vendor": "galaxea",
+    "title": "Galaxea Open-World Dataset and G0 Dual-System VLA Model",
+    "slug": "galaxea-open-world-dataset-g0-vla",
+    "document_type": "technical_report",
+    "published_date": "2025-08-30",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2509.00576",
+    "pdf_url": "https://arxiv.org/pdf/2509.00576v1",
+    "metadata_url": "https://open-galaxea.github.io/Doc/g0/",
+    "notes": "Reviewed 2026-10-14: Historical G0 model: VLM multimodal planner paired with VLA fine-grained execution; predecessor to already registered G0.5, not a duplicate of G0.5. The official Galaxea G0 documentation links arXiv:2509.00576v1 and labels the model G0; arXiv confirms submission 2025-08-30 and one version. Current registry has G0.5 but not this G0 paper.",
+    "reading_models": [
+      "G0"
+    ]
+  },
+  {
+    "vendor": "agibot",
+    "title": "AgiBot World Colosseo: A Large-scale Manipulation Platform for Scalable and Intelligent Embodied Systems",
+    "slug": "agibot-world-colosseo-go-1",
+    "document_type": "technical_report",
+    "published_date": "2025-03-09",
+    "source_updated_date": "2025-08-04",
+    "version": "arxiv-v4",
+    "source_url": "https://arxiv.org/abs/2503.06669",
+    "pdf_url": "https://arxiv.org/pdf/2503.06669v4",
+    "metadata_url": "https://github.com/OpenDriveLab/AgiBot-World",
+    "notes": "Reviewed 2026-10-14: Generalist manipulation policy using latent action representations, introduced and evaluated within the AgiBot World paper. This is not just a dataset report. The official OpenDriveLab/AgiBot-World repository links the technical report and GO-1 checkpoints, states the report release date as 2025-03-10, and distinguishes the GO-1 model from dataset artifacts. The arXiv first submission date remains 2025-03-09; history gives current v4 dated 2025-08-04.",
+    "reading_models": [
+      "GO-1"
+    ]
+  },
+  {
+    "vendor": "bytedance",
+    "title": "GR-Dexter Technical Report",
+    "slug": "gr-dexter-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-12-30",
+    "source_updated_date": "2026-01-09",
+    "version": "arxiv-v2",
+    "source_url": "https://arxiv.org/abs/2512.24210",
+    "pdf_url": "https://arxiv.org/pdf/2512.24210v2",
+    "metadata_url": "https://byte-dexter.github.io/gr-dexter/",
+    "notes": "Reviewed 2026-10-14: Dexterous bimanual VLA generalist model, explicitly follows GR-3. Distinct from already registered GR-3 and GR-RL. The official project page identifies ByteDance Seed, describes the GR-Dexter VLA model/architecture and links the paper. arXiv dates v1 2025-12-30 and v2 2026-01-09. Current sources registry includes GR-3 and GR-RL but not GR-Dexter.",
+    "reading_models": [
+      "GR-Dexter"
+    ]
+  },
+  {
+    "vendor": "tencent",
+    "title": "HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents",
+    "slug": "hy-embodied-0-5",
+    "document_type": "technical_report",
+    "published_date": "2026-04-08",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2604.07430",
+    "pdf_url": "https://arxiv.org/pdf/2604.07430v1",
+    "metadata_url": "https://github.com/Tencent-Hunyuan/HY-Embodied",
+    "notes": "Reviewed 2026-10-14: Core embodied foundation VLM release for real-world embodied agents; spatial/temporal perception and embodied reasoning, prediction, interaction and planning. Official Tencent repository cites the title and arXiv ID and announces the HY-Embodied-0.5 release on 2026-04-09. arXiv records one version submitted 2026-04-08.",
+    "reading_models": [
+      "HY-Embodied-0.5"
+    ]
+  },
+  {
+    "vendor": "bytedance",
+    "title": "GR-2: A Generative Video-Language-Action Model with Web-Scale Knowledge for Robot Manipulation",
+    "slug": "gr-2-generative-video-language-action-model",
+    "document_type": "technical_report",
+    "published_date": "2024-10-08",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2410.06158",
+    "pdf_url": "https://arxiv.org/pdf/2410.06158v1",
+    "metadata_url": "https://gr2-manipulation.github.io/",
+    "notes": "Reviewed 2026-10-14: Historical robot VLA/world-model lineage: internet-video pretraining, video generation and action prediction. Distinct from the already registered later GR-3 and GR-RL reports. ArXiv identifies GR-2 as a generalist robot agent, lists ByteDance authors on the official project lineage, says Tech Report, and shows only v1 submitted 2024-10-08. Current registry has GR-3 and GR-RL but not GR-2.",
+    "reading_models": [
+      "GR-2"
+    ]
+  },
+  {
+    "vendor": "bytedance",
+    "title": "Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation",
+    "slug": "gr-1-large-scale-video-generative-pretraining",
+    "document_type": "technical_report",
+    "published_date": "2023-12-20",
+    "source_updated_date": "2023-12-21",
+    "version": "arxiv-v2",
+    "source_url": "https://arxiv.org/abs/2312.13139",
+    "pdf_url": "https://arxiv.org/pdf/2312.13139v2",
+    "metadata_url": "https://gr1-manipulation.github.io/",
+    "notes": "Reviewed 2026-10-14: Historical GR-1 model: GPT-style vision-language manipulation model jointly predicting robot actions and future frames, an early ByteDance robot foundation-policy report. Official project page says ByteDance Research, gives the model/method description, and links arXiv/paper/code. arXiv confirms v1 2023-12-20, v2 2023-12-21; published at ICLR 2024. Registry has no GR-1 source.",
+    "reading_models": [
+      "GR-1"
+    ]
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "π0: A Vision-Language-Action Flow Model for General Robot Control",
+    "slug": "pi-0-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2024-10-31",
+    "source_updated_date": "2026-01-08",
+    "source_url": "https://arxiv.org/abs/2410.24164",
+    "pdf_url": "https://arxiv.org/pdf/2410.24164v4",
+    "notes": "Reviewed 2026-10-14: General multi-robot VLA/policy; official company project page connects report.",
+    "reading_models": [
+      "π0"
+    ],
+    "version": "arxiv-v4",
+    "metadata_url": "https://www.pi.website/blog/pi0"
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "π0.5: a Vision-Language-Action Model with Open-World Generalization",
+    "slug": "pi-0-5-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-04-22",
+    "source_updated_date": "",
+    "source_url": "https://arxiv.org/abs/2504.16054",
+    "pdf_url": "https://arxiv.org/pdf/2504.16054v1",
+    "notes": "Reviewed 2026-10-14: A model based on π0, not a different embodiment-agnostic evaluation protocol than other lab work; use own evidence.",
+    "reading_models": [
+      "π0.5"
+    ],
+    "version": "arxiv-v1",
+    "metadata_url": "https://www.pi.website/blog/pi05"
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "π0.6 Model Card",
+    "slug": "pi-0-6-model-card",
+    "document_type": "model_card",
+    "published_date": "2025-11-17",
+    "source_updated_date": "",
+    "source_url": "https://website.pi-asset.com/pi06star/PI06_model_card.pdf",
+    "pdf_url": "https://website.pi-asset.com/pi06star/PI06_model_card.pdf",
+    "notes": "Reviewed 2026-10-14: Four-page model card states π0.6 builds on π0.5, uses Gemma3 4B and an ~860M action expert, and evaluates out of the box. Do not treat it as a general technical paper or as the π*0.6 model. PDF title/date are visible on its first page. No explicit revision marker exposed; date on PDF title page is 2025-11-17.",
+    "reading_models": [
+      "π0.6"
+    ],
+    "metadata_url": "https://www.pi.website/blog/pistar06"
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "π*0.6: a VLA That Learns From Experience",
+    "slug": "pi-star-0-6-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-11-18",
+    "source_updated_date": "2025-11-19",
+    "source_url": "https://arxiv.org/abs/2511.14759",
+    "pdf_url": "https://arxiv.org/pdf/2511.14759v2",
+    "notes": "Reviewed 2026-10-14: arXiv submitted one day after the PI blog post; source date should follow source convention and record the discrepancy explicitly. It presents RECAP and specializes the base π0.6 via on-robot experience.",
+    "reading_models": [
+      "π*0.6"
+    ],
+    "version": "arxiv-v2",
+    "metadata_url": "https://www.pi.website/blog/pistar06"
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "Hi Robot: Open-Ended Instruction Following with Hierarchical Vision-Language-Action Models",
+    "slug": "hi-robot-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-02-26",
+    "source_updated_date": "2025-07-15",
+    "source_url": "https://arxiv.org/abs/2502.19417",
+    "pdf_url": "https://arxiv.org/pdf/2502.19417v2",
+    "notes": "Reviewed 2026-10-14: Hi Robot is a hierarchical system (high-level VLM + low-level π0 VLA), not an independent generalist checkpoint. PI page title is “Teaching Robots to Listen and Think Harder”; paper title is as recorded from arXiv.",
+    "reading_models": [
+      "Hi Robot",
+      "π0"
+    ],
+    "version": "arxiv-v2",
+    "metadata_url": "https://www.pi.website/research/hirobot"
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "FAST: Efficient Action Tokenization for Vision-Language-Action Models",
+    "slug": "fast-action-tokenization-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-01-16",
+    "source_updated_date": "",
+    "source_url": "https://arxiv.org/abs/2501.09747",
+    "pdf_url": "https://arxiv.org/pdf/2501.09747v1",
+    "notes": "Reviewed 2026-10-14: FAST is the tokenization method. FAST+ is a general-purpose tokenizer trained on 1M action trajectories; π0-FAST is the autoregressive VLA variant. Keep these roles distinct from flow-based π0.",
+    "reading_models": [
+      "π0-FAST",
+      "FAST+"
+    ],
+    "version": "arxiv-v1",
+    "metadata_url": "https://www.pi.website/research/fast"
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "Knowledge Insulating Vision-Language-Action Models: Train Fast, Run Fast, Generalize Better",
+    "slug": "knowledge-insulating-vlas-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-05-29",
+    "source_updated_date": "",
+    "source_url": "https://arxiv.org/abs/2505.23705",
+    "pdf_url": "https://arxiv.org/pdf/2505.23705v1",
+    "notes": "Reviewed 2026-10-14: The official page calls it “VLAs that Train Fast, Run Fast, and Generalize Better”; use the exact arXiv paper title. This is a method/policy report, not a π0.6 release report.",
+    "reading_models": [
+      "π0.5"
+    ],
+    "version": "arxiv-v1",
+    "metadata_url": "https://www.pi.website/research/knowledge_insulation"
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "MEM: Multi-Scale Embodied Memory for Vision Language Action Models",
+    "slug": "mem-multi-scale-embodied-memory-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2026-03-03",
+    "source_updated_date": "",
+    "source_url": "https://www.pi.website/research/memory",
+    "pdf_url": "https://www.pi.website/download/Mem.pdf",
+    "notes": "Reviewed 2026-10-14: The paper integrates MEM into π0.6 as π0.6-MEM; this is an architecture extension, not a new base model series release. Exact title verified on official PDF first page. No explicit revision marker exposed on the official project page/PDF.",
+    "reading_models": [
+      "π0.6-MEM"
+    ]
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "Real-Time Execution of Action Chunking Flow Policies",
+    "slug": "real-time-execution-action-chunking-flow-policies",
+    "document_type": "technical_report",
+    "published_date": "2025-06-09",
+    "source_updated_date": "2025-12-05",
+    "source_url": "https://arxiv.org/abs/2506.07339",
+    "pdf_url": "https://arxiv.org/pdf/2506.07339v2",
+    "notes": "Reviewed 2026-10-14: Inference-time RTC works with diffusion/flow VLAs; not a standalone model. The PI page documents an official follow-up arXiv paper with training-time RTC.  Local pinned PDF explicitly evaluates π0.5 as the base real-world policy; RTC is an execution method, not a model release.",
+    "reading_models": [
+      "π0.5"
+    ],
+    "version": "arxiv-v2",
+    "metadata_url": "https://www.pi.website/research/real_time_chunking"
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "Training-Time Action Conditioning for Efficient Real-Time Chunking",
+    "slug": "training-time-action-conditioning-rtc",
+    "document_type": "technical_report",
+    "published_date": "2025-12-05",
+    "source_updated_date": "2025-12-09",
+    "source_url": "https://arxiv.org/abs/2512.05964",
+    "pdf_url": "https://arxiv.org/pdf/2512.05964v2",
+    "notes": "Reviewed 2026-10-14: Training-time action-conditioning method evaluated with π0.6 VLA; it is not a distinct checkpoint/release.",
+    "reading_models": [
+      "π0.6"
+    ],
+    "version": "arxiv-v2"
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "RL Token: Bootstrapping Online RL with Vision-Language-Action Models",
+    "slug": "precise-manipulation-efficient-online-rl",
+    "document_type": "technical_report",
+    "published_date": "2026-03-19",
+    "source_updated_date": "",
+    "source_url": "https://www.pi.website/research/rlt",
+    "pdf_url": "https://www.pi.website/download/rlt.pdf",
+    "notes": "Reviewed 2026-10-14: RLT is an online policy-adaptation method based on an RL token and small actor/critic; it improves π0.6 VLA on precision phases. Not a new VLA checkpoint. The browser could not open the 13.75 MB PDF, so do not claim its cover/version independently inspected. The page exposes an unversioned Paper → RLT.pdf link; no arXiv identifier or revision marker was found on the page. Confirm PDF cover/version when collecting. Official landing article is titled Precise Manipulation with Efficient Online RL; local PDF cover independently verified 2026-10-14 uses the exact paper title recorded here. Publication date follows the dated research post; no separate PDF revision date is asserted.",
+    "reading_models": [
+      "π0.6"
+    ]
+  },
+  {
+    "vendor": "physical_intelligence",
+    "title": "Emergence of Human to Robot Transfer in Vision-Language-Action Models",
+    "slug": "emergence-human-to-robot-transfer-vlas",
+    "document_type": "technical_report",
+    "published_date": "2025-12-27",
+    "source_updated_date": "",
+    "source_url": "https://arxiv.org/abs/2512.22414",
+    "pdf_url": "https://arxiv.org/pdf/2512.22414v1",
+    "notes": "Reviewed 2026-10-14: Coauthored with PI researchers and external collaborators; studies human-video to robot transfer scaling and is not a released PI model/report page. Include as a VLA training research paper, not as a new π-series model slot.  Local source Figure 4 and experiment text identify the π0.5 base and π0.5 + ego fine-tuned variant; this is PI-coauthored work with external collaborators, not an independent base-model launch.",
+    "reading_models": [
+      "π0.5",
+      "π0.5 + ego"
+    ],
+    "version": "arxiv-v1"
+  },
+  {
+    "vendor": "nvidia",
+    "title": "DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos",
+    "slug": "dreamdojo-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2026-02-06",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2602.06949",
+    "pdf_url": "https://arxiv.org/pdf/2602.06949v1",
+    "metadata_url": "https://github.com/NVIDIA/DreamDojo",
+    "notes": "Reviewed 2026-10-14: official NVIDIA GEAR publication list and official NVIDIA/DreamDojo repository identify this mixed-collaboration generalist robot world model and link the paper. Code/checkpoints/data released 2026-02-18; paper submission, model artifact release and ICML venue are distinct. It predicts world dynamics and is not a VLA action policy. The downloaded pinned v1 cover is dated 2026-2-9; the official arXiv history displays first submission 2026-02-06. Retain the displayed metadata history and cover date separately.",
+    "reading_models": [
+      "DreamDojo"
+    ]
+  },
+  {
+    "vendor": "nvidia",
+    "title": "DreamGen: Unlocking Generalization in Robot Learning through Video World Models",
+    "slug": "dreamgen-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-05-19",
+    "source_updated_date": "2025-06-17",
+    "version": "arxiv-v2",
+    "source_url": "https://arxiv.org/abs/2505.12705",
+    "pdf_url": "https://arxiv.org/pdf/2505.12705v2",
+    "metadata_url": "https://research.nvidia.com/labs/gear/dreamgen/",
+    "notes": "Reviewed 2026-10-14: official NVIDIA GEAR project links the paper and NVIDIA/GR00T-Dreams code. This is a synthetic trajectory generation/training pipeline using fine-tuned video world models, pseudo-actions and downstream visuomotor policy learning; its benchmark is not a new model release. arXiv v2 pinned separately from CoRL 2025 proceedings. The actual local report evaluates Diffusion Policy, π0 and GR00T N1 as downstream policies; DreamGen remains a data/training pipeline rather than a new policy entry.",
+    "reading_models": [
+      "GR00T N1",
+      "π0",
+      "Diffusion Policy"
+    ]
   }
 ]
