@@ -13,6 +13,21 @@ const observer = new IntersectionObserver(entries => {
     observer.unobserve(entry.target);
   }
 }, {threshold: 0.05});
+// Section entrances: heading, then text, then the figure inside each revealed section.
+const sectionObserver = new IntersectionObserver(entries => {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    entry.target.classList.add('is-visible');
+    let step = 0;
+    for (const child of entry.target.querySelectorAll(':scope > * > *, :scope > *')) {
+      if (child.matches('svg, script')) continue;
+      child.style.setProperty('--delay', `${Math.min(step, 6) * 70}ms`);
+      step++;
+    }
+    sectionObserver.unobserve(entry.target);
+  }
+}, {threshold: 0.12});
+for (const section of document.querySelectorAll('[data-reveal]')) sectionObserver.observe(section);
 const params = new URLSearchParams(location.search);
 function selectValue(element, value) {
   if ([...element.options].some(option => option.value === value)) element.value = value;

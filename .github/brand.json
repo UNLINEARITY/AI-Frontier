@@ -2,6 +2,8 @@
   "name": "AI Frontier",
   "tagline": "Track frontier AI, from original reports to technical insight.",
   "tagline_cn": "持续追踪前沿 AI，从原始报告走向技术洞察。",
+  "hero_line": "The official reports behind frontier AI",
+  "hero_line_cn": "前沿 AI 的官方报告档案",
   "description": "An open research archive for frontier AI. Official reports today; readable Markdown, technical analysis, and continuous tracking next.",
   "topics": [
     "ai",

@@ -33,10 +33,17 @@ class ShellTests(unittest.TestCase):
         self.assertIn('No records', lab_count(0, 0, False))
         self.assertIn('无记录', lab_count(0, 0, True))
 
-    def test_hero_clips_decorative_overflow_at_every_width(self):
+    def test_page_cannot_scroll_sideways(self):
         css = (ROOT / 'site/style.css').read_text()
-        hero = css.split('.hero{', 1)[1].split('}', 1)[0]
-        self.assertIn('overflow-x:clip', hero)
+        body = css.split('body {', 1)[1].split('}', 1)[0]
+        self.assertIn('overflow-x: hidden', body)
+
+    def test_stylesheet_keeps_the_house_style(self):
+        css = (ROOT / 'site/style.css').read_text()
+        for banned in ('linear-gradient(', 'radial-gradient(', 'box-shadow:', 'border-radius: 14px'):
+            self.assertNotIn(banned, css)
+        self.assertNotIn('border-top: 1px', css)
+        self.assertNotIn('border-bottom: 1px', css)
 
     def test_template_declares_the_light_banner_and_icons(self):
         for name in ('site/template.html', 'site/reader.html'):

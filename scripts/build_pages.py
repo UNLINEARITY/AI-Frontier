@@ -152,6 +152,123 @@ def write_not_found(output):
     (output / '404.html').write_text(NOT_FOUND_PAGE.replace('__SITE__', SITE_URL), encoding='utf-8')
 
 
+def cadence_plate(timeline, chinese):
+    """A real fragment of this archive's own interface: dated models per quarter."""
+    quarters = {}
+    for model in timeline:
+        if not model['release_date']:
+            continue
+        year, month = int(model['release_date'][:4]), int(model['release_date'][5:7])
+        key = year * 4 + (month - 1) // 3
+        quarters[key] = quarters.get(key, 0) + 1
+    if not quarters:
+        return ''
+    keys = list(range(min(quarters), max(quarters) + 1))
+    top = max(quarters.values())
+    width, height, plot = 760, 260, 216
+    step = width / len(keys)
+    bars, labels = [], []
+    for index, key in enumerate(keys):
+        count = quarters.get(key, 0)
+        bar = plot * count / top
+        bars.append(f'<rect x="{index * step + 1.5:.1f}" y="{plot - bar:.1f}" width="{step - 3:.1f}" '
+                    f'height="{max(bar, 1.5):.1f}" fill="var(--accent)" opacity="{0.3 + 0.7 * count / top:.2f}"></rect>')
+        if key % 4 == 0:
+            labels.append(f'<text x="{index * step:.1f}" y="{height - 12}" fill="var(--muted)" font-size="12">{key // 4}</text>')
+    busiest = max(quarters, key=quarters.get)
+    reading = (f'{busiest // 4} 年第 {busiest % 4 + 1} 季度最多：{quarters[busiest]} 个模型'
+               if chinese else
+               f'Busiest quarter: Q{busiest % 4 + 1} {busiest // 4}, {quarters[busiest]} models')
+    newest = sorted((model for model in timeline if model['release_date']),
+                    key=lambda model: model['release_date'], reverse=True)[:5]
+    rows = ''.join(f'<div class="ui-row"><span class="ui-muted">{escape(model["release_date"])}</span>'
+                   f'<b>{escape(model["model"])}</b>'
+                   f'<span class="ui-muted">{escape(VENDORS[model["vendor"]].split(" / ")[0])}</span></div>'
+                   for model in newest)
+    return (f'<div class="ui-row"><b>{"模型发布节奏" if chinese else "Release cadence"}</b>'
+            f'<span class="ui-muted">{reading}</span></div>'
+            f'<svg class="ui-plot" viewBox="0 0 {width} {height}" role="img" aria-label="{"按季度的模型发布数" if chinese else "models released per quarter"}">'
+            + ''.join(bars) + ''.join(labels) + '</svg>'
+            f'<div class="ui-rows"><span class="ui-muted">{"最新收录" if chinese else "Newest releases"}</span>{rows}</div>')
+
+
+def showcase_input(report, chinese):
+    """A real catalog record, laid out like the cover metadata of the report itself."""
+    rows = [
+        ('报告' if chinese else 'Report', escape(report['title'])),
+        ('发布方' if chinese else 'Publisher', escape(VENDORS[report['vendor']])),
+        ('类型' if chinese else 'Type', escape(DOCUMENT_TYPES[report['document_type']][int(chinese)])),
+        ('日期' if chinese else 'Date', escape(report['published_date'] or '—')),
+        ('页数' if chinese else 'Pages', f'{report["pages"]} ' + ('页' if chinese else 'pages')),
+        ('版本' if chinese else 'Version', escape(report['version'] or '—')),
+    ]
+    body = ''.join(f'<div class="ui-row"><span class="ui-muted">{label}</span><b>{value}</b></div>' for label, value in rows)
+    return body + f'<div class="ui-row" style="margin-top:10px"><span class="ui-muted">{"官方来源" if chinese else "Official source"}</span><b>{escape(report["source_url"])}</b></div>'
+
+
+def showcase_output(reader, figure, chinese):
+    """A real reading page fragment: opening passage, figure caption, printed page number."""
+    passage = ' '.join((reader.get('text') or '').split())
+    if len(passage) > 200:
+        passage = passage[:200].rsplit(' ', 1)[0] + '…'
+    items = [f'<div class="showcase-fig"><small>{"原文概要" if chinese else "Source passage"}</small><b>{escape(passage) or "—"}</b></div>']
+    if figure:
+        items.append(f'<div class="showcase-fig"><small>{"原图注" if chinese else "Original caption"}</small><b>{escape(figure.get("caption") or "")}</b>'
+                     f'<small>p. {figure.get("page")}</small></div>')
+    items.append(f'<div class="showcase-fig"><small>{"阅读页" if chinese else "Reading page"}</small>'
+                 f'<b>{escape(reader_path(reader))}</b></div>')
+    return ''.join(items)
+
+
+def gallery_tiles(timeline, reports, models, readers, figures, chinese):
+    dated = sum(1 for model in timeline if model['release_date'])
+    counted = {}
+    for row in reports:
+        counted[row['vendor']] = counted.get(row['vendor'], 0) + 1
+    types = {}
+    for row in reports:
+        types[row['document_type']] = types.get(row['document_type'], 0) + 1
+    tiles = [
+        (f'{len(reports)}', '官方报告' if chinese else 'official reports', 'a'),
+        (f'{len(VENDORS)}', '厂商' if chinese else 'publishers', ''),
+        (f'{len(timeline)}', '模型身份' if chinese else 'model identities', 'b'),
+        (f'{dated}', '已有发布日期' if chinese else 'with a release date', ''),
+        (f'{len(readers)}', '原文概要阅读页' if chinese else 'reading pages', 'a'),
+        (f'{figures}', '核心原图' if chinese else 'core figures', ''),
+    ]
+    cells = [f'<div class="gallery-cell gallery-cell--{kind}"><b>{number}</b><span>{label}</span></div>' if kind else
+             f'<div class="gallery-cell"><b>{number}</b><span>{label}</span></div>' for number, label, kind in tiles]
+    for vendor, label in sorted(VENDORS.items(), key=lambda item: -counted.get(item[0], 0))[:6]:
+        cells.append(f'<div class="gallery-cell gallery-cell--word"><b>{escape(label.split(" / ")[0])}</b>'
+                     f'<span>{counted.get(vendor, 0)} {"份报告" if chinese else "reports"}</span></div>')
+    for kind, (name, name_cn) in DOCUMENT_TYPES.items():
+        cells.append(f'<div class="gallery-cell gallery-cell--word"><b>{escape(name_cn if chinese else name)}</b>'
+                     f'<span>{types.get(kind, 0)} {"份" if chinese else "documents"}</span></div>')
+    return ''.join(cells)
+
+
+def proof_table(reports, models, readers, chinese):
+    """Where every document came from: counts, newest document and collection link per publisher."""
+    by_vendor = {}
+    for row in reports:
+        by_vendor.setdefault(row['vendor'], []).append(row)
+    model_counts = {}
+    for model in models:
+        model_counts[model['vendor']] = model_counts.get(model['vendor'], 0) + 1
+    rows = []
+    for vendor, group in sorted(by_vendor.items(), key=lambda item: -len(item[1]))[:12]:
+        newest = max(group, key=lambda row: row['published_date'])
+        collection = f'{REPOSITORY}/blob/main/pdfs/{vendor}/README.md'
+        rows.append('<tr>'
+                    f'<td>{escape(VENDORS[vendor])}</td>'
+                    f'<td>{len(group)}</td>'
+                    f'<td>{model_counts.get(vendor, 0)}</td>'
+                    f'<td>{escape(newest["published_date"] or "—")}</td>'
+                    f'<td>{link(collection, "目录" if chinese else "index")}</td>'
+                    '</tr>')
+    return ''.join(rows)
+
+
 def build(output):
     output.mkdir(parents=True, exist_ok=True)
     rows = list(csv.DictReader((ROOT / 'catalog.csv').open(encoding='utf-8', newline='')))
@@ -183,6 +300,19 @@ def build(output):
     brand = json.loads((ROOT / '.github/brand.json').read_text())
     models = [m for m in coverage['models'] if m.get('lifecycle', 'active') == 'active'
               and (m.get('latest_categories') or m.get('frontier_categories'))]
+    # Real fragments for the showcase: the newest archived document, and a reader that has a figure.
+    showcase_report = reports[0]
+    showcase_reader, showcase_figure = None, None
+    for report in reports:
+        summary = summaries.get(report['local_path'])
+        if not summary:
+            continue
+        figures_for = figure_reports.get(summary['id'], {}).get('figures') or []
+        if figures_for:
+            showcase_reader, showcase_figure = summary, figures_for[0]
+            break
+    if showcase_reader is None:
+        raise ValueError('No reading page with a figure is available for the showcase section')
     template = (ROOT / 'site/template.html').read_text()
     for chinese in (False, True):
         labels = dict(VENDORS)
@@ -197,19 +327,19 @@ def build(output):
             kind = DOCUMENT_TYPES[r['document_type']][0]
             revision = f" · {r['version']}" if r['version'].startswith('arxiv-') else ''
             target = report_target(r, summaries)
-            cards.append(f'<article class="card" data-view="reports" data-vendor="{r["vendor"]}" data-type="{r["document_type"]}" data-category="" data-date="{r["published_date"]}" data-title="{escape(r["title"])}" data-search="{escape(r["title"] + " " + labels[r["vendor"]] + " " + date)}"><div class="card-heading"><div class="publisher">{mark(r["vendor"])}<span>{escape(labels[r["vendor"]])}</span></div><span class="document-badge" data-kind="{r["document_type"]}">{kind}</span></div><h3><a class="card-link" href="{escape(target)}"{card_link_attributes(target)}>{escape(r["title"])}{card_link_mark(target)}{card_link_hint(target, chinese)}</a></h3><p class="date">{escape(date + revision)} · {r["pages"]} {"页" if chinese else "pages"}</p></article>')
+            cards.append(f'<article class="card" data-view="reports" data-vendor="{r["vendor"]}" data-type="{r["document_type"]}" data-category="" data-date="{r["published_date"]}" data-title="{escape(r["title"])}" data-search="{escape(r["title"] + " " + labels[r["vendor"]] + " " + date)}"><div class="card-heading"><div class="publisher">{mark(r["vendor"])}<span>{escape(labels[r["vendor"]])}</span></div></div><span class="document-badge" data-kind="{r["document_type"]}">{kind}</span><h3><a class="card-link" href="{escape(target)}"{card_link_attributes(target)}>{escape(r["title"])}{card_link_mark(target)}{card_link_hint(target, chinese)}</a></h3><p class="date">{escape(date + revision)} · {r["pages"]} {"页" if chinese else "pages"}</p></article>')
         for m in models:
             categories = [c for c in MODEL_CATEGORIES if c in m.get('latest_categories', []) or c in m.get('frontier_categories', [])]
             documents = model_documents(m, reports, sources, summaries)
             target = model_target(m, documents, web_readers)
             additional = '<div class="links">' + ''.join(link(d[2], d[3]) for d in documents[1:]) + '</div>' if len(documents) > 1 else ''
-            cards.append(f'<article class="card" data-date="" data-title="{escape(m["model"])}" data-view="models" data-vendor="{m["vendor"]}" data-type="" data-category="{escape(" ".join(categories))}" data-search="{escape(m["model"] + " " + labels[m["vendor"]])}" hidden><div class="card-heading"><div class="publisher">{mark(m["vendor"])}<span>{escape(labels[m["vendor"]])}</span></div><span class="model-indicator" aria-hidden="true"></span></div><h3><a class="card-link" href="{escape(target)}"{card_link_attributes(target)}>{escape(m["model"])}{card_link_mark(target)}{card_link_hint(target, chinese)}</a></h3><p class="date">{escape(" / ".join(MODEL_CATEGORIES[c][int(chinese)] for c in categories))}</p>{additional}</article>')
+            cards.append(f'<article class="card" data-date="" data-title="{escape(m["model"])}" data-view="models" data-vendor="{m["vendor"]}" data-type="" data-category="{escape(" ".join(categories))}" data-search="{escape(m["model"] + " " + labels[m["vendor"]])}" hidden><div class="card-heading"><div class="publisher">{mark(m["vendor"])}<span>{escape(labels[m["vendor"]])}</span></div></div><h3><a class="card-link" href="{escape(target)}"{card_link_attributes(target)}>{escape(m["model"])}{card_link_mark(target)}{card_link_hint(target, chinese)}</a></h3><p class="date">{escape(" / ".join(MODEL_CATEGORIES[c][int(chinese)] for c in categories))}</p>{additional}</article>')
         publisher_options = ''.join(f'<option value="{v}">{escape(label)}</option>' for v, label in labels.items())
         type_options = ''.join(f'<option value="{k}">{v[0]}</option>' for k, v in DOCUMENT_TYPES.items())
         category_options = ''.join(f'<option value="{k}">{escape(v[int(chinese)])}</option>' for k, v in MODEL_CATEGORIES.items())
         values = {
             'lang': 'zh-CN' if chinese else 'en', 'prefix': '../' if chinese else '',
-            'name': escape(brand['name']), 'tagline': escape(brand['tagline_cn' if chinese else 'tagline']),
+            'name': escape(brand['name']), 'tagline': escape(brand.get('hero_line_cn' if chinese else 'hero_line', brand['tagline_cn' if chinese else 'tagline'])),
             'intro': '原始报告，前沿模型。从语言与多模态 AI，到机器人与世界模型。' if chinese else 'Original reports. Frontier models. From language and multimodal AI to robotics and world models.',
             'switch': '../index.html' if chinese else 'cn/index.html', 'switch_label': '切换至 English' if chinese else 'Switch to 中文',
             'switch_compact': '中 → EN' if chinese else 'EN → 中',
@@ -257,6 +387,51 @@ def build(output):
                 f'<span class="lab-details"><span class="lab-name">{escape(label.split(" / ")[0])}</span>'
                 f'{lab_count(sum(r["vendor"] == v for r in reports), sum(m["vendor"] == v for m in models), chinese)}</span></button>'
                 for v, label in labels.items()),
+            'page_title': ('AI Frontier — 官方前沿 AI 报告、核心原图与模型发布时间线' if chinese else
+                           'AI Frontier — official frontier AI reports, core figures and a model timeline'),
+            'description': (f'来自 {len(VENDORS)} 家厂商的 {len(reports)} 份官方技术报告、模型卡与系统卡，附原文概要、核心原图，以及 {len(timeline)} 个模型的发布时间线。'
+                            if chinese else
+                            f'{len(reports)} official technical reports, model cards and system cards from {len(VENDORS)} publishers, '
+                            f'with source summaries, core figures and a release timeline of {len(timeline)} models.'),
+            'nav_reports': '报告' if chinese else 'Reports',
+            'nav_timeline': '时间线' if chinese else 'Timeline',
+            'nav_labs': '厂商' if chinese else 'Publishers',
+            'dated_models': str(sum(1 for model in timeline if model['release_date'])),
+            'dated_label': '个模型已有发布日期' if chinese else 'models with a release date',
+            'stat_plate': cadence_plate(timeline, chinese),
+            'stat_plate_caption': '按季度的模型发布数，取自档案自己记录的日期' if chinese else
+                                  "models per quarter, from the archive's own recorded dates",
+            'reader_count': str(len(readers)),
+            'reader_label': '篇含原文概要与核心原图的报告' if chinese else 'reports with an original-language summary and core figures',
+            'figure_count': str(sum(len(record.get('figures') or []) for record in figure_reports.values())),
+            'figure_label': '张核心原图，附印刷版图注与页码' if chinese else 'core figures with their printed captions and page numbers',
+            'showcase_label': '收进来什么，读的人拿到什么' if chinese else 'What arrives and what a reader gets',
+            'showcase_in_title': '收进来的' if chinese else 'What arrives',
+            'showcase_in_lead': '官方文档按发布时的原样登记：标题、发布方、类型、日期、修订版本，以及发布方自己的链接。' if chinese else
+                                "Official documents are filed exactly as published: title, publisher, type, date, revision, and the publisher's own link.",
+            'showcase_input': showcase_input(showcase_report, chinese),
+            'showcase_out_title': '读的人拿到什么' if chinese else 'What a reader gets',
+            'showcase_out_lead': '原文段落、带印刷版图注与页码的核心原图，以及并排的官方来源。' if chinese else
+                                 'The original passage, the core figures with their printed captions and page numbers, and the official source beside them.',
+            'showcase_output': showcase_output(showcase_reader, showcase_figure, chinese),
+            'gallery_label': '档案里有什么' if chinese else 'Inside the archive',
+            'gallery_title': '档案里有什么' if chinese else 'Inside the archive',
+            'gallery_lead': '下面的每一个数字都来自档案本身的目录。' if chinese else 'Every count below comes from the catalog itself.',
+            'gallery_cells': gallery_tiles(timeline, reports, models, readers, sum(len(record.get('figures') or []) for record in figure_reports.values()), chinese),
+            'proof_title': '每份文档来自哪里' if chinese else 'Where every document comes from',
+            'proof_lead': '官方来源、日期、修订与校验值逐份记录。' if chinese else 'Official sources, dates, revisions and checksums are recorded per document.',
+            'proof_publisher': '厂商' if chinese else 'Publisher',
+            'proof_reports': '报告' if chinese else 'Reports',
+            'proof_models': '前沿模型' if chinese else 'Frontier models',
+            'proof_latest': '最新一份' if chinese else 'Newest',
+            'proof_source': '档案目录' if chinese else 'Collection',
+            'proof_rows': proof_table(reports, models, readers, chinese),
+            'proof_note': ('原始 PDF 保留在发布方；本站保留官方链接、记录的日期与修订，以及已校验文件的校验值。' if chinese else
+                           'Original PDFs stay with their publishers; this archive keeps the official link, the recorded date and revision, '
+                           'and a checksum of the file it verified.'),
+            'cta_title': '少了一份报告，或发现了更新的修订？' if chinese else 'A missing report, or a newer revision?',
+            'cta_lead': '把发布方的官方链接发来，核实后收录。' if chinese else "Send the publisher's official link and it will be verified and added.",
+            'cta_action': '提交 issue' if chinese else 'Open an issue',
         }
         page = template
         for key, value in values.items():
@@ -264,7 +439,7 @@ def build(output):
         target = output / ('cn/index.html' if chinese else 'index.html')
         target.parent.mkdir(exist_ok=True)
         target.write_text(page, encoding='utf-8')
-    for name in ('style.css', 'app.js', 'theme-init.js', 'shared.js', 'reader.css', 'reader.js', 'timeline.css', 'timeline.js'):
+    for name in ('style.css', 'app.js', 'theme-init.js', 'shared.js', 'reader.js', 'timeline.js'):
         shutil.copyfile(ROOT / 'site' / name, output / name)
     (output / 'assets').mkdir(exist_ok=True)
     banner_source = ROOT / 'assets/branding/ai-frontier-banner.png'

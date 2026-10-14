@@ -10,4 +10,6 @@
   document.documentElement.dataset.themePreference = preference;
   const themeColor = document.querySelector('meta[name="theme-color"]');
   if (themeColor) themeColor.content = dark ? '#09121e' : '#f6f8fb';
+  // Reveal animations are opt-in: without this class the page is fully visible.
+  document.documentElement.classList.add('has-js');
 })();
