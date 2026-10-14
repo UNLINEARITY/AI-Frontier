@@ -17,7 +17,7 @@ on:
       - 'scripts/build_readers.py'
       - 'scripts/archive_reports.py'
       - 'site/**'
-      - 'assets/branding/ai-frontier-banner.png'
+      - 'assets/branding/**'
       - 'assets/vendors/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:

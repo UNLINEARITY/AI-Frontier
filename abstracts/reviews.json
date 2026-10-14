@@ -50,6 +50,22 @@
       "review_method": "visual_source_page",
       "reviewed_at": "2026-10-13",
       "note": "Reviewed the exact original Abstract— on the rendered source pages; pypdf reading order matches visible columns. Confirmed paragraph ending before I. INTRODUCTION and normalized character inventory against pdfminer; preserved initial disagreement."
+    },
+    {
+      "id": "meta:code-llama-open-foundation-models-for-code",
+      "source_sha256": "05ed05d2d76c420b6af4a1afe6e1dec99939ccf62c5a0c0a258b09cbe1889346",
+      "extractor": "pypdf 6.19.0",
+      "ranges": [
+        {
+          "page": 1,
+          "start_offset": 472,
+          "end_offset": 1626,
+          "raw_text_sha256": "2c4521212b0f6adb2f714bc0ee957a343e77d1e83170cd415b12e7f2968e164b"
+        }
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-14",
+      "note": "Passage rebuilt in printed page order from the source pages; the character inventory is identical to the extracted passage."
     }
   ]
 }

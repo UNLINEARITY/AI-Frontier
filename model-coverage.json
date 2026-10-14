@@ -140,7 +140,9 @@
       "note_cn": "已收录厂商原始 PDF。",
       "report_slugs": [
         "claude-sonnet-5-system-card"
-      ]
+      ],
+      "release_date": "2026-06-30",
+      "release_evidence": "Official post: Claude Sonnet 5 available everywhere today (Jun 30, 2026)."
     },
     {
       "vendor": "anthropic",
@@ -151,7 +153,9 @@
       "note_cn": "已收录厂商原始 PDF。",
       "report_slugs": [
         "claude-haiku-4-5-system-card"
-      ]
+      ],
+      "release_date": "2025-10-15",
+      "release_evidence": "Official post: Claude Haiku 4.5 available to all users today (Oct 15, 2025)."
     },
     {
       "vendor": "google",
@@ -1169,7 +1173,9 @@
       ],
       "latest_categories": [
         "coding"
-      ]
+      ],
+      "release_date": "2026-06-09",
+      "release_evidence": "Official Cohere post \"Introducing North Mini Code\" published Jun 09, 2026 (`datePublished` 2026-06-09): \"Today we're launching North Mini Code open-source\". The launch post names the model without the 1.0 suffix."
     },
     {
       "vendor": "cohere",
@@ -1539,7 +1545,9 @@
       "frontier_categories": [
         "general",
         "coding"
-      ]
+      ],
+      "release_date": "2026-09-28",
+      "release_evidence": "Official announcement: Claude Sonnet 5.5 available across Claude platforms (Sep 28, 2026)."
     },
     {
       "vendor": "xai",

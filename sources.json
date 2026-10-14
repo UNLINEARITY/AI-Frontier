@@ -483,7 +483,10 @@
     "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf#page=105",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。 模型卡包含于完整技术报告，归档整份报告。 首次报告发布日期取自对应 arXiv 元数据；归档文件使用官方站点提供的 PDF。",
     "pdf_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_v1_5_report.pdf",
-    "metadata_url": "https://arxiv.org/abs/2403.05530"
+    "metadata_url": "https://arxiv.org/abs/2403.05530",
+    "reading_models": [
+      "Gemini 1.5"
+    ]
   },
   {
     "vendor": "google",
@@ -495,7 +498,10 @@
     "source_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf#page=71",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。 模型卡包含于完整技术报告，归档整份报告。 首次报告发布日期取自对应 arXiv 元数据；归档文件使用官方站点提供的 PDF。",
     "pdf_url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_1_report.pdf",
-    "metadata_url": "https://arxiv.org/abs/2312.11805"
+    "metadata_url": "https://arxiv.org/abs/2312.11805",
+    "reading_models": [
+      "Gemini 1.0"
+    ]
   },
   {
     "vendor": "google",
@@ -810,7 +816,10 @@
     "published_date": "2026-07-09",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-6",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf"
+    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-6/gpt-5-6.pdf",
+    "reading_models": [
+      "GPT-5.6"
+    ]
   },
   {
     "vendor": "openai",
@@ -830,7 +839,10 @@
     "published_date": "2026-06-26",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-6-preview",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-6-preview/gpt-5-6-preview.pdf"
+    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-6-preview/gpt-5-6-preview.pdf",
+    "reading_models": [
+      "GPT-5.6"
+    ]
   },
   {
     "vendor": "openai",
@@ -850,7 +862,10 @@
     "published_date": "2026-05-05",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-5-instant",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-5-instant/gpt-5-5-instant.pdf"
+    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-5-instant/gpt-5-5-instant.pdf",
+    "reading_models": [
+      "GPT-5.5 Instant"
+    ]
   },
   {
     "vendor": "openai",
@@ -860,7 +875,10 @@
     "published_date": "2026-04-23",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-5",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-5/gpt-5-5.pdf"
+    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-5/gpt-5-5.pdf",
+    "reading_models": [
+      "GPT-5.5"
+    ]
   },
   {
     "vendor": "openai",
@@ -870,7 +888,10 @@
     "published_date": "2026-04-21",
     "source_url": "https://deploymentsafety.openai.com/chatgpt-images-2-0",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://deploymentsafety.openai.com/chatgpt-images-2-0/chatgpt-images-2-0.pdf"
+    "pdf_url": "https://deploymentsafety.openai.com/chatgpt-images-2-0/chatgpt-images-2-0.pdf",
+    "reading_models": [
+      "ChatGPT Images 2.0"
+    ]
   },
   {
     "vendor": "openai",
@@ -880,7 +901,10 @@
     "published_date": "2026-03-05",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf"
+    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-4-thinking/gpt-5-4-thinking.pdf",
+    "reading_models": [
+      "GPT-5.4 Thinking"
+    ]
   },
   {
     "vendor": "openai",
@@ -890,7 +914,10 @@
     "published_date": "2026-03-02",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-3-instant",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-3-instant/gpt-5-3-instant.pdf"
+    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-3-instant/gpt-5-3-instant.pdf",
+    "reading_models": [
+      "GPT-5.3 Instant"
+    ]
   },
   {
     "vendor": "openai",
@@ -900,7 +927,10 @@
     "published_date": "2026-02-05",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-3-codex",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-3-codex/gpt-5-3-codex.pdf"
+    "pdf_url": "https://deploymentsafety.openai.com/gpt-5-3-codex/gpt-5-3-codex.pdf",
+    "reading_models": [
+      "GPT-5.3-Codex"
+    ]
   },
   {
     "vendor": "openai",
@@ -910,7 +940,10 @@
     "published_date": "2025-12-18",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-2-codex",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf"
+    "pdf_url": "https://cdn.openai.com/pdf/ac7c37ae-7f4c-4442-b741-2eabdeaf77e0/oai_5_2_Codex.pdf",
+    "reading_models": [
+      "GPT-5.2-Codex"
+    ]
   },
   {
     "vendor": "openai",
@@ -920,7 +953,10 @@
     "published_date": "2025-12-11",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-2",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf"
+    "pdf_url": "https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf",
+    "reading_models": [
+      "GPT-5.2"
+    ]
   },
   {
     "vendor": "openai",
@@ -930,7 +966,10 @@
     "published_date": "2025-11-18",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-1-codex-max",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf"
+    "pdf_url": "https://cdn.openai.com/pdf/2a7d98b1-57e5-4147-8d0e-683894d782ae/5p1_codex_max_card_03.pdf",
+    "reading_models": [
+      "GPT-5.1-Codex-Max"
+    ]
   },
   {
     "vendor": "openai",
@@ -940,7 +979,11 @@
     "published_date": "2025-11-12",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-1",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://cdn.openai.com/pdf/4173ec8d-1229-47db-96de-06d87147e07e/5_1_system_card.pdf"
+    "pdf_url": "https://cdn.openai.com/pdf/4173ec8d-1229-47db-96de-06d87147e07e/5_1_system_card.pdf",
+    "reading_models": [
+      "GPT-5.1 Instant",
+      "GPT-5.1 Thinking"
+    ]
   },
   {
     "vendor": "openai",
@@ -950,7 +993,10 @@
     "published_date": "2025-10-27",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-sensitive-conversations",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://cdn.openai.com/pdf/3da476af-b937-47fb-9931-88a851620101/addendum-to-gpt-5-system-card-sensitive-conversations.pdf"
+    "pdf_url": "https://cdn.openai.com/pdf/3da476af-b937-47fb-9931-88a851620101/addendum-to-gpt-5-system-card-sensitive-conversations.pdf",
+    "reading_models": [
+      "GPT-5"
+    ]
   },
   {
     "vendor": "openai",
@@ -960,7 +1006,10 @@
     "published_date": "2025-09-30",
     "source_url": "https://deploymentsafety.openai.com/sora-2",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://cdn.openai.com/pdf/50d5973c-c4ff-4c2d-986f-c72b5d0ff069/sora_2_system_card.pdf"
+    "pdf_url": "https://cdn.openai.com/pdf/50d5973c-c4ff-4c2d-986f-c72b5d0ff069/sora_2_system_card.pdf",
+    "reading_models": [
+      "Sora 2"
+    ]
   },
   {
     "vendor": "openai",
@@ -970,7 +1019,10 @@
     "published_date": "2025-08-07",
     "source_url": "https://deploymentsafety.openai.com/gpt-5",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://cdn.openai.com/gpt-5-system-card.pdf"
+    "pdf_url": "https://cdn.openai.com/gpt-5-system-card.pdf",
+    "reading_models": [
+      "GPT-5"
+    ]
   },
   {
     "vendor": "openai",
@@ -1104,7 +1156,10 @@
     "published_date": "2025-11-26",
     "source_updated_date": "2025-11-27",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2511.21631v2"
+    "pdf_url": "https://arxiv.org/pdf/2511.21631v2",
+    "reading_models": [
+      "Qwen3-VL"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1117,7 +1172,10 @@
     "published_date": "2026-01-22",
     "source_updated_date": "2026-01-22",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2601.15621v1"
+    "pdf_url": "https://arxiv.org/pdf/2601.15621v1",
+    "reading_models": [
+      "Qwen3-TTS"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1130,7 +1188,10 @@
     "published_date": "2025-08-04",
     "source_updated_date": "2025-08-04",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2508.02324v1"
+    "pdf_url": "https://arxiv.org/pdf/2508.02324v1",
+    "reading_models": [
+      "Qwen-Image"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1143,7 +1204,10 @@
     "published_date": "2026-01-29",
     "source_updated_date": "2026-01-30",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2601.21337v2"
+    "pdf_url": "https://arxiv.org/pdf/2601.21337v2",
+    "reading_models": [
+      "Qwen3-ASR"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1169,7 +1233,10 @@
     "published_date": "2025-09-22",
     "source_updated_date": "2025-09-22",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2509.17765v1"
+    "pdf_url": "https://arxiv.org/pdf/2509.17765v1",
+    "reading_models": [
+      "Qwen3-Omni"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1195,7 +1262,11 @@
     "published_date": "2025-06-05",
     "source_updated_date": "2025-06-11",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2506.05176v3"
+    "pdf_url": "https://arxiv.org/pdf/2506.05176v3",
+    "reading_models": [
+      "Qwen3 Embedding",
+      "Qwen3 Reranker"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1208,7 +1279,10 @@
     "published_date": "2025-12-17",
     "source_updated_date": "2025-12-17",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2512.15603v1"
+    "pdf_url": "https://arxiv.org/pdf/2512.15603v1",
+    "reading_models": [
+      "Qwen-Image-Layered"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1247,7 +1321,10 @@
     "published_date": "2025-10-16",
     "source_updated_date": "2025-10-16",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2510.14276v1"
+    "pdf_url": "https://arxiv.org/pdf/2510.14276v1",
+    "reading_models": [
+      "Qwen3Guard"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1260,7 +1337,10 @@
     "published_date": "2026-08-31",
     "source_updated_date": "2026-08-31",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2609.00111v1"
+    "pdf_url": "https://arxiv.org/pdf/2609.00111v1",
+    "reading_models": [
+      "Qwen-Drive-1.0"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1871,7 +1951,11 @@
     "published_date": "2025-08-08",
     "source_updated_date": "2025-08-08",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2508.10925v1"
+    "pdf_url": "https://arxiv.org/pdf/2508.10925v1",
+    "reading_models": [
+      "gpt-oss-120b",
+      "gpt-oss-20b"
+    ]
   },
   {
     "vendor": "openai",
@@ -1962,7 +2046,10 @@
     "published_date": "2023-05-17",
     "source_updated_date": "2023-09-13",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2305.10403v3"
+    "pdf_url": "https://arxiv.org/pdf/2305.10403v3",
+    "reading_models": [
+      "PaLM 2"
+    ]
   },
   {
     "vendor": "google",
@@ -1975,7 +2062,11 @@
     "published_date": "2025-07-07",
     "source_updated_date": "2025-12-19",
     "version": "arxiv-v6",
-    "pdf_url": "https://arxiv.org/pdf/2507.06261v6"
+    "pdf_url": "https://arxiv.org/pdf/2507.06261v6",
+    "reading_models": [
+      "Gemini 2.5 Flash",
+      "Gemini 2.5 Pro"
+    ]
   },
   {
     "vendor": "google",
@@ -1988,7 +2079,10 @@
     "published_date": "2024-03-13",
     "source_updated_date": "2024-04-16",
     "version": "arxiv-v4",
-    "pdf_url": "https://arxiv.org/pdf/2403.08295v4"
+    "pdf_url": "https://arxiv.org/pdf/2403.08295v4",
+    "reading_models": [
+      "Gemma 1"
+    ]
   },
   {
     "vendor": "google",
@@ -2001,7 +2095,10 @@
     "published_date": "2025-03-25",
     "source_updated_date": "2025-03-25",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2503.19786v1"
+    "pdf_url": "https://arxiv.org/pdf/2503.19786v1",
+    "reading_models": [
+      "Gemma 3"
+    ]
   },
   {
     "vendor": "google",
@@ -2027,7 +2124,10 @@
     "published_date": "2024-07-10",
     "source_updated_date": "2024-10-10",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2407.07726v2"
+    "pdf_url": "https://arxiv.org/pdf/2407.07726v2",
+    "reading_models": [
+      "PaliGemma"
+    ]
   },
   {
     "vendor": "google",
@@ -2040,7 +2140,10 @@
     "published_date": "2024-12-04",
     "source_updated_date": "2024-12-04",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2412.03555v1"
+    "pdf_url": "https://arxiv.org/pdf/2412.03555v1",
+    "reading_models": [
+      "PaliGemma 2"
+    ]
   },
   {
     "vendor": "meta",
@@ -2092,7 +2195,10 @@
     "published_date": "2023-07-18",
     "source_updated_date": "2023-07-19",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2307.09288v2"
+    "pdf_url": "https://arxiv.org/pdf/2307.09288v2",
+    "reading_models": [
+      "Llama 2"
+    ]
   },
   {
     "vendor": "meta",
@@ -2105,7 +2211,10 @@
     "published_date": "2023-08-24",
     "source_updated_date": "2024-01-31",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2308.12950v3"
+    "pdf_url": "https://arxiv.org/pdf/2308.12950v3",
+    "reading_models": [
+      "Code Llama"
+    ]
   },
   {
     "vendor": "meta",
@@ -2131,7 +2240,10 @@
     "published_date": "2024-05-16",
     "source_updated_date": "2025-03-21",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2405.09818v2"
+    "pdf_url": "https://arxiv.org/pdf/2405.09818v2",
+    "reading_models": [
+      "Chameleon"
+    ]
   },
   {
     "vendor": "meta",
@@ -2144,7 +2256,10 @@
     "published_date": "2024-10-17",
     "source_updated_date": "2025-02-26",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2410.13720v2"
+    "pdf_url": "https://arxiv.org/pdf/2410.13720v2",
+    "reading_models": [
+      "Movie Gen"
+    ]
   },
   {
     "vendor": "meta",
@@ -2157,7 +2272,10 @@
     "published_date": "2023-08-22",
     "source_updated_date": "2023-10-25",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2308.11596v3"
+    "pdf_url": "https://arxiv.org/pdf/2308.11596v3",
+    "reading_models": [
+      "SeamlessM4T"
+    ]
   },
   {
     "vendor": "mistral",
@@ -2529,7 +2647,11 @@
     "source_updated_date": "",
     "source_url": "https://github.com/QwenLM/Qwen3-VL-Embedding",
     "pdf_url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL-Embedding/main/assets/qwen3vlembedding_technical_report.pdf",
-    "notes": "官方仓库 PDF 封面日期。"
+    "notes": "官方仓库 PDF 封面日期。",
+    "reading_models": [
+      "Qwen3-VL-Embedding",
+      "Qwen3-VL-Reranker"
+    ]
   },
   {
     "vendor": "google",
@@ -2551,7 +2673,10 @@
     "source_updated_date": "",
     "source_url": "https://deepmind.google/AlphaCode2_Tech_Report.pdf",
     "pdf_url": "https://deepmind.google/AlphaCode2_Tech_Report.pdf",
-    "notes": "报告封面日期。"
+    "notes": "报告封面日期。",
+    "reading_models": [
+      "AlphaCode 2"
+    ]
   },
   {
     "vendor": "openai",
@@ -2685,7 +2810,10 @@
     "published_date": "2024-06-17",
     "source_updated_date": "2024-06-19",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2406.11409v2"
+    "pdf_url": "https://arxiv.org/pdf/2406.11409v2",
+    "reading_models": [
+      "CodeGemma"
+    ]
   },
   {
     "vendor": "google",
@@ -2698,7 +2826,10 @@
     "published_date": "2025-12-16",
     "source_updated_date": "2025-12-23",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2512.14856v2"
+    "pdf_url": "https://arxiv.org/pdf/2512.14856v2",
+    "reading_models": [
+      "T5Gemma 2"
+    ]
   },
   {
     "vendor": "google",
@@ -2711,7 +2842,10 @@
     "published_date": "2025-04-08",
     "source_updated_date": "2025-04-08",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2504.06196v1"
+    "pdf_url": "https://arxiv.org/pdf/2504.06196v1",
+    "reading_models": [
+      "TxGemma"
+    ]
   },
   {
     "vendor": "mistral",
@@ -2789,7 +2923,10 @@
     "published_date": "2022-10-05",
     "source_updated_date": "2022-10-05",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2210.02303v1"
+    "pdf_url": "https://arxiv.org/pdf/2210.02303v1",
+    "reading_models": [
+      "Imagen Video"
+    ]
   },
   {
     "vendor": "google",
@@ -2815,7 +2952,10 @@
     "published_date": "2023-01-26",
     "source_updated_date": "2023-01-26",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2301.11325v1"
+    "pdf_url": "https://arxiv.org/pdf/2301.11325v1",
+    "reading_models": [
+      "MusicLM"
+    ]
   },
   {
     "vendor": "google",
@@ -2841,7 +2981,10 @@
     "published_date": "2023-06-08",
     "source_updated_date": "2024-01-30",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2306.05284v3"
+    "pdf_url": "https://arxiv.org/pdf/2306.05284v3",
+    "reading_models": [
+      "MusicGen"
+    ]
   },
   {
     "vendor": "meta",
@@ -2867,7 +3010,10 @@
     "published_date": "2024-08-01",
     "source_updated_date": "2024-10-28",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2408.00714v2"
+    "pdf_url": "https://arxiv.org/pdf/2408.00714v2",
+    "reading_models": [
+      "SAM 2"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -3582,6 +3728,9 @@
     "notes": "Image-generation and editing model family report. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01. Unversioned official arXiv endpoint verified to carry the requested ID and revision in first two pages; alternate supplied because pinned endpoint returned truncated HTTP payloads.",
     "alternate_pdf_urls": [
       "https://arxiv.org/pdf/2605.10730"
+    ],
+    "reading_models": [
+      "Qwen-Image-2.0"
     ]
   },
   {
@@ -3595,7 +3744,10 @@
     "pdf_url": "https://arxiv.org/pdf/2607.28227v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2607.28227",
-    "notes": "Qwen GUI-agent foundation model report. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01."
+    "notes": "Qwen GUI-agent foundation model report. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01.",
+    "reading_models": [
+      "Qwen UI Agent"
+    ]
   },
   {
     "vendor": "qwen",
@@ -3621,7 +3773,10 @@
     "pdf_url": "https://arxiv.org/pdf/2604.15804v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2604.15804",
-    "notes": "Qwen Team author-submitted model-family technical report. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01."
+    "notes": "Qwen Team author-submitted model-family technical report. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01.",
+    "reading_models": [
+      "Qwen3.5-Omni"
+    ]
   },
   {
     "vendor": "zai",
@@ -3682,6 +3837,9 @@
     "notes": "Qwen-developed preference model family report; official QwenLM repository releases 1.5B/7B/72B reward/preference model checkpoints. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01. Unversioned official arXiv endpoint verified to carry the requested ID and revision in first two pages; alternate supplied because pinned endpoint returned truncated HTTP payloads.",
     "alternate_pdf_urls": [
       "https://arxiv.org/pdf/2505.10527"
+    ],
+    "reading_models": [
+      "WorldPM"
     ]
   },
   {
@@ -3715,7 +3873,11 @@
     "source_updated_date": "2025-06-03",
     "source_url": "https://openai.com/index/o3-o4-mini-codex-system-card-addendum/",
     "pdf_url": "https://cdn.openai.com/pdf/8df7697b-c1b2-4222-be00-1fd3298f351d/codex_system_card.pdf",
-    "notes": "Official landing page gives May 16, 2025; publisher PDF contains an explicitly dated June 3, 2025 network-access update. Covers codex-1 and the Codex system."
+    "notes": "Official landing page gives May 16, 2025; publisher PDF contains an explicitly dated June 3, 2025 network-access update. Covers codex-1 and the Codex system.",
+    "reading_models": [
+      "o3",
+      "o4-mini"
+    ]
   },
   {
     "vendor": "openai",
@@ -3726,7 +3888,10 @@
     "source_updated_date": "",
     "source_url": "https://openai.com/index/gpt-5-system-card-addendum-gpt-5-codex/",
     "pdf_url": "https://cdn.openai.com/pdf/97cc5669-7a25-4e63-b15f-5fd5bdc4d149/gpt-5-codex-system-card.pdf",
-    "notes": "Publisher page and PDF both confirm September 15, 2025 and the GPT-5-Codex addendum identity."
+    "notes": "Publisher page and PDF both confirm September 15, 2025 and the GPT-5-Codex addendum identity.",
+    "reading_models": [
+      "GPT-5-Codex"
+    ]
   },
   {
     "vendor": "openai",
@@ -3737,7 +3902,11 @@
     "source_updated_date": "",
     "source_url": "https://openai.com/index/gpt-oss-safeguard-technical-report/",
     "pdf_url": "https://cdn.openai.com/pdf/08b7dee4-8bc6-4955-a219-7793fb69090c/Technical_report__Research_Preview_of_gpt_oss_safeguard.pdf",
-    "notes": "Original PDF cover title retained; official page explicitly designates a technical report and dates publication October 29, 2025."
+    "notes": "Original PDF cover title retained; official page explicitly designates a technical report and dates publication October 29, 2025.",
+    "reading_models": [
+      "gpt-oss-safeguard-120b",
+      "gpt-oss-safeguard-20b"
+    ]
   },
   {
     "vendor": "openai",
@@ -3927,7 +4096,10 @@
     "source_url": "https://arxiv.org/abs/2507.05201",
     "pdf_url": "https://arxiv.org/pdf/2507.05201v4",
     "version": "arxiv-v4",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://developers.google.com/health-ai-developer-foundations/medgemma/model-card-v1."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://developers.google.com/health-ai-developer-foundations/medgemma/model-card-v1.",
+    "reading_models": [
+      "MedGemma"
+    ]
   },
   {
     "vendor": "google",
@@ -3978,7 +4150,10 @@
     "source_url": "https://arxiv.org/abs/2509.20354",
     "pdf_url": "https://arxiv.org/pdf/2509.20354v3",
     "version": "arxiv-v3",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://deepmind.google/models/gemma/embeddinggemma/."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://deepmind.google/models/gemma/embeddinggemma/.",
+    "reading_models": [
+      "EmbeddingGemma"
+    ]
   },
   {
     "vendor": "meta",
@@ -3990,7 +4165,10 @@
     "source_url": "https://arxiv.org/abs/2312.05187",
     "pdf_url": "https://arxiv.org/pdf/2312.05187v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://ai.meta.com/research/publications/seamless-multilingual-expressive-and-streaming-speech-translation/."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://ai.meta.com/research/publications/seamless-multilingual-expressive-and-streaming-speech-translation/.",
+    "reading_models": [
+      "Seamless"
+    ]
   },
   {
     "vendor": "meta",
@@ -4014,7 +4192,10 @@
     "source_url": "https://arxiv.org/abs/2508.10104",
     "pdf_url": "https://arxiv.org/pdf/2508.10104v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://ai.meta.com/research/dinov3/."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://ai.meta.com/research/dinov3/.",
+    "reading_models": [
+      "DINOv3"
+    ]
   },
   {
     "vendor": "meta",
@@ -4026,7 +4207,10 @@
     "source_url": "https://arxiv.org/abs/2512.18099",
     "pdf_url": "https://arxiv.org/pdf/2512.18099v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://ai.meta.com/blog/sam-audio/."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://ai.meta.com/blog/sam-audio/.",
+    "reading_models": [
+      "SAM Audio"
+    ]
   },
   {
     "vendor": "meta",
@@ -4038,7 +4222,10 @@
     "source_url": "https://arxiv.org/abs/2511.16719",
     "pdf_url": "https://arxiv.org/pdf/2511.16719v2",
     "version": "arxiv-v2",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://ai.meta.com/research/publications/sam-3-segment-anything-with-concepts/."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://ai.meta.com/research/publications/sam-3-segment-anything-with-concepts/.",
+    "reading_models": [
+      "SAM 3"
+    ]
   },
   {
     "vendor": "meta",
@@ -4050,7 +4237,10 @@
     "source_url": "https://arxiv.org/abs/2304.07193",
     "pdf_url": "https://arxiv.org/pdf/2304.07193v2",
     "version": "arxiv-v2",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "DINOv2"
+    ]
   },
   {
     "vendor": "meta",
@@ -4062,7 +4252,10 @@
     "source_url": "https://arxiv.org/abs/2312.06674",
     "pdf_url": "https://arxiv.org/pdf/2312.06674v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "Llama Guard"
+    ]
   },
   {
     "vendor": "meta",
@@ -4074,7 +4267,10 @@
     "source_url": "https://arxiv.org/abs/2411.17713",
     "pdf_url": "https://arxiv.org/pdf/2411.17713v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "Llama Guard 3-1B-INT4"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -4227,7 +4423,10 @@
     "source_url": "https://arxiv.org/abs/2209.06794",
     "pdf_url": "https://arxiv.org/pdf/2209.06794v4",
     "version": "arxiv-v4",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "PaLI"
+    ]
   },
   {
     "vendor": "google",
@@ -4239,7 +4438,10 @@
     "source_url": "https://arxiv.org/abs/2310.09199",
     "pdf_url": "https://arxiv.org/pdf/2310.09199v2",
     "version": "arxiv-v2",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "PaLI-3"
+    ]
   },
   {
     "vendor": "google",
@@ -4284,6 +4486,9 @@
     "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
     "alternate_pdf_urls": [
       "https://export.arxiv.org/pdf/2412.08821v2"
+    ],
+    "reading_models": [
+      "Large Concept Model"
     ]
   },
   {
@@ -4308,7 +4513,10 @@
     "source_url": "https://arxiv.org/abs/2305.13516",
     "pdf_url": "https://arxiv.org/pdf/2305.13516v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "MMS"
+    ]
   },
   {
     "vendor": "meta",
@@ -4335,7 +4543,10 @@
     "source_url": "https://arxiv.org/abs/2504.13181",
     "pdf_url": "https://arxiv.org/pdf/2504.13181v2",
     "version": "arxiv-v2",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "Perception Encoder"
+    ]
   },
   {
     "vendor": "meta",
@@ -4347,7 +4558,10 @@
     "source_url": "https://arxiv.org/abs/2512.19687",
     "pdf_url": "https://arxiv.org/pdf/2512.19687v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "Perception Encoder Audiovisual"
+    ]
   },
   {
     "vendor": "meta",
@@ -4616,6 +4830,9 @@
     "notes": "Wan audio-driven cinematic-video model; official Wan2.2 repository links author project PDF. Alibaba publisher; Wan is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01.",
     "alternate_pdf_urls": [
       "https://arxiv.org/pdf/2508.18621"
+    ],
+    "reading_models": [
+      "Wan-S2V"
     ]
   },
   {
@@ -4632,6 +4849,9 @@
     "notes": "Wan character-animation/replacement model. Alibaba publisher; Wan is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01.",
     "alternate_pdf_urls": [
       "https://arxiv.org/pdf/2509.14055"
+    ],
+    "reading_models": [
+      "Wan-Animate"
     ]
   },
   {
@@ -4645,7 +4865,11 @@
     "pdf_url": "https://arxiv.org/pdf/2608.06009v2",
     "version": "arxiv-v2",
     "metadata_url": "https://github.com/Wan-Video/Wan-Animate-2",
-    "notes": "Latest paper title follows author arXiv metadata; official README has an older descriptive title and TODO citation, but its paper hyperlink identifies correct arXiv ID. Alibaba publisher; Wan is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01."
+    "notes": "Latest paper title follows author arXiv metadata; official README has an older descriptive title and TODO citation, but its paper hyperlink identifies correct arXiv ID. Alibaba publisher; Wan is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01.",
+    "reading_models": [
+      "Wan video / Wan-Dancer / Wan-Animate-2",
+      "Wan-Animate-2"
+    ]
   },
   {
     "vendor": "qwen",
@@ -4658,7 +4882,11 @@
     "pdf_url": "https://arxiv.org/pdf/2607.09581v3",
     "version": "arxiv-v3",
     "metadata_url": "https://github.com/Wan-Video/Wan-Dancer",
-    "notes": "Wan music-to-dance video model with released official checkpoints. Alibaba publisher; Wan is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01."
+    "notes": "Wan music-to-dance video model with released official checkpoints. Alibaba publisher; Wan is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01.",
+    "reading_models": [
+      "Wan video / Wan-Dancer / Wan-Animate-2",
+      "Wan-Dancer"
+    ]
   },
   {
     "vendor": "qwen",
@@ -4674,6 +4902,9 @@
     "notes": "Wan motion-controllable video model with released official checkpoints. Alibaba publisher; Wan is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01.",
     "alternate_pdf_urls": [
       "https://arxiv.org/pdf/2512.08765"
+    ],
+    "reading_models": [
+      "Wan-Move"
     ]
   },
   {
@@ -4687,7 +4918,10 @@
     "pdf_url": "https://arxiv.org/pdf/2510.24701v3",
     "version": "arxiv-v3",
     "metadata_url": "https://github.com/Alibaba-NLP/DeepResearch",
-    "notes": "Tongyi DeepResearch-30B-A3B agentic model; official repository provides model weights and original technical report. Alibaba publisher; Tongyi is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01."
+    "notes": "Tongyi DeepResearch-30B-A3B agentic model; official repository provides model weights and original technical report. Alibaba publisher; Tongyi is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01.",
+    "reading_models": [
+      "Tongyi DeepResearch"
+    ]
   },
   {
     "vendor": "minimax",
@@ -4865,7 +5099,11 @@
     "source_updated_date": "",
     "source_url": "https://deploymentsafety.openai.com/gpt-5-6-august-update",
     "pdf_url": "https://deploymentsafety.openai.com/gpt-5-6-august-update/gpt-5-6-august-update.pdf",
-    "notes": "Official safety evaluation update, distinct from the July GPT-5.6 system card. Cover and landing page date agree; verified original PDF, 30 pages. Report date is not a new model release date."
+    "notes": "Official safety evaluation update, distinct from the July GPT-5.6 system card. Cover and landing page date agree; verified original PDF, 30 pages. Report date is not a new model release date.",
+    "reading_models": [
+      "GPT-5.6",
+      "GPT-5.6 August safety update"
+    ]
   },
   {
     "vendor": "cohere",
@@ -5032,7 +5270,10 @@
     "source_url": "https://arxiv.org/abs/2606.12429",
     "pdf_url": "https://arxiv.org/pdf/2606.12429v1",
     "notes": "Official Meta author report; arXiv v1 dates verified from submission history. Official publisher endpoint https://ai.meta.com/static-resource/muse-spark-safety-and-preparedness-report/ is a different 160-page revision (arXiv 159 pages); do not use as byte-identical alternate.",
-    "version": "arxiv-v1"
+    "version": "arxiv-v1",
+    "reading_models": [
+      "Muse Spark"
+    ]
   },
   {
     "vendor": "meta",

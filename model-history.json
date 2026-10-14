@@ -54,7 +54,10 @@
       "report_slugs": [
         "claude-sonnet-3-5-model-card",
         "claude-3-5-haiku-and-upgraded-sonnet-model-card-addendum"
-      ]
+      ],
+      "release_date": "2024-06-20",
+      "release_source_url": "https://www.anthropic.com/news/claude-3-5-sonnet",
+      "release_evidence": "Official Claude 3.5 family launch post (\"Today we are launching Claude 3.5 Sonnet\"); the page timestamp is 2024-06-21T03:28Z UTC, the announcement day in the US was 2024-06-20."
     },
     {
       "vendor": "anthropic",
@@ -62,7 +65,10 @@
       "source_url": "https://www.anthropic.com/system-cards",
       "report_slugs": [
         "claude-3-5-haiku-and-upgraded-sonnet-model-card-addendum"
-      ]
+      ],
+      "release_date": "2024-10-22",
+      "release_source_url": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+      "release_evidence": "Official post announcing computer use, the upgraded Claude 3.5 Sonnet, and Claude 3.5 Haiku (Oct 22, 2024)."
     },
     {
       "vendor": "anthropic",
@@ -103,7 +109,10 @@
       "source_url": "https://www.anthropic.com/system-cards",
       "report_slugs": [
         "claude-opus-4-1-system-card"
-      ]
+      ],
+      "release_date": "2025-08-05",
+      "release_source_url": "https://www.anthropic.com/news/claude-opus-4-1",
+      "release_evidence": "Official post: \"Today we are releasing Claude Opus 4.1\" (Aug 5, 2025); API id claude-opus-4-1-20250805."
     },
     {
       "vendor": "anthropic",
@@ -122,7 +131,10 @@
       "source_url": "https://www.anthropic.com/system-cards",
       "report_slugs": [
         "claude-opus-4-5-system-card"
-      ]
+      ],
+      "release_date": "2025-11-24",
+      "release_source_url": "https://www.anthropic.com/news/claude-opus-4-5",
+      "release_evidence": "Official Claude Opus 4.5 announcement; available in Claude apps, API, and cloud platforms the same day (Nov 24, 2025)."
     },
     {
       "vendor": "anthropic",
@@ -130,7 +142,10 @@
       "source_url": "https://anthropic.com/claude-opus-4-6-system-card",
       "report_slugs": [
         "claude-opus-4-6-system-card"
-      ]
+      ],
+      "release_date": "2026-02-05",
+      "release_source_url": "https://www.anthropic.com/news/claude-opus-4-6",
+      "release_evidence": "Official Claude Opus 4.6 announcement with system card (Feb 5, 2026)."
     },
     {
       "vendor": "anthropic",
@@ -138,7 +153,10 @@
       "source_url": "https://anthropic.com/claude-sonnet-4-6-system-card",
       "report_slugs": [
         "claude-sonnet-4-6-system-card"
-      ]
+      ],
+      "release_date": "2026-02-17",
+      "release_source_url": "https://www.anthropic.com/news/claude-sonnet-4-6",
+      "release_evidence": "Official post introducing Claude Sonnet 4.6 (Feb 17, 2026)."
     },
     {
       "vendor": "anthropic",
@@ -154,7 +172,10 @@
       "source_url": "https://anthropic.com/claude-opus-4-7-system-card",
       "report_slugs": [
         "claude-opus-4-7-system-card"
-      ]
+      ],
+      "release_date": "2026-04-16",
+      "release_source_url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "release_evidence": "Official post: Claude Opus 4.7 generally available (Apr 16, 2026)."
     },
     {
       "vendor": "anthropic",
@@ -173,7 +194,10 @@
       "source_url": "https://anthropic.com/claude-fable-5-mythos-5-system-card",
       "report_slugs": [
         "claude-fable-5-and-mythos-5-system-card"
-      ]
+      ],
+      "release_date": "2026-06-09",
+      "release_source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "release_evidence": "Official post launching Claude Fable 5 and Claude Mythos 5 (Jun 9, 2026); access suspended Jun 12, 2026 and restored Jul 1, 2026."
     },
     {
       "vendor": "anthropic",
@@ -181,7 +205,10 @@
       "source_url": "https://anthropic.com/claude-fable-5-mythos-5-system-card",
       "report_slugs": [
         "claude-fable-5-and-mythos-5-system-card"
-      ]
+      ],
+      "release_date": "2026-06-09",
+      "release_source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+      "release_evidence": "Official post launching Claude Fable 5 and Claude Mythos 5 (Jun 9, 2026); Mythos 5 restricted to vetted Project Glasswing partners."
     },
     {
       "vendor": "anthropic",
@@ -197,7 +224,10 @@
       "source_url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
       "report_slugs": [
         "claude-fable-5-1-and-mythos-5-1-system-card"
-      ]
+      ],
+      "release_date": "2026-09-01",
+      "release_source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "release_evidence": "Official Claude Fable 5.1 / Claude Mythos 5.1 announcement; product page dates Claude Fable 5.1 to Sep 1, 2026."
     },
     {
       "vendor": "anthropic",
@@ -205,7 +235,10 @@
       "source_url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
       "report_slugs": [
         "claude-fable-5-1-and-mythos-5-1-system-card"
-      ]
+      ],
+      "release_date": "2026-09-01",
+      "release_source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "release_evidence": "Announced together with Claude Fable 5.1 in the same official post (Sep 1, 2026); access limited to verified organizations."
     },
     {
       "vendor": "openai",
@@ -2337,7 +2370,10 @@
       "source_url": "https://github.com/zai-org/GLM-5",
       "report_slugs": [
         "glm-5-from-vibe-coding-to-agentic-engineering"
-      ]
+      ],
+      "release_date": "2026-02-12",
+      "release_source_url": "https://z.ai/blog/glm-5",
+      "release_evidence": "Official Z.ai research post dated Feb 12, 2026: \"We are launching GLM-5\", with weights, API availability, and model use linked."
     },
     {
       "vendor": "zai",

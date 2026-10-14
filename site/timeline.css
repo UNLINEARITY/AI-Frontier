@@ -27,7 +27,6 @@
 .timeline-node:hover .timeline-dot,.timeline-node:focus .timeline-dot{r:7;stroke-width:3}
 .timeline-node:hover .timeline-stem,.timeline-node:focus .timeline-stem{stroke-opacity:.7}
 .timeline-node:focus .timeline-dot{stroke:var(--ink)}
-.timeline-node.is-muted .timeline-dot{opacity:.24}
 .timeline-empty{fill:var(--muted);font-size:13px}
 .timeline-tooltip{position:absolute;display:flex;align-items:flex-start;gap:10px;max-width:290px;padding:14px 16px;background:var(--input-bg);color:var(--ink);border:1px solid var(--border-hover);border-radius:10px;box-shadow:0 8px 28px var(--shadow);pointer-events:none;z-index:2;animation:rise .16s var(--ease)}
 .timeline-tooltip img{width:30px;height:30px;object-fit:contain;background:#fff;padding:5px;border-radius:7px;flex-shrink:0}
