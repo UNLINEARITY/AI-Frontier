@@ -2,16 +2,18 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**39 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**41 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
 | 2026-09-03 | [WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations](https://arxiv.org/abs/2609.03582) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2609.03582) |
+| 2026-07-29 | [Gemini Robotics 2: Safety Evaluations](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
 | 2026-07-02 | [Gemma 4 Technical Report](https://arxiv.org/abs/2607.02770) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2607.02770) |
 | 2026-05-26 | [Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini](https://arxiv.org/abs/2605.27295) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2605.27295) |
 | 2026-04-06 | [MedGemma 1.5 Technical Report](https://arxiv.org/abs/2604.05081) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2604.05081) |
 | 2026-01-13 | [TranslateGemma Technical Report](https://arxiv.org/abs/2601.09012) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2601.09012) |
 | 2025-12-16 | [T5Gemma 2: Seeing, Reading, and Understanding Longer](https://deepmind.google/models/gemma/t5gemma/) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://deepmind.google/models/gemma/t5gemma/) |
+| 2025-12-04 | [SIMA 2: A Generalist Embodied Agent for Virtual Worlds](https://arxiv.org/abs/2512.04797) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2512.04797) |
 | 2025-09-24 | [EmbeddingGemma: Powerful and Lightweight Text Representations](https://arxiv.org/abs/2509.20354) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2509.20354) |
 | 2025-07-07 | [MedGemma Technical Report](https://arxiv.org/abs/2507.05201) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2507.05201) |
 | 2025-07-07 | [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](https://arxiv.org/abs/2507.06261) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2507.06261) |

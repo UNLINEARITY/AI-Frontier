@@ -8,7 +8,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 
 | Type | Reports |
 | --- | ---: |
-| [Technical Report](technical-reports/README.md) | 9 |
+| [Technical Report](technical-reports/README.md) | 11 |
 | [Model Card](model-cards/README.md) | 4 |
 | [System Card](system-cards/README.md) | 0 |
 
@@ -20,8 +20,10 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | 2026-04-15 | [Seedance 2.0: Advancing Video Generation for World Complexity](https://seed.bytedance.com/en/research) | [Technical Report](../../reports/technical-reports.md) | [Source](https://seed.bytedance.com/en/research) |
 | 2025-12-17 | [Seed1.8 Model Card: Towards Generalized Real-World Agency](https://seed.bytedance.com/en/seed_model_portfolio) | [Model Card](../../reports/model-cards.md) | [Source](https://seed.bytedance.com/en/seed_model_portfolio) |
 | 2025-12-15 | [Seedance 1.5 pro: A Native Audio-Visual Joint Generation Foundation Model](https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro) | [Model Card](../../reports/model-cards.md) | [Source](https://seed.bytedance.com/en/blog/sound-and-vision-all-in-one-take-the-official-release-of-seedance-1-5-pro) |
+| 2025-12-01 | [GR-RL: Going Dexterous and Precise for Long-Horizon Robotic Manipulation](https://arxiv.org/abs/2512.01801) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2512.01801) |
 | 2025-09-24 | [Seedream 4.0: Toward Next-generation Multimodal Image Generation](https://arxiv.org/abs/2509.20427) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2509.20427) |
 | 2025-08-04 | [Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference](https://seed.bytedance.com/en/seed_model_portfolio) | [Technical Report](../../reports/technical-reports.md) | [Source](https://seed.bytedance.com/en/seed_model_portfolio) |
+| 2025-07-21 | [GR-3 Technical Report](https://arxiv.org/abs/2507.15493) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2507.15493) |
 | 2025-06-10 | [Seedance 1.0: Exploring the Boundaries of Video Generation Models](https://arxiv.org/abs/2506.09113) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2506.09113) |
 | 2025-05-11 | [Seed1.5-VL Technical Report](https://seed.bytedance.com/en/seed_model_portfolio) | [Technical Report](../../reports/technical-reports.md) | [Source](https://seed.bytedance.com/en/seed_model_portfolio) |
 | 2025-04-15 | [Seedream 3.0 Technical Report](https://arxiv.org/abs/2504.11346) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2504.11346) |

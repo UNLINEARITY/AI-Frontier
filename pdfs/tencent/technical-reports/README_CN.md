@@ -2,7 +2,7 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已收录 **15 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **16 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
@@ -11,6 +11,7 @@
 | 2026-08-03 | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](https://arxiv.org/abs/2608.02711) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.02711) |
 | 2026-07-06 | [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](https://github.com/Tencent-Hunyuan/HunyuanOCR) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
 | 2026-05-21 | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](https://arxiv.org/abs/2605.22064) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.22064) |
+| 2025-12-16 | [WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling](https://arxiv.org/abs/2512.14614) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.14614) |
 | 2025-11-24 | [HunyuanVideo 1.5 Technical Report](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |
 | 2025-11-24 | [HunyuanOCR Technical Report](https://github.com/Tencent-Hunyuan/HunyuanOCR) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
 | 2025-09-28 | [HunyuanImage 3.0 Technical Report](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) |

@@ -22,8 +22,9 @@ HEADINGS = {
     'model overview': ('overview', 2), 'overview': ('overview', 2),
     'model description': ('description', 3), 'description': ('description', 3),
     'summary': ('summary', 4), 'introduction': ('introduction', 5),
+    'model architecture': ('model_architecture', 6),
 }
-KNOWN_BOUNDARIES = re.compile(r'^(?:model dependencies|model architecture|architecture|inputs|outputs|training|training data|limitations|intended use|intended uses|model details|evaluation|evaluations|capabilities|safety|contents|table of contents)$', re.I)
+KNOWN_BOUNDARIES = re.compile(r'^(?:model dependencies|model architecture|architecture|modalities|context length|total model size|inputs|outputs|training|training data|limitations|intended use|intended uses|model details|evaluation|evaluations|capabilities|safety|contents|table of contents|open-source code|open-weight model checkpoint|open synthetic dataset|open evaluation benchmark)$', re.I)
 OPENING = re.compile(r'^(?:We (?:introduce|present|describe|propose)|This (?:paper|report)|State[- ]of[- ]the[- ]art)', re.I)
 
 
@@ -33,25 +34,36 @@ def compact(text):
     return re.sub(r'\s+', '', re.sub(r'-\s*\n\s*(?=[a-z])', '', text))
 
 
+def source_agrees(fragment, page):
+    # Word-positioned PDFs can insert a newline after a genuine word hyphen.
+    # Compare literal glyph order before normalizing line-wrap hyphens.
+    glyphs = lambda value: re.sub(r'\s+', '', unicodedata.normalize('NFKC', value))
+    return glyphs(fragment) in glyphs(page) or compact(fragment) in compact(page)
+
+
 def heading(text):
     lines = [line.strip() for line in text.splitlines() if line.strip()]
     if not lines:
         return None
     first = lines[0]
-    prefix = re.sub(r'^\d+(?:\.\d+)*\.?\s*', '', first).strip()
+    prefix = re.sub(r'^(?:\d+(?:\.\d+)*\.?|[IVX]+\.)\s*', '', first).strip()
     # A heading can wrap, or share its first text box with the paragraph.
     for name, (kind, rank) in HEADINGS.items():
-        if re.fullmatch(re.escape(name) + r'[.:]?', prefix, re.I):
+        if re.fullmatch(re.escape(name) + r'[.:—–-]?', prefix, re.I):
             return kind, rank, first, '\n'.join(lines[1:])
     if len(lines) >= 2 and (first + ' ' + lines[1]).lower() == 'executive summary':
         return 'executive_summary', 1, first + ' ' + lines[1], '\n'.join(lines[2:])
-    match = re.match(r'^Abstract[.:]\s*(.+)$', first, re.I)
+    match = re.match(r'^Abstract[.:—–-]\s*(.+)$', first, re.I)
     if match:
         return 'abstract', 0, first[:first.index(match[1])].strip(), match[1] + '\n' + '\n'.join(lines[1:])
     inline = re.match(r'^(Description|Model description|Overview):\s*(.+)$', first, re.I)
     if inline:
         kind, rank = HEADINGS[inline[1].lower()]
         return kind, rank, inline[1] + ':', inline[2] + '\n' + '\n'.join(lines[1:])
+    table = re.match(r'^(Model architecture)\s{2,}(.+)$', first, re.I)
+    if table:
+        kind, rank = HEADINGS[table[1].lower()]
+        return kind, rank, table[1], table[2] + '\n' + '\n'.join(lines[1:])
     if re.match(r'^\d+\.?\s+Safety Overview\b', first, re.I):
         return 'overview', 2, first, '\n'.join(lines[1:])
     return None
@@ -122,7 +134,7 @@ def choose_section(pages):
         start_font = start_block['font_size']
         body_font = start_font if len(remainder) > 120 else next((b['font_size'] for b in pages[pi]['blocks'][bi+1:] if usable(b, pages[pi]) and len(b['text']) > 120), start_font)
         # Label/value model-card tables require row geometry rather than text order.
-        if kind == 'description' and not remainder and start_block['bbox'][2] < pages[pi]['width'] * .35:
+        if kind in {'description', 'model_architecture'} and not remainder and start_block['bbox'][2] < pages[pi]['width'] * .35:
             values = [b for b in pages[pi]['blocks'] if b['bbox'][0] > start_block['bbox'][2] + 15
                       and abs(b['bbox'][3] - start_block['bbox'][3]) < 5 and len(b['text']) > 120]
             if len(values) == 1:
@@ -137,14 +149,16 @@ def choose_section(pages):
                 break
             for bn in range(bi if pn == pi else 0, len(page['blocks'])):
                 block = page['blocks'][bn]
+                # IEEE section headings can be smaller than the paragraph font.
+                # Recognize their boundary before filtering small body/annotation text.
+                if (pn != pi or bn != bi) and block['bbox'][2] >= page['width'] * .08 and boundary(block, start_font):
+                    ended = True
+                    break
                 if not usable(block, page) or (pn != pi or bn != bi) and block['font_size'] < body_font * .9:
                     continue
                 if pn == pi and bn == bi:
                     text = remainder
                 else:
-                    if boundary(block, start_font):
-                        ended = True
-                        break
                     # Exclude repeated running headers, not body text.
                     if block['bbox'][1] > page['height'] * .93 and len(block['text']) < 160:
                         continue
@@ -153,6 +167,14 @@ def choose_section(pages):
                     fragments.append({'page': pn + 1, 'text': text.strip()})
             if ended:
                 break
+        if kind == 'model_architecture':
+            grouped = []
+            for fragment in fragments:
+                if grouped and grouped[-1]['page'] == fragment['page'] and not re.match(r'^\(\d+\)', fragment['text']):
+                    grouped[-1]['text'] += '\n' + fragment['text']
+                else:
+                    grouped.append(dict(fragment))
+            fragments = grouped
         raw = '\n\n'.join(f['text'] for f in fragments)
         if len(raw) >= 40 and len(raw.split()) >= 8:
             return dict(section_type=kind, source_heading=label, fragments=fragments,
@@ -200,6 +222,7 @@ def extract_report(item, cache, scan_pages):
     result = dict(id=f"{row['vendor']}:{item['slug']}", vendor=row['vendor'], title=row['title'],
                   models=item['models'], document_type=row['document_type'], source_pdf=row['local_path'],
                   source_url=row['source_url'], source_sha256=digest, source_version=row['version'],
+                  reader_scope=item.get('reader_scope', 'frontier'),
                   method='native_text', extractors={'primary': 'pdfminer.six 20260107', 'comparison': 'pypdf 6.19.0'},
                   manual_review=False, status='no_summary_identified', review_reasons=[],
                   section_type=None, source_heading=None, pages=[], raw_text='', text='',
@@ -212,9 +235,10 @@ def extract_report(item, cache, scan_pages):
     result['source_fragments'] = section['fragments']
     result['pages'] = sorted({f['page'] for f in section['fragments']})
     result['text'] = '\n\n'.join(re.sub(r'\s+', ' ', f['text']).strip() for f in section['fragments'])
-    matches = [compact(f['text']) in compact(extracted['pypdf_pages'][f['page'] - 1])
+    matches = [source_agrees(f['text'], extracted['pypdf_pages'][f['page'] - 1])
                for f in section['fragments']]
-    result['cross_check'] = {'matched_fragments': sum(matches), 'total_fragments': len(matches)}
+    result['cross_check'] = {'matched_fragments': sum(matches), 'total_fragments': len(matches),
+                             'comparison': 'literal_glyph_order_or_line_wrap_normalization'}
     if not all(matches):
         result['review_reasons'].append('Independent text extractors disagree on one or more paragraphs.')
     if not section['boundary_found'] and result['pages'][-1] < extracted['page_count']:
@@ -238,18 +262,22 @@ def apply_source_review(report, cache, scan_pages):
             continue
         row = dict(local_path=report['source_pdf'])
         source = extract_cached(ROOT / row['local_path'], report['source_sha256'], cache, scan_pages)
-        raw = source['pypdf_pages'][review['page'] - 1][review['start_offset']:review['end_offset']]
-        if hashlib.sha256(raw.encode()).hexdigest() != review['raw_text_sha256']:
-            raise ValueError('Reviewed source text changed; do not reuse the review.')
+        parts = []
+        for region in review.get('ranges', [review]):
+            raw = source['pypdf_pages'][region['page'] - 1][region['start_offset']:region['end_offset']]
+            if hashlib.sha256(raw.encode()).hexdigest() != region['raw_text_sha256']:
+                raise ValueError('Reviewed source text changed; do not reuse the review.')
+            parts.append({'page': region['page'], 'text': raw})
+        raw = '\n'.join(part['text'] for part in parts)
         # A moved glyph can change reading order without changing source characters.
         if Counter(compact(raw)) != Counter(compact(report['raw_text'])):
             raise ValueError('Reviewed alternate extraction changes source characters.')
         report['initial_cross_check'] = report['cross_check']
         report['cross_check'] = {'method': 'normalized_character_inventory', 'agrees': True, 'reading_order_check': 'visual_source_page'}
         report['extractors'] = {'primary': 'pypdf 6.19.0', 'comparison': 'pdfminer.six 20260107'}
-        report.update(raw_text=raw, text=re.sub(r'\s+', ' ', raw).strip(), pages=[review['page']],
+        report.update(raw_text=raw, text=re.sub(r'\s+', ' ', raw).strip(), pages=sorted({p['page'] for p in parts}),
                       status='source_reviewed', source_review=review,
-                      source_fragments=[{'page': review['page'], 'text': raw}],
+                      source_fragments=parts,
                       review_reasons=[])
         report['text_sha256'] = hashlib.sha256(report['text'].encode()).hexdigest()
     return report
@@ -275,6 +303,20 @@ def current_reports():
         if not found:
             missing.append(dict(vendor=model['vendor'], model=model['model'],
                                 source_url=model.get('frontier_source_url', model['source_url'])))
+    # Keep previously extracted report URLs usable when a latest model is superseded.
+    # They remain archive readers, separate from the active frontier navigation.
+    previous = ROOT / 'abstracts/index.json'
+    if previous.exists():
+        by_path = {r['local_path']: r for r in rows if r['status'] == 'archived'}
+        selected_ids = {(i['row']['vendor'], i['slug']) for i in reports.values()}
+        for old in json.loads(previous.read_text())['reports']:
+            if not old.get('source_pdf') or tuple(old['id'].split(':', 1)) in selected_ids:
+                continue
+            row = by_path.get(old['source_pdf'])
+            if not row or row['sha256'] != old['source_sha256']:
+                raise ValueError(f"Stale historical reader binding: {old['id']}")
+            reports[row['local_path']] = dict(row=row, slug=old['id'].split(':', 1)[1],
+                                              models=old['models'], reader_scope='historical')
     return list(reports.values()), missing
 
 
@@ -296,9 +338,21 @@ def write_outputs(output, reports, missing, write_index=True):
         selected = figures.get(report['id'], {})
         if selected.get('source_sha256') == report['source_sha256']:
             for figure in selected.get('figures', []):
-                number = f"Figure {figure['figure_number']}" if figure['figure_number'] is not None else 'Figure'
-                lines += [f"![{number}](../../{figure['png_path']})", '', figure['caption'], '',
-                          f"p. {figure['page']}", '']
+                number = figure.get('figure_number')
+                if number is not None:
+                    number = str(number) if re.match(r'^(?:Figure|Fig\.|Table)\s', str(number)) else f"Figure {number}"
+                else:
+                    number = ('Table' if figure.get('source_kind') == 'table' else
+                              'Image' if figure.get('source_kind') == 'image' and figure.get('page') is None else 'Figure')
+                if figure.get('lead_in'):
+                    lines += [figure['lead_in'], '']
+                alt = figure.get('alt') or number
+                alt = alt.replace('[', '\\[').replace(']', '\\]')
+                lines += [f"![{alt}](../../{figure['png_path']})", '']
+                if figure.get('caption'):
+                    lines += [figure['caption'], '']
+                if figure.get('page') is not None:
+                    lines += [f"p. {figure['page']}", '']
         target.write_text('\n'.join(line.rstrip() for line in '\n'.join(lines).splitlines()).rstrip() + '\n')
     payload = dict(schema_version=1, extracted_at=date.today().isoformat(), reports=reports,
                    models_without_archived_reports=missing)
@@ -306,13 +360,14 @@ def write_outputs(output, reports, missing, write_index=True):
         (output / 'index.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n')
     for chinese in (False, True):
         name = 'README_CN.md' if chinese else 'README.md'
-        figure_count = sum(len(figures.get(r['id'], {}).get('figures', [])) for r in reports
+        frontier = [r for r in reports if r.get('reader_scope') != 'historical']
+        figure_count = sum(len(figures.get(r['id'], {}).get('figures', [])) for r in frontier
                            if figures.get(r['id'], {}).get('source_sha256') == r['source_sha256'])
-        lines = ['# 前沿报告' if chinese else '# Frontier reports', '',
+        lines = ['# 前沿阅读' if chinese else '# Frontier reading', '',
                  '[English](README.md) · [首页](../README_CN.md)' if chinese else '[中文](README_CN.md) · [Home](../README.md)', '',
-                 f"**{len(reports)} {'份报告' if chinese else 'reports'} · {figure_count} {'张核心图片' if chinese else 'core figures'}**", '']
+                 f"**{len(frontier)} {'篇原文概要' if chinese else 'source overviews'} · {figure_count} {'张核心图片' if chinese else 'core figures'}**", '']
         for vendor, label in VENDORS.items():
-            group = [r for r in reports if r['vendor'] == vendor]
+            group = [r for r in frontier if r['vendor'] == vendor]
             if not group:
                 continue
             lines += [f"## {label if chinese or vendor != 'zai' else 'Z.ai / Zhipu AI'}", '']
@@ -337,6 +392,9 @@ def main():
     cache.mkdir(parents=True, exist_ok=True)
     items, missing = current_reports()
     reports = [apply_source_review(extract_report(item, cache, args.scan_pages), cache, args.scan_pages) for item in items]
+    from web_sources import current_summaries
+    web = current_summaries(ROOT, json.loads((ROOT / 'model-coverage.json').read_text())['models'])
+    reports.extend(web)
     write_outputs(args.output.resolve(), reports, missing)
     print(json.dumps(dict(reports=len(reports), statuses=dict(Counter(r['status'] for r in reports)),
                           sections=dict(Counter(r['section_type'] for r in reports)), models_without_pdf=len(missing))))

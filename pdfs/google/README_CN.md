@@ -8,20 +8,25 @@
 
 | 类型 | 已收录报告 |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 39 |
-| [模型卡](model-cards/README_CN.md) | 32 |
-| [系统卡](system-cards/README_CN.md) | 0 |
+| [技术报告](technical-reports/README_CN.md) | 41 |
+| [模型卡](model-cards/README_CN.md) | 34 |
+| [系统卡](system-cards/README_CN.md) | 1 |
 
 ## 全部报告
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-10-13 | [Gemini 4 Argon Safety and Security Report](https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/) | [系统卡](../../reports/system-cards_CN.md) | [来源](https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/) |
+| 2026-10-13 | [Gemini 4 Argon Model Card](https://deepmind.google/models/model-cards/gemini-4-argon/) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://deepmind.google/models/model-cards/gemini-4-argon/) |
+| 2026-10-06 | [Nano Banana 2.1 Model Card](https://deepmind.google/models/model-cards/nano-banana-2-1/) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://deepmind.google/models/model-cards/nano-banana-2-1/) |
 | 2026-09-03 | [WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations](https://arxiv.org/abs/2609.03582) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2609.03582) |
+| 2026-07-29 | [Gemini Robotics 2: Safety Evaluations](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
 | 2026-07-02 | [Gemma 4 Technical Report](https://arxiv.org/abs/2607.02770) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.02770) |
 | 2026-05-26 | [Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini](https://arxiv.org/abs/2605.27295) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.27295) |
 | 2026-04-06 | [MedGemma 1.5 Technical Report](https://arxiv.org/abs/2604.05081) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2604.05081) |
 | 2026-01-13 | [TranslateGemma Technical Report](https://arxiv.org/abs/2601.09012) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2601.09012) |
 | 2025-12-16 | [T5Gemma 2: Seeing, Reading, and Understanding Longer](https://deepmind.google/models/gemma/t5gemma/) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://deepmind.google/models/gemma/t5gemma/) |
+| 2025-12-04 | [SIMA 2: A Generalist Embodied Agent for Virtual Worlds](https://arxiv.org/abs/2512.04797) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.04797) |
 | 2025-09-24 | [EmbeddingGemma: Powerful and Lightweight Text Representations](https://arxiv.org/abs/2509.20354) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2509.20354) |
 | 2025-07-07 | [MedGemma Technical Report](https://arxiv.org/abs/2507.05201) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2507.05201) |
 | 2025-07-07 | [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](https://arxiv.org/abs/2507.06261) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2507.06261) |

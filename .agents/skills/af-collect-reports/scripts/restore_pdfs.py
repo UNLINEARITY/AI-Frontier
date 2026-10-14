@@ -22,7 +22,7 @@ def restore(root, vendor=None, slugs=(), download=False):
     reports = json.loads((root / 'abstracts/index.json').read_text())['reports']
     with (root / 'catalog.csv').open(newline='') as stream:
         rows = {r['local_path']: r for r in csv.DictReader(stream) if r['status'] == 'archived'}
-    selected = [r for r in reports if (not vendor or r['vendor'] == vendor)
+    selected = [r for r in reports if r.get('source_kind') != 'html' and (not vendor or r['vendor'] == vendor)
                 and (not slugs or r['id'].split(':', 1)[1] in slugs)]
     if not selected:
         raise ValueError('No selected abstracts source matches the filters')

@@ -26,12 +26,19 @@ def build_readers(root, output, summaries, figure_reports, catalog):
     by_pdf = {r['local_path']: r for r in catalog}
     articles, reports, previews = [], [], {}
     for report in summaries.values():
-        row = by_pdf.get(report['source_pdf'])
-        if not row or row['sha256'] != report['source_sha256']:
-            raise ValueError(f"Stale summary: {report['id']}")
+        if report.get('source_kind') == 'html':
+            from web_sources import validate_summary
+            validate_summary(root, report)
+        else:
+            row = by_pdf.get(report['source_pdf'])
+            if not row or row['sha256'] != report['source_sha256']:
+                raise ValueError(f"Stale summary: {report['id']}")
         selected = figure_reports.get(report['id'])
         if selected and selected['source_sha256'] != report['source_sha256']:
             raise ValueError(f"Stale figure selection: {report['id']}")
+        if report.get('source_kind') == 'html':
+            from web_sources import validate_figures
+            validate_figures(root, report, selected)
         markdown_path = root / report['markdown_path']
         images = {}
         for figure in selected['figures'] if selected else []:
@@ -43,7 +50,7 @@ def build_readers(root, output, summaries, figure_reports, catalog):
             target.parent.mkdir(parents=True, exist_ok=True)
             with Image.open(source) as image:
                 image.thumbnail((1800, 1800), Image.Resampling.LANCZOS)
-                image.convert('RGB').save(target, 'WEBP', quality=92, method=6)
+                image.save(target, 'WEBP', quality=92, method=6)
                 size = image.size
             previews[figure['png_path']] = relative.as_posix()
             href = Path(os.path.relpath(source, markdown_path.parent)).as_posix()
@@ -64,13 +71,14 @@ def build_readers(root, output, summaries, figure_reports, catalog):
             values = {
                 'lang': t('en', 'zh-CN'), 'prefix': prefix, 'home': home,
                 'switch': prefix + ('' if chinese else 'cn/') + reader_path(report),
-                'switch_label': t('中文', 'English'), 'name': 'AI Frontier', 'repository': REPOSITORY,
+                'switch_label': t('Switch to 中文', '切换至 English'), 'name': 'AI Frontier', 'repository': REPOSITORY,
+                'switch_compact': t('EN → 中', '中 → EN'),
                 'title': escape(report['title']), 'description': escape(report['title']),
                 'body': body.replace('{{asset_prefix}}', prefix), 'vendor': vendor,
                 'back': t('Back', '返回'), 'zoom': t('Figure', '图片'), 'close': t('Close', '关闭'),
                 'theme_label': t('Appearance', '外观'), 'light_theme': t('Light', '浅色'),
                 'dark_theme': t('Dark', '深色'), 'system_theme': t('System', '跟随系统'),
-                'star': t('Star on GitHub', '在 GitHub 上 Star'), 'skip': t('Skip to content', '跳到内容'),
+                'star': t('Star on GitHub', '给项目点个 Star'), 'skip': t('Skip to content', '跳到内容'),
                 'top': t('Back to top', '回到顶部'),
             }
             page = template

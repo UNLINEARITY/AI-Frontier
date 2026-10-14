@@ -12,6 +12,9 @@
         "addendum-to-gpt-6-astra-system-card-gpt-6-1-sol"
       ],
       "latest_categories": [
+        "coding"
+      ],
+      "frontier_categories": [
         "general",
         "coding"
       ]
@@ -387,12 +390,7 @@
       "status": "unconfirmed",
       "note_en": "Latest flagship release confirmed. Linked 4-page evaluation methodology is a companion, not a full technical/safety report; earlier Spark reports do not establish 1.3 coverage.",
       "note_cn": "已核实最新旗舰发布。所附 4 页评测方法为配套文件，不能用早期 Spark 报告表示已覆盖 1.3。",
-      "report_slugs": [],
-      "latest_categories": [
-        "general",
-        "coding",
-        "vision"
-      ]
+      "report_slugs": []
     },
     {
       "vendor": "meta",
@@ -557,9 +555,10 @@
       "report_slugs": [
         "mistral-medium-3-5-model-card"
       ],
-      "latest_categories": [
+      "frontier_categories": [
         "general",
-        "coding"
+        "coding",
+        "vision"
       ]
     },
     {
@@ -680,8 +679,10 @@
         "robostral-navigate"
       ],
       "latest_categories": [
-        "robotics"
-      ]
+        "robotics",
+        "navigation"
+      ],
+      "reviewed_at": "2026-10-13"
     },
     {
       "vendor": "mistral",
@@ -747,7 +748,12 @@
       "note_cn": "已收录官方技术报告；模型发布与文档时间线保持区分。",
       "report_slugs": [
         "cosmos-3-omnimodal-world-models-for-physical-ai"
-      ]
+      ],
+      "frontier_categories": [
+        "world",
+        "embodied_reasoning"
+      ],
+      "reviewed_at": "2026-10-13"
     },
     {
       "vendor": "nvidia",
@@ -784,13 +790,14 @@
       "vendor": "nvidia",
       "model": "GR00T N1.7",
       "source_url": "https://github.com/NVIDIA/Isaac-GR00T",
-      "status": "unconfirmed",
+      "status": "web_only",
       "note_en": "Official repository/model documentation confirmed; older family papers do not constitute a current-version report. No standalone current-version PDF verified.",
       "note_cn": "已核实官方仓库及模型文档；早期家族论文不代表当前版本报告，未核实当前版本独立 PDF。",
       "report_slugs": [],
       "latest_categories": [
         "robotics"
-      ]
+      ],
+      "reviewed_at": "2026-10-14"
     },
     {
       "vendor": "deepseek",
@@ -805,7 +812,8 @@
       "latest_categories": [
         "general",
         "vision"
-      ]
+      ],
+      "reviewed_at": "2026-10-14"
     },
     {
       "vendor": "deepseek",
@@ -1036,7 +1044,8 @@
       "report_slugs": [],
       "latest_categories": [
         "general"
-      ]
+      ],
+      "reviewed_at": "2026-10-14"
     },
     {
       "vendor": "tencent",
@@ -1428,9 +1437,6 @@
       "note_cn": "已由 Nova 2 家族技术报告覆盖；家族报告不等同各模型独立卡片。",
       "report_slugs": [
         "nova-2-family"
-      ],
-      "latest_categories": [
-        "realtime"
       ]
     },
     {
@@ -1530,7 +1536,7 @@
       "status": "archived",
       "note_en": "Original report verified and archived.",
       "note_cn": "已核实并收录原始报告。",
-      "latest_categories": [
+      "frontier_categories": [
         "general",
         "coding"
       ]
@@ -1662,13 +1668,14 @@
       "model": "Qwen3.8-Omni-Flash",
       "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
       "report_slugs": [],
-      "status": "unconfirmed",
+      "status": "web_only",
       "note_en": "Official current model entry reviewed on October 3, 2026; no standalone original PDF verified.",
       "note_cn": "2026 年 10 月 3 日核对官方当前模型入口；尚未核实独立原始 PDF。",
       "latest_categories": [
         "general",
         "vision"
-      ]
+      ],
+      "reviewed_at": "2026-10-14"
     },
     {
       "vendor": "qwen",
@@ -1763,12 +1770,13 @@
       "model": "Kimi K2.8 Preview",
       "source_url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
       "report_slugs": [],
-      "status": "unconfirmed",
-      "note_en": "Official current model entry reviewed on October 3, 2026; no standalone original PDF verified.",
-      "note_cn": "2026 年 10 月 3 日核对官方当前模型入口；尚未核实独立原始 PDF。",
+      "status": "web_only",
+      "note_en": "Official Kimi Code rollout September 11 verified; service branch remains distinct from K3 flagship. No separate checkpoint/report verified.",
+      "note_cn": "已核实 9 月 11 日官方 Kimi Code 上线，服务分支与 K3 旗舰区分；未核实独立权重或报告。",
       "latest_categories": [
         "coding"
-      ]
+      ],
+      "reviewed_at": "2026-10-14"
     },
     {
       "vendor": "moonshot",
@@ -1789,13 +1797,14 @@
       "model": "GLM-5.3-FlashX",
       "source_url": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
       "report_slugs": [],
-      "status": "unconfirmed",
-      "note_en": "Official current model entry reviewed on October 3, 2026; no standalone original PDF verified.",
-      "note_cn": "2026 年 10 月 3 日核对官方当前模型入口；尚未核实独立原始 PDF。",
+      "status": "web_only",
+      "note_en": "Current official API docs explicitly list FlashX as a live Flash-family endpoint; no separate weights or report verified.",
+      "note_cn": "当前官方 API 文档明确列出 FlashX 活跃 Flash 家族端点，未核实独立权重或报告。",
       "latest_categories": [
         "general",
         "vision"
-      ]
+      ],
+      "reviewed_at": "2026-10-14"
     },
     {
       "vendor": "zai",
@@ -1852,13 +1861,20 @@
     {
       "vendor": "stepfun",
       "model": "Step 5 Preview",
-      "source_url": "https://platform.stepfun.com/docs/zh/guides/models/step-5-preview",
+      "source_url": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview",
       "report_slugs": [],
-      "status": "unconfirmed",
-      "note_en": "Official current model entry reviewed on October 3, 2026; no standalone original PDF verified.",
-      "note_cn": "2026 年 10 月 3 日核对官方当前模型入口；尚未核实独立原始 PDF。",
+      "status": "web_only",
+      "note_en": "Official flagship product/API availability confirmed; open weights are announced for October 15, still future on October 14. Official documentation is a source overview, not a fabricated model-card PDF.",
+      "note_cn": "已核实官方旗舰产品/API 可用性；开放权重预告 10 月 15 日发布，截至 10 月 14 日仍是未来日期。官方文档用于原文概要，不制造模型卡 PDF。",
       "latest_categories": [
         "general",
+        "vision"
+      ],
+      "release_date": "2026-09-20",
+      "reviewed_at": "2026-10-14",
+      "frontier_categories": [
+        "general",
+        "coding",
         "vision"
       ]
     },
@@ -2036,13 +2052,24 @@
     },
     {
       "vendor": "google",
-      "model": "Gemini 4 Argon (limited release)",
-      "source_url": "https://deepmind.google/models/",
-      "report_slugs": [],
-      "status": "unconfirmed",
-      "note_en": "Official current model entry reviewed on October 3, 2026; no standalone original PDF verified.",
-      "note_cn": "2026 年 10 月 3 日核对官方当前模型入口；尚未核实独立原始 PDF。",
+      "model": "Gemini 4 Argon",
+      "source_url": "https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/",
+      "report_slugs": [
+        "gemini-4-argon-model-card",
+        "gemini-4-argon-safety-and-security-report"
+      ],
+      "status": "archived",
+      "note_en": "October 13 broad/global rollout verified; model card and separate Safety & Security Report collected. Eligible consumer tiers and API access differ; this is beyond the earlier limited-release entry.",
+      "note_cn": "已核实 10 月 13 日广泛/全球上线，并收集模型卡及独立安全报告；消费者订阅层级与 API 访问范围不同，已更新此前的受限发布状态。",
       "latest_categories": [
+        "general",
+        "coding",
+        "vision",
+        "security"
+      ],
+      "release_date": "2026-10-13",
+      "reviewed_at": "2026-10-14",
+      "frontier_categories": [
         "general",
         "coding",
         "vision",
@@ -2058,10 +2085,7 @@
       ],
       "status": "archived",
       "note_en": "Original report verified and archived.",
-      "note_cn": "已核实并收录原始报告。",
-      "latest_categories": [
-        "image"
-      ]
+      "note_cn": "已核实并收录原始报告。"
     },
     {
       "vendor": "google",
@@ -2129,7 +2153,7 @@
       "status": "archived",
       "note_en": "Original report verified and archived.",
       "note_cn": "已核实并收录原始报告。",
-      "latest_categories": [
+      "frontier_categories": [
         "embedding"
       ]
     },
@@ -2143,8 +2167,8 @@
         "gemini-robotics-2-safety-evaluations"
       ],
       "status": "family_report",
-      "note_en": "Archived cards cover ER 2 and On-Device 2; no VLA 2-specific PDF verified. Scoped category review 2026-10-13: official release page identifies ER 2 as the embodied reasoning branch; existing family cards remain attached only to ER 2 and On-Device 2. Newly verified Safety Evaluations technical report registered but not locally collected; safety evaluation scope is not a general VLA architecture report.",
-      "note_cn": "已收录模型卡覆盖 ER 2 与 On-Device 2；尚未核实 VLA 2 独立 PDF。 2026-10-13 局部类别核查：官方发布页明确 ER 2 的具身推理定位，现有家族模型卡仅对应 ER 2 与 On-Device 2。 新核实 Safety Evaluations 技术报告并登记，本地归档待完成；安全评测范围不等同于通用 VLA 架构报告。",
+      "note_en": "Archived ER2/On-Device2 cards and the Safety Evaluations technical report. Safety scope is not a general VLA architecture report. The July 2026 family separates VLA control, embodied reasoning and on-device control; reviewed 2026-10-13.",
+      "note_cn": "已收录 ER2、On-Device2 模型卡及 Safety Evaluations 技术报告。安全评测不等同于通用 VLA 架构报告；2026 年 7 月家族区分 VLA 控制、具身推理与端侧控制，2026-10-13 核对。",
       "latest_categories": [
         "robotics",
         "embodied_reasoning"
@@ -2156,12 +2180,13 @@
       "model": "Genie 3",
       "source_url": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
       "report_slugs": [],
-      "status": "unconfirmed",
+      "status": "web_only",
       "note_en": "Official current model entry reviewed on October 3, 2026; no standalone original PDF verified.",
       "note_cn": "2026 年 10 月 3 日核对官方当前模型入口；尚未核实独立原始 PDF。",
       "latest_categories": [
         "world"
-      ]
+      ],
+      "reviewed_at": "2026-10-14"
     },
     {
       "vendor": "google",
@@ -2198,11 +2223,12 @@
       "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
       "report_slugs": [],
       "status": "web_only",
-      "note_en": "Official current model entry reviewed on October 3, 2026; no standalone original PDF verified.",
-      "note_cn": "2026 年 10 月 3 日核对官方当前模型入口；尚未核实独立原始 PDF。",
+      "note_en": "Official recipe states there is no separate Lightning technical report; model card, recipe and release blog provide methodology evidence. Ultra remains the distinct current flagship.",
+      "note_cn": "官方训练方案说明 Lightning 没有独立技术报告，方法证据来自模型卡、训练配置和发布博客。Ultra 仍作为独立当前旗舰保留。",
       "latest_categories": [
         "general"
-      ]
+      ],
+      "reviewed_at": "2026-10-14"
     },
     {
       "vendor": "nvidia",
@@ -2248,13 +2274,16 @@
       "vendor": "nvidia",
       "model": "Cosmos 3 Edge",
       "source_url": "https://huggingface.co/nvidia/Cosmos3-Edge",
-      "report_slugs": [],
-      "status": "web_only",
-      "note_en": "Official current model entry reviewed on October 3, 2026; no standalone original PDF verified.",
-      "note_cn": "2026 年 10 月 3 日核对官方当前模型入口；尚未核实独立原始 PDF。",
+      "report_slugs": [
+        "cosmos-3-omnimodal-world-models-for-physical-ai"
+      ],
+      "status": "family_report",
+      "note_en": "Cosmos 3 family report explicitly describes Edge scale on page 14 and its training in Appendix D; the archive does not claim this predates the later checkpoint release. World-family architecture and grounded reasoning report are applicable; no separate Edge report is substituted.",
+      "note_cn": "Cosmos 3 家族报告第 14 页明确介绍 Edge 规模，附录 D 介绍其训练；不以报告日期代替后续权重发布日。对应家族架构与具身推理材料适用，未冒充独立 Edge 报告。",
       "latest_categories": [
         "world"
-      ]
+      ],
+      "reviewed_at": "2026-10-13"
     },
     {
       "vendor": "nvidia",
@@ -2308,15 +2337,16 @@
       "vendor": "qwen",
       "model": "Qwen3.8-Max",
       "source_url": "https://help.aliyun.com/en/model-studio/qwen3-8-max",
-      "status": "unconfirmed",
+      "status": "web_only",
       "report_slugs": [],
-      "note_en": "Official current 2.4T MoE flagship; retained alongside newer Omni/Flash models. No Max-specific original PDF verified.",
-      "note_cn": "官方当前 2.4T MoE 旗舰；与较新的 Omni/Flash 分支同时展示，尚未核实 Max 独立原始 PDF。",
+      "note_en": "Official flagship remains Max; current 0902 snapshot is not a new family release. Flash-Next report does not describe Max; no standalone Max report verified in checked official routes.",
+      "note_cn": "官方旗舰仍为 Max，当前 0902 快照不视为新家族发布。Flash-Next 报告不覆盖 Max；所查官方入口未核实独立 Max 报告。",
       "frontier_categories": [
         "general",
         "coding",
         "vision"
-      ]
+      ],
+      "reviewed_at": "2026-10-14"
     },
     {
       "vendor": "deepseek",
@@ -2326,23 +2356,24 @@
       "report_slugs": [
         "deepseek-v4-model-card"
       ],
-      "note_en": "Active V4-Pro expert model; archived V4 family model card explicitly lists Pro and Flash. Retained alongside the newer V4.1-Flash.",
-      "note_cn": "当前在用 V4-Pro 专家模型；已归档 V4 家族模型卡明确列出 Pro 与 Flash，与更新的 V4.1-Flash 并列展示。",
+      "note_en": "Current official API catalog still lists V4-Pro-0813. Keep active; earlier routing notices and community retirement claims do not establish current retirement.",
+      "note_cn": "当前官方 API 目录仍列出 V4-Pro-0813，保留活跃状态；早期路由公告和社区停运说法不构成当前停运证据。",
       "frontier_categories": [
         "general",
         "coding"
-      ]
+      ],
+      "reviewed_at": "2026-10-14"
     },
     {
       "vendor": "physical_intelligence",
       "model": "π0.7",
       "source_url": "https://www.pi.website/blog/pi07",
-      "status": "unconfirmed",
+      "status": "archived",
       "report_slugs": [
         "pi-0-7"
       ],
-      "note_en": "Scoped review 2026-10-13: official model announcement dated 2026-04-16 and official indexed PDF title confirmed. Direct PDF fetch returned 403; local capture and source extraction pending. This research model is distinct from openpi released checkpoints.",
-      "note_cn": "2026-10-13 局部核查：官方模型公告日期为 2026-04-16，官方索引可核实报告题名。直接获取 PDF 返回 403；本地归档与原文提取待完成。该研究模型与 openpi 已发布权重区分。",
+      "note_en": "Original model-specific PDF title/version/hash verified; original passage and visually reviewed core figures are available in the unified reader. Scoped review 2026-10-14.",
+      "note_cn": "已核实专属原始 PDF 的题名、版本和校验值；统一阅读页已包含原文概要及目视复核的核心图片。局部核查：2026-10-14。",
       "reviewed_at": "2026-10-13",
       "latest_categories": [
         "robotics"
@@ -2381,12 +2412,12 @@
       "vendor": "agibot",
       "model": "GE-Act 2.0",
       "source_url": "https://ge-act-v2.github.io/",
-      "status": "unconfirmed",
+      "status": "archived",
       "report_slugs": [
         "ge-act-2-0"
       ],
-      "note_en": "Scoped review 2026-10-13: official AgibotTech repository announces GE-Act 2.0 on 2026-09-10, linking the author project and arXiv:2609.05588v1. A verified model-specific paper exists; local PDF collection and extraction are pending. Code is described as coming soon; do not imply released weights/code.",
-      "note_cn": "2026-10-13 局部核查：智元官方仓库记录 GE-Act 2.0 于 2026-09-10 发布，并链接作者项目及 arXiv:2609.05588v1。已核实专属论文，本地 PDF 归档和提取待完成；项目代码标为即将开放，不宣称代码或权重已经发布。",
+      "note_en": "Original model-specific PDF title/version/hash verified; original passage and visually reviewed core figures are available in the unified reader. Scoped review 2026-10-14.",
+      "note_cn": "已核实专属原始 PDF 的题名、版本和校验值；统一阅读页已包含原文概要及目视复核的核心图片。局部核查：2026-10-14。",
       "reviewed_at": "2026-10-13",
       "latest_categories": [
         "robotics"
@@ -2397,12 +2428,12 @@
       "vendor": "agibot",
       "model": "GE-Sim 2.0",
       "source_url": "https://ge-sim-v2.github.io/",
-      "status": "unconfirmed",
+      "status": "archived",
       "report_slugs": [
         "ge-sim-2-0"
       ],
-      "note_en": "Scoped review 2026-10-13: official AgibotTech repository records release on 2026-05-28; author project links arXiv:2605.27491v1. Learned video/world simulation includes state and task-evaluation modules. Verified paper exists; local collection/extraction pending.",
-      "note_cn": "2026-10-13 局部核查：智元官方仓库记录发布日为 2026-05-28，作者项目链接 arXiv:2605.27491v1。该学习式视频世界模拟器包含状态与任务评估模块。已核实论文，本地归档与提取待完成。",
+      "note_en": "Original model-specific PDF title/version/hash verified; original passage and visually reviewed core figures are available in the unified reader. Scoped review 2026-10-14.",
+      "note_cn": "已核实专属原始 PDF 的题名、版本和校验值；统一阅读页已包含原文概要及目视复核的核心图片。局部核查：2026-10-14。",
       "reviewed_at": "2026-10-13",
       "latest_categories": [
         "world"
@@ -2413,12 +2444,12 @@
       "vendor": "agibot",
       "model": "GenieReasoner",
       "source_url": "https://geniereasoner.github.io/GenieReasoner/",
-      "status": "unconfirmed",
+      "status": "archived",
       "report_slugs": [
         "genie-reasoner"
       ],
-      "note_en": "Scoped review 2026-10-13: official AgiBot Research project documents an embodied reasoning/action model and links arXiv:2512.24125v3. Retained as a distinct reasoning family; July paper revision is not a model release. No separately verified model announcement date; local PDF collection/extraction pending.",
-      "note_cn": "2026-10-13 局部核查：智元研究项目介绍具身推理与动作模型，链接 arXiv:2512.24125v3。作为独立推理家族保留，7 月论文修订不视为模型发布；模型首次公告日期未单独核实，本地 PDF 归档与提取待完成。",
+      "note_en": "Original model-specific PDF title/version/hash verified; original passage and visually reviewed core figures are available in the unified reader. Scoped review 2026-10-14.",
+      "note_cn": "已核实专属原始 PDF 的题名、版本和校验值；统一阅读页已包含原文概要及目视复核的核心图片。局部核查：2026-10-14。",
       "reviewed_at": "2026-10-13",
       "frontier_categories": [
         "embodied_reasoning"
@@ -2428,18 +2459,352 @@
       "vendor": "galaxea",
       "model": "G0.5",
       "source_url": "https://github.com/OpenGalaxea/GalaxeaVLA",
-      "status": "unconfirmed",
+      "status": "archived",
       "report_slugs": [
         "g0-5"
       ],
-      "note_en": "Scoped review 2026-10-13: official README introduces G0.5 on 2026-06-01, releases base checkpoint on June 16, and links the model paper published August 12 (arXiv:2608.11739v1). Unified autoregressive reasoning/action stream; Galaxea Open-World Dataset and R1 hardware are not model versions. Paper verified; local PDF collection/extraction pending.",
-      "note_cn": "2026-10-13 局部核查：官方 README 记录 G0.5 于 2026-06-01 介绍、6 月 16 日发布基础权重、8 月 12 日发表专属论文 arXiv:2608.11739v1。推理与动作采用统一自回归序列；Galaxea Open-World 数据集与 R1 硬件不视为模型版本。已核实论文，本地 PDF 归档与提取待完成。",
+      "note_en": "Original model-specific PDF title/version/hash verified; original passage and visually reviewed core figures are available in the unified reader. Scoped review 2026-10-14.",
+      "note_cn": "已核实专属原始 PDF 的题名、版本和校验值；统一阅读页已包含原文概要及目视复核的核心图片。局部核查：2026-10-14。",
       "reviewed_at": "2026-10-13",
       "latest_categories": [
         "robotics",
         "embodied_reasoning"
       ],
       "release_date": "2026-06-01"
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-VLA",
+      "source_url": "https://github.com/QwenLM/Qwen-VLA",
+      "status": "archived",
+      "report_slugs": [
+        "qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments"
+      ],
+      "frontier_categories": [
+        "robotics"
+      ],
+      "note_en": "Distinct officially documented task family; exact archived report revision selected. Paper chronology is not an independently verified model release date. RobotNav/RobotManip official repository says no current plan to release weights; no cross-task capability ranking implied.",
+      "note_cn": "官方记录的独立任务家族，选择已归档论文的准确修订版。论文时间不充当单独核实的模型发布日；RobotNav/RobotManip 官方仓库说明暂无权重发布计划，不进行跨任务能力排序。",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-RobotNav",
+      "source_url": "https://github.com/QwenLM/Qwen-RobotNav",
+      "status": "archived",
+      "report_slugs": [
+        "qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system"
+      ],
+      "frontier_categories": [
+        "robotics",
+        "navigation"
+      ],
+      "note_en": "Distinct officially documented task family; exact archived report revision selected. Paper chronology is not an independently verified model release date. RobotNav/RobotManip official repository says no current plan to release weights; no cross-task capability ranking implied.",
+      "note_cn": "官方记录的独立任务家族，选择已归档论文的准确修订版。论文时间不充当单独核实的模型发布日；RobotNav/RobotManip 官方仓库说明暂无权重发布计划，不进行跨任务能力排序。",
+      "reviewed_at": "2026-10-13",
+      "latest_categories": [
+        "navigation"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-RobotManip",
+      "source_url": "https://github.com/QwenLM/Qwen-RobotManip",
+      "status": "archived",
+      "report_slugs": [
+        "qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models"
+      ],
+      "frontier_categories": [
+        "robotics",
+        "manipulation"
+      ],
+      "note_en": "Distinct officially documented task family; exact archived report revision selected. Paper chronology is not an independently verified model release date. RobotNav/RobotManip official repository says no current plan to release weights; no cross-task capability ranking implied.",
+      "note_cn": "官方记录的独立任务家族，选择已归档论文的准确修订版。论文时间不充当单独核实的模型发布日；RobotNav/RobotManip 官方仓库说明暂无权重发布计划，不进行跨任务能力排序。",
+      "reviewed_at": "2026-10-13",
+      "latest_categories": [
+        "manipulation"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "V-JEPA 2 / 2-AC",
+      "source_url": "https://github.com/facebookresearch/vjepa2",
+      "status": "archived",
+      "report_slugs": [
+        "v-jepa-2-technical-report"
+      ],
+      "frontier_categories": [
+        "world",
+        "robotics"
+      ],
+      "note_en": "Official V-JEPA2 report covers the action-conditioned 2-AC world model and robot planning. Retained as an active world/action family; V-JEPA2.1 is a distinct dense encoder update, not a verified 2-AC policy successor.",
+      "note_cn": "V-JEPA2 官方报告覆盖动作条件 2-AC 世界模型和机器人规划，作为活跃世界/动作家族保留。V-JEPA2.1 是独立稠密编码器更新，不作为已核实的 2-AC 策略后继。",
+      "reviewed_at": "2026-10-13",
+      "latest_categories": [
+        "world"
+      ],
+      "release_date": "2025-06-11"
+    },
+    {
+      "vendor": "meta",
+      "model": "V-JEPA 2.1",
+      "source_url": "https://github.com/facebookresearch/vjepa2",
+      "status": "archived",
+      "report_slugs": [
+        "v-jepa-2-1-technical-report"
+      ],
+      "frontier_categories": [
+        "vision"
+      ],
+      "note_en": "Official dense video representation family; not a robot policy successor. Exact V-JEPA2.1 arXiv v3 archived; model announcement is March 16, 2026, distinct from paper first submission.",
+      "note_cn": "官方稠密视频表征家族，不视为机器人策略后继。已归档 V-JEPA2.1 arXiv v3；模型公告为 2026-03-16，与论文首次提交区分。",
+      "reviewed_at": "2026-10-13",
+      "release_date": "2026-03-16"
+    },
+    {
+      "vendor": "bytedance",
+      "model": "GR-3",
+      "source_url": "https://seed.bytedance.com/GR3",
+      "status": "archived",
+      "report_slugs": [
+        "gr-3-technical-report"
+      ],
+      "latest_categories": [
+        "robotics"
+      ],
+      "frontier_categories": [
+        "robotics",
+        "manipulation"
+      ],
+      "release_date": "2025-07-22",
+      "note_en": "Official Seed Robotics model and model-specific report verified; model announcement 2025-07-22 differs from paper first submission 2025-07-21. ByteMini is the hardware, not the model. Public weights not verified in the scoped official sources.",
+      "note_cn": "已核实 Seed Robotics 模型和专属报告；模型公告 2025-07-22 与论文首次提交 2025-07-21 区分。ByteMini 是硬件，不视为模型；本轮官方来源未核实公共权重。",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "vendor": "bytedance",
+      "model": "GR-RL (specialized policy)",
+      "source_url": "https://seed.bytedance.com/en/gr_rl",
+      "status": "archived",
+      "report_slugs": [
+        "gr-rl-technical-report"
+      ],
+      "frontier_categories": [
+        "manipulation"
+      ],
+      "note_en": "Official framework and resulting learned specialist policy for dexterous manipulation; retain original report, without claiming a separately released generic foundation checkpoint or a general GR-3 successor. Paper revision is not a model release.",
+      "note_cn": "官方灵巧操作训练框架及其学习式专用策略；保留原始报告，不宣称另有发布的通用基础权重或已成为 GR-3 通用后继。论文修订不视为模型发布。",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Rho",
+      "source_url": "https://github.com/microsoft/rhobotics",
+      "status": "archived",
+      "report_slugs": [
+        "rho-technical-report"
+      ],
+      "frontier_categories": [
+        "robotics",
+        "manipulation"
+      ],
+      "note_en": "Official open-weight 5B VLA family with model-specific report and embodiment-specific checkpoints. Rho-alpha tactile early-access model is a distinct official entry; do not merge their identities absent explicit lineage evidence. First model announcement date not independently verified.",
+      "note_cn": "官方开放权重的 5B VLA 家族，具备专属报告和针对机器人本体的权重。Rho-alpha 触觉早期研究模型为独立官方条目，无明确谱系证据时不合并身份；首次模型公告日期未单独核实。",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "vendor": "microsoft",
+      "model": "Rho-alpha",
+      "source_url": "https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/",
+      "status": "web_only",
+      "report_slugs": [],
+      "frontier_categories": [
+        "robotics",
+        "manipulation"
+      ],
+      "release_date": "2026-01-21",
+      "note_en": "Official research-early-access VLA+ announcement with tactile inputs. Foundry availability was future-planned in this story; no Rho-alpha-specific linked report verified in reviewed sources. Rho paper is not substituted as alpha-specific report.",
+      "note_cn": "官方带触觉输入的 VLA+ 研究早期访问公告。该文章中的 Foundry 可用性为后续计划；在所查来源未核实 Rho-alpha 专属报告，不以 Rho 论文代替。",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "vendor": "tencent",
+      "model": "HY-World 1.5 / WorldPlay",
+      "source_url": "https://github.com/Tencent-Hunyuan/HY-WorldPlay",
+      "status": "archived",
+      "report_slugs": [
+        "worldplay-technical-report"
+      ],
+      "latest_categories": [
+        "world"
+      ],
+      "frontier_categories": [
+        "world"
+      ],
+      "release_date": "2025-12-17",
+      "note_en": "Official interactive learned video world model with keyboard/mouse action conditioning and open model/code instructions. Latest verified paper is arXiv:2512.14614v2; lightweight 5B tier and HY-World2 persistent 3D reconstruction are distinct from paper chronology and interactive-family identity.",
+      "note_cn": "官方交互式学习视频世界模型，通过键盘/鼠标动作条件生成，提供模型及代码使用说明。已核实论文为 arXiv:2512.14614v2；轻量 5B 分支、HY-World2 持久 3D 重建与论文时间线及交互家族身份分别记录。",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "vendor": "google",
+      "model": "SIMA 2",
+      "source_url": "https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/",
+      "status": "archived",
+      "report_slugs": [
+        "sima-2-technical-report"
+      ],
+      "latest_categories": [
+        "virtual_agent"
+      ],
+      "frontier_categories": [
+        "virtual_agent"
+      ],
+      "release_date": "2025-11-13",
+      "note_en": "Official Gemini-powered generalist agent for virtual 3D worlds, not a physical robot policy. Limited research preview for selected academics/game developers; report first submission 2025-12-04 is distinct from November announcement.",
+      "note_cn": "官方由 Gemini 驱动的虚拟 3D 世界通用智能体，不是实体机器人策略。针对选定研究者和游戏开发者的有限研究预览；论文首次提交 2025-12-04 与 11 月公告区分。",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "vendor": "generalist",
+      "model": "GEN-1.5",
+      "source_url": "https://generalistai.com/blog/gen-1.5",
+      "status": "web_only",
+      "report_slugs": [],
+      "release_date": "2026-08-19",
+      "latest_categories": [
+        "robotics"
+      ],
+      "frontier_categories": [
+        "manipulation"
+      ],
+      "reviewed_at": "2026-10-14",
+      "note_en": "Official GEN-1.5 announcement and native overview verified; one-shot/few-shot model capabilities concern the evaluated short-horizon tasks. No model-specific standalone PDF verified in this article. Interactive scientific figures remain available at the official source.",
+      "note_cn": "已核实 GEN-1.5 官方公告和原文概要；单次/少样本学习能力针对所评测的短时任务。该文章中未核实专属独立 PDF，交互式科学图表可在官方来源阅读。"
+    },
+    {
+      "vendor": "openai",
+      "model": "GPT-6 Sol / Luna (ChatGPT October)",
+      "report_slugs": [
+        "gpt-6-sol-and-luna-october-2026-update"
+      ],
+      "reviewed_at": "2026-10-14",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-october",
+      "status": "family_report",
+      "release_date": "2026-10-07",
+      "note_en": "October ChatGPT release; the original system card explicitly distinguishes September API/Codex/Work versions. GPT-6.1 Sol and Astra remain distinct API/flagship branches.",
+      "note_cn": "10 月 ChatGPT 发布版；原始系统卡明确区分仍在 API/Codex/Work 使用的 9 月版本，保留独立的 GPT-6.1 Sol 和 Astra API/旗舰分支。",
+      "latest_categories": [
+        "general"
+      ]
+    },
+    {
+      "vendor": "anthropic",
+      "model": "Claude Haiku 5.5",
+      "report_slugs": [
+        "claude-haiku-5-5-system-card"
+      ],
+      "reviewed_at": "2026-10-14",
+      "source_url": "https://www.anthropic.com/claude-haiku-5-5",
+      "status": "archived",
+      "release_date": "2026-10-07",
+      "note_en": "New efficient/small branch; official October 7 system card collected. It does not replace Opus or Fable/Mythos frontier tiers.",
+      "note_cn": "新的高效小模型分支，已收集 10 月 7 日官方系统卡；不替代 Opus 或 Fable/Mythos 旗舰层级。",
+      "latest_categories": [
+        "general",
+        "coding"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "Nano Banana 2.1",
+      "report_slugs": [
+        "nano-banana-2-1-model-card"
+      ],
+      "reviewed_at": "2026-10-14",
+      "source_url": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1?hl=en",
+      "status": "archived",
+      "release_date": "2026-10-06",
+      "note_en": "Official GA image-generation/editing model gemini-nano-banana-2.1; October 6 card collected. Separate from Nano Banana 2 Lite.",
+      "note_cn": "官方正式图像生成/编辑模型 gemini-nano-banana-2.1，已收集 10 月 6 日模型卡，与 Nano Banana 2 Lite 区分。",
+      "latest_categories": [
+        "image"
+      ]
+    },
+    {
+      "vendor": "google",
+      "model": "EmbeddingGemma 2",
+      "report_slugs": [
+        "embeddinggemma-2-model-card"
+      ],
+      "reviewed_at": "2026-10-14",
+      "source_url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2?hl=en",
+      "status": "web_only",
+      "release_date": "2026-10-06",
+      "note_en": "Official open multimodal embedding model and HTML model card; distinct from hosted Gemini Embedding 2. No standalone card PDF verified.",
+      "note_cn": "官方开放多模态嵌入模型与 HTML 模型卡，与托管 Gemini Embedding 2 区分；未核实独立模型卡 PDF。",
+      "latest_categories": [
+        "embedding"
+      ]
+    },
+    {
+      "vendor": "meta",
+      "model": "Muse Wonder / Wonder Full",
+      "report_slugs": [],
+      "reviewed_at": "2026-10-14",
+      "source_url": "https://research.meta.ai/blog/muse-wonder",
+      "status": "web_only",
+      "release_date": "2026-10-12",
+      "frontier_categories": [
+        "general",
+        "coding",
+        "vision"
+      ],
+      "note_en": "Official October 12 most-capable family release. Wonder is available via Meta Model API/Muse Code; Full via Muse Code subscriptions. Additional safety report is explicitly promised, not currently substituted by a Spark report.",
+      "note_cn": "官方 10 月 12 日最强家族发布。Wonder 可经 Meta Model API/Muse Code 使用，Full 面向 Muse Code 订阅者；额外安全报告明确预告发布，不使用 Spark 报告替代。",
+      "latest_categories": [
+        "general",
+        "coding",
+        "vision"
+      ]
+    },
+    {
+      "vendor": "mistral",
+      "model": "Mistral Large 4 (Public Preview)",
+      "report_slugs": [],
+      "reviewed_at": "2026-10-14",
+      "source_url": "https://mistral.ai/news/mistral-large-4/",
+      "status": "web_only",
+      "release_date": "2026-10-06",
+      "frontier_categories": [
+        "general",
+        "coding",
+        "vision"
+      ],
+      "note_en": "Official API Public Preview available October 6; weights promised by end of October and unavailable as of October 14. Official active-parameter counts differ across pages; no count inferred. No dedicated PDF report verified.",
+      "note_cn": "官方 API 公共预览于 10 月 6 日可用；权重预告 10 月底发布，截至 10 月 14 日尚未发布。不同官方页面的激活参数数值存在差异，不推断具体值；未核实专属 PDF 报告。",
+      "latest_categories": [
+        "general",
+        "coding",
+        "vision"
+      ]
+    },
+    {
+      "vendor": "amazon",
+      "model": "Nova 2.5 Sonic",
+      "report_slugs": [
+        "amazon-nova-2-5-sonic-service-card"
+      ],
+      "reviewed_at": "2026-10-14",
+      "source_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-nova-2.5-Sonic/",
+      "status": "web_only",
+      "release_date": "2026-10-05",
+      "note_en": "Official GA successor in speech-to-speech; source is an HTML AWS AI Service Card. Nova 2 family PDF does not establish coverage for this new release. No original current-model PDF verified.",
+      "note_cn": "官方正式发布的语音对话后继版本，原始来源为 HTML AWS AI Service Card。Nova 2 家族 PDF 不充当该新版本报告；未核实当前模型独立原始 PDF。",
+      "latest_categories": [
+        "realtime"
+      ]
     }
-  ]
+  ],
+  "updated_at": "2026-10-14"
 }

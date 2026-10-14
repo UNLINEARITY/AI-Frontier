@@ -2,10 +2,11 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**9 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**10 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-09-29 | [Rho: A Foundation for Efficiently Adaptable VLA Models](https://arxiv.org/abs/2609.38164) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2609.38164) |
 | 2026-06-02 | [MAI-Thinking-1: Building a Hill-Climbing Machine](https://microsoft.ai/models/mai-thinking-1/) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://microsoft.ai/models/mai-thinking-1/) |
 | 2026-03-04 | [Phi-4-reasoning-vision-15B Technical Report](https://arxiv.org/abs/2603.03975) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2603.03975) |
 | 2025-07-09 | [Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) |

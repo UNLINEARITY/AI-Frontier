@@ -12,6 +12,44 @@
       "review_method": "visual_source_page",
       "reviewed_at": "2026-10-05",
       "note": "Verified the complete abstract and the position of the multiplication sign in 2.5× against PDF page 1."
+    },
+    {
+      "id": "physical_intelligence:pi-0-7",
+      "source_sha256": "54843c88fbabf6bce53ab2ee94cafc9a55c3d5639f7b74c5e8ad24485fe6863b",
+      "extractor": "pypdf 6.19.0",
+      "ranges": [
+        {
+          "page": 1,
+          "start_offset": 2582,
+          "end_offset": 3677,
+          "raw_text_sha256": "f0fe418d49c80f8a4c2f41992ad9c5c4ed8f2a4d864cfd096445198dca4cd48f"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 305,
+          "raw_text_sha256": "a88adcfc6702a5634dbd0540782e9f9a718a8ab628d2002cd379807bc0eb6576"
+        }
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-13",
+      "note": "Reviewed the exact original Abstract— on the rendered source pages; pypdf reading order matches visible columns. Confirmed paragraph ending before I. INTRODUCTION and normalized character inventory against pdfminer; preserved initial disagreement."
+    },
+    {
+      "id": "agibot:genie-reasoner",
+      "source_sha256": "2df3595c3d45ab7213e1fadeb66354b3c1d0a02c67743373931b1bdb30b09d60",
+      "extractor": "pypdf 6.19.0",
+      "ranges": [
+        {
+          "page": 1,
+          "start_offset": 1889,
+          "end_offset": 3400,
+          "raw_text_sha256": "f25b5d5e16fdd8cc8c14dc5cac5e571826d759c3a2b30da47fc2f7509a82e532"
+        }
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-13",
+      "note": "Reviewed the exact original Abstract— on the rendered source pages; pypdf reading order matches visible columns. Confirmed paragraph ending before I. INTRODUCTION and normalized character inventory against pdfminer; preserved initial disagreement."
     }
   ]
 }

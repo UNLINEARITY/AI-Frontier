@@ -97,6 +97,10 @@ function clear() {
 for (const id of ['#clear', '#empty-clear']) document.querySelector(id).addEventListener('click', clear);
 for (const lab of document.querySelectorAll('[data-publisher]')) lab.addEventListener('click', () => {
   vendor.value = vendor.value === lab.dataset.publisher ? '' : lab.dataset.publisher;
+  if (vendor.value && view === 'reports' && Number(lab.dataset.reports) === 0) {
+    view = 'models';
+    syncView();
+  }
   filter();
   document.querySelector('#collection').scrollIntoView({behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start'});
 });

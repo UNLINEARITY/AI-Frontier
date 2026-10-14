@@ -8,7 +8,7 @@
 
 | 类型 | 已收录报告 |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 0 |
+| [技术报告](technical-reports/README_CN.md) | 1 |
 | [模型卡](model-cards/README_CN.md) | 0 |
 | [系统卡](system-cards/README_CN.md) | 0 |
 
@@ -16,5 +16,6 @@
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-04-16 | [π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities](https://arxiv.org/abs/2604.15483) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2604.15483) |
 
 归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../catalog.csv)。

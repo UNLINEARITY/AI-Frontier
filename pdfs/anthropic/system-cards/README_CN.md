@@ -2,10 +2,11 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已收录 **17 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **18 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-10-07 | [Claude Haiku 5.5 System Card](https://www.anthropic.com/claude-haiku-5-5-system-card) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://www.anthropic.com/claude-haiku-5-5-system-card) |
 | 2026-09-28 | [System Card: Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5-system-card) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://www.anthropic.com/claude-sonnet-5-5-system-card) |
 | 2026-09-22 | [Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://www.anthropic.com/claude-opus-5-5-system-card) |
 | 2026-09-01 | [Claude Fable 5.1 and Mythos 5.1 System Card](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card) | [系统卡](../../../reports/system-cards_CN.md) | [来源](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card) |

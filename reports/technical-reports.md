@@ -2,10 +2,11 @@
 
 [All reports](../README.md) · [Document types](../README.md#choose-the-right-document) · [Chinese](technical-reports_CN.md)
 
-**268 reports**. Listed by recorded first publication date, newest first; unknown dates appear last.
+**279 reports**. Listed by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Publisher | Report | Status | Official source |
 | --- | --- | --- | --- | --- |
+| 2026-09-29 | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [Rho: A Foundation for Efficiently Adaptable VLA Models](https://arxiv.org/abs/2609.38164) | archived | [Source](https://arxiv.org/abs/2609.38164) |
 | 2026-09-17 | [Tencent / Hunyuan](../pdfs/tencent/README.md) | [WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing](https://huggingface.co/tencent/WeVisDoc-4B) | archived | [Source](https://huggingface.co/tencent/WeVisDoc-4B) |
 | 2026-09-17 | [DeepSeek](../pdfs/deepseek/README.md) | [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](https://arxiv.org/abs/2609.19969) | archived | [Source](https://arxiv.org/abs/2609.19969) |
 | 2026-09-12 | [StepFun](../pdfs/stepfun/README.md) | [StepAudio 3 Realtime Technical Report](https://arxiv.org/abs/2609.14005) | archived | [Source](https://arxiv.org/abs/2609.14005) |
@@ -13,14 +14,17 @@
 | 2026-09-11 | [StepFun](../pdfs/stepfun/README.md) | [StepAudio 3 Music Technical Report](https://arxiv.org/abs/2609.16034) | archived | [Source](https://arxiv.org/abs/2609.16034) |
 | 2026-09-11 | [StepFun](../pdfs/stepfun/README.md) | [StepAudio 3 Gen Technical Report](https://arxiv.org/abs/2609.12945) | archived | [Source](https://arxiv.org/abs/2609.12945) |
 | 2026-09-07 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Qwen-Audio-3.0-ASR Technical Report](https://arxiv.org/abs/2609.07549) | archived | [Source](https://arxiv.org/abs/2609.07549) |
+| 2026-09-04 | [AgiBot](../pdfs/agibot/README.md) | [GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation](https://arxiv.org/abs/2609.05588) | archived | [Source](https://arxiv.org/abs/2609.05588) |
 | 2026-09-03 | [Google / DeepMind](../pdfs/google/README.md) | [WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations](https://arxiv.org/abs/2609.03582) | archived | [Source](https://arxiv.org/abs/2609.03582) |
 | 2026-09-02 | [NVIDIA](../pdfs/nvidia/README.md) | [Post-Training Language Models for Gold-Medal Performance in Coding Competitions](https://arxiv.org/abs/2609.02849) | archived | [Source](https://arxiv.org/abs/2609.02849) |
 | 2026-08-31 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving](https://github.com/QwenLM/Qwen-Drive-1.0) | archived | [Source](https://github.com/QwenLM/Qwen-Drive-1.0) |
 | 2026-08-26 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](https://github.com/QwenLM/Qwen3.8-Flash-Next) | archived | [Source](https://github.com/QwenLM/Qwen3.8-Flash-Next) |
+| 2026-08-12 | [Galaxea AI](../pdfs/galaxea/README.md) | [G0.5: One Autoregressive Stream for Robot Reasoning and Action](https://arxiv.org/abs/2608.11739) | archived | [Source](https://arxiv.org/abs/2608.11739) |
 | 2026-08-06 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](https://arxiv.org/abs/2608.06009) | archived | [Source](https://arxiv.org/abs/2608.06009) |
 | 2026-08-05 | [Tencent / Hunyuan](../pdfs/tencent/README.md) | [WorldClaw: Agentic 3D Open-World Generation at Scale](https://arxiv.org/abs/2608.05248) | archived | [Source](https://arxiv.org/abs/2608.05248) |
 | 2026-08-03 | [Tencent / Hunyuan](../pdfs/tencent/README.md) | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](https://arxiv.org/abs/2608.02711) | archived | [Source](https://arxiv.org/abs/2608.02711) |
 | 2026-07-30 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents](https://arxiv.org/abs/2607.28227) | archived | [Source](https://arxiv.org/abs/2607.28227) |
+| 2026-07-29 | [Google / DeepMind](../pdfs/google/README.md) | [Gemini Robotics 2: Safety Evaluations](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) | archived | [Source](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
 | 2026-07-28 | [Mistral AI](../pdfs/mistral/README.md) | [Shieldstral](https://arxiv.org/abs/2607.25857) | archived | [Source](https://arxiv.org/abs/2607.25857) |
 | 2026-07-22 | [Mistral AI](../pdfs/mistral/README.md) | [Robostral Navigate](https://arxiv.org/abs/2607.20785) | archived | [Source](https://arxiv.org/abs/2607.20785) |
 | 2026-07-10 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation](https://arxiv.org/abs/2607.09581) | archived | [Source](https://arxiv.org/abs/2607.09581) |
@@ -37,6 +41,7 @@
 | 2026-05-28 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments](https://github.com/QwenLM/Qwen-VLA) | archived | [Source](https://github.com/QwenLM/Qwen-VLA) |
 | 2026-05-26 | [MiniMax](../pdfs/minimax/README.md) | [The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence](https://arxiv.org/abs/2605.26494) | archived | [Source](https://arxiv.org/abs/2605.26494) |
 | 2026-05-26 | [Google / DeepMind](../pdfs/google/README.md) | [Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini](https://arxiv.org/abs/2605.27295) | archived | [Source](https://arxiv.org/abs/2605.27295) |
+| 2026-05-26 | [AgiBot](../pdfs/agibot/README.md) | [GE-Sim 2.0: A Roadmap Towards Comprehensive Closed-loop Video World Simulators for Robotic Manipulation](https://arxiv.org/abs/2605.27491) | archived | [Source](https://arxiv.org/abs/2605.27491) |
 | 2026-05-22 | [StepFun](../pdfs/stepfun/README.md) | [StepAudio 2.5 Technical Report](https://arxiv.org/abs/2605.23463) | archived | [Source](https://arxiv.org/abs/2605.23463) |
 | 2026-05-21 | [Tencent / Hunyuan](../pdfs/tencent/README.md) | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](https://arxiv.org/abs/2605.22064) | archived | [Source](https://arxiv.org/abs/2605.22064) |
 | 2026-05-11 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Qwen-Image-2.0 Technical Report](https://arxiv.org/abs/2605.10730) | archived | [Source](https://arxiv.org/abs/2605.10730) |
@@ -45,6 +50,7 @@
 | 2026-04-26 | [DeepSeek](../pdfs/deepseek/README.md) | [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](https://arxiv.org/abs/2606.19348) | archived | [Source](https://arxiv.org/abs/2606.19348) |
 | 2026-04-22 | [ByteDance / Seed](../pdfs/bytedance/README.md) | [Seed3D 2.0: Advancing High-Fidelity Simulation-Ready 3D Content Generation](https://seed.bytedance.com/en/seed3d_2_0) | archived | [Source](https://seed.bytedance.com/en/seed3d_2_0) |
 | 2026-04-17 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Qwen3.5-Omni Technical Report](https://arxiv.org/abs/2604.15804) | archived | [Source](https://arxiv.org/abs/2604.15804) |
+| 2026-04-16 | [Physical Intelligence](../pdfs/physical_intelligence/README.md) | [π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities](https://arxiv.org/abs/2604.15483) | archived | [Source](https://arxiv.org/abs/2604.15483) |
 | 2026-04-15 | [ByteDance / Seed](../pdfs/bytedance/README.md) | [Seedance 2.0: Advancing Video Generation for World Complexity](https://seed.bytedance.com/en/research) | archived | [Source](https://seed.bytedance.com/en/research) |
 | 2026-04-06 | [Google / DeepMind](../pdfs/google/README.md) | [MedGemma 1.5 Technical Report](https://arxiv.org/abs/2604.05081) | archived | [Source](https://arxiv.org/abs/2604.05081) |
 | 2026-03-26 | [Mistral AI](../pdfs/mistral/README.md) | [Voxtral TTS](https://arxiv.org/abs/2603.25551) | archived | [Source](https://arxiv.org/abs/2603.25551) |
@@ -66,10 +72,12 @@
 | 2026-01-13 | [Google / DeepMind](../pdfs/google/README.md) | [TranslateGemma Technical Report](https://arxiv.org/abs/2601.09012) | archived | [Source](https://arxiv.org/abs/2601.09012) |
 | 2026-01-13 | [Mistral AI](../pdfs/mistral/README.md) | [Ministral 3](https://mistral.ai/news/mistral-3/) | archived | [Source](https://mistral.ai/news/mistral-3/) |
 | 2026-01-08 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Qwen3-VL-Embedding and Qwen3-VL-Reranker Technical Report](https://github.com/QwenLM/Qwen3-VL-Embedding) | archived | [Source](https://github.com/QwenLM/Qwen3-VL-Embedding) |
+| 2025-12-30 | [AgiBot](../pdfs/agibot/README.md) | [Unified Embodied VLM Reasoning with Robotic Action via Autoregressive Discretized Pre-training](https://arxiv.org/abs/2512.24125) | archived | [Source](https://arxiv.org/abs/2512.24125) |
 | 2025-12-23 | [StepFun](../pdfs/stepfun/README.md) | [Step-DeepResearch Technical Report](https://github.com/stepfun-ai/StepDeepResearch) | archived | [Source](https://github.com/stepfun-ai/StepDeepResearch) |
 | 2025-12-22 | [Meta](../pdfs/meta/README.md) | [Pushing the Frontier of Audiovisual Perception with Large-Scale Multimodal Correspondence Learning](https://arxiv.org/abs/2512.19687) | archived | [Source](https://arxiv.org/abs/2512.19687) |
 | 2025-12-19 | [Meta](../pdfs/meta/README.md) | [SAM Audio: Segment Anything in Audio](https://arxiv.org/abs/2512.18099) | archived | [Source](https://arxiv.org/abs/2512.18099) |
 | 2025-12-17 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Qwen-Image-Layered: Towards Inherent Editability via Layer Decomposition](https://github.com/QwenLM/Qwen-Image-Layered) | archived | [Source](https://github.com/QwenLM/Qwen-Image-Layered) |
+| 2025-12-16 | [Tencent / Hunyuan](../pdfs/tencent/README.md) | [WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling](https://arxiv.org/abs/2512.14614) | archived | [Source](https://arxiv.org/abs/2512.14614) |
 | 2025-12-16 | [Google / DeepMind](../pdfs/google/README.md) | [T5Gemma 2: Seeing, Reading, and Understanding Longer](https://deepmind.google/models/gemma/t5gemma/) | archived | [Source](https://deepmind.google/models/gemma/t5gemma/) |
 | 2025-12-16 | [Z.ai / Zhipu AI](../pdfs/zai/README.md) | [GLM-TTS Technical Report](https://github.com/zai-org/GLM-TTS) | archived | [Source](https://github.com/zai-org/GLM-TTS) |
 | 2025-12-15 | [MiniMax](../pdfs/minimax/README.md) | [Towards Scalable Pre-training of Visual Tokenizers for Generation](https://arxiv.org/abs/2512.13687) | archived | [Source](https://arxiv.org/abs/2512.13687) |
@@ -77,8 +85,10 @@
 | 2025-12-15 | [NVIDIA](../pdfs/nvidia/README.md) | [NVIDIA Nemotron 3: Efficient and Open Intelligence](https://research.nvidia.com/labs/nemotron/Nemotron-3/) | archived | [Source](https://research.nvidia.com/labs/nemotron/Nemotron-3/) |
 | 2025-12-15 | [NVIDIA](../pdfs/nvidia/README.md) | [NVIDIA Nemotron 3 Nano Technical Report](https://research.nvidia.com/labs/nemotron/Nemotron-3/) | archived | [Source](https://research.nvidia.com/labs/nemotron/Nemotron-3/) |
 | 2025-12-09 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Wan-Move: Motion-controllable Video Generation via Latent Trajectory Guidance](https://arxiv.org/abs/2512.08765) | archived | [Source](https://arxiv.org/abs/2512.08765) |
+| 2025-12-04 | [Google / DeepMind](../pdfs/google/README.md) | [SIMA 2: A Generalist Embodied Agent for Virtual Worlds](https://arxiv.org/abs/2512.04797) | archived | [Source](https://arxiv.org/abs/2512.04797) |
 | 2025-12-02 | [DeepSeek](../pdfs/deepseek/README.md) | [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](https://arxiv.org/abs/2512.02556) | archived | [Source](https://arxiv.org/abs/2512.02556) |
 | 2025-12-02 | [Amazon / Nova](../pdfs/amazon/README.md) | [Amazon Nova 2: Multimodal Reasoning and Generation Models](https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models) | archived | [Source](https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models) |
+| 2025-12-01 | [ByteDance / Seed](../pdfs/bytedance/README.md) | [GR-RL: Going Dexterous and Precise for Long-Horizon Robotic Manipulation](https://arxiv.org/abs/2512.01801) | archived | [Source](https://arxiv.org/abs/2512.01801) |
 | 2025-11-27 | [StepFun](../pdfs/stepfun/README.md) | [ReasonEdit: Towards Reasoning-Enhanced Image Editing Models](https://github.com/stepfun-ai/Step1X-Edit) | archived | [Source](https://github.com/stepfun-ai/Step1X-Edit) |
 | 2025-11-27 | [DeepSeek](../pdfs/deepseek/README.md) | [DeepSeekMath-V2: Towards Self-Verifiable Mathematical Reasoning](https://github.com/deepseek-ai/DeepSeek-Math-V2) | archived | [Source](https://github.com/deepseek-ai/DeepSeek-Math-V2) |
 | 2025-11-26 | [Alibaba / Qwen / Wan](../pdfs/qwen/README.md) | [Qwen3-VL Technical Report](https://github.com/QwenLM/Qwen3-VL) | archived | [Source](https://github.com/QwenLM/Qwen3-VL) |
@@ -114,6 +124,7 @@
 | 2025-07-28 | [Moonshot AI / Kimi](../pdfs/moonshot/README.md) | [Kimi K2: Open Agentic Intelligence](https://github.com/MoonshotAI/Kimi-K2) | archived | [Source](https://github.com/MoonshotAI/Kimi-K2) |
 | 2025-07-25 | [StepFun](../pdfs/stepfun/README.md) | [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](https://github.com/stepfun-ai/Step3) | archived | [Source](https://github.com/stepfun-ai/Step3) |
 | 2025-07-22 | [StepFun](../pdfs/stepfun/README.md) | [Step-Audio 2 Technical Report](https://github.com/stepfun-ai/Step-Audio2) | archived | [Source](https://github.com/stepfun-ai/Step-Audio2) |
+| 2025-07-21 | [ByteDance / Seed](../pdfs/bytedance/README.md) | [GR-3 Technical Report](https://arxiv.org/abs/2507.15493) | archived | [Source](https://arxiv.org/abs/2507.15493) |
 | 2025-07-17 | [Mistral AI](../pdfs/mistral/README.md) | [Voxtral](https://arxiv.org/abs/2507.13264) | archived | [Source](https://arxiv.org/abs/2507.13264) |
 | 2025-07-09 | [Microsoft / Phi / MAI](../pdfs/microsoft/README.md) | [Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) | archived | [Source](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) |
 | 2025-07-07 | [Google / DeepMind](../pdfs/google/README.md) | [MedGemma Technical Report](https://arxiv.org/abs/2507.05201) | archived | [Source](https://arxiv.org/abs/2507.05201) |

@@ -2,7 +2,7 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**15 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**16 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
@@ -11,6 +11,7 @@
 | 2026-08-03 | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](https://arxiv.org/abs/2608.02711) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2608.02711) |
 | 2026-07-06 | [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](https://github.com/Tencent-Hunyuan/HunyuanOCR) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
 | 2026-05-21 | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](https://arxiv.org/abs/2605.22064) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2605.22064) |
+| 2025-12-16 | [WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling](https://arxiv.org/abs/2512.14614) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2512.14614) |
 | 2025-11-24 | [HunyuanVideo 1.5 Technical Report](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |
 | 2025-11-24 | [HunyuanOCR Technical Report](https://github.com/Tencent-Hunyuan/HunyuanOCR) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
 | 2025-09-28 | [HunyuanImage 3.0 Technical Report](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) |

@@ -25,7 +25,7 @@ VENDORS = {
     "bytedance": "ByteDance / Seed", "cohere": "Cohere",
     "microsoft": "Microsoft / Phi / MAI", "amazon": "Amazon / Nova",
     "physical_intelligence": "Physical Intelligence", "figure": "Figure AI",
-    "skild": "Skild AI", "agibot": "AgiBot", "galaxea": "Galaxea AI",
+    "skild": "Skild AI", "agibot": "AgiBot", "galaxea": "Galaxea AI", "generalist": "Generalist AI",
 }
 DOCUMENT_TYPES = {
     "technical_report": ("Technical Report", "technical-reports.md"),
@@ -48,6 +48,9 @@ MODEL_CATEGORIES = {
     "embedding": ("Embeddings", "向量嵌入"),
     "reranking": ("Reranking", "重排序"),
     "robotics": ("Robotics & VLA", "机器人与 VLA"),
+    "navigation": ("Robot navigation", "机器人导航"),
+    "manipulation": ("Robot manipulation", "机器人操作"),
+    "virtual_agent": ("Virtual embodied agents", "虚拟具身智能体"),
     "embodied_reasoning": ("Embodied reasoning & planning", "具身推理与规划"),
     "world": ("World models & simulation", "世界模型与仿真"),
     "3d": ("3D generation", "3D 生成"),
@@ -171,7 +174,9 @@ def render_model_coverage(rows):
         return
     coverage = json.loads(path.read_text(encoding="utf-8"))
     summary_file = ROOT / 'abstracts/index.json'
-    summaries = {r['source_pdf']: r for r in json.loads(summary_file.read_text())['reports']} if summary_file.exists() else {}
+    readers = json.loads(summary_file.read_text())['reports'] if summary_file.exists() else []
+    summaries = {r['source_pdf']: r for r in readers if r.get('source_pdf')}
+    web_readers = {(r['vendor'], name): r for r in readers if r.get('source_kind') == 'html' for name in r['models']}
     sources = {(s["vendor"], s["slug"]): s for s in
                json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))}
     latest = {}
@@ -195,8 +200,8 @@ def render_model_coverage(rows):
         lines = ["# 前沿模型" if chinese else "# Frontier models", "",
                  f"[English]({sibling}) · [首页]({home})" if chinese else
                  f"[中文]({sibling}) · [Home]({home})", "",
-                 f"更新于 **{coverage['checked_at']}**。" if chinese else
-                 f"Updated **{coverage['checked_at']}**.", "",
+                 f"更新于 **{coverage.get('updated_at', coverage['checked_at'])}**。" if chinese else
+                 f"Updated **{coverage.get('updated_at', coverage['checked_at'])}**.", "",
                  "按厂商浏览当前旗舰与重要新模型，直达原始报告与官方介绍。" if chinese else
                  "Current flagships and important new models, with original reports and official introductions.", "",
                  " · ".join(f"[{label}](#{vendor})" for vendor, label in publisher_labels.items()), ""]
@@ -243,6 +248,9 @@ def render_model_coverage(rows):
                         title = source["title"] if report_types.count(kind) > 1 else DOCUMENT_TYPES[kind][0]
                         links.append(f"[{title}]({source.get('source_url') or source['pdf_url']})")
                 official = "官方介绍" if chinese else "Official"
+                web = web_readers.get((vendor, model['model']))
+                if web:
+                    links.append(f"[{'阅读' if chinese else 'Read'}]({web['markdown_path']})")
                 links.append(f"[{official}]({model.get('frontier_source_url', model['source_url'])})")
                 name = model["model"].replace("|", "\\|")
                 lines.append(f"| {' / '.join(entry['categories'])} | {name} | {' · '.join(links)} |")

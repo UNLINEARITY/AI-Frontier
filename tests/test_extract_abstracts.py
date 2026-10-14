@@ -1,6 +1,8 @@
 """Guard source section boundaries and prevent false verification claims."""
 import hashlib
+import csv
 import importlib.util
+import json
 import sys
 import tempfile
 import unittest
@@ -28,8 +30,77 @@ def page(*blocks):
 
 
 class AbstractTests(unittest.TestCase):
+    def test_superseded_pdf_reader_is_retained_with_exact_historical_binding(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root/'abstracts').mkdir()
+            (root/'sources.json').write_text('[]')
+            (root/'model-coverage.json').write_text(json.dumps(dict(models=[])))
+            row = dict(vendor='openai', local_path='pdfs/openai/old.pdf', sha256='1'*64, status='archived')
+            with (root/'catalog.csv').open('w', newline='') as stream:
+                writer = csv.DictWriter(stream, fieldnames=list(row)); writer.writeheader(); writer.writerow(row)
+            old = dict(id='openai:old', source_pdf=row['local_path'], source_sha256=row['sha256'], models=['Old'])
+            (root/'abstracts/index.json').write_text(json.dumps(dict(reports=[old])))
+            with patch.object(extract, 'ROOT', root):
+                reports, missing = extract.current_reports()
+                self.assertEqual(missing, [])
+                self.assertEqual(reports[0]['reader_scope'], 'historical')
+                self.assertEqual(reports[0]['row']['sha256'], row['sha256'])
+                old['source_sha256'] = '2'*64
+                (root/'abstracts/index.json').write_text(json.dumps(dict(reports=[old])))
+                with self.assertRaisesRegex(ValueError, 'Stale historical'):
+                    extract.current_reports()
+
+    def test_word_positioned_pdf_preserves_genuine_hyphens_and_numbers(self):
+        self.assertTrue(extract.source_agrees('good-faith model', 'good-\nfaith\n model'))
+        self.assertTrue(extract.source_agrees('two-thirds', 'two-\nthirds'))
+        self.assertFalse(extract.source_agrees('0.98 success', '0.89 success'))
+        self.assertFalse(extract.source_agrees('-3 result', '3 result'))
+
+    def test_multi_page_review_checks_each_range_and_character_inventory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'abstracts').mkdir()
+            native = ['first page original', 'second page original']
+            ranges = [dict(page=i+1, start_offset=0, end_offset=len(t),
+                           raw_text_sha256=hashlib.sha256(t.encode()).hexdigest()) for i, t in enumerate(native)]
+            review = dict(id='lab:example', source_sha256='source', ranges=ranges)
+            path = root / 'abstracts/reviews.json'
+            path.write_text(json.dumps(dict(reviews=[review])))
+            report = dict(id='lab:example', source_sha256='source', source_pdf='example.pdf',
+                          raw_text='\n'.join(native), cross_check={'matched_fragments': 1, 'total_fragments': 2})
+            with patch.object(extract, 'ROOT', root), patch.object(extract, 'extract_cached', return_value=dict(pypdf_pages=native)):
+                result = extract.apply_source_review(dict(report), root, 12)
+                self.assertEqual(result['pages'], [1, 2])
+                self.assertEqual(result['status'], 'source_reviewed')
+                self.assertEqual(result['initial_cross_check'], report['cross_check'])
+                changed = {**report, 'raw_text': report['raw_text'] + ' invented'}
+                with self.assertRaisesRegex(ValueError, 'changes source characters'):
+                    extract.apply_source_review(changed, root, 12)
+                ranges[1]['raw_text_sha256'] = '0' * 64
+                path.write_text(json.dumps(dict(reviews=[review])))
+                with self.assertRaisesRegex(ValueError, 'source text changed'):
+                    extract.apply_source_review(dict(report), root, 12)
+
     def test_inline_abstract_keeps_original_heading(self):
         self.assertEqual(extract.heading('Abstract. We describe a model.'), ('abstract', 0, 'Abstract.', 'We describe a model.\n'))
+
+    def test_ieee_dash_abstract_continues_until_roman_introduction(self):
+        opening = 'We present a robot model with original experiments and preserve the complete abstract. ' * 3
+        continuation = 'The abstract continues on the next page with its final evaluation results.'
+        section = extract.choose_section([page(block('Abstract—' + opening)),
+                                          page(block(continuation), block('I. INTRODUCTION', 8.4), block('Not the abstract.'))])
+        self.assertEqual(section['source_heading'], 'Abstract—')
+        self.assertEqual([f['page'] for f in section['fragments']], [1, 2])
+        self.assertNotIn('Not the abstract', section['raw_text'])
+        self.assertTrue(section['boundary_found'])
+
+    def test_link_widgets_are_not_part_of_abstract(self):
+        text = 'We introduce a world model and report its original results. ' * 3
+        section = extract.choose_section([page(block('Abstract', 10), block(text, 10),
+                                              block('Open-Source Code', 10), block('Code and dataset links.', 10))])
+        self.assertEqual(section['raw_text'], text.strip())
+        self.assertTrue(section['boundary_found'])
 
     def test_wrapped_summary_heading(self):
         self.assertEqual(extract.heading('Executive\nSummary\nOriginal words.'), ('executive_summary', 1, 'Executive Summary', 'Original words.'))
@@ -72,6 +143,26 @@ class AbstractTests(unittest.TestCase):
         section = extract.choose_section([page(block(text), block('Inputs: Text'))])
         self.assertEqual(section['source_heading'], 'Description:')
         self.assertTrue(section['boundary_found'])
+
+    def test_model_architecture_table_is_source_passage_not_abstract(self):
+        label = block('Model architecture', bottom=600)
+        label['bbox'] = [50, 600, 180, 620]
+        text = 'The model uses a mixture of experts with sparse attention and reports the original architecture details. ' * 3
+        value = block(text, bottom=600)
+        value['bbox'] = [220, 400, 550, 620]
+        section = extract.choose_section([page(label, value)])
+        self.assertEqual(section['section_type'], 'model_architecture')
+        self.assertEqual(section['source_heading'], 'Model architecture')
+        self.assertEqual(section['raw_text'], text.strip())
+        self.assertTrue(section['boundary_found'])
+
+    def test_merged_architecture_label_stops_before_next_table_row(self):
+        text = 'The model uses sparse attention and describes its original training architecture in this table.'
+        section = extract.choose_section([page(block('Model architecture  ' + text),
+                                              block('Modalities'), block('Text and image inputs.'))])
+        self.assertEqual(section['source_heading'], 'Model architecture')
+        self.assertEqual(section['raw_text'], text)
+        self.assertNotIn('Modalities', section['raw_text'])
 
     def test_split_introduction_and_caption_end_abstract(self):
         text = 'We introduce a model and report original experimental results. ' * 4

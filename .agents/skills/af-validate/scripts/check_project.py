@@ -9,11 +9,15 @@ import math
 import os
 import re
 import subprocess
+import sys
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(ROOT / 'scripts'))
+from web_sources import validate_summary, validate_figures, verify_snapshot
+
 SHA = re.compile(r'^[0-9a-f]{64}$')
 MD_LINK = re.compile(r'!?\[[^\]\n]*\]\(([^\s\)]+)\)')
 
@@ -102,8 +106,18 @@ def validate(root, site=None, local_pdfs=False):
     count = 0
     for report in reports:
         key = report['id']
+        web = report.get('source_kind') == 'html'
         row = catalog.get(report['source_pdf'])
-        require(bool(row) and row['sha256'] == report['source_sha256'], f'Stale summary source: {key}')
+        web_source = None
+        if web:
+            try:
+                web_source = validate_summary(root, report)
+                if local(web_source['snapshot']['path']).exists():
+                    verify_snapshot(root, web_source)
+            except (ValueError, OSError) as error:
+                require(False, str(error))
+        else:
+            require(bool(row) and row['sha256'] == report['source_sha256'], f'Stale summary source: {key}')
         if row:
             require(all(isinstance(p, int) and 1 <= p <= int(row['pages']) for p in report['pages']), f'Invalid summary source pages: {key}')
         require((not report['text'] and report['text_sha256'] is None) or sha_text(report['text']) == report['text_sha256'], f'Changed source-summary text checksum: {key}')
@@ -119,18 +133,32 @@ def validate(root, site=None, local_pdfs=False):
             continue
         require(exported['source_sha256'] == selected['source_sha256'] == report['source_sha256'], f'Stale figure source: {key}')
         require(len(exported['figures']) == len(selected['figures']), f'Export/selection count differs: {key}')
+        if web:
+            require(web_source is not None and selected['figures'] == web_source['assets'], f'Stale web asset selection: {key}')
+            try:
+                validate_figures(root, report, exported)
+            except ValueError as error:
+                require(False, str(error))
         for figure, selection in zip(exported['figures'], selected['figures']):
             count += 1
             require(selection.get('visual_review') is True, f'Missing visual figure review: {key}')
-            require(figure['bbox'] == selection['bbox'] and figure['page'] == selection['page'], f'Export differs from selected region: {key}')
-            require(row is not None and 1 <= figure['page'] <= int(row['pages']), f'Invalid figure source page: {key}')
-            require(all(math.isfinite(x) for x in figure['bbox']), f'Invalid figure rectangle: {key}')
+            if web:
+                require(web_source is not None and selected['figures'] == web_source['assets'], f'Stale web asset selection: {key}')
+                require(figure.get('page') is None and figure.get('bbox') is None and not figure.get('pdf_path'), f'Fabricated PDF provenance: {key}')
+                for field in ('asset_url', 'asset_sha256', 'role', 'caption'):
+                    require(figure.get(field, '') == selection.get(field, ''), f'Web asset export differs: {key}: {field}')
+                if local(selection['local_path']).exists():
+                    require(sha(local(selection['local_path'])) == selection['asset_sha256'], f'Changed original web asset: {key}')
+            else:
+                require(figure['bbox'] == selection['bbox'] and figure['page'] == selection['page'], f'Export differs from selected region: {key}')
+                require(row is not None and 1 <= figure['page'] <= int(row['pages']), f'Invalid figure source page: {key}')
+                require(all(math.isfinite(x) for x in figure['bbox']), f'Invalid figure rectangle: {key}')
             image = local(figure['png_path'])
             require(image.is_file() and sha(image) == figure['png_sha256'], f'Missing/changed PNG: {figure["png_path"]}')
             require(' '.join(figure['caption'].split()) in ' '.join(text.split()), f'Original caption missing from Markdown: {key}')
             reference = Path(os.path.relpath(image, markdown.parent)).as_posix()
             require(f']({reference})' in text, f'Figure is not embedded in source Markdown: {key}')
-            if local_pdfs:
+            if local_pdfs and not web:
                 pdf = local(figure['pdf_path'])
                 require(pdf.is_file() and sha(pdf) == figure['pdf_sha256'], f'Missing/changed local cropped PDF: {figure["pdf_path"]}')
     public = [root / n for n in ('README.md', 'README_CN.md', 'LATEST_MODELS.md', 'LATEST_MODELS_CN.md')]

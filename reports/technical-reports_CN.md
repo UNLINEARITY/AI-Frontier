@@ -2,10 +2,11 @@
 
 [首页](../README_CN.md) · [文档类型](../README_CN.md#按类型找报告) · [英文版](technical-reports.md)
 
-已收录 **268 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **279 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 厂商 | 报告 | 状态 | 官方来源 |
 | --- | --- | --- | --- | --- |
+| 2026-09-29 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [Rho: A Foundation for Efficiently Adaptable VLA Models](https://arxiv.org/abs/2609.38164) | 已归档 | [来源](https://arxiv.org/abs/2609.38164) |
 | 2026-09-17 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing](https://huggingface.co/tencent/WeVisDoc-4B) | 已归档 | [来源](https://huggingface.co/tencent/WeVisDoc-4B) |
 | 2026-09-17 | [DeepSeek](../pdfs/deepseek/README_CN.md) | [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](https://arxiv.org/abs/2609.19969) | 已归档 | [来源](https://arxiv.org/abs/2609.19969) |
 | 2026-09-12 | [StepFun](../pdfs/stepfun/README_CN.md) | [StepAudio 3 Realtime Technical Report](https://arxiv.org/abs/2609.14005) | 已归档 | [来源](https://arxiv.org/abs/2609.14005) |
@@ -13,14 +14,17 @@
 | 2026-09-11 | [StepFun](../pdfs/stepfun/README_CN.md) | [StepAudio 3 Music Technical Report](https://arxiv.org/abs/2609.16034) | 已归档 | [来源](https://arxiv.org/abs/2609.16034) |
 | 2026-09-11 | [StepFun](../pdfs/stepfun/README_CN.md) | [StepAudio 3 Gen Technical Report](https://arxiv.org/abs/2609.12945) | 已归档 | [来源](https://arxiv.org/abs/2609.12945) |
 | 2026-09-07 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen-Audio-3.0-ASR Technical Report](https://arxiv.org/abs/2609.07549) | 已归档 | [来源](https://arxiv.org/abs/2609.07549) |
+| 2026-09-04 | [AgiBot](../pdfs/agibot/README_CN.md) | [GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation](https://arxiv.org/abs/2609.05588) | 已归档 | [来源](https://arxiv.org/abs/2609.05588) |
 | 2026-09-03 | [Google / DeepMind](../pdfs/google/README_CN.md) | [WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations](https://arxiv.org/abs/2609.03582) | 已归档 | [来源](https://arxiv.org/abs/2609.03582) |
 | 2026-09-02 | [NVIDIA](../pdfs/nvidia/README_CN.md) | [Post-Training Language Models for Gold-Medal Performance in Coding Competitions](https://arxiv.org/abs/2609.02849) | 已归档 | [来源](https://arxiv.org/abs/2609.02849) |
 | 2026-08-31 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen-Drive-1.0: An Initial Step towards a Vision-Language Foundation Model for Autonomous Driving](https://github.com/QwenLM/Qwen-Drive-1.0) | 已归档 | [来源](https://github.com/QwenLM/Qwen-Drive-1.0) |
 | 2026-08-26 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability](https://github.com/QwenLM/Qwen3.8-Flash-Next) | 已归档 | [来源](https://github.com/QwenLM/Qwen3.8-Flash-Next) |
+| 2026-08-12 | [Galaxea AI](../pdfs/galaxea/README_CN.md) | [G0.5: One Autoregressive Stream for Robot Reasoning and Action](https://arxiv.org/abs/2608.11739) | 已归档 | [来源](https://arxiv.org/abs/2608.11739) |
 | 2026-08-06 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](https://arxiv.org/abs/2608.06009) | 已归档 | [来源](https://arxiv.org/abs/2608.06009) |
 | 2026-08-05 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [WorldClaw: Agentic 3D Open-World Generation at Scale](https://arxiv.org/abs/2608.05248) | 已归档 | [来源](https://arxiv.org/abs/2608.05248) |
 | 2026-08-03 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [Hunyuan3D-Buffalo 1.0: A Unified Multimodal Model for Scalable 3D Generation, Understanding, and Editing](https://arxiv.org/abs/2608.02711) | 已归档 | [来源](https://arxiv.org/abs/2608.02711) |
 | 2026-07-30 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents](https://arxiv.org/abs/2607.28227) | 已归档 | [来源](https://arxiv.org/abs/2607.28227) |
+| 2026-07-29 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Gemini Robotics 2: Safety Evaluations](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) | 已归档 | [来源](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
 | 2026-07-28 | [Mistral AI](../pdfs/mistral/README_CN.md) | [Shieldstral](https://arxiv.org/abs/2607.25857) | 已归档 | [来源](https://arxiv.org/abs/2607.25857) |
 | 2026-07-22 | [Mistral AI](../pdfs/mistral/README_CN.md) | [Robostral Navigate](https://arxiv.org/abs/2607.20785) | 已归档 | [来源](https://arxiv.org/abs/2607.20785) |
 | 2026-07-10 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation](https://arxiv.org/abs/2607.09581) | 已归档 | [来源](https://arxiv.org/abs/2607.09581) |
@@ -37,6 +41,7 @@
 | 2026-05-28 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments](https://github.com/QwenLM/Qwen-VLA) | 已归档 | [来源](https://github.com/QwenLM/Qwen-VLA) |
 | 2026-05-26 | [MiniMax](../pdfs/minimax/README_CN.md) | [The MiniMax-M2 Series: Mini Activations Unleashing Max Real-World Intelligence](https://arxiv.org/abs/2605.26494) | 已归档 | [来源](https://arxiv.org/abs/2605.26494) |
 | 2026-05-26 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini](https://arxiv.org/abs/2605.27295) | 已归档 | [来源](https://arxiv.org/abs/2605.27295) |
+| 2026-05-26 | [AgiBot](../pdfs/agibot/README_CN.md) | [GE-Sim 2.0: A Roadmap Towards Comprehensive Closed-loop Video World Simulators for Robotic Manipulation](https://arxiv.org/abs/2605.27491) | 已归档 | [来源](https://arxiv.org/abs/2605.27491) |
 | 2026-05-22 | [StepFun](../pdfs/stepfun/README_CN.md) | [StepAudio 2.5 Technical Report](https://arxiv.org/abs/2605.23463) | 已归档 | [来源](https://arxiv.org/abs/2605.23463) |
 | 2026-05-21 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](https://arxiv.org/abs/2605.22064) | 已归档 | [来源](https://arxiv.org/abs/2605.22064) |
 | 2026-05-11 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen-Image-2.0 Technical Report](https://arxiv.org/abs/2605.10730) | 已归档 | [来源](https://arxiv.org/abs/2605.10730) |
@@ -45,6 +50,7 @@
 | 2026-04-26 | [DeepSeek](../pdfs/deepseek/README_CN.md) | [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](https://arxiv.org/abs/2606.19348) | 已归档 | [来源](https://arxiv.org/abs/2606.19348) |
 | 2026-04-22 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [Seed3D 2.0: Advancing High-Fidelity Simulation-Ready 3D Content Generation](https://seed.bytedance.com/en/seed3d_2_0) | 已归档 | [来源](https://seed.bytedance.com/en/seed3d_2_0) |
 | 2026-04-17 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen3.5-Omni Technical Report](https://arxiv.org/abs/2604.15804) | 已归档 | [来源](https://arxiv.org/abs/2604.15804) |
+| 2026-04-16 | [Physical Intelligence](../pdfs/physical_intelligence/README_CN.md) | [π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities](https://arxiv.org/abs/2604.15483) | 已归档 | [来源](https://arxiv.org/abs/2604.15483) |
 | 2026-04-15 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [Seedance 2.0: Advancing Video Generation for World Complexity](https://seed.bytedance.com/en/research) | 已归档 | [来源](https://seed.bytedance.com/en/research) |
 | 2026-04-06 | [Google / DeepMind](../pdfs/google/README_CN.md) | [MedGemma 1.5 Technical Report](https://arxiv.org/abs/2604.05081) | 已归档 | [来源](https://arxiv.org/abs/2604.05081) |
 | 2026-03-26 | [Mistral AI](../pdfs/mistral/README_CN.md) | [Voxtral TTS](https://arxiv.org/abs/2603.25551) | 已归档 | [来源](https://arxiv.org/abs/2603.25551) |
@@ -66,10 +72,12 @@
 | 2026-01-13 | [Google / DeepMind](../pdfs/google/README_CN.md) | [TranslateGemma Technical Report](https://arxiv.org/abs/2601.09012) | 已归档 | [来源](https://arxiv.org/abs/2601.09012) |
 | 2026-01-13 | [Mistral AI](../pdfs/mistral/README_CN.md) | [Ministral 3](https://mistral.ai/news/mistral-3/) | 已归档 | [来源](https://mistral.ai/news/mistral-3/) |
 | 2026-01-08 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen3-VL-Embedding and Qwen3-VL-Reranker Technical Report](https://github.com/QwenLM/Qwen3-VL-Embedding) | 已归档 | [来源](https://github.com/QwenLM/Qwen3-VL-Embedding) |
+| 2025-12-30 | [AgiBot](../pdfs/agibot/README_CN.md) | [Unified Embodied VLM Reasoning with Robotic Action via Autoregressive Discretized Pre-training](https://arxiv.org/abs/2512.24125) | 已归档 | [来源](https://arxiv.org/abs/2512.24125) |
 | 2025-12-23 | [StepFun](../pdfs/stepfun/README_CN.md) | [Step-DeepResearch Technical Report](https://github.com/stepfun-ai/StepDeepResearch) | 已归档 | [来源](https://github.com/stepfun-ai/StepDeepResearch) |
 | 2025-12-22 | [Meta](../pdfs/meta/README_CN.md) | [Pushing the Frontier of Audiovisual Perception with Large-Scale Multimodal Correspondence Learning](https://arxiv.org/abs/2512.19687) | 已归档 | [来源](https://arxiv.org/abs/2512.19687) |
 | 2025-12-19 | [Meta](../pdfs/meta/README_CN.md) | [SAM Audio: Segment Anything in Audio](https://arxiv.org/abs/2512.18099) | 已归档 | [来源](https://arxiv.org/abs/2512.18099) |
 | 2025-12-17 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen-Image-Layered: Towards Inherent Editability via Layer Decomposition](https://github.com/QwenLM/Qwen-Image-Layered) | 已归档 | [来源](https://github.com/QwenLM/Qwen-Image-Layered) |
+| 2025-12-16 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling](https://arxiv.org/abs/2512.14614) | 已归档 | [来源](https://arxiv.org/abs/2512.14614) |
 | 2025-12-16 | [Google / DeepMind](../pdfs/google/README_CN.md) | [T5Gemma 2: Seeing, Reading, and Understanding Longer](https://deepmind.google/models/gemma/t5gemma/) | 已归档 | [来源](https://deepmind.google/models/gemma/t5gemma/) |
 | 2025-12-16 | [智谱 / Z.ai](../pdfs/zai/README_CN.md) | [GLM-TTS Technical Report](https://github.com/zai-org/GLM-TTS) | 已归档 | [来源](https://github.com/zai-org/GLM-TTS) |
 | 2025-12-15 | [MiniMax](../pdfs/minimax/README_CN.md) | [Towards Scalable Pre-training of Visual Tokenizers for Generation](https://arxiv.org/abs/2512.13687) | 已归档 | [来源](https://arxiv.org/abs/2512.13687) |
@@ -77,8 +85,10 @@
 | 2025-12-15 | [NVIDIA](../pdfs/nvidia/README_CN.md) | [NVIDIA Nemotron 3: Efficient and Open Intelligence](https://research.nvidia.com/labs/nemotron/Nemotron-3/) | 已归档 | [来源](https://research.nvidia.com/labs/nemotron/Nemotron-3/) |
 | 2025-12-15 | [NVIDIA](../pdfs/nvidia/README_CN.md) | [NVIDIA Nemotron 3 Nano Technical Report](https://research.nvidia.com/labs/nemotron/Nemotron-3/) | 已归档 | [来源](https://research.nvidia.com/labs/nemotron/Nemotron-3/) |
 | 2025-12-09 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Wan-Move: Motion-controllable Video Generation via Latent Trajectory Guidance](https://arxiv.org/abs/2512.08765) | 已归档 | [来源](https://arxiv.org/abs/2512.08765) |
+| 2025-12-04 | [Google / DeepMind](../pdfs/google/README_CN.md) | [SIMA 2: A Generalist Embodied Agent for Virtual Worlds](https://arxiv.org/abs/2512.04797) | 已归档 | [来源](https://arxiv.org/abs/2512.04797) |
 | 2025-12-02 | [DeepSeek](../pdfs/deepseek/README_CN.md) | [DeepSeek-V3.2: Pushing the Frontier of Open Large Language Models](https://arxiv.org/abs/2512.02556) | 已归档 | [来源](https://arxiv.org/abs/2512.02556) |
 | 2025-12-02 | [Amazon / Nova](../pdfs/amazon/README_CN.md) | [Amazon Nova 2: Multimodal Reasoning and Generation Models](https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models) | 已归档 | [来源](https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models) |
+| 2025-12-01 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [GR-RL: Going Dexterous and Precise for Long-Horizon Robotic Manipulation](https://arxiv.org/abs/2512.01801) | 已归档 | [来源](https://arxiv.org/abs/2512.01801) |
 | 2025-11-27 | [StepFun](../pdfs/stepfun/README_CN.md) | [ReasonEdit: Towards Reasoning-Enhanced Image Editing Models](https://github.com/stepfun-ai/Step1X-Edit) | 已归档 | [来源](https://github.com/stepfun-ai/Step1X-Edit) |
 | 2025-11-27 | [DeepSeek](../pdfs/deepseek/README_CN.md) | [DeepSeekMath-V2: Towards Self-Verifiable Mathematical Reasoning](https://github.com/deepseek-ai/DeepSeek-Math-V2) | 已归档 | [来源](https://github.com/deepseek-ai/DeepSeek-Math-V2) |
 | 2025-11-26 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen3-VL Technical Report](https://github.com/QwenLM/Qwen3-VL) | 已归档 | [来源](https://github.com/QwenLM/Qwen3-VL) |
@@ -114,6 +124,7 @@
 | 2025-07-28 | [Moonshot AI / Kimi](../pdfs/moonshot/README_CN.md) | [Kimi K2: Open Agentic Intelligence](https://github.com/MoonshotAI/Kimi-K2) | 已归档 | [来源](https://github.com/MoonshotAI/Kimi-K2) |
 | 2025-07-25 | [StepFun](../pdfs/stepfun/README_CN.md) | [Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding](https://github.com/stepfun-ai/Step3) | 已归档 | [来源](https://github.com/stepfun-ai/Step3) |
 | 2025-07-22 | [StepFun](../pdfs/stepfun/README_CN.md) | [Step-Audio 2 Technical Report](https://github.com/stepfun-ai/Step-Audio2) | 已归档 | [来源](https://github.com/stepfun-ai/Step-Audio2) |
+| 2025-07-21 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [GR-3 Technical Report](https://arxiv.org/abs/2507.15493) | 已归档 | [来源](https://arxiv.org/abs/2507.15493) |
 | 2025-07-17 | [Mistral AI](../pdfs/mistral/README_CN.md) | [Voxtral](https://arxiv.org/abs/2507.13264) | 已归档 | [来源](https://arxiv.org/abs/2507.13264) |
 | 2025-07-09 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) | 已归档 | [来源](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) |
 | 2025-07-07 | [Google / DeepMind](../pdfs/google/README_CN.md) | [MedGemma Technical Report](https://arxiv.org/abs/2507.05201) | 已归档 | [来源](https://arxiv.org/abs/2507.05201) |

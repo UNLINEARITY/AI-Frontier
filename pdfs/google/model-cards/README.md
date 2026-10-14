@@ -2,10 +2,12 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**32 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**34 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-10-13 | [Gemini 4 Argon Model Card](https://deepmind.google/models/model-cards/gemini-4-argon/) | [Model Card](../../../reports/model-cards.md) | [Source](https://deepmind.google/models/model-cards/gemini-4-argon/) |
+| 2026-10-06 | [Nano Banana 2.1 Model Card](https://deepmind.google/models/model-cards/nano-banana-2-1/) | [Model Card](../../../reports/model-cards.md) | [Source](https://deepmind.google/models/model-cards/nano-banana-2-1/) |
 | Unknown | [Veo 3.1 Lite Model Card](https://deepmind.google/models/model-cards/veo-3-1-lite/) | [Model Card](../../../reports/model-cards.md) | [Source](https://deepmind.google/models/model-cards/veo-3-1-lite/) |
 | Unknown | [Veo 3 Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf) | [Model Card](../../../reports/model-cards.md) | [Source](https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf) |
 | Unknown | TxGemma Model Card (Pending) | [Model Card](../../../reports/model-cards.md) | [Source](https://developers.google.com/health-ai-developer-foundations/txgemma/model-card) |

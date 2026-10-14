@@ -10,12 +10,13 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | --- | ---: |
 | [Technical Report](technical-reports/README.md) | 0 |
 | [Model Card](model-cards/README.md) | 5 |
-| [System Card](system-cards/README.md) | 17 |
+| [System Card](system-cards/README.md) | 18 |
 
 ## All reports
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-10-07 | [Claude Haiku 5.5 System Card](https://www.anthropic.com/claude-haiku-5-5-system-card) | [System Card](../../reports/system-cards.md) | [Source](https://www.anthropic.com/claude-haiku-5-5-system-card) |
 | 2026-09-28 | [System Card: Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5-system-card) | [System Card](../../reports/system-cards.md) | [Source](https://www.anthropic.com/claude-sonnet-5-5-system-card) |
 | 2026-09-22 | [Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card) | [System Card](../../reports/system-cards.md) | [Source](https://www.anthropic.com/claude-opus-5-5-system-card) |
 | 2026-09-01 | [Claude Fable 5.1 and Mythos 5.1 System Card](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card) | [System Card](../../reports/system-cards.md) | [Source](https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card) |

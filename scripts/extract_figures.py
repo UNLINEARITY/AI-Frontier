@@ -62,6 +62,12 @@ def export(output, selections, reports):
     records = []
     for selection in selections:
         report = lookup[selection['id']]
+        if report.get('source_kind') == 'html':
+            from web_sources import export_figures
+            folder, record = export_figures(ROOT, output, report, selection)
+            write_report(folder, record)
+            records.append(record)
+            continue
         source = ROOT / report['source_pdf']
         if sha(source) != report['source_sha256']:
             raise ValueError(f'Changed source PDF: {source}')
@@ -86,6 +92,8 @@ def export(output, selections, reports):
                     pix = page.get_pixmap(dpi=dpi, alpha=False, annots=False)
                     pix.save(png)
                 item = {k: selected[k] for k in ('page', 'figure_number', 'role', 'caption', 'bbox')}
+                if selected.get('source_kind'):
+                    item['source_kind'] = selected['source_kind']
                 item.update(coordinate_system='PDF points, top-left origin',
                             page_size=list(document[selected['page']-1].rect)[2:],
                             review_method='agent_visual_source_page_review',
@@ -97,7 +105,7 @@ def export(output, selections, reports):
                 record['figures'].append(item)
         write_report(folder, record)
         records.append(record)
-    payload = {'schema_version': 1, 'method': 'native_pdf_region_export', 'reports': records}
+    payload = {'schema_version': 1, 'method': 'native_pdf_regions_and_official_web_assets', 'reports': records}
     (output / 'index.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n')
     write_index(output, records)
     return records

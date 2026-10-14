@@ -45,10 +45,12 @@ def build(output):
     coverage = json.loads((ROOT / 'model-coverage.json').read_text())
     sources = {(s['vendor'], s['slug']): s for s in json.loads((ROOT / 'sources.json').read_text())}
     summary_file = ROOT / 'abstracts/index.json'
-    summaries = {r['source_pdf']: r for r in json.loads(summary_file.read_text())['reports']} if summary_file.exists() else {}
+    readers = {r['id']: r for r in json.loads(summary_file.read_text())['reports']} if summary_file.exists() else {}
+    summaries = {r['source_pdf']: r for r in readers.values() if r.get('source_pdf')}
+    web_readers = {(r['vendor'], name): r for r in readers.values() if r.get('source_kind') == 'html' for name in r['models']}
     figure_file = ROOT / 'figures/index.json'
     figure_reports = {r['id']: r for r in json.loads(figure_file.read_text())['reports']} if figure_file.exists() else {}
-    reader_count, preview_count = build_readers(ROOT, output, summaries, figure_reports, reports)
+    reader_count, preview_count = build_readers(ROOT, output, readers, figure_reports, reports)
     brand = json.loads((ROOT / '.github/brand.json').read_text())
     models = [m for m in coverage['models'] if m.get('lifecycle', 'active') == 'active'
               and (m.get('latest_categories') or m.get('frontier_categories'))]
@@ -83,6 +85,8 @@ def build(output):
                     documents.append((True, list(DOCUMENT_TYPES).index(source['document_type']), source['source_url'], source['title']))
             documents.sort(key=lambda d: d[:2])
             target = documents[0][2] if documents else m.get('frontier_source_url', m['source_url'])
+            if not documents and (m['vendor'], m['model']) in web_readers:
+                target = reader_path(web_readers[(m['vendor'], m['model'])])
             additional = '<div class="links">' + ''.join(link(d[2], d[3]) for d in documents[1:]) + '</div>' if len(documents) > 1 else ''
             cards.append(f'<article class="card" data-date="" data-title="{escape(m["model"])}" data-view="models" data-vendor="{m["vendor"]}" data-type="" data-category="{escape(" ".join(categories))}" data-search="{escape(m["model"] + " " + labels[m["vendor"]])}" hidden><div class="card-heading"><div class="publisher">{mark(m["vendor"])}<span>{escape(labels[m["vendor"]])}</span></div><span class="model-indicator" aria-hidden="true"></span></div><h3><a class="card-link" href="{escape(target)}">{escape(m["model"])}</a></h3><p class="date">{escape(" / ".join(MODEL_CATEGORIES[c][int(chinese)] for c in categories))}</p>{additional}</article>')
         publisher_options = ''.join(f'<option value="{v}">{escape(label)}</option>' for v, label in labels.items())
@@ -92,12 +96,13 @@ def build(output):
             'lang': 'zh-CN' if chinese else 'en', 'prefix': '../' if chinese else '',
             'name': escape(brand['name']), 'tagline': escape(brand['tagline_cn' if chinese else 'tagline']),
             'intro': '原始报告，前沿模型。从语言与多模态 AI，到机器人与世界模型。' if chinese else 'Original reports. Frontier models. From language and multimodal AI to robotics and world models.',
-            'switch': '../index.html' if chinese else 'cn/index.html', 'switch_label': 'English' if chinese else '中文',
-            'repository': REPOSITORY, 'star': '在 GitHub 上 Star' if chinese else 'Star on GitHub',
+            'switch': '../index.html' if chinese else 'cn/index.html', 'switch_label': '切换至 English' if chinese else 'Switch to 中文',
+            'switch_compact': '中 → EN' if chinese else 'EN → 中',
+            'repository': REPOSITORY, 'star': '给项目点个 Star' if chinese else 'Star on GitHub',
             'date_range': f"{min(r['published_date'][:4] for r in reports if r['published_date'])} — {max(r['published_date'][:4] for r in reports if r['published_date'])}",
             'report_count': str(len(reports)), 'publisher_count': str(len(VENDORS)), 'model_count': str(len(models)),
             'reports': '原始报告' if chinese else 'Original reports', 'publishers': '厂商' if chinese else 'Publishers',
-            'models': '前沿模型' if chinese else 'Frontier models', 'updated': ('模型核查：' if chinese else 'Models reviewed: ') + coverage['checked_at'],
+            'models': '前沿模型' if chinese else 'Frontier models', 'updated': ('更新于：' if chinese else 'Updated: ') + coverage.get('updated_at', coverage['checked_at']),
             'search': '搜索报告、模型或厂商' if chinese else 'Search reports, models, or publishers',
             'all_publishers': '全部厂商' if chinese else 'All publishers', 'all_types': '全部文档类型' if chinese else 'All document types',
             'all_categories': '全部模型类别' if chinese else 'All model categories',
@@ -107,7 +112,7 @@ def build(output):
             'results': '条结果' if chinese else 'results',
             'explore': '探索报告' if chinese else 'Explore the archive',
             'browse_labs': '追踪每一家厂商' if chinese else 'Follow every frontier lab',
-            'publisher_hint': '选择厂商，直达原始报告。' if chinese else 'Choose a publisher. Go straight to the source.',
+            'publisher_hint': '选择厂商，浏览报告与前沿模型。' if chinese else 'Choose a publisher. Explore reports and frontier models.',
             'clear': '清除筛选' if chinese else 'Clear filters',
             'sort_label': '排序' if chinese else 'Sort',
             'newest': '日期：由新到旧' if chinese else 'Date: newest first',
@@ -120,7 +125,12 @@ def build(output):
             'top': '回到顶部' if chinese else 'Back to top',
             'skip': '跳到内容' if chinese else 'Skip to content',
             'evidence': '原始文档 · 清晰分类 · 来源可追溯' if chinese else 'Original documents · Clear categories · Traceable sources',
-            'publisher_buttons': ''.join(f'<button class="lab" data-publisher="{v}" aria-pressed="false">{mark(v)}<span>{escape(label.split(" / ")[0])}</span><span class="lab-count">{sum(r["vendor"] == v for r in reports)}</span></button>' for v, label in labels.items()),
+            'publisher_buttons': ''.join(
+                f'<button class="lab" data-publisher="{v}" data-reports="{sum(r["vendor"] == v for r in reports)}" aria-pressed="false">{mark(v)}'
+                f'<span class="lab-details"><span class="lab-name">{escape(label.split(" / ")[0])}</span>'
+                f'<span class="lab-count">{sum(r["vendor"] == v for r in reports)} {"份 PDF 报告" if chinese else "PDF reports"} · '
+                f'{sum(m["vendor"] == v for m in models)} {"个模型" if chinese else "models"}</span></span></button>'
+                for v, label in labels.items()),
         }
         page = template
         for key, value in values.items():

@@ -2,10 +2,13 @@
 
 [All reports](../README.md) · [Document types](../README.md#choose-the-right-document) · [Chinese](system-cards_CN.md)
 
-**58 reports**. Listed by recorded first publication date, newest first; unknown dates appear last.
+**61 reports**. Listed by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Publisher | Report | Status | Official source |
 | --- | --- | --- | --- | --- |
+| 2026-10-13 | [Google / DeepMind](../pdfs/google/README.md) | [Gemini 4 Argon Safety and Security Report](https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/) | archived | [Source](https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/) |
+| 2026-10-07 | [OpenAI](../pdfs/openai/README.md) | [GPT-6 Sol and GPT-6 Luna: October 2026 update](https://deploymentsafety.openai.com/gpt-6-october) | archived | [Source](https://deploymentsafety.openai.com/gpt-6-october) |
+| 2026-10-07 | [Anthropic](../pdfs/anthropic/README.md) | [Claude Haiku 5.5 System Card](https://www.anthropic.com/claude-haiku-5-5-system-card) | archived | [Source](https://www.anthropic.com/claude-haiku-5-5-system-card) |
 | 2026-09-29 | [OpenAI](../pdfs/openai/README.md) | [Addendum to GPT-6 Astra System Card: GPT-6.1 Sol](https://deploymentsafety.openai.com/gpt-6-1-sol) | archived | [Source](https://deploymentsafety.openai.com/gpt-6-1-sol) |
 | 2026-09-28 | [Anthropic](../pdfs/anthropic/README.md) | [System Card: Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5-system-card) | archived | [Source](https://www.anthropic.com/claude-sonnet-5-5-system-card) |
 | 2026-09-22 | [Anthropic](../pdfs/anthropic/README.md) | [Claude Opus 5.5 System Card](https://www.anthropic.com/claude-opus-5-5-system-card) | archived | [Source](https://www.anthropic.com/claude-opus-5-5-system-card) |

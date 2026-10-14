@@ -36,12 +36,8 @@ SpaceXAI plans to add Grok 4.7 to its consumer surfaces (web, mobile apps, and G
 
 ![Figure](../../figures/xai/grok-4-7-model-card/figure-01.png)
 
-
-
 p. 7
 
 ![Figure](../../figures/xai/grok-4-7-model-card/figure-02.png)
-
-
 
 p. 8

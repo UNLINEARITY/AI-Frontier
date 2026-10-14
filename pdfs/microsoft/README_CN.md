@@ -8,7 +8,7 @@
 
 | 类型 | 已收录报告 |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 9 |
+| [技术报告](technical-reports/README_CN.md) | 10 |
 | [模型卡](model-cards/README_CN.md) | 8 |
 | [系统卡](system-cards/README_CN.md) | 0 |
 
@@ -16,6 +16,7 @@
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-09-29 | [Rho: A Foundation for Efficiently Adaptable VLA Models](https://arxiv.org/abs/2609.38164) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2609.38164) |
 | 2026-06-02 | [MAI-Thinking-1: Building a Hill-Climbing Machine](https://microsoft.ai/models/mai-thinking-1/) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://microsoft.ai/models/mai-thinking-1/) |
 | 2026-03-04 | [Phi-4-reasoning-vision-15B Technical Report](https://arxiv.org/abs/2603.03975) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2603.03975) |
 | 2025-07-09 | [Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) |

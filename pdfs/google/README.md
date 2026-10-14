@@ -8,20 +8,25 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 
 | Type | Reports |
 | --- | ---: |
-| [Technical Report](technical-reports/README.md) | 39 |
-| [Model Card](model-cards/README.md) | 32 |
-| [System Card](system-cards/README.md) | 0 |
+| [Technical Report](technical-reports/README.md) | 41 |
+| [Model Card](model-cards/README.md) | 34 |
+| [System Card](system-cards/README.md) | 1 |
 
 ## All reports
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-10-13 | [Gemini 4 Argon Safety and Security Report](https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/) | [System Card](../../reports/system-cards.md) | [Source](https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/) |
+| 2026-10-13 | [Gemini 4 Argon Model Card](https://deepmind.google/models/model-cards/gemini-4-argon/) | [Model Card](../../reports/model-cards.md) | [Source](https://deepmind.google/models/model-cards/gemini-4-argon/) |
+| 2026-10-06 | [Nano Banana 2.1 Model Card](https://deepmind.google/models/model-cards/nano-banana-2-1/) | [Model Card](../../reports/model-cards.md) | [Source](https://deepmind.google/models/model-cards/nano-banana-2-1/) |
 | 2026-09-03 | [WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations](https://arxiv.org/abs/2609.03582) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2609.03582) |
+| 2026-07-29 | [Gemini Robotics 2: Safety Evaluations](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) | [Technical Report](../../reports/technical-reports.md) | [Source](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
 | 2026-07-02 | [Gemma 4 Technical Report](https://arxiv.org/abs/2607.02770) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2607.02770) |
 | 2026-05-26 | [Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini](https://arxiv.org/abs/2605.27295) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2605.27295) |
 | 2026-04-06 | [MedGemma 1.5 Technical Report](https://arxiv.org/abs/2604.05081) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2604.05081) |
 | 2026-01-13 | [TranslateGemma Technical Report](https://arxiv.org/abs/2601.09012) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2601.09012) |
 | 2025-12-16 | [T5Gemma 2: Seeing, Reading, and Understanding Longer](https://deepmind.google/models/gemma/t5gemma/) | [Technical Report](../../reports/technical-reports.md) | [Source](https://deepmind.google/models/gemma/t5gemma/) |
+| 2025-12-04 | [SIMA 2: A Generalist Embodied Agent for Virtual Worlds](https://arxiv.org/abs/2512.04797) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2512.04797) |
 | 2025-09-24 | [EmbeddingGemma: Powerful and Lightweight Text Representations](https://arxiv.org/abs/2509.20354) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2509.20354) |
 | 2025-07-07 | [MedGemma Technical Report](https://arxiv.org/abs/2507.05201) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2507.05201) |
 | 2025-07-07 | [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](https://arxiv.org/abs/2507.06261) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2507.06261) |

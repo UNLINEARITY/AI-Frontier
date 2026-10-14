@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "method": "native_pdf_region_export",
+  "method": "native_pdf_regions_and_official_web_assets",
   "reports": [
     {
       "id": "openai:addendum-to-gpt-6-astra-system-card-gpt-6-1-sol",
@@ -355,15 +355,91 @@
       "source_url": "https://deploymentsafety.openai.com/chatgpt-images-2-5",
       "source_sha256": "ba0695a115e0b8a4a0aa528eb776323848be4f2844a698c93ac14e3cedb15c9b",
       "source_version": "snapshot-2026-09-30",
-      "status": "no_suitable_figure_identified",
+      "status": "available",
       "inspected_pages": [
+        1,
+        2,
+        3,
         4,
         5,
-        6
+        6,
+        7,
+        8
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
-      "figures": []
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": "Table 1",
+          "role": "safety_evaluation",
+          "caption": "Table 1: Safety Evaluations Overall",
+          "bbox": [
+            70.0,
+            565.0,
+            535.0,
+            722.0
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.87,
+            568.26,
+            225.76,
+            580.14
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3875,
+            1309
+          ],
+          "pdf_path": "figures/openai/chatgpt-images-2-5-system-card/figure-01.pdf",
+          "png_path": "figures/openai/chatgpt-images-2-5-system-card/figure-01.png",
+          "pdf_sha256": "e14716b757a882093c448d244f8285c63c5f77ae4653c01f6258d2b6a1467a74",
+          "png_sha256": "5d5c71198d3f5a2ab35ba7d1d89e610e260807a576bb06b811b7577fa83fb66c"
+        },
+        {
+          "page": 5,
+          "figure_number": "Table 2",
+          "role": "safety_evaluation",
+          "caption": "Table 2: Safety Evaluations by Policy",
+          "bbox": [
+            68.0,
+            66.0,
+            541.0,
+            718.0
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.87,
+            70.3,
+            238.46,
+            82.18
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3942,
+            5434
+          ],
+          "pdf_path": "figures/openai/chatgpt-images-2-5-system-card/figure-02.pdf",
+          "png_path": "figures/openai/chatgpt-images-2-5-system-card/figure-02.png",
+          "pdf_sha256": "13cc6f4d9fc949651c10d5d513f079743eff4a551d37ec13cc4c9dd713abe6e4",
+          "png_sha256": "f780cacacee094228e1e2e2a39af02fb22a74fa64dcfb63b681cce8ba604d984"
+        }
+      ]
     },
     {
       "id": "openai:gpt-rosalind-5-5-system-card",
@@ -377,17 +453,59 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-rosalind-5-5",
       "source_sha256": "7406f84297f46c901c1a49a5626f256c1c48b6abd64a79fbc1633d876146043d",
       "source_version": "snapshot-2026-09-30",
-      "status": "no_suitable_figure_identified",
+      "status": "available",
       "inspected_pages": [
+        1,
+        2,
+        3,
         4,
         5,
         6,
         7,
-        8
+        8,
+        9,
+        10,
+        11
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
-      "figures": []
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 8,
+          "figure_number": "Table 10",
+          "role": "results",
+          "caption": "Table 10: Biological experiments are costly and iterative. Because errors compound across steps,\na single low-success-rate step can substantially constrain a project’s overall probability of success.\nWe hypothesize that a qualitative capability shift is most likely to emerge when stepwise success\nrates exceed a relatively high threshold. Accordingly, we propose 50% correctness as the threshold\nfor biorisk concern.",
+          "bbox": [
+            68.0,
+            306.0,
+            530.0,
+            429.0
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.31300354003906,
+            309.0377197265625,
+            526.3739013671875,
+            374.1438293457031
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3850,
+            1025
+          ],
+          "pdf_path": "figures/openai/gpt-rosalind-5-5-system-card/figure-01.pdf",
+          "png_path": "figures/openai/gpt-rosalind-5-5-system-card/figure-01.png",
+          "pdf_sha256": "95a3dd20d3aaf384b308a4d3e531a09c91c9b9ef679ec04d3e6e0ea00f0cb085",
+          "png_sha256": "2f6543fe52d49331ef48d35848b4c16f80c5c01774ccd88c621b1780274f9bed"
+        }
+      ]
     },
     {
       "id": "anthropic:claude-opus-5-5-system-card",
@@ -840,7 +958,7 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/",
       "source_sha256": "fd9b9494c8cb0da6dc16777c3df70d9f9226708e08ba7c9337222207c5d482af",
       "source_version": "snapshot-2026-09-30",
-      "status": "no_suitable_figure_identified",
+      "status": "available",
       "inspected_pages": [
         1,
         2,
@@ -851,9 +969,70 @@
         7,
         8
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
-      "figures": []
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 5,
+          "figure_number": null,
+          "role": "results",
+          "caption": "",
+          "bbox": [
+            32.0,
+            75.0,
+            532.0,
+            738.0
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            596.0,
+            842.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            4167,
+            5525
+          ],
+          "pdf_path": "figures/google/gemini-3-8-flash-model-card/figure-01.pdf",
+          "png_path": "figures/google/gemini-3-8-flash-model-card/figure-01.png",
+          "pdf_sha256": "ab6658d830f3f6489c85c572e7ed4d7b3e3e2441d01a39987ad5cf2ec51f264c",
+          "png_sha256": "ad823afb78c8dbb27a7bfa8f9977b428ca4c4e0e0b66f262fd65b5a24a024b0c"
+        },
+        {
+          "page": 7,
+          "figure_number": null,
+          "role": "safety_evaluation",
+          "caption": "",
+          "bbox": [
+            35,
+            237,
+            487,
+            551
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            596.0,
+            842.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            3767,
+            2617
+          ],
+          "pdf_path": "figures/google/gemini-3-8-flash-model-card/figure-02.pdf",
+          "png_path": "figures/google/gemini-3-8-flash-model-card/figure-02.png",
+          "pdf_sha256": "285111494cd4a263d62ec59e296763c8f76cbd290a96b59963149d142fbe116e",
+          "png_sha256": "f877d8761d4e6749ef9c774ecce2ae6077b1e898cfa76cd0fb9c530dc74482ae"
+        }
+      ]
     },
     {
       "id": "google:gemini-3-1-pro-model-card",
@@ -867,20 +1046,52 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-pro/",
       "source_sha256": "70bcda79a248255d2c858600cb1fecae9ea30278c942684754df0bca71ca8315",
       "source_version": "snapshot-2026-09-30",
-      "status": "no_suitable_figure_identified",
+      "status": "available",
       "inspected_pages": [
         1,
         2,
         3,
         4,
+        5,
         6,
         7,
         8,
         9
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
-      "figures": []
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": null,
+          "role": "results",
+          "caption": "",
+          "bbox": [
+            68.0,
+            220.0,
+            546.0,
+            635.0
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            3984,
+            3459
+          ],
+          "pdf_path": "figures/google/gemini-3-1-pro-model-card/figure-01.pdf",
+          "png_path": "figures/google/gemini-3-1-pro-model-card/figure-01.png",
+          "pdf_sha256": "9631ea07edf08cf8f6d28173f60ff19703b41d449f6dc7a2e7f9886d927adbd8",
+          "png_sha256": "e5cb7842cf099c82c6b8b5b857da9527728bb928551da8fdf9595ec5a0e60542"
+        }
+      ]
     },
     {
       "id": "google:lyria-3-5-model-card",
@@ -901,8 +1112,8 @@
         3,
         4
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "reason_en": "All four pages visually reviewed. The card contains descriptive model/training prose and evaluation summaries, but no source diagram, plot, or core benchmark/safety table suitable for extraction.",
+      "reason_cn": "已逐页检查四页模型卡；内容为模型、训练和评测说明，未发现适合作为核心配图的示意图、曲线或评测表格。",
       "figures": []
     },
     {
@@ -1789,6 +2000,97 @@
       ]
     },
     {
+      "id": "nvidia:cosmos-3-omnimodal-world-models-for-physical-ai",
+      "vendor": "nvidia",
+      "title": "Cosmos 3: Omnimodal World Models for Physical AI",
+      "models": [
+        "Cosmos 3",
+        "Cosmos 3 Edge"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/nvidia/technical-reports/cosmos-3-omnimodal-world-models-for-physical-ai.pdf",
+      "source_url": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/",
+      "source_sha256": "d8f554d76b37d8c2ba504c628d7814176d7b0383c6c3bfa9f8389decda228d6e",
+      "source_version": "snapshot-2026-09-30",
+      "status": "available",
+      "inspected_pages": [
+        10,
+        68
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 10,
+          "figure_number": "4",
+          "role": "architecture",
+          "caption": "Figure 4: Action sequence configurations. For a video-action data sample, Cosmos 3 constructs different training modes by varying which tokens are clean and which are noisy. The diagram shows a local temporal window in which action tokens lie between adjacent video tokens: 𝑎𝑡connects 𝑣𝑡−1 to 𝑣𝑡, and 𝑎𝑡+1 connects 𝑣𝑡 to 𝑣𝑡+1. Forward dynamics mode denoises vision tokens conditioned on clean action tokens; inverse dynamics mode denoises action tokens conditioned on clean vision tokens; and video-action (policy) mode denoises both vision and action tokens. Language and special tokens are omitted for compactness.",
+          "bbox": [
+            57,
+            550,
+            538,
+            735
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.0,
+            653.5,
+            532.9,
+            729.6
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4009,
+            1542
+          ],
+          "pdf_path": "figures/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai/figure-01.pdf",
+          "png_path": "figures/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai/figure-01.png",
+          "pdf_sha256": "18d25e9ec1f8c8332d4bb3a747d76c89ea3d7cdb62b3eea86c804c83eb1db421",
+          "png_sha256": "1e3b068e80340f6b56859722bd8ae7bf1c1001a7b6b040ca277e8b3555860d0f"
+        },
+        {
+          "page": 68,
+          "figure_number": "24",
+          "role": "results",
+          "caption": "Figure 24: Qualitative comparison for robotics forward dynamics. The generated frames closely follow the action commands, and the interactions between the robot arm and the fabric are more realistic than those from the baseline. Green boxes highlight regions with visible distortions or artifacts in the baseline outputs, and the corresponding regions in Cosmos3-Nano (MT-init), where these artifacts are absent.",
+          "bbox": [
+            40,
+            80,
+            537,
+            333
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.4,
+            277.3,
+            532.9,
+            329.6
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4142,
+            2109
+          ],
+          "pdf_path": "figures/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai/figure-02.pdf",
+          "png_path": "figures/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai/figure-02.png",
+          "pdf_sha256": "065255712c6d28331b8ab0279ee210861b0ef03357c56fb6381ef47baea493f8",
+          "png_sha256": "8bd09d1d09559e3c6ea24668a615ae0e14b0e2eb73f211789c32f07f155388ca"
+        }
+      ]
+    },
+    {
       "id": "deepseek:deepseek-v4-1-flash-technical-report",
       "vendor": "deepseek",
       "title": "DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression",
@@ -2250,7 +2552,7 @@
       "source_url": "https://arxiv.org/abs/2609.13916",
       "source_sha256": "f593e3ab110631bf1f2b5412c482ebb6dd56c38a38fd77c60dcdf10784e621fa",
       "source_version": "arxiv-v1",
-      "status": "no_suitable_figure_identified",
+      "status": "available",
       "inspected_pages": [
         1,
         2,
@@ -2267,9 +2569,80 @@
         13,
         14
       ],
-      "reason_en": "Pages 2, 8, and 13 contain benchmark comparison matrices; all 14 pages were inspected and no standalone architecture, pipeline, or plotted results figure was present.",
-      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
-      "figures": []
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "Table 1",
+          "role": "results",
+          "caption": "Table 1: Aggregated results of our model against other top systems with under 1T parameters.",
+          "bbox": [
+            70.87,
+            72.0,
+            522.0,
+            320.0
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            110.25,
+            309.68,
+            484.72,
+            319.64
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3760,
+            2067
+          ],
+          "pdf_path": "figures/cohere/north-small-translate/figure-01.pdf",
+          "png_path": "figures/cohere/north-small-translate/figure-01.png",
+          "pdf_sha256": "20c853526d594985ddd67c68125cbfef9d9b652ff035076691fbe02f07c8525e",
+          "png_sha256": "8eb111a250e369badbf2a9a46cb7d9f1d8457a9d7ba7ec7e665df97ea7ed653b"
+        },
+        {
+          "page": 8,
+          "figure_number": "Table 4",
+          "role": "results",
+          "caption": "Table 4: Machine translation capabilities aggregated over different groups of languages over the WMT26 testset.",
+          "bbox": [
+            70,
+            71,
+            524,
+            346
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            73.03,
+            334.21,
+            521.94,
+            344.17
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3784,
+            2292
+          ],
+          "pdf_path": "figures/cohere/north-small-translate/figure-02.pdf",
+          "png_path": "figures/cohere/north-small-translate/figure-02.png",
+          "pdf_sha256": "0427569c9166fa4594b746892eeaefe8effc00ee90df3f661aaf31e770d1cbf5",
+          "png_sha256": "26f9be52f6a3de055e5214039e4b1eff9cb763e3db6fd7859f0c4884ebdda243"
+        }
+      ]
     },
     {
       "id": "microsoft:mai-thinking-1-technical-report",
@@ -2383,7 +2756,7 @@
       "source_url": "https://microsoft.ai/models/mai-code-1-flash/",
       "source_sha256": "9caf4abe4c8eb6c3b5e1dfd5c61238e42139510bf4c5690d6115d9277f59e22f",
       "source_version": "snapshot-2026-10-01",
-      "status": "no_suitable_figure_identified",
+      "status": "available",
       "inspected_pages": [
         1,
         2,
@@ -2392,9 +2765,70 @@
         5,
         6
       ],
-      "reason_en": "All six pages were inspected; content consists of model-card text and benchmark tables, without a core architecture diagram or plotted result figure.",
-      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
-      "figures": []
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 5,
+          "figure_number": null,
+          "role": "results",
+          "caption": "",
+          "bbox": [
+            72.03,
+            233.58,
+            539.98,
+            346.35
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            3900,
+            940
+          ],
+          "pdf_path": "figures/microsoft/mai-code-1-1-flash-model-card/figure-01.pdf",
+          "png_path": "figures/microsoft/mai-code-1-1-flash-model-card/figure-01.png",
+          "pdf_sha256": "580464d8b4ca6b32b7c31962dcd161b90d9bb232b40bd6b4758b6a81269631e5",
+          "png_sha256": "2673f7fec7cbe0734b821e4fdb8819424b4fb83737dd528051da9c90a9dd62c7"
+        },
+        {
+          "page": 5,
+          "figure_number": null,
+          "role": "results",
+          "caption": "",
+          "bbox": [
+            71,
+            346,
+            541,
+            490
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            3917,
+            1200
+          ],
+          "pdf_path": "figures/microsoft/mai-code-1-1-flash-model-card/figure-02.pdf",
+          "png_path": "figures/microsoft/mai-code-1-1-flash-model-card/figure-02.png",
+          "pdf_sha256": "9a3ca470f11f7b3417e0fa65886c50a40cbb8d277a55268fdbaf746c8b79de8b",
+          "png_sha256": "5144fea694891dbc00d098448ca0f3d2036b0bd483a85e3797aa80d8d7380fdc"
+        }
+      ]
     },
     {
       "id": "microsoft:mai-image-2-6-model-card",
@@ -2415,8 +2849,8 @@
         3,
         4
       ],
-      "reason_en": "All four pages were inspected; the card is text-only and contains no architecture diagram or plotted results figure.",
-      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
+      "reason_en": "The four-page model card contains a descriptive model-summary grid, prose and bullet lists, but no distinct architecture or method diagram, plotted result, or compact table whose values add enough core-image context to justify an image. The architecture and capabilities are already stated directly in the card text.",
+      "reason_cn": "四页模型卡包含描述性摘要表、正文和项目符号列表，但没有独立的架构或方法图、结果图，也没有足以作为核心配图的紧凑数据表。模型架构与能力已在卡片正文中直接说明。",
       "figures": []
     },
     {
@@ -2431,7 +2865,7 @@
       "source_url": "https://microsoft.ai/models/mai-cyber-1-flash/",
       "source_sha256": "e10050344fa3e591745c73ca4dca7a4dfbbf1c525ab5b3146f82e974a9b55ee2",
       "source_version": "snapshot-2026-10-01",
-      "status": "no_suitable_figure_identified",
+      "status": "available",
       "inspected_pages": [
         1,
         2,
@@ -2441,9 +2875,40 @@
         6,
         7
       ],
-      "reason_en": "All seven pages were inspected; evaluation content is presented in tables and prose, with no standalone core figure.",
-      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
-      "figures": []
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 5,
+          "figure_number": null,
+          "role": "results",
+          "caption": "",
+          "bbox": [
+            72.5,
+            194.54,
+            533.4,
+            389.57
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            3841,
+            1626
+          ],
+          "pdf_path": "figures/microsoft/mai-cyber-1-flash-model-card/figure-01.pdf",
+          "png_path": "figures/microsoft/mai-cyber-1-flash-model-card/figure-01.png",
+          "pdf_sha256": "575b7507e465855d4a0bc5aeebcc415159bb31f3fc961305249e4a7e88608c8b",
+          "png_sha256": "eac591626b36668b111f82c63f909e5b2cb83857629dd6611bad259d35577ace"
+        }
+      ]
     },
     {
       "id": "microsoft:phi-4-reasoning-vision",
@@ -2536,100 +3001,6 @@
       ]
     },
     {
-      "id": "amazon:nova-2-family",
-      "vendor": "amazon",
-      "title": "Amazon Nova 2: Multimodal Reasoning and Generation Models",
-      "models": [
-        "Nova 2 Sonic",
-        "Nova 2 Lite / Pro Preview",
-        "Nova 2 Omni Preview"
-      ],
-      "document_type": "technical_report",
-      "source_pdf": "pdfs/amazon/technical-reports/nova-2-family.pdf",
-      "source_url": "https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models",
-      "source_sha256": "db4da51d88f40e1d6b04e369b22bbf8554232514158ff3a147474606b09ed122",
-      "source_version": "snapshot-2026-10-01",
-      "status": "available",
-      "inspected_pages": [
-        1,
-        3,
-        5,
-        7
-      ],
-      "reason_en": "The family overview and LiveCodeBench effort-versus-accuracy figure provide useful model and result summaries.",
-      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
-      "figures": [
-        {
-          "page": 1,
-          "figure_number": "1",
-          "role": "overview",
-          "caption": "Figure 1: Amazon Nova 2 Family of Models",
-          "bbox": [
-            127.5,
-            202.6,
-            484.5,
-            409.87
-          ],
-          "coordinate_system": "PDF points, top-left origin",
-          "page_size": [
-            612.0,
-            792.0
-          ],
-          "review_method": "agent_visual_source_page_review",
-          "caption_in_crop": true,
-          "caption_bbox": [
-            215.9029998779297,
-            396.9064636230469,
-            393.8848571777344,
-            406.86907958984375
-          ],
-          "png_dpi": 600,
-          "png_size": [
-            2975,
-            1728
-          ],
-          "pdf_path": "figures/amazon/nova-2-family/figure-01.pdf",
-          "png_path": "figures/amazon/nova-2-family/figure-01.png",
-          "pdf_sha256": "02ced5b94857ac1dbdea372dace3790865b67a0e3086b92d9fa8cee049b311f0",
-          "png_sha256": "bd4143050969973475b8fece924370889843697cda0821dddfe00c7df7f96834"
-        },
-        {
-          "page": 3,
-          "figure_number": "2",
-          "role": "results",
-          "caption": "Figure 2: Nova 2 Lite Extended thinking performance on\ncode generation tasks (LiveCodeBench) across reasoning\neffort levels. Accuracy increases as the model allocates\nmore computational resources to reasoning, demonstrating\nthe configurable trade-off between speed and intelligence\nthat Nova 2 provides through its low, medium, and high\nreasoning effort settings.",
-          "bbox": [
-            80.7,
-            69,
-            543.0,
-            416.7
-          ],
-          "coordinate_system": "PDF points, top-left origin",
-          "page_size": [
-            612.0,
-            792.0
-          ],
-          "review_method": "agent_visual_source_page_review",
-          "caption_in_crop": true,
-          "caption_bbox": [
-            306.0,
-            201.11244201660156,
-            540.0007934570312,
-            276.6970520019531
-          ],
-          "png_dpi": 600,
-          "png_size": [
-            3853,
-            2898
-          ],
-          "pdf_path": "figures/amazon/nova-2-family/figure-02.pdf",
-          "png_path": "figures/amazon/nova-2-family/figure-02.png",
-          "pdf_sha256": "058d8fc1cc058bac632469bcf2d16f083b448336bef279414147951832affc8d",
-          "png_sha256": "5c36507ed26dfc9548464a393abfcbf6e3c02dde4af5bc604c8341b2a3eb171d"
-        }
-      ]
-    },
-    {
       "id": "openai:gpt-live-system-card",
       "vendor": "openai",
       "title": "GPT-Live System Card",
@@ -2641,15 +3012,160 @@
       "source_url": "https://deploymentsafety.openai.com/gpt-live",
       "source_sha256": "8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d",
       "source_version": "snapshot-2026-09-30",
-      "status": "no_suitable_figure_identified",
+      "status": "available",
       "inspected_pages": [
+        1,
+        2,
+        3,
         4,
         5,
+        6,
         7
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
-      "figures": []
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": "Table 1",
+          "role": "safety_evaluation",
+          "caption": "Table 1: Voice-Native Evaluations: Production Prompts",
+          "bbox": [
+            68.0,
+            448.0,
+            540.0,
+            594.0
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.55,
+            452.53,
+            318.07,
+            464.41
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3934,
+            1217
+          ],
+          "pdf_path": "figures/openai/gpt-live-system-card/figure-01.pdf",
+          "png_path": "figures/openai/gpt-live-system-card/figure-01.png",
+          "pdf_sha256": "fee646e5dac24200e4276592fa3d4f848244a4f4937b6cd8d978121bf3389e3e",
+          "png_sha256": "76475f3d8e701ed5bca8a15ed5d90b039fb15387ff56cb56dd54781a81afae83"
+        },
+        {
+          "page": 5,
+          "figure_number": "Table 2",
+          "role": "safety_evaluation",
+          "caption": "Table 2: Voice-Native Evaluations: Synthetic Prompts",
+          "bbox": [
+            68.0,
+            296.0,
+            540.0,
+            464.0
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.55,
+            299.52,
+            313.49,
+            311.4
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3934,
+            1400
+          ],
+          "pdf_path": "figures/openai/gpt-live-system-card/figure-02.pdf",
+          "png_path": "figures/openai/gpt-live-system-card/figure-02.png",
+          "pdf_sha256": "2d1ea0e1e1b88eeda7be744e9d1cb2c16b2d6e5556d57240d9345fb84ae3e113",
+          "png_sha256": "bfc0ae78bc3ae6f4e4f8f9b486dc009919d955f29fd2c5f7544b298e34f1be7f"
+        },
+        {
+          "page": 7,
+          "figure_number": "Table 3",
+          "role": "safety_evaluation",
+          "caption": "Table 3: Voice-Native Evaluations: Production Prompts — Original and Corrected Results",
+          "bbox": [
+            68,
+            278,
+            540,
+            431
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.5469970703125,
+            283.4605712890625,
+            473.432861328125,
+            295.34600830078125
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3934,
+            1275
+          ],
+          "pdf_path": "figures/openai/gpt-live-system-card/figure-03.pdf",
+          "png_path": "figures/openai/gpt-live-system-card/figure-03.png",
+          "pdf_sha256": "4f0ee7ffc2afbec1de37ced9fffd18e87b48ed91882f644b1560ef33e8648957",
+          "png_sha256": "a0013e27b15067bb17c3812b8572896a1cda15c631d6ef6dc12585712bb69be7"
+        },
+        {
+          "page": 7,
+          "figure_number": "Table 4",
+          "role": "safety_evaluation",
+          "caption": "Table 4: Voice-Native Evaluations: Synthetic Prompts — Original and Corrected Results",
+          "bbox": [
+            68,
+            444,
+            540,
+            608
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.5469970703125,
+            447.7215576171875,
+            467.2357482910156,
+            459.60699462890625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3934,
+            1367
+          ],
+          "pdf_path": "figures/openai/gpt-live-system-card/figure-04.pdf",
+          "png_path": "figures/openai/gpt-live-system-card/figure-04.png",
+          "pdf_sha256": "85522063455edd54ea7d3a5f6c3369b7b954884a34733917ebc07adb67a79ccb",
+          "png_sha256": "2ef886ffcea5a0b402dcea8133922d0d1b81ee3d03885be1ae503330d0d7887c"
+        }
+      ]
     },
     {
       "id": "anthropic:claude-sonnet-5-5-system-card",
@@ -2913,8 +3429,8 @@
         3,
         4
       ],
-      "reason_en": "All four pages were inspected; sample voice content is shown as text callouts and there are no core system or results figures.",
-      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
+      "reason_en": "All four pages are text, capability bullets, SSML examples, and distribution details. No distinct diagram, plotted result, or useful benchmark/specification table appears.",
+      "reason_cn": "四页内容均为正文、能力列表、SSML 示例和分发信息；未发现独立示意图、结果图或有用的基准/规格表。",
       "figures": []
     },
     {
@@ -2936,9 +3452,102 @@
         3,
         4
       ],
-      "reason_en": "All four pages were inspected; sample voice content is shown as text callouts and there are no core system or results figures.",
-      "reason_cn": "已逐页检查原始 PDF；相关内容仅为正文、表格或文本示例，未发现适合作为核心图形的架构、流程或结果图。",
+      "reason_en": "All four pages are text, capability bullets, SSML examples, and distribution details. No distinct diagram, plotted result, or useful benchmark/specification table appears.",
+      "reason_cn": "四页内容均为正文、能力列表、SSML 示例和分发信息；未发现独立示意图、结果图或有用的基准/规格表。",
       "figures": []
+    },
+    {
+      "id": "amazon:nova-2-family",
+      "vendor": "amazon",
+      "title": "Amazon Nova 2: Multimodal Reasoning and Generation Models",
+      "models": [
+        "Nova 2 Lite / Pro Preview",
+        "Nova 2 Omni Preview"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/amazon/technical-reports/nova-2-family.pdf",
+      "source_url": "https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models",
+      "source_sha256": "db4da51d88f40e1d6b04e369b22bbf8554232514158ff3a147474606b09ed122",
+      "source_version": "snapshot-2026-10-01",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "reason_en": "The family overview and LiveCodeBench effort-versus-accuracy figure provide useful model and result summaries.",
+      "reason_cn": "已检查标注页面的原始 PDF 页面并进行视觉核对；选择的框覆盖完整图形、面板及图例。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": "1",
+          "role": "overview",
+          "caption": "Figure 1: Amazon Nova 2 Family of Models",
+          "bbox": [
+            127.5,
+            202.6,
+            484.5,
+            409.87
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            215.9029998779297,
+            396.9064636230469,
+            393.8848571777344,
+            406.86907958984375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            2975,
+            1728
+          ],
+          "pdf_path": "figures/amazon/nova-2-family/figure-01.pdf",
+          "png_path": "figures/amazon/nova-2-family/figure-01.png",
+          "pdf_sha256": "02ced5b94857ac1dbdea372dace3790865b67a0e3086b92d9fa8cee049b311f0",
+          "png_sha256": "bd4143050969973475b8fece924370889843697cda0821dddfe00c7df7f96834"
+        },
+        {
+          "page": 3,
+          "figure_number": "2",
+          "role": "results",
+          "caption": "Figure 2: Nova 2 Lite Extended thinking performance on\ncode generation tasks (LiveCodeBench) across reasoning\neffort levels. Accuracy increases as the model allocates\nmore computational resources to reasoning, demonstrating\nthe configurable trade-off between speed and intelligence\nthat Nova 2 provides through its low, medium, and high\nreasoning effort settings.",
+          "bbox": [
+            80.7,
+            69,
+            543.0,
+            416.7
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            306.0,
+            201.11244201660156,
+            540.0007934570312,
+            276.6970520019531
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3853,
+            2898
+          ],
+          "pdf_path": "figures/amazon/nova-2-family/figure-02.pdf",
+          "png_path": "figures/amazon/nova-2-family/figure-02.png",
+          "pdf_sha256": "058d8fc1cc058bac632469bcf2d16f083b448336bef279414147951832affc8d",
+          "png_sha256": "5c36507ed26dfc9548464a393abfcbf6e3c02dde4af5bc604c8341b2a3eb171d"
+        }
+      ]
     },
     {
       "id": "amazon:nova-2-lite-frontier-safety-report",
@@ -4317,30 +4926,191 @@
       ]
     },
     {
-      "id": "google:gemini-3-1-flash-lite-image-model-card",
+      "id": "google:gemini-4-argon-model-card",
       "vendor": "google",
-      "title": "Gemini 3.1 Flash-Lite Image Model Card",
+      "title": "Gemini 4 Argon Model Card",
       "models": [
-        "Nano Banana 2 Lite / Gemini 3.1 Flash-Lite Image"
+        "Gemini 4 Argon"
       ],
       "document_type": "model_card",
-      "source_pdf": "pdfs/google/model-cards/gemini-3-1-flash-lite-image-model-card.pdf",
-      "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-lite-image/",
-      "source_sha256": "f03d4a695a24c480f5ace904589072919f65f4d23cca91c666811c1dcc984f80",
-      "source_version": "snapshot-2026-09-30",
-      "status": "no_suitable_figure_identified",
+      "source_pdf": "pdfs/google/model-cards/gemini-4-argon-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-4-argon/",
+      "source_sha256": "562cd3c5deddf75dd2aff7a59dcf6dcc273277eae7d82fe957b6a607d84f7763",
+      "source_version": "snapshot-2026-10-14",
+      "status": "available",
       "inspected_pages": [
-        1,
-        2,
-        3,
-        4,
         5,
         6,
-        7
+        10,
+        12,
+        13
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
-      "figures": []
+      "reason_en": "Selective core-figure review of the listed physical source pages and exact crops; not a full-document page audit.",
+      "reason_cn": "已选择性核对所列原始物理页及准确裁切图，不宣称对整份文档逐页审查。",
+      "figures": [
+        {
+          "page": 6,
+          "figure_number": null,
+          "role": "results",
+          "caption": "",
+          "bbox": [
+            72,
+            72,
+            543,
+            544
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            3925,
+            3934
+          ],
+          "pdf_path": "figures/google/gemini-4-argon-model-card/figure-01.pdf",
+          "png_path": "figures/google/gemini-4-argon-model-card/figure-01.png",
+          "pdf_sha256": "65fc000fdfa96e77b228a3274da3aa74e7a7210314b25a57d08b8116a452e485",
+          "png_sha256": "27d827ff9c87ca2d116f0a659a44847a627a40fe68cbfbf2ffcb66f9b61ab588"
+        }
+      ]
+    },
+    {
+      "id": "google:gemini-4-argon-safety-and-security-report",
+      "vendor": "google",
+      "title": "Gemini 4 Argon Safety and Security Report",
+      "models": [
+        "Gemini 4 Argon"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/google/system-cards/gemini-4-argon-safety-and-security-report.pdf",
+      "source_url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
+      "source_sha256": "1451f641e6104778b1a0e7429d9f558325da26968427d53d1fd242b0e4257cba",
+      "source_version": "snapshot-2026-10-14",
+      "status": "available",
+      "inspected_pages": [
+        18,
+        28,
+        57,
+        60,
+        96,
+        114,
+        115
+      ],
+      "reason_en": "Selective core-figure review of the listed physical source pages and exact crops; not a full-document page audit.",
+      "reason_cn": "已选择性核对所列原始物理页及准确裁切图，不宣称对整份文档逐页审查。",
+      "figures": [
+        {
+          "page": 28,
+          "figure_number": "Figure 3.1",
+          "role": "safety_evaluation",
+          "caption": "Figure 3.1: Red teaming results from three tested biological scenarios. Red teaming scores for each stage are averages across red teamers, and are on a 0-100 scale (where 100 indicates flawless and highly actionable information, and 0 represents inactionable information). We note several stages for which web baseline information was not scored (and therefore not included in our evaluation).",
+          "bbox": [
+            72,
+            72,
+            543,
+            683
+          ],
+          "source_kind": "figure",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72,
+            604,
+            535.3,
+            681.1
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3925,
+            5092
+          ],
+          "pdf_path": "figures/google/gemini-4-argon-safety-and-security-report/figure-01.pdf",
+          "png_path": "figures/google/gemini-4-argon-safety-and-security-report/figure-01.png",
+          "pdf_sha256": "6ac718e432b195626ddc636515cebd47eee89b0d74cbf056b56aaa50a15e3e31",
+          "png_sha256": "96e4d2902f87e6437c317b81d983a6b0e6d733f11d4dddee15d01ef82d73b68c"
+        },
+        {
+          "page": 60,
+          "figure_number": "Figure 3.10",
+          "role": "safety_evaluation",
+          "caption": "Figure 3.10: Adversarial robustness performance of mitigations across multiple tests.",
+          "bbox": [
+            72,
+            300,
+            543,
+            614
+          ],
+          "source_kind": "figure",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72,
+            597.85,
+            493.4,
+            611.62
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3925,
+            2617
+          ],
+          "pdf_path": "figures/google/gemini-4-argon-safety-and-security-report/figure-02.pdf",
+          "png_path": "figures/google/gemini-4-argon-safety-and-security-report/figure-02.png",
+          "pdf_sha256": "f06d0cfef5006403afb7a893d1d298e16621bc0cb8891badc60df7e260a69a16",
+          "png_sha256": "f553a2bb17df374d17f04b9de0efa00a1bdb375cecc955fcc01bf993e90c39b4"
+        },
+        {
+          "page": 96,
+          "figure_number": "Figure 3.17",
+          "role": "safety_evaluation",
+          "caption": "Figure 3.17: Evaluation results on our agentic evals measuring puzzle cheating, security/sandbox bypass, and overeagerness traps (18 tasks, 20 epochs per task; error bars show 95% bootstrap confidence intervals in Panel A and 95% Wilson confidence intervals in Panel B).",
+          "bbox": [
+            72,
+            72,
+            546,
+            419
+          ],
+          "source_kind": "figure",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72,
+            339.6,
+            545.6,
+            416.7
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3950,
+            2892
+          ],
+          "pdf_path": "figures/google/gemini-4-argon-safety-and-security-report/figure-03.pdf",
+          "png_path": "figures/google/gemini-4-argon-safety-and-security-report/figure-03.png",
+          "pdf_sha256": "a62f958db9b39ebe34f3340b98ebe7c500c4c0d6bf945a55aca8ab7a214ae73b",
+          "png_sha256": "d38141b236f36522a733ec420754d0c728ec491a3a9442441d9922b7b321e209"
+        }
+      ]
     },
     {
       "id": "google:gemini-omni-flash-model-card",
@@ -4361,8 +5131,8 @@
         3,
         4
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "reason_en": "All four pages visually reviewed. The model card has prose about model information, distribution, intended use, and ethics, with no diagrams, plots, or core benchmark/safety tables.",
+      "reason_cn": "已逐页检查四页模型卡；内容为模型信息、分发、用途与伦理说明，未发现独立图形或核心评测表格。",
       "figures": []
     },
     {
@@ -4381,12 +5151,15 @@
       "status": "no_suitable_figure_identified",
       "inspected_pages": [
         1,
+        2,
         3,
         4,
-        6
+        5,
+        6,
+        7
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "reason_en": "All seven pages visually reviewed. The card points to separate Gemini 3.7 or linked evaluation methodology pages for details and contains no in-card diagrams, plots, or core result/safety tables.",
+      "reason_cn": "已逐页检查七页模型卡；评测细节链接至其他模型或方法页面，本卡片没有对应的独立图形或核心结果表格。",
       "figures": []
     },
     {
@@ -4404,14 +5177,15 @@
       "status": "no_suitable_figure_identified",
       "inspected_pages": [
         1,
+        2,
         3,
         4,
         5,
         6,
         7
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "reason_en": "All seven pages visually reviewed. Evaluation details are linked to separate methodology pages; the card contains text and lists but no suitable in-card plots, diagrams, or core benchmark/safety tables.",
+      "reason_cn": "已逐页检查七页模型卡；评测细节链接至独立方法页面，卡片内未发现适合作为核心配图的结果图、示意图或表格。",
       "figures": []
     },
     {
@@ -4527,12 +5301,13 @@
       "status": "no_suitable_figure_identified",
       "inspected_pages": [
         1,
+        2,
         3,
         4,
         5
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
+      "reason_en": "All five pages visually reviewed. The card explicitly points to Figures 1–5 in the separate Gemini Robotics ER 2 release post for procedures/results; this PDF itself contains no candidate diagram, plot, or benchmark table.",
+      "reason_cn": "已逐页检查五页模型卡；卡片引用独立 ER2 发布文章中的图1–5，本 PDF 自身没有候选示意图、曲线或评测表格。",
       "figures": []
     },
     {
@@ -4547,15 +5322,193 @@
       "source_url": "https://deepmind.google/models/model-cards/gemini-robotics-on-device-2/",
       "source_sha256": "d7fe703c0fba456137c7e9cd7c22c997c78e67a24be6a44ed1078b25a492a568",
       "source_version": "snapshot-2026-09-30",
-      "status": "no_suitable_figure_identified",
+      "status": "available",
       "inspected_pages": [
         1,
+        2,
         3,
-        4
+        4,
+        5
       ],
-      "reason_en": "Visual-page inventory and contact-sheet review found text, tables, or evaluation prose but no distinct, useful diagram or plotted figure suitable for a core-image summary.",
-      "reason_cn": "已检查图形页面清单和页面缩略图；页面以正文、表格或评测说明为主，没有适合作为核心配图的独立示意图或结果图。",
-      "figures": []
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": null,
+          "role": "results",
+          "caption": "Gemini Robotics On-Device 1 vs Gemini Robotics On-Device 2 - Data scaling evaluation",
+          "bbox": [
+            69.0,
+            160.0,
+            547.0,
+            395.0
+          ],
+          "source_kind": "figure",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            87.18,
+            167.03,
+            529.71,
+            179.55
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3984,
+            1959
+          ],
+          "pdf_path": "figures/google/gemini-robotics-on-device-2-model-card/figure-01.pdf",
+          "png_path": "figures/google/gemini-robotics-on-device-2-model-card/figure-01.png",
+          "pdf_sha256": "88edd5aab2bf1acde29b609f07fa82ece988e8ed9d56cfff51c632aee4a7e685",
+          "png_sha256": "f79fcd2cf4c3cf3750c332cc77f4f7d35f573ba7316be94a445d53b0a8e006f7"
+        }
+      ]
+    },
+    {
+      "id": "google:gemini-robotics-2-safety-evaluations",
+      "vendor": "google",
+      "title": "Gemini Robotics 2: Safety Evaluations",
+      "models": [
+        "Gemini Robotics 2 / ER 2 / On-Device 2"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/google/technical-reports/gemini-robotics-2-safety-evaluations.pdf",
+      "source_url": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/",
+      "source_sha256": "0ce23ac5909394696970fcc9fc7777cb20033b5234b7777d3d5b1d38919baf7d",
+      "source_version": "snapshot-2026-10-13",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "overview",
+          "caption": "Figure 1 | Benchmark Setup for Safety Orchestration and Uncertainty Resolution",
+          "bbox": [
+            59,
+            82,
+            468,
+            280
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            265.5862731933594,
+            444.5840759277344,
+            277.06500244140625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3409,
+            1650
+          ],
+          "pdf_path": "figures/google/gemini-robotics-2-safety-evaluations/figure-01.pdf",
+          "png_path": "figures/google/gemini-robotics-2-safety-evaluations/figure-01.png",
+          "pdf_sha256": "98a846bd7f68528fbd150182707d4b853164ebc5fa0cef1a3cc08c6d502e427b",
+          "png_sha256": "29075f6364a625064a0fe1591be20d64ac7f35e4739b8cf81283022e40a64a8c"
+        },
+        {
+          "page": 5,
+          "figure_number": "6",
+          "role": "safety_evaluation",
+          "caption": "Figure 6 | Results: Agentic Human Safety Monitoring",
+          "bbox": [
+            59,
+            348,
+            440,
+            577
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            563.0792236328125,
+            314.3403625488281,
+            574.5579833984375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3175,
+            1909
+          ],
+          "pdf_path": "figures/google/gemini-robotics-2-safety-evaluations/figure-02.pdf",
+          "png_path": "figures/google/gemini-robotics-2-safety-evaluations/figure-02.png",
+          "pdf_sha256": "decb9345bb90a7083b67a9be00588fbca26db7b8a68061896c26d762661dec76",
+          "png_sha256": "bbdb7a63034e02346c21fd4683a34719077d7ae80103345ca21185e332582c8c"
+        },
+        {
+          "page": 8,
+          "figure_number": "10",
+          "role": "safety_evaluation",
+          "caption": "Figure 10 | Results: VLA Feasibility Evals (one-Step variant)– (Left) comparisons and (Right) Gemini\nRobotics ER 2 performance improvements with increasing VLA feasibility awareness",
+          "bbox": [
+            59,
+            82,
+            536,
+            292
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            263.5112609863281,
+            532.914794921875,
+            288.53900146484375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3975,
+            1750
+          ],
+          "pdf_path": "figures/google/gemini-robotics-2-safety-evaluations/figure-03.pdf",
+          "png_path": "figures/google/gemini-robotics-2-safety-evaluations/figure-03.png",
+          "pdf_sha256": "a90c9205bfb0285004d2339c271b1513933a26f9458a2b5546078ae9c61e2d86",
+          "png_sha256": "84447d8c3effc6c913218a1ae4821fa967c3f3b66ddd2131af70278219439b26"
+        }
+      ]
     },
     {
       "id": "google:weathernext-3-technical-report",
@@ -5076,17 +6029,3227 @@
       "source_url": "https://www.deepseek.com/en/transparency/",
       "source_sha256": "c225d71e3d3d21f263f6f4c2fda2f05757c61eb575a9d263cb9fee291576d5b0",
       "source_version": "snapshot-2026-10-01",
-      "status": "no_suitable_figure_identified",
+      "status": "available",
       "inspected_pages": [
         1,
         2,
         3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 3,
+          "figure_number": null,
+          "role": "overview",
+          "caption": "",
+          "bbox": [
+            90.0,
+            80.33,
+            504.96,
+            738.12
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            594.9600219726562,
+            842.0399780273438
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": null,
+          "png_dpi": 600,
+          "png_size": [
+            3458,
+            5482
+          ],
+          "pdf_path": "figures/deepseek/deepseek-v4-model-card/figure-01.pdf",
+          "png_path": "figures/deepseek/deepseek-v4-model-card/figure-01.png",
+          "pdf_sha256": "1180e60a98c9fd44b4a3622b8db0cf19e696af7cc033a5166b398cc0748227fc",
+          "png_sha256": "9a62521b18b94b6b82001c61f5767bbaa3769c9287e7dc5af77a1330df9155d6"
+        }
+      ]
+    },
+    {
+      "id": "physical_intelligence:pi-0-7",
+      "vendor": "physical_intelligence",
+      "title": "π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities",
+      "models": [
+        "π0.7"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/physical_intelligence/technical-reports/pi-0-7--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2604.15483",
+      "source_sha256": "54843c88fbabf6bce53ab2ee94cafc9a55c3d5639f7b74c5e8ad24485fe6863b",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Fig. 2: Architecture overview. The π0.7 model is a 5B-parameter VLA consisting of a 4B VLM backbone, a MEM-style video history encoder and a 860M\nparameter action expert. The model’s context includes multiple distinct modalities, including language commands, episode metadata that describes the data\nquality and strategy, and multimodal inputs such as subgoal images. At runtime, the language commands are produced by a high-level semantic policy based\non the same architecture, and the subgoal images are produced by a lightweight world model based on the BAGEL image generation model [105].",
+          "bbox": [
+            45,
+            50,
+            567,
+            355
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            48.95899963378906,
+            317.4465026855469,
+            563.0321044921875,
+            352.7236633300781
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4350,
+            2542
+          ],
+          "pdf_path": "figures/physical_intelligence/pi-0-7/figure-01.pdf",
+          "png_path": "figures/physical_intelligence/pi-0-7/figure-01.png",
+          "pdf_sha256": "16166b6421f5a1a2da554fe82583a7106e5fd8ae9a04c1ce46f2160c057b27a6",
+          "png_sha256": "3cfa95b28b8bd41a7b5eb76dd92b06ecd974e6a2aef98b2b4cea87a0e7d912f5"
+        },
+        {
+          "page": 12,
+          "figure_number": "13",
+          "role": "results",
+          "caption": "Fig. 13: Cross-embodiment transfer produces emergent strategies adapted\nto the target embodiment. (a) On the source robot, human teleoperators\nuse one arm to hold the bag open while the other performs insertion. On\nthe UR5e target robot, π0.7 instead discovers a single-arm pick-and-place\nstrategy suited to the robot’s greater reach. (b) Human teleoperators approach\nthe shirt with a tilted end-effector on the source robot, while π0.7 produces\nvertical grasps on the UR5e, which is more suitable for the larger robot’s arm\nplacement. In both cases, the policy goes beyond replicating source behavior,\ndiscovering manipulation strategies for the task that are better suited to the\ntarget embodiment.",
+          "bbox": [
+            45,
+            363,
+            305,
+            625
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            48.95899963378906,
+            533.019775390625,
+            300.01806640625,
+            621.7596435546875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            2167,
+            2184
+          ],
+          "pdf_path": "figures/physical_intelligence/pi-0-7/figure-02.pdf",
+          "png_path": "figures/physical_intelligence/pi-0-7/figure-02.png",
+          "pdf_sha256": "f018484fa1b1653c379319c6f2bf68bed4a0d7c5512ad8ba191d1538494d40a3",
+          "png_sha256": "0238552ebf76a9e6932b77f2b7847684aabad6cb157d87dc9fb3444d2f1eede5"
+        },
+        {
+          "page": 23,
+          "figure_number": "22",
+          "role": "results",
+          "caption": "Fig. 22: Comparison of π0.7 (GC) and human. We find that π0.7 (GC)\nachieves competitive performance compared to the human operators, in the\nshirt folding task with the UR5e bimanual platform.",
+          "bbox": [
+            45,
+            420,
+            305,
+            558
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            48.958984375,
+            527.8271484375,
+            300.0185852050781,
+            553.9136962890625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            2167,
+            1150
+          ],
+          "pdf_path": "figures/physical_intelligence/pi-0-7/figure-03.pdf",
+          "png_path": "figures/physical_intelligence/pi-0-7/figure-03.png",
+          "pdf_sha256": "9021e4d1582a48f479c5cea9121444a90b4a9651a76dc125deeffe3eb5a1be94",
+          "png_sha256": "b5185320c0663d11a0266bab204f23ed91ea000d386a536334a57be54c788e9e"
+        }
+      ]
+    },
+    {
+      "id": "agibot:ge-act-2-0",
+      "vendor": "agibot",
+      "title": "GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation",
+      "models": [
+        "GE-Act 2.0"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/agibot/technical-reports/ge-act-2-0--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2609.05588",
+      "source_sha256": "4e6e98d3a1c30739e968afff7be63898de8bec0442c15a2ab63706d6498c0248",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        5,
+        18
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 5,
+          "figure_number": "Figure 2",
+          "role": "architecture",
+          "caption": "Figure 2: GE-Act 2.0 system architecture. The SVP grounds the instruction in the current observation and fully denoises multi-view future visual latents in a single flow-generator pass; the IDM combines current and predicted latents with proprioception to produce dense and sparse action sequences.",
+          "bbox": [
+            66.0,
+            67.0,
+            546.0,
+            279.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.87,
+            240.79,
+            541.14,
+            274.59
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4000,
+            1767
+          ],
+          "pdf_path": "figures/agibot/ge-act-2-0/figure-01.pdf",
+          "png_path": "figures/agibot/ge-act-2-0/figure-01.png",
+          "pdf_sha256": "7fc129f1db4b0c3b2085b7d5d2cc611ec923d3ebda9c2282f4bfd61c02bc8a26",
+          "png_sha256": "9f5f22a6e81d792a00db2acfac1798d8fa6b4dd22991441840820f9c8c5331b8"
+        },
+        {
+          "page": 18,
+          "figure_number": "Figure 10",
+          "role": "results",
+          "caption": "Figure 10: Skill-group zero-shot OOD scaling trajectories for G1-OP (more than 50% of the co-training mixture) and G2-90D (less than 2%). Each panel reports one group’s mean SR across the 300-, 1,200-, 5,000-, and 30,000-hour models.",
+          "bbox": [
+            61.0,
+            62.0,
+            551.0,
+            381.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.87,
+            342.2,
+            541.3,
+            376.09
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4084,
+            2659
+          ],
+          "pdf_path": "figures/agibot/ge-act-2-0/figure-02.pdf",
+          "png_path": "figures/agibot/ge-act-2-0/figure-02.png",
+          "pdf_sha256": "3f1d88089b5b4c92050c67b3b44d5b35f998bb8ad14beac6725cd3672cef63c3",
+          "png_sha256": "ebd1af35d6d71b7a170cc858e443ea132a44dd0c84678a7e297820dca6bfbfb5"
+        }
+      ]
+    },
+    {
+      "id": "agibot:ge-sim-2-0",
+      "vendor": "agibot",
+      "title": "GE-Sim 2.0: A Roadmap Towards Comprehensive Closed-loop Video World Simulators for Robotic Manipulation",
+      "models": [
+        "GE-Sim 2.0"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/agibot/technical-reports/ge-sim-2-0--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2605.27491",
+      "source_sha256": "af875445ebe487962e308bbff5e76e19fdcfc57620a50ec6ec9070989cbfe641",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        5,
+        13,
+        14
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 5,
+          "figure_number": "Figure 2",
+          "role": "architecture",
+          "caption": "Figure 2: Vision expert and proprioceptive state expert overview. The vision expert processes historical frames and action conditions to generate future visual states, which are then consumed by the proprioceptive state expert to predict the joint angles and gripper openness of both arms.",
+          "bbox": [
+            59.0,
+            52.0,
+            546.0,
+            314.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.87,
+            276.13,
+            541.13,
+            310.07
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4059,
+            2184
+          ],
+          "pdf_path": "figures/agibot/ge-sim-2-0/figure-01.pdf",
+          "png_path": "figures/agibot/ge-sim-2-0/figure-01.png",
+          "pdf_sha256": "0fd534f0b2904454ed5a9c911f4c20e1d4ff228976d3e1b909b8cd4a1577f303",
+          "png_sha256": "5099fb4656bb4a213887c561d435595ae21869287c57213d744c17a339430a1e"
+        },
+        {
+          "page": 13,
+          "figure_number": "Figure 7",
+          "role": "results",
+          "caption": "Figure 7: WorldArena leaderboard. GE-Sim 2.0 achieves the top overall score on the WorldArena benchmark, outperforming prior robotic world models and closed-source general video generators.",
+          "bbox": [
+            67.0,
+            199.0,
+            546.0,
+            396.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.87,
+            369.73,
+            542.38,
+            391.82
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3992,
+            1642
+          ],
+          "pdf_path": "figures/agibot/ge-sim-2-0/figure-02.pdf",
+          "png_path": "figures/agibot/ge-sim-2-0/figure-02.png",
+          "pdf_sha256": "27dabc439189d4c8ffd23bfdfe48df4fddabc60c90d37739687a322f578dddf4",
+          "png_sha256": "82451880ab15c395975998be82ca4242bdd2f7d63b49ac28c57fab89820402b2"
+        },
+        {
+          "page": 14,
+          "figure_number": "Figure 8",
+          "role": "results",
+          "caption": "Figure 8: World-model success-rate alignment with real-robot outcomes. We compare the task success rates measured in the real world and those predicted by different world models under closed-loop policy rollouts. Each marker denotes one manipulation task, while different dashed lines correspond to Ctrl-World, our model without state conditioning, and our full model with state conditioning. The gray dashed line indicates perfect agreement (y = x) between world-model and real-world success rates. Compared with Ctrl-World, our models show stronger alignment with real-world policy performance, and state conditioning further improves the consistency between simulated and physical outcomes.",
+          "bbox": [
+            67.0,
+            67.0,
+            546.0,
+            304.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.51,
+            217.01,
+            541.8,
+            298.87
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3992,
+            1975
+          ],
+          "pdf_path": "figures/agibot/ge-sim-2-0/figure-03.pdf",
+          "png_path": "figures/agibot/ge-sim-2-0/figure-03.png",
+          "pdf_sha256": "5083a54a41721d7402028fd876b2cbb08fd7dbff649c29f8b0c6f48688fbd92f",
+          "png_sha256": "6b224a55a6cefb3ce8d193cc460c47c7029e81681434afd8a795d9581980d68b"
+        }
+      ]
+    },
+    {
+      "id": "agibot:genie-reasoner",
+      "vendor": "agibot",
+      "title": "Unified Embodied VLM Reasoning with Robotic Action via Autoregressive Discretized Pre-training",
+      "models": [
+        "GenieReasoner"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/agibot/technical-reports/genie-reasoner--arxiv-v3.pdf",
+      "source_url": "https://arxiv.org/abs/2512.24125",
+      "source_sha256": "2df3595c3d45ab7213e1fadeb66354b3c1d0a02c67743373931b1bdb30b09d60",
+      "source_version": "arxiv-v3",
+      "status": "available",
+      "inspected_pages": [
+        5,
+        7
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 5,
+          "figure_number": "Fig. 3",
+          "role": "architecture",
+          "caption": "Fig. 3: The GenieReasoner system architecture. (a) Training: Our unified pipeline jointly optimizes the VLM backbone for multimodal reasoning and robotic control by tokenizing continuous actions into a discrete latent space. This process encompasses the second and third stages of the training recipe (Section V-A), where General VQA data is incorporated during the second stage to preserve foundational vision-language knowledge. (b) Inference: Discrete action codes generated by the VLM backbone are decoded into continuous control signals via the FACT decoder, ensuring high-precision manipulation that is semantically grounded in the task instructions.",
+          "bbox": [
+            70.0,
+            68.0,
+            545.0,
+            326.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            252.23,
+            540.0,
+            321.97
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3959,
+            2150
+          ],
+          "pdf_path": "figures/agibot/genie-reasoner/figure-01.pdf",
+          "png_path": "figures/agibot/genie-reasoner/figure-01.png",
+          "pdf_sha256": "78d64835a21c2908863275664b6d5ffc86f75cde62b961933520ce1d587cebe4",
+          "png_sha256": "31ae5af2a4034251df2d2c30db374c19bdb685528344c767591d1d07993c8180"
+        },
+        {
+          "page": 7,
+          "figure_number": "Fig. 6",
+          "role": "results",
+          "caption": "Fig. 6: Real-robot success rates which measure the full completion of the task, specifically whether the robot successfully grasps and manipulates the target object.",
+          "bbox": [
+            308.0,
+            68.0,
+            545.0,
+            203.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            311.98,
+            164.65,
+            540.0,
+            198.52
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            1975,
+            1125
+          ],
+          "pdf_path": "figures/agibot/genie-reasoner/figure-02.pdf",
+          "png_path": "figures/agibot/genie-reasoner/figure-02.png",
+          "pdf_sha256": "a3f6251258fc7dd83822d7f32ff7f5f7cbc01fd90c3e69b08d9bded1f34820aa",
+          "png_sha256": "b3c7cad624416c392c35d4c3059dd8e4f2c84781031e1887a8ebd9c98fbbdff9"
+        }
+      ]
+    },
+    {
+      "id": "galaxea:g0-5",
+      "vendor": "galaxea",
+      "title": "G0.5: One Autoregressive Stream for Robot Reasoning and Action",
+      "models": [
+        "G0.5"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/galaxea/technical-reports/g0-5--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2608.11739",
+      "source_sha256": "3e045e1166a84a42f6b4026dd28e036f597d352a335a4dad1f94c48d0ee88ab7",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        12
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": "Figure 1",
+          "role": "overview",
+          "caption": "Figure 1: G0.5: reasoning and action in one autoregressive stream. Top left: A single VLM conditions on multi-view images, an instruction, proprioception, and an embodiment identifier, then generates optional chain-of-thought (CoT) and compact action codes under the same next-token objective. A cross-embodiment ActionCodec converts the codes into continuous motor commands, while active-part tokenization omits inactive control groups. Top right: Comparisons with flow-matching policies span generalist pretraining and specialist post-training, covering optimization, compatibility with reinforcement learning, transfer after DROID post-training to a held-out physical setup and previously unseen object instances, and inference latency. Bottom: A closed-loop rollout of open the drawer →pour the walnuts →close the drawer. At each stage, updated visual and proprioceptive observations condition interleaved reasoning and action generation. The examples highlight prompt-driven action steering (left), grounded bounding-box prediction (middle), and adaptive subtask reasoning (right); colors distinguish conditioning context, reasoning, and action tokens.",
+          "bbox": [
+            45.0,
+            188.0,
+            566.0,
+            703.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            71.62,
+            561.42,
+            541.12,
+            660.05
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4342,
+            4292
+          ],
+          "pdf_path": "figures/galaxea/g0-5/figure-01.pdf",
+          "png_path": "figures/galaxea/g0-5/figure-01.png",
+          "pdf_sha256": "00d275c19723629b9a790298a1b8d31a09cc5f79d620856ba522f37003dc2acb",
+          "png_sha256": "a0208925324b37724bdc5cc3b11f803df5a3e7852b22dc0a44286c4ce7dafe10"
+        },
+        {
+          "page": 12,
+          "figure_number": "Figure 6",
+          "role": "results",
+          "caption": "Figure 6: DROID environment- and object-level zero-shot evaluation results. All models are trained on DROID data, while the physical evaluation environment and object instances are held out. Per-task success rates (%) are reported for 𝜋0.5-DROID, MolmoAct2-DROID, and G0.5 across 10 manipulation tasks. G0.5 achieves an average of 82.5%, outperforming 𝜋0.5-DROID (57.5%) by 25.0 percentage points and MolmoAct2-DROID (52.0%) by 30.5 percentage points.",
+          "bbox": [
+            68.0,
+            512.0,
+            545.0,
+            703.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            640.69,
+            541.75,
+            700.07
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3975,
+            1592
+          ],
+          "pdf_path": "figures/galaxea/g0-5/figure-02.pdf",
+          "png_path": "figures/galaxea/g0-5/figure-02.png",
+          "pdf_sha256": "4c138409df8a8b2709983156ba5f3a4967646ed4ec9ce51aac612f9473935b61",
+          "png_sha256": "ed5df88f0c3103b99ad6e22b762bc065a9378b787165e94170df8c615a7031b6"
+        }
+      ]
+    },
+    {
+      "id": "qwen:qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments",
+      "vendor": "qwen",
+      "title": "Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments",
+      "models": [
+        "Qwen-VLA"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/qwen/technical-reports/qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments--arxiv-v2.pdf",
+      "source_url": "https://github.com/QwenLM/Qwen-VLA",
+      "source_sha256": "f6aabca8b80fab2605050749cc2e2c4c02d888c11dce6729310f030072a82b0d",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        21
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 1,
+          "figure_number": "1",
+          "role": "architecture",
+          "caption": "Figure 1: Overview of Qwen-VLA, a unified embodied model trained on mixed manipulation, navigation, and vision-language understanding data to generate both robot actions and textual responses.",
+          "bbox": [
+            65,
+            500,
+            530,
+            765
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.9,
+            740.5,
+            525.7,
+            761.3
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3875,
+            2209
+          ],
+          "pdf_path": "figures/qwen/qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments/figure-01.pdf",
+          "png_path": "figures/qwen/qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments/figure-01.png",
+          "pdf_sha256": "b3bc20172d4ef73d6641602c917bacf966a288ad72e77d67791d43d90eda3c97",
+          "png_sha256": "2e8862a5ea378d1891f349febbf2abe98c7d029c0df2195f9f6ecc28cfbac26a"
+        },
+        {
+          "page": 21,
+          "figure_number": "5",
+          "role": "results",
+          "caption": "Figure 5: Qualitative out-of-distribution generalization of Qwen-VLA-Base on the ALOHA dual-arm robot. Top-left: color-conditioned grasping of green, blue, red, and yellow balls. Top-right: upper two panels show grasping of novel objects (green broccoli, toy duck); lower two panels show a compositional “clean up the table” task with sequential pick-and-place into a bin (blue umbrella, toy duck, bottled yogurt). Bottom-left: interaction with completely unseen objects (sunglasses, plush doll, toy duck). Bottom-right: atomic action transfer through uncapping a pen and placing the cap, robust to unseen yellow backgrounds.",
+          "bbox": [
+            65,
+            95,
+            530,
+            445
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            69.4,
+            364.5,
+            526.2,
+            440.3
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3875,
+            2917
+          ],
+          "pdf_path": "figures/qwen/qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments/figure-02.pdf",
+          "png_path": "figures/qwen/qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments/figure-02.png",
+          "pdf_sha256": "87e4dff67b63e2ca4570aec2d979c9c2a149739d0e81d19feeea777f3fab3dac",
+          "png_sha256": "aaecf71cdc2fe7a965b25b3a6424413a4acc9d7c838e5ffb83ee0531bcfb04d8"
+        }
+      ]
+    },
+    {
+      "id": "qwen:qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system",
+      "vendor": "qwen",
+      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
+      "models": [
+        "Qwen-RobotNav"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/qwen/technical-reports/qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system--arxiv-v3.pdf",
+      "source_url": "https://github.com/QwenLM/Qwen-RobotNav",
+      "source_sha256": "dc70ff7f3b4413936f65575ee7b8d8aafe40699adcc37be35a83eee0037fc186",
+      "source_version": "arxiv-v3",
+      "status": "available",
+      "inspected_pages": [
+        2,
+        4
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Figure 2: Qwen-RobotNav architecture. Top: In the agentic navigation system, an upper planner LLM decomposes long-horizon goals into sub-goals and controls Qwen-RobotNav through task-adaptive context parameters such as token budget B, temporal decay γ, camera weights wc, and frame sampling mode. Bottom: Qwen-RobotNav receives multi-view RGB observations, an embodied prompt, and a navigation instruction; allocates visual tokens across cameras and timesteps; inserts natural-language temporal and viewpoint tags; and feeds the resulting visual-language sequence into the Qwen3-VL backbone. A lightweight MLP action head maps trajectory hidden states to eight waypoint predictions (x, y, θ).",
+          "bbox": [
+            65,
+            66,
+            530,
+            374
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.6,
+            281.5,
+            524.7,
+            369.2
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3875,
+            2567
+          ],
+          "pdf_path": "figures/qwen/qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system/figure-01.pdf",
+          "png_path": "figures/qwen/qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system/figure-01.png",
+          "pdf_sha256": "26b964e6a0faca4028c1eb04b291288ed7ee875ede2ce0408471f6f363ed5bec",
+          "png_sha256": "168c31e01d8739f457464179af5db1ea65911084d6194aaa9a98f47feb14668f"
+        },
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "results",
+          "caption": "Figure 1: Benchmark summary. Across instruction following, object search, target tracking, embodied question answering, and autonomous driving, Qwen-RobotNav-4B and Qwen-RobotNav-8B achieve state-of-the-art or competitive performance against specialist and navigation foundation model baselines. Trophy icons mark the best result in each benchmark group.",
+          "bbox": [
+            65,
+            65,
+            532,
+            366
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.6,
+            318.1,
+            526.2,
+            361.1
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3892,
+            2509
+          ],
+          "pdf_path": "figures/qwen/qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system/figure-02.pdf",
+          "png_path": "figures/qwen/qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system/figure-02.png",
+          "pdf_sha256": "4c8df63c7124fd064c00a0fdc149ff3f1e69969a2c8f61e98311bbd043dc0f72",
+          "png_sha256": "53fcbc39858b696d217f0e1f7f27f3a017d4cba6038b87bda1523e0eb0f61911"
+        }
+      ]
+    },
+    {
+      "id": "qwen:qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models",
+      "vendor": "qwen",
+      "title": "Qwen-RobotManip Technical Report: Alignment Unlocks Scale for Robotic Manipulation Foundation Models",
+      "models": [
+        "Qwen-RobotManip"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/qwen/technical-reports/qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models--arxiv-v2.pdf",
+      "source_url": "https://github.com/QwenLM/Qwen-RobotManip",
+      "source_sha256": "193fff177785d4e9d9cc63dca02b61b4e250ec174535c45dafe7a625ed8ed025",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        11,
+        20
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 11,
+          "figure_number": "3",
+          "role": "architecture",
+          "caption": "Figure 3: Overview of QWEN-ROBOTMANIP. The model couples a Qwen-VL backbone with a flow- matching Diffusion Transformer (DiT) action head. The backbone jointly encodes multi-view visual tokens, structured embodiment prompts, and historical context tokens, with last-layer hidden states injected into the DiT via alternating cross-attention. States and actions share a unified 80-dimensional canonical representation, with end-effector actions expressed as camera-frame delta poses to align the action space with visual observations across embodiments, conditioned on camera and end-effector type embeddings for embodiment-aware denoising. VLM co-training and VLA training use separate batches, where each batch contains either (Vision, QA) or (Vision, Language, Context, Action) data.",
+          "bbox": [
+            65,
+            65,
+            530,
+            490
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.4,
+            395.8,
+            526.1,
+            482.6
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3875,
+            3542
+          ],
+          "pdf_path": "figures/qwen/qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models/figure-01.pdf",
+          "png_path": "figures/qwen/qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models/figure-01.png",
+          "pdf_sha256": "a855c5128ba6773bde592e99add6e5cc7f9a9f493fe80f53deca39f16843e24e",
+          "png_sha256": "1c94793df433fe7cedeab048f265354e49ffbf162df8fbb552f639b80ae9d6db"
+        },
+        {
+          "page": 20,
+          "figure_number": "7",
+          "role": "results",
+          "caption": "Figure 7: OOD generalization summary. QWEN-ROBOTMANIP vs. previous state-of-the-art VLA model across three generalization axes. (a) Task and scene generalization under controlled perturbations. (b) Instruction following with held-out language templates. (c) Zero-shot cross-embodiment transfer. QWEN-ROBOTMANIP outperforms previous models on every OOD benchmark, with the gap widening on harder settings.",
+          "bbox": [
+            65,
+            215,
+            532,
+            491
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.5,
+            431.5,
+            526.2,
+            485.4
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3892,
+            2300
+          ],
+          "pdf_path": "figures/qwen/qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models/figure-02.pdf",
+          "png_path": "figures/qwen/qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models/figure-02.png",
+          "pdf_sha256": "2e3ce5b9ba8078141aee450a66a95d5eda8a13d63107ec71e3cacd68526ad4ee",
+          "png_sha256": "325c5c30c09fdd115b98df23ce2c9ff0ad3cc092106688d0e14e073b482fac95"
+        }
+      ]
+    },
+    {
+      "id": "meta:v-jepa-2-technical-report",
+      "vendor": "meta",
+      "title": "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",
+      "models": [
+        "V-JEPA 2 / 2-AC"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/meta/technical-reports/v-jepa-2-technical-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2506.09985",
+      "source_sha256": "9cfcfde5fb0d9730637da5b9e7317825c3f3d09e91f3553e22eeba42c74d2226",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "overview",
+          "caption": "Figure 1 V-JEPA 2 Overview. Leveraging 1M hours of internet-scale video and 1M images, we pretrain the V-JEPA 2\nvideo model using a visual mask denoising objective (Bardes et al., 2024; Assran et al., 2023), and leverage this\nmodel for downstream tasks such as action classification, object recognition, action anticipation, and Video Question\nAnswering by aligning the model with an LLM backbone. After pretraining, we can also freeze the video encoder\nand train a new action-conditioned predictor with a small amount of robot interaction data on top of the learned\nrepresentations, and leverage this action-conditioned model, V-JEPA 2-AC, for downstream robot manipulation tasks\nusing planning within a model predictive control loop.",
+          "bbox": [
+            67,
+            60,
+            545,
+            373
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.5250015258789,
+            293.7379150390625,
+            541.3945922851562,
+            369.5259704589844
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3984,
+            2609
+          ],
+          "pdf_path": "figures/meta/v-jepa-2-technical-report/figure-01.pdf",
+          "png_path": "figures/meta/v-jepa-2-technical-report/figure-01.png",
+          "pdf_sha256": "8251a5d228ee0fd22e89669cb789991b55ddc929b34046fabfbdac40cf886dca",
+          "png_sha256": "58350b80f515901148acbb78b9e28a1694c0d7af10d1f8918c473166aa4e9e03"
+        },
+        {
+          "page": 11,
+          "figure_number": "7",
+          "role": "architecture",
+          "caption": "Figure 7 Planning. We plan an action sequence for a fixed time horizon T by minimizing the L1 distance between\nthe world model’s imagined state representation T steps into the future and its goal representation. The L1 loss is\noptimized with respect to the actions (ak)k∈[T ] using the cross-entropy method (Rubinstein, 1997). Specifically, in each\nplanning step, we sample the action coordinates at each point in the planning horizon from a sequence of Gaussian\ndistributions initialized with zero mean and unit variance. The population statistics of the top-k actions trajectories\nare used to update the mean and variance of the Gaussian distributions. This process is repeated for several iterations\nbefore finally returning the mean of the sequence of Gaussians as the selected action trajectory.",
+          "bbox": [
+            67,
+            58,
+            545,
+            285
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            206.12591552734375,
+            541.1778564453125,
+            281.9129638671875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3984,
+            1892
+          ],
+          "pdf_path": "figures/meta/v-jepa-2-technical-report/figure-02.pdf",
+          "png_path": "figures/meta/v-jepa-2-technical-report/figure-02.png",
+          "pdf_sha256": "98a7697a02553c101416bab7e396195fa07a2c7460c90056447f6c8910765b68",
+          "png_sha256": "4db7ef2a2e9446ee28f43fe52bcbcea798a9ea2385ab6cb34bdf71853e841059"
+        },
+        {
+          "page": 14,
+          "figure_number": "10",
+          "role": "results",
+          "caption": "Figure 10 Pick-&-Place. Closed-loop robot execution of V-JEPA 2-AC for multi-goal pick-&-place tasks. Highlighted\nframes indicate when the model achieves a sub-goal and switches to the next goal. The first goal image shows the\nobject being grasped, the second goal image shows the object in the vicinity of the desired location, and the third\ngoal image shows the object placed in the desired position. The model first optimizes actions with respect to the\nfirst sub-goal for 4 time-steps before automatically switching to the second sub-goal for the next 10 time-steps, and\nfinally the third goal for the last 4 time-steps. Robot actions are inferred through goal-conditioned planning. The\nV-JEPA 2-AC model is able to perform zero-shot pick-&-place tasks on two Franka arms in different labs, with various\nobject configurations and cluttered environments.",
+          "bbox": [
+            67,
+            60,
+            545,
+            338
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.5250015258789,
+            248.33392333984375,
+            541.1962280273438,
+            335.0799560546875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3984,
+            2317
+          ],
+          "pdf_path": "figures/meta/v-jepa-2-technical-report/figure-03.pdf",
+          "png_path": "figures/meta/v-jepa-2-technical-report/figure-03.png",
+          "pdf_sha256": "ac8b66dd72a859e9f801155b5fe4c5e4f96beb66f7b639078bacbc379ba282c5",
+          "png_sha256": "7c32c7ff0fd99f9d19c0f468c5d133cb92ab6fd84b115c52881a114797a74a95"
+        }
+      ]
+    },
+    {
+      "id": "meta:v-jepa-2-1-technical-report",
+      "vendor": "meta",
+      "title": "V-JEPA 2.1: Unlocking Dense Features in Video Self-Supervised Learning",
+      "models": [
+        "V-JEPA 2.1"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/meta/technical-reports/v-jepa-2-1-technical-report--arxiv-v3.pdf",
+      "source_url": "https://arxiv.org/abs/2603.14482",
+      "source_sha256": "b40580916242ade00e2ac177cb01473d511f021d5a25f7552fd17512b3a72bbb",
+      "source_version": "arxiv-v3",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "2",
+          "role": "results",
+          "caption": "Figure 2   V-JEPA 2.1 ViT-G performance across dense and global prediction tasks.   We   show   the   relative   improvements   of V-JEPA   2.1   compared   to   the   previous   V-JEPA   2   ViT-g   model   ( Assran   et   al. ,   2025 ).   We   also   report   the   performance of   previous   SOTA   models   using   a   frozen   backbone   evaluation:   DINOv3   ( Siméoni   et   al. ,   2025 )   is   the   reference   model for   depth   estimation,   object   tracking,   semantic   segmentation,   SSv2   action   recognition,   and   image   classification; InternVideo2s   ( Wang   et   al. ,   2024b )   for   K400   action   recognition,   STAformer   ( Mur-Labadia   et   al. ,   2024 )   for   short-term object   interaction   anticipation,   and   PlausiVL   ( Mittal   et   al. ,   2024 )   for   action   anticipation.   Tasks   where   V-JEPA   2.1 ViT-G   obtains   SOTA   in   frozen-backbone   evaluation   are   underlined.",
+          "bbox": [
+            65,
+            65,
+            545,
+            310
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.5250015258789,
+            229.85089111328125,
+            542.4470825195312,
+            305.6379699707031
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4000,
+            2042
+          ],
+          "pdf_path": "figures/meta/v-jepa-2-1-technical-report/figure-01.pdf",
+          "png_path": "figures/meta/v-jepa-2-1-technical-report/figure-01.png",
+          "pdf_sha256": "055522ec11a486a12eef9676150da827af1960c19f7b131cabff487ab8df54c0",
+          "png_sha256": "559772953af5db7249e6dd119e676eab0fb6e3800c5bc21b9edc312cfcfd32ef"
+        },
+        {
+          "page": 5,
+          "figure_number": "4",
+          "role": "architecture",
+          "caption": "Figure   4 V-JEPA   2.1   Detailed   Architecture. Images   and   videos   are   processed   by   respectively   either   a   2D   or   3D Convolutional   patch   embedding.   Then,   3D   Rotational   Positional   Encoding   (RoPE)   and   learnable   modality   embedding are added.   The  x − encoder processes the visible tokens and outputs multi-level embeddings formed by concatenating the normalized   output   from   intermediate   encoder   blocks.   Then,   a   MLP   fuses   this   multi-level   representation   and   reduces   its dimensionality.   These   context   tokens   are   concatenated   with   learnable   mask   tokens   carrying   spatio-temporal   positional information.   The   predictor   processes   the   combined   sequence   and   produces   multi-level   predictions   for   the   masked tokens.   Training   uses   two   different   losses:   (i)   an   L1   loss   on   masked-token   predictions   (the   original   V-JEPA   objective), and   (ii)   a   distance-weighted   L1   loss   on   nearby   context   tokens,   both   supervised   using   the   y -encoder   multi-level   outputs.",
+          "bbox": [
+            70,
+            55,
+            543,
+            376
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86599731445312,
+            286.21392822265625,
+            542.4293823242188,
+            372.9488525390625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3942,
+            2675
+          ],
+          "pdf_path": "figures/meta/v-jepa-2-1-technical-report/figure-02.pdf",
+          "png_path": "figures/meta/v-jepa-2-1-technical-report/figure-02.png",
+          "pdf_sha256": "101db62257323ac97c89ac6b19d8a077073c1d3e8a229925178981275878b770",
+          "png_sha256": "fa8b117aace80e27f28248b1b0a4e55097a0a363dc793c58ab3ad0c2503820de"
+        },
+        {
+          "page": 17,
+          "figure_number": "11",
+          "role": "results",
+          "caption": "Figure 11   Semantic segmentation qualitative results in VOC12 and Cityscapes datasets.   The   previous   version,   V-JEPA   2, produced   sparse   semantic   masks   due   to   the   presence   noisy   feature   maps.   However,   V-JEPA   2.1   achieves   competitive performance   with   state   of   the   art   methods   such   as   DINOv3   ViT-H+.",
+          "bbox": [
+            70,
+            60,
+            543,
+            452
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.86602783203125,
+            415.3839111328125,
+            542.406982421875,
+            447.3349609375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3942,
+            3267
+          ],
+          "pdf_path": "figures/meta/v-jepa-2-1-technical-report/figure-03.pdf",
+          "png_path": "figures/meta/v-jepa-2-1-technical-report/figure-03.png",
+          "pdf_sha256": "8fa4821ba359d81539b86b583d23a15243bb4c0f6119d89d2d0d5fd208a2db76",
+          "png_sha256": "6571b9b571c60944a82438514d04e7881aaf356e08231aef7a2189d7a71bfdcc"
+        }
+      ]
+    },
+    {
+      "id": "bytedance:gr-3-technical-report",
+      "vendor": "bytedance",
+      "title": "GR-3 Technical Report",
+      "models": [
+        "GR-3"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/bytedance/technical-reports/gr-3-technical-report--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2507.15493",
+      "source_sha256": "9c3e23f9ca44d0d3139f950470523130b63493562cc86508704513078a03f30f",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        4,
+        13
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": "3",
+          "role": "architecture",
+          "caption": "Figure 3 The GR-3 Model. GR-3 is co-trained on both robot trajectories and vision-language data with a flow-matching objective (left) and a next-token-prediction objective (right), respectively.",
+          "bbox": [
+            65,
+            65,
+            548,
+            220
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.9,
+            193.7,
+            541.2,
+            215.0
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4025,
+            1292
+          ],
+          "pdf_path": "figures/bytedance/gr-3-technical-report/figure-01.pdf",
+          "png_path": "figures/bytedance/gr-3-technical-report/figure-01.png",
+          "pdf_sha256": "c0935d0aabba1443dfc614f1e92ee5c8c4cfe999c80e43586168a15b2af8c721",
+          "png_sha256": "73e1303bb33c48ec6c8df4d330f1622a10d17f90e9259bcc28b3d8f59ad985e9"
+        },
+        {
+          "page": 13,
+          "figure_number": "10",
+          "role": "results",
+          "caption": "Figure 10 Experiment Results on Dexterous Cloth Manipulation. (a) Sankey diagram of success (solid) and failure (hatch) across entire rollouts of the Basic setting. (b) Average task progresses of π0 and GR-3 in the three evaluation settings.",
+          "bbox": [
+            65,
+            65,
+            548,
+            300
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            69.8,
+            257.9,
+            541.1,
+            290.2
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4025,
+            1959
+          ],
+          "pdf_path": "figures/bytedance/gr-3-technical-report/figure-02.pdf",
+          "png_path": "figures/bytedance/gr-3-technical-report/figure-02.png",
+          "pdf_sha256": "026ffed461d3c8405753e97276600d4f32d60faddf697a0c20170f7dfc2eac4a",
+          "png_sha256": "e1af89296dc1b6dce6cee0b77b44cfb92fdb639faa0dc018926b61e0886eef11"
+        }
+      ]
+    },
+    {
+      "id": "bytedance:gr-rl-technical-report",
+      "vendor": "bytedance",
+      "title": "GR-RL: Going Dexterous and Precise for Long-Horizon Robotic Manipulation",
+      "models": [
+        "GR-RL (specialized policy)"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/bytedance/technical-reports/gr-rl-technical-report--arxiv-v3.pdf",
+      "source_url": "https://arxiv.org/abs/2512.01801",
+      "source_sha256": "8b94f6cc63f6f7d2a36448015583b27573dd90a8313e6ba8aaacbfd0e7b79f07",
+      "source_version": "arxiv-v3",
+      "status": "available",
+      "inspected_pages": [
+        2,
+        8
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 2,
+          "figure_number": "1",
+          "role": "overview",
+          "caption": "Figure 1 GR-RL performs long-horizon, dexterous, and high-precision manipulation, in the task of shoe lacing, by adopting a multi-stage training pipeline, consisting of 1) offline filtered behavior cloning with learned task progress, 2) simple yet effective action augmentation, 3) online reinforcement learning.",
+          "bbox": [
+            65,
+            60,
+            548,
+            470
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.9,
+            430.7,
+            542.2,
+            463.0
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4025,
+            3417
+          ],
+          "pdf_path": "figures/bytedance/gr-rl-technical-report/figure-01.pdf",
+          "png_path": "figures/bytedance/gr-rl-technical-report/figure-01.png",
+          "pdf_sha256": "ddc5902cb9e0c89c36a7f8cbf7b73b017e940755ae4877719ae81c508d8ae21c",
+          "png_sha256": "e6b09271f06ea3e886db2937fa360b5acdd1b955bec11233a433969b3d53da94"
+        },
+        {
+          "page": 8,
+          "figure_number": "5",
+          "role": "results",
+          "caption": "Figure 5 Left: the success rate of our multi-stage training recipe. Data filtering, mirror augmentation, and online tuning all contribute to the final performance. Right: the binary success signal per episode (dots) and the moving average of success rate (curve) during online finetuning. The performance increases rapidly after an offline-to-online adaptation phase.",
+          "bbox": [
+            65,
+            60,
+            548,
+            305
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            70.9,
+            258.1,
+            541.2,
+            290.2
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4025,
+            2042
+          ],
+          "pdf_path": "figures/bytedance/gr-rl-technical-report/figure-02.pdf",
+          "png_path": "figures/bytedance/gr-rl-technical-report/figure-02.png",
+          "pdf_sha256": "d894ce241e8c7a5b9e7bd2910c24ad828232e63a976a9a49d590ed5902ea1e42",
+          "png_sha256": "1f29b6df62f6eecab1e4ba4c3d73baa4cff79932ba70527ec2aa5120b6c3c7eb"
+        }
+      ]
+    },
+    {
+      "id": "microsoft:rho-technical-report",
+      "vendor": "microsoft",
+      "title": "Rho: A Foundation for Efficiently Adaptable VLA Models",
+      "models": [
+        "Rho"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/microsoft/technical-reports/rho-technical-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2609.38164",
+      "source_sha256": "2e6c4c09d8f1bc001cd5aa8e0946377a7ad7bb4c05b32d35da5085db84bebe5a",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        6,
+        25
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 6,
+          "figure_number": "2",
+          "role": "architecture",
+          "caption": "Figure 2 The Rho flow-matching action expert. State and noisy-action tokens pass through 12 wide transformer blocks with grouped-query self-attention, cross-attention to the VLM context, and feed-forward updates. The flow timestep conditions the sublayers through shared adaLN-Zero maps with block-specific offsets.",
+          "bbox": [
+            60,
+            65,
+            535,
+            495
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            68.0,
+            443.7,
+            527.4,
+            478.4
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3959,
+            3584
+          ],
+          "pdf_path": "figures/microsoft/rho-technical-report/figure-01.pdf",
+          "png_path": "figures/microsoft/rho-technical-report/figure-01.png",
+          "pdf_sha256": "0e30b807ee99864509e7ca00aaa91e5501d0a1e655f163b4e8083dfca60c63b3",
+          "png_sha256": "47d8c6f3f3281daa585ca3214d312a53cd5f13b50aea1428217956576b09a6c4"
+        },
+        {
+          "page": 25,
+          "figure_number": "14",
+          "role": "results",
+          "caption": "Figure 14 FR3 Duo task-adaptation results. Each model is adapted independently on each task dataset and evaluated over 30 distinct, matched initial configurations per variant. We report binary success rate and mean task progress; Overall is the unweighted mean across the five task variants.",
+          "bbox": [
+            60,
+            60,
+            535,
+            430
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            68.0,
+            383.2,
+            527.6,
+            414.0
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3959,
+            3084
+          ],
+          "pdf_path": "figures/microsoft/rho-technical-report/figure-02.pdf",
+          "png_path": "figures/microsoft/rho-technical-report/figure-02.png",
+          "pdf_sha256": "940c0b1b8cd93e3ac35c10eb43329443147c5a3b2976d5cc7ea8680405bb0834",
+          "png_sha256": "f2c02f404b5f60b4b53437e61b443f8dbcf92fd3b4a34c6503a988ff2648aaf9"
+        }
+      ]
+    },
+    {
+      "id": "tencent:worldplay-technical-report",
+      "vendor": "tencent",
+      "title": "WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling",
+      "models": [
+        "HY-World 1.5 / WorldPlay"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/tencent/technical-reports/worldplay-technical-report--arxiv-v2.pdf",
+      "source_url": "https://arxiv.org/abs/2512.14614",
+      "source_sha256": "5051aab9b54f14963a6fc8bfda6038fe5a25867dc6efa16e811e2e690bdfbde6",
+      "source_version": "arxiv-v2",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": "2",
+          "role": "overview",
+          "caption": "Figure 2.   Method overview.   Given a single image or text prompt to describe a world,  WorldPlay  performs a next chunk (16 video frames) prediction task to generate future videos conditioned on action from users.   For the generation of each chunk, we dynamically reconstitute context memory from past chunks to enforce long-term temporal and geometric consistency.",
+          "bbox": [
+            54,
+            65,
+            542,
+            282
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            54.893001556396484,
+            251.56430053710938,
+            541.75634765625,
+            280.681396484375
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4067,
+            1809
+          ],
+          "pdf_path": "figures/tencent/worldplay-technical-report/figure-01.pdf",
+          "png_path": "figures/tencent/worldplay-technical-report/figure-01.png",
+          "pdf_sha256": "ad71624c97db2be346e5a7fc63adff43f6b474e6bf918a58478793e76c37daa0",
+          "png_sha256": "7c7e4e38f0fe342fff20cd2bc728f66e0f8656d3f75e13d898b57b0d6f5a24eb"
+        },
+        {
+          "page": 7,
+          "figure_number": "6",
+          "role": "results",
+          "caption": "Figure 6.   Qualitative comparisons with existing methods.   WorldPlay achieves the state-of-the-art long-term consistency ( shown in red boxes ) and visual quality across diverse scenes, including both first- and third-person real and stylized worlds.",
+          "bbox": [
+            54,
+            64,
+            542,
+            447
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            54.893001556396484,
+            425.69586181640625,
+            541.4412231445312,
+            444.74237060546875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4067,
+            3192
+          ],
+          "pdf_path": "figures/tencent/worldplay-technical-report/figure-02.pdf",
+          "png_path": "figures/tencent/worldplay-technical-report/figure-02.png",
+          "pdf_sha256": "f955d53163209f03e3264b731b0abd89b99e0d0d1bd7946671d1ae97877463d0",
+          "png_sha256": "989737b659c6aa64e5845b85b2b9680df2394211be5f00a60f97abca566a4d43"
+        }
+      ]
+    },
+    {
+      "id": "google:sima-2-technical-report",
+      "vendor": "google",
+      "title": "SIMA 2: A Generalist Embodied Agent for Virtual Worlds",
+      "models": [
+        "SIMA 2"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/google/technical-reports/sima-2-technical-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2512.04797",
+      "source_sha256": "a12ecfd60003a02d1039d2f137cb43b5d829a491c8c451fd2651b3fad3226cd2",
+      "source_version": "arxiv-v1",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 7,
+          "figure_number": "3",
+          "role": "architecture",
+          "caption": "Figure   3   |   Agent-Environment   Interface .   The   agent   receives   a   prompt   that   includes   the   current instruction.   Conditioning   on   recent   frames,   the   agent   outputs   internal   reasoning,   dialogue,   and actions, with the agent specifying which modalities to produce at any given step.",
+          "bbox": [
+            62,
+            87,
+            534,
+            325
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            283.2582702636719,
+            533.1038818359375,
+            321.83502197265625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3934,
+            1984
+          ],
+          "pdf_path": "figures/google/sima-2-technical-report/figure-01.pdf",
+          "png_path": "figures/google/sima-2-technical-report/figure-01.png",
+          "pdf_sha256": "e80b7ed86eb21c798cba309d7eedc57b28dfc5fb59d06386a0be1b3178ccee35",
+          "png_sha256": "c9661330bb43245d28da8ad0a0e5c9bdcae46a771c70a0345b99edcc0b8c3c07"
+        },
+        {
+          "page": 14,
+          "figure_number": "6",
+          "role": "results",
+          "caption": "Figure   6   |   Average   Performance   on   Embodied   Tasks .   Performance   is   averaged   over   training environments for each type of evaluation (human or automatic).   We plot human performance both with and without the time restrictions imposed on agents.   SIMA 2 effectively doubles the average success rate of SIMA 1, approaching human-level performance in both cases.",
+          "bbox": [
+            61,
+            50,
+            534,
+            285
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            61.9370002746582,
+            230.93930053710938,
+            532.9160766601562,
+            283.06500244140625
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3942,
+            1959
+          ],
+          "pdf_path": "figures/google/sima-2-technical-report/figure-02.pdf",
+          "png_path": "figures/google/sima-2-technical-report/figure-02.png",
+          "pdf_sha256": "7649757d03bdf03721b6f9791928bf8155540615ae4d4696e8243dcf43222496",
+          "png_sha256": "4ce1b4c0b6914fe6d2bf8575a4930a5fed217a4c3bcbebf1556ad1c4b7a06388"
+        },
+        {
+          "page": 24,
+          "figure_number": "15",
+          "role": "results",
+          "caption": "Figure 15   |   Self-Improvement on a Fixed Set of Tasks in  ASKA . To isolate the improvement aspect of our learning process, independent of the task setter, we first use a fixed set of tasks in ASKA. Over successive   iterations   (darker   blue   points   and   curves),   we   see   that   performance   steadily   improves, eventually exceeding a score of 50 across the full task set (the threshold for “success”).   Performance approaches, and in some cases even exceeds, the scores of reference trajectories from humans.",
+          "bbox": [
+            61,
+            50,
+            535,
+            339
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            595.2760009765625,
+            841.8900146484375
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            62.36199951171875,
+            271.3102722167969,
+            534.4259643554688,
+            336.98602294921875
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3950,
+            2409
+          ],
+          "pdf_path": "figures/google/sima-2-technical-report/figure-03.pdf",
+          "png_path": "figures/google/sima-2-technical-report/figure-03.png",
+          "pdf_sha256": "a4b6b46d0821d3f403ba9c3635a0c5f30ed4aacee9440008f443feaeac0a1330",
+          "png_sha256": "1ad6c0255b937d61e5f7d3be61800147f7321e07e573e01c64d9893129361c97"
+        }
+      ]
+    },
+    {
+      "id": "openai:gpt-6-sol-and-luna-october-2026-update",
+      "vendor": "openai",
+      "title": "GPT-6 Sol and GPT-6 Luna: October 2026 update",
+      "models": [
+        "GPT-6 Sol / Luna (ChatGPT October)"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/openai/system-cards/gpt-6-sol-and-luna-october-2026-update.pdf",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-october",
+      "source_sha256": "1c34c6a00e161825b5a066c6e7616f55a8aedee5f04a4d819fa067b898a0c603",
+      "source_version": "snapshot-2026-10-14",
+      "status": "available",
+      "inspected_pages": [
+        8,
+        11,
+        16
+      ],
+      "reason_en": "Selective core-figure review of the listed physical source pages and exact crops; not a full-document page audit.",
+      "reason_cn": "已选择性核对所列原始物理页及准确裁切图，不宣称对整份文档逐页审查。",
+      "figures": [
+        {
+          "page": 8,
+          "figure_number": "Figure 1",
+          "role": "safety_evaluation",
+          "caption": "Figure 1: Safety and non-overrefusal on challenging prompts. Higher is better on both axes.",
+          "bbox": [
+            118,
+            69,
+            494,
+            381
+          ],
+          "source_kind": "figure",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            120.2,
+            355.0,
+            489.8,
+            379.82
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3134,
+            2600
+          ],
+          "pdf_path": "figures/openai/gpt-6-sol-and-luna-october-2026-update/figure-01.pdf",
+          "png_path": "figures/openai/gpt-6-sol-and-luna-october-2026-update/figure-01.png",
+          "pdf_sha256": "31dc85e3b0999c8df8214f45efcfb3c263bdad4e08ac50467a401c781a9bc775",
+          "png_sha256": "41b9fd8d7ebec5fcba9cda6b3bac43335006a7aefb6a9df96c4af4785d96eade"
+        },
+        {
+          "page": 11,
+          "figure_number": "Figure 2",
+          "role": "safety_evaluation",
+          "caption": "Figure 2: Multiturn jailbreak robustness by attacker budget.",
+          "bbox": [
+            118,
+            69,
+            494,
+            331
+          ],
+          "source_kind": "figure",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            120.2,
+            317.8,
+            390.3,
+            329.72
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3134,
+            2184
+          ],
+          "pdf_path": "figures/openai/gpt-6-sol-and-luna-october-2026-update/figure-02.pdf",
+          "png_path": "figures/openai/gpt-6-sol-and-luna-october-2026-update/figure-02.png",
+          "pdf_sha256": "5ae2719e1a7c2899514c117f38864750e3f3b78a0834df25dc5321341b312d51",
+          "png_sha256": "73d29828dcfd77920b4d79f299f53c41b61d66db72efa6b54bbf9a5287d2707f"
+        },
+        {
+          "page": 16,
+          "figure_number": "Figure 3",
+          "role": "results",
+          "caption": "Figure 3: Response-level and claim-level factual error rates on factuality-heavy, user-flagged, and high-stakes prompt sets. Lower is better.",
+          "bbox": [
+            118,
+            69,
+            494,
+            313
+          ],
+          "source_kind": "figure",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            120.2,
+            285.4,
+            485.0,
+            310.16
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3134,
+            2034
+          ],
+          "pdf_path": "figures/openai/gpt-6-sol-and-luna-october-2026-update/figure-03.pdf",
+          "png_path": "figures/openai/gpt-6-sol-and-luna-october-2026-update/figure-03.png",
+          "pdf_sha256": "f3e0f4c27697bfc2c349f6cfb4b352af32f96f083e187d177bf4132a633251ea",
+          "png_sha256": "43927b0dac128de4fc592da9d4ce3bb282e9e0e66ff3892e1324b1bff890398e"
+        }
+      ]
+    },
+    {
+      "id": "anthropic:claude-haiku-5-5-system-card",
+      "vendor": "anthropic",
+      "title": "Claude Haiku 5.5 System Card",
+      "models": [
+        "Claude Haiku 5.5"
+      ],
+      "document_type": "system_card",
+      "source_pdf": "pdfs/anthropic/system-cards/claude-haiku-5-5-system-card.pdf",
+      "source_url": "https://www.anthropic.com/claude-haiku-5-5-system-card",
+      "source_sha256": "d5dbaab6996c02ad6ff28b032ce5a9c7582e59af09b5d1bc0975cf0235535da9",
+      "source_version": "snapshot-2026-10-14",
+      "status": "available",
+      "inspected_pages": [
+        20,
+        50,
+        111
+      ],
+      "reason_en": "Selective core-figure review of the listed physical source pages and exact crops; not a full-document page audit.",
+      "reason_cn": "已选择性核对所列原始物理页及准确裁切图，不宣称对整份文档逐页审查。",
+      "figures": [
+        {
+          "page": 20,
+          "figure_number": "2.3.2.A",
+          "role": "results",
+          "caption": "[Figure 2.3.2.A] The Epoch Capabilities Index (ECI) synthesizes performance across many benchmarks into one \nnumber per model. Our version of this metric, the Anthropic ECI (AECI), is powered by internal benchmark \nresults, so scores are not directly comparable to Epoch’s public ECI leaderboard. Gray dots are previous frontier \nClaude models; colored dots are the most recent models. Thin black error bars are 95% CI over 100 IRT refits, \neach on a random 80% subsample of benchmarks (global error). Thick violet error bars come from the same \nresampled fits but measure each score’s movement relative to the three preceding releases for each model \n(local error). The two lines compare different hypotheses for the frontier trend. Claude 3.5 Sonnet (June 2024) \nanchors the ECI scale at 130, so it has no global CI (its local error bar reflects uncertainty in the models before \nit). Scores of recent models on the new scale are reported for direct comparison. ",
+          "bbox": [
+            72.0,
+            112.0,
+            544.0,
+            421.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": [
+            72.0,
+            424.76,
+            541.63,
+            542.81
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3934,
+            2575
+          ],
+          "pdf_path": "figures/anthropic/claude-haiku-5-5-system-card/figure-01.pdf",
+          "png_path": "figures/anthropic/claude-haiku-5-5-system-card/figure-01.png",
+          "pdf_sha256": "48f759f79d995f81f15a1108d556267a3596c503994f401bf278277c660f1b71",
+          "png_sha256": "b5b4089839060fa2a31b3a1b007ef15a18fc213023e43c0f722955c627c3447f"
+        },
+        {
+          "page": 50,
+          "figure_number": "5.2.1.A",
+          "role": "safety_evaluation",
+          "caption": "[Figure 5.2.1.A] Indirect prompt injection attacks from the Gray Swan IPI benchmark (Q1+Q2 2026), lower \nscores are better. All models use extended thinking. Results represent the probability that an attacker finds a \nsuccessful attack after k=1, k=10, and k=15 attempts. Qwen 3.8, DeepSeek-V4-Pro, and GLM-5.3 were not \nevaluated on GUI Computer use scenarios. Claude models are evaluated without protections specific to prompt \ninjection. ",
+          "bbox": [
+            72.0,
+            197.0,
+            544.0,
+            401.0
+          ],
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": false,
+          "caption_bbox": [
+            72.0,
+            403.7,
+            539.95,
+            468.76
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3934,
+            1700
+          ],
+          "pdf_path": "figures/anthropic/claude-haiku-5-5-system-card/figure-02.pdf",
+          "png_path": "figures/anthropic/claude-haiku-5-5-system-card/figure-02.png",
+          "pdf_sha256": "5d7400e0e2fecb8691673c714a86b5e268d2b9f86e2f90a764e30f7d1425b812",
+          "png_sha256": "f797adb2cc48fe0691609545aa457a7c414d867a3951fd9a959f2ffd4e9bf960"
+        },
+        {
+          "page": 111,
+          "figure_number": "Table 8.1.A",
+          "role": "results",
+          "caption": "[Table 8.1.A] Capability evaluation summary. Unless otherwise noted, all Haiku 5.5 results use the following \nstandard configuration: adaptive thinking at max effort, default sampling settings (temperature, top_p), \naveraged over five trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. The \nbest score at max effort in each row is bolded. Competitor figures are drawn from the respective developers’ \npublished system cards or benchmark leaderboards unless otherwise noted.  ",
+          "bbox": [
+            70.0,
+            143.0,
+            541.0,
+            616.0
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            550.05,
+            526.12,
+            615.43
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3925,
+            3942
+          ],
+          "pdf_path": "figures/anthropic/claude-haiku-5-5-system-card/figure-03.pdf",
+          "png_path": "figures/anthropic/claude-haiku-5-5-system-card/figure-03.png",
+          "pdf_sha256": "3821c6335890583f509f3b1b39de2d48fadb9802b21f15d6dca19ffc44643109",
+          "png_sha256": "56b7971d8e0e08b1e39ef6c7b83bff14b38fbd374982a8697b46431e7b888d55"
+        }
+      ]
+    },
+    {
+      "id": "google:nano-banana-2-1-model-card",
+      "vendor": "google",
+      "title": "Nano Banana 2.1 Model Card",
+      "models": [
+        "Nano Banana 2.1"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/nano-banana-2-1-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/nano-banana-2-1/",
+      "source_sha256": "397b41ff808a7d2aa2d601afeb2b84c3c0574239281eb1d619996eed7d880566",
+      "source_version": "snapshot-2026-10-14",
+      "status": "available",
+      "inspected_pages": [
+        5
+      ],
+      "reason_en": "Selective core-figure review of the listed physical source pages and exact crops; not a full-document page audit.",
+      "reason_cn": "已选择性核对所列原始物理页及准确裁切图，不宣称对整份文档逐页审查。",
+      "figures": [
+        {
+          "page": 5,
+          "figure_number": null,
+          "role": "results",
+          "caption": "Capabilities: Text-to-Image",
+          "bbox": [
+            32,
+            112,
+            548,
+            280
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            596.0,
+            842.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            36,
+            113.71,
+            183.33,
+            127.48
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4300,
+            1400
+          ],
+          "pdf_path": "figures/google/nano-banana-2-1-model-card/figure-01.pdf",
+          "png_path": "figures/google/nano-banana-2-1-model-card/figure-01.png",
+          "pdf_sha256": "cdcfe0bc931090c3b829580d3e46b648f2700472d94474cf307173c7b937085c",
+          "png_sha256": "d7c5f4b89f0b3ce17aa6d1b7a3a59a2b01d07d19f097d43f916395aafc1aeb98"
+        },
+        {
+          "page": 5,
+          "figure_number": null,
+          "role": "results",
+          "caption": "Capabilities: Editing",
+          "bbox": [
+            32,
+            318,
+            548,
+            570
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            596.0,
+            842.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            36,
+            319.15,
+            144.15,
+            332.93
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            4300,
+            2100
+          ],
+          "pdf_path": "figures/google/nano-banana-2-1-model-card/figure-02.pdf",
+          "png_path": "figures/google/nano-banana-2-1-model-card/figure-02.png",
+          "pdf_sha256": "9a54b752eefad684f62236a37e83d219b9737fefe796c0b715e526af44e2f64e",
+          "png_sha256": "5ef28a53b1a5da53214dc101f4ba358fedceee9ce4bda51c973f538cbd24d066"
+        }
+      ]
+    },
+    {
+      "id": "google:gemini-3-1-flash-lite-image-model-card",
+      "vendor": "google",
+      "title": "Gemini 3.1 Flash-Lite Image Model Card",
+      "models": [
+        "Nano Banana 2 Lite / Gemini 3.1 Flash-Lite Image"
+      ],
+      "document_type": "model_card",
+      "source_pdf": "pdfs/google/model-cards/gemini-3-1-flash-lite-image-model-card.pdf",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-lite-image/",
+      "source_sha256": "f03d4a695a24c480f5ace904589072919f65f4d23cca91c666811c1dcc984f80",
+      "source_version": "snapshot-2026-09-30",
+      "status": "available",
+      "inspected_pages": [
+        1,
+        2,
+        3,
+        4,
         5,
         6,
         7
       ],
-      "reason_en": "The inspected pages contain a textual model-property description and specification/use tables, but no standalone architecture, framework, pipeline, benchmark, or safety-evaluation figure suitable for figure extraction. The model architecture is described in prose on page 3.",
-      "reason_cn": "已检查第1、2、3、5、6、7页：内容为文字版模型属性、规格/使用表格，没有适合提取的独立架构、框架、流程、基准或安全评测图。第3页的模型架构仅以正文描述。",
+      "reason_en": "Source pages and exact crops visually reviewed; native captions and complete boundaries checked against the original PDF.",
+      "reason_cn": "已目视核对原始页面和准确裁切图，逐项校验原始图注及完整边界。",
+      "figures": [
+        {
+          "page": 4,
+          "figure_number": null,
+          "role": "results",
+          "caption": "Capabilities: Text-to-Image",
+          "bbox": [
+            67,
+            384,
+            541,
+            658
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            388.76,
+            219.33,
+            447.16
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3950,
+            2284
+          ],
+          "pdf_path": "figures/google/gemini-3-1-flash-lite-image-model-card/figure-01.pdf",
+          "png_path": "figures/google/gemini-3-1-flash-lite-image-model-card/figure-01.png",
+          "pdf_sha256": "5f7c20be2dce0916a10ffa8d35fcfc7d17ef30fcc5f08dd95952de3704a58909",
+          "png_sha256": "f7368f898dfc1f1dd56655881b8f1cb9078fb00ee96de5e44037ddabbee67dd5"
+        },
+        {
+          "page": 5,
+          "figure_number": null,
+          "role": "results",
+          "caption": "Capabilities: Editing",
+          "bbox": [
+            67,
+            68,
+            541,
+            585
+          ],
+          "source_kind": "table",
+          "coordinate_system": "PDF points, top-left origin",
+          "page_size": [
+            612.0,
+            792.0
+          ],
+          "review_method": "agent_visual_source_page_review",
+          "caption_in_crop": true,
+          "caption_bbox": [
+            72.0,
+            72.0,
+            182.4,
+            100.17
+          ],
+          "png_dpi": 600,
+          "png_size": [
+            3950,
+            4309
+          ],
+          "pdf_path": "figures/google/gemini-3-1-flash-lite-image-model-card/figure-02.pdf",
+          "png_path": "figures/google/gemini-3-1-flash-lite-image-model-card/figure-02.png",
+          "pdf_sha256": "f8ed3fe2e4c66d5475e73cbee50af8c940a036f5b2d358c7423e3d9257e183e9",
+          "png_sha256": "76ff2e109ff5a377f0015ab0a121f9a83b2620129efed9021840780529150cf0"
+        }
+      ]
+    },
+    {
+      "id": "figure:helix-2-5",
+      "vendor": "figure",
+      "title": "Helix 2.5",
+      "models": [
+        "Helix 2.5"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization",
+      "source_sha256": "65536339ce4a14ee7adb95dcd712b715ad59441a0288107a616fb04592463fd6",
+      "source_version": "2026-10-13",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "",
+      "reason_cn": "已核对官方原始素材、准确图注或替代文字，并保留完整画面。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": "1",
+          "role": "results",
+          "source_kind": "image",
+          "caption": "Figure 1: Zero-Shot Success in 30 Homes: Success rates of models trained from scratch vs. models trained with Index. Index accounts for the majority of Helix 2.5's zero-shot capability.",
+          "alt": "",
+          "lead_in": "",
+          "asset_url": "https://images.ctfassets.net/qx5k8y1u9drj/1uDWoFB8Pp4tABoKweAD5R/c9c8db99e1ca737eb5ed1275926bfbac/ZeroShotSuccess__2_.png",
+          "asset_sha256": "8d0c503ce6ce71f29b32ab7c0429a965f8b2b78ffc900104b1410357aed9e6c9",
+          "png_size": [
+            1920,
+            892
+          ],
+          "transform": "alpha_composite:#111111",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/figure/helix-2-5/figure-01.png",
+          "png_sha256": "f400059f338a0929bf2f83ccb9d973c6905d62572b49023bae2f6fd133108473"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": "Table 1",
+          "role": "results",
+          "source_kind": "table",
+          "caption": "Table 1: Evaluation Task Definitions and Setup",
+          "alt": "",
+          "lead_in": "",
+          "asset_url": "https://images.ctfassets.net/qx5k8y1u9drj/5MVtZq4mymIuC9fIjFR2go/df75030c7afbeb9a761470a3ec4dc3fb/Tasks-Table__1_.png",
+          "asset_sha256": "c3243f5c9e8cf21c09f21050e29f0d9feb35b08e67087de4c88b78b7aed1d070",
+          "png_size": [
+            1920,
+            978
+          ],
+          "transform": "alpha_composite:#111111",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/figure/helix-2-5/figure-02.png",
+          "png_sha256": "67722ad4235961ffd540e97f8cb383748a010b7138bfb3fb0022b18cf72edd8e"
+        }
+      ]
+    },
+    {
+      "id": "skild:s1",
+      "vendor": "skild",
+      "title": "S1",
+      "models": [
+        "S1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://skild.ai/blogs/s1",
+      "source_sha256": "066b49b153eaf461cc0c7b40c8590a967081870139f6de88944709d68bed2f10",
+      "source_version": "2026-10-13",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "The page contains scientifically useful model-specific results charts with exact native captions: Fig. 4 'Success rate against pre-training scale, for in-context learning and language-prompted VLA policies.'; Fig. 5 'Success rate as the deployment scene deviates from the training conditions, for in-context learning and language-prompted VLA policies.'; Fig. 6 'Success rate as the deployment scene deviates from the in-context demonstration. Training conditions are held fixed.'; Fig. 7 'Success rate against the number of post-training demonstrations on a new unseen task. The in-context learning policy is flat because it never trains — it is given one demonstration in its prompt. For long-horizon tasks (over four minutes), collecting 380 demonstrations takes 50–100 hours of teleoperation.' They are interactive page-native charts rendered by embedded JavaScript, not standalone original raster assets; HTML snapshot preserves source markup/captions, but no screenshot/image capture was submitted.",
+      "reason_cn": "已核对官方原始素材、准确图注或替代文字，并保留完整画面。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "example",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "",
+          "lead_in": "",
+          "asset_url": "https://assets.skild.ai/site/v1/blog/sb-812a99baf442e4fb5939/pancakes-poster.jpg",
+          "asset_sha256": "89c8c828763d8fa1e9d1243078b7f15740541cdfc221df84d21889852ae21711",
+          "png_size": [
+            1920,
+            1080
+          ],
+          "transform": "lossless_png_from_decoded_pixels",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/skild/s1/figure-01.png",
+          "png_sha256": "fd4c23eb62c6c6dcae0bac7ce5c21f3cb6bb9d06f48ec517da85ed0abbbd9da0"
+        }
+      ]
+    },
+    {
+      "id": "generalist:gen-1-5",
+      "vendor": "generalist",
+      "title": "GEN-1.5",
+      "models": [
+        "GEN-1.5"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://generalistai.com/blog/gen-1.5",
+      "source_sha256": "ff4927b3d6c492534961750d530a9fceef94d514b6d8160ad8e5293de3570f8b",
+      "source_version": "2026-10-13",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The article contains original scientific figures and example rollouts as embedded videos/interactive media, including Figure 1 (one-shot learning comparison), Figure 2 (task success results), Figure 3 (held-out action-prediction error across pretraining phases), and Figure 4 (few-step adaptation MDS embedding). They have author captions in the page, but no separately downloadable static image asset in the captured HTML. The only static article image found is the cover frame, which is abstract/low-value rather than a scientific diagram or result; it was visually inspected and excluded. No video frame was fabricated or extracted.",
+      "reason_cn": "该原始网页的科学图表为交互或视频内容，尚无可直接导出的独立静态科学图片。",
+      "figures": []
+    },
+    {
+      "id": "google:genie-3",
+      "vendor": "google",
+      "title": "Genie 3",
+      "models": [
+        "Genie 3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+      "source_sha256": "f77d9e56d865d0049a5a93ce5a0891c4c71165d49127ce9b9c1121bb469067f3",
+      "source_version": "2026-10-13",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "",
+      "reason_cn": "已核对官方原始素材、准确图注或替代文字，并保留完整画面。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "table",
+          "caption": "",
+          "alt": "Comparison table detailing the advancements of the Genie 3 model over GameNGen, Genie 2, and Veo in key areas like control, resolution, and interaction latency.",
+          "lead_in": "",
+          "asset_url": "https://lh3.googleusercontent.com/cZoNo9iSxNXrzUDTQUuy84upr6YnjHF1XaysuhkUG9X8LwCzKI3KX4scd0Y779NBBi7ffpkTbTaKqPZ_07Wto_0VaqjF8gmwNAwTSk3eLOtX8PCn%3Dw1440",
+          "asset_sha256": "dd43f8e3bcd9e8e7a55447d08fc338a9204d7d58f7c8cbdf7003e246453edeeb",
+          "png_size": [
+            1440,
+            637
+          ],
+          "transform": "lossless_png_from_decoded_pixels",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/google/genie-3/figure-01.png",
+          "png_sha256": "3eed3960f22ceb5d62248f068776c8b532e61dfc2b11e704b2b70eb29d8e1608"
+        }
+      ]
+    },
+    {
+      "id": "nvidia:gr00t-n1-7",
+      "vendor": "nvidia",
+      "title": "GR00T N1.7",
+      "models": [
+        "GR00T N1.7"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/NVIDIA/Isaac-GR00T",
+      "source_sha256": "e31c10cc5adaaf1085b7e5697f7fff5a1c1b65f0ca18659c0600313e1a98afa4",
+      "source_version": "2026-10-13",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "",
+      "reason_cn": "已核对官方原始素材、准确图注或替代文字，并保留完整画面。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "architecture",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "model-architecture",
+          "lead_in": "The neural network architecture of GR00T N1.7 is a combination of vision-language foundation model and diffusion transformer head that denoises continuous actions. Here is a schematic diagram of the architecture:",
+          "asset_url": "https://raw.githubusercontent.com/NVIDIA/Isaac-GR00T/main/media/model-architecture.png",
+          "asset_sha256": "bbf161c66daac88799b5bc7b5c110429f48d7f96ae315113e2b2e6d1f11c9e54",
+          "png_size": [
+            7558,
+            3942
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/nvidia/gr00t-n1-7/figure-01.png",
+          "png_sha256": "bbf161c66daac88799b5bc7b5c110429f48d7f96ae315113e2b2e6d1f11c9e54"
+        }
+      ]
+    },
+    {
+      "id": "microsoft:rho-alpha",
+      "vendor": "microsoft",
+      "title": "Rho-alpha",
+      "models": [
+        "Rho-alpha"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://www.microsoft.com/en-us/research/story/advancing-ai-for-the-physical-world/",
+      "source_sha256": "ba51a011a0e3d6e31c7f61645f1b0b7f79dbb6365524f3debc94d62f6fba112d",
+      "source_version": "2026-10-13",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "The official page embeds videos/example media but no static technical diagram or result chart was found in the captured HTML. Rho-alpha is still being evaluated; the article says its technical description will be published later.",
+      "reason_cn": "已核对官方原始素材、准确图注或替代文字，并保留完整画面。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "example",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Rho-Alpha | close up image of a robotic arm and hand holding down a power outlet strip while unplugging a small charging adapter.",
+          "lead_in": "",
+          "asset_url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2026/01/Rho-Alpha_hero_2000x1333.jpg",
+          "asset_sha256": "01c119054f733c3dbafba17725ef0e13310e9d21b8e8d3c88a9e0964b2aad875",
+          "png_size": [
+            2000,
+            1333
+          ],
+          "transform": "lossless_png_from_decoded_pixels",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/microsoft/rho-alpha/figure-01.png",
+          "png_sha256": "801f7410ca0ec323bc88d75de108b38fc9230824df3e94dd7dfad5e226fcc90b"
+        }
+      ]
+    },
+    {
+      "id": "mistral:mistral-large-3-model-card",
+      "vendor": "mistral",
+      "title": "Mistral Large 3",
+      "models": [
+        "Mistral Large 3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512",
+      "source_sha256": "8ae40722e689e857d33bf00919962803376af4b60d5879dcd0ec4c359b069bed",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Complete source-native assets visually reviewed; original alt preserved without invented captions.",
+      "reason_cn": "已目视复核完整官方原生图片，原始替代文字不充当图注。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "image",
+          "lead_in": "",
+          "asset_url": "https://cdn-uploads.huggingface.co/production/uploads/64161701107962562e9b1006/IrPlvUUD-5-Phwi9QSevh.png",
+          "asset_sha256": "5adfea47199dec96d07523acc627ba234d3023eeb875b046a6dc8175c94ffc09",
+          "png_size": [
+            1905,
+            1242
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/mistral/mistral-large-3-model-card/figure-01.png",
+          "png_sha256": "5adfea47199dec96d07523acc627ba234d3023eeb875b046a6dc8175c94ffc09"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "image",
+          "lead_in": "",
+          "asset_url": "https://cdn-uploads.huggingface.co/production/uploads/64161701107962562e9b1006/fDFEymz4HZNsqFARB4u9Y.png",
+          "asset_sha256": "b7dc0e8c604465819a10db9faabe5bba7fada6d41194f9219e108cd4c45a9ef9",
+          "png_size": [
+            1346,
+            1115
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/mistral/mistral-large-3-model-card/figure-02.png",
+          "png_sha256": "b7dc0e8c604465819a10db9faabe5bba7fada6d41194f9219e108cd4c45a9ef9"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "image",
+          "lead_in": "",
+          "asset_url": "https://cdn-uploads.huggingface.co/production/uploads/64161701107962562e9b1006/eMdaAPcjOo8VyoGyFKxrE.png",
+          "asset_sha256": "c440d510fe06bfd60c4db89b1b4318890ca4114b808966e6ba7a1555ce3b5e3b",
+          "png_size": [
+            1905,
+            1242
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/mistral/mistral-large-3-model-card/figure-03.png",
+          "png_sha256": "c440d510fe06bfd60c4db89b1b4318890ca4114b808966e6ba7a1555ce3b5e3b"
+        }
+      ]
+    },
+    {
+      "id": "zai:glm-5-3-model-card",
+      "vendor": "zai",
+      "title": "GLM-5.3",
+      "models": [
+        "GLM-5.3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3",
+      "source_sha256": "93f674473ef39208ea381f946b6aa4675395b5242996563feb77008f4d4cdcb0",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Complete source-native assets visually reviewed; original alt preserved without invented captions.",
+      "reason_cn": "已目视复核完整官方原生图片，原始替代文字不充当图注。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "bench_53",
+          "lead_in": "",
+          "asset_url": "https://raw.githubusercontent.com/zai-org/GLM-5/refs/heads/main/resources/bench_53_2.png",
+          "asset_sha256": "9dbb95f48e23c316b009571bd838f076db3ffe056c79cc6c94286ed9c7cc7ace",
+          "png_size": [
+            4239,
+            2504
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/zai/glm-5-3-model-card/figure-01.png",
+          "png_sha256": "9dbb95f48e23c316b009571bd838f076db3ffe056c79cc6c94286ed9c7cc7ace"
+        }
+      ]
+    },
+    {
+      "id": "stepfun:step-3-7-flash-model-card",
+      "vendor": "stepfun",
+      "title": "Step 3.7 Flash",
+      "models": [
+        "Step 3.7 Flash"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/stepfun-ai/Step-3.7-Flash",
+      "source_sha256": "96e1ffcaf91d4576318c0c800d5145bc504f5f375b5c83a310003cb9270ebfbf",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Complete source-native assets visually reviewed; original alt preserved without invented captions.",
+      "reason_cn": "已目视复核完整官方原生图片，原始替代文字不充当图注。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Step 3.7 Flash benchmark results across General Agent, Agentic Coding, and Multimodal evaluations",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/stepfun-ai/Step-3.7-Flash/resolve/main/assets/benchmarks.png",
+          "asset_sha256": "3d26171162c0421a57c6c2c22074b9b276b626c5d90fe3a62e9fceb8ad988ae7",
+          "png_size": [
+            1280,
+            730
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/stepfun/step-3-7-flash-model-card/figure-01.png",
+          "png_sha256": "3d26171162c0421a57c6c2c22074b9b276b626c5d90fe3a62e9fceb8ad988ae7"
+        }
+      ]
+    },
+    {
+      "id": "minimax:minimax-m3-model-card",
+      "vendor": "minimax",
+      "title": "MiniMax-M3",
+      "models": [
+        "MiniMax-M3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+      "source_sha256": "1ed1782700ec351d33dacd7f9436706a62cf165dc69d6a4e660e0cb25ecb1c9b",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Complete source-native assets visually reviewed; original alt preserved without invented captions.",
+      "reason_cn": "已目视复核完整官方原生图片，原始替代文字不充当图注。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3/resolve/main/figures/benchmark.jpeg",
+          "asset_sha256": "b4bc02e54f508f540e71a9286905477c780934bb79c0b17cd5892b6338313e57",
+          "png_size": [
+            2584,
+            6587
+          ],
+          "transform": "lossless_png_from_decoded_pixels",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/minimax/minimax-m3-model-card/figure-01.png",
+          "png_sha256": "396f144a7c242a4420328e8e5371609289cfe2fe897a9209e8107b42826cd686"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "GQA vs MSA Efficiency Comparison",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/MiniMaxAI/MiniMax-M3/resolve/main/figures/efficiency_gqa_vs_msa.png",
+          "asset_sha256": "12b57574e58a5cd2c0e44e431a10737534c864d962bbd7e6ec1c0b1223c2d7d7",
+          "png_size": [
+            2544,
+            681
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/minimax/minimax-m3-model-card/figure-02.png",
+          "png_sha256": "12b57574e58a5cd2c0e44e431a10737534c864d962bbd7e6ec1c0b1223c2d7d7"
+        }
+      ]
+    },
+    {
+      "id": "minimax:minimax-h3-model-card",
+      "vendor": "minimax",
+      "title": "MiniMax-H3",
+      "models": [
+        "MiniMax-H3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+      "source_sha256": "ebeb326e8f1af0ff931e7e2c873e52da681589cf4022c75e51518570b66de66f",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Complete source-native assets visually reviewed; original alt preserved without invented captions.",
+      "reason_cn": "已目视复核完整官方原生图片，原始替代文字不充当图注。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "overview",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Image",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/resolve/main/assets/overview.png",
+          "asset_sha256": "b32290cdabb1fe08982ecca971b3df7e14b22c661b171db610c1fa66198881b9",
+          "png_size": [
+            3616,
+            1336
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/minimax/minimax-h3-model-card/figure-01.png",
+          "png_sha256": "b32290cdabb1fe08982ecca971b3df7e14b22c661b171db610c1fa66198881b9"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "architecture",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Image",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/resolve/main/assets/full-arch.png",
+          "asset_sha256": "5bd8e4077a11a400ab32ed8d8b6cfc81b16fdd0af3fd1716e78544b0e02ed38d",
+          "png_size": [
+            3936,
+            2186
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/minimax/minimax-h3-model-card/figure-02.png",
+          "png_sha256": "5bd8e4077a11a400ab32ed8d8b6cfc81b16fdd0af3fd1716e78544b0e02ed38d"
+        }
+      ]
+    },
+    {
+      "id": "cohere:command-a-plus-model-card",
+      "vendor": "cohere",
+      "title": "Command A+",
+      "models": [
+        "Command A+"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16",
+      "source_sha256": "8246884230424ca64701ec11cceaeb7f062733ce97a8b37d99b2c8b240389a97",
+      "source_version": "2026-10-14",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "No source-native PNG/JPEG image is embedded in the captured model-card body. No figures or captions are proposed.",
+      "reason_cn": "已检查官方模型卡正文，没有可直接导出的原生静态科学图片；保留官方来源。",
+      "figures": []
+    },
+    {
+      "id": "cohere:north-mini-code-1-0-model-card",
+      "vendor": "cohere",
+      "title": "North Mini Code 1.0",
+      "models": [
+        "North Mini Code 1.0"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/CohereLabs/North-Mini-Code-1.0",
+      "source_sha256": "20a4a355afa33692280650555097ef0d05f520b11ad06c1691ae248134be3cb7",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Complete source-native assets visually reviewed; original alt preserved without invented captions.",
+      "reason_cn": "已目视复核完整官方原生图片，原始替代文字不充当图注。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "image1",
+          "lead_in": "",
+          "asset_url": "https://cdn-uploads.huggingface.co/production/uploads/62668f725fb8d521d94d8451/xR7kZ3X9RKEZrbgD6hpG1.png",
+          "asset_sha256": "1156382fea3c798097c6cf4a82fe12473da572fc136114aacae54ffbc033a35e",
+          "png_size": [
+            1176,
+            559
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/cohere/north-mini-code-1-0-model-card/figure-01.png",
+          "png_sha256": "1156382fea3c798097c6cf4a82fe12473da572fc136114aacae54ffbc033a35e"
+        }
+      ]
+    },
+    {
+      "id": "mistral:mistral-medium-3-5-model-card",
+      "vendor": "mistral",
+      "title": "Mistral Medium 3.5",
+      "models": [
+        "Mistral Medium 3.5"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+      "source_sha256": "c667f71e977a21c545fb8d5b5aa0e1ced1db3f50d3f602da67efd7f2efacd60b",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Complete source-native assets visually reviewed; original alt preserved without invented captions.",
+      "reason_cn": "已目视复核完整官方原生图片，原始替代文字不充当图注。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Mistral agentic benchmark",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/resolve/main/images/image2.png",
+          "asset_sha256": "747d444807c82cfb2afe13b1faedf5d0421e351066febcba4a9a9e6356d663bc",
+          "png_size": [
+            3236,
+            1917
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/mistral/mistral-medium-3-5-model-card/figure-01.png",
+          "png_sha256": "747d444807c82cfb2afe13b1faedf5d0421e351066febcba4a9a9e6356d663bc"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Mistral agentic benchmark SWE-bench",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/resolve/main/images/image3.png",
+          "asset_sha256": "bcab7507cc80e9fb02d69cb7735ad037392e8d3138b270baef7cdf9324b9f473",
+          "png_size": [
+            3236,
+            1917
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/mistral/mistral-medium-3-5-model-card/figure-02.png",
+          "png_sha256": "bcab7507cc80e9fb02d69cb7735ad037392e8d3138b270baef7cdf9324b9f473"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Mistral agentic vs competiting models benchmark",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/resolve/main/images/image4.png",
+          "asset_sha256": "02e490d392dd987612db1cc6e6851f89acff06b3a1d9f8ce8465f687ae988a4a",
+          "png_size": [
+            3236,
+            2370
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/mistral/mistral-medium-3-5-model-card/figure-03.png",
+          "png_sha256": "02e490d392dd987612db1cc6e6851f89acff06b3a1d9f8ce8465f687ae988a4a"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "instruct reasoning and agentic benchmark",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/resolve/main/images/image1.png",
+          "asset_sha256": "204ead2c7c0b088379b3402c53bfdae1bcd6b09cb14b0cc71d10176582183fa2",
+          "png_size": [
+            3185,
+            1860
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/mistral/mistral-medium-3-5-model-card/figure-04.png",
+          "png_sha256": "204ead2c7c0b088379b3402c53bfdae1bcd6b09cb14b0cc71d10176582183fa2"
+        }
+      ]
+    },
+    {
+      "id": "meta:muse-glimmer-30b-model-card",
+      "vendor": "meta",
+      "title": "Muse Glimmer 30B",
+      "models": [
+        "Muse Glimmer 30B"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+      "source_sha256": "15d122107042a1b0db44bf83cabaf6efd4c72899dc2bfaa52b17cc85f115dd06",
+      "source_version": "2026-10-14",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "No source-native PNG/JPEG image is embedded in the captured model-card body. No figures or captions are proposed.",
+      "reason_cn": "已检查官方模型卡正文，没有可直接导出的原生静态科学图片；保留官方来源。",
+      "figures": []
+    },
+    {
+      "id": "mistral:mistral-large-4",
+      "vendor": "mistral",
+      "title": "Mistral Large 4 (Public Preview)",
+      "models": [
+        "Mistral Large 4 (Public Preview)"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://mistral.ai/news/mistral-large-4/",
+      "source_sha256": "9128cfb2ed28f5a066cecc6837883d98a6e331d409f56272d62518ecb9c39d7e",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Full source-native images and exact source linkage visually reviewed; alt text is not an author caption.",
+      "reason_cn": "已复核完整官方原生素材及来源链接，替代文字不充当作者图注。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "",
+          "lead_in": "",
+          "asset_url": "https://mistral.ai/_astro/artificial-analysis---deepswe-1.1%201-alt_Z28T39q.webp?dpl=6accf0d261fecbe6ba702f4d",
+          "asset_sha256": "df82a5aa879ff37b505c514b9b99d73580b194af137fabe772aef827c679d2f0",
+          "png_size": [
+            2400,
+            1779
+          ],
+          "transform": "lossless_png_from_decoded_pixels",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/mistral/mistral-large-4/figure-01.png",
+          "png_sha256": "bd00119e18ea2d073897484c8eeda67d1ebafe24b27eef165c547fb6ba213f2e"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "",
+          "lead_in": "",
+          "asset_url": "https://mistral.ai/_astro/cybersecurity-benchmarks---aa-cyber-index-alt_zJwyJ.webp?dpl=6accf0d261fecbe6ba702f4d",
+          "asset_sha256": "820b3b16d3569e27e5cf942552e81a8d43f8bd7569e0323330ffc9b539b80b4c",
+          "png_size": [
+            1214,
+            800
+          ],
+          "transform": "lossless_png_from_decoded_pixels",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/mistral/mistral-large-4/figure-02.png",
+          "png_sha256": "0969b508fc8f6d247f39d738734c77237fb33d6fea7ada5db37dd3b8f7fcc5df"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "",
+          "lead_in": "",
+          "asset_url": "https://mistral.ai/_astro/vals.ai---finance-agent-v2%201_18mXuR.webp?dpl=6accf0d261fecbe6ba702f4d",
+          "asset_sha256": "a9ee93a03e7b2a2181b776e191982fbc30ff32985564135757ea268da9cf7e2d",
+          "png_size": [
+            2400,
+            1582
+          ],
+          "transform": "lossless_png_from_decoded_pixels",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/mistral/mistral-large-4/figure-03.png",
+          "png_sha256": "e8d1aacc80d58cc4018ed9cf1bc90bfbba99fbeec5af52c4a5959d9517f7c224"
+        }
+      ]
+    },
+    {
+      "id": "meta:muse-wonder",
+      "vendor": "meta",
+      "title": "Muse Wonder / Wonder Full",
+      "models": [
+        "Muse Wonder / Wonder Full"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://research.meta.ai/blog/muse-wonder",
+      "source_sha256": "5a542eb62fbea2758ee54ddce684cb2d47f72081b7b317a965e1a863d75b8732",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Full source-native images and exact source linkage visually reviewed; alt text is not an author caption.",
+      "reason_cn": "已复核完整官方原生素材及来源链接，替代文字不充当作者图注。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "table",
+          "caption": "",
+          "alt": "Benchmark table comparing leading models across personal and professional agent, coding, and general evaluations.",
+          "lead_in": "",
+          "asset_url": "https://research.meta.ai/articles/introducing-muse-wonder/images/muse-evaluation-table-light-v6.webp",
+          "asset_sha256": "4a9f891f33ba1b87bcedc0907a7f12c8c5a58b7ab146772039804866a8ba5e1c",
+          "png_size": [
+            3240,
+            4890
+          ],
+          "transform": "lossless_png_from_decoded_pixels",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/meta/muse-wonder/figure-01.png",
+          "png_sha256": "9364c7612671dfcb04fc88034af6c1f79eac93fc2be86d1e23cc185e7a914da0"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Scatter plot comparing Muse Spark 1.3 and Muse Wonder Full across in-distribution and out-of-distribution performance. Muse Wonder Full follows a higher trend line, illustrating extra out-of-distribution performance, or effective robustness.",
+          "lead_in": "",
+          "asset_url": "https://research.meta.ai/articles/introducing-muse-wonder/images/ttc-controlled-iid-ood-scaling-light-v5.webp",
+          "asset_sha256": "5a31c59eff705812c828680f741bf98dfdd4fabaa64d72af4833ad2002a4f1d8",
+          "png_size": [
+            5760,
+            3240
+          ],
+          "transform": "lossless_png_from_decoded_pixels",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/meta/muse-wonder/figure-02.png",
+          "png_sha256": "dd5ee100eed8fa6849c514edd33537f22a7905703d6854762705798d084ef81b"
+        }
+      ]
+    },
+    {
+      "id": "google:embeddinggemma-2",
+      "vendor": "google",
+      "title": "EmbeddingGemma 2",
+      "models": [
+        "EmbeddingGemma 2"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2?hl=en",
+      "source_sha256": "23bff33b0361a8fd70c917ddbc8eef20b2ccf7140bc672116093f4a04bbe399a",
+      "source_version": "2026-10-14",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "A banner image is present, but it is branding; there is no native static architecture/results figure. Model details and benchmark results are HTML tables.",
+      "reason_cn": "本次核查的官方网页没有可直接导出的静态科学图片，保留原文与官方来源。",
+      "figures": []
+    },
+    {
+      "id": "moonshot:kimi-k2-8-preview",
+      "vendor": "moonshot",
+      "title": "Kimi K2.8 Preview",
+      "models": [
+        "Kimi K2.8 Preview"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html",
+      "source_sha256": "33a580f8a6bea72c9ccef4bcaa00088c57eab3e9e99627b14e0228d0eabd61a4",
+      "source_version": "2026-10-14",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "No source-native image assets or technical figures are embedded in the K2.8 Preview changelog section.",
+      "reason_cn": "本次核查的官方网页没有可直接导出的静态科学图片，保留原文与官方来源。",
+      "figures": []
+    },
+    {
+      "id": "zai:glm-5-3-flashx",
+      "vendor": "zai",
+      "title": "GLM-5.3-FlashX",
+      "models": [
+        "GLM-5.3-FlashX"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://docs.z.ai/guides/vlm/glm-5.3-flash",
+      "source_sha256": "b682b6e924ad3ef7c8eaff099b9aa3a46ee028cd16ab86939c4ba4dba792c1d7",
+      "source_version": "2026-10-14",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The visible page has three capability-example image assets with blank alt text, but they are demo imagery rather than technical architecture/results figures; the page has no suitable static figure for a reader summary.",
+      "reason_cn": "本次核查的官方网页没有可直接导出的静态科学图片，保留原文与官方来源。",
+      "figures": []
+    },
+    {
+      "id": "stepfun:step-5-preview-docs",
+      "vendor": "stepfun",
+      "title": "Step 5 Preview",
+      "models": [
+        "Step 5 Preview"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://platform.stepfun.ai/docs/en/guides/models/step-5-preview",
+      "source_sha256": "37bb0c7493c3ac369eeba4e063155c071591a83f5a20f0fbafed304c345df2e4",
+      "source_version": "2026-10-14",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured documentation page contains logo assets only; its technical specifications are text/table content, with no architecture or results figure.",
+      "reason_cn": "本次核查的官方网页没有可直接导出的静态科学图片，保留原文与官方来源。",
+      "figures": []
+    },
+    {
+      "id": "amazon:nova-2-5-sonic",
+      "vendor": "amazon",
+      "title": "Nova 2.5 Sonic",
+      "models": [
+        "Nova 2.5 Sonic"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://docs.aws.amazon.com/ai/responsible-ai/nova-2-5-sonic/overview.html",
+      "source_sha256": "24e9c819ddb8fb5a88c7f0a1334bdef0c0dd3e688e04b6663b9a0c3920da96bb",
+      "source_version": "2026-10-14",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured HTML contains only the decorative banner background (alt 'Banner background image') and a warning icon (alt 'Warning'); neither is a technical architecture/result image. No static architecture diagram or results chart appears in this capture. The official card explains architecture in prose.",
+      "reason_cn": "官方服务卡只有装饰图片，未发现可直接导出的静态科学图。",
+      "figures": []
+    },
+    {
+      "id": "nvidia:nemotron-3-5-lightning",
+      "vendor": "nvidia",
+      "title": "Nemotron 3.5 Lightning",
+      "models": [
+        "Nemotron 3.5 Lightning"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "source_sha256": "2d472f13727c3bc891e499f9fea9f2bc2219fd8ca73f64f6bfbe3acc607d3392",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Full source-native benchmark images visually reviewed; no invented captions.",
+      "reason_cn": "已核对完整官方原生评测图片；原图的替代文字与图注单独保留。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16/resolve/main/accuracy_plot.png",
+          "asset_sha256": "feecce07c67ac1ba7bf57f9d3b31bb819211b8da60f547287bdfce4376091ec4",
+          "png_size": [
+            2600,
+            1200
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/nvidia/nemotron-3-5-lightning/figure-01.png",
+          "png_sha256": "feecce07c67ac1ba7bf57f9d3b31bb819211b8da60f547287bdfce4376091ec4"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Agentic Coding Benchmarks",
+          "lead_in": "",
+          "asset_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16/resolve/main/agentic_coding_benchmarks.png",
+          "asset_sha256": "06cf5486ae94ecd7cc6f91ae3b4bae21c7435253a294cb89f54f7ec42eda8847",
+          "png_size": [
+            3000,
+            1460
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/nvidia/nemotron-3-5-lightning/figure-02.png",
+          "png_sha256": "06cf5486ae94ecd7cc6f91ae3b4bae21c7435253a294cb89f54f7ec42eda8847"
+        }
+      ]
+    },
+    {
+      "id": "tencent:hy4-preview",
+      "vendor": "tencent",
+      "title": "Hy4-preview",
+      "models": [
+        "Hy4-preview"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/Tencent-Hunyuan/Hy4-preview",
+      "source_sha256": "91e9b8ea5afbb9712c5fadfe57e2d4356a8c87fb31e40ecbf7f82458862ca8df",
+      "source_version": "2026-10-14",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Full original source assets and their labels visually reviewed. Oversized unreviewed primary Hy4 benchmark excluded; source appendix table retained.",
+      "reason_cn": "已核对完整官方原生评测图片；原图的替代文字与图注单独保留。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "table",
+          "caption": "",
+          "alt": "",
+          "lead_in": "",
+          "asset_url": "https://github.com/Tencent-Hunyuan/Hy4-preview/raw/main/assets/benchmark-appendix.jpg",
+          "asset_sha256": "02c751bf51c52c52cc02094561d7144bbfe3e27084d48d8a405d580da3554e21",
+          "png_size": [
+            4960,
+            10840
+          ],
+          "transform": "lossless_png_from_decoded_pixels",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/tencent/hy4-preview/figure-01.png",
+          "png_sha256": "6664823bdc38d31532ab29d09dd29969ea2b23e9cf45583a65cd7d9fffb15ce6"
+        }
+      ]
+    },
+    {
+      "id": "qwen:qwen3-8-max",
+      "vendor": "qwen",
+      "title": "Qwen3.8-Max",
+      "models": [
+        "Qwen3.8-Max"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://help.aliyun.com/en/model-studio/qwen3-8-max",
+      "source_sha256": "efaef9b6bfeb77889bfde174f2c45b692090e3ba1f839f61cd1f32aa8ac33453",
+      "source_version": "2026-10-14",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "No core architecture/results figures appear on the captured Aliyun model-info page. Its images are site/app/social branding; model limits and capabilities are represented as native HTML text/tables.",
+      "reason_cn": "官方模型文档以文字和 HTML 表格提供规格，本页面没有静态核心图。",
       "figures": []
     }
   ]

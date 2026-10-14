@@ -2,10 +2,12 @@
 
 [首页](../README_CN.md) · [文档类型](../README_CN.md#按类型找报告) · [英文版](model-cards.md)
 
-已收录 **59 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **61 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 厂商 | 报告 | 状态 | 官方来源 |
 | --- | --- | --- | --- | --- |
+| 2026-10-13 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Gemini 4 Argon Model Card](https://deepmind.google/models/model-cards/gemini-4-argon/) | 已归档 | [来源](https://deepmind.google/models/model-cards/gemini-4-argon/) |
+| 2026-10-06 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Nano Banana 2.1 Model Card](https://deepmind.google/models/model-cards/nano-banana-2-1/) | 已归档 | [来源](https://deepmind.google/models/model-cards/nano-banana-2-1/) |
 | 2026-09-21 | [xAI](../pdfs/xai/README_CN.md) | [Grok 4.7 Model Card](https://x.ai/safety) | 已归档 | [来源](https://x.ai/safety) |
 | 2026-08-12 | [xAI](../pdfs/xai/README_CN.md) | [Grok 4.6 Model Card](https://x.ai/safety) | 已归档 | [来源](https://x.ai/safety) |
 | 2026-07-14 | [xAI](../pdfs/xai/README_CN.md) | [Grok 4.5 Model Card](https://x.ai/safety) | 已归档 | [来源](https://x.ai/safety) |

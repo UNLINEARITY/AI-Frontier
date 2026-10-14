@@ -16,7 +16,9 @@ Read the core figure section of [agent.md](../../../agent.md). Preserve selectio
    ```sh
    uv run --with-requirements requirements-figures.txt python scripts/extract_figures.py
    ```
-   Selections must cover every report in `abstracts/index.json` exactly once. The command requires all those local source PDFs; stop to resolve missing sources or stale hashes rather than exporting unrelated/older figures.
+   Official web-only records use verified native assets from `abstracts/web-sources.json`, not PDF crops. Preserve original asset URL/checksum/dimensions, actual captions versus alt text, visual review, and any explicit display-background transform. Interactive/video-only figures are not redrawn; examples are not labeled architecture/results. See the web source rules in `agent.md`.
+
+   Selections must cover every report in `abstracts/index.json` exactly once. The command requires all selected local PDFs and recorded web snapshots/assets; stop to resolve missing sources or stale hashes rather than exporting unrelated/older figures.
 5. Inspect the resulting PNGs, then regenerate unified reading Markdown:
    ```sh
    uv run --with-requirements requirements-abstracts.txt python scripts/extract_abstracts.py --render-only

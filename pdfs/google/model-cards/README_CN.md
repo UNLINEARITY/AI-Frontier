@@ -2,10 +2,12 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已收录 **32 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **34 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
+| 2026-10-13 | [Gemini 4 Argon Model Card](https://deepmind.google/models/model-cards/gemini-4-argon/) | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://deepmind.google/models/model-cards/gemini-4-argon/) |
+| 2026-10-06 | [Nano Banana 2.1 Model Card](https://deepmind.google/models/model-cards/nano-banana-2-1/) | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://deepmind.google/models/model-cards/nano-banana-2-1/) |
 | 未确认 | [Veo 3.1 Lite Model Card](https://deepmind.google/models/model-cards/veo-3-1-lite/) | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://deepmind.google/models/model-cards/veo-3-1-lite/) |
 | 未确认 | [Veo 3 Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf) | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf) |
 | 未确认 | TxGemma Model Card（待补齐） | [模型卡](../../../reports/model-cards_CN.md) | [来源](https://developers.google.com/health-ai-developer-foundations/txgemma/model-card) |

@@ -2,14 +2,16 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**9 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**11 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
 | 2026-04-22 | [Seed3D 2.0: Advancing High-Fidelity Simulation-Ready 3D Content Generation](https://seed.bytedance.com/en/seed3d_2_0) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://seed.bytedance.com/en/seed3d_2_0) |
 | 2026-04-15 | [Seedance 2.0: Advancing Video Generation for World Complexity](https://seed.bytedance.com/en/research) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://seed.bytedance.com/en/research) |
+| 2025-12-01 | [GR-RL: Going Dexterous and Precise for Long-Horizon Robotic Manipulation](https://arxiv.org/abs/2512.01801) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2512.01801) |
 | 2025-09-24 | [Seedream 4.0: Toward Next-generation Multimodal Image Generation](https://arxiv.org/abs/2509.20427) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2509.20427) |
 | 2025-08-04 | [Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference](https://seed.bytedance.com/en/seed_model_portfolio) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://seed.bytedance.com/en/seed_model_portfolio) |
+| 2025-07-21 | [GR-3 Technical Report](https://arxiv.org/abs/2507.15493) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2507.15493) |
 | 2025-06-10 | [Seedance 1.0: Exploring the Boundaries of Video Generation Models](https://arxiv.org/abs/2506.09113) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2506.09113) |
 | 2025-05-11 | [Seed1.5-VL Technical Report](https://seed.bytedance.com/en/seed_model_portfolio) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://seed.bytedance.com/en/seed_model_portfolio) |
 | 2025-04-15 | [Seedream 3.0 Technical Report](https://arxiv.org/abs/2504.11346) | [Technical Report](../../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2504.11346) |

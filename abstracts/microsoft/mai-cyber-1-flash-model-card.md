@@ -5,3 +5,7 @@
 ## 1. Model overview
 
 MAI-Cyber-1-Flash is Microsoft’s specialized cyber defense model with 5 billion active parameters, built for agentic security workflows. Developed using real-world executable security environments, the model helps organizations identify, prioritize, and remediate vulnerabilities across modern codebases at enterprise scale within codename MDASH.
+
+![Table](../../figures/microsoft/mai-cyber-1-flash-model-card/figure-01.png)
+
+p. 5

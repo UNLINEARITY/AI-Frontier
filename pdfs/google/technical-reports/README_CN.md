@@ -2,16 +2,18 @@
 
 [首页](../../../README_CN.md) · [厂商目录](../README_CN.md) · [英文版](README.md)
 
-已收录 **39 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **41 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 报告 | 类型 | 官方来源 |
 | --- | --- | --- | --- |
 | 2026-09-03 | [WeatherNext 3: Increasing Resolution and Performance of Global Weather Models with Raw Observations](https://arxiv.org/abs/2609.03582) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2609.03582) |
+| 2026-07-29 | [Gemini Robotics 2: Safety Evaluations](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
 | 2026-07-02 | [Gemma 4 Technical Report](https://arxiv.org/abs/2607.02770) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.02770) |
 | 2026-05-26 | [Gemini Embedding 2: A Native Multimodal Embedding Model from Gemini](https://arxiv.org/abs/2605.27295) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.27295) |
 | 2026-04-06 | [MedGemma 1.5 Technical Report](https://arxiv.org/abs/2604.05081) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2604.05081) |
 | 2026-01-13 | [TranslateGemma Technical Report](https://arxiv.org/abs/2601.09012) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2601.09012) |
 | 2025-12-16 | [T5Gemma 2: Seeing, Reading, and Understanding Longer](https://deepmind.google/models/gemma/t5gemma/) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://deepmind.google/models/gemma/t5gemma/) |
+| 2025-12-04 | [SIMA 2: A Generalist Embodied Agent for Virtual Worlds](https://arxiv.org/abs/2512.04797) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.04797) |
 | 2025-09-24 | [EmbeddingGemma: Powerful and Lightweight Text Representations](https://arxiv.org/abs/2509.20354) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2509.20354) |
 | 2025-07-07 | [MedGemma Technical Report](https://arxiv.org/abs/2507.05201) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2507.05201) |
 | 2025-07-07 | [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](https://arxiv.org/abs/2507.06261) | [技术报告](../../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2507.06261) |

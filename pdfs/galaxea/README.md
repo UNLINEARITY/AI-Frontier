@@ -8,7 +8,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 
 | Type | Reports |
 | --- | ---: |
-| [Technical Report](technical-reports/README.md) | 0 |
+| [Technical Report](technical-reports/README.md) | 1 |
 | [Model Card](model-cards/README.md) | 0 |
 | [System Card](system-cards/README.md) | 0 |
 
@@ -16,5 +16,6 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-08-12 | [G0.5: One Autoregressive Stream for Robot Reasoning and Action](https://arxiv.org/abs/2608.11739) | [Technical Report](../../reports/technical-reports.md) | [Source](https://arxiv.org/abs/2608.11739) |
 
 Archive versions, checksums, retrieval times, and revision dates: [catalog.csv](../../catalog.csv).

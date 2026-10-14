@@ -2,10 +2,12 @@
 
 [All reports](../README.md) · [Document types](../README.md#choose-the-right-document) · [Chinese](model-cards_CN.md)
 
-**59 reports**. Listed by recorded first publication date, newest first; unknown dates appear last.
+**61 reports**. Listed by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Publisher | Report | Status | Official source |
 | --- | --- | --- | --- | --- |
+| 2026-10-13 | [Google / DeepMind](../pdfs/google/README.md) | [Gemini 4 Argon Model Card](https://deepmind.google/models/model-cards/gemini-4-argon/) | archived | [Source](https://deepmind.google/models/model-cards/gemini-4-argon/) |
+| 2026-10-06 | [Google / DeepMind](../pdfs/google/README.md) | [Nano Banana 2.1 Model Card](https://deepmind.google/models/model-cards/nano-banana-2-1/) | archived | [Source](https://deepmind.google/models/model-cards/nano-banana-2-1/) |
 | 2026-09-21 | [xAI](../pdfs/xai/README.md) | [Grok 4.7 Model Card](https://x.ai/safety) | archived | [Source](https://x.ai/safety) |
 | 2026-08-12 | [xAI](../pdfs/xai/README.md) | [Grok 4.6 Model Card](https://x.ai/safety) | archived | [Source](https://x.ai/safety) |
 | 2026-07-14 | [xAI](../pdfs/xai/README.md) | [Grok 4.5 Model Card](https://x.ai/safety) | archived | [Source](https://x.ai/safety) |

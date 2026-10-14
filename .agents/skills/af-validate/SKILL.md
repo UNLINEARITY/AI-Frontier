@@ -11,7 +11,7 @@ Read [AGENTS.md](../../../AGENTS.md). Use the read-only helper to catch metadata
 python .agents/skills/af-validate/scripts/check_project.py
 ```
 
-Default checks do not require PDFs. Add `--local-pdfs` only when the complete local catalog/crop set is intended to be present; otherwise restore the scoped sources needed for extraction. A clean clone's missing ignored PDFs are not corrupt public artifacts.
+Default checks do not require PDFs or ignored web captures. Web records and native assets remain checked against their registered provenance; when captures exist, their bytes and visible source text are also verified. Add `--local-pdfs` only when the complete local catalog/crop set is intended to be present; otherwise restore the scoped sources needed for extraction. A clean clone's missing ignored PDFs are not corrupt public artifacts.
 
 Regenerate only affected documents: source/model changes require the archive renderer; figure/reading changes require abstracts `--render-only`. Do not re-extract or export unchanged sources merely to update layout.
 

@@ -2,10 +2,11 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**35 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**36 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
+| 2026-10-07 | [GPT-6 Sol and GPT-6 Luna: October 2026 update](https://deploymentsafety.openai.com/gpt-6-october) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-6-october) |
 | 2026-09-29 | [Addendum to GPT-6 Astra System Card: GPT-6.1 Sol](https://deploymentsafety.openai.com/gpt-6-1-sol) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-6-1-sol) |
 | 2026-09-08 | [ChatGPT Images 2.5 System Card](https://deploymentsafety.openai.com/chatgpt-images-2-5) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/chatgpt-images-2-5) |
 | 2026-09-03 | [GPT-6 Astra System Card](https://deploymentsafety.openai.com/gpt-6-astra) | [System Card](../../../reports/system-cards.md) | [Source](https://deploymentsafety.openai.com/gpt-6-astra) |

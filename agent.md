@@ -23,6 +23,9 @@ The research scope also covers embodied AI from both existing frontier labs and 
 | Task identifier | Include | Boundary |
 | --- | --- | --- |
 | `robotics` | VLA, learned robot policies, manipulation, navigation, locomotion, whole-body control | A robot hardware generation is not a model version; identify the policy and embodiment separately |
+| `navigation` | Learned robot navigation models and policies | Navigation stacks, maps and benchmarks are not independently model releases |
+| `manipulation` | Learned grasping, dexterous and bimanual manipulation | Keep specialist policies separate from general VLA successor claims |
+| `virtual_agent` | Agents acting in games and other virtual environments | Do not imply physical robot deployment from virtual evaluation |
 | `embodied_reasoning` | Spatial reasoning, task planning, grounding, recovery, human–robot interaction | Require explicit embodied tasks/evidence; general VLM capability alone is insufficient |
 | `world` | Learned world models, action-conditioned prediction, embodied world simulators | Video generation alone does not imply a world model; conventional simulators are not learned model releases |
 
@@ -35,6 +38,7 @@ Official specialist starting points (not a complete inventory):
 | `skild` | [Research blog](https://skild.ai/blogs) |
 | `agibot` | [Official repositories](https://github.com/AgibotTech), model-specific author project pages linked there |
 | `galaxea` | [GalaxeaVLA](https://github.com/OpenGalaxea/GalaxeaVLA), author project pages linked there |
+| `generalist` | [Research blog](https://generalistai.com/blog), model-specific technical introductions |
 
 Also review relevant families under existing publishers, including Gemini Robotics/RT/PaLM-E, GR00T/Cosmos, Qwen robotics, and other officially documented robot/world models. These are discovery leads, not assertions of current version or completeness. Extend the publisher vocabulary only after verifying the institution's official model/report provenance. Do not require or invent a publisher logo to add coverage.
 
@@ -183,11 +187,21 @@ The generated site includes only pages, styles, scripts, and the existing projec
 
 `abstracts/` is a source-passage layer for currently selected frontier reports. `index.json` is the structured record; report Markdown retains original-language source text and the actual section heading. Separate English and Chinese indexes share the original passages. Do not call an Overview, Description, Introduction, or unlabelled opening paragraph an author-labelled Abstract. Missing PDFs and reports without an identified summary remain explicit.
 
+Previously extracted PDF readers remain source-bound archive readers after their model leaves the current selection. `reader_scope: historical` preserves the reader URL for report-archive cards while excluding that document from the current abstracts navigation. Re-extraction still requires its exact catalog PDF; do not discard an existing reader merely because the latest model changed.
+
 Run `uv run --with-requirements requirements-abstracts.txt python scripts/extract_abstracts.py`. The script deduplicates family reports, selects the current archived revision, checks the PDF SHA-256, and scans up to 12 pages with pinned pdfminer.six and pypdf versions. Native extracts and layout data are cached locally by source hash, extractor versions, and page limit. It never generates summaries or calls an LLM/OCR service. Use OCR only when native extraction is unusable, and keep that method and its review status explicit. Test with `uv run --with-requirements requirements-abstracts.txt python -m unittest discover -s tests`.
 
 `cross_checked` means selected text agrees between independent extractors under documented comparison normalization; it does not mean human verification or guaranteed section semantics. Published prose only normalizes whitespace and preserves source characters; `raw_text` retains original line breaks. Comparison normalization expands Unicode ligatures and accounts for line-wrap hyphens without changing published text. Section selection excludes contents pages, captions, margin stamps, and small-print footnotes. Flag unmatched text or uncertain section endings; never silently repair numbers or symbols.
 
+The independent comparison first checks literal glyph order after Unicode/whitespace normalization, then the existing line-wrap normalization. Word-positioned PDFs may introduce a newline after a genuine hyphen; literal agreement preserves that glyph instead of treating it as an invented mismatch. Numbers, signs and published prose are unchanged.
+
 `abstracts/reviews.json` contains source-bound visual checks for exceptional extraction order. Reviews are tied to the exact PDF checksum, extractor, page, text offsets, and raw-text checksum. Alternate text must preserve the normalized character inventory, with reading order checked against the rendered source page. A changed source or extraction invalidates the review. Preserve the initial disagreement metadata and distinguish `source_reviewed` from automatically cross-checked output. This layer is not a full-document Markdown conversion or technical analysis; the public indexes and Pages cards link to source summaries and core figures.
+
+Official web-only model introductions use `abstracts/web-sources.json` as their curated input and the same `abstracts/index.json` reader output. Records explicitly use `source_kind: html`, a null `source_pdf`/`document_type`, the capture URL/date/HTML checksum, exact visible paragraphs with locators, and an independent source review. They are not registered as invented PDF reports. Keep snapshots and original downloaded assets under ignored `.cache/web-overviews/`; extraction verifies their exact bytes and native visible text, excluding scripts and hidden accessibility helpers. A fresh clone builds from reviewed records and published PNGs without those captures. Re-extraction requires the recorded snapshots/assets; changed live pages need a new capture and review, not silently reused provenance.
+
+Web assets retain their official URL, original asset checksum, native dimensions, visual review, caption-versus-alt distinction, and output checksum in the existing figure manifests. Copy native PNG bytes or encode decoded JPEG pixels losslessly as PNG. For transparent white-label assets, explicit source-appropriate background compositing is allowed for legibility and must be recorded as a display transform; preserve original bytes locally. Never redraw interactive charts, invent captions, or substitute a video poster for architecture/results. Where no useful native static figure was captured, retain the limitation in JSON and leave the official page accessible.
+
+Decode native JPEG/WebP assets to PNG without upscaling; preserve the original input bytes and record the transform. Verify relative image URLs against their source origin and pin the exact asset referenced by the saved capture, including Next image original-path references. Do not substitute another CDN size or deployment filename just because the chart looks similar. Exclude assets beyond decoder safety limits; never disable those limits to force publication.
 
 
 ## Core figures

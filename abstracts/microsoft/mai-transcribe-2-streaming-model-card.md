@@ -8,6 +8,4 @@ MAI-Transcribe-2-Streaming is a low-latency streaming speech recognition model b
 
 ![Figure](../../figures/microsoft/mai-transcribe-2-streaming-model-card/figure-01.png)
 
-
-
 p. 2

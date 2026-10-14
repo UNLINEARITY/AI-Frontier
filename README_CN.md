@@ -10,7 +10,7 @@
 
 一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。覆盖语言与多模态模型、机器人与 VLA、具身推理以及世界模型。我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，并逐步推进可读原文、基于来源的技术分析与模型发布追踪。
 
-**385 份报告 · 23 家厂商 · 2022 年起**
+**401 份报告 · 24 家厂商 · 2022 年起**
 
 **当前已提供：**官方报告索引、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。
 
@@ -22,9 +22,9 @@
 
 | 类型 | 主要对象 | 重点 | 常见内容 | 报告数量 |
 | --- | --- | --- | --- | ---: |
-| [Technical Report](reports/technical-reports_CN.md) | 模型/训练方法 | 技术实现与实验 | 架构、数据、训练、后训练、推理、benchmark | 268 |
-| [Model Card](reports/model-cards_CN.md) | 单个模型 | 模型说明与使用边界 | 能力、限制、适用场景、不适用场景、评测、安全信息 | 59 |
-| [System Card](reports/system-cards_CN.md) | 完整产品/系统 | 风险、安全、部署表现 | red teaming、危险能力评估、越狱、安全 mitigations、部署限制 | 58 |
+| [Technical Report](reports/technical-reports_CN.md) | 模型/训练方法 | 技术实现与实验 | 架构、数据、训练、后训练、推理、benchmark | 279 |
+| [Model Card](reports/model-cards_CN.md) | 单个模型 | 模型说明与使用边界 | 能力、限制、适用场景、不适用场景、评测、安全信息 | 61 |
+| [System Card](reports/system-cards_CN.md) | 完整产品/系统 | 风险、安全、部署表现 | red teaming、危险能力评估、越狱、安全 mitigations、部署限制 | 61 |
 
 这是常见区分，文档内容可能交叉，也可能覆盖整个模型家族；分类以官方命名与文档主要用途为准。
 
@@ -36,9 +36,9 @@
 
 | 厂商 | 技术报告 | 模型卡 | 系统卡 | 报告总数 |
 | --- | ---: | ---: | ---: | ---: |
-| [OpenAI](pdfs/openai/README_CN.md) | [6](pdfs/openai/technical-reports/README_CN.md) | [1](pdfs/openai/model-cards/README_CN.md) | [35](pdfs/openai/system-cards/README_CN.md) | 42 |
-| [Anthropic](pdfs/anthropic/README_CN.md) | [0](pdfs/anthropic/technical-reports/README_CN.md) | [5](pdfs/anthropic/model-cards/README_CN.md) | [17](pdfs/anthropic/system-cards/README_CN.md) | 22 |
-| [Google / DeepMind](pdfs/google/README_CN.md) | [39](pdfs/google/technical-reports/README_CN.md) | [32](pdfs/google/model-cards/README_CN.md) | [0](pdfs/google/system-cards/README_CN.md) | 71 |
+| [OpenAI](pdfs/openai/README_CN.md) | [6](pdfs/openai/technical-reports/README_CN.md) | [1](pdfs/openai/model-cards/README_CN.md) | [36](pdfs/openai/system-cards/README_CN.md) | 43 |
+| [Anthropic](pdfs/anthropic/README_CN.md) | [0](pdfs/anthropic/technical-reports/README_CN.md) | [5](pdfs/anthropic/model-cards/README_CN.md) | [18](pdfs/anthropic/system-cards/README_CN.md) | 23 |
+| [Google / DeepMind](pdfs/google/README_CN.md) | [41](pdfs/google/technical-reports/README_CN.md) | [34](pdfs/google/model-cards/README_CN.md) | [1](pdfs/google/system-cards/README_CN.md) | 76 |
 | [Meta](pdfs/meta/README_CN.md) | [28](pdfs/meta/technical-reports/README_CN.md) | [0](pdfs/meta/model-cards/README_CN.md) | [2](pdfs/meta/system-cards/README_CN.md) | 30 |
 | [xAI](pdfs/xai/README_CN.md) | [0](pdfs/xai/technical-reports/README_CN.md) | [7](pdfs/xai/model-cards/README_CN.md) | [1](pdfs/xai/system-cards/README_CN.md) | 8 |
 | [Mistral AI](pdfs/mistral/README_CN.md) | [11](pdfs/mistral/technical-reports/README_CN.md) | [0](pdfs/mistral/model-cards/README_CN.md) | [0](pdfs/mistral/system-cards/README_CN.md) | 11 |
@@ -49,16 +49,17 @@
 | [智谱 / Z.ai](pdfs/zai/README_CN.md) | [18](pdfs/zai/technical-reports/README_CN.md) | [0](pdfs/zai/model-cards/README_CN.md) | [0](pdfs/zai/system-cards/README_CN.md) | 18 |
 | [MiniMax](pdfs/minimax/README_CN.md) | [6](pdfs/minimax/technical-reports/README_CN.md) | [0](pdfs/minimax/model-cards/README_CN.md) | [0](pdfs/minimax/system-cards/README_CN.md) | 6 |
 | [StepFun](pdfs/stepfun/README_CN.md) | [18](pdfs/stepfun/technical-reports/README_CN.md) | [0](pdfs/stepfun/model-cards/README_CN.md) | [0](pdfs/stepfun/system-cards/README_CN.md) | 18 |
-| [Tencent / Hunyuan](pdfs/tencent/README_CN.md) | [15](pdfs/tencent/technical-reports/README_CN.md) | [0](pdfs/tencent/model-cards/README_CN.md) | [0](pdfs/tencent/system-cards/README_CN.md) | 15 |
-| [ByteDance / Seed](pdfs/bytedance/README_CN.md) | [9](pdfs/bytedance/technical-reports/README_CN.md) | [4](pdfs/bytedance/model-cards/README_CN.md) | [0](pdfs/bytedance/system-cards/README_CN.md) | 13 |
+| [Tencent / Hunyuan](pdfs/tencent/README_CN.md) | [16](pdfs/tencent/technical-reports/README_CN.md) | [0](pdfs/tencent/model-cards/README_CN.md) | [0](pdfs/tencent/system-cards/README_CN.md) | 16 |
+| [ByteDance / Seed](pdfs/bytedance/README_CN.md) | [11](pdfs/bytedance/technical-reports/README_CN.md) | [4](pdfs/bytedance/model-cards/README_CN.md) | [0](pdfs/bytedance/system-cards/README_CN.md) | 15 |
 | [Cohere](pdfs/cohere/README_CN.md) | [8](pdfs/cohere/technical-reports/README_CN.md) | [0](pdfs/cohere/model-cards/README_CN.md) | [0](pdfs/cohere/system-cards/README_CN.md) | 8 |
-| [Microsoft / Phi / MAI](pdfs/microsoft/README_CN.md) | [9](pdfs/microsoft/technical-reports/README_CN.md) | [8](pdfs/microsoft/model-cards/README_CN.md) | [0](pdfs/microsoft/system-cards/README_CN.md) | 17 |
+| [Microsoft / Phi / MAI](pdfs/microsoft/README_CN.md) | [10](pdfs/microsoft/technical-reports/README_CN.md) | [8](pdfs/microsoft/model-cards/README_CN.md) | [0](pdfs/microsoft/system-cards/README_CN.md) | 18 |
 | [Amazon / Nova](pdfs/amazon/README_CN.md) | [4](pdfs/amazon/technical-reports/README_CN.md) | [0](pdfs/amazon/model-cards/README_CN.md) | [3](pdfs/amazon/system-cards/README_CN.md) | 7 |
-| [Physical Intelligence](pdfs/physical_intelligence/README_CN.md) | [0](pdfs/physical_intelligence/technical-reports/README_CN.md) | [0](pdfs/physical_intelligence/model-cards/README_CN.md) | [0](pdfs/physical_intelligence/system-cards/README_CN.md) | 0 |
+| [Physical Intelligence](pdfs/physical_intelligence/README_CN.md) | [1](pdfs/physical_intelligence/technical-reports/README_CN.md) | [0](pdfs/physical_intelligence/model-cards/README_CN.md) | [0](pdfs/physical_intelligence/system-cards/README_CN.md) | 1 |
 | [Figure AI](pdfs/figure/README_CN.md) | [0](pdfs/figure/technical-reports/README_CN.md) | [0](pdfs/figure/model-cards/README_CN.md) | [0](pdfs/figure/system-cards/README_CN.md) | 0 |
 | [Skild AI](pdfs/skild/README_CN.md) | [0](pdfs/skild/technical-reports/README_CN.md) | [0](pdfs/skild/model-cards/README_CN.md) | [0](pdfs/skild/system-cards/README_CN.md) | 0 |
-| [AgiBot](pdfs/agibot/README_CN.md) | [0](pdfs/agibot/technical-reports/README_CN.md) | [0](pdfs/agibot/model-cards/README_CN.md) | [0](pdfs/agibot/system-cards/README_CN.md) | 0 |
-| [Galaxea AI](pdfs/galaxea/README_CN.md) | [0](pdfs/galaxea/technical-reports/README_CN.md) | [0](pdfs/galaxea/model-cards/README_CN.md) | [0](pdfs/galaxea/system-cards/README_CN.md) | 0 |
+| [AgiBot](pdfs/agibot/README_CN.md) | [3](pdfs/agibot/technical-reports/README_CN.md) | [0](pdfs/agibot/model-cards/README_CN.md) | [0](pdfs/agibot/system-cards/README_CN.md) | 3 |
+| [Galaxea AI](pdfs/galaxea/README_CN.md) | [1](pdfs/galaxea/technical-reports/README_CN.md) | [0](pdfs/galaxea/model-cards/README_CN.md) | [0](pdfs/galaxea/system-cards/README_CN.md) | 1 |
+| [Generalist AI](pdfs/generalist/README_CN.md) | [0](pdfs/generalist/technical-reports/README_CN.md) | [0](pdfs/generalist/model-cards/README_CN.md) | [0](pdfs/generalist/system-cards/README_CN.md) | 0 |
 
 ## 为什么值得持续关注？
 
