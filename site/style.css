@@ -578,14 +578,16 @@ body:has(.reader) .header-inner { max-width: 1000px; }
 .reader-back { display: inline-block; color: var(--muted); font-size: var(--step-small); margin-bottom: clamp(24px, 4vw, 56px); }
 .reader-back:hover { color: var(--accent); }
 
+@property --measure { syntax: "<length>"; inherits: true; initial-value: 0px; }
+.reader { --measure: 85ch; }
 .markdown-body { overflow-wrap: anywhere; }
 .markdown-body h1 { font-size: clamp(1.9rem, 3.4vw, 3.1rem); line-height: 1.06; letter-spacing: -0.04em; margin-bottom: 18px; max-width: 26ch; }
 .markdown-body h2 { font-size: var(--step-small); font-weight: 500; color: var(--muted); margin: 40px 0 12px; letter-spacing: 0.01em; }
-.markdown-body p { font-size: var(--step-body); line-height: 1.62; margin: 0 0 18px; max-width: 68ch; }
+.markdown-body p { font-size: var(--step-body); line-height: 1.62; margin: 0 0 18px; max-width: var(--measure); }
 .markdown-body h1 + p { font-size: var(--step-small); margin-bottom: 34px; }
 .markdown-body a { color: var(--accent); }
 .markdown-body a:hover { text-decoration: underline; }
-.markdown-body p:has(> .inline-image) { margin: 34px 0 12px; max-width: none; }
+.markdown-body p:has(> .inline-image) { margin: 34px 0 12px; max-width: var(--measure); }
 .inline-image { display: block; cursor: zoom-in; background: #fff; }
 .inline-image img { display: block; width: 100%; height: auto; }
 .markdown-body p:has(> .inline-image) + p { font-size: var(--step-small); line-height: 1.55; color: var(--muted); margin-bottom: 6px; }
