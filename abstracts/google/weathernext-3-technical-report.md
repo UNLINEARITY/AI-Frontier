@@ -12,6 +12,6 @@ p. 2
 
 ![Figure 2](../../figures/google/weathernext-3-technical-report/figure-02.png)
 
-Figure 2 | Analysis results. (a) Upper-level CRPS scorecard comparing WN3 to the previous state- of-the-art model WN2 at 0.25◦. Blue squares indicate improvement. (b) Single-level variable CRPS scorecard of WN2 vs WN3 evaluated at 0.1◦. WN2 forecasts were interpolated bilinearly. (c) Scorecard of variables not in WN2 against ECMWF ENS at 0.1◦. The ground truth for (a), (b) and (c) is HRES-fc0. All scores computed for 00/12 UTC initializations in 2024.
+Figure 2 | Analysis results. (a) Upper-level CRPS scorecard comparing WN3 to the previous state-of-the-art model WN2 at 0.25◦. Blue squares indicate improvement. (b) Single-level variable CRPS scorecard of WN2 vs WN3 evaluated at 0.1◦. WN2 forecasts were interpolated bilinearly. (c) Scorecard of variables not in WN2 against ECMWF ENS at 0.1◦. The ground truth for (a), (b) and (c) is HRES-fc0. All scores computed for 00/12 UTC initializations in 2024.
 
 p. 11

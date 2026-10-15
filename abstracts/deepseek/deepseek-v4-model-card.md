@@ -4,7 +4,7 @@
 
 ## Model architecture
 
-DeepSeek V4 is a Mixture-of-Experts (MoE) language model series that retains the DeepSeekMoE framework and Multi- Token Prediction (MTP) strategy from DeepSeek-V3, while introducing several key architectural innovations:
+DeepSeek V4 is a Mixture-of-Experts (MoE) language model series that retains the DeepSeekMoE framework and Multi-Token Prediction (MTP) strategy from DeepSeek-V3, while introducing several key architectural innovations:
 
 (1) Hybrid Attention Architecture: combines Compressed Sparse Attention (CSA) and Heavily Compressed Attention (HCA) to dramatically improve long-context efficiency. CSA compresses KV caches along the sequence dimensionand applies DeepSeek Sparse Attention (DSA); HCA applies heavier compressionwith dense attention.
 

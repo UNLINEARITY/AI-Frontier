@@ -16,7 +16,7 @@ In this work, we introduce Segment Anything Model Audio (SAM Audio), a foundatio
 
 Contributions. Our main contributions are threefold.
 
-• We propose SAM Audio, the first foundation model that supports multimodal prompting (text, visual, span) – used either individually or in combination, for open-domain audio separation, achieving state- of-the-art results for both in-the-wild and professional audios of general and specialized domains (e.g., speech, music).
+• We propose SAM Audio, the first foundation model that supports multimodal prompting (text, visual, span) – used either individually or in combination, for open-domain audio separation, achieving state-of-the-art results for both in-the-wild and professional audios of general and specialized domains (e.g., speech, music).
 
 • We introduce span prompting, a novel form of temporal conditioning that enables precise frame-level control for audio separation.
 

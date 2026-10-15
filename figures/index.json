@@ -1555,7 +1555,7 @@
           "page": 1,
           "figure_number": "1",
           "role": "results",
-          "caption": "Figure 1: Voxtral Realtime approaches offline accuracy at sub-second latency. Macro-average word error-\nrate (WER) vs. delay on the FLEURS multilingual benchmark for realtime and offline models. Lower is better.\nAt 480 ms delay, Voxtral Realtime is competitive with Scribe v2 Realtime, the leading realtime API model,\nas well as Whisper, the most popular open-source offline model. It surpasses both baselines at 960 ms delay,\napproaching the performance of Voxtral Mini Transcribe V2, a state-of-the-art offline transcription model.",
+          "caption": "Figure 1: Voxtral Realtime approaches offline accuracy at sub-second latency. Macro-average word error-rate (WER) vs. delay on the FLEURS multilingual benchmark for realtime and offline models. Lower is better.\nAt 480 ms delay, Voxtral Realtime is competitive with Scribe v2 Realtime, the leading realtime API model,\nas well as Whisper, the most popular open-source offline model. It surpasses both baselines at 960 ms delay,\napproaching the performance of Voxtral Mini Transcribe V2, a state-of-the-art offline transcription model.",
           "bbox": [
             104.68,
             449,
@@ -1648,7 +1648,7 @@
           "page": 2,
           "figure_number": "1",
           "role": "architecture",
-          "caption": "Figure 1: Shieldstral architecture. An instruction, a natural-language query, and content (text, image, or both)\nare composed into a structured prompt, then processed by the model in a single forward pass. The softmax-\nnormalised logits of the “yes” and “no” tokens yield a continuous safety score that is thresholded for binary\nclassification.",
+          "caption": "Figure 1: Shieldstral architecture. An instruction, a natural-language query, and content (text, image, or both)\nare composed into a structured prompt, then processed by the model in a single forward pass. The softmax-normalised logits of the “yes” and “no” tokens yield a continuous safety score that is thresholded for binary\nclassification.",
           "bbox": [
             105.0,
             69,
@@ -2114,7 +2114,7 @@
           "page": 1,
           "figure_number": 1,
           "role": "results",
-          "caption": "Figure 1 | (a) Performance of DeepSeek-V4.1-Flash and its counterparts on agentic benchmarks.\n(b) Global KV cache size per token (in bytes) across generations of DeepSeek models, highlight-\ning DeepSeek’s sustained efforts to reduce context memory requirements. DeepSeek-V4.1-Flash\nachieves approximately 4-fold and 437-fold reductions in per-token global KV cache size relative\nto DeepSeek-V4-Flash and DeepSeek-V1, respectively.",
+          "caption": "Figure 1 | (a) Performance of DeepSeek-V4.1-Flash and its counterparts on agentic benchmarks.\n(b) Global KV cache size per token (in bytes) across generations of DeepSeek models, highlighting DeepSeek’s sustained efforts to reduce context memory requirements. DeepSeek-V4.1-Flash\nachieves approximately 4-fold and 437-fold reductions in per-token global KV cache size relative\nto DeepSeek-V4-Flash and DeepSeek-V1, respectively.",
           "bbox": [
             67.51,
             507.13,
@@ -3904,7 +3904,7 @@
           "page": 2,
           "figure_number": 1,
           "role": "overview",
-          "caption": "Figure 1: Overview of Qwen-Audio-3.0-ASR and its production-oriented capabilities. The system\nsupports multilingual and dialectal recognition, low-latency streaming, domain entity recognition,\nlong-audio contextual modeling, hierarchical hotword customization, and native single-pass tran-\nscription polishing. The central ring highlights four system-level properties: instruction-controlled\ndecoding, context awareness, native single-pass generation, and low latency.",
+          "caption": "Figure 1: Overview of Qwen-Audio-3.0-ASR and its production-oriented capabilities. The system\nsupports multilingual and dialectal recognition, low-latency streaming, domain entity recognition,\nlong-audio contextual modeling, hierarchical hotword customization, and native single-pass transcription polishing. The central ring highlights four system-level properties: instruction-controlled\ndecoding, context awareness, native single-pass generation, and low latency.",
           "bbox": [
             105.0,
             69.0,
@@ -3994,7 +3994,7 @@
           "page": 1,
           "figure_number": 1,
           "role": "results",
-          "caption": "Figure 1: Performance of Kimi-Audio and previous audio langauge models including Qwen2-Audio [11], Baichuan-\nAudio [41], Step-Audio [28], and Qwen2.5-Omni [73] on various benchmarks.",
+          "caption": "Figure 1: Performance of Kimi-Audio and previous audio langauge models including Qwen2-Audio [11], Baichuan-Audio [41], Step-Audio [28], and Qwen2.5-Omni [73] on various benchmarks.",
           "bbox": [
             65.0,
             428.0,
@@ -4623,7 +4623,7 @@
           "page": 4,
           "figure_number": 2,
           "role": "overview",
-          "caption": "Figure 2: Overview of StepAudio 3 Music. Lyrics, a text prompt, and optional task-speciﬁc references are serialized for a\ntrainable Mixture-of-Experts autoregressive model. In ABC-CoT mode, the model ﬁrst produces an explicit arrangement plan and\nthen predicts a 50-Hz sequence from a 65536-entry single codebook. A separately trained renderer generates 50-Hz StepAudio VAE\nlatents with a ﬂow-matching DiT and decodes them into 48-kHz waveform audio. The renderer is held ﬁxed during autoregressive-\nmodel training.",
+          "caption": "Figure 2: Overview of StepAudio 3 Music. Lyrics, a text prompt, and optional task-speciﬁc references are serialized for a\ntrainable Mixture-of-Experts autoregressive model. In ABC-CoT mode, the model ﬁrst produces an explicit arrangement plan and\nthen predicts a 50-Hz sequence from a 65536-entry single codebook. A separately trained renderer generates 50-Hz StepAudio VAE\nlatents with a ﬂow-matching DiT and decodes them into 48-kHz waveform audio. The renderer is held ﬁxed during autoregressive-model training.",
           "bbox": [
             69.0,
             69.0,
@@ -4859,7 +4859,7 @@
           "page": 1,
           "figure_number": 1,
           "role": "results",
-          "caption": "Figure 1 WeVisDoc-4B leads the compared end-to-end parsers across all four reported settings. Bars show\nscores on OmniDocBench v1.6 and the three PureDocBench robustness tracks; WeVisDoc-2B delivers top-tier end-to-\nend performance at half the parameter count.",
+          "caption": "Figure 1 WeVisDoc-4B leads the compared end-to-end parsers across all four reported settings. Bars show\nscores on OmniDocBench v1.6 and the three PureDocBench robustness tracks; WeVisDoc-2B delivers top-tier end-to-end performance at half the parameter count.",
           "bbox": [
             67.87,
             547.0,
@@ -5589,7 +5589,7 @@
           "page": 11,
           "figure_number": "2",
           "role": "results",
-          "caption": "Figure 2 | Analysis results. (a) Upper-level CRPS scorecard comparing WN3 to the previous state-\nof-the-art model WN2 at 0.25◦. Blue squares indicate improvement. (b) Single-level variable CRPS\nscorecard of WN2 vs WN3 evaluated at 0.1◦. WN2 forecasts were interpolated bilinearly. (c) Scorecard\nof variables not in WN2 against ECMWF ENS at 0.1◦. The ground truth for (a), (b) and (c) is HRES-fc0.\nAll scores computed for 00/12 UTC initializations in 2024.",
+          "caption": "Figure 2 | Analysis results. (a) Upper-level CRPS scorecard comparing WN3 to the previous state-of-the-art model WN2 at 0.25◦. Blue squares indicate improvement. (b) Single-level variable CRPS\nscorecard of WN2 vs WN3 evaluated at 0.1◦. WN2 forecasts were interpolated bilinearly. (c) Scorecard\nof variables not in WN2 against ECMWF ENS at 0.1◦. The ground truth for (a), (b) and (c) is HRES-fc0.\nAll scores computed for 00/12 UTC initializations in 2024.",
           "bbox": [
             60,
             70,
@@ -6821,7 +6821,7 @@
           "page": 11,
           "figure_number": "3",
           "role": "architecture",
-          "caption": "Figure 3: Overview of QWEN-ROBOTMANIP. The model couples a Qwen-VL backbone with a flow- matching Diffusion Transformer (DiT) action head. The backbone jointly encodes multi-view visual tokens, structured embodiment prompts, and historical context tokens, with last-layer hidden states injected into the DiT via alternating cross-attention. States and actions share a unified 80-dimensional canonical representation, with end-effector actions expressed as camera-frame delta poses to align the action space with visual observations across embodiments, conditioned on camera and end-effector type embeddings for embodiment-aware denoising. VLM co-training and VLA training use separate batches, where each batch contains either (Vision, QA) or (Vision, Language, Context, Action) data.",
+          "caption": "Figure 3: Overview of QWEN-ROBOTMANIP. The model couples a Qwen-VL backbone with a flow-matching Diffusion Transformer (DiT) action head. The backbone jointly encodes multi-view visual tokens, structured embodiment prompts, and historical context tokens, with last-layer hidden states injected into the DiT via alternating cross-attention. States and actions share a unified 80-dimensional canonical representation, with end-effector actions expressed as camera-frame delta poses to align the action space with visual observations across embodiments, conditioned on camera and end-effector type embeddings for embodiment-aware denoising. VLM co-training and VLA training use separate batches, where each batch contains either (Vision, QA) or (Vision, Language, Context, Action) data.",
           "bbox": [
             65,
             65,
@@ -8129,7 +8129,7 @@
           "page": 3,
           "figure_number": 2,
           "role": "architecture",
-          "caption": "Fig. 2: Architectural overview of HyVLA-0.5. The framework adopts a MoT architecture to facilitate cross-modal interactions via a shared joint-attention mechanism. To effectively process K-frame multi- view RGB sequences, the image encoder is extended into a compact memory encoder. Specifically, temporal attention blocks are interleaved every four layers to enforce causal masking across the temporal dimension and seamlessly incorporate historical visual context. As depicted on the right, the attention mask demonstrates our block-wise causal attention strategy. Following Hy-Embodied- 0.5 [15], we apply local bidirectional attention to model the multi-view observations.",
+          "caption": "Fig. 2: Architectural overview of HyVLA-0.5. The framework adopts a MoT architecture to facilitate cross-modal interactions via a shared joint-attention mechanism. To effectively process K-frame multi-view RGB sequences, the image encoder is extended into a compact memory encoder. Specifically, temporal attention blocks are interleaved every four layers to enforce causal masking across the temporal dimension and seamlessly incorporate historical visual context. As depicted on the right, the attention mask demonstrates our block-wise causal attention strategy. Following Hy-Embodied- 0.5 [15], we apply local bidirectional attention to model the multi-view observations.",
           "bbox": [
             100.0,
             480.0,
@@ -10343,7 +10343,7 @@
           "page": 3,
           "figure_number": "2",
           "role": "architecture",
-          "caption": "Figure 2: The overview of Qwen3-Omni. Qwen3-Omni adopts the Thinker-Talker architecture. Thinker\nis tasked with text generation while Talker focuses on generating streaming speech tokens by receives\nhigh-level representations directly from Thinker. To achieve ultra–low-latency streaming, Talker autore-\ngressively predicts a multi-codebook sequence. At each decoding step, an MTP module outputs the\nresidual codebooks for the current frame, after which the Code2Wav renderer incrementally synthesizes\nthe corresponding waveform, enabling frame-by-frame streaming generation.",
+          "caption": "Figure 2: The overview of Qwen3-Omni. Qwen3-Omni adopts the Thinker-Talker architecture. Thinker\nis tasked with text generation while Talker focuses on generating streaming speech tokens by receives\nhigh-level representations directly from Thinker. To achieve ultra–low-latency streaming, Talker autoregressively predicts a multi-codebook sequence. At each decoding step, an MTP module outputs the\nresidual codebooks for the current frame, after which the Code2Wav renderer incrementally synthesizes\nthe corresponding waveform, enabling frame-by-frame streaming generation.",
           "bbox": [
             69.07,
             66.06,
@@ -10377,7 +10377,7 @@
           "page": 10,
           "figure_number": "6",
           "role": "results",
-          "caption": "Table 6: Transcription performance for Audio→Text tasks (ASR & S2TT), comparing Qwen3-Omni-\nInstruct with the baselines. The highest scores are shown in bold.",
+          "caption": "Table 6: Transcription performance for Audio→Text tasks (ASR & S2TT), comparing Qwen3-Omni-Instruct with the baselines. The highest scores are shown in bold.",
           "bbox": [
             69.0,
             480.0,
@@ -11140,7 +11140,7 @@
           "page": 2,
           "figure_number": "1",
           "role": "results",
-          "caption": "Figure 1 | Language understanding and generation performance of Gemma 7B across different capa-\nbilities compared to similarly sized open models. We group together standard academic benchmark\nevaluations by capability and average the respective scores; see Table 6 for a detailed breakdown of\nperformance.",
+          "caption": "Figure 1 | Language understanding and generation performance of Gemma 7B across different capabilities compared to similarly sized open models. We group together standard academic benchmark\nevaluations by capability and average the respective scores; see Table 6 for a detailed breakdown of\nperformance.",
           "bbox": [
             58,
             80,
@@ -11174,7 +11174,7 @@
           "page": 7,
           "figure_number": "3",
           "role": "safety_evaluation",
-          "caption": "Figure 3 | Measuring personal and sensitive data\nmemorization rates. No sensitive data was mem-\norized, hence it is omitted from the figure.",
+          "caption": "Figure 3 | Measuring personal and sensitive data\nmemorization rates. No sensitive data was memorized, hence it is omitted from the figure.",
           "bbox": [
             300,
             130,
@@ -11374,7 +11374,7 @@
           "page": 13,
           "figure_number": "12",
           "role": "results",
-          "caption": "Figure 12 | Relative regret of using a limited num-\nber of transfer examples. Thick line represents\nthe median. Per task plot in appendix K.9.",
+          "caption": "Figure 12 | Relative regret of using a limited number of transfer examples. Thick line represents\nthe median. Per task plot in appendix K.9.",
           "bbox": [
             300,
             80,
@@ -11440,7 +11440,7 @@
           "page": 2,
           "figure_number": "1",
           "role": "architecture",
-          "caption": "Figure 1 | PaliGemma 2 processes a 224px2/\n448px2/896px2 image with a SigLIP-400m en-\ncoder with patch size 14px2, yielding 256/1024/\n4096 tokens. After a linear projection, the image\ntokens are concatenated with the input text to-\nkens and Gemma 2 autoregressively completes\nthis prefix with an answer.",
+          "caption": "Figure 1 | PaliGemma 2 processes a 224px2/\n448px2/896px2 image with a SigLIP-400m encoder with patch size 14px2, yielding 256/1024/\n4096 tokens. After a linear projection, the image\ntokens are concatenated with the input text tokens and Gemma 2 autoregressively completes\nthis prefix with an answer.",
           "bbox": [
             58,
             75,
@@ -11574,7 +11574,7 @@
           "page": 4,
           "figure_number": "3",
           "role": "safety_evaluation",
-          "caption": "Figure 3: Safety human evaluation results for Llama 2-Chat compared to other open-source and closed-\nsource models. Human raters judged model generations for safety violations across ~2,000 adversarial\nprompts consisting of both single and multi-turn prompts. More details can be found in Section 4.4. It is\nimportant to caveat these safety results with the inherent bias of LLM evaluations due to limitations of the\nprompt set, subjectivity of the review guidelines, and subjectivity of individual raters. Additionally, these\nsafety evaluations are performed using content standards that are likely to be biased towards the Llama\n2-Chat models.",
+          "caption": "Figure 3: Safety human evaluation results for Llama 2-Chat compared to other open-source and closed-source models. Human raters judged model generations for safety violations across ~2,000 adversarial\nprompts consisting of both single and multi-turn prompts. More details can be found in Section 4.4. It is\nimportant to caveat these safety results with the inherent bias of LLM evaluations due to limitations of the\nprompt set, subjectivity of the review guidelines, and subjectivity of individual raters. Additionally, these\nsafety evaluations are performed using content standards that are likely to be biased towards the Llama\n2-Chat models.",
           "bbox": [
             70,
             66,
@@ -12549,7 +12549,7 @@
           "page": 7,
           "figure_number": "3",
           "role": "results",
-          "caption": "Figure 3 | Comparison of TxGemma-Predict’s performance with therapeutic generalist models. (top)\nrelative performance improvement of TxGemma-27B-Predict in comparison to Tx-LLM S. TxGemma-27B-Predict\noutperforms Tx-LLM S on 62 and underperforms on only 4. (bottom) relative performance improvement of TxGemma-\n27B-Predict in comparison to Tx-LLM M. TxGemma-27B-Predict outperforms Tx-LLM M on 45 out of 66 tasks, while\nunderperforming on 21. When aggregating performance over task, we observe a net improvement of TxGemma-27B-\nPredict over Tx-LLM models, with a statistically significant difference (p=0.003, Wilcoxon signed-rank test). These\nresults establish TxGemma-27B-Predict as a competitive and functionally enhanced alternative at practical model\nsizes. Values for each task can be found in Tables S.15 and S.16.",
+          "caption": "Figure 3 | Comparison of TxGemma-Predict’s performance with therapeutic generalist models. (top)\nrelative performance improvement of TxGemma-27B-Predict in comparison to Tx-LLM S. TxGemma-27B-Predict\noutperforms Tx-LLM S on 62 and underperforms on only 4. (bottom) relative performance improvement of TxGemma-\n27B-Predict in comparison to Tx-LLM M. TxGemma-27B-Predict outperforms Tx-LLM M on 45 out of 66 tasks, while\nunderperforming on 21. When aggregating performance over task, we observe a net improvement of TxGemma-27B-Predict over Tx-LLM models, with a statistically significant difference (p=0.003, Wilcoxon signed-rank test). These\nresults establish TxGemma-27B-Predict as a competitive and functionally enhanced alternative at practical model\nsizes. Values for each task can be found in Tables S.15 and S.16.",
           "bbox": [
             68,
             62,
@@ -12615,7 +12615,7 @@
           "page": 8,
           "figure_number": "6",
           "role": "architecture",
-          "caption": "Figure 6: The cascaded sampling pipeline starting from a text prompt input to generating a 5.3-\nsecond, 1280×768 video at 24fps. “SSR” and “TSR” denote spatial and temporal super-resolution\nrespectively, and videos are labeled as frames×width×height. In practice, the text embeddings are\ninjected into all models, not just the base model.",
+          "caption": "Figure 6: The cascaded sampling pipeline starting from a text prompt input to generating a 5.3-second, 1280×768 video at 24fps. “SSR” and “TSR” denote spatial and temporal super-resolution\nrespectively, and videos are labeled as frames×width×height. In practice, the text embeddings are\ninjected into all models, not just the base model.",
           "bbox": [
             105,
             78,
@@ -13041,7 +13041,7 @@
           "page": 1,
           "figure_number": "1",
           "role": "results",
-          "caption": "Figure 1: Qwen-Image-2.0 shows significant improvements across core dimensions, including photoreal-\nism and portrait generation, in LMArena (accessed April 22, 2026).",
+          "caption": "Figure 1: Qwen-Image-2.0 shows significant improvements across core dimensions, including photorealism and portrait generation, in LMArena (accessed April 22, 2026).",
           "bbox": [
             69.07,
             506.78,
@@ -13175,7 +13175,7 @@
           "page": 8,
           "figure_number": "3",
           "role": "architecture",
-          "caption": "Figure 3: The environment infrastructure of Qwen-UI-Agent. (a) Scalable sandbox environments span-\nning mobile-use, computer-use, browser-use, and DeepSearch provide controllability and repeatable\nevaluation for data synthesis and training. (b) A sim-to-real bridge extends agents to real devices with\nreal applications, networks, and account states, supporting user takeover for login, payment, permis-\nsion, and confirmation. (c) A hybrid GUI+CLI action space interleaves graphical operations with direct\ncommand execution. (d) A unified interface standardizes the thinking–action–observation loop across\nheterogeneous environments.",
+          "caption": "Figure 3: The environment infrastructure of Qwen-UI-Agent. (a) Scalable sandbox environments spanning mobile-use, computer-use, browser-use, and DeepSearch provide controllability and repeatable\nevaluation for data synthesis and training. (b) A sim-to-real bridge extends agents to real devices with\nreal applications, networks, and account states, supporting user takeover for login, payment, permission, and confirmation. (c) A hybrid GUI+CLI action space interleaves graphical operations with direct\ncommand execution. (d) A unified interface standardizes the thinking–action–observation loop across\nheterogeneous environments.",
           "bbox": [
             54.01,
             36.18,
@@ -13275,7 +13275,7 @@
           "page": 11,
           "figure_number": "5",
           "role": "results",
-          "caption": "Table 5: Audio benchmark comparison across Gemini-3.1 Pro, Qwen3.5-Omni-Flash, and Qwen3.5-\nOmni-Plus. For most benchmarks, higher is better. For ASR benchmarks, lower WER is better. Best\nresults are shown in bold.",
+          "caption": "Table 5: Audio benchmark comparison across Gemini-3.1 Pro, Qwen3.5-Omni-Flash, and Qwen3.5-Omni-Plus. For most benchmarks, higher is better. For ASR benchmarks, lower WER is better. Best\nresults are shown in bold.",
           "bbox": [
             69.0,
             70.0,
@@ -13943,7 +13943,7 @@
           "page": 3,
           "figure_number": "2",
           "role": "results",
-          "caption": "Figure 2: Performance of the DINOv3 family of models, compared to other families of self- or weakly-\nsupervised models, on different benchmarks. DINOv3 significantly surpasses others on dense benchmarks,\nincluding models that leverage mask annotation priors such as AM-RADIO (Heinrich et al., 2025).",
+          "caption": "Figure 2: Performance of the DINOv3 family of models, compared to other families of self- or weakly-supervised models, on different benchmarks. DINOv3 significantly surpasses others on dense benchmarks,\nincluding models that leverage mask annotation priors such as AM-RADIO (Heinrich et al., 2025).",
           "bbox": [
             70,
             62,
@@ -14848,7 +14848,7 @@
           "page": 4,
           "figure_number": "1",
           "role": "results",
-          "caption": "Table 1: Performance comparison between contrastively pre-trained (“SigLIP”) models and classi-\nfication pre-trained (“Classif”) ViT image encoders using the same PaLI setup, across a wide range\nof tasks. While linear classification few-shot probing (first column) suggests SigLIP encoders are\nworse across many tasks, when plugged into PaLI and transferred, they show clear improvements.\nOn the most complicated and detailed image understanding tasks, SigLIP models outperform Classif\nmodels by a large margin. Captioning numbers are CIDEr scores, where XM3600 shows the En-\nglish performance in the first column, and the average across other languages in the second column.\nRefCOCO numbers are mIoU scores (details in Section 4.3).",
+          "caption": "Table 1: Performance comparison between contrastively pre-trained (“SigLIP”) models and classification pre-trained (“Classif”) ViT image encoders using the same PaLI setup, across a wide range\nof tasks. While linear classification few-shot probing (first column) suggests SigLIP encoders are\nworse across many tasks, when plugged into PaLI and transferred, they show clear improvements.\nOn the most complicated and detailed image understanding tasks, SigLIP models outperform Classif\nmodels by a large margin. Captioning numbers are CIDEr scores, where XM3600 shows the English performance in the first column, and the average across other languages in the second column.\nRefCOCO numbers are mIoU scores (details in Section 4.3).",
           "bbox": [
             105,
             78,
@@ -15492,7 +15492,7 @@
           "page": 7,
           "figure_number": "4",
           "role": "results",
-          "caption": "Figure 4: Qualitative comparison of generated human videos. The leftmost column displays the\nreference image. Hunyuan-Avatar (top row) often suffers from facial distortions and inconsistent\nidentity during large movements. Ominihuman (middle row) typically generates results with a lim-\nited range of motion, largely adhering to the pose of the reference image. In contrast, our method\n(bottom row) achieves superior performance in both motion dynamics and identity consistency.",
+          "caption": "Figure 4: Qualitative comparison of generated human videos. The leftmost column displays the\nreference image. Hunyuan-Avatar (top row) often suffers from facial distortions and inconsistent\nidentity during large movements. Ominihuman (middle row) typically generates results with a limited range of motion, largely adhering to the pose of the reference image. In contrast, our method\n(bottom row) achieves superior performance in both motion dynamics and identity consistency.",
           "bbox": [
             108.0,
             103.6,
@@ -15555,7 +15555,7 @@
           "page": 4,
           "figure_number": "2",
           "role": "architecture",
-          "caption": "Figure 2: Overview of Wan-Animate, which is built upon Wan-I2V. We modify its input formula-\ntion to unify reference image input, temporal frame guidance, and environmental information (for\ndual-mode compatibility) under a common symbolic representation. For body motion control, we\nuse skeleton signals that are merged via spatial alignment. For facial expression control, we lever-\nage implicit features extracted from face images as the driving signal. Additionally, for character\nreplacement, we train an auxiliary Relighting LoRA to enhance the character’s integration with the\nnew environment.",
+          "caption": "Figure 2: Overview of Wan-Animate, which is built upon Wan-I2V. We modify its input formulation to unify reference image input, temporal frame guidance, and environmental information (for\ndual-mode compatibility) under a common symbolic representation. For body motion control, we\nuse skeleton signals that are merged via spatial alignment. For facial expression control, we leverage implicit features extracted from face images as the driving signal. Additionally, for character\nreplacement, we train an auxiliary Relighting LoRA to enhance the character’s integration with the\nnew environment.",
           "bbox": [
             101.76,
             78.86,
@@ -16934,7 +16934,7 @@
           "page": 2,
           "figure_number": "1",
           "role": "architecture",
-          "caption": "Figure 1: Intermediate fusion for efficient VLA policies. Our fusion strategy (top-right) strategi- cally prunes VLM layers while enhancing Flow Transformer capacity in parameter-constrained set- tings. This approach informs FLOWER, a novel, 950M VLA that achieves competitive performance across 10 benchmarks using only 1% of the pretraining compute of models like OpenVLA [1], while maintaining a small memory footprint across diverse embodiments and action spaces (bottom).",
+          "caption": "Figure 1: Intermediate fusion for efficient VLA policies. Our fusion strategy (top-right) strategically prunes VLM layers while enhancing Flow Transformer capacity in parameter-constrained settings. This approach informs FLOWER, a novel, 950M VLA that achieves competitive performance across 10 benchmarks using only 1% of the pretraining compute of models like OpenVLA [1], while maintaining a small memory footprint across diverse embodiments and action spaces (bottom).",
           "bbox": [
             105,
             74.5,
@@ -17575,7 +17575,7 @@
           "page": 5,
           "figure_number": 2,
           "role": "architecture",
-          "caption": "Fig. 2: HY-Embodied-0.5 Mixture-of-Transformers Architecture. The MoT design decouples the processing of visual and textual tokens by employing modality-specific QKV and FFN layers, alongside distinct attention mechanisms. Visual latent tokens and mixed optimization loss are employed to bridge and stress the relationships between modalities during large- scale training.",
+          "caption": "Fig. 2: HY-Embodied-0.5 Mixture-of-Transformers Architecture. The MoT design decouples the processing of visual and textual tokens by employing modality-specific QKV and FFN layers, alongside distinct attention mechanisms. Visual latent tokens and mixed optimization loss are employed to bridge and stress the relationships between modalities during large-scale training.",
           "bbox": [
             95.0,
             62.0,
@@ -17609,7 +17609,7 @@
           "page": 23,
           "figure_number": 13,
           "role": "results",
-          "caption": "Fig. 13: Robot Experimental Setup and Success Rates for the Evaluated Tasks. (a) Real- world setup of three representative tasks. Our platform employs a dual-arm Xtrainer equipped with head-mounted and wrist-mounted cameras. The benchmark includes: (1) Precision Plug-in Packing, (2) Tableware Stacking, and (3) Mug Hanging. Success rates are evaluated over 20 trials per task. (b) Object poses are randomly initialized at the start of each trial. We conduct 20 real-robot trials per task per model. The success rates (%) are summarized above.",
+          "caption": "Fig. 13: Robot Experimental Setup and Success Rates for the Evaluated Tasks. (a) Real-world setup of three representative tasks. Our platform employs a dual-arm Xtrainer equipped with head-mounted and wrist-mounted cameras. The benchmark includes: (1) Precision Plug-in Packing, (2) Tableware Stacking, and (3) Mug Hanging. Success rates are evaluated over 20 trials per task. (b) Object poses are randomly initialized at the start of each trial. We conduct 20 real-robot trials per task per model. The success rates (%) are summarized above.",
           "bbox": [
             95.0,
             75.0,
@@ -17700,7 +17700,7 @@
           "page": 8,
           "figure_number": 9,
           "role": "results",
-          "caption": "Figure 9: Success Rates of End-to-End Bin Pick- ing.",
+          "caption": "Figure 9: Success Rates of End-to-End Bin Picking.",
           "bbox": [
             320,
             340,
@@ -17757,7 +17757,7 @@
           "page": 2,
           "figure_number": 1,
           "role": "overview",
-          "caption": "Figure 1: Overview of GR-1. GR-1 is first pre-trained on the task of video prediction with a large- scale video dataset. It is then finetuned on robot data to learn multi-task visual robot manipulation.",
+          "caption": "Figure 1: Overview of GR-1. GR-1 is first pre-trained on the task of video prediction with a large-scale video dataset. It is then finetuned on robot data to learn multi-task visual robot manipulation.",
           "bbox": [
             100,
             60,
@@ -18214,7 +18214,7 @@
           "page": 4,
           "figure_number": 2,
           "role": "architecture",
-          "caption": "Figure 2: Overview of hierarchical VLA. The policy consists of a high-level and a low-level policy. The high-level policy pro- cesses open-ended instructions and images from base and wrist- mounted cameras to generate low-level language commands. The low-level policy uses these commands, images, and robot states to produce actions and optionally verbal responses.",
+          "caption": "Figure 2: Overview of hierarchical VLA. The policy consists of a high-level and a low-level policy. The high-level policy processes open-ended instructions and images from base and wrist-mounted cameras to generate low-level language commands. The low-level policy uses these commands, images, and robot states to produce actions and optionally verbal responses.",
           "bbox": [
             55.4,
             72,
@@ -18522,7 +18522,7 @@
           "page": 6,
           "figure_number": 6,
           "role": "results",
-          "caption": "Fig. 6: Performance of policies on challenging, long-horizon manipu- lation tasks. Without memory, even state-of-the-art generalist policies like π0.6 struggle to perform such tasks. We ablate the memory components and show these tasks are solvable by combining short- horizon, observation-based memory, with long-horizon, language- based memory. Naive memory of past language instructions, without compression, struggles with training-inference distribution shifts.",
+          "caption": "Fig. 6: Performance of policies on challenging, long-horizon manipulation tasks. Without memory, even state-of-the-art generalist policies like π0.6 struggle to perform such tasks. We ablate the memory components and show these tasks are solvable by combining short-horizon, observation-based memory, with long-horizon, language-based memory. Naive memory of past language instructions, without compression, struggles with training-inference distribution shifts.",
           "bbox": [
             48.8,
             290,
@@ -18887,7 +18887,7 @@
           "page": 6,
           "figure_number": 8,
           "role": "results",
-          "caption": "Fig. 8: Task generalization performance scaling: Performance of Robot Finetuning on Sort Eggs plateaus, even as the pretraining diversity im- proves. In contrast, Human+Robot Finetuning performance scales sharply with pretraining, suggesting that broader pretraining enables more effective transfer from human data.",
+          "caption": "Fig. 8: Task generalization performance scaling: Performance of Robot Finetuning on Sort Eggs plateaus, even as the pretraining diversity improves. In contrast, Human+Robot Finetuning performance scales sharply with pretraining, suggesting that broader pretraining enables more effective transfer from human data.",
           "bbox": [
             311.9,
             405,

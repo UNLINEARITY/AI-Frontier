@@ -8,7 +8,7 @@ We present Kimi-Audio, an open-source audio foundation model that excels in audi
 
 ![Figure 1](../../figures/moonshot/kimi-audio-technical-report/figure-01.png)
 
-Figure 1: Performance of Kimi-Audio and previous audio langauge models including Qwen2-Audio [11], Baichuan- Audio [41], Step-Audio [28], and Qwen2.5-Omni [73] on various benchmarks.
+Figure 1: Performance of Kimi-Audio and previous audio langauge models including Qwen2-Audio [11], Baichuan-Audio [41], Step-Audio [28], and Qwen2.5-Omni [73] on various benchmarks.
 
 p. 1
 

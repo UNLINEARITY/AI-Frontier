@@ -4,7 +4,7 @@
 
 ## Introduction
 
-GPT-5.2-Codex is our most advanced agentic coding model yet for complex, real-world software engineering. A version of GPT-5.2 optimized for agentic coding in Codex, it includes further improvements on long-horizon work through context compaction, stronger performance on project- scale tasks like refactors and migrations, and improved performance in Windows environments — and significantly stronger cybersecurity capabilities.
+GPT-5.2-Codex is our most advanced agentic coding model yet for complex, real-world software engineering. A version of GPT-5.2 optimized for agentic coding in Codex, it includes further improvements on long-horizon work through context compaction, stronger performance on project-scale tasks like refactors and migrations, and improved performance in Windows environments — and significantly stronger cybersecurity capabilities.
 
 This system card outlines the comprehensive safety measures implemented for GPT-5.2-Codex. It details both model-level mitigations, such as specialized safety training for harmful tasks and prompt injections, and product-level mitigations like agent sandboxing and configurable network access.
 

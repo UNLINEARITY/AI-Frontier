@@ -14,6 +14,6 @@ p. 2
 
 ![Figure 9](../../figures/bytedance/gr-2-generative-video-language-action-model/figure-02.png)
 
-Figure 9: Success Rates of End-to-End Bin Pick- ing.
+Figure 9: Success Rates of End-to-End Bin Picking.
 
 p. 8

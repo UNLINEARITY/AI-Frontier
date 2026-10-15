@@ -8,7 +8,7 @@ We introduce Voxtral Realtime, a natively streaming automatic speech recognition
 
 ![Figure 1](../../figures/mistral/voxtral-realtime/figure-01.png)
 
-Figure 1: Voxtral Realtime approaches offline accuracy at sub-second latency. Macro-average word error- rate (WER) vs. delay on the FLEURS multilingual benchmark for realtime and offline models. Lower is better. At 480 ms delay, Voxtral Realtime is competitive with Scribe v2 Realtime, the leading realtime API model, as well as Whisper, the most popular open-source offline model. It surpasses both baselines at 960 ms delay, approaching the performance of Voxtral Mini Transcribe V2, a state-of-the-art offline transcription model.
+Figure 1: Voxtral Realtime approaches offline accuracy at sub-second latency. Macro-average word error-rate (WER) vs. delay on the FLEURS multilingual benchmark for realtime and offline models. Lower is better. At 480 ms delay, Voxtral Realtime is competitive with Scribe v2 Realtime, the leading realtime API model, as well as Whisper, the most popular open-source offline model. It surpasses both baselines at 960 ms delay, approaching the performance of Voxtral Mini Transcribe V2, a state-of-the-art offline transcription model.
 
 p. 1
 
