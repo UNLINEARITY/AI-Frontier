@@ -375,10 +375,15 @@ def build(output):
             'timeline_title': '模型时间线' if chinese else 'Model timeline',
             'timeline_search': '搜索时间线中的模型或厂商' if chinese else 'Find a model or publisher on the timeline',
             'timeline_pan': '拖动浏览时间线' if chinese else 'Drag to explore the timeline',
-            'timeline_gesture': '拖动平移 · 双指或 Ctrl/⌘ + 滚轮缩放' if chinese else 'Drag to pan · Pinch or Ctrl/⌘ + scroll to zoom',
+            'timeline_gesture': '真实时间间隔 · 拖动浏览 · 双击或双指缩放' if chinese else 'True time intervals · Drag to explore · Double-click or pinch to zoom',
             'timeline_zoom_in': '放大时间线' if chinese else 'Zoom in',
             'timeline_zoom_out': '缩小时间线' if chinese else 'Zoom out',
             'timeline_fit': '全览' if chinese else 'Fit all',
+            'timeline_overview_label': '全局模型时间线' if chinese else 'All model releases',
+            'timeline_window_label': '可见时间范围' if chinese else 'Visible time window',
+            'timeline_start_label': '起始日期' if chinese else 'Start date',
+            'timeline_end_label': '结束日期' if chinese else 'End date',
+            'timeline_overview_help': '拖动选区平移，拖动两端缩放；方向键调整，双击全览。' if chinese else 'Drag the window to pan or its ends to zoom. Use arrow keys to adjust; double-click to fit all.',
             'timeline_latest': '最新' if chinese else 'Latest',
             'timeline_undated': '日期待确认' if chinese else 'Date unconfirmed',
             'timeline_empty': '当前范围内没有已确认日期的模型' if chinese else 'No dated models in this view',
@@ -473,7 +478,7 @@ def build(output):
                                 nav_publishers_href='index.html#publishers', nav_timeline_href='#timeline',
                                 nav_reports_href='reports.html', skip_href='#collection')
         header = template.split('<main>', 1)[0].replace('data-page="home"', 'data-page="models"')
-        header = header.replace('src="{{prefix}}app.js"', 'src="{{prefix}}models.js"').replace('<script src="{{prefix}}navigation.js" defer>', '<script src="{{prefix}}timeline.js" defer></script><script src="{{prefix}}navigation.js" defer>')
+        header = header.replace('src="{{prefix}}app.js"', 'src="{{prefix}}models.js"').replace('<script src="{{prefix}}navigation.js" defer>', '<script src="{{prefix}}timeline-layout.js" defer></script><script src="{{prefix}}timeline.js" defer></script><script src="{{prefix}}navigation.js" defer>')
         footer = template[template.index('<footer>'):]
         directory_page = directory_template.replace('{{page_header}}', header).replace('{{page_footer}}', footer).replace('{{model_timeline}}', timeline_template)
         for key, value in directory_values.items():
@@ -491,7 +496,7 @@ def build(output):
         for key, value in report_values.items():
             report_page = report_page.replace('{{' + key + '}}', value)
         (output / ('cn/reports.html' if chinese else 'reports.html')).write_text(report_page, encoding='utf-8')
-    for name in ('style.css', 'app.js', 'models.js', 'reports.js', 'motion.js', 'navigation.js', 'navigation-init.js', 'theme-init.js', 'shared.js', 'reader.js', 'timeline.js'):
+    for name in ('style.css', 'app.js', 'models.js', 'reports.js', 'motion.js', 'navigation.js', 'navigation-init.js', 'theme-init.js', 'shared.js', 'reader.js', 'timeline-layout.js', 'timeline.js'):
         shutil.copyfile(ROOT / 'site' / name, output / name)
     (output / 'assets').mkdir(exist_ok=True)
     banner_source = ROOT / 'assets/branding/ai-frontier-banner.png'

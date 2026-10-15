@@ -360,7 +360,7 @@ header { position: sticky; top: 0; z-index: 15; background: var(--bg); }
   .showcase-pair { grid-template-columns: 1fr; }
 }
 
-/* ---------- timeline (structure unchanged, restyled) ---------- */
+/* ---------- proportional release atlas ---------- */
 
 .timeline-section { margin-top: var(--section); padding: 0 var(--gutter); min-width: 0; scroll-margin-top: 96px; }
 .section-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
@@ -382,19 +382,25 @@ header { position: sticky; top: 0; z-index: 15; background: var(--bg); }
 #timeline-in, #timeline-out { min-width: 40px; font-size: 1.05rem; }
 #timeline-zoom { min-width: 42px; text-align: center; color: var(--muted); font-size: var(--step-small); font-variant-numeric: tabular-nums; }
 
-.timeline-frame { position: relative; background: var(--surface); }
-#timeline-plot { display: block; width: 100%; height: 340px; touch-action: pan-y; cursor: grab; user-select: none; }
+.timeline-frame { position: relative; background: var(--surface); overflow: hidden; }
+#timeline-plot { display: block; width: 100%; height: 400px; touch-action: pan-y; cursor: grab; user-select: none; overflow: hidden; }
 #timeline-plot.is-dragging { cursor: grabbing; }
-#timeline-axis { fill: none; stroke: var(--muted); stroke-opacity: 0.5; stroke-width: 1; }
-.timeline-tick line { stroke: var(--line); stroke-width: 1; stroke-dasharray: none; }
-.timeline-tick text { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+#timeline-axis { fill: none; stroke: var(--muted); stroke-opacity: .5; stroke-width: 1; opacity: 0; transition: opacity 160ms ease; }
+#timeline[data-active] #timeline-axis { opacity: 1; }
+.timeline-tick text { fill: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
 .timeline-node { cursor: pointer; outline: none; }
-.timeline-stem { stroke: var(--accent); stroke-opacity: 0.16; stroke-width: 1; transition: stroke-opacity 0.18s; }
-.timeline-dot { fill: var(--accent); stroke: var(--surface); stroke-width: 2; transition: r 0.18s, stroke-width 0.18s; }
+.timeline-stem { pointer-events: none; stroke: var(--accent); stroke-opacity: .7; stroke-width: 1; opacity: 0; transition: opacity 160ms ease; }
+.timeline-stem.is-active { opacity: 1; }
+.timeline-dot { fill: var(--accent); stroke: var(--surface); stroke-width: .75; transition: r 0.18s, stroke-width 0.18s; }
+.timeline-node[data-small-dot="true"] .timeline-dot { stroke-width: 0; }
 .timeline-hit { fill: transparent; }
-.timeline-model-label { fill: var(--ink); font-size: 10px; paint-order: stroke; stroke: var(--surface); stroke-width: 3; stroke-linejoin: round; pointer-events: none; }
+.timeline-model-label { fill: var(--ink); font-size: 14px; font-weight: 500; }
+#timeline-years text { fill: var(--muted); font-size: 16px; font-weight: 600; font-variant-numeric: tabular-nums; }
+#timeline-guide { pointer-events: none; }
+#timeline-guide line { stroke: var(--accent); stroke-width: 1; stroke-opacity: .45; }
+#timeline-guide rect { fill: var(--ink); }
+#timeline-guide text { fill: var(--bg); font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; }
 .timeline-node:hover .timeline-dot, .timeline-node:focus .timeline-dot { r: 7; stroke-width: 3; }
-.timeline-node:hover .timeline-stem, .timeline-node:focus .timeline-stem { stroke-opacity: 0.7; }
 .timeline-node:focus .timeline-dot { stroke: var(--ink); }
 .timeline-empty { fill: var(--muted); font-size: var(--step-small); }
 .timeline-tooltip {
@@ -407,9 +413,10 @@ header { position: sticky; top: 0; z-index: 15; background: var(--bg); }
 .timeline-tooltip span { font-size: var(--step-small); color: var(--muted); }
 .timeline-tooltip strong { font-size: var(--step-small); font-weight: 600; overflow-wrap: anywhere; }
 .timeline-tooltip time { font-size: var(--step-small); color: var(--accent); font-variant-numeric: tabular-nums; }
-.timeline-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin: 12px 0 0; color: var(--muted); font-size: var(--step-small); }
+.timeline-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin: 12px 0 0; color: var(--muted); font-size: 1rem; }
 @media (max-width: 700px) {
-  #timeline-plot { height: 300px; }
+  #timeline-plot { height: 350px; }
+  .timeline-footer { gap: 8px; }
   .timeline-search input { font-size: 16px; }
 }
 
@@ -716,3 +723,23 @@ header { view-transition-name: site-header; }
   ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
+
+.model-row :is(.publisher, .date), .model-category { font-size: 1rem; }
+
+/* Global context stays visible while the main date window changes. */
+.timeline-overview { margin-top: 10px; background: var(--surface); }
+#timeline-overview { display: block; width: 100%; height: 98px; touch-action: none; user-select: none; }
+#timeline-overview-points { pointer-events: none; }
+#timeline-overview-points circle { fill: var(--accent); opacity: .75; transition: opacity 220ms ease; }
+#timeline-overview-points circle[data-selected="false"] { fill: var(--muted); opacity: .22; }
+#timeline-overview-years text { fill: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; pointer-events: none; }
+.overview-window { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; cursor: grab; outline: none; }
+.overview-window-hit { fill: transparent; cursor: grab; }
+.overview-window:active { cursor: grabbing; }
+.overview-window:focus { stroke: var(--ink); stroke-width: 2.5; }
+.overview-handle { cursor: ew-resize; outline: none; }
+.overview-handle-hit { fill: transparent; }
+.overview-handle-bar { fill: var(--accent); }
+.overview-handle:focus .overview-handle-bar, .overview-handle:hover .overview-handle-bar { fill: var(--ink); }
+.timeline-node[data-label-visible="true"] .timeline-model-label { animation: timeline-name-in 200ms ease both; }
+@keyframes timeline-name-in { from { opacity: 0; } to { opacity: 1; } }
