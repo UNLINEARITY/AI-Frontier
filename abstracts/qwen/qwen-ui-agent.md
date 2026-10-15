@@ -16,12 +16,6 @@ p. 1
 
 ![Figure 3](../../figures/qwen/qwen-ui-agent/figure-02.png)
 
-Figure 3: The environment infrastructure of Qwen-UI-Agent. (a) Scalable sandbox environments span-
-ning mobile-use, computer-use, browser-use, and DeepSearch provide controllability and repeatable
-evaluation for data synthesis and training. (b) A sim-to-real bridge extends agents to real devices with
-real applications, networks, and account states, supporting user takeover for login, payment, permis-
-sion, and confirmation. (c) A hybrid GUI+CLI action space interleaves graphical operations with direct
-command execution. (d) A unified interface standardizes the thinking–action–observation loop across
-heterogeneous environments.
+Figure 3: The environment infrastructure of Qwen-UI-Agent. (a) Scalable sandbox environments span- ning mobile-use, computer-use, browser-use, and DeepSearch provide controllability and repeatable evaluation for data synthesis and training. (b) A sim-to-real bridge extends agents to real devices with real applications, networks, and account states, supporting user takeover for login, payment, permis- sion, and confirmation. (c) A hybrid GUI+CLI action space interleaves graphical operations with direct command execution. (d) A unified interface standardizes the thinking–action–observation loop across heterogeneous environments.
 
 p. 8

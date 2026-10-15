@@ -30,6 +30,55 @@ def page(*blocks):
 
 
 class AbstractTests(unittest.TestCase):
+    def test_reviewed_page_break_reflows_without_merging_real_paragraphs(self):
+        text = 'First real paragraph.\n\nA sentence ends the page with In\n\nmulti-turn testing, it continues.\n\nAnother real paragraph.'
+        report = dict(id='lab:report', source_pdf='source.pdf', source_sha256='source', text=text)
+        layout = dict(source_sha256='source', text_sha256=hashlib.sha256(text.encode()).hexdigest(),
+                      join_after=[1], review_method='visual_source_page')
+        rendered = extract.markdown_passage(report, layout)
+        self.assertEqual(rendered, 'First real paragraph.\n\nA sentence ends the page with In multi-turn testing, it continues.\n\nAnother real paragraph.')
+        self.assertEqual(report['text'], text)
+        self.assertEqual(extract.markdown_passage(report), text)
+        for changed in [{**report, 'source_sha256': 'new-source'}, {**report, 'text': text+' changed'},
+                        {**report, 'source_pdf': None}]:
+            with self.assertRaisesRegex(ValueError, 'Stale paragraph'):
+                extract.markdown_passage(changed, layout)
+        for joins in [[-1], [3], [1, 1], [True]]:
+            with self.assertRaisesRegex(ValueError, 'Invalid paragraph'):
+                extract.markdown_passage(report, {**layout, 'join_after': joins})
+
+    def test_source_bound_passage_repair_is_exact_and_idempotent(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            old_root = extract.ROOT
+            extract.ROOT = root
+            try:
+                original = 'Autoregressive\n\nas Transformer-based policies.'
+                fixed = 'Autoregressive sequence models, such as Transformer-based policies.'
+                repair = dict(
+                    id='lab:fast', source_sha256='source',
+                    input_text_sha256=hashlib.sha256(original.encode()).hexdigest(),
+                    output_text_sha256=hashlib.sha256(fixed.encode()).hexdigest(),
+                    source_regions=[dict(page=1, source_fragment_index=0,
+                                        raw_text_sha256=hashlib.sha256('Autoregressive'.encode()).hexdigest())],
+                    edits=[dict(match='Autoregressive\n\nas Transformer-based',
+                                replacement='Autoregressive sequence models, such as Transformer-based',
+                                match_sha256=hashlib.sha256('Autoregressive\n\nas Transformer-based'.encode()).hexdigest())])
+                (root/'abstracts').mkdir()
+                (root/'abstracts/reviews.json').write_text(json.dumps(dict(passage_repairs=[repair])))
+                report = dict(id='lab:fast', source_sha256='source', text=original,
+                              source_fragments=[dict(page=1, text='Autoregressive')])
+                extract.apply_passage_repairs(report)
+                self.assertEqual(report['text'], fixed)
+                self.assertEqual(report['status'], 'source_reviewed')
+                extract.apply_passage_repairs(report)
+                self.assertEqual(report['text'], fixed)
+                changed = {**report, 'text': fixed + ' stale'}
+                with self.assertRaisesRegex(ValueError, 'Stale passage repair input'):
+                    extract.apply_passage_repairs(changed)
+            finally:
+                extract.ROOT = old_root
+
     def test_unlabelled_embodied_overview_precedes_introduction(self):
         text = 'Building capable embodied agents requires physical understanding. ' * 4
         section = extract.choose_section([page(block('Paper title', 20), block(text, 11),

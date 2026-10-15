@@ -6,14 +6,12 @@ This paper introduces CodeGemma, a collection of specialized open code models bu
 
 ![Figure 1](../../figures/google/codegemma-open-code-models-based-on-gemma/figure-01.png)
 
-Figure 1 | Both pretrained models are derived
-from corresponding Gemma pretrained models.
+Figure 1 | Both pretrained models are derived from corresponding Gemma pretrained models.
 
 p. 1
 
 ![Figure 3](../../figures/google/codegemma-open-code-models-based-on-gemma/figure-02.png)
 
-Figure 3 | Language capability comparison of CodeGemma and the instruction-tuned version of
-Gemma. Both Gemma and CodeGemma are in the 7B size class.
+Figure 3 | Language capability comparison of CodeGemma and the instruction-tuned version of Gemma. Both Gemma and CodeGemma are in the 7B size class.
 
 p. 5

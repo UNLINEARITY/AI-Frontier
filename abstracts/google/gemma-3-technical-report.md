@@ -6,17 +6,12 @@ We introduce Gemma 3, a multimodal addition to the Gemma family of lightweight o
 
 ![Figure 2](../../figures/google/gemma-3-technical-report/figure-01.png)
 
-Figure 2 | Summary of the performance of different pre-trained models from Gemma 2 and 3 across
-general abilities. These plots are meant to give a simplified summary and details are in the appendix.
+Figure 2 | Summary of the performance of different pre-trained models from Gemma 2 and 3 across general abilities. These plots are meant to give a simplified summary and details are in the appendix.
 
 p. 6
 
 ![Figure 6](../../figures/google/gemma-3-technical-report/figure-02.png)
 
-Figure 6 | KV cache memory versus context
-length. We show the memory usage of the KV
-cache for our architecture (L:G=5:1, sw=1024)
-and a transformer with global attention only – as
-used in LLaMa or Gemma 1.
+Figure 6 | KV cache memory versus context length. We show the memory usage of the KV cache for our architecture (L:G=5:1, sw=1024) and a transformer with global attention only – as used in LLaMa or Gemma 1.
 
 p. 7

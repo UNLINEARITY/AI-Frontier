@@ -8,15 +8,12 @@ We present Qwen-Drive-1.0, an initial step towards a vision-language foundation 
 
 ![Figure 1](../../figures/qwen/qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving/figure-01.png)
 
-Figure 1: Performance overview of Qwen-Drive-1.0 across driving VQA, general VQA, 3D perception,
-and motion planning.
+Figure 1: Performance overview of Qwen-Drive-1.0 across driving VQA, general VQA, 3D perception, and motion planning.
 
 p. 1
 
 ![Figure 2](../../figures/qwen/qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving/figure-02.png)
 
-Figure 2: Unified architecture of Qwen-Drive-1.0 for 3D perception, visual question answering, and
-motion planning. A shared vision encoder and VLM support text generation, while the external BEV
-perception head and Planning Expert produce geometric predictions and future ego trajectories.
+Figure 2: Unified architecture of Qwen-Drive-1.0 for 3D perception, visual question answering, and motion planning. A shared vision encoder and VLM support text generation, while the external BEV perception head and Planning Expert produce geometric predictions and future ego trajectories.
 
 p. 3

@@ -8,11 +8,7 @@ This system card describes Claude Haiku 5.5, the latest Haiku-class large langua
 
 We have condensed the content of this system card in a number of ways so that we can better concentrate our pre-deployment testing on thoroughly investigating the capabilities of our frontier models. Speciﬁcally:
 
-● We omit some evaluations that require large amounts of human time to obtain
-
-trustworthy results from, when they are not critical to the takeaways of a section. ● We focus on presenting numerical results from our evaluations, and dedicate less
-
-space to a prose analysis of those evaluations or their results, especially in cases where we have already explained the evaluation in question in a previous system card.
+● We omit some evaluations that require large amounts of human time to obtain trustworthy results from, when they are not critical to the takeaways of a section. ● We focus on presenting numerical results from our evaluations, and dedicate less space to a prose analysis of those evaluations or their results, especially in cases where we have already explained the evaluation in question in a previous system card.
 
 As a result, this system card is somewhat shorter than some previous ones. We expect system cards for our non-frontier models to be similarly condensed going forward, except where a speciﬁc model has notable properties that are deserving of in-depth elaboration.
 
@@ -34,34 +30,18 @@ Our assessment of Claude Haiku 5.5’s capabilities includes a wide range of eva
 
 ![Figure 2.3.2.A](../../figures/anthropic/claude-haiku-5-5-system-card/figure-01.png)
 
-[Figure 2.3.2.A] The Epoch Capabilities Index (ECI) synthesizes performance across many benchmarks into one
-number per model. Our version of this metric, the Anthropic ECI (AECI), is powered by internal benchmark
-results, so scores are not directly comparable to Epoch’s public ECI leaderboard. Gray dots are previous frontier
-Claude models; colored dots are the most recent models. Thin black error bars are 95% CI over 100 IRT refits,
-each on a random 80% subsample of benchmarks (global error). Thick violet error bars come from the same
-resampled fits but measure each score’s movement relative to the three preceding releases for each model
-(local error). The two lines compare different hypotheses for the frontier trend. Claude 3.5 Sonnet (June 2024)
-anchors the ECI scale at 130, so it has no global CI (its local error bar reflects uncertainty in the models before
-it). Scores of recent models on the new scale are reported for direct comparison.
+[Figure 2.3.2.A] The Epoch Capabilities Index (ECI) synthesizes performance across many benchmarks into one number per model. Our version of this metric, the Anthropic ECI (AECI), is powered by internal benchmark results, so scores are not directly comparable to Epoch’s public ECI leaderboard. Gray dots are previous frontier Claude models; colored dots are the most recent models. Thin black error bars are 95% CI over 100 IRT refits, each on a random 80% subsample of benchmarks (global error). Thick violet error bars come from the same resampled fits but measure each score’s movement relative to the three preceding releases for each model (local error). The two lines compare different hypotheses for the frontier trend. Claude 3.5 Sonnet (June 2024) anchors the ECI scale at 130, so it has no global CI (its local error bar reflects uncertainty in the models before it). Scores of recent models on the new scale are reported for direct comparison.
 
 p. 20
 
 ![Figure 5.2.1.A](../../figures/anthropic/claude-haiku-5-5-system-card/figure-02.png)
 
-[Figure 5.2.1.A] Indirect prompt injection attacks from the Gray Swan IPI benchmark (Q1+Q2 2026), lower
-scores are better. All models use extended thinking. Results represent the probability that an attacker finds a
-successful attack after k=1, k=10, and k=15 attempts. Qwen 3.8, DeepSeek-V4-Pro, and GLM-5.3 were not
-evaluated on GUI Computer use scenarios. Claude models are evaluated without protections specific to prompt
-injection.
+[Figure 5.2.1.A] Indirect prompt injection attacks from the Gray Swan IPI benchmark (Q1+Q2 2026), lower scores are better. All models use extended thinking. Results represent the probability that an attacker finds a successful attack after k=1, k=10, and k=15 attempts. Qwen 3.8, DeepSeek-V4-Pro, and GLM-5.3 were not evaluated on GUI Computer use scenarios. Claude models are evaluated without protections specific to prompt injection.
 
 p. 50
 
 ![Table 8.1.A](../../figures/anthropic/claude-haiku-5-5-system-card/figure-03.png)
 
-[Table 8.1.A] Capability evaluation summary. Unless otherwise noted, all Haiku 5.5 results use the following
-standard configuration: adaptive thinking at max effort, default sampling settings (temperature, top_p),
-averaged over five trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. The
-best score at max effort in each row is bolded. Competitor figures are drawn from the respective developers’
-published system cards or benchmark leaderboards unless otherwise noted.
+[Table 8.1.A] Capability evaluation summary. Unless otherwise noted, all Haiku 5.5 results use the following standard configuration: adaptive thinking at max effort, default sampling settings (temperature, top_p), averaged over five trials. Context window sizes are evaluation-dependent and do not exceed 1M tokens. The best score at max effort in each row is bolded. Competitor figures are drawn from the respective developers’ published system cards or benchmark leaderboards unless otherwise noted.
 
 p. 111

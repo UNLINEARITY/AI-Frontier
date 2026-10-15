@@ -6,8 +6,6 @@ General-purpose robots need a deep understanding of the physical world, advanced
 
 ![Figure 1](../../figures/google/gemini-robotics-1-5-technical-report/figure-01.png)
 
-Figure 1 | The Gemini Robotics 1.5 family of models consists of Gemini Robotics 1.5, a VLA, and Gemini
-Robotics 1.5-ER, a VLM with state-of-the-art embodied reasoning capabilities. They can be combined together
-to form a powerful agentic framework.
+Figure 1 | The Gemini Robotics 1.5 family of models consists of Gemini Robotics 1.5, a VLA, and Gemini Robotics 1.5-ER, a VLM with state-of-the-art embodied reasoning capabilities. They can be combined together to form a powerful agentic framework.
 
 p. 2

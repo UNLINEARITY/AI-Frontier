@@ -16,10 +16,6 @@ Below we describe the incremental biological capability findings for GPT-Rosalin
 
 ![Table 10](../../figures/openai/gpt-rosalind-5-5-system-card/figure-01.png)
 
-Table 10: Biological experiments are costly and iterative. Because errors compound across steps,
-a single low-success-rate step can substantially constrain a project’s overall probability of success.
-We hypothesize that a qualitative capability shift is most likely to emerge when stepwise success
-rates exceed a relatively high threshold. Accordingly, we propose 50% correctness as the threshold
-for biorisk concern.
+Table 10: Biological experiments are costly and iterative. Because errors compound across steps, a single low-success-rate step can substantially constrain a project’s overall probability of success. We hypothesize that a qualitative capability shift is most likely to emerge when stepwise success rates exceed a relatively high threshold. Accordingly, we propose 50% correctness as the threshold for biorisk concern.
 
 p. 8

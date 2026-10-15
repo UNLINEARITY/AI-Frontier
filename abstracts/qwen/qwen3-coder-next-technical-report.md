@@ -8,8 +8,7 @@ We present Qwen3-Coder-Next, an open-weight language model specialized for codin
 
 ![Figure 1](../../figures/qwen/qwen3-coder-next-technical-report/figure-01.png)
 
-Figure 1: Comparison of Qwen3-Coder-Next to other open-weight models on SWE-Bench Verified,
-SWE-Bench Multilingual, SWE-Bench Pro, Terminal-Bench 2.0, and Aider.
+Figure 1: Comparison of Qwen3-Coder-Next to other open-weight models on SWE-Bench Verified, SWE-Bench Multilingual, SWE-Bench Pro, Terminal-Bench 2.0, and Aider.
 
 p. 1
 

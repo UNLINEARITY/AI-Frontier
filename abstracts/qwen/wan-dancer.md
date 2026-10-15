@@ -10,19 +10,12 @@ Keywords: Video Generation · Music-to-Dance · Global-to-Local · Minute- scale
 
 ![Figure 1](../../figures/qwen/wan-dancer/figure-01.png)
 
-Fig. 1: Training Pipeline. Our training strategy focuses on optimizing the Diffusion
-Transformer (DiT) blocks and the Music Encoder. Both the global keyframe generation
-and local temporal refinement stages adhere to a unified training pipeline. The primary
-distinction lies in the input video, keyframe mask, prompt, and the target frame rates
-(fps) specific to each stage’s temporal granularity.
+Fig. 1: Training Pipeline. Our training strategy focuses on optimizing the Diffusion Transformer (DiT) blocks and the Music Encoder. Both the global keyframe generation and local temporal refinement stages adhere to a unified training pipeline. The primary distinction lies in the input video, keyframe mask, prompt, and the target frame rates (fps) specific to each stage’s temporal granularity.
 
 p. 5
 
 ![Figure 3](../../figures/qwen/wan-dancer/figure-02.png)
 
-Fig. 3: Minute-scale Video Generation. Our framework enables the synthesis of dance
-videos exceeding one minute in duration across diverse genres. The first row features
-Chinese Classical dance with fluid movements, the second showcases the energetic
-rhythms of Latin dance, and the third reflects the unique elements of K-Pop dance.
+Fig. 3: Minute-scale Video Generation. Our framework enables the synthesis of dance videos exceeding one minute in duration across diverse genres. The first row features Chinese Classical dance with fluid movements, the second showcases the energetic rhythms of Latin dance, and the third reflects the unique elements of K-Pop dance.
 
 p. 9

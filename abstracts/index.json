@@ -4220,8 +4220,8 @@
         "primary": "pdfminer.six 20260107",
         "comparison": "pypdf 6.19.0"
       },
-      "manual_review": false,
-      "status": "cross_checked",
+      "manual_review": true,
+      "status": "source_reviewed",
       "review_reasons": [],
       "section_type": "introduction",
       "source_heading": "1 Introduction",
@@ -4231,7 +4231,7 @@
         3
       ],
       "raw_text": "Physical AI implemented as vision-language-action (VLAs) and world-action models (WAMs)\noffers a path toward general-purpose robot manipulation by combining the semantic and perceptual\ncapabilities of pretrained vision-language backbones (VLMs) with action generation [4, 14, 20, 21,\n23, 44, 74]. Recent models of this type have been exposed to increasingly broad task coverage and\nexpressive continuous control during training. However, zero-shot success rates of existing VLA\nand WAMs on unseen manipulation tasks and in new environments remain low. Adaptation is a\ncrucial and complex step between a pretrained robot foundation model and a version of it that\nworks in practice.\n\nThis report introduces Rho, an open-weights family of 5B-parameter physical AI models for\nbimanual robotic manipulation explicitly designed for data-efficient adaptation to new environments\n\nUniversal Robots AI Trainer\n\nFranka FR3 Duo\n\nFigure 1 Rho’s physical dual-arm robot embodiments. YAM Box is common in research labs, FR3\nDuo’s usage straddles research and industry, and UR AI Trainer is an emerging standard setup for\nindustrial bimanual manipulation tasks. Midtrained checkpoints for all three are available at https:\n//huggingface.co/collections/microsoft/rho\n\nand tasks. Rho’s central premise is that, in order to quickly learn a new task, a physical AI model\nneeds to master vision, language, and control of the specific robot that is expected to perform\nthis task before task adaptation begins. Pretraining is insufficient for this: it typically exposes\nthe model to a broad but superficial mixture of tasks, environments, and embodiments, without\nfocusing on sensing, kinematics, action space, and data conventions of any robot in particular.\nDirectly teaching a pretrained model to complete an unseen task, then, involves familiarizing it\nwith the control of the target robot platform, which makes the adaptation process data-intensive.\nRho’s training recipe separates adaptation to a robot embodiment from adaptation to a task,\nabsorbing a large part of the task adaptation burden into the Rho models we present. The Rho\nfamily derives from a single foundation, Rho-base, and consists of several VLAs that can serve\nas reusable starting points for adapting to many downstream tasks much more data-efficiently\nthan a pretrained-only model would, as our empirical evaluation demonstrates. We also show that\nafter offline task specialization, these VLAs can continue improving from interaction through an\ninternal latent policy, covering blind spots left by typically small finetuning datasets.\n\nWe release the Rho foundation Rho-base along with its variants for 3 representative robot\nplatforms for bimanual manipulation – I2RT YAM Box, Universal Robots AI Trainer, and Franka\nFR3 Duo (Figure 1). Each of these Rho variants is built via a recipe we call regularized progressive\nadaptation, whose steps expose the model to various forms of robotic manipulation training while\ntaking care to preserve useful visual, linguistic, and control capabilities gained in the previous\ntraining stages. As a starting point, Rho uses a backbone distilled from Microsoft’s Phi-family\nVLM [3]. Rho’s training recipe adapts this backbone for physical-world comprehension, couples\nit to a flow-matching action expert that generates continuous action chunks, and pretrains it\nin the end-effector-pose action space on a multi-task multi-embodiment data mixture that is\ndominated by demonstrations from dual-arm robot platforms but also includes robotics-relevant\nWeb VQA data. This produces the foundation Rho-base and is followed by Rho-base’s multi-task\nsingle-embodiment midtraining. The embodiment-midtraining stage is key: during it, Rho-base\nfocuses on learning to control a target robot across a broad distribution of tasks, motions, and\nenvironments, giving rise to Rho family’s embodiment-specific VLAs Rho-YAM-Box, Rho-UR-\nAI-Trainer, and Rho-FR3-Duo. Offline task adaptation comes after horizontal midtraining and\nfinetunes these VLAs to a target task. For continued adaptation after deployment, each of\nRho-family VLA’s flow module includes an optional internal latent policy that maps the current\nobservation to the flow’s initial condition, replacing random sampling while leaving the action\ngenerator fixed. In our online experiments, only this lightweight internal module learns from\ncorrective interaction, preserving the broader capabilities acquired earlier and serving as a form of\nregularization.\n\nOur experiments assess whether this combination of reusable embodiment checkpoints and\noffline as well as online adaptation provides a practical route from a generalist VLA to reliable task\n\nexecution, both in simulation and on physical robots. We systematically study the architecture of\nRho’s action expert, the composition and scheduling of its pretraining mixture, and the effect of its\nembodiment midtraining on its downstream task adaptation. Across the settings and open-weights\nbaselines evaluated in this report, Rho achieves the strongest overall performance.\n\nThus, the main contributions of our work are:\n\n• We release the Rho model family consisting of the Rho-base foundation checkpoint and\nits 3 embodiment-midtrained VLA variants Rho-YAM-Box, Rho-UR-AI-Trainer, and Rho-\nFR3-Duo, for researchers and practitioners to adapt to their own robotic manipulation\nscenarios.\n\n• We systematically evaluate Rho’s architectural and multi-stage training recipe that com-\nbines physical grounding with heterogeneous, multi-embodiment multi-task robot data,\nhorizontal embodiment midtraining, and vertical task adaptation. Our studies, performed\nin RoboTwin [8], LIBERO [34], and RoboEval [59] simulation environment, and on common\ndual-arm robot setups YAM Box, UR AI Trainer, and FR3 Duo demonstrate this recipe’s\nbroad positive effects.\n\n• We empirically analyze the influence of midtraining on downstream adaptation and show\nthat it halves the amount of task finetuning data needed to achieve a given success rate\nthreshold, compared to finetuning pretrained Rho without midtraining. We also demonstrate\nthat Rho can continue improving after offline task specialization by adapting its internal\nlatent policy from corrective interaction.\n\nTogether, these results establish Rho as a strong open-weights VLA and, more broadly, examine\nhow architecture, pretraining, embodiment midtraining, and task adaptation interact in a practical\nrobot-learning pipeline.",
-      "text": "Physical AI implemented as vision-language-action (VLAs) and world-action models (WAMs) offers a path toward general-purpose robot manipulation by combining the semantic and perceptual capabilities of pretrained vision-language backbones (VLMs) with action generation [4, 14, 20, 21, 23, 44, 74]. Recent models of this type have been exposed to increasingly broad task coverage and expressive continuous control during training. However, zero-shot success rates of existing VLA and WAMs on unseen manipulation tasks and in new environments remain low. Adaptation is a crucial and complex step between a pretrained robot foundation model and a version of it that works in practice.\n\nThis report introduces Rho, an open-weights family of 5B-parameter physical AI models for bimanual robotic manipulation explicitly designed for data-efficient adaptation to new environments\n\nUniversal Robots AI Trainer\n\nFranka FR3 Duo\n\nFigure 1 Rho’s physical dual-arm robot embodiments. YAM Box is common in research labs, FR3 Duo’s usage straddles research and industry, and UR AI Trainer is an emerging standard setup for industrial bimanual manipulation tasks. Midtrained checkpoints for all three are available at https: //huggingface.co/collections/microsoft/rho\n\nand tasks. Rho’s central premise is that, in order to quickly learn a new task, a physical AI model needs to master vision, language, and control of the specific robot that is expected to perform this task before task adaptation begins. Pretraining is insufficient for this: it typically exposes the model to a broad but superficial mixture of tasks, environments, and embodiments, without focusing on sensing, kinematics, action space, and data conventions of any robot in particular. Directly teaching a pretrained model to complete an unseen task, then, involves familiarizing it with the control of the target robot platform, which makes the adaptation process data-intensive. Rho’s training recipe separates adaptation to a robot embodiment from adaptation to a task, absorbing a large part of the task adaptation burden into the Rho models we present. The Rho family derives from a single foundation, Rho-base, and consists of several VLAs that can serve as reusable starting points for adapting to many downstream tasks much more data-efficiently than a pretrained-only model would, as our empirical evaluation demonstrates. We also show that after offline task specialization, these VLAs can continue improving from interaction through an internal latent policy, covering blind spots left by typically small finetuning datasets.\n\nWe release the Rho foundation Rho-base along with its variants for 3 representative robot platforms for bimanual manipulation – I2RT YAM Box, Universal Robots AI Trainer, and Franka FR3 Duo (Figure 1). Each of these Rho variants is built via a recipe we call regularized progressive adaptation, whose steps expose the model to various forms of robotic manipulation training while taking care to preserve useful visual, linguistic, and control capabilities gained in the previous training stages. As a starting point, Rho uses a backbone distilled from Microsoft’s Phi-family VLM [3]. Rho’s training recipe adapts this backbone for physical-world comprehension, couples it to a flow-matching action expert that generates continuous action chunks, and pretrains it in the end-effector-pose action space on a multi-task multi-embodiment data mixture that is dominated by demonstrations from dual-arm robot platforms but also includes robotics-relevant Web VQA data. This produces the foundation Rho-base and is followed by Rho-base’s multi-task single-embodiment midtraining. The embodiment-midtraining stage is key: during it, Rho-base focuses on learning to control a target robot across a broad distribution of tasks, motions, and environments, giving rise to Rho family’s embodiment-specific VLAs Rho-YAM-Box, Rho-UR- AI-Trainer, and Rho-FR3-Duo. Offline task adaptation comes after horizontal midtraining and finetunes these VLAs to a target task. For continued adaptation after deployment, each of Rho-family VLA’s flow module includes an optional internal latent policy that maps the current observation to the flow’s initial condition, replacing random sampling while leaving the action generator fixed. In our online experiments, only this lightweight internal module learns from corrective interaction, preserving the broader capabilities acquired earlier and serving as a form of regularization.\n\nOur experiments assess whether this combination of reusable embodiment checkpoints and offline as well as online adaptation provides a practical route from a generalist VLA to reliable task\n\nexecution, both in simulation and on physical robots. We systematically study the architecture of Rho’s action expert, the composition and scheduling of its pretraining mixture, and the effect of its embodiment midtraining on its downstream task adaptation. Across the settings and open-weights baselines evaluated in this report, Rho achieves the strongest overall performance.\n\nThus, the main contributions of our work are:\n\n• We release the Rho model family consisting of the Rho-base foundation checkpoint and its 3 embodiment-midtrained VLA variants Rho-YAM-Box, Rho-UR-AI-Trainer, and Rho- FR3-Duo, for researchers and practitioners to adapt to their own robotic manipulation scenarios.\n\n• We systematically evaluate Rho’s architectural and multi-stage training recipe that com- bines physical grounding with heterogeneous, multi-embodiment multi-task robot data, horizontal embodiment midtraining, and vertical task adaptation. Our studies, performed in RoboTwin [8], LIBERO [34], and RoboEval [59] simulation environment, and on common dual-arm robot setups YAM Box, UR AI Trainer, and FR3 Duo demonstrate this recipe’s broad positive effects.\n\n• We empirically analyze the influence of midtraining on downstream adaptation and show that it halves the amount of task finetuning data needed to achieve a given success rate threshold, compared to finetuning pretrained Rho without midtraining. We also demonstrate that Rho can continue improving after offline task specialization by adapting its internal latent policy from corrective interaction.\n\nTogether, these results establish Rho as a strong open-weights VLA and, more broadly, examine how architecture, pretraining, embodiment midtraining, and task adaptation interact in a practical robot-learning pipeline.",
+      "text": "Physical AI implemented as vision-language-action (VLAs) and world-action models (WAMs) offers a path toward general-purpose robot manipulation by combining the semantic and perceptual capabilities of pretrained vision-language backbones (VLMs) with action generation [4, 14, 20, 21, 23, 44, 74]. Recent models of this type have been exposed to increasingly broad task coverage and expressive continuous control during training. However, zero-shot success rates of existing VLA and WAMs on unseen manipulation tasks and in new environments remain low. Adaptation is a crucial and complex step between a pretrained robot foundation model and a version of it that works in practice.\n\nThis report introduces Rho, an open-weights family of 5B-parameter physical AI models for bimanual robotic manipulation explicitly designed for data-efficient adaptation to new environments and tasks. Rho’s central premise is that, in order to quickly learn a new task, a physical AI model needs to master vision, language, and control of the specific robot that is expected to perform this task before task adaptation begins. Pretraining is insufficient for this: it typically exposes the model to a broad but superficial mixture of tasks, environments, and embodiments, without focusing on sensing, kinematics, action space, and data conventions of any robot in particular. Directly teaching a pretrained model to complete an unseen task, then, involves familiarizing it with the control of the target robot platform, which makes the adaptation process data-intensive. Rho’s training recipe separates adaptation to a robot embodiment from adaptation to a task, absorbing a large part of the task adaptation burden into the Rho models we present. The Rho family derives from a single foundation, Rho-base, and consists of several VLAs that can serve as reusable starting points for adapting to many downstream tasks much more data-efficiently than a pretrained-only model would, as our empirical evaluation demonstrates. We also show that after offline task specialization, these VLAs can continue improving from interaction through an internal latent policy, covering blind spots left by typically small finetuning datasets.\n\nWe release the Rho foundation Rho-base along with its variants for 3 representative robot platforms for bimanual manipulation – I2RT YAM Box, Universal Robots AI Trainer, and Franka FR3 Duo (Figure 1). Each of these Rho variants is built via a recipe we call regularized progressive adaptation, whose steps expose the model to various forms of robotic manipulation training while taking care to preserve useful visual, linguistic, and control capabilities gained in the previous training stages. As a starting point, Rho uses a backbone distilled from Microsoft’s Phi-family VLM [3]. Rho’s training recipe adapts this backbone for physical-world comprehension, couples it to a flow-matching action expert that generates continuous action chunks, and pretrains it in the end-effector-pose action space on a multi-task multi-embodiment data mixture that is dominated by demonstrations from dual-arm robot platforms but also includes robotics-relevant Web VQA data. This produces the foundation Rho-base and is followed by Rho-base’s multi-task single-embodiment midtraining. The embodiment-midtraining stage is key: during it, Rho-base focuses on learning to control a target robot across a broad distribution of tasks, motions, and environments, giving rise to Rho family’s embodiment-specific VLAs Rho-YAM-Box, Rho-UR- AI-Trainer, and Rho-FR3-Duo. Offline task adaptation comes after horizontal midtraining and finetunes these VLAs to a target task. For continued adaptation after deployment, each of Rho-family VLA’s flow module includes an optional internal latent policy that maps the current observation to the flow’s initial condition, replacing random sampling while leaving the action generator fixed. In our online experiments, only this lightweight internal module learns from corrective interaction, preserving the broader capabilities acquired earlier and serving as a form of regularization.\n\nOur experiments assess whether this combination of reusable embodiment checkpoints and offline as well as online adaptation provides a practical route from a generalist VLA to reliable task\n\nexecution, both in simulation and on physical robots. We systematically study the architecture of Rho’s action expert, the composition and scheduling of its pretraining mixture, and the effect of its embodiment midtraining on its downstream task adaptation. Across the settings and open-weights baselines evaluated in this report, Rho achieves the strongest overall performance.\n\nThus, the main contributions of our work are:\n\n• We release the Rho model family consisting of the Rho-base foundation checkpoint and its 3 embodiment-midtrained VLA variants Rho-YAM-Box, Rho-UR-AI-Trainer, and Rho- FR3-Duo, for researchers and practitioners to adapt to their own robotic manipulation scenarios.\n\n• We systematically evaluate Rho’s architectural and multi-stage training recipe that com- bines physical grounding with heterogeneous, multi-embodiment multi-task robot data, horizontal embodiment midtraining, and vertical task adaptation. Our studies, performed in RoboTwin [8], LIBERO [34], and RoboEval [59] simulation environment, and on common dual-arm robot setups YAM Box, UR AI Trainer, and FR3 Duo demonstrate this recipe’s broad positive effects.\n\n• We empirically analyze the influence of midtraining on downstream adaptation and show that it halves the amount of task finetuning data needed to achieve a given success rate threshold, compared to finetuning pretrained Rho without midtraining. We also demonstrate that Rho can continue improving after offline task specialization by adapting its internal latent policy from corrective interaction.\n\nTogether, these results establish Rho as a strong open-weights VLA and, more broadly, examine how architecture, pretraining, embodiment midtraining, and task adaptation interact in a practical robot-learning pipeline.",
       "source_fragments": [
         {
           "page": 1,
@@ -4290,16 +4290,183 @@
           "text": "Together, these results establish Rho as a strong open-weights VLA and, more broadly, examine\nhow architecture, pretraining, embodiment midtraining, and task adaptation interact in a practical\nrobot-learning pipeline."
         }
       ],
-      "text_sha256": "a71023e284358391713bc7d2d5d934d5b5d435bc191fa8ad27bf0fd317fa866b",
+      "text_sha256": "aedacb90ced6e5056b5420f9e9e910428f154e417bd01c66116ed91a278d471f",
       "cross_check": {
         "matched_fragments": 14,
         "total_fragments": 14,
         "comparison": "literal_glyph_order_or_line_wrap_normalization"
       },
       "initial_cross_check": null,
-      "source_review": null,
+      "source_review": {
+        "id": "microsoft:rho-technical-report",
+        "source_sha256": "2e6c4c09d8f1bc001cd5aa8e0946377a7ad7bb4c05b32d35da5085db84bebe5a",
+        "input_text_sha256": "a71023e284358391713bc7d2d5d934d5b5d435bc191fa8ad27bf0fd317fa866b",
+        "output_text_sha256": "aedacb90ced6e5056b5420f9e9e910428f154e417bd01c66116ed91a278d471f",
+        "source_pages": [
+          1,
+          2
+        ],
+        "source_fragment_indexes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "review_method": "visual_source_page",
+        "reviewed_at": "2026-10-15",
+        "note": "The page-2 figure labels, caption, and URL are interleaved before the continuation “and tasks.” Remove the figure material from the derived passage and join the source sentence; retain its original raw_text and source_fragments.",
+        "edits": [
+          {
+            "match": "explicitly designed for data-efficient adaptation to new environments\n\nUniversal Robots AI Trainer\n\nFranka FR3 Duo\n\nFigure 1 Rho’s physical dual-arm robot embodiments. YAM Box is common in research labs, FR3 Duo’s usage straddles research and industry, and UR AI Trainer is an emerging standard setup for industrial bimanual manipulation tasks. Midtrained checkpoints for all three are available at https: //huggingface.co/collections/microsoft/rho\n\nand tasks.",
+            "replacement": "explicitly designed for data-efficient adaptation to new environments and tasks.",
+            "match_sha256": "a7c5fbab4d275ead66dc2e4c4ed9b7e18848a004cf8d26b621416d2a46ee1b8e"
+          }
+        ],
+        "source_regions": [
+          {
+            "page": 1,
+            "source_fragment_index": 1,
+            "raw_text_sha256": "307a83d54b829ca3a1350e32acd34660e5c28e0845cfcc9a444cad570345b5f4",
+            "bbox": [
+              68.031,
+              84.0396346,
+              527.4642465479997,
+              109.1757346
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 2,
+            "raw_text_sha256": "9b2f4bd36a85346d66dd1b22d4c475a1945e483137a0c8afaf85acb417da00f6",
+            "bbox": [
+              234.535,
+              678.3242555999999,
+              360.94843887999997,
+              688.2868556
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 3,
+            "raw_text_sha256": "bd5d0d12a68f1e42f2a34cee2bb61c4658ea88d440c137c6cf2a234604d606d0",
+            "bbox": [
+              416.886,
+              678.3242555999999,
+              490.6490904,
+              688.2868556
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 4,
+            "raw_text_sha256": "ddbd544e0a292500f2b990a374be3163c31be59a74e46b7aa73fb313aba5e2b7",
+            "bbox": [
+              67.50799999999998,
+              623.8483027999999,
+              529.85919,
+              669.9558556000001
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 5,
+            "raw_text_sha256": "4dd7d83eea920e44b8a43fea17e84782c1bf9ef66ad92bbce28ff212fdd00e01",
+            "bbox": [
+              67.639,
+              404.52663459999997,
+              529.3628458604595,
+              600.3827346
+            ]
+          }
+        ]
+      },
       "inspected_pages": 12,
-      "markdown_path": "abstracts/microsoft/rho-technical-report.md"
+      "markdown_path": "abstracts/microsoft/rho-technical-report.md",
+      "passage_review": {
+        "id": "microsoft:rho-technical-report",
+        "source_sha256": "2e6c4c09d8f1bc001cd5aa8e0946377a7ad7bb4c05b32d35da5085db84bebe5a",
+        "input_text_sha256": "a71023e284358391713bc7d2d5d934d5b5d435bc191fa8ad27bf0fd317fa866b",
+        "output_text_sha256": "aedacb90ced6e5056b5420f9e9e910428f154e417bd01c66116ed91a278d471f",
+        "source_pages": [
+          1,
+          2
+        ],
+        "source_fragment_indexes": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "review_method": "visual_source_page",
+        "reviewed_at": "2026-10-15",
+        "note": "The page-2 figure labels, caption, and URL are interleaved before the continuation “and tasks.” Remove the figure material from the derived passage and join the source sentence; retain its original raw_text and source_fragments.",
+        "edits": [
+          {
+            "match": "explicitly designed for data-efficient adaptation to new environments\n\nUniversal Robots AI Trainer\n\nFranka FR3 Duo\n\nFigure 1 Rho’s physical dual-arm robot embodiments. YAM Box is common in research labs, FR3 Duo’s usage straddles research and industry, and UR AI Trainer is an emerging standard setup for industrial bimanual manipulation tasks. Midtrained checkpoints for all three are available at https: //huggingface.co/collections/microsoft/rho\n\nand tasks.",
+            "replacement": "explicitly designed for data-efficient adaptation to new environments and tasks.",
+            "match_sha256": "a7c5fbab4d275ead66dc2e4c4ed9b7e18848a004cf8d26b621416d2a46ee1b8e"
+          }
+        ],
+        "source_regions": [
+          {
+            "page": 1,
+            "source_fragment_index": 1,
+            "raw_text_sha256": "307a83d54b829ca3a1350e32acd34660e5c28e0845cfcc9a444cad570345b5f4",
+            "bbox": [
+              68.031,
+              84.0396346,
+              527.4642465479997,
+              109.1757346
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 2,
+            "raw_text_sha256": "9b2f4bd36a85346d66dd1b22d4c475a1945e483137a0c8afaf85acb417da00f6",
+            "bbox": [
+              234.535,
+              678.3242555999999,
+              360.94843887999997,
+              688.2868556
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 3,
+            "raw_text_sha256": "bd5d0d12a68f1e42f2a34cee2bb61c4658ea88d440c137c6cf2a234604d606d0",
+            "bbox": [
+              416.886,
+              678.3242555999999,
+              490.6490904,
+              688.2868556
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 4,
+            "raw_text_sha256": "ddbd544e0a292500f2b990a374be3163c31be59a74e46b7aa73fb313aba5e2b7",
+            "bbox": [
+              67.50799999999998,
+              623.8483027999999,
+              529.85919,
+              669.9558556000001
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 5,
+            "raw_text_sha256": "4dd7d83eea920e44b8a43fea17e84782c1bf9ef66ad92bbce28ff212fdd00e01",
+            "bbox": [
+              67.639,
+              404.52663459999997,
+              529.3628458604595,
+              600.3827346
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "tencent:worldplay-technical-report",
@@ -4319,8 +4486,8 @@
         "primary": "pdfminer.six 20260107",
         "comparison": "pypdf 6.19.0"
       },
-      "manual_review": false,
-      "status": "cross_checked",
+      "manual_review": true,
+      "status": "source_reviewed",
       "review_reasons": [],
       "section_type": "abstract",
       "source_heading": "Abstract",
@@ -4329,7 +4496,7 @@
         2
       ],
       "raw_text": "This paper presents WorldPlay, a streaming\nvideo diffusion model that enables real-time,\ninteractive world modeling with long-term\ngeometric consistency, resolving the trade-off\nbetween speed and memory that limits current\n\nmethods. WorldPlay draws power from three\nkey ingredients.\n1) We use a Dual Action\nRepresentation to enable robust action control\nin response to the user’s keyboard and mouse\ninputs. 2) To enforce long-term consistency, our\nReconstituted Context Memory dynamically\nrebuilds context from past frames and uses tem-\nporal reframing to keep geometrically important\nbut long-past frames accessible, effectively allevi-\nating memory attenuation. 3) We also propose\nContext Forcing, a novel distillation method\ndesigned for memory-aware model. Aligning\nmemory context between the teacher and student\npreserves the student’s capacity to use long-range\ninformation, enabling real-time speeds while\n\nWorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling\n\npreventing error drift. Taken together, WorldPlay\ngenerates long-horizon streaming 720p video at\n24 FPS with superior consistency, comparing\nfavorably with existing techniques and showing\nstrong generalization across diverse scenes.\nProject page and online demo can be found:\nhttps://3d-models.hunyuan.tencent.com/world/\nand https://3d.hunyuan.tencent.com/sceneTo3D.",
-      "text": "This paper presents WorldPlay, a streaming video diffusion model that enables real-time, interactive world modeling with long-term geometric consistency, resolving the trade-off between speed and memory that limits current\n\nmethods. WorldPlay draws power from three key ingredients. 1) We use a Dual Action Representation to enable robust action control in response to the user’s keyboard and mouse inputs. 2) To enforce long-term consistency, our Reconstituted Context Memory dynamically rebuilds context from past frames and uses tem- poral reframing to keep geometrically important but long-past frames accessible, effectively allevi- ating memory attenuation. 3) We also propose Context Forcing, a novel distillation method designed for memory-aware model. Aligning memory context between the teacher and student preserves the student’s capacity to use long-range information, enabling real-time speeds while\n\nWorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling\n\npreventing error drift. Taken together, WorldPlay generates long-horizon streaming 720p video at 24 FPS with superior consistency, comparing favorably with existing techniques and showing strong generalization across diverse scenes. Project page and online demo can be found: https://3d-models.hunyuan.tencent.com/world/ and https://3d.hunyuan.tencent.com/sceneTo3D.",
+      "text": "This paper presents WorldPlay, a streaming video diffusion model that enables real-time, interactive world modeling with long-term geometric consistency, resolving the trade-off between speed and memory that limits current\n\nmethods. WorldPlay draws power from three key ingredients. 1) We use a Dual Action Representation to enable robust action control in response to the user’s keyboard and mouse inputs. 2) To enforce long-term consistency, our Reconstituted Context Memory dynamically rebuilds context from past frames and uses tem- poral reframing to keep geometrically important but long-past frames accessible, effectively allevi- ating memory attenuation. 3) We also propose Context Forcing, a novel distillation method designed for memory-aware model. Aligning memory context between the teacher and student preserves the student’s capacity to use long-range information, enabling real-time speeds while preventing error drift. Taken together, WorldPlay generates long-horizon streaming 720p video at 24 FPS with superior consistency, comparing favorably with existing techniques and showing strong generalization across diverse scenes. Project page and online demo can be found: https://3d-models.hunyuan.tencent.com/world/ and https://3d.hunyuan.tencent.com/sceneTo3D.",
       "source_fragments": [
         {
           "page": 1,
@@ -4348,16 +4515,135 @@
           "text": "preventing error drift. Taken together, WorldPlay\ngenerates long-horizon streaming 720p video at\n24 FPS with superior consistency, comparing\nfavorably with existing techniques and showing\nstrong generalization across diverse scenes.\nProject page and online demo can be found:\nhttps://3d-models.hunyuan.tencent.com/world/\nand https://3d.hunyuan.tencent.com/sceneTo3D."
         }
       ],
-      "text_sha256": "dbfb3afaf7a0beac1763ccfc363b1a7ddac15b530d9fb596d422bb85070f70b6",
+      "text_sha256": "9f7d1dbb6a0b099db870f1fea60913c1649ac772768f40644fff63fb1afa3582",
       "cross_check": {
         "matched_fragments": 4,
         "total_fragments": 4,
         "comparison": "literal_glyph_order_or_line_wrap_normalization"
       },
       "initial_cross_check": null,
-      "source_review": null,
+      "source_review": {
+        "id": "tencent:worldplay-technical-report",
+        "source_sha256": "5051aab9b54f14963a6fc8bfda6038fe5a25867dc6efa16e811e2e690bdfbde6",
+        "input_text_sha256": "dbfb3afaf7a0beac1763ccfc363b1a7ddac15b530d9fb596d422bb85070f70b6",
+        "output_text_sha256": "9f7d1dbb6a0b099db870f1fea60913c1649ac772768f40644fff63fb1afa3582",
+        "source_pages": [
+          1,
+          2
+        ],
+        "source_fragment_indexes": [
+          1,
+          2,
+          3
+        ],
+        "review_method": "visual_source_page",
+        "reviewed_at": "2026-10-15",
+        "note": "The page-2 running title interrupts the abstract sentence. Remove that header and join the visually continuous source sentence; retain the header in original raw_text and source_fragments.",
+        "edits": [
+          {
+            "match": "enabling real-time speeds while\n\nWorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling\n\npreventing error drift.",
+            "replacement": "enabling real-time speeds while preventing error drift.",
+            "match_sha256": "ccdce9209bc849dbb63a30fa0f35e511fb181dff8e2e23c19b5fa84b881588b0"
+          }
+        ],
+        "source_regions": [
+          {
+            "page": 1,
+            "source_fragment_index": 1,
+            "raw_text_sha256": "6b64a2fb630ae520347568eee9dbfc40fa55c5c1db2213ad88f80e45f9adf20f",
+            "bbox": [
+              327.366,
+              79.2910784,
+              523.1684298248001,
+              256.6266784
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 2,
+            "raw_text_sha256": "e46825cf6d34f72a37f81e9b964c5476ab5eae1b0cc7794976ebb5a1b00cd335",
+            "bbox": [
+              107.642,
+              736.0170224,
+              488.7946975999999,
+              744.9834224
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 3,
+            "raw_text_sha256": "94dc830c4f9fc12d8c794497731a6762aad23b05363c156a67e4d872692cd086",
+            "bbox": [
+              75.366,
+              629.1380783999999,
+              271.2560210040001,
+              722.7876784
+            ]
+          }
+        ]
+      },
       "inspected_pages": 12,
-      "markdown_path": "abstracts/tencent/worldplay-technical-report.md"
+      "markdown_path": "abstracts/tencent/worldplay-technical-report.md",
+      "passage_review": {
+        "id": "tencent:worldplay-technical-report",
+        "source_sha256": "5051aab9b54f14963a6fc8bfda6038fe5a25867dc6efa16e811e2e690bdfbde6",
+        "input_text_sha256": "dbfb3afaf7a0beac1763ccfc363b1a7ddac15b530d9fb596d422bb85070f70b6",
+        "output_text_sha256": "9f7d1dbb6a0b099db870f1fea60913c1649ac772768f40644fff63fb1afa3582",
+        "source_pages": [
+          1,
+          2
+        ],
+        "source_fragment_indexes": [
+          1,
+          2,
+          3
+        ],
+        "review_method": "visual_source_page",
+        "reviewed_at": "2026-10-15",
+        "note": "The page-2 running title interrupts the abstract sentence. Remove that header and join the visually continuous source sentence; retain the header in original raw_text and source_fragments.",
+        "edits": [
+          {
+            "match": "enabling real-time speeds while\n\nWorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling\n\npreventing error drift.",
+            "replacement": "enabling real-time speeds while preventing error drift.",
+            "match_sha256": "ccdce9209bc849dbb63a30fa0f35e511fb181dff8e2e23c19b5fa84b881588b0"
+          }
+        ],
+        "source_regions": [
+          {
+            "page": 1,
+            "source_fragment_index": 1,
+            "raw_text_sha256": "6b64a2fb630ae520347568eee9dbfc40fa55c5c1db2213ad88f80e45f9adf20f",
+            "bbox": [
+              327.366,
+              79.2910784,
+              523.1684298248001,
+              256.6266784
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 2,
+            "raw_text_sha256": "e46825cf6d34f72a37f81e9b964c5476ab5eae1b0cc7794976ebb5a1b00cd335",
+            "bbox": [
+              107.642,
+              736.0170224,
+              488.7946975999999,
+              744.9834224
+            ]
+          },
+          {
+            "page": 2,
+            "source_fragment_index": 3,
+            "raw_text_sha256": "94dc830c4f9fc12d8c794497731a6762aad23b05363c156a67e4d872692cd086",
+            "bbox": [
+              75.366,
+              629.1380783999999,
+              271.2560210040001,
+              722.7876784
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "google:sima-2-technical-report",
@@ -8080,8 +8366,8 @@
         "primary": "pdfminer.six 20260107",
         "comparison": "pypdf 6.19.0"
       },
-      "manual_review": false,
-      "status": "cross_checked",
+      "manual_review": true,
+      "status": "source_reviewed",
       "review_reasons": [],
       "section_type": "introduction",
       "source_heading": "1. Introduction",
@@ -8091,7 +8377,7 @@
         5
       ],
       "raw_text": "German literary critic Friedrich Schlegel once said, “What is lost in the good or excellent translation is precisely\nthe best.” When applied to speech, this sentiment implies that even when a translation accurately renders the\nsemantic meaning of an utterance, certain defining elements of speech may be lost in the process (Schuller\net al., 2013).\n\nWhile the specific constituents of what Schlegel deemed the best are open for interpretation, the speech\ntranslation research community has long homed in on two components: the indexical (i.e., components marking\nthe characteristics of a person) and pragmatical (i.e., the way communication works in social situations)\ncomponents of speech that make human communication what it is. For speech to be natural, it relies on\nthe indexical or revelatory nature of the human voice (Costello, 2000). A speech translation system that\nincorporates features that help a listener make inferences about a speaker’s personhood bolsters the naturalness\nof a machine-mediated interaction (Waytz et al., 2014). Preserving vocal style also involves capturing the\nprosodic elements of speech (e.g., pitch, stress, rhythm), which are key in facilitating the expression of meaning,\nemotions, and intent (Aguero et al., 2006; Anumanchipalli et al., 2012). Next, human speech and translation\nare sensitive to pragmatic nuances such as turn-taking and timing controls (Cokely, 1986; Levinson, 2016).\nPicture how human simultaneous interpreters work: they find just the right balance between low-latency and\naccurate translations. Waiting too long stifles the flow of communication, while going too fast compromises\nthe overall quality of a translation.\n\nExisting research efforts aimed at preserving these intrinsically human features in translation have led to the\nindependent development of expressive and streaming speech-to-speech translation (S2ST) systems. On the\nexpressive front, recent advances in text-to-speech synthesis have integrated voice style transfer via speech\nlanguage model (Wang et al., 2023a; Kharitonov et al., 2022), flow matching (Le et al., 2023) and diffusion\nmodel (Shen et al., 2023). These approaches subsequently inspired S2ST models designed to preserve the\nsource speech’s vocal style and style qualities with a cascaded architecture. Despite these advances, an open,\ncomprehensive S2ST system capturing semantic translation, rhythm, pauses, and sentence-level preservation\nof the style of one’s voice has yet to be realized. Streaming wise, recent efforts have explored how different\nsimultaneous translation policies (e.g., rule-based or learnable policies) could be deployed to produce systems\nthat strike a balance between low latency and high-quality translations (Ma et al., 2019a; Arivazhagan et al.,\n2019; Ma et al., 2020c). That said, existing research investments in streaming have homed in on speech-to-text\ntranslation (S2TT), and the few that are S2ST compatible are limited in language coverage. Moreover, most\nstreaming translation systems focus on bilingual communication, limiting their utility in contexts where a\ngroup of speakers converse in multiple different languages.\n\nTo advance research in multilingual expressive and streaming speech translation, we introduce SeamlessM4T\nv2, SeamlessExpressive, and SeamlessStreaming. SeamlessM4T v2 is the foundational multilingual and\nmultimodal model on which the latter two models are initialized. As an improved version of SeamlessM4T,\nSeamlessM4T v2 delivers state-of-the-art semantic accuracy across different speech and text translation tasks\nwhile supporting nearly 100 languages as input speech or text. This new version features multitask-UnitY2\nwith its non-auto-regressive unit decoder and hierarchical upsampling, making predicting units much more\ndata-efficient. The new w2v-BERT 2.0 speech encoder of SeamlessM4T v2 was pre-trained on 4.5M hours\nof unlabeled audio data, and the multitask model was finetuned with more supervision from automatically\naligned pairs to boost SeamlessM4T v2’s performance on low-resource languages. Built using commissioned\nand publicly available datasets, SeamlessExpressive enables translation that preserves vocal style and\nprosody (e.g., rhythm and tone). The model supports translations from and into English in five languages. To\nour knowledge, SeamlessExpressive is the first model to enable expressive S2ST from and into English and\nsupports underexplored aspects of prosody such as speech rate and pauses. Our SeamlessStreaming model\nleverages the Efficient Monotonic Multihead Attention (EMMA) (Ma et al., 2023) mechanism to generate\nlow-latency target translations without waiting for complete source utterances. As the first of its kind to\nprovide many-to-many translations in a simultaneous manner, SeamlessStreaming supports the same\nlanguage coverage as the scale of SeamlessM4T v2 in ASR, S2TT, and S2ST tasks.\n\nTo comprehensively evaluate our systems, we combined existing and newly developed metrics (Section 9.2).\nFor expressivity, we developed two new automatic metrics that measure prosody—AutoPCP and a rhythm\n\nFigure 1 - An overview of the technical components of Seamless and how they fit together.\n\nevaluation toolkit. For human evaluation, we used Cross-lingual Semantic Textual Similarity (XSTS) (Licht\net al., 2022) to measure semantics, Mean Opinion Score (MOS) to measure the speech quality of all of our\nmodels, and a modified version of the Prosodic Consistency Protocol (PCP) (Huang et al., 2023) to measure\nthe extent to which the expressive qualities in source and target audio are matched. For latency, we used\nEnding Offset (see Section 5.2.3) for speech output (i.e., the time between when a person finishes speaking\nand the last translated speech being generated) and an adapted version of Average Lagging (Ma et al., 2019a,\n2020b) (i.e., a metric that quantifies the degree to which a listener is out of sync with a speaker with regards\nto the number of seconds in the source speech) and Length-Adaptive Average Lagging (Papi et al., 2022)\nfor text output. Moreover, we used well-known metrics such as BLEU, chrF, and Blaser 2.0 to measure\ntranslation quality automatically. Lastly, we tested for robustness towards noise and vocal style variations.\n\nTo ensure that our models are built safely and ethically, we took a four-pronged approach to Responsible AI\nby implementing 1) the first known red-teaming effort for machine translation, 2) added-toxicity detection and\nmitigation, 3) a systematic evaluation of gender bias, and 4) an inaudible, localized watermarking mechanism\nnamed SeamlessWM . We also introduce the new concept of a metric card (Section 9.2) that compiles\ndetails of our evaluation and Responsible AI metrics.\n\nCombining these building blocks, our unified model Seamless (comprising of SeamlessExpressive and\nSeamlessStreaming) marks the first publicly available system that unlocks expressive cross-lingual\ncommunication in real-time (see Figure 1). Crucially, Seamless gives us a pivotal look at the tech-\nnical foundation needed to transform the Universal Speech Translator from a science fiction concept\nto a real-world technology. To spur further research into related domains and make our work avail-\nable to the various communities that could benefit from our effort, we publicly release the following at\nhttps://github.com/facebookresearch/seamless_communication:\n\n• Models & code: SeamlessM4T v2, SeamlessExpressive, SeamlessStreaming, and Seamless\n\nmodels\n\n• Automatically aligned data models, code, and metadata: SeamlessAlign data and Sonar speech\n\nencoders\n\n• Evaluation tools: AutoPCP, rhythm evaluation toolkit, and a multilingual alignment extraction toolkit\n\nbased on the UnitY2 aligner\n\n• Responsible AI tools: SeamlessWM detector\n\nThe rest of the article is structured as follows: Section 2 contextualizes the sociotechnical need for expressive\nand streaming speech translation via an interview study with users who experience language barriers in their\nday-to-day lives. Then, it outlines existing technical efforts that tackle this issue, followed by a list of tasks\nand languages our models support. Section 3 details the various improvements made to SeamlessM4T\nto create SeamlessM4T v2. Section 4 and Section 5 detail the data and modeling techniques devised\nto train models that supports both expressive and streaming multilingual translations. Section 6 reports\nhow we bring SeamlessExpressive and SeamlessStreaming together to form Seamless. Subsequently,\n\nSection 7 documents the automatic and human evaluation of our translation outputs, and the robustness of\nour models in various settings. Section 8 homes in on our Responsible AI effort, where we provide details on\nour red-teaming, added toxicity detection and mitigation, gender bias evaluation, and watermarking efforts.\nFinally, we conclude in Section 9, where we discuss the social impact of our work and offer a forward-looking\nperspective on how Seamless could spearhead the transformation of multilingual communication in the near\nfuture.",
-      "text": "German literary critic Friedrich Schlegel once said, “What is lost in the good or excellent translation is precisely the best.” When applied to speech, this sentiment implies that even when a translation accurately renders the semantic meaning of an utterance, certain defining elements of speech may be lost in the process (Schuller et al., 2013).\n\nWhile the specific constituents of what Schlegel deemed the best are open for interpretation, the speech translation research community has long homed in on two components: the indexical (i.e., components marking the characteristics of a person) and pragmatical (i.e., the way communication works in social situations) components of speech that make human communication what it is. For speech to be natural, it relies on the indexical or revelatory nature of the human voice (Costello, 2000). A speech translation system that incorporates features that help a listener make inferences about a speaker’s personhood bolsters the naturalness of a machine-mediated interaction (Waytz et al., 2014). Preserving vocal style also involves capturing the prosodic elements of speech (e.g., pitch, stress, rhythm), which are key in facilitating the expression of meaning, emotions, and intent (Aguero et al., 2006; Anumanchipalli et al., 2012). Next, human speech and translation are sensitive to pragmatic nuances such as turn-taking and timing controls (Cokely, 1986; Levinson, 2016). Picture how human simultaneous interpreters work: they find just the right balance between low-latency and accurate translations. Waiting too long stifles the flow of communication, while going too fast compromises the overall quality of a translation.\n\nExisting research efforts aimed at preserving these intrinsically human features in translation have led to the independent development of expressive and streaming speech-to-speech translation (S2ST) systems. On the expressive front, recent advances in text-to-speech synthesis have integrated voice style transfer via speech language model (Wang et al., 2023a; Kharitonov et al., 2022), flow matching (Le et al., 2023) and diffusion model (Shen et al., 2023). These approaches subsequently inspired S2ST models designed to preserve the source speech’s vocal style and style qualities with a cascaded architecture. Despite these advances, an open, comprehensive S2ST system capturing semantic translation, rhythm, pauses, and sentence-level preservation of the style of one’s voice has yet to be realized. Streaming wise, recent efforts have explored how different simultaneous translation policies (e.g., rule-based or learnable policies) could be deployed to produce systems that strike a balance between low latency and high-quality translations (Ma et al., 2019a; Arivazhagan et al., 2019; Ma et al., 2020c). That said, existing research investments in streaming have homed in on speech-to-text translation (S2TT), and the few that are S2ST compatible are limited in language coverage. Moreover, most streaming translation systems focus on bilingual communication, limiting their utility in contexts where a group of speakers converse in multiple different languages.\n\nTo advance research in multilingual expressive and streaming speech translation, we introduce SeamlessM4T v2, SeamlessExpressive, and SeamlessStreaming. SeamlessM4T v2 is the foundational multilingual and multimodal model on which the latter two models are initialized. As an improved version of SeamlessM4T, SeamlessM4T v2 delivers state-of-the-art semantic accuracy across different speech and text translation tasks while supporting nearly 100 languages as input speech or text. This new version features multitask-UnitY2 with its non-auto-regressive unit decoder and hierarchical upsampling, making predicting units much more data-efficient. The new w2v-BERT 2.0 speech encoder of SeamlessM4T v2 was pre-trained on 4.5M hours of unlabeled audio data, and the multitask model was finetuned with more supervision from automatically aligned pairs to boost SeamlessM4T v2’s performance on low-resource languages. Built using commissioned and publicly available datasets, SeamlessExpressive enables translation that preserves vocal style and prosody (e.g., rhythm and tone). The model supports translations from and into English in five languages. To our knowledge, SeamlessExpressive is the first model to enable expressive S2ST from and into English and supports underexplored aspects of prosody such as speech rate and pauses. Our SeamlessStreaming model leverages the Efficient Monotonic Multihead Attention (EMMA) (Ma et al., 2023) mechanism to generate low-latency target translations without waiting for complete source utterances. As the first of its kind to provide many-to-many translations in a simultaneous manner, SeamlessStreaming supports the same language coverage as the scale of SeamlessM4T v2 in ASR, S2TT, and S2ST tasks.\n\nTo comprehensively evaluate our systems, we combined existing and newly developed metrics (Section 9.2). For expressivity, we developed two new automatic metrics that measure prosody—AutoPCP and a rhythm\n\nFigure 1 - An overview of the technical components of Seamless and how they fit together.\n\nevaluation toolkit. For human evaluation, we used Cross-lingual Semantic Textual Similarity (XSTS) (Licht et al., 2022) to measure semantics, Mean Opinion Score (MOS) to measure the speech quality of all of our models, and a modified version of the Prosodic Consistency Protocol (PCP) (Huang et al., 2023) to measure the extent to which the expressive qualities in source and target audio are matched. For latency, we used Ending Offset (see Section 5.2.3) for speech output (i.e., the time between when a person finishes speaking and the last translated speech being generated) and an adapted version of Average Lagging (Ma et al., 2019a, 2020b) (i.e., a metric that quantifies the degree to which a listener is out of sync with a speaker with regards to the number of seconds in the source speech) and Length-Adaptive Average Lagging (Papi et al., 2022) for text output. Moreover, we used well-known metrics such as BLEU, chrF, and Blaser 2.0 to measure translation quality automatically. Lastly, we tested for robustness towards noise and vocal style variations.\n\nTo ensure that our models are built safely and ethically, we took a four-pronged approach to Responsible AI by implementing 1) the first known red-teaming effort for machine translation, 2) added-toxicity detection and mitigation, 3) a systematic evaluation of gender bias, and 4) an inaudible, localized watermarking mechanism named SeamlessWM . We also introduce the new concept of a metric card (Section 9.2) that compiles details of our evaluation and Responsible AI metrics.\n\nCombining these building blocks, our unified model Seamless (comprising of SeamlessExpressive and SeamlessStreaming) marks the first publicly available system that unlocks expressive cross-lingual communication in real-time (see Figure 1). Crucially, Seamless gives us a pivotal look at the tech- nical foundation needed to transform the Universal Speech Translator from a science fiction concept to a real-world technology. To spur further research into related domains and make our work avail- able to the various communities that could benefit from our effort, we publicly release the following at https://github.com/facebookresearch/seamless_communication:\n\n• Models & code: SeamlessM4T v2, SeamlessExpressive, SeamlessStreaming, and Seamless\n\nmodels\n\n• Automatically aligned data models, code, and metadata: SeamlessAlign data and Sonar speech\n\nencoders\n\n• Evaluation tools: AutoPCP, rhythm evaluation toolkit, and a multilingual alignment extraction toolkit\n\nbased on the UnitY2 aligner\n\n• Responsible AI tools: SeamlessWM detector\n\nThe rest of the article is structured as follows: Section 2 contextualizes the sociotechnical need for expressive and streaming speech translation via an interview study with users who experience language barriers in their day-to-day lives. Then, it outlines existing technical efforts that tackle this issue, followed by a list of tasks and languages our models support. Section 3 details the various improvements made to SeamlessM4T to create SeamlessM4T v2. Section 4 and Section 5 detail the data and modeling techniques devised to train models that supports both expressive and streaming multilingual translations. Section 6 reports how we bring SeamlessExpressive and SeamlessStreaming together to form Seamless. Subsequently,\n\nSection 7 documents the automatic and human evaluation of our translation outputs, and the robustness of our models in various settings. Section 8 homes in on our Responsible AI effort, where we provide details on our red-teaming, added toxicity detection and mitigation, gender bias evaluation, and watermarking efforts. Finally, we conclude in Section 9, where we discuss the social impact of our work and offer a forward-looking perspective on how Seamless could spearhead the transformation of multilingual communication in the near future.",
+      "text": "German literary critic Friedrich Schlegel once said, “What is lost in the good or excellent translation is precisely the best.” When applied to speech, this sentiment implies that even when a translation accurately renders the semantic meaning of an utterance, certain defining elements of speech may be lost in the process (Schuller et al., 2013).\n\nWhile the specific constituents of what Schlegel deemed the best are open for interpretation, the speech translation research community has long homed in on two components: the indexical (i.e., components marking the characteristics of a person) and pragmatical (i.e., the way communication works in social situations) components of speech that make human communication what it is. For speech to be natural, it relies on the indexical or revelatory nature of the human voice (Costello, 2000). A speech translation system that incorporates features that help a listener make inferences about a speaker’s personhood bolsters the naturalness of a machine-mediated interaction (Waytz et al., 2014). Preserving vocal style also involves capturing the prosodic elements of speech (e.g., pitch, stress, rhythm), which are key in facilitating the expression of meaning, emotions, and intent (Aguero et al., 2006; Anumanchipalli et al., 2012). Next, human speech and translation are sensitive to pragmatic nuances such as turn-taking and timing controls (Cokely, 1986; Levinson, 2016). Picture how human simultaneous interpreters work: they find just the right balance between low-latency and accurate translations. Waiting too long stifles the flow of communication, while going too fast compromises the overall quality of a translation.\n\nExisting research efforts aimed at preserving these intrinsically human features in translation have led to the independent development of expressive and streaming speech-to-speech translation (S2ST) systems. On the expressive front, recent advances in text-to-speech synthesis have integrated voice style transfer via speech language model (Wang et al., 2023a; Kharitonov et al., 2022), flow matching (Le et al., 2023) and diffusion model (Shen et al., 2023). These approaches subsequently inspired S2ST models designed to preserve the source speech’s vocal style and style qualities with a cascaded architecture. Despite these advances, an open, comprehensive S2ST system capturing semantic translation, rhythm, pauses, and sentence-level preservation of the style of one’s voice has yet to be realized. Streaming wise, recent efforts have explored how different simultaneous translation policies (e.g., rule-based or learnable policies) could be deployed to produce systems that strike a balance between low latency and high-quality translations (Ma et al., 2019a; Arivazhagan et al., 2019; Ma et al., 2020c). That said, existing research investments in streaming have homed in on speech-to-text translation (S2TT), and the few that are S2ST compatible are limited in language coverage. Moreover, most streaming translation systems focus on bilingual communication, limiting their utility in contexts where a group of speakers converse in multiple different languages.\n\nTo advance research in multilingual expressive and streaming speech translation, we introduce SeamlessM4T v2, SeamlessExpressive, and SeamlessStreaming. SeamlessM4T v2 is the foundational multilingual and multimodal model on which the latter two models are initialized. As an improved version of SeamlessM4T, SeamlessM4T v2 delivers state-of-the-art semantic accuracy across different speech and text translation tasks while supporting nearly 100 languages as input speech or text. This new version features multitask-UnitY2 with its non-auto-regressive unit decoder and hierarchical upsampling, making predicting units much more data-efficient. The new w2v-BERT 2.0 speech encoder of SeamlessM4T v2 was pre-trained on 4.5M hours of unlabeled audio data, and the multitask model was finetuned with more supervision from automatically aligned pairs to boost SeamlessM4T v2’s performance on low-resource languages. Built using commissioned and publicly available datasets, SeamlessExpressive enables translation that preserves vocal style and prosody (e.g., rhythm and tone). The model supports translations from and into English in five languages. To our knowledge, SeamlessExpressive is the first model to enable expressive S2ST from and into English and supports underexplored aspects of prosody such as speech rate and pauses. Our SeamlessStreaming model leverages the Efficient Monotonic Multihead Attention (EMMA) (Ma et al., 2023) mechanism to generate low-latency target translations without waiting for complete source utterances. As the first of its kind to provide many-to-many translations in a simultaneous manner, SeamlessStreaming supports the same language coverage as the scale of SeamlessM4T v2 in ASR, S2TT, and S2ST tasks.\n\nTo comprehensively evaluate our systems, we combined existing and newly developed metrics (Section 9.2). For expressivity, we developed two new automatic metrics that measure prosody—AutoPCP and a rhythm evaluation toolkit. For human evaluation, we used Cross-lingual Semantic Textual Similarity (XSTS) (Licht et al., 2022) to measure semantics, Mean Opinion Score (MOS) to measure the speech quality of all of our models, and a modified version of the Prosodic Consistency Protocol (PCP) (Huang et al., 2023) to measure the extent to which the expressive qualities in source and target audio are matched. For latency, we used Ending Offset (see Section 5.2.3) for speech output (i.e., the time between when a person finishes speaking and the last translated speech being generated) and an adapted version of Average Lagging (Ma et al., 2019a, 2020b) (i.e., a metric that quantifies the degree to which a listener is out of sync with a speaker with regards to the number of seconds in the source speech) and Length-Adaptive Average Lagging (Papi et al., 2022) for text output. Moreover, we used well-known metrics such as BLEU, chrF, and Blaser 2.0 to measure translation quality automatically. Lastly, we tested for robustness towards noise and vocal style variations.\n\nTo ensure that our models are built safely and ethically, we took a four-pronged approach to Responsible AI by implementing 1) the first known red-teaming effort for machine translation, 2) added-toxicity detection and mitigation, 3) a systematic evaluation of gender bias, and 4) an inaudible, localized watermarking mechanism named SeamlessWM . We also introduce the new concept of a metric card (Section 9.2) that compiles details of our evaluation and Responsible AI metrics.\n\nCombining these building blocks, our unified model Seamless (comprising of SeamlessExpressive and SeamlessStreaming) marks the first publicly available system that unlocks expressive cross-lingual communication in real-time (see Figure 1). Crucially, Seamless gives us a pivotal look at the tech- nical foundation needed to transform the Universal Speech Translator from a science fiction concept to a real-world technology. To spur further research into related domains and make our work avail- able to the various communities that could benefit from our effort, we publicly release the following at https://github.com/facebookresearch/seamless_communication:\n\n• Models & code: SeamlessM4T v2, SeamlessExpressive, SeamlessStreaming, and Seamless\n\nmodels\n\n• Automatically aligned data models, code, and metadata: SeamlessAlign data and Sonar speech\n\nencoders\n\n• Evaluation tools: AutoPCP, rhythm evaluation toolkit, and a multilingual alignment extraction toolkit\n\nbased on the UnitY2 aligner\n\n• Responsible AI tools: SeamlessWM detector\n\nThe rest of the article is structured as follows: Section 2 contextualizes the sociotechnical need for expressive and streaming speech translation via an interview study with users who experience language barriers in their day-to-day lives. Then, it outlines existing technical efforts that tackle this issue, followed by a list of tasks and languages our models support. Section 3 details the various improvements made to SeamlessM4T to create SeamlessM4T v2. Section 4 and Section 5 detail the data and modeling techniques devised to train models that supports both expressive and streaming multilingual translations. Section 6 reports how we bring SeamlessExpressive and SeamlessStreaming together to form Seamless. Subsequently,\n\nSection 7 documents the automatic and human evaluation of our translation outputs, and the robustness of our models in various settings. Section 8 homes in on our Responsible AI effort, where we provide details on our red-teaming, added toxicity detection and mitigation, gender bias evaluation, and watermarking efforts. Finally, we conclude in Section 9, where we discuss the social impact of our work and offer a forward-looking perspective on how Seamless could spearhead the transformation of multilingual communication in the near future.",
       "source_fragments": [
         {
           "page": 3,
@@ -8166,16 +8452,135 @@
           "text": "Section 7 documents the automatic and human evaluation of our translation outputs, and the robustness of\nour models in various settings. Section 8 homes in on our Responsible AI effort, where we provide details on\nour red-teaming, added toxicity detection and mitigation, gender bias evaluation, and watermarking efforts.\nFinally, we conclude in Section 9, where we discuss the social impact of our work and offer a forward-looking\nperspective on how Seamless could spearhead the transformation of multilingual communication in the near\nfuture."
         }
       ],
-      "text_sha256": "4ad51b45596a613535e2a9b7dbd203030dd53166bf231c8a1fcfbe5ed75b2f26",
+      "text_sha256": "c016c294dbd8798030db86155539a655c03573cb353d7a0ba4f8bf4e490ff87e",
       "cross_check": {
         "matched_fragments": 18,
         "total_fragments": 18,
         "comparison": "literal_glyph_order_or_line_wrap_normalization"
       },
       "initial_cross_check": null,
-      "source_review": null,
+      "source_review": {
+        "id": "meta:seamless-technical-report",
+        "source_sha256": "0cdd32197ea09ea3625d45c6573c54d181c532d67d6a5c1075a2b7cc92001474",
+        "input_text_sha256": "4ad51b45596a613535e2a9b7dbd203030dd53166bf231c8a1fcfbe5ed75b2f26",
+        "output_text_sha256": "c016c294dbd8798030db86155539a655c03573cb353d7a0ba4f8bf4e490ff87e",
+        "source_pages": [
+          3,
+          4
+        ],
+        "source_fragment_indexes": [
+          4,
+          5,
+          6
+        ],
+        "review_method": "visual_source_page",
+        "reviewed_at": "2026-10-15",
+        "note": "The source introduction sentence continues across the figure caption: “a rhythm evaluation toolkit.” Remove the interleaved Figure 1 caption from the derived prose and reconnect the sentence; retain the original raw_text/source_fragments.",
+        "edits": [
+          {
+            "match": "a rhythm\n\nFigure 1 - An overview of the technical components of Seamless and how they fit together.\n\nevaluation toolkit.",
+            "replacement": "a rhythm evaluation toolkit.",
+            "match_sha256": "fbf5ec5b5ef36ce5e08fa8469695cb262aff01d4a68b403b995ce33d26c818f9"
+          }
+        ],
+        "source_regions": [
+          {
+            "page": 3,
+            "source_fragment_index": 4,
+            "raw_text_sha256": "3c16e071217609f024787516e004e2b07dd72e256659c60e16a7a24efd7bfd47",
+            "bbox": [
+              70.508,
+              82.795,
+              543.0638972076603,
+              104.7126
+            ]
+          },
+          {
+            "page": 4,
+            "source_fragment_index": 5,
+            "raw_text_sha256": "8f95525d0b40ed2640664164450e07249ee7f53aa065426f4fc9f4d89526f878",
+            "bbox": [
+              120.343,
+              573.2165184,
+              491.66134976,
+              583.9224
+            ]
+          },
+          {
+            "page": 4,
+            "source_fragment_index": 6,
+            "raw_text_sha256": "2e447e97faf5c42b9ddd3af1e9e8ef8164d6d0485f733e1411348fdbd0b27a34",
+            "bbox": [
+              70.617,
+              434.183,
+              542.5195576266403,
+              551.7425999999999
+            ]
+          }
+        ]
+      },
       "inspected_pages": 12,
-      "markdown_path": "abstracts/meta/seamless-technical-report.md"
+      "markdown_path": "abstracts/meta/seamless-technical-report.md",
+      "passage_review": {
+        "id": "meta:seamless-technical-report",
+        "source_sha256": "0cdd32197ea09ea3625d45c6573c54d181c532d67d6a5c1075a2b7cc92001474",
+        "input_text_sha256": "4ad51b45596a613535e2a9b7dbd203030dd53166bf231c8a1fcfbe5ed75b2f26",
+        "output_text_sha256": "c016c294dbd8798030db86155539a655c03573cb353d7a0ba4f8bf4e490ff87e",
+        "source_pages": [
+          3,
+          4
+        ],
+        "source_fragment_indexes": [
+          4,
+          5,
+          6
+        ],
+        "review_method": "visual_source_page",
+        "reviewed_at": "2026-10-15",
+        "note": "The source introduction sentence continues across the figure caption: “a rhythm evaluation toolkit.” Remove the interleaved Figure 1 caption from the derived prose and reconnect the sentence; retain the original raw_text/source_fragments.",
+        "edits": [
+          {
+            "match": "a rhythm\n\nFigure 1 - An overview of the technical components of Seamless and how they fit together.\n\nevaluation toolkit.",
+            "replacement": "a rhythm evaluation toolkit.",
+            "match_sha256": "fbf5ec5b5ef36ce5e08fa8469695cb262aff01d4a68b403b995ce33d26c818f9"
+          }
+        ],
+        "source_regions": [
+          {
+            "page": 3,
+            "source_fragment_index": 4,
+            "raw_text_sha256": "3c16e071217609f024787516e004e2b07dd72e256659c60e16a7a24efd7bfd47",
+            "bbox": [
+              70.508,
+              82.795,
+              543.0638972076603,
+              104.7126
+            ]
+          },
+          {
+            "page": 4,
+            "source_fragment_index": 5,
+            "raw_text_sha256": "8f95525d0b40ed2640664164450e07249ee7f53aa065426f4fc9f4d89526f878",
+            "bbox": [
+              120.343,
+              573.2165184,
+              491.66134976,
+              583.9224
+            ]
+          },
+          {
+            "page": 4,
+            "source_fragment_index": 6,
+            "raw_text_sha256": "2e447e97faf5c42b9ddd3af1e9e8ef8164d6d0485f733e1411348fdbd0b27a34",
+            "bbox": [
+              70.617,
+              434.183,
+              542.5195576266403,
+              551.7425999999999
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "meta:dinov3-technical-report",
@@ -8798,8 +9203,8 @@
         "primary": "pdfminer.six 20260107",
         "comparison": "pypdf 6.19.0"
       },
-      "manual_review": false,
-      "status": "cross_checked",
+      "manual_review": true,
+      "status": "source_reviewed",
       "review_reasons": [],
       "section_type": "introduction",
       "source_heading": "1 Introduction",
@@ -8810,7 +9215,7 @@
         4
       ],
       "raw_text": "Large Language models (LLMs) are dominating current research in natural language processing,\nand with their recent extension to more modalities, namely images, video and speech, they seem to\nbe considered as the de-facto technique to follow to approach human intelligence. LLMs achieve\nindeed impressive performance on a large variety of tasks, such as providing detailed answers for\ngeneral knowledge questions, helping in performing long document analysis, or drafting different\ntypes of messages, and writing or debugging code. Building an LLM from scratch requires access to\n\nenormous computational resources to process ever larger amounts of data and train models, the size\nof which now exceeds four hundred billion parameters. Knowledge acquisition in LLMs is heavily\ndata-driven and extending them to more languages or modalities usually requires injecting additional\n(synthetic) data to cover them.\n\nThe landscape of available LLMs can be structured into open models such as Llama (The Llama3\nteam, 2024), Mistral (Jiang et al., 2024), Bloom (BigScience Workshop, 2023) or Falcon\n(Almazrouei et al., 2023), on the one hand, and closed models such as Gemini (Gemini Team Google,\n2024), GPT (OpenAI, 2024) or Claude (Anthropic, 2024), on the other. It is striking that all\nthese models are based on the same underlying architecture: a transformer-based, decoder-only\nlanguage model, which is pretrained to predict the next token, given a long context of preceding\ntokens. Despite the undeniable success of LLMs and continued progress, all current LLMs miss\na crucial characteristic of human intelligence: explicit reasoning and planning at multiple levels of\nabstraction. The human brain does not operate at the word level only. We usually have a top-down\nprocess to solve a complex task or compose a long document: we first plan at a higher level the\noverall structure, and then step-by-step, add details at lower levels of abstraction. One may argue\nthat LLMs are implicitly learning a hierarchical representation, but we stipulate that models with\nan explicit hierarchical architecture are better suited to create coherent long-form output.\n\nImagine a researcher giving a fifteen-minute talk. In such a situation, researchers do not usually\nprepare detailed speeches by writing out every single word they will pronounce. Instead, they outline\na flow of higher-level ideas they want to communicate. Should they give the same talk multiple\ntimes, the actual words being spoken may differ, the talk could even be given in different languages,\nbut the flow of higher-level abstract ideas will remain the same. Similarly, when writing a research\npaper or essay on a specific topic, humans usually start by preparing an outline that structures the\nwhole document into sections, which they then refine iteratively. Humans also detect and remember\ndependencies between the different parts of a longer document at an abstract level. If we expand\non our previous research writing example, keeping track of dependencies means that we need to\nprovide results for each of the experiment mentioned in the introduction. Finally, when processing\nand analyzing information, humans rarely consider every single word in a large document. Instead,\nwe use a hierarchical approach: we remember which part of a long document we should search to\nfind a specific piece of information.\n\nTo the best of our knowledge, this explicit hierarchical structure of information processing and\ngeneration, at an abstract level, independent of any instantiation in a particular language or modality,\ncannot be found in any of the current LLMs. In this work, we present a new approach which\nmoves away from processing at the token level and closer to (hierarchical) reasoning in an abstract\nembedding space. This abstract embedding space is designed to be independent of the language or\nmodality in which the content is expressed; in other words, we aim to model the underlying reasoning\nprocess at a purely semantic level, not its instantiation in a specific language. In order to verify our\napproach, we limit our study to two levels of abstraction: subword tokens and concepts. We define a\nconcept as an abstract atomic idea. In practice, a concept would often correspond to a sentence in a\ntext document, or an equivalent speech utterance. We posit that a sentence is an appropriate unit to\nachieve language independence, in opposition to single words. This is in sharp contrast to current\nLLMs techniques which are heavily English centric and token based.\n\nOur fundamental idea could be based on any fixed-size sentence embedding space for which an\nencoder and decoder are available. In particular, we could aim to train a new embedding space\nspecifically optimized to our reasoning architecture. In this work, we chose an existing and freely\navailable sentence embedding, named SONAR (Duquenne et al., 2023b). SONAR supports text\n\nFigure 1 - Left: visualization of reasoning in an embedding space of concepts (task of summarization).\nRight: fundamental architecture of an Large Concept Model (LCM).\n⋆: concept encoder and decoder are frozen.\n\ninput and output in 200 languages, speech input in 76 languages, and speech output in English. We\ndiscuss the constraints and impact of this choice in Section 2.1, and share some ideas on alternative\nembedding spaces in Section 6.\n\nFigure 1-left visualizes reasoning in an embedding space with the example of a summarization task,\nwhich is materialized by a function on the embedding space, mapping five concept representations\ninto two. Figure 1-right summarizes the overall architecture and processing flow. The input is first\nsegmented into sentences, and each one is encoded with SONAR to achieve a sequence of concepts,\ni.e., sentence embeddings. This sequence of concepts is then processed by a Large Concept Model\n(LCM) to generate at the output a new sequence of concepts. Finally, the generated concepts are\ndecoded by SONAR into a sequence of subwords. The encoder and decoder are fixed and are not\ntrained. It is important to highlight that the unchanged sequence of concepts at the output of\nthe LCM can be decoded into other languages or modalities without performing again the whole\nreasoning process. In the same spirit, a particular reasoning operation such as summarization can\nbe performed in a zero-shot setting on input in any language or modality, since it solely operates\non concepts. To summarize, the LCM neither has information on the input language or modality\nnor generates output in a particular language or modality. We explore multiple architectures to\ntrain the LCM, in particular several variants of diffusion. Finally, we envision an additional level of\nabstraction beyond concepts which could correspond to a short description of a paragraph or small\nsection. In Section 4.3 we report initial ideas on how conditioning and predicting such higher-level\nrepresentations can improve consistency of output generated by an LCM.\n\nTo some extent, the LCM architecture resembles the Jepa approach (LeCun, 2022) that also aims to\npredict the representation of the next observation in an embedding space. However, unlike Jepa that\nplaces more emphasis on learning a representation space in a self-supervised way, the LCM focuses\non accurate prediction in the existing embedding space.\n\nThe mains characteristics of our generic Large Concept Model approach are as follows:\n\n– We model the underlying reasoning process, not its instantiation in a particular language.\n\n– The LCM can be trained, i.e. acquire knowledge, on all languages and modalities at once,\n\npromising scalability in an unbiased way.\n\n– Better readability of long-form output by a human.\n\n– Facilitates local interactive edits by a user.\n\n– The complexity of a vanilla transformer model increases quadratically with the sequence length.\nThis makes handling of large context windows challenging and several techniques have been\ndeveloped to alleviate this problem, e.g., sparse attention (Child et al., 2019) or LSH attention\n(Kitaev et al., 2020). Our LCM operates on sequences which are at least an order of magnitude\nshorter.1\n\n– Independently of the language or modality the LCM is pre-trained and fine-tuned on, it can be\napplied to any language and modality supported by the SONAR encoders, without the need of\nadditional data or fine-tuning. We report results for multiple languages in the text modality.\n\n– Unlike multimodal LLMs that can suffer from modality competition (Aghajanyan et al., 2023;\nChameleon team, 2024), concept encoders and decoders can be independently developed and\noptimized without any competition or interference.\n\n– New languages or modalities can be easily added for an existing system.\n\nThe goal of this paper is to provide a proof of concept of this high-level vision of an alternative\narchitecture to current best practice in language modeling. In the next section we present the main\ndesign principles of our models and discuss several variants to build and train a Large Concept\nModel. We discuss several designs to implement diffusion approaches with concept embeddings and\ncarefully study noise scheduling. This section is completed by a compute complexity comparison\nwith token-based LLMs. Section 3 is dedicated to the analysis of a larger 7B parameter model. We\ndiscuss challenges when instruction fine-tuning this model on multiple generative tasks, and provide\na comparison with existing LLMs of comparable size. The paper concludes with a discussion of\nrelated work, the current limitations and perspectives of our approach.\n\nTo foster research in this area, we make our LCM training code2 as well as SONAR encoders and\ndecoders3 for up to 200 languages and multiple modalities freely available.",
-      "text": "Large Language models (LLMs) are dominating current research in natural language processing, and with their recent extension to more modalities, namely images, video and speech, they seem to be considered as the de-facto technique to follow to approach human intelligence. LLMs achieve indeed impressive performance on a large variety of tasks, such as providing detailed answers for general knowledge questions, helping in performing long document analysis, or drafting different types of messages, and writing or debugging code. Building an LLM from scratch requires access to\n\nenormous computational resources to process ever larger amounts of data and train models, the size of which now exceeds four hundred billion parameters. Knowledge acquisition in LLMs is heavily data-driven and extending them to more languages or modalities usually requires injecting additional (synthetic) data to cover them.\n\nThe landscape of available LLMs can be structured into open models such as Llama (The Llama3 team, 2024), Mistral (Jiang et al., 2024), Bloom (BigScience Workshop, 2023) or Falcon (Almazrouei et al., 2023), on the one hand, and closed models such as Gemini (Gemini Team Google, 2024), GPT (OpenAI, 2024) or Claude (Anthropic, 2024), on the other. It is striking that all these models are based on the same underlying architecture: a transformer-based, decoder-only language model, which is pretrained to predict the next token, given a long context of preceding tokens. Despite the undeniable success of LLMs and continued progress, all current LLMs miss a crucial characteristic of human intelligence: explicit reasoning and planning at multiple levels of abstraction. The human brain does not operate at the word level only. We usually have a top-down process to solve a complex task or compose a long document: we first plan at a higher level the overall structure, and then step-by-step, add details at lower levels of abstraction. One may argue that LLMs are implicitly learning a hierarchical representation, but we stipulate that models with an explicit hierarchical architecture are better suited to create coherent long-form output.\n\nImagine a researcher giving a fifteen-minute talk. In such a situation, researchers do not usually prepare detailed speeches by writing out every single word they will pronounce. Instead, they outline a flow of higher-level ideas they want to communicate. Should they give the same talk multiple times, the actual words being spoken may differ, the talk could even be given in different languages, but the flow of higher-level abstract ideas will remain the same. Similarly, when writing a research paper or essay on a specific topic, humans usually start by preparing an outline that structures the whole document into sections, which they then refine iteratively. Humans also detect and remember dependencies between the different parts of a longer document at an abstract level. If we expand on our previous research writing example, keeping track of dependencies means that we need to provide results for each of the experiment mentioned in the introduction. Finally, when processing and analyzing information, humans rarely consider every single word in a large document. Instead, we use a hierarchical approach: we remember which part of a long document we should search to find a specific piece of information.\n\nTo the best of our knowledge, this explicit hierarchical structure of information processing and generation, at an abstract level, independent of any instantiation in a particular language or modality, cannot be found in any of the current LLMs. In this work, we present a new approach which moves away from processing at the token level and closer to (hierarchical) reasoning in an abstract embedding space. This abstract embedding space is designed to be independent of the language or modality in which the content is expressed; in other words, we aim to model the underlying reasoning process at a purely semantic level, not its instantiation in a specific language. In order to verify our approach, we limit our study to two levels of abstraction: subword tokens and concepts. We define a concept as an abstract atomic idea. In practice, a concept would often correspond to a sentence in a text document, or an equivalent speech utterance. We posit that a sentence is an appropriate unit to achieve language independence, in opposition to single words. This is in sharp contrast to current LLMs techniques which are heavily English centric and token based.\n\nOur fundamental idea could be based on any fixed-size sentence embedding space for which an encoder and decoder are available. In particular, we could aim to train a new embedding space specifically optimized to our reasoning architecture. In this work, we chose an existing and freely available sentence embedding, named SONAR (Duquenne et al., 2023b). SONAR supports text\n\nFigure 1 - Left: visualization of reasoning in an embedding space of concepts (task of summarization). Right: fundamental architecture of an Large Concept Model (LCM). ⋆: concept encoder and decoder are frozen.\n\ninput and output in 200 languages, speech input in 76 languages, and speech output in English. We discuss the constraints and impact of this choice in Section 2.1, and share some ideas on alternative embedding spaces in Section 6.\n\nFigure 1-left visualizes reasoning in an embedding space with the example of a summarization task, which is materialized by a function on the embedding space, mapping five concept representations into two. Figure 1-right summarizes the overall architecture and processing flow. The input is first segmented into sentences, and each one is encoded with SONAR to achieve a sequence of concepts, i.e., sentence embeddings. This sequence of concepts is then processed by a Large Concept Model (LCM) to generate at the output a new sequence of concepts. Finally, the generated concepts are decoded by SONAR into a sequence of subwords. The encoder and decoder are fixed and are not trained. It is important to highlight that the unchanged sequence of concepts at the output of the LCM can be decoded into other languages or modalities without performing again the whole reasoning process. In the same spirit, a particular reasoning operation such as summarization can be performed in a zero-shot setting on input in any language or modality, since it solely operates on concepts. To summarize, the LCM neither has information on the input language or modality nor generates output in a particular language or modality. We explore multiple architectures to train the LCM, in particular several variants of diffusion. Finally, we envision an additional level of abstraction beyond concepts which could correspond to a short description of a paragraph or small section. In Section 4.3 we report initial ideas on how conditioning and predicting such higher-level representations can improve consistency of output generated by an LCM.\n\nTo some extent, the LCM architecture resembles the Jepa approach (LeCun, 2022) that also aims to predict the representation of the next observation in an embedding space. However, unlike Jepa that places more emphasis on learning a representation space in a self-supervised way, the LCM focuses on accurate prediction in the existing embedding space.\n\nThe mains characteristics of our generic Large Concept Model approach are as follows:\n\n– We model the underlying reasoning process, not its instantiation in a particular language.\n\n– The LCM can be trained, i.e. acquire knowledge, on all languages and modalities at once,\n\npromising scalability in an unbiased way.\n\n– Better readability of long-form output by a human.\n\n– Facilitates local interactive edits by a user.\n\n– The complexity of a vanilla transformer model increases quadratically with the sequence length. This makes handling of large context windows challenging and several techniques have been developed to alleviate this problem, e.g., sparse attention (Child et al., 2019) or LSH attention (Kitaev et al., 2020). Our LCM operates on sequences which are at least an order of magnitude shorter.1\n\n– Independently of the language or modality the LCM is pre-trained and fine-tuned on, it can be applied to any language and modality supported by the SONAR encoders, without the need of additional data or fine-tuning. We report results for multiple languages in the text modality.\n\n– Unlike multimodal LLMs that can suffer from modality competition (Aghajanyan et al., 2023; Chameleon team, 2024), concept encoders and decoders can be independently developed and optimized without any competition or interference.\n\n– New languages or modalities can be easily added for an existing system.\n\nThe goal of this paper is to provide a proof of concept of this high-level vision of an alternative architecture to current best practice in language modeling. In the next section we present the main design principles of our models and discuss several variants to build and train a Large Concept Model. We discuss several designs to implement diffusion approaches with concept embeddings and carefully study noise scheduling. This section is completed by a compute complexity comparison with token-based LLMs. Section 3 is dedicated to the analysis of a larger 7B parameter model. We discuss challenges when instruction fine-tuning this model on multiple generative tasks, and provide a comparison with existing LLMs of comparable size. The paper concludes with a discussion of related work, the current limitations and perspectives of our approach.\n\nTo foster research in this area, we make our LCM training code2 as well as SONAR encoders and decoders3 for up to 200 languages and multiple modalities freely available.",
+      "text": "Large Language models (LLMs) are dominating current research in natural language processing, and with their recent extension to more modalities, namely images, video and speech, they seem to be considered as the de-facto technique to follow to approach human intelligence. LLMs achieve indeed impressive performance on a large variety of tasks, such as providing detailed answers for general knowledge questions, helping in performing long document analysis, or drafting different types of messages, and writing or debugging code. Building an LLM from scratch requires access to\n\nenormous computational resources to process ever larger amounts of data and train models, the size of which now exceeds four hundred billion parameters. Knowledge acquisition in LLMs is heavily data-driven and extending them to more languages or modalities usually requires injecting additional (synthetic) data to cover them.\n\nThe landscape of available LLMs can be structured into open models such as Llama (The Llama3 team, 2024), Mistral (Jiang et al., 2024), Bloom (BigScience Workshop, 2023) or Falcon (Almazrouei et al., 2023), on the one hand, and closed models such as Gemini (Gemini Team Google, 2024), GPT (OpenAI, 2024) or Claude (Anthropic, 2024), on the other. It is striking that all these models are based on the same underlying architecture: a transformer-based, decoder-only language model, which is pretrained to predict the next token, given a long context of preceding tokens. Despite the undeniable success of LLMs and continued progress, all current LLMs miss a crucial characteristic of human intelligence: explicit reasoning and planning at multiple levels of abstraction. The human brain does not operate at the word level only. We usually have a top-down process to solve a complex task or compose a long document: we first plan at a higher level the overall structure, and then step-by-step, add details at lower levels of abstraction. One may argue that LLMs are implicitly learning a hierarchical representation, but we stipulate that models with an explicit hierarchical architecture are better suited to create coherent long-form output.\n\nImagine a researcher giving a fifteen-minute talk. In such a situation, researchers do not usually prepare detailed speeches by writing out every single word they will pronounce. Instead, they outline a flow of higher-level ideas they want to communicate. Should they give the same talk multiple times, the actual words being spoken may differ, the talk could even be given in different languages, but the flow of higher-level abstract ideas will remain the same. Similarly, when writing a research paper or essay on a specific topic, humans usually start by preparing an outline that structures the whole document into sections, which they then refine iteratively. Humans also detect and remember dependencies between the different parts of a longer document at an abstract level. If we expand on our previous research writing example, keeping track of dependencies means that we need to provide results for each of the experiment mentioned in the introduction. Finally, when processing and analyzing information, humans rarely consider every single word in a large document. Instead, we use a hierarchical approach: we remember which part of a long document we should search to find a specific piece of information.\n\nTo the best of our knowledge, this explicit hierarchical structure of information processing and generation, at an abstract level, independent of any instantiation in a particular language or modality, cannot be found in any of the current LLMs. In this work, we present a new approach which moves away from processing at the token level and closer to (hierarchical) reasoning in an abstract embedding space. This abstract embedding space is designed to be independent of the language or modality in which the content is expressed; in other words, we aim to model the underlying reasoning process at a purely semantic level, not its instantiation in a specific language. In order to verify our approach, we limit our study to two levels of abstraction: subword tokens and concepts. We define a concept as an abstract atomic idea. In practice, a concept would often correspond to a sentence in a text document, or an equivalent speech utterance. We posit that a sentence is an appropriate unit to achieve language independence, in opposition to single words. This is in sharp contrast to current LLMs techniques which are heavily English centric and token based.\n\nOur fundamental idea could be based on any fixed-size sentence embedding space for which an encoder and decoder are available. In particular, we could aim to train a new embedding space specifically optimized to our reasoning architecture. In this work, we chose an existing and freely available sentence embedding, named SONAR (Duquenne et al., 2023b). SONAR supports text input and output in 200 languages, speech input in 76 languages, and speech output in English. We discuss the constraints and impact of this choice in Section 2.1, and share some ideas on alternative embedding spaces in Section 6.\n\nFigure 1-left visualizes reasoning in an embedding space with the example of a summarization task, which is materialized by a function on the embedding space, mapping five concept representations into two. Figure 1-right summarizes the overall architecture and processing flow. The input is first segmented into sentences, and each one is encoded with SONAR to achieve a sequence of concepts, i.e., sentence embeddings. This sequence of concepts is then processed by a Large Concept Model (LCM) to generate at the output a new sequence of concepts. Finally, the generated concepts are decoded by SONAR into a sequence of subwords. The encoder and decoder are fixed and are not trained. It is important to highlight that the unchanged sequence of concepts at the output of the LCM can be decoded into other languages or modalities without performing again the whole reasoning process. In the same spirit, a particular reasoning operation such as summarization can be performed in a zero-shot setting on input in any language or modality, since it solely operates on concepts. To summarize, the LCM neither has information on the input language or modality nor generates output in a particular language or modality. We explore multiple architectures to train the LCM, in particular several variants of diffusion. Finally, we envision an additional level of abstraction beyond concepts which could correspond to a short description of a paragraph or small section. In Section 4.3 we report initial ideas on how conditioning and predicting such higher-level representations can improve consistency of output generated by an LCM.\n\nTo some extent, the LCM architecture resembles the Jepa approach (LeCun, 2022) that also aims to predict the representation of the next observation in an embedding space. However, unlike Jepa that places more emphasis on learning a representation space in a self-supervised way, the LCM focuses on accurate prediction in the existing embedding space.\n\nThe mains characteristics of our generic Large Concept Model approach are as follows:\n\n– We model the underlying reasoning process, not its instantiation in a particular language.\n\n– The LCM can be trained, i.e. acquire knowledge, on all languages and modalities at once,\n\npromising scalability in an unbiased way.\n\n– Better readability of long-form output by a human.\n\n– Facilitates local interactive edits by a user.\n\n– The complexity of a vanilla transformer model increases quadratically with the sequence length. This makes handling of large context windows challenging and several techniques have been developed to alleviate this problem, e.g., sparse attention (Child et al., 2019) or LSH attention (Kitaev et al., 2020). Our LCM operates on sequences which are at least an order of magnitude shorter.1\n\n– Independently of the language or modality the LCM is pre-trained and fine-tuned on, it can be applied to any language and modality supported by the SONAR encoders, without the need of additional data or fine-tuning. We report results for multiple languages in the text modality.\n\n– Unlike multimodal LLMs that can suffer from modality competition (Aghajanyan et al., 2023; Chameleon team, 2024), concept encoders and decoders can be independently developed and optimized without any competition or interference.\n\n– New languages or modalities can be easily added for an existing system.\n\nThe goal of this paper is to provide a proof of concept of this high-level vision of an alternative architecture to current best practice in language modeling. In the next section we present the main design principles of our models and discuss several variants to build and train a Large Concept Model. We discuss several designs to implement diffusion approaches with concept embeddings and carefully study noise scheduling. This section is completed by a compute complexity comparison with token-based LLMs. Section 3 is dedicated to the analysis of a larger 7B parameter model. We discuss challenges when instruction fine-tuning this model on multiple generative tasks, and provide a comparison with existing LLMs of comparable size. The paper concludes with a discussion of related work, the current limitations and perspectives of our approach.\n\nTo foster research in this area, we make our LCM training code2 as well as SONAR encoders and decoders3 for up to 200 languages and multiple modalities freely available.",
       "source_fragments": [
         {
           "page": 1,
@@ -8901,16 +9306,135 @@
           "text": "To foster research in this area, we make our LCM training code2 as well as SONAR encoders and\ndecoders3 for up to 200 languages and multiple modalities freely available."
         }
       ],
-      "text_sha256": "f99e1ce3ee26a0f229f5cb8e235908cbc5c9329255e8717193d91d5fe3a2ecb1",
+      "text_sha256": "832ce649163d22df9a65070d28f79e52c32f9dc770dce02fda6a578d6427e202",
       "cross_check": {
         "matched_fragments": 22,
         "total_fragments": 22,
         "comparison": "literal_glyph_order_or_line_wrap_normalization"
       },
       "initial_cross_check": null,
-      "source_review": null,
+      "source_review": {
+        "id": "meta:large-concept-models-technical-report",
+        "source_sha256": "986cd29b5f9f49fe596073a6a5910ebf5125585008ca95ac7ed02b92851665b1",
+        "input_text_sha256": "f99e1ce3ee26a0f229f5cb8e235908cbc5c9329255e8717193d91d5fe3a2ecb1",
+        "output_text_sha256": "832ce649163d22df9a65070d28f79e52c32f9dc770dce02fda6a578d6427e202",
+        "source_pages": [
+          2,
+          3
+        ],
+        "source_fragment_indexes": [
+          5,
+          6,
+          7
+        ],
+        "review_method": "visual_source_page",
+        "reviewed_at": "2026-10-15",
+        "note": "The source sentence continues around an interleaved Figure 1 caption. Remove the caption from the derived opening passage and reconnect the sentence; retain the original raw_text/source_fragments.",
+        "edits": [
+          {
+            "match": "SONAR supports text\n\nFigure 1 - Left: visualization of reasoning in an embedding space of concepts (task of summarization). Right: fundamental architecture of an Large Concept Model (LCM). ⋆: concept encoder and decoder are frozen.\n\ninput and output in 200 languages",
+            "replacement": "SONAR supports text input and output in 200 languages",
+            "match_sha256": "c35e21dfc983a5846aded3dfb3e7ae835c2aeae3854f9ca7d9eaef54b08d2c4c"
+          }
+        ],
+        "source_regions": [
+          {
+            "page": 2,
+            "source_fragment_index": 5,
+            "raw_text_sha256": "09cc1f4b2fbfc070bb1621439a33690da25210c68b0aba02a59df9deffbfad36",
+            "bbox": [
+              70.866,
+              70.866,
+              541.5400140461994,
+              122.42309999999999
+            ]
+          },
+          {
+            "page": 3,
+            "source_fragment_index": 6,
+            "raw_text_sha256": "2e03489a0f396cb3b2138b4ceff424dddc3c4748e9693721ce62cc1e2f078c05",
+            "bbox": [
+              84.594,
+              495.4532556000001,
+              529.3383058200001,
+              529.3258556000001
+            ]
+          },
+          {
+            "page": 3,
+            "source_fragment_index": 7,
+            "raw_text_sha256": "a863b39936db8d12fd9da6419b28fce4fa3f284f611d1270876238ae4fc5228c",
+            "bbox": [
+              70.866,
+              435.817,
+              541.1388271237998,
+              473.82410000000004
+            ]
+          }
+        ]
+      },
       "inspected_pages": 12,
-      "markdown_path": "abstracts/meta/large-concept-models-technical-report.md"
+      "markdown_path": "abstracts/meta/large-concept-models-technical-report.md",
+      "passage_review": {
+        "id": "meta:large-concept-models-technical-report",
+        "source_sha256": "986cd29b5f9f49fe596073a6a5910ebf5125585008ca95ac7ed02b92851665b1",
+        "input_text_sha256": "f99e1ce3ee26a0f229f5cb8e235908cbc5c9329255e8717193d91d5fe3a2ecb1",
+        "output_text_sha256": "832ce649163d22df9a65070d28f79e52c32f9dc770dce02fda6a578d6427e202",
+        "source_pages": [
+          2,
+          3
+        ],
+        "source_fragment_indexes": [
+          5,
+          6,
+          7
+        ],
+        "review_method": "visual_source_page",
+        "reviewed_at": "2026-10-15",
+        "note": "The source sentence continues around an interleaved Figure 1 caption. Remove the caption from the derived opening passage and reconnect the sentence; retain the original raw_text/source_fragments.",
+        "edits": [
+          {
+            "match": "SONAR supports text\n\nFigure 1 - Left: visualization of reasoning in an embedding space of concepts (task of summarization). Right: fundamental architecture of an Large Concept Model (LCM). ⋆: concept encoder and decoder are frozen.\n\ninput and output in 200 languages",
+            "replacement": "SONAR supports text input and output in 200 languages",
+            "match_sha256": "c35e21dfc983a5846aded3dfb3e7ae835c2aeae3854f9ca7d9eaef54b08d2c4c"
+          }
+        ],
+        "source_regions": [
+          {
+            "page": 2,
+            "source_fragment_index": 5,
+            "raw_text_sha256": "09cc1f4b2fbfc070bb1621439a33690da25210c68b0aba02a59df9deffbfad36",
+            "bbox": [
+              70.866,
+              70.866,
+              541.5400140461994,
+              122.42309999999999
+            ]
+          },
+          {
+            "page": 3,
+            "source_fragment_index": 6,
+            "raw_text_sha256": "2e03489a0f396cb3b2138b4ceff424dddc3c4748e9693721ce62cc1e2f078c05",
+            "bbox": [
+              84.594,
+              495.4532556000001,
+              529.3383058200001,
+              529.3258556000001
+            ]
+          },
+          {
+            "page": 3,
+            "source_fragment_index": 7,
+            "raw_text_sha256": "a863b39936db8d12fd9da6419b28fce4fa3f284f611d1270876238ae4fc5228c",
+            "bbox": [
+              70.866,
+              435.817,
+              541.1388271237998,
+              473.82410000000004
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "meta:mms-technical-report",
@@ -10587,8 +11111,8 @@
         "primary": "pdfminer.six 20260107",
         "comparison": "pypdf 6.19.0"
       },
-      "manual_review": false,
-      "status": "cross_checked",
+      "manual_review": true,
+      "status": "source_reviewed",
       "review_reasons": [],
       "section_type": "abstract",
       "source_heading": "Abstract—",
@@ -10596,7 +11120,7 @@
         1
       ],
       "raw_text": "Autoregressive\n\nas\nTransformer-based vision-language\naction (VLA) policies,\ncan be tremendously effective for capturing complex and\ngeneralizable robotic behaviors. However, such models require\nus to choose a tokenization of our continuous action signals,\nwhich determines how the discrete symbols predicted by the\nmodel map to continuous robot actions. We find that current\napproaches for robot action tokenization, based on simple\nper-dimension, per-timestep binning schemes, typically perform\npoorly when learning dexterous skills from high-frequency\nrobot data. To address this challenge, we propose a new\ncompression-based tokenization scheme for robot actions, based\non the discrete cosine transform. Our tokenization approach,\nFrequency-space Action Sequence Tokenization (FAST), enables\nus to train autoregressive VLAs for highly dexterous and\nhigh-frequency tasks where standard discretization methods fail\ncompletely. Based on FAST, we release FAST+, a universal robot\naction tokenizer, trained on 1M real robot action trajectories.\nIt can be used as a black-box tokenizer for a wide range of\nrobot action sequences, with diverse action spaces and control\nfrequencies. Finally, we show that, when combined with the\nπ0 VLA, our method can scale to training on 10k hours of\nrobot data and match the performance of diffusion VLAs, while\nreducing training time by up to 5x.",
-      "text": "Autoregressive\n\nas Transformer-based vision-language action (VLA) policies, can be tremendously effective for capturing complex and generalizable robotic behaviors. However, such models require us to choose a tokenization of our continuous action signals, which determines how the discrete symbols predicted by the model map to continuous robot actions. We find that current approaches for robot action tokenization, based on simple per-dimension, per-timestep binning schemes, typically perform poorly when learning dexterous skills from high-frequency robot data. To address this challenge, we propose a new compression-based tokenization scheme for robot actions, based on the discrete cosine transform. Our tokenization approach, Frequency-space Action Sequence Tokenization (FAST), enables us to train autoregressive VLAs for highly dexterous and high-frequency tasks where standard discretization methods fail completely. Based on FAST, we release FAST+, a universal robot action tokenizer, trained on 1M real robot action trajectories. It can be used as a black-box tokenizer for a wide range of robot action sequences, with diverse action spaces and control frequencies. Finally, we show that, when combined with the π0 VLA, our method can scale to training on 10k hours of robot data and match the performance of diffusion VLAs, while reducing training time by up to 5x.",
+      "text": "Autoregressive sequence models, such as Transformer-based vision-language action (VLA) policies, can be tremendously effective for capturing complex and generalizable robotic behaviors. However, such models require us to choose a tokenization of our continuous action signals, which determines how the discrete symbols predicted by the model map to continuous robot actions. We find that current approaches for robot action tokenization, based on simple per-dimension, per-timestep binning schemes, typically perform poorly when learning dexterous skills from high-frequency robot data. To address this challenge, we propose a new compression-based tokenization scheme for robot actions, based on the discrete cosine transform. Our tokenization approach, Frequency-space Action Sequence Tokenization (FAST), enables us to train autoregressive VLAs for highly dexterous and high-frequency tasks where standard discretization methods fail completely. Based on FAST, we release FAST+, a universal robot action tokenizer, trained on 1M real robot action trajectories. It can be used as a black-box tokenizer for a wide range of robot action sequences, with diverse action spaces and control frequencies. Finally, we show that, when combined with the π0 VLA, our method can scale to training on 10k hours of robot data and match the performance of diffusion VLAs, while reducing training time by up to 5x.",
       "source_fragments": [
         {
           "page": 1,
@@ -10607,16 +11131,109 @@
           "text": "as\nTransformer-based vision-language\naction (VLA) policies,\ncan be tremendously effective for capturing complex and\ngeneralizable robotic behaviors. However, such models require\nus to choose a tokenization of our continuous action signals,\nwhich determines how the discrete symbols predicted by the\nmodel map to continuous robot actions. We find that current\napproaches for robot action tokenization, based on simple\nper-dimension, per-timestep binning schemes, typically perform\npoorly when learning dexterous skills from high-frequency\nrobot data. To address this challenge, we propose a new\ncompression-based tokenization scheme for robot actions, based\non the discrete cosine transform. Our tokenization approach,\nFrequency-space Action Sequence Tokenization (FAST), enables\nus to train autoregressive VLAs for highly dexterous and\nhigh-frequency tasks where standard discretization methods fail\ncompletely. Based on FAST, we release FAST+, a universal robot\naction tokenizer, trained on 1M real robot action trajectories.\nIt can be used as a black-box tokenizer for a wide range of\nrobot action sequences, with diverse action spaces and control\nfrequencies. Finally, we show that, when combined with the\nπ0 VLA, our method can scale to training on 10k hours of\nrobot data and match the performance of diffusion VLAs, while\nreducing training time by up to 5x."
         }
       ],
-      "text_sha256": "d9d0fc0888ce669f4456d711079d30e7d7c6a11218457d279954b1693d1c6cda",
+      "text_sha256": "f0b54c3e09ab28a7d506608bef804b22736a90a3b840999def5a38120dc4af27",
       "cross_check": {
         "matched_fragments": 2,
         "total_fragments": 2,
         "comparison": "literal_glyph_order_or_line_wrap_normalization"
       },
       "initial_cross_check": null,
-      "source_review": null,
+      "source_review": {
+        "id": "physical_intelligence:fast-action-tokenization-technical-report",
+        "source_sha256": "3739b31f5fecdde371509ff5bb13619979734e894a255a9b264253f4cc53934a",
+        "input_text_sha256": "d9d0fc0888ce669f4456d711079d30e7d7c6a11218457d279954b1693d1c6cda",
+        "output_text_sha256": "f0b54c3e09ab28a7d506608bef804b22736a90a3b840999def5a38120dc4af27",
+        "source_pages": [
+          1
+        ],
+        "source_fragment_indexes": [
+          0,
+          1
+        ],
+        "review_method": "visual_source_page",
+        "reviewed_at": "2026-10-15",
+        "note": "The PDF abstract visibly reads “Autoregressive sequence models, such as Transformer-based”; the native layout extraction omitted “sequence models, such”. Restore those source words while preserving the original extracted raw_text and source_fragments.",
+        "edits": [
+          {
+            "match": "Autoregressive\n\nas Transformer-based",
+            "replacement": "Autoregressive sequence models, such as Transformer-based",
+            "match_sha256": "98a057c50aef00cc0bf6436058ee0c9499257c93a687c702979a11abf48e081c"
+          }
+        ],
+        "source_regions": [
+          {
+            "page": 1,
+            "source_fragment_index": 0,
+            "raw_text_sha256": "b299e271e0bfe97a75f132f76fac2395bebb9a97a0ed8ec2e0326d26b200bc54",
+            "bbox": [
+              58.922000000000054,
+              556.7990224,
+              155.12235840000008,
+              565.7654224
+            ]
+          },
+          {
+            "page": 1,
+            "source_fragment_index": 1,
+            "raw_text_sha256": "0ec1d90aaf40de35918438a1d2e590098427183cd0f5098706e6c072b674e94f",
+            "bbox": [
+              48.959,
+              327.65802239999994,
+              300.0224704000002,
+              565.7654224
+            ]
+          }
+        ]
+      },
       "inspected_pages": 12,
-      "markdown_path": "abstracts/physical_intelligence/fast-action-tokenization-technical-report.md"
+      "markdown_path": "abstracts/physical_intelligence/fast-action-tokenization-technical-report.md",
+      "passage_review": {
+        "id": "physical_intelligence:fast-action-tokenization-technical-report",
+        "source_sha256": "3739b31f5fecdde371509ff5bb13619979734e894a255a9b264253f4cc53934a",
+        "input_text_sha256": "d9d0fc0888ce669f4456d711079d30e7d7c6a11218457d279954b1693d1c6cda",
+        "output_text_sha256": "f0b54c3e09ab28a7d506608bef804b22736a90a3b840999def5a38120dc4af27",
+        "source_pages": [
+          1
+        ],
+        "source_fragment_indexes": [
+          0,
+          1
+        ],
+        "review_method": "visual_source_page",
+        "reviewed_at": "2026-10-15",
+        "note": "The PDF abstract visibly reads “Autoregressive sequence models, such as Transformer-based”; the native layout extraction omitted “sequence models, such”. Restore those source words while preserving the original extracted raw_text and source_fragments.",
+        "edits": [
+          {
+            "match": "Autoregressive\n\nas Transformer-based",
+            "replacement": "Autoregressive sequence models, such as Transformer-based",
+            "match_sha256": "98a057c50aef00cc0bf6436058ee0c9499257c93a687c702979a11abf48e081c"
+          }
+        ],
+        "source_regions": [
+          {
+            "page": 1,
+            "source_fragment_index": 0,
+            "raw_text_sha256": "b299e271e0bfe97a75f132f76fac2395bebb9a97a0ed8ec2e0326d26b200bc54",
+            "bbox": [
+              58.922000000000054,
+              556.7990224,
+              155.12235840000008,
+              565.7654224
+            ]
+          },
+          {
+            "page": 1,
+            "source_fragment_index": 1,
+            "raw_text_sha256": "0ec1d90aaf40de35918438a1d2e590098427183cd0f5098706e6c072b674e94f",
+            "bbox": [
+              48.959,
+              327.65802239999994,
+              300.0224704000002,
+              565.7654224
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "physical_intelligence:knowledge-insulating-vlas-technical-report",

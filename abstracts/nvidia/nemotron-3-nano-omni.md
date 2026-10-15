@@ -8,17 +8,12 @@ We introduce Nemotron 3 Nano Omni, the latest model in the Nemotron multimodal s
 
 ![Figure 1](../../figures/nvidia/nemotron-3-nano-omni/figure-01.png)
 
-Figure 1 | Nemotron 3 Nano Omni architecture. For encoding images and videos we use dynamic
-resolution. Additionally, videos use Conv3D and optionally Efficient Video Sampling for higher
-throughput. Audio inputs are encoded using Parakeet v2 audio encoder. Visual, audio, and text
-tokens are concatenated and fed to the LLM.
+Figure 1 | Nemotron 3 Nano Omni architecture. For encoding images and videos we use dynamic resolution. Additionally, videos use Conv3D and optionally Efficient Video Sampling for higher throughput. Audio inputs are encoded using Parakeet v2 audio encoder. Visual, audio, and text tokens are concatenated and fed to the LLM.
 
 p. 3
 
 ![Figure 2](../../figures/nvidia/nemotron-3-nano-omni/figure-02.png)
 
-Figure 2 | Staged training recipe for the v3 omni-modal model. The pipeline first performs vision
-SFT, then joint omni SFT while progressively extending context length, followed by omni-modal RL
-training.
+Figure 2 | Staged training recipe for the v3 omni-modal model. The pipeline first performs vision SFT, then joint omni SFT while progressively extending context length, followed by omni-modal RL training.
 
 p. 4

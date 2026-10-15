@@ -14,10 +14,6 @@ p. 3
 
 ![Figure 4](../../figures/qwen/wan-s2v/figure-02.png)
 
-Figure 4: Qualitative comparison of generated human videos. The leftmost column displays the
-reference image. Hunyuan-Avatar (top row) often suffers from facial distortions and inconsistent
-identity during large movements. Ominihuman (middle row) typically generates results with a lim-
-ited range of motion, largely adhering to the pose of the reference image. In contrast, our method
-(bottom row) achieves superior performance in both motion dynamics and identity consistency.
+Figure 4: Qualitative comparison of generated human videos. The leftmost column displays the reference image. Hunyuan-Avatar (top row) often suffers from facial distortions and inconsistent identity during large movements. Ominihuman (middle row) typically generates results with a lim- ited range of motion, largely adhering to the pose of the reference image. In contrast, our method (bottom row) achieves superior performance in both motion dynamics and identity consistency.
 
 p. 7

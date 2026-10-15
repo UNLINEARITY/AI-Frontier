@@ -6,9 +6,7 @@ We present Segment Anything Model (SAM) 3, a unified model that detects, segment
 
 ![Figure 1](../../figures/meta/sam-3-technical-report/figure-01.png)
 
-Figure 1 SAM 3 improves over SAM 2 on promptable visual segmentation with clicks (left) and introduces the new
-promptable concept segmentation capability (right). Users can segment all instances of a visual concept specified by a
-short noun phrase, image exemplars (positive or negative), or a combination of both.
+Figure 1 SAM 3 improves over SAM 2 on promptable visual segmentation with clicks (left) and introduces the new promptable concept segmentation capability (right). Users can segment all instances of a visual concept specified by a short noun phrase, image exemplars (positive or negative), or a combination of both.
 
 p. 1
 
@@ -20,8 +18,6 @@ p. 4
 
 ![Figure 1](../../figures/meta/sam-3-technical-report/figure-03.png)
 
-Table 1 Evaluation on image concept segmentation with text. APo corresponds to COCO-O accuracy, ⋆: partially
-trained on LVIS, †: from original papers, δ: from DINO-X API. Gray numbers indicate usage of respective closed set
-training data (LVIS/COCO). See §F.1 for more baselines and results and §E.4 for details of human performance.
+Table 1 Evaluation on image concept segmentation with text. APo corresponds to COCO-O accuracy, ⋆: partially trained on LVIS, †: from original papers, δ: from DINO-X API. Gray numbers indicate usage of respective closed set training data (LVIS/COCO). See §F.1 for more baselines and results and §E.4 for details of human performance.
 
 p. 8

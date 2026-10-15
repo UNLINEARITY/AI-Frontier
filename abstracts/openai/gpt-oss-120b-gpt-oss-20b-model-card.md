@@ -20,18 +20,12 @@ As part of this launch, OpenAI is reaffirming its commitment to advancing benefi
 
 ![Figure 1](../../figures/openai/gpt-oss-120b-gpt-oss-20b-model-card/figure-01.png)
 
-Figure 1: Main capabilities evaluations. We compare the gpt-oss models at reasoning level
-high to OpenAI’s o3, o3-mini, and o4-mini on canonical benchmarks. gpt-oss-120b surpasses
-OpenAI o3-mini and approaches OpenAI o4-mini accuracy. The smaller gpt-oss-20b model is
-also surprisingly competitive, despite being 6 times smaller than gpt-oss-120b.
-*Note: o3-mini was evaluated on AIME without tools, see Table 3 for the gpt-oss models on AIME without tools
+Figure 1: Main capabilities evaluations. We compare the gpt-oss models at reasoning level high to OpenAI’s o3, o3-mini, and o4-mini on canonical benchmarks. gpt-oss-120b surpasses OpenAI o3-mini and approaches OpenAI o4-mini accuracy. The smaller gpt-oss-20b model is also surprisingly competitive, despite being 6 times smaller than gpt-oss-120b. *Note: o3-mini was evaluated on AIME without tools, see Table 3 for the gpt-oss models on AIME without tools
 
 p. 6
 
 ![Figure 3](../../figures/openai/gpt-oss-120b-gpt-oss-20b-model-card/figure-02.png)
 
-Figure 3: We evaluate AIME and GPQA using the three different reasoning modes (low, medium,
-high) and plot accuracy against the average CoT + Answer length. We find that there is smooth
-test-time scaling of accuracy when increasing the reasoning level.
+Figure 3: We evaluate AIME and GPQA using the three different reasoning modes (low, medium, high) and plot accuracy against the average CoT + Answer length. We find that there is smooth test-time scaling of accuracy when increasing the reasoning level.
 
 p. 8

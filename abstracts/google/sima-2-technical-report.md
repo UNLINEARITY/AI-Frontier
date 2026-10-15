@@ -6,18 +6,18 @@ We introduce SIMA 2, a generalist embodied agent that understands and acts in a 
 
 ![Figure 3](../../figures/google/sima-2-technical-report/figure-01.png)
 
-Figure   3   |   Agent-Environment   Interface .   The   agent   receives   a   prompt   that   includes   the   current instruction.   Conditioning   on   recent   frames,   the   agent   outputs   internal   reasoning,   dialogue,   and actions, with the agent specifying which modalities to produce at any given step.
+Figure 3 | Agent-Environment Interface . The agent receives a prompt that includes the current instruction. Conditioning on recent frames, the agent outputs internal reasoning, dialogue, and actions, with the agent specifying which modalities to produce at any given step.
 
 p. 7
 
 ![Figure 6](../../figures/google/sima-2-technical-report/figure-02.png)
 
-Figure   6   |   Average   Performance   on   Embodied   Tasks .   Performance   is   averaged   over   training environments for each type of evaluation (human or automatic).   We plot human performance both with and without the time restrictions imposed on agents.   SIMA 2 effectively doubles the average success rate of SIMA 1, approaching human-level performance in both cases.
+Figure 6 | Average Performance on Embodied Tasks . Performance is averaged over training environments for each type of evaluation (human or automatic). We plot human performance both with and without the time restrictions imposed on agents. SIMA 2 effectively doubles the average success rate of SIMA 1, approaching human-level performance in both cases.
 
 p. 14
 
 ![Figure 15](../../figures/google/sima-2-technical-report/figure-03.png)
 
-Figure 15   |   Self-Improvement on a Fixed Set of Tasks in  ASKA . To isolate the improvement aspect of our learning process, independent of the task setter, we first use a fixed set of tasks in ASKA. Over successive   iterations   (darker   blue   points   and   curves),   we   see   that   performance   steadily   improves, eventually exceeding a score of 50 across the full task set (the threshold for “success”).   Performance approaches, and in some cases even exceeds, the scores of reference trajectories from humans.
+Figure 15 | Self-Improvement on a Fixed Set of Tasks in ASKA . To isolate the improvement aspect of our learning process, independent of the task setter, we first use a fixed set of tasks in ASKA. Over successive iterations (darker blue points and curves), we see that performance steadily improves, eventually exceeding a score of 50 across the full task set (the threshold for “success”). Performance approaches, and in some cases even exceeds, the scores of reference trajectories from humans.
 
 p. 24

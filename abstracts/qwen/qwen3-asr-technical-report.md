@@ -14,10 +14,6 @@ p. 3
 
 ![Figure 3](../../figures/qwen/qwen3-asr-technical-report/figure-02.png)
 
-Table 3: Evaluation on English, Mandarin Chinese, and a range of Chinese dialect benchmarks. For
-the commercial APIs and the open-source Whisper-large-v3 model, we obtained results by running
-inference on the test sets ourselves due to the absence of published numbers; for FunASR-MLT-Nano,
-we report the results from its official technical report. "N/A" denotes that we cannot get a reasonable
-result by the official API. "–" indicates that the corresponding benchmark result is not reported.
+Table 3: Evaluation on English, Mandarin Chinese, and a range of Chinese dialect benchmarks. For the commercial APIs and the open-source Whisper-large-v3 model, we obtained results by running inference on the test sets ourselves due to the absence of published numbers; for FunASR-MLT-Nano, we report the results from its official technical report. "N/A" denotes that we cannot get a reasonable result by the official API. "–" indicates that the corresponding benchmark result is not reported.
 
 p. 8

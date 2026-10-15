@@ -8,16 +8,12 @@ As large language models (LLMs) become more capable and widely used, ensuring th
 
 ![Figure 1](../../figures/qwen/qwen3guard-technical-report/figure-01.png)
 
-Figure 1: Average F1 scores of Qwen3Guard-Gen vs. existing guard models across safety classification
-benchmarks for Prompts and Responses in English, Chinese, and Multilingual datasets.
+Figure 1: Average F1 scores of Qwen3Guard-Gen vs. existing guard models across safety classification benchmarks for Prompts and Responses in English, Chinese, and Multilingual datasets.
 
 p. 1
 
 ![Figure 7](../../figures/qwen/qwen3guard-technical-report/figure-02.png)
 
-Figure 7: Overview of Stream Qwen3Guard. The model enables real-time safety moderation during LLM
-conversations by introducing two classification heads: the Prompt Moderator head evaluates incoming
-user prompts, while the Response Moderator head assesses each generated token in the streaming output,
-allowing for immediate intervention if unsafe content is detected.
+Figure 7: Overview of Stream Qwen3Guard. The model enables real-time safety moderation during LLM conversations by introducing two classification heads: the Prompt Moderator head evaluates incoming user prompts, while the Response Moderator head assesses each generated token in the streaming output, allowing for immediate intervention if unsafe content is detected.
 
 p. 13

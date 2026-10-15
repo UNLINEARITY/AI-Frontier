@@ -6,16 +6,12 @@ We present SAM 3D, a generative model for visually grounded 3D object reconstruc
 
 ![Figure 2](../../figures/meta/sam-3d-technical-report/figure-01.png)
 
-Figure 2 SAM 3D architecture. (top) SAM 3D first predicts coarse shape and layout with the Geometry model; (right)
-the mixture of transformers architecture apply a two-stream approach with information sharing in the multi-modal
-self-attention layer. (bottom) The voxels predicted by the Geometry model are passed to the Texture & Refinement
-model, which adds higher resolution detail and textures.
+Figure 2 SAM 3D architecture. (top) SAM 3D first predicts coarse shape and layout with the Geometry model; (right) the mixture of transformers architecture apply a two-stream approach with information sharing in the multi-modal self-attention layer. (bottom) The voxels predicted by the Geometry model are passed to the Texture & Refinement model, which adds higher resolution detail and textures.
 
 p. 3
 
 ![Figure 8](../../figures/meta/sam-3d-technical-report/figure-02.png)
 
-Figure 8 Preference comparison on scene-level and object-level reconstruction. Numbers indicate human preference rates.
-Objects comparisons are done on textured meshes. SAM 3D is significantly preferred over others on all fronts.
+Figure 8 Preference comparison on scene-level and object-level reconstruction. Numbers indicate human preference rates. Objects comparisons are done on textured meshes. SAM 3D is significantly preferred over others on all fronts.
 
 p. 10

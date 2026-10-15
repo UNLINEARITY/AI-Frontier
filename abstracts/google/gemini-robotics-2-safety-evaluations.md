@@ -8,9 +8,7 @@ Collaborative applications – where humans and robots interact in close proximi
 
 In Figure 1, we sketch a simplified system diagram for benchmarking such collaborative safety behaviors. The Agent receives a long-horizon task from a human operator and nominally decomposes it into sub-tasks for the Vision-Language-Action (VLA) model, in a “system 2 / system 1” architecture. However, to manage the aleatoric uncertainty inherent in unstructured human environments — such as ambiguous natural language instructions or occluded scenes—the Agent is empowered to seek human clarification rather than blindly propagating this uncertainty downstream. Furthermore, unlike traditional deterministic software tools, the VLA is a statistical learning-based system that remains susceptible to epistemic uncertainty when encountering physical tasks it has not yet been fully trained for. To address this, the Agent may use in-context information – or query specialized tools – for VLA confidence assessments; if a sub-task is deemed infeasible, the Agent proactively pauses execution and requests human intervention. At the planning level, the Agent must decline any task that violates predefined safety constraints and appropriately inform the user. During physical execution, the Agent continuously monitors dynamic safety-relevant states, such as actuator health or human proximity. Upon detecting a critical hazard, the Agent invokes a dedicated safety tool designed to immediately transition the robot into a safe state (e.g., returning to a home pose and stopping).
 
-In this report, we leverage diverse scene and instruction contexts to explicitly quantify the Agent’s
-
-proficiency in making the routing decisions described above — whether delegating to the VLA, querying the human, or triggering safety tools. We design an offline “one-step" and multiturn (using VLA tool emulation) benchmark. We also perform real-world evaluations of safe stopping behaviors on the Apptronik Apollo2 Humanoid, powered by the Gemini Robotics 2 model family.
+In this report, we leverage diverse scene and instruction contexts to explicitly quantify the Agent’s proficiency in making the routing decisions described above — whether delegating to the VLA, querying the human, or triggering safety tools. We design an offline “one-step" and multiturn (using VLA tool emulation) benchmark. We also perform real-world evaluations of safe stopping behaviors on the Apptronik Apollo2 Humanoid, powered by the Gemini Robotics 2 model family.
 
 While we advocate for a broader definition of collaborative safety, this report focuses primarily on the high-level semantic reasoning and orchestration capabilities of the Agent. This work does not evaluate the underlying functional safety architecture – including certified hardware components, redundancy mechanisms, and real-time system guarantees – necessary to safely execute those decisions in a compliant physical deployment.
 
@@ -28,7 +26,6 @@ p. 5
 
 ![Figure 10](../../figures/google/gemini-robotics-2-safety-evaluations/figure-03.png)
 
-Figure 10 | Results: VLA Feasibility Evals (one-Step variant)– (Left) comparisons and (Right) Gemini
-Robotics ER 2 performance improvements with increasing VLA feasibility awareness
+Figure 10 | Results: VLA Feasibility Evals (one-Step variant)– (Left) comparisons and (Right) Gemini Robotics ER 2 performance improvements with increasing VLA feasibility awareness
 
 p. 8

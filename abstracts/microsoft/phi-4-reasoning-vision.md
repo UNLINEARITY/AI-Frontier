@@ -6,18 +6,12 @@ We present Phi-4-reasoning-vision-15B, a compact open-weight multimodal reasonin
 
 ![Figure 2](../../figures/microsoft/phi-4-reasoning-vision/figure-01.png)
 
-Figure 2: Phi-4-reasoning-vision-15B presents a compelling option compared to existing models, pushing the Pareto
-frontier of the trade-off between accuracy and compute costs. We achieve competitive performance with much slower
-models that require more time and tokens, and higher accuracy than similarly fast models. These values were computed
-by averaging accuracy, time, and output token counts for a subset of 4 benchmarks: ChartQATEST, MathVistaMINI,
-MMMUVAL, and ScreenSpot_v2.
+Figure 2: Phi-4-reasoning-vision-15B presents a compelling option compared to existing models, pushing the Pareto frontier of the trade-off between accuracy and compute costs. We achieve competitive performance with much slower models that require more time and tokens, and higher accuracy than similarly fast models. These values were computed by averaging accuracy, time, and output token counts for a subset of 4 benchmarks: ChartQATEST, MathVistaMINI, MMMUVAL, and ScreenSpot_v2.
 
 p. 3
 
 ![Figure 3](../../figures/microsoft/phi-4-reasoning-vision/figure-02.png)
 
-Figure 3: Overview of the Phi-4-reasoning-vision-15B mid-fusion architecture. Images are processed by a SigLIP-2 vision
-encoder and projected into the language embedding space via a cross-modality projector (MLP). The resulting visual
-“soft” tokens are interleaved with text tokens and fed into the Phi-4-Reasoning language model.
+Figure 3: Overview of the Phi-4-reasoning-vision-15B mid-fusion architecture. Images are processed by a SigLIP-2 vision encoder and projected into the language embedding space via a cross-modality projector (MLP). The resulting visual “soft” tokens are interleaved with text tokens and fed into the Phi-4-Reasoning language model.
 
 p. 4

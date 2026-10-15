@@ -6,17 +6,12 @@ We introduce Gemini Embedding 2, a native multimodal embedding model that allows
 
 ![Figure 1](../../figures/google/gemini-embedding-2/figure-01.png)
 
-Figure 1 | Conceptual overview of the Gemini Embedding 2 workflow. The model natively processes
-heterogeneous inputs—text, images, video, audio, documents, and their combinations—mapping
-them into a single, unified high-dimensional vector space where cross-modal semantic relationships
-are preserved.
+Figure 1 | Conceptual overview of the Gemini Embedding 2 workflow. The model natively processes heterogeneous inputs—text, images, video, audio, documents, and their combinations—mapping them into a single, unified high-dimensional vector space where cross-modal semantic relationships are preserved.
 
 p. 2
 
 ![Figure 2](../../figures/google/gemini-embedding-2/figure-02.png)
 
-Figure 2 | Gemini Embedding 2 shows strong performance across multimodal retrieval tasks spanning
-image, text, video, and document modalities.
-∗MTEB number is reported for Voyage-3.5 since Voyage-3.5-multimodal does not report MTEB.
+Figure 2 | Gemini Embedding 2 shows strong performance across multimodal retrieval tasks spanning image, text, video, and document modalities. ∗MTEB number is reported for Voyage-3.5 since Voyage-3.5-multimodal does not report MTEB.
 
 p. 3

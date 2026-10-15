@@ -6,20 +6,12 @@ We introduce EmbeddingGemma, a new lightweight, open text embedding model based 
 
 ![Figure 1](../../figures/google/embeddinggemma-technical-report/figure-01.png)
 
-Figure 1 | Comparison of top 20 embedding models under 500M parameters across MTEB multilingual
-and code benchmarks. We exclude models trained on more than 25% of the MTEB data to mitigate
-potential over-fitting. ∗: Average excludes COIRCodeSearchNetRetrieval, which was unavailable for
-most models. An analogous figure for MTEB(English, v2) is available in Section A.
+Figure 1 | Comparison of top 20 embedding models under 500M parameters across MTEB multilingual and code benchmarks. We exclude models trained on more than 25% of the MTEB data to mitigate potential over-fitting. ∗: Average excludes COIRCodeSearchNetRetrieval, which was unavailable for most models. An analogous figure for MTEB(English, v2) is available in Section A.
 
 p. 2
 
 ![Figure 5](../../figures/google/embeddinggemma-technical-report/figure-02.png)
 
-Table 5 | Comparison of popular embedding models on the Massive Text Embedding Benchmark:
-MTEB(Multilingual, v2), MTEB(English, v2), and MTEB(Code). We also show results on XOR-Retrieve
-and XTREME-UP, reporting Recall@5kt and MRR@10 respectively. ∗: Averaged over all code tasks
-excluding COIRCodeSearchNetRetrieval, which was unavailable for most models.
-†: For Gecko
-Embedding (Lee et al., 2024), we evaluate a smaller version of the model discussed in the paper.
+Table 5 | Comparison of popular embedding models on the Massive Text Embedding Benchmark: MTEB(Multilingual, v2), MTEB(English, v2), and MTEB(Code). We also show results on XOR-Retrieve and XTREME-UP, reporting Recall@5kt and MRR@10 respectively. ∗: Averaged over all code tasks excluding COIRCodeSearchNetRetrieval, which was unavailable for most models. †: For Gecko Embedding (Lee et al., 2024), we evaluate a smaller version of the model discussed in the paper.
 
 p. 8

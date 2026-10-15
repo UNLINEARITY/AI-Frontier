@@ -8,18 +8,12 @@ We present Wan-Move, a simple and scalable framework that brings motion control 
 
 ![Figure 2](../../figures/qwen/wan-move/figure-01.png)
 
-Figure 2: (a) To inject motion guidance, we transfer point trajectories from videos to latent space,
-then replicate the first frame feature into subsequent zero-padded frames along each latent trajectory.
-(b) Wan-Move is trained upon an existing image-to-video generation model (e.g., work [19, 34]), with
-an efficient latent feature replication step (as in (a)) to update the condition feature. The CLIP [70]
-image encoder and umT5 [71] text encoder from the base model are omitted for simplicity.
+Figure 2: (a) To inject motion guidance, we transfer point trajectories from videos to latent space, then replicate the first frame feature into subsequent zero-padded frames along each latent trajectory. (b) Wan-Move is trained upon an existing image-to-video generation model (e.g., work [19, 34]), with an efficient latent feature replication step (as in (a)) to update the condition feature. The CLIP [70] image encoder and umT5 [71] text encoder from the base model are omitted for simplicity.
 
 p. 4
 
 ![Figure 6](../../figures/qwen/wan-move/figure-02.png)
 
-Figure 6: Qualitative comparisons between Wan-Move and recent approaches, including both
-academic methods [58, 16] and commercial solutions [4]. Motions that deviate from the specified
-trajectories and major visual artifacts are marked with red dots and boxes, respectively.
+Figure 6: Qualitative comparisons between Wan-Move and recent approaches, including both academic methods [58, 16] and commercial solutions [4]. Motions that deviate from the specified trajectories and major visual artifacts are marked with red dots and boxes, respectively.
 
 p. 7

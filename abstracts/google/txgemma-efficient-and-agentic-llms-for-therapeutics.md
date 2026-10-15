@@ -8,9 +8,7 @@ The pharmaceutical industry faces significant challenges in bringing new therape
 
 Computational approaches, such as machine learning, are emerging as powerful tools to address these challenges. Leveraging predictive models trained on curated datasets allows researchers to prioritize promising candidates early in the development process, reducing reliance on costly experimental assays [5]. Publicly available databases of molecular properties and biological activity are crucial for training and validating these models. In this area, a major development was the curation of the Therapeutics Data Commons (TDC) [6, 7, 8], which contains datasets and benchmarks for many different tasks throughout the therapeutic development pipeline, ranging from early-stage target identification to late-stage clinical trial approval.
 
-Recent advancements in large language models (LLMs) offer a compelling opportunity to leverage available datasets and address limitations in the therapeutic development process. LLMs have demonstrated the capacity to integrate and learn from diverse data sources across various domains, including scientific applications [9, 10,
-
-11]. Their potential to connect disparate aspects of drug development, such as chemical structure, biological activity, and clinical trial outcomes, is particularly exciting. In this context, we have previously introduced Tx-LLM, a LLM fine-tuned from a collection of question-answer instruction-tuning datasets based on TDC [12]. While promising, the model’s lack of conversational capabilities prevented reasoning or user interaction, limiting its value for scientists who require a model that can understand complex queries and engage in nuanced discussions.
+Recent advancements in large language models (LLMs) offer a compelling opportunity to leverage available datasets and address limitations in the therapeutic development process. LLMs have demonstrated the capacity to integrate and learn from diverse data sources across various domains, including scientific applications [9, 10, 11]. Their potential to connect disparate aspects of drug development, such as chemical structure, biological activity, and clinical trial outcomes, is particularly exciting. In this context, we have previously introduced Tx-LLM, a LLM fine-tuned from a collection of question-answer instruction-tuning datasets based on TDC [12]. While promising, the model’s lack of conversational capabilities prevented reasoning or user interaction, limiting its value for scientists who require a model that can understand complex queries and engage in nuanced discussions.
 
 In this work, we introduce TxGemma, a suite of efficient, generalist LLMs trained for therapeutics. Building on, but significantly extending, our previous work [12], TxGemma leverages LLMs to synthesize information from diverse sources. The suite includes 2B, 9B, and 27B parameter models, fine-tuned from Gemma-2 [13, 14] using a collection of therapeutic instruction-tuning datasets encompassing small molecules, proteins, nucleic acids, diseases, and cell lines. For the first time in therapeutic AI, TxGemma features conversational counter- parts capable of reasoning and explanation, moving beyond black-box predictions to facilitate mechanistic understanding and scientific discussions. Our key contributions are as follows:
 
@@ -24,27 +22,12 @@ In this work, we introduce TxGemma, a suite of efficient, generalist LLMs traine
 
 ![Figure 1](../../figures/google/txgemma-efficient-and-agentic-llms-for-therapeutics/figure-01.png)
 
-Figure 1 | Overview of TxGemma. (top) All TxGemma variants are trained on diverse data sources of the
-Therapeutic Data Commons (TDC). TxGemma-Predict comes in three size variants (2B, 9B, and 27B) and is trained
-for high-performance predictions on a broad set of therapeutic development tasks. TxGemma-Chat features two
-variants (9B and 27B) and is trained on a combination of TDC data with general Gemma-2 instruction tuning data to
-retain conversational and reasoning capabilities. Agentic-Tx, a therapeutics-focused agentic system powered by Gemini
-2.5, has access to 18 tools including TxGemma-Predict and TxGemma-Chat to collect external knowledge and manages
-complex tasks in either autonomous or interactive settings. (bottom-right) Absolute performance of Agentic-Tx
-compared to best-in-class models on three complex therapeutic-related reasoning benchmarks. The state-of-the-art
-(SOTA) values are obtained from [1, 2] and details are listed in Table 3. Dashed lines: L=lowest, M=mean, H=highest
+Figure 1 | Overview of TxGemma. (top) All TxGemma variants are trained on diverse data sources of the Therapeutic Data Commons (TDC). TxGemma-Predict comes in three size variants (2B, 9B, and 27B) and is trained for high-performance predictions on a broad set of therapeutic development tasks. TxGemma-Chat features two variants (9B and 27B) and is trained on a combination of TDC data with general Gemma-2 instruction tuning data to retain conversational and reasoning capabilities. Agentic-Tx, a therapeutics-focused agentic system powered by Gemini 2.5, has access to 18 tools including TxGemma-Predict and TxGemma-Chat to collect external knowledge and manages complex tasks in either autonomous or interactive settings. (bottom-right) Absolute performance of Agentic-Tx compared to best-in-class models on three complex therapeutic-related reasoning benchmarks. The state-of-the-art (SOTA) values are obtained from [1, 2] and details are listed in Table 3. Dashed lines: L=lowest, M=mean, H=highest
 
 p. 2
 
 ![Figure 3](../../figures/google/txgemma-efficient-and-agentic-llms-for-therapeutics/figure-02.png)
 
-Figure 3 | Comparison of TxGemma-Predict’s performance with therapeutic generalist models. (top)
-relative performance improvement of TxGemma-27B-Predict in comparison to Tx-LLM S. TxGemma-27B-Predict
-outperforms Tx-LLM S on 62 and underperforms on only 4. (bottom) relative performance improvement of TxGemma-
-27B-Predict in comparison to Tx-LLM M. TxGemma-27B-Predict outperforms Tx-LLM M on 45 out of 66 tasks, while
-underperforming on 21. When aggregating performance over task, we observe a net improvement of TxGemma-27B-
-Predict over Tx-LLM models, with a statistically significant difference (p=0.003, Wilcoxon signed-rank test). These
-results establish TxGemma-27B-Predict as a competitive and functionally enhanced alternative at practical model
-sizes. Values for each task can be found in Tables S.15 and S.16.
+Figure 3 | Comparison of TxGemma-Predict’s performance with therapeutic generalist models. (top) relative performance improvement of TxGemma-27B-Predict in comparison to Tx-LLM S. TxGemma-27B-Predict outperforms Tx-LLM S on 62 and underperforms on only 4. (bottom) relative performance improvement of TxGemma- 27B-Predict in comparison to Tx-LLM M. TxGemma-27B-Predict outperforms Tx-LLM M on 45 out of 66 tasks, while underperforming on 21. When aggregating performance over task, we observe a net improvement of TxGemma-27B- Predict over Tx-LLM models, with a statistically significant difference (p=0.003, Wilcoxon signed-rank test). These results establish TxGemma-27B-Predict as a competitive and functionally enhanced alternative at practical model sizes. Values for each task can be found in Tables S.15 and S.16.
 
 p. 7

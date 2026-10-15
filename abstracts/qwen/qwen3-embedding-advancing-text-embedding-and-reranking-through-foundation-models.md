@@ -14,7 +14,6 @@ p. 3
 
 ![Figure 2](../../figures/qwen/qwen3-embedding-advancing-text-embedding-and-reranking-through-foundation-models/figure-02.png)
 
-Table 2: Performance on MTEB Multilingual (Enevoldsen et al., 2025). For compared models, the
-scores are retrieved from MTEB online leaderboard on June 4th, 2025.
+Table 2: Performance on MTEB Multilingual (Enevoldsen et al., 2025). For compared models, the scores are retrieved from MTEB online leaderboard on June 4th, 2025.
 
 p. 6

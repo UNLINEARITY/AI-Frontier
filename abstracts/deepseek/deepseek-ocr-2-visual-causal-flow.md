@@ -8,16 +8,12 @@ We present DeepSeek-OCR 2 to investigate the feasibility of a novel encoder—De
 
 ![Figure 1](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-01.png)
 
-Figure 1 | We substitute the CLIP component in DeepEncoder with an LLM-style architecture.
-By customizing the attention mask, visual tokens utilize bidirectional attention while learnable
-queries adopt causal attention. Each query token can thus attend to all visual tokens and
-preceding queries, allowing progressive causal reordering over visual information.
+Figure 1 | We substitute the CLIP component in DeepEncoder with an LLM-style architecture. By customizing the attention mask, visual tokens utilize bidirectional attention while learnable queries adopt causal attention. Each query token can thus attend to all visual tokens and preceding queries, allowing progressive causal reordering over visual information.
 
 p. 1
 
 ![Figure 5](../../figures/deepseek/deepseek-ocr-2-visual-causal-flow/figure-02.png)
 
-Figure 5 | Attention mask architecture of DeepEncoder V2. Concatenation of bidirectional mask
-(vision tokens, ViT-like) and causal triangular mask (flow tokens, LLM decoder-style).
+Figure 5 | Attention mask architecture of DeepEncoder V2. Concatenation of bidirectional mask (vision tokens, ViT-like) and causal triangular mask (flow tokens, LLM decoder-style).
 
 p. 7

@@ -8,16 +8,12 @@ Document parsing converts document images into structured content and requires r
 
 ![Figure 1](../../figures/tencent/wevisdoc/figure-01.png)
 
-Figure 1 WeVisDoc-4B leads the compared end-to-end parsers across all four reported settings. Bars show
-scores on OmniDocBench v1.6 and the three PureDocBench robustness tracks; WeVisDoc-2B delivers top-tier end-to-
-end performance at half the parameter count.
+Figure 1 WeVisDoc-4B leads the compared end-to-end parsers across all four reported settings. Bars show scores on OmniDocBench v1.6 and the three PureDocBench robustness tracks; WeVisDoc-2B delivers top-tier end-to- end performance at half the parameter count.
 
 p. 1
 
 ![Figure 2](../../figures/tencent/wevisdoc/figure-02.png)
 
-Figure 2 Stage I data construction. Collected sources are normalized through multi-model labeling, while general
-synthesis generates exact semantic and structural targets. Both data sources enter a shared clean pool. Appearance
-augmentation is then applied according to the source to form the Stage I mixture.
+Figure 2 Stage I data construction. Collected sources are normalized through multi-model labeling, while general synthesis generates exact semantic and structural targets. Both data sources enter a shared clean pool. Appearance augmentation is then applied according to the source to form the Stage I mixture.
 
 p. 6

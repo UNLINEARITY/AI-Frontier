@@ -6,24 +6,18 @@ We present Segment Anything Model 2 (SAM 2), a foundation model towards solving 
 
 ![Figure 1](../../figures/meta/sam-2-segment-anything-in-images-and-videos/figure-01.png)
 
-Figure 1 We introduce the Segment Anything Model 2 (SAM 2), towards solving the promptable visual segmentation
-task (a) with our foundation model (b), trained on our large-scale SA-V dataset collected through our data engine (c).
-SAM 2 is capable of interactively segmenting regions through prompts (clicks, boxes, or masks) on one or multiple
-video frames by utilizing a streaming memory that stores previous prompts and predictions.
+Figure 1 We introduce the Segment Anything Model 2 (SAM 2), towards solving the promptable visual segmentation task (a) with our foundation model (b), trained on our large-scale SA-V dataset collected through our data engine (c). SAM 2 is capable of interactively segmenting regions through prompts (clicks, boxes, or masks) on one or multiple video frames by utilizing a streaming memory that stores previous prompts and predictions.
 
 p. 2
 
 ![Figure 3](../../figures/meta/sam-2-segment-anything-in-images-and-videos/figure-02.png)
 
-Figure 3 The SAM 2 architecture. For a given frame, the segmentation prediction is conditioned on the current prompt
-and/or on previously observed memories. Videos are processed in a streaming fashion with frames being consumed one
+Figure 3 The SAM 2 architecture. For a given frame, the segmentation prediction is conditioned on the current prompt and/or on previously observed memories. Videos are processed in a streaming fashion with frames being consumed one
 
 p. 5
 
 ![Figure 5](../../figures/meta/sam-2-segment-anything-in-images-and-videos/figure-03.png)
 
-Table 5 Zero-shot accuracy on the Segment Anything (SA) task across 37 datasets. The table shows the average 1-
-and 5-click mIoU of SAM 2 compared to SAM by domains (image/video). We report the average metrics on the 23
-datasets used by SAM (SA-23) and the average across 14 additional zero-shot video datasets (as detailed in §F.3).
+Table 5 Zero-shot accuracy on the Segment Anything (SA) task across 37 datasets. The table shows the average 1- and 5-click mIoU of SAM 2 compared to SAM by domains (image/video). We report the average metrics on the 23 datasets used by SAM (SA-23) and the average across 14 additional zero-shot video datasets (as detailed in §F.3).
 
 p. 11

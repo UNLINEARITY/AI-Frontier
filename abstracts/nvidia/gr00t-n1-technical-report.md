@@ -8,11 +8,6 @@ General-purpose robots need a versatile body and an intelligent mind. Recent adv
 
 ![Figure 3](../../figures/nvidia/gr00t-n1-technical-report/figure-01.png)
 
-Figure 3: GR00T N1 Model Architecture. GR00T N1 is trained on a diverse set of embodiments ranging from
-single-arm robot arms to bimanual humanoid dexterous hands. To deal with different robot embodiment’s
-state observation and action, we use DiT blocks with an embodiment-aware state and action encoder to embed
-the robot’s state and action inputs. GR00T N1 model leverages latent embeddings of the Eagle-2 model to
-incorporate the robot’s visual observation and language instructions. The vision language tokens will then be
-fed into the DiT blocks through cross-attention layers.
+Figure 3: GR00T N1 Model Architecture. GR00T N1 is trained on a diverse set of embodiments ranging from single-arm robot arms to bimanual humanoid dexterous hands. To deal with different robot embodiment’s state observation and action, we use DiT blocks with an embodiment-aware state and action encoder to embed the robot’s state and action inputs. GR00T N1 model leverages latent embeddings of the Eagle-2 model to incorporate the robot’s visual observation and language instructions. The vision language tokens will then be fed into the DiT blocks through cross-attention layers.
 
 p. 4

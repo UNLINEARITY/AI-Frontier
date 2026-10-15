@@ -8,10 +8,7 @@ In this report, we introduce the Qwen3-VL-Embedding and Qwen3-VL-Reranker model 
 
 ![Figure 1](../../figures/qwen/qwen3-vl-embedding-and-qwen3-vl-reranker-technical-report/figure-01.png)
 
-Figure 1: Illustration of the Unified Multimodal Representation Space. Qwen3-VL-Embedding model
-series represent multi-source data (Text, Image, Visual Document, and Video) into a common manifold.
-By aligning semantic concepts across modalities (e.g., the text "urban architecture" and its corresponding
-image), the model achieves a holistic understanding of complex visual and textual information.
+Figure 1: Illustration of the Unified Multimodal Representation Space. Qwen3-VL-Embedding model series represent multi-source data (Text, Image, Visual Document, and Video) into a common manifold. By aligning semantic concepts across modalities (e.g., the text "urban architecture" and its corresponding image), the model achieves a holistic understanding of complex visual and textual information.
 
 p. 2
 

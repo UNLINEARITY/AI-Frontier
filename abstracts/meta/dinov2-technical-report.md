@@ -8,17 +8,12 @@ The recent breakthroughs in natural language processing for model pretraining on
 
 ![Figure 1](../../figures/meta/dinov2-technical-report/figure-01.png)
 
-Figure 1: Visualization of the first PCA components. We compute a PCA between the patches of the
-images from the same column (a, b, c and d) and show their first 3 components. Each component is matched
-to a different color channel. Same parts are matched between related images despite changes of pose, style
-or even objects. Background is removed by thresholding the first PCA component.
+Figure 1: Visualization of the first PCA components. We compute a PCA between the patches of the images from the same column (a, b, c and d) and show their first 3 components. Each component is matched to a different color channel. Same parts are matched between related images despite changes of pose, style or even objects. Background is removed by thresholding the first PCA component.
 
 p. 2
 
 ![Figure 3](../../figures/meta/dinov2-technical-report/figure-02.png)
 
-Figure 3: Overview of our data processing pipeline. Images from curated and uncurated data sources
-are first mapped to embeddings. Uncurated images are then deduplicated before being matched to curated
-images. The resulting combination augments the initial dataset through a self-supervised retrieval system.
+Figure 3: Overview of our data processing pipeline. Images from curated and uncurated data sources are first mapped to embeddings. Uncurated images are then deduplicated before being matched to curated images. The resulting combination augments the initial dataset through a self-supervised retrieval system.
 
 p. 4

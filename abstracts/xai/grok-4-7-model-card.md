@@ -14,13 +14,9 @@ The model’s use is subject to SpaceXAI’s Acceptable Use Policy1, applicable 
 
 Grok 4.7 is primarily a text model: it accepts natural-language text and images as input and produces text as output. It is available for use through the following channels:
 
-• SpaceXAI API: Available from the console at console.x.ai; API users can call Grok 4.7
+• SpaceXAI API: Available from the console at console.x.ai; API users can call Grok 4.7 through the standard chat and completions endpoints.
 
-through the standard chat and completions endpoints.
-
-• Grok Build: The default model in SpaceXAI’s terminal-based coding agent, available
-
-through both the API and the CLI.
+• Grok Build: The default model in SpaceXAI’s terminal-based coding agent, available through both the API and the CLI.
 
 • Cursor: Available to all users, on every plan tier.
 

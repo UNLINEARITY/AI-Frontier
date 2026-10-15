@@ -8,18 +8,12 @@ We present Qwen-Image-2.0, an omni-capable image generation foundation model tha
 
 ![Figure 1](../../figures/qwen/qwen-image-2-0/figure-01.png)
 
-Figure 1: Qwen-Image-2.0 shows significant improvements across core dimensions, including photoreal-
-ism and portrait generation, in LMArena (accessed April 22, 2026).
+Figure 1: Qwen-Image-2.0 shows significant improvements across core dimensions, including photoreal- ism and portrait generation, in LMArena (accessed April 22, 2026).
 
 p. 1
 
 ![Figure 8](../../figures/qwen/qwen-image-2-0/figure-02.png)
 
-Figure 8: Overview of the Qwen-Image-2.0 architecture. The model adopts a MMDiT architecture, with
-input representations provided by a frozen Qwen3-VL and a VAE encoder. It uses RMSNorm (Zhang
-&Sennrich, 2019) for QK-Norm, while all other normalization layers use LayerNorm. The unified stream,
-comprising both text and image modalities, employs the joint positional calculation with MSRoPE
-encoding introduced in Qwen-Image (Wu et al., 2025). SwiGLU is adopted as the non-linear activation
-function in the MLP layers to improve expressivity and enhance training stability.
+Figure 8: Overview of the Qwen-Image-2.0 architecture. The model adopts a MMDiT architecture, with input representations provided by a frozen Qwen3-VL and a VAE encoder. It uses RMSNorm (Zhang &Sennrich, 2019) for QK-Norm, while all other normalization layers use LayerNorm. The unified stream, comprising both text and image modalities, employs the joint positional calculation with MSRoPE encoding introduced in Qwen-Image (Wu et al., 2025). SwiGLU is adopted as the non-linear activation function in the MLP layers to improve expressivity and enhance training stability.
 
 p. 10

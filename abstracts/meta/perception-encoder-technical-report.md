@@ -6,23 +6,12 @@ We introduce Perception Encoder (PE), a state-of-the-art vision encoder for imag
 
 ![Figure 1](../../figures/meta/perception-encoder-technical-report/figure-01.png)
 
-Figure 1 Perception Encoder (PE) is a family of large-scale vision encoder models with state-of-the-art performance
-on a large variety of vision tasks. By using a robust contrastive pretraining recipe and finetuning on synthetically
-aligned videos, PE not only outperforms all existing models on classification and retrieval (§2), but it also internally
-produces strong, general features that scale for downstream tasks (§3). PE unlocks the ability for large-scale contrastive
-pretraining to transfer to downstream tasks with alignment tuning to capitalize on those general features (§4, §5).
+Figure 1 Perception Encoder (PE) is a family of large-scale vision encoder models with state-of-the-art performance on a large variety of vision tasks. By using a robust contrastive pretraining recipe and finetuning on synthetically aligned videos, PE not only outperforms all existing models on classification and retrieval (§2), but it also internally produces strong, general features that scale for downstream tasks (§3). PE unlocks the ability for large-scale contrastive pretraining to transfer to downstream tasks with alignment tuning to capitalize on those general features (§4, §5).
 
 p. 2
 
 ![Figure 8](../../figures/meta/perception-encoder-technical-report/figure-02.png)
 
-Figure 8 Layer Analysis. Evaluating intermediate layers as frozen features
-across tasks for different pretraining methods: captioning (AIMv2-
-3B [37], left), spatially self-supervised (DINOv2-g [98], middle), and our
-contrastive recipe (PEcoreG, right). Vertical lines denote the best layer
-and horizontal lines the best performance across models. As expected,
-AIMv2 performs well on language but not spatial, and DINOv2 performs
-well on spatial but not language. But surprisingly, intermediate layers
-of PEcoreG perform well on both language modeling and spatial tasks.
+Figure 8 Layer Analysis. Evaluating intermediate layers as frozen features across tasks for different pretraining methods: captioning (AIMv2- 3B [37], left), spatially self-supervised (DINOv2-g [98], middle), and our contrastive recipe (PEcoreG, right). Vertical lines denote the best layer and horizontal lines the best performance across models. As expected, AIMv2 performs well on language but not spatial, and DINOv2 performs well on spatial but not language. But surprisingly, intermediate layers of PEcoreG perform well on both language modeling and spatial tasks.
 
 p. 11

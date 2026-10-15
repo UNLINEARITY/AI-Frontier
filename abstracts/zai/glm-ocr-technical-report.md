@@ -14,9 +14,6 @@ p. 1
 
 ![Figure 2](../../figures/zai/glm-ocr-technical-report/figure-02.png)
 
-Figure 2: Overall architecture and workflow of the GLM-OCR framework. This system supports two
-primary tasks: Document Parsing (Task 1), which combines layout detection and region cropping to
-produce structured Markdown and JSON outputs; and Key Information Extraction (Task 2), which
-directly extracts structured JSON data based on input visual prompts.
+Figure 2: Overall architecture and workflow of the GLM-OCR framework. This system supports two primary tasks: Document Parsing (Task 1), which combines layout detection and region cropping to produce structured Markdown and JSON outputs; and Key Information Extraction (Task 2), which directly extracts structured JSON data based on input visual prompts.
 
 p. 4

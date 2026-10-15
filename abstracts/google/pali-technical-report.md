@@ -8,21 +8,12 @@ Effective scaling and a flexible task interface enable large language models to 
 
 ![Figure 1](../../figures/google/pali-technical-report/figure-01.png)
 
-Figure 1: The PaLI main architecture
-is simple and scalable.
-It uses an
-encoder-decoder Transformer model,
-with a large-capacity ViT component
-for image processing.
+Figure 1: The PaLI main architecture is simple and scalable. It uses an encoder-decoder Transformer model, with a large-capacity ViT component for image processing.
 
 p. 4
 
 ![Figure 2](../../figures/google/pali-technical-report/figure-02.png)
 
-Figure 2: PaLI scaling for a number of tasks. We report CIDEr scores for captioning tasks, and
-accuracy scores for VQA tasks. Both scaling the language side (from 1B to 13B parameters) and the
-vision side of the model (from 2B to 4B parameters) yield improvements across all tasks. The results
-represented by solid bars are from the standard 224×224 resolution pre-training. The empty orange
-bars correspond to PaLI-17B checkpoints with the high resolution pre-training phase.
+Figure 2: PaLI scaling for a number of tasks. We report CIDEr scores for captioning tasks, and accuracy scores for VQA tasks. Both scaling the language side (from 1B to 13B parameters) and the vision side of the model (from 2B to 4B parameters) yield improvements across all tasks. The results represented by solid bars are from the standard 224×224 resolution pre-training. The empty orange bars correspond to PaLI-17B checkpoints with the high resolution pre-training phase.
 
 p. 8

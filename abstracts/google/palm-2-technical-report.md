@@ -10,14 +10,7 @@ When discussing the PaLM 2 family, it is important to distinguish between pre-tr
 
 ![Figure 1](../../figures/google/palm-2-technical-report/figure-01.png)
 
-Figure 1: Performance of PaLM 2 and PaLM on the latest available professional language proficiency exams. We
-used exams for each language to test a C2 (mastery or advanced professional) level proficiency following the CEFR
-definition. We used the transcripts of the listening portion of the exams and treated them as additional reading questions.
-We used the most recent year’s exam where available, otherwise we used practice exams representative of the full exam.
-Each writing exam was scored by three professional native speakers. The writing portion was given equal weight to
-the final score compared to the non-written portion. These were done under simulated conditions and are not official
-results. For more details, see Section 4.1 of this report. * PaLM 2 reached level A/special A on Japanese, whereas PaLM
-reached level F. PaLM 2 reached level C1 on French. The dotted columns correspond to the writing exams.
+Figure 1: Performance of PaLM 2 and PaLM on the latest available professional language proficiency exams. We used exams for each language to test a C2 (mastery or advanced professional) level proficiency following the CEFR definition. We used the transcripts of the listening portion of the exams and treated them as additional reading questions. We used the most recent year’s exam where available, otherwise we used practice exams representative of the full exam. Each writing exam was scored by three professional native speakers. The writing portion was given equal weight to the final score compared to the non-written portion. These were done under simulated conditions and are not official results. For more details, see Section 4.1 of this report. * PaLM 2 reached level A/special A on Japanese, whereas PaLM reached level F. PaLM 2 reached level C1 on French. The dotted columns correspond to the writing exams.
 
 p. 4
 

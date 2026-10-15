@@ -6,8 +6,6 @@ We introduce Gemma 4, a new generation of open-weight, natively multimodal langu
 
 ![Figure 1](../../figures/google/gemma-4-technical-report/figure-01.png)
 
-Figure 1 | The autoregressive MTP drafter (blue
-blocks on the right) is fed activations and KV
-cache from the main model (gray blocks).
+Figure 1 | The autoregressive MTP drafter (blue blocks on the right) is fed activations and KV cache from the main model (gray blocks).
 
 p. 3

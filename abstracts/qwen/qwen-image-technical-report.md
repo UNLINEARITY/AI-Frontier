@@ -8,18 +8,12 @@ We present Qwen-Image, an image generation foundation model in the Qwen series t
 
 ![Figure 6](../../figures/qwen/qwen-image-technical-report/figure-01.png)
 
-Figure 6: Overview of the Qwen-Image architecture. It adopts a standard double-stream MMDiT
-architecture. The input representations are provided by a frozen Qwen2.5-VL and a VAE encoder. The
-model employs RMSNorm (Zhang &Sennrich, 2019) for QK-Norm, while all other normalization layers
-use LayerNorm. Additionally, we design a new positional encoding scheme, MSRoPE (Multimodal
-Scalable RoPE), to jointly encode positional information for both image and text modalities.
+Figure 6: Overview of the Qwen-Image architecture. It adopts a standard double-stream MMDiT architecture. The input representations are provided by a frozen Qwen2.5-VL and a VAE encoder. The model employs RMSNorm (Zhang &Sennrich, 2019) for QK-Norm, while all other normalization layers use LayerNorm. Additionally, we design a new positional encoding scheme, MSRoPE (Multimodal Scalable RoPE), to jointly encode positional information for both image and text modalities.
 
 p. 7
 
 ![Figure 18](../../figures/qwen/qwen-image-technical-report/figure-02.png)
 
-Figure 18: Comparison of long English rendering capability in image generation. This case requires
-rendering a long paragraph, and only Qwen-Image and GPT Image 1 [High] manage to render such a
-long text clearly and almost perfectly. The other models either omit words or produce duplicates.
+Figure 18: Comparison of long English rendering capability in image generation. This case requires rendering a long paragraph, and only Qwen-Image and GPT Image 1 [High] manage to render such a long text clearly and almost perfectly. The other models either omit words or produce duplicates.
 
 p. 28

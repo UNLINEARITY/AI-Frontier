@@ -14,12 +14,6 @@ p. 1
 
 ![Figure 2](../../figures/amazon/nova-2-family/figure-02.png)
 
-Figure 2: Nova 2 Lite Extended thinking performance on
-code generation tasks (LiveCodeBench) across reasoning
-effort levels. Accuracy increases as the model allocates
-more computational resources to reasoning, demonstrating
-the configurable trade-off between speed and intelligence
-that Nova 2 provides through its low, medium, and high
-reasoning effort settings.
+Figure 2: Nova 2 Lite Extended thinking performance on code generation tasks (LiveCodeBench) across reasoning effort levels. Accuracy increases as the model allocates more computational resources to reasoning, demonstrating the configurable trade-off between speed and intelligence that Nova 2 provides through its low, medium, and high reasoning effort settings.
 
 p. 3

@@ -8,18 +8,12 @@ Being able to simulate the outcomes of actions in varied environments will revol
 
 ![Figure 1](../../figures/nvidia/dreamdojo-technical-report/figure-01.png)
 
-Figure 1: DreamDojo overview. DreamDojo acquires comprehensive physical knowledge from large-scale
-human datasets by utilizing latent actions as unified labels. After post-training and distillation on the target
-robots, our model can predict the future world in real time with continuous action controls. DreamDojo
-can robustly generalize to various objects and environments, facilitating large-scale policy evaluation without
-real-world deployment. It also enables live teleoperation and online model-based planning.
+Figure 1: DreamDojo overview. DreamDojo acquires comprehensive physical knowledge from large-scale human datasets by utilizing latent actions as unified labels. After post-training and distillation on the target robots, our model can predict the future world in real time with continuous action controls. DreamDojo can robustly generalize to various objects and environments, facilitating large-scale policy evaluation without real-world deployment. It also enables live teleoperation and online model-based planning.
 
 p. 3
 
 ![Table 4](../../figures/nvidia/dreamdojo-technical-report/figure-02.png)
 
-Table 4: Human preference evaluation in diverse out-of-distribution scenarios. DreamDojo outperforms
-the pretrained Cosmos-Predict2.5 by a non-trivial margin. Our DreamDojo-14B demonstrates the most
-competitive performance in both physics correctness and action following.
+Table 4: Human preference evaluation in diverse out-of-distribution scenarios. DreamDojo outperforms the pretrained Cosmos-Predict2.5 by a non-trivial margin. Our DreamDojo-14B demonstrates the most competitive performance in both physics correctness and action following.
 
 p. 12

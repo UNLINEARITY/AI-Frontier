@@ -8,12 +8,7 @@ We introduce Nemotron 3 Ultra, a 550 billion total and 55 billion active paramet
 
 ![Figure 1](../../figures/nvidia/nvidia-nemotron-3-ultra-technical-report/figure-01.png)
 
-Figure 1 | Accuracy and throughput comparisons for Nemotron 3 Ultra. Our model achieves on-par
-accuracy with other open LLMs while achieving significantly higher inference throughput on the
-8K input / 64K output token setting. All throughput numbers are reported at max-throughput
-using NVFP4 precision on GB200. For Nemotron 3 Ultra, throughput numbers are obtained from
-TRT-LLM, while all other model numbers use vLLM. We run with and without speculative decoding,
-where available, and choose the best numbers for each model.
+Figure 1 | Accuracy and throughput comparisons for Nemotron 3 Ultra. Our model achieves on-par accuracy with other open LLMs while achieving significantly higher inference throughput on the 8K input / 64K output token setting. All throughput numbers are reported at max-throughput using NVFP4 precision on GB200. For Nemotron 3 Ultra, throughput numbers are obtained from TRT-LLM, while all other model numbers use vLLM. We run with and without speculative decoding, where available, and choose the best numbers for each model.
 
 p. 2
 

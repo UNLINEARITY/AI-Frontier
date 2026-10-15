@@ -8,17 +8,12 @@ We describe the architecture and ablations of Qwen3.8-Flash-Next, a sparse mixtu
 
 ![Figure 1](../../figures/qwen/qwen3-8-flash-next/figure-01.png)
 
-Figure 1: Qwen3.8-Flash-Next architecture. Token mixing alternates three GDN layers with one QSA
-layer per block of four. Every sublayer reads and writes through GR, which widens the residual stream
-and gates the read elementwise. An n-gram embedding layer at Layer 2 scales capacity off the accelerator
-via host-memory prefetching. The MTP module reuses QSA indices across speculative decoding steps.
+Figure 1: Qwen3.8-Flash-Next architecture. Token mixing alternates three GDN layers with one QSA layer per block of four. Every sublayer reads and writes through GR, which widens the residual stream and gates the read elementwise. An n-gram embedding layer at Layer 2 scales capacity off the accelerator via host-memory prefetching. The MTP module reuses QSA indices across speculative decoding steps.
 
 p. 2
 
 ![Figure 5](../../figures/qwen/qwen3-8-flash-next/figure-02.png)
 
-Figure 5: Architecture ablations of QSA on RULER. (a) QSA performance with different micro-block sizes;
-“Keep x” indicates the number of IndexShare indexer layers retained for computation. (b) Performance
-with different numbers of indexer query heads after dense distillation and sparse training.
+Figure 5: Architecture ablations of QSA on RULER. (a) QSA performance with different micro-block sizes; “Keep x” indicates the number of IndexShare indexer layers retained for computation. (b) Performance with different numbers of indexer query heads after dense distillation and sparse training.
 
 p. 9

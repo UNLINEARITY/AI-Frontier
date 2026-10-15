@@ -8,15 +8,12 @@ We present Kimi-Audio, an open-source audio foundation model that excels in audi
 
 ![Figure 1](../../figures/moonshot/kimi-audio-technical-report/figure-01.png)
 
-Figure 1: Performance of Kimi-Audio and previous audio langauge models including Qwen2-Audio [11], Baichuan-
-Audio [41], Step-Audio [28], and Qwen2.5-Omni [73] on various benchmarks.
+Figure 1: Performance of Kimi-Audio and previous audio langauge models including Qwen2-Audio [11], Baichuan- Audio [41], Step-Audio [28], and Qwen2.5-Omni [73] on various benchmarks.
 
 p. 1
 
 ![Figure 2](../../figures/moonshot/kimi-audio-technical-report/figure-02.png)
 
-Figure 2: Overview of the Kimi-Audio model architecture: (1) an audio tokenizer that extracts discrete semantic tokens
-and a Whisper encoder that generates continuous acoustic features; (2) an audio LLM that processes audio inputs and
-generates text and/or audio outputs; (3) an audio detokenizer converts audio tokens into waveforms.
+Figure 2: Overview of the Kimi-Audio model architecture: (1) an audio tokenizer that extracts discrete semantic tokens and a Whisper encoder that generates continuous acoustic features; (2) an audio LLM that processes audio inputs and generates text and/or audio outputs; (3) an audio detokenizer converts audio tokens into waveforms.
 
 p. 4

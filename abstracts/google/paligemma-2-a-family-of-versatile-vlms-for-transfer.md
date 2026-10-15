@@ -12,21 +12,12 @@ We also explore new tasks which were not ex- plored in depth in [9], including t
 
 ![Figure 1](../../figures/google/paligemma-2-a-family-of-versatile-vlms-for-transfer/figure-01.png)
 
-Figure 1 | PaliGemma 2 processes a 224px2/
-448px2/896px2 image with a SigLIP-400m en-
-coder with patch size 14px2, yielding 256/1024/
-4096 tokens. After a linear projection, the image
-tokens are concatenated with the input text to-
-kens and Gemma 2 autoregressively completes
-this prefix with an answer.
+Figure 1 | PaliGemma 2 processes a 224px2/ 448px2/896px2 image with a SigLIP-400m en- coder with patch size 14px2, yielding 256/1024/ 4096 tokens. After a linear projection, the image tokens are concatenated with the input text to- kens and Gemma 2 autoregressively completes this prefix with an answer.
 
 p. 2
 
 ![Figure 4](../../figures/google/paligemma-2-a-family-of-versatile-vlms-for-transfer/figure-02.png)
 
-Figure 4 | Transfer performance as a function of model size and resolution (median over 5 transfer
-runs). The shaded area marks standard deviation to reported value. Lighter lines correspond to higher
-resolution (448px2). The tasks are grouped into tasks sensitive to both model size and resolution ( ),
-sensitive to model size ( ), and sensitive to resolution ( ). Data for this plot is available in Table 13.
+Figure 4 | Transfer performance as a function of model size and resolution (median over 5 transfer runs). The shaded area marks standard deviation to reported value. Lighter lines correspond to higher resolution (448px2). The tasks are grouped into tasks sensitive to both model size and resolution ( ), sensitive to model size ( ), and sensitive to resolution ( ). Data for this plot is available in Table 13.
 
 p. 5

@@ -8,17 +8,12 @@ We present Imagen Video, a text-conditional video generation system based on a c
 
 ![Figure 6](../../figures/google/imagen-video-high-definition-video-generation-with-diffusion-models/figure-01.png)
 
-Figure 6: The cascaded sampling pipeline starting from a text prompt input to generating a 5.3-
-second, 1280×768 video at 24fps. “SSR” and “TSR” denote spatial and temporal super-resolution
-respectively, and videos are labeled as frames×width×height. In practice, the text embeddings are
-injected into all models, not just the base model.
+Figure 6: The cascaded sampling pipeline starting from a text prompt input to generating a 5.3- second, 1280×768 video at 24fps. “SSR” and “TSR” denote spatial and temporal super-resolution respectively, and videos are labeled as frames×width×height. In practice, the text embeddings are injected into all models, not just the base model.
 
 p. 8
 
 ![Figure 3](../../figures/google/imagen-video-high-definition-video-generation-with-diffusion-models/figure-02.png)
 
-Figure 3: Videos generated from various text prompts.
-Imagen Video produces diverse and
-temporally-coherent videos that are well-aligned with the given prompt.
+Figure 3: Videos generated from various text prompts. Imagen Video produces diverse and temporally-coherent videos that are well-aligned with the given prompt.
 
 p. 3

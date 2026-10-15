@@ -8,10 +8,7 @@ We introduce StepAudio 3 Gen, a general-purpose audio generation model that supp
 
 ![Figure 1](../../figures/stepfun/step-audio-3-gen/figure-01.png)
 
-Figure 1: Overview of the StepAudio 3 Gen architecture. At each audio frame, the LLM predicts c0, and the RVQ Code
-Predictor conditions on the LLM hidden state and c0 to predict c1, . . . , c15. All sixteen codes form the full RVQ frame
-used for waveform decoding. ⊕denotes element-wise addition: at audio positions, the RVQ Adaptor output is added to
-the corresponding token embedding (§2.2).
+Figure 1: Overview of the StepAudio 3 Gen architecture. At each audio frame, the LLM predicts c0, and the RVQ Code Predictor conditions on the LLM hidden state and c0 to predict c1, . . . , c15. All sixteen codes form the full RVQ frame used for waveform decoding. ⊕denotes element-wise addition: at audio positions, the RVQ Adaptor output is added to the corresponding token embedding (§2.2).
 
 p. 4
 

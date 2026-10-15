@@ -8,15 +8,12 @@ Date: December 13, 2023 Correspondence: Hakan Inan at inan@meta.com Code: https:
 
 ![Figure 1](../../figures/meta/llama-guard-technical-report/figure-01.png)
 
-Figure 1 Example task instructions for the Llama Guard prompt and response classification tasks. A task consists of
-four main components. Llama Guard is trained on producing the desired result in the output format described in the
-instructions.
+Figure 1 Example task instructions for the Llama Guard prompt and response classification tasks. A task consists of four main components. Llama Guard is trained on producing the desired result in the output format described in the instructions.
 
 p. 4
 
 ![Figure 2](../../figures/meta/llama-guard-technical-report/figure-02.png)
 
-Table 2 Evaluation results on various benchmarks (metric: AUPRC, higher is better). Best scores in bold. The
-reported Llama Guard results are with zero-shot prompting using the target taxonomy.
+Table 2 Evaluation results on various benchmarks (metric: AUPRC, higher is better). Best scores in bold. The reported Llama Guard results are with zero-shot prompting using the target taxonomy.
 
 p. 8

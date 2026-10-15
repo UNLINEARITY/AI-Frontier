@@ -18,16 +18,12 @@ To address these changes, the Seed team adopted a product-driven development and
 
 ![Figure 5](../../figures/bytedance/seed2-1-model-card/figure-01.png)
 
-Figure 5 Efficiency of the Generalist Computer-Use Agent (CUA) setting on OSWorld. For each model, the arrow
-points from the GUI-only operating point (open marker) to the Generalist CUA setting (filled marker), in which the
-agent may also issue commands and call tools. Both models move up and to the left: higher success rate with fewer
-steps per task.
+Figure 5 Efficiency of the Generalist Computer-Use Agent (CUA) setting on OSWorld. For each model, the arrow points from the GUI-only operating point (open marker) to the Generalist CUA setting (filled marker), in which the agent may also issue commands and call tools. Both models move up and to the left: higher success rate with fewer steps per task.
 
 p. 13
 
 ![Figure 16](../../figures/bytedance/seed2-1-model-card/figure-02.png)
 
-Figure 16 Seed-for-Seed development loop. Seed2.1 participates in evaluation, data, training, and infrastructure loops
-through long-horizon execution and continuous target-driven iteration.
+Figure 16 Seed-for-Seed development loop. Seed2.1 participates in evaluation, data, training, and infrastructure loops through long-horizon execution and continuous target-driven iteration.
 
 p. 28

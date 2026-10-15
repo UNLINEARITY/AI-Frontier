@@ -6,18 +6,12 @@ We introduce T5Gemma 2, the next generation of the T5Gemma family of lightweight
 
 ![Figure 1](../../figures/google/t5gemma-2-seeing-reading-and-understanding-longer/figure-01.png)
 
-Figure 1 | Summary of pretraining (top) and post-training (bottom) performance for Gemma 3 and
-T5Gemma 2 at 270M, 1B and 4B over five capabilities. 270M for T5Gemma 2 means a 270M encoder
-with a 270M decoder (the same applies to 1B and 4B). X: multilingual. Note the post-training result
-for T5Gemma 2 is for illustration, where we only performed slight supervised finetuning without RL.
+Figure 1 | Summary of pretraining (top) and post-training (bottom) performance for Gemma 3 and T5Gemma 2 at 270M, 1B and 4B over five capabilities. 270M for T5Gemma 2 means a 270M encoder with a 270M decoder (the same applies to 1B and 4B). X: multilingual. Note the post-training result for T5Gemma 2 is for illustration, where we only performed slight supervised finetuning without RL.
 
 p. 1
 
 ![Figure 2](../../figures/google/t5gemma-2-seeing-reading-and-understanding-longer/figure-02.png)
 
-Figure 2 | Overview of T5Gemma 2. Encoder/decoder parameters are initialized from the pretrained
-decoder-only model, and then pretrained with UL2. We tie all word embeddings (in blue) and merge
-decoder self- and cross-attention sub-layers. Image is preprocessed by SigLIP into 256 embedding
-tokens and fed to the encoder for vision understanding (see [img] for illustration).
+Figure 2 | Overview of T5Gemma 2. Encoder/decoder parameters are initialized from the pretrained decoder-only model, and then pretrained with UL2. We tie all word embeddings (in blue) and merge decoder self- and cross-attention sub-layers. Image is preprocessed by SigLIP into 256 embedding tokens and fed to the encoder for vision understanding (see [img] for illustration).
 
 p. 2

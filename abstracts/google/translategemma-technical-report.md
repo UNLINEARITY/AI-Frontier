@@ -6,8 +6,6 @@ We present TranslateGemma, a suite of open machine translation models based on t
 
 ![Figure 2](../../figures/google/translategemma-technical-report/figure-01.png)
 
-Figure 2 | Illustration of how sequence-level and token-level rewards are additively combined during
-advantage computation in RL. Note that advantage is computed from sequence-level rewards as
-‘reward-to-go’, meaning that rewards are broadcast uniformly to every token.
+Figure 2 | Illustration of how sequence-level and token-level rewards are additively combined during advantage computation in RL. Note that advantage is computed from sequence-level rewards as ‘reward-to-go’, meaning that rewards are broadcast uniformly to every token.
 
 p. 4

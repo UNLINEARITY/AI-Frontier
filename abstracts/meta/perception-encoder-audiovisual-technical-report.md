@@ -6,18 +6,12 @@ We introduce Perception Encoder Audiovisual, PEAV, a new family of encoders for 
 
 ![Figure 1](../../figures/meta/perception-encoder-audiovisual-technical-report/figure-01.png)
 
-Figure 1 Perception Encoder Audiovisual (PEAV) is a family of audio-video-text (AVT) encoders. By scaling coverage of
-contrastive learning, model size, and training with synthetically aligned video-audio-text pairs across diverse domains,
-PEAV achieves state-of-the-art performance on a wide range of zero-shot sound, music, speech, and video classification
-and retrieval tasks.
+Figure 1 Perception Encoder Audiovisual (PEAV) is a family of audio-video-text (AVT) encoders. By scaling coverage of contrastive learning, model size, and training with synthetically aligned video-audio-text pairs across diverse domains, PEAV achieves state-of-the-art performance on a wide range of zero-shot sound, music, speech, and video classification and retrieval tasks.
 
 p. 2
 
 ![Figure 2](../../figures/meta/perception-encoder-audiovisual-technical-report/figure-02.png)
 
-Figure 2 Perception Encoder-AudioVisual (PEAV) is composed of an audio encoder, a frame encoder, video encoder,
-audio-video fusion encoder and a text encoder. For audio we use DAC-VAE to encode raw audio waveforms. For
-video we directly encode raw RGB frames. We use eight contrastive loss to associate embeddings of eight types of
-multimodal pairs. We use two extra pairs during fine-tuning stage adding to a total of ten loss pairs.
+Figure 2 Perception Encoder-AudioVisual (PEAV) is composed of an audio encoder, a frame encoder, video encoder, audio-video fusion encoder and a text encoder. For audio we use DAC-VAE to encode raw audio waveforms. For video we directly encode raw RGB frames. We use eight contrastive loss to associate embeddings of eight types of multimodal pairs. We use two extra pairs during fine-tuning stage adding to a total of ten loss pairs.
 
 p. 3

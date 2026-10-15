@@ -14,7 +14,6 @@ p. 4
 
 ![Figure 5](../../figures/qwen/qwen3-tts-technical-report/figure-02.png)
 
-Table 5: Zero-shot speech generation on the Seed-TTS test set. Performance is measured by Word Error
-Rate (WER, ↓), where lower is better. The best results are highlighted in bold.
+Table 5: Zero-shot speech generation on the Seed-TTS test set. Performance is measured by Word Error Rate (WER, ↓), where lower is better. The best results are highlighted in bold.
 
 p. 8

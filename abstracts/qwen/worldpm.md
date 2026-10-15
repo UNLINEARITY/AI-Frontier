@@ -8,19 +8,12 @@ Motivated by scaling laws in language modeling that demonstrate how test loss sc
 
 ![Figure 1](../../figures/qwen/worldpm/figure-01.png)
 
-Figure 1: Test loss analysis across domains for 1.5B-72B models with increasing training data. The x-axis
-is scaled logarithmically (base 2).
+Figure 1: Test loss analysis across domains for 1.5B-72B models with increasing training data. The x-axis is scaled logarithmically (base 2).
 
 p. 1
 
 ![Figure 6](../../figures/qwen/worldpm/figure-02.png)
 
-Figure 6: Analysis of alignment performance across WorldPM training scales. Both Alpaca Eval and Arena
-Hard implement distinct style control mechanisms to mitigate style preference in AI-based subjective
-evaluation. The figure demonstrates performance under both controlled and uncontrolled conditions.
-Arena Hard exhibits stable performance trends across control conditions, with 72B consistently superior to
-7B and optimal performance achieved at larger training scales. However, Alpaca Eval shows substantial
-sensitivity to style control, with evaluation scores highly correlated with response length when style
-control is absent.
+Figure 6: Analysis of alignment performance across WorldPM training scales. Both Alpaca Eval and Arena Hard implement distinct style control mechanisms to mitigate style preference in AI-based subjective evaluation. The figure demonstrates performance under both controlled and uncontrolled conditions. Arena Hard exhibits stable performance trends across control conditions, with 72B consistently superior to 7B and optimal performance achieved at larger training scales. However, Alpaca Eval shows substantial sensitivity to style control, with evaluation scores highly correlated with response length when style control is absent.
 
 p. 10

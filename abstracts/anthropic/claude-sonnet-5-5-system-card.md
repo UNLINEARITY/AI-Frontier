@@ -8,11 +8,7 @@ This system card describes Claude Sonnet 5.5, the latest Sonnet-class large lang
 
 We have condensed the content of this system card in a number of ways so that we can better concentrate our pre-deployment testing on thoroughly investigating the capabilities of our frontier models. Speciﬁcally:
 
-● We omit some evaluations that require large amounts of human time to obtain
-
-trustworthy results from, when they are not critical to the takeaways of a section. ● We focus on presenting numerical results from our evaluations, and dedicate less
-
-space to a prose analysis of those evaluations or their results, especially in cases where we have already explained the evaluation in question in a previous system card.
+● We omit some evaluations that require large amounts of human time to obtain trustworthy results from, when they are not critical to the takeaways of a section. ● We focus on presenting numerical results from our evaluations, and dedicate less space to a prose analysis of those evaluations or their results, especially in cases where we have already explained the evaluation in question in a previous system card.
 
 As a result, this system card is somewhat shorter than some previous ones. We expect system cards for our non-frontier models to be similarly condensed going forward, except where a speciﬁc model has notable properties that are deserving of in-depth elaboration.
 
@@ -34,26 +30,12 @@ Our assessment of Sonnet 5.5’s capabilities includes a wide range of evaluatio
 
 ![Figure 2.3.2.A](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-01.png)
 
-[Figure 2.3.2.A] The Epoch Capabilities Index (ECI) synthesizes performance across many benchmarks into one
-number per model. Our version of this metric, the Anthropic ECI (AECI), is powered by internal benchmark
-results, so scores are not directly comparable to Epoch’s public ECI leaderboard. Gray dots are previous frontier
-Claude models; colored dots are the most recent models. Thin black error bars are 95% CI over 100 IRT refits,
-each on a random 80% subsample of benchmarks (global error). Thick violet error bars come from the same
-resampled fits but measure each score’s movement relative to the three preceding releases for each model
-(local error). The two lines compare different hypotheses for the frontier trend. Claude Sonnet 3.5 (June 2024)
-anchors the ECI scale at 130, so it has no global CI (its local error bar reflects uncertainty in the models before
-it). Scores of recent models on the new scale are reported for direct comparison.
+[Figure 2.3.2.A] The Epoch Capabilities Index (ECI) synthesizes performance across many benchmarks into one number per model. Our version of this metric, the Anthropic ECI (AECI), is powered by internal benchmark results, so scores are not directly comparable to Epoch’s public ECI leaderboard. Gray dots are previous frontier Claude models; colored dots are the most recent models. Thin black error bars are 95% CI over 100 IRT refits, each on a random 80% subsample of benchmarks (global error). Thick violet error bars come from the same resampled fits but measure each score’s movement relative to the three preceding releases for each model (local error). The two lines compare different hypotheses for the frontier trend. Claude Sonnet 3.5 (June 2024) anchors the ECI scale at 130, so it has no global CI (its local error bar reflects uncertainty in the models before it). Scores of recent models on the new scale are reported for direct comparison.
 
 p. 21
 
 ![Figure 8.4.A](../../figures/anthropic/claude-sonnet-5-5-system-card/figure-02.png)
 
-[Figure 8.4.A] FrontierCode v1.1 Main score versus average output tokens per task across reasoning effort levels (low, medium, high, xhigh, and max; GPT-6 Astra also at none). Cognition ran the evaluation for every
-model shown and reported the results; Claude models were run in Claude Code and GPT models were run in
-Codex CLI. Cognition’s result files report token counts for every model and no cost for Claude Sonnet 5.5, so
-the x-axis shows average output tokens per task on a logarithmic scale. Each Claude Sonnet 5.5 point is labeled
-with its effort level; for every other model the labeled points are its lowest and highest effort levels and the level at which it scored highest (GPT-6 Astra also at low). Unlabeled points follow the line in order of effort. The
-result files carry no uncertainty intervals, so none are shown; Cognition's published figures report error bars.
-Note that the y-axis begins at 27%, not at zero, so differences between points are visually magnified.
+[Figure 8.4.A] FrontierCode v1.1 Main score versus average output tokens per task across reasoning effort levels (low, medium, high, xhigh, and max; GPT-6 Astra also at none). Cognition ran the evaluation for every model shown and reported the results; Claude models were run in Claude Code and GPT models were run in Codex CLI. Cognition’s result files report token counts for every model and no cost for Claude Sonnet 5.5, so the x-axis shows average output tokens per task on a logarithmic scale. Each Claude Sonnet 5.5 point is labeled with its effort level; for every other model the labeled points are its lowest and highest effort levels and the level at which it scored highest (GPT-6 Astra also at low). Unlabeled points follow the line in order of effort. The result files carry no uncertainty intervals, so none are shown; Cognition's published figures report error bars. Note that the y-axis begins at 27%, not at zero, so differences between points are visually magnified.
 
 p. 111

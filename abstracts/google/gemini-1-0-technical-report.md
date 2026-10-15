@@ -6,14 +6,12 @@ This report introduces a new family of multimodal models, Gemini, that exhibit r
 
 ![Figure 2](../../figures/google/gemini-1-0-technical-report/figure-01.png)
 
-Figure 2 | Gemini models support interleaved sequences of text, image, audio, and video as inputs
-(illustrated by tokens of different colors in the input sequence). They can output responses with
+Figure 2 | Gemini models support interleaved sequences of text, image, audio, and video as inputs (illustrated by tokens of different colors in the input sequence). They can output responses with
 
 p. 4
 
 ![Figure 3](../../figures/google/gemini-1-0-technical-report/figure-02.png)
 
-Figure 3 | Language understanding and generation performance of Gemini model family across
-different capabilities (normalized by the Gemini Pro model).
+Figure 3 | Language understanding and generation performance of Gemini model family across different capabilities (normalized by the Gemini Pro model).
 
 p. 9

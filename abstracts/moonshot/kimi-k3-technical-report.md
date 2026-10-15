@@ -14,10 +14,6 @@ p. 1
 
 ![Figure 2](../../figures/moonshot/kimi-k3-technical-report/figure-02.png)
 
-Figure 2: The Kimi K3 architecture, organized around token, channel, and layer mixing, with a native vision pathway at the input.
-Each block contains three Kimi Delta Attention (KDA) layers followed by one Gated MLA layer, with each attention layer paired
-with a Stable LatentMoE feed-forward network. Attention Residuals (AttnRes) use learned pseudo-queries (w) to derive attention
-weights (α) over the embedding and preceding block outputs, enabling selective information flow across depth. Top left: the Stable
-LatentMoE module with shared and routed experts. Bottom left: the KDA module. Bottom right: the native vision pathway.
+Figure 2: The Kimi K3 architecture, organized around token, channel, and layer mixing, with a native vision pathway at the input. Each block contains three Kimi Delta Attention (KDA) layers followed by one Gated MLA layer, with each attention layer paired with a Stable LatentMoE feed-forward network. Attention Residuals (AttnRes) use learned pseudo-queries (w) to derive attention weights (α) over the embedding and preceding block outputs, enabling selective information flow across depth. Top left: the Stable LatentMoE module with shared and routed experts. Bottom left: the KDA module. Bottom right: the native vision pathway.
 
 p. 3

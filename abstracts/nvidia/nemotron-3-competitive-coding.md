@@ -14,8 +14,6 @@ p. 2
 
 ![Figure 2](../../figures/nvidia/nemotron-3-competitive-coding/figure-02.png)
 
-Figure 2 | Our competitive-programming pipeline. Nemotron-3-Nano-CC undergoes supervised
-fine-tuning and reinforcement learning, while Nemotron-3-Ultra-CC uses supervised fine-tuning only.
-Both models use GenCorrect at inference time.
+Figure 2 | Our competitive-programming pipeline. Nemotron-3-Nano-CC undergoes supervised fine-tuning and reinforcement learning, while Nemotron-3-Ultra-CC uses supervised fine-tuning only. Both models use GenCorrect at inference time.
 
 p. 3

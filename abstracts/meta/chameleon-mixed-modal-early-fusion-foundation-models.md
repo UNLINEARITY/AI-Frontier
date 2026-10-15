@@ -6,16 +6,12 @@ We present Chameleon, a family of early-fusion token-based mixed-modal models ca
 
 ![Figure 1](../../figures/meta/chameleon-mixed-modal-early-fusion-foundation-models/figure-01.png)
 
-Figure 1 Chameleon represents all modalities — images, text, and code, as discrete tokens and uses a uniform
-transformer-based architecture that is trained from scratch in an end-to-end fashion on ∼10T tokens of interleaved
-mixed-modal data. As a result, Chameleon can both reason over, as well as generate, arbitrary mixed-modal documents.
-Text tokens are represented in green and image tokens are represented in blue.
+Figure 1 Chameleon represents all modalities — images, text, and code, as discrete tokens and uses a uniform transformer-based architecture that is trained from scratch in an end-to-end fashion on ∼10T tokens of interleaved mixed-modal data. As a result, Chameleon can both reason over, as well as generate, arbitrary mixed-modal documents. Text tokens are represented in green and image tokens are represented in blue.
 
 p. 2
 
 ![Figure 9](../../figures/meta/chameleon-mixed-modal-early-fusion-foundation-models/figure-02.png)
 
-Figure 9 Performance of Chameleon vs baselines, on mixed-modal understanding and generation on a set of diverse
-and natural prompts from human annotators.
+Figure 9 Performance of Chameleon vs baselines, on mixed-modal understanding and generation on a set of diverse and natural prompts from human annotators.
 
 p. 12

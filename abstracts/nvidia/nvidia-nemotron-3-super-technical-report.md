@@ -8,14 +8,7 @@ We describe the pre-training, post-training, and quantization of Nemotron 3 Supe
 
 ![Figure 1](../../figures/nvidia/nvidia-nemotron-3-super-technical-report/figure-01.png)
 
-Figure 1 | Accuracy and throughput comparisons of Nemotron 3 Super with GPT-OSS-120B and
-Qwen3.5-122B. Nemotron 3 Super achieves comparable accuracies across popular benchmarks but
-provides the highest inference throughput; on 8k input sequence lengths and 64k output sequence
-lengths, Nemotron 3 Super provides up to 2.2× and 7.5× higher throughput than GPT-OSS-120B
-and Qwen3.5-122B, respectively. We measured throughput on B200 GPUs with vLLM and TRT-LLM
-and use the best out of the two frameworks for each model. For GPT-OSS-120B we use MXFP4
-weights, MXFP8 activations, and FP8 KV-Cache; for Qwen3.5-122B we use BF16. We used the
-OpenHands harness to evaluate SWE-Bench.
+Figure 1 | Accuracy and throughput comparisons of Nemotron 3 Super with GPT-OSS-120B and Qwen3.5-122B. Nemotron 3 Super achieves comparable accuracies across popular benchmarks but provides the highest inference throughput; on 8k input sequence lengths and 64k output sequence lengths, Nemotron 3 Super provides up to 2.2× and 7.5× higher throughput than GPT-OSS-120B and Qwen3.5-122B, respectively. We measured throughput on B200 GPUs with vLLM and TRT-LLM and use the best out of the two frameworks for each model. For GPT-OSS-120B we use MXFP4 weights, MXFP8 activations, and FP8 KV-Cache; for Qwen3.5-122B we use BF16. We used the OpenHands harness to evaluate SWE-Bench.
 
 p. 2
 

@@ -8,12 +8,6 @@ Physical AI needs to be trained digitally first. It needs a digital twin of itse
 
 ![Figure 2](../../figures/nvidia/cosmos-world-foundation-model-platform-for-physical-ai/figure-01.png)
 
-Figure 2: Pre-trained WFMs are world model generalists that are trained with large-scale, diverse video datasets
-capturing different aspects of real-world physics. These pre-trained world foundation models can be specialized
-to a target Physical AI setup through post-training. Usually, the datasets for post-training are “prompt”-video
-pairs collected from the target Physical AI setup. The prompt can be in the form of action commands, trajectory,
-instructions, etc. As the pre-trained WFM provides a great foundation, the dataset for post-training can be
-much smaller. This pre-training-and-post-training yields an efficient strategy for building a Physical AI system.
-In the figure, the dashed lines represent the data loop.
+Figure 2: Pre-trained WFMs are world model generalists that are trained with large-scale, diverse video datasets capturing different aspects of real-world physics. These pre-trained world foundation models can be specialized to a target Physical AI setup through post-training. Usually, the datasets for post-training are “prompt”-video pairs collected from the target Physical AI setup. The prompt can be in the form of action commands, trajectory, instructions, etc. As the pre-trained WFM provides a great foundation, the dataset for post-training can be much smaller. This pre-training-and-post-training yields an efficient strategy for building a Physical AI system. In the figure, the dashed lines represent the data loop.
 
 p. 3

@@ -8,17 +8,12 @@ A fundamental challenge in character image animation lies in effectively integra
 
 ![Figure 1](../../figures/qwen/wan-animate-2/figure-01.png)
 
-Figure 1 Overview of our framework. Our method conditions video generation on a reference image and a reference video
-through a dual-branch DiT architecture. To effectively fuse static appearance and dynamic motion cues, we introduce
-Time-Align RoPE for temporal alignment between denoising video tokens and reference tokens, and Sparse-Ref
-Attention to selectively attend to informative reference features.
+Figure 1 Overview of our framework. Our method conditions video generation on a reference image and a reference video through a dual-branch DiT architecture. To effectively fuse static appearance and dynamic motion cues, we introduce Time-Align RoPE for temporal alignment between denoising video tokens and reference tokens, and Sparse-Ref Attention to selectively attend to informative reference features.
 
 p. 5
 
 ![Figure 3](../../figures/qwen/wan-animate-2/figure-02.png)
 
-Figure 3 Animation results of Wan-Animate-2. Our approach enables accurate cross-identity animation by faithfully
-transferring motion from the reference video to targets with drastically different body shapes and appearances, including
-humans, cartoon characters, robots, and animals.
+Figure 3 Animation results of Wan-Animate-2. Our approach enables accurate cross-identity animation by faithfully transferring motion from the reference video to targets with drastically different body shapes and appearances, including humans, cartoon characters, robots, and animals.
 
 p. 9

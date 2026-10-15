@@ -8,14 +8,12 @@ Amazon published its Frontier Model Safety Framework (FMSF) as part of the Paris
 
 ![Figure 1](../../figures/amazon/nova-2-lite-frontier-safety-report/figure-01.png)
 
-Figure 1: CBRN automated benchmark results comparing models across four datasets. For Nova 2.0 Lite, we present
-the best result among all the reasoning modes (low’,’medium’, and ‘high’).
+Figure 1: CBRN automated benchmark results comparing models across four datasets. For Nova 2.0 Lite, we present the best result among all the reasoning modes (low’,’medium’, and ‘high’).
 
 p. 2
 
 ![Figure 2](../../figures/amazon/nova-2-lite-frontier-safety-report/figure-02.png)
 
-Figure 2: Offensive Cyber Security Knowledge Benchmarks comparing Nova 2.0 Lite against previous generation
-baselines. For Nova 2.0 Lite, we present the best result among all the reasoning modes (‘low’, ‘medium’, and ‘high’).
+Figure 2: Offensive Cyber Security Knowledge Benchmarks comparing Nova 2.0 Lite against previous generation baselines. For Nova 2.0 Lite, we present the best result among all the reasoning modes (‘low’, ‘medium’, and ‘high’).
 
 p. 4

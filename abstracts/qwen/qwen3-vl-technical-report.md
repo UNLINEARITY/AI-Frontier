@@ -8,21 +8,12 @@ We introduce Qwen3-VL, the most capable vision–language model in the Qwen seri
 
 ![Figure 1](../../figures/qwen/qwen3-vl-technical-report/figure-01.png)
 
-Figure 1: The Qwen3-VL framework integrates a vision encoder and a language model decoder to process
-multimodal inputs, including text, images, and video. The vision encoder is specifically designed to
-handle dynamic, native-resolution visual inputs, mapping them to visual tokens of variable length.
-To enhance perceptual capability and preserve rich visual information, we incorporate the pioneering
-DeepStack mechanism, which injects visual tokens from multiple layers of the vision encoder into
-corresponding layers of the LLM. Furthermore, we adopt Interleaved MRoPE to encode positional
-information for multimodal inputs with a balanced frequency spectrum, and introduce text-based
-timestamp tokens to more effectively capture the temporal structure of video sequences.
+Figure 1: The Qwen3-VL framework integrates a vision encoder and a language model decoder to process multimodal inputs, including text, images, and video. The vision encoder is specifically designed to handle dynamic, native-resolution visual inputs, mapping them to visual tokens of variable length. To enhance perceptual capability and preserve rich visual information, we incorporate the pioneering DeepStack mechanism, which injects visual tokens from multiple layers of the vision encoder into corresponding layers of the LLM. Furthermore, we adopt Interleaved MRoPE to encode positional information for multimodal inputs with a balanced frequency spectrum, and introduce text-based timestamp tokens to more effectively capture the temporal structure of video sequences.
 
 p. 3
 
 ![Figure 2](../../figures/qwen/qwen3-vl-technical-report/figure-02.png)
 
-Table 2: Performance of Qwen3-VL-235B-A22B and top-tier models on visual benchmarks. The highest
-scores of the reasoning and non-reasoning models are shown in bold and underlined, respectively.
-Results marked with an ∗are sourced from the technical report. + denotes results with tool use.
+Table 2: Performance of Qwen3-VL-235B-A22B and top-tier models on visual benchmarks. The highest scores of the reasoning and non-reasoning models are shown in bold and underlined, respectively. Results marked with an ∗are sourced from the technical report. + denotes results with tool use.
 
 p. 15

@@ -67,5 +67,771 @@
       "reviewed_at": "2026-10-14",
       "note": "Passage rebuilt in printed page order from the source pages; the character inventory is identical to the extracted passage."
     }
+  ],
+  "paragraph_layouts": [
+    {
+      "id": "anthropic:claude-opus-5-5-system-card",
+      "source_sha256": "7311c9c6bbb16d012f1c12c7418b05949fcf7ae3e30d2c40f22050074b2a7378",
+      "text_sha256": "4a30247a9ca0cf4cf6bf06ce9041e9dca4b614e90b6a65e8ffe02402a30603fb",
+      "join_after": [
+        6,
+        11
+      ],
+      "pages": [
+        2,
+        3,
+        4
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "anthropic:claude-fable-5-1-and-mythos-5-1-system-card",
+      "source_sha256": "b0d59edc7a60eef32a879c13d713cce60c3fefd7e6b5183afdc8b835af3c8c39",
+      "text_sha256": "353fba07f5c20b5b1268c8936182cdc147655e5e1b77ee0c0b69e4b06ecb330a",
+      "join_after": [
+        8,
+        12
+      ],
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "xai:grok-4-7-model-card",
+      "source_sha256": "c40541597ac3c461d71a914c922d43b200b468e41434b699fdd11c9a8761c56f",
+      "text_sha256": "b7279255ac3ce11a605109e62d46539b2ec062fe55c4bb1a1132a4c2446dfec3",
+      "join_after": [
+        5,
+        7
+      ],
+      "pages": [
+        5
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "anthropic:claude-sonnet-5-5-system-card",
+      "source_sha256": "89cfd6a6d3aa6148eaf23f4a53006950ee7746009f381237c62920c720725785",
+      "text_sha256": "5c7728f6951c5a920804553b243570956d40bba3b9207017fe77828c76b4c8d7",
+      "join_after": [
+        2,
+        3
+      ],
+      "pages": [
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "google:gemini-4-argon-safety-and-security-report",
+      "source_sha256": "1451f641e6104778b1a0e7429d9f558325da26968427d53d1fd242b0e4257cba",
+      "text_sha256": "054a39cf9a5cc06f736630094336bcb91ba68cbc8a51edfcde11b0882efee0b7",
+      "join_after": [
+        7
+      ],
+      "pages": [
+        7,
+        8
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "google:gemini-robotics-2-safety-evaluations",
+      "source_sha256": "0ce23ac5909394696970fcc9fc7777cb20033b5234b7777d3d5b1d38919baf7d",
+      "text_sha256": "11fedd2c0a65ce0dbf8c11833e6ca7d35d88f40893c114165713d0eee773ea5a",
+      "join_after": [
+        2
+      ],
+      "pages": [
+        1,
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "meta:v-jepa-2-technical-report",
+      "source_sha256": "9cfcfde5fb0d9730637da5b9e7317825c3f3d09e91f3553e22eeba42c74d2226",
+      "text_sha256": "8ac7bf1f2fec87dd60d96fae7d2f9a933e4cc38db6f35ffc915ad323c8b04711",
+      "join_after": [
+        1,
+        4
+      ],
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "microsoft:rho-technical-report",
+      "source_sha256": "2e6c4c09d8f1bc001cd5aa8e0946377a7ad7bb4c05b32d35da5085db84bebe5a",
+      "text_sha256": "aedacb90ced6e5056b5420f9e9e910428f154e417bd01c66116ed91a278d471f",
+      "join_after": [
+        3
+      ],
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks or corrected passage regions continue the same source paragraph; remove only reviewed separators."
+    },
+    {
+      "id": "tencent:worldplay-technical-report",
+      "source_sha256": "5051aab9b54f14963a6fc8bfda6038fe5a25867dc6efa16e811e2e690bdfbde6",
+      "text_sha256": "9f7d1dbb6a0b099db870f1fea60913c1649ac772768f40644fff63fb1afa3582",
+      "join_after": [
+        0
+      ],
+      "pages": [
+        1,
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks or corrected passage regions continue the same source paragraph; remove only reviewed separators."
+    },
+    {
+      "id": "anthropic:claude-haiku-5-5-system-card",
+      "source_sha256": "d5dbaab6996c02ad6ff28b032ce5a9c7582e59af09b5d1bc0975cf0235535da9",
+      "text_sha256": "b33fee1087b4ad89339cacc41af7dc0ad74d46fd17d97b8e4bf7a84ed094f514",
+      "join_after": [
+        2,
+        3
+      ],
+      "pages": [
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "google:gemini-1-5-technical-report",
+      "source_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
+      "text_sha256": "781142a791efd32330700716e71032689822e43d1c47cff4ebd79b1900b91279",
+      "join_after": [
+        2,
+        4,
+        31
+      ],
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks or corrected passage regions continue the same source paragraph; remove only reviewed separators."
+    },
+    {
+      "id": "google:gemini-2-5-pushing-the-frontier-with-advanced-reasoning-multimodality-long-context-and-next-generation-agentic-capabilities",
+      "source_sha256": "b4cfe19f7eea7b0308cb0282127ef4821bb8f1d1e270e7a6f398b30fe57d41cb",
+      "text_sha256": "3c82c55fecb2795dd2d0a8e14668a5910d24e63270480a2959d6da90a9d9495c",
+      "join_after": [
+        2
+      ],
+      "pages": [
+        1,
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "google:gemma-open-models-based-on-gemini-research-and-technology",
+      "source_sha256": "d8f89e0a7e62c57e035d391b3174d8307a73f72ee84f6494ba58aa8fe7e38383",
+      "text_sha256": "93acb1089b9507a3e996b8462235fa57d686c62c1bb8ff2d7387b519d75df6c1",
+      "join_after": [
+        5
+      ],
+      "pages": [
+        1,
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "google:paligemma-a-versatile-3b-vlm-for-transfer",
+      "source_sha256": "aec6edd6b712597647d5e6e10850039d6415620163f45bb64f71d89718e6bb2f",
+      "text_sha256": "c91c0c4aa089525b589bb33f4c1ec4136bd19bc5c131d0eca8643a6a26c2e8c6",
+      "join_after": [
+        1,
+        4
+      ],
+      "pages": [
+        1
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks or corrected passage regions continue the same source paragraph; remove only reviewed separators."
+    },
+    {
+      "id": "meta:seamlessm4t-massively-multilingual-multimodal-machine-translation",
+      "source_sha256": "d75272376c4d837a4fe734768d4d9773bb6482d998d336c79cff8c8ac2a557ff",
+      "text_sha256": "f97ac6daaf5d46a72db40d97c668c513207fa92373ca22e9d3a5772e19033001",
+      "join_after": [
+        0
+      ],
+      "pages": [
+        1,
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "google:medgemma-technical-report",
+      "source_sha256": "f9849790a0f9c140edd0b86ab8a804d3ef0e9716edbbd591dcd581270ac98124",
+      "text_sha256": "4f6bbfd9494f3793726a1611404c37446f7942eb2d1156b5f1aa208a17d94c0e",
+      "join_after": [
+        2
+      ],
+      "pages": [
+        2,
+        3
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "google:gemini-robotics-technical-report",
+      "source_sha256": "f2c1ab4e73a76013b9ebf5a4ff90bb3d291eee0730304d3ebf4531256a204b78",
+      "text_sha256": "61069fa8ae30834ad4352b9c99a19e6c6296ebdf0dde1dac06c617e6ec228ffc",
+      "join_after": [
+        0,
+        4
+      ],
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "meta:seamless-technical-report",
+      "source_sha256": "0cdd32197ea09ea3625d45c6573c54d181c532d67d6a5c1075a2b7cc92001474",
+      "text_sha256": "c016c294dbd8798030db86155539a655c03573cb353d7a0ba4f8bf4e490ff87e",
+      "join_after": [
+        7,
+        9,
+        11,
+        14
+      ],
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Visually confirmed adjacent extraction blocks continue the same source sentence; replace only the reviewed separator."
+    },
+    {
+      "id": "meta:sam-audio-technical-report",
+      "source_sha256": "f533d2810818861133e170ab0e56f96ca8b62eef65db9f06eff6173e10765445",
+      "text_sha256": "1b7a21c5b18c33f36e7759a68789ca09adc1ba59c48d43f955743eef71ad327b",
+      "join_after": [
+        1,
+        8
+      ],
+      "pages": [
+        1,
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "google:rt-2-technical-report",
+      "source_sha256": "0a62dc36bbbfdea232ad45a0ab75c82e9cf535b55333ff22c02d5da1897ccac3",
+      "text_sha256": "5823dc62f9a510aaa540ddac11a59e03410936383f9d7c957ddde6751eac162c",
+      "join_after": [
+        0
+      ],
+      "pages": [
+        1,
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "meta:large-concept-models-technical-report",
+      "source_sha256": "986cd29b5f9f49fe596073a6a5910ebf5125585008ca95ac7ed02b92851665b1",
+      "text_sha256": "832ce649163d22df9a65070d28f79e52c32f9dc770dce02fda6a578d6427e202",
+      "join_after": [
+        0,
+        10
+      ],
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks and reviewed passage repairs reconnect source prose while keeping genuine paragraph boundaries."
+    },
+    {
+      "id": "google:rt-x-technical-report",
+      "source_sha256": "13f16aff5afdee583dc25b3c570e9bb0cf6baefb59b539928d919588cd8d9246",
+      "text_sha256": "93965f91563b6e56e468624ca5c275685a7e95b908acd53934cbb2aae6234688",
+      "join_after": [
+        0,
+        1
+      ],
+      "pages": [
+        1,
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "google:robocat-technical-report",
+      "source_sha256": "ec66c1579baaada787820abf4ce99a9a59143b583ddcc6dfc4814623d1969831",
+      "text_sha256": "25d92da2cb540ad69654d88674c22cd8ceafe72daa7789fdb630a54d79f24c48",
+      "join_after": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "pages": [
+        1
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "microsoft:magma-technical-report",
+      "source_sha256": "df8e92d42a6b14f4298711d300fb23547bb95a2a1c9a81d6b3287ce96103b994",
+      "text_sha256": "8f3a50fb21088990415aa0a941ffc5f2cd625e75a20422ae11bd9b771ba2c730",
+      "join_after": [
+        0
+      ],
+      "pages": [
+        1
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "physical_intelligence:pi-0-technical-report",
+      "source_sha256": "fbdfba56258bdbd220207ba63410c6c943e43a73e97a7a5a47ca0bc74204f821",
+      "text_sha256": "162726b167e8665adc86f77abe13f0267537d052742d3eb8d6b33f326b302be2",
+      "join_after": [
+        0
+      ],
+      "pages": [
+        1
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "physical_intelligence:pi-0-5-technical-report",
+      "source_sha256": "6a1029fd8ab6944b74cf22f5e5d30e60bc15699d964b2900af799b807a34b64c",
+      "text_sha256": "2b7426a3613f3d1d6fc4ba9c6815f45580643c0197cf841f23a56147983a341c",
+      "join_after": [
+        0
+      ],
+      "pages": [
+        1
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks continue the same source paragraph; remove only the intervening Markdown paragraph break."
+    },
+    {
+      "id": "google:txgemma-efficient-and-agentic-llms-for-therapeutics",
+      "source_sha256": "bd9e6f48e3255951ef9ae5147fdebda59bd73bcd3ee66ec19a6a69e142b42ce2",
+      "text_sha256": "f3bed38f023bce3b5807e46bc44d92a8929b7b52cfd384d04a117a7b7e73580b",
+      "join_after": [
+        2
+      ],
+      "pages": [
+        1,
+        3
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks or corrected passage regions continue the same source paragraph; remove only reviewed separators."
+    },
+    {
+      "id": "qwen:qwen-image-layered-towards-inherent-editability-via-layer-decomposition",
+      "source_sha256": "af8994674db763027ce9ed86262f96c1ecff253e6c583bd70167c8643070ca28",
+      "text_sha256": "043addd6604d30395c9d7fb284270149c3137d71fc1ae674c1748d35b16d4ff7",
+      "join_after": [
+        0
+      ],
+      "pages": [
+        1,
+        2
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "Adjacent extraction blocks or corrected passage regions continue the same source paragraph; remove only reviewed separators."
+    }
+  ],
+  "passage_repairs": [
+    {
+      "id": "physical_intelligence:fast-action-tokenization-technical-report",
+      "source_sha256": "3739b31f5fecdde371509ff5bb13619979734e894a255a9b264253f4cc53934a",
+      "input_text_sha256": "d9d0fc0888ce669f4456d711079d30e7d7c6a11218457d279954b1693d1c6cda",
+      "output_text_sha256": "f0b54c3e09ab28a7d506608bef804b22736a90a3b840999def5a38120dc4af27",
+      "source_pages": [
+        1
+      ],
+      "source_fragment_indexes": [
+        0,
+        1
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "The PDF abstract visibly reads “Autoregressive sequence models, such as Transformer-based”; the native layout extraction omitted “sequence models, such”. Restore those source words while preserving the original extracted raw_text and source_fragments.",
+      "edits": [
+        {
+          "match": "Autoregressive\n\nas Transformer-based",
+          "replacement": "Autoregressive sequence models, such as Transformer-based",
+          "match_sha256": "98a057c50aef00cc0bf6436058ee0c9499257c93a687c702979a11abf48e081c"
+        }
+      ],
+      "source_regions": [
+        {
+          "page": 1,
+          "source_fragment_index": 0,
+          "raw_text_sha256": "b299e271e0bfe97a75f132f76fac2395bebb9a97a0ed8ec2e0326d26b200bc54",
+          "bbox": [
+            58.922000000000054,
+            556.7990224,
+            155.12235840000008,
+            565.7654224
+          ]
+        },
+        {
+          "page": 1,
+          "source_fragment_index": 1,
+          "raw_text_sha256": "0ec1d90aaf40de35918438a1d2e590098427183cd0f5098706e6c072b674e94f",
+          "bbox": [
+            48.959,
+            327.65802239999994,
+            300.0224704000002,
+            565.7654224
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tencent:worldplay-technical-report",
+      "source_sha256": "5051aab9b54f14963a6fc8bfda6038fe5a25867dc6efa16e811e2e690bdfbde6",
+      "input_text_sha256": "dbfb3afaf7a0beac1763ccfc363b1a7ddac15b530d9fb596d422bb85070f70b6",
+      "output_text_sha256": "9f7d1dbb6a0b099db870f1fea60913c1649ac772768f40644fff63fb1afa3582",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_fragment_indexes": [
+        1,
+        2,
+        3
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "The page-2 running title interrupts the abstract sentence. Remove that header and join the visually continuous source sentence; retain the header in original raw_text and source_fragments.",
+      "edits": [
+        {
+          "match": "enabling real-time speeds while\n\nWorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling\n\npreventing error drift.",
+          "replacement": "enabling real-time speeds while preventing error drift.",
+          "match_sha256": "ccdce9209bc849dbb63a30fa0f35e511fb181dff8e2e23c19b5fa84b881588b0"
+        }
+      ],
+      "source_regions": [
+        {
+          "page": 1,
+          "source_fragment_index": 1,
+          "raw_text_sha256": "6b64a2fb630ae520347568eee9dbfc40fa55c5c1db2213ad88f80e45f9adf20f",
+          "bbox": [
+            327.366,
+            79.2910784,
+            523.1684298248001,
+            256.6266784
+          ]
+        },
+        {
+          "page": 2,
+          "source_fragment_index": 2,
+          "raw_text_sha256": "e46825cf6d34f72a37f81e9b964c5476ab5eae1b0cc7794976ebb5a1b00cd335",
+          "bbox": [
+            107.642,
+            736.0170224,
+            488.7946975999999,
+            744.9834224
+          ]
+        },
+        {
+          "page": 2,
+          "source_fragment_index": 3,
+          "raw_text_sha256": "94dc830c4f9fc12d8c794497731a6762aad23b05363c156a67e4d872692cd086",
+          "bbox": [
+            75.366,
+            629.1380783999999,
+            271.2560210040001,
+            722.7876784
+          ]
+        }
+      ]
+    },
+    {
+      "id": "microsoft:rho-technical-report",
+      "source_sha256": "2e6c4c09d8f1bc001cd5aa8e0946377a7ad7bb4c05b32d35da5085db84bebe5a",
+      "input_text_sha256": "a71023e284358391713bc7d2d5d934d5b5d435bc191fa8ad27bf0fd317fa866b",
+      "output_text_sha256": "aedacb90ced6e5056b5420f9e9e910428f154e417bd01c66116ed91a278d471f",
+      "source_pages": [
+        1,
+        2
+      ],
+      "source_fragment_indexes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "The page-2 figure labels, caption, and URL are interleaved before the continuation “and tasks.” Remove the figure material from the derived passage and join the source sentence; retain its original raw_text and source_fragments.",
+      "edits": [
+        {
+          "match": "explicitly designed for data-efficient adaptation to new environments\n\nUniversal Robots AI Trainer\n\nFranka FR3 Duo\n\nFigure 1 Rho’s physical dual-arm robot embodiments. YAM Box is common in research labs, FR3 Duo’s usage straddles research and industry, and UR AI Trainer is an emerging standard setup for industrial bimanual manipulation tasks. Midtrained checkpoints for all three are available at https: //huggingface.co/collections/microsoft/rho\n\nand tasks.",
+          "replacement": "explicitly designed for data-efficient adaptation to new environments and tasks.",
+          "match_sha256": "a7c5fbab4d275ead66dc2e4c4ed9b7e18848a004cf8d26b621416d2a46ee1b8e"
+        }
+      ],
+      "source_regions": [
+        {
+          "page": 1,
+          "source_fragment_index": 1,
+          "raw_text_sha256": "307a83d54b829ca3a1350e32acd34660e5c28e0845cfcc9a444cad570345b5f4",
+          "bbox": [
+            68.031,
+            84.0396346,
+            527.4642465479997,
+            109.1757346
+          ]
+        },
+        {
+          "page": 2,
+          "source_fragment_index": 2,
+          "raw_text_sha256": "9b2f4bd36a85346d66dd1b22d4c475a1945e483137a0c8afaf85acb417da00f6",
+          "bbox": [
+            234.535,
+            678.3242555999999,
+            360.94843887999997,
+            688.2868556
+          ]
+        },
+        {
+          "page": 2,
+          "source_fragment_index": 3,
+          "raw_text_sha256": "bd5d0d12a68f1e42f2a34cee2bb61c4658ea88d440c137c6cf2a234604d606d0",
+          "bbox": [
+            416.886,
+            678.3242555999999,
+            490.6490904,
+            688.2868556
+          ]
+        },
+        {
+          "page": 2,
+          "source_fragment_index": 4,
+          "raw_text_sha256": "ddbd544e0a292500f2b990a374be3163c31be59a74e46b7aa73fb313aba5e2b7",
+          "bbox": [
+            67.50799999999998,
+            623.8483027999999,
+            529.85919,
+            669.9558556000001
+          ]
+        },
+        {
+          "page": 2,
+          "source_fragment_index": 5,
+          "raw_text_sha256": "4dd7d83eea920e44b8a43fea17e84782c1bf9ef66ad92bbce28ff212fdd00e01",
+          "bbox": [
+            67.639,
+            404.52663459999997,
+            529.3628458604595,
+            600.3827346
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta:seamless-technical-report",
+      "source_sha256": "0cdd32197ea09ea3625d45c6573c54d181c532d67d6a5c1075a2b7cc92001474",
+      "input_text_sha256": "4ad51b45596a613535e2a9b7dbd203030dd53166bf231c8a1fcfbe5ed75b2f26",
+      "output_text_sha256": "c016c294dbd8798030db86155539a655c03573cb353d7a0ba4f8bf4e490ff87e",
+      "source_pages": [
+        3,
+        4
+      ],
+      "source_fragment_indexes": [
+        4,
+        5,
+        6
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "The source introduction sentence continues across the figure caption: “a rhythm evaluation toolkit.” Remove the interleaved Figure 1 caption from the derived prose and reconnect the sentence; retain the original raw_text/source_fragments.",
+      "edits": [
+        {
+          "match": "a rhythm\n\nFigure 1 - An overview of the technical components of Seamless and how they fit together.\n\nevaluation toolkit.",
+          "replacement": "a rhythm evaluation toolkit.",
+          "match_sha256": "fbf5ec5b5ef36ce5e08fa8469695cb262aff01d4a68b403b995ce33d26c818f9"
+        }
+      ],
+      "source_regions": [
+        {
+          "page": 3,
+          "source_fragment_index": 4,
+          "raw_text_sha256": "3c16e071217609f024787516e004e2b07dd72e256659c60e16a7a24efd7bfd47",
+          "bbox": [
+            70.508,
+            82.795,
+            543.0638972076603,
+            104.7126
+          ]
+        },
+        {
+          "page": 4,
+          "source_fragment_index": 5,
+          "raw_text_sha256": "8f95525d0b40ed2640664164450e07249ee7f53aa065426f4fc9f4d89526f878",
+          "bbox": [
+            120.343,
+            573.2165184,
+            491.66134976,
+            583.9224
+          ]
+        },
+        {
+          "page": 4,
+          "source_fragment_index": 6,
+          "raw_text_sha256": "2e447e97faf5c42b9ddd3af1e9e8ef8164d6d0485f733e1411348fdbd0b27a34",
+          "bbox": [
+            70.617,
+            434.183,
+            542.5195576266403,
+            551.7425999999999
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meta:large-concept-models-technical-report",
+      "source_sha256": "986cd29b5f9f49fe596073a6a5910ebf5125585008ca95ac7ed02b92851665b1",
+      "input_text_sha256": "f99e1ce3ee26a0f229f5cb8e235908cbc5c9329255e8717193d91d5fe3a2ecb1",
+      "output_text_sha256": "832ce649163d22df9a65070d28f79e52c32f9dc770dce02fda6a578d6427e202",
+      "source_pages": [
+        2,
+        3
+      ],
+      "source_fragment_indexes": [
+        5,
+        6,
+        7
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-15",
+      "note": "The source sentence continues around an interleaved Figure 1 caption. Remove the caption from the derived opening passage and reconnect the sentence; retain the original raw_text/source_fragments.",
+      "edits": [
+        {
+          "match": "SONAR supports text\n\nFigure 1 - Left: visualization of reasoning in an embedding space of concepts (task of summarization). Right: fundamental architecture of an Large Concept Model (LCM). ⋆: concept encoder and decoder are frozen.\n\ninput and output in 200 languages",
+          "replacement": "SONAR supports text input and output in 200 languages",
+          "match_sha256": "c35e21dfc983a5846aded3dfb3e7ae835c2aeae3854f9ca7d9eaef54b08d2c4c"
+        }
+      ],
+      "source_regions": [
+        {
+          "page": 2,
+          "source_fragment_index": 5,
+          "raw_text_sha256": "09cc1f4b2fbfc070bb1621439a33690da25210c68b0aba02a59df9deffbfad36",
+          "bbox": [
+            70.866,
+            70.866,
+            541.5400140461994,
+            122.42309999999999
+          ]
+        },
+        {
+          "page": 3,
+          "source_fragment_index": 6,
+          "raw_text_sha256": "2e03489a0f396cb3b2138b4ceff424dddc3c4748e9693721ce62cc1e2f078c05",
+          "bbox": [
+            84.594,
+            495.4532556000001,
+            529.3383058200001,
+            529.3258556000001
+          ]
+        },
+        {
+          "page": 3,
+          "source_fragment_index": 7,
+          "raw_text_sha256": "a863b39936db8d12fd9da6419b28fce4fa3f284f611d1270876238ae4fc5228c",
+          "bbox": [
+            70.866,
+            435.817,
+            541.1388271237998,
+            473.82410000000004
+          ]
+        }
+      ]
+    }
   ]
 }

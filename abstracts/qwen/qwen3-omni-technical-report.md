@@ -8,18 +8,12 @@ We present Qwen3-Omni, a single multimodal model that for the first time maintai
 
 ![Figure 2](../../figures/qwen/qwen3-omni-technical-report/figure-01.png)
 
-Figure 2: The overview of Qwen3-Omni. Qwen3-Omni adopts the Thinker-Talker architecture. Thinker
-is tasked with text generation while Talker focuses on generating streaming speech tokens by receives
-high-level representations directly from Thinker. To achieve ultra–low-latency streaming, Talker autore-
-gressively predicts a multi-codebook sequence. At each decoding step, an MTP module outputs the
-residual codebooks for the current frame, after which the Code2Wav renderer incrementally synthesizes
-the corresponding waveform, enabling frame-by-frame streaming generation.
+Figure 2: The overview of Qwen3-Omni. Qwen3-Omni adopts the Thinker-Talker architecture. Thinker is tasked with text generation while Talker focuses on generating streaming speech tokens by receives high-level representations directly from Thinker. To achieve ultra–low-latency streaming, Talker autore- gressively predicts a multi-codebook sequence. At each decoding step, an MTP module outputs the residual codebooks for the current frame, after which the Code2Wav renderer incrementally synthesizes the corresponding waveform, enabling frame-by-frame streaming generation.
 
 p. 3
 
 ![Figure 6](../../figures/qwen/qwen3-omni-technical-report/figure-02.png)
 
-Table 6: Transcription performance for Audio→Text tasks (ASR & S2TT), comparing Qwen3-Omni-
-Instruct with the baselines. The highest scores are shown in bold.
+Table 6: Transcription performance for Audio→Text tasks (ASR & S2TT), comparing Qwen3-Omni- Instruct with the baselines. The highest scores are shown in bold.
 
 p. 10

@@ -6,14 +6,12 @@ We introduce SAM 3D Body (3DB), a promptable model for single-image full-body 3D
 
 ![Figure 2](../../figures/meta/sam-3d-body-technical-report/figure-01.png)
 
-Figure 2 SAM 3D Body Model Architecture. We employ a promptable encoder–decoder architecture with a shared
-image encoder and separate decoders for body and hand pose estimation.
+Figure 2 SAM 3D Body Model Architecture. We employ a promptable encoder–decoder architecture with a shared image encoder and separate decoders for body and hand pose estimation.
 
 p. 3
 
 ![Figure 8](../../figures/meta/sam-3d-body-technical-report/figure-02.png)
 
-Figure 8 Comparison of 3DB win rate against baselines for human preference study. Win rate (%) and number of wins
-out of 80.
+Figure 8 Comparison of 3DB win rate against baselines for human preference study. Win rate (%) and number of wins out of 80.
 
 p. 13

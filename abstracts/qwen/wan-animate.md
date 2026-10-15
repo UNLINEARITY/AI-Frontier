@@ -8,13 +8,7 @@ We introduce Wan-Animate, a unified framework for character animation and re- pl
 
 ![Figure 2](../../figures/qwen/wan-animate/figure-01.png)
 
-Figure 2: Overview of Wan-Animate, which is built upon Wan-I2V. We modify its input formula-
-tion to unify reference image input, temporal frame guidance, and environmental information (for
-dual-mode compatibility) under a common symbolic representation. For body motion control, we
-use skeleton signals that are merged via spatial alignment. For facial expression control, we lever-
-age implicit features extracted from face images as the driving signal. Additionally, for character
-replacement, we train an auxiliary Relighting LoRA to enhance the character’s integration with the
-new environment.
+Figure 2: Overview of Wan-Animate, which is built upon Wan-I2V. We modify its input formula- tion to unify reference image input, temporal frame guidance, and environmental information (for dual-mode compatibility) under a common symbolic representation. For body motion control, we use skeleton signals that are merged via spatial alignment. For facial expression control, we lever- age implicit features extracted from face images as the driving signal. Additionally, for character replacement, we train an auxiliary Relighting LoRA to enhance the character’s integration with the new environment.
 
 p. 4
 

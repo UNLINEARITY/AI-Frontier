@@ -6,22 +6,12 @@ We present Movie Gen, a cast of foundation models that generates high-quality, 1
 
 ![Figure 3](../../figures/meta/movie-gen-a-cast-of-media-foundation-models/figure-01.png)
 
-Figure 3 Overview of the joint image and video generation pipeline. We train our generative model on a spatio-temporally
-compressed latent space, which is learned via a temporal autoencoder model (TAE). User-provided text prompts are
-encoded using pre-trained text-encoders, and used as conditioning. Our generative model takes sampled Gaussian
-noise and all provided conditioning as input, and generates an output latent, which is decoded to an output image or
-video using the TAE decoder.
+Figure 3 Overview of the joint image and video generation pipeline. We train our generative model on a spatio-temporally compressed latent space, which is learned via a temporal autoencoder model (TAE). User-provided text prompts are encoded using pre-trained text-encoders, and used as conditioning. Our generative model takes sampled Gaussian noise and all provided conditioning as input, and generates an output latent, which is decoded to an output image or video using the TAE decoder.
 
 p. 5
 
 ![Figure 6](../../figures/meta/movie-gen-a-cast-of-media-foundation-models/figure-02.png)
 
-Table 6 Movie Gen Video vs. prior work. The comparison uses either generated videos from the Movie Gen Video Bench
-prompt set (Runway Gen3, LumaLabs, Kling1.5) or prompts from publicly released videos on their website (OpenAI
-Sora). A detailed summary of information from prior work is shown in Table 41. We measure the net win rate (win% -
-loss% of our model) which has a range of [−100%, 100%]. To assess statistical significance, we perform an annotation
-variance analysis (Appendix C.1), with the net win standard deviation, σ, indicated in the table above. A significant
-win/loss is identified when the net win rate is beyond 2σ (95% CI), a moderate win/loss within 1–2 σ (68% CI), and
-performance is considered on par within 1σ.
+Table 6 Movie Gen Video vs. prior work. The comparison uses either generated videos from the Movie Gen Video Bench prompt set (Runway Gen3, LumaLabs, Kling1.5) or prompts from publicly released videos on their website (OpenAI Sora). A detailed summary of information from prior work is shown in Table 41. We measure the net win rate (win% - loss% of our model) which has a range of [−100%, 100%]. To assess statistical significance, we perform an annotation variance analysis (Appendix C.1), with the net win standard deviation, σ, indicated in the table above. A significant win/loss is identified when the net win rate is beyond 2σ (95% CI), a moderate win/loss within 1–2 σ (68% CI), and performance is considered on par within 1σ.
 
 p. 21

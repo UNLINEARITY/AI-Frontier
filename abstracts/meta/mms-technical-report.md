@@ -8,17 +8,12 @@ Expanding the language coverage of speech technology has the potential to im- pr
 
 ![Figure 1](../../figures/meta/mms-technical-report/figure-01.png)
 
-Figure 1: Illustration of where the languages supported by MMS are spoken around the world:
-MMS models support speech-to-text and text-to-speech for 1,107 languages as well as language
-identification for 4,017 languages.
+Figure 1: Illustration of where the languages supported by MMS are spoken around the world: MMS models support speech-to-text and text-to-speech for 1,107 languages as well as language identification for 4,017 languages.
 
 p. 2
 
 ![Figure 12](../../figures/meta/mms-technical-report/figure-02.png)
 
-Figure 12: Scaling Multilingual ASR to 1,107 Languages. We fine-tune both dense and LSAH
-models with 61, 128, 256, 512 and 1,107 languages on MMS-lab data and show average CER on 61
-languages of FLEURS and 49 languages of CommonVoice. LSAH models have language-specific
-adapter modules and output layers.
+Figure 12: Scaling Multilingual ASR to 1,107 Languages. We fine-tune both dense and LSAH models with 61, 128, 256, 512 and 1,107 languages on MMS-lab data and show average CER on 61 languages of FLEURS and 49 languages of CommonVoice. LSAH models have language-specific adapter modules and output layers.
 
 p. 16

@@ -291,6 +291,58 @@ def apply_source_review(report, cache, scan_pages):
     return report
 
 
+def validate_passage_regions(report, repair):
+    regions = repair.get('source_regions')
+    if not regions:
+        raise ValueError(f"Missing passage repair source regions: {report['id']}")
+    fragments = report.get('source_fragments', [])
+    for region in regions:
+        index = region.get('source_fragment_index')
+        if type(index) is not int or not 0 <= index < len(fragments):
+            raise ValueError(f"Invalid passage repair source region: {report['id']}")
+        fragment = fragments[index]
+        if (fragment['page'] != region.get('page')
+                or hashlib.sha256(fragment['text'].encode()).hexdigest() != region.get('raw_text_sha256')):
+            raise ValueError(f"Stale passage repair source region: {report['id']}")
+
+
+def apply_passage_repairs(report):
+    """Apply exact, source-reviewed fixes to derived prose; retain raw extraction evidence."""
+    path = ROOT / 'abstracts/reviews.json'
+    if not path.exists():
+        return report
+    repairs = json.loads(path.read_text()).get('passage_repairs', [])
+    matches = [item for item in repairs if item['id'] == report['id']]
+    if not matches:
+        return report
+    if len(matches) != 1:
+        raise ValueError(f"Duplicate passage repair: {report['id']}")
+    repair = matches[0]
+    if repair['source_sha256'] != report['source_sha256']:
+        raise ValueError(f"Stale passage repair source: {report['id']}")
+    validate_passage_regions(report, repair)
+    current_hash = hashlib.sha256(report['text'].encode()).hexdigest()
+    if current_hash == repair['output_text_sha256']:
+        if report.get('passage_review') != repair or report.get('source_review') != repair:
+            raise ValueError(f"Missing passage repair evidence: {report['id']}")
+        return report
+    if current_hash != repair['input_text_sha256']:
+        raise ValueError(f"Stale passage repair input: {report['id']}")
+    text = report['text']
+    for edit in repair['edits']:
+        match = edit['match']
+        if hashlib.sha256(match.encode()).hexdigest() != edit['match_sha256'] or text.count(match) != 1:
+            raise ValueError(f"Invalid passage repair edit: {report['id']}")
+        text = text.replace(match, edit['replacement'], 1)
+    output_hash = hashlib.sha256(text.encode()).hexdigest()
+    if output_hash != repair['output_text_sha256']:
+        raise ValueError(f"Passage repair output checksum mismatch: {report['id']}")
+    report.update(text=text, text_sha256=output_hash,
+                  passage_review=repair, source_review=repair,
+                  status='source_reviewed', manual_review=True)
+    return report
+
+
 def current_reports():
     models = json.loads((ROOT / 'model-coverage.json').read_text())['models']
     models = [m for m in models if m.get('lifecycle', 'active') == 'active'
@@ -340,11 +392,49 @@ def current_reports():
     return list(reports.values()), missing
 
 
+def markdown_prose(text):
+    """Render source prose as unwrapped Markdown paragraphs without editing wording."""
+    return '\n\n'.join(' '.join(paragraph.split()) for paragraph in re.split(r'\n\s*\n', text.strip()))
+
+
+def markdown_passage(report, layout=None):
+    """Join only visually reviewed PDF block boundaries, bound to exact source text."""
+    text = markdown_prose(report['text'])
+    if layout is None:
+        return text
+    if (not report.get('source_pdf') or layout['source_sha256'] != report['source_sha256']
+            or layout['text_sha256'] != hashlib.sha256(report['text'].encode()).hexdigest()):
+        raise ValueError(f"Stale paragraph layout review: {report['id']}")
+    paragraphs = text.split('\n\n')
+    joins = layout['join_after']
+    if (not isinstance(joins, list) or any(type(j) is not int or not 0 <= j < len(paragraphs)-1 for j in joins)
+            or joins != sorted(set(joins)) or layout.get('review_method') != 'visual_source_page'):
+        raise ValueError(f"Invalid paragraph layout review: {report['id']}")
+    return ''.join(paragraph + (' ' if i in joins else '\n\n')
+                   for i, paragraph in enumerate(paragraphs)).strip()
+
+
 def write_outputs(output, reports, missing, write_index=True):
     output.mkdir(parents=True, exist_ok=True)
     figure_index = ROOT / 'figures/index.json'
     figures = {r['id']: r for r in json.loads(figure_index.read_text())['reports']} if figure_index.exists() else {}
+    review_path = ROOT / 'abstracts/reviews.json'
+    review_data = json.loads(review_path.read_text()) if review_path.exists() else {}
+    layouts = review_data.get('paragraph_layouts', [])
+    passage_repairs = {item['id']: item for item in review_data.get('passage_repairs', [])}
+    layout_lookup = {review['id']: review for review in layouts}
+    if len(layout_lookup) != len(layouts):
+        raise ValueError('Duplicate paragraph layout review')
     for report in reports:
+        passage_repair = passage_repairs.get(report['id'])
+        if passage_repair:
+            actual_hash = hashlib.sha256(report['text'].encode()).hexdigest()
+            validate_passage_regions(report, passage_repair)
+            if (report.get('source_sha256') != passage_repair['source_sha256']
+                    or actual_hash != passage_repair['output_text_sha256']
+                    or report.get('passage_review') != passage_repair
+                    or report.get('source_review') != passage_repair):
+                raise ValueError(f"Unreviewed or stale passage repair: {report['id']}")
         slug = report['id'].split(':', 1)[1]
         target = output / report['vendor'] / f'{slug}.md'
         target.parent.mkdir(exist_ok=True)
@@ -354,7 +444,7 @@ def write_outputs(output, reports, missing, write_index=True):
         if report['text']:
             if report['source_heading']:
                 lines += [f"## {report['source_heading']}", '']
-            lines += [report['text'], '']
+            lines += [markdown_passage(report, layout_lookup.get(report['id'])), '']
         selected = figures.get(report['id'], {})
         if selected.get('source_sha256') == report['source_sha256']:
             for figure in selected.get('figures', []):
@@ -365,12 +455,12 @@ def write_outputs(output, reports, missing, write_index=True):
                     number = ('Table' if figure.get('source_kind') == 'table' else
                               'Image' if figure.get('source_kind') == 'image' and figure.get('page') is None else 'Figure')
                 if figure.get('lead_in'):
-                    lines += [figure['lead_in'], '']
+                    lines += [markdown_prose(figure['lead_in']), '']
                 alt = figure.get('alt') or number
                 alt = alt.replace('[', '\\[').replace(']', '\\]')
                 lines += [f"![{alt}](../../{figure['png_path']})", '']
                 if figure.get('caption'):
-                    lines += [figure['caption'], '']
+                    lines += [markdown_prose(figure['caption']), '']
                 if figure.get('page') is not None:
                     lines += [f"p. {figure['page']}", '']
         target.write_text('\n'.join(line.rstrip() for line in '\n'.join(lines).splitlines()).rstrip() + '\n')
@@ -411,7 +501,9 @@ def main():
     cache = ROOT / '.cache/abstracts'
     cache.mkdir(parents=True, exist_ok=True)
     items, missing = current_reports()
-    reports = [apply_source_review(extract_report(item, cache, args.scan_pages), cache, args.scan_pages) for item in items]
+    reports = [apply_passage_repairs(
+        apply_source_review(extract_report(item, cache, args.scan_pages), cache, args.scan_pages))
+        for item in items]
     from web_sources import current_summaries
     web = current_summaries(ROOT, json.loads((ROOT / 'model-coverage.json').read_text())['models'])
     reports.extend(web)

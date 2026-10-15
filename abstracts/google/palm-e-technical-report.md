@@ -8,10 +8,6 @@ Large language models have been demonstrated to perform complex tasks. However, 
 
 ![Figure 1](../../figures/google/palm-e-technical-report/figure-01.png)
 
-Figure 1: PaLM-E is a single general-purpose multimodal language model for embodied reasoning tasks, visual-language tasks,
-and language tasks. PaLM-E transfers knowledge from visual-language domains into embodied reasoning – from robot planning in
-environments with complex dynamics and physical constraints, to answering questions about the observable world. PaLM-E operates on
-multimodal sentences, i.e. sequences of tokens where inputs from arbitrary modalities (e.g. images, neural 3D representations, or states, in
-green and blue) are inserted alongside text tokens (in orange) as input to an LLM, trained end-to-end.
+Figure 1: PaLM-E is a single general-purpose multimodal language model for embodied reasoning tasks, visual-language tasks, and language tasks. PaLM-E transfers knowledge from visual-language domains into embodied reasoning – from robot planning in environments with complex dynamics and physical constraints, to answering questions about the observable world. PaLM-E operates on multimodal sentences, i.e. sequences of tokens where inputs from arbitrary modalities (e.g. images, neural 3D representations, or states, in green and blue) are inserted alongside text tokens (in orange) as input to an LLM, trained end-to-end.
 
 p. 1

@@ -16,17 +16,12 @@ The release of Muse Spark reflects our commitment to responsible AI deployment. 
 
 ![Figure 1](../../figures/meta/muse-spark-safety-and-preparedness-report/figure-01.png)
 
-Table 1 Muse Spark capabilities scorecard. Snapshot of a subset of key preparedness evaluations
-of model capabilities. All results are reported for Muse Spark as-is in its Thinking configuration.
-For Chemical & Biological Risks capabilities and Prompted evaluation awareness, we do not report
-results for Claude Opus 4.6 due to high refusal rates. Highest capabilities appear in bold.
+Table 1 Muse Spark capabilities scorecard. Snapshot of a subset of key preparedness evaluations of model capabilities. All results are reported for Muse Spark as-is in its Thinking configuration. For Chemical & Biological Risks capabilities and Prompted evaluation awareness, we do not report results for Claude Opus 4.6 due to high refusal rates. Highest capabilities appear in bold.
 
 p. 7
 
 ![Figure 6](../../figures/meta/muse-spark-safety-and-preparedness-report/figure-02.png)
 
-Figure 6 High-Risk Bottlenecks: Chemical Threats. Performance of Muse Spark and open-weight
-models on chemical bottlenecks related to synthesis, purification, manufacture, and formulation. Two
-tasks related to synthesis were excluded for OSS Model C due to refusals.
+Figure 6 High-Risk Bottlenecks: Chemical Threats. Performance of Muse Spark and open-weight models on chemical bottlenecks related to synthesis, purification, manufacture, and formulation. Two tasks related to synthesis were excluded for OSS Model C due to refusals.
 
 p. 28

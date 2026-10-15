@@ -8,18 +8,12 @@ Deploying navigation systems at scale requires a recipe that minimizes sensor as
 
 ![Figure 1](../../figures/mistral/robostral-navigate/figure-01.png)
 
-Figure 1: System Architecture. Given a natural language instruction and a stream of RGB observations, the
-VLM predicts the next waypoint at 0.5 hertz via pointing, metric displacement and orientation upon arrival.
-When the target lies outside the field of view, pointing is omitted. A diffusion policy takes the waypoint, the
-context frame (frame at which the waypoint has been inferred) and the current frame to produce a dense trajectory
-at 10 hertz. Finally, a motion-tracking controller turns this trajectory into high-frequency actuator torques.
+Figure 1: System Architecture. Given a natural language instruction and a stream of RGB observations, the VLM predicts the next waypoint at 0.5 hertz via pointing, metric displacement and orientation upon arrival. When the target lies outside the field of view, pointing is omitted. A diffusion policy takes the waypoint, the context frame (frame at which the waypoint has been inferred) and the current frame to produce a dense trajectory at 10 hertz. Finally, a motion-tracking controller turns this trajectory into high-frequency actuator torques.
 
 p. 3
 
 ![Figure 5](../../figures/mistral/robostral-navigate/figure-02.png)
 
-Figure 5: Overview of our online reinforcement learning pipeline. The trainer orchestrates the prompt sampling,
-physical simulator, and action generator (vLLM) in an asynchronous loop, updating the policy via CISPO using
-the −max(2, dist_to_goal) reward signal upon episode termination.
+Figure 5: Overview of our online reinforcement learning pipeline. The trainer orchestrates the prompt sampling, physical simulator, and action generator (vLLM) in an asynchronous loop, updating the policy via CISPO using the −max(2, dist_to_goal) reward signal upon episode termination.
 
 p. 7

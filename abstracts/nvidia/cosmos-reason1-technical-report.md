@@ -8,9 +8,6 @@ Physical AI systems need to perceive, understand, and perform complex actions in
 
 ![Figure 1](../../figures/nvidia/cosmos-reason1-technical-report/figure-01.png)
 
-Figure 1: An overview of Cosmos-Reason1. Cosmos-Reason1 contains two multimodal large language models of
-7B and 56B, trained in two stages, including Physical AI SFT and Physical AI RL. We also define two ontologies
-for physical common sense and embodied reasoning, and build two benchmarks to evaluate models’ Physical
-AI reasoning capabilities.
+Figure 1: An overview of Cosmos-Reason1. Cosmos-Reason1 contains two multimodal large language models of 7B and 56B, trained in two stages, including Physical AI SFT and Physical AI RL. We also define two ontologies for physical common sense and embodied reasoning, and build two benchmarks to evaluate models’ Physical AI reasoning capabilities.
 
 p. 2

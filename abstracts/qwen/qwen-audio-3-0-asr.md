@@ -8,18 +8,12 @@ In recent years, automatic speech recognition (ASR) has witnessed transformative
 
 ![Figure 1](../../figures/qwen/qwen-audio-3-0-asr/figure-01.png)
 
-Figure 1: Overview of Qwen-Audio-3.0-ASR and its production-oriented capabilities. The system
-supports multilingual and dialectal recognition, low-latency streaming, domain entity recognition,
-long-audio contextual modeling, hierarchical hotword customization, and native single-pass tran-
-scription polishing. The central ring highlights four system-level properties: instruction-controlled
-decoding, context awareness, native single-pass generation, and low latency.
+Figure 1: Overview of Qwen-Audio-3.0-ASR and its production-oriented capabilities. The system supports multilingual and dialectal recognition, low-latency streaming, domain entity recognition, long-audio contextual modeling, hierarchical hotword customization, and native single-pass tran- scription polishing. The central ring highlights four system-level properties: instruction-controlled decoding, context awareness, native single-pass generation, and low latency.
 
 p. 2
 
 ![Figure 6](../../figures/qwen/qwen-audio-3-0-asr/figure-02.png)
 
-Figure 6: Character error rate (CER, %) on an internal evaluation suite covering 16 Chinese dialects
-under the ASR and AST settings described in Section 5.2. We compare Doubao-ASR, Tencent
-Hy-ASR-3.0-preview, and Qwen-Audio-3.0-ASR. Lower values indicate better performance.
+Figure 6: Character error rate (CER, %) on an internal evaluation suite covering 16 Chinese dialects under the ASR and AST settings described in Section 5.2. We compare Doubao-ASR, Tencent Hy-ASR-3.0-preview, and Qwen-Audio-3.0-ASR. Lower values indicate better performance.
 
 p. 14
