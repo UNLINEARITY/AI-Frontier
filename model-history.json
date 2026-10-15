@@ -3723,6 +3723,30 @@
       "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2025-09-05；只能证明论文公开时间，不能证明模型首发时间。"
     },
     {
+      "vendor": "microsoft",
+      "model": "MAI Image 2.6",
+      "source_url": "https://microsoft.ai/models/mai-image-2-6/",
+      "report_slugs": [
+        "mai-image-2-6-model-card"
+      ],
+      "release_date": "2026-08-10",
+      "release_source_url": "https://microsoft.ai/news/mai-image-2-6-launches-at-no-2-on-arena-ahead-of-google-meta-and-xai/",
+      "release_evidence": "Official August 10 announcement introduces MAI-Image-2.6 and makes it testable on Arena that day. Its September 4 update describes later Foundry availability; that update is not the original model release.",
+      "reviewed_at": "2026-10-15"
+    },
+    {
+      "vendor": "microsoft",
+      "model": "MAI Image 2.6 Flash",
+      "source_url": "https://microsoft.ai/models/mai-image-2-6/",
+      "report_slugs": [
+        "mai-image-2-6-model-card"
+      ],
+      "release_date": "2026-09-04",
+      "release_source_url": "https://microsoft.ai/news/pushing-the-quality-cost-frontier-with-mai-image-2-6/",
+      "release_evidence": "Official September 4 announcement explicitly expands the existing MAI-Image-2.6 family with the new Flash variant and offers both in public preview. The July 31 model-version identifier in API documentation is not a public release date.",
+      "reviewed_at": "2026-10-15"
+    },
+    {
       "vendor": "amazon",
       "model": "Nova Premier",
       "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",

@@ -40,6 +40,15 @@ class TimelineTests(unittest.TestCase):
         self.assertEqual([m['release_date'] for m in result], ['2026-04-01', '2026-04-01'])
         self.assertEqual([m['report_slugs'] for m in result], [['report'], ['report']])
 
+    def test_shared_report_does_not_overwrite_individual_variant_launch_days(self):
+        self.model.update(model='A / B', release_date='2026-04-01')
+        history = {'models': [dict(self.model, model='A', release_date='2026-04-01'),
+                              dict(self.model, model='B', release_date='2026-05-02')],
+                   'coverage_aliases': [dict(vendor='lab', coverage_model='A / B', models=['A', 'B'], shared_reports=True)]}
+        result = self.resolve(history=history)
+        self.assertEqual([(m['model'], m['release_date']) for m in result], [('A', '2026-04-01'), ('B', '2026-05-02')])
+        self.assertTrue(all(m['report_slugs'] == ['report'] for m in result))
+
     def test_invalid_partial_conflicting_dates_and_stale_aliases_fail(self):
         for released in ('2026-02-30', '2026-02', '20260201'):
             with self.subTest(released=released), self.assertRaises(ValueError):

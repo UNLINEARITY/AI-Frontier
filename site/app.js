@@ -1,47 +1,50 @@
-/* The homepage is an overview; the complete collections have their own routes. */
+/* The lab index is a set of direct entrances; the complete explorer lives on Models. */
 (() => {
-  const tiles = [...document.querySelectorAll('.publisher-tile')];
   const params = new URLSearchParams(location.search);
-  const legacyModels = params.get('view') === 'models';
-  const legacyReports = params.has('q') || params.has('type') || params.has('sort') || location.hash === '#collection';
-  if (legacyModels || legacyReports) {
-    const destination = new URL(legacyModels ? 'models.html' : 'reports.html', location.href);
-    destination.search = params.toString(); destination.searchParams.delete('view'); destination.hash = 'collection';
-    if (legacyModels) {destination.searchParams.delete('type'); destination.searchParams.set('scope', 'frontier');}
-    location.replace(destination.href);
+  if (params.get('view') === 'models' || params.has('model') || params.has('from') || location.hash === '#timeline') {
+    const destination = new URL('models.html', location.href);
+    destination.search = params.toString(); destination.searchParams.delete('view');
+    if (params.get('view') === 'models') destination.searchParams.set('scope', 'frontier');
+    destination.hash = location.hash === '#timeline' ? 'timeline' : '';
+    location.replace(destination);
+  } else if (params.has('q') || params.has('type') || params.has('sort') || location.hash === '#collection') {
+    const destination = new URL('reports.html', location.href);
+    destination.search = params.toString(); location.replace(destination);
   }
-  let publisher = params.get('publisher') || '';
-  if (!tiles.some(tile => tile.dataset.publisher === publisher)) publisher = '';
-  function select(value, reset = false) {
-    publisher = value;
-    for (const tile of tiles) tile.setAttribute('aria-pressed', String(tile.dataset.publisher === publisher));
-    const label = document.querySelector('#publisher-selection');
-    label.textContent = publisher ? tiles.find(tile => tile.dataset.publisher === publisher).dataset.label : '';
-    const state = new URLSearchParams(location.search);
-    if (publisher) state.set('publisher', publisher); else state.delete('publisher');
-    if (reset) for (const key of ['model', 'from', 'to']) state.delete(key);
-    history.replaceState(null, '', `${location.pathname}${state.size ? `?${state}` : ''}${location.hash}`);
-    for (const entry of document.querySelectorAll('[data-report-entry], [data-model-entry]')) {
-      const destination = new URL(entry.href);
-      if (publisher) destination.searchParams.set('publisher', publisher); else destination.searchParams.delete('publisher');
-      entry.href = destination.href;
+  const tiles = [...document.querySelectorAll('.publisher-grid .publisher-tile')];
+  const grid = document.querySelector('.publisher-grid');
+  let departing = false, abandoned = false, departure = 0;
+  addEventListener('pagehide', () => {abandoned = true; departure++;});
+  function reset() {
+    departure++; departing = false; abandoned = false; grid.removeAttribute('aria-busy');
+    for (const tile of tiles) {
+      tile.getAnimations().forEach(animation => animation.cancel());
+      if (window.frontierEntry?.kind === 'publishers-return' && tile.dataset.publisher === window.frontierEntry.publisher) tile.style.viewTransitionName = 'publisher-focus';
+      else tile.style.removeProperty('view-transition-name');
+      tile.removeAttribute('aria-current');
     }
-    const language = new URL(document.querySelector('.language-link').href);
-    language.search = state.toString(); language.hash = location.hash;
-    document.querySelector('.language-link').href = language.href;
-    document.dispatchEvent(new CustomEvent('frontier:publisher', {detail: publisher}));
-    if (reset) document.dispatchEvent(new Event('frontier:reset'));
   }
-  for (const tile of tiles) tile.addEventListener('click', () => {
-    const value = tile.dataset.publisher;
-    select(value === publisher ? '' : value, !value);
-  });
-  document.addEventListener('keydown', event => {
-    const input = document.querySelector('#timeline-search');
-    if (event.key === '/' && !/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName) && !document.activeElement.isContentEditable) {
-      event.preventDefault(); input.focus();
+  addEventListener('pageshow', reset);
+  document.addEventListener('click', async event => {
+    const tile = event.target.closest('.publisher-grid .publisher-tile');
+    if (!tile || event.defaultPrevented || event.button || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (departing) return;
+    const generation = ++departure;
+    departing = true; grid.setAttribute('aria-busy', 'true');
+    for (const other of tiles) other.style.removeProperty('view-transition-name');
+    tile.setAttribute('aria-current', 'true'); tile.style.viewTransitionName = 'publisher-focus';
+    window.frontierNavigation?.rememberModels(tile);
+    if (!reducedMotion.matches) {
+      const selected = tile.getBoundingClientRect();
+      const animations = tiles.filter(other => other !== tile).map(other => {
+        const bounds = other.getBoundingClientRect();
+        const distance = Math.abs(bounds.x - selected.x) + Math.abs(bounds.y - selected.y);
+        return other.animate([{opacity: 1, transform: 'none'}, {opacity: 0, transform: 'translateY(12px) scale(.96)'}],
+          {duration: 240, delay: Math.min(100, distance / 18), easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'forwards'});
+      });
+      await Promise.allSettled(animations.map(animation => animation.finished));
     }
-    if (event.key === 'Escape' && document.activeElement === input) {input.value = ''; input.dispatchEvent(new Event('input')); input.blur();}
+    if (!abandoned && generation === departure) location.assign(tile.href);
   });
-  select(publisher);
 })();

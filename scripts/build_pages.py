@@ -249,17 +249,17 @@ def showcase_output(reader, figure, chinese):
 
 def publisher_tiles(timeline, reports, labels, chinese, prefix):
     """A complete publisher index; every tile is a direct selection, including ALL."""
-    tiles = (f'<button class="publisher-tile publisher-tile--all" data-publisher="" aria-pressed="true" data-motion="publisher">'
-             f'<span class="tile-name">ALL</span>{lab_count(len(reports), len(timeline), chinese)}</button>')
+    tiles = (f'<a class="publisher-tile publisher-tile--all" href="models.html" data-publisher="" data-motion="publisher">'
+             f'<span class="tile-name">ALL</span>{lab_count(len(reports), len(timeline), chinese)}</a>')
     tones = ('paper', 'ink', 'accent', 'soft')
     for index, (vendor, label) in enumerate(labels.items()):
         report_count = sum(record['vendor'] == vendor for record in reports)
         model_count = sum(model['vendor'] == vendor for model in timeline)
-        tiles += (f'<button class="publisher-tile publisher-tile--{tones[index % len(tones)]}" data-publisher="{vendor}" '
-                  f'data-label="{escape(label.split(" / ")[0])}" aria-pressed="false" data-motion="publisher">'
+        tiles += (f'<a class="publisher-tile publisher-tile--{tones[index % len(tones)]}" href="models.html?publisher={vendor}" data-publisher="{vendor}" '
+                  f'data-label="{escape(label.split(" / ")[0])}" data-motion="publisher">'
                   f'<span class="tile-brand">{publisher_mark(vendor, prefix, "eager")}'
                   f'<span class="tile-name">{escape(label.split(" / ")[0])}</span></span>'
-                  f'{lab_count(report_count, model_count, chinese)}</button>')
+                  f'{lab_count(report_count, model_count, chinese)}</a>')
     return tiles
 
 
@@ -317,6 +317,9 @@ def build(output):
     models = [m for m in coverage['models'] if m.get('lifecycle', 'active') == 'active'
               and (m.get('latest_categories') or m.get('frontier_categories'))]
     current_keys = current_model_keys(models, history)
+    for model, entry in zip(timeline, timeline_data):
+        entry['categories'] = model['categories']
+        entry['frontier'] = (model['vendor'], model['model'].casefold()) in current_keys
     # Real fragments for the showcase: the newest archived document, and a reader that has a figure.
     showcase_report = reports[0]
     showcase_reader, showcase_figure = None, None
@@ -333,6 +336,7 @@ def build(output):
     template = (ROOT / 'site/template.html').read_text()
     directory_template = (ROOT / 'site/models.html').read_text()
     reports_template = (ROOT / 'site/reports.html').read_text()
+    timeline_template = (ROOT / 'site/timeline.html').read_text()
     for chinese in (False, True):
         labels = dict(VENDORS)
         if not chinese:
@@ -380,13 +384,15 @@ def build(output):
             'timeline_empty': '当前范围内没有已确认日期的模型' if chinese else 'No dated models in this view',
             'timeline_count_label': '个模型' if chinese else 'models',
             'timeline_count': str(len(timeline)),
+            'undated_scope_option': ('<option value="undated">' + ('日期待确认' if chinese else 'Date unconfirmed') + '</option>') if any(not model['release_date'] for model in timeline) else '',
+            'model_list_label': '模型列表' if chinese else 'Model list',
             'all_models_link': f'浏览全部 {len(timeline)} 个模型' if chinese else f'Browse all {len(timeline)} models',
             'cards': '\n'.join(cards), 'empty': '未找到匹配结果，请调整搜索或筛选条件。' if chinese else 'No matches. Try a different search or filter.',
             'footer': '从原始报告走向技术洞察。' if chinese else 'From original reports to technical insight.',
             'results': '条结果' if chinese else 'results',
             'explore': '探索报告' if chinese else 'Explore the archive',
             'browse_labs': '追踪每一家厂商' if chinese else 'Follow every frontier lab',
-            'publisher_hint': '选择厂商，浏览报告与前沿模型。' if chinese else 'Choose a publisher. Explore reports and frontier models.',
+            'publisher_hint': '选择厂商，浏览它的时间线与模型。' if chinese else 'Choose a lab to explore its timeline and models.',
             'clear': '清除筛选' if chinese else 'Clear filters',
             'sort_label': '排序' if chinese else 'Sort',
             'newest': '日期：由新到旧' if chinese else 'Date: newest first',
@@ -410,7 +416,7 @@ def build(output):
             'nav_labs': '厂商' if chinese else 'Publishers',
             'nav_models': '模型' if chinese else 'Models',
             'nav_label': '主导航' if chinese else 'Main navigation',
-            'nav_publishers_href': '#publishers', 'nav_timeline_href': '#timeline', 'nav_reports_href': 'reports.html',
+            'nav_publishers_href': '#publishers', 'nav_timeline_href': 'models.html#timeline', 'nav_reports_href': 'reports.html',
             'nav_home': '首页' if chinese else 'Home', 'skip_href': '#publishers',
             'report_return_hint': '在顶部继续向上滑，返回刚才的首页位置。' if chinese else 'Scroll up past the top to return to where you left the home page.',
             'publisher_tiles': publisher_tiles(timeline, reports, labels, chinese, prefix),
@@ -464,12 +470,12 @@ def build(output):
                                 directory_search='搜索模型或厂商' if chinese else 'Search models or publishers',
                                 directory_scope='模型范围' if chinese else 'Model scope',
                                 all_models='全部模型' if chinese else 'All models', model_cards=model_cards,
-                                nav_publishers_href='index.html#publishers', nav_timeline_href='index.html#timeline',
+                                nav_publishers_href='index.html#publishers', nav_timeline_href='#timeline',
                                 nav_reports_href='reports.html', skip_href='#collection')
         header = template.split('<main>', 1)[0].replace('data-page="home"', 'data-page="models"')
-        header = header.replace('src="{{prefix}}app.js"', 'src="{{prefix}}models.js"').replace('<script src="{{prefix}}timeline.js" defer></script>', '')
+        header = header.replace('src="{{prefix}}app.js"', 'src="{{prefix}}models.js"').replace('<script src="{{prefix}}navigation.js" defer>', '<script src="{{prefix}}timeline.js" defer></script><script src="{{prefix}}navigation.js" defer>')
         footer = template[template.index('<footer>'):]
-        directory_page = directory_template.replace('{{page_header}}', header).replace('{{page_footer}}', footer)
+        directory_page = directory_template.replace('{{page_header}}', header).replace('{{page_footer}}', footer).replace('{{model_timeline}}', timeline_template)
         for key, value in directory_values.items():
             directory_page = directory_page.replace('{{' + key + '}}', value)
         (output / ('cn/models.html' if chinese else 'models.html')).write_text(directory_page, encoding='utf-8')
@@ -477,7 +483,7 @@ def build(output):
                              description=f'浏览来自 {len(VENDORS)} 家厂商的 {len(reports)} 份官方报告。' if chinese else
                                          f'Browse {len(reports)} official reports from {len(VENDORS)} publishers.',
                              switch='../reports.html' if chinese else 'cn/reports.html',
-                             nav_publishers_href='index.html#publishers', nav_timeline_href='index.html#timeline',
+                             nav_publishers_href='index.html#publishers', nav_timeline_href='models.html#timeline',
                              nav_reports_href='reports.html', skip_href='#collection')
         report_header = template.split('<main>', 1)[0].replace('data-page="home"', 'data-page="reports"')
         report_header = report_header.replace('src="{{prefix}}app.js"', 'src="{{prefix}}reports.js"').replace('<script src="{{prefix}}timeline.js" defer></script>', '')

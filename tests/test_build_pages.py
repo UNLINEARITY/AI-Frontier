@@ -33,7 +33,7 @@ class ShellTests(unittest.TestCase):
         self.assertIn('No records', lab_count(0, 0, False))
         self.assertIn('无记录', lab_count(0, 0, True))
 
-    def test_overview_precedes_timeline_and_models_have_a_direct_page(self):
+    def test_overview_opens_the_combined_timeline_and_model_directory(self):
         from html.parser import HTMLParser
         class Sections(HTMLParser):
             def __init__(self):
@@ -47,7 +47,11 @@ class ShellTests(unittest.TestCase):
                     self.links.append(attributes.get('href'))
         parser = Sections()
         parser.feed((ROOT / 'site/template.html').read_text())
-        self.assertLess(parser.ids.index('publishers'), parser.ids.index('timeline'))
+        self.assertIn('publishers', parser.ids)
+        self.assertNotIn('timeline', parser.ids)
+        directory = (ROOT / 'site/models.html').read_text()
+        self.assertLess(directory.index('{{model_timeline}}'), directory.index('id="model-list"'))
+        self.assertIn('id="timeline"', (ROOT / 'site/timeline.html').read_text())
         self.assertNotIn('collection', parser.ids)
         self.assertIn('reports.html', parser.links)
         self.assertIn('id="collection"', (ROOT / 'site/reports.html').read_text())
@@ -60,10 +64,11 @@ class ShellTests(unittest.TestCase):
         reports = [{'vendor': 'openai'}]
         for chinese in (False, True):
             tiles = publisher_tiles(models, reports, labels, chinese, '../')
-            self.assertEqual(tiles.count('<button '), len(labels) + 1)
+            self.assertEqual(tiles.count('<a '), len(labels) + 1)
             for vendor in ('', *labels):
                 self.assertIn(f'data-publisher="{vendor}"', tiles)
             self.assertIn('Robot &amp; Co', tiles)
+            self.assertIn('href="models.html?publisher=generalist"', tiles)
             self.assertIn('3 个模型' if chinese else '3 models', tiles)
             self.assertNotIn('0 reports', tiles)
 

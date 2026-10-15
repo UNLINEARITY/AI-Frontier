@@ -9,11 +9,10 @@
   const frame = document.querySelector('.timeline-frame');
   const plot = document.querySelector('#timeline-points');
   const ticks = document.querySelector('#timeline-ticks');
-  const input = document.querySelector('#timeline-search');
+  const input = document.querySelector('#search');
+  const explorer = window.frontierModels;
   const tooltip = document.querySelector('#timeline-tooltip');
-  const directoryLink = document.querySelector('#timeline-models-link');
-  const normalize = text => text.normalize('NFKC').toLocaleLowerCase().replaceAll('π', 'pi').replace(/[^\p{L}\p{N}]/gu, '');
-  for (const model of data) model.searchTerms = normalize(`${model.model} ${model.vendor} ${model.publisher_en} ${model.publisher_cn} ${(model.aliases || []).join(' ')}`);
+  for (const model of data) model.searchTerms = explorer.searchText(model);
   const dated = data.filter(model => model.release_date).map(model => ({...model, time: Date.parse(model.release_date + 'T00:00:00Z')}));
   const undated = data.filter(model => !model.release_date);
   const full = dated.length ? [Math.min(...dated.map(m => m.time)), Math.max(...dated.map(m => m.time))] : [Date.now() - day, Date.now()];
@@ -21,13 +20,14 @@
   const minimumSpan = Math.min(3 * day, full[1] - full[0]);
   let view = [...full], target = [...full], width = 0, height = 304, animation = 0;
   let publisher = '';
+  let phase = 'idle', focusTimer = 0, focusGeneration = 0, lastWindow = '', leavingForChooser = false;
   let activeNode = null;
   const pointers = new Map();
   let gesture = null, suppressClickUntil = 0, urlTimer = 0;
   const params = new URLSearchParams(location.search);
   publisher = params.get('publisher') || '';
-  input.value = params.get('model') || '';
-  let searchTerms = queryTerms();
+  if (window.frontierEntry?.kind === 'models-enter' && publisher && !reducedMotion.matches) phase = 'overview';
+  section.dataset.phase = phase;
   const from = Date.parse(params.get('from') || ''), to = Date.parse(params.get('to') || '');
   if (Number.isFinite(from) && Number.isFinite(to) && from < to) view = target = constrain(from, to);
 
@@ -38,10 +38,7 @@
     return node;
   }
   function label(model) {return chinese ? model.publisher_cn : model.publisher_en;}
-  function queryTerms() {return input.value.trim().split(/\s+/).map(normalize).filter(Boolean);}
-  function matches(model) {
-    return (!publisher || model.vendor === publisher) && searchTerms.every(term => model.searchTerms.includes(term));
-  }
+  function matches(model) {return explorer.matches(model);}
   function dateText(time) {return new Date(time).toISOString().slice(0, 10);}
   function constrain(start, end) {
     const span = Math.max(minimumSpan, Math.min(full[1] - full[0], end - start));
@@ -50,36 +47,15 @@
   }
   function x(time) {return 16 + (time - view[0]) / (view[1] - view[0]) * Math.max(1, width - 32);}
   function timeAt(pixel, range = target) {return range[0] + (pixel - 16) / Math.max(1, width - 32) * (range[1] - range[0]);}
-  function windowQuery() {
-    const state = new URLSearchParams(location.search);
-    state.delete('model'); state.delete('from'); state.delete('to');
-    if (input.value.trim()) state.set('model', input.value.trim());
-    if (target[1] - target[0] < (full[1] - full[0]) * .999) {
-      state.set('from', new Date(target[0]).toISOString()); state.set('to', new Date(target[1]).toISOString());
-    }
-    return state;
-  }
   function persistURL() {
-    clearTimeout(urlTimer);
-    urlTimer = 0;
-    const state = windowQuery();
-    const suffix = state.size ? `?${state}` : '';
-    const destination = `${location.pathname}${suffix}#timeline`;
-    if (destination !== `${location.pathname}${location.search}${location.hash}`) history.replaceState(null, '', destination);
-    syncLanguage(state);
-  }
-  function syncLanguage(state) {
-    const language = document.querySelector('.language-link');
-    const destination = new URL(language.href);
-    destination.search = state.toString(); destination.hash = 'timeline'; language.href = destination.href;
+    clearTimeout(urlTimer); urlTimer = 0;
+    explorer.persistWindow(target[0], target[1], isFull(target));
   }
   function updateURL() {
-    syncLanguage(windowQuery());
-    // Continuous gestures update the plot immediately, but coalesce browser history writes.
     clearTimeout(urlTimer);
     urlTimer = setTimeout(persistURL, 150);
   }
-  function setWindow(start, end, animate = false) {
+  function setWindow(start, end, animate = false, duration = 260) {
     cancelAnimationFrame(animation);
     target = constrain(start, end);
     updateURL();
@@ -87,7 +63,7 @@
     section.setAttribute('aria-busy', 'true');
     const initial = [...view], began = performance.now();
     function tick(now) {
-      const fraction = Math.min(1, (now - began) / 260);
+      const fraction = Math.min(1, (now - began) / duration);
       const eased = 1 - Math.pow(1 - fraction, 3);
       view = initial.map((value, index) => value + (target[index] - value) * eased);
       render();
@@ -127,7 +103,7 @@
   }
   const nodes = dated.map(model => {
     const link = element('a', {href: model.href, class: 'timeline-node', tabindex: '0', 'data-date': model.release_date,
-      'data-model': model.model, 'aria-label': `${model.model} · ${label(model)} · ${model.release_date}`});
+      'data-model': model.model, 'data-vendor': model.vendor, 'aria-label': `${model.model} · ${label(model)} · ${model.release_date}`});
     const stem = element('line', {class: 'timeline-stem'});
     const hit = element('circle', {class: 'timeline-hit', r: 13});
     const dot = element('circle', {class: 'timeline-dot', r: 5});
@@ -188,9 +164,13 @@
     let visible = 0, matching = 0;
     for (const item of nodes) {
       const pass = matches(item.model);
+      const context = phase !== 'idle';
+      item.link.dataset.selected = String(pass);
+      item.link.setAttribute('tabindex', pass ? '0' : '-1');
+      item.link.style.pointerEvents = pass ? '' : 'none';
       if (pass) matching++;
       const position = x(item.model.time);
-      const onScreen = pass && position >= 8 && position <= width - 8;
+      const onScreen = (context || pass) && item.model.time >= view[0] && item.model.time <= view[1];
       item.link.style.display = onScreen ? '' : 'none';
       if (!onScreen) continue;
       let lane = occupied.findIndex(previous => position - previous >= 16);
@@ -201,11 +181,11 @@
       item.stem.setAttribute('x1', 0); item.stem.setAttribute('x2', 0);
       item.stem.setAttribute('y1', 0); item.stem.setAttribute('y2', -offsets[lane]);
       item.name.style.display = 'none';
-      visible++;
+      if (pass) visible++;
     }
     // Labels yield to nearby labels; every point retains its full accessible name and tooltip.
     const boxes = [];
-    for (const item of [...nodes].reverse()) if (item.link.style.display !== 'none') {
+    for (const item of [...nodes].reverse()) if (item.link.style.display !== 'none' && (phase === 'overview' || matches(item.model))) {
       const text = [...item.model.model];
       item.name.textContent = text.length > 24 ? text.slice(0, 21).join('') + '…' : item.model.model;
       const size = item.name.textContent.length * 6;
@@ -226,10 +206,6 @@
     const unconfirmedLabel = document.querySelector('#timeline-undated-count');
     unconfirmedLabel.hidden = unconfirmed === 0;
     unconfirmedLabel.textContent = `${unconfirmed} ${unconfirmedLabel.dataset.label}`;
-    const directoryQuery = new URLSearchParams();
-    if (publisher) directoryQuery.set('publisher', publisher);
-    if (input.value.trim()) directoryQuery.set('q', input.value.trim());
-    directoryLink.href = 'models.html' + (directoryQuery.size ? `?${directoryQuery}` : '');
     const empty = document.querySelector('#timeline-empty');
     empty.toggleAttribute('hidden', visible !== 0); empty.setAttribute('x', width / 2); empty.setAttribute('y', axis - 24);
     const count = section.dataset.countLabel;
@@ -241,27 +217,68 @@
     document.querySelector('#timeline-in').disabled = view[1] - view[0] <= minimumSpan * 1.001;
     if (activeNode && activeNode.link.style.display === 'none') hideTooltip();
     else positionTooltip();
+    const windowKey = `${view[0]}:${view[1]}`;
+    if (lastWindow !== windowKey) {lastWindow = windowKey; explorer.setWindow(view[0], view[1], isFull(view));}
     if (focusedNode?.link.style.display === 'none') svg.focus({preventScroll: true});
   }
+  for (const control of document.querySelectorAll('.timeline-controls button')) control.addEventListener('click', () => {cancelFocus(); setPhase('idle');});
   document.querySelector('#timeline-in').addEventListener('click', () => zoom(2));
   document.querySelector('#timeline-out').addEventListener('click', () => zoom(.5));
   document.querySelector('#timeline-fit').addEventListener('click', () => setWindow(...full, true));
   document.querySelector('#timeline-latest').addEventListener('click', () => setWindow(full[1] - 120 * day, full[1], true));
-  input.addEventListener('input', () => {
-    searchTerms = queryTerms();
-    hideTooltip();
+  function isFull(range) {return range[0] <= full[0] + 1 && range[1] >= full[1] - 1;}
+  function fittedRange() {
     const found = dated.filter(matches);
-    if (input.value.trim() && found.length) {
-      const earliest = Math.min(...found.map(m => m.time)), latest = Math.max(...found.map(m => m.time));
-      const padding = Math.max(3 * day, (latest - earliest) * .05);
-      setWindow(earliest - padding, latest + padding, true);
-    } else {updateURL(); render();}
+    if (!found.length) return [...full];
+    const earliest = Math.min(...found.map(model => model.time)), latest = Math.max(...found.map(model => model.time));
+    const padding = Math.max(7 * day, (latest - earliest) * .045);
+    return constrain(earliest - padding, latest + padding);
+  }
+  function setPhase(value) {phase = value; section.dataset.phase = value; render();}
+  function cancelFocus() {clearTimeout(focusTimer); focusGeneration++;}
+  function focusPublisher(context = true) {
+    cancelFocus(); hideTooltip();
+    publisher = explorer.publisher();
+    const generation = focusGeneration;
+    if (reducedMotion.matches || !context || !publisher) {
+      setPhase('idle'); setWindow(...(publisher || input.value.trim() ? fittedRange() : full), !reducedMotion.matches, 650); return;
+    }
+    setPhase('overview'); setWindow(...full);
+    focusTimer = setTimeout(() => {
+      if (generation !== focusGeneration) return;
+      setPhase('highlight');
+      focusTimer = setTimeout(() => {
+        if (generation !== focusGeneration) return;
+        setPhase('zoom'); setWindow(...fittedRange(), true, 780);
+        focusTimer = setTimeout(() => {if (generation === focusGeneration) setPhase('idle');}, 820);
+      }, 340);
+    }, 180);
+  }
+  document.addEventListener('frontier:filters', event => {
+    publisher = explorer.publisher();
+    if (event.detail.fit) focusPublisher(event.detail.publisherChanged);
+    else {cancelFocus(); setPhase('idle'); render();}
   });
-  document.addEventListener('frontier:publisher', event => {publisher = event.detail; hideTooltip(); render();});
-  document.addEventListener('frontier:reset', () => {
-    input.value = ''; searchTerms = queryTerms(); hideTooltip(); setWindow(...full, true);
+  window.frontierTimeline = {returnToPublishers: async () => {
+    leavingForChooser = true;
+    cancelFocus(); hideTooltip(); setPhase('overview'); setWindow(...full, true, 380);
+    if (!reducedMotion.matches) await new Promise(resolve => setTimeout(resolve, 400));
+  }};
+  addEventListener('pageshow', event => {
+    if (!event.persisted) return;
+    if (leavingForChooser) {leavingForChooser = false; focusPublisher(true);}
+    else {setPhase('idle'); view = [...target]; render();}
   });
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    Promise.resolve(window.frontierArrival).then(() => {
+      if (window.frontierEntry?.kind === 'models-enter') focusPublisher(true);
+      else {setPhase('idle'); render();}
+    });
+  }));
+  reducedMotion.addEventListener('change', () => {if (reducedMotion.matches) {cancelFocus(); setPhase('idle'); setWindow(...fittedRange());}});
+  addEventListener('pagehide', () => {cancelFocus(); cancelAnimationFrame(animation); view = [...target];});
   svg.addEventListener('wheel', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) {cancelFocus(); setPhase('idle');}
     if (event.ctrlKey || event.metaKey) {
       event.preventDefault(); zoom(Math.exp(-Math.max(-100, Math.min(100, event.deltaY)) * .012), event.clientX - svg.getBoundingClientRect().left);
     } else if (event.shiftKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
@@ -271,6 +288,7 @@
     }
   }, {passive: false});
   svg.addEventListener('pointerdown', event => {
+    cancelFocus(); setPhase('idle');
     if (event.button !== 0) return;
     pointers.set(event.pointerId, {x: event.clientX, y: event.clientY});
     const positions = [...pointers.values()];
