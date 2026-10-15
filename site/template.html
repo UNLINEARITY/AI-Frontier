@@ -5,61 +5,53 @@
 <meta name="theme-color" content="#09121e">
 <title>{{page_title}}</title><meta name="description" content="{{description}}">
 <link rel="icon" href="{{prefix}}favicon.svg" type="image/svg+xml"><link rel="icon" href="{{prefix}}favicon.ico" sizes="32x32"><link rel="apple-touch-icon" href="{{prefix}}apple-touch-icon.png">
-<script src="{{prefix}}theme-init.js"></script>
-<link rel="stylesheet" href="{{prefix}}style.css"><script src="{{prefix}}shared.js" defer></script><script src="{{prefix}}app.js" defer></script><script src="{{prefix}}timeline.js" defer></script>
+<script src="{{prefix}}theme-init.js"></script><script src="{{prefix}}navigation-init.js"></script>
+<link rel="stylesheet" href="{{prefix}}style.css"><script src="{{prefix}}shared.js" defer></script><script src="{{prefix}}motion.js" defer></script><script src="{{prefix}}app.js" defer></script><script src="{{prefix}}timeline.js" defer></script><script src="{{prefix}}navigation.js" defer></script>
 </head>
-<body>
-<a class="skip-link" href="#collection">{{skip}}</a><div class="reading-progress" aria-hidden="true"></div>
-<header><div class="header-inner"><a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 22V9l5 2v13M14 22V5l5 2v14M22 21V10l5 2v8" fill="none" stroke="currentColor" stroke-width="3"/><path d="M3 27Q17 17 30 23" fill="none" stroke="var(--accent)" stroke-width="2"/></svg></span>{{name}}</a><nav class="site-nav"><a href="#collection">{{nav_reports}}</a><a href="#timeline">{{nav_timeline}}</a><a href="#publishers">{{nav_labs}}</a></nav><div class="actions" aria-label="{{switch_label}} / GitHub"><a class="language-link" href="{{switch}}" aria-label="{{switch_label}}" title="{{switch_label}}"><span class="language-label">{{switch_label}}</span><span class="language-compact" aria-hidden="true">{{switch_compact}}</span></a><div class="theme-controls" role="group" aria-label="{{theme_label}}"><button data-theme-choice="light" aria-pressed="false" aria-label="{{light_theme}}" title="{{light_theme}}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button><button data-theme-choice="dark" aria-pressed="false" aria-label="{{dark_theme}}" title="{{dark_theme}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A9 9 0 0 1 8.5 4 9 9 0 1 0 20 15.5Z"/></svg></button><button data-theme-choice="system" aria-pressed="false" aria-label="{{system_theme}}" title="{{system_theme}}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></button></div><a class="star" href="{{repository}}" aria-label="{{star}}" title="{{star}}"><svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.78 5.63L21 9.54l-4.5 4.39 1.06 6.2L12 17.2l-5.56 2.93 1.06-6.2L3 9.54l6.22-.91Z"/></svg><span class="star-label">{{star}}</span><span class="star-compact" aria-hidden="true">Star</span><span aria-hidden="true">↗</span></a></div></div></header>
+<body data-page="home">
+<a class="skip-link" href="{{skip_href}}">{{skip}}</a><div class="reading-progress" aria-hidden="true"></div>
+<header><div class="header-inner"><a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 22V9l5 2v13M14 22V5l5 2v14M22 21V10l5 2v8" fill="none" stroke="currentColor" stroke-width="3"/><path d="M3 27Q17 17 30 23" fill="none" stroke="var(--accent)" stroke-width="2"/></svg></span>{{name}}</a><nav class="site-nav" aria-label="{{nav_label}}"><a href="{{nav_publishers_href}}" data-section="publishers">{{nav_labs}}</a><a href="{{nav_timeline_href}}" data-section="timeline">{{nav_timeline}}</a><a href="models.html" data-page-link="models" data-model-entry>{{nav_models}}</a><a href="{{nav_reports_href}}" data-page-link="reports" data-report-entry>{{nav_reports}}</a></nav><div class="actions" aria-label="{{switch_label}} / GitHub"><a class="language-link" href="{{switch}}" aria-label="{{switch_label}}" title="{{switch_label}}"><span class="language-label">{{switch_label}}</span><span class="language-compact" aria-hidden="true">{{switch_compact}}</span></a><div class="theme-controls" role="group" aria-label="{{theme_label}}"><button data-theme-choice="light" aria-pressed="false" aria-label="{{light_theme}}" title="{{light_theme}}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button><button data-theme-choice="dark" aria-pressed="false" aria-label="{{dark_theme}}" title="{{dark_theme}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15.5A9 9 0 0 1 8.5 4 9 9 0 1 0 20 15.5Z"/></svg></button><button data-theme-choice="system" aria-pressed="false" aria-label="{{system_theme}}" title="{{system_theme}}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></button></div><a class="star" href="{{repository}}" aria-label="{{star}}" title="{{star}}"><svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.78 5.63L21 9.54l-4.5 4.39 1.06 6.2L12 17.2l-5.56 2.93 1.06-6.2L3 9.54l6.22-.91Z"/></svg><span class="star-label">{{star}}</span><span class="star-compact" aria-hidden="true">Star</span><span aria-hidden="true">↗</span></a></div></div></header>
 <main>
 <div class="masthead"><picture><source type="image/webp" srcset="{{prefix}}assets/banner.webp"><img class="banner" src="{{prefix}}assets/banner.png" width="2172" height="724" alt="{{name}}" fetchpriority="high"></picture></div>
-<section class="hero" data-reveal>
-<div class="hero-side"><p class="hero-lead">{{intro}}</p><a class="primary-button" href="#collection">{{explore}} <span aria-hidden="true">↗</span></a></div>
-<div class="hero-statement"><h1>{{tagline}}</h1></div>
+<section class="hero">
+<div class="hero-side"><p class="hero-lead" data-motion="rise">{{intro}}</p><a class="primary-button" href="reports.html" data-report-entry data-motion="rise">{{explore}} <span aria-hidden="true">↗</span></a></div>
+<div class="hero-statement"><h1 class="hero-heading">{{hero_heading}}</h1></div>
 
+</section>
+<section id="publishers" class="publishers-section"><div class="section-heading"><h2>{{browse_labs}}</h2><p>{{publisher_hint}}</p></div><div class="publisher-grid">{{publisher_tiles}}</div><div class="publisher-routes"><a class="text-link" href="reports.html" data-report-entry>{{nav_reports}} <span aria-hidden="true">→</span></a><a class="text-link" href="models.html" data-model-entry>{{nav_models}} <span aria-hidden="true">→</span></a><span id="publisher-selection" aria-live="polite" data-all-label="{{all_publishers}}"></span></div></section>
+
+<section id="timeline" class="timeline-section" aria-labelledby="timeline-heading" data-prefix="{{prefix}}" data-count-label="{{timeline_count_label}}">
+<div class="section-heading"><h2 id="timeline-heading">{{timeline_title}}</h2><p id="timeline-range" aria-live="polite"></p></div>
+<div class="timeline-tools"><label class="timeline-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">{{timeline_search}}</span><input id="timeline-search" type="search" placeholder="{{timeline_search}}" autocomplete="off"></label><div class="timeline-controls" role="group" aria-label="{{timeline_title}}"><button id="timeline-out" aria-label="{{timeline_zoom_out}}" title="{{timeline_zoom_out}}">−</button><span id="timeline-zoom" aria-live="polite">1×</span><button id="timeline-in" aria-label="{{timeline_zoom_in}}" title="{{timeline_zoom_in}}">+</button><button id="timeline-fit">{{timeline_fit}}</button><button id="timeline-latest">{{timeline_latest}} <span aria-hidden="true">→</span></button></div></div>
+<div class="timeline-frame" data-ui><svg id="timeline-plot" role="group" tabindex="0" aria-label="{{timeline_pan}}" aria-describedby="timeline-gesture"><defs><clipPath id="timeline-clip"><rect id="timeline-clip-rect"/></clipPath></defs><g id="timeline-ticks" aria-hidden="true"></g><path id="timeline-axis" aria-hidden="true"/><g id="timeline-points" clip-path="url(#timeline-clip)"></g><text id="timeline-empty" class="timeline-empty" text-anchor="middle" hidden>{{timeline_empty}}</text></svg><div id="timeline-tooltip" class="timeline-tooltip" role="tooltip" hidden><img alt="" id="timeline-tooltip-logo"><div><span id="timeline-tooltip-publisher"></span><strong id="timeline-tooltip-model"></strong><time id="timeline-tooltip-date"></time></div></div></div>
+<div class="timeline-footer"><span id="timeline-gesture">{{timeline_gesture}}</span><span id="timeline-visible-count"></span></div>
+<div class="timeline-directory"><a id="timeline-models-link" href="models.html">{{all_models_link}} <span aria-hidden="true">→</span></a><span id="timeline-undated-count" data-label="{{timeline_undated}}"></span></div>
+<script type="application/json" id="timeline-data">{{timeline_data}}</script>
 </section>
 <section class="stats" aria-label="{{name}}">
 <figure class="stat-plate" data-ui>{{stat_plate}}<figcaption class="ui-plate-cap">{{stat_plate_caption}}<br>{{date_range}} · {{dated_models}} {{dated_label}} · {{updated}}</figcaption></figure>
 <div class="stat-tile stat-tile--a"><strong data-count="{{reader_count}}">{{reader_count}}</strong><span>{{reader_label}}</span></div>
 <div class="stat-tile stat-tile--b"><strong data-count="{{figure_count}}">{{figure_count}}</strong><span>{{figure_label}}</span></div>
 </section>
-<section class="showcase" aria-label="{{showcase_label}}">
-<div class="showcase-field showcase-field--dark" data-reveal>
-<h2>{{showcase_in_title}}</h2>
-<p>{{showcase_in_lead}}</p>
-<div class="showcase-card showcase-card--dark" data-ui>{{showcase_input}}</div>
-</div>
-<div class="showcase-field showcase-field--light" data-reveal>
-<h2>{{showcase_out_title}}</h2>
-<p>{{showcase_out_lead}}</p>
-<div class="showcase-card" data-ui>{{showcase_output}}</div>
-</div>
-</section>
-<section id="timeline" class="timeline-section" aria-labelledby="timeline-heading" data-prefix="{{prefix}}" data-count-label="{{timeline_count_label}}">
-<div class="section-heading"><h2 id="timeline-heading">{{timeline_title}}</h2><p id="timeline-range" aria-live="polite"></p></div>
-<div class="timeline-tools"><label class="timeline-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">{{timeline_search}}</span><input id="timeline-search" type="search" placeholder="{{timeline_search}}" autocomplete="off"></label><div class="timeline-controls" role="group" aria-label="{{timeline_title}}"><button id="timeline-out" aria-label="{{timeline_zoom_out}}" title="{{timeline_zoom_out}}">−</button><span id="timeline-zoom" aria-live="polite">1×</span><button id="timeline-in" aria-label="{{timeline_zoom_in}}" title="{{timeline_zoom_in}}">+</button><button id="timeline-fit">{{timeline_fit}}</button><button id="timeline-latest">{{timeline_latest}} <span aria-hidden="true">→</span></button></div></div>
-<div class="timeline-frame"><svg id="timeline-plot" role="group" tabindex="0" aria-label="{{timeline_pan}}" aria-describedby="timeline-gesture"><defs><clipPath id="timeline-clip"><rect id="timeline-clip-rect"/></clipPath></defs><g id="timeline-ticks" aria-hidden="true"></g><path id="timeline-axis" aria-hidden="true"/><g id="timeline-points" clip-path="url(#timeline-clip)"></g><text id="timeline-empty" class="timeline-empty" text-anchor="middle" hidden>{{timeline_empty}}</text></svg><div id="timeline-tooltip" class="timeline-tooltip" role="tooltip" hidden><img alt="" id="timeline-tooltip-logo"><div><span id="timeline-tooltip-publisher"></span><strong id="timeline-tooltip-model"></strong><time id="timeline-tooltip-date"></time></div></div></div>
-<div class="timeline-footer"><span id="timeline-gesture">{{timeline_gesture}}</span><span id="timeline-visible-count"></span></div>
-<div id="timeline-pending" class="timeline-pending"><h3>{{timeline_undated}} <span id="timeline-pending-count"></span></h3><div id="timeline-pending-models" class="timeline-pending-models" role="list"></div></div>
-<script type="application/json" id="timeline-data">{{timeline_data}}</script>
-</section>
-<section class="gallery" aria-label="{{gallery_label}}">
-<div class="gallery-head"><h2>{{gallery_title}}</h2><p>{{gallery_lead}}</p></div>
-<div class="gallery-grid">{{gallery_cells}}</div>
-</section>
-<section id="collection" class="collection" aria-label="{{reports}}">
-<div class="collection-header"><div class="tabs" role="group" aria-label="{{reports}} / {{models}}"><button data-tab="reports" aria-pressed="true">{{reports}}<span>{{report_count}}</span></button><button data-tab="models" aria-pressed="false">{{models}}<span>{{model_count}}</span></button></div><span class="reviewed">{{updated}}</span></div>
-<div class="filter-bar"><div class="filters"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">{{search}}</span><input id="search" type="search" placeholder="{{search}}"><kbd aria-hidden="true">/</kbd></label><label><span class="sr-only">{{all_publishers}}</span><select id="vendor"><option value="">{{all_publishers}}</option>{{publisher_options}}</select></label><label id="type-field"><span class="sr-only">{{all_types}}</span><select id="type"><option value="">{{all_types}}</option>{{type_options}}</select></label><label id="category-field" hidden><span class="sr-only">{{all_categories}}</span><select id="category"><option value="">{{all_categories}}</option>{{category_options}}</select></label></div></div>
-<div class="results-toolbar"><div><span id="result-count" aria-live="polite" data-label="{{results}}">{{report_count}} {{results}}</span><button id="clear" hidden>{{clear}} <span aria-hidden="true">×</span></button></div><label class="sort-field"><span class="sr-only">{{sort_label}}</span><select id="sort"><option value="newest">{{newest}}</option><option value="oldest">{{oldest}}</option><option value="title">{{alphabetical}}</option></select></label></div>
-<div id="cards" class="cards">{{cards}}</div><div id="empty" class="empty-state" hidden><h3>{{empty}}</h3><button id="empty-clear">{{clear}} ↗</button></div>
-</section>
-<section id="publishers" class="publishers-section"><div class="section-heading"><h2>{{browse_labs}}</h2><p>{{publisher_hint}}</p></div><div class="labs">{{publisher_buttons}}</div></section>
+
 <section class="proof" aria-label="{{proof_title}}">
 <div class="section-heading"><h2>{{proof_title}}</h2><p>{{proof_lead}}</p></div>
 <table class="proof-table"><thead><tr><th>{{proof_publisher}}</th><th>{{proof_reports}}</th><th>{{proof_models}}</th><th>{{proof_latest}}</th><th>{{proof_source}}</th></tr></thead><tbody>{{proof_rows}}</tbody></table>
 <p class="proof-note">{{proof_note}}</p>
 </section>
-<section class="cta" data-reveal><div class="cta-inner"><h2>{{cta_title}}</h2><p>{{cta_lead}}</p><a class="primary-button" href="{{repository}}/issues/new">{{cta_action}} <span aria-hidden="true">↗</span></a></div></section>
+<section class="cta"><div class="cta-inner"><h2>{{cta_title}}</h2><p>{{cta_lead}}</p><a class="primary-button" href="{{repository}}/issues/new">{{cta_action}} <span aria-hidden="true">↗</span></a></div></section>
+<section class="showcase" aria-label="{{showcase_label}}">
+<div class="showcase-field showcase-field--dark">
+<h2>{{showcase_in_title}}</h2>
+<p>{{showcase_in_lead}}</p>
+<div class="showcase-card showcase-card--dark" data-ui>{{showcase_input}}</div>
+</div>
+<div class="showcase-field showcase-field--light">
+<h2>{{showcase_out_title}}</h2>
+<p>{{showcase_out_lead}}</p>
+<div class="showcase-card" data-ui>{{showcase_output}}</div>
+</div>
+</section>
 </main>
 <footer><div class="footer-inner"><div><a class="footer-brand" href="index.html">{{name}}</a><p>{{footer}}</p></div><a href="{{repository}}">GitHub ↗</a></div></footer><button id="back-top" aria-label="{{top}}" title="{{top}}" hidden>↑</button>
 </body></html>

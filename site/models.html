@@ -1,0 +1,13 @@
+{{page_header}}
+<main class="model-directory" id="collection">
+<div class="directory-heading"><h1 data-motion="rise">{{directory_title}}</h1><p data-motion="rise" data-delay="70">{{directory_intro}}</p></div>
+<div class="filter-bar"><div class="filters">
+<label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">{{directory_search}}</span><input id="search" type="search" placeholder="{{directory_search}}" autocomplete="off"><kbd aria-hidden="true">/</kbd></label>
+<label><span class="sr-only">{{all_publishers}}</span><select id="vendor"><option value="">{{all_publishers}}</option>{{publisher_options}}</select></label>
+<label><span class="sr-only">{{all_categories}}</span><select id="category"><option value="">{{all_categories}}</option>{{category_options}}</select></label>
+<label><span class="sr-only">{{directory_scope}}</span><select id="scope"><option value="all">{{all_models}}</option><option value="frontier">{{models}}</option><option value="undated">{{timeline_undated}}</option></select></label>
+</div></div>
+<div class="results-toolbar"><div><span id="result-count" aria-live="polite" data-label="{{results}}">{{timeline_count}} {{results}}</span><button id="clear" hidden>{{clear}} <span aria-hidden="true">×</span></button></div><label class="sort-field"><span class="sr-only">{{sort_label}}</span><select id="sort"><option value="newest">{{newest}}</option><option value="oldest">{{oldest}}</option><option value="title">{{alphabetical}}</option></select></label></div>
+<div id="cards" class="cards model-rows">{{model_cards}}</div><div id="empty" class="empty-state" hidden><h2>{{empty}}</h2><button id="empty-clear">{{clear}} ↗</button></div>
+</main>
+{{page_footer}}

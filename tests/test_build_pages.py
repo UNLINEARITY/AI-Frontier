@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from build_pages import (SITE_URL, card_link_attributes, card_link_hint, card_link_mark, lab_count,
+from build_pages import (SITE_URL, card_link_attributes, card_link_hint, card_link_mark, lab_count, publisher_tiles,
                          write_not_found, write_robots, write_sitemap)
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,10 +33,39 @@ class ShellTests(unittest.TestCase):
         self.assertIn('No records', lab_count(0, 0, False))
         self.assertIn('无记录', lab_count(0, 0, True))
 
-    def test_page_cannot_scroll_sideways(self):
-        css = (ROOT / 'site/style.css').read_text()
-        body = css.split('body {', 1)[1].split('}', 1)[0]
-        self.assertIn('overflow-x: hidden', body)
+    def test_overview_precedes_timeline_and_models_have_a_direct_page(self):
+        from html.parser import HTMLParser
+        class Sections(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.ids, self.links = [], []
+            def handle_starttag(self, tag, attrs):
+                attributes = dict(attrs)
+                if tag == 'section' and attributes.get('id'):
+                    self.ids.append(attributes['id'])
+                if tag == 'a':
+                    self.links.append(attributes.get('href'))
+        parser = Sections()
+        parser.feed((ROOT / 'site/template.html').read_text())
+        self.assertLess(parser.ids.index('publishers'), parser.ids.index('timeline'))
+        self.assertNotIn('collection', parser.ids)
+        self.assertIn('reports.html', parser.links)
+        self.assertIn('id="collection"', (ROOT / 'site/reports.html').read_text())
+        self.assertIn('models.html', parser.links)
+        self.assertNotIn('timeline-pending', parser.ids)
+
+    def test_publisher_index_is_complete_including_model_only_labs_and_all(self):
+        labels = {'openai': 'Lab', 'generalist': 'Robot & Co', 'figure': 'New Lab'}
+        models = [{'vendor': 'openai'}, {'vendor': 'openai'}, {'vendor': 'generalist'}]
+        reports = [{'vendor': 'openai'}]
+        for chinese in (False, True):
+            tiles = publisher_tiles(models, reports, labels, chinese, '../')
+            self.assertEqual(tiles.count('<button '), len(labels) + 1)
+            for vendor in ('', *labels):
+                self.assertIn(f'data-publisher="{vendor}"', tiles)
+            self.assertIn('Robot &amp; Co', tiles)
+            self.assertIn('3 个模型' if chinese else '3 models', tiles)
+            self.assertNotIn('0 reports', tiles)
 
     def test_stylesheet_keeps_the_house_style(self):
         css = (ROOT / 'site/style.css').read_text()
@@ -66,9 +95,9 @@ class ShellTests(unittest.TestCase):
             robots = (output / 'robots.txt').read_text()
             self.assertIn(f'Sitemap: {SITE_URL}/sitemap.xml', robots)
             sitemap = (output / 'sitemap.xml').read_text()
-            self.assertEqual(sitemap.count('<loc>'), 4)
+            self.assertEqual(sitemap.count('<loc>'), 8)
             for location in (f'{SITE_URL}/', f'{SITE_URL}/cn/', f'{SITE_URL}/abstracts/lab/model.html',
-                             f'{SITE_URL}/cn/abstracts/lab/model.html'):
+                             f'{SITE_URL}/cn/abstracts/lab/model.html', f'{SITE_URL}/models.html', f'{SITE_URL}/cn/models.html', f'{SITE_URL}/reports.html', f'{SITE_URL}/cn/reports.html'):
                 self.assertIn(f'<loc>{location}</loc>', sitemap)
             page = (output / '404.html').read_text()
             self.assertNotIn('__SITE__', page)

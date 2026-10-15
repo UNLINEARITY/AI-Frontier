@@ -70,6 +70,7 @@ def build_readers(root, output, summaries, figure_reports, catalog):
             home = prefix + ('cn/index.html' if chinese else 'index.html')
             values = {
                 'lang': t('en', 'zh-CN'), 'prefix': prefix, 'home': home,
+                'reports_home': prefix + ('cn/reports.html' if chinese else 'reports.html'),
                 'switch': prefix + ('' if chinese else 'cn/') + reader_path(report),
                 'switch_label': t('Switch to 中文', '切换至 English'), 'name': 'AI Frontier', 'repository': REPOSITORY,
                 'switch_compact': t('EN → 中', '中 → EN'),

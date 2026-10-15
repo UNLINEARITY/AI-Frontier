@@ -11,20 +11,23 @@
   const ticks = document.querySelector('#timeline-ticks');
   const input = document.querySelector('#timeline-search');
   const tooltip = document.querySelector('#timeline-tooltip');
-  const pending = document.querySelector('#timeline-pending-models');
+  const directoryLink = document.querySelector('#timeline-models-link');
   const normalize = text => text.normalize('NFKC').toLocaleLowerCase().replaceAll('π', 'pi').replace(/[^\p{L}\p{N}]/gu, '');
+  for (const model of data) model.searchTerms = normalize(`${model.model} ${model.vendor} ${model.publisher_en} ${model.publisher_cn} ${(model.aliases || []).join(' ')}`);
   const dated = data.filter(model => model.release_date).map(model => ({...model, time: Date.parse(model.release_date + 'T00:00:00Z')}));
   const undated = data.filter(model => !model.release_date);
   const full = dated.length ? [Math.min(...dated.map(m => m.time)), Math.max(...dated.map(m => m.time))] : [Date.now() - day, Date.now()];
   if (full[1] - full[0] < 3 * day) {full[0] -= day * 2; full[1] += day * 2;}
   const minimumSpan = Math.min(3 * day, full[1] - full[0]);
   let view = [...full], target = [...full], width = 0, height = 304, animation = 0;
-  let publisher = document.querySelector('#vendor').value;
+  let publisher = '';
   let activeNode = null;
   const pointers = new Map();
   let gesture = null, suppressClickUntil = 0, urlTimer = 0;
   const params = new URLSearchParams(location.search);
+  publisher = params.get('publisher') || '';
   input.value = params.get('model') || '';
+  let searchTerms = queryTerms();
   const from = Date.parse(params.get('from') || ''), to = Date.parse(params.get('to') || '');
   if (Number.isFinite(from) && Number.isFinite(to) && from < to) view = target = constrain(from, to);
 
@@ -35,10 +38,9 @@
     return node;
   }
   function label(model) {return chinese ? model.publisher_cn : model.publisher_en;}
+  function queryTerms() {return input.value.trim().split(/\s+/).map(normalize).filter(Boolean);}
   function matches(model) {
-    const text = normalize(`${model.model} ${model.vendor} ${model.publisher_en} ${model.publisher_cn} ${(model.aliases || []).join(' ')}`);
-    const terms = input.value.trim().split(/\s+/).map(normalize).filter(Boolean);
-    return (!publisher || model.vendor === publisher) && terms.every(term => text.includes(term));
+    return (!publisher || model.vendor === publisher) && searchTerms.every(term => model.searchTerms.includes(term));
   }
   function dateText(time) {return new Date(time).toISOString().slice(0, 10);}
   function constrain(start, end) {
@@ -143,14 +145,6 @@
     link.addEventListener('blur', hideTooltip);
     return item;
   });
-  for (const model of undated) {
-    const item = document.createElement('div'); item.className = 'timeline-pending-model'; item.setAttribute('role', 'listitem');
-    const link = document.createElement('a'); link.href = model.href; link.title = `${model.model} · ${label(model)}`;
-    const publisherName = document.createElement('span'); publisherName.textContent = label(model);
-    const name = document.createElement('strong'); name.textContent = model.model;
-    link.append(publisherName, name); item.append(link); pending.append(item);
-    model.pendingElement = item;
-  }
   function tickDates() {
     const span = view[1] - view[0];
     const maximum = Math.max(2, Math.floor(width / 95));
@@ -228,9 +222,14 @@
       }
     }
     let unconfirmed = 0;
-    for (const model of undated) {model.pendingElement.hidden = !matches(model); if (!model.pendingElement.hidden) unconfirmed++;}
-    document.querySelector('#timeline-pending').hidden = unconfirmed === 0;
-    document.querySelector('#timeline-pending-count').textContent = unconfirmed;
+    for (const model of undated) if (matches(model)) unconfirmed++;
+    const unconfirmedLabel = document.querySelector('#timeline-undated-count');
+    unconfirmedLabel.hidden = unconfirmed === 0;
+    unconfirmedLabel.textContent = `${unconfirmed} ${unconfirmedLabel.dataset.label}`;
+    const directoryQuery = new URLSearchParams();
+    if (publisher) directoryQuery.set('publisher', publisher);
+    if (input.value.trim()) directoryQuery.set('q', input.value.trim());
+    directoryLink.href = 'models.html' + (directoryQuery.size ? `?${directoryQuery}` : '');
     const empty = document.querySelector('#timeline-empty');
     empty.toggleAttribute('hidden', visible !== 0); empty.setAttribute('x', width / 2); empty.setAttribute('y', axis - 24);
     const count = section.dataset.countLabel;
@@ -249,6 +248,7 @@
   document.querySelector('#timeline-fit').addEventListener('click', () => setWindow(...full, true));
   document.querySelector('#timeline-latest').addEventListener('click', () => setWindow(full[1] - 120 * day, full[1], true));
   input.addEventListener('input', () => {
+    searchTerms = queryTerms();
     hideTooltip();
     const found = dated.filter(matches);
     if (input.value.trim() && found.length) {
@@ -258,6 +258,9 @@
     } else {updateURL(); render();}
   });
   document.addEventListener('frontier:publisher', event => {publisher = event.detail; hideTooltip(); render();});
+  document.addEventListener('frontier:reset', () => {
+    input.value = ''; searchTerms = queryTerms(); hideTooltip(); setWindow(...full, true);
+  });
   svg.addEventListener('wheel', event => {
     if (event.ctrlKey || event.metaKey) {
       event.preventDefault(); zoom(Math.exp(-Math.max(-100, Math.min(100, event.deltaY)) * .012), event.clientX - svg.getBoundingClientRect().left);

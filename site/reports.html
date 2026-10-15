@@ -1,0 +1,11 @@
+{{page_header}}
+<main class="reports-directory" id="collection">
+
+<div class="collection-header"><h1 data-motion="rise">{{reports}} <span class="heading-count">{{report_count}}</span></h1><a class="text-link" href="models.html?scope=frontier" data-model-entry>{{models}} <span class="heading-count">{{model_count}}</span> <span aria-hidden="true">→</span></a><span class="reviewed">{{updated}}</span></div>
+<div class="report-portal"><a class="report-return" href="index.html" data-report-return>↑ {{nav_home}}</a><p>{{report_return_hint}}</p></div>
+<div class="filter-bar"><div class="filters"><label class="search-field"><span aria-hidden="true">⌕</span><span class="sr-only">{{search}}</span><input id="search" type="search" placeholder="{{search}}"><kbd aria-hidden="true">/</kbd></label><label><span class="sr-only">{{all_publishers}}</span><select id="vendor"><option value="">{{all_publishers}}</option>{{publisher_options}}</select></label><label id="type-field"><span class="sr-only">{{all_types}}</span><select id="type"><option value="">{{all_types}}</option>{{type_options}}</select></label></div></div>
+<div class="results-toolbar"><div><span id="result-count" aria-live="polite" data-label="{{results}}">{{report_count}} {{results}}</span><button id="clear" hidden>{{clear}} <span aria-hidden="true">×</span></button></div><label class="sort-field"><span class="sr-only">{{sort_label}}</span><select id="sort"><option value="newest">{{newest}}</option><option value="oldest">{{oldest}}</option><option value="title">{{alphabetical}}</option></select></label></div>
+<div id="cards" class="cards">{{cards}}</div><div id="empty" class="empty-state" hidden><h3>{{empty}}</h3><button id="empty-clear">{{clear}} ↗</button></div>
+
+</main>
+{{page_footer}}

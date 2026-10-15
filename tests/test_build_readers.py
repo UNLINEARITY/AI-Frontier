@@ -43,7 +43,7 @@ class ReaderTests(unittest.TestCase):
         self.assertNotIn(self.summary['text'], en)
         self.assertIn('href="../../cn/abstracts/lab/model.html"', en)
         self.assertIn('href="../../../abstracts/lab/model.html"', cn)
-        self.assertIn('href="../../../cn/index.html?publisher=lab#collection"', cn)
+        self.assertIn('href="../../../cn/reports.html?publisher=lab"', cn)
         self.assertNotIn('{{', en + cn)
         self.assertNotIn('No core figure selected', en)
         self.assertNotIn('Source summary', en)
