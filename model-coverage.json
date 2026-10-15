@@ -62,7 +62,10 @@
         "gpt-live-system-card"
       ],
       "release_date": "2026-07-08",
-      "release_evidence": "OpenAI 2026-07-08 公告列出 GPT-Live-1 mini"
+      "release_evidence": "OpenAI 2026-07-08 公告列出 GPT-Live-1 mini",
+      "groups": [
+        "audio"
+      ]
     },
     {
       "vendor": "openai",
@@ -73,6 +76,9 @@
       "note_cn": "8 月 6 日的补充安全报告；该日期是报告更新日期，并非模型发布日期。",
       "report_slugs": [
         "gpt-5-6-august-updates"
+      ],
+      "groups": [
+        "language"
       ]
     },
     {
@@ -102,7 +108,10 @@
         "sora-2-system-card"
       ],
       "lifecycle": "discontinued",
-      "lifecycle_source_url": "https://openai.com/index/sora-2-system-card/"
+      "lifecycle_source_url": "https://openai.com/index/sora-2-system-card/",
+      "groups": [
+        "video"
+      ]
     },
     {
       "vendor": "anthropic",
@@ -148,7 +157,10 @@
         "claude-sonnet-5-system-card"
       ],
       "release_date": "2026-06-30",
-      "release_evidence": "Official post: Claude Sonnet 5 available everywhere today (Jun 30, 2026)."
+      "release_evidence": "Official post: Claude Sonnet 5 available everywhere today (Jun 30, 2026).",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "anthropic",
@@ -161,7 +173,10 @@
         "claude-haiku-4-5-system-card"
       ],
       "release_date": "2025-10-15",
-      "release_evidence": "Official post: Claude Haiku 4.5 available to all users today (Oct 15, 2025)."
+      "release_evidence": "Official post: Claude Haiku 4.5 available to all users today (Oct 15, 2025).",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "google",
@@ -189,6 +204,9 @@
       "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
       "report_slugs": [
         "gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card"
+      ],
+      "groups": [
+        "audio"
       ]
     },
     {
@@ -202,7 +220,12 @@
         "gemini-omni-flash-model-card"
       ],
       "release_date": "2026-05-19",
-      "release_evidence": "Google I/O 2026 宣布首个 Gemini Omni Flash 模型"
+      "release_evidence": "Google I/O 2026 宣布首个 Gemini Omni Flash 模型",
+      "groups": [
+        "language",
+        "vision",
+        "audio"
+      ]
     },
     {
       "vendor": "google",
@@ -213,6 +236,9 @@
       "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
       "report_slugs": [
         "gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card"
+      ],
+      "groups": [
+        "audio"
       ]
     },
     {
@@ -226,7 +252,11 @@
         "gemini-3-7-flash-model-card"
       ],
       "release_date": "2026-08-13",
-      "release_evidence": "Google 2026-08-13 发布 Introducing Gemini 3.7 Flash"
+      "release_evidence": "Google 2026-08-13 发布 Introducing Gemini 3.7 Flash",
+      "groups": [
+        "language",
+        "vision"
+      ]
     },
     {
       "vendor": "google",
@@ -254,6 +284,9 @@
       "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
       "report_slugs": [
         "gemini-3-1-flash-lite-image-model-card"
+      ],
+      "groups": [
+        "image"
       ]
     },
     {
@@ -285,7 +318,10 @@
       "lifecycle": "deprecated",
       "lifecycle_source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
       "release_date": "2026-03-31",
-      "release_evidence": "Google 2026-03-31 正式介绍 Veo 3.1 Lite"
+      "release_evidence": "Google 2026-03-31 正式介绍 Veo 3.1 Lite",
+      "groups": [
+        "video"
+      ]
     },
     {
       "vendor": "google",
@@ -298,7 +334,10 @@
         "veo-3-model-card"
       ],
       "lifecycle": "deprecated",
-      "lifecycle_source_url": "https://ai.google.dev/gemini-api/docs/deprecations"
+      "lifecycle_source_url": "https://ai.google.dev/gemini-api/docs/deprecations",
+      "groups": [
+        "video"
+      ]
     },
     {
       "vendor": "google",
@@ -311,7 +350,10 @@
         "imagen-4-model-card"
       ],
       "release_date": "2025-05-20",
-      "release_evidence": "Google I/O 官方公告当日发布 Imagen 4"
+      "release_evidence": "Google I/O 官方公告当日发布 Imagen 4",
+      "groups": [
+        "image"
+      ]
     },
     {
       "vendor": "google",
@@ -322,6 +364,9 @@
       "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
       "report_slugs": [
         "gemini-robotics-er-2-model-card"
+      ],
+      "groups": [
+        "robotics"
       ]
     },
     {
@@ -333,6 +378,9 @@
       "note_cn": "已收录官方模型卡 PDF；目录更新日期不等同首次发布日期。",
       "report_slugs": [
         "gemini-robotics-on-device-2-model-card"
+      ],
+      "groups": [
+        "robotics"
       ]
     },
     {
@@ -363,7 +411,10 @@
         "diffusiongemma-model-card"
       ],
       "release_date": "2026-06-10",
-      "release_evidence": "【第三轮联网复核·官方发布】Google 6月10日公告明确称 Today we’re introducing DiffusionGemma，标示开源实验模型首次介绍"
+      "release_evidence": "【第三轮联网复核·官方发布】Google 6月10日公告明确称 Today we’re introducing DiffusionGemma，标示开源实验模型首次介绍",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "google",
@@ -376,7 +427,10 @@
         "functiongemma-model-card"
       ],
       "release_date": "2025-12-18",
-      "release_evidence": "Google 官方博客当日表示正在发布 FunctionGemma"
+      "release_evidence": "Google 官方博客当日表示正在发布 FunctionGemma",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "google",
@@ -420,7 +474,10 @@
       "note_cn": "已核实最新旗舰发布。所附 4 页评测方法为配套文件，不能用早期 Spark 报告表示已覆盖 1.3。",
       "report_slugs": [],
       "release_date": "2026-09-02",
-      "release_evidence": "Meta 官方研究博客当日发布 Muse Spark 1.3"
+      "release_evidence": "Meta 官方研究博客当日发布 Muse Spark 1.3",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "meta",
@@ -431,7 +488,10 @@
       "note_cn": "已找到官方发布及简短评测方法文件；未核实完整模型或安全报告。",
       "report_slugs": [],
       "release_date": "2026-08-05",
-      "release_evidence": "【第三轮联网复核·官方发布】Meta Research 2026-08-05 官方文章 Introducing Muse Code and Muse Spark 1.2 发布该版本"
+      "release_evidence": "【第三轮联网复核·官方发布】Meta Research 2026-08-05 官方文章 Introducing Muse Code and Muse Spark 1.2 发布该版本",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "meta",
@@ -444,7 +504,10 @@
         "muse-spark-1-1-evaluation-report"
       ],
       "release_date": "2026-07-09",
-      "release_evidence": "Meta 官方研究博客当日发布 Muse Spark 1.1"
+      "release_evidence": "Meta 官方研究博客当日发布 Muse Spark 1.1",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "meta",
@@ -457,7 +520,10 @@
         "muse-spark-safety-and-preparedness-report"
       ],
       "release_date": "2026-04-08",
-      "release_evidence": "【联网复核·官方首发确认】Meta 官方 2026-04-08 宣布 Muse Spark 首次发布并上线 Meta AI"
+      "release_evidence": "【联网复核·官方首发确认】Meta 官方 2026-04-08 宣布 Muse Spark 首次发布并上线 Meta AI",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "meta",
@@ -527,7 +593,10 @@
       "note_cn": "已找到官方发布或安全说明页面；本轮尚未核实独立报告或卡片 PDF。",
       "report_slugs": [],
       "release_date": "2026-09-08",
-      "release_evidence": "【第三轮联网复核·官方发布】Meta 官方研究文章 2026-09-08 称当天上线 Muse personal AI agent"
+      "release_evidence": "【第三轮联网复核·官方发布】Meta 官方研究文章 2026-09-08 称当天上线 Muse personal AI agent",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "meta",
@@ -595,7 +664,10 @@
       "note_cn": "官方文档已确认音频分支；尚未找到对应报告或模型卡。",
       "report_slugs": [],
       "release_date": "2025-12-17",
-      "release_evidence": "xAI 当日宣布开放 Grok Voice Agent API（与本行 Grok Voice API 相关）"
+      "release_evidence": "xAI 当日宣布开放 Grok Voice Agent API（与本行 Grok Voice API 相关）",
+      "groups": [
+        "audio"
+      ]
     },
     {
       "vendor": "mistral",
@@ -624,6 +696,9 @@
       "note_cn": "已确认官方网页模型卡；尚未找到原始 PDF。",
       "report_slugs": [
         "mistral-small-4-model-card"
+      ],
+      "groups": [
+        "language"
       ]
     },
     {
@@ -655,7 +730,10 @@
       "lifecycle": "deprecated",
       "lifecycle_source_url": "https://docs.mistral.ai/models",
       "release_date": "2025-12-09",
-      "release_evidence": "Mistral AI 当日宣布发布 Devstral 2"
+      "release_evidence": "Mistral AI 当日宣布发布 Devstral 2",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "mistral",
@@ -670,7 +748,10 @@
       "lifecycle": "deprecated",
       "lifecycle_source_url": "https://docs.mistral.ai/models",
       "release_date": "2026-07-02",
-      "release_evidence": "Mistral 2026-07-02 官方研究博客明确写明当日发布 Leanstral 1.5"
+      "release_evidence": "Mistral 2026-07-02 官方研究博客明确写明当日发布 Leanstral 1.5",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "mistral",
@@ -683,7 +764,10 @@
         "ministral-3"
       ],
       "release_date": "2025-12-02",
-      "release_evidence": "Mistral AI 当日宣布 Mistral 3 并包括 Ministral 3 模型系列"
+      "release_evidence": "Mistral AI 当日宣布 Mistral 3 并包括 Ministral 3 模型系列",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "mistral",
@@ -775,6 +859,9 @@
       "note_cn": "已收录官方技术报告；模型发布与文档时间线保持区分。",
       "report_slugs": [
         "nvidia-nemotron-3-nano-technical-report"
+      ],
+      "groups": [
+        "language"
       ]
     },
     {
@@ -838,7 +925,10 @@
         "nemotron-cascade-2-technical-report"
       ],
       "release_date": "2026-03-19",
-      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2026-03-19；只能证明论文公开时间，不能证明模型首发时间。"
+      "release_evidence": "【论文日期参考，非模型发布日】arXiv 显示相关论文 v1 首次提交于 2026-03-19；只能证明论文公开时间，不能证明模型首发时间。",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "nvidia",
@@ -851,7 +941,11 @@
         "nemotron-audex-technical-report"
       ],
       "release_date": "2026-06-08",
-      "release_evidence": "【第三轮联网复核·官方开源日】NVIDIA 官方 Hugging Face 模型卡 Release Date 明确写 June 8, 2026"
+      "release_evidence": "【第三轮联网复核·官方开源日】NVIDIA 官方 Hugging Face 模型卡 Release Date 明确写 June 8, 2026",
+      "groups": [
+        "audio",
+        "language"
+      ]
     },
     {
       "vendor": "nvidia",
@@ -862,7 +956,11 @@
       "note_cn": "已核实官方仓库及模型文档；早期家族论文不代表当前版本报告，未核实当前版本独立 PDF。",
       "report_slugs": [],
       "release_date": "2026-01-05",
-      "release_evidence": "【第三轮联网复核·官方发布】NVIDIA 2026-01-05 公告称当日发布 Cosmos 系列新开放模型，明确列出 Cosmos Reason 2"
+      "release_evidence": "【第三轮联网复核·官方发布】NVIDIA 2026-01-05 公告称当日发布 Cosmos 系列新开放模型，明确列出 Cosmos Reason 2",
+      "groups": [
+        "robotics",
+        "world"
+      ]
     },
     {
       "vendor": "nvidia",
@@ -907,7 +1005,10 @@
         "deepseek-v3-2-model-card"
       ],
       "note_en": "Separate official cards, not the technical reports. Both have Technical Documentation on the cover and Model Card on page 2; conflicting cover date order is preserved in the catalog.",
-      "note_cn": "独立官方模型卡，与技术报告分开归档。封面为 Technical Documentation，第二页为 Model Card；封面日期先后异常按原文保留。"
+      "note_cn": "独立官方模型卡，与技术报告分开归档。封面为 Technical Documentation，第二页为 Model Card；封面日期先后异常按原文保留。",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "qwen",
@@ -920,7 +1021,10 @@
         "qwen3-8-technical-report"
       ],
       "release_date": "2026-08-12",
-      "release_evidence": "Qwen 官方仓库 News 记录 Qwen3.8 首批模型于 2026-08-12 可用"
+      "release_evidence": "Qwen 官方仓库 News 记录 Qwen3.8 首批模型于 2026-08-12 可用",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "qwen",
@@ -948,7 +1052,10 @@
       "note_cn": "官方模型仓库尚无报告 PDF；Qwen-Image-2.0 报告属于更早版本。",
       "report_slugs": [],
       "release_date": "2026-09-20",
-      "release_evidence": "Qwen 2026-09-20 官方公告开源 Qwen-Image-2.1"
+      "release_evidence": "Qwen 2026-09-20 官方公告开源 Qwen-Image-2.1",
+      "groups": [
+        "image"
+      ]
     },
     {
       "vendor": "qwen",
@@ -961,6 +1068,9 @@
         "wan-2-1",
         "wan-dancer",
         "wan-animate-2"
+      ],
+      "groups": [
+        "video"
       ]
     },
     {
@@ -988,6 +1098,11 @@
       "report_slugs": [
         "kimi-audio-technical-report",
         "kimi-vl-technical-report"
+      ],
+      "groups": [
+        "audio",
+        "language",
+        "vision"
       ]
     },
     {
@@ -1017,7 +1132,10 @@
         "glm-5-3-flash-model-card"
       ],
       "release_date": "2026-08-26",
-      "release_evidence": "Z.ai 2026-08-26 官方研究公告明确推出 GLM-5.3-Flash"
+      "release_evidence": "Z.ai 2026-08-26 官方研究公告明确推出 GLM-5.3-Flash",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "zai",
@@ -1029,6 +1147,10 @@
       "report_slugs": [
         "glm-ocr-technical-report",
         "glm-tts-technical-report"
+      ],
+      "groups": [
+        "vision",
+        "audio"
       ]
     },
     {
@@ -1038,7 +1160,11 @@
       "status": "web_only",
       "note_en": "Official image/ASR repositories exist; standalone PDF reports not located in reviewed entry points.",
       "note_cn": "官方图像与 ASR 模型仓库已发布；已检查入口尚未找到独立 PDF 报告。",
-      "report_slugs": []
+      "report_slugs": [],
+      "groups": [
+        "image",
+        "audio"
+      ]
     },
     {
       "vendor": "minimax",
@@ -1132,6 +1258,9 @@
         "step-audio-3-gen",
         "step-audio-3-realtime",
         "step-audio-3-music"
+      ],
+      "groups": [
+        "audio"
       ]
     },
     {
@@ -1158,7 +1287,10 @@
       "note_cn": "官方发布仓库已提供，尚未找到对应模型原始报告 PDF。",
       "report_slugs": [],
       "release_date": "2026-08-15",
-      "release_evidence": "【未核实占位日期】【估计·低置信度】根据模型系列版本顺序及相关资料，暂估于 2026-08；15 日只是月份占位，所附官方项目页并不证明具体发布日期"
+      "release_evidence": "【未核实占位日期】【估计·低置信度】根据模型系列版本顺序及相关资料，暂估于 2026-08；15 日只是月份占位，所附官方项目页并不证明具体发布日期",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "tencent",
@@ -1186,6 +1318,9 @@
       "report_slugs": [
         "hunyuan3d-buffalo-1-0",
         "hunyuan3d-worldclaw"
+      ],
+      "groups": [
+        "image"
       ]
     },
     {
@@ -1199,6 +1334,11 @@
         "hunyuan-image-3",
         "hunyuan-video-1-5",
         "hunyuan-ocr-1-5"
+      ],
+      "groups": [
+        "vision",
+        "image",
+        "video"
       ]
     },
     {
@@ -1253,7 +1393,10 @@
       "status": "unconfirmed",
       "note_en": "Latest official audio and audiovisual model pages reviewed; no original PDF report located.",
       "note_cn": "已检查最新官方语音与视听模型页；尚未找到原始 PDF 报告。",
-      "report_slugs": []
+      "report_slugs": [],
+      "groups": [
+        "audio"
+      ]
     },
     {
       "vendor": "cohere",
@@ -1312,7 +1455,10 @@
         "cohere-transcribe-model-card"
       ],
       "release_date": "2026-03-26",
-      "release_evidence": "Cohere 当日正式宣布推出开源语音识别模型 Transcribe"
+      "release_evidence": "Cohere 当日正式宣布推出开源语音识别模型 Transcribe",
+      "groups": [
+        "audio"
+      ]
     },
     {
       "vendor": "cohere",
@@ -1357,7 +1503,10 @@
         "command-a-translate"
       ],
       "release_date": "2025-08-28",
-      "release_evidence": "Cohere 当日宣布发布 Command A Translate 翻译模型"
+      "release_evidence": "Cohere 当日宣布发布 Command A Translate 翻译模型",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "cohere",
@@ -1370,7 +1519,10 @@
         "tiny-aya"
       ],
       "release_date": "2026-02-17",
-      "release_evidence": "Cohere Labs 当日宣布发布 Tiny Aya 多语言模型系列"
+      "release_evidence": "Cohere Labs 当日宣布发布 Tiny Aya 多语言模型系列",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "cohere",
@@ -1471,7 +1623,10 @@
         "mai-transcribe-2-model-card"
       ],
       "release_date": "2026-09-03",
-      "release_evidence": "Microsoft AI 当日推出 MAI-Transcribe-2"
+      "release_evidence": "Microsoft AI 当日推出 MAI-Transcribe-2",
+      "groups": [
+        "audio"
+      ]
     },
     {
       "vendor": "microsoft",
@@ -1484,7 +1639,10 @@
         "mai-voice-2-model-card"
       ],
       "release_date": "2026-06-02",
-      "release_evidence": "Microsoft AI 2026-06-02 发布 Introducing MAI-Voice-2"
+      "release_evidence": "Microsoft AI 2026-06-02 发布 Introducing MAI-Voice-2",
+      "groups": [
+        "audio"
+      ]
     },
     {
       "vendor": "microsoft",
@@ -1511,7 +1669,10 @@
       "note_cn": "已宣布 Flash 发布；现有 Voice 2 卡片不能独立证明覆盖 Flash。",
       "report_slugs": [],
       "release_date": "2026-07-23",
-      "release_evidence": "Microsoft AI 2026-07-23 正式介绍 MAI-Voice-2-Flash"
+      "release_evidence": "Microsoft AI 2026-07-23 正式介绍 MAI-Voice-2-Flash",
+      "groups": [
+        "audio"
+      ]
     },
     {
       "vendor": "microsoft",
@@ -1540,7 +1701,10 @@
         "phi-4-mini-flash-reasoning"
       ],
       "release_date": "2025-07-09",
-      "release_evidence": "微软 Azure 官方博客于 2025-07-09 发布 Phi-4-mini-flash-reasoning"
+      "release_evidence": "微软 Azure 官方博客于 2025-07-09 发布 Phi-4-mini-flash-reasoning",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "amazon",
@@ -1554,7 +1718,10 @@
         "nova-2-lite-frontier-safety-report"
       ],
       "release_date": "2025-12-02",
-      "release_evidence": "AWS 当日宣布 Nova 2 Lite 可用"
+      "release_evidence": "AWS 当日宣布 Nova 2 Lite 可用",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "amazon",
@@ -1567,7 +1734,10 @@
         "nova-2-family"
       ],
       "release_date": "2025-12-02",
-      "release_evidence": "AWS 当日宣布 Nova 2 Pro 预览"
+      "release_evidence": "AWS 当日宣布 Nova 2 Pro 预览",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "amazon",
@@ -1580,7 +1750,12 @@
         "nova-2-family"
       ],
       "release_date": "2025-12-02",
-      "release_evidence": "AWS 当日宣布 Nova 2 Omni 预览"
+      "release_evidence": "AWS 当日宣布 Nova 2 Omni 预览",
+      "groups": [
+        "language",
+        "vision",
+        "audio"
+      ]
     },
     {
       "vendor": "amazon",
@@ -1593,7 +1768,10 @@
         "nova-2-family"
       ],
       "release_date": "2025-12-02",
-      "release_evidence": "AWS 当日宣布 Nova 2 Sonic 上线"
+      "release_evidence": "AWS 当日宣布 Nova 2 Sonic 上线",
+      "groups": [
+        "audio"
+      ]
     },
     {
       "vendor": "amazon",
@@ -1609,7 +1787,10 @@
       "lifecycle": "discontinued",
       "lifecycle_source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle-legacy.html",
       "release_date": "2025-04-30",
-      "release_evidence": "AWS 官方发布公告 2025-04-30 宣布 Nova Premier 当天正式可用"
+      "release_evidence": "AWS 官方发布公告 2025-04-30 宣布 Nova Premier 当天正式可用",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "amazon",
@@ -1622,7 +1803,10 @@
         "nova-act-service-card"
       ],
       "release_date": "2025-03-31",
-      "release_evidence": "Amazon Science 2025-03-31 正式介绍 Nova Act 模型并推出研究预览 SDK"
+      "release_evidence": "Amazon Science 2025-03-31 正式介绍 Nova Act 模型并推出研究预览 SDK",
+      "groups": [
+        "language"
+      ]
     },
     {
       "vendor": "openai",
@@ -2327,7 +2511,10 @@
       "note_en": "Original report verified and archived.",
       "note_cn": "已核实并收录原始报告。",
       "release_date": "2026-06-30",
-      "release_evidence": "【第三轮联网复核·官方发布】Google 6月30日博客宣布 Nano Banana 2 Lite 开放开发者使用；该项为原表别名，日期用于关联模型上线"
+      "release_evidence": "【第三轮联网复核·官方发布】Google 6月30日博客宣布 Nano Banana 2 Lite 开放开发者使用；该项为原表别名，日期用于关联模型上线",
+      "groups": [
+        "image"
+      ]
     },
     {
       "vendor": "google",

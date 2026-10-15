@@ -8,6 +8,8 @@ import json
 import re
 import time
 import urllib.request
+
+from model_groups import CATEGORY_GROUPS, model_groups
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
@@ -215,9 +217,9 @@ def render_model_coverage(rows):
                     candidates.append(latest[(vendor, category)])
                 for model in candidates:
                     entry = models.setdefault(id(model), {"model": model, "categories": []})
-                    category_label = MODEL_CATEGORIES[category][int(chinese)]
-                    if category_label not in entry["categories"]:
-                        entry["categories"].append(category_label)
+                    for group in model_groups([category]):
+                        if group not in entry["categories"]:
+                            entry["categories"].append(group)
             if not models:
                 continue
             lines += [f'<a id="{vendor}"></a>', "", f"## {label}", "",
@@ -253,7 +255,8 @@ def render_model_coverage(rows):
                     links.append(f"[{'阅读' if chinese else 'Read'}]({web['markdown_path']})")
                 links.append(f"[{official}]({model.get('frontier_source_url', model['source_url'])})")
                 name = model["model"].replace("|", "\\|")
-                lines.append(f"| {' / '.join(entry['categories'])} | {name} | {' · '.join(links)} |")
+                group_order = list(CATEGORY_GROUPS)
+                lines.append(f"| {' / '.join(CATEGORY_GROUPS[g][int(chinese)] for g in sorted(entry['categories'], key=group_order.index))} | {name} | {' · '.join(links)} |")
             lines.append("")
         lines += ["历史模型与报告见[厂商归档](README_CN.md#按厂商浏览)。" if chinese else
                   "Explore earlier models and reports in the [publisher archives](README.md#browse-by-publisher).", ""]

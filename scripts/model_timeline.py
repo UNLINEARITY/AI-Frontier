@@ -8,6 +8,7 @@ def model_key(vendor, name):
 
 
 def timeline_models(coverage, history, sources, vendors):
+    from model_groups import CATEGORY_GROUPS, TAG_TO_GROUP
     source_ids = {(s['vendor'], s['slug']) for s in sources}
     coverage_ids = {model_key(m['vendor'], m['model']) for m in coverage['models']}
     aliases = {}
@@ -37,8 +38,15 @@ def timeline_models(coverage, history, sources, vendors):
             if inherit_reports:
                 entry['report_slugs'] = list(dict.fromkeys(entry['report_slugs'] + record.get('report_slugs', [])))
             if inherit_categories:
-                entry['categories'] = list(dict.fromkeys(entry['categories'] + record.get('latest_categories', [])
-                                                         + record.get('frontier_categories', [])))
+                inherited = list(record.get('groups', []))
+                for tag in record.get('latest_categories', []) + record.get('frontier_categories', []):
+                    if tag in TAG_TO_GROUP:
+                        inherited.append(TAG_TO_GROUP[tag])
+                for group in inherited:
+                    if group not in CATEGORY_GROUPS:
+                        raise ValueError(f'Unknown timeline model group: {key}: {group}')
+                    if group not in entry['categories']:
+                        entry['categories'].append(group)
             released = record.get('release_date', '') if inherit_date else ''
             if released:
                 if date.fromisoformat(released).isoformat() != released:
@@ -64,7 +72,9 @@ def timeline_models(coverage, history, sources, vendors):
         alias = aliases.get(model_key(model['vendor'], model['model']), {})
         names = alias.get('models', [model['model']])
         # An aggregate coverage row is not evidence of simultaneous variant releases.
+        # Browse groups are display vocabulary and safe to share across variants;
+        # dates and report associations stay per-variant.
         add(model, names, len(names) == 1 or alias.get('shared_release', False),
-            len(names) == 1 or alias.get('shared_reports', False), len(names) == 1)
+            len(names) == 1 or alias.get('shared_reports', False), True)
     return sorted(models.values(), key=lambda m: (not bool(m['release_date']), m['release_date'],
                                                   m['vendor'], m['model'].casefold()))

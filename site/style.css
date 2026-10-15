@@ -587,6 +587,9 @@ body:has(.reader) .header-inner { max-width: 1000px; }
 .markdown-body h1 + p { font-size: var(--step-small); margin-bottom: 34px; }
 .markdown-body a { color: var(--accent); }
 .markdown-body a:hover { text-decoration: underline; }
+.reader-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px; margin: -6px 0 0; color: var(--muted); font-size: var(--step-small); }
+.reader-meta time { font-variant-numeric: tabular-nums; }
+.reader-meta + p { font-size: var(--step-small); margin-bottom: 34px; }
 .markdown-body p:has(> .inline-image) { margin: 34px 0 12px; max-width: var(--measure); }
 .inline-image { display: block; cursor: zoom-in; background: #fff; }
 .inline-image img { display: block; width: 100%; height: auto; }

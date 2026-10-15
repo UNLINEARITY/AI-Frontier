@@ -11,6 +11,7 @@ from PIL import Image
 
 from build_readers import build_readers, reader_path
 from archive_reports import DOCUMENT_TYPES, MODEL_CATEGORIES, VENDORS
+from model_groups import CATEGORY_GROUPS, TAG_TO_GROUP, model_groups
 from model_timeline import timeline_models
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -142,8 +143,8 @@ def current_model_keys(models, history):
 
 
 def model_card(model, target, labels, current_keys, chinese, prefix):
-    categories = [key for key in MODEL_CATEGORIES if key in model.get('categories', [])]
-    category_text = ' / '.join(MODEL_CATEGORIES[key][int(chinese)] for key in categories)
+    categories = [key for key in CATEGORY_GROUPS if key in model.get('categories', [])]
+    category_text = ' / '.join(CATEGORY_GROUPS[key][int(chinese)] for key in categories)
     search = ' '.join([model['model'], labels[model['vendor']]] + model.get('search_aliases', []))
     current = (model['vendor'], model['model'].casefold()) in current_keys
     date = model['release_date']
@@ -312,7 +313,20 @@ def build(output):
                                   href=model_target(model, documents, web_readers)))
     figure_file = ROOT / 'figures/index.json'
     figure_reports = {r['id']: r for r in json.loads(figure_file.read_text())['reports']} if figure_file.exists() else {}
-    reader_count, preview_count = build_readers(ROOT, output, readers, figure_reports, reports)
+    reader_meta = {}
+    for record in history.get('models', []) + coverage['models']:
+        tag_groups = {TAG_TO_GROUP.get(t, t) for t in record.get('groups', [])
+                      + record.get('latest_categories', []) + record.get('frontier_categories', [])}
+        groups = [g for g in CATEGORY_GROUPS if g in tag_groups]
+        released = record.get('release_date', '')
+        for slug in record.get('report_slugs', []):
+            slot = reader_meta.setdefault(slug, {'date': '', 'groups': []})
+            if released and (not slot['date'] or released < slot['date']):
+                slot['date'] = released
+            for group in groups:
+                if group not in slot['groups']:
+                    slot['groups'].append(group)
+    reader_count, preview_count = build_readers(ROOT, output, readers, figure_reports, reports, reader_meta)
     brand = json.loads((ROOT / '.github/brand.json').read_text())
     models = [m for m in coverage['models'] if m.get('lifecycle', 'active') == 'active'
               and (m.get('latest_categories') or m.get('frontier_categories'))]
@@ -355,7 +369,7 @@ def build(output):
                                 for model, entry in zip(timeline, timeline_data))
         publisher_options = ''.join(f'<option value="{v}">{escape(label)}</option>' for v, label in labels.items())
         type_options = ''.join(f'<option value="{k}">{v[0]}</option>' for k, v in DOCUMENT_TYPES.items())
-        category_options = ''.join(f'<option value="{k}">{escape(v[int(chinese)])}</option>' for k, v in MODEL_CATEGORIES.items())
+        category_options = ''.join(f'<option value="{gid}">{escape(CATEGORY_GROUPS[gid][int(chinese)])}</option>' for gid in CATEGORY_GROUPS)
         values = {
             'lang': 'zh-CN' if chinese else 'en', 'prefix': '../' if chinese else '',
             'name': escape(brand['name']), 'tagline': escape(brand.get('hero_line_cn' if chinese else 'hero_line', brand['tagline_cn' if chinese else 'tagline'])),
@@ -478,7 +492,11 @@ def build(output):
                                 nav_publishers_href='index.html#publishers', nav_timeline_href='#timeline',
                                 nav_reports_href='reports.html', skip_href='#collection')
         header = template.split('<main>', 1)[0].replace('data-page="home"', 'data-page="models"')
-        header = header.replace('src="{{prefix}}app.js"', 'src="{{prefix}}models.js"').replace('<script src="{{prefix}}navigation.js" defer>', '<script src="{{prefix}}timeline-layout.js" defer></script><script src="{{prefix}}timeline.js" defer></script><script src="{{prefix}}navigation.js" defer>')
+        group_data = json.dumps({'tagToGroup': TAG_TO_GROUP}, ensure_ascii=False).replace('<', '\\u003c')
+        header = header.replace('src="{{prefix}}app.js"', 'src="{{prefix}}models.js"').replace(
+            '<script src="{{prefix}}models.js" defer>',
+            f'<script type="application/json" id="group-data">{group_data}</script><script src="{{{{prefix}}}}models.js" defer>').replace(
+            '<script src="{{prefix}}navigation.js" defer>', '<script src="{{prefix}}timeline-layout.js" defer></script><script src="{{prefix}}timeline.js" defer></script><script src="{{prefix}}navigation.js" defer>')
         footer = template[template.index('<footer>'):]
         directory_page = directory_template.replace('{{page_header}}', header).replace('{{page_footer}}', footer).replace('{{model_timeline}}', timeline_template)
         for key, value in directory_values.items():

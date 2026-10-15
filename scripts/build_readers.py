@@ -7,6 +7,8 @@ import subprocess
 from pathlib import Path
 from urllib.parse import quote
 
+from model_groups import CATEGORY_GROUPS
+
 from PIL import Image
 
 REPOSITORY = 'https://github.com/UNLINEARITY/AI-Frontier'
@@ -21,7 +23,22 @@ def reader_path(summary):
     return str(Path(summary['markdown_path']).with_suffix('.html'))
 
 
-def build_readers(root, output, summaries, figure_reports, catalog):
+def inject_reader_meta(body, meta, chinese):
+    """Date and browse-group labels under the title; assembled from model records."""
+    if not meta or not meta.get('groups') or '</h1>' not in body:
+        return body
+    t = lambda en, cn: cn if chinese else en
+    parts = []
+    if meta.get('date'):
+        parts.append(f'<time datetime="{meta["date"]}">{meta["date"]}</time>')
+    labels = ' / '.join(CATEGORY_GROUPS[g][1 if chinese else 0] for g in meta['groups'])
+    parts.append(f'<span>{escape(labels)}</span>')
+    sep = f' <span class="reader-meta-sep" aria-hidden="true">{t("·", "·")}</span> '
+    line = '<p class="reader-meta">' + sep.join(parts) + '</p>'
+    return body.replace('</h1>', '</h1>\n' + line, 1)
+
+
+def build_readers(root, output, summaries, figure_reports, catalog, reader_meta=None):
     template = (root / 'site/reader.html').read_text()
     by_pdf = {r['local_path']: r for r in catalog}
     articles, reports, previews = [], [], {}
@@ -63,6 +80,7 @@ def build_readers(root, output, summaries, figure_reports, catalog):
                                         text=True, capture_output=True, check=True).stdout)
     for report, body in zip(reports, rendered, strict=True):
         vendor, slug = report['id'].split(':', 1)
+        meta = (reader_meta or {}).get(slug, {})
         for chinese in (False, True):
             t = lambda en, cn: cn if chinese else en
             path = Path(('cn/' if chinese else '') + reader_path(report))
@@ -75,7 +93,7 @@ def build_readers(root, output, summaries, figure_reports, catalog):
                 'switch_label': t('Switch to 中文', '切换至 English'), 'name': 'AI Frontier', 'repository': REPOSITORY,
                 'switch_compact': t('EN → 中', '中 → EN'),
                 'title': escape(report['title']), 'description': escape(report['title']),
-                'body': body.replace('{{asset_prefix}}', prefix), 'vendor': vendor,
+                'body': inject_reader_meta(body, meta, chinese), 'vendor': vendor,
                 'back': t('Back', '返回'), 'zoom': t('Figure', '图片'), 'close': t('Close', '关闭'),
                 'theme_label': t('Appearance', '外观'), 'light_theme': t('Light', '浅色'),
                 'dark_theme': t('Dark', '深色'), 'system_theme': t('System', '跟随系统'),

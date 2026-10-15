@@ -2,6 +2,7 @@
 
 import importlib.util
 import io
+import sys
 import json
 import tempfile
 import unittest
@@ -9,6 +10,8 @@ from pathlib import Path
 from unittest.mock import patch
 
 from pypdf import PdfWriter
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 
 spec = importlib.util.spec_from_file_location(
     "archive_reports", Path(__file__).resolve().parents[1] / "scripts/archive_reports.py")

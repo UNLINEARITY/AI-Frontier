@@ -7,9 +7,14 @@
   const focus = document.querySelector('#publisher-focus'), choices = document.querySelector('#publisher-choices').content;
   const params = new URLSearchParams(location.search);
   const normalize = text => text.normalize('NFKC').toLocaleLowerCase().replaceAll('π', 'pi').replace(/[^\p{L}\p{N}]/gu, '');
+  let tagToGroup = {};
+  try { tagToGroup = JSON.parse(document.querySelector('#group-data')?.textContent || '{}').tagToGroup || {}; }
+  catch { tagToGroup = {}; }
   search.value = params.get('q') || params.get('model') || '';
   for (const [element, key] of [[publisher, 'publisher'], [category, 'category'], [scope, 'scope'], [sort, 'sort']]) {
-    if ([...element.options].some(option => option.value === params.get(key))) element.value = params.get(key);
+    let value = params.get(key);
+    if (key === 'category' && value && tagToGroup[value]) value = tagToGroup[value];
+    if ([...element.options].some(option => option.value === value)) element.value = value;
   }
   let terms = [], windowRange = null, lastSort = '', displayedPublisher;
   const from = Date.parse(params.get('from')), to = Date.parse(params.get('to'));
