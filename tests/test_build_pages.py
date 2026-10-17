@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from build_pages import (SITE_URL, card_link_attributes, card_link_hint, card_link_mark, lab_count, publisher_tiles,
-                         write_not_found, write_robots, write_sitemap)
+                         reader_sequence, write_not_found, write_robots, write_sitemap)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -57,6 +57,21 @@ class ShellTests(unittest.TestCase):
         self.assertIn('id="collection"', (ROOT / 'site/reports.html').read_text())
         self.assertIn('models.html', parser.links)
         self.assertNotIn('timeline-pending', parser.ids)
+
+    def test_reader_sequence_dedupes_wraps_and_skips_external_documents(self):
+        readers = {key: dict(id=key, markdown_path=f'abstracts/lab/{key}.md') for key in ('a', 'b', 'c')}
+        def entry(model, date, href):
+            return dict(model=model, release_date=date, href=href, publisher_en='Lab', publisher_cn='实验室')
+        timeline = [entry('Old', '2024-01-01', 'abstracts/lab/a.html'),
+                    entry('Alias', '2024-01-01', 'abstracts/lab/a.html'),
+                    entry('New', '2026-01-01', 'abstracts/lab/b.html'),
+                    entry('External', '2026-05-01', 'https://example.org/report')]
+        nav = reader_sequence(timeline, readers)
+        self.assertEqual(sorted(nav), ['a', 'b'])
+        self.assertEqual(nav['a']['prev']['path'], 'abstracts/lab/b.html')
+        self.assertEqual(nav['a']['next']['path'], 'abstracts/lab/b.html')
+        self.assertEqual(nav['b']['next']['model'], 'Old')
+        self.assertEqual(reader_sequence(timeline[:1], readers), {})
 
     def test_publisher_index_is_complete_including_model_only_labs_and_all(self):
         labels = {'openai': 'Lab', 'generalist': 'Robot & Co', 'figure': 'New Lab'}

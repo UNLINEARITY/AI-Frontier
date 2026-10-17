@@ -38,7 +38,46 @@ def inject_reader_meta(body, meta, chinese):
     return body.replace('</h1>', '</h1>\n' + line, 1)
 
 
-def build_readers(root, output, summaries, figure_reports, catalog, reader_meta=None):
+def reader_navigation(nav, prefix, chinese):
+    """Build-time previous/next links along the release timeline, with wrap-around."""
+    if not nav:
+        return ''
+    t = lambda en, cn: cn if chinese else en
+
+    def target(entry):
+        return prefix + ('cn/' if chinese else '') + entry['path']
+
+    def keys(relation):
+        return 'ArrowLeft' if relation == 'prev' else 'ArrowRight'
+
+    def step(entry, relation):
+        label = t('Previous report', '上一份报告') if relation == 'prev' else t('Next report', '下一份报告')
+        hint = escape(f'{label}: {entry["model"]}')
+        rotation = 'M15 5l-7 7 7 7' if relation == 'prev' else 'M9 5l7 7-7 7'
+        return (f'<a class="reader-step reader-step--{relation}" href="{escape(target(entry))}" rel="{relation}" '
+                f'aria-label="{hint}" title="{hint}" aria-keyshortcuts="{keys(relation)}">'
+                f'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="{rotation}"/></svg></a>')
+
+    def link(entry, relation):
+        label = t('Previous', '上一份') if relation == 'prev' else t('Next', '下一份')
+        arrow = '←' if relation == 'prev' else '→'
+        stamp = f'<time datetime="{escape(entry["date"])}">{escape(entry["date"])}</time>' if entry['date'] else ''
+        publisher = escape(entry['publisher_cn' if chinese else 'publisher_en'])
+        meta = ' <span aria-hidden="true">·</span> '.join(filter(None, [stamp, publisher]))
+        return (f'<a class="reader-pager-link reader-pager-link--{relation}" href="{escape(target(entry))}" '
+                f'rel="{relation}" aria-keyshortcuts="{keys(relation)}">'
+                f'<span class="reader-pager-direction"><span aria-hidden="true">{arrow}</span> {escape(label)}</span>'
+                f'<span class="reader-pager-title">{escape(entry["model"])}</span>'
+                f'<span class="reader-pager-meta">{meta}</span></a>')
+
+    label = escape(t('Timeline navigation', '时间线浏览'))
+    return (f'<nav class="reader-pager" aria-label="{label}">'
+            + step(nav['prev'], 'prev') + step(nav['next'], 'next')
+            + '<div class="reader-pager-links">' + link(nav['prev'], 'prev') + link(nav['next'], 'next') + '</div>'
+            + '</nav>')
+
+
+def build_readers(root, output, summaries, figure_reports, catalog, reader_meta=None, reader_nav=None):
     template = (root / 'site/reader.html').read_text()
     by_pdf = {r['local_path']: r for r in catalog}
     articles, reports, previews = [], [], {}
@@ -94,6 +133,7 @@ def build_readers(root, output, summaries, figure_reports, catalog, reader_meta=
                 'switch_compact': t('EN → 中', '中 → EN'),
                 'title': escape(report['title']), 'description': escape(report['title']),
                 'body': inject_reader_meta(body.replace('{{asset_prefix}}', prefix), meta, chinese), 'vendor': vendor,
+                'reader_nav': reader_navigation(reader_nav.get(report['id']) if reader_nav else None, prefix, chinese),
                 'back': t('Back', '返回'), 'zoom': t('Figure', '图片'), 'close': t('Close', '关闭'),
                 'theme_label': t('Appearance', '外观'), 'light_theme': t('Light', '浅色'),
                 'dark_theme': t('Dark', '深色'), 'system_theme': t('System', '跟随系统'),

@@ -81,6 +81,44 @@ class ReaderTests(unittest.TestCase):
         documents[0] = (False, 0, 'abstracts/lab/other.html', 'Report')
         self.assertEqual(model_target(model, documents, readers), 'abstracts/lab/other.html')
 
+    def test_reader_navigation_links_both_languages(self):
+        from build_readers import reader_navigation
+        entry = lambda path, model, date='': dict(path=path, model=model, date=date,
+                                                  publisher_en='Lab', publisher_cn='实验室')
+        nav = {'prev': entry('abstracts/lab/older.html', 'Older <model>', '2025-01-02'),
+               'next': entry('abstracts/lab/newer.html', 'Newer', '')}
+        en = reader_navigation(nav, '../../', False)
+        cn = reader_navigation(nav, '../../../', True)
+        self.assertIn('class="reader-pager"', en)
+        self.assertIn('href="../../abstracts/lab/older.html" rel="prev"', en)
+        self.assertIn('href="../../abstracts/lab/newer.html" rel="next"', en)
+        self.assertIn('aria-keyshortcuts="ArrowLeft"', en)
+        self.assertIn('aria-keyshortcuts="ArrowRight"', en)
+        self.assertIn('Older &lt;model&gt;', en)
+        self.assertIn('Previous', en)
+        self.assertIn('Next', en)
+        self.assertNotIn('<span class="reader-pager-meta"></span>', en)
+        self.assertIn('href="../../../cn/abstracts/lab/older.html"', cn)
+        self.assertIn('href="../../../cn/abstracts/lab/newer.html"', cn)
+        self.assertIn('上一份', cn)
+        self.assertIn('实验室', cn)
+        self.assertEqual(reader_navigation(None, '../../', False), '')
+
+    def test_reader_pages_carry_the_timeline_neighbours(self):
+        entry = lambda path, model: dict(path=path, model=model, date='2026-02-03',
+                                         publisher_en='Lab', publisher_cn='实验室')
+        nav = {'lab:model': {'prev': entry('abstracts/lab/older.html', 'Older'),
+                             'next': entry('abstracts/lab/newer.html', 'Newer')}}
+        build_readers(self.root, self.output, {'pdfs/model.pdf': self.summary}, {}, self.catalog, None, nav)
+        en = (self.output / 'abstracts/lab/model.html').read_text()
+        cn = (self.output / 'cn/abstracts/lab/model.html').read_text()
+        self.assertIn('href="../../abstracts/lab/newer.html"', en)
+        self.assertIn('href="../../../cn/abstracts/lab/newer.html"', cn)
+        self.assertNotIn('{{', en + cn)
+        without = build_readers(self.root, self.output, {'pdfs/model.pdf': self.summary}, {}, self.catalog, None, {})
+        self.assertEqual(without, (2, 0))
+        self.assertNotIn('reader-pager', (self.output / 'abstracts/lab/model.html').read_text())
+
     def test_stale_source_and_figure_selection_rejected(self):
         self.summary['source_sha256'] = 'changed'
         with self.assertRaisesRegex(ValueError, 'Stale summary'):

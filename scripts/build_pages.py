@@ -135,6 +135,27 @@ def model_target(model, documents, web_readers):
     return model.get('frontier_source_url', model['source_url'])
 
 
+def reader_sequence(timeline_data, readers):
+    """Order reader pages along the release timeline and return each page's neighbours.
+
+    Only pages a timeline model opens take part; documents without a model record keep
+    their reading page but stay outside the left/right sequence. The sequence wraps.
+    """
+    ids = {reader_path(record): record['id'] for record in readers.values()}
+    sequence, seen = [], set()
+    for entry in timeline_data:
+        path = entry['href']
+        if path not in ids or path in seen:
+            continue
+        seen.add(path)
+        sequence.append(dict(path=path, id=ids[path], model=entry['model'], date=entry['release_date'],
+                             publisher_en=entry['publisher_en'], publisher_cn=entry['publisher_cn']))
+    if len(sequence) < 2:
+        return {}
+    return {entry['id']: dict(prev=sequence[index - 1], next=sequence[(index + 1) % len(sequence)])
+            for index, entry in enumerate(sequence)}
+
+
 def current_model_keys(models, history):
     aliases = {(entry['vendor'], entry['coverage_model'].casefold()): entry['models']
                for entry in history.get('coverage_aliases', [])}
@@ -311,6 +332,7 @@ def build(output):
                                   logo=f'assets/vendors/{MARKS[model["vendor"]]}.svg'
                                   if (ROOT / f'assets/vendors/{MARKS[model["vendor"]]}.svg').is_file() else '',
                                   href=model_target(model, documents, web_readers)))
+    reader_nav = reader_sequence(timeline_data, readers)
     figure_file = ROOT / 'figures/index.json'
     figure_reports = {r['id']: r for r in json.loads(figure_file.read_text())['reports']} if figure_file.exists() else {}
     reader_meta = {}
@@ -326,7 +348,7 @@ def build(output):
             for group in groups:
                 if group not in slot['groups']:
                     slot['groups'].append(group)
-    reader_count, preview_count = build_readers(ROOT, output, readers, figure_reports, reports, reader_meta)
+    reader_count, preview_count = build_readers(ROOT, output, readers, figure_reports, reports, reader_meta, reader_nav)
     brand = json.loads((ROOT / '.github/brand.json').read_text())
     models = [m for m in coverage['models'] if m.get('lifecycle', 'active') == 'active'
               and (m.get('latest_categories') or m.get('frontier_categories'))]
