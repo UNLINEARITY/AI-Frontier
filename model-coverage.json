@@ -3348,6 +3348,107 @@
       "note_cn": "NVIDIA GEAR 参与、多机构合作的机器人世界模型；官方仓库提供代码、权重与数据并记录其 2026-02-18 发布。模型预测动作条件下的世界动态并支持策略评测，不属于 VLA 动作策略。与 Cosmos 并列保留该当前专业分支，论文日期与模型资源公开时间分开记录。",
       "release_date": "2026-02-18",
       "release_evidence": "【第三轮联网复核·官方开源日】NVIDIA DreamDojo 官方仓库 News 明言 2026/02/18 发布全部 2B/14B 预训练及后训练权重、代码与数据集；论文公开日期为 2月9日，不混淆"
+    },
+    {
+      "vendor": "toyota_research_institute",
+      "model": "LBM 1.0",
+      "source_url": "https://toyotaresearchinstitute.github.io/lbm1/",
+      "status": "archived",
+      "note_en": "Original TRI technical report archived; LBM 1.0 is a robot behavior-model family evaluated on dexterous manipulation.",
+      "note_cn": "已收录 TRI 原始技术报告；LBM 1.0 为多任务灵巧操作评估的机器人行为模型家族。",
+      "report_slugs": [
+        "tri-lbm-1-technical-report"
+      ],
+      "release_date": "2025-07-07",
+      "release_evidence": "TRI project page and arXiv v1 (2025-07-07) present LBM 1.0; announcement date not independently re-verified beyond the report submission.",
+      "frontier_categories": [
+        "robotics",
+        "manipulation"
+      ],
+      "groups": [
+        "robotics"
+      ]
+    },
+    {
+      "vendor": "1x",
+      "model": "1X World Model",
+      "source_url": "https://www.1x.tech/discover/redwood-ai-world-model",
+      "status": "archived",
+      "note_en": "June 2025 world-model report archived. A January 2026 HTML update describes a policy variant and is not treated as a new report.",
+      "note_cn": "已收录 2025 年 6 月世界模型报告。2026 年 1 月的网页更新描述策略变体，不视为新的报告。",
+      "report_slugs": [
+        "1x-world-model-technical-report"
+      ],
+      "release_date": "2025-06-16",
+      "release_evidence": "Publisher page byline JUN 16 2025 and PDF CreationDate 2025-06-16.",
+      "frontier_categories": [
+        "world",
+        "robotics"
+      ],
+      "groups": [
+        "world",
+        "robotics"
+      ]
+    },
+    {
+      "vendor": "tencent",
+      "model": "HY-World 2.0",
+      "source_url": "https://3d.hunyuan.tencent.com/sceneTo3D",
+      "status": "archived",
+      "note_en": "Original HY-World 2.0 report archived; reconstructs, generates and simulates 3D worlds. Distinct from HY-World 1.5 / WorldPlay.",
+      "note_cn": "已收录 HY-World 2.0 原始报告；覆盖 3D 世界重建、生成与仿真，与 HY-World 1.5 / WorldPlay 区分。",
+      "report_slugs": [
+        "hy-world-2-0-technical-report"
+      ],
+      "release_date": "2026-04-16",
+      "release_evidence": "Official Tencent Hunyuan project page and GitHub repository identify the arXiv report; report date 2026-04-16.",
+      "frontier_categories": [
+        "world"
+      ],
+      "groups": [
+        "world"
+      ]
+    },
+    {
+      "vendor": "ubtech",
+      "model": "Thinker-WM",
+      "source_url": "https://thinkercosmos.ubtrobot.com/thinker-wm",
+      "status": "archived",
+      "note_en": "Original Thinker-WM report archived; unified world model with a shared multimodal backbone. Report document date 2026-09-30 differs from arXiv v1 (2026-10-13); model release date unverified.",
+      "note_cn": "已收录 Thinker-WM 原始报告；共享多模态骨干的统一世界模型。PDF 文档日期 2026-09-30 与 arXiv v1（2026-10-13）不同，模型发布日期尚未核实。",
+      "report_slugs": [
+        "thinker-wm-technical-report"
+      ],
+      "release_evidence": "arXiv v1 2026-10-13; PDF frontmatter date 2026-09-30. Model announcement date not verified.",
+      "frontier_categories": [
+        "world",
+        "embodied_reasoning"
+      ],
+      "groups": [
+        "world",
+        "robotics"
+      ]
+    },
+    {
+      "vendor": "qwen",
+      "model": "Qwen-RobotWorld",
+      "source_url": "https://qwen.ai/blog?id=qwen-robotworld",
+      "status": "archived",
+      "note_en": "Original technical report archived; language-conditioned video world model for embodied intelligence. Distinct from Qwen-RobotNav and Qwen-RobotManip.",
+      "note_cn": "已收录原始技术报告；面向具身智能的语言条件视频世界模型，与 Qwen-RobotNav、Qwen-RobotManip 区分。",
+      "report_slugs": [
+        "qwen-robotworld-technical-report"
+      ],
+      "release_date": "2026-06-18",
+      "release_evidence": "PDF frontmatter dated June 18, 2026.",
+      "frontier_categories": [
+        "world",
+        "embodied_reasoning"
+      ],
+      "groups": [
+        "world",
+        "robotics"
+      ]
     }
   ],
   "updated_at": "2026-10-14"

@@ -22,6 +22,12 @@ Thus, the main contributions of our work are:
 
 Together, these results establish Rho as a strong open-weights VLA and, more broadly, examine how architecture, pretraining, embodiment midtraining, and task adaptation interact in a practical robot-learning pipeline.
 
+## Pretraining
+
+Multi-embodiment multi-task pretraining spanning diverse environments and data sources turns the grounded backbone and action expert into a general continuous-control VLA, with the goal of learning transferable action representations before adapting to a particular physical platform.
+
+p. 7
+
 ![Figure 2](../../figures/microsoft/rho-technical-report/figure-01.png)
 
 Figure 2 The Rho flow-matching action expert. State and noisy-action tokens pass through 12 wide transformer blocks with grouped-query self-attention, cross-attention to the VLM context, and feed-forward updates. The flow timestep conditions the sublayers through shared adaLN-Zero maps with block-specific offsets.

@@ -7010,5 +7010,82 @@
       "π0",
       "Diffusion Policy"
     ]
+  },
+  {
+    "vendor": "toyota_research_institute",
+    "title": "A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation",
+    "slug": "tri-lbm-1-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-07-07",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2507.05331",
+    "pdf_url": "https://arxiv.org/pdf/2507.05331",
+    "metadata_url": "https://toyotaresearchinstitute.github.io/lbm1/",
+    "notes": "Verified 2026-10-17: official TRI project page links this PDF and arXiv:2507.05331; arXiv v1 submitted 2025-07-07. Report title and LBM 1.0 naming confirmed from the PDF frontmatter and project page. Robot policy family, not a hardware launch.",
+    "reading_models": [
+      "LBM 1.0"
+    ]
+  },
+  {
+    "vendor": "1x",
+    "title": "1X World Model: Evaluating Bits, not Atoms",
+    "slug": "1x-world-model-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2025-06-16",
+    "source_updated_date": "",
+    "source_url": "https://www.1x.tech/discover/redwood-ai-world-model",
+    "pdf_url": "https://www.1x.tech/1x-world-model.pdf",
+    "notes": "Verified 2026-10-17: publisher page byline JUN 16 2025 and PDF CreationDate 2025-06-16; PDF page 1 states it is the supplementary technical progress report for the 1X World Model released at the linked page. A separate January 2026 HTML update describes a policy variant and is not substituted for this report.",
+    "reading_models": [
+      "1X World Model"
+    ]
+  },
+  {
+    "vendor": "tencent",
+    "title": "Tencent Hunyuan HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds",
+    "slug": "hy-world-2-0-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2026-04-16",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2604.14268",
+    "pdf_url": "https://arxiv.org/pdf/2604.14268",
+    "metadata_url": "https://3d.hunyuan.tencent.com/sceneTo3D",
+    "notes": "Verified 2026-10-17: official Tencent Hunyuan project page and GitHub repository identify this report; 44-page PDF frontmatter matches title. HY-World 2.0 is a multi-modal 3D world model framework, distinct from HY-World 1.5 / WorldPlay.",
+    "reading_models": [
+      "HY-World 2.0"
+    ]
+  },
+  {
+    "vendor": "ubtech",
+    "title": "Thinker-WM: A Unified World Model with Shared Multimodal Backbone for Embodied Intelligence",
+    "slug": "thinker-wm-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2026-10-13",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2610.18447",
+    "pdf_url": "https://arxiv.org/pdf/2610.18447",
+    "metadata_url": "https://thinkercosmos.ubtrobot.com/thinker-wm",
+    "notes": "Verified 2026-10-17: arXiv v1 submitted 2026-10-13, v2 2026-10-14; the 39-page PDF carries a 2026-09-30 document date, recorded here as the document date rather than a verified model release date. Project page is JS-rendered and was not used as the passage source.",
+    "reading_models": [
+      "Thinker-WM"
+    ]
+  },
+  {
+    "vendor": "qwen",
+    "title": "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation",
+    "slug": "qwen-robotworld-technical-report",
+    "document_type": "technical_report",
+    "published_date": "2026-06-18",
+    "source_updated_date": "",
+    "version": "arxiv-v1",
+    "source_url": "https://arxiv.org/abs/2606.17030",
+    "pdf_url": "https://arxiv.org/pdf/2606.17030",
+    "notes": "Verified 2026-10-17: 25-page arXiv PDF dated June 18, 2026; title and Qwen Team authorship confirmed from the PDF frontmatter. A language-conditioned video world model, distinct from Qwen-RobotNav and Qwen-RobotManip policies.",
+    "reading_models": [
+      "Qwen-RobotWorld"
+    ]
   }
 ]

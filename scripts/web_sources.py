@@ -63,6 +63,8 @@ def load_sources(root):
                 or source['snapshot']['bytes'] <= 0 or not source['paragraphs']
                 or source['review'].get('paragraph_boundaries_verified') is not True):
             raise ValueError(f"Invalid/unreviewed official web source: {source['id']}")
+        if source.get('reader_scope') not in (None, 'archive'):
+            raise ValueError(f"Invalid web reader scope: {source['id']}")
         assets = source['assets']
         if len({a['asset_url'] for a in assets}) != len(assets):
             raise ValueError(f"Duplicate native web asset: {source['id']}")
@@ -105,7 +107,7 @@ def verify_snapshot(root, source):
 
 def summary(source):
     text = '\n\n'.join(p['text'] for p in source['paragraphs'])
-    return dict(id=source['id'], vendor=source['vendor'], title=source['title'], models=source['models'],
+    record = dict(id=source['id'], vendor=source['vendor'], title=source['title'], models=source['models'],
                 document_type=None, source_kind='html', source_pdf=None, source_url=source['source_url'],
                 source_sha256=source['snapshot']['sha256'], source_version=source['retrieved_at'],
                 method='reviewed_visible_html', manual_review=True, status='source_reviewed',
@@ -113,6 +115,9 @@ def summary(source):
                 raw_text=text, text=text, text_sha256=digest(text.encode()),
                 word_count=len(text.split()), source_fragments=source['paragraphs'],
                 source_review=source['review'], review_reasons=[])
+    if source.get('reader_scope'):
+        record['reader_scope'] = source['reader_scope']
+    return record
 
 
 def validate_summary(root, report):
@@ -131,7 +136,7 @@ def current_summaries(root, models):
               and (m.get('latest_categories') or m.get('frontier_categories'))}
     reports = []
     for source in load_sources(root).values():
-        if any((source['vendor'], name) in active for name in source['models']):
+        if source.get('reader_scope') == 'archive' or any((source['vendor'], name) in active for name in source['models']):
             verify_snapshot(root, source)
             reports.append(summary(source))
     return reports

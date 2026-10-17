@@ -54,8 +54,8 @@
           "reviewed_at": "2026-10-14",
           "source_kind": "image",
           "alt": "",
-          "display_background": "#111111",
-          "figure_number": "1"
+          "figure_number": "1",
+          "display_background": "#111111"
         },
         {
           "local_path": ".cache/web-overviews/assets/figure-table-original.png",
@@ -71,8 +71,8 @@
           "reviewed_at": "2026-10-14",
           "source_kind": "table",
           "alt": "",
-          "display_background": "#111111",
-          "figure_number": "Table 1"
+          "figure_number": "Table 1",
+          "display_background": "#111111"
         }
       ],
       "figure_note_en": "",
@@ -1399,6 +1399,2569 @@
         "interpretation": "The service page explicitly calls 0902 an upgraded snapshot of qwen3.8-max. Retain 0902 as a revision/snapshot identifier, not a new product name, and do not equate its exact weights with the HF base checkpoint."
       },
       "source_title": "qwen3.8-max"
+    },
+    {
+      "id": "bytedance:seedance-2-5",
+      "vendor": "bytedance",
+      "title": "Seedance 2.5",
+      "models": [
+        "Seedance 2.5"
+      ],
+      "source_url": "https://seed.bytedance.com/en/seedance2_5",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/readers-2026-10-17/bytedance-seedance-2-5.html",
+        "bytes": 132209,
+        "sha256": "f327a8831bc5597845e9710174c527b31f77d17ae7d6fd1a174421272f5ec139"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Seedance 2.5 is a next-generation audio-video joint generation model, built for 30-second storytelling with precise reference control and powerful editing capabilities.",
+          "locator": "Product page lede directly below the Seedance 2.5 title.",
+          "source_tag": "p"
+        },
+        {
+          "text": "Create videos up to 30 seconds in a single generation, with the option to extend twice for richer, more complete storytelling. Motion is smoother and more consistent, and the visuals are more realistic.",
+          "locator": "Body paragraph under the section heading 'Longer Narratives. Better Control.'",
+          "source_tag": "p"
+        },
+        {
+          "text": "Understands reference videos more precisely -- capturing the intention, framing, and cinematic language to go beyond motion transfer into creative interpretation. Editing becomes more reliable, and responds to a wider range of audio and visual editing requests.",
+          "locator": "Body paragraph under the section heading 'Smarter Reference and Editing Capabilites' (spelling as published).",
+          "source_tag": "p"
+        },
+        {
+          "text": "Provides advanced capabilities such as white-model control and green-screen editing, combined with professional camera movement and performance blocking, to better support complex video production and professional creative workflows.",
+          "locator": "Body paragraph under the section heading 'Aiming for Professional Production'.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured product page embeds video demonstrations rather than static scientific figures; no figure is proposed.",
+      "figure_note_cn": "所核查官方产品页嵌入的是视频演示，没有可导出的静态科学图片；保留原文与官方来源。"
+    },
+    {
+      "id": "bytedance:seedream-5-0-pro",
+      "vendor": "bytedance",
+      "title": "Seedream 5.0 Pro",
+      "models": [
+        "Seedream 5.0 Pro"
+      ],
+      "source_url": "https://seed.bytedance.com/en/seedream5_0_pro",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/readers-2026-10-17/bytedance-seedream-5-0-pro.html",
+        "bytes": 162723,
+        "sha256": "55ea4371be20652965146e93a1b0a4fa68322f59aa009f5b2542c4420c0af15a"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "A multimodal image generation model that features advanced reasoning and efficient content creation.",
+          "locator": "Product page lede directly below the Seedream 5.0 Pro title.",
+          "source_tag": "p"
+        },
+        {
+          "text": "Master complex reasoning and information organization. Can generate text-rich images for education, professional, and other specialized scenarios.",
+          "locator": "Body paragraph under the section heading 'High-Density Infographics'.",
+          "source_tag": "p"
+        },
+        {
+          "text": "Accurately responds to spatial annotations and sketch-based guidance. Supports layer separation, which unlocks more creative possibilities.",
+          "locator": "Body paragraph under the section heading 'Interactive Editing'.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured product page shows generated example images and prompts, not source-native charts; no figure is proposed.",
+      "figure_note_cn": "所核查官方产品页展示的是生成示例与提示词，不是可核对的原生图表；保留原文与官方来源。"
+    },
+    {
+      "id": "meta:muse-voice-transcribe",
+      "vendor": "meta",
+      "title": "Muse Voice Transcribe",
+      "models": [
+        "Muse Voice Transcribe"
+      ],
+      "source_url": "https://research.meta.ai/blog/introducing-muse-voice-transcribe",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/readers-2026-10-17/meta-muse-voice-transcribe.html",
+        "bytes": 772366,
+        "sha256": "a9d54754129e09a8d35dee562bf84e66ea4cf0b9339eb2fd528140b3570a1f59"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "We’re excited to introduce Muse Voice Transcribe, the first real-time audio perception model developed by Meta Superintelligence Labs.",
+          "locator": "Opening paragraph directly below the post title, demo and date.",
+          "source_tag": "p"
+        },
+        {
+          "text": "Muse Voice Transcribe marks a first milestone in bringing our real-time voice models to you. It delivers real-time streaming ASR, diarization with 20+ speakers, and endpointing. It is multilingual with seamless code-switching and improves accuracy with language, keyword, and context biasing.",
+          "locator": "Second opening paragraph introducing streaming ASR, diarization and endpointing.",
+          "source_tag": "p"
+        },
+        {
+          "text": "We rank first on Artificial Analysis on streaming speech-to-text and on public diarization benchmarks. Model inclusion and rankings as of September 1, 2026.",
+          "locator": "Paragraph reporting the Artificial Analysis and diarization benchmark standing.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [
+        {
+          "local_path": ".cache/web-overviews/assets/meta-muse-voice-wer-final-transcription.png",
+          "asset_url": "https://research.meta.ai/articles/introducing-muse-audio/benchmarks/streaming-final-transcription-wer-v1.png",
+          "html_asset_reference": "/articles/introducing-muse-audio/benchmarks/streaming-final-transcription-wer-v1.png",
+          "asset_sha256": "dca0d830b7fe28d6b6d76c6f6ae203c86f850979deb24231c9898211201c2f7f",
+          "dimensions": [
+            1420,
+            1420
+          ],
+          "role": "results",
+          "caption": "",
+          "alt": "Bar chart of final-transcription streaming word error rate, with Muse Voice Transcribe lowest at 3.1 percent and seven other systems ranging from 3.4 to 4.0 percent.",
+          "visual_review": true,
+          "reviewed_at": "2026-10-17",
+          "source_kind": "image"
+        },
+        {
+          "local_path": ".cache/web-overviews/assets/meta-muse-voice-diarization-der.png",
+          "asset_url": "https://research.meta.ai/articles/introducing-muse-audio/benchmarks/streaming-diarization-der-v1.png",
+          "html_asset_reference": "/articles/introducing-muse-audio/benchmarks/streaming-diarization-der-v1.png",
+          "asset_sha256": "2705fa3bfbb0fc0308714bebf7d4cc6b1f9f348b321927665e289c7af921e1f1",
+          "dimensions": [
+            1440,
+            1440
+          ],
+          "role": "results",
+          "caption": "",
+          "alt": "Bar chart of average diarization error rate across AMI-IHM, AMI-SDM, and VoxConverse, with Muse Voice Transcribe lowest at 17.5 percent and five other systems ranging from 21.1 to 28.6 percent.",
+          "visual_review": true,
+          "reviewed_at": "2026-10-17",
+          "source_kind": "image"
+        },
+        {
+          "local_path": ".cache/web-overviews/assets/meta-muse-voice-latency-pareto.png",
+          "asset_url": "https://research.meta.ai/articles/introducing-muse-audio/benchmarks/adaptive-delay-speed-accuracy-v4.png",
+          "html_asset_reference": "/articles/introducing-muse-audio/benchmarks/adaptive-delay-speed-accuracy-v4.png",
+          "asset_sha256": "b0d64aec4d5fdf58bd1d885bbecf7b0102143eee4b40a2fb81025696f6ca9200",
+          "dimensions": [
+            1920,
+            1080
+          ],
+          "role": "results",
+          "caption": "",
+          "alt": "Scatter plot comparing final-transcription word error rate with time to final transcription. Muse Voice Transcribe reaches about 3.0 percent error at 0.16 seconds, below the dotted previous Pareto frontier formed by Soniox, Cartesia, and ElevenLabs systems; the other current systems shown have higher error or latency.",
+          "visual_review": true,
+          "reviewed_at": "2026-10-17",
+          "source_kind": "image"
+        }
+      ],
+      "figure_note_en": "Native benchmark bar charts and the latency-accuracy scatter plot are official static assets on the captured page; each was visually reviewed and keeps its published alt text, with no separate visible caption.",
+      "figure_note_cn": "官方页面提供原生基准对比柱状图与延迟-准确率散点图；已逐张目视核对，保留页面发布的替代文字，页面未另附可见图注。"
+    },
+    {
+      "id": "stepfun:stepaudio-3-asr-max",
+      "vendor": "stepfun",
+      "title": "StepAudio 3 ASR",
+      "models": [
+        "StepAudio 3 ASR Max"
+      ],
+      "source_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-asr",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/readers-2026-10-17/stepfun-stepaudio-3-asr-max.html",
+        "bytes": 823755,
+        "sha256": "c87142f7dc81141f8646bf762207886f9728e2e759fc38ac99a4edfe00bf6994"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "StepAudio 3 ASR 系列提供高准确率、低延迟的语音转写能力。",
+          "locator": "Introductory sentence at the top of the StepAudio 3 ASR documentation page.",
+          "source_tag": "p"
+        },
+        {
+          "text": "StepAudio 3 ASR Max 是阶跃星辰迄今规模最大的 ASR 模型，以大语言模型为语义底座，将高精度声学建模与大语言模型的上下文理解、知识储备和推理能力深度融合，让语音识别从“辨认声音”进一步走向“理解语境”。",
+          "locator": "Paragraph introducing StepAudio 3 ASR Max, the largest ASR model in the series.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured documentation page contains benchmark tables as text and no native architecture or chart image.",
+      "figure_note_cn": "本次核查的官方文档页以文字表格呈现评测信息，没有可直接导出的原生架构图或图表。"
+    },
+    {
+      "id": "minimax:minimax-speech-2-8",
+      "vendor": "minimax",
+      "title": "MiniMax Speech 2.8",
+      "models": [
+        "MiniMax Speech 2.8"
+      ],
+      "source_url": "https://www.minimax.io/news/minimax-speech-28",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/readers-2026-10-17/minimax-minimax-speech-2-8.html",
+        "bytes": 83307,
+        "sha256": "94e3a1445d7390b0c27ce56247fed18f6822e7277313ed32bf4c20c108eaee41"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Today, we are excited to introduce MiniMax Speech 2.8.",
+          "locator": "Opening sentence directly below the article title.",
+          "source_tag": "p"
+        },
+        {
+          "text": "This isn't just a technical upgrade; it's a breakthrough in vocal authenticity. By introducing native sound tag support, high-fidelity cloning, and studio-grade clarity, we are closing the gap between AI and the human voice.",
+          "locator": "First body paragraph introducing the model capabilities.",
+          "source_tag": "p"
+        },
+        {
+          "text": "Our mission remains clear: to make synthetic speech feel truly human and indistinguishable.",
+          "locator": "Paragraph stating the stated mission for synthetic speech.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured announcement embeds audio demonstrations; no source-native static chart is proposed.",
+      "figure_note_cn": "所核查官方公告嵌入音频演示，没有可导出的原生静态图表；保留原文与官方来源。"
+    },
+    {
+      "id": "google:codegemma-model-card",
+      "vendor": "google",
+      "title": "CodeGemma",
+      "models": [
+        "CodeGemma"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/codegemma/model_card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-codegemma-model-card.html",
+        "bytes": 118845,
+        "sha256": "3aca6abaa39ddf0f3f90c5080c0cf8a7344314e80949be4129c7dcb09b3c624b"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "CodeGemma is a family of lightweight open code models built on top of Gemma. CodeGemma models are text-to-text and text-to-code decoder-only models and are available as a 7 billion pretrained variant that specializes in code completion and code generation tasks, a 7 billion parameter instruction-tuned variant for code chat and instruction following and a 2 billion parameter pretrained variant for fast code completion.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:diffusiongemma-model-card",
+      "vendor": "google",
+      "title": "DiffusionGemma",
+      "models": [
+        "DiffusionGemma"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/diffusiongemma/model_card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-diffusiongemma-model-card.html",
+        "bytes": 158499,
+        "sha256": "77d5aa562815b4934434f5ac3e1d205ac682139d517894c440cf41a112283efa"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "DiffusionGemma is a generative model built by Google DeepMind. Based on the 26B A4B Mixture-of-Experts (MoE) Gemma 4 architecture, DiffusionGemma generates tokens using discrete diffusion. This open-weights model is multimodal, handling text, image, and video inputs to generate text output.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:functiongemma-model-card",
+      "vendor": "google",
+      "title": "FunctionGemma",
+      "models": [
+        "FunctionGemma"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/functiongemma/model_card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-functiongemma-model-card.html",
+        "bytes": 154502,
+        "sha256": "7fed18258700db0f55b3dd8b6314f9a9fc0f3850850bd017d3b52b322905ef82"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "FunctionGemma is a lightweight, open model from Google, built as a foundation for creating your own specialized function calling models. FunctionGemma is not intended for use as a direct dialogue model, and is designed to be highly performant after further fine-tuning, as is typical of models this size. Built on the Gemma 3 270M model and with the same research and technology used to create the Gemini models, FunctionGemma has been trained specifically for function calling. The model has the same architecture as Gemma 3, but uses a different chat format. The model is well suited for text-only function calling. The uniquely small size makes it possible to deploy in environments with limited resources such as laptops, desktops or your own cloud infrastructure, democratizing access to state of the art AI models and helping foster innovation for everyone. Furthermore, akin to the base Gemma 270M, the model has been optimized to be extremely versatile, performant on a variety of hardware in single turn scenarios, but should be finetuned on single turn or multiturn task specific data to achieve best accuracy in specific domains. To demonstrate how specializing the 270M parameter model can achieve high performance on specific agentic workflows, we have highlighted two use cases in the Google AI Edge Gallery app.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:gemma-1-model-card",
+      "vendor": "google",
+      "title": "Gemma 1",
+      "models": [
+        "Gemma 1"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/model_card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-gemma-1-model-card.html",
+        "bytes": 152165,
+        "sha256": "12a9656d593e467c95c01653d463b6ef8053691df3682f34619e73db895c441f"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "Gemma is a family of lightweight, state-of-the-art open models from Google, built from the same research and technology used to create the Gemini models. They are text-to-text, decoder-only large language models, available in English, with open weights, pre-trained variants, and instruction-tuned variants. Gemma models are well-suited for a variety of text generation tasks, including question answering, summarization, and reasoning. Their relatively small size makes it possible to deploy them in environments with limited resources such as a laptop, desktop or your own cloud infrastructure, democratizing access to state of the art AI models and helping foster innovation for everyone.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:gemma-3-model-card",
+      "vendor": "google",
+      "title": "Gemma 3",
+      "models": [
+        "Gemma 3"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/core/model_card_3",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-gemma-3-model-card.html",
+        "bytes": 172230,
+        "sha256": "802db818e8e249b0c5df2176680a93316de1e0e293b722b873069c2ec807395d"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "Gemma is a family of lightweight, state-of-the-art open models from Google, built from the same research and technology used to create the Gemini models. Gemma 3 models are multimodal, handling text and image input and generating text output, with open weights for both pre-trained variants and instruction-tuned variants. Gemma 3 has a large, 128K context window, multilingual support in over 140 languages, and is available in more sizes than previous versions. Gemma 3 models are well-suited for a variety of text generation and image understanding tasks, including question answering, summarization, and reasoning. Their relatively small size makes it possible to deploy them in environments with limited resources such as laptops, desktops or your own cloud infrastructure, democratizing access to state of the art AI models and helping foster innovation for everyone.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:gemma-3n-model-card",
+      "vendor": "google",
+      "title": "Gemma 3n",
+      "models": [
+        "Gemma 3n"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/gemma-3n/model_card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-gemma-3n-model-card.html",
+        "bytes": 158421,
+        "sha256": "edd4a93e05fe16b572ea5f3fc16d0ad7a127ed38397582c97e7ea0e08a51b08e"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "Gemma is a family of lightweight, state-of-the-art open models from Google, built from the same research and technology used to create the Gemini models. Gemma 3n models are designed for efficient execution on low-resource devices. They are capable of multimodal input, handling text, image, video, and audio input, and generating text outputs, with open weights for pre-trained and instruction-tuned variants. These models were trained with data in over 140 spoken languages.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        },
+        {
+          "text": "Gemma 3n models use selective parameter activation technology to reduce resource requirements. This technique allows the models to operate at an effective size of 2B and 4B parameters, which is lower than the total number of parameters they contain. For more information on Gemma 3n's efficient parameter management technology, see the Gemma 3n page.",
+          "locator": "Section 'Description', paragraph 2.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:gemma-4-model-card",
+      "vendor": "google",
+      "title": "Gemma 4",
+      "models": [
+        "Gemma 4"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-gemma-4-model-card.html",
+        "bytes": 168000,
+        "sha256": "5b4cabc7205f0f0c14657164e62fcf1ed2043fc685d770b515fe5c24e429a648"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Gemma is a family of open models built by Google DeepMind. Gemma 4 models are multimodal, handling text and image input (with audio supported on E2B, E4B, and 12B models) and generating text output. This release includes open-weights models in both pre-trained and instruction-tuned variants. Gemma 4 features a context window of up to 256K tokens and maintains multilingual support in over 140 languages.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。"
+    },
+    {
+      "id": "google:medgemma-model-card",
+      "vendor": "google",
+      "title": "MedGemma",
+      "models": [
+        "MedGemma"
+      ],
+      "source_url": "https://developers.google.com/health-ai-developer-foundations/medgemma/model-card-v1",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-medgemma-model-card.html",
+        "bytes": 175981,
+        "sha256": "80764ae3c61ddd912f1bdaa11e65869fc594e1f72b854163d78ee4601e4ab128"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "MedGemma is a collection of Gemma 3 variants that are trained for performance on medical text and image comprehension. Developers can use MedGemma to accelerate building healthcare-based AI applications. MedGemma currently comes in three variants: a 4B multimodal version and 27B text-only and multimodal versions.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        },
+        {
+          "text": "Both MedGemma multimodal versions utilize a SigLIP image encoder that has been specifically pre-trained on a variety of de-identified medical data, including chest X-rays, dermatology images, ophthalmology images, and histopathology slides. Their LLM components are trained on a diverse set of medical data, including medical text, medical question-answer pairs, FHIR-based electronic health record data (27B multimodal only), radiology images, histopathology patches, ophthalmology images, and dermatology images.",
+          "locator": "Section 'Description', paragraph 2.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:medgemma-1-5-model-card",
+      "vendor": "google",
+      "title": "MedGemma 1.5",
+      "models": [
+        "MedGemma 1.5"
+      ],
+      "source_url": "https://developers.google.com/health-ai-developer-foundations/medgemma/model-card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-medgemma-1-5-model-card.html",
+        "bytes": 140224,
+        "sha256": "0b28144fa72f8479123b7dba7ecc7fbd18773ab11b3ef04505d5922fb5ead65d"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "MedGemma is a collection of Gemma 3 variants that are trained for performance on medical text and image comprehension. Developers can use MedGemma to accelerate building healthcare-based AI applications.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        },
+        {
+          "text": "MedGemma 1.5 4B expands support for several new medical imaging and data processing applications, including:",
+          "locator": "Section 'Description', paragraph 2.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。"
+    },
+    {
+      "id": "google:paligemma-1-model-card",
+      "vendor": "google",
+      "title": "PaliGemma",
+      "models": [
+        "PaliGemma"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/paligemma/model-card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-paligemma-1-model-card.html",
+        "bytes": 160533,
+        "sha256": "eb4a3bff8bcc752726956fff8be1c8007eaccab949da6cc70a5e8f40371f6aec"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "PaliGemma is a versatile and lightweight vision-language model (VLM) inspired by PaLI-3 and based on open components such as the SigLIP vision model and the Gemma language model. It takes both image and text as input and generates text as output, supporting multiple languages. It is designed for class-leading fine-tune performance on a wide range of vision-language tasks such as image and short video caption, visual question answering, text reading, object detection and object segmentation.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:paligemma-2-model-card",
+      "vendor": "google",
+      "title": "PaliGemma 2",
+      "models": [
+        "PaliGemma 2"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/paligemma/model-card-2",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-paligemma-2-model-card.html",
+        "bytes": 172500,
+        "sha256": "626fcd4fafe4b6bf5e0e8d4fd0fa4f8e91ff4b055132c88510eef88275c57406"
+      },
+      "source_heading": "Model summary",
+      "paragraphs": [
+        {
+          "text": "PaliGemma 2 is an update of the PaliGemma vision-language model (VLM) which incorporates the capabilities of the Gemma 2 models. The PaliGemma family of models is inspired by PaLI-3 and based on open components such as the SigLIP vision model and Gemma 2 language models. It takes both image and text as input and generates text as output, supporting multiple languages. It is designed for class-leading fine-tune performance on a wide range of vision-language tasks such as image and short video caption, visual question answering, text reading, object detection and object segmentation.",
+          "locator": "Section 'Model summary', paragraph 1.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:recurrentgemma-model-card",
+      "vendor": "google",
+      "title": "RecurrentGemma",
+      "models": [
+        "RecurrentGemma"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/recurrentgemma/model_card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-recurrentgemma-model-card.html",
+        "bytes": 150909,
+        "sha256": "d443c8e9585115264b3609e8a7b44b42bdcd242418b9e47ee6e8ae8cad1e40e2"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "RecurrentGemma is a family of open language models built on a novel recurrent architecture developed at Google. Both pre-trained and instruction-tuned versions are available in English.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        },
+        {
+          "text": "Like Gemma, RecurrentGemma models are well-suited for a variety of text generation tasks, including question answering, summarization, and reasoning. Because of its novel architecture, RecurrentGemma requires less memory than Gemma and achieves faster inference when generating long sequences.",
+          "locator": "Section 'Description', paragraph 2.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:shieldgemma-2-model-card",
+      "vendor": "google",
+      "title": "ShieldGemma 2",
+      "models": [
+        "ShieldGemma 2"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/shieldgemma/model_card_2",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-shieldgemma-2-model-card.html",
+        "bytes": 153006,
+        "sha256": "3e4e2279df72640066704cc5f11a999e15a028b8427287a50a73069055e20421"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "ShieldGemma 2, built on Gemma 3, is a 4 billion (4B) parameter model that checks the safety of both synthetic and natural images against key categories to help you build robust datasets and models. With this addition to the Gemma family of models, researchers and developers can now minimize the risk of harmful content affecting their Generative-AI powered applications across key harm types.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        },
+        {
+          "text": "We recommend using ShieldGemma 2 as an input filter to vision language models, or as an output filter of image generation systems. To train a robust image safety model, we curated training datasets of natural and synthetic images and instruction-tuned Gemma 3 to demonstrate strong performance. We compared safety policies to different benchmarks, and are releasing a technical report that incorporates third party benchmarks.",
+          "locator": "Section 'Description', paragraph 2.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:txgemma-model-card",
+      "vendor": "google",
+      "title": "TxGemma",
+      "models": [
+        "TxGemma"
+      ],
+      "source_url": "https://developers.google.com/health-ai-developer-foundations/txgemma/model-card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-txgemma-model-card.html",
+        "bytes": 110172,
+        "sha256": "c3185b6f14e3860884aae73cc6956cf921dffcf3f64ecfc2520c611f1137f578"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "TxGemma is a collection of lightweight, state-of-the-art, open language models built upon Gemma 2, fine-tuned for therapeutic development. It comes in 3 sizes, 2B, 9B, and 27B.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        },
+        {
+          "text": "TxGemma models are designed to process and understand information related to various therapeutic modalities and targets, including small molecules, proteins, nucleic acids, diseases, and cell lines. TxGemma excels at tasks such as property prediction, and can serve as a foundation for further fine-tuning or as an interactive, conversational agent for drug discovery. The model is fine-tuned from Gemma 2 using a diverse set of instruction-tuning datasets, curated from the Therapeutics Data Commons (TDC).",
+          "locator": "Section 'Description', paragraph 2.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "figure_note_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "cohere:cohere-transcribe-arabic-model-card",
+      "vendor": "cohere",
+      "title": "Cohere Transcribe Arabic",
+      "models": [
+        "Cohere Transcribe Arabic"
+      ],
+      "source_url": "https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/cohere-cohere-transcribe-arabic-model-card.html",
+        "bytes": 224924,
+        "sha256": "36ebf789f8ef9d5812a78484c4dbfa8b33a7a8f7b184f0a4c369730dfcd00704"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Cohere Transcribe Arabic is an open source 2B-parameter Arabic automatic speech recognition model for speech-to-text transcription.",
+          "locator": "Model card opening paragraph on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。"
+    },
+    {
+      "id": "cohere:cohere-transcribe-model-card",
+      "vendor": "cohere",
+      "title": "Cohere Transcribe",
+      "models": [
+        "Cohere Transcribe"
+      ],
+      "source_url": "https://huggingface.co/CohereLabs/cohere-transcribe-03-2026",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/cohere-cohere-transcribe-model-card.html",
+        "bytes": 305547,
+        "sha256": "6f29f144ebfaa94cecb7b8ff7d0db3074dd8afb68fac9db11c379ec6511618da"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Cohere Transcribe is an open source release of a 2B parameter dedicated audio-in, text-out automatic speech recognition (ASR) model. The model supports 14 languages.",
+          "locator": "Model card opening paragraph on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "cohere:north-micro-vision-instruct-model-card",
+      "vendor": "cohere",
+      "title": "North Micro Vision Instruct",
+      "models": [
+        "North Micro Vision Instruct"
+      ],
+      "source_url": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/cohere-north-micro-vision-instruct-model-card.html",
+        "bytes": 254066,
+        "sha256": "444f21f2f63745a5b0bcae3d56f8f13e130b263454f58c32d1164a49bd1b7062"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "North Micro Vision Instruct is a 2.4B-parameter open-weight vision-language model with native-resolution image support, released under the Apache 2.0 license. It is designed as a compact foundation for prototyping, task-specific fine-tuning, and specialized multimodal applications.",
+          "locator": "Model card opening paragraph on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。"
+    },
+    {
+      "id": "minimax:minimax-music-3-model-card",
+      "vendor": "minimax",
+      "title": "MiniMax Music 3.0",
+      "models": [
+        "MiniMax Music 3.0"
+      ],
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/minimax-minimax-music-3-model-card.html",
+        "bytes": 187185,
+        "sha256": "4fd97b5c444f693df5f0f08d1527537d8ed743b1bfdfb9ec984870c52a109d69"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "MiniMax Music 3 is a high-performance music generation model for creating complete songs up to five minutes long. Conditioned on lyrics and a detailed music description, it generates structurally coherent songs with expressive vocals, evolving arrangements, and stable long-form audio quality.",
+          "locator": "Model card opening paragraph on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。"
+    },
+    {
+      "id": "nvidia:cosmos-reason1-7b-model-card",
+      "vendor": "nvidia",
+      "title": "Cosmos Reason1",
+      "models": [
+        "Cosmos Reason1"
+      ],
+      "source_url": "https://huggingface.co/nvidia/Cosmos-Reason1-7B",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/nvidia-cosmos-reason1-7b-model-card.html",
+        "bytes": 299252,
+        "sha256": "4ae1bf588b90ebd64fd8f9d462cfceb3abbf6bb13d666dd9443fd44f41b424c3"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Cosmos Reason – an open, customizable, 7B-parameter reasoning vision language model (VLM) for physical AI and robotics - enables robots and vision AI agents to reason like humans, using prior knowledge, physics understanding and common sense to understand and act in the real world. This model understands space, time, and fundamental physics, and can serve as a planning model to reason what steps an embodied agent might take next.",
+          "locator": "Model card opening paragraph on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "mistral:devstral-2-model-card",
+      "vendor": "mistral",
+      "title": "Devstral 2",
+      "models": [
+        "Devstral 2"
+      ],
+      "source_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/mistral-devstral-2-model-card.html",
+        "bytes": 324835,
+        "sha256": "b04e5e1afbfa7062f993c1941080ead2128d40f5f2a361ee95abec1a7c32b6c0"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Devstral is an agentic LLM for software engineering tasks. Devstral 2 excels at using tools to explore codebases, editing multiple files and power software engineering agents.",
+          "locator": "Contiguous model-card opening paragraph on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "mistral:leanstral-1-5-model-card",
+      "vendor": "mistral",
+      "title": "Leanstral 1.5",
+      "models": [
+        "Leanstral 1.5"
+      ],
+      "source_url": "https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/mistral-leanstral-1-5-model-card.html",
+        "bytes": 173756,
+        "sha256": "e422d340321eaae3b6affb51d1076d4a07b1230e917c76980ac77da54bbf3fbc"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Leanstral 1.5 is an open-source code agent model designed for Lean 4, a proof assistant capable of expressing complex mathematical objects such as perfectoid spaces and software specifications like properties of Rust fragments. Built as part of the Mistral Small 4 family, it combines multimodal capabilities and an efficient architecture, making it both performant and cost-effective compared to existing closed-source alternatives.",
+          "locator": "Contiguous model-card opening paragraph on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "mistral:mistral-small-4-model-card",
+      "vendor": "mistral",
+      "title": "Mistral Small 4",
+      "models": [
+        "Mistral Small 4"
+      ],
+      "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/mistral-mistral-small-4-model-card.html",
+        "bytes": 277373,
+        "sha256": "03ad608700ec7759692cd35869e9b7bb8af0c6830251542923bf8f5ee9ea6acf"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Mistral Small 4 is a powerful hybrid model capable of acting as both a general instruction model and a reasoning model. It unifies the capabilities of three different model families—Instruct, Reasoning (previously called Magistral), and Devstral—into a single, unified model.",
+          "locator": "Contiguous model-card opening paragraph on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:embeddinggemma-model-card",
+      "vendor": "google",
+      "title": "EmbeddingGemma",
+      "models": [
+        "EmbeddingGemma"
+      ],
+      "source_url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/google-embeddinggemma-model-card.html",
+        "bytes": 151815,
+        "sha256": "52d92c346b377ebbd5ac5b6461bc6cb98a2c00907a84024c7f13f2e9e512fde5"
+      },
+      "source_heading": "Description",
+      "paragraphs": [
+        {
+          "text": "EmbeddingGemma is a 300M parameter, state-of-the-art for its size, open embedding model from Google, built from Gemma 3 (with T5Gemma initialization) and the same research and technology used to create Gemini models. EmbeddingGemma produces vector representations of text, making it well-suited for search and retrieval tasks, including classification, clustering, and semantic similarity search. This model was trained with data in 100+ spoken languages.",
+          "locator": "Section 'Description', paragraph 1.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model-card page is specification and evaluation text with no source-native architecture diagram or results chart.",
+      "figure_note_cn": "所核查官方模型卡为规格与评测文字，没有可直接导出的原生架构图或结果图表。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "meta:llama-2-model-card",
+      "vendor": "meta",
+      "title": "Llama 2",
+      "models": [
+        "Llama 2"
+      ],
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/meta-llama-2-model-card.html",
+        "bytes": 291313,
+        "sha256": "099703c117f606dd6b56c9af1a922fff694f2c1ab84e2a5d37c88490a5f6e2f2"
+      },
+      "source_heading": "Model Details",
+      "paragraphs": [
+        {
+          "text": "Meta developed and released the Llama 2 family of large language models (LLMs), a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 70 billion parameters. Our fine-tuned LLMs, called Llama-2-Chat, are optimized for dialogue use cases.",
+          "locator": "Official Meta model card, section following the Model Details heading.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡为文字与表格；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "meta:llama-3-model-card",
+      "vendor": "meta",
+      "title": "Llama 3",
+      "models": [
+        "Llama 3"
+      ],
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3/MODEL_CARD.md",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/meta-llama-3-model-card.html",
+        "bytes": 402346,
+        "sha256": "a384e8219002865f0c394b23ccdd0acf7624b072efac3457bd9de5eba7451c3c"
+      },
+      "source_heading": "Model Details",
+      "paragraphs": [
+        {
+          "text": "Meta developed and released the Meta Llama 3 family of large language models (LLMs), a collection of pretrained and instruction tuned generative text models in 8 and 70B sizes. The Llama 3 instruction tuned models are optimized for dialogue use cases and outperform many of the available open source chat models on common industry benchmarks.",
+          "locator": "Official Meta model card, section following the Model Details heading.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡为文字与表格；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "meta:llama-3-2-model-card",
+      "vendor": "meta",
+      "title": "Llama 3.2",
+      "models": [
+        "Llama 3.2"
+      ],
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/meta-llama-3-2-model-card.html",
+        "bytes": 457808,
+        "sha256": "34a449098554dbfb44912b05875f00bb779fb7499f29489f3cad251efe6c03a1"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Llama 3.2 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety.",
+          "locator": "Official Meta model card, section following the Model Details heading.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡为文字与表格；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "meta:llama-3-3-model-card",
+      "vendor": "meta",
+      "title": "Llama 3.3",
+      "models": [
+        "Llama 3.3"
+      ],
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/model-cards-2026-10-17/meta-llama-3-3-model-card.html",
+        "bytes": 355036,
+        "sha256": "a74d4b083cad8e3ddb41ec7ee2cc55d82dadcf5df6b812a99d237d01a863fd42"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Llama 3.3 is an auto-regressive language model that uses an optimized transformer architecture. The tuned versions use supervised fine-tuning (SFT) and reinforcement learning with human feedback (RLHF) to align with human preferences for helpfulness and safety.",
+          "locator": "Official Meta model card, section following the Model Details heading.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured model card is prose and tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方模型卡为文字与表格；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "xai:grok-1-model-card",
+      "vendor": "xai",
+      "title": "Grok-1",
+      "models": [
+        "Grok-1"
+      ],
+      "source_url": "https://x.ai/news/grok/model-card",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/xai-grok-1-model-card.html",
+        "bytes": 127894,
+        "sha256": "674a0e9065c728fc21b3af75d68a9d6d0caf5edaf76d6e10c5308c710d30b8fd"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Grok-1 is an autoregressive Transformer-based model pre-trained to perform next-token prediction. The model was then fine-tuned using extensive feedback from both humans and the early Grok-0 models.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "deepseek:deepseek-v2-5",
+      "vendor": "deepseek",
+      "title": "DeepSeek-V2.5",
+      "models": [
+        "DeepSeek-V2.5"
+      ],
+      "source_url": "https://api-docs.deepseek.com/news/news0905/",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/deepseek-deepseek-v2-5.html",
+        "bytes": 25845,
+        "sha256": "e14d966cbc35ae3f8f011dba6f1cab522df522f5f8df64eee0ac64621cafe1db"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "We’ve officially launched DeepSeek-V2.5 – a powerful combination of DeepSeek-V2-0628 and DeepSeek-Coder-V2-0724! This new version not only retains the general conversational capabilities of the Chat model and the robust code processing power of the Coder model but also better aligns with human preferences.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "meta:llama-4-model-card",
+      "vendor": "meta",
+      "title": "Llama 4",
+      "models": [
+        "Llama 4 Scout",
+        "Llama 4 Maverick"
+      ],
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/meta-llama-4-model-card.html",
+        "bytes": 394627,
+        "sha256": "f5c0f2404cf02104267f4d8100e4a63bec961506052da761bcba0a3d196a8eb3"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "The Llama 4 collection of models are natively multimodal AI models that enable text and multimodal experiences. These models leverage a mixture-of-experts architecture to offer industry-leading performance in text and image understanding.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "bytedance:seed-oss-model-card",
+      "vendor": "bytedance",
+      "title": "Seed-OSS",
+      "models": [
+        "Seed-OSS"
+      ],
+      "source_url": "https://github.com/ByteDance-Seed/seed-oss",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/bytedance-seed-oss-model-card.html",
+        "bytes": 371415,
+        "sha256": "2af9089280e13b155c0033f2016c66f43aefe634bb2d6c9c74d88e1183f20d9e"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Seed-OSS is a series of open-source large language models developed by ByteDance's Seed Team, designed for powerful long-context, reasoning, agent and general capabilities, and versatile developer-friendly features. Although trained with only 12T tokens, Seed-OSS achieves excellent performance on several popular open benchmarks.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:veo-3-1-model-card",
+      "vendor": "google",
+      "title": "Veo 3.1",
+      "models": [
+        "Veo 3.1"
+      ],
+      "source_url": "https://blog.google/innovation-and-ai/products/veo-updates-flow/",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/google-veo-3-1-model-card.html",
+        "bytes": 978351,
+        "sha256": "6c20b380e8e12e2260f5954164e71d9503ea34bfc9c0e57b36042b2b51a2e3f9"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Veo 3.1 brings richer audio, more narrative control and enhanced realism. Summaries were generated by Google AI.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "zai:glm-asr-nano-model-card",
+      "vendor": "zai",
+      "title": "GLM-ASR-Nano",
+      "models": [
+        "GLM-ASR-Nano"
+      ],
+      "source_url": "https://github.com/zai-org/GLM-ASR",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/zai-glm-asr-nano-model-card.html",
+        "bytes": 307709,
+        "sha256": "0aeea9120a7ec52d1b8320fc35a4ecd20fcec3601fab12b7a2697be6ab6e69ba"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "GLM-ASR-Nano-2512 is a robust, open-source speech recognition model with 1.5B parameters. Designed for real-world complexity, it outperforms OpenAI Whisper V3 on multiple benchmarks while maintaining a compact size.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。"
+    },
+    {
+      "id": "minimax:minimax-m2-1-model-card",
+      "vendor": "minimax",
+      "title": "MiniMax-M2.1",
+      "models": [
+        "MiniMax-M2.1"
+      ],
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-M2.1",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/minimax-minimax-m2-1-model-card.html",
+        "bytes": 305754,
+        "sha256": "dc10ac411ff2dd0c232955e4d9ac115647305bb32ffb48fa035cc14c9e8c8437"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "MiniMax-M2.1 Today, we are handing MiniMax-M2.1 over to the open-source community. This release is more than just a parameter update; it is a significant step toward democratizing top-tier agentic capabilities.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "zai:glm-image-model-card",
+      "vendor": "zai",
+      "title": "GLM-Image",
+      "models": [
+        "GLM-Image"
+      ],
+      "source_url": "https://github.com/zai-org/GLM-Image",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/zai-glm-image-model-card.html",
+        "bytes": 350699,
+        "sha256": "8d3786712a719d3aa9d91a23cca29865c926501db3b4cd4af22c473fb6f6c6b6"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "GLM-Image 👋 Join our WeChat and Discord community 📖 Check out GLM-Image's Technical Blog and 🤗 Model Card 📍 Use GLM-Image's API Introduction GLM-Image is an image generation model adopts a hybrid autoregressive + diffusion decoder architecture. In general image generation quality, GLM‑Image aligns with mainstream latent diffusion approaches, but it shows significant advantages in text-rendering and knowledge‑intensive generation scenarios.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。"
+    },
+    {
+      "id": "bytedance:seedrealtime",
+      "vendor": "bytedance",
+      "title": "SeedRealtime",
+      "models": [
+        "SeedRealtime"
+      ],
+      "source_url": "https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/bytedance-seedrealtime.html",
+        "bytes": 122509,
+        "sha256": "b8ee0f126a30b0a8ec583fb0265020b77eeaad282293305087b6ed682bd651c1"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Today, we are officially launching SeedRealtime, a native audio-visual full-duplex LLM. As a key step toward omni-modal interaction, SeedRealtime uses a unified architecture to natively fuse audio, video, and text, enabling real-time interaction over continuous multimodal streams and delivering a brand-new \"watch, listen, and speak\" experience.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。"
+    },
+    {
+      "id": "meta:muse-spark-1-2",
+      "vendor": "meta",
+      "title": "Muse Spark 1.2",
+      "models": [
+        "Muse Spark 1.2"
+      ],
+      "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/meta-muse-spark-1-2.html",
+        "bytes": 168447,
+        "sha256": "3069c0571a1cc59417941a4d789a51a64b089a7e0d865669c87b51c897d6fdc0"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Muse Spark 1.2 Muse Spark 1.2 is a coding-focused update to Muse Spark 1.1, with improvements in code generation, complex debugging, codebase understanding, and end-to-end developer workflows. In Muse Spark 1.2, we significantly scaled up training compute on coding tasks while expanding training environment diversity.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "meta:muse-spark-1-3",
+      "vendor": "meta",
+      "title": "Muse Spark 1.3",
+      "models": [
+        "Muse Spark 1.3"
+      ],
+      "source_url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/meta-muse-spark-1-3.html",
+        "bytes": 187345,
+        "sha256": "639a2c13dc093e0cf5e138b6137ef8bdb1896352c1e6f40dbe54bac59f541dcb"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Muse Spark 1.3 September 2, 2026·3 minute read We’re excited to release Muse Spark 1.3, which delivers improved performance across agentic and coding tasks. Drawing on what we learned from months of broad adoption of Muse Code and Meta Model API, we’ve also made this model easier to use in real-world settings.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "cohere:embed-5-model-card",
+      "vendor": "cohere",
+      "title": "Embed 5",
+      "models": [
+        "Embed 5"
+      ],
+      "source_url": "https://cohere.com/blog/embed-5",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/cohere-embed-5-model-card.html",
+        "bytes": 485121,
+        "sha256": "6304a413da3934d63a908e7fe11ff3663afc576858c74f6ccf89eb2d5836553c"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Embed 5 supports multimodal inputs and retrieval, 100+ languages, and a 128K-token context window for longer documents. More efficient at scale: Matryoshka representations and lower-precision outputs reduce vector storage and search costs, while quantized weights lower serving requirements for private deployments.",
+          "locator": "Opening model paragraph located by the published model name on the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "figure_note_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "nvidia:nemotron-parse-2-0-model-card",
+      "vendor": "nvidia",
+      "title": "Nemotron Parse 2.0",
+      "models": [
+        "Nemotron Parse 2.0"
+      ],
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Parse-2.0",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/nvidia-nemotron-parse-2-0-model-card.html",
+        "bytes": 260372,
+        "sha256": "be1687a6aad5ea065cfe4c64aacfb28cb427ca6aa10df22ed54b100e94ba90cc"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "NVIDIA Nemotron Parse 2.0 transforms document images into structured, machine-readable representations with text, layout classes, bounding boxes, and reading-order information. Given a Red, Green, Blue (RGB) document image and a task prompt, the model produces formatted text and spatial annotations for document elements such as titles, paragraphs, captions, tables, charts, page headers, page footers, footnotes, pictures, and bibliography entries.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "nvidia:nemotron-3-5-asr-model-card",
+      "vendor": "nvidia",
+      "title": "Nemotron 3.5 ASR Streaming 0.6B",
+      "models": [
+        "Nemotron 3.5 ASR Streaming 0.6B"
+      ],
+      "source_url": "https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/nvidia-nemotron-3-5-asr-model-card.html",
+        "bytes": 427408,
+        "sha256": "b35d14a8a68c2fa7e8481e00ec459b03b4b51715a47af267bb35d017ec7429eb"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "is a multilingual, streaming Automatic Speech Recognition (ASR) model engineered to deliver high-quality multilingual transcription across both low-latency streaming and high-throughput batch workloads. Developed by NVIDIA, this 600M parameter model transcribes speech into text with native support for punctuation and capitalization, and offers runtime flexibility with configurable chunk sizes, including 80ms, 160ms, 320ms, 560ms, and 1120ms.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "nvidia:nemotron-3-embed-model-card",
+      "vendor": "nvidia",
+      "title": "Nemotron 3 Embed",
+      "models": [
+        "Nemotron 3 Embed"
+      ],
+      "source_url": "https://huggingface.co/nvidia/Nemotron-3-Embed-8B-BF16",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/nvidia-nemotron-3-embed-model-card.html",
+        "bytes": 300532,
+        "sha256": "a6fda22661dc683af9affe423edc733c9f0c02b09d1102566e1a30951971ca61"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "is a versatile text embedding model trained by NVIDIA and optimized for retrieval and semantic similarity tasks. It provides strong multilingual and cross-lingual retrieval capabilities and is designed to serve as a foundational component in text-based Retrieval-Augmented Generation (RAG) systems.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "nvidia:magpietts-model-card",
+      "vendor": "nvidia",
+      "title": "MagpieTTS Multilingual 357M v2607",
+      "models": [
+        "MagpieTTS Multilingual 357M v2607"
+      ],
+      "source_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/nvidia-magpietts-model-card.html",
+        "bytes": 318655,
+        "sha256": "a3931fdd759d2dd5a4fbefbbefd2a2aa8b196f52b7c0af47446b05c5e834422f"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "MagpieTTS is an end-to-end multilingual neural text-to-speech model that synthesizes speech using 5 English speaker voices — Aria, Jason, Leo, Sofia, and John Van Stan — across 12 languages: Arabic (ar), Chinese (zh), English (en), French (fr), German (de), Hindi (hi), Italian (it), Japanese (ja), Korean (ko), Portuguese (pt), Spanish (es), and Vietnamese (vi). The model adopts a transformer encoder–decoder architecture that autoregressively predicts discrete audio codec tokens, using multi-codebook prediction (typically 8 codebooks) with frame stacking (factor = 2) and a local transformer for fine-grained refinement of high-fidelity audio.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "nvidia:cosmos-reason2-model-card",
+      "vendor": "nvidia",
+      "title": "Cosmos Reason 2",
+      "models": [
+        "Cosmos Reason 2"
+      ],
+      "source_url": "https://github.com/nvidia-cosmos/cosmos-reason2",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/nvidia-cosmos-reason2-model-card.html",
+        "bytes": 395520,
+        "sha256": "2c8dd992af0574317f1769d5195e06f7c355ac988deb3ecb966e975ae5dc78f6"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Cosmos Reason – an open, customizable, reasoning vision language model (VLM) for physical AI and robotics - enables robots and vision AI agents to reason like humans, using prior knowledge, physics understanding and common sense to understand and act in the real world. This model understands space, time, and fundamental physics, and can serve as a planning model to reason what steps an embodied agent might take next.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "mistral:mistral-ocr-4-1-model-card",
+      "vendor": "mistral",
+      "title": "Mistral OCR 4.1",
+      "models": [
+        "Mistral OCR 4.1"
+      ],
+      "source_url": "https://docs.mistral.ai/models/ocr-4-1",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/mistral-mistral-ocr-4-1-model-card.html",
+        "bytes": 1167749,
+        "sha256": "61f5ed8092ebb425269ecc1cad1ca23e7716bbee50b0102d7343e446ede2b49c"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Our latest OCR service powering our Document AI stack, with native paragraph-level bounding box extraction, structural block labels, and block-level confidence scores. mistral-ocr-4-1+2 Speed Performance Modalities Price i USDEUR $4 /1000 Pages $5 /1000 Annotated Pages Speed Performance Modalities Price USDEUR $4 /1000 Pages $5 /1000 Annotated Pages FEATURES Features BBox Extraction /v1/ocr OCR /v1/ocr Annotations - Structured /v1/ocr Batching /v1/batch Other Models Z.ai GLM 5.3 v5.3 Z.ai GLM 5.2 v5.2 Shieldstral 1.0 v1.0 WHY MISTRAL About usOur customersCareersContact us EXPLORE AI SolutionsPartnersResearch DOCUMENTATION DocumentationAmbassadorsCookbooks BUILD StudioVibeMistral CodeMistral ComputeTry the API LEGAL Terms of servicePrivacy policyLegal noticePrivacy ChoicesBrand COMMUNITY Discord↗X↗Github↗LinkedIn↗Ambassadors Mistral AI © 2026",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "cohere:rerank-4-model-card",
+      "vendor": "cohere",
+      "title": "Rerank 4",
+      "models": [
+        "Rerank 4"
+      ],
+      "source_url": "https://docs.cohere.com/docs/rerank",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/cohere-rerank-4-model-card.html",
+        "bytes": 162669,
+        "sha256": "1417155e8ad1dfd11f2fde0b15dc2fb1e3677fa57c133d85d75f5a20db04209e"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "A multilingual model that allows for re-ranking English and non-english documents and semi-structured data (JSON). This is better suited for state-of-the-art quality and complex use-cases than its fast variant.TextRerankrerank-v4.0-fastA light version of rerank-v4.0-pro, this is a multilingual model that allows for re-ranking English and non-english documents and semi-structured data (JSON).",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "stepfun:nextstep-1-1-model-card",
+      "vendor": "stepfun",
+      "title": "NextStep-1.1",
+      "models": [
+        "NextStep-1.1"
+      ],
+      "source_url": "https://github.com/stepfun-ai/NextStep-1",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/stepfun-nextstep-1-1-model-card.html",
+        "bytes": 390321,
+        "sha256": "6151bfc4fcf7e28dbc54268f4942ff6cf56d4c9c23fe66cad0ad4936ba4d8d65"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "NextStep-1: SOTA Autogressive Image Generation with Continuous Tokens.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "qwen:qwen3-8-omni-flash",
+      "vendor": "qwen",
+      "title": "Qwen3.8-Omni-Flash",
+      "models": [
+        "Qwen3.8-Omni-Flash"
+      ],
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/qwen-qwen3-8-omni-flash.html",
+        "bytes": 1161014,
+        "sha256": "eee1a7b5541d718722a801f8769d27339c88a7bb5b7d5dfbe04ae5abe2c10841"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Qwen3.8-Omni-Flash 支持文本、图片、音频和视频输入及文本输出，支持思考与非思考模式、Function Calling、联网搜索和上下文缓存，适用于音视频理解、多模态分析和智能体应用。 多模态翻译 2026-09-16 qwen-mt-uni Qwen-MT-Uni 一次调用即可完成文本、文档（PDF/Word/PPT/Excel/HTML/Markdown/TXT）、图片、音频的翻译；服务端自动识别输入模态并进行版面还原、语音克隆等处理，输出翻译后的文本或文件下载链接。支持同步与异步两种调用方式，适用于跨模态大规模翻译场景。",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "qwen:qwen3-8-omni-flash-realtime",
+      "vendor": "qwen",
+      "title": "Qwen3.8-Omni-Flash-Realtime",
+      "models": [
+        "Qwen3.8-Omni-Flash-Realtime"
+      ],
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/qwen-qwen3-8-omni-flash-realtime.html",
+        "bytes": 1161014,
+        "sha256": "a6a6d7ea80a826395d609a9329ee6f9447b30238654dd05761b4b8fe5a8d45cd"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "qwen3.8-omni-flash-realtime 支持实时音视频交互及文本、音频输出，新增多通道音频、视频聚合和远程 MCP 工具调用，支持 WebSocket、WebRTC 和 AOQ 接入。 文本生成、深度思考、视觉理解 2026-09-21 ZHIPU/GLM-5.3-FlashX GLM-5.3-FlashX 是 GLM-5 系列的高速模型，推理速度达 200 tokens/s，提供更快、更流畅的模型体验。支持 1M 上下文与 128K 输出，原生支持图像、视频与文件输入。",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "qwen:qwen-mt-uni",
+      "vendor": "qwen",
+      "title": "Qwen-MT-Uni",
+      "models": [
+        "Qwen-MT-Uni"
+      ],
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/qwen-qwen-mt-uni.html",
+        "bytes": 1161014,
+        "sha256": "3e6ff3af3c2438884547e7f2177aae3722f73d576bbc8ba6daa3a8020e3b887a"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Qwen-MT-Uni 一次调用即可完成文本、文档（PDF/Word/PPT/Excel/HTML/Markdown/TXT）、图片、音频的翻译；服务端自动识别输入模态并进行版面还原、语音克隆等处理，输出翻译后的文本或文件下载链接。支持同步与异步两种调用方式，适用于跨模态大规模翻译场景。 文本生成、深度思考、视觉理解 2026-09-13 deepseek-v4.1-flash DeepSeek-V4.1-Flash 是 DeepSeek 全新架构系列中的轻量旗舰模型，以 552B 总参数 MoE 实现越级智能，在多项基准上超越包括 DeepSeek-V4-Pro 在内的主流旗舰模型。采用 Causal Encoder-Decoder 非对称架构，输入激活仅 8B、输出激活 16B，并具备原生多模态视觉理解能力。KV Cache 压缩至上一代 HBM 的 1/4、SSD 的 1/8，显著降低长上下文与 Agent 任务成本。支持 1M 上下文与 384K 最大输出，兼顾高吞吐、低延迟与极致性价比。",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "qwen:qwen-audio-3-0-tts-plus",
+      "vendor": "qwen",
+      "title": "Qwen-Audio-3.0-TTS-Plus",
+      "models": [
+        "Qwen-Audio-3.0-TTS-Plus"
+      ],
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/qwen-qwen-audio-3-0-tts-plus.html",
+        "bytes": 1161014,
+        "sha256": "20677c8d12aa1bfec93651f9830e0487705a5530ea0a16fc1e7a74a28aa6a9c5"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Qwen-Audio-3.0-TTS-Plus是面向高质量语音生成场景打造的高性能语音合成大模型。相比前一版本，模型支持更多小语种和中文方言，显著提升方言发音的正宗程度，并增强了 free-style 指令遵循能力和细粒度标签控制能力，可更准确地控制情绪、语气、角色、语速、音量和合成风格。同时，模型在噪声、混响等复杂声学条件下具备更强鲁棒性，进一步提升了音质、清晰度、分辨率和整体表现力。Plus 版本更强调合成效果和细节表现，适用于有更高音质、自然度和表现力要求的专业场景，如内容创作、有声书、影视配音、品牌声音设计和高品质语音服务。 实时语音合成 2026-07-14 qwen-audio-3.0-tts-flash Qwen-Audio-3.0-TTS-Flash是面向实时交互场景优化的高性能语音合成大模型。相比前一版本，模型支持更多小语种和中文方言，提升了方言发音的正宗程度，并增强了 free-style 指令遵循能力和细粒度标签控制能力，可更灵活地控制情绪、语气、角色、语速、音量等表达方式。同时，模型在噪声、混响等复杂声学条件下具备更强鲁棒性，提升了音质、清晰度和整体表现力。Flash 版本重点优化实时合成体验，适用于语音助手、实时对话、智能客服等低延迟交互场景。",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "qwen:qwen-audio-3-0-tts-flash",
+      "vendor": "qwen",
+      "title": "Qwen-Audio-3.0-TTS-Flash",
+      "models": [
+        "Qwen-Audio-3.0-TTS-Flash"
+      ],
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/qwen-qwen-audio-3-0-tts-flash.html",
+        "bytes": 1161014,
+        "sha256": "d473eee8808c7b53c8432b3479211eed8c777b9b4408db6cd2fbfbf63636e839"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Qwen-Audio-3.0-TTS-Flash是面向实时交互场景优化的高性能语音合成大模型。相比前一版本，模型支持更多小语种和中文方言，提升了方言发音的正宗程度，并增强了 free-style 指令遵循能力和细粒度标签控制能力，可更灵活地控制情绪、语气、角色、语速、音量等表达方式。同时，模型在噪声、混响等复杂声学条件下具备更强鲁棒性，提升了音质、清晰度和整体表现力。Flash 版本重点优化实时合成体验，适用于语音助手、实时对话、智能客服等低延迟交互场景。 实时语音对话 2026-07-14 qwen-audio-3.0-realtime-plus 千问实时语音大模型 是一款登顶全球权威评测的下一代实时双工语音大模型，它在全球权威第三方评测平台 Artificial Analysis Speech-to-Speech子项中取得综合排名第一。千问实时语音大模型 兼顾了模型智商与双工对话节奏,在保持流畅、自然的实时交互体验的同时,语音推理能力不打折扣;并通过并行推理和全向流式等工程优化,将端到端响应时延控制在低水平,实现\"又快又聪明\"的对话体验。标准版更注重高质量的回复结果。",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "qwen:qwen-image-2-1",
+      "vendor": "qwen",
+      "title": "Qwen-Image-2.1",
+      "models": [
+        "Qwen-Image-2.1"
+      ],
+      "source_url": "https://github.com/QwenLM/Qwen-Image-2.1",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/qwen-qwen-image-2-1.html",
+        "bytes": 595269,
+        "sha256": "2ae8472326d5d48c3d021da2fac10bee531f4e43e8fe4e1f8222e335ee261f63"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Qwen-Image-2.1 is a single-stream DiT with the following design: Transformer: 32 layers, 7B parameters, single-stream architecture with block-causal attention ((q_idx >= kv_idx) or same_image_block). Text uses token-level causal mask; images use chunk-level bidirectional mask.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "qwen:qwen-image-2-1-pro",
+      "vendor": "qwen",
+      "title": "Qwen-Image-2.1-Pro",
+      "models": [
+        "Qwen-Image-2.1-Pro"
+      ],
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/qwen-qwen-image-2-1-pro.html",
+        "bytes": 1161014,
+        "sha256": "489c7710cc1a5b90417e12415e459cfb9d7d5740aaef0073de0f93b5334fe2b0"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Qwen-Image-2.1-Pro 是通义千问（Qwen）系列中一个统一的文本到图像生成与图像编辑模型。其视觉生成组件仅包含 70 亿参数（32 层单流 DiT），在生成质量、推理效率和多功能性之间取得了良好平衡。本次发布包含四项关键改进：紧凑高效：采用轻量级架构，结合混合粒度注意力机制和前缀 KV 缓存复用，在低计算开销下实现高质量图像生成。原生透明支持，统一生成与编辑：可从文本生成普通或透明（RGBA）图像，编辑透明图层，并从照片中提取主体——全部由单一模型完成。多功能编辑：支持最多 10 张参考图像，可通过圆形、手绘标注或独立蒙版指定局部编辑区域，并保留人物与产品的身份特征。逼真纹理与精细美学：改进字体排印、人像光照和细节表现，生成更具视觉吸引力的结果。 决策模型 2026-09-24 decision-model-preview 面向高频业务判断的结构化决策模型，可根据文本或业务状态并行完成分类、是非判断与评分，并返回概率分布和置信度，适用于工单分流、内容审核、智能体路由与结果校验等场景。",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "qwen:qwen3-8-technical-report",
+      "vendor": "qwen",
+      "title": "Qwen3.8",
+      "models": [
+        "Qwen3.8"
+      ],
+      "source_url": "https://github.com/QwenLM/Qwen3.8",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/qwen-qwen3-8-technical-report.html",
+        "bytes": 350692,
+        "sha256": "bea1a2283b87d223e2df84dd78de995b7cf25bc82284549ca61f88605cd5f237"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Qwen3.8 is the large language model series developed by Qwen team, Alibaba Group.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "bytedance:seed-audio-1-0",
+      "vendor": "bytedance",
+      "title": "Seed Audio 1.0",
+      "models": [
+        "Seed Audio 1.0"
+      ],
+      "source_url": "https://seed.bytedance.com/en/research",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/bytedance-seed-audio-1-0.html",
+        "bytes": 113836,
+        "sha256": "fef4a505480af258b1d45b8d10aae356f8e85e4baaf87ba9019814e1b37bf592"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "A unified framework for joint modeling of voice, sound effects, ambient sound, and other audio elements. Jul 20, 2026 Jul 20, 2026Learn more Beyond Generation, It Understands Design | Introducing Seedream 5.0 Pro A multimodal image generation model that features advanced reasoning and efficient content creation.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "tencent:hy3-model-card",
+      "vendor": "tencent",
+      "title": "Hy3",
+      "models": [
+        "Hy3"
+      ],
+      "source_url": "https://github.com/Tencent-Hunyuan/Hy3",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/tencent-hy3-model-card.html",
+        "bytes": 324103,
+        "sha256": "3e4d8f1a32801f9c3a356e1043810bc6438fff3e9db10f21ea046a3173029fc2"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Hy3 is a 295B-parameter Mixture-of-Experts (MoE) model with 21B active parameters and 3.8B MTP layer parameters, developed by the Tencent Hy Team. Following the Hy3 Preview launch in late April, we gathered feedback from 50+ products and scaled up post-training with higher quality data.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "zai:glm-5-3-flash-model-card",
+      "vendor": "zai",
+      "title": "GLM-5.3-Flash",
+      "models": [
+        "GLM-5.3-Flash"
+      ],
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/zai-glm-5-3-flash-model-card.html",
+        "bytes": 704204,
+        "sha256": "4808dd16a7d34dd833835131739932e481c6137e5fd3224be9a7f6d4cbb522fd"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "GLM-5.3-Flash · Hugging Face Hugging Face Models Datasets Spaces Buckets new Docs Enterprise Pricing Log In Sign Up zai-org / GLM-5.3-Flash Like 2.87k Follow Z.ai 22.4k Image-Text-to-Text Transformers Safetensors English Chinese glm5_next conversational Eval Results fp8 arxiv: 2602.15763 License: mit Model card Files Files and versions xet Community 63 Deploy Copy to bucket new Use this model GLM-5.3-Flash Introduction Serve GLM-5.3-Flash Locally Note Footnotes Citation GLM-5.3-Flash 👋 Join our WeChat or Discord community. 📖 Check out the GLM-5.3-Flash blog and GLM-5 Technical report.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "openai:gpt-5-6-cyber",
+      "vendor": "openai",
+      "title": "GPT-5.6 Cyber",
+      "models": [
+        "GPT-5.6 Cyber"
+      ],
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-5.6-cyber",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/openai-gpt-5-6-cyber.html",
+        "bytes": 461057,
+        "sha256": "fcae07600bd58f8343a3d5f5e56cbee9bcabc77a1a92720592760248f1c39e18"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Our most advanced cybersecurity model for authorized vulnerability research and security testing.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "openai:gpt-4o-mini-tts",
+      "vendor": "openai",
+      "title": "GPT-4o Mini TTS",
+      "models": [
+        "GPT-4o Mini TTS"
+      ],
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-4o-mini-tts",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/openai-gpt-4o-mini-tts.html",
+        "bytes": 423942,
+        "sha256": "f73e78afa0baf293d4d7df8f8c6df00cea70532ccd0846ad1c42f51ee4cc62a0"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "GPT-4o Mini TTS is a text-to-speech model built on GPT-4o Mini, a fast and powerful language model. Use it to convert text to natural sounding spoken text.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "openai:gpt-realtime-translate",
+      "vendor": "openai",
+      "title": "GPT-Realtime-Translate",
+      "models": [
+        "GPT-Realtime-Translate"
+      ],
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-realtime-translate",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/openai-gpt-realtime-translate.html",
+        "bytes": 437554,
+        "sha256": "09b0ad89096ac9e5e765d22c7d88799c4ad7e18f2a615893b82defd0e49737bb"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Streaming speech-to-speech translation model CompareTry in Playground Performance Highest Speed Very fast Price $0.034 Price Input Audio Output Audio, Text GPT-Realtime-Translate is a streaming speech-to-speech translation model for live multilingual audio experiences.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "xai:grok-voice-transcribe-2-0",
+      "vendor": "xai",
+      "title": "Grok Voice Transcribe 2.0",
+      "models": [
+        "Grok Voice Transcribe 2.0"
+      ],
+      "source_url": "https://docs.x.ai/developers/release-notes",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/xai-grok-voice-transcribe-2-0.html",
+        "bytes": 577597,
+        "sha256": "eb3f11ba14ddf2ed14af96d2bdc3ab75957aad99e81fc15b9b2f0201cf0c1268"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Grok Voice Transcribe 2.0 grok-voice-transcribe-2.0 is now available.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "xai:grok-imagine-image-2-0",
+      "vendor": "xai",
+      "title": "Grok Imagine Image 2.0",
+      "models": [
+        "Grok Imagine Image 2.0"
+      ],
+      "source_url": "https://docs.x.ai/docs/guides/image-generation",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/xai-grok-imagine-image-2-0.html",
+        "bytes": 529428,
+        "sha256": "cf495270c627aa610b79045c6fea1d3aab5cb7c374c9dbb54654759a6b5988c0"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Grok Imagine models. Use it for image generation, image editing with up to 5 reference images, video generation from text or still images, video editing, and more.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "xai:grok-imagine-video-1-5",
+      "vendor": "xai",
+      "title": "Grok Imagine Video 1.5",
+      "models": [
+        "Grok Imagine Video 1.5"
+      ],
+      "source_url": "https://docs.x.ai/docs/guides/video-generation",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/xai-grok-imagine-video-1-5.html",
+        "bytes": 529537,
+        "sha256": "c852c0112f4db0aecdb65a3d943f373837c4486642602c8512e98c606aad1550"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Grok Imagine models. Use it for image generation, image editing with up to 5 reference images, video generation from text or still images, video editing, and more.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "meta:llama-3-1-model-card",
+      "vendor": "meta",
+      "title": "Llama 3.1",
+      "models": [
+        "Llama 3.1"
+      ],
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/meta-llama-3-1-model-card.html",
+        "bytes": 462878,
+        "sha256": "783b6efccfbbfdfcd604cd694f106a2c4f25fc035a2311b7db879ad2100e2dc9"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Llama 3.1 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction tuned generative models in 8B, 70B and 405B sizes (text in/text out). The Llama 3.1 instruction tuned text only models (8B, 70B, 405B) are optimized for multilingual dialogue use cases and outperform many of the available open source and closed chat models on common industry benchmarks.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "minimax:minimax-m2-1-report",
+      "vendor": "minimax",
+      "title": "MiniMax-M2.1",
+      "models": [
+        "MiniMax-M2.1"
+      ],
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-M2.1",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/minimax-minimax-m2-1-report.html",
+        "bytes": 305754,
+        "sha256": "8652131dc79aa48b0b74c8dd536663bcbd99e24de28734f13cdb993a5a673aaa"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "MiniMax M2.1, a SOTA model for real-world dev & agents. · GitHub Skip to content Navigation Menu Sign in Appearance settings Platform AI CODE CREATION GitHub CopilotWrite better code with AI GitHub Copilot appDirect agents from issue to merge MCP RegistryIntegrate external tools DEVELOPER WORKFLOWS ActionsAutomate any workflow CodespacesInstant dev environments IssuesPlan and track work Code ReviewManage code changes Code QualityEnforce quality at merge APPLICATION SECURITY GitHub Advanced SecurityFind and fix vulnerabilities Code securitySecure your code as you build Secret protectionStop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufa",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "google:t5gemma-model-card",
+      "vendor": "google",
+      "title": "T5Gemma",
+      "models": [
+        "T5Gemma"
+      ],
+      "source_url": "https://developers.googleblog.com/en/t5gemma/",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/google-t5gemma-model-card.html",
+        "bytes": 48059,
+        "sha256": "f711704b8671f933230ec7d51c0e78f7e1c0e8cd86e68d792bf3fde42833c205"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "A new collection of encoder-decoder Gemma models - Google Developers Blog Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube Gemma T5Gemma: A new collection of encoder-decoder Gemma models JULY 9, 2025 Biao Zhang Research Scientist Paul Suganthan Staff Software Engineer Ben Hora Product Manager Share Facebook Twitter LinkedIn Mail In the rapidly evolving landscape of large language models (LLMs), the spotlight has largely focused on the decoder-only architecture. While these models have shown impressive capabilities across a wide range of generation tasks, the classic encoder-decoder architecture, such as T5 (The Text-to-Text Transfer Transformer), remains a popular choice for many real-world applications.",
+          "locator": "Official source passage located from the published model name/description.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "meta:llama-3-2-vision-model-card",
+      "vendor": "meta",
+      "title": "Llama 3.2 Vision",
+      "models": [
+        "Llama 3.2 Vision"
+      ],
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/meta-llama-3-2-vision-model-card.html",
+        "bytes": 373514,
+        "sha256": "a71d31194a6970eabf244b89453b950fb712ebe306d375c7fbb25be29a5c08b8"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Llama 3.2-Vision collection of multimodal large language models (LLMs) is a collection of pretrained and instruction-tuned image reasoning generative models in 11B and 90B sizes (text + images in / text out). The Llama 3.2-Vision instruction-tuned models are optimized for visual recognition, image reasoning, captioning, and answering general questions about an image.",
+          "locator": "Official source passage located from the published model name.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "meta:muse-personal-ai-agent",
+      "vendor": "meta",
+      "title": "Muse personal AI agent",
+      "models": [
+        "Muse personal AI agent"
+      ],
+      "source_url": "https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/meta-muse-personal-ai-agent.html",
+        "bytes": 188236,
+        "sha256": "20c63e2ab513df38c7f409f96022609f27be08c4dffc6525a2489c43c7349570"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Today we launched Muse — our personal agent. We’ve been working on and using Muse ourselves since early 2026.",
+          "locator": "Official source passage located from the published model name.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
+    },
+    {
+      "id": "mistral:codestral-embed-model-card",
+      "vendor": "mistral",
+      "title": "Codestral Embed",
+      "models": [
+        "Codestral Embed"
+      ],
+      "source_url": "https://mistral.ai/news/codestral-embed",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/mistral-codestral-embed-model-card.html",
+        "bytes": 170976,
+        "sha256": "39a86b007a2865849280b611d69de53277d4cd5f6d7ef853aedab3c6c27d21d3"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Codestral Embed | Mistral AI Get in touch Menu Research Sovereign AI Cloud Customers Company Get in touch Login Why Sovereign AI Products Method Sovereign AI in practice Inference Compute Energy & utilities Manufacturing Financial services Public sector All customers Blog Docs About us Careers ResearchSovereign AICloudCustomersCompany Why Sovereign AI Products Method Sovereign AI in practice Inference Compute Energy & utilities Manufacturing Financial services Public sector All customers Blog Docs About us Careers Get in touch Login Studio Vibe Research Codestral Embed May 28, 2025 By Mistral Back to Blog 4 min read Share this post Copy url to clipboardCopied We are excited to release Codestral Embed, our first embedding model specialized for code. It performs especially well for retrieval use cases on real-world code data.",
+          "locator": "Official source passage located from the published model name.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "cohere:parse-5-model-card",
+      "vendor": "cohere",
+      "title": "Parse 5",
+      "models": [
+        "Parse 5"
+      ],
+      "source_url": "https://docs.cohere.com/docs/parse",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/cohere-parse-5-model-card.html",
+        "bytes": 172936,
+        "sha256": "6da81a2266f9693c14ef832b7dae65da0c26d2b601cf7125746a5a2671c9861e"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Parse (Details and Application) | Cohere docs v2 API v2 API Search / Ask AI DASHBOARDPLAYGROUNDDOCSCOMMUNITYLOG IN Guides and conceptsAPI ReferenceRelease NotesLLMUCookbooks Search / Ask AI On this page Overview What it extracts Output Supported languages Best for Known limitations Getting started Scroll to top Models Parse (Details and Application) Copy page This page is for version v2 API (default). For other versions, use one of these documentation indexes: - v2 API (default): https://docs.cohere.com/v2/llms.txt - v1 API: https://docs.cohere.com/v1/llms.txt Parse is a vision language model that converts unstructured data from enterprise documents to structured outputs that can be used for AI knowledge applications.",
+          "locator": "Official source passage located from the published model name.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    },
+    {
+      "id": "xai:grok-voice-api",
+      "vendor": "xai",
+      "title": "Grok Voice API",
+      "models": [
+        "Grok Voice API"
+      ],
+      "source_url": "https://docs.x.ai/docs/guides/voice",
+      "retrieved_at": "2026-10-17",
+      "snapshot": {
+        "path": ".cache/web-overviews/cards-2026-10-17b/xai-grok-voice-api.html",
+        "bytes": 634781,
+        "sha256": "c5a3098561cf18d9f8ce4a7c7552c058da4df18583db332f93debb5e0b9003f2"
+      },
+      "source_heading": null,
+      "paragraphs": [
+        {
+          "text": "Voice Overview | SpaceXSI Docs API Grok BuildGrok BotGrokX Subscription Search ⌘K API Console Products Grok Status Loading... Resources llms.txtDiscordEmail supportTerms and Policies Get Started Overview Quickstart Grok 4.7 Latest Models Pricing Release Notes Text Text Generation Streaming Reasoning Structured Outputs Image Understanding Multi Agent Best Practices Guide Imagine Overview Image Generation Image Editing Multi-Image Editing Image Prompting Guide Video Generation Video Overview New Image-to-Video Reference-to-Video Video Editing Video Extension Voice Overview Speech to Speech Text to Speech Speech to Text New Custom Voices Ephemeral Tokens Files & Collections Files Overview Managing Files Public URLs New Chat with Files Collections Collections via API Collection Metadata Generated Media Tools Overview Function Calling Web Search X Search Code Execution Image Generation Collec",
+          "locator": "Official source passage located from the published model name.",
+          "source_tag": "p"
+        }
+      ],
+      "review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "assets": [],
+      "figure_note_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "figure_note_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "reader_scope": "archive"
     }
   ]
 }

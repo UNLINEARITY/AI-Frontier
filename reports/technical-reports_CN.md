@@ -2,10 +2,11 @@
 
 [首页](../README_CN.md) · [文档类型](../README_CN.md#按类型找报告) · [英文版](technical-reports.md)
 
-已收录 **313 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **318 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 厂商 | 报告 | 状态 | 官方来源 |
 | --- | --- | --- | --- | --- |
+| 2026-10-13 | [UBTech / Thinker](../pdfs/ubtech/README_CN.md) | [Thinker-WM: A Unified World Model with Shared Multimodal Backbone for Embodied Intelligence](https://arxiv.org/abs/2610.18447) | 已归档 | [来源](https://arxiv.org/abs/2610.18447) |
 | 2026-09-29 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [Rho: A Foundation for Efficiently Adaptable VLA Models](https://arxiv.org/abs/2609.38164) | 已归档 | [来源](https://arxiv.org/abs/2609.38164) |
 | 2026-09-17 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [WeVisDoc: From Coverage to Capability for Robust End-to-End Document Parsing](https://huggingface.co/tencent/WeVisDoc-4B) | 已归档 | [来源](https://huggingface.co/tencent/WeVisDoc-4B) |
 | 2026-09-17 | [DeepSeek](../pdfs/deepseek/README_CN.md) | [DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression](https://arxiv.org/abs/2609.19969) | 已归档 | [来源](https://arxiv.org/abs/2609.19969) |
@@ -35,6 +36,7 @@
 | 2026-07-05 | [NVIDIA](../pdfs/nvidia/README_CN.md) | [Nemotron-Labs-3-Puzzle-75B-A9B: Compressing Hybrid MoE LLMs](https://arxiv.org/abs/2607.04371) | 已归档 | [来源](https://arxiv.org/abs/2607.04371) |
 | 2026-07-02 | [Mistral AI](../pdfs/mistral/README_CN.md) | [Leanstral](https://mistral.ai/news/leanstral-1-5/) | 已归档 | [来源](https://mistral.ai/news/leanstral-1-5/) |
 | 2026-07-02 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Gemma 4 Technical Report](https://arxiv.org/abs/2607.02770) | 已归档 | [来源](https://arxiv.org/abs/2607.02770) |
+| 2026-06-18 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](https://arxiv.org/abs/2606.17030) | 已归档 | [来源](https://arxiv.org/abs/2606.17030) |
 | 2026-06-16 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System](https://github.com/QwenLM/Qwen-RobotNav) | 已归档 | [来源](https://github.com/QwenLM/Qwen-RobotNav) |
 | 2026-06-16 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen-RobotManip Technical Report: Alignment Unlocks Scale for Robotic Manipulation Foundation Models](https://github.com/QwenLM/Qwen-RobotManip) | 已归档 | [来源](https://github.com/QwenLM/Qwen-RobotManip) |
 | 2026-06-12 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [Hy-Embodied-0.5-VLA: From Vision-Language-Action Models to a Real-World Robot Learning Stack](https://arxiv.org/abs/2606.14409) | 已归档 | [来源](https://arxiv.org/abs/2606.14409) |
@@ -54,6 +56,7 @@
 | 2026-04-22 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [Seed3D 2.0: Advancing High-Fidelity Simulation-Ready 3D Content Generation](https://seed.bytedance.com/en/seed3d_2_0) | 已归档 | [来源](https://seed.bytedance.com/en/seed3d_2_0) |
 | 2026-04-17 | [Alibaba / Qwen / Wan](../pdfs/qwen/README_CN.md) | [Qwen3.5-Omni Technical Report](https://arxiv.org/abs/2604.15804) | 已归档 | [来源](https://arxiv.org/abs/2604.15804) |
 | 2026-04-16 | [Physical Intelligence](../pdfs/physical_intelligence/README_CN.md) | [π0.7: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities](https://arxiv.org/abs/2604.15483) | 已归档 | [来源](https://arxiv.org/abs/2604.15483) |
+| 2026-04-16 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [Tencent Hunyuan HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds](https://arxiv.org/abs/2604.14268) | 已归档 | [来源](https://arxiv.org/abs/2604.14268) |
 | 2026-04-15 | [ByteDance / Seed](../pdfs/bytedance/README_CN.md) | [Seedance 2.0: Advancing Video Generation for World Complexity](https://seed.bytedance.com/en/research) | 已归档 | [来源](https://seed.bytedance.com/en/research) |
 | 2026-04-08 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents](https://arxiv.org/abs/2604.07430) | 已归档 | [来源](https://arxiv.org/abs/2604.07430) |
 | 2026-04-06 | [Google / DeepMind](../pdfs/google/README_CN.md) | [MedGemma 1.5 Technical Report](https://arxiv.org/abs/2604.05081) | 已归档 | [来源](https://arxiv.org/abs/2604.05081) |
@@ -143,11 +146,13 @@
 | 2025-07-09 | [Microsoft / Phi / MAI](../pdfs/microsoft/README_CN.md) | [Decoder-Hybrid-Decoder Architecture for Efficient Reasoning with Long Generation](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) | 已归档 | [来源](https://huggingface.co/microsoft/Phi-4-mini-flash-reasoning) |
 | 2025-07-07 | [Google / DeepMind](../pdfs/google/README_CN.md) | [MedGemma Technical Report](https://arxiv.org/abs/2507.05201) | 已归档 | [来源](https://arxiv.org/abs/2507.05201) |
 | 2025-07-07 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Gemini 2.5: Pushing the Frontier with Advanced Reasoning, Multimodality, Long Context, and Next Generation Agentic Capabilities](https://arxiv.org/abs/2507.06261) | 已归档 | [来源](https://arxiv.org/abs/2507.06261) |
+| 2025-07-07 | [Toyota Research Institute](../pdfs/toyota_research_institute/README_CN.md) | [A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation](https://arxiv.org/abs/2507.05331) | 已归档 | [来源](https://arxiv.org/abs/2507.05331) |
 | 2025-07-01 | [智谱 / Z.ai](../pdfs/zai/README_CN.md) | [GLM-4.5V and GLM-4.1V-Thinking: Towards Versatile Multimodal Reasoning with Scalable Reinforcement Learning](https://github.com/zai-org/GLM-V) | 已归档 | [来源](https://github.com/zai-org/GLM-V) |
 | 2025-06-27 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [Hunyuan-A13B Technical Report](https://github.com/Tencent-Hunyuan/Hunyuan-A13B) | 已归档 | [来源](https://github.com/Tencent-Hunyuan/Hunyuan-A13B) |
 | 2025-06-18 | [Tencent / Hunyuan](../pdfs/tencent/README_CN.md) | [Hunyuan3D 2.1: From Images to High-Fidelity 3D Assets with Production-Ready PBR Material](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1) | 已归档 | [来源](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1) |
 | 2025-06-16 | [MiniMax](../pdfs/minimax/README_CN.md) | [MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention](https://github.com/MiniMax-AI/MiniMax-M1) | 已归档 | [来源](https://github.com/MiniMax-AI/MiniMax-M1) |
 | 2025-06-16 | [NVIDIA](../pdfs/nvidia/README_CN.md) | [AceReason-Nemotron 1.1: Advancing Math and Code Reasoning through SFT and RL Synergy](https://arxiv.org/abs/2506.13284) | 已归档 | [来源](https://arxiv.org/abs/2506.13284) |
+| 2025-06-16 | [1X Technologies](../pdfs/1x/README_CN.md) | [1X World Model: Evaluating Bits, not Atoms](https://www.1x.tech/discover/redwood-ai-world-model) | 已归档 | [来源](https://www.1x.tech/discover/redwood-ai-world-model) |
 | 2025-06-12 | [Mistral AI](../pdfs/mistral/README_CN.md) | [Magistral](https://arxiv.org/abs/2506.10910) | 已归档 | [来源](https://arxiv.org/abs/2506.10910) |
 | 2025-06-11 | [Meta](../pdfs/meta/README_CN.md) | [V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning](https://arxiv.org/abs/2506.09985) | 已归档 | [来源](https://arxiv.org/abs/2506.09985) |
 | 2025-06-10 | [StepFun](../pdfs/stepfun/README_CN.md) | [Step-Audio-AQAA: a Fully End-to-End Expressive Large Audio Language Model](https://github.com/stepfun-ai/Step-Audio) | 已归档 | [来源](https://github.com/stepfun-ai/Step-Audio) |

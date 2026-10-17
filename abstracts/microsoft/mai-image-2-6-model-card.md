@@ -11,3 +11,9 @@ MAI-Image-2.6 was rebuilt from the ground up for multimodal editing workflows, w
 It supports reliable object removal, replacement, attribute changes, inpainting, and image enhancement without destabilizing composition or layout. The model also maintains strong visual consistency across iterative edits.
 
 This combination of flow-matching objectives and diffusion inference enables the model to produce high-quality, diverse images that maintain strong alignment with the input text, making it suitable for creative generation, design tasks, production editing workflows, and multimodal applications.
+
+## Training, Testing, and Validation Datasets
+
+The training dataset consists of paired images and text descriptions, where each caption provides a detailed account of the visual content. The data spans a broad, general-purpose domain including everyday objects, natural scenes, people, and abstract concepts, making it suitable for open-domain text-to-image generation and image editing. The dataset combines visual data (images) with natural language text, enabling multimodal learning.
+
+p. 4

@@ -8,7 +8,7 @@
 
 | 类型 | 已收录报告 |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 20 |
+| [技术报告](technical-reports/README_CN.md) | 21 |
 | [模型卡](model-cards/README_CN.md) | 0 |
 | [系统卡](system-cards/README_CN.md) | 0 |
 
@@ -24,6 +24,7 @@
 | 2026-07-06 | [HunyuanOCR-1.5: Making Lightweight OCR VLMs Faster and Better](https://github.com/Tencent-Hunyuan/HunyuanOCR) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanOCR) |
 | 2026-06-12 | [Hy-Embodied-0.5-VLA: From Vision-Language-Action Models to a Real-World Robot Learning Stack](https://arxiv.org/abs/2606.14409) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2606.14409) |
 | 2026-05-21 | [Hy-MT2: A Family of Fast, Efficient and Powerful Multilingual Translation Models in the Wild](https://arxiv.org/abs/2605.22064) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2605.22064) |
+| 2026-04-16 | [Tencent Hunyuan HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds](https://arxiv.org/abs/2604.14268) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2604.14268) |
 | 2026-04-08 | [HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents](https://arxiv.org/abs/2604.07430) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2604.07430) |
 | 2025-12-16 | [WorldPlay: Towards Long-Term Geometric Consistency for Real-Time Interactive World Modeling](https://arxiv.org/abs/2512.14614) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2512.14614) |
 | 2025-11-24 | [HunyuanVideo 1.5 Technical Report](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5) |

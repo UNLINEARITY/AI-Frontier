@@ -2,7 +2,7 @@
 
 [中文](README_CN.md) · [Home](../README.md)
 
-**459 source overviews · 634 core figures**
+**541 source overviews · 637 core figures**
 
 ## OpenAI
 
@@ -49,6 +49,9 @@
 - [Technical Report: Performance and baseline evaluations of gpt-oss-safeguard-120b and gpt-oss-safeguard-20b](openai/gpt-oss-safeguard-technical-report.md)
 - [Improving Image Generation with Better Captions](openai/improving-image-generation-with-better-captions.md)
 - [GPT-5.6 — August Updates](openai/gpt-5-6-august-updates.md)
+- [GPT-5.6 Cyber](openai/gpt-5-6-cyber.md)
+- [GPT-4o Mini TTS](openai/gpt-4o-mini-tts.md)
+- [GPT-Realtime-Translate](openai/gpt-realtime-translate.md)
 
 ## Anthropic
 
@@ -161,6 +164,23 @@
 - [SARA-RT: Scaling up Robotics Transformers with Self-Adaptive Robust Attention](google/sara-rt-technical-report.md)
 - [Genie 3](google/genie-3.md)
 - [EmbeddingGemma 2](google/embeddinggemma-2.md)
+- [CodeGemma](google/codegemma-model-card.md)
+- [DiffusionGemma](google/diffusiongemma-model-card.md)
+- [FunctionGemma](google/functiongemma-model-card.md)
+- [Gemma 1](google/gemma-1-model-card.md)
+- [Gemma 3](google/gemma-3-model-card.md)
+- [Gemma 3n](google/gemma-3n-model-card.md)
+- [Gemma 4](google/gemma-4-model-card.md)
+- [MedGemma](google/medgemma-model-card.md)
+- [MedGemma 1.5](google/medgemma-1-5-model-card.md)
+- [PaliGemma](google/paligemma-1-model-card.md)
+- [PaliGemma 2](google/paligemma-2-model-card.md)
+- [RecurrentGemma](google/recurrentgemma-model-card.md)
+- [ShieldGemma 2](google/shieldgemma-2-model-card.md)
+- [TxGemma](google/txgemma-model-card.md)
+- [EmbeddingGemma](google/embeddinggemma-model-card.md)
+- [Veo 3.1](google/veo-3-1-model-card.md)
+- [T5Gemma](google/t5gemma-model-card.md)
 
 ## Meta
 
@@ -197,6 +217,17 @@
 - [Revisiting Feature Prediction for Learning Visual Representations from Video](meta/v-jepa-technical-report.md)
 - [Muse Glimmer 30B](meta/muse-glimmer-30b-model-card.md)
 - [Muse Wonder / Wonder Full](meta/muse-wonder.md)
+- [Muse Voice Transcribe](meta/muse-voice-transcribe.md)
+- [Llama 2](meta/llama-2-model-card.md)
+- [Llama 3](meta/llama-3-model-card.md)
+- [Llama 3.2](meta/llama-3-2-model-card.md)
+- [Llama 3.3](meta/llama-3-3-model-card.md)
+- [Llama 4](meta/llama-4-model-card.md)
+- [Muse Spark 1.2](meta/muse-spark-1-2.md)
+- [Muse Spark 1.3](meta/muse-spark-1-3.md)
+- [Llama 3.1](meta/llama-3-1-model-card.md)
+- [Llama 3.2 Vision](meta/llama-3-2-vision-model-card.md)
+- [Muse personal AI agent](meta/muse-personal-ai-agent.md)
 
 ## xAI
 
@@ -208,6 +239,11 @@
 - [Grok 4 Model Card](xai/grok-4-model-card.md)
 - [Grok 4.20 System Card](xai/grok-4-20-system-card.md)
 - [Grok 4.1 Model Card](xai/grok-4-1-model-card.md)
+- [Grok-1](xai/grok-1-model-card.md)
+- [Grok Voice Transcribe 2.0](xai/grok-voice-transcribe-2-0.md)
+- [Grok Imagine Image 2.0](xai/grok-imagine-image-2-0.md)
+- [Grok Imagine Video 1.5](xai/grok-imagine-video-1-5.md)
+- [Grok Voice API](xai/grok-voice-api.md)
 
 ## Mistral AI
 
@@ -225,6 +261,11 @@
 - [Mistral Large 3](mistral/mistral-large-3-model-card.md)
 - [Mistral Medium 3.5](mistral/mistral-medium-3-5-model-card.md)
 - [Mistral Large 4 (Public Preview)](mistral/mistral-large-4.md)
+- [Devstral 2](mistral/devstral-2-model-card.md)
+- [Leanstral 1.5](mistral/leanstral-1-5-model-card.md)
+- [Mistral Small 4](mistral/mistral-small-4-model-card.md)
+- [Mistral OCR 4.1](mistral/mistral-ocr-4-1-model-card.md)
+- [Codestral Embed](mistral/codestral-embed-model-card.md)
 
 ## NVIDIA
 
@@ -257,6 +298,12 @@
 - [DreamGen: Unlocking Generalization in Robot Learning through Video World Models](nvidia/dreamgen-technical-report.md)
 - [GR00T N1.7](nvidia/gr00t-n1-7.md)
 - [Nemotron 3.5 Lightning](nvidia/nemotron-3-5-lightning.md)
+- [Cosmos Reason1](nvidia/cosmos-reason1-7b-model-card.md)
+- [Nemotron Parse 2.0](nvidia/nemotron-parse-2-0-model-card.md)
+- [Nemotron 3.5 ASR Streaming 0.6B](nvidia/nemotron-3-5-asr-model-card.md)
+- [Nemotron 3 Embed](nvidia/nemotron-3-embed-model-card.md)
+- [MagpieTTS Multilingual 357M v2607](nvidia/magpietts-model-card.md)
+- [Cosmos Reason 2](nvidia/cosmos-reason2-model-card.md)
 
 ## DeepSeek
 
@@ -285,6 +332,7 @@
 - [DeepSeek-Prover: Advancing Theorem Proving in LLMs through Large-Scale Synthetic Data](deepseek/deepseek-prover.md)
 - [DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence](deepseek/deepseek-v4.md)
 - [DeepSeek V3.2 Technical Documentation (Model Card)](deepseek/deepseek-v3-2-model-card.md)
+- [DeepSeek-V2.5](deepseek/deepseek-v2-5.md)
 
 ## Alibaba / Qwen / Wan
 
@@ -294,6 +342,7 @@
 - [Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments](qwen/qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments.md)
 - [Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System](qwen/qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system.md)
 - [Qwen-RobotManip Technical Report: Alignment Unlocks Scale for Robotic Manipulation Foundation Models](qwen/qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models.md)
+- [Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](qwen/qwen-robotworld-technical-report.md)
 - [Qwen2 Technical Report](qwen/qwen2-technical-report.md)
 - [Qwen2.5 Technical Report](qwen/qwen2-5-technical-report.md)
 - [Qwen3 Technical Report](qwen/qwen3-technical-report.md)
@@ -329,6 +378,14 @@
 - [Wan-Move: Motion-controllable Video Generation via Latent Trajectory Guidance](qwen/wan-move.md)
 - [Tongyi DeepResearch Technical Report](qwen/tongyi-deepresearch.md)
 - [Qwen3.8-Max](qwen/qwen3-8-max.md)
+- [Qwen3.8-Omni-Flash](qwen/qwen3-8-omni-flash.md)
+- [Qwen3.8-Omni-Flash-Realtime](qwen/qwen3-8-omni-flash-realtime.md)
+- [Qwen-MT-Uni](qwen/qwen-mt-uni.md)
+- [Qwen-Audio-3.0-TTS-Plus](qwen/qwen-audio-3-0-tts-plus.md)
+- [Qwen-Audio-3.0-TTS-Flash](qwen/qwen-audio-3-0-tts-flash.md)
+- [Qwen-Image-2.1](qwen/qwen-image-2-1.md)
+- [Qwen-Image-2.1-Pro](qwen/qwen-image-2-1-pro.md)
+- [Qwen3.8](qwen/qwen3-8-technical-report.md)
 
 ## Moonshot AI / Kimi
 
@@ -366,6 +423,9 @@
 - [Inf-DiT: Upsampling Any-Resolution Image with Memory-Efficient Diffusion Transformer](zai/inf-dit.md)
 - [GLM-5.3](zai/glm-5-3-model-card.md)
 - [GLM-5.3-FlashX](zai/glm-5-3-flashx.md)
+- [GLM-ASR-Nano](zai/glm-asr-nano-model-card.md)
+- [GLM-Image](zai/glm-image-model-card.md)
+- [GLM-5.3-Flash](zai/glm-5-3-flash-model-card.md)
 
 ## MiniMax
 
@@ -377,6 +437,10 @@
 - [Towards Scalable Pre-training of Visual Tokenizers for Generation](minimax/vtp-visual-tokenizers.md)
 - [MiniMax-M3](minimax/minimax-m3-model-card.md)
 - [MiniMax-H3](minimax/minimax-h3-model-card.md)
+- [MiniMax Speech 2.8](minimax/minimax-speech-2-8.md)
+- [MiniMax Music 3.0](minimax/minimax-music-3-model-card.md)
+- [MiniMax-M2.1](minimax/minimax-m2-1-model-card.md)
+- [MiniMax-M2.1](minimax/minimax-m2-1-report.md)
 
 ## StepFun
 
@@ -400,6 +464,8 @@
 - [NextStep-1: Toward Autoregressive Image Generation with Continuous Tokens at Scale](stepfun/nextstep-1.md)
 - [Step 3.7 Flash](stepfun/step-3-7-flash-model-card.md)
 - [Step 5 Preview](stepfun/step-5-preview-docs.md)
+- [StepAudio 3 ASR](stepfun/stepaudio-3-asr-max.md)
+- [NextStep-1.1](stepfun/nextstep-1-1-model-card.md)
 
 ## Tencent / Hunyuan
 
@@ -411,6 +477,7 @@
 - [Hy-Embodied-0.5-VLA: From Vision-Language-Action Models to a Real-World Robot Learning Stack](tencent/hy-embodied-0-5-vla.md)
 - [Hy-Embodied-VLM-1.0: Efficient Physical-World Agents](tencent/hy-embodied-vlm-1-0.md)
 - [RxBrain: Embodied Cognition Foundation Model with Joint Language-Visual Reasoning and Imagination](tencent/hy-embodied-rxbrain-1-0.md)
+- [Tencent Hunyuan HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds](tencent/hy-world-2-0-technical-report.md)
 - [Hunyuan-Large: An Open-Source MoE Model with 52 Billion Activated Parameters by Tencent](tencent/hunyuan-large.md)
 - [Hunyuan-MT Technical Report](tencent/hunyuan-mt.md)
 - [HunyuanOCR Technical Report](tencent/hunyuan-ocr.md)
@@ -424,6 +491,7 @@
 - [WorldClaw: Agentic 3D Open-World Generation at Scale](tencent/hunyuan3d-worldclaw.md)
 - [HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents](tencent/hy-embodied-0-5.md)
 - [Hy4-preview](tencent/hy4-preview.md)
+- [Hy3](tencent/hy3-model-card.md)
 
 ## ByteDance / Seed
 
@@ -445,6 +513,11 @@
 - [GR-Dexter Technical Report](bytedance/gr-dexter-technical-report.md)
 - [GR-2: A Generative Video-Language-Action Model with Web-Scale Knowledge for Robot Manipulation](bytedance/gr-2-generative-video-language-action-model.md)
 - [Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation](bytedance/gr-1-large-scale-video-generative-pretraining.md)
+- [Seedance 2.5](bytedance/seedance-2-5.md)
+- [Seedream 5.0 Pro](bytedance/seedream-5-0-pro.md)
+- [Seed-OSS](bytedance/seed-oss-model-card.md)
+- [SeedRealtime](bytedance/seedrealtime.md)
+- [Seed Audio 1.0](bytedance/seed-audio-1-0.md)
 
 ## Cohere
 
@@ -458,6 +531,12 @@
 - [Command-A-Translate: Raising the Bar of Machine Translation with Difficulty Filtering](cohere/command-a-translate.md)
 - [Command A+](cohere/command-a-plus-model-card.md)
 - [North Mini Code 1.0](cohere/north-mini-code-1-0-model-card.md)
+- [Cohere Transcribe Arabic](cohere/cohere-transcribe-arabic-model-card.md)
+- [Cohere Transcribe](cohere/cohere-transcribe-model-card.md)
+- [North Micro Vision Instruct](cohere/north-micro-vision-instruct-model-card.md)
+- [Embed 5](cohere/embed-5-model-card.md)
+- [Rerank 4](cohere/rerank-4-model-card.md)
+- [Parse 5](cohere/parse-5-model-card.md)
 
 ## Microsoft / Phi / MAI
 
@@ -534,3 +613,15 @@
 ## Generalist AI
 
 - [GEN-1.5](generalist/gen-1-5.md)
+
+## Toyota Research Institute
+
+- [A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation](toyota_research_institute/tri-lbm-1-technical-report.md)
+
+## 1X Technologies
+
+- [1X World Model: Evaluating Bits, not Atoms](1x/1x-world-model-technical-report.md)
+
+## UBTech / Thinker
+
+- [Thinker-WM: A Unified World Model with Shared Multimodal Backbone for Embodied Intelligence](ubtech/thinker-wm-technical-report.md)

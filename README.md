@@ -10,7 +10,7 @@
 
 An open research archive for understanding how frontier AI models are built, evaluated, and deployed. Coverage spans language and multimodal models, robotics and VLA, embodied reasoning, and world models. We bring official technical reports, model cards, and system cards into one place, and are building toward readable sources, grounded technical analysis, and ongoing release tracking.
 
-**436 reports · 24 publishers · 2022 onward**
+**441 reports · 27 publishers · 2022 onward**
 
 **Available today:** official report indexes, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). Full-document Markdown, structured analysis, and automated tracking are the next stages.
 
@@ -22,7 +22,7 @@ Looking for implementation details, model boundaries, or deployment safety? Star
 
 | Type | Main subject | Focus | Typical contents | Reports |
 | --- | --- | --- | --- | ---: |
-| [Technical Report](reports/technical-reports.md) | Model / training method | Implementation and experiments | Architecture, data, training, post-training, inference, benchmarks | 313 |
+| [Technical Report](reports/technical-reports.md) | Model / training method | Implementation and experiments | Architecture, data, training, post-training, inference, benchmarks | 318 |
 | [Model Card](reports/model-cards.md) | Individual model | Model description and usage boundaries | Capabilities, limitations, intended and unsuitable uses, evaluations, safety information | 62 |
 | [System Card](reports/system-cards.md) | Complete product / system | Risk, safety, and deployment behavior | Red teaming, dangerous capability evaluations, jailbreaks, safety mitigations, deployment restrictions | 61 |
 
@@ -44,12 +44,12 @@ Click a count to open that publisher's collection for the document type. Counts 
 | [Mistral AI](pdfs/mistral/README.md) | [11](pdfs/mistral/technical-reports/README.md) | [0](pdfs/mistral/model-cards/README.md) | [0](pdfs/mistral/system-cards/README.md) | 11 |
 | [NVIDIA](pdfs/nvidia/README.md) | [27](pdfs/nvidia/technical-reports/README.md) | [0](pdfs/nvidia/model-cards/README.md) | [0](pdfs/nvidia/system-cards/README.md) | 27 |
 | [DeepSeek](pdfs/deepseek/README.md) | [23](pdfs/deepseek/technical-reports/README.md) | [2](pdfs/deepseek/model-cards/README.md) | [0](pdfs/deepseek/system-cards/README.md) | 25 |
-| [Alibaba / Qwen / Wan](pdfs/qwen/README.md) | [40](pdfs/qwen/technical-reports/README.md) | [0](pdfs/qwen/model-cards/README.md) | [0](pdfs/qwen/system-cards/README.md) | 40 |
+| [Alibaba / Qwen / Wan](pdfs/qwen/README.md) | [41](pdfs/qwen/technical-reports/README.md) | [0](pdfs/qwen/model-cards/README.md) | [0](pdfs/qwen/system-cards/README.md) | 41 |
 | [Moonshot AI / Kimi](pdfs/moonshot/README.md) | [10](pdfs/moonshot/technical-reports/README.md) | [0](pdfs/moonshot/model-cards/README.md) | [0](pdfs/moonshot/system-cards/README.md) | 10 |
 | [Z.ai / Zhipu AI](pdfs/zai/README.md) | [18](pdfs/zai/technical-reports/README.md) | [0](pdfs/zai/model-cards/README.md) | [0](pdfs/zai/system-cards/README.md) | 18 |
 | [MiniMax](pdfs/minimax/README.md) | [6](pdfs/minimax/technical-reports/README.md) | [0](pdfs/minimax/model-cards/README.md) | [0](pdfs/minimax/system-cards/README.md) | 6 |
 | [StepFun](pdfs/stepfun/README.md) | [18](pdfs/stepfun/technical-reports/README.md) | [0](pdfs/stepfun/model-cards/README.md) | [0](pdfs/stepfun/system-cards/README.md) | 18 |
-| [Tencent / Hunyuan](pdfs/tencent/README.md) | [20](pdfs/tencent/technical-reports/README.md) | [0](pdfs/tencent/model-cards/README.md) | [0](pdfs/tencent/system-cards/README.md) | 20 |
+| [Tencent / Hunyuan](pdfs/tencent/README.md) | [21](pdfs/tencent/technical-reports/README.md) | [0](pdfs/tencent/model-cards/README.md) | [0](pdfs/tencent/system-cards/README.md) | 21 |
 | [ByteDance / Seed](pdfs/bytedance/README.md) | [14](pdfs/bytedance/technical-reports/README.md) | [4](pdfs/bytedance/model-cards/README.md) | [0](pdfs/bytedance/system-cards/README.md) | 18 |
 | [Cohere](pdfs/cohere/README.md) | [8](pdfs/cohere/technical-reports/README.md) | [0](pdfs/cohere/model-cards/README.md) | [0](pdfs/cohere/system-cards/README.md) | 8 |
 | [Microsoft / Phi / MAI](pdfs/microsoft/README.md) | [12](pdfs/microsoft/technical-reports/README.md) | [8](pdfs/microsoft/model-cards/README.md) | [0](pdfs/microsoft/system-cards/README.md) | 20 |
@@ -60,6 +60,9 @@ Click a count to open that publisher's collection for the document type. Counts 
 | [AgiBot](pdfs/agibot/README.md) | [5](pdfs/agibot/technical-reports/README.md) | [0](pdfs/agibot/model-cards/README.md) | [0](pdfs/agibot/system-cards/README.md) | 5 |
 | [Galaxea AI](pdfs/galaxea/README.md) | [2](pdfs/galaxea/technical-reports/README.md) | [0](pdfs/galaxea/model-cards/README.md) | [0](pdfs/galaxea/system-cards/README.md) | 2 |
 | [Generalist AI](pdfs/generalist/README.md) | [0](pdfs/generalist/technical-reports/README.md) | [0](pdfs/generalist/model-cards/README.md) | [0](pdfs/generalist/system-cards/README.md) | 0 |
+| [Toyota Research Institute](pdfs/toyota_research_institute/README.md) | [1](pdfs/toyota_research_institute/technical-reports/README.md) | [0](pdfs/toyota_research_institute/model-cards/README.md) | [0](pdfs/toyota_research_institute/system-cards/README.md) | 1 |
+| [1X Technologies](pdfs/1x/README.md) | [1](pdfs/1x/technical-reports/README.md) | [0](pdfs/1x/model-cards/README.md) | [0](pdfs/1x/system-cards/README.md) | 1 |
+| [UBTech / Thinker](pdfs/ubtech/README.md) | [1](pdfs/ubtech/technical-reports/README.md) | [0](pdfs/ubtech/model-cards/README.md) | [0](pdfs/ubtech/system-cards/README.md) | 1 |
 
 ## Why follow AI Frontier?
 

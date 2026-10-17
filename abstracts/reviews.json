@@ -544,6 +544,20 @@
       "review_method": "visual_source_page",
       "reviewed_at": "2026-10-15",
       "note": "Adjacent extraction blocks or corrected passage regions continue the same source paragraph; remove only reviewed separators."
+    },
+    {
+      "id": "toyota_research_institute:tri-lbm-1-technical-report",
+      "source_sha256": "c9ba44579974208aa43d60fce2e0294c0fee1f1b8d604abd64613568f9c5a102",
+      "text_sha256": "e86abbded04254ad4b87152812004a0c40774d59eb11b86dac633365c3d342d5",
+      "join_after": [
+        0
+      ],
+      "pages": [
+        1
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-17",
+      "note": "Rendered page 1 shows the opening clause continues without a paragraph break; join only the first extraction separator."
     }
   ],
   "passage_repairs": [
@@ -11599,6 +11613,65 @@
           "page": 6,
           "source_fragment_index": 3,
           "raw_text_sha256": "7452b784701107f6e49c8ec23dc04cf9ffea1f31aebf7f37fed4085306e46027"
+        }
+      ]
+    },
+    {
+      "id": "toyota_research_institute:tri-lbm-1-technical-report",
+      "source_sha256": "c9ba44579974208aa43d60fce2e0294c0fee1f1b8d604abd64613568f9c5a102",
+      "input_text_sha256": "2fc7d37ccf09a1b4cfa7a96aab578d8b26a97060ea09a3696195ef11fbdf485d",
+      "output_text_sha256": "e86abbded04254ad4b87152812004a0c40774d59eb11b86dac633365c3d342d5",
+      "source_pages": [
+        1
+      ],
+      "source_fragment_indexes": [
+        1
+      ],
+      "review_method": "visual_source_page",
+      "reviewed_at": "2026-10-17",
+      "note": "Rendered PDF page 1 and confirmed the two-column abstract reading order. Restored the sentence \"meaningful evaluation of real-world performance remains a challenge, limiting both the pace of development and inhibiting a nuanced understanding of current capabilities\", and joined line-end hyphenation residue (hard-to-model, Models, confidence, multitask).",
+      "edits": [
+        {
+          "match": "dexterous and hard- to-model tasks",
+          "replacement": "dexterous and hard-to-model tasks",
+          "match_sha256": "54de5dab3be18ada06920d64b4841d8d23590dfaee6543ac82901475ad5f4785"
+        },
+        {
+          "match": "Large Behavior Mod- els (LBMs)",
+          "replacement": "Large Behavior Models (LBMs)",
+          "match_sha256": "7dfa6ad2de8c0bff8e12416f493c98f96d31ce96439a4592235157f3ae7fa9d6"
+        },
+        {
+          "match": "statistical con- fidence",
+          "replacement": "statistical confidence",
+          "match_sha256": "7a272a6d56dce588357d0a2bd81d6fe7a24a02554d33ffda067672e639fd2d8a"
+        },
+        {
+          "match": "multi- task pretraining",
+          "replacement": "multitask pretraining",
+          "match_sha256": "744d0309e03e90bb3e8c9c2d1061066daef597dde495dec38fbbbd7873b277e0"
+        },
+        {
+          "match": "evaluation of real-world perfor- limiting both the pace of mance remains a challenge, development and inhibiting",
+          "replacement": "evaluation of real-world performance remains a challenge, limiting both the pace of development and inhibiting",
+          "match_sha256": "3fb1d80cfa42e8d2a3fae11c4df1943a92c8cbfed6ece7b4d98554c0894c7633"
+        }
+      ],
+      "source_regions": [
+        {
+          "page": 1,
+          "source_fragment_index": 0,
+          "raw_text_sha256": "3432e01d74a4e71b5b4fbd8086c94f756268f556a214f28db23028efdb1267f6"
+        },
+        {
+          "page": 1,
+          "source_fragment_index": 1,
+          "raw_text_sha256": "a2114c4e230cc26b00d835413e585c5b05c461adcad739f1256cfb5143cf0f70"
+        },
+        {
+          "page": 1,
+          "source_fragment_index": 2,
+          "raw_text_sha256": "61a286cad78a34c1635bf804c20d5712fd4f95ac2f52714f7bdae0bd04c64c35"
         }
       ]
     }

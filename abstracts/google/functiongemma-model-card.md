@@ -1,0 +1,7 @@
+# FunctionGemma
+
+[Official source](https://ai.google.dev/gemma/docs/functiongemma/model_card)
+
+## Description
+
+FunctionGemma is a lightweight, open model from Google, built as a foundation for creating your own specialized function calling models. FunctionGemma is not intended for use as a direct dialogue model, and is designed to be highly performant after further fine-tuning, as is typical of models this size. Built on the Gemma 3 270M model and with the same research and technology used to create the Gemini models, FunctionGemma has been trained specifically for function calling. The model has the same architecture as Gemma 3, but uses a different chat format. The model is well suited for text-only function calling. The uniquely small size makes it possible to deploy in environments with limited resources such as laptops, desktops or your own cloud infrastructure, democratizing access to state of the art AI models and helping foster innovation for everyone. Furthermore, akin to the base Gemma 270M, the model has been optimized to be extremely versatile, performant on a variety of hardware in single turn scenarios, but should be finetuned on single turn or multiturn task specific data to achieve best accuracy in specific domains. To demonstrate how specializing the 270M parameter model can achieve high performance on specific agentic workflows, we have highlighted two use cases in the Google AI Edge Gallery app.

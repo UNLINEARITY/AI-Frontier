@@ -427,6 +427,25 @@ def markdown_passage(report, layout=None):
                    for i, paragraph in enumerate(paragraphs)).strip()
 
 
+
+def attach_sections(reports):
+    path = ROOT / 'abstracts/sections.json'
+    if not path.exists():
+        return reports
+    data = json.loads(path.read_text())
+    lookup = {item['id']: item for item in data['reports']}
+    for report in reports:
+        item = lookup.get(report['id'])
+        if not item:
+            continue
+        if item['source_sha256'] != report['source_sha256']:
+            raise ValueError(f"Stale technical sections source: {report['id']}")
+        for section in item['sections']:
+            if hashlib.sha256(section['text'].encode()).hexdigest() != section['text_sha256']:
+                raise ValueError(f"Changed technical section: {report['id']}")
+        report['sections'] = item['sections']
+    return reports
+
 def write_outputs(output, reports, missing, write_index=True):
     output.mkdir(parents=True, exist_ok=True)
     figure_index = ROOT / 'figures/index.json'
@@ -458,6 +477,12 @@ def write_outputs(output, reports, missing, write_index=True):
             if report['source_heading']:
                 lines += [f"## {report['source_heading']}", '']
             lines += [markdown_passage(report, layout_lookup.get(report['id'])), '']
+        for section in report.get('sections', []):
+            lines += [f"## {section['heading']}", '', markdown_prose(section['text']), '']
+            pages = section.get('pages') or []
+            if pages:
+                label = f"p. {pages[0]}" if len(pages) == 1 else f"pp. {pages[0]}–{pages[-1]}"
+                lines += [label, '']
         selected = figures.get(report['id'], {})
         if selected.get('source_sha256') == report['source_sha256']:
             for figure in selected.get('figures', []):
@@ -521,6 +546,7 @@ def main():
     from web_sources import current_summaries
     web = current_summaries(ROOT, json.loads((ROOT / 'model-coverage.json').read_text())['models'])
     reports.extend(web)
+    attach_sections(reports)
     write_outputs(args.output.resolve(), reports, missing)
     print(json.dumps(dict(reports=len(reports), statuses=dict(Counter(r['status'] for r in reports)),
                           sections=dict(Counter(r['section_type'] for r in reports)), models_without_pdf=len(missing))))

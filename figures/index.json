@@ -32405,6 +32405,1621 @@
           "png_sha256": "e996a6d725d00ad3f04305feaf70d35378450430717298bf153fb1314af8db8e"
         }
       ]
+    },
+    {
+      "id": "bytedance:seedance-2-5",
+      "vendor": "bytedance",
+      "title": "Seedance 2.5",
+      "models": [
+        "Seedance 2.5"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://seed.bytedance.com/en/seedance2_5",
+      "source_sha256": "f327a8831bc5597845e9710174c527b31f77d17ae7d6fd1a174421272f5ec139",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Product page embeds video demonstrations; the captured HTML contains no native static chart, table, or architecture diagram.",
+      "reason_cn": "所核查产品页嵌入视频演示；抓取的 HTML 中没有可导出的原生静态图表、表格或架构图。",
+      "figures": []
+    },
+    {
+      "id": "bytedance:seedream-5-0-pro",
+      "vendor": "bytedance",
+      "title": "Seedream 5.0 Pro",
+      "models": [
+        "Seedream 5.0 Pro"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://seed.bytedance.com/en/seedream5_0_pro",
+      "source_sha256": "55ea4371be20652965146e93a1b0a4fa68322f59aa009f5b2542c4420c0af15a",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured product page shows generated example images and prompts rather than source-native result charts or tables.",
+      "reason_cn": "所核查产品页展示生成示例与提示词，未包含可核对的原生结果图表或表格。",
+      "figures": []
+    },
+    {
+      "id": "meta:muse-voice-transcribe",
+      "vendor": "meta",
+      "title": "Muse Voice Transcribe",
+      "models": [
+        "Muse Voice Transcribe"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://research.meta.ai/blog/introducing-muse-voice-transcribe",
+      "source_sha256": "a9d54754129e09a8d35dee562bf84e66ea4cf0b9339eb2fd528140b3570a1f59",
+      "source_version": "2026-10-17",
+      "status": "available",
+      "inspected_pages": [],
+      "reason_en": "Three official benchmark charts were visually reviewed and selected as the reader core figures.",
+      "reason_cn": "已目视核对三张官方基准图表并选为阅读页核心配图。",
+      "figures": [
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Bar chart of final-transcription streaming word error rate, with Muse Voice Transcribe lowest at 3.1 percent and seven other systems ranging from 3.4 to 4.0 percent.",
+          "lead_in": "",
+          "asset_url": "https://research.meta.ai/articles/introducing-muse-audio/benchmarks/streaming-final-transcription-wer-v1.png",
+          "asset_sha256": "dca0d830b7fe28d6b6d76c6f6ae203c86f850979deb24231c9898211201c2f7f",
+          "png_size": [
+            1420,
+            1420
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/meta/muse-voice-transcribe/figure-01.png",
+          "png_sha256": "dca0d830b7fe28d6b6d76c6f6ae203c86f850979deb24231c9898211201c2f7f"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Bar chart of average diarization error rate across AMI-IHM, AMI-SDM, and VoxConverse, with Muse Voice Transcribe lowest at 17.5 percent and five other systems ranging from 21.1 to 28.6 percent.",
+          "lead_in": "",
+          "asset_url": "https://research.meta.ai/articles/introducing-muse-audio/benchmarks/streaming-diarization-der-v1.png",
+          "asset_sha256": "2705fa3bfbb0fc0308714bebf7d4cc6b1f9f348b321927665e289c7af921e1f1",
+          "png_size": [
+            1440,
+            1440
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/meta/muse-voice-transcribe/figure-02.png",
+          "png_sha256": "2705fa3bfbb0fc0308714bebf7d4cc6b1f9f348b321927665e289c7af921e1f1"
+        },
+        {
+          "page": null,
+          "bbox": null,
+          "figure_number": null,
+          "role": "results",
+          "source_kind": "image",
+          "caption": "",
+          "alt": "Scatter plot comparing final-transcription word error rate with time to final transcription. Muse Voice Transcribe reaches about 3.0 percent error at 0.16 seconds, below the dotted previous Pareto frontier formed by Soniox, Cartesia, and ElevenLabs systems; the other current systems shown have higher error or latency.",
+          "lead_in": "",
+          "asset_url": "https://research.meta.ai/articles/introducing-muse-audio/benchmarks/adaptive-delay-speed-accuracy-v4.png",
+          "asset_sha256": "b0d64aec4d5fdf58bd1d885bbecf7b0102143eee4b40a2fb81025696f6ca9200",
+          "png_size": [
+            1920,
+            1080
+          ],
+          "transform": "original_bytes",
+          "review_method": "agent_visual_official_asset_review",
+          "png_path": "figures/meta/muse-voice-transcribe/figure-03.png",
+          "png_sha256": "b0d64aec4d5fdf58bd1d885bbecf7b0102143eee4b40a2fb81025696f6ca9200"
+        }
+      ]
+    },
+    {
+      "id": "stepfun:stepaudio-3-asr-max",
+      "vendor": "stepfun",
+      "title": "StepAudio 3 ASR",
+      "models": [
+        "StepAudio 3 ASR Max"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-asr",
+      "source_sha256": "c87142f7dc81141f8646bf762207886f9728e2e759fc38ac99a4edfe00bf6994",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The documentation page presents specifications and benchmark information as text and tables, with no native architecture or chart image.",
+      "reason_cn": "该文档页以文字与表格呈现规格和评测信息，没有可直接导出的原生架构图或图表。",
+      "figures": []
+    },
+    {
+      "id": "minimax:minimax-speech-2-8",
+      "vendor": "minimax",
+      "title": "MiniMax Speech 2.8",
+      "models": [
+        "MiniMax Speech 2.8"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://www.minimax.io/news/minimax-speech-28",
+      "source_sha256": "94e3a1445d7390b0c27ce56247fed18f6822e7277313ed32bf4c20c108eaee41",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The announcement embeds audio demonstrations and product imagery; no source-native benchmark chart or architecture figure is published on the page.",
+      "reason_cn": "该公告嵌入音频演示与产品配图，页面未发布可核对的原生评测图表或架构图。",
+      "figures": []
+    },
+    {
+      "id": "google:codegemma-model-card",
+      "vendor": "google",
+      "title": "CodeGemma",
+      "models": [
+        "CodeGemma"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/codegemma/model_card",
+      "source_sha256": "3aca6abaa39ddf0f3f90c5080c0cf8a7344314e80949be4129c7dcb09b3c624b",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:diffusiongemma-model-card",
+      "vendor": "google",
+      "title": "DiffusionGemma",
+      "models": [
+        "DiffusionGemma"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/diffusiongemma/model_card",
+      "source_sha256": "77d5aa562815b4934434f5ac3e1d205ac682139d517894c440cf41a112283efa",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:functiongemma-model-card",
+      "vendor": "google",
+      "title": "FunctionGemma",
+      "models": [
+        "FunctionGemma"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/functiongemma/model_card",
+      "source_sha256": "7fed18258700db0f55b3dd8b6314f9a9fc0f3850850bd017d3b52b322905ef82",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:gemma-1-model-card",
+      "vendor": "google",
+      "title": "Gemma 1",
+      "models": [
+        "Gemma 1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/model_card",
+      "source_sha256": "12a9656d593e467c95c01653d463b6ef8053691df3682f34619e73db895c441f",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:gemma-3-model-card",
+      "vendor": "google",
+      "title": "Gemma 3",
+      "models": [
+        "Gemma 3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/core/model_card_3",
+      "source_sha256": "802db818e8e249b0c5df2176680a93316de1e0e293b722b873069c2ec807395d",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:gemma-3n-model-card",
+      "vendor": "google",
+      "title": "Gemma 3n",
+      "models": [
+        "Gemma 3n"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/gemma-3n/model_card",
+      "source_sha256": "edd4a93e05fe16b572ea5f3fc16d0ad7a127ed38397582c97e7ea0e08a51b08e",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:gemma-4-model-card",
+      "vendor": "google",
+      "title": "Gemma 4",
+      "models": [
+        "Gemma 4"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+      "source_sha256": "5b4cabc7205f0f0c14657164e62fcf1ed2043fc685d770b515fe5c24e429a648",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:medgemma-model-card",
+      "vendor": "google",
+      "title": "MedGemma",
+      "models": [
+        "MedGemma"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://developers.google.com/health-ai-developer-foundations/medgemma/model-card-v1",
+      "source_sha256": "80764ae3c61ddd912f1bdaa11e65869fc594e1f72b854163d78ee4601e4ab128",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:medgemma-1-5-model-card",
+      "vendor": "google",
+      "title": "MedGemma 1.5",
+      "models": [
+        "MedGemma 1.5"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://developers.google.com/health-ai-developer-foundations/medgemma/model-card",
+      "source_sha256": "0b28144fa72f8479123b7dba7ecc7fbd18773ab11b3ef04505d5922fb5ead65d",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:paligemma-1-model-card",
+      "vendor": "google",
+      "title": "PaliGemma",
+      "models": [
+        "PaliGemma"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/paligemma/model-card",
+      "source_sha256": "eb4a3bff8bcc752726956fff8be1c8007eaccab949da6cc70a5e8f40371f6aec",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:paligemma-2-model-card",
+      "vendor": "google",
+      "title": "PaliGemma 2",
+      "models": [
+        "PaliGemma 2"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/paligemma/model-card-2",
+      "source_sha256": "626fcd4fafe4b6bf5e0e8d4fd0fa4f8e91ff4b055132c88510eef88275c57406",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:recurrentgemma-model-card",
+      "vendor": "google",
+      "title": "RecurrentGemma",
+      "models": [
+        "RecurrentGemma"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/recurrentgemma/model_card",
+      "source_sha256": "d443c8e9585115264b3609e8a7b44b42bdcd242418b9e47ee6e8ae8cad1e40e2",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:shieldgemma-2-model-card",
+      "vendor": "google",
+      "title": "ShieldGemma 2",
+      "models": [
+        "ShieldGemma 2"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/shieldgemma/model_card_2",
+      "source_sha256": "3e4e2279df72640066704cc5f11a999e15a028b8427287a50a73069055e20421",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "google:txgemma-model-card",
+      "vendor": "google",
+      "title": "TxGemma",
+      "models": [
+        "TxGemma"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://developers.google.com/health-ai-developer-foundations/txgemma/model-card",
+      "source_sha256": "c3185b6f14e3860884aae73cc6956cf921dffcf3f64ecfc2520c611f1137f578",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page presents specifications and evaluation text; it contains no source-native architecture diagram or results chart suitable for extraction.",
+      "reason_cn": "所核查官方模型卡以规格与评测文字为主，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "toyota_research_institute:tri-lbm-1-technical-report",
+      "vendor": "toyota_research_institute",
+      "title": "A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation",
+      "models": [
+        "LBM 1.0"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/toyota_research_institute/technical-reports/tri-lbm-1-technical-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2507.05331",
+      "source_sha256": "c9ba44579974208aa43d60fce2e0294c0fee1f1b8d604abd64613568f9c5a102",
+      "source_version": "arxiv-v1",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [],
+      "reason_en": "The report is an empirical evaluation of multitask policies; its informative plots need a reviewed page-level crop, which is deferred rather than guessed.",
+      "reason_cn": "报告为多任务策略的实证评估；其图表需要逐页核对后裁切，本轮先保留原文，不猜测配图。",
+      "figures": []
+    },
+    {
+      "id": "1x:1x-world-model-technical-report",
+      "vendor": "1x",
+      "title": "1X World Model: Evaluating Bits, not Atoms",
+      "models": [
+        "1X World Model"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/1x/technical-reports/1x-world-model-technical-report.pdf",
+      "source_url": "https://www.1x.tech/discover/redwood-ai-world-model",
+      "source_sha256": "a52d9d1ee00cb1373c34aee52321152a265d58bf2041326e2df54307f3ddbc87",
+      "source_version": "snapshot-2026-10-17",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [],
+      "reason_en": "The 12-page report embeds video-frame figures; no architecture diagram or single compact benchmark chart was visually selected in this pass.",
+      "reason_cn": "这份 12 页报告以视频帧示意图为主；本轮未目视选定架构图或单张紧凑评测图表。",
+      "figures": []
+    },
+    {
+      "id": "tencent:hy-world-2-0-technical-report",
+      "vendor": "tencent",
+      "title": "Tencent Hunyuan HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds",
+      "models": [
+        "HY-World 2.0"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/tencent/technical-reports/hy-world-2-0-technical-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2604.14268",
+      "source_sha256": "6a92b680015f1318de716eb64fe3a7fccccd3cc18d835a4ab845deafc5f1973b",
+      "source_version": "arxiv-v1",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [],
+      "reason_en": "44-page 3D world-model report; figure selection requires page-level visual review not completed in this pass.",
+      "reason_cn": "44 页 3D 世界模型报告；图表选取需要逐页目视核对，本轮未完成。",
+      "figures": []
+    },
+    {
+      "id": "ubtech:thinker-wm-technical-report",
+      "vendor": "ubtech",
+      "title": "Thinker-WM: A Unified World Model with Shared Multimodal Backbone for Embodied Intelligence",
+      "models": [
+        "Thinker-WM"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/ubtech/technical-reports/thinker-wm-technical-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2610.18447",
+      "source_sha256": "d8abce8faa2fd45c3b9d8afbdd76e235bf65804df272b6ecb5fe89aca657979f",
+      "source_version": "arxiv-v1",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [],
+      "reason_en": "39-page world-model report; figure selection deferred to a page-level visual review.",
+      "reason_cn": "39 页世界模型报告；图表选取留待逐页目视核对。",
+      "figures": []
+    },
+    {
+      "id": "qwen:qwen-robotworld-technical-report",
+      "vendor": "qwen",
+      "title": "Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation",
+      "models": [
+        "Qwen-RobotWorld"
+      ],
+      "document_type": "technical_report",
+      "source_pdf": "pdfs/qwen/technical-reports/qwen-robotworld-technical-report--arxiv-v1.pdf",
+      "source_url": "https://arxiv.org/abs/2606.17030",
+      "source_sha256": "a8425282fd60ccba7cdddc796b1becf3a92bbf17a55497c9936b21ed4117b801",
+      "source_version": "arxiv-v1",
+      "status": "no_suitable_figure_identified",
+      "inspected_pages": [],
+      "reason_en": "25-page report; figure selection deferred to a page-level visual review.",
+      "reason_cn": "25 页报告；图表选取留待逐页目视核对。",
+      "figures": []
+    },
+    {
+      "id": "cohere:cohere-transcribe-arabic-model-card",
+      "vendor": "cohere",
+      "title": "Cohere Transcribe Arabic",
+      "models": [
+        "Cohere Transcribe Arabic"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026",
+      "source_sha256": "36ebf789f8ef9d5812a78484c4dbfa8b33a7a8f7b184f0a4c369730dfcd00704",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "cohere:cohere-transcribe-model-card",
+      "vendor": "cohere",
+      "title": "Cohere Transcribe",
+      "models": [
+        "Cohere Transcribe"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/CohereLabs/cohere-transcribe-03-2026",
+      "source_sha256": "6f29f144ebfaa94cecb7b8ff7d0db3074dd8afb68fac9db11c379ec6511618da",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "cohere:north-micro-vision-instruct-model-card",
+      "vendor": "cohere",
+      "title": "North Micro Vision Instruct",
+      "models": [
+        "North Micro Vision Instruct"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct",
+      "source_sha256": "444f21f2f63745a5b0bcae3d56f8f13e130b263454f58c32d1164a49bd1b7062",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "minimax:minimax-music-3-model-card",
+      "vendor": "minimax",
+      "title": "MiniMax Music 3.0",
+      "models": [
+        "MiniMax Music 3.0"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
+      "source_sha256": "4fd97b5c444f693df5f0f08d1527537d8ed743b1bfdfb9ec984870c52a109d69",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "nvidia:cosmos-reason1-7b-model-card",
+      "vendor": "nvidia",
+      "title": "Cosmos Reason1",
+      "models": [
+        "Cosmos Reason1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/nvidia/Cosmos-Reason1-7B",
+      "source_sha256": "4ae1bf588b90ebd64fd8f9d462cfceb3abbf6bb13d666dd9443fd44f41b424c3",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "mistral:devstral-2-model-card",
+      "vendor": "mistral",
+      "title": "Devstral 2",
+      "models": [
+        "Devstral 2"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/mistralai/Devstral-2-123B-Instruct-2512",
+      "source_sha256": "b04e5e1afbfa7062f993c1941080ead2128d40f5f2a361ee95abec1a7c32b6c0",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "mistral:leanstral-1-5-model-card",
+      "vendor": "mistral",
+      "title": "Leanstral 1.5",
+      "models": [
+        "Leanstral 1.5"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/mistralai/Leanstral-1.5-119B-A6B",
+      "source_sha256": "e422d340321eaae3b6affb51d1076d4a07b1230e917c76980ac77da54bbf3fbc",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "mistral:mistral-small-4-model-card",
+      "vendor": "mistral",
+      "title": "Mistral Small 4",
+      "models": [
+        "Mistral Small 4"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+      "source_sha256": "03ad608700ec7759692cd35869e9b7bb8af0c6830251542923bf8f5ee9ea6acf",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is predominantly prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "google:embeddinggemma-model-card",
+      "vendor": "google",
+      "title": "EmbeddingGemma",
+      "models": [
+        "EmbeddingGemma"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.google.dev/gemma/docs/embeddinggemma/model_card",
+      "source_sha256": "52d92c346b377ebbd5ac5b6461bc6cb98a2c00907a84024c7f13f2e9e512fde5",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model-card page is specification and evaluation text with no source-native architecture diagram or results chart.",
+      "reason_cn": "所核查官方模型卡为规格与评测文字，没有可直接导出的原生架构图或结果图表。",
+      "figures": []
+    },
+    {
+      "id": "meta:llama-2-model-card",
+      "vendor": "meta",
+      "title": "Llama 2",
+      "models": [
+        "Llama 2"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama2/MODEL_CARD.md",
+      "source_sha256": "099703c117f606dd6b56c9af1a922fff694f2c1ab84e2a5d37c88490a5f6e2f2",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡为文字与表格；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "meta:llama-3-model-card",
+      "vendor": "meta",
+      "title": "Llama 3",
+      "models": [
+        "Llama 3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3/MODEL_CARD.md",
+      "source_sha256": "a384e8219002865f0c394b23ccdd0acf7624b072efac3457bd9de5eba7451c3c",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡为文字与表格；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "meta:llama-3-2-model-card",
+      "vendor": "meta",
+      "title": "Llama 3.2",
+      "models": [
+        "Llama 3.2"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD.md",
+      "source_sha256": "34a449098554dbfb44912b05875f00bb779fb7499f29489f3cad251efe6c03a1",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡为文字与表格；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "meta:llama-3-3-model-card",
+      "vendor": "meta",
+      "title": "Llama 3.3",
+      "models": [
+        "Llama 3.3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md",
+      "source_sha256": "a74d4b083cad8e3ddb41ec7ee2cc55d82dadcf5df6b812a99d237d01a863fd42",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured model card is prose and tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方模型卡为文字与表格；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "xai:grok-1-model-card",
+      "vendor": "xai",
+      "title": "Grok-1",
+      "models": [
+        "Grok-1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://x.ai/news/grok/model-card",
+      "source_sha256": "674a0e9065c728fc21b3af75d68a9d6d0caf5edaf76d6e10c5308c710d30b8fd",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "deepseek:deepseek-v2-5",
+      "vendor": "deepseek",
+      "title": "DeepSeek-V2.5",
+      "models": [
+        "DeepSeek-V2.5"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://api-docs.deepseek.com/news/news0905/",
+      "source_sha256": "e14d966cbc35ae3f8f011dba6f1cab522df522f5f8df64eee0ac64621cafe1db",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "meta:llama-4-model-card",
+      "vendor": "meta",
+      "title": "Llama 4",
+      "models": [
+        "Llama 4 Scout",
+        "Llama 4 Maverick"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama4/MODEL_CARD.md",
+      "source_sha256": "f5c0f2404cf02104267f4d8100e4a63bec961506052da761bcba0a3d196a8eb3",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "bytedance:seed-oss-model-card",
+      "vendor": "bytedance",
+      "title": "Seed-OSS",
+      "models": [
+        "Seed-OSS"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/ByteDance-Seed/seed-oss",
+      "source_sha256": "2af9089280e13b155c0033f2016c66f43aefe634bb2d6c9c74d88e1183f20d9e",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "google:veo-3-1-model-card",
+      "vendor": "google",
+      "title": "Veo 3.1",
+      "models": [
+        "Veo 3.1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://blog.google/innovation-and-ai/products/veo-updates-flow/",
+      "source_sha256": "6c20b380e8e12e2260f5954164e71d9503ea34bfc9c0e57b36042b2b51a2e3f9",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "zai:glm-asr-nano-model-card",
+      "vendor": "zai",
+      "title": "GLM-ASR-Nano",
+      "models": [
+        "GLM-ASR-Nano"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/zai-org/GLM-ASR",
+      "source_sha256": "0aeea9120a7ec52d1b8320fc35a4ecd20fcec3601fab12b7a2697be6ab6e69ba",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "minimax:minimax-m2-1-model-card",
+      "vendor": "minimax",
+      "title": "MiniMax-M2.1",
+      "models": [
+        "MiniMax-M2.1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-M2.1",
+      "source_sha256": "dc10ac411ff2dd0c232955e4d9ac115647305bb32ffb48fa035cc14c9e8c8437",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "zai:glm-image-model-card",
+      "vendor": "zai",
+      "title": "GLM-Image",
+      "models": [
+        "GLM-Image"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/zai-org/GLM-Image",
+      "source_sha256": "8d3786712a719d3aa9d91a23cca29865c926501db3b4cd4af22c473fb6f6c6b6",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "bytedance:seedrealtime",
+      "vendor": "bytedance",
+      "title": "SeedRealtime",
+      "models": [
+        "SeedRealtime"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction",
+      "source_sha256": "b8ee0f126a30b0a8ec583fb0265020b77eeaad282293305087b6ed682bd651c1",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "meta:muse-spark-1-2",
+      "vendor": "meta",
+      "title": "Muse Spark 1.2",
+      "models": [
+        "Muse Spark 1.2"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+      "source_sha256": "3069c0571a1cc59417941a4d789a51a64b089a7e0d865669c87b51c897d6fdc0",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "meta:muse-spark-1-3",
+      "vendor": "meta",
+      "title": "Muse Spark 1.3",
+      "models": [
+        "Muse Spark 1.3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+      "source_sha256": "639a2c13dc093e0cf5e138b6137ef8bdb1896352c1e6f40dbe54bac59f541dcb",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "cohere:embed-5-model-card",
+      "vendor": "cohere",
+      "title": "Embed 5",
+      "models": [
+        "Embed 5"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://cohere.com/blog/embed-5",
+      "source_sha256": "6304a413da3934d63a908e7fe11ff3663afc576858c74f6ccf89eb2d5836553c",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "The captured page is prose/tables; no source-native figure was selected in this pass.",
+      "reason_cn": "所核查官方页面以文字与表格为主；本轮未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "nvidia:nemotron-parse-2-0-model-card",
+      "vendor": "nvidia",
+      "title": "Nemotron Parse 2.0",
+      "models": [
+        "Nemotron Parse 2.0"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Parse-2.0",
+      "source_sha256": "be1687a6aad5ea065cfe4c64aacfb28cb427ca6aa10df22ed54b100e94ba90cc",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "nvidia:nemotron-3-5-asr-model-card",
+      "vendor": "nvidia",
+      "title": "Nemotron 3.5 ASR Streaming 0.6B",
+      "models": [
+        "Nemotron 3.5 ASR Streaming 0.6B"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b",
+      "source_sha256": "b35d14a8a68c2fa7e8481e00ec459b03b4b51715a47af267bb35d017ec7429eb",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "nvidia:nemotron-3-embed-model-card",
+      "vendor": "nvidia",
+      "title": "Nemotron 3 Embed",
+      "models": [
+        "Nemotron 3 Embed"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/nvidia/Nemotron-3-Embed-8B-BF16",
+      "source_sha256": "a6fda22661dc683af9affe423edc733c9f0c02b09d1102566e1a30951971ca61",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "nvidia:magpietts-model-card",
+      "vendor": "nvidia",
+      "title": "MagpieTTS Multilingual 357M v2607",
+      "models": [
+        "MagpieTTS Multilingual 357M v2607"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/nvidia/magpie_tts_multilingual_357m",
+      "source_sha256": "a3931fdd759d2dd5a4fbefbbefd2a2aa8b196f52b7c0af47446b05c5e834422f",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "nvidia:cosmos-reason2-model-card",
+      "vendor": "nvidia",
+      "title": "Cosmos Reason 2",
+      "models": [
+        "Cosmos Reason 2"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/nvidia-cosmos/cosmos-reason2",
+      "source_sha256": "2c8dd992af0574317f1769d5195e06f7c355ac988deb3ecb966e975ae5dc78f6",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "mistral:mistral-ocr-4-1-model-card",
+      "vendor": "mistral",
+      "title": "Mistral OCR 4.1",
+      "models": [
+        "Mistral OCR 4.1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://docs.mistral.ai/models/ocr-4-1",
+      "source_sha256": "61f5ed8092ebb425269ecc1cad1ca23e7716bbee50b0102d7343e446ede2b49c",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "cohere:rerank-4-model-card",
+      "vendor": "cohere",
+      "title": "Rerank 4",
+      "models": [
+        "Rerank 4"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://docs.cohere.com/docs/rerank",
+      "source_sha256": "1417155e8ad1dfd11f2fde0b15dc2fb1e3677fa57c133d85d75f5a20db04209e",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "stepfun:nextstep-1-1-model-card",
+      "vendor": "stepfun",
+      "title": "NextStep-1.1",
+      "models": [
+        "NextStep-1.1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/stepfun-ai/NextStep-1",
+      "source_sha256": "6151bfc4fcf7e28dbc54268f4942ff6cf56d4c9c23fe66cad0ad4936ba4d8d65",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "qwen:qwen3-8-omni-flash",
+      "vendor": "qwen",
+      "title": "Qwen3.8-Omni-Flash",
+      "models": [
+        "Qwen3.8-Omni-Flash"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "source_sha256": "eee1a7b5541d718722a801f8769d27339c88a7bb5b7d5dfbe04ae5abe2c10841",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "qwen:qwen3-8-omni-flash-realtime",
+      "vendor": "qwen",
+      "title": "Qwen3.8-Omni-Flash-Realtime",
+      "models": [
+        "Qwen3.8-Omni-Flash-Realtime"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "source_sha256": "a6a6d7ea80a826395d609a9329ee6f9447b30238654dd05761b4b8fe5a8d45cd",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "qwen:qwen-mt-uni",
+      "vendor": "qwen",
+      "title": "Qwen-MT-Uni",
+      "models": [
+        "Qwen-MT-Uni"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "source_sha256": "3e6ff3af3c2438884547e7f2177aae3722f73d576bbc8ba6daa3a8020e3b887a",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "qwen:qwen-audio-3-0-tts-plus",
+      "vendor": "qwen",
+      "title": "Qwen-Audio-3.0-TTS-Plus",
+      "models": [
+        "Qwen-Audio-3.0-TTS-Plus"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "source_sha256": "20677c8d12aa1bfec93651f9830e0487705a5530ea0a16fc1e7a74a28aa6a9c5",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "qwen:qwen-audio-3-0-tts-flash",
+      "vendor": "qwen",
+      "title": "Qwen-Audio-3.0-TTS-Flash",
+      "models": [
+        "Qwen-Audio-3.0-TTS-Flash"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "source_sha256": "d473eee8808c7b53c8432b3479211eed8c777b9b4408db6cd2fbfbf63636e839",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "qwen:qwen-image-2-1",
+      "vendor": "qwen",
+      "title": "Qwen-Image-2.1",
+      "models": [
+        "Qwen-Image-2.1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/QwenLM/Qwen-Image-2.1",
+      "source_sha256": "2ae8472326d5d48c3d021da2fac10bee531f4e43e8fe4e1f8222e335ee261f63",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "qwen:qwen-image-2-1-pro",
+      "vendor": "qwen",
+      "title": "Qwen-Image-2.1-Pro",
+      "models": [
+        "Qwen-Image-2.1-Pro"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://help.aliyun.com/zh/model-studio/newly-released-models",
+      "source_sha256": "489c7710cc1a5b90417e12415e459cfb9d7d5740aaef0073de0f93b5334fe2b0",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "qwen:qwen3-8-technical-report",
+      "vendor": "qwen",
+      "title": "Qwen3.8",
+      "models": [
+        "Qwen3.8"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/QwenLM/Qwen3.8",
+      "source_sha256": "bea1a2283b87d223e2df84dd78de995b7cf25bc82284549ca61f88605cd5f237",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "bytedance:seed-audio-1-0",
+      "vendor": "bytedance",
+      "title": "Seed Audio 1.0",
+      "models": [
+        "Seed Audio 1.0"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://seed.bytedance.com/en/research",
+      "source_sha256": "fef4a505480af258b1d45b8d10aae356f8e85e4baaf87ba9019814e1b37bf592",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "tencent:hy3-model-card",
+      "vendor": "tencent",
+      "title": "Hy3",
+      "models": [
+        "Hy3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/Tencent-Hunyuan/Hy3",
+      "source_sha256": "3e4d8f1a32801f9c3a356e1043810bc6438fff3e9db10f21ea046a3173029fc2",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "zai:glm-5-3-flash-model-card",
+      "vendor": "zai",
+      "title": "GLM-5.3-Flash",
+      "models": [
+        "GLM-5.3-Flash"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "source_sha256": "4808dd16a7d34dd833835131739932e481c6137e5fd3224be9a7f6d4cbb522fd",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "openai:gpt-5-6-cyber",
+      "vendor": "openai",
+      "title": "GPT-5.6 Cyber",
+      "models": [
+        "GPT-5.6 Cyber"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-5.6-cyber",
+      "source_sha256": "fcae07600bd58f8343a3d5f5e56cbee9bcabc77a1a92720592760248f1c39e18",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "openai:gpt-4o-mini-tts",
+      "vendor": "openai",
+      "title": "GPT-4o Mini TTS",
+      "models": [
+        "GPT-4o Mini TTS"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-4o-mini-tts",
+      "source_sha256": "f73e78afa0baf293d4d7df8f8c6df00cea70532ccd0846ad1c42f51ee4cc62a0",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "openai:gpt-realtime-translate",
+      "vendor": "openai",
+      "title": "GPT-Realtime-Translate",
+      "models": [
+        "GPT-Realtime-Translate"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://developers.openai.com/api/docs/models/gpt-realtime-translate",
+      "source_sha256": "09b0ad89096ac9e5e765d22c7d88799c4ad7e18f2a615893b82defd0e49737bb",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "xai:grok-voice-transcribe-2-0",
+      "vendor": "xai",
+      "title": "Grok Voice Transcribe 2.0",
+      "models": [
+        "Grok Voice Transcribe 2.0"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://docs.x.ai/developers/release-notes",
+      "source_sha256": "eb3f11ba14ddf2ed14af96d2bdc3ab75957aad99e81fc15b9b2f0201cf0c1268",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "xai:grok-imagine-image-2-0",
+      "vendor": "xai",
+      "title": "Grok Imagine Image 2.0",
+      "models": [
+        "Grok Imagine Image 2.0"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://docs.x.ai/docs/guides/image-generation",
+      "source_sha256": "cf495270c627aa610b79045c6fea1d3aab5cb7c374c9dbb54654759a6b5988c0",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "xai:grok-imagine-video-1-5",
+      "vendor": "xai",
+      "title": "Grok Imagine Video 1.5",
+      "models": [
+        "Grok Imagine Video 1.5"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://docs.x.ai/docs/guides/video-generation",
+      "source_sha256": "c852c0112f4db0aecdb65a3d943f373837c4486642602c8512e98c606aad1550",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "meta:llama-3-1-model-card",
+      "vendor": "meta",
+      "title": "Llama 3.1",
+      "models": [
+        "Llama 3.1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md",
+      "source_sha256": "783b6efccfbbfdfcd604cd694f106a2c4f25fc035a2311b7db879ad2100e2dc9",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "minimax:minimax-m2-1-report",
+      "vendor": "minimax",
+      "title": "MiniMax-M2.1",
+      "models": [
+        "MiniMax-M2.1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-M2.1",
+      "source_sha256": "8652131dc79aa48b0b74c8dd536663bcbd99e24de28734f13cdb993a5a673aaa",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "google:t5gemma-model-card",
+      "vendor": "google",
+      "title": "T5Gemma",
+      "models": [
+        "T5Gemma"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://developers.googleblog.com/en/t5gemma/",
+      "source_sha256": "f711704b8671f933230ec7d51c0e78f7e1c0e8cd86e68d792bf3fde42833c205",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "meta:llama-3-2-vision-model-card",
+      "vendor": "meta",
+      "title": "Llama 3.2 Vision",
+      "models": [
+        "Llama 3.2 Vision"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/MODEL_CARD_VISION.md",
+      "source_sha256": "a71d31194a6970eabf244b89453b950fb712ebe306d375c7fbb25be29a5c08b8",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "meta:muse-personal-ai-agent",
+      "vendor": "meta",
+      "title": "Muse personal AI agent",
+      "models": [
+        "Muse personal AI agent"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "source_sha256": "20c63e2ab513df38c7f409f96022609f27be08c4dffc6525a2489c43c7349570",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "mistral:codestral-embed-model-card",
+      "vendor": "mistral",
+      "title": "Codestral Embed",
+      "models": [
+        "Codestral Embed"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://mistral.ai/news/codestral-embed",
+      "source_sha256": "39a86b007a2865849280b611d69de53277d4cd5f6d7ef853aedab3c6c27d21d3",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "cohere:parse-5-model-card",
+      "vendor": "cohere",
+      "title": "Parse 5",
+      "models": [
+        "Parse 5"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://docs.cohere.com/docs/parse",
+      "source_sha256": "6da81a2266f9693c14ef832b7dae65da0c26d2b601cf7125746a5a2671c9861e",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
+    },
+    {
+      "id": "xai:grok-voice-api",
+      "vendor": "xai",
+      "title": "Grok Voice API",
+      "models": [
+        "Grok Voice API"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://docs.x.ai/docs/guides/voice",
+      "source_sha256": "c5a3098561cf18d9f8ce4a7c7552c058da4df18583db332f93debb5e0b9003f2",
+      "source_version": "2026-10-17",
+      "status": "no_native_static_figure_available",
+      "inspected_pages": [],
+      "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
+      "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。",
+      "figures": []
     }
   ]
 }

@@ -28,6 +28,8 @@ VENDORS = {
     "microsoft": "Microsoft / Phi / MAI", "amazon": "Amazon / Nova",
     "physical_intelligence": "Physical Intelligence", "figure": "Figure AI",
     "skild": "Skild AI", "agibot": "AgiBot", "galaxea": "Galaxea AI", "generalist": "Generalist AI",
+    "toyota_research_institute": "Toyota Research Institute", "1x": "1X Technologies",
+    "ubtech": "UBTech / Thinker",
 }
 DOCUMENT_TYPES = {
     "technical_report": ("Technical Report", "technical-reports.md"),

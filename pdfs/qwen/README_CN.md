@@ -8,7 +8,7 @@
 
 | 类型 | 已收录报告 |
 | --- | ---: |
-| [技术报告](technical-reports/README_CN.md) | 40 |
+| [技术报告](technical-reports/README_CN.md) | 41 |
 | [模型卡](model-cards/README_CN.md) | 0 |
 | [系统卡](system-cards/README_CN.md) | 0 |
 
@@ -22,6 +22,7 @@
 | 2026-08-06 | [Wan-Animate-2: Pushing the Application Boundaries of Character Animation](https://arxiv.org/abs/2608.06009) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2608.06009) |
 | 2026-07-30 | [Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents](https://arxiv.org/abs/2607.28227) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.28227) |
 | 2026-07-10 | [Wan-Dancer: A Hierarchical Framework for Minute-scale Coherent Music-to-Dance Generation](https://arxiv.org/abs/2607.09581) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2607.09581) |
+| 2026-06-18 | [Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](https://arxiv.org/abs/2606.17030) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://arxiv.org/abs/2606.17030) |
 | 2026-06-16 | [Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System](https://github.com/QwenLM/Qwen-RobotNav) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/QwenLM/Qwen-RobotNav) |
 | 2026-06-16 | [Qwen-RobotManip Technical Report: Alignment Unlocks Scale for Robotic Manipulation Foundation Models](https://github.com/QwenLM/Qwen-RobotManip) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/QwenLM/Qwen-RobotManip) |
 | 2026-05-28 | [Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments](https://github.com/QwenLM/Qwen-VLA) | [技术报告](../../reports/technical-reports_CN.md) | [来源](https://github.com/QwenLM/Qwen-VLA) |

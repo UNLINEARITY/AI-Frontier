@@ -6,7 +6,7 @@ Updated **2026-10-14**.
 
 Current flagships and important new models, with original reports and official introductions.
 
-[OpenAI](#openai) · [Anthropic](#anthropic) · [Google / DeepMind](#google) · [Meta](#meta) · [xAI](#xai) · [Mistral AI](#mistral) · [NVIDIA](#nvidia) · [DeepSeek](#deepseek) · [Alibaba / Qwen / Wan](#qwen) · [Moonshot AI / Kimi](#moonshot) · [Z.ai / Zhipu AI](#zai) · [MiniMax](#minimax) · [StepFun](#stepfun) · [Tencent / Hunyuan](#tencent) · [ByteDance / Seed](#bytedance) · [Cohere](#cohere) · [Microsoft / Phi / MAI](#microsoft) · [Amazon / Nova](#amazon) · [Physical Intelligence](#physical_intelligence) · [Figure AI](#figure) · [Skild AI](#skild) · [AgiBot](#agibot) · [Galaxea AI](#galaxea) · [Generalist AI](#generalist)
+[OpenAI](#openai) · [Anthropic](#anthropic) · [Google / DeepMind](#google) · [Meta](#meta) · [xAI](#xai) · [Mistral AI](#mistral) · [NVIDIA](#nvidia) · [DeepSeek](#deepseek) · [Alibaba / Qwen / Wan](#qwen) · [Moonshot AI / Kimi](#moonshot) · [Z.ai / Zhipu AI](#zai) · [MiniMax](#minimax) · [StepFun](#stepfun) · [Tencent / Hunyuan](#tencent) · [ByteDance / Seed](#bytedance) · [Cohere](#cohere) · [Microsoft / Phi / MAI](#microsoft) · [Amazon / Nova](#amazon) · [Physical Intelligence](#physical_intelligence) · [Figure AI](#figure) · [Skild AI](#skild) · [AgiBot](#agibot) · [Galaxea AI](#galaxea) · [Generalist AI](#generalist) · [Toyota Research Institute](#toyota_research_institute) · [1X Technologies](#1x) · [UBTech / Thinker](#ubtech)
 
 <a id="openai"></a>
 
@@ -50,7 +50,7 @@ Current flagships and important new models, with original reports and official i
 | --- | --- | --- |
 | Language & coding / Vision | Gemini 3.8 Flash | [Model Card](abstracts/google/gemini-3-8-flash-model-card.md) · [Official](https://deepmind.google/models/gemini/flash/) |
 | Language & coding / Vision | Gemini 3.1 Pro | [Model Card](abstracts/google/gemini-3-1-pro-model-card.md) · [Official](https://deepmind.google/models/gemini/pro/) |
-| Language & coding / Vision | Gemma 4 | [Technical Report](abstracts/google/gemma-4-technical-report.md) · [Official](https://ai.google.dev/gemma/docs/core/model_card_4) |
+| Language & coding / Vision | Gemma 4 | [Technical Report](abstracts/google/gemma-4-technical-report.md) · [Read](abstracts/google/gemma-4-model-card.md) · [Official](https://ai.google.dev/gemma/docs/core/model_card_4) |
 | Language & coding / Vision / Domain-specific | Gemini 4 Argon | [Model Card](abstracts/google/gemini-4-argon-model-card.md) · [System Card](abstracts/google/gemini-4-argon-safety-and-security-report.md) · [Official](https://blog.google/intl/en-mena/product-updates/explore-get-answers/gemini-4-argon-built-to-solve-your-hardest-problems/) |
 | Image & 3D generation | Nano Banana 2.1 | [Model Card](abstracts/google/nano-banana-2-1-model-card.md) · [Official](https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1?hl=en) |
 | Video generation | Gemini Omni 1.1 Flash | [Model Card](abstracts/google/gemini-omni-flash-model-card.md) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
@@ -65,7 +65,7 @@ Current flagships and important new models, with original reports and official i
 | Robotics & embodied AI | SIMA 2 | [Technical Report](abstracts/google/sima-2-technical-report.md) · [Official](https://deepmind.google/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/) |
 | World models & simulation | Genie 3 | [Read](abstracts/google/genie-3.md) · [Official](https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/) |
 | Domain-specific | WeatherNext 3 | [Technical Report](abstracts/google/weathernext-3-technical-report.md) · [Official](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/) |
-| Domain-specific | MedGemma 1.5 | [Technical Report](abstracts/google/medgemma-1-5-technical-report.md) · [Official](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card) |
+| Domain-specific | MedGemma 1.5 | [Technical Report](abstracts/google/medgemma-1-5-technical-report.md) · [Read](abstracts/google/medgemma-1-5-model-card.md) · [Official](https://developers.google.com/health-ai-developer-foundations/medgemma/model-card) |
 
 <a id="meta"></a>
 
@@ -81,7 +81,7 @@ Current flagships and important new models, with original reports and official i
 | Vision | V-JEPA 2.1 | [Technical Report](abstracts/meta/v-jepa-2-1-technical-report.md) · [Official](https://github.com/facebookresearch/vjepa2) |
 | Image & 3D generation | Muse Image | [Official](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
 | Video generation | Muse Video | [Official](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
-| Speech & audio | Muse Voice Transcribe | [Official](https://research.meta.ai/blog/introducing-muse-voice-transcribe) |
+| Speech & audio | Muse Voice Transcribe | [Read](abstracts/meta/muse-voice-transcribe.md) · [Official](https://research.meta.ai/blog/introducing-muse-voice-transcribe) |
 | Robotics & embodied AI / World models & simulation | V-JEPA 2 / 2-AC | [Technical Report](abstracts/meta/v-jepa-2-technical-report.md) · [Official](https://github.com/facebookresearch/vjepa2) |
 | Image & 3D generation | SAM 3D Objects / Body | [SAM 3D: 3Dfy Anything in Images](abstracts/meta/sam-3d-technical-report.md) · [SAM 3D Body: Robust Full-Body Human Mesh Recovery](abstracts/meta/sam-3d-body-technical-report.md) · [Official](https://about.fb.com/news/2025/11/new-sam-models-detect-objects-create-3d-reconstructions/) |
 
@@ -173,6 +173,7 @@ Current flagships and important new models, with original reports and official i
 | Robotics & embodied AI | Qwen-VLA | [Technical Report](abstracts/qwen/qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments.md) · [Official](https://github.com/QwenLM/Qwen-VLA) |
 | Robotics & embodied AI | Qwen-RobotNav | [Technical Report](abstracts/qwen/qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system.md) · [Official](https://github.com/QwenLM/Qwen-RobotNav) |
 | Robotics & embodied AI | Qwen-RobotManip | [Technical Report](abstracts/qwen/qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models.md) · [Official](https://github.com/QwenLM/Qwen-RobotManip) |
+| Robotics & embodied AI / World models & simulation | Qwen-RobotWorld | [Technical Report](https://arxiv.org/abs/2606.17030) · [Official](https://qwen.ai/blog?id=qwen-robotworld) |
 
 <a id="moonshot"></a>
 
@@ -211,7 +212,7 @@ Current flagships and important new models, with original reports and official i
 | --- | --- | --- |
 | Language & coding | MiniMax-M3 | [Read](abstracts/minimax/minimax-m3-model-card.md) · [Official](https://huggingface.co/MiniMaxAI/MiniMax-M3) |
 | Video generation | MiniMax-H3 | [Read](abstracts/minimax/minimax-h3-model-card.md) · [Official](https://www.minimax.io/blog/minimax-h3) |
-| Speech & audio | MiniMax Speech 2.8 | [Official](https://www.minimax.io/news/minimax-speech-28) |
+| Speech & audio | MiniMax Speech 2.8 | [Read](abstracts/minimax/minimax-speech-2-8.md) · [Official](https://www.minimax.io/news/minimax-speech-28) |
 | Speech & audio | MiniMax Music 3.0 | [Official](https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model) |
 
 <a id="stepfun"></a>
@@ -227,7 +228,7 @@ Current flagships and important new models, with original reports and official i
 | Image & 3D generation | NextStep-1.1 | [Official](https://github.com/stepfun-ai/NextStep-1) |
 | Video generation | Step-Video-TI2V | [Technical Report](abstracts/stepfun/step-video-ti2v.md) · [Official](https://github.com/stepfun-ai/Step-Video-TI2V) |
 | Speech & audio | StepAudio 3 Realtime | [Technical Report](abstracts/stepfun/step-audio-3-realtime.md) · [Official](https://github.com/stepfun-ai) |
-| Speech & audio | StepAudio 3 ASR Max | [Official](https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-asr) |
+| Speech & audio | StepAudio 3 ASR Max | [Read](abstracts/stepfun/stepaudio-3-asr-max.md) · [Official](https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-asr) |
 | Speech & audio | StepAudio 3 TTS | [Technical Report](abstracts/stepfun/step-audio-3-gen.md) · [Official](https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-tts) |
 | Speech & audio | StepAudio 3 Music | [Technical Report](abstracts/stepfun/step-audio-3-music.md) · [Official](https://github.com/stepfun-ai) |
 | Image & 3D generation | Step1X-3D | [Technical Report](abstracts/stepfun/step1x-3d.md) · [Official](https://github.com/stepfun-ai/Step1X-3D) |
@@ -249,6 +250,7 @@ Current flagships and important new models, with original reports and official i
 | Robotics & embodied AI | Hy-Embodied-VLM-1.0 | [Technical Report](abstracts/tencent/hy-embodied-vlm-1-0.md) · [Official](https://github.com/Tencent-Hunyuan/HY-Embodied) |
 | Robotics & embodied AI | Hy-Embodied-RxBrain-1.0 | [Technical Report](abstracts/tencent/hy-embodied-rxbrain-1-0.md) · [Official](https://github.com/Tencent-Hunyuan/Hy-Embodied-RxBrain-1.0) |
 | World models & simulation | HY-World 1.5 / WorldPlay | [Technical Report](abstracts/tencent/worldplay-technical-report.md) · [Official](https://github.com/Tencent-Hunyuan/HY-WorldPlay) |
+| World models & simulation | HY-World 2.0 | [Technical Report](https://arxiv.org/abs/2604.14268) · [Official](https://3d.hunyuan.tencent.com/sceneTo3D) |
 | Image & 3D generation | Hunyuan3D 3.1 | [Official](https://cloud.tencent.com/document/product/1804/123447) |
 
 <a id="bytedance"></a>
@@ -260,8 +262,8 @@ Current flagships and important new models, with original reports and official i
 | Category | Model | Read |
 | --- | --- | --- |
 | Language & coding / Vision | Seed2.1 | [Model Card](abstracts/bytedance/seed2-1-model-card.md) · [Official](https://seed.bytedance.com/en/research) |
-| Image & 3D generation | Seedream 5.0 Pro | [Official](https://seed.bytedance.com/en/seedream5_0_pro) |
-| Video generation | Seedance 2.5 | [Official](https://seed.bytedance.com/en/seedance2_5) |
+| Image & 3D generation | Seedream 5.0 Pro | [Read](abstracts/bytedance/seedream-5-0-pro.md) · [Official](https://seed.bytedance.com/en/seedream5_0_pro) |
+| Video generation | Seedance 2.5 | [Read](abstracts/bytedance/seedance-2-5.md) · [Official](https://seed.bytedance.com/en/seedance2_5) |
 | Speech & audio | SeedRealtime | [Official](https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction) |
 | Speech & audio | Seed Audio 1.0 | [Official](https://seed.bytedance.com/en/research) |
 | Robotics & embodied AI | GR-3 | [Technical Report](abstracts/bytedance/gr-3-technical-report.md) · [Official](https://seed.bytedance.com/GR3) |
@@ -376,5 +378,35 @@ Current flagships and important new models, with original reports and official i
 | Category | Model | Read |
 | --- | --- | --- |
 | Robotics & embodied AI | GEN-1.5 | [Read](abstracts/generalist/gen-1-5.md) · [Official](https://generalistai.com/blog/gen-1.5) |
+
+<a id="toyota_research_institute"></a>
+
+## Toyota Research Institute
+
+[All reports](pdfs/toyota_research_institute/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| Robotics & embodied AI | LBM 1.0 | [Technical Report](https://arxiv.org/abs/2507.05331) · [Official](https://toyotaresearchinstitute.github.io/lbm1/) |
+
+<a id="1x"></a>
+
+## 1X Technologies
+
+[All reports](pdfs/1x/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| Robotics & embodied AI / World models & simulation | 1X World Model | [Technical Report](https://www.1x.tech/discover/redwood-ai-world-model) · [Official](https://www.1x.tech/discover/redwood-ai-world-model) |
+
+<a id="ubtech"></a>
+
+## UBTech / Thinker
+
+[All reports](pdfs/ubtech/README.md)
+
+| Category | Model | Read |
+| --- | --- | --- |
+| Robotics & embodied AI / World models & simulation | Thinker-WM | [Technical Report](https://arxiv.org/abs/2610.18447) · [Official](https://thinkercosmos.ubtrobot.com/thinker-wm) |
 
 Explore earlier models and reports in the [publisher archives](README.md#browse-by-publisher).
