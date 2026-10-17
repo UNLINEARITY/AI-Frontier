@@ -93,7 +93,7 @@ def build_readers(root, output, summaries, figure_reports, catalog, reader_meta=
                 'switch_label': t('Switch to 中文', '切换至 English'), 'name': 'AI Frontier', 'repository': REPOSITORY,
                 'switch_compact': t('EN → 中', '中 → EN'),
                 'title': escape(report['title']), 'description': escape(report['title']),
-                'body': inject_reader_meta(body, meta, chinese), 'vendor': vendor,
+                'body': inject_reader_meta(body.replace('{{asset_prefix}}', prefix), meta, chinese), 'vendor': vendor,
                 'back': t('Back', '返回'), 'zoom': t('Figure', '图片'), 'close': t('Close', '关闭'),
                 'theme_label': t('Appearance', '外观'), 'light_theme': t('Light', '浅色'),
                 'dark_theme': t('Dark', '深色'), 'system_theme': t('System', '跟随系统'),

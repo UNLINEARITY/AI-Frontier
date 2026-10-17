@@ -30,7 +30,10 @@
     "source_updated_date": "",
     "source_url": "https://anthropic.com/claude-opus-5-system-card",
     "notes": "发布日期取自官方目录，按其精度保留。 发布日期精度根据 PDF 封面补充。",
-    "pdf_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/ceaf5c7ff2783855203fde8208ec311252dced5b/Claude%20Opus%205%20System%20Card.pdf",
+    "reading_models": [
+      "Claude Opus 5"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -41,7 +44,10 @@
     "source_updated_date": "",
     "source_url": "https://anthropic.com/claude-sonnet-5-system-card",
     "notes": "发布日期取自官方目录，按其精度保留。 发布日期精度根据 PDF 封面补充。",
-    "pdf_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/283ef97c476cf442c91d9a37d5b214242a55bb92/Claude%20Sonnet%205%20System%20Card.pdf",
+    "reading_models": [
+      "Claude Sonnet 5"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -52,7 +58,10 @@
     "source_updated_date": "",
     "source_url": "https://anthropic.com/claude-opus-4-8-system-card",
     "notes": "发布日期取自官方目录，按其精度保留。 发布日期精度根据 PDF 封面补充。",
-    "pdf_url": "https://www-cdn.anthropic.com/0f0c97ad20d8005706296bd92aa1c27c6b2f4f61/Claude%20Opus%204.8%20System%20Card.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/0f0c97ad20d8005706296bd92aa1c27c6b2f4f61/Claude%20Opus%204.8%20System%20Card.pdf",
+    "reading_models": [
+      "Claude Opus 4.8"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -63,7 +72,11 @@
     "source_updated_date": "",
     "source_url": "https://anthropic.com/claude-fable-5-mythos-5-system-card",
     "notes": "发布日期取自官方目录，按其精度保留。 发布日期精度根据 PDF 封面补充。",
-    "pdf_url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20&%20Claude%20Mythos%205%20System%20Card.pdf",
+    "reading_models": [
+      "Claude Fable 5",
+      "Claude Mythos 5"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -74,7 +87,10 @@
     "source_updated_date": "",
     "source_url": "https://anthropic.com/claude-opus-4-7-system-card",
     "notes": "发布日期取自官方目录，按其精度保留。 发布日期精度根据 PDF 封面补充。",
-    "pdf_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf",
+    "reading_models": [
+      "Claude Opus 4.7"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -85,7 +101,10 @@
     "source_updated_date": "",
     "source_url": "https://www.anthropic.com/claude-mythos-preview-system-card",
     "notes": "发布日期取自官方目录，按其精度保留。 发布日期精度根据 PDF 封面补充。",
-    "pdf_url": "https://www-cdn.anthropic.com/7624816413e9b4d2e3ba620c5a5e091b98b190a5/Claude%20Mythos%20Preview%20System%20Card.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/7624816413e9b4d2e3ba620c5a5e091b98b190a5/Claude%20Mythos%20Preview%20System%20Card.pdf",
+    "reading_models": [
+      "Claude Mythos Preview"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -96,7 +115,10 @@
     "source_updated_date": "",
     "source_url": "https://anthropic.com/claude-sonnet-4-6-system-card",
     "notes": "发布日期取自官方目录，按其精度保留。 发布日期精度根据 PDF 封面补充。",
-    "pdf_url": "https://www-cdn.anthropic.com/bbd8ef16d70b7a1665f14f306ee88b53f686aa75/Claude%20Sonnet%204.6%20System%20Card.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/bbd8ef16d70b7a1665f14f306ee88b53f686aa75/Claude%20Sonnet%204.6%20System%20Card.pdf",
+    "reading_models": [
+      "Claude Sonnet 4.6"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -107,7 +129,10 @@
     "source_updated_date": "",
     "source_url": "https://anthropic.com/claude-opus-4-6-system-card",
     "notes": "发布日期取自官方目录，按其精度保留。 发布日期精度根据 PDF 封面补充。",
-    "pdf_url": "https://www-cdn.anthropic.com/6a5fa276ac68b9aeb0c8b6af5fa36326e0e166dd/Claude%20Opus%204.6%20System%20Card.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/6a5fa276ac68b9aeb0c8b6af5fa36326e0e166dd/Claude%20Opus%204.6%20System%20Card.pdf",
+    "reading_models": [
+      "Claude Opus 4.6"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -118,7 +143,10 @@
     "source_updated_date": "",
     "source_url": "https://www.anthropic.com/system-cards",
     "notes": "发布日期取自官方目录，按其精度保留。 发布日期精度根据 PDF 封面补充。",
-    "pdf_url": "https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/bf10f64990cfda0ba858290be7b8cc6317685f47.pdf",
+    "reading_models": [
+      "Claude Opus 4.5"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -129,7 +157,10 @@
     "source_updated_date": "",
     "source_url": "https://www.anthropic.com/system-cards",
     "notes": "发布日期取自官方目录，按其精度保留。",
-    "pdf_url": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/7aad69bf12627d42234e01ee7c36305dc2f6a970.pdf",
+    "reading_models": [
+      "Claude Haiku 4.5"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -140,7 +171,10 @@
     "source_updated_date": "",
     "source_url": "https://www.anthropic.com/system-cards",
     "notes": "发布日期取自官方目录，按其精度保留。",
-    "pdf_url": "https://www-cdn.anthropic.com/963373e433e489a87a10c823c52a0a013e9172dd.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/963373e433e489a87a10c823c52a0a013e9172dd.pdf",
+    "reading_models": [
+      "Claude Sonnet 4.5"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -151,7 +185,10 @@
     "source_updated_date": "",
     "source_url": "https://www.anthropic.com/system-cards",
     "notes": "发布日期取自官方目录，按其精度保留。",
-    "pdf_url": "https://www-cdn.anthropic.com/9fa30625273bafdf5af82c93719d7ca606485a16.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/9fa30625273bafdf5af82c93719d7ca606485a16.pdf",
+    "reading_models": [
+      "Claude Opus 4.1"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -162,7 +199,11 @@
     "source_updated_date": "",
     "source_url": "https://www.anthropic.com/system-cards",
     "notes": "发布日期取自官方目录，按其精度保留。",
-    "pdf_url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+    "reading_models": [
+      "Claude Sonnet 4",
+      "Claude Opus 4"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -173,7 +214,10 @@
     "source_updated_date": "",
     "source_url": "https://www.anthropic.com/system-cards",
     "notes": "发布日期取自官方目录，按其精度保留。",
-    "pdf_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/9ff93dfa8f445c932415d335c88852ef47f1201e.pdf",
+    "reading_models": [
+      "Claude 3.7 Sonnet"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -184,7 +228,11 @@
     "source_updated_date": "",
     "source_url": "https://www.anthropic.com/system-cards",
     "notes": "发布日期取自官方目录，按其精度保留。",
-    "pdf_url": "https://www-cdn.anthropic.com/c7822cdc35ad788ec87e14b3a9d45010f1f86c38.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/c7822cdc35ad788ec87e14b3a9d45010f1f86c38.pdf",
+    "reading_models": [
+      "Claude 3.5 Sonnet",
+      "Claude 3.5 Haiku"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -195,7 +243,10 @@
     "source_updated_date": "",
     "source_url": "https://www.anthropic.com/system-cards",
     "notes": "发布日期取自官方目录，按其精度保留。",
-    "pdf_url": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/fed9cc193a14b84131812372d8d5857f8f304c52/Model_Card_Claude_3_Addendum.pdf",
+    "reading_models": [
+      "Claude 3.5 Sonnet"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -206,7 +257,12 @@
     "source_updated_date": "",
     "source_url": "https://www.anthropic.com/system-cards",
     "notes": "发布日期取自官方目录，按其精度保留。",
-    "pdf_url": "https://www-cdn.anthropic.com/c6a80a657af445f40e31afac050f3bf76d3b1404.pdf"
+    "pdf_url": "https://www-cdn.anthropic.com/c6a80a657af445f40e31afac050f3bf76d3b1404.pdf",
+    "reading_models": [
+      "Claude 3 Opus",
+      "Claude 3 Sonnet",
+      "Claude 3 Haiku"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -218,7 +274,10 @@
     "source_url": "https://www.anthropic.com/news/claude-2-1",
     "notes": "发布日期取自官方目录，按其精度保留。 Verified revised 16-page PDF linked from the official Claude 2.1 announcement; first page explicitly dates the added Claude 2.1 appendix November 21, 2023. Original archived Claude 2 card is 14 pages and has no appendix. Preserve original first-publication date; appendix-v1 is the publisher filename revision label. Official alternate claude-2-model-card.pdf under the same CDN directory is web-readable but direct requests returned HTTP 403, so not registered as a downloader fallback.",
     "pdf_url": "https://www-cdn.anthropic.com/5c49cc247484cecf107c699baf29250302e5da70/ModelCardClaudev2_with_appendix_v1.pdf",
-    "version": "appendix-v1"
+    "version": "appendix-v1",
+    "reading_models": [
+      "Claude 2"
+    ]
   },
   {
     "vendor": "google",
@@ -273,7 +332,10 @@
     "source_updated_date": "2026-08-13",
     "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-7-Flash-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 3.7 Flash"
+    ]
   },
   {
     "vendor": "google",
@@ -284,7 +346,10 @@
     "source_updated_date": "2026-07-21",
     "source_url": "https://deepmind.google/models/model-cards/gemini-3-6-flash/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-6-Flash-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 3.6 Flash"
+    ]
   },
   {
     "vendor": "google",
@@ -295,7 +360,10 @@
     "source_updated_date": "2026-07-21",
     "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash-lite/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Lite-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Lite-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 3.5 Flash-Lite"
+    ]
   },
   {
     "vendor": "google",
@@ -317,7 +385,10 @@
     "source_updated_date": "2026-05-19",
     "source_url": "https://deepmind.google/models/model-cards/gemini-3-5-flash/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-5-Flash-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 3.5 Flash"
+    ]
   },
   {
     "vendor": "google",
@@ -328,7 +399,11 @@
     "source_updated_date": "2026-04-15",
     "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-audio/",
     "notes": "官方 HTML 模型卡提供的对应 PDF；目录 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Flash-Audio-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Flash-Audio-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 3.1 Flash Live",
+      "Gemini 3.1 Flash TTS"
+    ]
   },
   {
     "vendor": "google",
@@ -339,7 +414,10 @@
     "source_updated_date": "2026-03-03",
     "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-lite/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Flash-Lite-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Flash-Lite-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 3.1 Flash-Lite"
+    ]
   },
   {
     "vendor": "google",
@@ -350,7 +428,10 @@
     "source_updated_date": "2026-02-26",
     "source_url": "https://deepmind.google/models/model-cards/gemini-3-1-flash-image/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Flash-Image-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-1-Flash-Image-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 3.1 Flash Image"
+    ]
   },
   {
     "vendor": "google",
@@ -372,7 +453,10 @@
     "source_updated_date": "2025-12-17",
     "source_url": "https://deepmind.google/models/model-cards/gemini-3-flash/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Flash-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 3 Flash"
+    ]
   },
   {
     "vendor": "google",
@@ -383,7 +467,10 @@
     "source_updated_date": "2025-11-20",
     "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro-image/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Image-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Image-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 3 Pro Image"
+    ]
   },
   {
     "vendor": "google",
@@ -394,7 +481,10 @@
     "source_updated_date": "2025-11-18",
     "source_url": "https://deepmind.google/models/model-cards/gemini-3-pro/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 3 Pro"
+    ]
   },
   {
     "vendor": "google",
@@ -405,7 +495,10 @@
     "source_updated_date": "2025-10-07",
     "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Computer-Use-Model-Card.pdf",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Computer-Use-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Computer-Use-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 2.5 Computer Use"
+    ]
   },
   {
     "vendor": "google",
@@ -416,7 +509,10 @@
     "source_updated_date": "2025-08-01",
     "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Deep-Think-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 2.5 Deep Think"
+    ]
   },
   {
     "vendor": "google",
@@ -427,7 +523,10 @@
     "source_updated_date": "2025-09-26",
     "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Lite-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 2.5 Flash-Lite"
+    ]
   },
   {
     "vendor": "google",
@@ -438,7 +537,11 @@
     "source_updated_date": "2025-09-26",
     "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Flash-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 2.5 Flash",
+      "Gemini 2.5 Flash Image"
+    ]
   },
   {
     "vendor": "google",
@@ -449,7 +552,10 @@
     "source_updated_date": "2025-06-27",
     "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Pro-Model-Card.pdf",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Pro-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-5-Pro-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 2.5 Pro"
+    ]
   },
   {
     "vendor": "google",
@@ -460,7 +566,10 @@
     "source_updated_date": "2025-04-15",
     "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 2.0 Flash"
+    ]
   },
   {
     "vendor": "google",
@@ -471,7 +580,10 @@
     "source_updated_date": "2025-04-10",
     "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Lite-Model-Card.pdf",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Lite-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-2-0-Flash-Lite-Model-Card.pdf",
+    "reading_models": [
+      "Gemini 2.0 Flash-Lite"
+    ]
   },
   {
     "vendor": "google",
@@ -523,7 +635,10 @@
     "source_updated_date": "2026-04-08",
     "source_url": "https://deepmind.google/models/model-cards/veo-3-1-lite/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-1-Lite-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-1-Lite-Model-Card.pdf",
+    "reading_models": [
+      "Veo 3.1 Lite"
+    ]
   },
   {
     "vendor": "google",
@@ -534,7 +649,10 @@
     "source_updated_date": "2026-02-18",
     "source_url": "https://deepmind.google/models/model-cards/lyria-3/",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Lyria-3-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Lyria-3-Model-Card.pdf",
+    "reading_models": [
+      "Lyria 3"
+    ]
   },
   {
     "vendor": "google",
@@ -545,7 +663,11 @@
     "source_updated_date": "2026-01-13",
     "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf",
+    "reading_models": [
+      "Veo 3",
+      "Veo 3 / 3.1"
+    ]
   },
   {
     "vendor": "google",
@@ -556,7 +678,10 @@
     "source_updated_date": "2025-05-20",
     "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Imagen-4-Model-Card.pdf",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Imagen-4-Model-Card.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Imagen-4-Model-Card.pdf",
+    "reading_models": [
+      "Imagen 4"
+    ]
   },
   {
     "vendor": "google",
@@ -709,7 +834,10 @@
     "source_url": "https://ai.google.dev/gemma/docs/model_card_2",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。 模型卡包含于完整技术报告，归档整份报告。 首次报告发布日期取自对应 arXiv 元数据；归档文件使用官方站点提供的 PDF。",
     "pdf_url": "https://storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf",
-    "metadata_url": "https://arxiv.org/abs/2406.18802"
+    "metadata_url": "https://arxiv.org/abs/2406.18802",
+    "reading_models": [
+      "Gemma 2"
+    ]
   },
   {
     "vendor": "google",
@@ -775,7 +903,10 @@
     "source_updated_date": "2025-02-25",
     "source_url": "https://ai.google.dev/gemma/docs/shieldgemma/model_card",
     "notes": "日期取自官方目录；Google 的 Updated 日期仅记为修订日期。 模型卡包含于完整技术报告，归档整份报告。",
-    "pdf_url": "https://storage.googleapis.com/deepmind-media/gemma/shieldgemma-report.pdf"
+    "pdf_url": "https://storage.googleapis.com/deepmind-media/gemma/shieldgemma-report.pdf",
+    "reading_models": [
+      "ShieldGemma"
+    ]
   },
   {
     "vendor": "openai",
@@ -1032,7 +1163,10 @@
     "published_date": "2025-07-17",
     "source_url": "https://deploymentsafety.openai.com/chatgpt-agent",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://cdn.openai.com/pdf/839e66fc-602c-48bf-81d3-b21eacc3459d/chatgpt_agent_system_card.pdf"
+    "pdf_url": "https://cdn.openai.com/pdf/839e66fc-602c-48bf-81d3-b21eacc3459d/chatgpt_agent_system_card.pdf",
+    "reading_models": [
+      "ChatGPT agent"
+    ]
   },
   {
     "vendor": "openai",
@@ -1042,7 +1176,10 @@
     "published_date": "2025-03-25",
     "source_url": "https://deploymentsafety.openai.com/4o-native-image-generation",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf"
+    "pdf_url": "https://cdn.openai.com/11998be9-5319-4302-bfbf-1167e093f1fb/Native_Image_Generation_System_Card.pdf",
+    "reading_models": [
+      "GPT-4o"
+    ]
   },
   {
     "vendor": "openai",
@@ -1052,7 +1189,10 @@
     "published_date": "2025-02-25",
     "source_url": "https://deploymentsafety.openai.com/deep-research",
     "notes": "发布日期取自官方 Deployment Safety Hub。",
-    "pdf_url": "https://cdn.openai.com/deep-research-system-card.pdf"
+    "pdf_url": "https://cdn.openai.com/deep-research-system-card.pdf",
+    "reading_models": [
+      "Deep research"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1065,7 +1205,10 @@
     "published_date": "2024-07-15",
     "source_updated_date": "2024-09-10",
     "version": "arxiv-v4",
-    "pdf_url": "https://arxiv.org/pdf/2407.10671v4"
+    "pdf_url": "https://arxiv.org/pdf/2407.10671v4",
+    "reading_models": [
+      "Qwen2"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1078,7 +1221,10 @@
     "published_date": "2024-12-19",
     "source_updated_date": "2025-01-03",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2412.15115v2"
+    "pdf_url": "https://arxiv.org/pdf/2412.15115v2",
+    "reading_models": [
+      "Qwen2.5"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1091,7 +1237,10 @@
     "published_date": "2025-05-14",
     "source_updated_date": "2025-05-14",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2505.09388v1"
+    "pdf_url": "https://arxiv.org/pdf/2505.09388v1",
+    "reading_models": [
+      "Qwen3"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1104,7 +1253,10 @@
     "published_date": "2023-09-28",
     "source_updated_date": "2023-09-28",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2309.16609v1"
+    "pdf_url": "https://arxiv.org/pdf/2309.16609v1",
+    "reading_models": [
+      "Qwen"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1117,7 +1269,10 @@
     "published_date": "2023-08-24",
     "source_updated_date": "2023-10-13",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2308.12966v3"
+    "pdf_url": "https://arxiv.org/pdf/2308.12966v3",
+    "reading_models": [
+      "Qwen-VL"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1130,7 +1285,10 @@
     "published_date": "2024-09-18",
     "source_updated_date": "2024-10-03",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2409.12191v2"
+    "pdf_url": "https://arxiv.org/pdf/2409.12191v2",
+    "reading_models": [
+      "Qwen2-VL"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1143,7 +1301,10 @@
     "published_date": "2025-02-19",
     "source_updated_date": "2025-02-19",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2502.13923v1"
+    "pdf_url": "https://arxiv.org/pdf/2502.13923v1",
+    "reading_models": [
+      "Qwen2.5-VL"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1220,7 +1381,10 @@
     "published_date": "2024-07-15",
     "source_updated_date": "2024-07-15",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2407.10759v1"
+    "pdf_url": "https://arxiv.org/pdf/2407.10759v1",
+    "reading_models": [
+      "Qwen2-Audio"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1249,7 +1413,10 @@
     "published_date": "2023-11-14",
     "source_updated_date": "2023-12-21",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2311.07919v2"
+    "pdf_url": "https://arxiv.org/pdf/2311.07919v2",
+    "reading_models": [
+      "Qwen-Audio"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1295,7 +1462,10 @@
     "published_date": "2025-03-26",
     "source_updated_date": "2025-03-26",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2503.20215v1"
+    "pdf_url": "https://arxiv.org/pdf/2503.20215v1",
+    "reading_models": [
+      "Qwen2.5-Omni"
+    ]
   },
   {
     "vendor": "qwen",
@@ -1392,7 +1562,10 @@
     "published_date": "2025-01-14",
     "source_updated_date": "2025-01-14",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2501.08313v1"
+    "pdf_url": "https://arxiv.org/pdf/2501.08313v1",
+    "reading_models": [
+      "MiniMax-01"
+    ]
   },
   {
     "vendor": "minimax",
@@ -1405,7 +1578,10 @@
     "published_date": "2025-06-16",
     "source_updated_date": "2025-06-16",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2506.13585v1"
+    "pdf_url": "https://arxiv.org/pdf/2506.13585v1",
+    "reading_models": [
+      "MiniMax-M1"
+    ]
   },
   {
     "vendor": "minimax",
@@ -1418,7 +1594,10 @@
     "published_date": "2026-06-11",
     "source_updated_date": "2026-06-12",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2606.13392v2"
+    "pdf_url": "https://arxiv.org/pdf/2606.13392v2",
+    "reading_models": [
+      "MiniMax-M3"
+    ]
   },
   {
     "vendor": "zai",
@@ -1431,7 +1610,10 @@
     "published_date": "2022-10-05",
     "source_updated_date": "2023-10-25",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2210.02414v2"
+    "pdf_url": "https://arxiv.org/pdf/2210.02414v2",
+    "reading_models": [
+      "GLM-130B"
+    ]
   },
   {
     "vendor": "zai",
@@ -1444,7 +1626,10 @@
     "published_date": "2024-06-18",
     "source_updated_date": "2024-07-30",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2406.12793v2"
+    "pdf_url": "https://arxiv.org/pdf/2406.12793v2",
+    "reading_models": [
+      "ChatGLM"
+    ]
   },
   {
     "vendor": "zai",
@@ -1457,7 +1642,10 @@
     "published_date": "2025-08-08",
     "source_updated_date": "2025-08-08",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2508.06471v1"
+    "pdf_url": "https://arxiv.org/pdf/2508.06471v1",
+    "reading_models": [
+      "GLM-4.5"
+    ]
   },
   {
     "vendor": "zai",
@@ -1470,7 +1658,10 @@
     "published_date": "2026-02-17",
     "source_updated_date": "2026-02-24",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2602.15763v2"
+    "pdf_url": "https://arxiv.org/pdf/2602.15763v2",
+    "reading_models": [
+      "GLM-5"
+    ]
   },
   {
     "vendor": "zai",
@@ -1483,7 +1674,11 @@
     "published_date": "2025-07-01",
     "source_updated_date": "2026-01-01",
     "version": "arxiv-v6",
-    "pdf_url": "https://arxiv.org/pdf/2507.01006v6"
+    "pdf_url": "https://arxiv.org/pdf/2507.01006v6",
+    "reading_models": [
+      "GLM-4.5V",
+      "GLM-4.1V-Thinking"
+    ]
   },
   {
     "vendor": "zai",
@@ -1496,7 +1691,10 @@
     "published_date": "2024-12-03",
     "source_updated_date": "2024-12-03",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2412.02612v1"
+    "pdf_url": "https://arxiv.org/pdf/2412.02612v1",
+    "reading_models": [
+      "GLM-4-Voice"
+    ]
   },
   {
     "vendor": "zai",
@@ -1535,7 +1733,10 @@
     "published_date": "2023-11-06",
     "source_updated_date": "2024-02-04",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2311.03079v2"
+    "pdf_url": "https://arxiv.org/pdf/2311.03079v2",
+    "reading_models": [
+      "CogVLM"
+    ]
   },
   {
     "vendor": "zai",
@@ -1548,7 +1749,10 @@
     "published_date": "2023-12-14",
     "source_updated_date": "2024-12-27",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2312.08914v3"
+    "pdf_url": "https://arxiv.org/pdf/2312.08914v3",
+    "reading_models": [
+      "CogAgent"
+    ]
   },
   {
     "vendor": "zai",
@@ -1561,7 +1765,10 @@
     "published_date": "2024-08-29",
     "source_updated_date": "2024-08-29",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2408.16500v1"
+    "pdf_url": "https://arxiv.org/pdf/2408.16500v1",
+    "reading_models": [
+      "CogVLM2"
+    ]
   },
   {
     "vendor": "zai",
@@ -1574,7 +1781,10 @@
     "published_date": "2022-05-29",
     "source_updated_date": "2022-05-29",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2205.15868v1"
+    "pdf_url": "https://arxiv.org/pdf/2205.15868v1",
+    "reading_models": [
+      "CogVideo"
+    ]
   },
   {
     "vendor": "zai",
@@ -1587,7 +1797,10 @@
     "published_date": "2024-08-12",
     "source_updated_date": "2025-03-26",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2408.06072v3"
+    "pdf_url": "https://arxiv.org/pdf/2408.06072v3",
+    "reading_models": [
+      "CogVideoX"
+    ]
   },
   {
     "vendor": "zai",
@@ -1600,7 +1813,10 @@
     "published_date": "2022-04-28",
     "source_updated_date": "2022-05-27",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2204.14217v2"
+    "pdf_url": "https://arxiv.org/pdf/2204.14217v2",
+    "reading_models": [
+      "CogView2"
+    ]
   },
   {
     "vendor": "zai",
@@ -1613,7 +1829,10 @@
     "published_date": "2024-03-08",
     "source_updated_date": "2024-03-08",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2403.05121v1"
+    "pdf_url": "https://arxiv.org/pdf/2403.05121v1",
+    "reading_models": [
+      "CogView3"
+    ]
   },
   {
     "vendor": "zai",
@@ -1626,7 +1845,10 @@
     "published_date": "2023-03-30",
     "source_updated_date": "2024-07-10",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2303.17568v2"
+    "pdf_url": "https://arxiv.org/pdf/2303.17568v2",
+    "reading_models": [
+      "CodeGeeX"
+    ]
   },
   {
     "vendor": "moonshot",
@@ -1639,7 +1861,10 @@
     "published_date": "2025-01-22",
     "source_updated_date": "2025-06-03",
     "version": "arxiv-v4",
-    "pdf_url": "https://arxiv.org/pdf/2501.12599v4"
+    "pdf_url": "https://arxiv.org/pdf/2501.12599v4",
+    "reading_models": [
+      "Kimi K1.5"
+    ]
   },
   {
     "vendor": "moonshot",
@@ -1652,7 +1877,10 @@
     "published_date": "2025-07-28",
     "source_updated_date": "2026-02-03",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2507.20534v2"
+    "pdf_url": "https://arxiv.org/pdf/2507.20534v2",
+    "reading_models": [
+      "Kimi K2"
+    ]
   },
   {
     "vendor": "moonshot",
@@ -1678,7 +1906,11 @@
     "published_date": "2025-04-10",
     "source_updated_date": "2025-06-23",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2504.07491v3"
+    "pdf_url": "https://arxiv.org/pdf/2504.07491v3",
+    "reading_models": [
+      "Kimi-VL",
+      "Kimi Audio / Kimi VL"
+    ]
   },
   {
     "vendor": "moonshot",
@@ -1691,7 +1923,10 @@
     "published_date": "2025-09-27",
     "source_updated_date": "2025-12-08",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2509.23045v3"
+    "pdf_url": "https://arxiv.org/pdf/2509.23045v3",
+    "reading_models": [
+      "Kimi-Dev"
+    ]
   },
   {
     "vendor": "moonshot",
@@ -1704,7 +1939,10 @@
     "published_date": "2025-10-30",
     "source_updated_date": "2025-11-01",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2510.26692v2"
+    "pdf_url": "https://arxiv.org/pdf/2510.26692v2",
+    "reading_models": [
+      "Kimi Linear"
+    ]
   },
   {
     "vendor": "moonshot",
@@ -1717,7 +1955,10 @@
     "published_date": "2025-02-24",
     "source_updated_date": "2025-02-24",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2502.16982v1"
+    "pdf_url": "https://arxiv.org/pdf/2502.16982v1",
+    "reading_models": [
+      "Moonlight"
+    ]
   },
   {
     "vendor": "moonshot",
@@ -1730,7 +1971,10 @@
     "published_date": "2025-04-15",
     "source_updated_date": "2025-04-15",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2504.11354v1"
+    "pdf_url": "https://arxiv.org/pdf/2504.11354v1",
+    "reading_models": [
+      "Kimina-Prover Preview"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1743,7 +1987,10 @@
     "published_date": "2024-01-05",
     "source_updated_date": "2024-01-05",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2401.02954v1"
+    "pdf_url": "https://arxiv.org/pdf/2401.02954v1",
+    "reading_models": [
+      "DeepSeek LLM"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1756,7 +2003,10 @@
     "published_date": "2024-01-25",
     "source_updated_date": "2024-01-26",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2401.14196v2"
+    "pdf_url": "https://arxiv.org/pdf/2401.14196v2",
+    "reading_models": [
+      "DeepSeek-Coder"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1769,7 +2019,10 @@
     "published_date": "2024-06-17",
     "source_updated_date": "2024-06-17",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2406.11931v1"
+    "pdf_url": "https://arxiv.org/pdf/2406.11931v1",
+    "reading_models": [
+      "DeepSeek-Coder-V2"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1782,7 +2035,10 @@
     "published_date": "2024-02-05",
     "source_updated_date": "2024-04-27",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2402.03300v3"
+    "pdf_url": "https://arxiv.org/pdf/2402.03300v3",
+    "reading_models": [
+      "DeepSeekMath"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1795,7 +2051,10 @@
     "published_date": "2024-01-11",
     "source_updated_date": "2024-01-11",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2401.06066v1"
+    "pdf_url": "https://arxiv.org/pdf/2401.06066v1",
+    "reading_models": [
+      "DeepSeekMoE"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1808,7 +2067,10 @@
     "published_date": "2024-05-07",
     "source_updated_date": "2024-06-19",
     "version": "arxiv-v5",
-    "pdf_url": "https://arxiv.org/pdf/2405.04434v5"
+    "pdf_url": "https://arxiv.org/pdf/2405.04434v5",
+    "reading_models": [
+      "DeepSeek-V2"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1821,7 +2083,10 @@
     "published_date": "2024-12-27",
     "source_updated_date": "2025-02-18",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2412.19437v2"
+    "pdf_url": "https://arxiv.org/pdf/2412.19437v2",
+    "reading_models": [
+      "DeepSeek-V3"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1834,7 +2099,10 @@
     "published_date": "2025-01-22",
     "source_updated_date": "2026-01-04",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2501.12948v2"
+    "pdf_url": "https://arxiv.org/pdf/2501.12948v2",
+    "reading_models": [
+      "DeepSeek-R1"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1847,7 +2115,10 @@
     "published_date": "2024-03-08",
     "source_updated_date": "2024-03-11",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2403.05525v2"
+    "pdf_url": "https://arxiv.org/pdf/2403.05525v2",
+    "reading_models": [
+      "DeepSeek-VL"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1860,7 +2131,10 @@
     "published_date": "2024-12-13",
     "source_updated_date": "2024-12-13",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2412.10302v1"
+    "pdf_url": "https://arxiv.org/pdf/2412.10302v1",
+    "reading_models": [
+      "DeepSeek-VL2"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1873,7 +2147,10 @@
     "published_date": "2024-10-17",
     "source_updated_date": "2024-10-17",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2410.13848v1"
+    "pdf_url": "https://arxiv.org/pdf/2410.13848v1",
+    "reading_models": [
+      "Janus"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1886,7 +2163,10 @@
     "published_date": "2024-11-12",
     "source_updated_date": "2025-03-24",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2411.07975v2"
+    "pdf_url": "https://arxiv.org/pdf/2411.07975v2",
+    "reading_models": [
+      "JanusFlow"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1899,7 +2179,10 @@
     "published_date": "2025-01-29",
     "source_updated_date": "2025-01-29",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2501.17811v1"
+    "pdf_url": "https://arxiv.org/pdf/2501.17811v1",
+    "reading_models": [
+      "Janus-Pro"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1912,7 +2195,10 @@
     "published_date": "2024-08-15",
     "source_updated_date": "2024-08-15",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2408.08152v1"
+    "pdf_url": "https://arxiv.org/pdf/2408.08152v1",
+    "reading_models": [
+      "DeepSeek-Prover-V1.5"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1925,7 +2211,10 @@
     "published_date": "2025-10-21",
     "source_updated_date": "2025-10-21",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2510.18234v1"
+    "pdf_url": "https://arxiv.org/pdf/2510.18234v1",
+    "reading_models": [
+      "DeepSeek-OCR"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -1968,7 +2257,10 @@
     "published_date": "2022-12-06",
     "source_updated_date": "2022-12-06",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2212.04356v1"
+    "pdf_url": "https://arxiv.org/pdf/2212.04356v1",
+    "reading_models": [
+      "Whisper"
+    ]
   },
   {
     "vendor": "openai",
@@ -1981,7 +2273,10 @@
     "published_date": "2023-03-15",
     "source_updated_date": "2024-03-04",
     "version": "arxiv-v6",
-    "pdf_url": "https://arxiv.org/pdf/2303.08774v6"
+    "pdf_url": "https://arxiv.org/pdf/2303.08774v6",
+    "reading_models": [
+      "GPT-4"
+    ]
   },
   {
     "vendor": "openai",
@@ -1994,7 +2289,10 @@
     "published_date": "2022-03-04",
     "source_updated_date": "2022-03-04",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2203.02155v1"
+    "pdf_url": "https://arxiv.org/pdf/2203.02155v1",
+    "reading_models": [
+      "InstructGPT"
+    ]
   },
   {
     "vendor": "openai",
@@ -2007,7 +2305,10 @@
     "published_date": "2022-04-13",
     "source_updated_date": "2022-04-13",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2204.06125v1"
+    "pdf_url": "https://arxiv.org/pdf/2204.06125v1",
+    "reading_models": [
+      "DALL-E 2"
+    ]
   },
   {
     "vendor": "google",
@@ -2020,7 +2321,10 @@
     "published_date": "2022-03-29",
     "source_updated_date": "2022-03-29",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2203.15556v1"
+    "pdf_url": "https://arxiv.org/pdf/2203.15556v1",
+    "reading_models": [
+      "Chinchilla"
+    ]
   },
   {
     "vendor": "google",
@@ -2033,7 +2337,10 @@
     "published_date": "2022-04-05",
     "source_updated_date": "2022-10-05",
     "version": "arxiv-v5",
-    "pdf_url": "https://arxiv.org/pdf/2204.02311v5"
+    "pdf_url": "https://arxiv.org/pdf/2204.02311v5",
+    "reading_models": [
+      "PaLM"
+    ]
   },
   {
     "vendor": "google",
@@ -2156,7 +2463,10 @@
     "published_date": "2022-05-02",
     "source_updated_date": "2022-06-21",
     "version": "arxiv-v4",
-    "pdf_url": "https://arxiv.org/pdf/2205.01068v4"
+    "pdf_url": "https://arxiv.org/pdf/2205.01068v4",
+    "reading_models": [
+      "OPT"
+    ]
   },
   {
     "vendor": "meta",
@@ -2169,7 +2479,10 @@
     "published_date": "2022-11-16",
     "source_updated_date": "2022-11-16",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2211.09085v1"
+    "pdf_url": "https://arxiv.org/pdf/2211.09085v1",
+    "reading_models": [
+      "Galactica"
+    ]
   },
   {
     "vendor": "meta",
@@ -2182,7 +2495,10 @@
     "published_date": "2023-02-27",
     "source_updated_date": "2023-02-27",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2302.13971v1"
+    "pdf_url": "https://arxiv.org/pdf/2302.13971v1",
+    "reading_models": [
+      "LLaMA"
+    ]
   },
   {
     "vendor": "meta",
@@ -2227,7 +2543,10 @@
     "published_date": "2024-07-31",
     "source_updated_date": "2024-11-23",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2407.21783v3"
+    "pdf_url": "https://arxiv.org/pdf/2407.21783v3",
+    "reading_models": [
+      "Llama 3.1"
+    ]
   },
   {
     "vendor": "meta",
@@ -2288,7 +2607,10 @@
     "published_date": "2023-10-10",
     "source_updated_date": "2023-10-10",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2310.06825v1"
+    "pdf_url": "https://arxiv.org/pdf/2310.06825v1",
+    "reading_models": [
+      "Mistral 7B"
+    ]
   },
   {
     "vendor": "mistral",
@@ -2301,7 +2623,10 @@
     "published_date": "2024-01-08",
     "source_updated_date": "2024-01-08",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2401.04088v1"
+    "pdf_url": "https://arxiv.org/pdf/2401.04088v1",
+    "reading_models": [
+      "Mixtral 8x7B"
+    ]
   },
   {
     "vendor": "mistral",
@@ -2314,7 +2639,10 @@
     "published_date": "2024-10-09",
     "source_updated_date": "2024-10-10",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2410.07073v2"
+    "pdf_url": "https://arxiv.org/pdf/2410.07073v2",
+    "reading_models": [
+      "Pixtral 12B"
+    ]
   },
   {
     "vendor": "mistral",
@@ -2327,7 +2655,10 @@
     "published_date": "2025-06-12",
     "source_updated_date": "2025-06-12",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2506.10910v1"
+    "pdf_url": "https://arxiv.org/pdf/2506.10910v1",
+    "reading_models": [
+      "Magistral"
+    ]
   },
   {
     "vendor": "mistral",
@@ -2340,7 +2671,10 @@
     "published_date": "2025-07-17",
     "source_updated_date": "2025-07-17",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2507.13264v1"
+    "pdf_url": "https://arxiv.org/pdf/2507.13264v1",
+    "reading_models": [
+      "Voxtral"
+    ]
   },
   {
     "vendor": "mistral",
@@ -2392,7 +2726,10 @@
     "published_date": "2024-02-26",
     "source_updated_date": "2024-02-27",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2402.16819v2"
+    "pdf_url": "https://arxiv.org/pdf/2402.16819v2",
+    "reading_models": [
+      "Nemotron-4 15B"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -2405,7 +2742,10 @@
     "published_date": "2024-06-17",
     "source_updated_date": "2024-08-06",
     "version": "arxiv-v2",
-    "pdf_url": "https://arxiv.org/pdf/2406.11704v2"
+    "pdf_url": "https://arxiv.org/pdf/2406.11704v2",
+    "reading_models": [
+      "Nemotron-4 340B"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -2418,7 +2758,10 @@
     "published_date": "2025-08-20",
     "source_updated_date": "2025-09-02",
     "version": "arxiv-v4",
-    "pdf_url": "https://arxiv.org/pdf/2508.14444v4"
+    "pdf_url": "https://arxiv.org/pdf/2508.14444v4",
+    "reading_models": [
+      "Nemotron Nano 2"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -2456,7 +2799,10 @@
     "source_updated_date": "2026-08-17",
     "source_url": "https://x.ai/safety",
     "pdf_url": "https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf",
-    "notes": "发布日期和 Revision 日期均取自 PDF 封面。"
+    "notes": "发布日期和 Revision 日期均取自 PDF 封面。",
+    "reading_models": [
+      "Grok 4.6"
+    ]
   },
   {
     "vendor": "xai",
@@ -2467,7 +2813,10 @@
     "source_updated_date": "2026-07-20",
     "source_url": "https://x.ai/safety",
     "pdf_url": "https://media.x.ai/v1/website/4p5-5184fdf9.pdf",
-    "notes": "发布日期和 Revision 日期均取自 PDF 封面。"
+    "notes": "发布日期和 Revision 日期均取自 PDF 封面。",
+    "reading_models": [
+      "Grok 4.5"
+    ]
   },
   {
     "vendor": "xai",
@@ -2478,7 +2827,10 @@
     "source_updated_date": "2025-09-19",
     "source_url": "https://x.ai/safety",
     "pdf_url": "https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf",
-    "notes": "封面的 Last updated 日期只记为修订日期；首次报告发布日期待确认。"
+    "notes": "封面的 Last updated 日期只记为修订日期；首次报告发布日期待确认。",
+    "reading_models": [
+      "Grok 4 Fast"
+    ]
   },
   {
     "vendor": "xai",
@@ -2489,7 +2841,10 @@
     "source_updated_date": "2025-08-26",
     "source_url": "https://x.ai/safety",
     "pdf_url": "https://data.x.ai/2025-08-26-grok-code-fast-1-model-card.pdf",
-    "notes": "封面的 Last updated 日期只记为修订日期；首次报告发布日期待确认。"
+    "notes": "封面的 Last updated 日期只记为修订日期；首次报告发布日期待确认。",
+    "reading_models": [
+      "Grok Code Fast 1"
+    ]
   },
   {
     "vendor": "xai",
@@ -2500,7 +2855,10 @@
     "source_updated_date": "2025-08-20",
     "source_url": "https://x.ai/safety",
     "pdf_url": "https://data.x.ai/2025-08-20-grok-4-model-card.pdf",
-    "notes": "封面的 Last updated 日期只记为修订日期；首次报告发布日期待确认。"
+    "notes": "封面的 Last updated 日期只记为修订日期；首次报告发布日期待确认。",
+    "reading_models": [
+      "Grok 4"
+    ]
   },
   {
     "vendor": "xai",
@@ -2511,7 +2869,10 @@
     "source_updated_date": "",
     "source_url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
     "pdf_url": "https://data.x.ai/2026-04-07-grok-4-20-model-card.pdf",
-    "notes": "报告封面日期。"
+    "notes": "报告封面日期。",
+    "reading_models": [
+      "Grok 4.20"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -2522,7 +2883,12 @@
     "source_updated_date": "2025-12-24",
     "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
     "pdf_url": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-White-Paper.pdf",
-    "notes": "来自 Nemotron 3 官方报告目录；Nano 与家族报告的首次发布日期取自发布页，其他报告日期待核对。 PDF 封面标记的当前文件日期记录为来源版本日期；不据此推断首次公开时间。"
+    "notes": "来自 Nemotron 3 官方报告目录；Nano 与家族报告的首次发布日期取自发布页，其他报告日期待核对。 PDF 封面标记的当前文件日期记录为来源版本日期；不据此推断首次公开时间。",
+    "reading_models": [
+      "Nemotron 3 Nano",
+      "Nemotron 3 Super",
+      "Nemotron 3 Ultra"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -2533,7 +2899,10 @@
     "source_updated_date": "2025-12-23",
     "source_url": "https://research.nvidia.com/labs/nemotron/Nemotron-3/",
     "pdf_url": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Nano-Technical-Report.pdf",
-    "notes": "来自 Nemotron 3 官方报告目录；Nano 与家族报告的首次发布日期取自发布页，其他报告日期待核对。 PDF 封面标记的当前文件日期记录为来源版本日期；不据此推断首次公开时间。"
+    "notes": "来自 Nemotron 3 官方报告目录；Nano 与家族报告的首次发布日期取自发布页，其他报告日期待核对。 PDF 封面标记的当前文件日期记录为来源版本日期；不据此推断首次公开时间。",
+    "reading_models": [
+      "Nemotron 3 Nano"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -2578,7 +2947,10 @@
     "source_updated_date": "",
     "source_url": "https://research.nvidia.com/labs/adlr/",
     "pdf_url": "https://research.nvidia.com/labs/adlr/files/NVIDIA-Nemotron-Nano-V2-VL-report.pdf",
-    "notes": "来自 NVIDIA 官方 ADLR 报告。"
+    "notes": "来自 NVIDIA 官方 ADLR 报告。",
+    "reading_models": [
+      "Nemotron Nano 2 VL"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -2590,7 +2962,10 @@
     "source_url": "https://github.com/deepseek-ai/DeepSeek-Math-V2",
     "pdf_url": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-Math-V2/main/DeepSeekMath_V2.pdf",
     "notes": "官方仓库提供的完整报告；首次发布日期待核对。 对应报告的首次 arXiv 公开日期单独核对；归档字节仍来自官方仓库/官网。",
-    "metadata_url": "https://arxiv.org/abs/2511.22570"
+    "metadata_url": "https://arxiv.org/abs/2511.22570",
+    "reading_models": [
+      "DeepSeekMath-V2"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -2602,7 +2977,10 @@
     "source_url": "https://github.com/deepseek-ai/DeepSeek-Prover-V2",
     "pdf_url": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-Prover-V2/main/DeepSeek_Prover_V2.pdf",
     "notes": "官方仓库提供的完整报告；首次发布日期待核对。 对应报告的首次 arXiv 公开日期单独核对；归档字节仍来自官方仓库/官网。",
-    "metadata_url": "https://arxiv.org/abs/2504.21801"
+    "metadata_url": "https://arxiv.org/abs/2504.21801",
+    "reading_models": [
+      "DeepSeek-Prover-V2"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -2613,7 +2991,10 @@
     "source_updated_date": "",
     "source_url": "https://github.com/deepseek-ai/DeepSeek-V3.2-Exp",
     "pdf_url": "https://raw.githubusercontent.com/deepseek-ai/DeepSeek-V3.2-Exp/main/DeepSeek_V3_2.pdf",
-    "notes": "官方仓库文件名为 DeepSeek_V3_2.pdf，但 PDF 封面明确是 V3.2-Exp，不与正式 V3.2 混淆。"
+    "notes": "官方仓库文件名为 DeepSeek_V3_2.pdf，但 PDF 封面明确是 V3.2-Exp，不与正式 V3.2 混淆。",
+    "reading_models": [
+      "DeepSeek-V3.2-Exp"
+    ]
   },
   {
     "vendor": "moonshot",
@@ -2636,7 +3017,10 @@
     "source_url": "https://github.com/MoonshotAI/Kimi-K2.5",
     "pdf_url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K2.5/master/tech_report.pdf",
     "notes": "官方仓库提供的完整报告；首次发布日期待核对。 对应报告的首次 arXiv 公开日期单独核对；归档字节仍来自官方仓库/官网。",
-    "metadata_url": "https://arxiv.org/abs/2602.02276"
+    "metadata_url": "https://arxiv.org/abs/2602.02276",
+    "reading_models": [
+      "Kimi K2.5"
+    ]
   },
   {
     "vendor": "qwen",
@@ -2662,7 +3046,10 @@
     "source_updated_date": "",
     "source_url": "https://deepmind.google/models/gemma/recurrentgemma/",
     "pdf_url": "https://storage.googleapis.com/deepmind-media/gemma/recurrentgemma-report.pdf",
-    "notes": ""
+    "notes": "",
+    "reading_models": [
+      "RecurrentGemma"
+    ]
   },
   {
     "vendor": "google",
@@ -2687,7 +3074,10 @@
     "source_updated_date": "",
     "source_url": "https://openai.com/index/gpt-4v-system-card/",
     "pdf_url": "https://cdn.openai.com/papers/GPTV_System_Card.pdf",
-    "notes": "官方来源及文件标题核对；旧 CDN 链接可能不可用，失败会记录为缺口。"
+    "notes": "官方来源及文件标题核对；旧 CDN 链接可能不可用，失败会记录为缺口。",
+    "reading_models": [
+      "GPT-4V"
+    ]
   },
   {
     "vendor": "openai",
@@ -2709,7 +3099,10 @@
     "source_updated_date": "",
     "source_url": "https://openai.com/index/gpt-4o-system-card/",
     "pdf_url": "https://cdn.openai.com/gpt-4o-system-card.pdf",
-    "notes": "官方来源及文件标题核对；旧 CDN 链接可能不可用，失败会记录为缺口。"
+    "notes": "官方来源及文件标题核对；旧 CDN 链接可能不可用，失败会记录为缺口。",
+    "reading_models": [
+      "GPT-4o"
+    ]
   },
   {
     "vendor": "openai",
@@ -2720,7 +3113,10 @@
     "source_updated_date": "",
     "source_url": "https://openai.com/index/gpt-4-5-system-card/",
     "pdf_url": "https://cdn.openai.com/gpt-4-5-system-card-2272025.pdf",
-    "notes": "PDF 地址取自官方发布页 Read the System Card 链接。"
+    "notes": "PDF 地址取自官方发布页 Read the System Card 链接。",
+    "reading_models": [
+      "GPT-4.5"
+    ]
   },
   {
     "vendor": "openai",
@@ -2731,7 +3127,11 @@
     "source_updated_date": "",
     "source_url": "https://deploymentsafety.openai.com/o3",
     "pdf_url": "https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf",
-    "notes": "官方来源及文件标题核对；旧 CDN 链接可能不可用，失败会记录为缺口。"
+    "notes": "官方来源及文件标题核对；旧 CDN 链接可能不可用，失败会记录为缺口。",
+    "reading_models": [
+      "o3",
+      "o4-mini"
+    ]
   },
   {
     "vendor": "openai",
@@ -2753,7 +3153,10 @@
     "source_updated_date": "",
     "source_url": "https://openai.com/index/openai-o1-system-card/",
     "pdf_url": "https://cdn.openai.com/o1-system-card-20241205.pdf",
-    "notes": "官方来源及文件标题核对；旧 CDN 链接可能不可用，失败会记录为缺口。"
+    "notes": "官方来源及文件标题核对；旧 CDN 链接可能不可用，失败会记录为缺口。",
+    "reading_models": [
+      "o1"
+    ]
   },
   {
     "vendor": "openai",
@@ -2764,7 +3167,11 @@
     "source_updated_date": "",
     "source_url": "https://openai.com/index/openai-o1-system-card/",
     "pdf_url": "https://cdn.openai.com/o1-system-card.pdf",
-    "notes": "官方来源及文件标题核对；旧 CDN 链接可能不可用，失败会记录为缺口。"
+    "notes": "官方来源及文件标题核对；旧 CDN 链接可能不可用，失败会记录为缺口。",
+    "reading_models": [
+      "o1-preview",
+      "o1-mini"
+    ]
   },
   {
     "vendor": "openai",
@@ -2775,7 +3182,10 @@
     "source_updated_date": "2025-02-10",
     "source_url": "https://openai.com/index/o3-mini-system-card/",
     "pdf_url": "https://cdn.openai.com/o3-mini-system-card-feb10.pdf",
-    "notes": "官网当前 PDF 链接；首次发布日期取自发布页，修订日期取自所链接文件的标记。"
+    "notes": "官网当前 PDF 链接；首次发布日期取自发布页，修订日期取自所链接文件的标记。",
+    "reading_models": [
+      "o3-mini"
+    ]
   },
   {
     "vendor": "qwen",
@@ -2858,7 +3268,10 @@
     "published_date": "2026-01-13",
     "source_updated_date": "2026-01-13",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2601.08584v1"
+    "pdf_url": "https://arxiv.org/pdf/2601.08584v1",
+    "reading_models": [
+      "Ministral 3"
+    ]
   },
   {
     "vendor": "qwen",
@@ -2871,7 +3284,10 @@
     "published_date": "2024-09-18",
     "source_updated_date": "2024-09-18",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2409.12122v1"
+    "pdf_url": "https://arxiv.org/pdf/2409.12122v1",
+    "reading_models": [
+      "Qwen2.5-Math"
+    ]
   },
   {
     "vendor": "qwen",
@@ -2884,7 +3300,10 @@
     "published_date": "2024-09-18",
     "source_updated_date": "2024-11-12",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2409.12186v3"
+    "pdf_url": "https://arxiv.org/pdf/2409.12186v3",
+    "reading_models": [
+      "Qwen2.5-Coder"
+    ]
   },
   {
     "vendor": "google",
@@ -2897,7 +3316,10 @@
     "published_date": "2022-01-20",
     "source_updated_date": "2022-02-10",
     "version": "arxiv-v3",
-    "pdf_url": "https://arxiv.org/pdf/2201.08239v3"
+    "pdf_url": "https://arxiv.org/pdf/2201.08239v3",
+    "reading_models": [
+      "LaMDA"
+    ]
   },
   {
     "vendor": "google",
@@ -2910,7 +3332,10 @@
     "published_date": "2022-05-23",
     "source_updated_date": "2022-05-23",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2205.11487v1"
+    "pdf_url": "https://arxiv.org/pdf/2205.11487v1",
+    "reading_models": [
+      "Imagen"
+    ]
   },
   {
     "vendor": "google",
@@ -2939,7 +3364,10 @@
     "published_date": "2022-06-22",
     "source_updated_date": "2022-06-22",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2206.10789v1"
+    "pdf_url": "https://arxiv.org/pdf/2206.10789v1",
+    "reading_models": [
+      "Parti"
+    ]
   },
   {
     "vendor": "google",
@@ -2968,7 +3396,10 @@
     "published_date": "2022-02-08",
     "source_updated_date": "2022-02-08",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2203.07814v1"
+    "pdf_url": "https://arxiv.org/pdf/2203.07814v1",
+    "reading_models": [
+      "AlphaCode"
+    ]
   },
   {
     "vendor": "meta",
@@ -2997,7 +3428,10 @@
     "published_date": "2023-04-05",
     "source_updated_date": "2023-04-05",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2304.02643v1"
+    "pdf_url": "https://arxiv.org/pdf/2304.02643v1",
+    "reading_models": [
+      "SAM"
+    ]
   },
   {
     "vendor": "meta",
@@ -3026,7 +3460,10 @@
     "published_date": "2025-12-02",
     "source_updated_date": "2025-12-02",
     "version": "arxiv-v1",
-    "pdf_url": "https://arxiv.org/pdf/2512.02556v1"
+    "pdf_url": "https://arxiv.org/pdf/2512.02556v1",
+    "reading_models": [
+      "DeepSeek-V3.2"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -3039,7 +3476,10 @@
     "pdf_url": "https://arxiv.org/pdf/2507.19427v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2507.19427",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Step 3"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -3052,7 +3492,10 @@
     "pdf_url": "https://arxiv.org/pdf/2602.10604v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2602.10604",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Step 3.5 Flash"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -3065,7 +3508,10 @@
     "pdf_url": "https://arxiv.org/pdf/2601.09668v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2601.09668",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Step3-VL-10B"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -3078,7 +3524,10 @@
     "pdf_url": "https://arxiv.org/pdf/2502.11946v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2502.11946",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Step-Audio"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -3091,7 +3540,10 @@
     "pdf_url": "https://arxiv.org/pdf/2506.08967v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2506.08967",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Step-Audio-AQAA"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -3104,7 +3556,10 @@
     "pdf_url": "https://arxiv.org/pdf/2507.16632v3",
     "version": "arxiv-v3",
     "metadata_url": "https://arxiv.org/abs/2507.16632",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Step-Audio 2"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -3117,7 +3572,10 @@
     "pdf_url": "https://arxiv.org/pdf/2511.15848v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2511.15848",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Step-Audio-R1"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -3130,7 +3588,10 @@
     "pdf_url": "https://arxiv.org/pdf/2604.25719v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2604.25719",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Step-Audio-R1.5"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -3143,7 +3604,10 @@
     "pdf_url": "https://arxiv.org/pdf/2511.03601v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2511.03601",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Step-Audio-EditX"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -3156,7 +3620,10 @@
     "pdf_url": "https://arxiv.org/pdf/2512.20491v4",
     "version": "arxiv-v4",
     "metadata_url": "https://arxiv.org/abs/2512.20491",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Step-DeepResearch"
+    ]
   },
   {
     "vendor": "tencent",
@@ -3169,7 +3636,10 @@
     "pdf_url": "https://arxiv.org/pdf/2411.02265v3",
     "version": "arxiv-v3",
     "metadata_url": "https://arxiv.org/abs/2411.02265",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Hunyuan-Large"
+    ]
   },
   {
     "vendor": "tencent",
@@ -3182,7 +3652,10 @@
     "pdf_url": "https://arxiv.org/pdf/2509.05209v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2509.05209",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Hunyuan-MT"
+    ]
   },
   {
     "vendor": "tencent",
@@ -3195,7 +3668,10 @@
     "pdf_url": "https://arxiv.org/pdf/2511.19575v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2511.19575",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "HunyuanOCR"
+    ]
   },
   {
     "vendor": "tencent",
@@ -3208,7 +3684,11 @@
     "pdf_url": "https://arxiv.org/pdf/2607.04884v3",
     "version": "arxiv-v3",
     "metadata_url": "https://arxiv.org/abs/2607.04884",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "HunyuanOCR 1.5",
+      "HunyuanImage 3.0 / HunyuanVideo 1.5 / HunyuanOCR 1.5"
+    ]
   },
   {
     "vendor": "tencent",
@@ -3221,7 +3701,10 @@
     "pdf_url": "https://arxiv.org/pdf/2412.03603v6",
     "version": "arxiv-v6",
     "metadata_url": "https://arxiv.org/abs/2412.03603",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "HunyuanVideo"
+    ]
   },
   {
     "vendor": "tencent",
@@ -3247,7 +3730,10 @@
     "pdf_url": "https://arxiv.org/pdf/2501.12202v5",
     "version": "arxiv-v5",
     "metadata_url": "https://arxiv.org/abs/2501.12202",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Hunyuan3D 2.0"
+    ]
   },
   {
     "vendor": "tencent",
@@ -3260,7 +3746,10 @@
     "pdf_url": "https://arxiv.org/pdf/2506.15442v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2506.15442",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Hunyuan3D 2.1"
+    ]
   },
   {
     "vendor": "tencent",
@@ -3286,7 +3775,10 @@
     "pdf_url": "https://arxiv.org/pdf/2405.08748v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2405.08748",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Hunyuan-DiT"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3299,7 +3791,10 @@
     "pdf_url": "https://arxiv.org/pdf/2504.13914v3",
     "version": "arxiv-v3",
     "metadata_url": "https://arxiv.org/abs/2504.13914",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Seed1.5-Thinking"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3312,7 +3807,10 @@
     "pdf_url": "https://arxiv.org/pdf/2505.07062v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2505.07062",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Seed1.5-VL"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3325,7 +3823,10 @@
     "pdf_url": "https://arxiv.org/pdf/2508.02193v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2508.02193",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Seed Diffusion"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3338,7 +3839,10 @@
     "pdf_url": "https://arxiv.org/pdf/2503.07703v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2503.07703",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Seedream 2.0"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3351,7 +3855,10 @@
     "pdf_url": "https://arxiv.org/pdf/2504.11346v3",
     "version": "arxiv-v3",
     "metadata_url": "https://arxiv.org/abs/2504.11346",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Seedream 3.0"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3364,7 +3871,10 @@
     "pdf_url": "https://arxiv.org/pdf/2509.20427v3",
     "version": "arxiv-v3",
     "metadata_url": "https://arxiv.org/abs/2509.20427",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Seedream 4.0"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3377,7 +3887,10 @@
     "pdf_url": "https://arxiv.org/pdf/2506.09113v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2506.09113",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Seedance 1.0"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3390,7 +3903,10 @@
     "pdf_url": "https://arxiv.org/pdf/2512.13507v3",
     "version": "arxiv-v3",
     "metadata_url": "https://arxiv.org/abs/2512.13507",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Seedance 1.5 Pro"
+    ]
   },
   {
     "vendor": "cohere",
@@ -3403,7 +3919,10 @@
     "pdf_url": "https://arxiv.org/pdf/2504.00698v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2504.00698",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Command A"
+    ]
   },
   {
     "vendor": "cohere",
@@ -3416,7 +3935,10 @@
     "pdf_url": "https://arxiv.org/pdf/2402.07827v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2402.07827",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Aya"
+    ]
   },
   {
     "vendor": "cohere",
@@ -3429,7 +3951,10 @@
     "pdf_url": "https://arxiv.org/pdf/2405.15032v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2405.15032",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Aya 23"
+    ]
   },
   {
     "vendor": "cohere",
@@ -3442,7 +3967,10 @@
     "pdf_url": "https://arxiv.org/pdf/2412.04261v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2412.04261",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Aya Expanse"
+    ]
   },
   {
     "vendor": "cohere",
@@ -3455,7 +3983,10 @@
     "pdf_url": "https://arxiv.org/pdf/2505.08751v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2505.08751",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Aya Vision"
+    ]
   },
   {
     "vendor": "cohere",
@@ -3468,7 +3999,10 @@
     "pdf_url": "https://arxiv.org/pdf/2603.11510v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2603.11510",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Tiny Aya"
+    ]
   },
   {
     "vendor": "microsoft",
@@ -3481,7 +4015,10 @@
     "pdf_url": "https://arxiv.org/pdf/2306.11644v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2306.11644",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Phi-1"
+    ]
   },
   {
     "vendor": "microsoft",
@@ -3494,7 +4031,10 @@
     "pdf_url": "https://arxiv.org/pdf/2309.05463v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2309.05463",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Phi-1.5"
+    ]
   },
   {
     "vendor": "microsoft",
@@ -3507,7 +4047,10 @@
     "pdf_url": "https://arxiv.org/pdf/2404.14219v4",
     "version": "arxiv-v4",
     "metadata_url": "https://arxiv.org/abs/2404.14219",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Phi-3"
+    ]
   },
   {
     "vendor": "microsoft",
@@ -3520,7 +4063,10 @@
     "pdf_url": "https://arxiv.org/pdf/2412.08905v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2412.08905",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Phi-4"
+    ]
   },
   {
     "vendor": "microsoft",
@@ -3533,7 +4079,11 @@
     "pdf_url": "https://arxiv.org/pdf/2503.01743v2",
     "version": "arxiv-v2",
     "metadata_url": "https://arxiv.org/abs/2503.01743",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Phi-4 Mini",
+      "Phi-4 Multimodal"
+    ]
   },
   {
     "vendor": "microsoft",
@@ -3546,7 +4096,10 @@
     "pdf_url": "https://arxiv.org/pdf/2504.21318v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2504.21318",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Phi-4 Reasoning"
+    ]
   },
   {
     "vendor": "microsoft",
@@ -3572,7 +4125,10 @@
     "pdf_url": "https://arxiv.org/pdf/2507.06607v3",
     "version": "arxiv-v3",
     "metadata_url": "https://arxiv.org/abs/2507.06607",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Phi 4 Mini Flash Reasoning"
+    ]
   },
   {
     "vendor": "amazon",
@@ -3583,7 +4139,15 @@
     "source_updated_date": "",
     "source_url": "https://www.amazon.science/publications/the-amazon-nova-family-of-models-technical-report-and-model-card",
     "pdf_url": "https://cdn.amazon.science/96/7d/0d3e59514abf8fdcfafcdc574300/nova-tech-report-20250317-0810.pdf",
-    "notes": "2026-10-01 核对 Amazon Science 官方出版页及下载入口；技术报告与模型卡合并在一个原始文件中，按 technical_report 归档一次。首次发布日期取自出版页明确的报告发布说明。"
+    "notes": "2026-10-01 核对 Amazon Science 官方出版页及下载入口；技术报告与模型卡合并在一个原始文件中，按 technical_report 归档一次。首次发布日期取自出版页明确的报告发布说明。",
+    "reading_models": [
+      "Nova Premier",
+      "Nova Micro",
+      "Nova Lite",
+      "Nova Pro",
+      "Nova Canvas",
+      "Nova Reel"
+    ]
   },
   {
     "vendor": "amazon",
@@ -3605,7 +4169,10 @@
     "source_updated_date": "2025-06-12",
     "source_url": "https://www.amazon.science/publications/amazon-nova-sonic-technical-report-and-model-card",
     "pdf_url": "https://cdn.amazon.science/86/bb/4316d28940bd9a719abb28f45aaf/amazon-nova-sonic-technical-report-and-model-card-6-12.pdf",
-    "notes": "官方出版页明确说明报告首次发布于 2025-04-08、修订于 2025-06-12；技术报告与模型卡合并为一个原始文件，仅归档一次。"
+    "notes": "官方出版页明确说明报告首次发布于 2025-04-08、修订于 2025-06-12；技术报告与模型卡合并为一个原始文件，仅归档一次。",
+    "reading_models": [
+      "Nova Sonic"
+    ]
   },
   {
     "vendor": "tencent",
@@ -3616,7 +4183,10 @@
     "source_updated_date": "",
     "source_url": "https://github.com/Tencent-Hunyuan/Hunyuan-A13B",
     "pdf_url": "https://raw.githubusercontent.com/Tencent-Hunyuan/Hunyuan-A13B/main/report/Hunyuan_A13B_Technical_Report.pdf",
-    "notes": "官方仓库 2025.6.27 新闻明确宣布报告与模型发布；官网仓库原始 PDF。arXiv 登记较晚，首次日期采用仓库报告公告。 PDF 标注日期为 2025-06-26，仅作为文件日期说明，不据此推断一次后续修订；首次公开日采用仓库公告。"
+    "notes": "官方仓库 2025.6.27 新闻明确宣布报告与模型发布；官网仓库原始 PDF。arXiv 登记较晚，首次日期采用仓库报告公告。 PDF 标注日期为 2025-06-26，仅作为文件日期说明，不据此推断一次后续修订；首次公开日采用仓库公告。",
+    "reading_models": [
+      "Hunyuan-A13B"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3638,7 +4208,10 @@
     "source_updated_date": "",
     "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
     "pdf_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/seed2/0214/Seed2.0%20Model%20Card.pdf",
-    "notes": "官方模型目录链接的原始 Model Card PDF，首页题名已核对。目录所列 2026-02-14 是模型发布日期，未确认该报告首次公开日，故留空；不以模型发布日期代替文档发布日期。"
+    "notes": "官方模型目录链接的原始 Model Card PDF，首页题名已核对。目录所列 2026-02-14 是模型发布日期，未确认该报告首次公开日，故留空；不以模型发布日期代替文档发布日期。",
+    "reading_models": [
+      "Seed2.0"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3649,7 +4222,10 @@
     "source_updated_date": "",
     "source_url": "https://seed.bytedance.com/en/seed_model_portfolio",
     "pdf_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf",
-    "notes": "官方模型目录列出对应 Model Card 原始 PDF；发布日期为该目录记录的公开发布日期，未从模型名称或 URL 推断修订日期。2026-10-01 下载并核对 PDF 首页完整题名。"
+    "notes": "官方模型目录列出对应 Model Card 原始 PDF；发布日期为该目录记录的公开发布日期，未从模型名称或 URL 推断修订日期。2026-10-01 下载并核对 PDF 首页完整题名。",
+    "reading_models": [
+      "Seed1.8"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -3673,7 +4249,10 @@
     "pdf_url": "https://arxiv.org/pdf/2405.14333v1",
     "version": "arxiv-v1",
     "metadata_url": "https://github.com/deepseek-ai/DeepSeek-Prover-V1.5",
-    "notes": "Original DeepSeek-Prover model report, distinct from V1.5 and V2. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01."
+    "notes": "Original DeepSeek-Prover model report, distinct from V1.5 and V2. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01.",
+    "reading_models": [
+      "DeepSeek-Prover"
+    ]
   },
   {
     "vendor": "deepseek",
@@ -3686,7 +4265,10 @@
     "pdf_url": "https://arxiv.org/pdf/2606.19348v1",
     "version": "arxiv-v1",
     "metadata_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
-    "notes": "Covers DeepSeek-V4-Pro and Flash; latest author-submitted arXiv report. The arXiv submission history reports 2026-04-26 despite the 2606 identifier; do not infer the publication month from the ID. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01."
+    "notes": "Covers DeepSeek-V4-Pro and Flash; latest author-submitted arXiv report. The arXiv submission history reports 2026-04-26 despite the 2606 identifier; do not infer the publication month from the ID. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01.",
+    "reading_models": [
+      "DeepSeek-V4"
+    ]
   },
   {
     "vendor": "minimax",
@@ -3699,7 +4281,10 @@
     "pdf_url": "https://arxiv.org/pdf/2505.07916v1",
     "version": "arxiv-v1",
     "metadata_url": "https://minimax-ai.github.io/tts_tech_report",
-    "notes": "Official MiniMax speech model family report. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01."
+    "notes": "Official MiniMax speech model family report. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01.",
+    "reading_models": [
+      "MiniMax-Speech"
+    ]
   },
   {
     "vendor": "minimax",
@@ -3712,7 +4297,10 @@
     "pdf_url": "https://arxiv.org/pdf/2605.26494v2",
     "version": "arxiv-v2",
     "metadata_url": "https://www.minimax.io",
-    "notes": "Family report explicitly discusses MiniMax M2, M2.5 and M2.7; archived once rather than duplicating per-release PDFs. A separate M2.1 report remains unconfirmed. Title, dates, revision and PDF identity verified on 2026-10-01."
+    "notes": "Family report explicitly discusses MiniMax M2, M2.5 and M2.7; archived once rather than duplicating per-release PDFs. A separate M2.1 report remains unconfirmed. Title, dates, revision and PDF identity verified on 2026-10-01.",
+    "reading_models": [
+      "MiniMax-M2"
+    ]
   },
   {
     "vendor": "qwen",
@@ -3792,6 +4380,9 @@
     "notes": "Official zai-org repository links this report and releases CogCoM model weights. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01. Unversioned official arXiv endpoint verified to carry the requested ID and revision in first two pages; alternate supplied because pinned endpoint returned truncated HTTP payloads.",
     "alternate_pdf_urls": [
       "https://arxiv.org/pdf/2402.04236"
+    ],
+    "reading_models": [
+      "CogCoM"
     ]
   },
   {
@@ -3808,6 +4399,9 @@
     "notes": "Official zai-org model repository links this report; named super-resolution diffusion model. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01. Unversioned official arXiv endpoint verified to carry the requested ID and revision in first two pages; alternate supplied because pinned endpoint returned truncated HTTP payloads.",
     "alternate_pdf_urls": [
       "https://arxiv.org/pdf/2405.04312"
+    ],
+    "reading_models": [
+      "Inf-DiT"
     ]
   },
   {
@@ -3821,7 +4415,12 @@
     "pdf_url": "https://arxiv.org/pdf/2512.13687v2",
     "version": "arxiv-v2",
     "metadata_url": "https://github.com/MiniMax-AI/VTP",
-    "notes": "Joint HUST/MiniMax visual-tokenizer model pretraining report; official MiniMax repository releases pretrained VTP checkpoints. Not a Hailuo technical report. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01."
+    "notes": "Joint HUST/MiniMax visual-tokenizer model pretraining report; official MiniMax repository releases pretrained VTP checkpoints. Not a Hailuo technical report. Title, first submission date, latest revision, and PDF endpoint verified against arXiv metadata on 2026-10-01.",
+    "reading_models": [
+      "VTP-S",
+      "VTP-B",
+      "VTP-L"
+    ]
   },
   {
     "vendor": "qwen",
@@ -3851,7 +4450,10 @@
     "source_updated_date": "",
     "source_url": "https://openai.com/index/gpt-4-research/",
     "pdf_url": "https://cdn.openai.com/papers/gpt-4-system-card.pdf",
-    "notes": "Standalone publisher PDF linked alongside the technical report on the official GPT-4 announcement dated March 14, 2023. Also appears as an appendix in the technical report; this is the publisher-provided standalone card."
+    "notes": "Standalone publisher PDF linked alongside the technical report on the official GPT-4 announcement dated March 14, 2023. Also appears as an appendix in the technical report; this is the publisher-provided standalone card.",
+    "reading_models": [
+      "GPT-4"
+    ]
   },
   {
     "vendor": "openai",
@@ -3862,7 +4464,10 @@
     "source_updated_date": "2025-03-11",
     "source_url": "https://openai.com/index/operator-system-card/",
     "pdf_url": "https://cdn.openai.com/operator_system_card.pdf",
-    "notes": "Official landing page confirms January 23, 2025; its API Availability section explicitly records a March 11, 2025 update. PDF identity checked."
+    "notes": "Official landing page confirms January 23, 2025; its API Availability section explicitly records a March 11, 2025 update. PDF identity checked.",
+    "reading_models": [
+      "Operator"
+    ]
   },
   {
     "vendor": "openai",
@@ -3917,7 +4522,10 @@
     "source_updated_date": "",
     "source_url": "https://openai.com/index/dall-e-3/",
     "pdf_url": "https://cdn.openai.com/papers/dall-e-3.pdf",
-    "notes": "Official DALL-E 3 page links this research paper. Model-specific DALL-E 3 captioning and evaluation report; not the oversized DALL-E 3 System Card. Exact first publication date is not confirmed by the current official landing page or PDF, so left empty."
+    "notes": "Official DALL-E 3 page links this research paper. Model-specific DALL-E 3 captioning and evaluation report; not the oversized DALL-E 3 System Card. Exact first publication date is not confirmed by the current official landing page or PDF, so left empty.",
+    "reading_models": [
+      "DALL-E 3"
+    ]
   },
   {
     "vendor": "xai",
@@ -3928,7 +4536,10 @@
     "source_updated_date": "",
     "source_url": "https://x.ai/news/grok-4-1",
     "pdf_url": "https://data.x.ai/2025-11-17-grok-4-1-model-card.pdf",
-    "notes": "Official announcement links the model card; PDF title and November 17, 2025 date checked. Historical card is absent from the current safety-directory shortlist."
+    "notes": "Official announcement links the model card; PDF title and November 17, 2025 date checked. Historical card is absent from the current safety-directory shortlist.",
+    "reading_models": [
+      "Grok 4.1"
+    ]
   },
   {
     "vendor": "xai",
@@ -3962,7 +4573,10 @@
     "source_updated_date": "",
     "source_url": "https://mistral.ai/news/leanstral-1-5/",
     "pdf_url": "https://raw.githubusercontent.com/mistralai/LeanstralSafeVerify/fb9c583eb0ea96426d94625f89b7842c9dc1c313/LeanstralReport.pdf",
-    "notes": "Official announcement links mistralai/LeanstralSafeVerify, which hosts the original 12-page Leanstral report covering Leanstral 1.5. PDF first page carries July 2, 2026 with an arXiv submit stamp (not a public arXiv identifier). PDF URL pinned to the verified file-addition commit fb9c583eb0ea96426d94625f89b7842c9dc1c313; publication date is the PDF stamp/announcement, not the July 3 repository commit date."
+    "notes": "Official announcement links mistralai/LeanstralSafeVerify, which hosts the original 12-page Leanstral report covering Leanstral 1.5. PDF first page carries July 2, 2026 with an arXiv submit stamp (not a public arXiv identifier). PDF URL pinned to the verified file-addition commit fb9c583eb0ea96426d94625f89b7842c9dc1c313; publication date is the PDF stamp/announcement, not the July 3 repository commit date.",
+    "reading_models": [
+      "Leanstral"
+    ]
   },
   {
     "vendor": "mistral",
@@ -4058,7 +4672,10 @@
     "pdf_url": "https://arxiv.org/pdf/2605.23463v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2605.23463",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "StepAudio 2.5"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -4071,7 +4688,10 @@
     "pdf_url": "https://arxiv.org/pdf/2604.14148v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2604.14148",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Seedance 2.0"
+    ]
   },
   {
     "vendor": "bytedance",
@@ -4084,7 +4704,10 @@
     "pdf_url": "https://arxiv.org/pdf/2605.13862v1",
     "version": "arxiv-v1",
     "metadata_url": "https://arxiv.org/abs/2605.13862",
-    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。"
+    "notes": "2026-10-01 核对作者提交的 arXiv 元数据及官方模型入口；首次发布日期为 arXiv v1，修订日期与版本分别记录。",
+    "reading_models": [
+      "Seed3D 2.0"
+    ]
   },
   {
     "vendor": "google",
@@ -4123,7 +4746,10 @@
     "source_url": "https://arxiv.org/abs/2504.06225",
     "pdf_url": "https://arxiv.org/pdf/2504.06225v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Original T5Gemma family report; official Google release links this paper under its research title. Publisher provenance: https://developers.googleblog.com/en/t5gemma/."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Original T5Gemma family report; official Google release links this paper under its research title. Publisher provenance: https://developers.googleblog.com/en/t5gemma/.",
+    "reading_models": [
+      "T5Gemma"
+    ]
   },
   {
     "vendor": "google",
@@ -4282,7 +4908,10 @@
     "source_url": "https://arxiv.org/abs/2505.00949",
     "pdf_url": "https://arxiv.org/pdf/2505.00949v5",
     "version": "arxiv-v5",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "Llama-Nemotron"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -4294,7 +4923,10 @@
     "source_url": "https://arxiv.org/abs/2504.03624",
     "pdf_url": "https://arxiv.org/pdf/2504.03624v4",
     "version": "arxiv-v4",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://research.nvidia.com/labs/adlr/nemotronh/."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://research.nvidia.com/labs/adlr/nemotronh/.",
+    "reading_models": [
+      "Nemotron-H"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -4306,7 +4938,10 @@
     "source_url": "https://arxiv.org/abs/2512.13607",
     "pdf_url": "https://arxiv.org/pdf/2512.13607v2",
     "version": "arxiv-v2",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "Nemotron-Cascade"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -4318,7 +4953,10 @@
     "source_url": "https://arxiv.org/abs/2603.19220",
     "pdf_url": "https://arxiv.org/pdf/2603.19220v2",
     "version": "arxiv-v2",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "Nemotron Cascade 2"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -4363,7 +5001,10 @@
     "source_url": "https://arxiv.org/abs/2508.15884",
     "pdf_url": "https://arxiv.org/pdf/2508.15884v3",
     "version": "arxiv-v3",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://research.nvidia.com/labs/eai/publication/jetnemotron/."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://research.nvidia.com/labs/eai/publication/jetnemotron/.",
+    "reading_models": [
+      "Jet-Nemotron"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -4375,7 +5016,10 @@
     "source_url": "https://arxiv.org/abs/2505.16400",
     "pdf_url": "https://arxiv.org/pdf/2505.16400v3",
     "version": "arxiv-v3",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "AceReason-Nemotron"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -4387,7 +5031,10 @@
     "source_url": "https://arxiv.org/abs/2506.13284",
     "pdf_url": "https://arxiv.org/pdf/2506.13284v1",
     "version": "arxiv-v1",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://huggingface.co/nvidia/AceReason-Nemotron-7B."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages. Publisher provenance: https://huggingface.co/nvidia/AceReason-Nemotron-7B.",
+    "reading_models": [
+      "AceReason-Nemotron 1.1"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -4399,7 +5046,10 @@
     "source_url": "https://arxiv.org/abs/2511.00088",
     "pdf_url": "https://arxiv.org/pdf/2511.00088v2",
     "version": "arxiv-v2",
-    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages."
+    "notes": "First publication and latest revision dates verified from author-submitted arXiv submission history. PDF title/model identity and original PDF header checked in first two pages.",
+    "reading_models": [
+      "Alpamayo-R1"
+    ]
   },
   {
     "vendor": "google",
@@ -4739,7 +5389,10 @@
     "source_url": "https://arxiv.org/abs/2204.14198",
     "pdf_url": "https://arxiv.org/pdf/2204.14198v2",
     "version": "arxiv-v2",
-    "notes": "Author-submitted arXiv publication and latest revision history verified. Original PDF header/title/model identity checked in first two pages. Model-family report; original title retained."
+    "notes": "Author-submitted arXiv publication and latest revision history verified. Original PDF header/title/model identity checked in first two pages. Model-family report; original title retained.",
+    "reading_models": [
+      "Flamingo"
+    ]
   },
   {
     "vendor": "google",
@@ -4751,7 +5404,10 @@
     "source_url": "https://arxiv.org/abs/2205.05131",
     "pdf_url": "https://arxiv.org/pdf/2205.05131v3",
     "version": "arxiv-v3",
-    "notes": "Author-submitted arXiv publication and latest revision history verified. Original PDF header/title/model identity checked in first two pages. Model-family report; original title retained."
+    "notes": "Author-submitted arXiv publication and latest revision history verified. Original PDF header/title/model identity checked in first two pages. Model-family report; original title retained.",
+    "reading_models": [
+      "UL2"
+    ]
   },
   {
     "vendor": "meta",
@@ -4763,7 +5419,10 @@
     "source_url": "https://arxiv.org/abs/2207.04672",
     "pdf_url": "https://export.arxiv.org/pdf/2207.04672v3",
     "version": "arxiv-v3",
-    "notes": "Original NLLB-200 model-family technical report. First submission 2022-07-11 and latest revision v3 dated 2022-08-25 verified from author-submitted arXiv history. The main arxiv.org pinned PDF endpoint returned HTTP 406 during this audit. Official export.arxiv.org serves the explicitly versioned v3 URL directly without redirect (8,094,540 original bytes; SHA-256 2e5c7cc19c5d99bf60b19a94333dbc4dd82425e1f3d8d1f05cc0587ad3b0b124). PDF title and Meta authors checked; no arXiv revision stamp appears in its first two pages, so an unversioned fallback must not be used as revision evidence."
+    "notes": "Original NLLB-200 model-family technical report. First submission 2022-07-11 and latest revision v3 dated 2022-08-25 verified from author-submitted arXiv history. The main arxiv.org pinned PDF endpoint returned HTTP 406 during this audit. Official export.arxiv.org serves the explicitly versioned v3 URL directly without redirect (8,094,540 original bytes; SHA-256 2e5c7cc19c5d99bf60b19a94333dbc4dd82425e1f3d8d1f05cc0587ad3b0b124). PDF title and Meta authors checked; no arXiv revision stamp appears in its first two pages, so an unversioned fallback must not be used as revision evidence.",
+    "reading_models": [
+      "NLLB-200"
+    ]
   },
   {
     "vendor": "amazon",
@@ -4774,7 +5433,10 @@
     "source_updated_date": "",
     "source_url": "https://docs.aws.amazon.com/pdfs/ai/responsible-ai/nova-act/nova-act.pdf",
     "pdf_url": "https://docs.aws.amazon.com/pdfs/ai/responsible-ai/nova-act/nova-act.pdf",
-    "notes": "Publisher calls this an AI Service Card. Classified as system_card by primary scope: the complete Nova Act service, safety, reliability, intended uses, deployment limitations and governance. Original 16-page official PDF; not a generic AWS manual. The service applicability date 2025-12-02 is not proof of this card's first publication date."
+    "notes": "Publisher calls this an AI Service Card. Classified as system_card by primary scope: the complete Nova Act service, safety, reliability, intended uses, deployment limitations and governance. Original 16-page official PDF; not a generic AWS manual. The service applicability date 2025-12-02 is not proof of this card's first publication date.",
+    "reading_models": [
+      "Nova Act"
+    ]
   },
   {
     "vendor": "amazon",
@@ -4798,7 +5460,11 @@
     "pdf_url": "https://arxiv.org/pdf/2503.20314v2",
     "version": "arxiv-v2",
     "metadata_url": "https://github.com/Wan-Video/Wan2.1",
-    "notes": "Wan2.1 foundation family. Wan2.2 repository also links this same paper; do not relabel it as a separate Wan2.2 report. Alibaba publisher; Wan is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01."
+    "notes": "Wan2.1 foundation family. Wan2.2 repository also links this same paper; do not relabel it as a separate Wan2.2 report. Alibaba publisher; Wan is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01.",
+    "reading_models": [
+      "Wan2.1",
+      "Wan video / Wan-Dancer / Wan-Animate-2"
+    ]
   },
   {
     "vendor": "qwen",
@@ -4814,6 +5480,9 @@
     "notes": "Wan-compatible all-in-one video creation and editing model, linked by official Wan2.1 repository. Alibaba publisher; Wan is a separate model family from Qwen, grouped under existing Alibaba vendor identifier qwen. Title, submission dates and latest arXiv revision verified 2026-10-01.",
     "alternate_pdf_urls": [
       "https://arxiv.org/pdf/2503.07598"
+    ],
+    "reading_models": [
+      "Wan-VACE"
     ]
   },
   {
@@ -4966,7 +5635,11 @@
     "source_updated_date": "2026-01-06",
     "source_url": "https://www.deepseek.com/en/transparency/",
     "pdf_url": "https://fe-static.deepseek.com/chat/transparency/deepseek-v3.2-model-card-0414-EN.pdf",
-    "notes": "Official directory designates Model Card; cover title Technical Documentation, page 2 Model Card. Cover explicitly gives an updated date earlier than publication; preserved as supplied, not model-release date."
+    "notes": "Official directory designates Model Card; cover title Technical Documentation, page 2 Model Card. Cover explicitly gives an updated date earlier than publication; preserved as supplied, not model-release date.",
+    "reading_models": [
+      "DeepSeek-V3.2",
+      "DeepSeek V4 / V3.2 model cards"
+    ]
   },
   {
     "vendor": "tencent",
@@ -4995,7 +5668,11 @@
     "pdf_url": "https://arxiv.org/pdf/2608.02711v3",
     "version": "arxiv-v3",
     "metadata_url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-Buffalo1.0",
-    "notes": "Official Tencent-Hunyuan repository links this named model report. Title, first submission date, latest revision and PDF frontmatter verified 2026-10-01."
+    "notes": "Official Tencent-Hunyuan repository links this named model report. Title, first submission date, latest revision and PDF frontmatter verified 2026-10-01.",
+    "reading_models": [
+      "Hunyuan3D Buffalo 1.0",
+      "Hunyuan3D Buffalo 1.0 / WorldClaw"
+    ]
   },
   {
     "vendor": "tencent",
@@ -5011,6 +5688,10 @@
     "notes": "Official Tencent-Hunyuan repository links this named model report. Title, first submission date, latest revision and PDF frontmatter verified 2026-10-01.",
     "alternate_pdf_urls": [
       "https://arxiv.org/pdf/2608.05248"
+    ],
+    "reading_models": [
+      "WorldClaw",
+      "Hunyuan3D Buffalo 1.0 / WorldClaw"
     ]
   },
   {
@@ -5126,7 +5807,10 @@
     "source_updated_date": "",
     "source_url": "https://aclanthology.org/2025.wmt-1.55/",
     "pdf_url": "https://aclanthology.org/2025.wmt-1.55.pdf",
-    "notes": "Official ACL proceedings publication, directly linked as the Command A Translate Technical Report by Cohere documentation. Verified 11-page PDF, pages 789–799. Publication month from proceedings; model release was August 2025, separately."
+    "notes": "Official ACL proceedings publication, directly linked as the Command A Translate Technical Report by Cohere documentation. Verified 11-page PDF, pages 789–799. Publication month from proceedings; model release was August 2025, separately.",
+    "reading_models": [
+      "Command A Translate"
+    ]
   },
   {
     "vendor": "cohere",
@@ -5214,7 +5898,10 @@
     "source_updated_date": "2026-09-03",
     "source_url": "https://microsoft.ai/models/mai-transcribe-2/",
     "pdf_url": "https://microsoft.ai/pdf/MAI-Transcribe-2-Model-Card.pdf",
-    "notes": "8 pages. Card explicitly dated September 3, 2026; first publication independently unconfirmed."
+    "notes": "8 pages. Card explicitly dated September 3, 2026; first publication independently unconfirmed.",
+    "reading_models": [
+      "MAI Transcribe 2"
+    ]
   },
   {
     "vendor": "microsoft",
@@ -5247,7 +5934,10 @@
     "source_updated_date": "2026-06-02",
     "source_url": "https://microsoft.ai/models/mai-voice-2/",
     "pdf_url": "https://microsoft.ai/pdf/MAI-Voice-2-Model-Card.PDF",
-    "notes": "3 pages; card Date June 2, 2026. Original official PDF verified and successfully archived."
+    "notes": "3 pages; card Date June 2, 2026. Original official PDF verified and successfully archived.",
+    "reading_models": [
+      "MAI Voice 2"
+    ]
   },
   {
     "vendor": "microsoft",
@@ -5284,7 +5974,10 @@
     "source_updated_date": "2026-07-09",
     "source_url": "https://research.meta.ai/blog/introducing-muse-spark-meta-model-api",
     "pdf_url": "https://research.meta.ai/static/muse-spark-1-1-evaluation-report",
-    "notes": "112-page model capabilities and safety/deployment evaluation under Advanced AI Scaling Framework. Classified by primary safety/deployment scope; publisher title is Evaluation Report. PDF explicitly states Date: July 9, 2026; document date recorded as source_updated_date, independent first publication unconfirmed."
+    "notes": "112-page model capabilities and safety/deployment evaluation under Advanced AI Scaling Framework. Classified by primary safety/deployment scope; publisher title is Evaluation Report. PDF explicitly states Date: July 9, 2026; document date recorded as source_updated_date, independent first publication unconfirmed.",
+    "reading_models": [
+      "Muse Spark 1.1"
+    ]
   },
   {
     "vendor": "nvidia",
@@ -5296,7 +5989,10 @@
     "source_url": "https://arxiv.org/abs/2607.05196",
     "pdf_url": "https://arxiv.org/pdf/2607.05196v2",
     "notes": "NVIDIA author technical report introducing Nemotron-Labs-Audex-30B-A3B, unified audio/text architecture, data, training and evaluation. Official model https://huggingface.co/nvidia/Nemotron-Labs-Audex-30B-A3B. PDF cover date June 8 is distinct from arXiv first publication July 6; explicit PDF arXiv stamp verifies v2 July 7.",
-    "version": "arxiv-v2"
+    "version": "arxiv-v2",
+    "reading_models": [
+      "Nemotron Labs Audex 30B A3B"
+    ]
   },
   {
     "vendor": "amazon",
@@ -5320,7 +6016,10 @@
     "source_url": "https://arxiv.org/abs/2507.06260",
     "pdf_url": "https://arxiv.org/pdf/2507.06260v1",
     "notes": "Amazon Nova Responsible AI author report; 10 pages. Official Amazon Science publication confirms publisher identity and scope; arXiv dates from submission history.",
-    "version": "arxiv-v1"
+    "version": "arxiv-v1",
+    "reading_models": [
+      "Nova Premier"
+    ]
   },
   {
     "vendor": "meta",
@@ -5410,7 +6109,10 @@
     "source_url": "https://arxiv.org/abs/2607.04371",
     "pdf_url": "https://arxiv.org/pdf/2607.04371v2",
     "version": "arxiv-v2",
-    "notes": "Model report linked from official NVIDIA Hugging Face model card; arXiv submission and revision dates verified separately from model release."
+    "notes": "Model report linked from official NVIDIA Hugging Face model card; arXiv submission and revision dates verified separately from model release.",
+    "reading_models": [
+      "Nemotron Labs 3 Puzzle 75B-A9B"
+    ]
   },
   {
     "vendor": "anthropic",
@@ -5457,7 +6159,10 @@
     "source_url": "https://github.com/stepfun-ai/Step1X-Edit",
     "pdf_url": "https://arxiv.org/pdf/2511.22625v2",
     "version": "arxiv-v2",
-    "notes": "Original model report linked by official publisher repository/model card; arXiv submission and revision dates independently verified, distinct from model release."
+    "notes": "Original model report linked by official publisher repository/model card; arXiv submission and revision dates independently verified, distinct from model release.",
+    "reading_models": [
+      "ReasonEdit"
+    ]
   },
   {
     "vendor": "stepfun",
@@ -5520,7 +6225,10 @@
     "source_url": "https://github.com/stepfun-ai/NextStep-1",
     "pdf_url": "https://arxiv.org/pdf/2508.10711v2",
     "version": "arxiv-v2",
-    "notes": "Original NextStep-1 model report linked by official StepFun repository; arXiv dates verified. Repository recommends the newer NextStep-1.1, released December 24, 2025 with separate post-training blog; this older report is not presented as a NextStep-1.1-specific report."
+    "notes": "Original NextStep-1 model report linked by official StepFun repository; arXiv dates verified. Repository recommends the newer NextStep-1.1, released December 24, 2025 with separate post-training blog; this older report is not presented as a NextStep-1.1-specific report.",
+    "reading_models": [
+      "NextStep-1"
+    ]
   },
   {
     "vendor": "physical_intelligence",

@@ -40,7 +40,10 @@ def validate_selection(selection, report, document):
                 raise ValueError('The full original caption must fit inside the crop')
         caption = figure.get('caption', '')
         normalize = lambda t: re.sub(r'\s+', '', unicodedata.normalize('NFKC', t))
-        if caption and normalize(caption) not in normalize(document[page-1].get_text()):
+        source_text = document[page-1].get_text()
+        # Allow visually reviewed word restorations at native PDF line breaks.
+        unwrapped = re.sub(r'(?<=[A-Za-z])-\s*\n\s*(?=[a-z])', '', source_text)
+        if caption and not any(normalize(caption) in normalize(text) for text in (source_text, unwrapped)):
             raise ValueError(f'Caption does not match native source text: {report["id"]}, page {page}')
         for block in document[page-1].get_text('dict')['blocks']:
             for line in block.get('lines', []):

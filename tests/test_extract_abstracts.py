@@ -7,7 +7,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 try:
     import pdfminer
@@ -30,6 +30,38 @@ def page(*blocks):
 
 
 class AbstractTests(unittest.TestCase):
+    def test_reader_alt_labels_preserve_table_and_figure_kinds(self):
+        with tempfile.TemporaryDirectory() as directory, patch.object(extract, 'ROOT', Path(directory)):
+            root = Path(directory)
+            (root / 'figures').mkdir()
+            figures = [dict(figure_number=number, source_kind=kind, caption='',
+                            png_path=f'figures/example-{i}.png', page=1)
+                       for i, (number, kind) in enumerate([('1', 'table'), (None, 'table'),
+                                                          ('2', 'figure'), ('Table 3', 'table')])]
+            (root / 'figures/index.json').write_text(json.dumps({'reports': [
+                dict(id='openai:example', source_sha256='source', figures=figures)]}))
+            report = dict(id='openai:example', vendor='openai', title='Example',
+                          source_url='https://example.com', source_sha256='source',
+                          source_heading=None, text='Original passage.')
+            extract.write_outputs(root / 'abstracts', [report], [])
+            body = (root / 'abstracts/openai/example.md').read_text()
+            for label in ('Table 1', 'Table', 'Figure 2', 'Table 3'):
+                self.assertIn(f'![{label}](', body)
+            self.assertNotIn('![Figure 1]', body)
+
+    def test_native_cache_preserves_unpaired_surrogates(self):
+        with tempfile.TemporaryDirectory() as directory:
+            cache = Path(directory)
+            native = 'Original parser text with an unmapped glyph: \ud835'
+            reader = Mock(pages=[Mock(extract_text=Mock(return_value=native))])
+            with patch.object(extract, 'PdfReader', return_value=reader) as read, \
+                    patch.object(extract, 'extract_pages', return_value=[]):
+                first = extract.extract_cached('source.pdf', 'source-hash', cache, 12)
+                second = extract.extract_cached('source.pdf', 'source-hash', cache, 12)
+            self.assertEqual(first['pypdf_pages'], [native])
+            self.assertEqual(second, first)
+            self.assertEqual(read.call_count, 1)
+
     def test_reviewed_page_break_reflows_without_merging_real_paragraphs(self):
         text = 'First real paragraph.\n\nA sentence ends the page with In\n\nmulti-turn testing, it continues.\n\nAnother real paragraph.'
         report = dict(id='lab:report', source_pdf='source.pdf', source_sha256='source', text=text)
@@ -86,6 +118,41 @@ class AbstractTests(unittest.TestCase):
         self.assertEqual(section['section_type'], 'opening_summary')
         self.assertIsNone(section['source_heading'])
         self.assertEqual(section['raw_text'], text.strip())
+
+    def test_numbered_descriptive_overview_retains_actual_heading(self):
+        text = 'The model generates video and synchronized audio from user instructions. ' * 4
+        section = extract.choose_section([page(block('System card', 20)),
+            page(block('1 Overview of Example 2', 14), block(text, 11),
+                 block('2 Model data', 14), block('Unrelated training details. ' * 5, 11))])
+        self.assertEqual(section['section_type'], 'overview')
+        self.assertEqual(section['source_heading'], '1 Overview of Example 2')
+        self.assertEqual(section['raw_text'], text.strip())
+        self.assertEqual(section['fragments'][0]['page'], 2)
+
+    def test_model_summary_stops_before_model_details(self):
+        text = 'The next iteration in our speech synthesis family generates natural speech. ' * 4
+        section = extract.choose_section([page(block('Model card', 20),
+            block('Model summary', 16), block(text, 11), block('About this model', 16),
+            block('Voice prompting and distribution details. ' * 4, 11))])
+        self.assertEqual(section['section_type'], 'summary')
+        self.assertEqual(section['source_heading'], 'Model summary')
+        self.assertEqual(section['raw_text'], text.strip())
+        self.assertTrue(section['boundary_found'])
+
+    def test_named_title_page_opening_is_fallback_without_invented_heading(self):
+        for name in ('Codex', 'GPT-5-Codex'):
+            with self.subTest(name=name):
+                text = f'{name} is a coding agent that executes tasks in an isolated environment. ' * 4
+                section = extract.choose_section([page(block('System card', 20), block(text, 11),
+                                                       block('1 Safety evaluations', 14))])
+                self.assertEqual(section['section_type'], 'opening_summary')
+                self.assertIsNone(section['source_heading'])
+                self.assertEqual(section['raw_text'], text.strip())
+                labelled = extract.choose_section([page(block(text, 11)),
+                    page(block('Overview', 14), block('Existing labelled overview. ' * 6, 11))])
+                self.assertEqual(labelled['section_type'], 'overview')
+                self.assertEqual(labelled['source_heading'], 'Overview')
+        self.assertIsNone(extract.choose_section([page(block('Figure 1 is a benchmark comparison. ' * 10, 11))]))
 
     def test_introduction_continues_below_an_interleaved_figure(self):
         first = 'This report describes an embodied model and evaluates the model’s'

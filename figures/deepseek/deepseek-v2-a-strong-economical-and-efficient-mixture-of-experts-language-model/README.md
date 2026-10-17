@@ -1,0 +1,3 @@
+# DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model
+
+[Read report](../../../abstracts/deepseek/deepseek-v2-a-strong-economical-and-efficient-mixture-of-experts-language-model.md)

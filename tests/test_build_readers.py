@@ -109,6 +109,15 @@ class ReaderTests(unittest.TestCase):
         self.assertNotIn('/blob/main/pdfs/model.pdf', en)
         self.assertIn('class="inline-image"', en)
         self.assertNotIn('figure-card', en)
+        for language, prefix in (('', '../../'), ('cn/', '../../../')):
+            with self.subTest(language=language):
+                page_path = self.output / language / 'abstracts/lab/model.html'
+                page = page_path.read_text()
+                preview_url = prefix + 'assets/figures/lab/model/figure-01.webp'
+                self.assertIn(f'src="{preview_url}"', page)
+                self.assertIn(f'data-preview="{preview_url}"', page)
+                self.assertNotIn('{{', page)
+                self.assertTrue((page_path.parent / preview_url).is_file())
         self.assertFalse(list(self.output.rglob('*.pdf')))
         figure['png_sha256'] = 'changed'
         with self.assertRaisesRegex(ValueError, 'checksum mismatch'):

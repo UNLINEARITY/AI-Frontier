@@ -21,11 +21,12 @@ HEADINGS = {
     'abstract': ('abstract', 0), 'executive summary': ('executive_summary', 1),
     'model overview': ('overview', 2), 'overview': ('overview', 2),
     'model description': ('description', 3), 'description': ('description', 3),
-    'summary': ('summary', 4), 'introduction': ('introduction', 5),
+    'model summary': ('summary', 4), 'summary': ('summary', 4), 'introduction': ('introduction', 5),
     'model architecture': ('model_architecture', 6),
 }
 KNOWN_BOUNDARIES = re.compile(r'^(?:model dependencies|model architecture|architecture|modalities|context length|total model size|inputs|outputs|training|training data|limitations|intended use|intended uses|model details|evaluation|evaluations|capabilities|safety|contents|table of contents|open-source code|open-weight model checkpoint|open synthetic dataset|open evaluation benchmark)$', re.I)
 OPENING = re.compile(r'^(?:We (?:introduce|present|describe|propose)|This (?:paper|report)|State[- ]of[- ]the[- ]art|Building capable|General[- ]purpose robots|The past year has witnessed)', re.I)
+NAMED_OPENING = re.compile(r'^[A-Z][\w.-]*(?:\s+[A-Z][\w.-]*){0,4}\s+is\s+(?:a|an|our|the)\b')
 
 
 def compact(text):
@@ -119,13 +120,25 @@ def choose_section(pages):
             if found and usable(block, page) and not (found[0] == 'description' and pi > 2):
                 kind, rank, label, remainder = found
                 candidates.append((rank, pi, bi, kind, label, remainder))
+    # Recover descriptive overview headings only when no supported section exists.
+    if not candidates:
+        for pi, page in enumerate(pages):
+            if contents_page(page):
+                continue
+            for bi, block in enumerate(page['blocks']):
+                lines = block['text'].strip().splitlines()
+                if (lines and usable(block, page) and len(lines[0]) < 120
+                        and re.match(r'^\d+\.?\s+Overview of\s+\S', lines[0], re.I)):
+                    candidates.append((2, pi, bi, 'overview', lines[0], '\n'.join(lines[1:])))
     # Some technical reports place an unlabelled abstract before Introduction.
     if pages and not contents_page(pages[0]):
         for bi, block in enumerate(pages[0]['blocks']):
             if heading(block['text']) or boundary(block, 14):
                 if candidates and any(c[1] == 0 and c[2] == bi for c in candidates):
                     break
-            if usable(block, pages[0]) and len(block['text']) > 220 and OPENING.match(block['text'].strip()):
+            if (usable(block, pages[0]) and len(block['text']) > 220
+                    and (OPENING.match(block['text'].strip())
+                         or not candidates and NAMED_OPENING.match(block['text'].strip()))):
                 candidates.append((0, 0, bi, 'opening_summary', None, block['text']))
                 break
     if not candidates:
@@ -215,7 +228,7 @@ def extract_cached(path, sha256, cache, scan_pages):
                                    font_size=sum(sizes) / len(sizes) if sizes else 0))
         layouts.append(dict(width=layout.width, height=layout.height, blocks=blocks))
     result = dict(pypdf_pages=native, pdfminer_pages=layouts, page_count=len(reader.pages))
-    target.write_text(json.dumps(result, ensure_ascii=False))
+    target.write_text(json.dumps(result, ensure_ascii=True))
     return result
 
 
@@ -450,7 +463,8 @@ def write_outputs(output, reports, missing, write_index=True):
             for figure in selected.get('figures', []):
                 number = figure.get('figure_number')
                 if number is not None:
-                    number = str(number) if re.match(r'^(?:Figure|Fig\.|Table)\s', str(number)) else f"Figure {number}"
+                    label = 'Table' if figure.get('source_kind') == 'table' else 'Figure'
+                    number = str(number) if re.match(r'^(?:Figure|Fig\.|Table)\s', str(number)) else f"{label} {number}"
                 else:
                     number = ('Table' if figure.get('source_kind') == 'table' else
                               'Image' if figure.get('source_kind') == 'image' and figure.get('page') is None else 'Figure')

@@ -1,0 +1,3 @@
+# Seedance 1.5 pro: A Native Audio-Visual Joint Generation Foundation Model
+
+[阅读报告](../../../abstracts/bytedance/seedance-1-5-pro-model-card.md)

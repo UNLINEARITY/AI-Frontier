@@ -62,6 +62,17 @@ class FigureSelectionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Caption does not match'):
             validate_selection(self.selection, self.report, self.document)
 
+    def test_reviewed_line_wrap_restoration_preserves_hyphens_and_numbers(self):
+        self.document[0].insert_text((30, 120), 'Figure 1: A con-\nventional model with state-of-the-art results at 90%.')
+        self.figure['bbox'] = [20, 30, 590, 500]
+        caption = 'Figure 1: A conventional model with state-of-the-art results at 90%.'
+        self.figure['caption'] = caption
+        validate_selection(self.selection, self.report, self.document)
+        for changed in (caption.replace('state-of-the-art', 'stateoftheart'), caption.replace('90%', '91%')):
+            with self.subTest(caption=changed), self.assertRaisesRegex(ValueError, 'Caption does not match'):
+                self.figure['caption'] = changed
+                validate_selection(self.selection, self.report, self.document)
+
     def test_clipped_axis_label_is_rejected(self):
         self.document[0].insert_text((10, 100), 'axis label')
         with self.assertRaisesRegex(ValueError, 'cuts source text'):
