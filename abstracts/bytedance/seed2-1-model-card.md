@@ -16,6 +16,12 @@ As model capabilities continue to evolve, we observe two important changes in ho
 
 To address these changes, the Seed team adopted a product-driven development and evaluation methodology for Seed2.1:
 
+## 3.2 Automatic Evaluation
+
+The coding-agent evaluation suite combines public benchmarks and Trae-oriented internal benchmarks. The public benchmarks cover complementary coding-agent abilities, including command-line task execution, repository-level software engineering, cyber-security task solving, program synthesis, and natural-language-to- repository code modification.
+
+p. 16
+
 ![Figure 5](../../figures/bytedance/seed2-1-model-card/figure-01.png)
 
 Figure 5 Efficiency of the Generalist Computer-Use Agent (CUA) setting on OSWorld. For each model, the arrow points from the GUI-only operating point (open marker) to the Generalist CUA setting (filled marker), in which the agent may also issue commands and call tools. Both models move up and to the left: higher success rate with fewer steps per task.

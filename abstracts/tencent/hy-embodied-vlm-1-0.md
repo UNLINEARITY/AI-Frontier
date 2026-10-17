@@ -6,6 +6,12 @@ Building capable embodied agents requires not only multimodal perception and und
 
 Github: github.com/Tencent-Hunyuan/HY-Embodied Model: huggingface.co/tencent/Hy-Embodied-VLM-1.0
 
+## 3 Model Architecture
+
+We build our vision-language model upon the Hy-series by adopting the A3B large lan- guage model as the language backbone. The backbone follows a Mixture-of-Experts (MoE) architecture (Shazeer et al., 2017) with approximately 30B total parameters, while only around 3B parameters are activated for each token during inference. Following the standard vision-language architecture (Liu et al., 2023), a dedicated vision encoder is coupled with the language model through a lightweight connector.
+
+p. 10
+
 ![Figure 1](../../figures/tencent/hy-embodied-vlm-1-0/figure-01.png)
 
 Fig. 1: Performance Comparison. Hy-Embodied-VLM-1.0 consistently outperforms strong VLM baselines of comparable scale across the three capability levels of our embodied intelligence taxonomy, achieving the best overall performance across all 38 benchmarks.

@@ -204,6 +204,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 8,
+      "sections": [
+        {
+          "heading": "2 Model Data and Training",
+          "text": "Like OpenAI’s other models, GPT-Image-2.5-Sunburst and GPT-Image-2.5- Flare were trained on diverse datasets, including information that is publicly available on the internet, information that we partner with third parties to access, and information that our users or human trainers and researchers provide or generate. Our data processing pipeline includes rigorous filtering to maintain data quality and mitigate potential risks. We use advanced data filtering processes to reduce personal information from training data.",
+          "pages": [
+            2
+          ],
+          "text_sha256": "bceca12a24e1c0dca4aae8c2d3825d402a9d1f944ae7d0ee73d700d73f70ffc2",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/openai/chatgpt-images-2-5-system-card.md"
     },
     {
@@ -714,6 +729,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 4,
+      "sections": [
+        {
+          "heading": "Architecture",
+          "text": "Lyria 3.5 utilizes latent diﬀusion, applied to temporal audio latents.",
+          "pages": [
+            2
+          ],
+          "text_sha256": "891a379010220f3c4aec4f5d06839a5ea2a851c8933c5ead11f3fdaabb194d31",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/google/lyria-3-5-model-card.md"
     },
     {
@@ -1153,6 +1183,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "5 Model Architecture",
+          "text": "Shieldstral is built upon Ministral-3B-Base-2512 [Liu et al., 2026], a 3B-parameter causal language model from the Mistral-3 family with native multimodal support via a Pixtral vision encoder [Agrawal et al., 2024].",
+          "pages": [
+            9
+          ],
+          "text_sha256": "b1a7c4a71e48013a61b33eccd0cb7a89abaf5885306ebdcd146c6e3e56670878",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/mistral/shieldstral.md"
     },
     {
@@ -1198,6 +1243,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 12,
+      "sections": [
+        {
+          "heading": "2.1 Architecture Overview",
+          "text": "Robostral Navigate takes a language instruction and history of monocular RGB frames as inputs, and outputs navigation waypoints in the form of pixel coordinates or displacement commands. The model is initialized from a dense 8B-parameter VLM designed for spatial grounding tasks such as pointing, counting, and object localization. Navigation is a natural extension of these grounding capabilities: once the model understands where things are in an image, it learns how to move toward them.",
+          "pages": [
+            3
+          ],
+          "text_sha256": "8aa3ccf6d1ee377c7da651c0294029dbf7bcaa36dbac0ad277b93491f881344c",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/mistral/robostral-navigate.md"
     },
     {
@@ -1401,6 +1461,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "2. Model Architecture",
+          "text": "Cosmos 3 is capable of processing multimodal inputs and generating multimodal outputs. Beyond language, vision (image and video), and audio, Cosmos 3 treats action as a core modality, introducing a dedicated class of action tokens. These action tokens bridge the physical world with language-based reasoning and video-based world modeling, linking directly to physically grounded control signals for real-world interaction.",
+          "pages": [
+            7
+          ],
+          "text_sha256": "23b746d2ee28b32bef39d120104fab35708e5091b74aa1fd777e25f5200c4379",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai.md"
     },
     {
@@ -1640,6 +1715,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "Training Details",
+          "text": "QSA is introduced during the continued pretraining (CPT) stage of Qwen3.8-Flash- Next with a sequence length of 256K tokens. The training procedure consists of two stages: dense distillation and sparse training.",
+          "pages": [
+            6
+          ],
+          "text_sha256": "3ca481d8ddc188530b14df7a1295d05cd75a174bd91d4ccb06e4d2aa247a54b5",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/qwen/qwen3-8-flash-next.md"
     },
     {
@@ -1933,6 +2023,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 12,
+      "sections": [
+        {
+          "heading": "3.2 Automatic Evaluation",
+          "text": "The coding-agent evaluation suite combines public benchmarks and Trae-oriented internal benchmarks. The public benchmarks cover complementary coding-agent abilities, including command-line task execution, repository-level software engineering, cyber-security task solving, program synthesis, and natural-language-to- repository code modification.",
+          "pages": [
+            16
+          ],
+          "text_sha256": "72e894b20bdc2ac906367859c9ff44c13277021920030681f0b97a0d193351ec",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/bytedance/seed2-1-model-card.md"
     },
     {
@@ -2085,6 +2190,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "2.1 Model Architecture",
+          "text": "Our model is built on top of Command A+ (Cohere Team, 2026), a decoder-only sparse Mixture-of-Experts transformer (Vaswani et al., 2017) with 218B total parameters and 25B active.3",
+          "pages": [
+            2
+          ],
+          "text_sha256": "4bb528086ab248ad5d04c3eaa35de663392e33bc8b875dc31de820f07f379e7e",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Architecture excerpt; the trailing 3 is the source footnote marker."
+          }
+        }
+      ],
       "markdown_path": "abstracts/cohere/north-small-translate.md"
     },
     {
@@ -2247,6 +2367,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 6,
+      "sections": [
+        {
+          "heading": "Training, testing and validation",
+          "text": "MAI-Code-1.1-Flash was trained end to end by Microsoft on carefully curated data using Microsoft infrastructure and data pipelines. The development pipeline spans pre-training, mid-training, supervised fine-tuning, and reinforcement learning, starting from MAI- Thinking-1's compressed 5B-active-parameter mid-training checkpoint. A lightweight supervised fine-tuning stage on curated instruction-following and agentic task data was applied on top of that mid-training checkpoint to establish reliable instruction- and format-following behavior.",
+          "pages": [
+            3
+          ],
+          "text_sha256": "673d48a6fd11fd9360290f03f4b5fd7e73e9e640c7a84bac938e35cce899825a",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/microsoft/mai-code-1-1-flash-model-card.md"
     },
     {
@@ -2445,6 +2580,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 7,
+      "sections": [
+        {
+          "heading": "3.1 Benchmarking methodology",
+          "text": "MAI-Cyber-1-Flash was primarily evaluated as a single model using a lightweight terminal harness to understand its standalone capabilities. Benchmarks were run on the release checkpoint, which includes RAI safety training in the model weights.",
+          "pages": [
+            5
+          ],
+          "text_sha256": "77b36ff9af6db4e5f4218d1ff25837626158e87db7df4a4b81f6f1b4064e47da",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/microsoft/mai-cyber-1-flash-model-card.md"
     },
     {
@@ -2695,6 +2845,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "2 Model Data and Training",
+          "text": "Like OpenAI’s other models, GPT-Live-1 and GPT-Live-1 mini were trained on diverse datasets, including information that is publicly available on the internet, information that we partner with third parties to access, and in- formation that our users or human trainers and researchers provide or gen- erate. Our data processing pipeline includes rigorous filtering to maintain data quality and mitigate potential risks. We use advanced data filtering pro- cesses to reduce personal information from training data.",
+          "pages": [
+            3
+          ],
+          "text_sha256": "e5094578aa9adf56c9b37ca13cfb17b470cb28bdf85d90774f561e7be4730eb5",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/openai/gpt-live-system-card.md"
     },
     {
@@ -2853,6 +3018,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 4,
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "MAI-Transcribe-2-Streaming is a low-latency streaming speech recognition model built in-house by the Microsoft AI team that turns live audio into text as it is spoken. It continuously processes an audio stream and emits fast partial hypotheses followed by stable final results, so applications can respond while a person is still talking.",
+          "pages": [
+            1
+          ],
+          "text_sha256": "358ab2c299bdd1335738bfb0c438038c4ea3b653b73bf2431735f0bfaafe02e5",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "The 4-page card has no architecture, training, or evaluation-methodology heading; this Overview paragraph is the card's original description of the model's streaming design."
+          }
+        }
+      ],
       "markdown_path": "abstracts/microsoft/mai-transcribe-2-streaming-model-card.md"
     },
     {
@@ -3530,6 +3710,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "3 Training",
+          "text": "The training of Qwen-Audio-3.0-ASR comprises five stages: audio encoder pretraining, audio- language model pretraining, LLM cooldown adaptation, supervised fine-tuning, and reinforcement learning. These stages progressively align acoustic representations with linguistic knowledge and instruction-following capabilities, while further optimizing the model for practical ASR objectives.",
+          "pages": [
+            4
+          ],
+          "text_sha256": "115b9a31cea6786d91da903313a0d364e2e415a735bb7292c4522310d31b7cc8",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/qwen/qwen-audio-3-0-asr.md"
     },
     {
@@ -4372,6 +4567,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "3.1 System Architecture",
+          "text": "StepAudio 3 Realtime uses a mixture-of-experts architecture. The audio frontend uses the Audio Transformer (AuT) encoder from Qwen3-Omni [8]. An adapter maps the encoder outputs into the representation space of the language model.",
+          "pages": [
+            3
+          ],
+          "text_sha256": "8dc715bbabcb874ab5806ab865636569300238a0c064f2c2a7046c4b1faa3313",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/stepfun/step-audio-3-realtime.md"
     },
     {
@@ -4514,6 +4724,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "2 Model Architecture",
+          "text": "StepAudio 3 Music supports open-domain text-controlled generation and explicit musical planning through a shared autoregressive backbone. As shown in ﬁgure 2, a Mixture-of-Experts decoder conditions on lyrics, a text prompt, and optional task-speciﬁc references to predict music tokens. The StepAudio Music Codec provides the interface between this discrete sequence and high-ﬁdelity audio, separating long-range musical organization from acoustic rendering.",
+          "pages": [
+            3
+          ],
+          "text_sha256": "d82347a27708cdb7db4ddd05aa2e7039b54f50f95b464578a19a1fc6cbe27176",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/stepfun/step-audio-3-music.md"
     },
     {
@@ -4933,15 +5158,15 @@
       "sections": [
         {
           "heading": "Architecture",
-          "text": "Gemini 4 Argon is a large scale sparse mixture-of-experts (MoE) (Clark et al., 2022; Du et al., 2021; Fedus et al., 2021; Jiang et al., 2024, Lepikhin et al., 2020; Riquelme et al., 2021; Roller et al., 2021; Shazeer et al., 2017) transformer-based model (Vaswani et al., 2017) with native multimodal support for text, vision, and audio inputs. Model Data",
+          "text": "Gemini 4 Argon is a large scale sparse mixture-of-experts (MoE) (Clark et al., 2022; Du et al., 2021; Fedus et al., 2021; Jiang et al., 2024, Lepikhin et al., 2020; Riquelme et al., 2021; Roller et al., 2021; Shazeer et al., 2017) transformer-based model (Vaswani et al., 2017) with native multimodal support for text, vision, and audio inputs.",
           "pages": [
             3
           ],
-          "text_sha256": "ff6b22f7752d0df42fba3d90a348b6def1f8a497014f6b3e16ed673a69c7b13c",
+          "text_sha256": "3db85dcf41337e858e5dbb99f258c540de901afeacca6553938b14ed761c0e31",
           "review": {
             "method": "native_pdf_heading_and_block_review",
             "reviewed_at": "2026-10-17",
-            "note": "Heading and following paragraph copied from the native PDF text; whitespace normalized only."
+            "note": "Heading and following paragraph copied from the native PDF text; whitespace normalized only. The trailing page-layout label \"Model Data\" was removed because it is a layout heading fragment, not prose."
           }
         }
       ],
@@ -5028,6 +5253,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 12,
+      "sections": [
+        {
+          "heading": "2.1 Model Training",
+          "text": "We build safety into our models through a combination of pre-training and post-training approaches. We start by constructing metrics based on the established safety policies and desired behaviors, which we typically turn into automated evaluations that guide model development through successive model iterations. This pipeline relies on data ﬁltering, Supervised Fine-Tuning (SFT), and Reinforcement Learning (RL).",
+          "pages": [
+            9
+          ],
+          "text_sha256": "7eddda9c6c427db99c8abcea4d5c6fb4141a784cb6fff5c419e5f3ca0b11d490",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/google/gemini-4-argon-safety-and-security-report.md"
     },
     {
@@ -5073,6 +5313,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 4,
+      "sections": [
+        {
+          "heading": "Architecture",
+          "text": "Gemini Omni Flash is a transformer-based model (Vaswani et al., 2017) with native multimodal support for text, vision, video and audio inputs.",
+          "pages": [
+            2
+          ],
+          "text_sha256": "f7310ffba3b1ba108ddbd903e270fa39d8e576686a7e1220dd6d1ce96460c30d",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/google/gemini-omni-flash-model-card.md"
     },
     {
@@ -5672,6 +5927,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 12,
+      "sections": [
+        {
+          "heading": "4.1. Evaluation Setup",
+          "text": "We evaluate on IOI 2025, ICPC 2025, and LiveCodeBench Pro (LCB Pro) (International Olympiad in Informatics, 2025; International Collegiate Programming Contest, 2025b; Zheng et al., 2025), ensuring that all evaluation problems are excluded and deduplicated from our SFT and RL data. For IOI, Score@𝑘 is computed by grouping generated solutions into independent runs.",
+          "pages": [
+            5
+          ],
+          "text_sha256": "4961bfdeff3918150d5140ac457491ec6c0797ea5dc070b7c1f22cc4edcd0de5",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/nvidia/nemotron-3-competitive-coding.md"
     },
     {
@@ -5831,6 +6101,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "1. Pre-training Phase",
+          "text": "During the pre-training phase, corpus data is required for training. This phase primarily uses the following two categories of data: - Public Data: We use publicly available information on the internet to build the model's broad understanding of world knowledge. We employ technical methods to acquire and filter these freely accessible data to enrich the model's knowledge base. - Licensed Data: We collaborate with third-party data providers to obtain proprietary datasets through legally signed agreements.",
+          "pages": [
+            7
+          ],
+          "text_sha256": "55e0c216bd7411df14f91ff596b1e4995e45a1acc5a741c16f00ebb4b35af444",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Original pre-training data passage; source bullet markers are preserved."
+          }
+        }
+      ],
       "markdown_path": "abstracts/deepseek/deepseek-v4-model-card.md"
     },
     {
@@ -8034,6 +8319,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "2 Model Data and Training",
+          "text": "Like OpenAI’s other models, GPT-6 models were trained on diverse datasets and filtered through our data processing pipeline, including to reduce per- sonal information. OpenAI reasoning models are trained to reason through reinforcement learning. These models are trained to think before they answer: they can produce a long internal chain of thought before responding to the user.",
+          "pages": [
+            5
+          ],
+          "text_sha256": "44a9e354b8bc0dbe3c7d0ce5bee2e0c00935b4c0659af306878ddfbf98caab7f",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/openai/gpt-6-sol-and-luna-october-2026-update.md"
     },
     {
@@ -8132,6 +8432,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 12,
+      "sections": [
+        {
+          "heading": "1.1 Training data and process",
+          "text": "Claude Haiku 5.5 was trained on a proprietary mix of publicly available information from the internet, public and private datasets, user data included in feedback or bugs or which users have explicitly permitted for training, and other sources, such as synthetic data generated by other models. In the course of its training, we used several data cleaning and ﬁltering methods, including deduplication and classiﬁcation. We use a general-purpose web crawler called ClaudeBot to obtain training data from public websites.",
+          "pages": [
+            8
+          ],
+          "text_sha256": "9f769fd5071ce827b16cbd74f60cdbf4d28e594471cfcd49bcbd4541284126b3",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/anthropic/claude-haiku-5-5-system-card.md"
     },
     {
@@ -8177,6 +8492,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 8,
+      "sections": [
+        {
+          "heading": "Human Red Teaming Results",
+          "text": "We conduct manual red teaming by specialist teams who sit outside of the model development team. High-level ﬁndings are fed back to the model team.",
+          "pages": [
+            7
+          ],
+          "text_sha256": "3cee786b72b418305a499705597ad404b8cdb4cadff46e6cdbb980d2dde42552",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "The card's Evaluation Approach section only cross-references the base model card; this excerpt is the original red-teaming method passage under Human Red Teaming Results."
+          }
+        }
+      ],
       "markdown_path": "abstracts/google/nano-banana-2-1-model-card.md"
     },
     {
@@ -8419,6 +8749,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "3 Model Architecture",
+          "text": "We build our vision-language model upon the Hy-series by adopting the A3B large lan- guage model as the language backbone. The backbone follows a Mixture-of-Experts (MoE) architecture (Shazeer et al., 2017) with approximately 30B total parameters, while only around 3B parameters are activated for each token during inference. Following the standard vision-language architecture (Liu et al., 2023), a dedicated vision encoder is coupled with the language model through a lightweight connector.",
+          "pages": [
+            10
+          ],
+          "text_sha256": "24ae65f5b181a27f8c19539b8eecf098af94d42823dddd8f2414c327133ae2ce",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/tencent/hy-embodied-vlm-1-0.md"
     },
     {
@@ -8531,6 +8876,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "4.2 Training Stage",
+          "text": "RxBrain is trained with a two-stage curriculum that progressively transforms the model from a general multimodal foundation model into an unified embodied model with joint language-visual reasoning and imagination abilities. The first stage focuses on establishing a unified vision-language generation capability, where the model learns to understand, reason over, and generate visual content while pre- serving the underlying language capability.",
+          "pages": [
+            12
+          ],
+          "text_sha256": "87bc76ae82de97842faffac34d2cf570819eab3b4db22f0842c13c993c73d1d0",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/tencent/hy-embodied-rxbrain-1-0.md"
     },
     {
@@ -8989,6 +9349,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 12,
+      "sections": [
+        {
+          "heading": "Architecture",
+          "text": "Double-Stream MMDiT with MLLM Action Encoding (§3). To implement language- conditioned state transitions, we adopt a double-stream Multimodal Diffusion Transformer (MMDiT) backbone. An understanding stream processes rich semantic features extracted by a frozen Qwen2.5-VL encoder, representing the action at; a generation stream processes visual latents from a video-compatible VAE, representing the visual state st.",
+          "pages": [
+            2
+          ],
+          "text_sha256": "09db846b559a0e45520a2419f616bee7d9d26736cb53aa3e5710c1e180132865",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/qwen/qwen-robotworld-technical-report.md"
     },
     {
@@ -9155,6 +9530,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 12,
+      "sections": [
+        {
+          "heading": "1.1 Training data and process",
+          "text": "Claude Sonnet 5 was trained on a proprietary mix of publicly available information from the internet, public and private datasets, and synthetic data generated by other models. In the course of its training, we used several data cleaning and ﬁltering methods, including deduplication and classiﬁcation. We use a general-purpose web crawler called ClaudeBot to obtain training data from public websites.",
+          "pages": [
+            9
+          ],
+          "text_sha256": "c1fd48ecf158c406a260605466932379fa50bcaafd614c4be713427ebde1c885",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/anthropic/claude-sonnet-5-system-card.md"
     },
     {
@@ -10395,6 +10785,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 9,
+      "sections": [
+        {
+          "heading": "Training and Development Evaluation Results",
+          "text": "Results for some of the internal safety evaluations conducted during the development phase are listed below. The evaluation results are for automated evaluations and not human evaluation or red teaming.",
+          "pages": [
+            6
+          ],
+          "text_sha256": "4b171ec05b86721f3f216214f849cc5fb5fab11974d5c337c5aba47e51b8728a",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "The evaluation-approach section cross-references the base model card; this excerpt records the automated evaluation protocol stated under Training and Development Evaluation Results."
+          }
+        }
+      ],
       "markdown_path": "abstracts/google/gemini-3-7-flash-model-card.md"
     },
     {
@@ -40524,6 +40929,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 8,
+      "sections": [
+        {
+          "heading": "Overview",
+          "text": "MAI-Transcribe-2 is a speech-to-text model built in-house by the Microsoft AI team, delivering reliable transcription across 60 languages. It powers video captions, meeting transcription, clinical and call center documentation, accessibility tools, content creation workflows, and voice agents.",
+          "pages": [
+            1
+          ],
+          "text_sha256": "2a263e8bf1dfb61889a1b5d7ba2d7423fc5a31b16feedf13ee93baed58528c34",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "The 8-page card has no architecture, training, or evaluation-methodology heading; this Overview paragraph is the card's original model description."
+          }
+        }
+      ],
       "markdown_path": "abstracts/microsoft/mai-transcribe-2-model-card.md"
     },
     {
@@ -40792,6 +41212,21 @@
           }
         ]
       },
+      "sections": [
+        {
+          "heading": "1.3 Evaluation Setup",
+          "text": "Our evaluations aim to produce realistic estimates of model capabilities under maximum elicitation, and to test safety and behavior in realistic settings. We reuse the methodology described in the Muse Spark Safety & Preparedness Report and note what differs for this assessment of Muse Spark 1.1 with API deployment affordances.",
+          "pages": [
+            10
+          ],
+          "text_sha256": "28c23e8433420c377844e81b53f4bf5eeb4f824a6062e1912fa75c4aeea84845",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/meta/muse-spark-1-1-evaluation-report.md"
     },
     {
@@ -45008,6 +45443,21 @@
       "initial_cross_check": null,
       "source_review": null,
       "inspected_pages": 7,
+      "sections": [
+        {
+          "heading": "Evaluation Approach",
+          "text": "Gemini 3.1 Flash-Lite Image was developed in partnership with internal safety, and responsibility teams. A range of evaluations and red teaming activities were conducted to help improve the model and inform decision-making.",
+          "pages": [
+            6
+          ],
+          "text_sha256": "31edfb3c999a08637ff3fdcf894e23e8c80412fc47d7d1ccb56f4aada5e1aa89",
+          "review": {
+            "method": "native_pdf_block_review",
+            "reviewed_at": "2026-10-17",
+            "note": "Heading and following native PDF text blocks located in the page block layout; excerpt contains only complete source sentences; whitespace normalized only."
+          }
+        }
+      ],
       "markdown_path": "abstracts/google/gemini-3-1-flash-lite-image-model-card.md"
     },
     {
@@ -48929,37 +49379,38 @@
     {
       "id": "google:t5gemma-model-card",
       "vendor": "google",
-      "title": "T5Gemma",
+      "title": "T5Gemma Model Card",
       "models": [
         "T5Gemma"
       ],
       "document_type": null,
       "source_kind": "html",
       "source_pdf": null,
-      "source_url": "https://developers.googleblog.com/en/t5gemma/",
-      "source_sha256": "f711704b8671f933230ec7d51c0e78f7e1c0e8cd86e68d792bf3fde42833c205",
+      "source_url": "https://huggingface.co/google/t5gemma-2b-2b-ul2",
+      "source_sha256": "a2c73b855d6edefd25075fcd009bfb3012b5cbfa42f6bc571ccbbfd8dcb0bbc2",
       "source_version": "2026-10-17",
       "method": "reviewed_visible_html",
       "manual_review": true,
       "status": "source_reviewed",
-      "source_heading": null,
+      "source_heading": "Description",
       "section_type": "web_overview",
       "pages": [],
-      "raw_text": "A new collection of encoder-decoder Gemma models - Google Developers Blog Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube Gemma T5Gemma: A new collection of encoder-decoder Gemma models JULY 9, 2025 Biao Zhang Research Scientist Paul Suganthan Staff Software Engineer Ben Hora Product Manager Share Facebook Twitter LinkedIn Mail In the rapidly evolving landscape of large language models (LLMs), the spotlight has largely focused on the decoder-only architecture. While these models have shown impressive capabilities across a wide range of generation tasks, the classic encoder-decoder architecture, such as T5 (The Text-to-Text Transfer Transformer), remains a popular choice for many real-world applications.",
-      "text": "A new collection of encoder-decoder Gemma models - Google Developers Blog Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube Gemma T5Gemma: A new collection of encoder-decoder Gemma models JULY 9, 2025 Biao Zhang Research Scientist Paul Suganthan Staff Software Engineer Ben Hora Product Manager Share Facebook Twitter LinkedIn Mail In the rapidly evolving landscape of large language models (LLMs), the spotlight has largely focused on the decoder-only architecture. While these models have shown impressive capabilities across a wide range of generation tasks, the classic encoder-decoder architecture, such as T5 (The Text-to-Text Transfer Transformer), remains a popular choice for many real-world applications.",
-      "text_sha256": "7f9974cb9ac0cb4a187e209230953d91881149fb166f848985805869b68d0271",
-      "word_count": 102,
+      "raw_text": "T5Gemma is a family of lightweight yet powerful encoder-decoder research models from Google. These models are created by adapting pretrained decoder-only models into a encoder-decoder.",
+      "text": "T5Gemma is a family of lightweight yet powerful encoder-decoder research models from Google. These models are created by adapting pretrained decoder-only models into a encoder-decoder.",
+      "text_sha256": "b3a71d8684bfdabe043848ba93dd6cca353dc27fd4ed85b2bae67a5db551b939",
+      "word_count": 25,
       "source_fragments": [
         {
-          "text": "A new collection of encoder-decoder Gemma models - Google Developers Blog Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube Gemma T5Gemma: A new collection of encoder-decoder Gemma models JULY 9, 2025 Biao Zhang Research Scientist Paul Suganthan Staff Software Engineer Ben Hora Product Manager Share Facebook Twitter LinkedIn Mail In the rapidly evolving landscape of large language models (LLMs), the spotlight has largely focused on the decoder-only architecture. While these models have shown impressive capabilities across a wide range of generation tasks, the classic encoder-decoder architecture, such as T5 (The Text-to-Text Transfer Transformer), remains a popular choice for many real-world applications.",
-          "locator": "Official source passage located from the published model name/description.",
+          "text": "T5Gemma is a family of lightweight yet powerful encoder-decoder research models from Google. These models are created by adapting pretrained decoder-only models into a encoder-decoder.",
+          "locator": "Opening paragraph under 'Description' in the captured official model card.",
           "source_tag": "p"
         }
       ],
       "source_review": {
         "reviewed_at": "2026-10-17",
         "method": "independent_native_html_paragraph_and_asset_review",
-        "paragraph_boundaries_verified": true
+        "paragraph_boundaries_verified": true,
+        "note": "Updated from the earlier Google Developers Blog capture to the catalog-registered Hugging Face model card; canonical URL verified in the captured HTML."
       },
       "review_reasons": [],
       "reader_scope": "archive",
@@ -49157,6 +49608,553 @@
       "review_reasons": [],
       "reader_scope": "archive",
       "markdown_path": "abstracts/xai/grok-voice-api.md"
+    },
+    {
+      "id": "openai:sora-system-card",
+      "vendor": "openai",
+      "title": "Sora System Card",
+      "models": [
+        "Sora"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://openai.com/index/sora-system-card/",
+      "source_sha256": "637579762e114eaa937c9558298101640998b2ce6e57d515a1b43892585a325e",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": "Overview of Sora",
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "Sora is a diffusion model, which generates a video by starting off with a base video that looks like static noise and gradually transforms it by removing the noise over many steps. By giving the model foresight of many frames at a time, we’ve solved a challenging problem of making sure a subject stays the same even when it goes out of view temporarily. Similar to GPT models, Sora uses a transformer architecture, unlocking superior scaling performance.",
+      "text": "Sora is a diffusion model, which generates a video by starting off with a base video that looks like static noise and gradually transforms it by removing the noise over many steps. By giving the model foresight of many frames at a time, we’ve solved a challenging problem of making sure a subject stays the same even when it goes out of view temporarily. Similar to GPT models, Sora uses a transformer architecture, unlocking superior scaling performance.",
+      "text_sha256": "b7c5962e2258ae03a8f0a390434a86483e3afa160d187c130aea4b39869f4492",
+      "word_count": 77,
+      "source_fragments": [
+        {
+          "text": "Sora is a diffusion model, which generates a video by starting off with a base video that looks like static noise and gradually transforms it by removing the noise over many steps. By giving the model foresight of many frames at a time, we’ve solved a challenging problem of making sure a subject stays the same even when it goes out of view temporarily. Similar to GPT models, Sora uses a transformer architecture, unlocking superior scaling performance.",
+          "locator": "Architecture paragraph under 'Overview of Sora' in the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true,
+        "note": "Live official URL returned HTTP 403 from this environment on 2026-10-17; captured HTML is Internet Archive snapshot 20261006112633 of the official URL."
+      },
+      "review_reasons": [],
+      "reader_scope": "archive",
+      "markdown_path": "abstracts/openai/sora-system-card.md"
+    },
+    {
+      "id": "openai:dall-e-3-system-card",
+      "vendor": "openai",
+      "title": "DALL·E 3 System Card",
+      "models": [
+        "DALL-E 3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://openai.com/index/dall-e-3-system-card/",
+      "source_sha256": "c5d8a0bcc35cfaf1b5b35cd4a811a9717dbe1e8820ccb4cc74935d910cbb4e65",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": "Abstract",
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "DALL·E 3 is an artificial intelligence system that takes a text prompt as an input and generates a new image as an output. DALL·E 3 builds on DALL·E 2 by improving caption fidelity and image quality.",
+      "text": "DALL·E 3 is an artificial intelligence system that takes a text prompt as an input and generates a new image as an output. DALL·E 3 builds on DALL·E 2 by improving caption fidelity and image quality.",
+      "text_sha256": "72a837a7112e64116f9e5351a53677924f50fd2044026e537b426d26790976c9",
+      "word_count": 36,
+      "source_fragments": [
+        {
+          "text": "DALL·E 3 is an artificial intelligence system that takes a text prompt as an input and generates a new image as an output. DALL·E 3 builds on DALL·E 2 by improving caption fidelity and image quality.",
+          "locator": "Opening paragraph under 'Abstract' in the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true,
+        "note": "Live official URL returned HTTP 403 from this environment on 2026-10-17; captured HTML is Internet Archive snapshot 20261012025307 of the official URL."
+      },
+      "review_reasons": [],
+      "reader_scope": "archive",
+      "markdown_path": "abstracts/openai/dall-e-3-system-card.md"
+    },
+    {
+      "id": "amazon:amazon-nova-premier-model-card",
+      "vendor": "amazon",
+      "title": "Amazon Nova Premier Model Card",
+      "models": [
+        "Amazon Nova Premier"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-premier.html",
+      "source_sha256": "af23bddb64e1de7c9074d2ee89b4c0295970a1518b597715affc4e9cff671d72",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": "Model Details",
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "Nova Premier is Amazon's multimodal model for complex reasoning, agentic workflows, and model distillation.",
+      "text": "Nova Premier is Amazon's multimodal model for complex reasoning, agentic workflows, and model distillation.",
+      "text_sha256": "969180b6d4b6b506169e23d261c36ac79f68eb385edc123e036855044c038c05",
+      "word_count": 14,
+      "source_fragments": [
+        {
+          "text": "Nova Premier is Amazon's multimodal model for complex reasoning, agentic workflows, and model distillation.",
+          "locator": "Opening paragraph under 'Model Details' in the captured official page.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true,
+        "note": "Live URL served a JavaScript redirect shell from this environment on 2026-10-17; captured HTML is Internet Archive snapshot 20260904195413 of the official URL."
+      },
+      "review_reasons": [],
+      "reader_scope": "archive",
+      "markdown_path": "abstracts/amazon/amazon-nova-premier-model-card.md"
+    },
+    {
+      "id": "google:translategemma-model-card",
+      "vendor": "google",
+      "title": "TranslateGemma Model Card",
+      "models": [
+        "TranslateGemma"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/google/translategemma-4b-it",
+      "source_sha256": "2dc1d19233d30082b6f545390f111f73a1d2e53d25d27f4d8ee58b27cc02d907",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": "Description",
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "TranslateGemma is a family of lightweight, state-of-the-art open translation models from Google, based on the Gemma 3 family of models. TranslateGemma models are designed to handle translation tasks across 55 languages.",
+      "text": "TranslateGemma is a family of lightweight, state-of-the-art open translation models from Google, based on the Gemma 3 family of models. TranslateGemma models are designed to handle translation tasks across 55 languages.",
+      "text_sha256": "bf00d0b0dc82c659017b042a3a4fc1a1ebaf515b02f7aaf71377ed329457f8de",
+      "word_count": 31,
+      "source_fragments": [
+        {
+          "text": "TranslateGemma is a family of lightweight, state-of-the-art open translation models from Google, based on the Gemma 3 family of models. TranslateGemma models are designed to handle translation tasks across 55 languages.",
+          "locator": "Opening paragraph under 'Description' in the captured official model card.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "review_reasons": [],
+      "reader_scope": "archive",
+      "markdown_path": "abstracts/google/translategemma-model-card.md"
+    },
+    {
+      "id": "nvidia:nemotron-3-nano-30b-a3b-model-card",
+      "vendor": "nvidia",
+      "title": "NVIDIA Nemotron 3 Nano 30B A3B Model Card",
+      "models": [
+        "Nemotron 3 Nano"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+      "source_sha256": "a1a2014552883ed3c70420fd830fbdf36baa0a54a21ef253e6df6420165aa8ff",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": "Description",
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "Nemotron-3-Nano-30B-A3B-BF16 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response.",
+      "text": "Nemotron-3-Nano-30B-A3B-BF16 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response.",
+      "text_sha256": "e19772e3fcc8fffa3b6d1473f1b7ac710b46eafdde826d70f2dae6cf152f7fad",
+      "word_count": 44,
+      "source_fragments": [
+        {
+          "text": "Nemotron-3-Nano-30B-A3B-BF16 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response.",
+          "locator": "Opening paragraph under 'Description' in the captured official model card.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "review_reasons": [],
+      "reader_scope": "archive",
+      "markdown_path": "abstracts/nvidia/nemotron-3-nano-30b-a3b-model-card.md"
+    },
+    {
+      "id": "minimax:minimax-h3-technical-report",
+      "vendor": "minimax",
+      "title": "MiniMax-H3 Technical Report",
+      "models": [
+        "MiniMax-H3"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://github.com/MiniMax-AI/MiniMax-H3",
+      "source_sha256": "fb66c0ebbd8e4db911444b7cb8aed73872d9d7075e9d9785071c54ef10496ec6",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": "System Overview",
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "MiniMax H3 is a general-purpose, omni-modal generative system. It supports unified understanding of multimodal contexts composed of text, images, video, and audio, and can generate video with native stereo audio at resolutions up to 2K and durations of up to 15 seconds.",
+      "text": "MiniMax H3 is a general-purpose, omni-modal generative system. It supports unified understanding of multimodal contexts composed of text, images, video, and audio, and can generate video with native stereo audio at resolutions up to 2K and durations of up to 15 seconds.",
+      "text_sha256": "6f3be99d58652b9d9d7f1949bc355416f96f134a73fff6a10f8409356716edd9",
+      "word_count": 42,
+      "source_fragments": [
+        {
+          "text": "MiniMax H3 is a general-purpose, omni-modal generative system. It supports unified understanding of multimodal contexts composed of text, images, video, and audio, and can generate video with native stereo audio at resolutions up to 2K and durations of up to 15 seconds.",
+          "locator": "Opening paragraph under 'System Overview' in the captured official repository page.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "review_reasons": [],
+      "markdown_path": "abstracts/minimax/minimax-h3-technical-report.md"
+    },
+    {
+      "id": "tencent:hunyuan3d-3-1",
+      "vendor": "tencent",
+      "title": "Hunyuan3D 3.1",
+      "models": [
+        "Hunyuan3D 3.1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://cloud.tencent.com.cn/document/product/1804/120696",
+      "source_sha256": "b7f1710aef020e312adf7d350274e181646f7486f786a60e3fb350220bd8bb7b",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": "已上线 API 接口服务",
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "混元生3D（专业版）：可选用混元生3D 3.0、3.1 模型，生成更高精度以及更高质量的3D 模型，支持文生3D，图生3D，多视图生3D，单几何生成（白模），草图生3D，智能拓扑生3D 功能；在此基础上，3.1 版本模型 在几何、纹理质量上实现进一步提升，支持八视图多角度输入。",
+      "text": "混元生3D（专业版）：可选用混元生3D 3.0、3.1 模型，生成更高精度以及更高质量的3D 模型，支持文生3D，图生3D，多视图生3D，单几何生成（白模），草图生3D，智能拓扑生3D 功能；在此基础上，3.1 版本模型 在几何、纹理质量上实现进一步提升，支持八视图多角度输入。",
+      "text_sha256": "3b7c98560ddfa939f2af3a5b4b39ca09b29394ea75c64c9bf0ba9842a84b41e8",
+      "word_count": 7,
+      "source_fragments": [
+        {
+          "text": "混元生3D（专业版）：可选用混元生3D 3.0、3.1 模型，生成更高精度以及更高质量的3D 模型，支持文生3D，图生3D，多视图生3D，单几何生成（白模），草图生3D，智能拓扑生3D 功能；在此基础上，3.1 版本模型 在几何、纹理质量上实现进一步提升，支持八视图多角度输入。",
+          "locator": "3.1 模型说明段落，位于官方产品概述页“已上线 API 接口服务”下。",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "review_reasons": [],
+      "markdown_path": "abstracts/tencent/hunyuan3d-3-1.md"
+    },
+    {
+      "id": "microsoft:mai-voice-2-flash",
+      "vendor": "microsoft",
+      "title": "Introducing MAI-Image-2.5-Pro and MAI-Voice-2-Flash",
+      "models": [
+        "MAI Voice 2 Flash"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://microsoft.ai/news/introducing-mai-image-2-5-pro-and-mai-voice-2-flash/",
+      "source_sha256": "0189dd350ad4b3806c89de3aceacc7a774a57d35ae3bfb5770e0e9901cc2355c",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": "Introducing two new model variants",
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "MAI-Voice-2-Flash is now in public preview. First introduced at Build, Flash is built for speed and scale. It’s the fast, efficient path for high-volume voice experiences where responsiveness is everything, all while retaining the natural prosody and high acoustic quality found in MAI-Voice-2.",
+      "text": "MAI-Voice-2-Flash is now in public preview. First introduced at Build, Flash is built for speed and scale. It’s the fast, efficient path for high-volume voice experiences where responsiveness is everything, all while retaining the natural prosody and high acoustic quality found in MAI-Voice-2.",
+      "text_sha256": "314cb84f0709ff75f7505e588a62803075ca2bed049c5e4cf0b056d14a698aa7",
+      "word_count": 43,
+      "source_fragments": [
+        {
+          "text": "MAI-Voice-2-Flash is now in public preview. First introduced at Build, Flash is built for speed and scale. It’s the fast, efficient path for high-volume voice experiences where responsiveness is everything, all while retaining the natural prosody and high acoustic quality found in MAI-Voice-2.",
+          "locator": "MAI-Voice-2-Flash paragraph under 'Introducing two new model variants' in the captured official announcement.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "review_reasons": [],
+      "reader_scope": "archive",
+      "markdown_path": "abstracts/microsoft/mai-voice-2-flash.md"
+    },
+    {
+      "id": "xai:grok-voice-think-fast-2",
+      "vendor": "xai",
+      "title": "Introducing Grok Voice 2.0",
+      "models": [
+        "Grok Voice Think Fast 2.0"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://x.ai/news/grok-voice-think-fast-2",
+      "source_sha256": "374387e0d1593c42c83d2889f25dd7746683e698d6c04b7d4ba1e0623984fe94",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": null,
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "Today, we're announcing Grok Voice 2.0, our next-generation voice model with improved intelligence, transcription accuracy, and conversational capabilities.",
+      "text": "Today, we're announcing Grok Voice 2.0, our next-generation voice model with improved intelligence, transcription accuracy, and conversational capabilities.",
+      "text_sha256": "285fd2bb3d67be4c6cd7669bdc514b34ae9b2c726154076632772ce609f665a6",
+      "word_count": 18,
+      "source_fragments": [
+        {
+          "text": "Today, we're announcing Grok Voice 2.0, our next-generation voice model with improved intelligence, transcription accuracy, and conversational capabilities.",
+          "locator": "Opening announcement sentence on the captured official release page. The page titles the model Grok Voice 2.0; the URL and model id are grok-voice-think-fast-2.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "review_reasons": [],
+      "markdown_path": "abstracts/xai/grok-voice-think-fast-2.md"
+    },
+    {
+      "id": "openai:gpt-transcribe-and-live-transcribe",
+      "vendor": "openai",
+      "title": "GPT Transcribe and GPT Live Transcribe",
+      "models": [
+        "GPT-Transcribe",
+        "GPT-Live-Transcribe",
+        "GPT-Transcribe / GPT-Live-Transcribe"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://developers.openai.com/api/docs/changelog",
+      "source_sha256": "54c245ea854d814c9cf816c4e1df609186b00e0469d3bc0489fc627849fda6ce",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": null,
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "Released GPT Transcribe for accurate file transcription and final transcripts of committed Realtime turns, along with GPT Live Transcribe for low-latency streaming transcription. Both models support free-form transcription context, keyword hints, and multiple expected input languages. Compare supported outputs and workflows in the transcription guide.",
+      "text": "Released GPT Transcribe for accurate file transcription and final transcripts of committed Realtime turns, along with GPT Live Transcribe for low-latency streaming transcription. Both models support free-form transcription context, keyword hints, and multiple expected input languages. Compare supported outputs and workflows in the transcription guide.",
+      "text_sha256": "42f85d30c2511c674c906097025ed496e8616bfee371451a8475f47a8c729b98",
+      "word_count": 45,
+      "source_fragments": [
+        {
+          "text": "Released GPT Transcribe for accurate file transcription and final transcripts of committed Realtime turns, along with GPT Live Transcribe for low-latency streaming transcription. Both models support free-form transcription context, keyword hints, and multiple expected input languages. Compare supported outputs and workflows in the transcription guide.",
+          "locator": "July 28 model-release entry in the captured official API changelog.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "review_reasons": [],
+      "markdown_path": "abstracts/openai/gpt-transcribe-and-live-transcribe.md"
+    },
+    {
+      "id": "meta:muse-image-video",
+      "vendor": "meta",
+      "title": "Introducing Muse Image and Muse Video",
+      "models": [
+        "Muse Image",
+        "Muse Video"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+      "source_sha256": "74c7ee41f27ccd16d653401ec08be8b5e67a71e3b05408806efc3a9e68f143ef",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": null,
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "We’re excited to launch Muse Image and preview Muse Video, the first media generation models developed by Meta Superintelligence Labs. Muse Image is our most advanced image generation model yet: it follows instructions faithfully, edits with precision, and composes from multiple references. It also brings agentic tool use capabilities and integrates with Muse Spark. Muse Video, built on the same pretraining base, delivers exceptional visual fidelity with native audio support.",
+      "text": "We’re excited to launch Muse Image and preview Muse Video, the first media generation models developed by Meta Superintelligence Labs. Muse Image is our most advanced image generation model yet: it follows instructions faithfully, edits with precision, and composes from multiple references. It also brings agentic tool use capabilities and integrates with Muse Spark. Muse Video, built on the same pretraining base, delivers exceptional visual fidelity with native audio support.",
+      "text_sha256": "fa8f0937387706181db3eee1f30a65986751930dde6e23cf6a47ac2853be513f",
+      "word_count": 70,
+      "source_fragments": [
+        {
+          "text": "We’re excited to launch Muse Image and preview Muse Video, the first media generation models developed by Meta Superintelligence Labs. Muse Image is our most advanced image generation model yet: it follows instructions faithfully, edits with precision, and composes from multiple references. It also brings agentic tool use capabilities and integrates with Muse Spark. Muse Video, built on the same pretraining base, delivers exceptional visual fidelity with native audio support.",
+          "locator": "Opening paragraph of the captured official post; canonical URL verified in the captured HTML.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true,
+        "note": "Capture made 2026-10-14 from the official post; the live ai.meta.com entry returned HTTP 400 on 2026-10-17."
+      },
+      "review_reasons": [],
+      "markdown_path": "abstracts/meta/muse-image-video.md"
+    },
+    {
+      "id": "nvidia:nemotron-labs-voicechat-11b",
+      "vendor": "nvidia",
+      "title": "NVIDIA NemotronLabs Voicechat",
+      "models": [
+        "Nemotron Labs VoiceChat 11B"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://catalog.ngc.nvidia.com/orgs/nim/nvidia/models/nemotron-labs-voicechat/-",
+      "source_sha256": "b359598607de1cf6d82099f5f2b1f193620d62fa835f83a9d2c3e9fdb324e788",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": "Model Overview",
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "NVIDIA NemotronLabs VoiceChat is a 11B end-to-end, real-time speech full duplex (FD) model for conversational AI that jointly performs streaming speech understanding and speech generation [1]. Unlike traditional cascaded stacks (ASR → LLM → TTS), this model achieves full duplex, real-time, seamless voice interaction in one unified architecture, eliminating the need for multiple models or API handoffs, thus reducing end-to-end latency. It sets new benchmarks by bringing open, robust, and highly natural conversation capabilities.",
+      "text": "NVIDIA NemotronLabs VoiceChat is a 11B end-to-end, real-time speech full duplex (FD) model for conversational AI that jointly performs streaming speech understanding and speech generation [1]. Unlike traditional cascaded stacks (ASR → LLM → TTS), this model achieves full duplex, real-time, seamless voice interaction in one unified architecture, eliminating the need for multiple models or API handoffs, thus reducing end-to-end latency. It sets new benchmarks by bringing open, robust, and highly natural conversation capabilities.",
+      "text_sha256": "bb2c211a726e7797062d4530be730438d3354449ff6322c82b7e0ce0e17d5a26",
+      "word_count": 74,
+      "source_fragments": [
+        {
+          "text": "NVIDIA NemotronLabs VoiceChat is a 11B end-to-end, real-time speech full duplex (FD) model for conversational AI that jointly performs streaming speech understanding and speech generation [1]. Unlike traditional cascaded stacks (ASR → LLM → TTS), this model achieves full duplex, real-time, seamless voice interaction in one unified architecture, eliminating the need for multiple models or API handoffs, thus reducing end-to-end latency. It sets new benchmarks by bringing open, robust, and highly natural conversation capabilities.",
+          "locator": "Description paragraph under 'Model Overview' in the captured official NGC model page.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "review_reasons": [],
+      "markdown_path": "abstracts/nvidia/nemotron-labs-voicechat-11b.md"
+    },
+    {
+      "id": "qwen:wan3-0-video-prime",
+      "vendor": "qwen",
+      "title": "万相3.0 视频生成 API 参考",
+      "models": [
+        "Wan3.0-Video-Prime"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference",
+      "source_sha256": "59fc9ba4dcd8d0cf27f56513fd198e0a36e26ec49760eafe4d89ee0d397a738e",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": "请求体（Request Body）",
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "wan3.0-video-prime：高速版，能力对齐标准版，端到端速度显著提升。",
+      "text": "wan3.0-video-prime：高速版，能力对齐标准版，端到端速度显著提升。",
+      "text_sha256": "9d842c9496b376f0d465f9abe753f3d5a8a3c9c3794c96e49e01d31b8c7c5054",
+      "word_count": 1,
+      "source_fragments": [
+        {
+          "text": "wan3.0-video-prime：高速版，能力对齐标准版，端到端速度显著提升。",
+          "locator": "model 参数中对 wan3.0-video-prime 的型号说明，位于官方 API 参考页。",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true
+      },
+      "review_reasons": [],
+      "markdown_path": "abstracts/qwen/wan3-0-video-prime.md"
+    },
+    {
+      "id": "microsoft:mai-thinking-1-model-card",
+      "vendor": "microsoft",
+      "title": "MAI-Thinking-1 Model Card",
+      "models": [
+        "MAI Thinking 1"
+      ],
+      "document_type": null,
+      "source_kind": "html",
+      "source_pdf": null,
+      "source_url": "https://ai.azure.com/catalog/models/MAI-Thinking-1",
+      "source_sha256": "7cfffa217ddc4e0b82e2ba65acd5d12b069aa4e845dd4a0b7d76c8737d298a75",
+      "source_version": "2026-10-17",
+      "method": "reviewed_visible_html",
+      "manual_review": true,
+      "status": "source_reviewed",
+      "source_heading": null,
+      "section_type": "web_overview",
+      "pages": [],
+      "raw_text": "MAI-Thinking-1 is Microsoft's reasoning model that delivers top-tier reasoning at the best price-to-performance ratio in its weight class.",
+      "text": "MAI-Thinking-1 is Microsoft's reasoning model that delivers top-tier reasoning at the best price-to-performance ratio in its weight class.",
+      "text_sha256": "d1c72a7701248c13a0913e5f3de65865577cedcf5338d95a3d21bcbdedf05c3a",
+      "word_count": 18,
+      "source_fragments": [
+        {
+          "text": "MAI-Thinking-1 is Microsoft's reasoning model that delivers top-tier reasoning at the best price-to-performance ratio in its weight class.",
+          "locator": "Opening description in the captured official Microsoft Foundry model catalog page.",
+          "source_tag": "p"
+        }
+      ],
+      "source_review": {
+        "reviewed_at": "2026-10-17",
+        "method": "independent_native_html_paragraph_and_asset_review",
+        "paragraph_boundaries_verified": true,
+        "note": "Captured official Microsoft Foundry model catalog page; canonical URL verified in the captured HTML."
+      },
+      "review_reasons": [],
+      "reader_scope": "archive",
+      "markdown_path": "abstracts/microsoft/mai-thinking-1-model-card.md"
     }
   ],
   "models_without_archived_reports": [

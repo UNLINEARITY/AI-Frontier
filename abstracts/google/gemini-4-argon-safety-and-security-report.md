@@ -22,6 +22,12 @@ Strengthening Cyber Defense Capabilities: Our cyber security training in Gemini 
 
 In parallel with defensive capability, we evaluate Gemini 4 Argon’s oﬀensive potential across exploit generation suites (including ExploitBench and internal red-teaming benchmarks based on real-world infrastructure tests). While the model exhibits improved reasoning across exploitation, our safety framework balances capability with robust governance and runtime intervention. Our policies prohibit weaponized exploit generation through additional safety layers such as out-of-model input/output classiﬁers, introspection probes, and monitoring frameworks that supervise agent trajectories and preserve chain of thought transparency. See Section 2 and Section 7 for more information.
 
+## 2.1 Model Training
+
+We build safety into our models through a combination of pre-training and post-training approaches. We start by constructing metrics based on the established safety policies and desired behaviors, which we typically turn into automated evaluations that guide model development through successive model iterations. This pipeline relies on data ﬁltering, Supervised Fine-Tuning (SFT), and Reinforcement Learning (RL).
+
+p. 9
+
 ![Figure 3.1](../../figures/google/gemini-4-argon-safety-and-security-report/figure-01.png)
 
 Figure 3.1: Red teaming results from three tested biological scenarios. Red teaming scores for each stage are averages across red teamers, and are on a 0-100 scale (where 100 indicates flawless and highly actionable information, and 0 represents inactionable information). We note several stages for which web baseline information was not scored (and therefore not included in our evaluation).

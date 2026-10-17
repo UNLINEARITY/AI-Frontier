@@ -40,6 +40,12 @@ starts, for compliance and analysis workloads; clean removes disfluencies for re
 
 and published transcripts.
 
+## Overview
+
+MAI-Transcribe-2 is a speech-to-text model built in-house by the Microsoft AI team, delivering reliable transcription across 60 languages. It powers video captions, meeting transcription, clinical and call center documentation, accessibility tools, content creation workflows, and voice agents.
+
+p. 1
+
 ![Figure](../../figures/microsoft/mai-transcribe-2-model-card/figure-01.png)
 
 p. 2

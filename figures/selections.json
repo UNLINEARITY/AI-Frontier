@@ -20792,13 +20792,13 @@
   {
     "id": "google:t5gemma-model-card",
     "source_kind": "html",
-    "source_sha256": "f711704b8671f933230ec7d51c0e78f7e1c0e8cd86e68d792bf3fde42833c205",
+    "source_sha256": "a2c73b855d6edefd25075fcd009bfb3012b5cbfa42f6bc571ccbbfd8dcb0bbc2",
     "status": "no_native_static_figure_available",
     "reviewed_at": "2026-10-17",
     "inspected_pages": [],
     "figures": [],
-    "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
-    "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
   },
   {
     "id": "meta:llama-3-2-vision-model-card",
@@ -20854,5 +20854,159 @@
     "figures": [],
     "reason_en": "Captured official page is prose/table content; no source-native figure selected.",
     "reason_cn": "所核查官方页面为文字或表格，未选取原生配图。"
+  },
+  {
+    "id": "openai:sora-system-card",
+    "source_kind": "html",
+    "source_sha256": "637579762e114eaa937c9558298101640998b2ce6e57d515a1b43892585a325e",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "openai:dall-e-3-system-card",
+    "source_kind": "html",
+    "source_sha256": "c5d8a0bcc35cfaf1b5b35cd4a811a9717dbe1e8820ccb4cc74935d910cbb4e65",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "amazon:amazon-nova-premier-model-card",
+    "source_kind": "html",
+    "source_sha256": "af23bddb64e1de7c9074d2ee89b4c0295970a1518b597715affc4e9cff671d72",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "google:translategemma-model-card",
+    "source_kind": "html",
+    "source_sha256": "2dc1d19233d30082b6f545390f111f73a1d2e53d25d27f4d8ee58b27cc02d907",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "nvidia:nemotron-3-nano-30b-a3b-model-card",
+    "source_kind": "html",
+    "source_sha256": "a1a2014552883ed3c70420fd830fbdf36baa0a54a21ef253e6df6420165aa8ff",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "minimax:minimax-h3-technical-report",
+    "source_kind": "html",
+    "source_sha256": "fb66c0ebbd8e4db911444b7cb8aed73872d9d7075e9d9785071c54ef10496ec6",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "tencent:hunyuan3d-3-1",
+    "source_kind": "html",
+    "source_sha256": "b7f1710aef020e312adf7d350274e181646f7486f786a60e3fb350220bd8bb7b",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "microsoft:mai-voice-2-flash",
+    "source_kind": "html",
+    "source_sha256": "0189dd350ad4b3806c89de3aceacc7a774a57d35ae3bfb5770e0e9901cc2355c",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "xai:grok-voice-think-fast-2",
+    "source_kind": "html",
+    "source_sha256": "374387e0d1593c42c83d2889f25dd7746683e698d6c04b7d4ba1e0623984fe94",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "openai:gpt-transcribe-and-live-transcribe",
+    "source_kind": "html",
+    "source_sha256": "54c245ea854d814c9cf816c4e1df609186b00e0469d3bc0489fc627849fda6ce",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "meta:muse-image-video",
+    "source_kind": "html",
+    "source_sha256": "74c7ee41f27ccd16d653401ec08be8b5e67a71e3b05408806efc3a9e68f143ef",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "nvidia:nemotron-labs-voicechat-11b",
+    "source_kind": "html",
+    "source_sha256": "b359598607de1cf6d82099f5f2b1f193620d62fa835f83a9d2c3e9fdb324e788",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "qwen:wan3-0-video-prime",
+    "source_kind": "html",
+    "source_sha256": "59fc9ba4dcd8d0cf27f56513fd198e0a36e26ec49760eafe4d89ee0d397a738e",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
+  },
+  {
+    "id": "microsoft:mai-thinking-1-model-card",
+    "source_kind": "html",
+    "source_sha256": "7cfffa217ddc4e0b82e2ba65acd5d12b069aa4e845dd4a0b7d76c8737d298a75",
+    "status": "no_native_static_figure_available",
+    "reviewed_at": "2026-10-17",
+    "inspected_pages": [],
+    "figures": [],
+    "reason_en": "No source-native architecture or results figure was selected in this pass; the official page remains linked.",
+    "reason_cn": "本轮未选取原生架构或结果配图；官方页面仍可直接访问。"
   }
 ]

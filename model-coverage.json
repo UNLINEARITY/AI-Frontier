@@ -491,6 +491,9 @@
       "release_evidence": "【第三轮联网复核·官方发布】Meta Research 2026-08-05 官方文章 Introducing Muse Code and Muse Spark 1.2 发布该版本",
       "groups": [
         "language"
+      ],
+      "reading_aliases": [
+        "Muse Spark 1.2"
       ]
     },
     {
@@ -610,7 +613,11 @@
         "general",
         "vision"
       ],
-      "frontier_source_url": "https://www.llama.com/models/llama-4/"
+      "frontier_source_url": "https://www.llama.com/models/llama-4/",
+      "reading_aliases": [
+        "Llama 4 Scout",
+        "Llama 4 Maverick"
+      ]
     },
     {
       "vendor": "xai",
@@ -960,6 +967,9 @@
       "groups": [
         "robotics",
         "world"
+      ],
+      "reading_aliases": [
+        "Cosmos Reason 2"
       ]
     },
     {
@@ -1164,6 +1174,10 @@
       "groups": [
         "image",
         "audio"
+      ],
+      "reading_aliases": [
+        "GLM-Image",
+        "GLM-ASR-Nano"
       ]
     },
     {
@@ -1396,6 +1410,10 @@
       "report_slugs": [],
       "groups": [
         "audio"
+      ],
+      "reading_aliases": [
+        "SeedRealtime",
+        "Seed Audio 1.0"
       ]
     },
     {
@@ -1534,6 +1552,9 @@
       "report_slugs": [],
       "latest_categories": [
         "embedding"
+      ],
+      "reading_aliases": [
+        "Embed 5"
       ]
     },
     {
@@ -1548,7 +1569,10 @@
         "reranking"
       ],
       "release_date": "2025-12-11",
-      "release_evidence": "Cohere 当日宣布推出 Rerank 4 重排序模型"
+      "release_evidence": "Cohere 当日宣布推出 Rerank 4 重排序模型",
+      "reading_aliases": [
+        "Rerank 4"
+      ]
     },
     {
       "vendor": "cohere",
@@ -2119,7 +2143,11 @@
         "speech"
       ],
       "release_date": "2026-07-14",
-      "release_evidence": "【第三轮联网复核·官方服务上线日】阿里云百炼官方最新模型列表将该 TTS 型号列在 2026-07-14 上新项；这是具体型号的渠道上线日，不等同最早研究发布"
+      "release_evidence": "【第三轮联网复核·官方服务上线日】阿里云百炼官方最新模型列表将该 TTS 型号列在 2026-07-14 上新项；这是具体型号的渠道上线日，不等同最早研究发布",
+      "reading_aliases": [
+        "Qwen-Audio-3.0-TTS-Plus",
+        "Qwen-Audio-3.0-TTS-Flash"
+      ]
     },
     {
       "vendor": "qwen",
@@ -2784,7 +2812,10 @@
         "embedding"
       ],
       "release_date": "2026-07-16",
-      "release_evidence": "【第三轮联网复核·官方型号开源参照日】NVIDIA 官方 Nemotron-3-Embed-1B-BF16 卡列 Release Date 07/16/2026；此处以 Embed 系列 1B 基础版本为代表，不能据此证明系列全部成员同日发布"
+      "release_evidence": "【第三轮联网复核·官方型号开源参照日】NVIDIA 官方 Nemotron-3-Embed-1B-BF16 卡列 Release Date 07/16/2026；此处以 Embed 系列 1B 基础版本为代表，不能据此证明系列全部成员同日发布",
+      "reading_aliases": [
+        "Nemotron 3 Embed"
+      ]
     },
     {
       "vendor": "qwen",

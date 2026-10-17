@@ -6,6 +6,12 @@
 
 Gemini 3.1 Flash-Lite Image is a member of the Gemini series of models, a suite of highly-capable, natively multimodal reasoning models. Gemini 3.1 Flash-Lite Image can comprehend input from diﬀerent information sources, including text, images, audio and video. Image and text output is generated in the response.
 
+## Evaluation Approach
+
+Gemini 3.1 Flash-Lite Image was developed in partnership with internal safety, and responsibility teams. A range of evaluations and red teaming activities were conducted to help improve the model and inform decision-making.
+
+p. 6
+
 ![Table](../../figures/google/gemini-3-1-flash-lite-image-model-card/figure-01.png)
 
 Capabilities: Text-to-Image

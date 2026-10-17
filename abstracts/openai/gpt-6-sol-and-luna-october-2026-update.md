@@ -14,6 +14,12 @@ Under our Preparedness Framework, we are treating this October release of GPT-6 
 
 For all safety evaluations, such as disallowed content and mental health, we measure performance of our models at their lowest reasoning deployment settings in order to capture performance for the vast majority of usage. For capabilities assessments, we evaluate the models at their maximum reasoning effort to get an upper bound of capabilities.
 
+## 2 Model Data and Training
+
+Like OpenAI’s other models, GPT-6 models were trained on diverse datasets and filtered through our data processing pipeline, including to reduce per- sonal information. OpenAI reasoning models are trained to reason through reinforcement learning. These models are trained to think before they answer: they can produce a long internal chain of thought before responding to the user.
+
+p. 5
+
 ![Figure 1](../../figures/openai/gpt-6-sol-and-luna-october-2026-update/figure-01.png)
 
 Figure 1: Safety and non-overrefusal on challenging prompts. Higher is better on both axes.

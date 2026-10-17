@@ -12,6 +12,12 @@ DeepSeek V4 is a Mixture-of-Experts (MoE) language model series that retains the
 
 (3) Muon Optimizer: employs the Muon optimizer for faster convergence and improved training stability.
 
+## 1. Pre-training Phase
+
+During the pre-training phase, corpus data is required for training. This phase primarily uses the following two categories of data: - Public Data: We use publicly available information on the internet to build the model's broad understanding of world knowledge. We employ technical methods to acquire and filter these freely accessible data to enrich the model's knowledge base. - Licensed Data: We collaborate with third-party data providers to obtain proprietary datasets through legally signed agreements.
+
+p. 7
+
 ![Table](../../figures/deepseek/deepseek-v4-model-card/figure-01.png)
 
 p. 3

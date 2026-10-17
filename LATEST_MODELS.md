@@ -21,11 +21,11 @@ Current flagships and important new models, with original reports and official i
 | Language & coding | GPT-6 Sol / Luna (ChatGPT October) | [System Card](abstracts/openai/gpt-6-sol-and-luna-october-2026-update.md) · [Official](https://deploymentsafety.openai.com/gpt-6-october) |
 | Image & 3D generation | ChatGPT Images 2.5 / Sunburst / Flare | [System Card](abstracts/openai/chatgpt-images-2-5-system-card.md) · [Official](https://deploymentsafety.openai.com/chatgpt-images-2-5) |
 | Speech & audio | GPT-Live-1 | [System Card](abstracts/openai/gpt-live-system-card.md) · [Official](https://openai.com/index/introducing-gpt-live-1-in-the-api/) |
-| Speech & audio | GPT-Transcribe / GPT-Live-Transcribe | [Official](https://developers.openai.com/api/docs/changelog) |
-| Speech & audio | GPT-4o Mini TTS | [Official](https://developers.openai.com/api/docs/models/gpt-4o-mini-tts) |
-| Language & coding | GPT-Realtime-Translate | [Official](https://developers.openai.com/api/docs/models/gpt-realtime-translate) |
+| Speech & audio | GPT-Transcribe / GPT-Live-Transcribe | [Read](abstracts/openai/gpt-transcribe-and-live-transcribe.md) · [Official](https://developers.openai.com/api/docs/changelog) |
+| Speech & audio | GPT-4o Mini TTS | [Read](abstracts/openai/gpt-4o-mini-tts.md) · [Official](https://developers.openai.com/api/docs/models/gpt-4o-mini-tts) |
+| Language & coding | GPT-Realtime-Translate | [Read](abstracts/openai/gpt-realtime-translate.md) · [Official](https://developers.openai.com/api/docs/models/gpt-realtime-translate) |
 | Domain-specific | GPT-Rosalind-5.5 | [System Card](abstracts/openai/gpt-rosalind-5-5-system-card.md) · [Official](https://deploymentsafety.openai.com/gpt-rosalind-5-5) |
-| Domain-specific | GPT-5.6 Cyber | [Official](https://developers.openai.com/api/docs/models/gpt-5.6-cyber) |
+| Domain-specific | GPT-5.6 Cyber | [Read](abstracts/openai/gpt-5-6-cyber.md) · [Official](https://developers.openai.com/api/docs/models/gpt-5.6-cyber) |
 
 <a id="anthropic"></a>
 
@@ -58,7 +58,7 @@ Current flagships and important new models, with original reports and official i
 | Speech & audio | Gemini 3.5 Transcribe / Transcribe Live | [Model Card](abstracts/google/gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card.md) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
 | Speech & audio | Gemini 3.8 Flash TTS / Flash-Lite TTS | [Model Card](abstracts/google/gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card.md) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
 | Speech & audio | Lyria 3.5 | [Model Card](abstracts/google/lyria-3-5-model-card.md) · [Official](https://deepmind.google/models/model-cards/) |
-| Language & coding | TranslateGemma | [Technical Report](abstracts/google/translategemma-technical-report.md) · [Official](https://ai.google.dev/gemma/docs/translategemma/model_card) |
+| Language & coding | TranslateGemma | [Technical Report](abstracts/google/translategemma-technical-report.md) · [Read](abstracts/google/translategemma-model-card.md) · [Official](https://ai.google.dev/gemma/docs/translategemma/model_card) |
 | Embeddings & retrieval | Gemini Embedding 2 | [Technical Report](abstracts/google/gemini-embedding-2.md) · [Official](https://ai.google.dev/gemini-api/docs/changelog) |
 | Embeddings & retrieval | EmbeddingGemma 2 | [Read](abstracts/google/embeddinggemma-2.md) · [Official](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2?hl=en) |
 | Robotics & embodied AI | Gemini Robotics 2 / ER 2 / On-Device 2 | [Gemini Robotics-ER 2 Model Card](abstracts/google/gemini-robotics-er-2-model-card.md) · [Gemini Robotics On-Device 2 Model Card](abstracts/google/gemini-robotics-on-device-2-model-card.md) · [Technical Report](abstracts/google/gemini-robotics-2-safety-evaluations.md) · [Official](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
@@ -79,8 +79,8 @@ Current flagships and important new models, with original reports and official i
 | Language & coding / Vision | Llama 4 Scout / Maverick | [Official](https://www.llama.com/models/llama-4/) |
 | Language & coding / Vision | Muse Wonder / Wonder Full | [Read](abstracts/meta/muse-wonder.md) · [Official](https://research.meta.ai/blog/muse-wonder) |
 | Vision | V-JEPA 2.1 | [Technical Report](abstracts/meta/v-jepa-2-1-technical-report.md) · [Official](https://github.com/facebookresearch/vjepa2) |
-| Image & 3D generation | Muse Image | [Official](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
-| Video generation | Muse Video | [Official](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
+| Image & 3D generation | Muse Image | [Read](abstracts/meta/muse-image-video.md) · [Official](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
+| Video generation | Muse Video | [Read](abstracts/meta/muse-image-video.md) · [Official](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
 | Speech & audio | Muse Voice Transcribe | [Read](abstracts/meta/muse-voice-transcribe.md) · [Official](https://research.meta.ai/blog/introducing-muse-voice-transcribe) |
 | Robotics & embodied AI / World models & simulation | V-JEPA 2 / 2-AC | [Technical Report](abstracts/meta/v-jepa-2-technical-report.md) · [Official](https://github.com/facebookresearch/vjepa2) |
 | Image & 3D generation | SAM 3D Objects / Body | [SAM 3D: 3Dfy Anything in Images](abstracts/meta/sam-3d-technical-report.md) · [SAM 3D Body: Robust Full-Body Human Mesh Recovery](abstracts/meta/sam-3d-body-technical-report.md) · [Official](https://about.fb.com/news/2025/11/new-sam-models-detect-objects-create-3d-reconstructions/) |
@@ -94,10 +94,10 @@ Current flagships and important new models, with original reports and official i
 | Category | Model | Read |
 | --- | --- | --- |
 | Language & coding | Grok 4.7 | [Model Card](abstracts/xai/grok-4-7-model-card.md) · [Official](https://x.ai/safety) |
-| Image & 3D generation | Grok Imagine Image 2.0 | [Official](https://docs.x.ai/developers/models) |
-| Video generation | Grok Imagine Video 1.5 | [Official](https://docs.x.ai/developers/models) |
-| Speech & audio | Grok Voice Think Fast 2.0 | [Official](https://docs.x.ai/developers/release-notes) |
-| Speech & audio | Grok Voice Transcribe 2.0 | [Official](https://docs.x.ai/developers/release-notes) |
+| Image & 3D generation | Grok Imagine Image 2.0 | [Read](abstracts/xai/grok-imagine-image-2-0.md) · [Official](https://docs.x.ai/developers/models) |
+| Video generation | Grok Imagine Video 1.5 | [Read](abstracts/xai/grok-imagine-video-1-5.md) · [Official](https://docs.x.ai/developers/models) |
+| Speech & audio | Grok Voice Think Fast 2.0 | [Read](abstracts/xai/grok-voice-think-fast-2.md) · [Official](https://docs.x.ai/developers/release-notes) |
+| Speech & audio | Grok Voice Transcribe 2.0 | [Read](abstracts/xai/grok-voice-transcribe-2-0.md) · [Official](https://docs.x.ai/developers/release-notes) |
 
 <a id="mistral"></a>
 
@@ -112,8 +112,8 @@ Current flagships and important new models, with original reports and official i
 | Language & coding / Vision | Mistral Large 4 (Public Preview) | [Read](abstracts/mistral/mistral-large-4.md) · [Official](https://mistral.ai/news/mistral-large-4/) |
 | Speech & audio | Voxtral Realtime | [Technical Report](abstracts/mistral/voxtral-realtime.md) · [Official](https://arxiv.org/abs/2602.11298) |
 | Speech & audio | Voxtral TTS | [Technical Report](abstracts/mistral/voxtral-tts.md) · [Official](https://arxiv.org/abs/2603.25551) |
-| Vision | Mistral OCR 4.1 | [Official](https://docs.mistral.ai/models/ocr-4-1) |
-| Embeddings & retrieval | Codestral Embed | [Official](https://docs.mistral.ai/models/codestral-embed-25-05) |
+| Vision | Mistral OCR 4.1 | [Read](abstracts/mistral/mistral-ocr-4-1-model-card.md) · [Official](https://docs.mistral.ai/models/ocr-4-1) |
+| Embeddings & retrieval | Codestral Embed | [Read](abstracts/mistral/codestral-embed-model-card.md) · [Official](https://docs.mistral.ai/models/codestral-embed-25-05) |
 | Robotics & embodied AI | Robostral Navigate | [Technical Report](abstracts/mistral/robostral-navigate.md) · [Official](https://arxiv.org/abs/2607.20785) |
 | Domain-specific | Shieldstral | [Technical Report](abstracts/mistral/shieldstral.md) · [Official](https://arxiv.org/abs/2607.25857) |
 
@@ -130,10 +130,10 @@ Current flagships and important new models, with original reports and official i
 | Language & coding | Nemotron 3.5 Lightning | [Read](abstracts/nvidia/nemotron-3-5-lightning.md) · [Official](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16) |
 | Language & coding | Nemotron Labs 3 Competitive Coding 550B-A55B | [Technical Report](abstracts/nvidia/nemotron-3-competitive-coding.md) · [Official](https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-3-Competitive-Coding-550B-A55B-NVFP4) |
 | Vision | Nemotron 3 Nano Omni | [Technical Report](abstracts/nvidia/nemotron-3-nano-omni.md) · [Official](https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/) |
-| Speech & audio | Nemotron Labs VoiceChat 11B | [Official](https://catalog.ngc.nvidia.com/orgs/nim/nvidia/containers/nemotron-labs-voicechat/1.0.0) |
-| Speech & audio | Nemotron 3.5 ASR Streaming 0.6B | [Official](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b) |
-| Speech & audio | MagpieTTS Multilingual 357M v2607 | [Official](https://huggingface.co/nvidia/magpie_tts_multilingual_357m) |
-| Vision | Nemotron Parse 2.0 | [Official](https://huggingface.co/nvidia/NVIDIA-Nemotron-Parse-2.0) |
+| Speech & audio | Nemotron Labs VoiceChat 11B | [Read](abstracts/nvidia/nemotron-labs-voicechat-11b.md) · [Official](https://catalog.ngc.nvidia.com/orgs/nim/nvidia/containers/nemotron-labs-voicechat/1.0.0) |
+| Speech & audio | Nemotron 3.5 ASR Streaming 0.6B | [Read](abstracts/nvidia/nemotron-3-5-asr-model-card.md) · [Official](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b) |
+| Speech & audio | MagpieTTS Multilingual 357M v2607 | [Read](abstracts/nvidia/magpietts-model-card.md) · [Official](https://huggingface.co/nvidia/magpie_tts_multilingual_357m) |
+| Vision | Nemotron Parse 2.0 | [Read](abstracts/nvidia/nemotron-parse-2-0-model-card.md) · [Official](https://huggingface.co/nvidia/NVIDIA-Nemotron-Parse-2.0) |
 | Embeddings & retrieval | Nemotron 3 Embed 1B / 8B | [Official](https://huggingface.co/nvidia/Nemotron-3-Embed-8B-BF16) |
 | Robotics & embodied AI | GR00T N1.7 | [Read](abstracts/nvidia/gr00t-n1-7.md) · [Official](https://github.com/NVIDIA/Isaac-GR00T) |
 | Robotics & embodied AI / World models & simulation | Cosmos 3 | [Technical Report](abstracts/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai.md) · [Official](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) |
@@ -162,18 +162,18 @@ Current flagships and important new models, with original reports and official i
 | --- | --- | --- |
 | Language & coding | Qwen3.8-Flash-Next | [Technical Report](abstracts/qwen/qwen3-8-flash-next.md) · [Official](https://github.com/QwenLM/Qwen3.8-Flash-Next) |
 | Language & coding / Vision | Qwen3.8-Max | [Read](abstracts/qwen/qwen3-8-max.md) · [Official](https://help.aliyun.com/en/model-studio/qwen3-8-max) |
-| Language & coding / Vision | Qwen3.8-Omni-Flash | [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| Language & coding / Vision | Qwen3.8-Omni-Flash | [Read](abstracts/qwen/qwen3-8-omni-flash.md) · [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
 | Language & coding | Qwen3-Coder-Next | [Technical Report](abstracts/qwen/qwen3-coder-next-technical-report.md) · [Official](https://github.com/QwenLM/Qwen3-Coder) |
-| Image & 3D generation | Qwen-Image-2.1-Pro | [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
-| Video generation | Wan3.0-Video-Prime | [Official](https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference) |
-| Speech & audio | Qwen3.8-Omni-Flash-Realtime | [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| Image & 3D generation | Qwen-Image-2.1-Pro | [Read](abstracts/qwen/qwen-image-2-1-pro.md) · [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| Video generation | Wan3.0-Video-Prime | [Read](abstracts/qwen/wan3-0-video-prime.md) · [Official](https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference) |
+| Speech & audio | Qwen3.8-Omni-Flash-Realtime | [Read](abstracts/qwen/qwen3-8-omni-flash-realtime.md) · [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
 | Speech & audio | Qwen-Audio-3.0-ASR | [Technical Report](abstracts/qwen/qwen-audio-3-0-asr.md) · [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
 | Speech & audio | Qwen-Audio-3.0-TTS-Plus / Flash | [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
-| Language & coding | Qwen-MT-Uni | [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| Language & coding | Qwen-MT-Uni | [Read](abstracts/qwen/qwen-mt-uni.md) · [Official](https://help.aliyun.com/zh/model-studio/newly-released-models) |
 | Robotics & embodied AI | Qwen-VLA | [Technical Report](abstracts/qwen/qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments.md) · [Official](https://github.com/QwenLM/Qwen-VLA) |
 | Robotics & embodied AI | Qwen-RobotNav | [Technical Report](abstracts/qwen/qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system.md) · [Official](https://github.com/QwenLM/Qwen-RobotNav) |
 | Robotics & embodied AI | Qwen-RobotManip | [Technical Report](abstracts/qwen/qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models.md) · [Official](https://github.com/QwenLM/Qwen-RobotManip) |
-| Robotics & embodied AI / World models & simulation | Qwen-RobotWorld | [Technical Report](https://arxiv.org/abs/2606.17030) · [Official](https://qwen.ai/blog?id=qwen-robotworld) |
+| Robotics & embodied AI / World models & simulation | Qwen-RobotWorld | [Technical Report](abstracts/qwen/qwen-robotworld-technical-report.md) · [Official](https://qwen.ai/blog?id=qwen-robotworld) |
 
 <a id="moonshot"></a>
 
@@ -197,8 +197,8 @@ Current flagships and important new models, with original reports and official i
 | --- | --- | --- |
 | Language & coding | GLM-5.3 | [Read](abstracts/zai/glm-5-3-model-card.md) · [Official](https://z.ai/blog/glm-5.3) |
 | Language & coding / Vision | GLM-5.3-FlashX | [Read](abstracts/zai/glm-5-3-flashx.md) · [Official](https://docs.z.ai/guides/vlm/glm-5.3-flash) |
-| Image & 3D generation | GLM-Image | [Official](https://github.com/zai-org/GLM-Image) |
-| Speech & audio | GLM-ASR-Nano | [Official](https://github.com/zai-org/GLM-ASR) |
+| Image & 3D generation | GLM-Image | [Read](abstracts/zai/glm-image-model-card.md) · [Official](https://github.com/zai-org/GLM-Image) |
+| Speech & audio | GLM-ASR-Nano | [Read](abstracts/zai/glm-asr-nano-model-card.md) · [Official](https://github.com/zai-org/GLM-ASR) |
 | Speech & audio | GLM-TTS | [Technical Report](abstracts/zai/glm-tts-technical-report.md) · [Official](https://github.com/zai-org/GLM-TTS) |
 | Vision | GLM-OCR | [Technical Report](abstracts/zai/glm-ocr-technical-report.md) · [Official](https://github.com/zai-org/GLM-OCR) |
 
@@ -211,9 +211,9 @@ Current flagships and important new models, with original reports and official i
 | Category | Model | Read |
 | --- | --- | --- |
 | Language & coding | MiniMax-M3 | [Read](abstracts/minimax/minimax-m3-model-card.md) · [Official](https://huggingface.co/MiniMaxAI/MiniMax-M3) |
-| Video generation | MiniMax-H3 | [Read](abstracts/minimax/minimax-h3-model-card.md) · [Official](https://www.minimax.io/blog/minimax-h3) |
+| Video generation | MiniMax-H3 | [Read](abstracts/minimax/minimax-h3-technical-report.md) · [Official](https://www.minimax.io/blog/minimax-h3) |
 | Speech & audio | MiniMax Speech 2.8 | [Read](abstracts/minimax/minimax-speech-2-8.md) · [Official](https://www.minimax.io/news/minimax-speech-28) |
-| Speech & audio | MiniMax Music 3.0 | [Official](https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model) |
+| Speech & audio | MiniMax Music 3.0 | [Read](abstracts/minimax/minimax-music-3-model-card.md) · [Official](https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model) |
 
 <a id="stepfun"></a>
 
@@ -225,7 +225,7 @@ Current flagships and important new models, with original reports and official i
 | --- | --- | --- |
 | Language & coding | Step 3.7 Flash | [Read](abstracts/stepfun/step-3-7-flash-model-card.md) · [Official](https://github.com/stepfun-ai/Step-3.7-Flash) |
 | Language & coding / Vision | Step 5 Preview | [Read](abstracts/stepfun/step-5-preview-docs.md) · [Official](https://platform.stepfun.ai/docs/en/guides/models/step-5-preview) |
-| Image & 3D generation | NextStep-1.1 | [Official](https://github.com/stepfun-ai/NextStep-1) |
+| Image & 3D generation | NextStep-1.1 | [Read](abstracts/stepfun/nextstep-1-1-model-card.md) · [Official](https://github.com/stepfun-ai/NextStep-1) |
 | Video generation | Step-Video-TI2V | [Technical Report](abstracts/stepfun/step-video-ti2v.md) · [Official](https://github.com/stepfun-ai/Step-Video-TI2V) |
 | Speech & audio | StepAudio 3 Realtime | [Technical Report](abstracts/stepfun/step-audio-3-realtime.md) · [Official](https://github.com/stepfun-ai) |
 | Speech & audio | StepAudio 3 ASR Max | [Read](abstracts/stepfun/stepaudio-3-asr-max.md) · [Official](https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-asr) |
@@ -250,8 +250,8 @@ Current flagships and important new models, with original reports and official i
 | Robotics & embodied AI | Hy-Embodied-VLM-1.0 | [Technical Report](abstracts/tencent/hy-embodied-vlm-1-0.md) · [Official](https://github.com/Tencent-Hunyuan/HY-Embodied) |
 | Robotics & embodied AI | Hy-Embodied-RxBrain-1.0 | [Technical Report](abstracts/tencent/hy-embodied-rxbrain-1-0.md) · [Official](https://github.com/Tencent-Hunyuan/Hy-Embodied-RxBrain-1.0) |
 | World models & simulation | HY-World 1.5 / WorldPlay | [Technical Report](abstracts/tencent/worldplay-technical-report.md) · [Official](https://github.com/Tencent-Hunyuan/HY-WorldPlay) |
-| World models & simulation | HY-World 2.0 | [Technical Report](https://arxiv.org/abs/2604.14268) · [Official](https://3d.hunyuan.tencent.com/sceneTo3D) |
-| Image & 3D generation | Hunyuan3D 3.1 | [Official](https://cloud.tencent.com/document/product/1804/123447) |
+| World models & simulation | HY-World 2.0 | [Technical Report](abstracts/tencent/hy-world-2-0-technical-report.md) · [Official](https://3d.hunyuan.tencent.com/sceneTo3D) |
+| Image & 3D generation | Hunyuan3D 3.1 | [Read](abstracts/tencent/hunyuan3d-3-1.md) · [Official](https://cloud.tencent.com/document/product/1804/123447) |
 
 <a id="bytedance"></a>
 
@@ -264,8 +264,8 @@ Current flagships and important new models, with original reports and official i
 | Language & coding / Vision | Seed2.1 | [Model Card](abstracts/bytedance/seed2-1-model-card.md) · [Official](https://seed.bytedance.com/en/research) |
 | Image & 3D generation | Seedream 5.0 Pro | [Read](abstracts/bytedance/seedream-5-0-pro.md) · [Official](https://seed.bytedance.com/en/seedream5_0_pro) |
 | Video generation | Seedance 2.5 | [Read](abstracts/bytedance/seedance-2-5.md) · [Official](https://seed.bytedance.com/en/seedance2_5) |
-| Speech & audio | SeedRealtime | [Official](https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction) |
-| Speech & audio | Seed Audio 1.0 | [Official](https://seed.bytedance.com/en/research) |
+| Speech & audio | SeedRealtime | [Read](abstracts/bytedance/seedrealtime.md) · [Official](https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction) |
+| Speech & audio | Seed Audio 1.0 | [Read](abstracts/bytedance/seed-audio-1-0.md) · [Official](https://seed.bytedance.com/en/research) |
 | Robotics & embodied AI | GR-3 | [Technical Report](abstracts/bytedance/gr-3-technical-report.md) · [Official](https://seed.bytedance.com/GR3) |
 | Robotics & embodied AI | GR-RL (specialized policy) | [Technical Report](abstracts/bytedance/gr-rl-technical-report.md) · [Official](https://seed.bytedance.com/en/gr_rl) |
 
@@ -279,10 +279,10 @@ Current flagships and important new models, with original reports and official i
 | --- | --- | --- |
 | Language & coding | Command A+ | [Read](abstracts/cohere/command-a-plus-model-card.md) · [Official](https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16) |
 | Language & coding | North Mini Code 1.0 | [Read](abstracts/cohere/north-mini-code-1-0-model-card.md) · [Official](https://huggingface.co/CohereLabs/North-Mini-Code-1.0) |
-| Vision | North Micro Vision Instruct | [Official](https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct) |
-| Speech & audio | Cohere Transcribe Arabic | [Official](https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026) |
+| Vision | North Micro Vision Instruct | [Read](abstracts/cohere/north-micro-vision-instruct-model-card.md) · [Official](https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct) |
+| Speech & audio | Cohere Transcribe Arabic | [Read](abstracts/cohere/cohere-transcribe-arabic-model-card.md) · [Official](https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026) |
 | Language & coding | North Small Translate 1.0 | [Technical Report](abstracts/cohere/north-small-translate.md) · [Official](https://arxiv.org/abs/2609.13916) |
-| Vision | Parse 5 | [Official](https://docs.cohere.com/docs/models) |
+| Vision | Parse 5 | [Read](abstracts/cohere/parse-5-model-card.md) · [Official](https://docs.cohere.com/docs/models) |
 | Embeddings & retrieval | Embed 5 (pro / fast) | [Official](https://docs.cohere.com/docs/models) |
 | Embeddings & retrieval | Rerank 4 (pro / fast) | [Official](https://docs.cohere.com/docs/models) |
 
@@ -294,7 +294,7 @@ Current flagships and important new models, with original reports and official i
 
 | Category | Model | Read |
 | --- | --- | --- |
-| Language & coding | MAI Thinking 1 | [Technical Report](abstracts/microsoft/mai-thinking-1-technical-report.md) · [Official](https://microsoft.ai/models/mai-thinking-1/) |
+| Language & coding | MAI Thinking 1 | [Technical Report](abstracts/microsoft/mai-thinking-1-technical-report.md) · [Read](abstracts/microsoft/mai-thinking-1-model-card.md) · [Official](https://microsoft.ai/models/mai-thinking-1/) |
 | Language & coding | MAI Code 1.1 Flash | [Model Card](abstracts/microsoft/mai-code-1-1-flash-model-card.md) · [Official](https://microsoft.ai/models/mai-code-1-flash/) |
 | Vision | Phi 4 Reasoning Vision | [Technical Report](abstracts/microsoft/phi-4-reasoning-vision.md) · [Official](https://arxiv.org/abs/2603.03975) |
 | Image & 3D generation | MAI Image 2.6 / 2.6 Flash | [Model Card](abstracts/microsoft/mai-image-2-6-model-card.md) · [Official](https://microsoft.ai/models/mai-image-2-6/) |
@@ -387,7 +387,7 @@ Current flagships and important new models, with original reports and official i
 
 | Category | Model | Read |
 | --- | --- | --- |
-| Robotics & embodied AI | LBM 1.0 | [Technical Report](https://arxiv.org/abs/2507.05331) · [Official](https://toyotaresearchinstitute.github.io/lbm1/) |
+| Robotics & embodied AI | LBM 1.0 | [Technical Report](abstracts/toyota_research_institute/tri-lbm-1-technical-report.md) · [Official](https://toyotaresearchinstitute.github.io/lbm1/) |
 
 <a id="1x"></a>
 
@@ -397,7 +397,7 @@ Current flagships and important new models, with original reports and official i
 
 | Category | Model | Read |
 | --- | --- | --- |
-| Robotics & embodied AI / World models & simulation | 1X World Model | [Technical Report](https://www.1x.tech/discover/redwood-ai-world-model) · [Official](https://www.1x.tech/discover/redwood-ai-world-model) |
+| Robotics & embodied AI / World models & simulation | 1X World Model | [Technical Report](abstracts/1x/1x-world-model-technical-report.md) · [Official](https://www.1x.tech/discover/redwood-ai-world-model) |
 
 <a id="ubtech"></a>
 
@@ -407,6 +407,6 @@ Current flagships and important new models, with original reports and official i
 
 | Category | Model | Read |
 | --- | --- | --- |
-| Robotics & embodied AI / World models & simulation | Thinker-WM | [Technical Report](https://arxiv.org/abs/2610.18447) · [Official](https://thinkercosmos.ubtrobot.com/thinker-wm) |
+| Robotics & embodied AI / World models & simulation | Thinker-WM | [Technical Report](abstracts/ubtech/thinker-wm-technical-report.md) · [Official](https://thinkercosmos.ubtrobot.com/thinker-wm) |
 
 Explore earlier models and reports in the [publisher archives](README.md#browse-by-publisher).

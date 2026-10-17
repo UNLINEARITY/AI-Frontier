@@ -21,11 +21,11 @@
 | 语言与编程 | GPT-6 Sol / Luna (ChatGPT October) | [System Card](abstracts/openai/gpt-6-sol-and-luna-october-2026-update.md) · [官方介绍](https://deploymentsafety.openai.com/gpt-6-october) |
 | 图像与 3D 生成 | ChatGPT Images 2.5 / Sunburst / Flare | [System Card](abstracts/openai/chatgpt-images-2-5-system-card.md) · [官方介绍](https://deploymentsafety.openai.com/chatgpt-images-2-5) |
 | 语音与音频 | GPT-Live-1 | [System Card](abstracts/openai/gpt-live-system-card.md) · [官方介绍](https://openai.com/index/introducing-gpt-live-1-in-the-api/) |
-| 语音与音频 | GPT-Transcribe / GPT-Live-Transcribe | [官方介绍](https://developers.openai.com/api/docs/changelog) |
-| 语音与音频 | GPT-4o Mini TTS | [官方介绍](https://developers.openai.com/api/docs/models/gpt-4o-mini-tts) |
-| 语言与编程 | GPT-Realtime-Translate | [官方介绍](https://developers.openai.com/api/docs/models/gpt-realtime-translate) |
+| 语音与音频 | GPT-Transcribe / GPT-Live-Transcribe | [阅读](abstracts/openai/gpt-transcribe-and-live-transcribe.md) · [官方介绍](https://developers.openai.com/api/docs/changelog) |
+| 语音与音频 | GPT-4o Mini TTS | [阅读](abstracts/openai/gpt-4o-mini-tts.md) · [官方介绍](https://developers.openai.com/api/docs/models/gpt-4o-mini-tts) |
+| 语言与编程 | GPT-Realtime-Translate | [阅读](abstracts/openai/gpt-realtime-translate.md) · [官方介绍](https://developers.openai.com/api/docs/models/gpt-realtime-translate) |
 | 专业领域模型 | GPT-Rosalind-5.5 | [System Card](abstracts/openai/gpt-rosalind-5-5-system-card.md) · [官方介绍](https://deploymentsafety.openai.com/gpt-rosalind-5-5) |
-| 专业领域模型 | GPT-5.6 Cyber | [官方介绍](https://developers.openai.com/api/docs/models/gpt-5.6-cyber) |
+| 专业领域模型 | GPT-5.6 Cyber | [阅读](abstracts/openai/gpt-5-6-cyber.md) · [官方介绍](https://developers.openai.com/api/docs/models/gpt-5.6-cyber) |
 
 <a id="anthropic"></a>
 
@@ -58,7 +58,7 @@
 | 语音与音频 | Gemini 3.5 Transcribe / Transcribe Live | [Model Card](abstracts/google/gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card.md) · [官方介绍](https://ai.google.dev/gemini-api/docs/changelog) |
 | 语音与音频 | Gemini 3.8 Flash TTS / Flash-Lite TTS | [Model Card](abstracts/google/gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card.md) · [官方介绍](https://ai.google.dev/gemini-api/docs/changelog) |
 | 语音与音频 | Lyria 3.5 | [Model Card](abstracts/google/lyria-3-5-model-card.md) · [官方介绍](https://deepmind.google/models/model-cards/) |
-| 语言与编程 | TranslateGemma | [Technical Report](abstracts/google/translategemma-technical-report.md) · [官方介绍](https://ai.google.dev/gemma/docs/translategemma/model_card) |
+| 语言与编程 | TranslateGemma | [Technical Report](abstracts/google/translategemma-technical-report.md) · [阅读](abstracts/google/translategemma-model-card.md) · [官方介绍](https://ai.google.dev/gemma/docs/translategemma/model_card) |
 | 表征与检索 | Gemini Embedding 2 | [Technical Report](abstracts/google/gemini-embedding-2.md) · [官方介绍](https://ai.google.dev/gemini-api/docs/changelog) |
 | 表征与检索 | EmbeddingGemma 2 | [阅读](abstracts/google/embeddinggemma-2.md) · [官方介绍](https://ai.google.dev/gemma/docs/embeddinggemma/model_card_2?hl=en) |
 | 机器人与具身智能 | Gemini Robotics 2 / ER 2 / On-Device 2 | [Gemini Robotics-ER 2 Model Card](abstracts/google/gemini-robotics-er-2-model-card.md) · [Gemini Robotics On-Device 2 Model Card](abstracts/google/gemini-robotics-on-device-2-model-card.md) · [Technical Report](abstracts/google/gemini-robotics-2-safety-evaluations.md) · [官方介绍](https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/) |
@@ -79,8 +79,8 @@
 | 语言与编程 / 视觉理解 | Llama 4 Scout / Maverick | [官方介绍](https://www.llama.com/models/llama-4/) |
 | 语言与编程 / 视觉理解 | Muse Wonder / Wonder Full | [阅读](abstracts/meta/muse-wonder.md) · [官方介绍](https://research.meta.ai/blog/muse-wonder) |
 | 视觉理解 | V-JEPA 2.1 | [Technical Report](abstracts/meta/v-jepa-2-1-technical-report.md) · [官方介绍](https://github.com/facebookresearch/vjepa2) |
-| 图像与 3D 生成 | Muse Image | [官方介绍](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
-| 视频生成 | Muse Video | [官方介绍](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
+| 图像与 3D 生成 | Muse Image | [阅读](abstracts/meta/muse-image-video.md) · [官方介绍](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
+| 视频生成 | Muse Video | [阅读](abstracts/meta/muse-image-video.md) · [官方介绍](https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/) |
 | 语音与音频 | Muse Voice Transcribe | [阅读](abstracts/meta/muse-voice-transcribe.md) · [官方介绍](https://research.meta.ai/blog/introducing-muse-voice-transcribe) |
 | 机器人与具身智能 / 世界模型与仿真 | V-JEPA 2 / 2-AC | [Technical Report](abstracts/meta/v-jepa-2-technical-report.md) · [官方介绍](https://github.com/facebookresearch/vjepa2) |
 | 图像与 3D 生成 | SAM 3D Objects / Body | [SAM 3D: 3Dfy Anything in Images](abstracts/meta/sam-3d-technical-report.md) · [SAM 3D Body: Robust Full-Body Human Mesh Recovery](abstracts/meta/sam-3d-body-technical-report.md) · [官方介绍](https://about.fb.com/news/2025/11/new-sam-models-detect-objects-create-3d-reconstructions/) |
@@ -94,10 +94,10 @@
 | 类别 | 模型 | 阅读 |
 | --- | --- | --- |
 | 语言与编程 | Grok 4.7 | [Model Card](abstracts/xai/grok-4-7-model-card.md) · [官方介绍](https://x.ai/safety) |
-| 图像与 3D 生成 | Grok Imagine Image 2.0 | [官方介绍](https://docs.x.ai/developers/models) |
-| 视频生成 | Grok Imagine Video 1.5 | [官方介绍](https://docs.x.ai/developers/models) |
-| 语音与音频 | Grok Voice Think Fast 2.0 | [官方介绍](https://docs.x.ai/developers/release-notes) |
-| 语音与音频 | Grok Voice Transcribe 2.0 | [官方介绍](https://docs.x.ai/developers/release-notes) |
+| 图像与 3D 生成 | Grok Imagine Image 2.0 | [阅读](abstracts/xai/grok-imagine-image-2-0.md) · [官方介绍](https://docs.x.ai/developers/models) |
+| 视频生成 | Grok Imagine Video 1.5 | [阅读](abstracts/xai/grok-imagine-video-1-5.md) · [官方介绍](https://docs.x.ai/developers/models) |
+| 语音与音频 | Grok Voice Think Fast 2.0 | [阅读](abstracts/xai/grok-voice-think-fast-2.md) · [官方介绍](https://docs.x.ai/developers/release-notes) |
+| 语音与音频 | Grok Voice Transcribe 2.0 | [阅读](abstracts/xai/grok-voice-transcribe-2-0.md) · [官方介绍](https://docs.x.ai/developers/release-notes) |
 
 <a id="mistral"></a>
 
@@ -112,8 +112,8 @@
 | 语言与编程 / 视觉理解 | Mistral Large 4 (Public Preview) | [阅读](abstracts/mistral/mistral-large-4.md) · [官方介绍](https://mistral.ai/news/mistral-large-4/) |
 | 语音与音频 | Voxtral Realtime | [Technical Report](abstracts/mistral/voxtral-realtime.md) · [官方介绍](https://arxiv.org/abs/2602.11298) |
 | 语音与音频 | Voxtral TTS | [Technical Report](abstracts/mistral/voxtral-tts.md) · [官方介绍](https://arxiv.org/abs/2603.25551) |
-| 视觉理解 | Mistral OCR 4.1 | [官方介绍](https://docs.mistral.ai/models/ocr-4-1) |
-| 表征与检索 | Codestral Embed | [官方介绍](https://docs.mistral.ai/models/codestral-embed-25-05) |
+| 视觉理解 | Mistral OCR 4.1 | [阅读](abstracts/mistral/mistral-ocr-4-1-model-card.md) · [官方介绍](https://docs.mistral.ai/models/ocr-4-1) |
+| 表征与检索 | Codestral Embed | [阅读](abstracts/mistral/codestral-embed-model-card.md) · [官方介绍](https://docs.mistral.ai/models/codestral-embed-25-05) |
 | 机器人与具身智能 | Robostral Navigate | [Technical Report](abstracts/mistral/robostral-navigate.md) · [官方介绍](https://arxiv.org/abs/2607.20785) |
 | 专业领域模型 | Shieldstral | [Technical Report](abstracts/mistral/shieldstral.md) · [官方介绍](https://arxiv.org/abs/2607.25857) |
 
@@ -130,10 +130,10 @@
 | 语言与编程 | Nemotron 3.5 Lightning | [阅读](abstracts/nvidia/nemotron-3-5-lightning.md) · [官方介绍](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16) |
 | 语言与编程 | Nemotron Labs 3 Competitive Coding 550B-A55B | [Technical Report](abstracts/nvidia/nemotron-3-competitive-coding.md) · [官方介绍](https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-3-Competitive-Coding-550B-A55B-NVFP4) |
 | 视觉理解 | Nemotron 3 Nano Omni | [Technical Report](abstracts/nvidia/nemotron-3-nano-omni.md) · [官方介绍](https://blogs.nvidia.com/blog/nemotron-3-nano-omni-multimodal-ai-agents/) |
-| 语音与音频 | Nemotron Labs VoiceChat 11B | [官方介绍](https://catalog.ngc.nvidia.com/orgs/nim/nvidia/containers/nemotron-labs-voicechat/1.0.0) |
-| 语音与音频 | Nemotron 3.5 ASR Streaming 0.6B | [官方介绍](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b) |
-| 语音与音频 | MagpieTTS Multilingual 357M v2607 | [官方介绍](https://huggingface.co/nvidia/magpie_tts_multilingual_357m) |
-| 视觉理解 | Nemotron Parse 2.0 | [官方介绍](https://huggingface.co/nvidia/NVIDIA-Nemotron-Parse-2.0) |
+| 语音与音频 | Nemotron Labs VoiceChat 11B | [阅读](abstracts/nvidia/nemotron-labs-voicechat-11b.md) · [官方介绍](https://catalog.ngc.nvidia.com/orgs/nim/nvidia/containers/nemotron-labs-voicechat/1.0.0) |
+| 语音与音频 | Nemotron 3.5 ASR Streaming 0.6B | [阅读](abstracts/nvidia/nemotron-3-5-asr-model-card.md) · [官方介绍](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b) |
+| 语音与音频 | MagpieTTS Multilingual 357M v2607 | [阅读](abstracts/nvidia/magpietts-model-card.md) · [官方介绍](https://huggingface.co/nvidia/magpie_tts_multilingual_357m) |
+| 视觉理解 | Nemotron Parse 2.0 | [阅读](abstracts/nvidia/nemotron-parse-2-0-model-card.md) · [官方介绍](https://huggingface.co/nvidia/NVIDIA-Nemotron-Parse-2.0) |
 | 表征与检索 | Nemotron 3 Embed 1B / 8B | [官方介绍](https://huggingface.co/nvidia/Nemotron-3-Embed-8B-BF16) |
 | 机器人与具身智能 | GR00T N1.7 | [阅读](abstracts/nvidia/gr00t-n1-7.md) · [官方介绍](https://github.com/NVIDIA/Isaac-GR00T) |
 | 机器人与具身智能 / 世界模型与仿真 | Cosmos 3 | [Technical Report](abstracts/nvidia/cosmos-3-omnimodal-world-models-for-physical-ai.md) · [官方介绍](https://research.nvidia.com/labs/cosmos-lab/cosmos3/) |
@@ -162,18 +162,18 @@
 | --- | --- | --- |
 | 语言与编程 | Qwen3.8-Flash-Next | [Technical Report](abstracts/qwen/qwen3-8-flash-next.md) · [官方介绍](https://github.com/QwenLM/Qwen3.8-Flash-Next) |
 | 语言与编程 / 视觉理解 | Qwen3.8-Max | [阅读](abstracts/qwen/qwen3-8-max.md) · [官方介绍](https://help.aliyun.com/en/model-studio/qwen3-8-max) |
-| 语言与编程 / 视觉理解 | Qwen3.8-Omni-Flash | [官方介绍](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| 语言与编程 / 视觉理解 | Qwen3.8-Omni-Flash | [阅读](abstracts/qwen/qwen3-8-omni-flash.md) · [官方介绍](https://help.aliyun.com/zh/model-studio/newly-released-models) |
 | 语言与编程 | Qwen3-Coder-Next | [Technical Report](abstracts/qwen/qwen3-coder-next-technical-report.md) · [官方介绍](https://github.com/QwenLM/Qwen3-Coder) |
-| 图像与 3D 生成 | Qwen-Image-2.1-Pro | [官方介绍](https://help.aliyun.com/zh/model-studio/newly-released-models) |
-| 视频生成 | Wan3.0-Video-Prime | [官方介绍](https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference) |
-| 语音与音频 | Qwen3.8-Omni-Flash-Realtime | [官方介绍](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| 图像与 3D 生成 | Qwen-Image-2.1-Pro | [阅读](abstracts/qwen/qwen-image-2-1-pro.md) · [官方介绍](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| 视频生成 | Wan3.0-Video-Prime | [阅读](abstracts/qwen/wan3-0-video-prime.md) · [官方介绍](https://help.aliyun.com/zh/model-studio/wan3-video-generation-api-reference) |
+| 语音与音频 | Qwen3.8-Omni-Flash-Realtime | [阅读](abstracts/qwen/qwen3-8-omni-flash-realtime.md) · [官方介绍](https://help.aliyun.com/zh/model-studio/newly-released-models) |
 | 语音与音频 | Qwen-Audio-3.0-ASR | [Technical Report](abstracts/qwen/qwen-audio-3-0-asr.md) · [官方介绍](https://help.aliyun.com/zh/model-studio/newly-released-models) |
 | 语音与音频 | Qwen-Audio-3.0-TTS-Plus / Flash | [官方介绍](https://help.aliyun.com/zh/model-studio/newly-released-models) |
-| 语言与编程 | Qwen-MT-Uni | [官方介绍](https://help.aliyun.com/zh/model-studio/newly-released-models) |
+| 语言与编程 | Qwen-MT-Uni | [阅读](abstracts/qwen/qwen-mt-uni.md) · [官方介绍](https://help.aliyun.com/zh/model-studio/newly-released-models) |
 | 机器人与具身智能 | Qwen-VLA | [Technical Report](abstracts/qwen/qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments.md) · [官方介绍](https://github.com/QwenLM/Qwen-VLA) |
 | 机器人与具身智能 | Qwen-RobotNav | [Technical Report](abstracts/qwen/qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system.md) · [官方介绍](https://github.com/QwenLM/Qwen-RobotNav) |
 | 机器人与具身智能 | Qwen-RobotManip | [Technical Report](abstracts/qwen/qwen-robotmanip-technical-report-alignment-unlocks-scale-for-robotic-manipulation-foundation-models.md) · [官方介绍](https://github.com/QwenLM/Qwen-RobotManip) |
-| 机器人与具身智能 / 世界模型与仿真 | Qwen-RobotWorld | [Technical Report](https://arxiv.org/abs/2606.17030) · [官方介绍](https://qwen.ai/blog?id=qwen-robotworld) |
+| 机器人与具身智能 / 世界模型与仿真 | Qwen-RobotWorld | [Technical Report](abstracts/qwen/qwen-robotworld-technical-report.md) · [官方介绍](https://qwen.ai/blog?id=qwen-robotworld) |
 
 <a id="moonshot"></a>
 
@@ -197,8 +197,8 @@
 | --- | --- | --- |
 | 语言与编程 | GLM-5.3 | [阅读](abstracts/zai/glm-5-3-model-card.md) · [官方介绍](https://z.ai/blog/glm-5.3) |
 | 语言与编程 / 视觉理解 | GLM-5.3-FlashX | [阅读](abstracts/zai/glm-5-3-flashx.md) · [官方介绍](https://docs.z.ai/guides/vlm/glm-5.3-flash) |
-| 图像与 3D 生成 | GLM-Image | [官方介绍](https://github.com/zai-org/GLM-Image) |
-| 语音与音频 | GLM-ASR-Nano | [官方介绍](https://github.com/zai-org/GLM-ASR) |
+| 图像与 3D 生成 | GLM-Image | [阅读](abstracts/zai/glm-image-model-card.md) · [官方介绍](https://github.com/zai-org/GLM-Image) |
+| 语音与音频 | GLM-ASR-Nano | [阅读](abstracts/zai/glm-asr-nano-model-card.md) · [官方介绍](https://github.com/zai-org/GLM-ASR) |
 | 语音与音频 | GLM-TTS | [Technical Report](abstracts/zai/glm-tts-technical-report.md) · [官方介绍](https://github.com/zai-org/GLM-TTS) |
 | 视觉理解 | GLM-OCR | [Technical Report](abstracts/zai/glm-ocr-technical-report.md) · [官方介绍](https://github.com/zai-org/GLM-OCR) |
 
@@ -211,9 +211,9 @@
 | 类别 | 模型 | 阅读 |
 | --- | --- | --- |
 | 语言与编程 | MiniMax-M3 | [阅读](abstracts/minimax/minimax-m3-model-card.md) · [官方介绍](https://huggingface.co/MiniMaxAI/MiniMax-M3) |
-| 视频生成 | MiniMax-H3 | [阅读](abstracts/minimax/minimax-h3-model-card.md) · [官方介绍](https://www.minimax.io/blog/minimax-h3) |
+| 视频生成 | MiniMax-H3 | [阅读](abstracts/minimax/minimax-h3-technical-report.md) · [官方介绍](https://www.minimax.io/blog/minimax-h3) |
 | 语音与音频 | MiniMax Speech 2.8 | [阅读](abstracts/minimax/minimax-speech-2-8.md) · [官方介绍](https://www.minimax.io/news/minimax-speech-28) |
-| 语音与音频 | MiniMax Music 3.0 | [官方介绍](https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model) |
+| 语音与音频 | MiniMax Music 3.0 | [阅读](abstracts/minimax/minimax-music-3-model-card.md) · [官方介绍](https://www.minimax.io/blog/minimax-music-3-0-next-generation-open-weights-production-ready-versatile-music-model) |
 
 <a id="stepfun"></a>
 
@@ -225,7 +225,7 @@
 | --- | --- | --- |
 | 语言与编程 | Step 3.7 Flash | [阅读](abstracts/stepfun/step-3-7-flash-model-card.md) · [官方介绍](https://github.com/stepfun-ai/Step-3.7-Flash) |
 | 语言与编程 / 视觉理解 | Step 5 Preview | [阅读](abstracts/stepfun/step-5-preview-docs.md) · [官方介绍](https://platform.stepfun.ai/docs/en/guides/models/step-5-preview) |
-| 图像与 3D 生成 | NextStep-1.1 | [官方介绍](https://github.com/stepfun-ai/NextStep-1) |
+| 图像与 3D 生成 | NextStep-1.1 | [阅读](abstracts/stepfun/nextstep-1-1-model-card.md) · [官方介绍](https://github.com/stepfun-ai/NextStep-1) |
 | 视频生成 | Step-Video-TI2V | [Technical Report](abstracts/stepfun/step-video-ti2v.md) · [官方介绍](https://github.com/stepfun-ai/Step-Video-TI2V) |
 | 语音与音频 | StepAudio 3 Realtime | [Technical Report](abstracts/stepfun/step-audio-3-realtime.md) · [官方介绍](https://github.com/stepfun-ai) |
 | 语音与音频 | StepAudio 3 ASR Max | [阅读](abstracts/stepfun/stepaudio-3-asr-max.md) · [官方介绍](https://platform.stepfun.com/docs/zh/guides/models/stepaudio-3-asr) |
@@ -250,8 +250,8 @@
 | 机器人与具身智能 | Hy-Embodied-VLM-1.0 | [Technical Report](abstracts/tencent/hy-embodied-vlm-1-0.md) · [官方介绍](https://github.com/Tencent-Hunyuan/HY-Embodied) |
 | 机器人与具身智能 | Hy-Embodied-RxBrain-1.0 | [Technical Report](abstracts/tencent/hy-embodied-rxbrain-1-0.md) · [官方介绍](https://github.com/Tencent-Hunyuan/Hy-Embodied-RxBrain-1.0) |
 | 世界模型与仿真 | HY-World 1.5 / WorldPlay | [Technical Report](abstracts/tencent/worldplay-technical-report.md) · [官方介绍](https://github.com/Tencent-Hunyuan/HY-WorldPlay) |
-| 世界模型与仿真 | HY-World 2.0 | [Technical Report](https://arxiv.org/abs/2604.14268) · [官方介绍](https://3d.hunyuan.tencent.com/sceneTo3D) |
-| 图像与 3D 生成 | Hunyuan3D 3.1 | [官方介绍](https://cloud.tencent.com/document/product/1804/123447) |
+| 世界模型与仿真 | HY-World 2.0 | [Technical Report](abstracts/tencent/hy-world-2-0-technical-report.md) · [官方介绍](https://3d.hunyuan.tencent.com/sceneTo3D) |
+| 图像与 3D 生成 | Hunyuan3D 3.1 | [阅读](abstracts/tencent/hunyuan3d-3-1.md) · [官方介绍](https://cloud.tencent.com/document/product/1804/123447) |
 
 <a id="bytedance"></a>
 
@@ -264,8 +264,8 @@
 | 语言与编程 / 视觉理解 | Seed2.1 | [Model Card](abstracts/bytedance/seed2-1-model-card.md) · [官方介绍](https://seed.bytedance.com/en/research) |
 | 图像与 3D 生成 | Seedream 5.0 Pro | [阅读](abstracts/bytedance/seedream-5-0-pro.md) · [官方介绍](https://seed.bytedance.com/en/seedream5_0_pro) |
 | 视频生成 | Seedance 2.5 | [阅读](abstracts/bytedance/seedance-2-5.md) · [官方介绍](https://seed.bytedance.com/en/seedance2_5) |
-| 语音与音频 | SeedRealtime | [官方介绍](https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction) |
-| 语音与音频 | Seed Audio 1.0 | [官方介绍](https://seed.bytedance.com/en/research) |
+| 语音与音频 | SeedRealtime | [阅读](abstracts/bytedance/seedrealtime.md) · [官方介绍](https://seed.bytedance.com/en/blog/seedrealtime-audio-visual-full-duplex-llm-released-toward-omni-modal-natural-interaction) |
+| 语音与音频 | Seed Audio 1.0 | [阅读](abstracts/bytedance/seed-audio-1-0.md) · [官方介绍](https://seed.bytedance.com/en/research) |
 | 机器人与具身智能 | GR-3 | [Technical Report](abstracts/bytedance/gr-3-technical-report.md) · [官方介绍](https://seed.bytedance.com/GR3) |
 | 机器人与具身智能 | GR-RL (specialized policy) | [Technical Report](abstracts/bytedance/gr-rl-technical-report.md) · [官方介绍](https://seed.bytedance.com/en/gr_rl) |
 
@@ -279,10 +279,10 @@
 | --- | --- | --- |
 | 语言与编程 | Command A+ | [阅读](abstracts/cohere/command-a-plus-model-card.md) · [官方介绍](https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16) |
 | 语言与编程 | North Mini Code 1.0 | [阅读](abstracts/cohere/north-mini-code-1-0-model-card.md) · [官方介绍](https://huggingface.co/CohereLabs/North-Mini-Code-1.0) |
-| 视觉理解 | North Micro Vision Instruct | [官方介绍](https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct) |
-| 语音与音频 | Cohere Transcribe Arabic | [官方介绍](https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026) |
+| 视觉理解 | North Micro Vision Instruct | [阅读](abstracts/cohere/north-micro-vision-instruct-model-card.md) · [官方介绍](https://huggingface.co/CohereLabs/North-Micro-Vision-Instruct) |
+| 语音与音频 | Cohere Transcribe Arabic | [阅读](abstracts/cohere/cohere-transcribe-arabic-model-card.md) · [官方介绍](https://huggingface.co/CohereLabs/cohere-transcribe-arabic-07-2026) |
 | 语言与编程 | North Small Translate 1.0 | [Technical Report](abstracts/cohere/north-small-translate.md) · [官方介绍](https://arxiv.org/abs/2609.13916) |
-| 视觉理解 | Parse 5 | [官方介绍](https://docs.cohere.com/docs/models) |
+| 视觉理解 | Parse 5 | [阅读](abstracts/cohere/parse-5-model-card.md) · [官方介绍](https://docs.cohere.com/docs/models) |
 | 表征与检索 | Embed 5 (pro / fast) | [官方介绍](https://docs.cohere.com/docs/models) |
 | 表征与检索 | Rerank 4 (pro / fast) | [官方介绍](https://docs.cohere.com/docs/models) |
 
@@ -294,7 +294,7 @@
 
 | 类别 | 模型 | 阅读 |
 | --- | --- | --- |
-| 语言与编程 | MAI Thinking 1 | [Technical Report](abstracts/microsoft/mai-thinking-1-technical-report.md) · [官方介绍](https://microsoft.ai/models/mai-thinking-1/) |
+| 语言与编程 | MAI Thinking 1 | [Technical Report](abstracts/microsoft/mai-thinking-1-technical-report.md) · [阅读](abstracts/microsoft/mai-thinking-1-model-card.md) · [官方介绍](https://microsoft.ai/models/mai-thinking-1/) |
 | 语言与编程 | MAI Code 1.1 Flash | [Model Card](abstracts/microsoft/mai-code-1-1-flash-model-card.md) · [官方介绍](https://microsoft.ai/models/mai-code-1-flash/) |
 | 视觉理解 | Phi 4 Reasoning Vision | [Technical Report](abstracts/microsoft/phi-4-reasoning-vision.md) · [官方介绍](https://arxiv.org/abs/2603.03975) |
 | 图像与 3D 生成 | MAI Image 2.6 / 2.6 Flash | [Model Card](abstracts/microsoft/mai-image-2-6-model-card.md) · [官方介绍](https://microsoft.ai/models/mai-image-2-6/) |
@@ -387,7 +387,7 @@
 
 | 类别 | 模型 | 阅读 |
 | --- | --- | --- |
-| 机器人与具身智能 | LBM 1.0 | [Technical Report](https://arxiv.org/abs/2507.05331) · [官方介绍](https://toyotaresearchinstitute.github.io/lbm1/) |
+| 机器人与具身智能 | LBM 1.0 | [Technical Report](abstracts/toyota_research_institute/tri-lbm-1-technical-report.md) · [官方介绍](https://toyotaresearchinstitute.github.io/lbm1/) |
 
 <a id="1x"></a>
 
@@ -397,7 +397,7 @@
 
 | 类别 | 模型 | 阅读 |
 | --- | --- | --- |
-| 机器人与具身智能 / 世界模型与仿真 | 1X World Model | [Technical Report](https://www.1x.tech/discover/redwood-ai-world-model) · [官方介绍](https://www.1x.tech/discover/redwood-ai-world-model) |
+| 机器人与具身智能 / 世界模型与仿真 | 1X World Model | [Technical Report](abstracts/1x/1x-world-model-technical-report.md) · [官方介绍](https://www.1x.tech/discover/redwood-ai-world-model) |
 
 <a id="ubtech"></a>
 
@@ -407,6 +407,6 @@
 
 | 类别 | 模型 | 阅读 |
 | --- | --- | --- |
-| 机器人与具身智能 / 世界模型与仿真 | Thinker-WM | [Technical Report](https://arxiv.org/abs/2610.18447) · [官方介绍](https://thinkercosmos.ubtrobot.com/thinker-wm) |
+| 机器人与具身智能 / 世界模型与仿真 | Thinker-WM | [Technical Report](abstracts/ubtech/thinker-wm-technical-report.md) · [官方介绍](https://thinkercosmos.ubtrobot.com/thinker-wm) |
 
 历史模型与报告见[厂商归档](README_CN.md#按厂商浏览)。

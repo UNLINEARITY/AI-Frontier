@@ -2,7 +2,7 @@
 
 [中文](README_CN.md) · [Home](../README.md)
 
-**541 source overviews · 637 core figures**
+**555 source overviews · 637 core figures**
 
 ## OpenAI
 
@@ -52,6 +52,9 @@
 - [GPT-5.6 Cyber](openai/gpt-5-6-cyber.md)
 - [GPT-4o Mini TTS](openai/gpt-4o-mini-tts.md)
 - [GPT-Realtime-Translate](openai/gpt-realtime-translate.md)
+- [Sora System Card](openai/sora-system-card.md)
+- [DALL·E 3 System Card](openai/dall-e-3-system-card.md)
+- [GPT Transcribe and GPT Live Transcribe](openai/gpt-transcribe-and-live-transcribe.md)
 
 ## Anthropic
 
@@ -180,7 +183,8 @@
 - [TxGemma](google/txgemma-model-card.md)
 - [EmbeddingGemma](google/embeddinggemma-model-card.md)
 - [Veo 3.1](google/veo-3-1-model-card.md)
-- [T5Gemma](google/t5gemma-model-card.md)
+- [T5Gemma Model Card](google/t5gemma-model-card.md)
+- [TranslateGemma Model Card](google/translategemma-model-card.md)
 
 ## Meta
 
@@ -228,6 +232,7 @@
 - [Llama 3.1](meta/llama-3-1-model-card.md)
 - [Llama 3.2 Vision](meta/llama-3-2-vision-model-card.md)
 - [Muse personal AI agent](meta/muse-personal-ai-agent.md)
+- [Introducing Muse Image and Muse Video](meta/muse-image-video.md)
 
 ## xAI
 
@@ -244,6 +249,7 @@
 - [Grok Imagine Image 2.0](xai/grok-imagine-image-2-0.md)
 - [Grok Imagine Video 1.5](xai/grok-imagine-video-1-5.md)
 - [Grok Voice API](xai/grok-voice-api.md)
+- [Introducing Grok Voice 2.0](xai/grok-voice-think-fast-2.md)
 
 ## Mistral AI
 
@@ -304,6 +310,8 @@
 - [Nemotron 3 Embed](nvidia/nemotron-3-embed-model-card.md)
 - [MagpieTTS Multilingual 357M v2607](nvidia/magpietts-model-card.md)
 - [Cosmos Reason 2](nvidia/cosmos-reason2-model-card.md)
+- [NVIDIA Nemotron 3 Nano 30B A3B Model Card](nvidia/nemotron-3-nano-30b-a3b-model-card.md)
+- [NVIDIA NemotronLabs Voicechat](nvidia/nemotron-labs-voicechat-11b.md)
 
 ## DeepSeek
 
@@ -386,6 +394,7 @@
 - [Qwen-Image-2.1](qwen/qwen-image-2-1.md)
 - [Qwen-Image-2.1-Pro](qwen/qwen-image-2-1-pro.md)
 - [Qwen3.8](qwen/qwen3-8-technical-report.md)
+- [万相3.0 视频生成 API 参考](qwen/wan3-0-video-prime.md)
 
 ## Moonshot AI / Kimi
 
@@ -441,6 +450,7 @@
 - [MiniMax Music 3.0](minimax/minimax-music-3-model-card.md)
 - [MiniMax-M2.1](minimax/minimax-m2-1-model-card.md)
 - [MiniMax-M2.1](minimax/minimax-m2-1-report.md)
+- [MiniMax-H3 Technical Report](minimax/minimax-h3-technical-report.md)
 
 ## StepFun
 
@@ -492,6 +502,7 @@
 - [HY-Embodied-0.5: Embodied Foundation Models for Real-World Agents](tencent/hy-embodied-0-5.md)
 - [Hy4-preview](tencent/hy4-preview.md)
 - [Hy3](tencent/hy3-model-card.md)
+- [Hunyuan3D 3.1](tencent/hunyuan3d-3-1.md)
 
 ## ByteDance / Seed
 
@@ -561,6 +572,8 @@
 - [Magma: A Foundation Model for Multimodal AI Agents](microsoft/magma-technical-report.md)
 - [FLOWER: Democratizing Generalist Robot Policies with Efficient Vision-Language-Action Flow Policies](microsoft/flower-technical-report.md)
 - [Rho-alpha](microsoft/rho-alpha.md)
+- [Introducing MAI-Image-2.5-Pro and MAI-Voice-2-Flash](microsoft/mai-voice-2-flash.md)
+- [MAI-Thinking-1 Model Card](microsoft/mai-thinking-1-model-card.md)
 
 ## Amazon / Nova
 
@@ -572,6 +585,7 @@
 - [AWS AI Service Cards: Amazon Nova Act](amazon/nova-act-service-card.md)
 - [Evaluating the Critical Risks of Amazon's Nova Premier under the Frontier Model Safety Framework](amazon/nova-premier-frontier-safety-report.md)
 - [Nova 2.5 Sonic](amazon/nova-2-5-sonic.md)
+- [Amazon Nova Premier Model Card](amazon/amazon-nova-premier-model-card.md)
 
 ## Physical Intelligence
 

@@ -5301,7 +5301,9 @@
       "vendor": "openai",
       "model": "GPT-6 Sol",
       "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-      "report_slugs": [],
+      "report_slugs": [
+        "gpt-6-sol-and-luna-october-2026-update"
+      ],
       "release_date": "2026-09-22",
       "release_source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
       "release_evidence": "GPT-6 Astra official post records on Sep 22, 2026: ‘We are expanding our GPT-6 family with GPT-6 Sol and GPT-6 Luna’ and links the announcement.",

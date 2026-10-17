@@ -12,6 +12,12 @@ We first present a summary of the model’s risk, safety, and behavioral profile
 
 The remainder of the report details our evaluation findings. Section 2 presents our preparedness assessment across the Chemical & Biological, Cybersecurity, and Loss of Control domains, along with our mitigation measures and emerging risk considerations. Section 3 presents red-team results evaluating the robustness of Muse Spark 1.1 against general harmful behaviors, with particular attention to direct misuse and prompt injection attacks in agentic settings. In Section 4, we discuss model behavior —our umbrella term for features including alignment, personality, style, and other behavioral propensities. Finally, in Section 5, we report Muse Spark 1.1’s performance across a variety of capability benchmarks, including coding, alongside other general evaluations.
 
+## 1.3 Evaluation Setup
+
+Our evaluations aim to produce realistic estimates of model capabilities under maximum elicitation, and to test safety and behavior in realistic settings. We reuse the methodology described in the Muse Spark Safety & Preparedness Report and note what differs for this assessment of Muse Spark 1.1 with API deployment affordances.
+
+p. 10
+
 ![Table 2](../../figures/meta/muse-spark-1-1-evaluation-report/figure-01.png)
 
 Table 2 Muse Spark 1.1 safety and behavioral propensities scorecard. Snapshot of a subset of key propensity, refusal, adversarial robustness, and behavioral alignment evaluations. Bolded numbers indicate the best safety performance.
