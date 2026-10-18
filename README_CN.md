@@ -10,9 +10,9 @@
 
 一个帮助研究者、工程师和 AI 技术读者理解模型如何训练、评测与部署的开放研究资料库。覆盖语言与多模态模型、机器人与 VLA、具身推理以及世界模型。我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，并逐步推进可读原文、基于来源的技术分析与模型发布追踪。
 
-**441 份报告 · 27 家厂商 · 2022 年起**
+**440 份报告 · 27 家厂商 · 2022 年起**
 
-**当前已提供：**官方报告索引、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。
+**当前已提供：**官方报告索引、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。阅读页结合 [TextFold](https://github.com/chenxiachan/textfold) 提供目录、可折叠 OCR 全文、图片、表格和公式。结构化分析与自动跟进是接下来的建设阶段。
 
 **Star 收藏 AI Frontier，把原始资料留在手边，也关注它如何逐步成为技术研究入口。**
 
@@ -23,7 +23,7 @@
 | 类型 | 主要对象 | 重点 | 常见内容 | 报告数量 |
 | --- | --- | --- | --- | ---: |
 | [Technical Report](reports/technical-reports_CN.md) | 模型/训练方法 | 技术实现与实验 | 架构、数据、训练、后训练、推理、benchmark | 318 |
-| [Model Card](reports/model-cards_CN.md) | 单个模型 | 模型说明与使用边界 | 能力、限制、适用场景、不适用场景、评测、安全信息 | 62 |
+| [Model Card](reports/model-cards_CN.md) | 单个模型 | 模型说明与使用边界 | 能力、限制、适用场景、不适用场景、评测、安全信息 | 61 |
 | [System Card](reports/system-cards_CN.md) | 完整产品/系统 | 风险、安全、部署表现 | red teaming、危险能力评估、越狱、安全 mitigations、部署限制 | 61 |
 
 这是常见区分，文档内容可能交叉，也可能覆盖整个模型家族；分类以官方命名与文档主要用途为准。
@@ -37,7 +37,7 @@
 | 厂商 | 技术报告 | 模型卡 | 系统卡 | 报告总数 |
 | --- | ---: | ---: | ---: | ---: |
 | [OpenAI](pdfs/openai/README_CN.md) | [6](pdfs/openai/technical-reports/README_CN.md) | [1](pdfs/openai/model-cards/README_CN.md) | [36](pdfs/openai/system-cards/README_CN.md) | 43 |
-| [Anthropic](pdfs/anthropic/README_CN.md) | [0](pdfs/anthropic/technical-reports/README_CN.md) | [5](pdfs/anthropic/model-cards/README_CN.md) | [18](pdfs/anthropic/system-cards/README_CN.md) | 23 |
+| [Anthropic](pdfs/anthropic/README_CN.md) | [0](pdfs/anthropic/technical-reports/README_CN.md) | [4](pdfs/anthropic/model-cards/README_CN.md) | [18](pdfs/anthropic/system-cards/README_CN.md) | 22 |
 | [Google / DeepMind](pdfs/google/README_CN.md) | [48](pdfs/google/technical-reports/README_CN.md) | [34](pdfs/google/model-cards/README_CN.md) | [1](pdfs/google/system-cards/README_CN.md) | 83 |
 | [Meta](pdfs/meta/README_CN.md) | [29](pdfs/meta/technical-reports/README_CN.md) | [0](pdfs/meta/model-cards/README_CN.md) | [2](pdfs/meta/system-cards/README_CN.md) | 31 |
 | [xAI](pdfs/xai/README_CN.md) | [0](pdfs/xai/technical-reports/README_CN.md) | [7](pdfs/xai/model-cards/README_CN.md) | [1](pdfs/xai/system-cards/README_CN.md) | 8 |
@@ -68,7 +68,7 @@
 
 - **直接读原文。** 官方报告与来源集中整理，减少在官网、仓库和论文页面之间来回查找。
 - **横向看技术。** 对照不同厂商披露的训练方法、评测结果与安全信息，为自己的研究和判断找到依据。
-- **回看演进。** 首次发布与修订日期分别记录，报告更新时保留已有归档版本，方便追溯变化。
+- **核对版本。** 首次发布与修订日期分别记录，重复报告在本地保留最新核验版本。
 
 [完整索引](catalog.csv) 提供日期、版本、来源及文件校验信息；[覆盖范围与待补清单](GAPS.md) 公开记录遗漏、未确认日期和待核对范围。
 
@@ -85,7 +85,7 @@
 | 阶段 | 帮助你做什么 | 状态 |
 | --- | --- | --- |
 | 原始资料 | 查找官方报告、来源链接、日期与归档版本 | 已提供 |
-| 可读原文 | 阅读概要原文，查看核心图片；继续推进全文 Markdown | 概要与图片已提供 |
+| 可读原文 | 阅读概要与可折叠 OCR 全文，通过目录定位章节，查看图片、表格和公式 | 已提供 |
 | 技术分析 | 结合原文出处，研究架构、数据、训练、后训练、推理与评测细节 | 计划中 |
 | 持续跟进 | 通过自动监测与更新记录，追踪新模型发布及报告修订 | 计划中 |
 

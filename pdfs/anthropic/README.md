@@ -9,7 +9,7 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | Type | Reports |
 | --- | ---: |
 | [Technical Report](technical-reports/README.md) | 0 |
-| [Model Card](model-cards/README.md) | 5 |
+| [Model Card](model-cards/README.md) | 4 |
 | [System Card](system-cards/README.md) | 18 |
 
 ## All reports
@@ -38,6 +38,5 @@ Reports are ordered by recorded first publication date, newest first; unknown da
 | 2024-06 | [Claude Sonnet 3.5 Model Card](https://www.anthropic.com/system-cards) | [Model Card](../../reports/model-cards.md) | [Source](https://www.anthropic.com/system-cards) |
 | 2024-03 | [Claude 3 Model Card](https://www.anthropic.com/system-cards) | [Model Card](../../reports/model-cards.md) | [Source](https://www.anthropic.com/system-cards) |
 | 2023-07 | [Claude 2 Model Card](https://www.anthropic.com/news/claude-2-1) | [Model Card](../../reports/model-cards.md) | [Source](https://www.anthropic.com/news/claude-2-1) |
-| 2023-07 | [Claude 2 Model Card](https://www.anthropic.com/system-cards) | [Model Card](../../reports/model-cards.md) | [Source](https://www.anthropic.com/system-cards) |
 
 Archive versions, checksums, retrieval times, and revision dates: [catalog.csv](../../catalog.csv).

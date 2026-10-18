@@ -278,7 +278,8 @@ def render(rows):
              "and are building toward readable sources, grounded technical analysis, and ongoing release tracking.", "",
              f"**{len(archived)} reports · {publisher_count} publishers · 2022 onward**", "",
              "**Available today:** official report indexes, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). "
-             "Full-document Markdown, structured analysis, and automated tracking are the next stages.", "",
+             "Reading pages also include contents and foldable OCR full text with figures, tables, and formulas, powered by [TextFold](https://github.com/chenxiachan/textfold). "
+             "Structured analysis and automated tracking are the next stages.", "",
              "**Star AI Frontier to keep the sources close and follow the archive as it grows.**", ""]
     cn_lines = [f"# {brand['name']}", "", "[英文版](README.md)", "", "![AI Frontier](assets/branding/ai-frontier-banner.png)", "", f"**{brand['tagline_cn']}**", "",
                 f"[在线浏览]({brand['homepage_url']}cn/) · [前沿模型](LATEST_MODELS_CN.md) · [完整索引](catalog.csv)", "",
@@ -287,7 +288,7 @@ def render(rows):
                 "我们把散落在官网、模型仓库和 arXiv 的官方技术报告、模型卡与系统卡集中整理，"
                 "并逐步推进可读原文、基于来源的技术分析与模型发布追踪。", "",
                 f"**{len(archived)} 份报告 · {publisher_count} 家厂商 · 2022 年起**", "",
-                "**当前已提供：**官方报告索引、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。全文 Markdown、结构化分析与自动跟进是接下来的建设阶段。", "",
+                "**当前已提供：**官方报告索引、可搜索且支持站内原文阅读与图片预览的双语网站，以及[前沿报告的概要原文与核心图片](abstracts/README_CN.md)。阅读页结合 [TextFold](https://github.com/chenxiachan/textfold) 提供目录、可折叠 OCR 全文、图片、表格和公式。结构化分析与自动跟进是接下来的建设阶段。", "",
                 "**Star 收藏 AI Frontier，把原始资料留在手边，也关注它如何逐步成为技术研究入口。**", ""]
     type_counts = {kind: sum(row["document_type"] == kind for row in archived) for kind in DOCUMENT_TYPES}
     lines += ["## Choose the right document", "",
@@ -422,7 +423,7 @@ def render(rows):
               "- **Compare across labs.** Find training methods, evaluation results, and safety disclosures "
               "across technical reports and model cards.",
               "- **Trace what changed.** Publication dates and revisions are recorded separately; "
-              "older archived versions are retained when reports are updated.", "",
+              "the latest verified revision is retained locally for duplicate reports.", "",
               "The [full catalog](catalog.csv) includes dates, versions, sources, and file verification details. "
               "Known omissions and uncertain dates are listed in [coverage and gaps](GAPS.md) "
               "(currently maintained in Chinese). Publisher and document-type directories have separate English and Chinese READMEs; "
@@ -437,7 +438,7 @@ def render(rows):
               "that helps readers follow releases, inspect technical evidence, and understand what changed.", "",
               "| Stage | What it helps you do | Status |", "| --- | --- | --- |",
               "| Original sources | Find official reports, source links, dates, and archived revisions | Available |",
-              "| Readable sources | Read source summaries and inspect core figures; full-document Markdown is next | Summaries and figures available |",
+              "| Readable sources | Read summaries and foldable OCR full text, navigate sections, and inspect figures, tables, and formulas | Available |",
               "| Technical analysis | Examine architecture, data, training, post-training, inference, and evaluation details with source references | Planned |",
               "| Continuous tracking | Follow new model releases and report revisions through automated monitoring and update histories | Planned |", "",
               "The bilingual website makes the archive searchable. Sources and frontier selections are curated manually.", "",
@@ -452,7 +453,7 @@ def render(rows):
     cn_lines += ["", "## 为什么值得持续关注？", "",
                  "- **直接读原文。** 官方报告与来源集中整理，减少在官网、仓库和论文页面之间来回查找。",
                  "- **横向看技术。** 对照不同厂商披露的训练方法、评测结果与安全信息，为自己的研究和判断找到依据。",
-                 "- **回看演进。** 首次发布与修订日期分别记录，报告更新时保留已有归档版本，方便追溯变化。", "",
+                 "- **核对版本。** 首次发布与修订日期分别记录，重复报告在本地保留最新核验版本。", "",
                  "[完整索引](catalog.csv) 提供日期、版本、来源及文件校验信息；"
                  "[覆盖范围与待补清单](GAPS.md) 公开记录遗漏、未确认日期和待核对范围。", "",
                  "## 一起把资料库补齐", "",
@@ -463,7 +464,7 @@ def render(rows):
                  "原始报告是基础。我们希望逐步建立一条研究路径，帮助读者跟进发布、核对技术证据、理解模型发生了什么变化。", "",
                  "| 阶段 | 帮助你做什么 | 状态 |", "| --- | --- | --- |",
                  "| 原始资料 | 查找官方报告、来源链接、日期与归档版本 | 已提供 |",
-                 "| 可读原文 | 阅读概要原文，查看核心图片；继续推进全文 Markdown | 概要与图片已提供 |",
+                 "| 可读原文 | 阅读概要与可折叠 OCR 全文，通过目录定位章节，查看图片、表格和公式 | 已提供 |",
                  "| 技术分析 | 结合原文出处，研究架构、数据、训练、后训练、推理与评测细节 | 计划中 |",
                  "| 持续跟进 | 通过自动监测与更新记录，追踪新模型发布及报告修订 | 计划中 |", "",
                  "双语网站提供报告搜索与筛选。来源和前沿模型清单由人工核对与维护。", "",

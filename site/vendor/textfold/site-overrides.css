@@ -1,0 +1,37 @@
+/* AI Frontier palette and static-reader controls. */
+:root {
+  --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif;
+  --serif: var(--sans);
+  --surface: #f2f4f6; --card: #fff; --ink: #0d1a28; --ink-2: #33485a; --muted: #5a6b7c;
+  --faint: #8296a8; --line: #d8dee4; --line-2: #e7ebef; --accent: #0f766e;
+  --accent-soft: #0f766e14; --accent-deep: #0a5a54; --warm: #b47b3e;
+  --hl: #f2df9b; --hl-ink: #8e6a12; --btn: #0f766e; --btn-hover: #0a5a54; --on-btn: #fff;
+  --col: 700px; color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --surface: #0f1b29; --card: #14202f; --ink: #eef4f9; --ink-2: #c5d1dc; --muted: #9db0c2;
+  --faint: #8296a8; --line: #22313f; --line-2: #1a2938; --accent: #65dfcc;
+  --accent-soft: #65dfcc1f; --accent-deep: #a8f0e2; --warm: #e0c79c;
+  --hl: #66551e; --hl-ink: #e3b73a; --btn: #65dfcc; --btn-hover: #a8f0e2; --on-btn: #05221e;
+  color-scheme: dark;
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif; }
+.embedded .paper-head { display: none; }
+.chunk, .u { min-width: 0; }
+.u[data-l="0"] { max-width: 100%; box-sizing: border-box; }
+.u[data-l="0"] .tx { display: block; min-width: 0; max-width: 100%; overflow-x: auto; }
+.doc { padding-bottom: 170px; }
+.madewith { text-align: center; }
+.local-fold-note { margin: 7px 0 0; color: var(--muted); font-size: 12px; }
+.reader-error { max-width: var(--col); margin: 12px auto; padding: 0 24px; color: var(--muted); }
+.static .chatbtn, .static .chat, .static .np-acts [data-act="ask"],
+.static .np-ask, .static .np-send, .static .np-stop { display: none !important; }
+.zoom-short { display: none; }
+@media (max-width: 600px) {
+  .zoombar button { white-space: nowrap; padding: 7px 8px; font-size: 12px; }
+  .zoombar .zoom-label { display: none; }
+  .zoombar .zoom-short { display: inline; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}

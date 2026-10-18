@@ -17,6 +17,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / 'scripts'))
 from web_sources import validate_summary, validate_figures, verify_snapshot
+from textfold_sources import load_textfold_index, load_document
 
 SHA = re.compile(r'^[0-9a-f]{64}$')
 MD_LINK = re.compile(r'!?\[[^\]\n]*\]\(([^\s\)]+)\)')
@@ -184,6 +185,20 @@ def validate(root, site=None, local_pdfs=False):
             require(name not in {'log.md', 'git-log.md', 'assets/branding/prompt.md', 'assets/branding/metadata.json'}
                     and not name.startswith('.cache/') and 'node_modules/' not in name, f'Private/cache file entered Git: {name}')
     if site:
+        for record in load_textfold_index(root, list(catalog.values())).values():
+            document = load_document(root, record)
+            expected_images = {image['site_path'] for image in record['images']}
+            require(all(src in expected_images for src in document.get('images', [])),
+                    f'Unregistered TextFold image: {record["id"]}')
+            vendor, slug = record['id'].split(':', 1)
+            native = site / 'fold' / vendor / (slug + '.html')
+            require(native.is_file() and native.with_suffix('.tfd').is_file(),
+                    f'Missing TextFold static reader or payload: {record["id"]}')
+            for image in record['images']:
+                require(not image.get('recovery') or image.get('visual_review'),
+                        f'Unreviewed TextFold recovery: {image["path"]}')
+                require((site / image['site_path']).is_file(),
+                        f'Missing TextFold website image: {image["site_path"]}')
         require((site / 'index.html').is_file() and (site / 'cn/index.html').is_file(), 'Both language homepages are required')
         require(not any(p.suffix.lower() == '.pdf' for p in site.rglob('*') if p.is_file()), 'Pages artifact contains a PDF')
         for path in site.rglob('*.html'):
@@ -209,7 +224,7 @@ class SiteLinks(HTMLParser):
         self.urls = []
 
     def handle_starttag(self, tag, attributes):
-        self.urls.extend(value for key, value in attributes if key in {'href', 'src'} and value)
+        self.urls.extend(value for key, value in attributes if key in {'href', 'src', 'data-document'} and value)
 
 
 if __name__ == '__main__':

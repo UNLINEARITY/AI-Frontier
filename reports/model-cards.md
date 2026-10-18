@@ -2,7 +2,7 @@
 
 [All reports](../README.md) · [Document types](../README.md#choose-the-right-document) · [Chinese](model-cards_CN.md)
 
-**62 reports**. Listed by recorded first publication date, newest first; unknown dates appear last.
+**61 reports**. Listed by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Publisher | Report | Status | Official source |
 | --- | --- | --- | --- | --- |
@@ -23,7 +23,6 @@
 | 2024-03 | [Anthropic](../pdfs/anthropic/README.md) | [Claude 3 Model Card](https://www.anthropic.com/system-cards) | archived | [Source](https://www.anthropic.com/system-cards) |
 | 2023-11-03 | [xAI](../pdfs/xai/README.md) | Grok-1 Model Card | missing_pdf | [Source](https://x.ai/news/grok/model-card) |
 | 2023-07 | [Anthropic](../pdfs/anthropic/README.md) | [Claude 2 Model Card](https://www.anthropic.com/news/claude-2-1) | archived | [Source](https://www.anthropic.com/news/claude-2-1) |
-| 2023-07 | [Anthropic](../pdfs/anthropic/README.md) | [Claude 2 Model Card](https://www.anthropic.com/system-cards) | archived | [Source](https://www.anthropic.com/system-cards) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | [Veo 3.1 Lite Model Card](https://deepmind.google/models/model-cards/veo-3-1-lite/) | archived | [Source](https://deepmind.google/models/model-cards/veo-3-1-lite/) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | [Veo 3 Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf) | archived | [Source](https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf) |
 | Unknown | [Google / DeepMind](../pdfs/google/README.md) | TxGemma Model Card | missing_pdf | [Source](https://developers.google.com/health-ai-developer-foundations/txgemma/model-card) |

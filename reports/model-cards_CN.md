@@ -2,7 +2,7 @@
 
 [首页](../README_CN.md) · [文档类型](../README_CN.md#按类型找报告) · [英文版](model-cards.md)
 
-已收录 **62 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
+已收录 **61 份报告**。按已记录的首次发布日期从新到旧排列，日期未确认的条目置于最后。
 
 | 首次发布日期 | 厂商 | 报告 | 状态 | 官方来源 |
 | --- | --- | --- | --- | --- |
@@ -23,7 +23,6 @@
 | 2024-03 | [Anthropic](../pdfs/anthropic/README_CN.md) | [Claude 3 Model Card](https://www.anthropic.com/system-cards) | 已归档 | [来源](https://www.anthropic.com/system-cards) |
 | 2023-11-03 | [xAI](../pdfs/xai/README_CN.md) | Grok-1 Model Card | 暂无独立 PDF | [来源](https://x.ai/news/grok/model-card) |
 | 2023-07 | [Anthropic](../pdfs/anthropic/README_CN.md) | [Claude 2 Model Card](https://www.anthropic.com/news/claude-2-1) | 已归档 | [来源](https://www.anthropic.com/news/claude-2-1) |
-| 2023-07 | [Anthropic](../pdfs/anthropic/README_CN.md) | [Claude 2 Model Card](https://www.anthropic.com/system-cards) | 已归档 | [来源](https://www.anthropic.com/system-cards) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Veo 3.1 Lite Model Card](https://deepmind.google/models/model-cards/veo-3-1-lite/) | 已归档 | [来源](https://deepmind.google/models/model-cards/veo-3-1-lite/) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | [Veo 3 Model Card](https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf) | 已归档 | [来源](https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf) |
 | 未确认 | [Google / DeepMind](../pdfs/google/README_CN.md) | TxGemma Model Card | 暂无独立 PDF | [来源](https://developers.google.com/health-ai-developer-foundations/txgemma/model-card) |

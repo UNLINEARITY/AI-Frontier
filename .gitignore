@@ -10,3 +10,4 @@ assets/branding/metadata.json
 node_modules/
 *.[pP][dD][fF]
 .taste-skill/
+/ocr

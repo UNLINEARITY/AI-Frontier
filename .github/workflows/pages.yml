@@ -11,10 +11,13 @@ on:
       - 'requirements-pages.txt'
       - 'abstracts/**'
       - 'figures/**'
+      - 'reader-content/**'
       - '.github/brand.json'
       - 'scripts/build_pages.py'
       - 'scripts/model_timeline.py'
       - 'scripts/build_readers.py'
+      - 'scripts/textfold_sources.py'
+      - 'scripts/textfold_static.py'
       - 'scripts/archive_reports.py'
       - 'site/**'
       - 'assets/branding/**'
@@ -37,6 +40,7 @@ jobs:
             site
             abstracts
             figures
+            reader-content
             assets/branding
             assets/vendors
             .github

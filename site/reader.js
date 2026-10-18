@@ -51,7 +51,13 @@ for (const link of document.querySelectorAll('.reader-step, .reader-pager-link')
 }
 
 function readerIsBusy() {
-  return document.querySelector('dialog[open]') !== null;
+  return document.querySelector('dialog[open]') !== null || document.documentElement.classList.contains('textfold-lightbox-open');
+}
+
+function pagingShouldYield(target) {
+  return target instanceof Element && Boolean(target.closest(
+    '[data-textfold-inline], iframe, table, input, textarea, select, button, a, [contenteditable="true"], [data-paging-ignore]'
+  ));
 }
 
 addEventListener('keydown', event => {
@@ -59,7 +65,7 @@ addEventListener('keydown', event => {
   if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
   if (readerIsBusy()) return;
   const target = event.target;
-  if (target instanceof HTMLElement && (target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))) return;
+  if (pagingShouldYield(target)) return;
   event.preventDefault();
   follow(event.key === 'ArrowLeft' ? 'prev' : 'next');
 });
@@ -67,7 +73,7 @@ addEventListener('keydown', event => {
 // Touch: a horizontal drag turns the page. Vertical scrolling keeps its own gesture.
 let touchStart;
 addEventListener('touchstart', event => {
-  if (!pager || readerIsBusy() || event.touches.length !== 1) return;
+  if (!pager || readerIsBusy() || event.touches.length !== 1 || pagingShouldYield(event.target)) return;
   const point = event.touches[0];
   touchStart = {x: point.clientX, y: point.clientY};
 }, {passive: true});
@@ -86,7 +92,7 @@ addEventListener('touchcancel', () => {touchStart = undefined;}, {passive: true}
 let horizontal = 0;
 let wheelTimer;
 addEventListener('wheel', event => {
-  if (!pager || event.ctrlKey || readerIsBusy()) return;
+  if (!pager || event.ctrlKey || readerIsBusy() || pagingShouldYield(event.target)) return;
   if (Math.abs(event.deltaX) <= Math.abs(event.deltaY) * 1.2) {horizontal = 0; return;}
   horizontal += event.deltaX;
   clearTimeout(wheelTimer);

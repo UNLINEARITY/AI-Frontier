@@ -9,7 +9,7 @@
 | 类型 | 已收录报告 |
 | --- | ---: |
 | [技术报告](technical-reports/README_CN.md) | 0 |
-| [模型卡](model-cards/README_CN.md) | 5 |
+| [模型卡](model-cards/README_CN.md) | 4 |
 | [系统卡](system-cards/README_CN.md) | 18 |
 
 ## 全部报告
@@ -38,6 +38,5 @@
 | 2024-06 | [Claude Sonnet 3.5 Model Card](https://www.anthropic.com/system-cards) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://www.anthropic.com/system-cards) |
 | 2024-03 | [Claude 3 Model Card](https://www.anthropic.com/system-cards) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://www.anthropic.com/system-cards) |
 | 2023-07 | [Claude 2 Model Card](https://www.anthropic.com/news/claude-2-1) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://www.anthropic.com/news/claude-2-1) |
-| 2023-07 | [Claude 2 Model Card](https://www.anthropic.com/system-cards) | [模型卡](../../reports/model-cards_CN.md) | [来源](https://www.anthropic.com/system-cards) |
 
 归档版本、文件校验值、抓取时间与版本更新时间见 [catalog.csv](../../catalog.csv)。

@@ -1,8 +1,9 @@
-"""Render the existing abstracts Markdown with inline figure previews."""
+"""Render full-text readers with metadata, falling back to source passages."""
 import hashlib
 import html
 import json
 import os
+import shutil
 import subprocess
 from pathlib import Path
 from urllib.parse import quote
@@ -10,6 +11,8 @@ from urllib.parse import quote
 from model_groups import CATEGORY_GROUPS
 
 from PIL import Image
+from textfold_sources import load_document, load_textfold_index, package_path
+from textfold_static import copy_static_assets, write_static_reader
 
 REPOSITORY = 'https://github.com/UNLINEARITY/AI-Frontier'
 RENDERER = Path(__file__).resolve().parents[1] / 'site/render-markdown.mjs'
@@ -80,6 +83,22 @@ def reader_navigation(nav, prefix, chinese):
 def build_readers(root, output, summaries, figure_reports, catalog, reader_meta=None, reader_nav=None):
     template = (root / 'site/reader.html').read_text()
     by_pdf = {r['local_path']: r for r in catalog}
+    fulltexts = load_textfold_index(root, catalog)
+    full_by_pdf, full_documents = {}, {}
+    if fulltexts:
+        copy_static_assets(root, output)
+        for record in fulltexts.values():
+            doc = load_document(root, record)
+            full_documents[record['id']] = (write_static_reader(root, output, record, doc), doc['chunks'])
+            full_by_pdf[record['source_pdf']] = record
+            for asset in record['images']:
+                if asset.get('recovery') and not asset.get('visual_review'):
+                    raise ValueError(f'Unreviewed TextFold recovered table: {asset["path"]}')
+                target = (output / asset['site_path']).resolve()
+                if not target.is_relative_to((output / 'assets/textfold-images').resolve()):
+                    raise ValueError('TextFold image target escapes the website assets')
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(package_path(root, asset['path']), target)
     articles, reports, previews = [], [], {}
     for report in summaries.values():
         if report.get('source_kind') == 'html':
@@ -125,6 +144,28 @@ def build_readers(root, output, summaries, figure_reports, catalog, reader_meta=
             path = Path(('cn/' if chinese else '') + reader_path(report))
             prefix = '../' * (len(path.parts) - 1)
             home = prefix + ('cn/index.html' if chinese else 'index.html')
+            fulltext = full_by_pdf.get(report.get('source_pdf'))
+            contents, fulltext_section = '', ''
+            if fulltext:
+                full_path, chunks = full_documents[fulltext['id']]
+                entries = []
+                for chunk in chunks:
+                    heading = ' '.join(filter(None, [chunk.get('num'), chunk.get('title')]))
+                    if not heading:
+                        heading = t('Opening', '开篇')
+                    entries.append(f'<li class="toc-depth-{min(4, max(1, int(chunk.get("level", 2))-1))}">'
+                                   f'<a href="#{escape(chunk["id"])}" '
+                                   f'data-fold-section="{escape(chunk["id"])}">{escape(heading)}</a></li>')
+                contents = (f'<details class="reader-toc" id="contents"><summary>{t("Contents", "目录")} '
+                            f'<span>({len(chunks)})</span></summary><ol>{"".join(entries)}</ol></details>')
+                fulltext_section = (
+                    f'<section id="fulltext" class="textfold-inline" data-textfold-inline '
+                    f'data-ui="{t("en", "zh")}" data-document="{escape(prefix + str(Path(full_path).with_suffix(".tfd")))}" '
+                    f'data-assets="{escape(prefix)}assets/textfold/" aria-label="{t("Full text", "全文")}" aria-busy="true">'
+                    f'<p class="textfold-loading">{t("Loading full text…", "正在载入全文…")}</p>'
+                    f'<noscript><p><a href="{escape(fulltext["source_url"])}">'
+                    f'{t("Read the official report", "阅读官方报告")}</a></p></noscript></section>'
+                    f'<script src="{escape(prefix)}assets/textfold/inline.js" defer></script>')
             values = {
                 'lang': t('en', 'zh-CN'), 'prefix': prefix, 'home': home,
                 'reports_home': prefix + ('cn/reports.html' if chinese else 'reports.html'),
@@ -132,7 +173,14 @@ def build_readers(root, output, summaries, figure_reports, catalog, reader_meta=
                 'switch_label': t('Switch to 中文', '切换至 English'), 'name': 'AI Frontier', 'repository': REPOSITORY,
                 'switch_compact': t('EN → 中', '中 → EN'),
                 'title': escape(report['title']), 'description': escape(report['title']),
-                'body': inject_reader_meta(body.replace('{{asset_prefix}}', prefix), meta, chinese), 'vendor': vendor,
+                'body': inject_reader_meta(
+                    (f'<h1>{escape(report["title"])}</h1>'
+                     f'<p><a href="{escape(fulltext["source_url"])}">{t("Official source", "官方来源")}</a></p>')
+                    if fulltext else body.replace('{{asset_prefix}}', prefix),
+                    meta, chinese),
+                'body_id': 'document-header' if fulltext else 'summary', 'vendor': vendor,
+                'reader_class': ' reader--fulltext' if fulltext else '',
+                'reader_contents': contents, 'fulltext_section': fulltext_section,
                 'reader_nav': reader_navigation(reader_nav.get(report['id']) if reader_nav else None, prefix, chinese),
                 'back': t('Back', '返回'), 'zoom': t('Figure', '图片'), 'close': t('Close', '关闭'),
                 'theme_label': t('Appearance', '外观'), 'light_theme': t('Light', '浅色'),

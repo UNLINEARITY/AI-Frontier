@@ -2,7 +2,7 @@
 
 [Home](../../../README.md) · [Publisher](../README.md) · [Chinese](README_CN.md)
 
-**5 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
+**4 reports**. Ordered by recorded first publication date, newest first; unknown dates appear last.
 
 | First published | Report | Type | Official source |
 | --- | --- | --- | --- |
@@ -10,6 +10,5 @@
 | 2024-06 | [Claude Sonnet 3.5 Model Card](https://www.anthropic.com/system-cards) | [Model Card](../../../reports/model-cards.md) | [Source](https://www.anthropic.com/system-cards) |
 | 2024-03 | [Claude 3 Model Card](https://www.anthropic.com/system-cards) | [Model Card](../../../reports/model-cards.md) | [Source](https://www.anthropic.com/system-cards) |
 | 2023-07 | [Claude 2 Model Card](https://www.anthropic.com/news/claude-2-1) | [Model Card](../../../reports/model-cards.md) | [Source](https://www.anthropic.com/news/claude-2-1) |
-| 2023-07 | [Claude 2 Model Card](https://www.anthropic.com/system-cards) | [Model Card](../../../reports/model-cards.md) | [Source](https://www.anthropic.com/system-cards) |
 
 Archive versions, checksums, retrieval times, and revision dates: [catalog.csv](../../../catalog.csv).

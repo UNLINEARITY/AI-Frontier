@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- Modified from TextFold's static reader template; see LICENSE and NOTICE. -->
+<html lang="en" class="static" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{TITLE}}</title>
+  <link rel="stylesheet" href="../../assets/textfold/reader.css">
+  <link rel="stylesheet" href="../../assets/textfold/site-overrides.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><rect class="m1" x="2" y="3" width="16" height="2.4" rx="1.2"/><rect class="m2" x="2" y="8.8" width="11" height="2.4" rx="1.2"/><rect class="m3" x="2" y="14.6" width="5" height="2.4" rx="1.2"/></svg>
+      <span>TextFold</span><a id="arxiv-link" target="_blank" rel="noopener"></a>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="tagline"></div>
+    <div class="langpick"><button type="button" id="langbtn" class="langbtn" aria-haspopup="menu" aria-expanded="false"></button><div id="langmenu" class="langmenu" role="menu" hidden></div></div>
+  </header>
+  <main id="doc" class="doc" data-level="4"></main>
+  <p id="reader-error" class="reader-error" role="alert" hidden></p>
+  <p class="reader-error"><a id="reader-source-fallback" href="{{SOURCE_URL}}" target="_blank" rel="noopener" hidden>Open the official source ↗</a></p>
+  <div id="ghosts" aria-hidden="true"></div>
+  <footer class="zoom">
+    <button type="button" id="back" class="backpill" hidden></button>
+    <nav class="zoombar" id="zoombar" aria-label="Zoom level"></nav>
+    <div class="hint" id="hint"></div>
+  </footer>
+  <script src="../../assets/textfold/theme.js"></script>
+  <script src="../../assets/textfold/i18n.js"></script>
+  <script type="application/json" id="paper-data"></script>
+  <script>
+    (async () => {
+      const fail = () => {
+        const zh = new URLSearchParams(location.search).get('ui') === 'zh';
+        const error = document.getElementById('reader-error');
+        error.textContent = zh ? '阅读数据无法在此浏览器中加载。' : 'Reader data could not be loaded in this browser.';
+        error.hidden = false;
+        const source = document.getElementById('reader-source-fallback');
+        source.hidden = !source.href || source.href === location.href;
+      };
+      try {
+        if (!('DecompressionStream' in window)) throw new Error('gzip is not supported');
+        const response = await fetch('{{DATA_URL}}');
+        if (!response.ok) throw new Error('reader data request failed');
+        const stream = new Blob([await response.arrayBuffer()]).stream().pipeThrough(new DecompressionStream('gzip'));
+        document.getElementById('paper-data').textContent = await new Response(stream).text();
+        const reader = document.createElement('script');
+        reader.src = '../../assets/textfold/reader.js';
+        reader.async = false;
+        reader.onerror = fail;
+        document.body.append(reader);
+      } catch (_) {
+        fail();
+      }
+    })();
+  </script>
+</body>
+</html>

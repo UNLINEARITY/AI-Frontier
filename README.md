@@ -10,9 +10,9 @@
 
 An open research archive for understanding how frontier AI models are built, evaluated, and deployed. Coverage spans language and multimodal models, robotics and VLA, embodied reasoning, and world models. We bring official technical reports, model cards, and system cards into one place, and are building toward readable sources, grounded technical analysis, and ongoing release tracking.
 
-**441 reports · 27 publishers · 2022 onward**
+**440 reports · 27 publishers · 2022 onward**
 
-**Available today:** official report indexes, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). Full-document Markdown, structured analysis, and automated tracking are the next stages.
+**Available today:** official report indexes, a searchable bilingual website with source reading pages and figure previews, and [frontier report summaries with core figures](abstracts/README.md). Reading pages also include contents and foldable OCR full text with figures, tables, and formulas, powered by [TextFold](https://github.com/chenxiachan/textfold). Structured analysis and automated tracking are the next stages.
 
 **Star AI Frontier to keep the sources close and follow the archive as it grows.**
 
@@ -23,7 +23,7 @@ Looking for implementation details, model boundaries, or deployment safety? Star
 | Type | Main subject | Focus | Typical contents | Reports |
 | --- | --- | --- | --- | ---: |
 | [Technical Report](reports/technical-reports.md) | Model / training method | Implementation and experiments | Architecture, data, training, post-training, inference, benchmarks | 318 |
-| [Model Card](reports/model-cards.md) | Individual model | Model description and usage boundaries | Capabilities, limitations, intended and unsuitable uses, evaluations, safety information | 62 |
+| [Model Card](reports/model-cards.md) | Individual model | Model description and usage boundaries | Capabilities, limitations, intended and unsuitable uses, evaluations, safety information | 61 |
 | [System Card](reports/system-cards.md) | Complete product / system | Risk, safety, and deployment behavior | Red teaming, dangerous capability evaluations, jailbreaks, safety mitigations, deployment restrictions | 61 |
 
 These are typical distinctions, not rigid boundaries. Documents can overlap or cover a model family; classification follows the publisher's designation and the document's primary purpose.
@@ -37,7 +37,7 @@ Click a count to open that publisher's collection for the document type. Counts 
 | Publisher | Technical Reports | Model Cards | System Cards | Total reports |
 | --- | ---: | ---: | ---: | ---: |
 | [OpenAI](pdfs/openai/README.md) | [6](pdfs/openai/technical-reports/README.md) | [1](pdfs/openai/model-cards/README.md) | [36](pdfs/openai/system-cards/README.md) | 43 |
-| [Anthropic](pdfs/anthropic/README.md) | [0](pdfs/anthropic/technical-reports/README.md) | [5](pdfs/anthropic/model-cards/README.md) | [18](pdfs/anthropic/system-cards/README.md) | 23 |
+| [Anthropic](pdfs/anthropic/README.md) | [0](pdfs/anthropic/technical-reports/README.md) | [4](pdfs/anthropic/model-cards/README.md) | [18](pdfs/anthropic/system-cards/README.md) | 22 |
 | [Google / DeepMind](pdfs/google/README.md) | [48](pdfs/google/technical-reports/README.md) | [34](pdfs/google/model-cards/README.md) | [1](pdfs/google/system-cards/README.md) | 83 |
 | [Meta](pdfs/meta/README.md) | [29](pdfs/meta/technical-reports/README.md) | [0](pdfs/meta/model-cards/README.md) | [2](pdfs/meta/system-cards/README.md) | 31 |
 | [xAI](pdfs/xai/README.md) | [0](pdfs/xai/technical-reports/README.md) | [7](pdfs/xai/model-cards/README.md) | [1](pdfs/xai/system-cards/README.md) | 8 |
@@ -68,7 +68,7 @@ Click a count to open that publisher's collection for the document type. Counts 
 
 - **Go straight to the source.** Official publisher reports and links, together in one index.
 - **Compare across labs.** Find training methods, evaluation results, and safety disclosures across technical reports and model cards.
-- **Trace what changed.** Publication dates and revisions are recorded separately; older archived versions are retained when reports are updated.
+- **Trace what changed.** Publication dates and revisions are recorded separately; the latest verified revision is retained locally for duplicate reports.
 
 The [full catalog](catalog.csv) includes dates, versions, sources, and file verification details. Known omissions and uncertain dates are listed in [coverage and gaps](GAPS.md) (currently maintained in Chinese). Publisher and document-type directories have separate English and Chinese READMEs; report titles and original PDFs retain their source language.
 
@@ -85,7 +85,7 @@ The original reports are the foundation. The longer-term goal is a research work
 | Stage | What it helps you do | Status |
 | --- | --- | --- |
 | Original sources | Find official reports, source links, dates, and archived revisions | Available |
-| Readable sources | Read source summaries and inspect core figures; full-document Markdown is next | Summaries and figures available |
+| Readable sources | Read summaries and foldable OCR full text, navigate sections, and inspect figures, tables, and formulas | Available |
 | Technical analysis | Examine architecture, data, training, post-training, inference, and evaluation details with source references | Planned |
 | Continuous tracking | Follow new model releases and report revisions through automated monitoring and update histories | Planned |
 
