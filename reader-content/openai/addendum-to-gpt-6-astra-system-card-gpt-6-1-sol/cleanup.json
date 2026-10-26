@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "openai:addendum-to-gpt-6-astra-system-card-gpt-6-1-sol",
+  "source_sha256": "1ae4ad6f0e2425a0f85623d3ccfc2a747c13611432a504ef0a7b5f4228789884",
+  "ocr_sha256": "62e2cfa828d807ba4ca3eb559d1c60c66e3d83038f85d8da5902dfce65762f4e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "coverage": "complete",
+    "notes": "Read all 602 OCR lines and extracted text from all 48 physical PDF pages in sequence, checking section transitions, tables, figures, page breaks, and formatting artifacts. Rendered selected pages 11, 26, 27, 39, and 48 to verify the HealthBench header, omitted prompt label, excerpt tables, and a line-end hyphenation case. Visual review was targeted, not a high-resolution visual inspection of every page. All page references are physical 1-based PDF pages; printed page numbers differ by one on interior pages.",
+    "coordinator_review": {
+      "pdf_pages": [
+        11,
+        26
+      ],
+      "method": "visual-source-pages-and-text",
+      "notes": "Confirmed final HealthBench column is GPT-6.1 Sol and the literal answer choices placeholder exists in the source prompt. Evaluation values and question contents retained."
+    }
+  },
+  "patches": [
+    {
+      "before": "<td>GPT-6 Luna</td><td>GPT-6 Sol</td></tr><tr><td>HealthBench</td>",
+      "after": "<td>GPT-6 Luna</td><td>GPT-6.1 Sol</td></tr><tr><td>HealthBench</td>",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 (printed p.10), Table 7: the final column header visibly reads GPT-6.1 Sol. The OCR duplicates GPT-6 Sol; this corrects only the header and leaves all table values unchanged."
+    },
+    {
+      "before": "Particles with Lorentz factor $\\approx$ 20 reach a detector wall one-third of the time. What Lorentz factor would make two-thirds reach it?  \nInstruction:",
+      "after": "Particles with Lorentz factor $\\approx$ 20 reach a detector wall one-third of the time. What Lorentz factor would make two-thirds reach it?  \n[answer choices]  \nInstruction:",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered physical p.26 (printed p.25), Table 10 prompt: the source visibly includes a separate “[answer choices]” line between the question and instruction; the OCR omitted that label."
+    },
+    {
+      "before": "semi-synthetic agen-tic environments.",
+      "after": "semi-synthetic agentic environments.",
+      "count": 1,
+      "pdf_pages": [
+        48
+      ],
+      "evidence": "Rendered physical p.48 (printed p.47): “agentic” is split at a line end as “agen-” / “tic”; the OCR retained the typesetting hyphen inside the word. Rejoins the word without changing the sentence."
+    }
+  ],
+  "unresolved": []
+}

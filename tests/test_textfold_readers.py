@@ -2,6 +2,7 @@
 
 These tests use tiny local OCR/PDF fixtures; they never call a model, network API, or browser.
 """
+import csv
 import gzip
 import hashlib
 import json
@@ -16,7 +17,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-from textfold_sources import load_textfold_index, prepare_document  # noqa: E402
+from textfold_sources import checksum, load_document, load_textfold_index, prepare_document  # noqa: E402
 from textfold_static import write_static_reader  # noqa: E402
 
 
@@ -178,6 +179,126 @@ class TextFoldSourceTests(unittest.TestCase):
         package.write_bytes(package.read_bytes() + b'corrupt')
         with self.assertRaisesRegex(ValueError, 'TextFold asset checksum mismatch'):
             load_textfold_index(self.root, [self.row])
+
+    def write_cleanup(self, before='Safe text.', after='Clean source text.', **changes):
+        path = self.root / 'reader-content/lab/model/cleanup.json'
+        path.parent.mkdir(parents=True, exist_ok=True)
+        data = {'schema_version': 1, 'id': 'lab:model', 'source_sha256': self.row['sha256'],
+                'ocr_sha256': checksum(self.ocr), 'patches': [
+                    {'before': before, 'after': after, 'count': 1,
+                     'pdf_pages': [1], 'evidence': 'Source PDF page 1 text checked.'}]}
+        data.update(changes)
+        path.write_text(json.dumps(data), encoding='utf-8')
+        return path
+
+    def test_reviewed_cleanup_replays_without_changing_source_or_images(self):
+        source_hash = checksum(self.ocr)
+        review = self.write_cleanup()
+        record = self.prepare()
+        self.assertEqual(checksum(self.ocr), source_hash)
+        self.assertEqual(record['text_cleanup']['sha256'], checksum(review))
+        self.write_index(record)
+        document = load_document(self.root, record)
+        words = ' '.join(t.get('t', '') for u in document['units'].values() for t in u['toks'])
+        self.assertIn('Clean source text', words)
+        self.assertNotIn('Safe text', words)
+        self.assertEqual(len(record['images']), 1)
+        self.pdf.unlink()
+        self.ocr.unlink()
+        self.assertEqual(load_textfold_index(self.root, [self.row]), {'lab:model': record})
+
+        review.write_text(review.read_text() + ' ')
+        with self.assertRaisesRegex(ValueError, 'OCR cleanup checksum mismatch'):
+            load_textfold_index(self.root, [self.row])
+        # Re-export can accept an edited review, but ordinary builds reject it.
+        self.assertEqual(load_textfold_index(self.root, [self.row], verify_cleanup=False), {'lab:model': record})
+
+    def test_cleanup_rejects_stale_source_and_ambiguous_replacements(self):
+        self.write_cleanup(ocr_sha256='0' * 64)
+        with self.assertRaisesRegex(ValueError, 'Stale OCR cleanup source'):
+            self.prepare()
+        self.write_cleanup(before='missing source fragment')
+        with self.assertRaisesRegex(ValueError, 'ambiguous OCR cleanup replacement'):
+            self.prepare()
+
+    def test_cleanup_cannot_remove_source_image(self):
+        self.ocr.write_text('# Model\n\n![chart](images/chart.jpg)\n')
+        self.write_cleanup(before='![chart](images/chart.jpg)', after='')
+        with self.assertRaisesRegex(ValueError, 'OCR cleanup changes source images'):
+            self.prepare()
+
+    def test_math_punctuation_spacing_is_repaired_outside_code_fences(self):
+        from textfold_sources import normalize_ocr_markdown
+
+        source = (
+            '## 1 Results\n\n'
+            'Prior work $[8, 9]$ , while others $[3]$ . Retention is $x$ ; measured.\n\n'
+            '```\nkeep $code$ , as written\n```\n'
+        )
+        normalized = normalize_ocr_markdown(source)
+        self.assertIn('$[8, 9]$, while others $[3]$. Retention is $x$; measured.', normalized)
+        self.assertIn('keep $code$ , as written', normalized)
+
+    def test_prose_rendered_as_code_is_reported_not_silently_exported(self):
+        from textfold_sources import swallowed_pre_blocks
+
+        body = 'planned output\n## 2 Results\n\n## 3 Ablations\n'
+        damaged = f'<pre><code>{body}</code></pre>'
+        self.assertEqual(swallowed_pre_blocks(damaged),
+                         [{'numbered_headings': 2, 'tables': 0, 'images': 0, 'chars': len(body)}])
+        figure = '## 2 Results\n\n![](images/plot.webp)\n'
+        self.assertEqual(swallowed_pre_blocks(f'<pre><code>{figure}</code></pre>'),
+                         [{'numbered_headings': 1, 'tables': 0, 'images': 1, 'chars': len(figure)}])
+        self.assertEqual(swallowed_pre_blocks('<pre><code>print(1)\n</code></pre>'), [],
+                         'a genuine code block is not a defect')
+        self.assertEqual(swallowed_pre_blocks('<pre><code>### Task\n{prompt}\n</code></pre>'), [],
+                         'a printed prompt box with one heading line is not a defect')
+
+    def test_force_reexport_regenerates_unchanged_packages(self):
+        import prepare_textfold
+
+        row = dict(self.row, status='archived')
+        with (self.root / 'catalog.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(row))
+            writer.writeheader()
+            writer.writerow(row)
+        (self.root / 'abstracts').mkdir()
+        (self.root / 'abstracts/index.json').write_text(json.dumps({'reports': [self.summary]}))
+        record = self.prepare()
+        self.write_index(record)
+
+        # Unchanged sources and reviews are normally reused, not re-exported.
+        with patch.object(prepare_textfold, 'prepare_document', wraps=prepare_textfold.prepare_document) as export:
+            prepare_textfold.prepare(self.root)
+        self.assertEqual(export.call_count, 0)
+
+        # A generator change needs the same package rebuilt byte for byte.
+        with patch.object(prepare_textfold, 'prepare_document', wraps=prepare_textfold.prepare_document) as export:
+            prepare_textfold.prepare(self.root, force=True)
+        self.assertEqual(export.call_count, 1)
+        rebuilt = load_textfold_index(self.root, [row])['lab:model']
+        self.assertEqual(rebuilt['document_sha256'], record['document_sha256'])
+
+    def test_export_refreshes_an_edited_cleanup_without_changing_ocr(self):
+        from prepare_textfold import prepare
+        row = dict(self.row, status='archived')
+        with (self.root / 'catalog.csv').open('w', newline='') as stream:
+            writer = csv.DictWriter(stream, fieldnames=list(row))
+            writer.writeheader()
+            writer.writerow(row)
+        (self.root / 'abstracts').mkdir()
+        (self.root / 'abstracts/index.json').write_text(json.dumps({'reports': [self.summary]}))
+        self.write_index(self.prepare())
+        source_hash = checksum(self.ocr)
+        self.write_cleanup()
+        prepare(self.root)
+        first = load_textfold_index(self.root, [row])['lab:model']
+        self.write_cleanup(after='Updated source text.')
+        prepare(self.root)
+        second = load_textfold_index(self.root, [row])['lab:model']
+        self.assertNotEqual(first['document_sha256'], second['document_sha256'])
+        self.assertNotEqual(first['text_cleanup']['sha256'], second['text_cleanup']['sha256'])
+        self.assertEqual(checksum(self.ocr), source_hash)
 
     def test_reader_opens_full_text_with_metadata_without_repeating_summary(self):
         from build_readers import build_readers

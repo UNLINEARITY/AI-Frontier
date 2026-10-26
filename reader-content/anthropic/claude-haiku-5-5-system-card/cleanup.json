@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-haiku-5-5-system-card",
+  "source_sha256": "d5dbaab6996c02ad6ff28b032ce5a9c7582e59af09b5d1bc0975cf0235535da9",
+  "ocr_sha256": "432bc2962cf488628e979ed744da8f48f0ebb4a08af0dd79a8e9f34d20db2301",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144
+    ],
+    "coverage": "complete",
+    "notes": "Reviewed the complete 2,185-line OCR Markdown sequentially and extracted text from all 144 physical PDF pages, checking paragraph/caption continuations and structural anomalies. Rendered selected pages for visual confirmation, including p.35 (Table 4.2.B) and p.71 (single composite chart); this was targeted visual review, not high-resolution visual review of every page. All page numbers are physical 1-based PDF pages. Also individually matched all 86 escaped-hyphen list items to the corresponding PDF page text; all are bullets.",
+    "preserved_source_details": [
+      {
+        "text": "Table 8.1.A FrontierCode Main row combines max and xhigh scores within cells (e.g. 46.4(max)45.8(xhigh)).",
+        "pdf_pages": [
+          111
+        ],
+        "reason": "PDF physical p.111 visually confirms both max/xhigh pairs belong in one FrontierCode 1.1 (Main) model cell. The proposal inserts line breaks only within each existing <td>, preserving the four model columns."
+      }
+    ],
+    "coordinator_review": {
+      "pdf_pages": [
+        35,
+        111
+      ],
+      "method": "visual-source-pages",
+      "notes": "Confirmed source table cell layout or list hierarchy; source content and uncertainty notation retained."
+    }
+  },
+  "patches": [
+    {
+      "before": "[Table 4.2.B] Multi-turn evaluation results for child safety. Higher is better for multi-turn appropriate\n\n",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Physical PDF p.35 renders the table first and its full caption immediately below. Removes only the misplaced OCR caption prefix; next patch restores it after the table."
+    },
+    {
+      "before": "</table>\n\nresponse rate. Bold indicates the top-performing model in each category; the second-best score is underlined. Results for previous models may show variance from previous system cards due to routine evaluation updates.",
+      "after": "</table>\n\n[Table 4.2.B] Multi-turn evaluation results for child safety. Higher is better for multi-turn appropriate response rate. Bold indicates the top-performing model in each category; the second-best score is underlined. Results for previous models may show variance from previous system cards due to routine evaluation updates.",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Physical PDF p.35 shows the complete caption after the last table row; cell contents and values remain unchanged."
+    },
+    {
+      "before": "new coverage of nihilistic violent\n\nextremism.",
+      "after": "new coverage of nihilistic violent extremism.",
+      "count": 1,
+      "pdf_pages": [
+        30,
+        31
+      ],
+      "evidence": "PDF p.30 ends this sentence at “violent”; p.31 continues “extremism. Topics include…”."
+    },
+    {
+      "before": "the system prompt applied, very rarely assisting with these requests. On the API without the system\n\nprompt, it assisted more often than Haiku 4.5,",
+      "after": "the system prompt applied, very rarely assisting with these requests. On the API without the system prompt, it assisted more often than Haiku 4.5,",
+      "count": 1,
+      "pdf_pages": [
+        37,
+        38
+      ],
+      "evidence": "PDF p.37 ends at “without the system”; p.38 begins “prompt, it assisted…”."
+    },
+    {
+      "before": "in this\n\nfigure lower is better. The y-axis is truncated below the maximum score of 10 in many cases. Reported scores are averaged across up to approximately",
+      "after": "in this figure lower is better. The y-axis is truncated below the maximum score of 10 in many cases. Reported scores are averaged across up to approximately",
+      "count": 1,
+      "pdf_pages": [
+        63,
+        64
+      ],
+      "evidence": "Figure 6.2.1.A caption flows across physical pp.63–64; p.64 continues the sentence with “figure lower is better”."
+    },
+    {
+      "before": "Reported scores are\n\naveraged across up to approximately 4,100 investigations per target model (approximately 1,850 seed instructions sampled 1 to 14 times; some metrics are scored only on the subset of scenarios where they apply), with each investigation generally containing many individual conversations. Shown with 95% CI.",
+      "after": "Reported scores are averaged across up to approximately 4,100 investigations per target model (approximately 1,850 seed instructions sampled 1 to 14 times; some metrics are scored only on the subset of scenarios where they apply), with each investigation generally containing many individual conversations. Shown with 95% CI.",
+      "count": 1,
+      "pdf_pages": [
+        65,
+        66
+      ],
+      "evidence": "Figure 6.2.2.A caption crosses physical pp.65–66; p.66 continues with “averaged across…”."
+    },
+    {
+      "before": "generated either by an instance of Claude or by\n\nanother frontier model. We measure the difference in scores Claude assigns to the same transcript",
+      "after": "generated either by an instance of Claude or by another frontier model. We measure the difference in scores Claude assigns to the same transcript",
+      "count": 1,
+      "pdf_pages": [
+        78,
+        79
+      ],
+      "evidence": "PDF p.78 ends at “by”; p.79 continues “another frontier model.”"
+    },
+    {
+      "before": "the agent's full transcript,\n\nincluding its reasoning (except in the hidden reasoning setting), and reasons about the whole trajectory before giving its verdict.",
+      "after": "the agent's full transcript, including its reasoning (except in the hidden reasoning setting), and reasons about the whole trajectory before giving its verdict.",
+      "count": 1,
+      "pdf_pages": [
+        87,
+        88
+      ],
+      "evidence": "PDF p.87 ends the clause at “transcript,”; p.88 continues “including its reasoning…”."
+    },
+    {
+      "before": "potential welfare in deployment. Differences between\n\nmodels partly reflect the differences in the tasks they are used for, rather than differences between the models themselves.",
+      "after": "potential welfare in deployment. Differences between models partly reflect the differences in the tasks they are used for, rather than differences between the models themselves.",
+      "count": 1,
+      "pdf_pages": [
+        98,
+        99
+      ],
+      "evidence": "PDF p.98 ends at “between”; p.99 continues “models partly reflect…”."
+    },
+    {
+      "before": "The constitution plays a large role in training, so high\n\nendorsement is expected and tells us little on its own;",
+      "after": "The constitution plays a large role in training, so high endorsement is expected and tells us little on its own;",
+      "count": 1,
+      "pdf_pages": [
+        108,
+        109
+      ],
+      "evidence": "PDF p.108 ends at “high”; p.109 continues “endorsement is expected…”."
+    },
+    {
+      "before": "Each line joins a model's points in order of\n\neffort. The result files carry no uncertainty intervals, so none are shown.",
+      "after": "Each line joins a model's points in order of effort. The result files carry no uncertainty intervals, so none are shown.",
+      "count": 1,
+      "pdf_pages": [
+        113,
+        114
+      ],
+      "evidence": "Figure 8.3.A caption spans pp.113–114; p.114 begins “effort.”"
+    },
+    {
+      "before": "grade responses against the per-task\n\nrubrics, with the same binary MET/UNMET verdicts aggregated into a normalized score,",
+      "after": "grade responses against the per-task rubrics, with the same binary MET/UNMET verdicts aggregated into a normalized score,",
+      "count": 1,
+      "pdf_pages": [
+        120,
+        121
+      ],
+      "evidence": "PDF p.120 ends at “per-task”; p.121 continues “rubrics…”."
+    },
+    {
+      "before": "recorded\n\nusage, with web search fees excluded. Claude Haiku 4.5 is shown at a 60K-token extended-thinking budget with 160K task budget.",
+      "after": "recorded usage, with web search fees excluded. Claude Haiku 4.5 is shown at a 60K-token extended-thinking budget with 160K task budget.",
+      "count": 1,
+      "pdf_pages": [
+        122,
+        123
+      ],
+      "evidence": "Figure 8.8.2.A caption crosses pp.122–123; p.123 continues “usage, with web search fees excluded”."
+    },
+    {
+      "before": "Our internal grading\n\nimplementation of Chartography matches the tasks and expert-determined acceptable answer ranges in the official repository.",
+      "after": "Our internal grading implementation of Chartography matches the tasks and expert-determined acceptable answer ranges in the official repository.",
+      "count": 1,
+      "pdf_pages": [
+        123,
+        124
+      ],
+      "evidence": "PDF p.123 ends at “grading”; p.124 continues “implementation…”."
+    },
+    {
+      "before": "We used the\n\nbenchmark's default settings (1080p resolution and a maximum of 500 action steps per task) at max effort.",
+      "after": "We used the benchmark's default settings (1080p resolution and a maximum of 500 action steps per task) at max effort.",
+      "count": 1,
+      "pdf_pages": [
+        127,
+        128
+      ],
+      "evidence": "PDF p.127 ends at “the”; p.128 continues “benchmark’s default settings…”."
+    },
+    {
+      "before": "tasks carried out in an electronic\n\nhealth record (EHR). Claude Haiku 5.5 passed 43.0% of attempts",
+      "after": "tasks carried out in an electronic health record (EHR). Claude Haiku 5.5 passed 43.0% of attempts",
+      "count": 1,
+      "pdf_pages": [
+        132,
+        133
+      ],
+      "evidence": "Figure 8.11.2.A caption crosses pp.132–133; p.133 continues “health record (EHR).”."
+    },
+    {
+      "before": "\n\\- ",
+      "after": "\n- ",
+      "count": 86,
+      "pdf_pages": [
+        2,
+        9,
+        10,
+        12,
+        19,
+        47,
+        48,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        70,
+        71,
+        72,
+        74,
+        99,
+        112
+      ],
+      "evidence": "Checked each of the 86 escaped-hyphen lines against its matching physical PDF page text; each is an ordinary source bullet. The listed physical pages are the distinct pages containing these list items. Markdown escape removal only; wording is unchanged."
+    },
+    {
+      "before": "<td>46.4(max)45.8(xhigh)</td>",
+      "after": "<td>46.4<br/>(max)<br/>45.8<br/>(xhigh)</td>",
+      "count": 1,
+      "pdf_pages": [
+        111
+      ],
+      "evidence": "Rendered PDF physical p.111: the Haiku 5.5 FrontierCode 1.1 (Main) cell displays 46.4, (max), 45.8, (xhigh) on separate lines. Keep all four lines inside the same existing model cell."
+    },
+    {
+      "before": "<td>46.2(max)52.1(xhigh)</td>",
+      "after": "<td>46.2<br/>(max)<br/>52.1<br/>(xhigh)</td>",
+      "count": 1,
+      "pdf_pages": [
+        111
+      ],
+      "evidence": "Rendered PDF physical p.111: the Sonnet 5.5 FrontierCode 1.1 (Main) cell displays 46.2, (max), 52.1, (xhigh) on separate lines. Keep all four lines inside the same existing model cell."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-robotics-technical-report",
+  "source_sha256": "f2c1ab4e73a76013b9ebf5a4ff90bb3d291eee0730304d3ebf4531256a204b78",
+  "ocr_sha256": "e3c14de93f9f8fa187f186c475a24b810bac3a618ae3b3c453e6c09af2cbae38",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      45
+    ],
+    "coverage": "partial",
+    "notes": "Formatting repair only: Figure 33 on physical p.45 prints literal ```python and ``` lines inside the figure text. OCR also opened an extra outer block before \"**Step 2: Grasp banana with left gripper**\", which left an unbalanced fence that rendered appendix C onwards (440 lines, 29 images, 4 tables) as code. Escaping the trailing fence keeps the printed characters and restores the appendix as body text. The inner figure fences were left paired as OCR produced them; a full content proofread remains outstanding."
+  },
+  "patches": [
+    {
+      "before": "```  \nFigure 33 | ",
+      "after": "\\`\\`\\`  \nFigure 33 | ",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Rendered physical p.45 shows Figure 33 ending with a printed \"```\" line inside the figure body, directly above the Figure 33 caption; treating it as a closing fence leaves the appendix balanced, while an unescaped marker opened a block that swallowed pages 46 onwards."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-33-inner-fences",
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "The figure prints two literal ```python lines; OCR pairs one of them with the code block that follows, so the printed marker is not visible as text. The figure body is otherwise transcribed faithfully and no content was removed."
+    }
+  ]
+}

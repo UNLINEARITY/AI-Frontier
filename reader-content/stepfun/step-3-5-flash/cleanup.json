@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step-3-5-flash",
+  "source_sha256": "0f91d0a5accac488ce3f607be93253c3a9e2e76a74b042fa597bf6d47e2822c9",
+  "ocr_sha256": "22519acc1d393d8024da8b51ed8a50f6acfef14a0a326eefd116d7fa61a94d49",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      47
+    ],
+    "coverage": "partial",
+    "notes": "Formatting repair only: physical p.47 prints the LiveCodeBench-v6 prompt box with the closing fence after {starter_code}. OCR transcribed that fence as \"###\", which left the appendix prompt boxes unbalanced and rendered the references (510 lines, 5 tables) as one code block. Restoring the printed fence balances the document; no prose, number or table value was changed. A full content proofread remains outstanding."
+  },
+  "patches": [
+    {
+      "before": "{starter_code}\n###\n### Answer:",
+      "after": "{starter_code}\n```\n### Answer:",
+      "count": 1,
+      "pdf_pages": [
+        47
+      ],
+      "evidence": "Rendered physical p.47 shows the prompt box \"### Question: / {question} / ### Format: ... / ``` python / {starter_code} / ``` / ### Answer:\". The OCR read the closing fence as \"###\"."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "prompt-box-headings",
+      "pdf_pages": [
+        47
+      ],
+      "evidence": "Printed prompt boxes contain literal fenced code lines and \"###\" headings; the reader keeps them as code blocks, which matches the source layout but was not proofread box by box."
+    }
+  ]
+}

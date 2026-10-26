@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-prover",
+  "source_sha256": "5731f6e680035a6aab3e35f11eedcc558b7939de5b290a589f43322251eb3e04",
+  "ocr_sha256": "ebc6662ed35cd0ffaabfe641d89ab75b44a9f9c8ac79ab0e7987f9463bc71bad",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      16
+    ],
+    "coverage": "partial",
+    "notes": "Formatting repair only: physical p.16 prints section A.4 followed by a Lean import block, but OCR dropped the opening fence, so the heading, the sentence and the whole code list rendered as one code block through the end of the document. Restoring the fence keeps the printed text unchanged and separates heading, prose and code. A full content proofread remains outstanding."
+  },
+  "patches": [
+    {
+      "before": "the following code as the prefix:\n\nimport Mathlib.Algebra.Algebra.Basic\n",
+      "after": "the following code as the prefix:\n\n```\nimport Mathlib.Algebra.Algebra.Basic\n",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 shows \"A.4 Formal Verification Details\", the sentence \"We verify the generated Lean 4 code with the following code as the prefix:\", and a monospaced import list starting with import Mathlib.Algebra.Algebra.Basic."
+    }
+  ],
+  "unresolved": []
+}

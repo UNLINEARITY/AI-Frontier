@@ -7,6 +7,7 @@ import gzip
 import hashlib
 import json
 import re
+import sys
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -26,8 +27,61 @@ def package_path(root, value):
     return path
 
 
+def apply_text_cleanup(text, path, report_id, row, ocr_sha256):
+    """Replay reviewed, exact replacements without changing the OCR source."""
+    if not path.is_file():
+        return text, None
+    data = json.loads(path.read_text(encoding='utf-8'))
+    if (data.get('schema_version') != 1 or data.get('id') != report_id
+            or data.get('source_sha256') != row['sha256']
+            or data.get('ocr_sha256') != ocr_sha256):
+        raise ValueError(f'Stale OCR cleanup source: {report_id}')
+    patches = data.get('patches')
+    if not isinstance(patches, list):
+        raise ValueError(f'Invalid OCR cleanup patches: {report_id}')
+    original = text
+    for patch in patches:
+        before, after, count = patch.get('before'), patch.get('after'), patch.get('count', 1)
+        pages = patch.get('pdf_pages')
+        if (not isinstance(before, str) or not before or not isinstance(after, str) or before == after
+                or type(count) is not int or count < 1 or text.count(before) != count
+                or not isinstance(pages, list) or not pages
+                or any(type(p) is not int or p < 1 or p > int(row.get('pages') or p) for p in pages)
+                or not patch.get('evidence')):
+            raise ValueError(f'Invalid or ambiguous OCR cleanup replacement: {report_id}')
+        text = text.replace(before, after)
+    # Cleanup cannot silently remove, replace or reorder source image embeds.
+    image = re.compile(r'!\[[^\]\n]*\]\([^\n]+?\)|!\[\[[^\]\n]+\]\]|<img\b[^>]*>', re.I)
+    if image.findall(original) != image.findall(text):
+        raise ValueError(f'OCR cleanup changes source images: {report_id}')
+    return text, {'sha256': checksum(path), 'patch_count': len(patches)}
+
+
+def swallowed_pre_blocks(html):
+    """Return code blocks that still contain document structure, i.e. OCR damage.
+
+    OCR reads printed fences from prompt boxes and figures, so a source can open
+    a code block that the renderer never closes. When that happens prose, tables
+    and images are shown as code. Report those blocks instead of exporting them
+    silently; the repair belongs in the document's reviewed cleanup.json.
+    """
+    found = []
+    for block in re.findall(r'<pre\b[^>]*>(.*?)</pre>', html, re.S | re.I):
+        text = re.sub(r'<[^>]+>', '', block)
+        # Printed prompt boxes and model transcripts legitimately start lines with
+        # "###", so only numbered section headings, tables and image embeds show
+        # that document body content was swallowed by an unbalanced fence.
+        numbered = len(re.findall(r'(?m)^#{2,6} \d+(?:\.\d+)*\s+\S', text))
+        tables = len(re.findall(r'(?m)^\s*<table', text))
+        images = len(re.findall(r'!\[(?!\[)[^\]\n]*\]\([^)\n]+\)', text))
+        if numbered or tables or images:
+            found.append({'numbered_headings': numbered, 'tables': tables, 'images': images,
+                          'chars': len(text)})
+    return found
+
+
 def normalize_ocr_markdown(text):
-    """Repair image syntax and explicit numbered heading depth, outside code fences."""
+    """Repair image syntax, numbered heading depth and math punctuation spacing."""
     lines, fence = [], None
     for line in text.splitlines():
         marker = re.match(r'^\s*(`{3,}|~{3,})', line)
@@ -45,6 +99,9 @@ def normalize_ocr_markdown(text):
             if heading:
                 depth = min(6, 2 + heading[1].count('.'))
                 line = '#' * depth + ' ' + heading[1] + ' ' + heading[2]
+            # OCR keeps the PDF layout gap between a closing inline-math
+            # delimiter and the punctuation that follows it.
+            line = re.sub(r'(?<=\S)\$[ \t]+([,.;:!?\uff0c\u3002\uff1b\uff1a\uff01\uff1f])', r'$\1', line)
         lines.append(line)
     return '\n'.join(lines) + '\n'
 
@@ -131,6 +188,10 @@ def prepare_document(root, row, summary=None, output_root=None):
         raise ValueError('Unsafe TextFold document id')
     report_id = f'{vendor}:{slug}'
     folder = output_root / vendor / slug
+    cleanup_path = folder / 'cleanup.json'
+    text, cleanup = apply_text_cleanup(text, cleanup_path, report_id, row, checksum(source))
+    if cleanup:
+        cleanup['path'] = cleanup_path.relative_to(root).as_posix()
     images, seen, exported = [], {}, set()
 
     def resolve_image(raw):
@@ -190,7 +251,16 @@ def prepare_document(root, row, summary=None, output_root=None):
             exported.add(site_path)
             return site_path
 
-    source_html, _ = markdown.to_html(normalize_ocr_markdown(text))
+    normalized_markdown = normalize_ocr_markdown(text)
+    source_html, _ = markdown.to_html(normalized_markdown)
+    swallowed = swallowed_pre_blocks(source_html)
+    if swallowed:
+        # Rendering prose as code is invisible in the build, so name the document
+        # and let a reviewed cleanup.json repair the unbalanced fence.
+        regions = ', '.join(f'{b["numbered_headings"]} headings/{b["tables"]} tables/'
+                            f'{b["images"]} images/{b["chars"]} chars' for b in swallowed)
+        print(f'WARNING: {report_id} renders document structure inside {len(swallowed)} code '
+              f'block(s) ({regions}); review cleanup.json for this document.', file=sys.stderr)
     _, source_html = markdown.take_title(source_html, {}, source.name)
     source_html, table_repairs = repair_table_images(source_html, workspace, recover_table)
     normalized = semantic.normalize(source_html, resolve_img=resolve_image)
@@ -205,18 +275,23 @@ def prepare_document(root, row, summary=None, output_root=None):
     doc['provenance'] = {'upstream': UPSTREAM, 'ai_generated': False, 'model': None,
                          'method': 'local-first-sentence', 'source_sha256': row['sha256'],
                          'ocr_sha256': checksum(source)}
+    if cleanup:
+        doc['provenance']['text_cleanup'] = cleanup
     folder.mkdir(parents=True, exist_ok=True)
     target = folder / 'document.json.gz'
     target.write_bytes(gzip.compress(json.dumps(doc, ensure_ascii=False, separators=(',', ':')).encode(), mtime=0))
-    return {'id': report_id, 'vendor': vendor, 'title': row['title'], 'version': row.get('version', ''),
+    record = {'id': report_id, 'vendor': vendor, 'title': row['title'], 'version': row.get('version', ''),
             'source_pdf': row['local_path'], 'source_sha256': row['sha256'], 'source_url': row['source_url'],
             'ocr_markdown': source.relative_to(root).as_posix(), 'ocr_sha256': checksum(source),
             'document_path': target.relative_to(root).as_posix(), 'document_sha256': checksum(target),
             'sections': len(doc['chunks']), 'units': len(doc['units']), 'images': images,
             'table_image_fallbacks': table_repairs}
+    if cleanup:
+        record['text_cleanup'] = cleanup
+    return record
 
 
-def load_textfold_index(root, catalog):
+def load_textfold_index(root, catalog, verify_cleanup=True):
     """Validate published packages; deliberately never read OCR sources or PDFs."""
     root = Path(root)
     index = root / 'reader-content/index.json'
@@ -237,6 +312,11 @@ def load_textfold_index(root, catalog):
             path = package_path(root, asset['path'])
             if not path.is_file() or checksum(path) != asset['sha256']:
                 raise ValueError(f'TextFold asset checksum mismatch: {asset["path"]}')
+        cleanup = record.get('text_cleanup')
+        if cleanup and verify_cleanup:
+            path = package_path(root, cleanup['path'])
+            if not path.is_file() or checksum(path) != cleanup['sha256']:
+                raise ValueError(f'OCR cleanup checksum mismatch: {record["id"]}')
         result[record['id']] = record
     return result
 
@@ -248,4 +328,6 @@ def load_document(root, record):
     doc = json.loads(gzip.decompress(path.read_bytes()))
     if doc['meta']['id'] != record['id'] or doc['meta']['source_sha256'] != record['source_sha256']:
         raise ValueError(f'TextFold document source mismatch: {record["id"]}')
+    if doc.get('provenance', {}).get('text_cleanup') != record.get('text_cleanup'):
+        raise ValueError(f'OCR cleanup provenance mismatch: {record["id"]}')
     return doc

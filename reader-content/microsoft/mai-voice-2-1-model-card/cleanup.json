@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:mai-voice-2-1-model-card",
+  "source_sha256": "779d6bcbfcaebcb556ed7ec4b832bfd7fa9aa6f8329d216177e573ef78e62f32",
+  "ocr_sha256": "1f0d0f8f7d5f6ccdf0715bcafadbb927c4666f4f92606399beccd2276960e468",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coverage": "complete",
+    "notes": "Read the complete OCR Markdown and extracted PDF text from all four physical pages. Visually reviewed pp.1–4; compared list markers and individual SSML example boxes and inspected Vietnamese diacritics. All page numbers are physical 1-based PDF pages."
+  },
+  "patches": [
+    {
+      "before": "Voice can be configured using:\n\n\\- Curated voice library (licensed voices designed to work straight out of the box)\n\n• Voice Cloning via short audio clips (5-60 seconds), and the model matches the voice instantly\n\n## Key capabilities\n\n• Natural and expressive voice synthesis with realistic intonation, rhythm, and emotional range.\n\n• High-fidelity, high-clarity voice output.\n\n• Multilingual support across 23 languages.\n\n\\- One voice across all supported languages: a single voice identity is rendered consistently in every supported language.\n\n\\- Fine-grained control of tone and delivery: shape emotion, tone, and delivery at the turn/sentence level, including different speaking styles via SSML.\n\n\\- State-of-the-art instant Voice Cloning: provide a short audio clip (5-60 seconds) and the model clones the voice instantly, with no fine-tuning required. Prompt quality significantly impacts output, with best results from natural, conversational delivery and moderate energy levels. Access requires Microsoft approval and guardrails are in place to avoid misuse.\n\n\\- Long-form content generation with improved consistency via chunking and context carryover.\n\n\\- Multi-speaker support for dialogue and conversational scenarios.",
+      "after": "Voice can be configured using:\n\n- Curated voice library (licensed voices designed to work straight out of the box)\n- Voice Cloning via short audio clips (5-60 seconds), and the model matches the voice instantly\n\n## Key capabilities\n\n- Natural and expressive voice synthesis with realistic intonation, rhythm, and emotional range.\n- High-fidelity, high-clarity voice output.\n- Multilingual support across 23 languages.\n- One voice across all supported languages: a single voice identity is rendered consistently in every supported language.\n- Fine-grained control of tone and delivery: shape emotion, tone, and delivery at the turn/sentence level, including different speaking styles via SSML.\n- State-of-the-art instant Voice Cloning: provide a short audio clip (5-60 seconds) and the model clones the voice instantly, with no fine-tuning required. Prompt quality significantly impacts output, with best results from natural, conversational delivery and moderate energy levels. Access requires Microsoft approval and guardrails are in place to avoid misuse.\n- Long-form content generation with improved consistency via chunking and context carryover.\n- Multi-speaker support for dialogue and conversational scenarios.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "PDF physical p.1 shows two voice-configuration bullets and eight capability bullets. Normalize escaped hyphens and bullet glyphs as Markdown list items; wording/order preserved."
+    },
+    {
+      "before": "Steps to Access Personal Voice (Voice Cloning) with MAI-Voice-2.1:\n\n\\- Apply for gated access: Submit a request via the Azure AI Custom Neural Voice and Custom Avatar Limited Access Review.\n\n\\- Access personal voice APIs: Once approved, use the APIs available at cognitive-services-speech-sdk/samples/custom-voice\n\n\\- Upload audio consent and prompt: Provide a recorded audio consent statement from the voice talent along with the required prompt to create a personal voice profile. For more information, read about Azure Speech consent statement.\n\n• Synthesize text using the created voice\n\n## Use cases\n\n## Key use cases\n\n• Audiobooks and Media Narration: Produce full-length, expressive narration with a consistent voice.\n\n\\- Content Creation and Voice-over: Turn scripts into polished, high-fidelity spoken audio.\n\n• Marketing and Advertising: Deliver a consistent brand voice across campaigns and markets.\n\n• E-learning and Educational Content: Build interactive learning content with expressive narration.\n\n\\- Virtual Assistants and Chatbots: Power conversational agents across apps and devices with natural voices.\n\n\\- Accessibility Features: Provide narration for visually impaired users and assistive voice technologies.\n\n• Public Announcements: Deliver clear, engaging voice output for public information systems.",
+      "after": "Steps to Access Personal Voice (Voice Cloning) with MAI-Voice-2.1:\n\n- Apply for gated access: Submit a request via the Azure AI Custom Neural Voice and Custom Avatar Limited Access Review.\n- Access personal voice APIs: Once approved, use the APIs available at cognitive-services-speech-sdk/samples/custom-voice\n- Upload audio consent and prompt: Provide a recorded audio consent statement from the voice talent along with the required prompt to create a personal voice profile. For more information, read about Azure Speech consent statement.\n- Synthesize text using the created voice\n\n## Use cases\n\n## Key use cases\n\n- Audiobooks and Media Narration: Produce full-length, expressive narration with a consistent voice.\n- Content Creation and Voice-over: Turn scripts into polished, high-fidelity spoken audio.\n- Marketing and Advertising: Deliver a consistent brand voice across campaigns and markets.\n- E-learning and Educational Content: Build interactive learning content with expressive narration.\n- Virtual Assistants and Chatbots: Power conversational agents across apps and devices with natural voices.\n- Accessibility Features: Provide narration for visually impaired users and assistive voice technologies.\n- Public Announcements: Deliver clear, engaging voice output for public information systems.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "PDF physical p.2 shows four safeguard steps and seven key use cases as bullets; normalizes OCR bullet glyphs and spacing."
+    },
+    {
+      "before": "MAI-Voice-2.1 can be accessed globally. The model is currently served from the following Azure regions to which the requests are routed:\n\n\\- France Central\n\nEast Asia\n\n\\- Southeast Asia\n\nEast US\n\n\\- Canada Central\n\nEast US 2\n\n\\- West US\n\n\\- West Europe\n\n\\- North Europe\n\n\\- West US 2\n\n\\- West US 3\n\n\\- Central India\n\n\\- Sweden Central\n\n\\- Japan East",
+      "after": "MAI-Voice-2.1 can be accessed globally. The model is currently served from the following Azure regions to which the requests are routed:\n\n- France Central\n- East Asia\n- Southeast Asia\n- East US\n- Canada Central\n- East US 2\n- West US\n- West Europe\n- North Europe\n- West US 2\n- West US 3\n- Central India\n- Sweden Central\n- Japan East",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "PDF physical p.4 shows all 14 Azure regions as a single bullet list; OCR omitted bullet markers for East Asia, East US and East US 2 and escaped other bullets. Restores list formatting/order only."
+    },
+    {
+      "before": "MAI-Voice-2.1 is available via the Azure Speech SDK and REST APIs:\n\n\\- Speech SDK: Integrate TTS capabilities directly into applications using Azure's Speech SDK, available for platforms including .NET, Python, Java, JavaScript, and C++.\n\n\\- REST API: Access TTS functionality via a public, subscription-based API for flexible integration into web services, mobile apps, and backend systems.",
+      "after": "MAI-Voice-2.1 is available via the Azure Speech SDK and REST APIs:\n\n- Speech SDK: Integrate TTS capabilities directly into applications using Azure's Speech SDK, available for platforms including .NET, Python, Java, JavaScript, and C++.\n- REST API: Access TTS functionality via a public, subscription-based API for flexible integration into web services, mobile apps, and backend systems.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "PDF physical p.4 shows the Speech SDK and REST API descriptions as two bullets. Converts escaped hyphens to Markdown list markers."
+    },
+    {
+      "before": "## SSML examples\n\nBasic SSML Example (Harper):\n\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts' xml:lang='en-US'>\n\n<voice name='en-US-Harper:MAI-Voice-2.1'>\n\nHello world, this is awesome!\n\n</voice>\n\n</speak>\n\n```txt\nBasic SSML Example (Grant):\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts'\nxml:lang='en-US'>\n<voice name='en-US-Grant:MAI-Voice-2.1'>\nHello world, this is awesome!\n</voice>\n</speak>\n\nMultilingual SSML Example (Harper):\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts'\nxml:lang='en-US'>\n<voice name='en-US-Harper:MAI-Voice-2.1'> How are you? </voice>\n<voice name='hu-HU-Harper:MAI-Voice-2.1'> Hogy vagy? </voice>\n<voice name='vi-VN-Harper:MAI-Voice-2.1'> Bàn khoê không? </voice>\n<voice name='es-MX-Harper:MAI-Voice-2.1'> ¿Cómo estás? </voice>\n</speak>\n\nMultilingual SSML Example (Grant):\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts'\nxml:lang='en-US'>\n<voice name='en-US-Grant:MAI-Voice-2.1'> I am fine, thank you</voice>\n<voice name='hu-HU-Grant:MAI-Voice-2.1'> Jól vagyok, köszönöm.</voice>\n<voice name='vi-VN-Grant:MAI-Voice-2.1'> Tôi ôn, cám on bạn.</voice>\n<voice name='es-MX-Grant:MAI-Voice-2.1'> Estoy bien gracias.</voice>\n</speak>\n\nExpressive Control with SSML `mstts:express-as`:\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts'\nxml:lang='en-US'>\n<voice name='en-US-Grant:MAI-Voice-2.1'>\n<mstts:express-as style=\"excited\">\nHello world, this is awesome!\n</mstts:express-as>\n</voice>\n</speak>\n```",
+      "after": "## SSML examples\n\nBasic SSML Example (Harper):\n\n```txt\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts' xml:lang='en-US'>\n\n<voice name='en-US-Harper:MAI-Voice-2.1'>\n\nHello world, this is awesome!\n\n</voice>\n\n</speak>\n```\n\nBasic SSML Example (Grant):\n\n```txt\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts'\nxml:lang='en-US'>\n<voice name='en-US-Grant:MAI-Voice-2.1'>\nHello world, this is awesome!\n</voice>\n</speak>\n```\n\nMultilingual SSML Example (Harper):\n\n```txt\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts'\nxml:lang='en-US'>\n<voice name='en-US-Harper:MAI-Voice-2.1'> How are you? </voice>\n<voice name='hu-HU-Harper:MAI-Voice-2.1'> Hogy vagy? </voice>\n<voice name='vi-VN-Harper:MAI-Voice-2.1'> Bàn khoê không? </voice>\n<voice name='es-MX-Harper:MAI-Voice-2.1'> ¿Cómo estás? </voice>\n</speak>\n```\n\nMultilingual SSML Example (Grant):\n\n```txt\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts'\nxml:lang='en-US'>\n<voice name='en-US-Grant:MAI-Voice-2.1'> I am fine, thank you</voice>\n<voice name='hu-HU-Grant:MAI-Voice-2.1'> Jól vagyok, köszönöm.</voice>\n<voice name='vi-VN-Grant:MAI-Voice-2.1'> Tôi ôn, cám on bạn.</voice>\n<voice name='es-MX-Grant:MAI-Voice-2.1'> Estoy bien gracias.</voice>\n</speak>\n```\n\nExpressive Control with SSML `mstts:express-as`:\n\n```txt\n<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xmlns:mstts='http://www.w3.org/2001/mstts'\nxml:lang='en-US'>\n<voice name='en-US-Grant:MAI-Voice-2.1'>\n<mstts:express-as style=\"excited\">\nHello world, this is awesome!\n</mstts:express-as>\n</voice>\n</speak>\n```",
+      "count": 1,
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "evidence": "Rendered PDF physical pp.2–3: each of the five SSML snippets appears in its own shaded code box, with its example label outside. The OCR had the Harper example unfenced and a single fence beginning before the Grant label and spanning later headings; proposal aligns code fences to the five source boxes while retaining XML text."
+    },
+    {
+      "before": "## 23 languages:",
+      "after": "23 languages:",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "PDF physical p.3 styles “Supported languages” as the heading and “23 languages:” as a normal introductory line; removes spurious OCR heading marker."
+    },
+    {
+      "before": "Bàn khoê không?",
+      "after": "Bạn khoẻ không?",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered PDF physical p.3 Harper example reads “Bạn khoẻ không?”; corrects Vietnamese OCR character/diacritic errors."
+    },
+    {
+      "before": "Tôi ôn, cám on bạn.",
+      "after": "Tôi ổn, cảm ơn bạn.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered PDF physical p.3 Grant example reads “Tôi ổn, cảm ơn bạn.”; corrects Vietnamese OCR character/diacritic errors."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-prover-v2-technical-report",
+  "source_sha256": "c583fda9ddf5a74da91cfc1f7e50e56627303b40f9f6571927aeb8fa25eb1131",
+  "ocr_sha256": "19ae37a7628ca206b51d90ddae1ddbd4c6135a87e27c9ad91de8e062cc594a7e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      38
+    ],
+    "coverage": "partial",
+    "notes": "Formatting repair only: physical p.38 prints the Lean snippets inside code boxes whose fence line reads \"```lean4\", and the box ends with one printed \"```\" line directly above the \"D. Revision to MiniF2F\" heading. OCR read those fence backticks as two apostrophes and split the closing fence into \"``\" and \"```\", so the appendix heading, its numbered items and the model output fell inside code blocks. Restoring the two misread openers and rejoining the split closer makes the appendix render as headings and prose; the printed model output keeps its monospace block. No prose, number or image was changed. A line-by-line content proofread of this report remains outstanding."
+  },
+  "patches": [
+    {
+      "before": "exact h_main\n\n``\n```\n\n## D. Revision to MiniF2F",
+      "after": "exact h_main\n\n```\n\n## D. Revision to MiniF2F",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38: the Lean code box ends with one printed \"```\" line directly above the \"D. Revision to MiniF2F\" heading. OCR split that fence into \"``\" and \"```\", which opened a block that swallowed the appendix heading; rejoining it leaves one closer."
+    },
+    {
+      "before": "''lean4",
+      "after": "```lean4",
+      "count": 2,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 prints the Lean snippets inside a code box whose fence line reads \"```lean4\"; OCR read the backticks as two apostrophes, so the boxes had a closer without an opener and the \"D. Revision to MiniF2F\" heading fell inside a code block."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "monospace-model-output",
+      "pdf_pages": [
+        20,
+        38
+      ],
+      "evidence": "Model outputs are printed in monospace boxes that contain markdown-like lines; they stay code blocks, which matches the source layout but was not proofread line by line."
+    }
+  ]
+}

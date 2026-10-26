@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "google:nano-banana-2-1-model-card",
+  "source_sha256": "397b41ff808a7d2aa2d601afeb2b84c3c0574239281eb1d619996eed7d880566",
+  "ocr_sha256": "084363eaeee8765724ce45c8f9d385900a9c60b19db5841892e22a6c648bb050",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverage": "complete",
+    "notes": "Read the complete 165-line OCR document and extracted PDF text from all eight physical pages. Rendered pp.4–5 for visual checking of list hierarchy, the T2I label and result tables; other pages reviewed by extracted PDF text. No table values changed.",
+    "preserved_source_details": [
+      {
+        "text": "Text in PDF p.5’s confidence intervals is visually rendered as plus/slash/minus-style notation (“+/-”); PDF text extraction inconsistently drops the minus glyph in one cell, while the OCR Markdown has “+/-”.",
+        "pdf_pages": [
+          5
+        ],
+        "reason": "OCR and rendered table are compatible; leave every numeric value and uncertainty marker unchanged."
+      }
+    ],
+    "coordinator_review": {
+      "pdf_pages": [
+        4,
+        5
+      ],
+      "method": "visual-source-pages",
+      "notes": "Confirmed source table cell layout or list hierarchy; source content and uncertainty notation retained."
+    }
+  },
+  "patches": [
+    {
+      "before": "Gemini App\n\n\\- Google AI Studio\n\nGemini API\n\n• Google Search AI Mode\n\n\\- Google Ads\n\n\\- Google Flow\n\n## - Google Stitch",
+      "after": "- Gemini App\n- Google AI Studio\n- Gemini API\n- Google Search AI Mode\n- Google Ads\n- Google Flow\n- Google Stitch",
+      "count": 1,
+      "pdf_pages": [
+        3,
+        4
+      ],
+      "evidence": "PDF physical p.3–4 shows these seven channels as one continuing bulleted list; Google Stitch is a bullet on p.4, not a section heading. Normalizes OCR bullet glyphs/escaping and restores list structure."
+    },
+    {
+      "before": "\\- Capabilities / Benchmarks cover several different quality aspects of image generation, which are in two broad categories:\n\n\\- Capability sets: diverse Text-to-Image (T2I) and editing public benchmarks, and internal evals are used, covering a wide range of capabilities.\n\n■ T2l: General Text-to-Image, i18n Text Rendering, Factuality (world knowledge, EDU, etc), Tool-Use, Visual Design.\n\n■ Editing: General Image Editing, Stylization, Character Editing, Object/Environment Editing, Ink (doodle) based Editing, Multi-Image (Multi-Product Recontextualization, Multi-Character, etc.),\n\n■ Multi-Turn: Covers both static and dynamic conversations.\n\nRegression sets: popular use cases observed on Gemini 2.5 Flash Image, and Gemini 3 Pro Image, to ensure Nano Banana 2.1 does not show any noticeable regressions.\n\n## - Eval Methodology\n\n\\- SxS human eval to get Elo across diverse T2I, Editing on overall preference, design quality, etc.\n\n\\- Single sided AutoRater on factuality.",
+      "after": "- Capabilities / Benchmarks cover several different quality aspects of image generation, which are in two broad categories:\n  - Capability sets: diverse Text-to-Image (T2I) and editing public benchmarks, and internal evals are used, covering a wide range of capabilities.\n    - T2I: General Text-to-Image, i18n Text Rendering, Factuality (world knowledge, EDU, etc), Tool-Use, Visual Design.\n    - Editing: General Image Editing, Stylization, Character Editing, Object/Environment Editing, Ink (doodle) based Editing, Multi-Image (Multi-Product Recontextualization, Multi-Character, etc.),\n    - Multi-Turn: Covers both static and dynamic conversations.\n  - Regression sets: popular use cases observed on Gemini 2.5 Flash Image, and Gemini 3 Pro Image, to ensure Nano Banana 2.1 does not show any noticeable regressions.\n- Eval Methodology\n  - SxS human eval to get Elo across diverse T2I, Editing on overall preference, design quality, etc.\n  - Single sided AutoRater on factuality.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "PDF physical p.4 shows “Capabilities / Benchmarks” as a top-level bullet; Capability sets and Regression sets as sub-bullets; T2I, Editing, Multi-Turn as square-bullet subitems; “Eval Methodology” is a top-level bullet with two subitems. PDF also spells the acronym “T2I” with capital I, correcting OCR “T2l”."
+    },
+    {
+      "before": "## Results as of October, 2026 are listed below:",
+      "after": "Results as of October, 2026 are listed below:",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical PDF p.5 styles “Results” as a heading and the following “Results as of…” sentence as normal body text; remove the spurious OCR heading marker."
+    },
+    {
+      "before": "\\- creation and editing of images with professional levels of precision and control and multiple, quick iterations\n\n\\- generation of clear text for posters and intricate diagrams\n\n\\- long context real-world knowledge\n\n\\- localized text rendering across several languages",
+      "after": "- creation and editing of images with professional levels of precision and control and multiple, quick iterations\n- generation of clear text for posters and intricate diagrams\n- long context real-world knowledge\n- localized text rendering across several languages",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "PDF physical p.6 presents four ordinary bullets under the intended-use lead-in; convert escaped hyphens and blank-line fragments to Markdown list syntax without changing wording."
+    },
+    {
+      "before": "\\- Poor text rendering in small text (often blurry in 1k model), long paragraphs, page length\n\n\\- Character consistency is not always perfect between input images and generated output image\n\n\\- Partial instruction following and ink persistence in masked/doodle based editing\n\n\\- During image editing, we observe rare instances of persistent subject pose, where structural alignment from the input image is retained in the generated output image\n\n\\- Occasional confusion around spatial localisation (e.g. left/right etc.)\n\n\\- Still limited in advanced capabilities with world knowledge, 3D reasoning and factuality",
+      "after": "- Poor text rendering in small text (often blurry in 1k model), long paragraphs, page length\n- Character consistency is not always perfect between input images and generated output image\n- Partial instruction following and ink persistence in masked/doodle based editing\n- During image editing, we observe rare instances of persistent subject pose, where structural alignment from the input image is retained in the generated output image\n- Occasional confusion around spatial localisation (e.g. left/right etc.)\n- Still limited in advanced capabilities with world knowledge, 3D reasoning and factuality",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "PDF physical p.6 shows these six limitation statements as bullets; convert escaped hyphens and blank-line fragments to a Markdown list, preserving every phrase."
+    }
+  ],
+  "unresolved": []
+}

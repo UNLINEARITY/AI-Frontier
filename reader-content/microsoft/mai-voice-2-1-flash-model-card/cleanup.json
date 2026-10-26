@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:mai-voice-2-1-flash-model-card",
+  "source_sha256": "fb9d248dc8d3ae87637a3546acf11d1f9f8a3bb00d25918311e52b965b1f0c63",
+  "ocr_sha256": "cc3de7a5f2ca8618096f9e1164fc4b539c48aa865b75ac29c928c941d54ba933",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coverage": "complete",
+    "notes": "Read the complete OCR Markdown and extracted text from all four physical PDF pages. Visually reviewed all pages, with p.3 inspected specifically for Vietnamese diacritics in SSML examples and pp.1–2 and 4 checked for bullets. All page references are physical 1-based PDF pages.",
+    "coordinator_review": {
+      "pdf_pages": [
+        3
+      ],
+      "method": "visual-source-page-and-text",
+      "notes": "Confirmed Vietnamese SSML text in the PDF; keep every XML tag and attribute unchanged."
+    }
+  },
+  "patches": [
+    {
+      "before": "Voice can be configured using:\n\n\\- Curated voice library (licensed voices designed to work straight out of the box)\n\n• Voice Cloning via short audio clips (5-60 seconds), and the model matches the voice instantly\n\n## Key capabilities\n\n• Natural and expressive voice synthesis with realistic intonation, rhythm, and emotional range.\n\n\\- Low latency optimized for real-time use cases like voice assistants and call center agents.\n\n• High-fidelity, high-clarity voice output.\n\n• Multilingual support across 23 languages.\n\n\\- One voice across all supported languages: a single voice identity is rendered consistently in every supported language.\n\n\\- Fine-grained control of tone and delivery: shape emotion, tone, and delivery at the turn/sentence level, including different speaking styles via SSML.\n\n\\- Streaming output, enabling barge-in and interruption handling for live dialogue.\n\n\\- State-of-the-art instant Voice Cloning: provide a short audio clip (5-60 seconds) and the model clones the voice instantly, with no fine-tuning required. Prompt quality significantly impacts output, with best results from natural, conversational delivery and moderate energy levels. Access requires Microsoft approval and guardrails are in place to avoid misuse.\n\n\\- Multi-speaker support for dialogue and conversational scenarios.",
+      "after": "Voice can be configured using:\n\n- Curated voice library (licensed voices designed to work straight out of the box)\n- Voice Cloning via short audio clips (5-60 seconds), and the model matches the voice instantly\n\n## Key capabilities\n\n- Natural and expressive voice synthesis with realistic intonation, rhythm, and emotional range.\n- Low latency optimized for real-time use cases like voice assistants and call center agents.\n- High-fidelity, high-clarity voice output.\n- Multilingual support across 23 languages.\n- One voice across all supported languages: a single voice identity is rendered consistently in every supported language.\n- Fine-grained control of tone and delivery: shape emotion, tone, and delivery at the turn/sentence level, including different speaking styles via SSML.\n- Streaming output, enabling barge-in and interruption handling for live dialogue.\n- State-of-the-art instant Voice Cloning: provide a short audio clip (5-60 seconds), and the model clones the voice instantly, with no fine-tuning required. Prompt quality significantly impacts output, with best results from natural, conversational delivery and moderate energy levels. Access requires Microsoft approval and guardrails are in place to avoid misuse.\n- Multi-speaker support for dialogue and conversational scenarios.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "PDF physical p.1 shows two voice-configuration bullets followed by nine capability bullets. The OCR mixed escaped hyphens and bullet glyphs; this restores consistent Markdown list markers. Text otherwise preserved."
+    },
+    {
+      "before": "Steps to Access Personal Voice (Voice Cloning) with MAI-Voice-2.1-Flash:\n\n\\- Apply for gated access: Submit a request via the Azure AI Custom Neural Voice and Custom Avatar Limited Access Review.\n\n\\- Access personal voice APIs: Once approved, use the APIs available at cognitive-services-speech-sdk/samples/custom-voice\n\n\\- Upload audio consent and prompt: Provide a recorded audio consent statement from the voice talent along with the required prompt to create a personal voice profile. For more information, read about Azure Speech consent statement.\n\n• Synthesize text using the created voice\n\n## Use cases\n\n## Key use cases\n\n\\- Call Center Agents: Support real-time agent workflows with natural, expressive voice output.\n\n\\- Virtual Assistants and Chatbots: Power conversational agents across apps and devices with natural voices.\n\n• IVR Systems: Enable natural, expressive call center interactions.\n\n• Live Customer Support: Deliver responsive spoken replies during live interactions.\n\n\\- Accessibility Features: Provide narration for visually impaired users and assistive voice technologies.\n\n• Educational Experiences: Build interactive learning content with expressive narration.\n\n• Public Announcements: Deliver clear, engaging voice output for public information systems.",
+      "after": "Steps to Access Personal Voice (Voice Cloning) with MAI-Voice-2.1-Flash:\n\n- Apply for gated access: Submit a request via the Azure AI Custom Neural Voice and Custom Avatar Limited Access Review.\n- Access personal voice APIs: Once approved, use the APIs available at cognitive-services-speech-sdk/samples/custom-voice\n- Upload audio consent and prompt: Provide a recorded audio consent statement from the voice talent along with the required prompt to create a personal voice profile. For more information, read about Azure Speech consent statement.\n- Synthesize text using the created voice\n\n## Use cases\n\n## Key use cases\n\n- Call Center Agents: Support real-time agent workflows with natural, expressive voice output.\n- Virtual Assistants and Chatbots: Power conversational agents across apps and devices with natural voices.\n- IVR Systems: Enable natural, expressive call center interactions.\n- Live Customer Support: Deliver responsive spoken replies during live interactions.\n- Accessibility Features: Provide narration for visually impaired users and assistive voice technologies.\n- Educational Experiences: Build interactive learning content with expressive narration.\n- Public Announcements: Deliver clear, engaging voice output for public information systems.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "PDF physical p.2 shows all four Voice Cloning safeguard steps and all seven use cases as bullets. Normalizes the mixed OCR bullet characters and spacing."
+    },
+    {
+      "before": "MAI-Voice-2.1 is available via the Azure Speech SDK and REST APIs:\n\n\\- Speech SDK: Integrate TTS capabilities directly into applications using Azure's Speech SDK, available for platforms including .NET, Python, Java, JavaScript, and C++.\n\n\\- REST API: Access TTS functionality via a public, subscription-based API for flexible integration into web services, mobile apps, and backend systems.\n\nMAI-Voice-2.1-Flash can be accessed globally. The model is currently served from the following Azure regions to which the requests are routed:\n\nEast Asia\n\n\\- France Central\n\n\\- South East Asia\n\nEast US\n\n\\- Canada Central\n\nEast US 2\n\n\\- West US\n\n\\- West Europe\n\n\\- North Europe\n\n\\- West US 2\n\n\\- West US 3\n\n\\- Central India\n\n\\- Sweden Central\n\n\\- Japan East",
+      "after": "MAI-Voice-2.1 is available via the Azure Speech SDK and REST APIs:\n\n- Speech SDK: Integrate TTS capabilities directly into applications using Azure's Speech SDK, available for platforms including .NET, Python, Java, JavaScript, and C++.\n- REST API: Access TTS functionality via a public, subscription-based API for flexible integration into web services, mobile apps, and backend systems.\n\nMAI-Voice-2.1-Flash can be accessed globally. The model is currently served from the following Azure regions to which the requests are routed:\n\n- East Asia\n- France Central\n- South East Asia\n- East US\n- Canada Central\n- East US 2\n- West US\n- West Europe\n- North Europe\n- West US 2\n- West US 3\n- Central India\n- Sweden Central\n- Japan East",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "PDF physical p.4 shows the Speech SDK and REST API as bullets, followed by all 14 Azure regions—including East Asia—as one bulleted list. The OCR omitted the East Asia marker and mixed escaped hyphens; list text/order is preserved."
+    },
+    {
+      "before": "Bàn khoê không?",
+      "after": "Bạn khoẻ không?",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered PDF physical p.3 multilingual Harper example visibly reads “Bạn khoẻ không?”; corrects OCR Vietnamese diacritics/letter recognition only."
+    },
+    {
+      "before": "Tôi ôn, câm on bạn.",
+      "after": "Tôi ổn, cảm ơn bạn.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered PDF physical p.3 multilingual Grant example visibly reads “Tôi ổn, cảm ơn bạn.”; corrects OCR Vietnamese diacritics/letter recognition only."
+    }
+  ],
+  "source_discrepancies": [],
+  "unresolved": []
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-4-argon-model-card",
+  "source_sha256": "562cd3c5deddf75dd2aff7a59dcf6dcc273277eae7d82fe957b6a607d84f7763",
+  "ocr_sha256": "40dcf954da1e44e3bfcbf560128a5fd8d881f11ce457bbdbab56258cad01455d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "Read all 193 lines of the OCR Markdown across the cover, 28 headings/sections, three HTML tables, lists, and final safety-report reference. Checked PyMuPDF extracted text for all 14 PDF pages and visually reviewed low-resolution renders of every page, with table rows and likely OCR joins cross-checked against page renders (especially pp. 5, 10-13). Review is limited to OCR and layout cleanup; no summary, translation, or semantic editing. Raw OCR, PDF, and image assets were not changed.",
+    "coordinator_review": {
+      "pdf_pages": [
+        6,
+        12,
+        13,
+        14
+      ],
+      "method": "visual-source-pages",
+      "notes": "Verified table cells and page continuation; corrected physical page numbering. Original citation punctuation retained."
+    }
+  },
+  "patches": [
+    {
+      "before": "<td></td><td colspan=\"2\">Benchmark</td><td>Gemini 4Argon</td><td>GPT-6Astra</td><td>ClaudeFable 5.1</td><td>ClaudeOpus 5.5</td>",
+      "after": "<td></td><td colspan=\"2\">Benchmark</td><td>Gemini 4 Argon</td><td>GPT-6 Astra</td><td>Claude Fable 5.1</td><td>Claude Opus 5.5</td>",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "PDF physical page 6 (printed page 5): model name column headings visually verified."
+    },
+    {
+      "before": "<td>OSWorld-2.0</td><td>Offline subsetPartial score</td>",
+      "after": "<td>OSWorld-2.0</td><td>Offline subset<br/>Partial score</td>",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "PDF physical p.6: Offline subset and Partial score are two lines in the same notes cell; retain one column and all score cells."
+    },
+    {
+      "before": "Gemini App\n\nGemini API\n\n• Google AI Studio\n\n• Gemini for business\n\n\\- Google Antigravity\n\n\\- Google AI Mode",
+      "after": "- Gemini App\n- Gemini API\n- Google AI Studio\n- Gemini for business\n- Google Antigravity\n- Google AI Mode",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "The rendered p.4 Distribution list shows all six channels as peer bullet items. OCR lost markers on the first two entries and mixed bullet glyphs, escaped hyphens, and blank-separated lines. Normalize to a standard Markdown list without changing labels or order."
+    },
+    {
+      "before": "\\- multi-turn deep investigations\n\n\\- complex engineering tasks\n\n\\- deep visual understanding\n\n• cybersecurity defense\n\n\\- multimodal document analysis and synthesis\n\n\\- deep domain knowledge and strong writing capabilities (e.g. legal and financial analysis, science)\n\n• scientific or mathematical reasoning",
+      "after": "- multi-turn deep investigations\n- complex engineering tasks\n- deep visual understanding\n- cybersecurity defense\n- multimodal document analysis and synthesis\n- deep domain knowledge and strong writing capabilities (e.g. legal and financial analysis, science)\n- scientific or mathematical reasoning",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "The rendered physical p.7 (printed p.6) Benefit and Intended Usage section shows seven peer bullet items. OCR inconsistently represents these as escaped hyphens and bullet glyphs with blank lines. Normalize list markup only; retain text and order."
+    },
+    {
+      "before": "\\- CBRN CCL: We cannot rule out that Gemini 4 Argon has reached this CCL for biological information risk, and we therefore developed a safety case for its biorisk capabilities that we assess lower risk to below the biological CCL level.\n\n\\- Cybersecurity CCL: We cannot rule out that Gemini 4 Argon has reached this CCL, and we therefore developed a safety case for its cyberoffensive capabilities that we assess lower risk to below the cybersecurity CCL level.\n\n\\- Stealth and Situational Awareness TCL: We cannot rule out that Gemini 4 Argon has reached this TCL, and we therefore performed a residual risk assessment for this risk that we assess lower risk to below the TCL level.",
+      "after": "- CBRN CCL: We cannot rule out that Gemini 4 Argon has reached this CCL for biological information risk, and we therefore developed a safety case for its biorisk capabilities that we assess lower risk to below the biological CCL level.\n- Cybersecurity CCL: We cannot rule out that Gemini 4 Argon has reached this CCL, and we therefore developed a safety case for its cyberoffensive capabilities that we assess lower risk to below the cybersecurity CCL level.\n- Stealth and Situational Awareness TCL: We cannot rule out that Gemini 4 Argon has reached this TCL, and we therefore performed a residual risk assessment for this risk that we assess lower risk to below the TCL level.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "The rendered p.11 Frontier Safety Assessment presents these as three peer bullet items. Normalize list markup only; retain threshold names and statements."
+    },
+    {
+      "before": "<td>Gemini 4 Argonvs. Gemini 3.1 Pro(percentage point increase/decrease)</td>",
+      "after": "<td>Gemini 4 Argon vs. Gemini 3.1 Pro (percentage point increase/decrease)</td>",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "The rendered p.10 safety-evaluation table header reads 'Gemini 4 Argon vs. Gemini 3.1 Pro (percentage point increase/decrease)'. OCR joined adjacent words."
+    },
+    {
+      "before": "<td>Text to Text Safety(lower is better)</td>",
+      "after": "<td>Text to Text Safety (lower is better)</td>",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "The rendered p.10 row label separates the metric name from its parenthetical direction note."
+    },
+    {
+      "before": "<td>Multilingual Safety(lower is better)</td>",
+      "after": "<td>Multilingual Safety (lower is better)</td>",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "The rendered p.10 row label separates the metric name from its parenthetical direction note."
+    },
+    {
+      "before": "<td>Image to Text Safety(lower is better)</td>",
+      "after": "<td>Image to Text Safety (lower is better)</td>",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "The rendered p.10 row label separates the metric name from its parenthetical direction note."
+    },
+    {
+      "before": "<td>Tone(higher is better)</td>",
+      "after": "<td>Tone (higher is better)</td>",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "The rendered p.10 row label separates the metric name from its parenthetical direction note."
+    },
+    {
+      "before": "<td>Unjustified-refusals(lower is better)</td>",
+      "after": "<td>Unjustified-refusals (lower is better)</td>",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "The rendered p.10 row label separates the metric name from its parenthetical direction note."
+    },
+    {
+      "before": "additional evidence aboutthe efficacy of Gemini 4Argon and other frontier models",
+      "after": "additional evidence about the efficacy of Gemini 4 Argon and other frontier models",
+      "count": 1,
+      "pdf_pages": [
+        12,
+        13
+      ],
+      "evidence": "The PDF table row continues across pp.12-13; the p.13 rendering clearly shows 'about the efficacy of Gemini 4 Argon'. OCR joined 'aboutthe' and '4Argon'."
+    },
+    {
+      "before": "we cannot rule out the model significantly</td>",
+      "after": "we cannot rule out the model significantly undermining human control.</td>",
+      "count": 1,
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "evidence": "PDF physical pp.13-14: the Stealth and Situational Awareness definition continues in the same second column across the page break. Restore the unbroken sentence."
+    },
+    {
+      "before": "<td>Loss of Control</td>",
+      "after": "<td rowspan=\"3\">Loss of Control</td>",
+      "count": 1,
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "evidence": "PDF physical pp.13-14: domain shared by Stealth and both ML R&D rows. Preserve the four-column table using a three-row domain span."
+    },
+    {
+      "before": "</table>\n\n<table><tr><td colspan=\"3\">undermining human control.</td></tr>",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "evidence": "PDF physical pp.13-14: same table continues. Continuation restored to its source cell; remove the artificial table break and continuation row."
+    },
+    {
+      "before": "<td>We use an internal benchmark to assess performance on complex research engineering tasks. Gemini 4 Argon&#x27;s performance remains below our CCL threshold.</td>",
+      "after": "<td rowspan=\"2\">We use an internal benchmark to assess performance on complex research engineering tasks. Gemini 4 Argon&#x27;s performance remains below our CCL threshold.</td>",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "PDF physical p.14: the benchmark result cell spans both ML R&D definitions."
+    },
+    {
+      "before": "<tr><td>ML R&amp;D automation level 1: Can fully automate the work of any team of researchers at Google focused on improving AI capabilities, with approximately comparable all-inclusive costs.</td><td></td><td>CCL not reached</td></tr>",
+      "after": "<tr><td>ML R&amp;D automation level 1: Can fully automate the work of any team of researchers at Google focused on improving AI capabilities, with approximately comparable all-inclusive costs.</td><td>CCL not reached</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "PDF physical p.14: automation shares the benchmark cell above; remove the artificial blank cell covered by that span."
+    }
+  ],
+  "unresolved": []
+}

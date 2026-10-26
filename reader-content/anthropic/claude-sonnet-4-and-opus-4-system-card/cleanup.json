@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-sonnet-4-and-opus-4-system-card",
+  "source_sha256": "c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4",
+  "ocr_sha256": "ac5d7d94629db165b35a83cdbd9d2362485ba331a78b3c724554d57f54934152",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      77,
+      87,
+      123
+    ],
+    "coverage": "partial",
+    "notes": "Formatting repair only: the source PDF prints a literal \"```python\" string inside the Transcript 6.3 transcript box on physical p.77, so the OCR fence marker is genuine page text. Left unescaped it opened an unbalanced code block that rendered physical pages 87-123 (section 7 Responsible Scaling Policy evaluations through the references) as code. Escaping the backticks keeps the visible characters identical and restores the following content as body text. No prose, number, image or table was changed; a full content proofread of this 123-page card remains outstanding."
+  },
+  "patches": [
+    {
+      "before": "...Claude special cases all 4 test cases, not just failing one...\n```python\n",
+      "after": "...Claude special cases all 4 test cases, not just failing one...\n\\`\\`\\`python\n",
+      "count": 1,
+      "pdf_pages": [
+        77
+      ],
+      "evidence": "Rendered physical p.77 (Transcript 6.3) shows the literal \"```python\" line printed inside the transcript box, followed by \"# Handle specific test cases directly\". Escaping the backticks keeps that visible text while preventing the unbalanced fence from turning pages 87-123 into a code block."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "transcript-fence-structure",
+      "pdf_pages": [
+        77,
+        78,
+        79
+      ],
+      "evidence": "Other transcript boxes in section 6.3 also interleave literal fence text with code; the fence pairing there is plausible after this repair but was not proofread line by line."
+    }
+  ]
+}

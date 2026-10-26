@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:mai-transcribe-2-streaming-model-card",
+  "source_sha256": "919c213d94e0027ff4c119a7887f0270d018c33126acf2b5f6afaae1318fbf87",
+  "ocr_sha256": "b6f7d39b1b01e4b1640056ed9bc23fda429d732d878d6fe8f6fa9a4509c0e656",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coverage": "complete",
+    "notes": "Read the complete OCR Markdown, extracted PDF text for all four physical pages, and visually reviewed all pages. Confirmed list structures on pp.1–4 and checked the table/chart order on p.2. No values or source-authentic phrases were changed."
+  },
+  "patches": [
+    {
+      "before": "\\- Low-latency streaming recognition that processes audio continuously as it arrives.\n\n\\- Immediate, evolving transcription for responsive user interfaces and downstream logic.\n\n\\- Reliable speech recognition across 60 languages.\n\n\\- Continuous session support for applications that need to recognize speech over an active audio connection.\n\n\\- Robust recognition across varied accents, speaking styles, and real-world audio conditions.",
+      "after": "- Low-latency streaming recognition that processes audio continuously as it arrives.\n- Immediate, evolving transcription for responsive user interfaces and downstream logic.\n- Reliable speech recognition across 60 languages.\n- Continuous session support for applications that need to recognize speech over an active audio connection.\n- Robust recognition across varied accents, speaking styles, and real-world audio conditions.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "PDF physical p.1 shows these five capabilities as bullets; convert escaped hyphens and blank-line-separated OCR fragments to a Markdown list, preserving wording."
+    },
+    {
+      "before": "\\- Voice agents and assistants: Stream microphone audio, use partial results to detect emerging intent, and act on finalized text once the utterance is complete.\n\n\\- Live captions and subtitles: Display partial recognition results immediately, then replace them with stable final text as each utterance completes.\n\n\\- Contact center agent assistance: Stream call audio and use finalized utterances to retrieve knowledge, populate forms, summarize context, and recommend next-best actions while the call is active.\n\n\\- Real-time call analytics: Send finalized utterances to analytics and monitoring systems throughout the session to flag topics, intent, sentiment, compliance terms, or escalation risk.\n\n\\- Real-time dictation: Render partial text as the user speaks and commit final results to the document with minimal perceived delay.\n\n\\- Meeting and collaboration experiences: Process meeting audio continuously and make finalized utterances available to captions, notes, search, and summarization.\n\n\\- Interactive accessibility tools: Convert live audio into continuously updated partial captions and stable final text across supported languages.\n\n\\- Live media and broadcasts: Stream program audio to feed captions, moderation, live blogs, indexing, or translation workflows.\n\n\\- Live translation workflows: Pass stable final utterances to downstream translation or speech synthesis as speakers complete each phrase.\n\n\\- Customer service automation: Stream caller speech and route finalized requests to intent detection, workflow automation, or a human agent.",
+      "after": "- Voice agents and assistants: Stream microphone audio, use partial results to detect emerging intent, and act on finalized text once the utterance is complete.\n- Live captions and subtitles: Display partial recognition results immediately, then replace them with stable final text as each utterance completes.\n- Contact center agent assistance: Stream call audio and use finalized utterances to retrieve knowledge, populate forms, summarize context, and recommend next-best actions while the call is active.\n- Real-time call analytics: Send finalized utterances to analytics and monitoring systems throughout the session to flag topics, intent, sentiment, compliance terms, or escalation risk.\n- Real-time dictation: Render partial text as the user speaks and commit final results to the document with minimal perceived delay.\n- Meeting and collaboration experiences: Process meeting audio continuously and make finalized utterances available to captions, notes, search, and summarization.\n- Interactive accessibility tools: Convert live audio into continuously updated partial captions and stable final text across supported languages.\n- Live media and broadcasts: Stream program audio to feed captions, moderation, live blogs, indexing, or translation workflows.\n- Live translation workflows: Pass stable final utterances to downstream translation or speech synthesis as speakers complete each phrase.\n- Customer service automation: Stream caller speech and route finalized requests to intent detection, workflow automation, or a human agent.",
+      "count": 1,
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "evidence": "PDF physical pp.2–3 show all ten Key use cases as bullets; normalize escaped hyphens and blank spacing without changing wording/order."
+    },
+    {
+      "before": "You can call the model in one of two ways, depending on your preferred setup:\n\n\\- OpenAI Realtime-compatible API over WebSockets: a drop-in option if you already build against the Realtime API, so existing integration patterns carry over with minimal changes.\n\n\\- Azure Speech SDK: a drop-in option if you already build using the Azure Speech SDK.\n\nMAI-Transcribe-2-Streaming is available in the following Azure regions:\n\n\\- Central US\n\n• East US 2 (Coming soon)\n\n\\- Sweden Central\n\n\\- Southeast Asia",
+      "after": "You can call the model in one of two ways, depending on your preferred setup:\n\n- OpenAI Realtime-compatible API over WebSockets: a drop-in option if you already build against the Realtime API, so existing integration patterns carry over with minimal changes.\n- Azure Speech SDK: a drop-in option if you already build using the Azure Speech SDK.\n\nMAI-Transcribe-2-Streaming is available in the following Azure regions:\n\n- Central US\n- East US 2 (Coming soon)\n- Sweden Central\n- Southeast Asia",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "PDF physical p.4 shows both integration options and all four Azure regions as bullets, including the East US 2 availability note; standardize mixed escaped/literal bullet symbols."
+    }
+  ],
+  "unresolved": [],
+  "reviewed_source_details": [
+    "The phrase “Visit our API documentation to start integrating MAI-Transcribe-API documentation” appears in the source PDF as link text and surrounding copy; preserved."
+  ]
+}

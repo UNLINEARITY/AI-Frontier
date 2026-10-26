@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "ubtech:thinker-wm-technical-report",
+  "source_sha256": "d8abce8faa2fd45c3b9d8afbdd76e235bf65804df272b6ecb5fe89aca657979f",
+  "ocr_sha256": "8823c9623d782dcd5745d56af05d656f4516b2910890ceb9cb6878d86871618b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 39 physical PDF pages; pages 7, 12 and 38 were additionally rendered to verify equations (4), (12) and reference [30]. Citation punctuation spacing after inline math is repaired by the shared OCR normalizer rather than a document patch. Figure label fragments on physical pages 31-32 and flattened table boundaries were left unchanged without clearer source evidence."
+  },
+  "patches": [
+    {
+      "before": "\\mathcal {E} _ {1}",
+      "after": "\\mathcal {E}_{l}",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered PDF physical p.7 equation (4) shows calligraphic E with a lowercase ell subscript, and the following sentence uses the same E_l for the task-level understanding representation; OCR read the subscript as the digit 1."
+    },
+    {
+      "before": "s \\sim \\mathrm{Uniform} \\{1, \\ldots , 1 0 0 0 \\}",
+      "after": "s \\sim \\mathrm{Uniform}\\{1, \\ldots, 1000\\}",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered PDF physical p.12 equation (12) reads s ~ Uniform{1, ..., 1000}; OCR spaced the digits of 1000 and inserted a space before the set brace."
+    },
+    {
+      "before": "arXiv\\_preprint",
+      "after": "arXiv preprint",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered PDF physical p.38 reference [30] reads \"arXiv preprint arXiv:2503.20314, 2025.\"; the backslash-underscore is a Markdown escape added by OCR, not source text."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-text-fragments-p31-p32",
+      "pdf_pages": [
+        31,
+        32
+      ],
+      "evidence": "Scattered axis labels and ticks from Figures 20-21 are interleaved with the preceding paragraph in OCR order; the source confirms they belong to the figures."
+    },
+    {
+      "id": "flattened-table-boundaries",
+      "pdf_pages": [
+        4,
+        20
+      ],
+      "evidence": "Some OCR HTML tables appear to concatenate column text or lose cell structure; a page-by-page comparison is needed before changing recorded values."
+    }
+  ]
+}

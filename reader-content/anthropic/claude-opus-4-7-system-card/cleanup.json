@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-opus-4-7-system-card",
+  "source_sha256": "a7729a0e5eb61dc6818f553ae3c27ab774411cd5ab4ed7f414456d74a05c26d2",
+  "ocr_sha256": "36bf5584494bc8476dbcf07d9743fb9e19b2cd71295e2994ee3d3b9de2469bb6",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      136
+    ],
+    "coverage": "partial",
+    "notes": "Formatting repair only: physical p.136 prints the sandbagging transcript inside a grey box that starts with \"[...]\" and ends with \"[...]\"; it prints \"```python\" and \"```\" only around the scoring snippet. OCR added a ```markdown wrapper around the whole box, and the stray closing fence made the reader render the following transcripts, sections and 26 figures as one code block. Removing the two OCR-added wrapper fences restores the prose and figures; the printed snippet fences stay as the code block. A full content proofread of this 230-page card remains outstanding."
+  },
+  "patches": [
+    {
+      "before": "```markdown\n[...]\nHmm, should I submit this?",
+      "after": "[...]\nHmm, should I submit this?",
+      "count": 1,
+      "pdf_pages": [
+        136
+      ],
+      "evidence": "Rendered physical p.136: the transcript box opens directly with \"[...]\", with no ```markdown line."
+    },
+    {
+      "before": "not extreme result.\n[...]\n```\n\n[Transcript 6.4.1.A]",
+      "after": "not extreme result.\n[...]\n\n[Transcript 6.4.1.A]",
+      "count": 1,
+      "pdf_pages": [
+        136
+      ],
+      "evidence": "Rendered physical p.136: the transcript box closes with \"[...]\" directly above the [Transcript 6.4.1.A] caption; no closing fence is printed."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "transcript-box-fences",
+      "pdf_pages": [
+        136
+      ],
+      "evidence": "Printed transcript boxes contain literal ```python fences around snippets; those remain code delimiters rather than visible text. Other transcript boxes in the card were not proofread box by box."
+    }
+  ]
+}
