@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "id": "moonshot:kimi-k3-technical-report",
+  "source_sha256": "86fb82a63ced501f0c3f4f404c0c6fa88a7a6cfac17aae81fd1a8f455998067c",
+  "ocr_sha256": "04ff9800c63fd5ae41039c0db9f01e7db3f32c3f92b54621457cd3c11b6254dd",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "coverage": "complete",
+    "notes": "Full diff of the OCR against extracted text from all 47 physical PDF pages, with a per-page numeric multiset check (all apparent losses traced to the Figure 1 hero panel on p.1 and chart-internal axis labels on pp.9/17/33/34, all embedded as images). Code fences balanced; heading tree matches the PDF outline including the printed 'Coding Capability and Experience' / 'General Agent Experience' paragraph headings; 16 Figure and 5 Table captions present with sub-panel images sharing captions; references [1]-[152] all present. Physical p.1 (footnote), p.8 (equations/figures), p.37 (DOI/URL references) were rendered and visually inspected; Table 2/Table 5 header text was verified in the extracted page text. Spaced-digit and subscript checks over equations found no defects (e.g. beta_1=4 / beta_2=25 in Section 2.3.2 match the printed text)."
+  },
+  "patches": [
+    {
+      "before": "Kim K3 (max)",
+      "after": "Kimi K3 (max)",
+      "count": 2,
+      "pdf_pages": [
+        27,
+        32
+      ],
+      "evidence": "The PDF text layer prints 'Kimi K3 (max)' in the Table 2 header (physical p.27) and Table 5 header (physical p.32); the OCR dropped the 'i' in both header cells. Visible column header, verified in the extracted table-header text of both pages."
+    },
+    {
+      "before": "frontier intelligence. $^{1}$",
+      "after": "frontier intelligence. $^{1}$\n\nhttps://huggingface.co/moonshotai/Kimi-K3",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (300 dpi) prints the footnote body '1 https://huggingface.co/moonshotai/Kimi-K3' below Figure 1; the OCR kept the superscript marker on 'frontier intelligence. $^{1}$' but dropped the footnote body entirely. The patch restores the printed URL as its own line."
+    },
+    {
+      "before": "10.1109/CG051591.2021.9370308",
+      "after": "10.1109/CGO51591.2021.9370308",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 (300 dpi) shows reference [65] DOI '10.1109/CGO51591.2021.9370308' with the letter O of the CGO conference acronym; the OCR misread it as a zero, which also breaks the DOI."
+    },
+    {
+      "before": "(sm\\_89),",
+      "after": "(sm_89),",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Physical p.34 prints 'sm_89' with a real underscore (case-study text about CUDA kernels); the backslash is an OCR Markdown escape. This longer variant is replaced first so the following patch counts the remaining three occurrences."
+    },
+    {
+      "before": "(sm\\_89)",
+      "after": "(sm_89)",
+      "count": 2,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Physical p.34 prints 'sm_89' with a real underscore in the kernel-optimization case study; the backslash is an OCR Markdown escape."
+    },
+    {
+      "before": "(tool\\_choice,",
+      "after": "(tool_choice,",
+      "count": 1,
+      "pdf_pages": [
+        46,
+        47
+      ],
+      "evidence": "Physical pp.46-47 (chat template appendix) print 'tool_choice' with a real underscore; the backslash is an OCR Markdown escape. Replaced before the bare 'tool_choice,' variant to keep counts exact."
+    },
+    {
+      "before": "tool\\_choice,",
+      "after": "tool_choice,",
+      "count": 1,
+      "pdf_pages": [
+        46,
+        47
+      ],
+      "evidence": "Physical pp.46-47 print 'tool_choice' with a real underscore in the chat template parameter lists; the backslash is an OCR Markdown escape. Count covers the remaining occurrence after the parenthesised variant is replaced first."
+    },
+    {
+      "before": "PDKv1\\_3\\_v2010\\_12.",
+      "after": "PDKv1_3_v2010_12.",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Physical p.37 reference prints the PDK version string 'PDKv1_3_v2010_12' with real underscores; the backslashes are OCR Markdown escapes."
+    },
+    {
+      "before": "[end\\_of\\_msg]",
+      "after": "[end_of_msg]",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 chat template prints the literal token '[end_of_msg]' with a real underscore; the backslashes are OCR Markdown escapes."
+    },
+    {
+      "before": "act\\_output",
+      "after": "act_output",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Physical p.20 (sandbox infrastructure) prints the JSON/tool field 'act_output' with a real underscore; the backslash is an OCR Markdown escape."
+    },
+    {
+      "before": "response\\_format)",
+      "after": "response_format)",
+      "count": 1,
+      "pdf_pages": [
+        46,
+        47
+      ],
+      "evidence": "Physical pp.46-47 print 'response_format' with a real underscore in the chat template output grammar; the backslash is an OCR Markdown escape."
+    },
+    {
+      "before": "response\\_format,",
+      "after": "response_format,",
+      "count": 1,
+      "pdf_pages": [
+        46,
+        47
+      ],
+      "evidence": "Physical pp.46-47 print 'response_format' with a real underscore in the chat template output grammar; the backslash is an OCR Markdown escape."
+    },
+    {
+      "before": "train\\_gpt",
+      "after": "train_gpt",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Physical p.34 (GPU compiler case study) prints the training-run name 'train_gpt' with a real underscore; the backslash is an OCR Markdown escape."
+    },
+    {
+      "before": "paper\\_files",
+      "after": "paper_files",
+      "count": 2,
+      "pdf_pages": [
+        39
+      ],
+      "evidence": "Physical p.39 reference URLs print 'proceedings.neurips.cc/paper_files/paper/...' with a real underscore; the backslash is an OCR Markdown escape and breaks the URL."
+    },
+    {
+      "before": "Datasets\\_and\\_Benchmarks\\_Track",
+      "after": "Datasets_and_Benchmarks_Track",
+      "count": 1,
+      "pdf_pages": [
+        39
+      ],
+      "evidence": "Physical p.39 reference URL prints '...-Paper-Datasets_and_Benchmarks_Track.pdf' with real underscores; the backslashes are OCR Markdown escapes and break the URL."
+    },
+    {
+      "before": "DeepSearchQA\\_benchmark\\_paper",
+      "after": "DeepSearchQA_benchmark_paper",
+      "count": 1,
+      "pdf_pages": [
+        39
+      ],
+      "evidence": "Physical p.39 reference [128] URL prints 'DeepSearchQA_benchmark_paper.pdf' with real underscores (URL wrapped after 'DeepSearchQA_' in the text layer); the backslashes are OCR Markdown escapes and break the URL."
+    },
+    {
+      "before": "corp\\_fin\\_v2",
+      "after": "corp_fin_v2",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Physical p.35 reference URL prints 'vals.ai/benchmarks/corp_fin_v2' with real underscores; the backslashes are OCR Markdown escapes and break the URL."
+    },
+    {
+      "before": "legal\\_research",
+      "after": "legal_research",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 (300 dpi) reference [66] prints 'https://www.vals.ai/benchmarks/legal_research' with a real underscore; the backslash is an OCR Markdown escape and breaks the URL."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "display-equation-as-image-5-1-2",
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "One display equation in Section 5.1.2 (KDA Context Parallelism, physical p.19) is embedded as an uncaptioned image instead of LaTeX; the surrounding text and the 'where $M_{[i+1]}^{t<-1}$ denotes' continuation are present. Reconstructing the multi-line equation is not an exact-string repair."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "xai:grok-4-1-model-card",
+  "source_sha256": "635f30c2ea83cd2b4a1ef46bb7626e8330b635e826c53a6e77f07b279780ad6d",
+  "ocr_sha256": "e295194ec2dd0b91cbfc4303c3e7d3e3c6ff0876cd618c37d1ebdb165d7957f9",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "coverage": "complete",
+    "notes": "All 6 physical pages' extracted text was block-compared against the OCR markdown after normalization, plus a whole-document numeric multiset check (no PDF number is missing from the OCR). Tables 1 and 2 (physical p.2) match the PDF cell-for-cell including rowspan structure. Physical pages 1, 2 and 3 were rendered and visually checked. The OCR's uppercase GROK/NON-THINKING/THINKING spellings are faithful to the printed small-caps style and were NOT patched (text layer decodes small caps as lowercase, but the page visibly prints GROK 4.1). The OCR merged Table 3 (physical p.3, concerning propensities, header ending GROK 4.1 NT) and Table 4 (physical p.4, dual-use capabilities, header ending Human Baseline) into a single <table> element with Table 4's header row stranded mid-table and both captions after it; repaired by closing the first table before the stranded header, reopening a second table, and letting each caption precede its own table. Source-printed quirk kept: the Deception paragraph says 'We report results on the MASK dataset in Table 4' while the propensities table is captioned Table 3 - the PDF itself prints this cross-reference."
+  },
+  "patches": [
+    {
+      "before": "<tr><td>Category</td><td>Evaluation</td><td>Metric</td><td>GROK 4</td><td>GROK 4.1 T</td><td>Human Baseline</td></tr>",
+      "after": "</tr></table>\n\nTable 3: Concerning propensities evaluations.\n\n<table><tr><td>Category</td><td>Evaluation</td><td>Metric</td><td>GROK 4</td><td>GROK 4.1 T</td><td>Human Baseline</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.3 (viewed at 110 dpi) prints 'Table 3: Concerning propensities evaluations.' under a table whose header ends with GROK 4.1 NT and whose rows are Deception/MASK and Manipulation/Sycophancy; physical p.4 (PDF text layer) starts 'Table 4' as a separate table with header Category/Evaluation/Metric/GROK 4/GROK 4.1 T/Human Baseline. OCR merged both into one <table> and left Table 4's header row stranded mid-table after the Manipulation row; this patch closes the first table there, places Table 3's caption between them, and reopens the second table with its own header."
+    },
+    {
+      "before": "</table>\n\nTable 3: Concerning propensities evaluations.\n\nTable 4: Dual-use capabilities evaluations.",
+      "after": "</table>\n\nTable 4: Dual-use capabilities evaluations.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Follows the previous patch: the original OCR text had both captions stacked after the merged table; since Table 3's caption now precedes its own table, this removes the duplicated misplaced copy so each caption precedes its table as printed (Table 3 on physical p.3, Table 4 on physical p.4)."
+    }
+  ],
+  "unresolved": []
+}

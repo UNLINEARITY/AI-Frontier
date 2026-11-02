@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "minimax:minimax-m1-scaling-test-time-compute-efficiently-with-lightning-attention",
+  "source_sha256": "d355a6a41a26b85ca145aec5154650f4d39733c92f54775ae7f5851ecbedf600",
+  "ocr_sha256": "5b9b88eb47c5037e2467bfc43c0f876770f0dbc5215871b3d5f8f270ccbef72c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "coverage": "complete",
+    "notes": "Automated word-level diff of extracted text from all 22 physical PDF pages against the normalized OCR markdown (order-insensitive whole-document matching), a fence check (no code fences), a heading audit, and a whole-reference URL comparison (every OCR URL canonically matched against the PDF text, with wrapped URLs rejoined). Teaser/axis labels on p.1 and p.15, the probability-axis labels on p.8 and the J_REINFORCE/J_PPO/J_unify subscripted objectives on p.5-7 are math- or figure-internal and not defects. Real defects: dropped title-page footnote 1 and copyright footer, dropped footnote 2 (TAU-bench system prompt), and three misread openreview IDs in the references. All repairs verified on 300-400 dpi renders of physical pages 1, 14, 16, 17 and 19."
+  },
+  "patches": [
+    {
+      "before": "MiniMax $^{1}$",
+      "after": "MiniMax $^{1}$\n\n$^{1}$Please send correspondence to model@minimax.io. © 2025 MiniMax. All rights reserved",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom strip (300 dpi visual check) prints footnote 1 under a rule: superscript 1 \"Please send correspondence to model@minimax.io.\" followed by a full-width rule and the line \"© 2025 MiniMax. All rights reserved\" (no trailing period). The OCR title block keeps \"MiniMax $^{1}$\" but dropped both lines. Same repair shape as the reviewed minimax-m2 title page."
+    },
+    {
+      "before": "The maximum number of interaction steps is 40.",
+      "after": "The maximum number of interaction steps is 40.\n\n$^{2}$ \"In each round, you need to carefully examine the tools provided to you to determine if any can be used. You must adhere to all of the policies. Pay attention to the details in the terms. Solutions for most situations can be found within these policies.\"",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 bottom strip (300 dpi visual check) prints footnote 2 as a straight-quoted system-prompt text (\"In each round, ... within these policies.\"); the OCR kept marker $^{2}$ after \"a general system prompt $^{2}$\" in the TAU-bench paragraph but dropped the body."
+    },
+    {
+      "before": "id=Ua6zukOWRH",
+      "after": "id=Ua6zuk0WRH",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 reference (Choromanski et al., Rethinking attention with Performers) at 400 dpi prints the openreview id as Ua6zuk0WRH with a numeral zero in the 7th position (typewriter face); the PDF text layer confirms the zero. OCR misread it as the letter O."
+    },
+    {
+      "before": "id=klK170Q3KB",
+      "after": "id=klK17OQ3KB",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 reference (Gu et al., How to train your HIPPO) at 400 dpi prints the openreview id as klK17OQ3KB with the letter O after 17; the PDF text layer confirms the letter. OCR misread it as a numeral zero."
+    },
+    {
+      "before": "id=B18CQrx2Up4",
+      "after": "id=Bl8CQrx2Up4",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 reference (Qin et al., cosFormer) at 400 dpi prints the openreview id as Bl8CQrx2Up4 with a lowercase l after B; the PDF text layer confirms the letter. OCR misread it as the numeral 1."
+    }
+  ],
+  "unresolved": []
+}

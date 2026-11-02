@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-robotics-on-device-2-model-card",
+  "source_sha256": "d7fe703c0fba456137c7e9cd7c22c997c78e67a24be6a44ed1078b25a492a568",
+  "ocr_sha256": "9a68fc66495c5902465bd07ebf9fc674d400dd72601e70bf8187c8366d879083",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 5 physical PDF pages against the OCR markdown; no code fences. Physical p.1 is a cover page; physical p.2 rendered (115 dpi) to verify the dropped italic introduction and Updated line, physical p.4 rendered to confirm the bold 'Data scaling evaluation' line is the figure's own printed title sitting above the embedded chart (OCR places it beside the embed). No code fences, tables or reference list in this card; all section prose otherwise matches the print."
+  },
+  "patches": [
+    {
+      "before": "## Gemini Robotics On-Device 2 Model Card\n\n## Model Information",
+      "after": "## Gemini Robotics On-Device 2 Model Card\n\n*Model Cards are intended to provide essential information about models, including known limitations, mitigation approaches, and safety performance. Model cards may be updated from time-to-time; for example, to include updated evaluations as the model is improved or revised.*\n\nUpdated: July 12, 2026\n\n## Model Information",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints an italic paragraph 'Model Cards are intended to provide essential information about models, including known limitations, mitigation approaches, and safety performance. Model cards may be updated from time-to-time; for example, to include updated evaluations as the model is improved or revised.' followed by 'Updated: July 12, 2026' and a rule before 'Model Information'; OCR dropped both lines, so the card carried no update date. Restored after the H1 title with the print's italics; the printed lowercase 'Model cards' in the second sentence is preserved."
+    }
+  ],
+  "unresolved": []
+}

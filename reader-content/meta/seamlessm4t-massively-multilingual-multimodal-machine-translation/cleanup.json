@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "meta:seamlessm4t-massively-multilingual-multimodal-machine-translation",
+  "source_sha256": "d75272376c4d837a4fe734768d4d9773bb6482d998d336c79cff8c8ac2a557ff",
+  "ocr_sha256": "576bb35219caf0032cd5e0e2c716e962e9cc8eeb36a11df8d28c9a55860df3cd",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      2,
+      5,
+      6,
+      7,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      29,
+      30,
+      31,
+      32,
+      33,
+      35,
+      38,
+      39,
+      40,
+      41,
+      42,
+      44,
+      45,
+      46,
+      47,
+      48,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      60,
+      61,
+      62,
+      65,
+      69,
+      70,
+      71,
+      75,
+      77,
+      79,
+      86,
+      108,
+      109,
+      110,
+      111
+    ],
+    "coverage": "partial",
+    "notes": "Triage review. (a) Structural scan over all 1555 lines: the OCR Markdown contains no code fences at all, so fence balance and fence-swallowed headings/tables/images cannot occur; 84 headings and 32 image embeds verified present. (b) Machine droppage scan over all 111 physical pages: normalized 4-gram set containment per PDF page (26 pages below 0.92 hit inspected individually) plus a 5-gram prose-line scan; every low-hit page was explained as an HTML table reflow (Tables 1, 2, 8, 14, 20-34, language table on physical pages 14-15, appendix data tables on pages 108-109 all present with their numeric bodies), LaTeX math restructuring, or figure-internal text of embedded figures (pages 54, 57, 60, 62 chart pages are embedded as images). Targeted probes confirmed footnotes of physical pages 51-52, the model card bullets of pages 110-111, BLASER 2.0 mentions (91), and reference spot checks (Wahlster, Fleurs, CVSS, Billion-scale). (c) Visual verification on rendered physical pages 5 and 71 (300 dpi crops; full page 5 at 110 dpi). Not line-by-line: main narrative reflow was accepted from the page-level gram scan rather than a full manual read; references (pages 74-84) were only spot-checked. The 11 backslash-underscore escapes inside printed URLs/DOIs (e.g. 10.1162/tacl\\_a\\_00288 on page 86) were left unchanged because the print really shows underscores and \\_ renders as _, so the visible text is faithful. Small caps HOLISTICBIAS on page 71 matches the rendered small-caps print and was left unchanged."
+  },
+  "patches": [
+    {
+      "before": "AudioPaLM-2 8B AST",
+      "after": "AudioPaLM-2-8B-AST",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (300 dpi crop, visually read) prints the small-caps name as AUDIOPALM-2-8B- (hyphenated, wrapping to AST on the next line); the same document's Table 2 on physical p.6 prints AudioPaLM-2-8B-AST and the OCR table cell on that page already reads <td>AudioPaLM-2-8B-AST</td>. OCR dropped the hyphens only in this prose mention."
+    },
+    {
+      "before": "such as the case for Bengali",
+      "after": "such is the case for Bengali",
+      "count": 1,
+      "pdf_pages": [
+        71
+      ],
+      "evidence": "Rendered physical p.71 (300 dpi crop, visually read) prints \"...in a particular axis—such is the case for Bengali (80% socio-economic status)...\"; OCR misread the printed 'is' as 'as', silently paraphrasing the sentence."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "references-not-line-by-line",
+      "pdf_pages": [
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "evidence": "Reference entries were only spot-checked (Wahlster, Fleurs, CVSS, Billion-scale similarity search all present); the eleven \\\\_-escaped URL/DOI strings in this range render faithfully and were left, but a character-level read of every entry has not been done."
+    },
+    {
+      "id": "figure-axis-text-on-embedded-chart-pages",
+      "pdf_pages": [
+        54,
+        57,
+        60,
+        62
+      ],
+      "evidence": "Pages 54, 57, 60 and 62 are chart pages whose text exists only inside figure images embedded in the Markdown; their axis labels are not transcribed, which is correct for embedded figures, so no patch applies."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "google:translategemma-technical-report",
+  "source_sha256": "ef250166bd0b2249b43b4438aea93fa135e2d19a30c22d37e5a382d5d12e969b",
+  "ocr_sha256": "e42b466f1abd66e57122d52165e91612a06d1a6236bea2ff1d96502be6f580f0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "coverage": "complete",
+    "notes": "Structure scan of the whole OCR markdown: no code fences, no fence swallowing of headings/tables/images, and the language-list appendix headings are legitimate sections. Automated droppage scan of all 12 physical pages (condensed-text window containment): hits triaged to the arXiv cover stamp, running page headers, Figure 1-4 image-internal chart labels and prompt artwork (pp.3, 4, 6 windows), and HTML table cell-order differences — Tables 1-4 and the prompt-template table were verified present with matching values (e.g. Table 1 27B rows; Table 3 MQM English-Italian 18/20/25; Table 4 en-ar 25.4/27.8/35.7). The reference list was verified complete, including the Barma et al. SMOL entry whose author string triggered scan hits on p.8. Real defects: the p.2 footnote 1 (marker and body both dropped), the p.5 footnote 2 body (marker survives), the nine Contributor names under the empty '## Contributors' heading, and the 'Now at Anthropic.' footnote for the $^{*}$ marker on Geza Kovacs. All four were verified on rendered pages (220/200/250 dpi). The cover line 'Corresponding author(s): vilar@google.com. See Contributions section for full author list.' and the copyright/arXiv stamp lines are cover boilerplate the OCR omitted; recorded as unresolved rather than patched. Figure 2's table of scores is image-internal while Table 1/2 carry the same numbers as HTML."
+  },
+  "patches": [
+    {
+      "before": "using an ensemble of metrics as reward models, to further boost translation quality.\n\n![[images/",
+      "after": "using an ensemble of metrics$^{1}$ as reward models, to further boost translation quality.\n\n$^{1}$https://kauldron.readthedocs.io/en/latest/\n\n![[images/",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (220 dpi, visually read) prints the sentence '...using an ensemble of metrics' with a superscript 1 and, beneath the footnote rule, '1https://kauldron.readthedocs.io/en/latest/'. The OCR dropped both the marker after 'metrics' and the footnote body (the string 'kauldron' occurs nowhere in the OCR). Restored the marker on the citing sentence and inserted the body after the paragraph, before the following figure embed."
+    },
+    {
+      "before": "a previous OCR pass.\n\nTable 2 |",
+      "after": "a previous OCR pass.\n\n$^{2}$The model release also includes an interface for image translation, similar to the one for text translation.\n\nTable 2 |",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 footnote rule (220 dpi, visually read) prints '2The model release also includes an interface for image translation, similar to the one for text translation.' The OCR kept the $^{2}$ marker after '...translate the text in it. $^{2}$ In particular...' but dropped the footnote body. Inserted after the paragraph carrying the marker."
+    },
+    {
+      "before": "## Contributors\n\n## Support",
+      "after": "## Contributors\n\nCole Dilanni\nColin Cherry\nEleftheria Briakou\nElizabeth Nielsen\nJiaming Luo\nKat Black\nRyan Mullins\nSweta Agrawal\nWenda Xu\n\n## Support",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 (200 dpi, visually read) lists nine names under the bold 'Contributors' heading: Cole Dilanni, Colin Cherry, Eleftheria Briakou, Elizabeth Nielsen, Jiaming Luo, Kat Black, Ryan Mullins, Sweta Agrawal and Wenda Xu. The OCR emitted the '## Contributors' heading with an empty body (none of these names occurs in that position; several surnames occur only inside reference entries). Inserted the printed names in printed order before the '## Support' section, matching the one-name-per-line format of the sibling sections."
+    },
+    {
+      "before": "Geza Kovacs $^{*}$\n\n## Lead",
+      "after": "Geza Kovacs $^{*}$\n\n$^{*}$Now at Anthropic.\n\n## Lead",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom (250 dpi, visually read) prints the footnote '★Now at Anthropic.' beneath a rule, referenced by the star on 'Geza Kovacs*' at the end of the Core Contributors list. The OCR kept the marker as 'Geza Kovacs $^{*}$' but dropped the footnote body. Inserted after the Core Contributors list carrying the marker."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "cover-corresponding-author-line-dropped",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The printed cover carries 'Corresponding author(s): vilar@google.com. See Contributions section for full author list.' plus the copyright and arXiv stamp lines; the OCR omitted them. Cover boilerplate rather than report content; restoring is a presentation decision (same treatment as medgemma-1-5)."
+    }
+  ]
+}

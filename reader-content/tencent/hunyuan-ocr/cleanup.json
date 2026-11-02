@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-ocr",
+  "source_sha256": "dd28a2955502cfcceae37f3102b9f24f1ec4493450e59c13afb38ee437ecb57d",
+  "ocr_sha256": "a29ff13ee1ac9b56f61e2cbc878a74990069a1a1ade795e3808154f427b55ceb",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "coverage": "partial",
+    "notes": "Full token-level diff of all 36 physical PDF pages against the OCR markdown, code-fence balance and heading inventory completed at text level; rendered-page visual verification was completed for the repaired regions (physical pp.12-13 footnotes), while the remaining text-level diff hits were not individually rendered before the deadline. Text-level hits attributed to figure-internal text: the title-page radar-chart axis values, Figure 2 prompt-panel internals (Chinese spotting/parsing/translation instructions with ref/quad tags) on physical p.5, the qualitative full-page example figures on physical pp.22-25 (embedded as images in the OCR markdown), and heavy PDF line-break hyphenation throughout. Table 1 legend cells and the Table 4 stage/training-config table were checked and present in the OCR markdown."
+  },
+  "patches": [
+    {
+      "before": "Thai, Italian, and Japanese.\n\nFor both OmniDocBench and its Wild variant",
+      "after": "Thai, Italian, and Japanese.\n\n$^{1}$ The Wild version of OmniDocBench will be publicly released in a future update.\n$^{2}$ The DocML multilingual parsing dataset will also be open-sourced in a future release. We invite interested parties to reach out to us for access or evaluation prior to its public release.\n\nFor both OmniDocBench and its Wild variant",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 bottom prints a footnote rule followed by '1The Wild version of OmniDocBench will be publicly released in a future update.' and '2The DocML multilingual parsing dataset will also be open-sourced in a future release. We invite interested parties to reach out to us for access or evaluation prior to its public release.' (visually verified at 150 dpi). The OCR markdown keeps the matching $^{1}$ (Wild version of OmniDocBench) and $^{2}$ (DocML) superscript markers in the preceding Sec. 6.1 paragraph but dropped both footnote bodies; the patch restores them directly after that paragraph."
+    },
+    {
+      "before": "await our upcoming general vision-language models to further boost overall translation quality.",
+      "after": "await our upcoming general vision-language models to further boost overall translation quality.\n\n$^{3}$ https://huggingface.co/tencent/Hunyuan-MT-7B",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 bottom prints footnote '3https://huggingface.co/tencent/Hunyuan-MT-7B' (visually verified at 150 dpi); the OCR markdown keeps the $^{3}$ marker on 'Hunyuan-MT-7B $^{3}$' in the same paragraph but dropped the URL body. The patch restores it after the paragraph."
+    }
+  ],
+  "unresolved": [
+    "Physical p.3 Table 1 header/legend region tokenizes as 'deploytment' in the PDF text layer; the OCR markdown Table 1 was not visually compared against the rendered table to confirm whether the printed header carries the same spelling.",
+    "Physical pp.22-25 qualitative example pages were confirmed embedded as figures, but their figure crops were not visually checked for missing sub-panels."
+  ]
+}

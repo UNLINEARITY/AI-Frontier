@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen-robotworld-technical-report",
+  "source_sha256": "a8425282fd60ccba7cdddc796b1becf3a92bbf17a55497c9936b21ed4117b801",
+  "ocr_sha256": "a698deca9ed455ea121f3177f0b3a8e1445ad5b4e0e1a46222372510a02b32c8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "coverage": "complete",
+    "notes": "All OCR lines compared against extracted text of all 25 physical pages; physical pages 3, 5, 9, 15, 16, 17 rendered and inspected (page 5 additionally at 300 dpi for the Table 1 citation cell, page 9 for the prompt box). Code fences are balanced. Demoted three figure-banner headings and two body/prompt-box lines that OCR promoted to headings; restored the dropped '— Analysis Phase —' box separator; removed Markdown backslash escapes from printed identifiers {{embodiment_type}}/{{viewpoint_type}} and pe_axes_dim. The PDF itself prints 'Fourier ActionNet Team &Mu (2025)' without a space (verified at 300 dpi), and prints both 'InternA1' (p.8) and 'InternData-A1' elsewhere, so neither was patched."
+  },
+  "patches": [
+    {
+      "before": "## Our contributions are summarized as follows:",
+      "after": "Our contributions are summarized as follows:",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 shows the sentence as plain body text at the start of the contributions list; the document's section headings use the numbered '2 Data'/'2.1 Action-Language Mapping' style. OCR wrongly promoted this lead-in sentence to a heading."
+    },
+    {
+      "before": "## Hierarchical Annotation Prompt Template",
+      "after": "Hierarchical Annotation Prompt Template",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 shows the string as the title tab of the bordered hierarchical-annotation prompt box (inside the box region under section 2.3.3), not a document section heading; the section heading is '2.3.3 Stage 3: Hierarchical Annotation'. Demoted to plain text."
+    },
+    {
+      "before": "## (a) Contrastive Instruction Following",
+      "after": "(a) Contrastive Instruction Following",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 shows '(a) Contrastive Instruction Following' only as a banner inside the Figure 5 raster image; the string does not exist in the PDF text layer. Heading demoted to plain text per figure-banner rule."
+    },
+    {
+      "before": "## (b) Complex Instruction Following",
+      "after": "(b) Complex Instruction Following",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 shows '(b) Complex Instruction Following' only as a banner inside the Figure 5 raster image; the string does not exist in the PDF text layer. Heading demoted to plain text per figure-banner rule."
+    },
+    {
+      "before": "## (A) Cross-Embodiment",
+      "after": "(A) Cross-Embodiment",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 shows '(A) Cross-Embodiment' only as a panel banner inside the Figure 6 raster image (the printed Figure 6 caption uses the lowercase 'Cross-embodiment'); the exact string does not exist in the PDF text layer. Heading demoted to plain text per figure-banner rule."
+    },
+    {
+      "before": "Layer 1 – Task Goal: Identify",
+      "after": "— Analysis Phase —\n\nLayer 1 – Task Goal: Identify",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prompt box prints '— Analysis Phase —' between the intro paragraph and 'Layer 1 – Task Goal' (PDF p.9 text layer line '— Analysis Phase —'); OCR kept the parallel '— Generation Phase —' separator but dropped this one. Restored as plain text."
+    },
+    {
+      "before": "{{embodiment\\_type}}",
+      "after": "{{embodiment_type}}",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prompt box prints {{embodiment_type}} with a plain underscore; the backslash is an OCR Markdown escape that changes the visible text."
+    },
+    {
+      "before": "{{viewpoint\\_type}}",
+      "after": "{{viewpoint_type}}",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prompt box prints {{viewpoint_type}} with a plain underscore; the backslash is an OCR Markdown escape that changes the visible text."
+    },
+    {
+      "before": "pe\\_axes\\_dim = [16, 56, 56]",
+      "after": "pe_axes_dim = [16, 56, 56]",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "PDF physical p.11 text layer prints 'pe_axes_dim = [16, 56, 56]'; the backslash-underscores are OCR Markdown escapes altering the printed identifier."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-embed-order-splits-sentences",
+      "pdf_pages": [
+        8,
+        11,
+        12
+      ],
+      "evidence": "Figure 2's embed lands mid-sentence between '...and 14 robot arm models' and 'are rendered into the inpainted scene...' (p.8), and the Figure 3/4 embeds split '...organized in a' / 'double-stream design.' (p.11-12). The figures sit on the following PDF pages; a reader-only cleanup cannot reorder image embeds, so the reading flow keeps the interruption."
+    },
+    {
+      "id": "figure-internal-labels-as-loose-plain-text",
+      "pdf_pages": [
+        16,
+        17,
+        18
+      ],
+      "evidence": "Figure-internal labels of Figures 5-7 ('④ Place right slot', '④ Stack on top', 'Target object', 'Destination', 'Action type', 'Kitchen / Move bowl to sink', 'Living room / Fold & organize', 'Tabletop / H-R handover', '(B) Cross-Task × Cross-Environment...', '(C) Multi-View Consistency', 'same episode · three cameras', 'Task 01/03/04', 'Ours (multi-view)', 'Ours (single-view)') survive as loose plain-text lines around the embeds. They are plain text (no headings) and are also visible inside the embedded images, so they were left in place; removing them is optional further review."
+    }
+  ]
+}

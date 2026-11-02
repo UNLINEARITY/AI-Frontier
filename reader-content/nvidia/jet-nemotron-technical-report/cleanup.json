@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:jet-nemotron-technical-report",
+  "source_sha256": "1f8cf861604cba61f6b3a7974eb97b238a69d65d96b392d31304a31c57f079d4",
+  "ocr_sha256": "8d052bddaf60f866244f972b8f5b00135e2a0bb3a50734250720cee466c4b6fb",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "coverage": "complete",
+    "notes": "Word-level diff of the PDF text layer against the OCR markdown for all 20 physical pages plus a whole-document digit-token inventory. No code fences; Figures 1-6 are embedded as raster images, so their diagram labels (attn/eattn/wq/wk/wv, MLP) and chart-axis ticks (p.1 throughput plot, p.11 context-length plots) are figure-internal and not transcription defects. Grid-search table values (physical p.6) all match the print cell-for-cell on a 300 dpi render. Footnote 1 and the corresponding-author line on physical p.1 were dropped and are restored; the footnote marker superscript 1 sits on 'significant' in the introduction (verified in the text layer and on the p.1 render)."
+  },
+  "patches": [
+    {
+      "before": "In parallel, significant work has focused",
+      "after": "In parallel, significant $^{1}$ work has focused",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (200 dpi) shows the footnote marker superscript 1 after 'significant' in 'In parallel, significant^1 work has focused on constructing hybrid models'; the OCR dropped the marker along with the footnote body."
+    },
+    {
+      "before": "and long-context tasks $[29]$ .",
+      "after": "and long-context tasks $[29]$ .\n\n1 We refer to the standard $O(n^2)$ attention as full attention, and $O(n)$ attention as linear attention.\n\nCorresponding author(s): Han Cai (hcai@nvidia.com).",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom (200 dpi) prints footnote 1 'We refer to the standard O(n^2) attention as full attention, and O(n) attention as linear attention.' and the unmarked credit line 'Corresponding author(s): Han Cai (hcai@nvidia.com).' above the copyright notice; both were dropped by the OCR."
+    },
+    {
+      "before": "Aidan N Gomez, Lukasz Kaiser, and Illia",
+      "after": "Aidan N Gomez, Łukasz Kaiser, and Illia",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 reference [8] at 300 dpi prints 'Aidan N Gomez, Łukasz Kaiser, and Illia Polosukhin' with the slashed L (visually verified); the PDF text layer carries Ł only in this reference (references [22] and [79] genuinely print plain 'Lukasz', which the OCR transcribed correctly)."
+    },
+    {
+      "before": "<td>Retrieval</td><td>Common.</td>",
+      "after": "<td>Retreival</td><td>Common.</td>",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 Table 2 header at 300 dpi prints the Accuracy sub-column as 'Retreival' - the source itself misspells the word (verified visually); the OCR silently corrected it to 'Retrieval'. Restored to the printed spelling; the later table on physical p.8 does print 'Retrieval' correctly and is left unchanged."
+    },
+    {
+      "before": "<td>RetrievalAccuracy↑</td>",
+      "after": "<td>Retrieval Accuracy↑</td>",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 grid-search table header at 300 dpi shows the cell as two stacked words 'Retrieval / Accuracy ↑'; the OCR glued them into one word. All nine data rows of this table match the print cell-for-cell."
+    },
+    {
+      "before": "<td>MathAccuracy↑</td>",
+      "after": "<td>Math Accuracy↑</td>",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 grid-search table header at 300 dpi shows the cell as two stacked words 'Math / Accuracy ↑'; the OCR glued them into one word."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "arxiv-stamp-and-copyright-p1",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The vertical arXiv margin stamp 'arXiv:2508.15884v3 [cs.CL] 28 Sep 2025' and the '(c) 2025 NVIDIA. All rights reserved.' page furniture exist only in the PDF margin/footer and are not part of the OCR text."
+    }
+  ]
+}

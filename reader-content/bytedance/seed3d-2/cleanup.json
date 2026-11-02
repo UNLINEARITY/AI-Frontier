@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seed3d-2",
+  "source_sha256": "5c472bc7d383e3df8da32d7daedd95d4d36f900e5db3526d09d0a4fee3f2b0b9",
+  "ocr_sha256": "792871f00298d023e44c13995c5852eb1292006177ae751f2a31d05eb69e7838",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "All 18 physical pages compared against the OCR Markdown with a normalized full-text diff plus a whole-document numeric multiset check (residual deltas were the Figure 1 user-study percentages on p.1, printed page numbers and the arXiv stamp). No unbalanced code fences (0 fence blocks); heading tree matches the printed Contents including the Appendix. Reference entries on the reference pages show no dropped lines at single-token granularity. The PDF prints its own typos 'compositon' (p.6), 'betwen' (p.9), 'latentcy' and 'evalute' (p.10); the OCR normalized these four to the standard spellings and they were left unchanged per the printed-typo rule. Pages 1 (three renders: upper half, footnote band, figure) were visually verified; figure-internal labels on p.4, p.5, p.7 and p.8 belong to embedded figure images."
+  },
+  "patches": [
+    {
+      "before": "https://seed.bytedance.com/seed3d\\_2\\_0",
+      "after": "https://seed.bytedance.com/seed3d_2_0",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (250 dpi band, visually read) prints 'Official Page: https://seed.bytedance.com/seed3d_2_0' with plain underscores; the backslash-underscore pairs are Markdown escapes added by OCR, not source text."
+    },
+    {
+      "before": "Correspondence: Jianfeng Zhang (jianfengzhang@bytedance.com)",
+      "after": "Correspondence: Jianfeng Zhang (jianfengzhang@bytedance.com)\n\na Model ID: doubao-seed3d-2-0-260328",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (250 dpi band, visually read) prints the page-bottom footnote 'a Model ID: doubao-seed3d-2-0-260328' beneath a rule, referenced by the superscript in 'available at Volcano Engine^a'. The OCR kept the <sup>a</sup> marker but dropped the footnote body; restored after the front-matter block carrying the marker."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-labels-p4-p5-p7-p8",
+      "pdf_pages": [
+        4,
+        5,
+        7,
+        8
+      ],
+      "evidence": "VAE/DiT pipeline labels ('Noisy', 'Exploded', 'Labeling', 'Annotation') and the Figure instruction captions ('Instructions', 'steampunk-inspired ... clock') exist only inside the embedded figure images, which show them; no text repair applies."
+    },
+    {
+      "id": "printed-typos-normalized-by-ocr",
+      "pdf_pages": [
+        6,
+        9,
+        10
+      ],
+      "evidence": "The PDF itself prints 'compositon' (p.6), 'betwen' (p.9), 'latentcy' and 'evalute' (p.10); the OCR silently normalized all four to standard spellings. Per the printed-typo rule no patch was made; noted for reviewers who compare against the text layer."
+    }
+  ]
+}

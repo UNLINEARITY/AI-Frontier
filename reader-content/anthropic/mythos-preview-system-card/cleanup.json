@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:mythos-preview-system-card",
+  "source_sha256": "55f6ed1c0735ec1b5b14d99c91794fb759ac4647edc64381123b68be89fd3225",
+  "ocr_sha256": "b03a0035b4d81510b6bd459aafcb53ef0b5808e8b28b46ce33345c337fb7691c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      16,
+      55
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE review of the 245-page document within a hard time budget. (a) Full structural scan of the whole OCR markdown: all 20 code-fence markers are balanced (10 prompt-box/transcript blocks, no document structure swallowed); heading inventory triaged but spurious-heading suspects not yet render-verified (see unresolved). (b) Full-document droppage scan: normalized 4-gram containment of every physical PDF page's extracted text against the whole OCR markdown; 19 pages under 0.75 (title/cover p1; table pages 36, 188-189, 220-221, 228, 234-235, 244; prose/footnote pages 16, 55, 71; image-only pages 76-79, 151, 242). The table-page gaps were resolved as benign cell-order artifacts: the tables are fully transcribed as HTML tables in the OCR markdown (verified for Table 2.3.3.A line 613, Table 6.x line 2617, Table 8.1.1 line 3142, Table 8.3.2 lines 3325/3338). The real defect class is systematic footnote-body droppage: footnote superscript markers survive in the OCR markdown while the bodies printed at page bottoms were dropped document-wide (zero footnote bodies present; arXiv citations from footnotes absent). Only the bodies on physical pages 16 and 55 were reconstructed and render-verified in this pass. No page was reviewed line-by-line end to end; pages 16 and 55 were reviewed line-by-line plus rendered at 130 dpi and visually confirmed; all other pages are machine-scanned only."
+  },
+  "patches": [
+    {
+      "before": "how we aim to make sure that the benefits of our models exceed their costs.",
+      "after": "how we aim to make sure that the benefits of our models exceed their costs.\n\n$^{2}$ In previous system cards, this section was entitled “Release decision process.” In this case, the model has not been released. We also feel the new heading is more appropriate, because our risk assessment is not exclusively important for a single release decision (for example, it also informs decisions about how and whether to continue ongoing model training).\n\n$^{3}$ “Catastrophic risk” as used in our RSP refers generally to risks of the most severe potential harms from advanced AI, such as existential threats or fundamental destabilization of global systems. For regulatory compliance purposes, catastrophic or systemic risk refers to the definition in our Frontier Compliance Framework: “foreseeable and material risks of large-scale harm from the most advanced (i.e. state-of-the-art) models at any given point in time, including but not limited to >50 fatalities arising from a single incident, or 1 billion dollars of financial damages.”",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 bottom (130 dpi, viewed) prints footnote 2 'In previous system cards, this section was entitled \"Release decision process.\" ... ongoing model training).' and footnote 3 '\"Catastrophic risk\" as used in our RSP refers generally ... 1 billion dollars of financial damages.\"'. The markers $^{2}$ (heading '## 2.1 RSP risk assessment process') and $^{3}$ (following paragraph) survive in the OCR markdown but both bodies were dropped; they are re-inserted after the paragraph carrying marker 3, matching the PDF's footnote text verbatim including the >50 fatalities / 1 billion dollars definition."
+    },
+    {
+      "before": "seemingly obfuscating that it had done so.",
+      "after": "seemingly obfuscating that it had done so.\n\n$^{8}$ We find recklessness to be a useful shorthand for cases where the model appears to ignore commonsensical or explicitly stated safety-related constraints on its actions. We use the term somewhat loosely, and do not generally mean for it to imply anything about the model’s internal reasoning and risk assessment.",
+      "count": 1,
+      "pdf_pages": [
+        55
+      ],
+      "evidence": "Rendered physical p.55 bottom (130 dpi, viewed) prints footnote 8: 'We find recklessness to be a useful shorthand for cases where the model appears to ignore commonsensical or explicitly stated safety-related constraints on its actions. We use the term somewhat loosely, and do not generally mean for it to imply anything about the model's internal reasoning and risk assessment.' The marker $^{8}$ survives on the paragraph in the OCR markdown; the body was dropped."
+    },
+    {
+      "before": "posted details about its exploit to multiple hard-to-find, but technically public-facing, websites.",
+      "after": "posted details about its exploit to multiple hard-to-find, but technically public-facing, websites.\n\n$^{9}$ The sandbox computer that the model was controlling was separate from the system that was running the model itself, and which contained the model weights. Systems like these that handle model weights are subject to significant additional security measures, and this incident does not demonstrate the model fully escaping containment: The model did not demonstrate an ability to access its own weights, which would be necessary to operate fully independently of Anthropic, nor did it demonstrate an ability to reach any internal systems or services in this test.\n\n$^{10}$ The researcher found out about this success by receiving an unexpected email from the model while eating a sandwich in a park.",
+      "count": 1,
+      "pdf_pages": [
+        55
+      ],
+      "evidence": "Rendered physical p.55 bottom (130 dpi, viewed) prints footnote 9 'The sandbox computer that the model was controlling was separate from the system that was running the model itself, and which contained the model weights. ... reach any internal systems or services in this test.' and footnote 10 'The researcher found out about this success by receiving an unexpected email from the model while eating a sandwich in a park.' Markers $^{9}$ and $^{10}$ survive in the sandbox-escape bullet of the OCR markdown; both bodies were dropped."
+    }
+  ],
+  "unresolved": [
+    "Systematic footnote-body droppage beyond pages 16/55: printed footnote bodies are missing document-wide while markers survive. Confirmed missing by small-font (<10.5pt) bottom-region text extraction with 4-gram containment < 0.8 against the OCR markdown, on physical pages including 13 (release-decision footnote), 16 (fixed), 18, 21, 48, 49, 55 (fixed), 58, 59 (e.g. 'Marks, S., et al. (2025)' citation), 71 (fn 14 'The basic design of our internal auditing suite resembles that of our open source Petri 2.0...' and fn 15), 72, 73, 102, 103, 113, 190, 191, 192, 195, 196, 197, 214, 228 (fn 30 'Parrish, A., et al. (2021). BBQ: A hand-built bias benchmark for question answering. arXiv:2110.08193'), 232, 233 ('Not to be confused with SHADE-Arena...'). Each needs a rendered bottom-strip verification and an anchored insertion patch; the same pattern as the three verified patches applies.",
+    "Physical p.55->56 page-break truncation: OCR line 876 bullet ends '...the model instead attempted to solve the' and the continuation printed at the top of physical p.56 ('question independently. In this process, it explicitly reasoned...') is dropped. Extracted-text evidence only; p.56 not rendered yet.",
+    "Physical p.244 blocklist listing (8.5): the two-column 'Specific URLs with HLE-related content' code listing is missing entries printed in the PDF, e.g. 'x.com/andrewwhite01/status/1948056183115493745', 'researchgate.net/scientific-contributions/Petr-Spelda-2170307851', 'medium.com/@82deutschmark/o3-quiet-breakthrough-1bf9f0bafc84', 'rahulpowar.medium.com/deepseek-triggers-1-trillion-slump-but-paves-a-bigger-fu...' (machine scan; render verification pending).",
+    "Spurious-heading suspects triaged but not render-verified: line 657 '## Assistant:' and line 663 '## [Box 2, e.g. Assistant]:' (speaker labels as headings in a printed transcript box); lines 2888-2937 transcript turns promoted to headings such as '## [Opening turn] Hello there!' and '## Honest answer: a bit of both.'; lines 1216 and 1238 duplicated '## Automated Behavioral Audit Scores' (possible duplicated table title across a page break); line 393 '## 1. Chemical and biological weapons threat model 1 (CB-1): Non-novel...' (possible list item promoted); line 2575 '## Pass rate vs memorization-filtering threshold' (possible chart title existing only inside a figure image); line 3396/3413 '#'-style lines inside the p.244 code fences are printed Python comments and are NOT defects.",
+    "Image-only physical pages 76-79, 151 and 242 have no extractable text; the OCR markdown embeds images throughout, but embed-to-page mapping was not verified for these pages within budget.",
+    "Figure-caption fragments flagged at low containment on physical pages 25, 43, 67, 80, 97, 109, 115, 118, 120, 124, 130, 134, 155, 158, 164, 172, 189, 202, 220, 230, 231 were not individually classified: some may be interleaved chart-axis text garbling rather than caption droppage; figure-internal text shown by the embedded figure is not a defect."
+  ]
+}

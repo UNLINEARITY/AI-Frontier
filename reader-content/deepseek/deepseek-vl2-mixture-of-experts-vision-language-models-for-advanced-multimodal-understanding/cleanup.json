@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-vl2-mixture-of-experts-vision-language-models-for-advanced-multimodal-understanding",
+  "source_sha256": "cff2bd0ad1656769d7447f0e3cf3a1885902333894f123bdac27fce05c97459e",
+  "ocr_sha256": "2c4e4010e840a913345b9e0990ec4f3a2beae4c45520379a47c982a7d36396e7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of the OCR lines against extracted text from all 28 physical PDF pages, plus code-fence and heading-structure checks (no fence markers; structure clean). Large delete runs against the text layer resolved to figure-internal text (Figures 1, 8, 9, 10 demo images are embedded as images) and HTML table cell ordering in Tables 2-4, whose bodies are present. Physical pages 1, 4 and 11 were rendered at 300 dpi to confirm the four patches (page-1 author-role legend, Figure 2 caption reading llava-style, Figure-2-section footnote 1, and evaluation footnote 2 with its resolution-set math)."
+  },
+  "patches": [
+    {
+      "before": "The scores of OCRBench are divided by 10 to scale them to [0, 100].",
+      "after": "The scores of OCRBench are divided by 10 to scale them to [0, 100].\n\n∗: Core contributors. †: Project lead. ‡: Corresponding author.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints the author-role legend directly below the Figure 1 caption: \"∗: Core contributors. †: Project lead. ‡: Corresponding author.\" (tail \"Project lead. ‡: Corresponding author.\" visually verified at 300 dpi). The OCR kept the ∗/†/‡ marks on the author list but dropped the legend line; the patch restores it after the Figure 1 caption."
+    },
+    {
+      "before": "The overall structure is a llama-style architecture",
+      "after": "The overall structure is a llava-style architecture",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 Figure 2 caption prints \"The overall structure is a llava-style architecture, which includes a vision encoder, a VL adaptor, and a MoE-based LLM\" (visually verified at 300 dpi); section 2 likewise prints \"LLaVA-style [54] architecture\". OCR misread llava as llama."
+    },
+    {
+      "before": "We select the resolution $(m_i \\cdot 384, n_i \\cdot 384)$ that minimizes the padding area.",
+      "after": "We select the resolution $(m_i \\cdot 384, n_i \\cdot 384)$ that minimizes the padding area.\n\n1 We first resize the original image until its long side matches the target resolution, then pad the other dimension while maintaining the original aspect ratio.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Physical p.4 prints footnote 1 below the Dynamic Tiling paragraph: \"1 We first resize the original image until its long side matches the target resolution, then pad the other dimension while maintaining the original aspect ratio.\" The OCR kept the superscript marker after \"resizing\" but dropped the footnote body; the patch restores it after the anchoring sentence."
+    },
+    {
+      "before": "we test DeepSeek-VL2 on the RefCOCO, RefCOCO+ and RefCOCOg benchmarks [33, 64].",
+      "after": "we test DeepSeek-VL2 on the RefCOCO, RefCOCO+ and RefCOCOg benchmarks [33, 64].\n\n2 Given that InfoVQA contains images with extreme aspect ratios and excessively large images, we enlarge the candidate resolutions as $C_R = \\{(m \\cdot 384, n \\cdot 384) \\mid m \\in \\mathbb{N}, n \\in \\mathbb{N}, 1 \\leq m, n, mn \\leq 18\\}$ when evaluating.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 footnote rule prints \"2 Given that InfoVQA contains images with extreme aspect ratios and excessively large images, we enlarge the candidate resolutions as C_R = {(m·384, n·384) | m ∈ N, n ∈ N, 1 ≤ m, n, mn ≤ 18} when evaluating.\" (visually verified at 300 dpi). The OCR kept the marker on InfoVQA but dropped the footnote body; the patch restores it after the anchoring sentence with the printed set-builder math in LaTeX form."
+    }
+  ],
+  "unresolved": []
+}

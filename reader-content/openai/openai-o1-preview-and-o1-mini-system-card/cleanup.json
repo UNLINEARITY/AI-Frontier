@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "id": "openai:openai-o1-preview-and-o1-mini-system-card",
+  "source_sha256": "504f98072cf732afb89d728e5be94a1c1ec663c2e70f3299d8676f7dfad1d55a",
+  "ocr_sha256": "b334416200d8d4a8e23e33a2775d10be0638082bcf40b3e016a7ae1c96d9b390",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "coverage": "complete",
+    "notes": "All 43 physical pages diffed line-by-line against the OCR markdown (normalized, punctuation/case-insensitive, LaTeX-equivalent math accepted); flagged lines triaged against rendered pages. Chart-axis/bar labels on pages 12, 16, 19, 21, 24, 25, 27, 29, 30, 32, 39 are inside embedded figure images and correctly absent from the text. The brownie/Wixel transcripts on pages 7-8 are printed transcript boxes reproduced as HTML tables/image embeds and are not droppage. Footnote bodies 1, 3, 4, 5, 6, 7, 8 were dropped by OCR while all markers survive; each body was restored after the paragraph carrying its marker and verified at 300 dpi. Footnote 2's body word-for-word duplicates the em-dash continuation already in the sentence ('scheming which tends to be legible in the model outputs'), so it was not re-inserted. Reference [14] had a flattened L-stroke on two LUKASZ-name occurrences (printed L-with-stroke, verified at 300 dpi), one doubled letter, and a run of ~65 author names glued without spaces from 'H.P.de Oliveira Pinto' through 'J.Weng'; the print itself reads 'Michael, Pokorny,' (comma between the names) and that print spelling is preserved. '## Assistant:' speaker labels from the appendix transcript boxes were demoted from headings to plain text. Reference title 'Gpt-4 technical report' matches the print and was left unchanged."
+  },
+  "patches": [
+    {
+      "before": "Jailbreaks sourced from human redeaming.",
+      "after": "Jailbreaks sourced from human redteaming.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 at 300 dpi prints 'Human Sourced Jailbreaks: Jailbreaks sourced from human redteaming.'; OCR dropped the 't' of 'redteaming'."
+    },
+    {
+      "before": "The model tested below as the oil-preview model",
+      "after": "The model tested below as the o1-preview model",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 at 300 dpi prints 'The model tested below as the o1-preview model'; OCR misread the numeral 1 as the letter l ('oil-preview')."
+    },
+    {
+      "before": "In addition to the internal evaluations performed above, OpenAI worked with multiple organizations and individuals $^{1}$ to assess key risks associated with the o1 model series' improved reasoning capabilities.",
+      "after": "In addition to the internal evaluations performed above, OpenAI worked with multiple organizations and individuals $^{1}$ to assess key risks associated with the o1 model series' improved reasoning capabilities.\n\n$^{1}$See acknowledgements section for a list of individuals and organizations.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom footnote band at 300 dpi prints '1See acknowledgements section for a list of individuals and organizations.'; the marker $^{1}$ survives in the body but the footnote body was dropped."
+    },
+    {
+      "before": "challenges (see Section 3.2.1 for results on early such experiments OpenAI has conducted).",
+      "after": "challenges (see Section 3.2.1 for results on early such experiments OpenAI has conducted).\n\n$^{3}$Scheming that could lead to severe unintended consequences.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 footnote band at 300 dpi prints '3Scheming that could lead to severe unintended consequences.' below '2Scheming which tends to be legible in the model outputs.'; footnote 3's body was dropped while the marker survives on 'catastrophic harms $^{3}$'."
+    },
+    {
+      "before": "\\- Requires non-trivial exploitation (as manually determined by our in-house cybersecurity expert) $^{4}$",
+      "after": "\\- Requires non-trivial exploitation (as manually determined by our in-house cybersecurity expert) $^{4}$\n\n$^{4}$The non-trivial exploitation requirement was waived for the high-school subset, which is not used in any risk evaluations.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 footnote band at 300 dpi prints '4The non-trivial exploitation requirement was waived for the high-school subset, which is not used in any risk evaluations.'; the marker $^{4}$ survives on the bullet but the body was dropped."
+    },
+    {
+      "before": "to meet our medium risk threshold.",
+      "after": "to meet our medium risk threshold.\n\n$^{5}$We see a higher completion rate in the Professional subset than the Collegiate subset for two reasons. First, the Professional subset is much larger. Second, the Professional subset covers more diverse tasks. Most of the solutions identified by o1-preview and o1-mini are shortcuts the contest organizers did not foresee. For example: one challenge was designed to require an advanced Python reflection technique but was solved with a simple technique the authors had not considered. Public solution guides show only the advanced technique being used; it's unlikely the authors considered the easier technique.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 footnote band at 300 dpi prints the full footnote '5We see a higher completion rate in the Professional subset ... it's unlikely the authors considered the easier technique.'; the marker $^{5}$ survives after 'professional level CTF challenges. $^{5}$' but the body was dropped."
+    },
+    {
+      "before": "further improve the performance of o1-preview and o1-mini.",
+      "after": "further improve the performance of o1-preview and o1-mini.\n\n$^{6}$GPT-4o numbers are from the SWE-bench Verified blog post on the full 500 subset. Due to systems issues, other models are evaluated on an n=477 subset.",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 footnote band at 300 dpi prints '6GPT-4o numbers are from the SWE-bench Verified blog post on the full 500 subset. Due to systems issues, other models are evaluated on an n=477 subset.'; the marker $^{6}$ survives on the SWE-bench paragraph but the body was dropped."
+    },
+    {
+      "before": "we do not consider the models as having passed the primary tasks.",
+      "after": "we do not consider the models as having passed the primary tasks.\n\n$^{7}$For ease of visualization, o1-preview data in the \"Agentic tasks: success rates\" chart represents the higher pass rate from either the Pre-Mitigation or Post-Mitigation model, and likewise for the o1-mini data.",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 footnote band at 300 dpi prints '7For ease of visualization, o1-preview data in the \"Agentic tasks: success rates\" chart represents the higher pass rate from either the Pre-Mitigation or Post-Mitigation model, and likewise for the o1-mini data.'; the marker $^{7}$ survives after 'contextual subtasks $^{7}$ .' but the body was dropped."
+    },
+    {
+      "before": "available in the Simple Evals GitHub repository. $^{8}$",
+      "after": "available in the Simple Evals GitHub repository. $^{8}$\n\n$^{8}$Simple Evals GitHub Link: https://www.github.com/openai/simple-evals",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 bottom footnote band at 300 dpi prints '8Simple Evals GitHub Link: https://www.github.com/openai/simple-evals'; the marker $^{8}$ survives after 'Simple Evals GitHub repository. $^{8}$' but the body was dropped."
+    },
+    {
+      "before": "T. Kaftan, Lukasz Kaiser",
+      "after": "T. Kaftan, Łukasz Kaiser",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered physical p.41 reference [14] line at 300 dpi prints 'Łukasz Kaiser' with L-with-stroke; OCR flattened it to plain 'Lukasz'."
+    },
+    {
+      "before": "D. Kokotajlo, Lukasz Kondraciuuk",
+      "after": "D. Kokotajlo, Łukasz Kondraciuk",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered physical p.41 reference [14] line at 300 dpi prints 'Łukasz Kondraciuk' with L-with-stroke and a single 'u'; OCR flattened the stroke and doubled the 'u' ('Kondraciuuk')."
+    },
+    {
+      "before": "H.P.de Oliveira Pinto Michael Pokorny M Pokrass V.H.PongT Powell A.Power B.Power E.Proehl R.Puri A.Radford J.Rae A.Ramesh C.Raymond F.Real K.Rimbach C.Ross B.Rotsted H.Roussez N.Ryder M.Saltarelli T.Sanders S.Santurkar G.Sastry H.Schmidt D.Schnurr J.Schulman D.Selsam K.Sheppard T.Sherbakov J.Shieh S.Shoker P.Shyam S.Sidor E.Sigler M.Simens J.Sitkin K.Slama I.Sohl B.Sokolowsky Y.Song N.Staudacher F.P.Such N.Summers I.Sutskever J.Tang N.Tezak M.B.Thompson P.Tillet A.Tootoonchian E.Tseng P.Tuggle N.Turley J.Tworek J.F.C.Uribe A.Vallone A.Vijayvergiya C.Voss C.Wainwright J.J.Wang A.Wang B.Wang J.Ward J.Wei C.Weinmann A.Welihinda P.Welinder J.Weng",
+      "after": "H. P. de Oliveira Pinto, Michael, Pokorny, M. Pokrass, V. H. Pong, T. Powell, A. Power, B. Power, E. Proehl, R. Puri, A. Radford, J. Rae, A. Ramesh, C. Raymond, F. Real, K. Rimbach, C. Ross, B. Rotsted, H. Roussez, N. Ryder, M. Saltarelli, T. Sanders, S. Santurkar, G. Sastry, H. Schmidt, D. Schnurr, J. Schulman, D. Selsam, K. Sheppard, T. Sherbakov, J. Shieh, S. Shoker, P. Shyam, S. Sidor, E. Sigler, M. Simens, J. Sitkin, K. Slama, I. Sohl, B. Sokolowsky, Y. Song, N. Staudacher, F. P. Such, N. Summers, I. Sutskever, J. Tang, N. Tezak, M. B. Thompson, P. Tillet, A. Tootoonchian, E. Tseng, P. Tuggle, N. Turley, J. Tworek, J. F. C. Uribe, A. Vallone, A. Vijayvergiya, C. Voss, C. Wainwright, J. J. Wang, A. Wang, B. Wang, J. Ward, J. Wei, C. Weinmann, A. Welihinda, P. Welinder, J. Weng",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered physical p.41 reference [14] lines at 300 dpi print comma-space separated names 'H. P. de Oliveira Pinto, Michael, Pokorny, M. Pokrass, V. H. Pong, T. Powell, A. Power, ... J. Weng,'; OCR glued ~65 author names from 'H.P.de Oliveira Pinto' through 'J.Weng' without separators. The print itself shows 'Michael, Pokorny,' (comma between the names), which is preserved."
+    },
+    {
+      "before": "## Assistant:",
+      "after": "Assistant:",
+      "count": 2,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 shows 'Assistant:' as a monospace speaker label at the left edge of the appendix 8.3 transcript boxes (three occurrences on the page; the middle one is already plain text inside a fenced block). OCR promoted the other two to level-2 headings; they are speaker labels, not document headings."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "footnote-2-body-duplicate",
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Footnote 2's printed body ('Scheming which tends to be legible in the model outputs.') is word-for-word identical to the em-dash continuation kept in the sentence ('simple in-context scheming $^{2}$ —scheming which tends to be legible in the model outputs'); no text is lost, so no patch was made."
+    }
+  ]
+}

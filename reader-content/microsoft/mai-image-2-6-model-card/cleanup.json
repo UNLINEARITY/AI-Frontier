@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:mai-image-2-6-model-card",
+  "source_sha256": "0f60c3a58ac49a3ab8f433b72c059bd2fddc52cebd929428d5092a51f4e017af",
+  "ocr_sha256": "41ac0610e6859473e0eef0e9f7740593de2b4fab6acc89a96d28498c30c50a9d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR, so no fence-swallowing. All four physical PDF pages were compared line-by-line against the OCR Markdown with a normalized word diff (case/punctuation-insensitive, LaTeX math collapsed), which surfaced exactly one content divergence; physical p.1 was rendered at 120 dpi (summary table crop at 320 dpi) and visually verified. The glued table cell 'availablehere' reproduces the printed 'available here' whose 'here' is a blue hyperlink, so the space loss is an OCR defect at the link-span boundary. The OCR string 'MAI-Image.2.6' inside the Model dependencies row reproduces a dot typo printed by the source PDF itself and is left unchanged. The mixed '\\-' and '•' list markers match the repo's accepted model-card handling (sibling cards patched both directions), so bullet style was left as OCR produced it. Parameters '2 x 10^10', all dates, the 2,359,296 / 1536x1536 pixel figures and the 32K context length match the print.",
+    "rendered_pages": [
+      1
+    ]
+  },
+  "patches": [
+    {
+      "before": "Public data summary availablehere",
+      "after": "Public data summary available here",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 Model Summary table row prints 'Public data summary available here' with 'here' styled as a blue underlined hyperlink (visually verified at 320 dpi crop); the OCR dropped the space at the hyperlink span boundary and glued the words together."
+    }
+  ],
+  "unresolved": []
+}

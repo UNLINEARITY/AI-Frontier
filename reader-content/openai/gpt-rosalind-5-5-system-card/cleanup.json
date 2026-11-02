@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-rosalind-5-5-system-card",
+  "source_sha256": "7406f84297f46c901c1a49a5626f256c1c48b6abd64a79fbc1633d876146043d",
+  "ocr_sha256": "78344f0f938df866c86307f0b1ff042dfa78317f4ffe4e651865001ea07a189a",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "coverage": "complete",
+    "notes": "Clean document: no patches. Full bidirectional word-level and number-level diff of all OCR lines against extracted text from all 11 physical PDF pages found zero missing, added or garbled words and zero missing or altered numbers in either direction. Structure check: no code fences; the heading set (sections 1 through 4.2.4 plus References) matches the printed card and its table of contents; the cover block (title, OpenAI, June 3, 2026) is complete. All 11 tables were compared value by value against the printed tables, including the three-model Preparedness tables; every value matches, and the cell '13.82 %' faithfully reproduces a space the PDF itself prints inside that table. The references section holds the single printed entry [1] complete. The change log, safeguards sections and boundary descriptions are present in full."
+  },
+  "patches": [],
+  "unresolved": []
+}

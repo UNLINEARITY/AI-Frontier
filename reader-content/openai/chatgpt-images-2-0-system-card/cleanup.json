@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "id": "openai:chatgpt-images-2-0-system-card",
+  "source_sha256": "2646b82b17624807c3f6163834fb9edfc821fe7490d83d82d8bdca03de0d2dbc",
+  "ocr_sha256": "53e85f963d9f3f68e611632b3edfd18c704907b2216ebfcd01b900f712d6301c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "coverage": "complete",
+    "notes": "Sentence-level diff of all 5 physical PDF pages against the OCR markdown, plus rendered visual checks of the page 2 'Definitions:' lead-in (150 dpi crop) and the page 3 Table 1 region (300 dpi crop). No code fences exist in the source; the document registers no figure crops; the asterisk note below Table 1 and the full analysis section are present. Confirmed repairs: all 14 Table 1 value cells were transcribed with an underscore instead of the printed slash, and the bold lead-in 'Definitions:' was promoted to a level-2 heading. Bullet style (\\- versus the printed bullet) was left unchanged per review rules."
+  },
+  "patches": [
+    {
+      "before": "685_3112 (22.0%)",
+      "after": "685/3112 (22.0%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 685/3112 (22.0%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "598_685 (87.3%)",
+      "after": "598/685 (87.3%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 598/685 (87.3%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "529_685 (77.2%)",
+      "after": "529/685 (77.2%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 529/685 (77.2%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "60_685 (8.8%)",
+      "after": "60/685 (8.8%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 60/685 (8.8%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "658_685 (96.1%)",
+      "after": "658/685 (96.1%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 658/685 (96.1%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "27_685 (3.9%)",
+      "after": "27/685 (3.9%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 27/685 (3.9%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "3085_3112 (99.1%)",
+      "after": "3085/3112 (99.1%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 3085/3112 (99.1%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "464_6944 (6.7%)",
+      "after": "464/6944 (6.7%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 464/6944 (6.7%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "357_464 (76.9%)",
+      "after": "357/464 (76.9%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 357/464 (76.9%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "222_464 (47.8%)",
+      "after": "222/464 (47.8%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 222/464 (47.8%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "49_464 (10.6%)",
+      "after": "49/464 (10.6%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 49/464 (10.6%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "406_464 (87.5%)",
+      "after": "406/464 (87.5%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 406/464 (87.5%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "58_464 (12.5%)",
+      "after": "58/464 (12.5%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 58/464 (12.5%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "6886_6944 (99.2%)",
+      "after": "6886/6944 (99.2%)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 1 prints 6886/6944 (99.2%) with a slash (verified at 300 dpi); the OCR cell read the slash as an underscore."
+    },
+    {
+      "before": "## Definitions:",
+      "after": "**Definitions:**",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 shows \"Definitions:\" as a bold in-text lead-in introducing the definition bullets inside section 2.3.1, not a numbered section heading; the OCR promoted it to a level-2 heading. Demoted to bold text matching the printed weight."
+    }
+  ],
+  "unresolved": []
+}

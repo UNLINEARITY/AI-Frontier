@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:hi-robot-technical-report",
+  "source_sha256": "a6400a0353705ae3974dec493bb21867885159133586d53da98bacf055fa4333",
+  "ocr_sha256": "3a61fc419841d2726d902c0458cbb30029df583f04f4d15fe3900bf5990d7ed2",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "coverage": "complete",
+    "notes": "All 15 physical pages compared against extracted PDF text; physical pages 14 and 15 rendered (110 dpi full pages plus a 300 dpi crop) and Listing 1 (GPT-4o Baseline Prompt) visually verified. The recurring unmatched 'vision language action models' n-grams are the running page header; the large unmatched fractions on physical pages 2-9 are dialogue/speech-bubble text inside figure images (user utterances, 'Got it', subtask streams) that the embedded figures display. Sections 1-6, acknowledgments, references and appendices A-C are present. One structural defect fixed: the OCR closed Listing 1's code fence at the end of physical page 14 and emitted the printed box continuation on physical page 15 as body text.",
+    "figures_verified": [
+      "physical p.14 110-dpi render + 300-dpi crop of the Listing 1 box ('robot' wrist' matches the print)",
+      "physical p.15 110-dpi render (gray listing box continuation)"
+    ]
+  },
+  "patches": [
+    {
+      "before": "pick up the trash\n```\n\npick up plastic bowl",
+      "after": "pick up the trash\npick up plastic bowl",
+      "count": 1,
+      "pdf_pages": [
+        14,
+        15
+      ],
+      "evidence": "Rendered physical p.14 shows Listing 1 'GPT-4o Baseline Prompt' as one continuous gray box whose instruction list ends the page at 'pick up the trash' with the box visibly continuing; rendered physical p.15 continues the same gray monospace box starting 'pick up plastic bowl'. The OCR wrongly closed the ```txt fence after 'pick up the trash' and emitted the p.15 continuation as plain body lines; the patch removes that premature fence close so the single printed listing stays one code block."
+    },
+    {
+      "before": "close gripper\nmove away from me\ngo back to home position",
+      "after": "close gripper\nmove away from me\ngo back to home position\n```",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 ends the gray Listing 1 box at 'go back to home position'. After the first patch reopens the block across the page break, this patch closes the fence at the end of the printed listing."
+    }
+  ],
+  "unresolved": []
+}

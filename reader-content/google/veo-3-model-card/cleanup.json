@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "google:veo-3-model-card",
+  "source_sha256": "805ca645079c287664890bdea737e22ebc8a66aca6e8f0a03d0ffeca86c4d17f",
+  "ocr_sha256": "d4dead7acc648053b9c12c405d6a41a72396c5903dc89f028dbbf77e401eadc9",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "coverage": "complete",
+    "notes": "Full normalized-text comparison of every PDF page against the OCR Markdown found no dropped prose, numbers or headings; page 1 is a title-only cover whose title is preserved as the document H1, and the trailing printed page number on page 6 carries no body text. OCR bullets printed as \\- lines match the printed bullet list style question and are excluded as bullet style. No code fences exist in the source. No repairs needed."
+  },
+  "patches": [],
+  "unresolved": []
+}

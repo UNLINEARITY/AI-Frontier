@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "google:shieldgemma-1-technical-report",
+  "source_sha256": "102da747b41016c861458c428597631de13f0beeedb8b677fe515c445d4cbdd2",
+  "ocr_sha256": "cd8aacd41ccb4fc90a37fec47e58682383d5bf3f3a8fc7a7c5a142130d60c71d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "coverage": "complete",
+    "notes": "Fence balance scan plus whole-document word/4-gram diff of the OCR Markdown against extracted text of all 11 physical PDF pages. The Figure 2 prompt-template boxes (physical p.6) exist in the PDF text layer but are dropped from the OCR text; the embedded Figure 2 image (inspected directly) fully shows both templates, so the text is figure-internal and not repaired. The abstract's 'WildCard (+4.3%)' matches the print's own spelling (WildGuard elsewhere) and was kept. Contributor lists (p.9), Conclusion, Table 1 and all reference entries were compared against the print; hyphenated line-break joins (Altenschmidt, development) are correct in the OCR."
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "arxiv-stamp-and-copyright-footer",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The arXiv stamp 'arXiv:submit/5738819 [cs.CL] 31 Jul 2024' and the footer '(c) 2024 Google LLC. All rights reserved' are absent from the OCR; recurring overlay text, left out deliberately."
+    }
+  ]
+}

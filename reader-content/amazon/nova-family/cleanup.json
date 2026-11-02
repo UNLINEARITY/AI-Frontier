@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "id": "amazon:nova-family",
+  "source_sha256": "52091131f581fffc952b1b528c05603b1ecdd61578e4cf4235ba55cda375adbb",
+  "ocr_sha256": "ae52b2234147b79cc69c9ec61915df53446cc85dcd7cfe142d6853305fb6b970",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "coverage": "partial",
+    "notes": "Machine-scanned all 48 physical pages with code-fence balance check (balanced; no swallowed headings/tables/images) and normalized 4-gram containment of each page's extracted text against the full OCR markdown; pages 6-12 misses were table cell-ordering artifacts (no missing words) and pages 39-42 are figure pages whose captions are present. Line-level focus on the footnote system: all 12 page-bottom footnote bodies (markers 1-12) are dropped in OCR and were re-transcribed from 300-dpi bottom-strip renders of pages 4, 5, 9, 10, 13, 15, 16, 18, 19, 21. Table 4's two-level header flattening and cell values were verified against the p.9 render and left unchanged (8 data columns match the print); page 47 contributor list and pages 39-42 figure captions were spot-checked for presence. Full word-by-word proofreading of body prose was not performed (machine scan only), so coverage is partial."
+  },
+  "patches": [
+    {
+      "before": "For more details, please refer to our prompting guide $^{1}$ .",
+      "after": "For more details, please refer to our prompting guide $^{1}$ .\n\n$^{1}$ https://docs.aws.amazon.com/nova/latest/userguide",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom at 300 dpi: page-bottom footnote 1 reads '1https://docs.aws.amazon.com/nova/latest/userguide'. The body was dropped by OCR while the marker $^{1}$ survives on 'prompting guide $^{1}$.'"
+    },
+    {
+      "before": "existing public results and by measuring their performance. $^{2}$",
+      "after": "existing public results and by measuring their performance. $^{2}$\n\n$^{2}$ Results measured internally by Amazon for evaluation purposes after Amazon Nova models completed training using (i) the Bedrock API for Claude and Meta models or (ii) the OpenAI API or Gemini API, as applicable.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom at 300 dpi: page-bottom footnote 2 reads '2Results measured internally by Amazon for evaluation purposes after Amazon Nova models completed training using (i) the Bedrock API for Claude and Meta models or (ii) the OpenAI API or Gemini API, as applicable.' The body was dropped by OCR while markers $^{2}$ survive in the body text and table notes."
+    },
+    {
+      "before": "(BFCL). $^{3}$ Stemming from the Gorilla project",
+      "after": "(BFCL). $^{3}$\n\n$^{3}$ BFCL is a fast-moving, live benchmark. We report results using the state of the repository and website leaderboard as of Nov 17th, 2024 (commit 8226d).\n\nStemming from the Gorilla project",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom at 300 dpi: page-bottom footnote 3 reads '3BFCL is a fast-moving, live benchmark. We report results using the state of the repository and website leaderboard as of Nov 17th, 2024 (commit 8226d).' The body was dropped by OCR while the marker $^{3}$ survives after '(BFCL).'"
+    },
+    {
+      "before": "covering six different types of tasks such as reasoning, event understanding and summarization.",
+      "after": "covering six different types of tasks such as reasoning, event understanding and summarization.\n\n$^{4}$ https://huggingface.co/datasets/AIWinter/LVBench",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 bottom at 300 dpi: page-bottom footnote 4 reads '4https://huggingface.co/datasets/AIWinter/LVBench'. The body was dropped by OCR while the marker $^{4}$ survives on 'YouTube videos $^{4}$'."
+    },
+    {
+      "before": "as reported by Artificial Analysis $^{5}$ , an independent entity that benchmarks AI models and hosting providers.",
+      "after": "as reported by Artificial Analysis $^{5}$ , an independent entity that benchmarks AI models and hosting providers.\n\n$^{5}$ https://artificialanalysis.ai/methodology",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 bottom at 300 dpi: page-bottom footnote 5 reads '5https://artificialanalysis.ai/methodology'. The body was dropped by OCR while the marker $^{5}$ survives on 'Artificial Analysis $^{5}$'."
+    },
+    {
+      "before": "can be found in our Amazon Science blog post ${}^{6}$ . In this section",
+      "after": "can be found in our Amazon Science blog post ${}^{6}$ .\n\n$^{6}$ https://www.amazon.science/blog/amazon-nova-canvas-examples\n\nIn this section",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 bottom at 300 dpi: page-bottom footnote 6 reads '6 https://www.amazon.science/blog/amazon-nova-canvas-examples' (print has a space after the marker). The body was dropped by OCR while the marker ${}^{6}$ survives after 'Amazon Science blog post.'"
+    },
+    {
+      "before": "can be found in our Amazon Science blog post. $^{7}$ In this section",
+      "after": "can be found in our Amazon Science blog post. $^{7}$\n\n$^{7}$ https://www.amazon.science/blog/amazon-nova-reel-examples\n\nIn this section",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 bottom at 300 dpi: page-bottom footnote 7 reads '7https://www.amazon.science/blog/amazon-nova-reel-examples'. The body was dropped by OCR while the marker $^{7}$ survives after 'Amazon Science blog post.'"
+    },
+    {
+      "before": "to enrich our Controllability design objectives.",
+      "after": "to enrich our Controllability design objectives.\n\n$^{8}$ https://metr.org/",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 bottom at 300 dpi: page-bottom footnote 8 reads '8https://metr.org/'. The body was dropped by OCR while the marker $^{8}$ survives on '(METR) center $^{8}$'."
+    },
+    {
+      "before": "add C2PA $^{9}$ metadata in all Canvas generated content.",
+      "after": "add C2PA $^{9}$ metadata in all Canvas generated content.\n\n$^{9}$ https://c2pa.org/",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 bottom at 300 dpi: page-bottom footnote 9 reads '9https://c2pa.org/'. The body was dropped by OCR while the marker $^{9}$ survives on 'add C2PA $^{9}$ metadata'."
+    },
+    {
+      "before": "large multimodal datasets and model checkpoints.",
+      "after": "large multimodal datasets and model checkpoints.\n\n$^{10}$ https://aws.amazon.com/blogs/aws/amazon-ec2-trn1-instances-for-high-performance-model-training-are-now-available/\n\n$^{11}$ https://www.amazon.science/publications/a-cloud-optimized-transport-protocol-for-elastic-and-scalable-hpc\n\n$^{12}$ https://aws.amazon.com/blogs/aws/new-amazon-ec2-p5-instances-powered-by-nvidia-h100-tensor-core-gpus-for-accelerating-generative-ai-and-hpc-applications/",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 bottom at 300 dpi: page-bottom footnotes read '10https://aws.amazon.com/blogs/aws/amazon-ec2-trn1-instances-for-high-performance-model-training-are-now-available/' (URL wraps after 'trainin'), '11https://www.amazon.science/publications/a-cloud-optimized-transport-protocol-for-elastic-and-scalable-hpc' (wraps after 'and-s') and '12https://aws.amazon.com/blogs/aws/new-amazon-ec2-p5-instances-powered-by-nvidia-h100-tensor-core-gpus-for-accelerating-generative-ai-and-hpc-applications/' (wraps after 'cor'). All three bodies were dropped by OCR while markers $^{10}$/$^{11}$/$^{12}$ survive in the training-infra paragraph; inserted at that paragraph's end."
+    },
+    {
+      "before": "Llama 3.18B and 70B for Llama 3.211B and 90B",
+      "after": "Llama 3.1 8B and 70B for Llama 3.2 11B and 90B",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 4 caption: the print breaks the line as 'Llama 3.1 / 8B and 70B for Llama 3.2 11B and 90B'; OCR joined across the line break into 'Llama 3.18B' and 'Llama 3.211B', changing the printed model names."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table-header-grouping-t4",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "The printed Table 4 groups columns under spanning labels (Non-Live, Live, Multi-Turn, Hallucination); OCR flattens 'Hallucination' into the first sub-column cell ('Hallucination relevance (↑)' / 'irrelevance (↑)'). All 8 data columns and values match the render, so only the grouping label presentation differs."
+    },
+    {
+      "id": "benchmark-table-ordering-p6-p12",
+      "pdf_pages": [
+        6,
+        7,
+        8,
+        11,
+        12
+      ],
+      "evidence": "4-gram containment misses on the large benchmark-table pages come from column-wise PDF text extraction versus OCR row order; every individual word and value is present in the markdown. A cell-by-cell value audit of Tables 1-3, 5-8 was not performed."
+    }
+  ]
+}

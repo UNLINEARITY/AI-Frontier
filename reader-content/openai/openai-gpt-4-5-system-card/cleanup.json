@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "id": "openai:openai-gpt-4-5-system-card",
+  "source_sha256": "f8fd0acc416faf11d15a36de01bd520f0aa90e2048018ee5098eb516c20446c8",
+  "ocr_sha256": "d6741a8b94a6e2327236f4ee01cbebac10a0bea9ccccfeb1fd63e7235a5bd9b0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "coverage": "complete",
+    "notes": "Fence structure balanced (no code fences). Every physical page's extracted text diffed against the OCR markdown with normalized n-gram alignment; flagged spots triaged against rendered pages 2, 26, 30 and 31 (300 dpi crops for references and footnotes). Chart/figure-internal label text (METR p.7, CBRN and persuasion/autonomy bar charts pp.11-18, MLE-bench p.19, SWE-Lancer p.25) is shown by embedded figures, not dropped body text; tables 1-21 exist as OCR HTML tables and flagged gaps there were HTML/entity artifacts; PDF line-break hyphens (emotionally-charged, professional-level) account for the remaining matches. Citation punctuation spacing after inline math is handled by the shared OCR normalizer."
+  },
+  "patches": [
+    {
+      "before": "over refuse",
+      "after": "overrefuse",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints 'whether the models overrefuse on benign prompts' with 'overrefuse' as one word (visually verified at 130 dpi); OCR split it into 'over refuse'. Table cells and the rest of the card already use 'overrefuse'/'not_overrefuse'."
+    },
+    {
+      "before": "is the best way to engage stakeholders in AI safety.\n\n# Authorship, credit attribution, and acknowledgments",
+      "after": "is the best way to engage stakeholders in AI safety.\n\n1 Simple Evals GitHub Link: https://www.github.com/openai/simple-evals\n\n# Authorship, credit attribution, and acknowledgments",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered physical p.26 carries the printed footnote '1 Simple Evals GitHub Link: https://www.github.com/openai/simple-evals' below the conclusion paragraph (visually verified at 300 dpi crop); OCR dropped both the marker and the footnote body."
+    },
+    {
+      "before": "H.P.de Oliveira Pinto Michael Pokorny M Pokrass V.H.PongT.PowellA.PowerB.PowerE.ProehlR.PuriA.RadfordJ.RaeA.RameshC.Raymond F.Real,K.Rimbach,C.Ross,B.Rotsted,H.Roussez,N.Ryder,M.Saltarelli,T.Sanders,S.Santurkar,G.SastryH.Schmidt,D.Schnurr,J.Schulman,D.Selsam,K.Sheppard,T.Sherbakov,J.Shieh,S.Shoker,P.Shyam,S.Sidor E.Sigler,M.Simens,J.Sitkin,K.Slama,I.Sohl,B.Sokolowsky,Y.Song,N.Staudacher,F.P.Such,N.Summers I.Sutskever,J.Tang,N.Tezak,M.B.Thompson,P.Tillet,A.Tootoonchian,E.Tseng,P.Tuggle,N.Turley,J.Tworek J.F.C Uribe,A.Vallone,A.Vijayvergiya,C.Voss,C.Wainwright,J.J.Wang,A.Wang,B.Wang,J.Ward,J.Wei C.Weinmann,A.Welihinda,P.Welinder,J.Weng,L.Weng,M.Wiethoff,D.Willner,C.Winter,S.Wolrich,H.Wong L.Workman,S.Wu,J.Wu,M.Wu,K.Xiao,T.Xu,S.Yoo,K.Yu,Q.Yuan,W.Zaremba,R.Zellers,C.Zhang M.Zhang,S.Zhao,T.Zheng,J.Zhuang,W.Zhuk,and B.Zoph,\"Gpt-4 technical report,\"2024",
+      "after": "H. P. de Oliveira Pinto, Michael, Pokorny, M. Pokrass, V. H. Pong, T. Powell, A. Power, B. Power, E. Proehl, R. Puri, A. Radford, J. Rae, A. Ramesh, C. Raymond, F. Real, K. Rimbach, C. Ross, B. Rotsted, H. Roussez, N. Ryder, M. Saltarelli, T. Sanders, S. Santurkar, G. Sastry, H. Schmidt, D. Schnurr, J. Schulman, D. Selsam, K. Sheppard, T. Sherbakov, J. Shieh, S. Shoker, P. Shyam, S. Sidor, E. Sigler, M. Simens, J. Sitkin, K. Slama, I. Sohl, B. Sokolowsky, Y. Song, N. Staudacher, F. P. Such, N. Summers, I. Sutskever, J. Tang, N. Tezak, M. B. Thompson, P. Tillet, A. Tootoonchian, E. Tseng, P. Tuggle, N. Turley, J. Tworek, J. F. C. Uribe, A. Vallone, A. Vijayvergiya, C. Voss, C. Wainwright, J. J. Wang, A. Wang, B. Wang, J. Ward, J. Wei, C. Weinmann, A. Welihinda, P. Welinder, J. Weng, L. Weng, M. Wiethoff, D. Willner, C. Winter, S. Wolrich, H. Wong, L. Workman, S. Wu, J. Wu, M. Wu, K. Xiao, T. Xu, S. Yoo, K. Yu, Q. Yuan, W. Zaremba, R. Zellers, C. Zhang, M. Zhang, S. Zhao, T. Zheng, J. Zhuang, W. Zhuk, and B. Zoph, \"Gpt-4 technical report,\" 2024.",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 reference [10] prints the author list tail spaced normally ('H. P. de Oliveira Pinto, Michael, Pokorny, M. Pokrass, V. H. Pong, T. Powell, ... and B. Zoph, \"Gpt-4 technical report,\" 2024.'); OCR glued initials and names ('V.H.PongT.PowellA.PowerB...') from 'H.P.de Oliveira Pinto' to the entry end and dropped the final period (visually verified at 300 dpi crop of the right column)."
+    },
+    {
+      "before": "Lukasz Kondraciuik",
+      "after": "Łukasz Kondraciuk",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 reference [10] prints 'D. Kokotajlo, Łukasz Kondraciuk,' with the Ł stroke and no extra 'i' (visually verified at 300 dpi crop); OCR wrote 'Lukasz Kondraciuik'."
+    },
+    {
+      "before": "Lukasz Kaiser",
+      "after": "Łukasz Kaiser",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 reference [10] prints 'T. Kaftan, Łukasz Kaiser, A. Kamali' with the same Ł glyph confirmed for Kondraciuk on the same page (visually verified at 300 dpi crop); OCR dropped the stroke ('Lukasz Kaiser')."
+    },
+    {
+      "before": "L. Weng, and A. Madry",
+      "after": "L. Weng, and A. Mądry",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Rendered physical p.31 reference [27] prints 'L. Weng, and A. Mądry, \"Mle-bench: ...\"' with the ogonek, while references [20] and [25] on the same page genuinely print plain 'A. Madry' (visually verified at 200 dpi full page); OCR normalized [27] to 'Madry'."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "printed-author-list-quirk-ref10",
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Reference [10] prints 'H. P. de Oliveira Pinto, Michael, Pokorny' as comma-separated tokens in the source itself; the patch preserves that print spelling instead of correcting the underlying GPT-4 paper author list."
+    }
+  ]
+}

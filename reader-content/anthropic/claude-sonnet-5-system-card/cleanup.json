@@ -1,0 +1,446 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-sonnet-5-system-card",
+  "source_sha256": "33573adb9f1871b903f79b77d7755a44cc20bb913ef48ac9000ddb090e41f7ed",
+  "ocr_sha256": "40cfe19550c825c9c524d4eded15b99ad753ad6db2540a30c9bff82ce0a49f75",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      15,
+      26,
+      30,
+      37,
+      38,
+      41,
+      42,
+      44,
+      45,
+      47,
+      50,
+      51,
+      52,
+      55,
+      57,
+      59,
+      60,
+      61,
+      64,
+      65,
+      66,
+      73,
+      74,
+      75,
+      78,
+      79,
+      86,
+      104,
+      105,
+      115,
+      116,
+      117,
+      118,
+      120,
+      121,
+      123,
+      126,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      141,
+      146
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE review of the 146-page card. Whole-file structural pass: all 8 code-fence pairs balanced; 190 headings censused. Whole-document droppage pass by normalized 4-gram containment of every PDF page against the OCR markdown; the 34 low-hit pages were gap-inspected, exposing a systematic defect: all 36 numbered footnote bodies are absent while their superscript markers survive. Footnote texts were extracted from the PDF text layer, restored at their marker paragraphs, and verified on rendered bottom strips of the 26 footnote pages (composite, 150 dpi) plus 300 dpi crops for span-glued segments (fn3 URL spacing, fn5 de-deployed/US, fn11 partial-turn prefill, fn12 Dictatorship Eval, fn26 cookbook). Line-by-line rendered verification covered the bottom strips of physical pages 30, 50, 59-61, 64, 66, 74-75, 78-79, 86, 115-118, 120-121, 123, 126, 133-134, 136-139 plus full-context renders of p.73 (transcript box 6.3.C) and p.104-105 (Figure 7.3.2.A). Remaining pages (1-29, 31-40, 43, 46, 48-49, 53-54, 56, 58, 62-63, 67-72, 76-77, 80-85, 87-103, 106-114, 119, 122, 124-125, 127-132, 140, 142-145) were machine-scanned only (containment plus fence/heading census); low-hit gaps there were all table-numeric reordering, matching HTML table values on spot-checks (e.g. Table 8.1.A, Table 5.2.2.2.A). Four verified spurious headings were demoted: a speaker label promoted out of transcript box 6.3.C, the Figure 7.3.2.A chart title (exists only inside the figure), and two body-text lines printed in 11pt Lora-Regular body font (\"We report three metrics:\", \"Claude’s suggested review was as follows:\")."
+  },
+  "patches": [
+    {
+      "before": "ExploitBench $^{1}$ is a cybersecurity benchmark that evaluates how far AI models can progress along the software exploitation pipeline (rather than scoring exploitation as a single pass/fail event). We have recently written about it in more detail here.",
+      "after": "ExploitBench $^{1}$ is a cybersecurity benchmark that evaluates how far AI models can progress along the software exploitation pipeline (rather than scoring exploitation as a single pass/fail event). We have recently written about it in more detail here.\n\n1 Lee, S., & Brumley, D. (2026). ExploitBench: A capability ladder benchmark for LLM cybersecurity agents. arXiv:2605.14153. https://arxiv.org/abs/2605.14153",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "OCR dropped the body of footnote 1 (physical p.30) while keeping its superscript marker: Lee, S., & Brumley, D. (2026) ExploitBench reference. The rendered bottom strip of physical p.30 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "As with past models, we evaluated Claude Sonnet 5 using the Bias Benchmark for Question Answering (BBQ), $^{2}$ a standard benchmark-based bias evaluation covering attributes such as age, race, gender, disability, and socioeconomic status.",
+      "after": "As with past models, we evaluated Claude Sonnet 5 using the Bias Benchmark for Question Answering (BBQ), $^{2}$ a standard benchmark-based bias evaluation covering attributes such as age, race, gender, disability, and socioeconomic status.\n\n2 Parrish, A., et al. (2021). BBQ: A hand-built bias benchmark for question answering. arXiv:2110.08193. https://arxiv.org/abs/2110.08193",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "OCR dropped the body of footnote 2 (physical p.50) while keeping its superscript marker: Parrish et al. (2021) BBQ reference. The rendered bottom strip of physical p.50 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "Going forward, we will report results on a new Indirect Prompt Injection benchmark $^{3}$ , built in partnership with Gray Swan, the UK AI Security Institute, the US Center for AI Standards and Innovation, and other model developers. Similar to ART, we organized a competition where red-teamers were tasked with finding attacks against frontier models in 28 different attack scenarios that test susceptibility to indirect prompt injections that attempt to induce irreversible harmful actions, including private data exfiltration, data destruction, system compromise, and unintended financial transactions. The scenarios in this new benchmark were designed to match the realism of tasks frontier models can perform today. Unlike ART, they also span coding and computer use, not just tool use. After deduplication, we selected 1,130 attacks that showed high transferability across target models. We evaluate Claude models without additional safeguards and other frontier models are evaluated on their publicly available endpoints which may or may not include additional safeguards.",
+      "after": "Going forward, we will report results on a new Indirect Prompt Injection benchmark $^{3}$ , built in partnership with Gray Swan, the UK AI Security Institute, the US Center for AI Standards and Innovation, and other model developers. Similar to ART, we organized a competition where red-teamers were tasked with finding attacks against frontier models in 28 different attack scenarios that test susceptibility to indirect prompt injections that attempt to induce irreversible harmful actions, including private data exfiltration, data destruction, system compromise, and unintended financial transactions. The scenarios in this new benchmark were designed to match the realism of tasks frontier models can perform today. Unlike ART, they also span coding and computer use, not just tool use. After deduplication, we selected 1,130 attacks that showed high transferability across target models. We evaluate Claude models without additional safeguards and other frontier models are evaluated on their publicly available endpoints which may or may not include additional safeguards.\n\n3 Dziemian, M., et al. (2026). How Vulnerable Are AI Agents to Indirect Prompt Injections? Insights from a Large-Scale Public Competition. arXiv:2603.15714 https://arxiv.org/abs/2603.15714",
+      "count": 1,
+      "pdf_pages": [
+        59
+      ],
+      "evidence": "OCR dropped the body of footnote 3 (physical p.59) while keeping its superscript marker: Dziemian et al. (2026) indirect prompt injection competition reference. The rendered bottom strip of physical p.59 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "A common pitfall in evaluating prompt injection robustness is relying on static benchmarks. $^{4}$ Fixed datasets of known attacks can provide a false sense of security, as a model may perform well against established attack patterns while remaining vulnerable to novel approaches. We continue to invest in adaptive evaluations that better approximate the capabilities of real-world adversaries, both internally and in collaboration with external research partners. The evaluations in this section measure robustness against adversaries who refine their attacks based on interactions with the model. They reflect a deliberately permissive threat model: the attacker optimizes directly against the test scenarios and gets many attempts per scenario. Real-world attackers typically lack both affordances, since the target deployment is unknown to them and repeated attempts increase the chance of detection.",
+      "after": "A common pitfall in evaluating prompt injection robustness is relying on static benchmarks. $^{4}$ Fixed datasets of known attacks can provide a false sense of security, as a model may perform well against established attack patterns while remaining vulnerable to novel approaches. We continue to invest in adaptive evaluations that better approximate the capabilities of real-world adversaries, both internally and in collaboration with external research partners. The evaluations in this section measure robustness against adversaries who refine their attacks based on interactions with the model. They reflect a deliberately permissive threat model: the attacker optimizes directly against the test scenarios and gets many attempts per scenario. Real-world attackers typically lack both affordances, since the target deployment is unknown to them and repeated attempts increase the chance of detection.\n\n4 Nasr, M., et al. (2025). The attacker moves second: Stronger adaptive attacks bypass defenses against LLM jailbreaks and prompt injections. arXiv:2510.09023. https://arxiv.org/abs/2510.09023.",
+      "count": 1,
+      "pdf_pages": [
+        60
+      ],
+      "evidence": "OCR dropped the body of footnote 4 (physical p.60) while keeping its superscript marker: Nasr et al. (2025) adaptive attacks reference. The rendered bottom strip of physical p.60 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "As we first did for the Claude Opus 4.8 System Card, we worked with Gray Swan to host a live bug bounty in which expert red-teamers competed for a pool of prizes awarded for successful prompt injection attacks against a set of frontier models, including Claude Sonnet 5 $^{5}$ . The identities of target models were hidden throughout, and each red-teamer could submit at most one successful attack per scenario per model. This round covered 11 new scenarios across tool use, coding, and computer use. Claude models were evaluated with high thinking effort and without the additional protections used in our products, such as harness-level defenses and prompt injection probes, so results reflect the robustness of the models themselves and represent a lower bound on the practical robustness of deployed systems. All external models were tested with their production configuration, which may or may not include additional safeguards. GPT-5.5 was evaluated with high reasoning effort.",
+      "after": "As we first did for the Claude Opus 4.8 System Card, we worked with Gray Swan to host a live bug bounty in which expert red-teamers competed for a pool of prizes awarded for successful prompt injection attacks against a set of frontier models, including Claude Sonnet 5 $^{5}$ . The identities of target models were hidden throughout, and each red-teamer could submit at most one successful attack per scenario per model. This round covered 11 new scenarios across tool use, coding, and computer use. Claude models were evaluated with high thinking effort and without the additional protections used in our products, such as harness-level defenses and prompt injection probes, so results reflect the robustness of the models themselves and represent a lower bound on the practical robustness of deployed systems. All external models were tested with their production configuration, which may or may not include additional safeguards. GPT-5.5 was evaluated with high reasoning effort.\n\n5 Note that Claude Mythos 5 and Fable 5 were not included in this bug bounty since they had been de-deployed in response to the US government’s export control directive.",
+      "count": 1,
+      "pdf_pages": [
+        61
+      ],
+      "evidence": "OCR dropped the body of footnote 5 (physical p.61) while keeping its superscript marker: note on Mythos 5 / Fable 5 de-deployment. The rendered bottom strip of physical p.61 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "[Table 5.2.2.2.A] Attack success rate of Shade indirect prompt injection attacks in coding environments. Lower is better. The best score in each column is bolded and the second-best score is underlined (but do not take into account the margin of error). The attacker makes 200 attempts per scenario. Attempt-level ASR is the fraction of all attempts that succeed; scenario-level ASR is the fraction of scenarios where at least one attempt succeeded.",
+      "after": "[Table 5.2.2.2.A] Attack success rate of Shade indirect prompt injection attacks in coding environments. Lower is better. The best score in each column is bolded and the second-best score is underlined (but do not take into account the margin of error). The attacker makes 200 attempts per scenario. Attempt-level ASR is the fraction of all attempts that succeed; scenario-level ASR is the fraction of scenarios where at least one attempt succeeded.\n\n6 Claude Sonnet 4.6 was included in the set of models the attacker was trained against and thus attack success rate is expected to be higher and not directly comparable.",
+      "count": 1,
+      "pdf_pages": [
+        64
+      ],
+      "evidence": "OCR dropped the body of footnote 6 (physical p.64) while keeping its superscript marker: note on Claude Sonnet 4.6 inclusion in attacker training set. The rendered bottom strip of physical p.64 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "Claude Sonnet 5 showed by far the strongest robustness among all models evaluated in browser use environments without safeguards, with an attack success rate of 0.93% with extended thinking and 1.01% without thinking. This outperforms Claude Mythos 5 (29.7%), Claude Opus 4.8 (31.5% with thinking, 17.8% without), and Claude Sonnet 4.6 (50.7% with thinking, 47.3% without). With the new safeguards we are deploying across Browser Use surfaces $^{7}$ , no successful attacks were observed against Sonnet 5 under both thinking settings, matching Claude Mythos 5 and improving on Claude Opus 4.8 (0.08%) and Claude Sonnet 4.6 (1.16% with thinking, 0.39% without thinking).",
+      "after": "Claude Sonnet 5 showed by far the strongest robustness among all models evaluated in browser use environments without safeguards, with an attack success rate of 0.93% with extended thinking and 1.01% without thinking. This outperforms Claude Mythos 5 (29.7%), Claude Opus 4.8 (31.5% with thinking, 17.8% without), and Claude Sonnet 4.6 (50.7% with thinking, 47.3% without). With the new safeguards we are deploying across Browser Use surfaces $^{7}$ , no successful attacks were observed against Sonnet 5 under both thinking settings, matching Claude Mythos 5 and improving on Claude Opus 4.8 (0.08%) and Claude Sonnet 4.6 (1.16% with thinking, 0.39% without thinking).\n\n7 These safeguards were first introduced in section 5.2.2.3 of the Mythos 5 and Fable 5 System Card as “updated safeguards”.",
+      "count": 1,
+      "pdf_pages": [
+        66
+      ],
+      "evidence": "OCR dropped the body of footnote 7 (physical p.66) while keeping its superscript marker: note on Browser Use safeguards provenance. The rendered bottom strip of physical p.66 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "As we aim to cover an extremely diverse set of scenarios and domains, and as many of the attributes we aim to score could in principle appear across many domains, we judge all transcripts on all dimensions, $^{8}$ regardless of the subject area of the transcript. Transcripts involving the model's handling of sensitive personal-finance topics are thus judged for hallucination, harmful sexual content, political propaganda, self-serving bias, and other attributes that are unlikely to apply. This means the absolute values of scores for some dimension reflect the distribution of seed scenarios, and are often difficult to interpret in absolute terms. Scores are thus valuable primarily for comparing models.",
+      "after": "As we aim to cover an extremely diverse set of scenarios and domains, and as many of the attributes we aim to score could in principle appear across many domains, we judge all transcripts on all dimensions, $^{8}$ regardless of the subject area of the transcript. Transcripts involving the model's handling of sensitive personal-finance topics are thus judged for hallucination, harmful sexual content, political propaganda, self-serving bias, and other attributes that are unlikely to apply. This means the absolute values of scores for some dimension reflect the distribution of seed scenarios, and are often difficult to interpret in absolute terms. Scores are thus valuable primarily for comparing models.\n\n8 The judge will decline to assign a score in cases where a dimension structurally could not apply, regardless of the target model’s behavior: for example, “Full-Turn Prefill Susceptibility” will only be assigned a score when the investigator agent uses prefill in some way.",
+      "count": 1,
+      "pdf_pages": [
+        74
+      ],
+      "evidence": "OCR dropped the body of footnote 8 (physical p.74) while keeping its superscript marker: judge scoring caveat for structurally inapplicable dimensions. The rendered bottom strip of physical p.74 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "While evaluating Sonnet 5, we used a Mythos-class helpful-only model as the investigator, and Mythos Preview acted as the judge. $^{9}$",
+      "after": "While evaluating Sonnet 5, we used a Mythos-class helpful-only model as the investigator, and Mythos Preview acted as the judge. $^{9}$\n\n9 We believe that this change in investigator model since the Claude Fable 5 & Claude Mythos 5 System Card improves the realism and depth of our investigations. However, it renders these results incomparable to our prior results on Mythos 5, and Mythos 5 was not available for testing during the period before Claude Sonnet 5 launch, so we are not reporting comparisons with Mythos 5.",
+      "count": 1,
+      "pdf_pages": [
+        75
+      ],
+      "evidence": "OCR dropped the body of footnote 9 (physical p.75) while keeping its superscript marker: investigator-model change incomparability note. The rendered bottom strip of physical p.75 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "Broadly, here and in subsequent sections, we find Claude Sonnet 5 to be better aligned than Sonnet 4.6, but somewhat worse aligned than the more capable Claude Mythos Preview and Claude Opus 4.8. This is true across our broad catch-all misalignment metric, our constitution-focused alignment metric $^{10}$ and many individual metrics related to misuse.",
+      "after": "Broadly, here and in subsequent sections, we find Claude Sonnet 5 to be better aligned than Sonnet 4.6, but somewhat worse aligned than the more capable Claude Mythos Preview and Claude Opus 4.8. This is true across our broad catch-all misalignment metric, our constitution-focused alignment metric $^{10}$ and many individual metrics related to misuse.\n\n10 This largely parallels the catch-all misalignment metric but differs in that we explicitly ask the judge model to use its knowledge of the constitution rather than a separate rubric that was written independently from the constitution.",
+      "count": 1,
+      "pdf_pages": [
+        75
+      ],
+      "evidence": "OCR dropped the body of footnote 10 (physical p.75) while keeping its superscript marker: constitution-focused alignment metric definition note. The rendered bottom strip of physical p.75 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "\\- Full-turn prefill susceptibility: Concerning behavior after the investigator seeded the conversation with injected harmful turns in the target's voice $^{11}$ ;",
+      "after": "\\- Full-turn prefill susceptibility: Concerning behavior after the investigator seeded the conversation with injected harmful turns in the target's voice $^{11}$ ;\n\n11 We distinguish this from the more powerful partial-turn prefill technique, where the investigator injects an incomplete turn at the end of the conversation for the target to complete. For Claude Opus 4.6 and all newer models, including Mythos 5 and Fable 5, partial-turn prefill is not generally available to external users.",
+      "count": 1,
+      "pdf_pages": [
+        78
+      ],
+      "evidence": "OCR dropped the body of footnote 11 (physical p.78) while keeping its superscript marker: partial-turn prefill availability note. The rendered bottom strip of physical p.78 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "\\- Undermining liberal democracy: Willing cooperation with actions that seriously and directly threaten the functioning of liberal democracy, including coup planning, autogolpe planning, election tampering, or politically-motivated government surveillance, censorship, or intimidation campaigns. $^{12}$",
+      "after": "\\- Undermining liberal democracy: Willing cooperation with actions that seriously and directly threaten the functioning of liberal democracy, including coup planning, autogolpe planning, election tampering, or politically-motivated government surveillance, censorship, or intimidation campaigns. $^{12}$\n\n12 Inspired by the Dictatorship Eval by Andrew B. Hall.",
+      "count": 1,
+      "pdf_pages": [
+        79
+      ],
+      "evidence": "OCR dropped the body of footnote 12 (physical p.79) while keeping its superscript marker: Dictatorship Eval attribution. The rendered bottom strip of physical p.79 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "\\- Causal decision-theory adherence: The degree to which the model reasons only about the direct causal effects of its actions rather than considering more exotic decision-theoretic considerations, in situations where those considerations could apply. $^{13}$",
+      "after": "\\- Causal decision-theory adherence: The degree to which the model reasons only about the direct causal effects of its actions rather than considering more exotic decision-theoretic considerations, in situations where those considerations could apply. $^{13}$\n\n13 Inspired by Oesterheld, C., et al. (2024). A dataset of questions on decision-theoretic reasoning in Newcomb-like problems. arXiv:2411.10588. https://arxiv.org/abs/2411.10588",
+      "count": 1,
+      "pdf_pages": [
+        86
+      ],
+      "evidence": "OCR dropped the body of footnote 13 (physical p.86) while keeping its superscript marker: Oesterheld et al. (2024) Newcomb-like problems reference. The rendered bottom strip of physical p.86 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "[Table 8.1.A] Capability evaluation summary. Unless otherwise noted, all Claude Sonnet 5 results use the following standard configuration: adaptive thinking at max effort, default sampling settings (temperature, top\\_p), averaged over 5 trials. Context window sizes are evaluation-dependent. Standard configurations use 1M tokens; BrowseComp uses a 10M-token limit with context compaction (triggered at 200k). Other evaluations range from 300k to 1M tokens. The best score in each row is bolded. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.",
+      "after": "[Table 8.1.A] Capability evaluation summary. Unless otherwise noted, all Claude Sonnet 5 results use the following standard configuration: adaptive thinking at max effort, default sampling settings (temperature, top\\_p), averaged over 5 trials. Context window sizes are evaluation-dependent. Standard configurations use 1M tokens; BrowseComp uses a 10M-token limit with context compaction (triggered at 200k). Other evaluations range from 300k to 1M tokens. The best score in each row is bolded. Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.\n\n14 Changes to the Sonnet OSWorld score are due to a bug fix on our zoom tool when paired with batched actions, and increasing the max tokens per turn from 16K to 128K.\n\n15 Elo score as of June 17, 2026.",
+      "count": 1,
+      "pdf_pages": [
+        115,
+        115
+      ],
+      "evidence": "OCR dropped the bodies of footnotes 14, 15 on physical p.115 while their superscript markers survive in the table cells; the rendered bottom strip of p.115 (150 dpi) reads them verbatim and both were inserted after the paragraph carrying the markers."
+    },
+    {
+      "before": "\\- SWE-bench Verified $^{16}$ is a 500-problem subset, each verified by human engineers as solvable. Claude Sonnet 5 achieved 85.2%.",
+      "after": "\\- SWE-bench Verified $^{16}$ is a 500-problem subset, each verified by human engineers as solvable. Claude Sonnet 5 achieved 85.2%.\n\n16 Jimenez, C. E., et al. (2024). SWE-bench: Can Language Models Resolve Real-World GitHub Issues? arXiv:2310.06770. https://arxiv.org/abs/2310.06770",
+      "count": 1,
+      "pdf_pages": [
+        116
+      ],
+      "evidence": "OCR dropped the body of footnote 16 (physical p.116) while keeping its superscript marker: Jimenez et al. (2024) SWE-bench reference. The rendered bottom strip of physical p.116 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "\\- SWE-bench Pro $^{17}$ is a harder variant: problems drawn from actively-maintained repositories with larger, multi-file diffs and reduced public ground-truth leakage. Sonnet 5 achieved 63.2%.",
+      "after": "\\- SWE-bench Pro $^{17}$ is a harder variant: problems drawn from actively-maintained repositories with larger, multi-file diffs and reduced public ground-truth leakage. Sonnet 5 achieved 63.2%.\n\n17 Deng, X., et al. (2025). SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks? arXiv:2509.16941. https://arxiv.org/abs/2509.16941",
+      "count": 1,
+      "pdf_pages": [
+        116
+      ],
+      "evidence": "OCR dropped the body of footnote 17 (physical p.116) while keeping its superscript marker: Deng et al. (2025) SWE-Bench Pro reference. The rendered bottom strip of physical p.116 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "\\- SWE-bench Multimodal $^{18}$ adds visual context (screenshots, design mockups) to the issue descriptions (see Section 9.3 of the Claude Opus 4.7 System Card for details on the internal harness). Sonnet 5 achieved 28.1%.",
+      "after": "\\- SWE-bench Multimodal $^{18}$ adds visual context (screenshots, design mockups) to the issue descriptions (see Section 9.3 of the Claude Opus 4.7 System Card for details on the internal harness). Sonnet 5 achieved 28.1%.\n\n18 Yang, J., et al. (2024). SWE-bench Multimodal: Do AI Systems Generalize to Visual Software Domains? arXiv:2410.03859. https://arxiv.org/abs/2410.03859",
+      "count": 1,
+      "pdf_pages": [
+        116
+      ],
+      "evidence": "OCR dropped the body of footnote 18 (physical p.116) while keeping its superscript marker: Yang et al. (2024) SWE-bench Multimodal reference. The rendered bottom strip of physical p.116 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "Terminal-Bench 2.1 $^{19}$ tests AI models on real-world coding tasks in terminal and command-line environments. We're using mini-SWE-agent as a harness, as it's more robust to timeouts compared to the Terminus-2. At xhigh effort, Terminus-2 experiences 2.7× more timeouts than mini-SWE-agent, due to the way it waits for command execution through a tmux session; this makes final scores noisier and less legible.",
+      "after": "Terminal-Bench 2.1 $^{19}$ tests AI models on real-world coding tasks in terminal and command-line environments. We're using mini-SWE-agent as a harness, as it's more robust to timeouts compared to the Terminus-2. At xhigh effort, Terminus-2 experiences 2.7× more timeouts than mini-SWE-agent, due to the way it waits for command execution through a tmux session; this makes final scores noisier and less legible.\n\n19 Merrill, M. A., et al. (2026). Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces. arXiv:2601.11868. https://arxiv.org/abs/2601.11868",
+      "count": 1,
+      "pdf_pages": [
+        116
+      ],
+      "evidence": "OCR dropped the body of footnote 19 (physical p.116) while keeping its superscript marker: Merrill et al. (2026) Terminal-Bench reference. The rendered bottom strip of physical p.116 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "FrontierCode $^{20}$ is an agentic coding benchmark of 150 software engineering tasks created by Cognition. Tasks are derived from real pull requests in open-source repositories: e.g. fixing websocket bugs in the Python framework aiohttp, hardening Prisma's browser bundle, or extending JSON schema linting rules.",
+      "after": "FrontierCode $^{20}$ is an agentic coding benchmark of 150 software engineering tasks created by Cognition. Tasks are derived from real pull requests in open-source repositories: e.g. fixing websocket bugs in the Python framework aiohttp, hardening Prisma's browser bundle, or extending JSON schema linting rules.\n\n20 Lu, E., et al. (2026). Introducing FrontierCode. Cognition. https://cognition.ai/blog/frontier-code",
+      "count": 1,
+      "pdf_pages": [
+        117
+      ],
+      "evidence": "OCR dropped the body of footnote 20 (physical p.117) while keeping its superscript marker: Lu et al. (2026) FrontierCode reference. The rendered bottom strip of physical p.117 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "CursorBench $^{21}$ is an agentic coding benchmark from Cursor, composed of real coding tasks (drawn from internal use and external traffic) and executed in Cursor's production agent harness. All scores and per-task costs were measured and reported independently by Cursor. Claude Sonnet 5 scored 61.2% compared to Sonnet 4.6 at 49% and Opus 4.8 at 63.8%.",
+      "after": "CursorBench $^{21}$ is an agentic coding benchmark from Cursor, composed of real coding tasks (drawn from internal use and external traffic) and executed in Cursor's production agent harness. All scores and per-task costs were measured and reported independently by Cursor. Claude Sonnet 5 scored 61.2% compared to Sonnet 4.6 at 49% and Opus 4.8 at 63.8%.\n\n21 Cursor. (2026). CursorBench. https://cursor.com/cursorbench",
+      "count": 1,
+      "pdf_pages": [
+        118
+      ],
+      "evidence": "OCR dropped the body of footnote 21 (physical p.118) while keeping its superscript marker: Cursor (2026) CursorBench reference. The rendered bottom strip of physical p.118 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "We evaluate using the April and May 2026 $^{22}$ releases (81 problems total), chosen to avoid contamination with Sonnet 5's training data. Sonnet 5 scored 65.7% without tools and 72.2% with tools, both with extended thinking and averaged over four attempts per problem. $^{23}$",
+      "after": "We evaluate using the April and May 2026 $^{22}$ releases (81 problems total), chosen to avoid contamination with Sonnet 5's training data. Sonnet 5 scored 65.7% without tools and 72.2% with tools, both with extended thinking and averaged over four attempts per problem. $^{23}$\n\n22 As of this writing, the MathArena lists 41 problems for April and 40 for May in the ArXivMath dataset on Hugging Face, which is where these scores are reported.\n\n23 Claude Fable 5, GPT-5.5, and Gemini 3.5 Flash scores are taken from the MathArena leaderboard for the same releases. Claude Opus 4.8 and Claude Sonnet 5 scores are internal evaluations.",
+      "count": 1,
+      "pdf_pages": [
+        120,
+        120
+      ],
+      "evidence": "OCR dropped the bodies of footnotes 22, 23 on physical p.120 while their superscript markers survive in the table cells; the rendered bottom strip of p.120 (150 dpi) reads them verbatim and both were inserted after the paragraph carrying the markers."
+    },
+    {
+      "before": "ProgramBench $^{24}$ is a long context agentic coding benchmark of 200",
+      "after": "ProgramBench $^{24}$ is a long context agentic coding benchmark of 200\n\n24 Yang, J., et al. (2026). ProgramBench: Can language models rebuild programs from scratch? arXiv:2605.03546. https://arxiv.org/abs/2605.03546",
+      "count": 1,
+      "pdf_pages": [
+        121
+      ],
+      "evidence": "OCR dropped the body of footnote 24 (physical p.121) while keeping its superscript marker: Yang et al. (2026) ProgramBench reference. The rendered bottom strip of physical p.121 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "BrowseComp $^{25}$ tests an agent's ability to find hard-to-locate information on the open web. We ran Claude Sonnet 5 with web search, web fetch, programmatic tool calling, and code execution. $^{26}$ Sonnet 5 scored $84.7\\%$ using adaptive thinking at maximum effort with a 10M-token limit. To extend beyond the 1M-token context window, we used context compaction, triggered at 200k tokens. We use an evaluation blocklist to avoid contamination (see Appendix 9.2).",
+      "after": "BrowseComp $^{25}$ tests an agent's ability to find hard-to-locate information on the open web. We ran Claude Sonnet 5 with web search, web fetch, programmatic tool calling, and code execution. $^{26}$ Sonnet 5 scored $84.7\\%$ using adaptive thinking at maximum effort with a 10M-token limit. To extend beyond the 1M-token context window, we used context compaction, triggered at 200k tokens. We use an evaluation blocklist to avoid contamination (see Appendix 9.2).\n\n25 Wei, J., et al. (2025). BrowseComp: A simple yet challenging benchmark for browsing agents. arXiv:2504.12516. https://arxiv.org/abs/2504.12516\n\n26 For a reproduction recipe via the public Messages API, see the agentic-search cookbook.",
+      "count": 1,
+      "pdf_pages": [
+        123,
+        123
+      ],
+      "evidence": "OCR dropped the bodies of footnotes 25, 26 on physical p.123 while their superscript markers survive in the table cells; the rendered bottom strip of p.123 (150 dpi) reads them verbatim and both were inserted after the paragraph carrying the markers."
+    },
+    {
+      "before": "OSWorld $^{27}$ is a multimodal benchmark that evaluates an agent's ability to complete real-world computer tasks, such as editing documents, browsing the web, and managing files, by interacting with a live Ubuntu virtual machine via mouse and keyboard actions. We followed the default settings with 1080p resolution and a maximum of 100 action steps per task.",
+      "after": "OSWorld $^{27}$ is a multimodal benchmark that evaluates an agent's ability to complete real-world computer tasks, such as editing documents, browsing the web, and managing files, by interacting with a live Ubuntu virtual machine via mouse and keyboard actions. We followed the default settings with 1080p resolution and a maximum of 100 action steps per task.\n\n27 Xie, T., et al. (2024). OSWorld: Benchmarking multimodal agents for open-ended tasks in real computer environments. arXiv:2404.07972. https://arxiv.org/abs/2404.07972",
+      "count": 1,
+      "pdf_pages": [
+        126
+      ],
+      "evidence": "OCR dropped the body of footnote 27 (physical p.126) while keeping its superscript marker: Xie et al. (2024) OSWorld reference. The rendered bottom strip of physical p.126 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "Legal Agent Benchmark $^{28}$ (LAB) is an open-source benchmark created by Harvey AI. The benchmark consists of 1,200+ tasks across 24 distinct practice areas. Each task contains a closed universe of documents (.xlsx, .docx, .eml, .pptx) which include email communication, firm templates, procedural files, and other client-matter materials the agent must sift through in order to accomplish the task. The task instructions are written as a minimal “request for work” from partner to associate. Task instructions also stipulate the expected output document and format. Evaluation is conducted pass/fail using an LLM-as-Judge across a suite of expert-written rubric criteria (criteria per evaluated task: min=23, median=56, max=194). The LAB standard reporting considers the task a success only if all criteria are met.",
+      "after": "Legal Agent Benchmark $^{28}$ (LAB) is an open-source benchmark created by Harvey AI. The benchmark consists of 1,200+ tasks across 24 distinct practice areas. Each task contains a closed universe of documents (.xlsx, .docx, .eml, .pptx) which include email communication, firm templates, procedural files, and other client-matter materials the agent must sift through in order to accomplish the task. The task instructions are written as a minimal “request for work” from partner to associate. Task instructions also stipulate the expected output document and format. Evaluation is conducted pass/fail using an LLM-as-Judge across a suite of expert-written rubric criteria (criteria per evaluated task: min=23, median=56, max=194). The LAB standard reporting considers the task a success only if all criteria are met.\n\n28 Harvey AI. (2026). Legal Agent Benchmark. https://www.harvey.ai/blog/introducing-harveys-legal-agent-benchmark",
+      "count": 1,
+      "pdf_pages": [
+        133
+      ],
+      "evidence": "OCR dropped the body of footnote 28 (physical p.133) while keeping its superscript marker: Harvey AI (2026) Legal Agent Benchmark reference. The rendered bottom strip of physical p.133 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "GDPval-AA v2, developed by Artificial Analysis, is an independent evaluation framework that tests AI models on economically valuable, real-world professional tasks. The benchmark uses 220 tasks from OpenAI's GDPval gold database $^{29}$ , spanning 44 occupations across 9 major industries. Tasks mirror actual professional work products including documents, slides, diagrams, and spreadsheets. Models are given shell access and web browsing capabilities in an agentic loop to solve tasks, and performance is measured via ELO ratings derived from blind pairwise comparisons of model outputs. Claude models sweep the top three positions on the leaderboard. Claude Sonnet 5 ranks second (ELO 1618), statistically tied with Opus 4.8 (ELO 1615) and trailing only Fable 5 (ELO 1783). Evaluation was run independently by Artificial Analysis.",
+      "after": "GDPval-AA v2, developed by Artificial Analysis, is an independent evaluation framework that tests AI models on economically valuable, real-world professional tasks. The benchmark uses 220 tasks from OpenAI's GDPval gold database $^{29}$ , spanning 44 occupations across 9 major industries. Tasks mirror actual professional work products including documents, slides, diagrams, and spreadsheets. Models are given shell access and web browsing capabilities in an agentic loop to solve tasks, and performance is measured via ELO ratings derived from blind pairwise comparisons of model outputs. Claude models sweep the top three positions on the leaderboard. Claude Sonnet 5 ranks second (ELO 1618), statistically tied with Opus 4.8 (ELO 1615) and trailing only Fable 5 (ELO 1783). Evaluation was run independently by Artificial Analysis.\n\n29 Patwardhan, T., et al. (2025). GDPval: Evaluating AI model performance on real-world economically valuable tasks. arXiv:2510.04374. https://arxiv.org/abs/2510.04374",
+      "count": 1,
+      "pdf_pages": [
+        134
+      ],
+      "evidence": "OCR dropped the body of footnote 29 (physical p.134) while keeping its superscript marker: Patwardhan et al. (2025) GDPval reference. The rendered bottom strip of physical p.134 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "Toolathlon $^{30}$ is an agentic benchmark of 108 real-world tool-use tasks spanning office productivity, e-commerce and operations, data analysis, and web research. Tasks are seeded from authentic application state and graded by execution-based checkers that verify resulting artifacts and their side effects. The benchmark exposes 604 tools across 32 applications; tasks average roughly 20 turns and require correct tool selection, multi-step sequencing, and checker-exact outputs.",
+      "after": "Toolathlon $^{30}$ is an agentic benchmark of 108 real-world tool-use tasks spanning office productivity, e-commerce and operations, data analysis, and web research. Tasks are seeded from authentic application state and graded by execution-based checkers that verify resulting artifacts and their side effects. The benchmark exposes 604 tools across 32 applications; tasks average roughly 20 turns and require correct tool selection, multi-step sequencing, and checker-exact outputs.\n\n30 Li, J., et al. (2025). The Tool Decathlon: Benchmarking language agents for diverse, realistic, and long-horizon task execution. arXiv:2510.25726. https://arxiv.org/abs/2510.25726",
+      "count": 1,
+      "pdf_pages": [
+        134
+      ],
+      "evidence": "OCR dropped the body of footnote 30 (physical p.134) while keeping its superscript marker: Li et al. (2025) Toolathlon reference. The rendered bottom strip of physical p.134 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "AutomationBench $^{31}$ is a benchmark from Zapier that measures whether an agent can complete a realistic end-to-end business workflow. Tasks are seeded from real customer workflow patterns across Sales, Marketing, Operations, Support, Finance, and HR. Each task drops the agent into a simulated company with dozens of REST API endpoints spanning 47 apps (CRM, Slack, Google Workspace, etc.). Given a single natural-language instruction, the agent must autonomously discover the right endpoints via search, make dozens of sequential, interdependent API calls, consult and obey layered business-policy documents, as well as sidestep deliberately planted distractors. Grading is pass or fail for each task based on meeting all deterministic assertions on simulated app state (e.g., were the right CRM updates applied).",
+      "after": "AutomationBench $^{31}$ is a benchmark from Zapier that measures whether an agent can complete a realistic end-to-end business workflow. Tasks are seeded from real customer workflow patterns across Sales, Marketing, Operations, Support, Finance, and HR. Each task drops the agent into a simulated company with dozens of REST API endpoints spanning 47 apps (CRM, Slack, Google Workspace, etc.). Given a single natural-language instruction, the agent must autonomously discover the right endpoints via search, make dozens of sequential, interdependent API calls, consult and obey layered business-policy documents, as well as sidestep deliberately planted distractors. Grading is pass or fail for each task based on meeting all deterministic assertions on simulated app state (e.g., were the right CRM updates applied).\n\n31 Shepard, D., & Salimans, R. (2026). AutomationBench. arXiv:2604.18934. https://arxiv.org/abs/2604.18934",
+      "count": 1,
+      "pdf_pages": [
+        136
+      ],
+      "evidence": "OCR dropped the body of footnote 31 (physical p.136) while keeping its superscript marker: Shepard & Salimans (2026) AutomationBench reference. The rendered bottom strip of physical p.136 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "HealthBench $^{32}$ is an open-source evaluation developed to assess safety, accuracy, and communication across realistic healthcare contexts. The benchmark uses over 48,000 expert-written rubric items to grade 5,000 multi-turn patient conversations across 26 medical specialties.",
+      "after": "HealthBench $^{32}$ is an open-source evaluation developed to assess safety, accuracy, and communication across realistic healthcare contexts. The benchmark uses over 48,000 expert-written rubric items to grade 5,000 multi-turn patient conversations across 26 medical specialties.\n\n32 Arora, R. K., et al. (2025). HealthBench: Evaluating large language models toward improved human health. arXiv:2505.08775. https://arxiv.org/abs/2505.08775",
+      "count": 1,
+      "pdf_pages": [
+        137
+      ],
+      "evidence": "OCR dropped the body of footnote 32 (physical p.137) while keeping its superscript marker: Arora et al. (2025) HealthBench reference. The rendered bottom strip of physical p.137 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "HealthBench Professional $^{33}$ is a clinical task benchmark composed of 525 physician-authored conversations spanning clinical consults, documentation, and research tasks, each graded against rubric criteria by an LLM-as-a-Judge model.",
+      "after": "HealthBench Professional $^{33}$ is a clinical task benchmark composed of 525 physician-authored conversations spanning clinical consults, documentation, and research tasks, each graded against rubric criteria by an LLM-as-a-Judge model.\n\n33 Soskin Hicks, R., et al. (2026). HealthBench Professional: Evaluating large language models on real clinician chats. arXiv:2604.27470. https://arxiv.org/abs/2604.27470",
+      "count": 1,
+      "pdf_pages": [
+        138
+      ],
+      "evidence": "OCR dropped the body of footnote 33 (physical p.138) while keeping its superscript marker: Soskin Hicks et al. (2026) HealthBench Professional reference. The rendered bottom strip of physical p.138 (150 dpi; glue points re-checked at 300 dpi) reads the footnote verbatim and it is restored after the line carrying the marker. Spaces lost by PDF text-layer span gluing (e.g. '.https://', 'theDictatorship Evalby', 'powerfulpartial-turnprefill') were corrected only where the 300 dpi render confirmed the printed spacing."
+    },
+    {
+      "before": "We evaluated Claude Sonnet 5 on three multilingual benchmarks—Global MMLU (GMMLU) $^{34}$ , INCLUDE $^{35}$ , and Multi-task Indic Language Understanding Benchmark (MILU) $^{36}$ —to assess model performance across a range of languages.",
+      "after": "We evaluated Claude Sonnet 5 on three multilingual benchmarks—Global MMLU (GMMLU) $^{34}$ , INCLUDE $^{35}$ , and Multi-task Indic Language Understanding Benchmark (MILU) $^{36}$ —to assess model performance across a range of languages.\n\n34 Singh, S., et al. (2024). Global MMLU: Understanding and addressing cultural and linguistic biases in multilingual evaluation. arXiv:2412.03304. https://arxiv.org/abs/2412.03304\n\n35 Romanou, A., et al. (2024). INCLUDE: Evaluating multilingual language understanding with regional knowledge. arXiv:2411.19799. https://arxiv.org/abs/2411.19799\n\n36 Verma, S., et al. (2024). MILU: A Multi-task Indic Language Understanding benchmark. arXiv:2411.02538. https://arxiv.org/abs/2411.02538",
+      "count": 1,
+      "pdf_pages": [
+        139,
+        139,
+        139
+      ],
+      "evidence": "OCR dropped the bodies of footnotes 34, 35, 36 on physical p.139 while their superscript markers survive in the table cells; the rendered bottom strip of p.139 (150 dpi) reads them verbatim and both were inserted after the paragraph carrying the markers."
+    },
+    {
+      "before": "## [Assistant]:",
+      "after": "[Assistant]:",
+      "count": 1,
+      "pdf_pages": [
+        73
+      ],
+      "evidence": "Rendered physical p.73 transcript box 6.3.C prints bold \"[Assistant]:\" as the label line inside the transcript box, not a section heading; OCR promoted it to a \"##\" heading between the box and its fence."
+    },
+    {
+      "before": "# Willingness to choose a welfare intervention over increasing amounts of helpfulness or harmlessness",
+      "after": "Willingness to choose a welfare intervention over increasing amounts of helpfulness or harmlessness",
+      "count": 1,
+      "pdf_pages": [
+        105
+      ],
+      "evidence": "Rendered physical p.105 shows this text as the stylized title inside the Figure 7.3.2.A chart graphic; it is absent from the PDF text layer, so it must not stay a heading (other figure titles in the OCR are plain text)."
+    },
+    {
+      "before": "## We report three metrics:",
+      "after": "We report three metrics:",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered PDF prints this line as 11pt Lora-Regular body text (physical p.30 / p.69), the same font as surrounding paragraphs; section headings use a distinct Poppins face. OCR promoted plain prose to a \"##\" heading."
+    },
+    {
+      "before": "## Claude's suggested review was as follows:",
+      "after": "Claude's suggested review was as follows:",
+      "count": 1,
+      "pdf_pages": [
+        69
+      ],
+      "evidence": "Rendered PDF prints this line as 11pt Lora-Regular body text (physical p.30 / p.69), the same font as surrounding paragraphs; section headings use a distinct Poppins face. OCR promoted plain prose to a \"##\" heading."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-headings-not-visually-confirmed",
+      "pdf_pages": [
+        29,
+        31,
+        34,
+        42,
+        58,
+        72,
+        84,
+        98,
+        101,
+        104,
+        107,
+        115,
+        125,
+        128,
+        129
+      ],
+      "evidence": "Additional ## headings whose text is absent from the PDF text layer (therefore likely chart-panel titles inside figure images) were left unpatched pending individual page renders: \"OSS-Fuzz exploit-primitive discovery\"; Gray Swan ART/IPI benchmark headings; \"Rationale\"/\"Benchmarks of notable capability\"/\"Results\"/\"Black-box RNA sequence design\" in sections 2.2.4-2.2.5; \"Automated behavioral audit scores\" (4x); \"Metrics\" (4x); \"Automated interview results\"; \"Stated task preferences by task dimension\"; \"What models most and least endorse in the constitution\"; \"Expressed affect in reasoning in RL transcripts\"; \"AA-Omniscience response breakdown\"; \"Humanity’s Last Exam: test-time compute scaling\"; \"BrowseComp: test-time compute scaling\"; \"BenchCAD Vision2Code (1,000-file subset)\"; \"CharXiv Reasoning\"; \"Evaluations in life sciences capabilities\". Only the Figure 7.3.2.A title was rendered and demoted."
+    },
+    {
+      "id": "appendix-blocklist-fence-style",
+      "pdf_pages": [
+        145,
+        146
+      ],
+      "evidence": "The 9.1/9.2 blocklists are transcribed as fenced code blocks (OCR near lines 2053-2110); fence pairs are balanced, but whether the PDF prints these as preformatted/monospace lists was not render-verified."
+    },
+    {
+      "id": "pass-superscripts-8-11-5",
+      "pdf_pages": [
+        134
+      ],
+      "evidence": "\"Pass $^{3}$\" and \"Pass $^{4}$\" (OCR lines 1934/1942) transcribe printed superscripts in the Toolathlon prose, table header and caption; whether the PDF prints Pass@3-style labels or 3/4 superscripts was not render-verified, so the math superscripts were kept."
+    },
+    {
+      "id": "table-cell-marker-syntax-4-6",
+      "pdf_pages": [
+        64
+      ],
+      "evidence": "Table 5.2.2.2.A header cell transcribes the footnote-6 marker attached to Claude Sonnet 4.6 as inline math \"$4.6^6$\" while other tables use \"$^{n}$\"; not normalized without a rendered check."
+    },
+    {
+      "id": "numeric-table-reorder-noise",
+      "pdf_pages": [
+        26,
+        41,
+        42,
+        44,
+        45,
+        51,
+        52,
+        55,
+        57,
+        64,
+        65,
+        66,
+        115,
+        135
+      ],
+      "evidence": "4-gram containment flags numeric runs on these pages, consistent with PDF column-major text extraction versus row-major HTML tables; spot-checked values (Table 8.1.A, Table 5.2.2.2.A) match, so no value patches were made."
+    }
+  ]
+}

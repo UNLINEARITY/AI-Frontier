@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-video-1-5",
+  "source_sha256": "d730db8544e641f9ec14e9905110dad7ae393a8c8ffa8383c2a64b395e656ff2",
+  "ocr_sha256": "98bf5a00557563d5b58a4f0eacde8eee42e77ce0f9e748c99f5e151158b158b0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "All 14 physical PDF pages' extracted text was block-compared against the OCR markdown after whitespace/punctuation normalization; no dropped blocks, headings or reference entries found. Physical page 11 was rendered at 150 dpi and visually checked: Tables 7-8 print ballot X (U+2717) for sparse attention off and a check mark (U+2713) for on; OCR misread the cross as U+2715 in Table 7 and all four check marks as the square-root sign U+221A. Table 8's four ballot-X glyphs were read correctly. Source-printed quirks kept: 'Data Volumn' header typo, 'Equally Bad'/'Equally good' and 'Other better'/'other better' case inconsistency, and the truncated-looking sentence 'combining a general textual encoder.' in the Text encoder paragraph all match the PDF text layer exactly. Algorithm 1 block (physical p.5) has no fences and its math delimiters render; citation punctuation spacing after inline math is handled by the shared normalizer."
+  },
+  "patches": [
+    {
+      "before": "✕",
+      "after": "✗",
+      "count": 4,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 Table 7 (visually checked at 150 dpi) prints the ballot X glyph U+2717 in the Sparse Attention column of rows 1, 2, 3 and 5; the PDF text layer also extracts U+2717. OCR misread all four as the multiplication X U+2715. Table 8's identical glyphs on the same page were read correctly as U+2717."
+    },
+    {
+      "before": "√",
+      "after": "✓",
+      "count": 4,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 Tables 7-8 (visually checked at 150 dpi) print a check mark U+2713 in the Sparse Attention column of the two sparse-attention-enabled rows of each table; the PDF text layer also extracts U+2713. OCR misread all four as the square-root sign U+221A."
+    }
+  ],
+  "unresolved": []
+}

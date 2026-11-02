@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:nextstep-1",
+  "source_sha256": "e0d69908d368a15322b9a062b735fa93183396466c3bb0d9c6347a41fd5869ab",
+  "ocr_sha256": "4296e4a88f9adc2dd6431e41af3b19e257164b73b9403215bbe416a39bb774a8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "coverage": "complete",
+    "notes": "Word-level diff of the PDF text layer against the OCR markdown for all 25 physical pages plus a whole-document digit-token inventory (residual PDF-only tokens are the arXiv stamp, page numerals, and figure-internal chart values such as the noise-std axis labels). All 8 figures are embedded as raster images, so the demo-task labels around Figure 1, the Figure 2 training-sequence tokens (bos/dog on rock/eoi), the Figure 3 character-pipeline flowchart text, and the Figure 7/8 panel labels are figure-internal and not transcription defects. Equation (2) is faithfully transcribed in LaTeX. Remaining word diffs are line-break hyphen artifacts (long-context, knowledge-aware, flow-matching, lower-dimensional, SeedEdit, vision-language, Chain-of-Thought, high-fidelity, deepmind, flux, introducing, native)."
+  },
+  "patches": [
+    {
+      "before": "we used the Step-1o-turbo $^{1}$ to generate rich and detailed captions for each image in both English and Chinese.",
+      "after": "we used the Step-1o-turbo $^{1}$ to generate rich and detailed captions for each image in both English and Chinese.\n\n1 https://platform.stepfun.com/docs/llm/vision",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 footnote area at 300 dpi prints footnote 1 as 'https://platform.stepfun.com/docs/llm/vision'; OCR kept the $^{1}$ marker on 'Step-1o-turbo' but dropped the footnote body."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "arxiv-stamp-p1",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The vertical arXiv margin stamp 'arXiv:2508.10711v2 [cs.CV] 18 Aug 2025' exists only as page furniture in the PDF margin and is not part of the OCR text."
+    }
+  ]
+}

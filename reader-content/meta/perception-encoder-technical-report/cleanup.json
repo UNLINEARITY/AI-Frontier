@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "id": "meta:perception-encoder-technical-report",
+  "source_sha256": "6db3c34bd289f15007c6883848767b406cbda0dd84638bc948dbc05b86dda37d",
+  "ocr_sha256": "3b5c5712633f142d918fd1dbada5cdf162b3071891ae9f2e703f6ce90b0755ad",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "coverage": "partial",
+    "notes": "Normalized full-text diff of all 44 physical pages against the OCR markdown plus a structure scan (single balanced code fence for the LLM feature-extraction question list; headings match printed sections). Physical pages 5, 25 (incl. 300-dpi Table 20 crop), 28 and 29 were rendered and visually inspected. Main finding: all eight printed footnote bodies were dropped while their superscript markers survived; seven are restored here (footnote 2's URL also appears on page 1 as a dataset link, but the page-7 marker footnote body itself was still dropped). Two OCR auto-corrections of the report's own misspellings ('remainining', 'subsequentially') are restored. NOT repaired within budget: the exporter merged the side-by-side print tables 18+19+20 (physical p.25) into one 6-column HTML table keeping only the 'Table 18 Image Pretraining.' caption ('Table 19 Video Finetuning.' is glued inside the last table cell, 'Table 20 Distillation.' is dropped), and likewise merged tables 21+22+23 (physical p.28) keeping only 'Table 21 Spatial Alignment.' ('Table 22 SAM 2.1 Teacher.' and 'Table 23 PEcoreG Teacher.' dropped); all cell content is present but the three-table structure and two captions per location are lost. Figure-internal axis/legend text (Fig. 2 robustness legend, Fig. 6 scatter axis labels, p.34 'PEspatial: Additional Qualitative Results' banner) sits inside embedded figures and is not a defect."
+  },
+  "patches": [
+    {
+      "before": "significantly improving captioning quality (see Tab. 1).\n",
+      "after": "significantly improving captioning quality (see Tab. 1).\n\n1 The annotators are instructed to remove, correct, and add information from the captions.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 prints the footnote body '1The annotators are instructed to remove, correct, and add information from the captions.' at the page bottom, attached to the superscript marker after 'refine the captions' in the Phase 2 paragraph; the OCR kept the marker but dropped the body."
+    },
+    {
+      "before": "coverage of scenes.\n\nWe additionally sel",
+      "after": "coverage of scenes.\n\nWe additionally sel2 PVD available at https://ai.meta.com/datasets/pe-video/",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Physical p.7 prints footnote '2PVD available at https://ai.meta.com/datasets/pe-video/'; the OCR dropped the body and kept the $^{2}$ marker in the PVD paragraph (PDF text layer; the anchor includes the following paragraph head because the PVD paragraph text appears twice)."
+    },
+    {
+      "before": "dimension of the output clip embedding space.\n",
+      "after": "dimension of the output clip embedding space.\n\n3 We employ the setup described in §2.1 except for the additional class token (only used for L and B). Interestingly, we find using the same high learning rate ( $2 \\times 10^{-3}$ ) to perform well for G. We also did not find scaling the text encoder to be beneficial",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Physical p.8 prints footnote 3 ('We employ the setup described in §2.1 except for the additional class token...') at the page bottom; the OCR kept the $^{3}$ marker after '2B parameters' but dropped the body (PDF text layer)."
+    },
+    {
+      "before": "to SigLIP2 [138] on video→text.\n",
+      "after": "to SigLIP2 [138] on video→text.\n\n4 We use the version provided by [39] and re-evaluate all models to ensure a fair comparison.",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Physical p.10 prints footnote '4We use the version provided by [39] and re-evaluate all models to ensure a fair comparison.' at the page bottom, attached to the marker after 'Dollar Street [113]' in the section 3 benchmark paragraph; the OCR dropped the body."
+    },
+    {
+      "before": "Our implementation is based on OpenCLIP $^{5}$ .\n",
+      "after": "Our implementation is based on OpenCLIP $^{5}$ .\n\n5 https://github.com/mlfoundations/open_clip",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints footnote '5https://github.com/mlfoundations/open_clip' at the page bottom, attached to 'OpenCLIP^5' in the B.1 intro sentence; the OCR kept the marker but dropped the URL."
+    },
+    {
+      "before": "evaluation code, and scripts for reproducibility.\n",
+      "after": "evaluation code, and scripts for reproducibility.\n\n6 https://github.com/LAION-AI/CLIP\\_benchmark",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Physical p.26 prints footnote '6https://github.com/LAION-AI/CLIP_benchmark' at the page bottom, attached to 'CLIPBench^6'; the OCR kept the marker but dropped the URL (underscore escaped per the document's own convention, cf. perception\\_models on page 1)."
+    },
+    {
+      "before": "This comprehensive data mix allows us to thoroughly assess our model's capabilities in various MLLM tasks.\n",
+      "after": "This comprehensive data mix allows us to thoroughly assess our model's capabilities in various MLLM tasks.\n\n7 We excluded multi-images samples.",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Physical p.26/27 boundary prints footnote '7We excluded multi-images samples.'; the OCR kept the $^{7}$ marker after '1.7M' in the SFT data paragraph but dropped the body (PDF text layer)."
+    },
+    {
+      "before": "We apply a series of test-time augmentation techniques to further improve the performance, detailed in Tab. 25.\n",
+      "after": "We apply a series of test-time augmentation techniques to further improve the performance, detailed in Tab. 25.\n8 https://github.com/jozhang97/DETA\n",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Physical p.30 prints footnote '8https://github.com/jozhang97/DETA' at the page bottom, attached to 'DETA repository^8'; the OCR kept the marker but dropped the URL. Inserted after the training-stage list that the print page interrupts."
+    },
+    {
+      "before": "768 for the remaining experiments",
+      "after": "768 for the remainining experiments",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 (Frozen Detection paragraph) prints '768 for the remainining experiments in §3' - the report's own misspelling; the OCR auto-corrected it to 'remaining'."
+    },
+    {
+      "before": "must be subsequently aligned to downstream tasks",
+      "after": "must be subsequentially aligned to downstream tasks",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Physical p.12 prints 'the model must be subsequentially aligned to downstream tasks' (the report's own misspelling); the OCR auto-corrected it to 'subsequently' (PDF text layer, section 3 analysis paragraph)."
+    }
+  ],
+  "unresolved": [
+    "Merged print tables: physical p.25 tables 18/19/20 are emitted as one HTML table with caption 'Table 19 Video Finetuning.' glued into a cell and 'Table 20 Distillation.' dropped; physical p.28 tables 21/22/23 are emitted as one HTML table with captions 'Table 22 SAM 2.1 Teacher.' and 'Table 23 PEcoreG Teacher.' dropped. Needs a structural split into three captioned tables per location; all cell values verified present against the rendered pages."
+  ]
+}

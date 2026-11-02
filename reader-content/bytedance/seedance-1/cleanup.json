@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seedance-1",
+  "source_sha256": "e4ec66efd7e354bc7b3d25478fc1cb21709d0dc907f70cee7000ad2bf036fd13",
+  "ocr_sha256": "9f9be5f80c96632b84eeee092fd338dd533b3771db876df4f78189a8467db73e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "All 26 physical pages compared word-by-word against the OCR Markdown; no code fences. Page 3 footnotes verified on a 300 dpi crop; page 26 contributor continuation verified on the rendered page. Word-level differences beyond the two patches are LaTeX math, soft-hyphen line breaks, and storage-infra figure labels (Babit Multimedia Framework, Tidal, HDFS on p.8). The PDF itself prints the typos 'devide/aquire/abilitity/adpot' (p.5) and 'proprerly' (p.7) in Prompt Engineering prose; OCR silently corrected three of them while keeping 'adpot'. Treated as author typos printed by the PDF and left unchanged per the no-author-typo-patch rule; flagged here in case the project later decides OCR must mirror the printed spelling."
+  },
+  "patches": [
+    {
+      "before": "daily creative applications.",
+      "after": "daily creative applications.\n\n1https://www.doubao.com/chat/create-video\n\n2https://jimeng.jianying.com/ai-tool/video/generate",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "The 300 dpi crop of physical p.3 prints two page footnotes '1https://www.doubao.com/chat/create-video' and '2https://jimeng.jianying.com/ai-tool/video/generate' below the sentence that ends '...daily creative applications.'; the OCR kept the Doubao/Jimeng markers as superscripts but dropped both footnote bodies. The patch restores the printed footnote lines after the referencing sentence."
+    },
+    {
+      "before": "<tr><td></td><td>Xinyan Zhang</td></tr></table>",
+      "after": "<tr><td></td><td>Xinyan Zhang</td></tr><tr><td>Xinyu Zhang</td><td>Rui Zhu</td></tr><tr><td>Zixiang Zhang</td><td>Wenjia Zhu</td></tr><tr><td>Qi Zhao</td><td></td></tr></table>",
+      "count": 1,
+      "pdf_pages": [
+        25,
+        26
+      ],
+      "evidence": "The Core Contributors table continues onto physical p.26 with five names the OCR dropped: left printed column 'Xinyu Zhang, Zixiang Zhang, Qi Zhao' (continuing the Core Contributors column) and right printed column 'Rui Zhu, Wenjia Zhu' (continuing the Contributors column); verified on the rendered page where the five names are row-aligned in two columns. The patch appends them to the existing two-column table, reusing its empty-cell pattern."
+    }
+  ],
+  "unresolved": []
+}

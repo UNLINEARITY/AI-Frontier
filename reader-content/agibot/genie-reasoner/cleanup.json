@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "agibot:genie-reasoner",
+  "source_sha256": "2df3595c3d45ab7213e1fadeb66354b3c1d0a02c67743373931b1bdb30b09d60",
+  "ocr_sha256": "2a21a917d3f642e00cd05fbd4aeb454b9dc6affce40c03b45bec570f5daad340",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "coverage": "complete",
+    "notes": "All OCR lines compared against extracted text of all 16 physical pages; physical pages 11 and 14 rendered and inspected (p.14 Table III legend and Error/Human-Intent columns at 300-400 dpi crops). Code fences are balanced; all 21 headings are printed headings. The main repair is Table III: OCR invented circled-digit footnote markers and empty circles where the PDF prints the half-filled circle used by the 'Partially Supported' legend (verified visually at 400 dpi). The legend line itself collapsed the half-filled circle to an empty one. Ref [53] prints 'genie_sim' with an underscore (verified at 300 dpi), so only the OCR backslash escape was removed. 'GenieReasoner(illustrated', 'phases:(1)', 'GenieSim[53]' and 'Appendix A1' are all printed that way in the PDF and were kept; references [1]-[69] are complete with no gaps; no spaced digits or dropped paragraphs were found."
+  },
+  "patches": [
+    {
+      "before": "○: Partially Supported",
+      "after": "◐: Partially Supported",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 legend under Table III (300 dpi crop) prints a left-half-filled circle before 'Partially Supported', distinct from the empty circle before 'Not Supported'; OCR wrote the empty circle for both."
+    },
+    {
+      "before": "<td>➀</td>",
+      "after": "<td>◐</td>",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 Table III, EmbodiedBench row Error cell (400 dpi crop of the Error/Human-Intent columns) prints the half-filled circle ◐; OCR invented a circled-digit marker ➀ that appears nowhere in the source table."
+    },
+    {
+      "before": "<td>➁</td><td>○</td><td>MC</td></tr>",
+      "after": "<td>◐</td><td>○</td><td>MC</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 Table III, Cosmos-Reason1 row Error cell prints ◐ (400 dpi crop); OCR wrote a circled-digit marker ➁."
+    },
+    {
+      "before": "<td>➁</td><td>○</td><td>Human based Open-ended</td>",
+      "after": "<td>◐</td><td>○</td><td>Human based Open-ended</td>",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 Table III, RoboVQA row Error cell prints ◐ (400 dpi crop); OCR wrote a circled-digit marker ➁."
+    },
+    {
+      "before": "<td>➁</td><td>○</td><td>MC/LLM-based Open-ended/Reg.</td>",
+      "after": "<td>◐</td><td>○</td><td>MC/LLM-based Open-ended/Reg.</td>",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 Table III, VidEgoThink row Error cell prints ◐ (400 dpi crop); OCR wrote a circled-digit marker ➁."
+    },
+    {
+      "before": "<td>➁</td><td>➁</td>",
+      "after": "<td>◐</td><td>◐</td>",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 Table III, RoboBench row prints ◐ in both the Error and Human Intent cells (400 dpi crop of both columns); OCR wrote circled-digit markers ➁ in both. This is the only adjacent ➁➁ pair in the table."
+    },
+    {
+      "before": "https://github.com/AgibotTech/genie\\_sim.",
+      "after": "https://github.com/AgibotTech/genie_sim.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 reference [53] (300 dpi crop) prints 'URL https://github.com/AgibotTech/genie_sim.' with a plain underscore; the OCR backslash is a Markdown escape in the URL."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-3-embed-splits-sentence",
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "The Fig. 3 embed and its caption land mid-sentence between 'The optimization objective over a demonstration dataset' and 'D is formulated as:'; the figure sits elsewhere on the printed page. A reader-only cleanup cannot reorder image embeds, so the interruption stays."
+    },
+    {
+      "id": "figure-10-panel-labels-as-loose-plain-text",
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "evidence": "Two Figure 10 panel labels ('Pick up the data cable with your left arm (OOD)', 'Pick up the TV remote control with your right arm (OOD)') survive as loose plain-text lines before the embed; they are not headings and are also visible inside the embedded image, so they were left in place."
+    }
+  ]
+}

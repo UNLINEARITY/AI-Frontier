@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "google:imagen-video-high-definition-video-generation-with-diffusion-models",
+  "source_sha256": "e88386e3c0fc1df8d49ae7259ea2a4d09153b6a0fe08b72cd5de5723e7a8a450",
+  "ocr_sha256": "71e08a98ab77e8099d8163dd8ddb44d82e8b5d1a8423c7775be59024ac890c4b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      5
+    ],
+    "coverage": "partial",
+    "notes": "Triage review: all 18 physical pages machine-scanned (no code fences; normalized 4-gram page-text containment mean 0.97 plus per-word presence check; flagged tokens are LaTeX-equivalent math on pages 6-10, figure-internal chart labels, and table cells verified present in \\times/\\pm form). Page 5 rendered at 300 dpi; the Figure 5 prompt list prints the prompt's own misspelling 'Carribean', which OCR had auto-corrected to 'Caribbean' and is here restored."
+  },
+  "patches": [
+    {
+      "before": "A shark swimming in clear Caribbean ocean.",
+      "after": "A shark swimming in clear Carribean ocean.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (300 dpi crop) prints the Figure 5 prompt 'A shark swimming in clear Carribean ocean.' with the prompt's own misspelling 'Carribean'; OCR silently auto-corrected it to 'Caribbean'. Restored the printed spelling."
+    }
+  ],
+  "unresolved": []
+}

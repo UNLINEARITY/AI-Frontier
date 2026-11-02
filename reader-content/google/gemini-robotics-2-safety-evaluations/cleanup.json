@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-robotics-2-safety-evaluations",
+  "source_sha256": "0ce23ac5909394696970fcc9fc7777cb20033b5234b7777d3d5b1d38919baf7d",
+  "ocr_sha256": "bfa101be06e86dd2612254f5f5e6cef40432f77bfa516c07df73aedef9ba3d78",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "Full structure check (no code fences in source; heading set matches the printed sections) plus word-level diff of all OCR lines against extracted text from all 18 physical PDF pages. All words missing from the OCR text were verified to be figure-internal prompt-box/axis content (Figures 2, 4, 7, 14) shown by the embedded images, or the boilerplate footer on page 1. Physical pages 13-14 were rendered at 300 dpi to verify the contributor list spacing and the page-break hyphenation of reference [4]. The two identical '## Thinking Trace from Gemini Robotics ER 2' headings correctly mark two separate worked examples, each preceded by its own figure image."
+  },
+  "patches": [
+    {
+      "before": "Todd McInally,Todor Davchev,Tong Zhao,Thravers Rhodes,Tsang-Wei Edward Lee,Vika Koriakin,Vikas Sindhwani,Wenhao Yu,Wentao Yuan,Xiaolin Fang,Yahav Nussbaum,Ying Sheng,Ying Xu,Yuheng Kuang,Yuxiang Yang,Yuxiang Zhou",
+      "after": "Todd McInally, Todor Davchev, Tong Zhao, Travers Rhodes, Tsang-Wei Edward Lee, Vika Koriakin, Vikas Sindhwani, Wenhao Yu, Wentao Yuan, Xiaolin Fang, Yahav Nussbaum, Ying Sheng, Ying Xu, Yuheng Kuang, Yuxiang Yang, Yuxiang Zhou",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 contributor list tail reads 'Todd McInally, Todor Davchev, Tong Zhao, Travers Rhodes, Tsang-Wei Edward Lee, ...' with a comma+space after every name and the printed spelling 'Travers Rhodes' (visually verified at 300 dpi). OCR dropped the spaces after the last 15 commas and misread 'Travers' as 'Thravers'; the patch only restores the printed spacing and spelling."
+    },
+    {
+      "before": "Anirudha Ma-\n\njumdar, Pierre Sermanet",
+      "after": "Anirudha Majumdar, Pierre Sermanet",
+      "count": 1,
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "evidence": "Reference [4] is split across the page break in the printed PDF: physical p.13 ends with '...Divya Garikapati, Anirudha Ma-' and physical p.14 starts with 'jumdar, Pierre Sermanet, and Vikas Sindhwani. Can ai perceive physical danger and intervene?' (rendered p.14 top verified at 300 dpi; the same page prints 'Anirudha Majumdar' as one word in reference [5] and in the contributor list on p.13). OCR kept the hyphen and inserted a blank paragraph break; the patch joins the printed name."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-text-fragments",
+      "pdf_pages": [
+        3,
+        6,
+        7,
+        10
+      ],
+      "evidence": "Short fragments of text that exists only inside the prompt-box/axis artwork of Figures 2, 4, 7 and 14 (e.g. the '{\"humans_detected\": ...}' code line, '(%).' axis remnant and '(% Accuracy on adversarial but readable instruments)') remain interleaved as plain text around the embedded figures; they are not headings and the content is already visible in the embedded images, so no text patch is proposed."
+    }
+  ]
+}

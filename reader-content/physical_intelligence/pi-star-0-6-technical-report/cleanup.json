@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:pi-star-0-6-technical-report",
+  "source_sha256": "9f4f5a3070ad9549ea7687ea54baa19858820dbcc0834cc805212d68fd6c8cb3",
+  "ocr_sha256": "0d536007c91342dddbb5ec344b706e4174a765ff36827523ee4069d0e7a53246",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of the OCR markdown against extracted text from all 18 physical pages; pages 1, 3, 5, 17 and 18 were rendered (110 dpi pages, 300 dpi crops) to verify the dropped footnote bodies, the project URL, and figure-internal labels. Both printed footnotes (physical p.3 fn.1 and p.5 fn.2) lost their bodies in OCR; fn.1 also lost its superscript marker. The p.1 project URL line was dropped. The panel banners inside Fig. 4 and Fig. 13 are part of the embedded figure images and stay unchanged. The PDF itself prints the typo 'calculatedd' on physical p.18; the OCR's sensible normalization to 'calculated' is kept rather than patching source typos. The arXiv sidebar stamp on p.1 is not document content."
+  },
+  "patches": [
+    {
+      "before": "with suboptimal data.",
+      "after": "with suboptimal data.\n\n$^{1}$For simplicity, we assume the observation $\\mathbf{o}_{t}$ constitutes a valid Markovian state. While not true in general, it is a common simplification in robotic RL.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 right-column footnote prints: superscript 1 'For simplicity, we assume the observation o_t constitutes a valid Markovian state. While not true in general, it is a common simplification in robotic RL.' anchored to 'advantage values derived from this' at the end of method item 3; OCR dropped both the marker and the whole footnote body."
+    },
+    {
+      "before": "The advantage values $A^{\\pi_{\\mathrm{ref}}(\\mathbf{o}_{t},\\mathbf{a}_{t},\\ell)}$ are obtained",
+      "after": "$^{2}$Prior work [4] instead uniformly chose $\\epsilon = 0$ and tuned $\\beta$ at test time, as in classifier-free guidance (CFG). However, high CFG weights can drive the action distribution to the corners of its support (leading to aggressive behavior) and would not affect the autoregressive part of the model. We found it easier to obtain good results by instead using the threshold $\\epsilon_{\\ell}$ to trade off regularization and optimality.\n\nThe advantage values $A^{\\pi_{\\mathrm{ref}}(\\mathbf{o}_{t},\\mathbf{a}_{t},\\ell)}$ are obtained",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 left-column footnote prints: superscript 2 'Prior work [4] instead uniformly chose eps = 0 and tuned beta at test time, as in classifier-free guidance (CFG). However, high CFG weights can drive the action distribution to the corners of its support (leading to aggressive behavior) and would not affect the autoregressive part of the model. We found it easier to obtain good results by instead using the threshold eps_l to trade off regularization and optimality.' OCR kept the '$^{2}$' marker at 'distribution after training.' but dropped the body; the paragraph ends with equation (3), so the body is inserted before the following paragraph."
+    },
+    {
+      "before": "Zhiyuan Zhou\n\n![[images/44bdd0d482c38ac112842e2034bd828b14d7ab4c1840f41d73c3bfa425e12814.jpg]]",
+      "after": "Zhiyuan Zhou\n\nhttps://pi.website/blog/pistar06\n\n![[images/44bdd0d482c38ac112842e2034bd828b14d7ab4c1840f41d73c3bfa425e12814.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints the link 'https://pi.website/blog/pistar06' centered between the author list and Fig. 1; OCR dropped the line. The image embed is preserved byte-identically."
+    }
+  ],
+  "unresolved": []
+}

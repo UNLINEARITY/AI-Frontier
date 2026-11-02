@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen-robotnav-technical-report-a-scalable-navigation-model-designed-for-an-agentic-navigation-system",
+  "source_sha256": "dc70ff7f3b4413936f65575ee7b8d8aafe40699adcc37be35a83eee0037fc186",
+  "ocr_sha256": "8c7ce57cdb438475b76b85f9ba80da7b4f7bdbf5adcae5bcc4a0a55d1ec83903",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR markdown; heading tree is numbered and matches the PDF section structure; all 10 tables and Figure 1-18 captions are present as HTML tables and image embeds. Normalized per-page membership diff of all 37 physical PDF pages against the tag-stripped OCR: the only body droppage is the author-footnote block on physical page 31 (verified on the rendered page). All other diff residuals are figure-internal text inside embedded figures (Figures 1-4, 10, 12-16 prompt strips and diagram labels, incl. the whole of physical page 18 and page 28), which the embedded images already show. Algorithm 1 and the Section 2.2 parameter table are present. Math-internal backslash-underscore escapes (nav_qwennav, goal_object) render as literal underscores and were left unchanged. No spaced digits, garbled numbers or changed image embeds found."
+  },
+  "patches": [
+    {
+      "before": "Shuai Bai, Xuancheng Ren\n\nAcknowledgments:",
+      "after": "Shuai Bai, Xuancheng Ren\n\n$^{*}$ Equal contribution. $^{\\dagger}$ Project lead. $^{\\ddagger}$ Corresponding author.\n\nAcknowledgments:",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Rendered physical p.31 prints a footnote block under the references column: '*Equal contribution. †Project lead. ‡Corresponding author.' matching the */†/‡ markers on the Core Contributors names; the OCR markdown kept the markers but dropped all three footnote bodies. The patch inserts them between the Contributors and Acknowledgments paragraphs in the PDF's symbol order."
+    }
+  ],
+  "unresolved": []
+}

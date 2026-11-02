@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-video",
+  "source_sha256": "422e33cf9e96f692abadf2113ce253ba20a070f7ca883b39f0c1c79e3d157faf",
+  "ocr_sha256": "a59fd4fd10167079194e99d872884e9dfee4d88bacc38b12dbb64418f7ba0380",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "coverage": "partial",
+    "notes": "Machine-scanned all 35 physical pages with code-fence balance check (balanced) and normalized 4-gram containment of each page's extracted text against the OCR markdown. Low-containment pages 6, 9 and 24 were inspected: the misses are benchmark-table cell ordering (Table 1 values all present and match), figure-internal axis/legend/subfigure text (Figures 6-10 montage plots, Figure 24 prompt-grid labels) and hyphenated line-break splits ('demon-strates'), not droppage. Line-level checks on the footnote system, Equation 1, Table 1 and section headings. Full word-by-word proofreading of body prose was not performed, so coverage is partial."
+  },
+  "patches": [
+    {
+      "before": "explored empirical scaling laws",
+      "after": "explored emperical scaling laws",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 section 4.4.1 at 300 dpi: the print reads 'Kaplan et.al [41] and Hoffmann et.al [36] explored emperical scaling laws for language models' - 'emperical' is the paper's own misspelling. OCR silently corrected it to 'empirical'; the print's spelling is restored."
+    },
+    {
+      "before": "We randomly sample 600 videos out of 1533 for public access $^{1}$ .",
+      "after": "We randomly sample 600 videos out of 1533 for public access $^{1}$ .\n\n$^{1}$ https://github.com/Tencent/HunyuanVideo",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 bottom at 300 dpi: page-bottom footnote 1 reads '1https://github.com/Tencent/HunyuanVideo'. The body was dropped by OCR while the marker $^{1}$ survives on 'public access $^{1}$.'; the abstract's URL sentence is separate prose."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-text-p9",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Figure 9/10 montage axis ticks, legend entries (DiT T2X model names), and subfigure labels appear as scattered OCR lines interleaved around the captions; they belong to the embedded figures and were left unchanged."
+    },
+    {
+      "id": "figure-24-caption-labels",
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Figure 24's caption subfigure labels ('Reference Image / Pose / Generated Video' grid) extract in collage order; all caption words are present in the markdown."
+    }
+  ]
+}

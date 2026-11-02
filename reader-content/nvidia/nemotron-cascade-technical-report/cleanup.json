@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nemotron-cascade-technical-report",
+  "source_sha256": "03b5fa9d42e80ab0bc1c438e241d6df53635c1602f4c4518d9828343f6b04402",
+  "ocr_sha256": "3695d4c6dd13f346ad4a30e134b48045b2789220063d3f06ab0f4e789c7f3e08",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "coverage": "complete",
+    "notes": "Fence structure balanced (10 fences, all printed prompt-box content with info strings). Full-page normalized diff of PDF text against the OCR markdown for all 60 physical pages: every unmatched window was resolved as a running header, figure-internal chart/axis text (Figures 1, 4, 5, 6, 7, 8, 11, 12), or a table/figure boundary artifact; Tables 1-12 and Table 9 row names were spot-checked value-by-value against the PDF text layer and are complete, and all suspected dropped prose (contributions list, NuminaMath filtering, dynamic filtering, code-switching penalty, IOI discussion, bag-of-tricks, Tables 10-11 rows) is present. Pages 7, 27, 34, 40, 41 were rendered and visually inspected: p.7 confirmed the sentence fragment below Table 1 is plain body text, p.27 and p.34 confirmed both dropped footnote URLs in the page-bottom footnotes, p.40/p.41 confirmed the 'For ... tasks, we include' lines and 'variance.' are plain non-bold text and that the PDF prints bold 'Step 1: Generate offtopic prompts' (OCR dropped 'ff'). The PDF's own typos were kept (Genini-2.5 table header, https://https:// in reference [48], 'inital' in the Table 1 caption, 'a execution-free'). Bold run-in labels that the OCR renders as ## headings (Reward function:, Hyperparameters:, Step 1:, C.2 prompt-file lines) were left as an OCR markdown convention for bold labels; only non-heading plain text and page-break fragments were demoted."
+  },
+  "patches": [
+    {
+      "before": "## RL, and Table 8 for SWE RL.",
+      "after": "RL, and Table 8 for SWE RL.",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 shows 'RL, and Table 8 for SWE RL.' as plain body text directly below Table 1, continuing the sentence that ends '...Table 7 for Code' before the table; OCR promoted the page-break fragment to a section heading. The fragment is kept as a plain paragraph after the table because the table intervenes in reading order."
+    },
+    {
+      "before": "(avg@8) to reduce\n\n## variance.",
+      "after": "(avg@8) to reduce variance.",
+      "count": 1,
+      "pdf_pages": [
+        39,
+        40
+      ],
+      "evidence": "Physical p.39 ends with '...averaged over 8 generations per question (avg@8) to reduce' and rendered physical p.40 begins with the plain continuation line 'variance.'; OCR split the sentence at the page break and promoted the second half to a heading. The patch rejoins the printed sentence as one paragraph."
+    },
+    {
+      "before": "## For alignment tasks, we include:",
+      "after": "For alignment tasks, we include:",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Rendered physical p.40 prints 'For alignment tasks, we include:' as regular-weight plain text introducing the IFEval/IFBench/ArenaHard bullet list; OCR promoted the non-heading line to a section heading."
+    },
+    {
+      "before": "## For math reasoning tasks, we include",
+      "after": "For math reasoning tasks, we include",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Rendered physical p.40 prints 'For math reasoning tasks, we include' (no trailing colon) as regular-weight plain text before the AIME bullet list; OCR promoted the non-heading line to a section heading."
+    },
+    {
+      "before": "## For code generation tasks, we include",
+      "after": "For code generation tasks, we include",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Rendered physical p.40 prints 'For code generation tasks, we include' (no trailing colon) as regular-weight plain text before the LiveCodeBench bullet list; OCR promoted the non-heading line to a section heading."
+    },
+    {
+      "before": "## Step 1: Generate of topic prompts",
+      "after": "## Step 1: Generate offtopic prompts",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered physical p.41 prints the bold label 'Step 1: Generate offtopic prompts'; OCR dropped the 'ff' of 'offtopic' ('of topic'). The heading level is kept because the PDF prints the label in bold. Consistent with OCR line 'Step 2: Judge if the offtopic prompts...' and body usage 'off-topic prompts'."
+    },
+    {
+      "before": "We refer readers to § 7.2 for ablation studies on reward functions.",
+      "after": "We refer readers to § 7.2 for ablation studies on reward functions.\n\n2 https://huggingface.co/moonshotai/Kimi-Dev-72B",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Rendered physical p.27 page bottom prints footnote 2 as 'https://huggingface.co/moonshotai/Kimi-Dev-72B' under the paragraph containing the surviving $^{2}$ marker on 'Kimi-Dev-72B model'; the OCR dropped the footnote body. Inserted after the paragraph containing the marker, following the established footnote-restoration format."
+    },
+    {
+      "before": "effectively integrates the complementary strengths of the two localization signals.",
+      "after": "effectively integrates the complementary strengths of the two localization signals.\n\n4 https://build.nvidia.com/nvidia/nv-embedcode-7b-v1",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered physical p.34 page bottom prints footnote 4 as 'https://build.nvidia.com/nvidia/nv-embedcode-7b-v1' (monospace URL visually verified character by character) under the paragraph containing the surviving $^{4}$ marker on 'NV-Embed-Code'; the OCR dropped the footnote body."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "bullet-page-break-continuations-p41",
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "The LiveCodeBench Pro bullet is split by the page break: OCR keeps '167' at the end of the bullet and the continuation 'problems in total).' as a separate plain paragraph. Plain-text page-break continuation, not a heading; left unchanged.",
+      "severity": "minor"
+    },
+    {
+      "id": "bold-labels-as-headings",
+      "pdf_pages": [
+        13,
+        17,
+        18,
+        21,
+        26,
+        41
+      ],
+      "evidence": "Bold run-in labels (Reward function:, Hyperparameters:, RM evaluation:, Step 1:, and the Appendix C.2 prompt-file lines such as '### mathweb/flask/app.py', '— END FILE —') are rendered as markdown headings throughout. The PDF prints them as bold labels or file-listing lines, not numbered section headings; demoting the whole class was out of scope for this pass and was left as the OCR pipeline's convention.",
+      "severity": "minor"
+    }
+  ]
+}

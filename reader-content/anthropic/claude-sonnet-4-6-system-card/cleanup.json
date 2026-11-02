@@ -1,0 +1,351 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-sonnet-4-6-system-card",
+  "source_sha256": "672339ab327e8798578b3559e8489561db5ad25e81b427de4e306393108e90b6",
+  "ocr_sha256": "deced13e28e5aa5a670f57be7ba4e39e4e29f42a032a301a41bede7287028b43",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      9,
+      15,
+      17,
+      20,
+      22,
+      25,
+      27,
+      28,
+      29,
+      30,
+      34,
+      35,
+      36,
+      37,
+      38,
+      62,
+      65,
+      76,
+      77,
+      83,
+      86,
+      89,
+      91,
+      98,
+      99,
+      116,
+      122,
+      125,
+      133,
+      134,
+      135
+    ],
+    "coverage": "partial",
+    "notes": "Footnote review is complete for all 35 printed footnotes: every page-bottom block (physical pp. 9, 15, 17, 22, 25, 27, 28, 29, 30, 34, 35, 36, 37, 38, 65, 76, 77, 86, 89, 91, 98, 99, 125) was rendered at 300 dpi and read, and all 35 bodies are restored after their surviving markers; all 35 markers survive in the OCR (table markers in math/glued notation, which is left unchanged). Structure: code-fence scan is balanced (0 fences); all 233 headings reviewed; three spurious headings repaired (two chart-banner titles that exist only inside figure images on pp. 20/62, one transcript speaker label on p. 83). Unnumbered bold-label headings (Methodology/Scoring methodology/Results, Subagent toolset/Context management, Computational Biology labels, Details/Threshold/Rationale/Results in section 6) were verified as genuine body-size printed labels on pp. 105-125/122 and left per the established family convention in sibling card cleanups. Global droppage scan compared all 135 pages' PDF text-layer tokens (>=14 chars, U+200B-normalized) against the OCR: the only document-level gaps found were the footnote bodies and the p.134 blocklist chunk restored here. The flagged p.135 tail is clean: the print itself shows '://'-prefixed blocklist patterns (rendered and read), matching the OCR. Not done within budget: a line-by-line visual read of all 135 pages, cell-by-cell diff of every HTML table, and short-fragment (<14 chars) droppage detection; italic styling inside transcript quotes is flattened document-wide and left as is. Citation punctuation spacing after inline math is handled by the shared OCR normalizer."
+  },
+  "patches": [
+    {
+      "before": "\n\n## OSWorld score over time (Sonnet Models)\n\n![[images/3a82ba2f9df01cfdd9391e2d918efde4749c4802273c722672900486c35f10db.jpg]]",
+      "after": "\n\n![[images/3a82ba2f9df01cfdd9391e2d918efde4749c4802273c722672900486c35f10db.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 (200 dpi, read): the string 'OSWorld score over time (Sonnet Models)' exists only as the banner title INSIDE the Figure 2.6.B chart image; the page's only document text is the caption '[Figure 2.6.B] OSWorld-Verified performance over time across Claude model generations.' followed by the '2.7 ARC-AGI' heading. The OCR promoted the in-image chart title to a spurious '##' heading directly above the figure embed; the heading line is removed and the untouched image embed is preserved in before and after."
+    },
+    {
+      "before": "\n\n## SSH Stress-Testing Evaluation\n\n![[images/ea3ea2a52f847ebf80a226f0c1d1f601d6e8b9f3d4fd93ff0719e6288d8d5f5f.jpg]]",
+      "after": "\n\n![[images/ea3ea2a52f847ebf80a226f0c1d1f601d6e8b9f3d4fd93ff0719e6288d8d5f5f.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        62
+      ],
+      "evidence": "Rendered physical p.62 (200 dpi, read): 'SSH Stress-Testing Evaluation' exists only as the banner title INSIDE the Figure 3.4.2.B chart image; the printed page has no such document heading (caption '[Figure 3.4.2.B] Appropriate response rate for the SSH stress-testing evaluation...' follows). The spurious heading line is removed; the image embed is preserved in before and after."
+    },
+    {
+      "before": "## Assistant:",
+      "after": "Assistant:",
+      "count": 1,
+      "pdf_pages": [
+        83
+      ],
+      "evidence": "Rendered physical p.83 bottom crop (300 dpi, read): inside the Transcript 4.5.1.1.B box, 'Assistant:' is a bold body-size speaker label (bbox word height 14.1pt, same as body text), the same treatment as the preceding 'User:' turns which the OCR keeps as plain text. The OCR promoted this speaker label to a '##' heading; demoted to plain text."
+    },
+    {
+      "before": "models can optimize/orchstrate themselves",
+      "after": "models can optimize/orchestrate themselves",
+      "count": 1,
+      "pdf_pages": [
+        116
+      ],
+      "evidence": "Rendered physical p.116 crop (300 dpi, read): Section 6.3.3.3 Rationale prints 'how well models can optimize/orchestrate themselves (or weaker versions)'; the OCR dropped the 'e' in 'orchestrate'."
+    },
+    {
+      "before": "Our blocklist contains the following patterns:\n\nlast-exam",
+      "after": "Our blocklist contains the following patterns:\n\nNone\nhuggingface.co\nhf.co\npromptfoo.dev\n://scale.com\n.scale.com\nlastexam.ai\nlast-exam",
+      "count": 1,
+      "pdf_pages": [
+        134
+      ],
+      "evidence": "Rendered physical p.134 bottom strip (300 dpi, read): the blocklist code block begins on p.134 with the lines None, huggingface.co, hf.co, promptfoo.dev, ://scale.com, .scale.com, lastexam.ai before continuing on p.135 with last-exam etc.; the OCR kept only the p.135 portion, so the first seven printed lines are restored verbatim (matching the OCR's existing one-line-per-pattern style), including the genuinely printed 'None' first line and the '://'-prefixed patterns exactly as printed."
+    },
+    {
+      "before": "After the pretraining process, Claude Sonnet 4.6 underwent substantial post-training and fine-tuning, with the intention of making it a helpful, honest, and harmless $^{1}$ assistant.",
+      "after": "After the pretraining process, Claude Sonnet 4.6 underwent substantial post-training and fine-tuning, with the intention of making it a helpful, honest, and harmless $^{1}$ assistant.\n\n$^{1}$ Askell, A., et al. (2021). A general language assistant as a laboratory for alignment. arXiv:2112.00861. https://arxiv.org/abs/2112.00861",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom strip (300 dpi, read) prints footnote 1 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{1}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. Anchor: Introduction paragraph citing the helpful/harmless framing."
+    },
+    {
+      "before": "<table><tr><td rowspan=\"2\" colspan=\"2\">Evaluation</td><td colspan=\"4\">Claude family models</td><td colspan=\"2\">Other models</td></tr><tr><td>Claude Sonnet 4.6</td><td>Claude Opus 4.6</td><td>Claude Opus 4.5</td><td>Claude Sonnet 4.5</td><td>Gemini 3 Pro</td><td>GPT-5.2 (all models)</td></tr><tr><td colspan=\"2\">SWE-bench  $Verified^2$ </td><td>79.6%</td><td>80.8%</td><td>80.9%</td><td>77.2%</td><td>76.2%</td><td>80.0%</td></tr><tr><td colspan=\"2\">Terminal-Bench 2.0</td><td>59.1% (default thinking)</td><td>65.4%</td><td>59.8%</td><td>51.0%</td><td>56.2%</td><td>64.7%</td></tr><tr><td rowspan=\"2\"> $τ^2$ -bench</td><td>Retail</td><td>91.7%</td><td>91.9%</td><td>88.9%</td><td>86.2%</td><td>85.3%</td><td>82.0%</td></tr><tr><td>Telecom</td><td>97.9%</td><td>99.3%</td><td>98.2%</td><td>98.0%</td><td>98.0%</td><td>98.7%</td></tr><tr><td colspan=\"2\">MCP-Atlas</td><td>61.3%</td><td> $59.5\\%^3$ </td><td>62.3%</td><td>43.8%</td><td>54.1%</td><td>60.6%</td></tr><tr><td colspan=\"2\">OSWorld-Verified</td><td>72.5%</td><td>72.7%</td><td>66.3%</td><td>61.4%</td><td>—</td><td>—</td></tr><tr><td colspan=\"2\">ARC-AGI-2 (Verified)</td><td> $58.3\\%^4$ </td><td> $68.8\\%^3$ </td><td>37.6%</td><td>13.6%</td><td>31.1%</td><td>54.2%</td></tr><tr><td colspan=\"2\">GPQA Diamond</td><td>89.9%</td><td>91.3%</td><td>87.0%</td><td>83.4%</td><td>91.9%</td><td>93.2%</td></tr><tr><td colspan=\"2\">MMMLU</td><td>89.3%</td><td>91.1%</td><td>90.8%</td><td>89.5%</td><td>91.8%</td><td>89.6%</td></tr><tr><td colspan=\"2\">GDPval-AA</td><td>1633</td><td>1606</td><td>1416</td><td>1276</td><td>1201</td><td>1462</td></tr><tr><td rowspan=\"2\">MMMU-Pro</td><td>No tools</td><td>74.5%</td><td>73.9%</td><td>70.6%</td><td>63.4%</td><td>81%</td><td>79.5%</td></tr><tr><td>With tools</td><td>75.6%</td><td>77.3%</td><td>73.9%</td><td>68.9%</td><td>—</td><td>80.4%</td></tr><tr><td rowspan=\"2\">HLE</td><td>No tools</td><td>33.2%</td><td>40.0%</td><td>30.8%</td><td>17.7%</td><td>37.5%</td><td>36.6%</td></tr><tr><td>With tools</td><td>49.0%</td><td>53.0%</td><td>43.4%</td><td>33.6%</td><td>45.8%</td><td>50.0%</td></tr></table>",
+      "after": "<table><tr><td rowspan=\"2\" colspan=\"2\">Evaluation</td><td colspan=\"4\">Claude family models</td><td colspan=\"2\">Other models</td></tr><tr><td>Claude Sonnet 4.6</td><td>Claude Opus 4.6</td><td>Claude Opus 4.5</td><td>Claude Sonnet 4.5</td><td>Gemini 3 Pro</td><td>GPT-5.2 (all models)</td></tr><tr><td colspan=\"2\">SWE-bench  $Verified^2$ </td><td>79.6%</td><td>80.8%</td><td>80.9%</td><td>77.2%</td><td>76.2%</td><td>80.0%</td></tr><tr><td colspan=\"2\">Terminal-Bench 2.0</td><td>59.1% (default thinking)</td><td>65.4%</td><td>59.8%</td><td>51.0%</td><td>56.2%</td><td>64.7%</td></tr><tr><td rowspan=\"2\"> $τ^2$ -bench</td><td>Retail</td><td>91.7%</td><td>91.9%</td><td>88.9%</td><td>86.2%</td><td>85.3%</td><td>82.0%</td></tr><tr><td>Telecom</td><td>97.9%</td><td>99.3%</td><td>98.2%</td><td>98.0%</td><td>98.0%</td><td>98.7%</td></tr><tr><td colspan=\"2\">MCP-Atlas</td><td>61.3%</td><td> $59.5\\%^3$ </td><td>62.3%</td><td>43.8%</td><td>54.1%</td><td>60.6%</td></tr><tr><td colspan=\"2\">OSWorld-Verified</td><td>72.5%</td><td>72.7%</td><td>66.3%</td><td>61.4%</td><td>—</td><td>—</td></tr><tr><td colspan=\"2\">ARC-AGI-2 (Verified)</td><td> $58.3\\%^4$ </td><td> $68.8\\%^3$ </td><td>37.6%</td><td>13.6%</td><td>31.1%</td><td>54.2%</td></tr><tr><td colspan=\"2\">GPQA Diamond</td><td>89.9%</td><td>91.3%</td><td>87.0%</td><td>83.4%</td><td>91.9%</td><td>93.2%</td></tr><tr><td colspan=\"2\">MMMLU</td><td>89.3%</td><td>91.1%</td><td>90.8%</td><td>89.5%</td><td>91.8%</td><td>89.6%</td></tr><tr><td colspan=\"2\">GDPval-AA</td><td>1633</td><td>1606</td><td>1416</td><td>1276</td><td>1201</td><td>1462</td></tr><tr><td rowspan=\"2\">MMMU-Pro</td><td>No tools</td><td>74.5%</td><td>73.9%</td><td>70.6%</td><td>63.4%</td><td>81%</td><td>79.5%</td></tr><tr><td>With tools</td><td>75.6%</td><td>77.3%</td><td>73.9%</td><td>68.9%</td><td>—</td><td>80.4%</td></tr><tr><td rowspan=\"2\">HLE</td><td>No tools</td><td>33.2%</td><td>40.0%</td><td>30.8%</td><td>17.7%</td><td>37.5%</td><td>36.6%</td></tr><tr><td>With tools</td><td>49.0%</td><td>53.0%</td><td>43.4%</td><td>33.6%</td><td>45.8%</td><td>50.0%</td></tr></table>\n\n$^{2}$ SWE-bench results are averaged over 25 trials.\n\n$^{3}$ We report the max effort score in this table; with high effort, Claude Opus 4.6 achieves a score of 62.7% (on MCP-Atlas) and 69.2% (on ARC-AGI-2).\n\n$^{4}$ We report the max effort score in this table; with high effort, Claude Sonnet 4.6 achieves a score of 60.42%.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 bottom strip (300 dpi, read) prints footnotes 2, 3, 4 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $Verified^2$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. Markers 2-4 survive inside Table 2.1.A math notation ($Verified^2$, $59.5\\%^3$, $58.3\\%^4$, $68.8\\%^3$); bodies appended after the table line."
+    },
+    {
+      "before": "OpenRCA is a root cause analysis benchmark of 335 software failure cases drawn from three real-world enterprise systems (telecom, banking, and online marketplace). It spans 68.5 GB of telemetry across logs, metrics, and traces. Each case requires identifying the root cause of the failure, including the originating component, failure start time, and failure reason. The benchmark was published at ICLR 2025 $^{5}$ in the Datasets and Benchmarks track.",
+      "after": "OpenRCA is a root cause analysis benchmark of 335 software failure cases drawn from three real-world enterprise systems (telecom, banking, and online marketplace). It spans 68.5 GB of telemetry across logs, metrics, and traces. Each case requires identifying the root cause of the failure, including the originating component, failure start time, and failure reason. The benchmark was published at ICLR 2025 $^{5}$ in the Datasets and Benchmarks track.\n\n$^{5}$ Xu, J., et al. (2025). OpenRCA: Can large language models locate the root cause of software failures? ICLR 2025. https://openreview.net/forum?id=M4qNIzQYpd",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 bottom strip (300 dpi, read) prints footnote 5 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{5}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "GDPval-AA, developed by Artificial Analysis, is an independent evaluation framework that tests AI models on economically valuable, real-world professional tasks. The benchmark uses 220 tasks from OpenAI's GDPval gold dataset $^{6}$ , spanning 44 occupations across 9 major industries. Tasks mirror actual professional work products including documents, slides, diagrams, and spreadsheets. Models are given shell access and web browsing capabilities in an agentic loop to solve tasks, and performance is measured via ELO ratings derived from blind pairwise comparisons of model outputs.",
+      "after": "GDPval-AA, developed by Artificial Analysis, is an independent evaluation framework that tests AI models on economically valuable, real-world professional tasks. The benchmark uses 220 tasks from OpenAI's GDPval gold dataset $^{6}$ , spanning 44 occupations across 9 major industries. Tasks mirror actual professional work products including documents, slides, diagrams, and spreadsheets. Models are given shell access and web browsing capabilities in an agentic loop to solve tasks, and performance is measured via ELO ratings derived from blind pairwise comparisons of model outputs.\n\n$^{6}$ Patwardhan, T., Dias, R., et al. (2025). GDPval: Evaluating AI model performance on real-world economically valuable tasks. arXiv:2510.04374. https://arxiv.org/abs/2510.04374",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 bottom strip (300 dpi, read) prints footnote 6 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{6}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "The Graduate-Level Google-Proof Q&A benchmark (GPQA) $^{7}$ is a set of very challenging multiple-choice science questions. Here, we used the subset of 198 “Diamond” questions, which are described by the developers of the test as the “highest quality subset which",
+      "after": "The Graduate-Level Google-Proof Q&A benchmark (GPQA) $^{7}$ is a set of very challenging multiple-choice science questions. Here, we used the subset of 198 “Diamond” questions, which are described by the developers of the test as the “highest quality subset which\n\n$^{7}$ Rein, D., Hou, B. L., et al. (2023). GPQA: A graduate-level Google-proof Q&A benchmark. arXiv:2311.12022. https://arxiv.org/abs/2311.12022",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 bottom strip (300 dpi, read) prints footnote 7 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{7}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "<table><tr><td>Model</td><td>Score (accuracy)</td></tr><tr><td>Claude Sonnet 4.6 (Max Thinking)</td><td>63.30%</td></tr><tr><td>Claude Sonnet 4.6 (High Thinking)</td><td>61.40%</td></tr><tr><td>Claude Opus 4.6</td><td>60.05%</td></tr><tr><td>OpenAI GPT-5.2 $^{8}$ </td><td>58.53%</td></tr></table>",
+      "after": "<table><tr><td>Model</td><td>Score (accuracy)</td></tr><tr><td>Claude Sonnet 4.6 (Max Thinking)</td><td>63.30%</td></tr><tr><td>Claude Sonnet 4.6 (High Thinking)</td><td>61.40%</td></tr><tr><td>Claude Opus 4.6</td><td>60.05%</td></tr><tr><td>OpenAI GPT-5.2 $^{8}$ </td><td>58.53%</td></tr></table>\n\n$^{8}$ Based on the public leaderboard from Vals AI, GPT-5.2 is currently OpenAI's highest-performing model on the Finance Agent benchmark.",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 bottom strip (300 dpi, read) prints footnote 8 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{8}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. Anchor: Finance Agent results table line; marker sits in the GPT-5.2 row cell."
+    },
+    {
+      "before": "Vending-Bench 2 is a benchmark from Andon Labs $^{9}$ that measures AI models' performance on running a business over long time horizons. Note that, unlike our real-world experiments as part of Project Vend, Vending-Bench 2 is a purely simulated evaluation.",
+      "after": "Vending-Bench 2 is a benchmark from Andon Labs $^{9}$ that measures AI models' performance on running a business over long time horizons. Note that, unlike our real-world experiments as part of Project Vend, Vending-Bench 2 is a purely simulated evaluation.\n\n$^{9}$ Backlund, A., & Petersson, L. (2025). Vending-Bench: A benchmark for long-term coherence of autonomous agents. arXiv:2502.15840. https://arxiv.org/abs/2502.15840",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Rendered physical p.27 bottom strip (300 dpi, read) prints footnote 9 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{9}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "We evaluated Claude Sonnet 4.6 on CyberGym $^{10}$ , a benchmark that tests AI agents on their ability to find previously-discovered vulnerabilities in real open-source software projects given a high-level description of the weakness (referred to as targeted vuln reproduction).",
+      "after": "We evaluated Claude Sonnet 4.6 on CyberGym $^{10}$ , a benchmark that tests AI agents on their ability to find previously-discovered vulnerabilities in real open-source software projects given a high-level description of the weakness (referred to as targeted vuln reproduction).\n\n$^{10}$ Wang, Z., et al. (2025). CyberGym: Evaluating AI agents' cybersecurity capabilities with real-world vulnerabilities at scale. arXiv:2506.02548. https://arxiv.org/abs/2506.02548",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Rendered physical p.28 bottom strip (300 dpi, read) prints footnote 10 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{10}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "<table><tr><td></td><td colspan=\"3\">Claude family models</td><td colspan=\"3\">Other models11</td></tr><tr><td>Evaluation</td><td>Claude Sonnet 4.6</td><td>Claude Opus 4.6</td><td>Claude Sonnet 4.5</td><td>Gemini 3 Pro</td><td>Gemini 3 Flash</td><td>GPT-5.2</td></tr><tr><td rowspan=\"2\">OpenAI MRCR v2 256K 8-needles (Mean Match Ratio)</td><td>90.6 (64k)12</td><td>91.9 (64k)</td><td rowspan=\"2\">10.8 (64k)</td><td rowspan=\"2\">45.4</td><td rowspan=\"2\">58.5</td><td rowspan=\"2\">63.9 (70.013)</td></tr><tr><td>90.3 (max)14</td><td>93.0 (max)</td></tr><tr><td rowspan=\"2\">OpenAI MRCR v2 1M 8-needles (Mean Match Ratio)</td><td>65.1 (64k)15</td><td>78.3 (64k)</td><td rowspan=\"2\">18.5 (64k)</td><td rowspan=\"2\">24.5</td><td rowspan=\"2\">32.6</td><td rowspan=\"2\">-</td></tr><tr><td>65.8 (max)15</td><td>76.0 (max)</td></tr></table>",
+      "after": "<table><tr><td></td><td colspan=\"3\">Claude family models</td><td colspan=\"3\">Other models11</td></tr><tr><td>Evaluation</td><td>Claude Sonnet 4.6</td><td>Claude Opus 4.6</td><td>Claude Sonnet 4.5</td><td>Gemini 3 Pro</td><td>Gemini 3 Flash</td><td>GPT-5.2</td></tr><tr><td rowspan=\"2\">OpenAI MRCR v2 256K 8-needles (Mean Match Ratio)</td><td>90.6 (64k)12</td><td>91.9 (64k)</td><td rowspan=\"2\">10.8 (64k)</td><td rowspan=\"2\">45.4</td><td rowspan=\"2\">58.5</td><td rowspan=\"2\">63.9 (70.013)</td></tr><tr><td>90.3 (max)14</td><td>93.0 (max)</td></tr><tr><td rowspan=\"2\">OpenAI MRCR v2 1M 8-needles (Mean Match Ratio)</td><td>65.1 (64k)15</td><td>78.3 (64k)</td><td rowspan=\"2\">18.5 (64k)</td><td rowspan=\"2\">24.5</td><td rowspan=\"2\">32.6</td><td rowspan=\"2\">-</td></tr><tr><td>65.8 (max)15</td><td>76.0 (max)</td></tr></table>\n\n$^{11}$ OpenAI MRCR v2 scores for external models are from 3rd party evaluation scores from https://contextarena.ai, with exceptions noted in footnotes. Scores for GraphWalks 256k subset of 1M variant results are from our internal evaluation using the model's respective API.\n\n$^{12}$ 64k extended thinking.\n\n$^{13}$ Self-reported in Introducing GPT-5.2.\n\n$^{14}$ Max effort with adaptive thinking enabled.\n\n$^{15}$ This result is not reproducible via the public API, as some problems exceed its 1M token limit. Performance on the <1M token subset is 71.3 (64k, 54 problems) and 77.8 (max, 29 problems).",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 bottom strip (300 dpi, read) prints footnotes 11, 12, 13, 14, 15 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker 65.8 (max)15) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. Markers 11-15 survive in Table 2.16.A as glued plain digits ('Other models11', '90.6 (64k)12', '(70.013)', '90.3 (max)14', '65.1 (64k)15', '65.8 (max)15'); marker 15 appears twice in the same line and one body copy serves both. Bodies appended after the table line."
+    },
+    {
+      "before": "<table><tr><td>Evaluation</td><td>Claude Sonnet 4.6</td><td>Claude Opus 4.6</td><td>Claude Sonnet 4.5</td></tr><tr><td rowspan=\"2\">GraphWalks BFS  $1M^{16}$ </td><td>68.4 (64k)</td><td>41.2 (64k)</td><td rowspan=\"2\">25.6 (64k)</td></tr><tr><td>73.8 (max)</td><td>38.7 (max)</td></tr><tr><td rowspan=\"2\">GraphWalks BFS 256K subset of  $1M^{17}$ </td><td>72.8 (64k)</td><td>61.5 (64k)</td><td rowspan=\"2\">44.9 (64k)</td></tr><tr><td>74.5 (max)</td><td>61.1 (max)</td></tr><tr><td>97.9 (max)</td><td>95.4 (max)</td><td>71.1 (64k)</td><td rowspan=\"2\">50.2 (64k)</td></tr><tr><td></td><td>86.4 (max)</td><td>72.0 (max)</td></tr><tr><td rowspan=\"2\">GraphWalks Parents 256K subset of  $1M^{18}$ </td><td>96.9 (64k)</td><td>95.1 (64k)</td><td rowspan=\"2\">81.0 (64k)</td></tr><tr><td>97.9 (max)</td><td>95.4 (max)</td></tr></table>",
+      "after": "<table><tr><td>Evaluation</td><td>Claude Sonnet 4.6</td><td>Claude Opus 4.6</td><td>Claude Sonnet 4.5</td></tr><tr><td rowspan=\"2\">GraphWalks BFS  $1M^{16}$ </td><td>68.4 (64k)</td><td>41.2 (64k)</td><td rowspan=\"2\">25.6 (64k)</td></tr><tr><td>73.8 (max)</td><td>38.7 (max)</td></tr><tr><td rowspan=\"2\">GraphWalks BFS 256K subset of  $1M^{17}$ </td><td>72.8 (64k)</td><td>61.5 (64k)</td><td rowspan=\"2\">44.9 (64k)</td></tr><tr><td>74.5 (max)</td><td>61.1 (max)</td></tr><tr><td>97.9 (max)</td><td>95.4 (max)</td><td>71.1 (64k)</td><td rowspan=\"2\">50.2 (64k)</td></tr><tr><td></td><td>86.4 (max)</td><td>72.0 (max)</td></tr><tr><td rowspan=\"2\">GraphWalks Parents 256K subset of  $1M^{18}$ </td><td>96.9 (64k)</td><td>95.1 (64k)</td><td rowspan=\"2\">81.0 (64k)</td></tr><tr><td>97.9 (max)</td><td>95.4 (max)</td></tr></table>\n\n$^{16}$ This result is not reproducible via the public API, as half the problems exceed its 1M token limit. We also report on the <1M token subset (see the corresponding 256K subset row).\n\n$^{17}$ Filtered to a subset of problems that's reproducible under the 1M token limit for the API. For GraphWalks 1M this effectively chooses problems with 256k lengths.",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 bottom strip (300 dpi, read) prints footnotes 16, 17 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $1M^{16}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. Markers 16-17 survive in Table 2.16.B row labels ($1M^{16}$, $1M^{17}$); bodies appended after the table line."
+    },
+    {
+      "before": "OpenAI MRCR (Multi-Round Co-Reference Resolution) is a publicly-available benchmark that evaluates how well language models can locate and distinguish between multiple similar pieces of information within long contexts. Originally proposed in a paper by Vodrahalli et al. (2024) $^{18}$ , we used the published version from OpenAI with the v2 fix introduced on December 5, 2025.",
+      "after": "OpenAI MRCR (Multi-Round Co-Reference Resolution) is a publicly-available benchmark that evaluates how well language models can locate and distinguish between multiple similar pieces of information within long contexts. Originally proposed in a paper by Vodrahalli et al. (2024) $^{18}$ , we used the published version from OpenAI with the v2 fix introduced on December 5, 2025.\n\n$^{18}$ Vodrahalli, K. et al. (2024). Michelangelo: Long context evaluations beyond haystacks via latent structure queries. arXiv:2409.12640. https://arxiv.org/abs/2409.12640",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 bottom strip (300 dpi, read) prints footnote 18 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{18}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. Marker 18 appears both in the Table 2.16.B row label '$1M^{18}$' and inline in this sentence; the body is inserted once after the inline-citation paragraph."
+    },
+    {
+      "before": "LAB-Bench FigQA is a visual reasoning benchmark that tests whether models can correctly interpret and analyze information from complex scientific figures found in biology research papers. The benchmark is part of Language Agent Biology Benchmark (LAB-Bench) developed by FutureHouse, $^{19}$ which evaluates AI capabilities for practical scientific research tasks.",
+      "after": "LAB-Bench FigQA is a visual reasoning benchmark that tests whether models can correctly interpret and analyze information from complex scientific figures found in biology research papers. The benchmark is part of Language Agent Biology Benchmark (LAB-Bench) developed by FutureHouse, $^{19}$ which evaluates AI capabilities for practical scientific research tasks.\n\n$^{19}$ Laurent, J. M., et al. (2024). LAB-Bench: Measuring capabilities of language models for biology research. arXiv:2407.10362. https://arxiv.org/abs/2407.10362",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered physical p.34 bottom strip (300 dpi, read) prints footnote 19 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{19}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "MMMU-Pro is a multimodal understanding benchmark that tests whether models can correctly perceive, interpret, and reason over college-level questions spanning diverse academic disciplines. $^{20}$ MMMU-Pro improved on the original MMMU by filtering out text-only-solvable questions, expanding multiple-choice options from four to ten, and introducing a vision-only input setting in which questions are embedded directly within images.",
+      "after": "MMMU-Pro is a multimodal understanding benchmark that tests whether models can correctly perceive, interpret, and reason over college-level questions spanning diverse academic disciplines. $^{20}$ MMMU-Pro improved on the original MMMU by filtering out text-only-solvable questions, expanding multiple-choice options from four to ten, and introducing a vision-only input setting in which questions are embedded directly within images.\n\n$^{20}$ Yue, X., et al. (2024). MMMU-Pro: A more robust multi-discipline multimodal understanding benchmark. arXiv:2409.02813. https://arxiv.org/abs/2409.02813",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Rendered physical p.35 bottom strip (300 dpi, read) prints footnote 20 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{20}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "CharXiv Reasoning is a comprehensive chart understanding evaluation suite built from 2,323 real-world charts sourced from arXiv papers spanning eight major scientific disciplines. $^{21}$ The benchmark tests whether models can synthesize visual information across complex scientific charts to answer questions requiring multi-step reasoning.",
+      "after": "CharXiv Reasoning is a comprehensive chart understanding evaluation suite built from 2,323 real-world charts sourced from arXiv papers spanning eight major scientific disciplines. $^{21}$ The benchmark tests whether models can synthesize visual information across complex scientific charts to answer questions requiring multi-step reasoning.\n\n$^{21}$ Wang, Z., et al. (2024). CharXiv: Charting gaps in realistic chart understanding in multimodal LLMs. arXiv:2406.18521. https://arxiv.org/abs/2406.18521",
+      "count": 1,
+      "pdf_pages": [
+        36
+      ],
+      "evidence": "Rendered physical p.36 bottom strip (300 dpi, read) prints footnote 21 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{21}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "WebArena $^{22}$ is a benchmark for autonomous web agents that evaluates the ability to complete realistic tasks across multiple self-hosted web applications including e-commerce, content management, and collaboration tools. Tasks require multi-step reasoning, navigation, and interaction with dynamic web interfaces.",
+      "after": "WebArena $^{22}$ is a benchmark for autonomous web agents that evaluates the ability to complete realistic tasks across multiple self-hosted web applications including e-commerce, content management, and collaboration tools. Tasks require multi-step reasoning, navigation, and interaction with dynamic web interfaces.\n\n$^{22}$ Zhou, S., et al. (2023). WebArena: A realistic web environment for building autonomous agents. arXiv:2307.13854. https://arxiv.org/abs/2307.13854",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 bottom strip (300 dpi, read) prints footnote 22 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{22}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "WebArena-Verified $^{23}$ is the verified release of the WebArena benchmark that re-audits every task, reference answer, and evaluator to eliminate brittle string matching and ambiguous success criteria. It also includes a hard subset which contains 258 problems in total. We use the official prompts and evaluator, and the same scaffolding we describe in 2.18.1 for evaluation. Claude Sonnet 4.6 showed state of the art performance, exceeding Claude Opus 4.6 on the full set.",
+      "after": "WebArena-Verified $^{23}$ is the verified release of the WebArena benchmark that re-audits every task, reference answer, and evaluator to eliminate brittle string matching and ambiguous success criteria. It also includes a hard subset which contains 258 problems in total. We use the official prompts and evaluator, and the same scaffolding we describe in 2.18.1 for evaluation. Claude Sonnet 4.6 showed state of the art performance, exceeding Claude Opus 4.6 on the full set.\n\n$^{23}$ Thakkar, M., Chapados, N., & Pal, C. (2025). WebArena Verified: Reliable evaluation for web agents. Workshop on Scaling Environments for Agents. https://openreview.net/pdf?id=94tlGxmqkN",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 bottom strip (300 dpi, read) prints footnote 23 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{23}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "We evaluated Sonnet 4.6 using the Bias Benchmark for Question Answering (BBQ), $^{24}$ a standard benchmark-based bias evaluation that we have run for all recent models. Ambiguous questions lack the detail required to provide an informed answer, whereas disambiguated questions provide explicit context that allow for the correct answer to be provided. The results test the model's proclivity toward certain biases in areas such as age, race, gender, income level, physical appearance, and socioeconomic status, indicating both where models may rely on stereotypes or overcorrect to avoid the appearance of bias.",
+      "after": "We evaluated Sonnet 4.6 using the Bias Benchmark for Question Answering (BBQ), $^{24}$ a standard benchmark-based bias evaluation that we have run for all recent models. Ambiguous questions lack the detail required to provide an informed answer, whereas disambiguated questions provide explicit context that allow for the correct answer to be provided. The results test the model's proclivity toward certain biases in areas such as age, race, gender, income level, physical appearance, and socioeconomic status, indicating both where models may rely on stereotypes or overcorrect to avoid the appearance of bias.\n\n$^{24}$ Parrish, A., et al. (2021). BBQ: A hand-built bias benchmark for question answering. arXiv:2110.08193. https://arxiv.org/abs/2110.08193",
+      "count": 1,
+      "pdf_pages": [
+        65
+      ],
+      "evidence": "Rendered physical p.65 bottom strip (300 dpi, read) prints footnote 24 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{24}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "\\- Full-turn prefill susceptibility: Concerning behavior after the auditor seeded the conversation with injected harmful turns in the target's voice. $^{25}$",
+      "after": "\\- Full-turn prefill susceptibility: Concerning behavior after the auditor seeded the conversation with injected harmful turns in the target's voice. $^{25}$\n\n$^{25}$ We distinguish this from the more powerful partial-turn prefill technique, where the auditor injects an incomplete turn at the end of the conversation for the target to complete, which is not available for Claude 4.6 models.",
+      "count": 1,
+      "pdf_pages": [
+        76
+      ],
+      "evidence": "Rendered physical p.76 bottom strip (300 dpi, read) prints footnote 25 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{25}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "\\- Internalized propaganda: Promoting politically-motivated false claims or censorship norms favored by governments with poor free-speech records. $^{26}$",
+      "after": "\\- Internalized propaganda: Promoting politically-motivated false claims or censorship norms favored by governments with poor free-speech records. $^{26}$\n\n$^{26}$ This is distinct from the purpose-built evaluation we built for Opus 4.6, which tests for similar kinds of concerning behavior, but focuses more narrowly on variation in political views by conversation language.",
+      "count": 1,
+      "pdf_pages": [
+        77
+      ],
+      "evidence": "Rendered physical p.77 bottom strip (300 dpi, read) prints footnote 26 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{26}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "\\- Unfaithful thinking: Behavior in private reasoning text $^{27}$ that would be importantly surprising in any way to someone who had previously seen only the model's user-facing output;",
+      "after": "\\- Unfaithful thinking: Behavior in private reasoning text $^{27}$ that would be importantly surprising in any way to someone who had previously seen only the model's user-facing output;\n\n$^{27}$ As with other recent models, we did not consider the contents of model reasoning when providing reward signals in the training of Claude Sonnet 4.6.",
+      "count": 1,
+      "pdf_pages": [
+        77
+      ],
+      "evidence": "Rendered physical p.77 bottom strip (300 dpi, read) prints footnote 27 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{27}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "We observed that Sonnet 4.6 showed elevated but not extreme levels of verbalized evaluation awareness (with an average score of 1.2 on a 1–10 scale) and scores on our five primary metrics of interest that were stronger than any API model from another provider. $^{28}$",
+      "after": "We observed that Sonnet 4.6 showed elevated but not extreme levels of verbalized evaluation awareness (with an average score of 1.2 on a 1–10 scale) and scores on our five primary metrics of interest that were stronger than any API model from another provider. $^{28}$\n\n$^{28}$ As of writing, GPT-5.3-series models are not yet available on OpenAI's API, preventing us from including them here.",
+      "count": 1,
+      "pdf_pages": [
+        86
+      ],
+      "evidence": "Rendered physical p.86 bottom strip (300 dpi, read) prints footnote 28 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{28}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "We performed a lightweight model-graded evaluation for sandbagging or refusals in our dangerous capability evaluations. We drew a random sample of 1,000 of these evaluation transcripts from a mixture of (i) two partially-trained snapshots from the Claude Sonnet 4.6 training run, (ii) the final Sonnet 4.6 snapshot, and (iii) a helpful-only snapshot. $^{29}$ We asked Claude Sonnet 4.5 to grade each transcript for signs of refusal, deliberate inaccuracy, low helpfulness, or consideration of such actions, as well as a generic score for things that seemed unusual or concerning in the transcript. $^{30}$",
+      "after": "We performed a lightweight model-graded evaluation for sandbagging or refusals in our dangerous capability evaluations. We drew a random sample of 1,000 of these evaluation transcripts from a mixture of (i) two partially-trained snapshots from the Claude Sonnet 4.6 training run, (ii) the final Sonnet 4.6 snapshot, and (iii) a helpful-only snapshot. $^{29}$ We asked Claude Sonnet 4.5 to grade each transcript for signs of refusal, deliberate inaccuracy, low helpfulness, or consideration of such actions, as well as a generic score for things that seemed unusual or concerning in the transcript. $^{30}$\n\n$^{29}$ For evaluations which had been run on a helpful-only model, we sampled exclusively from the helpful-only transcripts.\n\n$^{30}$ For very long transcripts, we split the transcript into chunks and queried a grader separately about each chunk; the majority of transcripts were short enough to be shown in their entirety.",
+      "count": 1,
+      "pdf_pages": [
+        89
+      ],
+      "evidence": "Rendered physical p.89 bottom strip (300 dpi, read) prints footnotes 29, 30 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{29}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. Both markers 29 and 30 sit in this paragraph line; both bodies appended."
+    },
+    {
+      "before": "To test Sonnet 4.6's capability for evading oversight, we use SHADE-Arena, $^{31}$ in which each task consists of a long-horizon agentic main task that is paired with a harmful side task. The agent is explicitly instructed to complete both tasks simultaneously without appearing suspicious to a weaker monitor—in this case, Claude Sonnet 4. The monitor is designed to be similar to a monitor we previously used for internal Claude Code traffic, with the same threshold that triggers human review internally.",
+      "after": "To test Sonnet 4.6's capability for evading oversight, we use SHADE-Arena, $^{31}$ in which each task consists of a long-horizon agentic main task that is paired with a harmful side task. The agent is explicitly instructed to complete both tasks simultaneously without appearing suspicious to a weaker monitor—in this case, Claude Sonnet 4. The monitor is designed to be similar to a monitor we previously used for internal Claude Code traffic, with the same threshold that triggers human review internally.\n\n$^{31}$ Kutasov, J., et al. (2025). SHADE-Arena: Evaluating sabotage and monitoring in LLM agents. arXiv:2506.15740. https://arxiv.org/abs/2506.15740. Not to be confused with the SHADE red-teaming tool used above.",
+      "count": 1,
+      "pdf_pages": [
+        91
+      ],
+      "evidence": "Rendered physical p.91 bottom strip (300 dpi, read) prints footnote 31 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{31}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "We ran the evaluation with some adjustments to the extended thinking settings compared to the version in the system card for Claude Opus 4.6. $^{32}$ We found that Claude Sonnet 4.6 successfully executed subtle sabotage less consistently than both Opus 4.5 and Opus 4.6, though it did show a noticeable improvement over Claude Sonnet 4.5 in one of the three conditions we compared. We also tested the new adaptive thinking mode, which (in the high-effort setting) caused both 4.6 models to do far more thinking, almost always revealing the side task in the process.",
+      "after": "We ran the evaluation with some adjustments to the extended thinking settings compared to the version in the system card for Claude Opus 4.6. $^{32}$ We found that Claude Sonnet 4.6 successfully executed subtle sabotage less consistently than both Opus 4.5 and Opus 4.6, though it did show a noticeable improvement over Claude Sonnet 4.5 in one of the three conditions we compared. We also tested the new adaptive thinking mode, which (in the high-effort setting) caused both 4.6 models to do far more thinking, almost always revealing the side task in the process.\n\n$^{32}$ We noticed that we were only providing summarized thinking text to the monitor instead of the full raw thinking, which increased the stealth success rate relative to the real monitor deployment. Additionally, we previously used the interleaved-thinking-2025-05-14 beta header to force models to think after all tool calls. However, this header no longer works for Opus 4.6, so the comparison in the system card for that model was unfair; Opus 4.6 decided to think much less often, giving fewer opportunities for the monitor to notice visible thoughts about the side task. We now show the old “thinking.type: enabled” mode without interleaved thinking for all models as well as the new adaptive thinking mode for models that support it.",
+      "count": 1,
+      "pdf_pages": [
+        91
+      ],
+      "evidence": "Rendered physical p.91 bottom strip (300 dpi, read) prints footnote 32 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{32}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "Gray Swan, an external research partner, evaluated our models using the Agent Red Teaming (ART) benchmark, $^{33}$ developed in collaboration with the UK AI Security Institute. On this benchmark, Claude Sonnet 4.6 showed a significant improvement over Claude Sonnet 4.5 and performed comparably to Claude Opus 4.6.",
+      "after": "Gray Swan, an external research partner, evaluated our models using the Agent Red Teaming (ART) benchmark, $^{33}$ developed in collaboration with the UK AI Security Institute. On this benchmark, Claude Sonnet 4.6 showed a significant improvement over Claude Sonnet 4.5 and performed comparably to Claude Opus 4.6.\n\n$^{33}$ Zou, A., et al. (2025). Security challenges in AI agent deployment: Insights from a large scale public competition. arXiv:2507.20526. https://arxiv.org/abs/2507.20526",
+      "count": 1,
+      "pdf_pages": [
+        98
+      ],
+      "evidence": "Rendered physical p.98 bottom strip (300 dpi, read) prints footnote 33 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{33}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "We use Shade, an external adaptive red-teaming tool from Gray Swan, $^{34}$ to evaluate the robustness of our models against prompt injection attacks in coding environments. Claude Sonnet 4.6 showed very large improvements over Claude Sonnet 4.5, bringing attack success to 0% with safeguards and extended thinking. We are investing in stronger adversaries to test future models.",
+      "after": "We use Shade, an external adaptive red-teaming tool from Gray Swan, $^{34}$ to evaluate the robustness of our models against prompt injection attacks in coding environments. Claude Sonnet 4.6 showed very large improvements over Claude Sonnet 4.5, bringing attack success to 0% with safeguards and extended thinking. We are investing in stronger adversaries to test future models.\n\n$^{34}$ Not to be confused with SHADE-Arena, an evaluation suite for sabotage, described in Section 4.6.6 of this system card.",
+      "count": 1,
+      "pdf_pages": [
+        99
+      ],
+      "evidence": "Rendered physical p.99 bottom strip (300 dpi, read) prints footnote 34 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{34}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    },
+    {
+      "before": "This public cyber capabilities benchmark is made up of 40 CTF challenges gathered from four CTF competitions. We have implemented a subset of challenges from this benchmark. More details can be found in the paper $^{35}$ outlining this benchmark.",
+      "after": "This public cyber capabilities benchmark is made up of 40 CTF challenges gathered from four CTF competitions. We have implemented a subset of challenges from this benchmark. More details can be found in the paper $^{35}$ outlining this benchmark.\n\n$^{35}$ Zhang, A., et al. (2024). Cybench: A framework for evaluating cybersecurity capabilities and risks of language models. arXiv:2408.08926. https://arxiv.org/abs/2408.08926",
+      "count": 1,
+      "pdf_pages": [
+        125
+      ],
+      "evidence": "Rendered physical p.125 bottom strip (300 dpi, read) prints footnote 35 verbatim as transcribed; the OCR line survives (anchor is this exact line, containing marker $^{35}$) but the page-bottom body was dropped. Inserted as paragraph(s) \"$^{N}$ body\" after the anchor line. "
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "short-fragment-droppage-not-fully-covered",
+      "pdf_pages": [],
+      "evidence": "The global droppage scan matches PDF text-layer tokens of >=14 characters only; dropped single short words or short labels on pages without renders would not be detected. Page-level visual reads covered the pages listed in pages_reviewed."
+    },
+    {
+      "id": "table-cell-structure-spot-check-only",
+      "pdf_pages": [
+        15,
+        29,
+        30,
+        25
+      ],
+      "evidence": "Tables 2.1.A, 2.16.A, 2.16.B and the Finance Agent table were verified for marker placement and score values against renders, but other tables' cell boundaries were not exhaustively diffed cell-by-cell; glued cells or flattened multi-line cells may remain outside the spot checks."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-5-3-codex-system-card",
+  "source_sha256": "320635949a1e8b127af026167c4e991bb73a7e1f2ab824ee07fd764a92708107",
+  "ocr_sha256": "b3129e46d0218cc0f0e4ef4be2571d5cd08083a462f05586f1ebb56fa8da5f2d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "coverage": "complete",
+    "notes": "Full 7-word-shingle sweep of extracted text from all 31 physical PDF pages against the OCR markdown, plus code-fence audit (the document contains no fences), heading audit and table-presence checks against pages 5, 16, 17, 24 and 26. Physical pages 4 and 17 were rendered and visually read to verify the two dropped footnote bodies verbatim. The unnumbered bold headings (Combined Pass Rate:, Universal Jailbreak Campaign, Adversarial Policy Coverage Campaign, Conclusions from Campaigns, Caveats and considerations:, External Government Testing) were confirmed against rendered/extracted page text as genuine printed headings, not OCR-promoted fragments. Tables 1, 5 and 7-8 values match the PDF text layer; hyphenated line breaks (trou-bleshooting, vul-nerabilities) are extraction artifacts of the diff, not OCR damage."
+  },
+  "patches": [
+    {
+      "before": "real-world risk in the context of this coding-focused model. $^{1}$",
+      "after": "real-world risk in the context of this coding-focused model. $^{1}$\n\nGPT-5.3 Codex is intended to be used in accordance with OpenAI's terms, including the Usage Policies at openai.com/policies/usage-policies/. If you need assistance with respect to GPT-5.3 Codex, you can find further information on OpenAI's website (openai.com), or you can contact OpenAI Support by opening the chat bubble icon displayed at the bottom-right of help.openai.com.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "The $^{1}$ marker survives at the end of the section 2.1 paragraph, but OCR dropped the entire footnote body. Rendered physical p.4 prints the footnote under the rule: \"1GPT-5.3 Codex is intended to be used in accordance with OpenAI's terms, including the Usage Policies at openai.com/policies/usage-policies/. If you need assistance with respect to GPT-5.3 Codex, you can find further information on OpenAI's website (openai.com), or you can contact OpenAI Support by opening the chat bubble icon displayed at the bottom-right of help.openai.com.\" (visually verified on the rendered page; the footnote prints GPT-5.3 Codex without the hyphen used in body text)."
+    },
+    {
+      "before": "• gpt-5.2-thinking: 47% $^{2}$",
+      "after": "• gpt-5.2-thinking: 47% $^{2}$\n\ngpt-5.2-thinking has not undergone a full evaluation on the most recent Cyber Range scenarios; however initial testing suggested that it would be unlikely to pass them.",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "The $^{2}$ marker survives on the Combined Pass Rate bullet, but OCR dropped the footnote body. Rendered physical p.17 prints under the rule: \"2gpt-5.2-thinking has not undergone a full evaluation on the most recent Cyber Range scenarios; however initial testing suggested that it would be unlikely to pass them.\" (visually verified on the rendered page)."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "mixed-list-marker-style-p17",
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "The Combined Pass Rate list mixes escaped-hyphen and bullet markers (\\- gpt-5.1-codex-max vs • gpt-5.2-thinking); the PDF prints all four items as bullets. Bullet style is not a repair class per review policy, so recorded only."
+    }
+  ]
+}

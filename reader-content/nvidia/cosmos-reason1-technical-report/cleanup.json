@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:cosmos-reason1-technical-report",
+  "source_sha256": "cd88d0a653bd4979ffa9dbd2e290c55a0ad3260d8647f6cfd3c96e2ff8cf7972",
+  "ocr_sha256": "56f9b2afbadfcfa3cd4ba0a0ba0c8db18a068e5df11e8194e8693cebb4c62bf3",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level diff of all 36 physical PDF pages against the OCR markdown plus a fence/heading structure scan; page 30 was rendered whole and pages 1 and 22 were inspected via 300 dpi crops. The five ```txt fences in Appendix A are balanced and transcribe printed prompt-box content, so no swallowed-structure risk. The five appendix A headings match the print; the Appendix B heading 'B. Additional results' (physical p.30) was dropped by the OCR while its Figures 11-12 were kept, and is restored. Apparent droppages in the diff resolved as figure-internal diagram and response-panel text already shown by the embedded figure images (architecture Fig. 2, dispatcher Fig. 5, RL training figures, benchmark samples, and the Appendix B response panels). Table reading-order pairs ('MCQ' before 'Total') come from rowspan header layout, not content loss."
+  },
+  "patches": [
+    {
+      "before": "NVIDIA $^{1}$\n\n## Abstract",
+      "after": "NVIDIA $^{1}$\n\n$^{1}$ A detailed list of contributors and acknowledgments can be found in App. C of this paper.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote line prints '1 A detailed list of contributors and acknowledgments can be found in App. C of this paper.' attached to the NVIDIA author block; the OCR kept the superscript marker but dropped the footnote body (visually verified at 300 dpi)."
+    },
+    {
+      "before": "```\n\n![[images/01bba7804569707e87a7a0355680d52fb71cbfee574a350e102efa6087a7dc51.jpg]]",
+      "after": "```\n\n## B. Additional results\n\n![[images/01bba7804569707e87a7a0355680d52fb71cbfee574a350e102efa6087a7dc51.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 opens with the section heading 'B. Additional results' followed by Figure 11 (spatial puzzle) and Figure 12 (object permanence); the OCR kept both figure embeds after the Appendix A prompt boxes but dropped the Appendix B heading itself. The heading is restored before the Figure 11 embed without moving any content."
+    },
+    {
+      "before": "the model without Physical AI RL struggles with object permanence",
+      "after": "the model without Phyiscal AI RL struggles with object permanence",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 prints the paper's own misspelling 'the model without Phyiscal AI RL struggles with object permanence' in the section 7.2.3 discussion of Fig. 12; the OCR silently auto-corrected 'Phyiscal' to 'Physical' (visually verified at 300 dpi)."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-response-panel-text-inline",
+      "pdf_pages": [
+        29,
+        30,
+        31
+      ],
+      "evidence": "The Appendix B response panels' internal monospace text (question banners, before-RL/after-RL chain-of-thought transcripts) is transcribed as body text around the embedded panel images; the text exists only inside the panel images, so removal would lose transcribed content and was left beyond a minimal heading repair."
+    },
+    {
+      "id": "front-cover-stamp-omitted",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The arXiv cover stamp (identifier, date stamp, copyright line) on physical p.1 is not transcribed in the OCR markdown; treated as cover metadata rather than document content."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "qwen:wan-s2v",
+  "source_sha256": "154fe1ebebede23c805109e74087dc965a6d4aabf7545a5dce74d75384ea2550",
+  "ocr_sha256": "d19470b692d53b824d12527b67657dc6064ba7aafee4aa11f5a08c4e926b56da",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "coverage": "complete",
+    "notes": "Word-level diff of the PDF text layer against the OCR markdown for all 11 physical pages plus a whole-document digit-token inventory (residual tokens are image-filename hashes, math tokenization, and reference URL dot-splits). Code-fence scan found no fences; all headings are the paper's printed uppercase section titles. No footnote bodies exist in this paper (references are unnumbered in print, verified on a p.9 render). The flow-matching equations and inline LaTeX match the printed math; hyphenation artifacts (cutting-edge, text-to-image, multi-stage, audio-driven, OCR-based, cross-attention, DiT-based, subjective split across the p.3/p.4 page break) were left unchanged. Fréchet in the OCR matches the print (combining-accent artifact only)."
+  },
+  "patches": [
+    {
+      "before": "During the inference, the model recovers the noisy input $x_{t}$ into $x_{0}$",
+      "after": "During the inference, the model recoveres the noisy input $x_{t}$ into $x_{0}$",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 at 300 dpi prints 'During the inference, the model recoveres the noisy input x_t into x_0 under the condition of the reference frame' - the source itself misspells 'recoveres'; the OCR silently corrected it to 'recovers'. Restored to the printed spelling."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "arxiv-stamp-p1",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The vertical arXiv margin stamp 'arXiv:2508.18621v1 [cs.CV] 26 Aug 2025' exists only as page furniture in the PDF margin and is not part of the OCR text."
+    }
+  ]
+}

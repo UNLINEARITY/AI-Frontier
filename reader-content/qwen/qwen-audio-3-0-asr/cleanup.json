@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen-audio-3-0-asr",
+  "source_sha256": "4ee0decb4dff3bf2fe20a3d45f0ee5debf123709a6f1b420f367e7732dcac7ae",
+  "ocr_sha256": "12b5d067b4d47da7d96975c150f1aeed3f580deb9a464496472fa529007244dc",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 21 physical PDF pages; pages 1, 12, 13 and 18 were additionally rendered to verify table headers, list bullets and the author block. The OCR contains no code fences and the PDF prints none, so no fence-repair is needed. All equations (1)-(2), the Consistency formula, Table 3 and Table 4 values (including the intentional error examples) match the source. Remaining non-matching PDF lines are figure-internal labels whose figures are embedded (Figures 1-11) or the vertical arXiv sidebar stamp on physical p.1, which is not body content. Table 2 macro-average rows use a hyphen for the printed en dash; this preserves content and was left unchanged."
+  },
+  "patches": [
+    {
+      "before": "<td>Whisper -large-v3</td>",
+      "after": "<td>Whisper-large-v3</td>",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered PDF physical p.12 Table 1 Panel A header wraps 'Whisper-' / 'large-v3' inside one cell with no space; OCR joined the wrapped lines as 'Whisper -large-v3'. The same cell in the OCR's Panel B region and body text use the unspaced hyphenated form."
+    },
+    {
+      "before": "<td>Kimi -Audio</td>",
+      "after": "<td>Kimi-Audio</td>",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered PDF physical p.12 Table 1 Panel A header wraps 'Kimi-' / '-Audio' as one cell reading 'Kimi-Audio'; OCR inserted a space at the line wrap."
+    },
+    {
+      "before": "<td>Step -Audio 2</td>",
+      "after": "<td>Step-Audio 2</td>",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered PDF physical p.12 Table 1 Panel A header wraps 'Step-' / '-Audio 2' as one cell reading 'Step-Audio 2'; OCR inserted a space at the line wrap."
+    },
+    {
+      "before": "<td>FireRed -ASR</td>",
+      "after": "<td>FireRed-ASR</td>",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered PDF physical p.12 Table 1 Panel A header wraps 'FireRed' / '-ASR' as one cell reading 'FireRed-ASR'; OCR inserted a space at the line wrap."
+    },
+    {
+      "before": "<td>Qwen-Audio -3.0-ASR</td>",
+      "after": "<td>Qwen-Audio-3.0-ASR</td>",
+      "count": 2,
+      "pdf_pages": [
+        12,
+        13
+      ],
+      "evidence": "Rendered PDF physical pp.12-13: the Table 1 headers and the Table 2 header each wrap 'Qwen-Audio' / '-3.0-ASR' as one cell reading 'Qwen-Audio-3.0-ASR'; OCR inserted a space at the line wrap in both. The OCR itself renders the same name without a space elsewhere in these tables (Table 1 Panel B) and in all body text."
+    },
+    {
+      "before": "<td>GPT-4oTranscribe</td>",
+      "after": "<td>GPT-4o Transcribe</td>",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered PDF physical p.12 Table 1 Panel B header wraps 'GPT-4o' / 'Transcribe' as two words in one cell; OCR joined them without any space. The OCR's own Table 2 header carries 'GPT-4o Transcribe' with the space, matching the source."
+    },
+    {
+      "before": "\\- ",
+      "after": "• ",
+      "count": 56,
+      "pdf_pages": [
+        2,
+        3,
+        7,
+        8,
+        18
+      ],
+      "evidence": "The PDF prints a round bullet before every list entry: key capabilities on physical pp.2-3, RL-framework components on pp.7-8, reward terms on p.8 and the author list on p.18 (verified in the PDF text layer and rendered p.18). OCR transcribed 56 of the 59 bullets as the Markdown escape '\\-' (which renders a literal hyphen instead of the printed bullet) while three author entries kept '•'. Repair restores the printed bullet glyph; all 56 occurrences are line-start list markers."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table-bold-emphasis-not-represented",
+      "pdf_pages": [
+        12,
+        13,
+        15
+      ],
+      "evidence": "The captions of Tables 1-3 state that bold marks the lowest error rate per row, and the rendered pages show those bold cells (e.g. Panel A on physical p.12 bolds 0.54, 2.02, 2.08, 3.03, 1.17, 2.24, 4.31), but the OCR table cells carry no bold markup. All cell values themselves match the source; restoring emphasis would require cell-by-cell font verification and was left for a follow-up review."
+    }
+  ]
+}

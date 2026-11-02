@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "mistral:ministral-3",
+  "source_sha256": "98cb4208c5c8d8246475dee31eab5c3681f4ec88fc4caa5a441d04007c2e5992",
+  "ocr_sha256": "728d80974ddb94144ddd9eee317c20d4bceb4944ce3c1692b9ec2d25340b936c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "Whole-document word-level diff of the OCR markdown against extracted text from all 14 physical PDF pages; physical p.1 was rendered in full (100 dpi) and the p.1/p.6/p.9/p.10 footnote strips at 300 dpi. Both algorithm code fences are balanced and preserve underscores and identifiers correctly. Remaining diff gaps are page-number stamps, the arXiv side stamp, figure-internal labels of the Figure 1 cascade diagram (covered by its embedded image), and text-layer artifacts (reference page-range spacing, diacritic decomposition)."
+  },
+  "patches": [
+    {
+      "before": "# MistralAI",
+      "after": "# Ministral 3",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (full page, 100 dpi): the printed document title is \"Ministral 3\"; the MistralAI wordmark is a graphic logo image between the title and the Abstract. OCR transcribed the logo text as the title heading and dropped the printed title. Patch restores the printed title as the top heading."
+    },
+    {
+      "before": "lengths up to 256k tokens (128k for reasoning models).",
+      "after": "lengths up to 256k tokens (128k for reasoning models).\n\n$^{1}$ https://mistral.ai/news/mistral-small-3-1",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1: the superscript 1 on \"Mistral Small 3.1,1 obtained via a Cascade Distillation approach\" has the printed footnote body \"1https://mistral.ai/news/mistral-small-3-1\", which OCR dropped while keeping the marker. Inserted after the paragraph carrying the marker, following the existing \"$^{n}$ ...\" footnote-line convention."
+    },
+    {
+      "before": "and LiveCodeBench [Jain et al., 2024].",
+      "after": "and LiveCodeBench [Jain et al., 2024].\n\n$^{2}$ https://huggingface.co/datasets/mistralai/MM-MT-Bench",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 footnote strip (300 dpi): the superscript 2 on \"MM MTBench2\" has the printed footnote body \"2https://huggingface.co/datasets/mistralai/MM-MT-Bench\", which OCR dropped while keeping the marker. The body text \"MM MTBench\" itself matches the printed spacing."
+    },
+    {
+      "before": "distillation from the more capable Mistral Medium 3.1.",
+      "after": "distillation from the more capable Mistral Medium 3.1.\n\n$^{3}$ https://docs.mistral.ai/models/mistral-medium-3-1-25-08",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 footnote strip (300 dpi): the superscript 3 on \"Mistral Medium 3 3\" has the printed footnote body \"3https://docs.mistral.ai/models/mistral-medium-3-1-25-08\", which OCR dropped while keeping the marker."
+    },
+    {
+      "before": "we selected the ODPO checkpoint as the release candidate.",
+      "after": "we selected the ODPO checkpoint as the release candidate.\n\n$^{4}$ We also found the 3B base more sensitive than 14B and 8B to hyper-parameter choice in fine-tuning",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 footnote strip (300 dpi): the superscript 4 on \"after this stage 4\" has the printed footnote body \"4We also found the 3B base more sensitive than 14B and 8B to hyper-parameter choice in fine-tuning\", which OCR dropped while keeping the marker."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "qwen:wan-animate",
+  "source_sha256": "2b237bad3f0953f8bdef45ab3d53da1a3a8e7da8745368a428e987d72353d0a5",
+  "ocr_sha256": "53e43b52db575cc1b7bcdee5781a2639e2c0222d2d5284f4f441cd46c1fdf18e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "Whole-document PDF-text vs OCR diff over all 17 physical pages plus a code-fence/heading scan (no code fences in the document; H1 matches the printed all-caps title exactly). Every digit token of the benchmark tables (e.g. the p.16 SSIM/LPIPS/FVD table) matches the PDF text layer; no dropped footnote bodies, prompt-box chunks, reference entries or headings were found. All remaining diff noise is hyphenation splits, accented-name encodings (Stéphane Lathuilière), arXiv sidebar stamps, and text printed inside embedded figures (Figure 2 architecture labels on p.4, Figure 8/9 'w/o Relighting' panel labels on p.12, Figure 10 layout on p.13), which the embedded figure images already show. No Markdown escapes or checkmark/sqrt misreads."
+  },
+  "patches": [],
+  "unresolved": []
+}

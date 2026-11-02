@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:phi-3",
+  "source_sha256": "16c0bec322ce5c3bf0876d21ab406881dd3e3f07b21d98a1e827fe6336c72cba",
+  "ocr_sha256": "af6258580745148fc987d8bef9f6673d8b2a74170dd335d4d89ebb71129b1921",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "coverage": "complete",
+    "notes": "All 24 physical pages word-diffed against the OCR markdown; the 4 code fences are balanced. Dropped footnote bodies 1-4 restored as $^{N}$ paragraphs after their marker paragraphs, following the established phi-series convention; footnote 4's printed '##' glyph was eaten by OCR together with the body. Table 4 (physical page 9, 220 dpi render verified cell-by-cell) glued the two-row benchmark names 'Arena Hard'/'BigBench Hard CoT (0-shot)' and 'Qasper'/'SQuALITY' into single rowspan cells; split back so the value rows align with their benchmarks. The printed chat template '<|user|>\\n Question <|end|>\\n <|assistant|>' (300 dpi render) matches the OCR code block byte-for-byte, including the literal backslash-n characters and spacing. The arXiv margin stamp and Figure-internal chart axis labels are intentionally absent."
+  },
+  "patches": [
+    {
+      "before": "The model is already chat-finetuned, and the chat template is as follows:\n\n```txt",
+      "after": "The model is already chat-finetuned, and the chat template is as follows:\n\n$^{1}$ We remove BoS tokens and add some additional tokens for chat template.\n\n```txt",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Physical p.2 bottom (text layer verified) prints '1We remove BoS tokens and add some additional tokens for chat template.'; the OCR kept the $32064^{1}$ marker in the tokenizer sentence but dropped the footnote body."
+    },
+    {
+      "before": "An additional 10% multilingual data was also used for this model.\n\nThe phi-3.5-MoE",
+      "after": "An additional 10% multilingual data was also used for this model.\n\n$^{2}$ We remove unused tokens from the vocabulary.\n\nThe phi-3.5-MoE",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Physical p.2 bottom (text layer verified) prints '2We remove unused tokens from the vocabulary.'; the OCR kept the $100352^{2}$ marker in the phi-3-small tokenizer sentence but dropped the footnote body."
+    },
+    {
+      "before": "We compare our approach with Llama-2 in Figure 3.\n\n",
+      "after": "We compare our approach with Llama-2 in Figure 3.\n\n$^{3}$ Just like for “compute optimal regime”, we use the term “optimal” in an aspirational sense for “data optimal regime”. We are not implying that we actually found the provably “optimal” data mixture for a given scale.\n\n",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Physical p.3 bottom (text layer verified) prints '3Just like for “compute optimal regime”, we use the term “optimal” in an aspirational sense for “data optimal regime”. We are not implying that we actually found the provably “optimal” data mixture for a given scale.'; the OCR kept the $^{3}$ marker after 'for a given scale.' but dropped the footnote body."
+    },
+    {
+      "before": "An example of a 2-shot prompt is described in Appendix A.",
+      "after": "An example of a 2-shot prompt is described in Appendix A.\n\n$^{4}$ For example, we found that using ## before the Question can lead to a noticeable improvement to phi-3-mini’s results across many benchmarks, but we did not do such changes in the prompts.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 bottom (text layer verified) prints '4For example, we found that using ## before the Question can lead to a noticeable improvement to phi-3-mini’s results across many benchmarks, but we did not do such changes in the prompts.'; the OCR kept the $^{4}$ marker after 'the phi-3 models.' but dropped the footnote body including the printed '##' glyph."
+    },
+    {
+      "before": "<td rowspan=\"2\">Popular</td><td rowspan=\"2\">Arena Hard BigBench Hard CoT (0-shot)</td>",
+      "after": "<td rowspan=\"2\">Popular</td><td>Arena Hard</td>",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 4 (220 dpi, visually verified) prints two separate benchmark rows under Popular: 'Arena Hard' (37/37.9/18.1/39.4/25.7/42/55.2/75) and 'BigBench Hard CoT (0-shot)' (69/79.1/33.4/60.2/63.4/63.5/66.7/80.4); OCR glued both names into one rowspan cell so the first value row shows without a benchmark label."
+    },
+    {
+      "before": "<tr><td>69</td><td>79.1</td>",
+      "after": "<tr><td>BigBench Hard CoT (0-shot)</td><td>69</td><td>79.1</td>",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Companion patch for the split: the second Popular value row (rendered physical p.9 Table 4 verified) belongs to 'BigBench Hard CoT (0-shot)'."
+    },
+    {
+      "before": "<td rowspan=\"2\">Long context</td><td rowspan=\"2\">Qasper SQuALITY</td>",
+      "after": "<td rowspan=\"2\">Long context</td><td>Qasper</td>",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 4 (220 dpi, visually verified) prints two separate benchmark rows under Long context: 'Qasper' (41.9/40.0/31.4/30.7/37.2/13.9/43.5/39.8) and 'SQuALITY' (24.3/24.1/25.9/25.8/26.2/0/23.5/23.8); OCR glued both names into one rowspan cell."
+    },
+    {
+      "before": "<tr><td>24.3</td><td>24.1</td>",
+      "after": "<tr><td>SQuALITY</td><td>24.3</td><td>24.1</td>",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Companion patch for the split: the second Long context value row (rendered physical p.9 Table 4 verified) belongs to 'SQuALITY'."
+    }
+  ],
+  "unresolved": []
+}

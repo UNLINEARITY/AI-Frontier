@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "google:lyria-3-model-card",
+  "source_sha256": "aaee77c7f6f1a01a49c272d3372ead8b4dba2009e472296863716be7044760d8",
+  "ocr_sha256": "dfcddb677d23f6d27573b1919c7bd2c8a14008b2d47f7ddf29405e0c30bf0a14",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "coverage": "complete",
+    "notes": "Clean document, no patches. All 5 physical pages were rendered at 120 dpi and read against the OCR Markdown, and the full extracted PDF text was token-diffed against the Markdown in both directions with case/punctuation/bullet-glyph normalization; the only divergence is the cover-page corner line 'Model card updated March 2026' (p.1 furniture, matching the sibling lyria-3-5 handling, since the body carries 'Updated: March 2026'). No code fences in the OCR, so no fence-swallowing. Every sentence, heading, list item and bold field label on pages 2-4 matched the OCR word for word; page 5 is blank except for a rule and contributes nothing. The Distribution channels, evaluation types and Risks & Mitigations lists are complete and correctly ordered; the mixed marker glyphs are recorded under unresolved per the established bullet-style rule. The card contains no tables, footnotes, references or content figures; the only page-1 graphics are the Google logo and a decorative icon tile.",
+    "rendered_pages": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "list-marker-style",
+      "pdf_pages": [
+        3,
+        4
+      ],
+      "evidence": "Every list entry in the PDF prints with a filled-circle bullet (7 Distribution channels on p.3; 3 evaluation types and 6 Risks & Mitigations items on p.4). The OCR renders some entries as plain lines ('Gemini App', 'Google AI Studio', 'Google Vids', 'YouTube'), some with '\\-' escapes ('Producer AI', the three evaluation types, 'dataset filtering', 'product-level mitigations') and some with '•'. Words are verbatim and no entry is missing, so per the established review rules marker glyph style alone is not patched."
+    }
+  ]
+}

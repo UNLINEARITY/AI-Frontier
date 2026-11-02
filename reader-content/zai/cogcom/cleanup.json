@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "id": "zai:cogcom",
+  "source_sha256": "e6a9c50de216f942f9fbe31697b3c71739b2e8ad2b9c4bb946141a0dd598ae37",
+  "ocr_sha256": "2c91065aa9307929b9463495cc8bc9ee85dd95cc72fb384018c9c9ffaad59ea9",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level pass of all 21 physical PDF pages; physical pages 5, 6 and the p.6 footnote block (300 dpi crop) were rendered and visually checked. All four printed footnote bodies were dropped while their superscript markers survived, and the print's own spelling 'quantitive' had been auto-corrected. Remaining token deltas are Figure 1/4/9/10 demo and axis text, obfuscated strings printed inside figures, and the running header."
+  },
+  "patches": [
+    {
+      "before": "develop the implementations of these manipulations $^{1}$ .",
+      "after": "develop the implementations of these manipulations $^{1}$ .\n\n1 We simply implement the CropZoomIn referring to human behaviors with a local code interpreter.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 footnote rule prints \"1We simply implement the CropZoomIn referring to human behaviors with a local code interpreter.\"; the $^{1}$ marker survived on 'these manipulations' but the body was dropped."
+    },
+    {
+      "before": "to build 70K CoM samples $^{2}$ .",
+      "after": "to build 70K CoM samples $^{2}$ .\n\n2 The success rate of GPT-4 to achieve the positive paths is 0.3555.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 footnote rule prints \"2The success rate of GPT-4 to achieve the positive paths is 0.3555.\"; the $^{2}$ marker survived on '70K CoM samples' but the body was dropped."
+    },
+    {
+      "before": "referring the phrase to the grounded objects in the image.",
+      "after": "referring the phrase to the grounded objects in the image.\n\n3 $x_i, y_i \\in [000, 999]$ refer to the normalized pixel coordinates.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 footnote rule prints \"3xi, yi ∈ [000, 999] refer to the normalized pixel coordinates.\" (square bracket confirmed at 300 dpi); the superscript 3 survived inside the coordinates math but the body was dropped."
+    },
+    {
+      "before": "asking models to optionally use manipulations for the adaption of explicitly eliciting.",
+      "after": "asking models to optionally use manipulations for the adaption of explicitly eliciting.\n\n4 See Appendix F.1 for examples.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 footnote rule prints \"4See Appendix F.1 for examples.\"; the $^{4}$ marker survived on 'lunching prompt $^{4}$' but the body was dropped."
+    },
+    {
+      "before": "without quantitative optimization, CogCoM output",
+      "after": "without quantitive optimization, CogCoM output",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Physical p.8 text layer and print read \"For example, without quantitive optimization, CogCoM outputs 262.9 informative tokens...\" - the misspelling is in the print itself; OCR auto-corrected it. Restoring the printed spelling."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "algorithm-pseudocode-fidelity",
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Algorithm 1 is preserved as a txt code block, but the print's small-caps spacing (e.g. 'V isual Annotator') and equation tag placement differ cosmetically; needs a dedicated pass before touching the listing."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen-drive-1-0-an-initial-step-towards-a-vision-language-foundation-model-for-autonomous-driving",
+  "source_sha256": "b53c66b6797c053dc6238944ec38080acc9efd7ef9712395b85e083573fbc4aa",
+  "ocr_sha256": "f5ea0b10b852d16bb8de226ac22bf4fa646da5007cec7de68d970cc933280f8b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "coverage": "complete",
+    "notes": "Structure: all 40 bare $$ display-math delimiters pair into 20 well-formed blocks (n, n+2), the three ```json blocks are one-to-three-line printed transcripts, and no code fence swallows headings, tables or images. Full text-layer diff of all 40 physical pages plus a word-coverage sweep and a numeric-multiset comparison; rendered physical pages 4, 5 and 33 were visually inspected and confirm every equation patch. Confirmed repairs: one dropped footnote body (LingoJudge/LingoScore) and OCR-spaced digits inside eight display equations ((4), (5), (6), (8), (17), (18), (19)). Dropped numbers on p10/p23 are axis and legend labels of embedded Figures 5/11 and the cover arXiv stamp is dropped by convention across sibling arXiv readers; author and contributor lists on p25 are present. The printed 'Pertraining' strings belong to the Figure-2/Figure-4 artwork."
+  },
+  "patches": [
+    {
+      "before": "safety-specific score for the image split.",
+      "after": "safety-specific score for the image split.\n\n$^{1}$ We use Qwen-Plus as the judge instead of the official LingoJudge, which we found to score leniently and inconsistently across scenarios. A stronger judge yields a stricter and more reliable assessment. Under the official LingoJudge protocol, Qwen-Drive-1.0-SFT obtains a LingoScore of 79.4.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered PDF physical p.14 bottom shows footnote 1 tied to the $^{1}$ marker after 'LingoQA (Marcu et al., 2024) evaluates free-form driving QA with a judge model.': 'We use Qwen-Plus as the judge instead of the official LingoJudge, which we found to score leniently and inconsistently across scenarios. A stronger judge yields a stricter and more reliable assessment. Under the official LingoJudge protocol, Qwen-Drive-1.0-SFT obtains a LingoScore of 79.4.' The OCR kept the marker but dropped the entire footnote body; restored after the paragraph carrying the marker per the established footnote-repair style."
+    },
+    {
+      "before": "+ 0. 7 5 \\mathcal {L} _ {\\ell_ {1}} ^ {(l)}",
+      "after": "+ 0.75 \\mathcal {L} _ {\\ell_ {1}} ^ {(l)}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 equation (4) prints the weight 0.75; OCR spaced the digits so the equation renders as '0. 7 5'."
+    },
+    {
+      "before": "= 1 0 0 \\mathcal {L} _ {\\text { focal }}",
+      "after": "= 100 \\mathcal {L} _ {\\text { focal }}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 equation (5) prints L_occ = 100 L_focal + ...; OCR spaced the digits of 100."
+    },
+    {
+      "before": "\\} _ {k = 1} ^ {5 0}",
+      "after": "\\} _ {k = 1} ^ {50}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 equation (6) prints the trajectory set {x_k, y_k, theta_k}_{k=1}^{50} with 50 waypoints; OCR spaced the superscript digits. The same paragraph prints 'Each trajectory contains 50 waypoints'."
+    },
+    {
+      "before": "2 \\times 1 0 ^ {- 4}",
+      "after": "2 \\times 10 ^ {- 4}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 equation (8) prints L_plan = L_fm + 2 x 10^-4 L_Delta1 + 2 x 10^-5 L_Delta2; OCR spaced the mantissa digits of both powers of ten."
+    },
+    {
+      "before": "2 \\times 1 0 ^ {- 5}",
+      "after": "2 \\times 10 ^ {- 5}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 equation (8) prints 2 x 10^-5 L_Delta2; OCR spaced the mantissa digits."
+    },
+    {
+      "before": "\\Delta (5 0; \\delta , \\kappa),\\tag{17}",
+      "after": "\\Delta(50; \\delta, \\kappa),\\tag{17}",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered PDF physical p.33 equation (17) prints R_NAVSIM = w_pdms PDMS + w_ade Delta(50; delta, kappa); OCR spaced the 50 and left a space before the comma inside the argument."
+    },
+    {
+      "before": "\\Delta (5 0; \\delta , \\kappa),\\tag{18}",
+      "after": "\\Delta(50; \\delta, \\kappa),\\tag{18}",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered PDF physical p.33 equation (18) prints R_WOD = w_rfs RFS + w_ade Delta(50; delta, kappa); OCR spaced the 50 and left a space before the comma."
+    },
+    {
+      "before": "\\Delta (5 0; \\delta , \\kappa_ {0})",
+      "after": "\\Delta(50; \\delta, \\kappa_{0})",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered PDF physical p.33 equation (19) prints R_PAI = w_0 Delta(50; delta, kappa_0) + ...; OCR spaced the 50 and left a space before the comma."
+    },
+    {
+      "before": "\\Delta (1 0 h; \\delta , \\kappa_ {h})",
+      "after": "\\Delta(10h; \\delta, \\kappa_{h})",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered PDF physical p.33 equation (19) prints w_h Delta(10h; delta, kappa_h) and the following sentence explains 'The horizon h corresponds to the first 10h waypoints'; OCR spaced the digits of 10h and left a space before the comma."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "flattened-inline-math-spacing",
+      "pdf_pages": [
+        4,
+        5,
+        33
+      ],
+      "evidence": "Display equations keep OCR spacing like \\mathcal {L} _ {\\text { occ }} throughout; only digit runs and space-before-comma inside the patched arguments were normalized, matching the ubtech precedent. Uniform restyling of all math spacing was left out as cosmetic risk without visible-text change."
+    }
+  ]
+}

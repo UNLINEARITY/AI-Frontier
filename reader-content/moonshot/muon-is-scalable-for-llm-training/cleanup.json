@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "moonshot:muon-is-scalable-for-llm-training",
+  "source_sha256": "6b8e3b47da4db09c952a35486c905f416c57081a32b445a36a3744c441b1c7f3",
+  "ocr_sha256": "a13f8ee7741277f8d60c46f50cba314a9a4150bb7c98b38d15a40612fbe830cf",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "coverage": "partial",
+    "notes": "All 19 physical pages were screened by normalized PDF-text n-gram diff plus a full structure scan (fence balance, swallowed-block check, heading/figure/table inventory); deep value-level verification concentrated on the flagged pages. Verified against the print: the p.1 title/author block head (Jingyuan Liu, Jianlin Su, Xingcheng Yao, ...), Tables 1, 2 and 8 value-by-value against the extracted text, Table 5's parameter/token/optimizer/MMLU rows, the complete appendix A proof on physical p.14 (rendered at 300 and 600 dpi, one math fix below), and the printed Figure 6 python listing on physical p.16 (rendered at 300 dpi, one indentation fix below). Unmatched n-grams on the remaining pages are explained by the running header ('Muon is Scalable for LLM Training' / 'TECHNICAL REPORT'), figure-internal axis/legend labels (physical pp.4, 8, 10, 15, 17, 18, 19 including Figure 9's E0WO/L2-L27 tick labels), and table serialization. NOT line-by-line verified: the remaining display equations in sections 2-3 (physical pp.3, 5, 8), the full value grids of Tables 3, 4, 6, 7, 9, 10, and the complete reference list (physical pp.11-13); these are recorded under unresolved for a follow-up pass.",
+    "figures_verified": [
+      "physical p.14 600-dpi crop of the Lemma 1 proof first line",
+      "physical p.16 300-dpi crop of the Figure 6 python listing (lines 16-29)"
+    ]
+  },
+  "patches": [
+    {
+      "before": "X = U_{[:,r]}V_{[:r,:]}",
+      "after": "X = U_{[:,:r]}V_{[:r,:]}",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 (600 dpi) prints 'X = U[:,:r]V[:r,:]' in the Lemma 1 proof: U's numpy-style row slice carries two colons '[:, :r]' while V's '[:r,:]' is as transcribed; the OCR dropped U's second colon. The patch restores the printed slice without changing any other character."
+    },
+    {
+      "before": "    for _ in range(iter_times):\n    # mock gaussian logits\n    logits = np.random.randn(num_experts)\n    # select topk logits\n    p = np.sort(sigmoid(logits))[::-1]\n    p = p[:topk]\n    # renormalize\n    p = p / p.sum()\n    # calculate the scaling factor\n    factors.append(1/ (p**2).sum()**0.5)\n    return np.mean(factors)",
+      "after": "    for _ in range(iter_times):\n        # mock gaussian logits\n        logits = np.random.randn(num_experts)\n        # select topk logits\n        p = np.sort(sigmoid(logits))[::-1]\n        p = p[:topk]\n        # renormalize\n        p = p / p.sum()\n        # calculate the scaling factor\n        factors.append(1/ (p**2).sum()**0.5)\n    return np.mean(factors)",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 (300 dpi) prints the Figure 6 listing with the for-loop body (printed lines 20-28: three comments and the six statements ending 'factors.append( 1/ (p**2).sum()**0.5)') indented one level under 'for _ in range(iter_times):', and 'return np.mean(factors)' (line 29) dedented back to function-body level. The OCR flattened the body to the same indent as 'for', which is not valid Python for the printed code; the patch restores the printed indentation only."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "remaining-equations-and-tables-not-line-verified",
+      "pdf_pages": [
+        3,
+        5,
+        8,
+        9,
+        10,
+        12,
+        13,
+        15,
+        17,
+        18
+      ],
+      "evidence": "Display equations in sections 2-3 and the full value grids of Tables 3, 4, 6, 7, 9, 10 and the reference entries on physical pp.11-13 were screened by n-gram diff only (no mismatches beyond header/figure-label/table-serialization effects); a line-by-line value check against 300-dpi renders is still outstanding."
+    }
+  ]
+}

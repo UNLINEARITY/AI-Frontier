@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "zai:cogview3-finer-and-faster-text-to-image-generation-via-relay-diffusion",
+  "source_sha256": "2cf95b66bbb265dfbc19465fa6a8571dee50d081ee41887262492b2a0414cb51",
+  "ocr_sha256": "9d28be77d31f1c2c0cca13832d1abebf4aff28bf996e6d4d5a8401289e728afe",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "Structure: the single ```txt fence in Appendix B is balanced and reproduces the printed recaption prompt; Tables 1-3 are present as HTML tables; all figures are image embeds with captions. Word-level diff of extracted text from all 21 physical pages against the OCR markdown; remaining diff lines are two-column hyphenation artifacts, Springer running headers ('CogView3: Finer and Faster... N' / 'W. Zheng et al.'), page numbers, figure-internal text, and LaTeX tokenization noise in the Appendix A sampler derivation (\\vec/\\mathcal/\\label artifacts; the OCR's aligned/array environments render the same printed equations). The author list, email braces line and reference entries [1]-[33] match the print, including the reference title 'Adversarial diffusion distillation'. Pages 1 and 4 rendered and inspected at 300 dpi; the print's own misspelling 'adversial' is restored in body text, not corrected."
+  },
+  "patches": [
+    {
+      "before": "generative adversarial networks",
+      "after": "generative adversial networks",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints the print's own misspelling 'generative adversial networks [12]' (300 dpi crop); OCR auto-corrected it to 'adversarial'. Reference [23]'s title 'Adversarial diffusion distillation' is spelled correctly in both print and OCR and is untouched."
+    },
+    {
+      "before": "adversarial diffusion distillation",
+      "after": "adversial diffusion distillation",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints the print's own misspelling 'adversial diffusion distillation [23]' (300 dpi crop); OCR auto-corrected it to 'adversarial'."
+    },
+    {
+      "before": "{zhengwd23@mails.,tengjy20@mails.,yuxiaod@,jietang@mail.}tsinghua.edu.cn\n\nmingding.thu@gmail.com",
+      "after": "{zhengwd23@mails.,tengjy20@mails.,yuxiaod@,jietang@mail.}tsinghua.edu.cn\n\n$^{2}$ Zhipu AI\n\nmingding.thu@gmail.com",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 affiliation block (300 dpi) prints '2 Zhipu AI' between the Tsinghua email line and 'mingding.thu@gmail.com'; the affiliation is missing from the OCR although authors Xiaotao Gu $^{2}$ and Ming Ding $^{2†}$ carry the marker."
+    },
+    {
+      "before": "mingding.thu@gmail.com",
+      "after": "mingding.thu@gmail.com\n\n$^{*}$ equal contribution\n\n$^{\\dagger}$ corresponding authors\n\n$^{\\ddagger}$ work was done when interned in Zhipu AI.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote block (300 dpi) prints '*equal contribution', '†corresponding authors' and '‡work was done when interned in Zhipu AI.'; all three footnote lines are missing from the OCR, which kept the *, † and ‡ marks in the author line. Inserted after the affiliation block carrying the marks, matching the printed lowercase wording."
+    }
+  ],
+  "unresolved": []
+}

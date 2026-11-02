@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-4v-ision-system-card",
+  "source_sha256": "f5a5a731482b3029e6a998377f7fc693f309c211a0672617c44bec5a076dcf5d",
+  "ocr_sha256": "133e72b8b22009b51d1cd89cc71b494f79d57bdf1dcd0e18b0a72255638039b0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "All 18 physical pages screened by column-aware PDF-text line diff plus a full structure scan (no printed fence markers; no tables; 15 figure embeds with matching captions). All three numbered footnotes were dropped by OCR and restored after 300-dpi render verification; appendix heading A.2 promoted to match A.1. Bulleted evaluation-area lists (physical pp.3-4, 6, 13-14), Figure captions and reference entries were confirmed present in the OCR. Remaining unmatched PDF lines are figure-internal model-output text and reference wrap continuations. Table-free document; no value grids to verify."
+  },
+  "patches": [
+    {
+      "before": "for image inputs.\n\nSimilar to GPT-4,",
+      "after": "for image inputs.\n\n$^{1}$This document takes inspiration from the concepts of model cards and system cards. $[4, 5, 6]$\n\nSimilar to GPT-4,",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (300 dpi crop of the footnote rule) prints \"1This document takes inspiration from the concepts of model cards and system cards.[4, 5, 6]\"; the OCR kept the $^{1}$ marker after \"$[4, 5]$\" in the introduction but dropped the footnote body."
+    },
+    {
+      "before": "useful red teamer feedback in:\n\n![[images/46da6d664ead41bc69518c70c5f1d212da25c56e665959475b1131aaad2af689.jpg]]",
+      "after": "useful red teamer feedback in:\n\n$^{2}$In the GPT-4 System Card, we explored additional risk areas of CBRN, weapons development, system interaction, and emergent risky properties such as self-replication. GPT-4V inherits the assessment in those areas, but this was not a key focus area as image input does not meaningfully alter the capabilities for these categories.\n\n![[images/46da6d664ead41bc69518c70c5f1d212da25c56e665959475b1131aaad2af689.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 (300 dpi crop of the footnote rule) prints the two-line footnote \"2In the GPT-4 System Card, we explored additional risk areas of CBRN, weapons development, system interaction, and emergent risky properties such as self-replication. GPT-4V inherits the assessment in those areas, but this was not a key focus area as image input does not meaningfully alter the capabilities for these categories.\"; the OCR kept the $^{2}$ marker on \"$6^{2}$ key risk areas\" but dropped the footnote body."
+    },
+    {
+      "before": "the model may be able to answer questions about people in low-risk contexts.\n\n## 2.3.4 Disinformation risks",
+      "after": "the model may be able to answer questions about people in low-risk contexts.\n\n$^{3}$All images with people in them used here are synthetically generated.\n\n## 2.3.4 Disinformation risks",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 (300 dpi crop of the footnote rule) prints \"3All images with people in them used here are synthetically generated.\"; the footnote body was dropped. The printed body marker for this note is not recoverable from the text layer, so the note is restored at the end of the section 2.3.3 text it qualifies (its example images with people)."
+    },
+    {
+      "before": "\nA.2  \n![[images/5f5b53e466cadda5b09233fded326fbfa9ea55ff7834d739c2af1966b33869ec.jpg]]",
+      "after": "\n## A.2  \n![[images/5f5b53e466cadda5b09233fded326fbfa9ea55ff7834d739c2af1966b33869ec.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 prints \"A.2\" as a section heading in the same style as \"A.1\" on physical p.17 (which the OCR transcribed as \"## A.1\"); the appendix A.2 line was left as plain text. Promoted to a heading to match."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "footnote3-marker-not-recovered",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "The superscript body marker for footnote 3 is not present in the PDF text layer (only the footnote itself carries the 3); the note was restored at the end of the section 2.3.3 text without a new inline marker."
+    }
+  ]
+}

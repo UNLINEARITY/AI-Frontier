@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "id": "meta:large-concept-models-technical-report",
+  "source_sha256": "986cd29b5f9f49fe596073a6a5910ebf5125585008ca95ac7ed02b92851665b1",
+  "ocr_sha256": "96b68e168b3ef2e3644a35a7b34a2f6bb55919d6c618464acc4c86115808cace",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "coverage": "complete",
+    "notes": "Full word-level diff of the OCR markdown against extracted text from all 49 physical PDF pages (case/punctuation/hyphen-insensitive); physical pages 4, 5, 31, 32, 33, 34, 35, 36, 40 and 48 were rendered at 115 dpi and pages 37 and 49 additionally at 300 dpi crops to verify every patch. No code fences exist in the source, so no fence-balance damage. All 17 numbered footnote markers survive while every footnote body was dropped; the bodies are restored after the paragraphs carrying their markers, in printed page order. Five introduction bullet heads were promoted to level-2 headings by OCR and are demoted back to list text. The print's own misspellings (\"mains characteristics\", \"intented\", \"devasted\", \"Welsch\") are preserved; two of them had been silently auto-corrected by OCR and are restored. Language names flagged missing on physical page 32 are the rotated x-axis labels inside the embedded Figure 16 image (not a defect); the same applies to legend text flagged on pages 8, 11, 15, 24. In-figure banner words like \"Feature normalizer\" belong to the embedded Figure 4 diagram."
+  },
+  "patches": [
+    {
+      "before": "## - Reasoning at an abstract language- and modality-agnostic level beyond tokens:",
+      "after": "\\- Reasoning at an abstract language- and modality-agnostic level beyond tokens:",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints this as the first bold bullet head of the introduction list (\"• Reasoning at an abstract language- and modality-agnostic level beyond tokens:\" followed by dash sub-bullets); OCR promoted it to a level-2 heading, which does not exist in the print. Demoted to a list item consistent with the sibling sub-bullets."
+    },
+    {
+      "before": "## • Explicit hierarchical structure:",
+      "after": "• Explicit hierarchical structure:",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"• Explicit hierarchical structure:\" as the second bold bullet head of the same list; OCR promoted it to a level-2 heading. Demoted by removing the heading marker, keeping the printed bullet glyph."
+    },
+    {
+      "before": "## - Handling of long context and long-form output:",
+      "after": "\\- Handling of long context and long-form output:",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"• Handling of long context and long-form output:\" as the third bullet head of the list; OCR promoted it to a level-2 heading. Demoted to a list item."
+    },
+    {
+      "before": "## - Unparalleled zero-shot generalization:",
+      "after": "\\- Unparalleled zero-shot generalization:",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"• Unparalleled zero-shot generalization:\" as the fourth bullet head; OCR promoted it to a level-2 heading. Demoted to a list item."
+    },
+    {
+      "before": "## - Modularity and extensibility:",
+      "after": "\\- Modularity and extensibility:",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"• Modularity and extensibility:\" as the fifth bullet head; OCR promoted it to a level-2 heading. Demoted to a list item."
+    },
+    {
+      "before": "an order of magnitude shorter. $^{1}$",
+      "after": "an order of magnitude shorter. $^{1}$\n\n$^{1}$ We assume an average sentence length of 10–20 tokens.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom prints footnote 1 \"We assume an average sentence length of 10–20 tokens.\" (en dash); the body was dropped by OCR while the marker survived at the end of the third introduction bullet."
+    },
+    {
+      "before": "multiple modalities freely available.",
+      "after": "multiple modalities freely available.\n\n$^{2}$ https://github.com/facebookresearch/large\\_concept\\_model\n\n$^{3}$ https://github.com/facebookresearch/SONAR",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom prints footnotes 2 and 3 (\"https://github.com/facebookresearch/large_concept_model\" and \"https://github.com/facebookresearch/SONAR\"); both bodies were dropped while the markers survive in the preceding paragraph. Underscores keep the document's existing \\-escaping for this URL."
+    },
+    {
+      "before": "Exact listings of the supported languages can be found in the SONAR GitHub repository.",
+      "after": "Exact listings of the supported languages can be found in the SONAR GitHub repository.\n\n$^{4}$ https://github.com/facebookresearch/SONAR",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom prints footnote 4 \"https://github.com/facebookresearch/SONAR\"; the body was dropped while the marker survives at the end of the paragraph carrying it."
+    },
+    {
+      "before": "more appropriate stemming and tokenization.",
+      "after": "more appropriate stemming and tokenization.\n\n$^{5}$ https://github.com/csebuetnlp/xl-sum/tree/master/multilingual\\_rouge\\_scoring",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Rendered physical p.31 bottom prints footnote 5 \"https://github.com/csebuetnlp/xl-sum/tree/master/multilingual_rouge_scoring\"; the body was dropped while the marker survives after \"scoring scripts released with the benchmark. $^{5}$\"."
+    },
+    {
+      "before": "generalization performance of the LCM to languages it has never seen.",
+      "after": "generalization performance of the LCM to languages it has never seen.\n\n$^{6}$ English, French, Hindi, Portuguese, Spanish and Thai.",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 bottom prints footnote 6 \"English, French, Hindi, Portuguese, Spanish and Thai.\"; the body was dropped while the marker survives in the same paragraph (\"...(20.2 versus 19.7 ROUGE-L). $^{6}$\")."
+    },
+    {
+      "before": "Both models were trained on the same data $^{7}$ for the same number of steps.",
+      "after": "Both models were trained on the same data $^{7}$ for the same number of steps.\n\n$^{7}$ Compared to previous experiments, we use a different data mixture more favorable for long-form generation.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 bottom prints footnote 7 \"Compared to previous experiments, we use a different data mixture more favorable for long-form generation.\"; the body was dropped while the marker survives in the Methodology paragraph."
+    },
+    {
+      "before": "spanning 1.5B segmented concepts (i.e. approximately 30B tokens).",
+      "after": "spanning 1.5B segmented concepts (i.e. approximately 30B tokens).\n\n$^{8}$ https://github.com/segment-any-text/wtpsplit",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 bottom prints footnote 8 \"https://github.com/segment-any-text/wtpsplit\"; the body was dropped while the marker survives after \"paragraph splitting API $^{8}$\"."
+    },
+    {
+      "before": "concepts generated by the LPCM when calculating coherence scores.",
+      "after": "concepts generated by the LPCM when calculating coherence scores.\n\n$^{9}$ Krippendorff’s α = 0.48",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered physical p.34 bottom prints footnote 9 \"Krippendorff’s α = 0.48\"; the body was dropped while the marker survives after \"reported an agreement $^{9}$ with human annotators\"."
+    },
+    {
+      "before": "essential for the objective of generating long-form output.",
+      "after": "essential for the objective of generating long-form output.\n\n$^{10}$ Significance observed at the 99.9% level.",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered physical p.34 bottom prints footnote 10 \"Significance observed at the 99.9% level.\"; the body was dropped while the marker survives after \"achieves significantly $^{10}$ higher coherence scores\"."
+    },
+    {
+      "before": "back from the embedding space has not been demonstrated.",
+      "after": "back from the embedding space has not been demonstrated.\n\n$^{11}$ https://docs.mistral.ai/capabilities/embeddings/",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Rendered physical p.35 bottom prints footnote 11 \"https://docs.mistral.ai/capabilities/embeddings/\"; the body was dropped while the marker survives after \"for example, MISTRAL-EMBED. $^{11}$\"."
+    },
+    {
+      "before": "expected to exhibit this trade-off to a lesser extent.",
+      "after": "expected to exhibit this trade-off to a lesser extent.\n\n$^{12}$ https://laion.ai/blog/leo-lm/\n\n$^{13}$ http://research.baidu.com/Blog/index-view?id=183\n\n$^{14}$ https://www.alibabacloud.com/en/solutions/generative-ai",
+      "count": 1,
+      "pdf_pages": [
+        35,
+        36
+      ],
+      "evidence": "Footnotes 12-14 were dropped; the markers all survive in the paragraph about language-specialized LLMs (LEOLM $^{12}$, ERNIBOT $^{13}$, TONGYI QIANWEN $^{14}$). Rendered physical p.35 bottom prints footnote 12 \"https://laion.ai/blog/leo-lm/\" and physical p.36 bottom prints footnotes 13 \"http://research.baidu.com/Blog/index-view?id=183\" and 14 \"https://www.alibabacloud.com/en/solutions/generative-ai\"; restored together after their common marker paragraph in printed order."
+    },
+    {
+      "before": "contribute to advance the field of machine intelligence.",
+      "after": "contribute to advance the field of machine intelligence.\n\n$^{15}$ https://github.com/facebookresearch/large\\_concept\\_model",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Rendered physical p.40 bottom prints footnote 15 \"https://github.com/facebookresearch/large_concept_model\"; the body was dropped while the marker survives after \"a set of supporting scripts, $^{15}$\"."
+    },
+    {
+      "before": "as it can also be used with a ray.io cluster.",
+      "after": "as it can also be used with a ray.io cluster.\n\n$^{16}$ https://github.com/facebookresearch/stopes\n\n$^{17}$ https://docs.ray.io/",
+      "count": 1,
+      "pdf_pages": [
+        48
+      ],
+      "evidence": "Rendered physical p.48 bottom prints footnotes 16 \"https://github.com/facebookresearch/stopes\" and 17 \"https://docs.ray.io/\"; both bodies were dropped while the markers survive in the appendix B paragraph (\"stopes $^{16}$\", \"ray.data $^{17}$\")."
+    },
+    {
+      "before": "or were not intended for",
+      "after": "or were not intented for",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 (300 dpi crop) prints \"...all of them either relied on token-level inputs or outputs, or were not intented for generating texts of arbitrary length.\" — the print's own misspelling \"intented\"; OCR silently auto-corrected it to \"intended\"."
+    },
+    {
+      "before": "completely devastated",
+      "after": "completely devasted",
+      "count": 1,
+      "pdf_pages": [
+        49
+      ],
+      "evidence": "Rendered physical p.49 (300 dpi crop) prints the appendix D example extract \"...one neighborhood of the city was completely devasted.\" — the print's own misspelling \"devasted\"; OCR silently auto-corrected it to \"devastated\"."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "small-caps-case-spelling",
+      "pdf_pages": [
+        31,
+        32,
+        29,
+        30
+      ],
+      "evidence": "The print styles model/metric names in small caps (extraction shows \"Rouge-L\", \"XLSum\", \"Llama-3.1-8B-IT\" in figure captions while body text uses the same names); the OCR renders them as ROUGE-L/XLSUM/LLAMA-3.1-8B-IT. Case-only normalization of small-caps styling is not treated as a defect; numbers and wording were verified intact."
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "id": "qwen:wan-2-1",
+  "source_sha256": "ca859378a8296fe1a09fb5127680bcdc7e6499fb340e989a598c904720424e9c",
+  "ocr_sha256": "dd9264d589f351c8e9f579f9e9ef95b74e6079616df93736d2a634a2e73a43c2",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "coverage": "partial",
+    "notes": "Triage review. (a) Full structural scan: no code fences at all; the complete '#'-heading tree (Abstract, Contents, sections 1-7, References) matches the printed structure with no spurious headings, banner promotions or demoted headings. (b) Full-document droppage scan: normalized 4-gram containment for all 60 extracted PDF pages plus a line-level 8-gram missing-lines pass over every page with missing content (1, 10-15, 18, 20, 22, 24-27, 30, 32-34, 37, 38, 40, 45-47, 50, 53, 56, 58, 59); all misses resolved as LaTeX-math-equivalent rewrites, figure-internal demo prompts/waveform descriptions (pp.13, 27, 33-34, 40, 45-46 - the figures themselves are embedded incl. Figure 33's audio-comparison panel), chart axis/bar labels (pp.1, 24, 30) or reference-list accent decomposition artifacts in the extractor (md keeps the correct precomposed names). All 33 Figure captions and all Table captions are present; the contributor list (p.49) is complete at 61 names, with 'Wei Wang~1/2' an ASCII rendering of the printed 'Wei Wang~1/2' affiliation marks. Two page-bottom footnote bodies were dropped while their superscript markers survived - restored by the two patches. (c) Renders visually verified at 170 dpi: pp.38 and 40."
+  },
+  "patches": [
+    {
+      "before": "compared to other leading commercial and closed-source Chinese competitors.",
+      "after": "compared to other leading commercial and closed-source Chinese competitors.\n\n$^{1}$ www.pexels.com",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Physical p.38 prints the page-bottom footnote '1www.pexels.com' under the 5.4.3 paragraph whose body sentence 'randomly picked from Pexels1.' keeps the matching superscript marker (paragraph and footnote both visually verified on the rendered page at 170 dpi). The OCR markdown kept the '$^{1}$' marker but dropped the footnote body; the patch restores it as a line after the paragraph that holds the marker."
+    },
+    {
+      "before": "for our real-time pipeline $^{2}$ .",
+      "after": "for our real-time pipeline $^{2}$ .\n\n$^{2}$ Part of this section is introduced in a previously released tech report The Matrix (Feng et al., 2024).",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Physical p.40 prints the 5.6.1 sentence '...as the foundation for our real-time pipeline 2.' with the superscript 2 and, at the page bottom under a footnote rule, '2Part of this section is introduced in a previously released tech report The Matrix (Feng et al., 2024).' (visually verified on the rendered page at 170 dpi). The OCR markdown kept the '$^{2}$' marker but dropped the footnote body; the patch restores it directly after the paragraph that holds the marker."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-demo-prompts",
+      "pdf_pages": [
+        13,
+        27,
+        33,
+        34,
+        40,
+        45,
+        46
+      ],
+      "evidence": "Demo prompt lines and waveform/audio descriptions printed inside the qualitative-result figures (e.g. 'A panda is holding up a cardboard that says Wan2.1', 'The video description: a horse is running...', p.46 Ours-vs-MMAudio prompts) exist only inside the embedded figure panels; they are omitted from the markdown text, which is consistent with the figures being present as image embeds."
+    }
+  ]
+}

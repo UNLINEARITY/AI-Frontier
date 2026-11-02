@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "id": "google:lamda-language-models-for-dialog-applications",
+  "source_sha256": "c2b9f7d10729fe742326a7b4ff41430899e2455700920ab464f8974e7ffcb718",
+  "ocr_sha256": "c14d18ad7591c8d751792c58b693b4dc12eb14ea14af5c238cb8a6414c7c3aaa",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 47 physical PDF pages against the OCR markdown; code fences balanced (3 ```txt blocks). Physical pages 1, 7, 32, 33, 35, 38, 39 and 41 were rendered (110-300 dpi) for visual verification. Appendix B instruction item '3. Is B's response factually correct?' is a numbered crowdworker-instruction item like its siblings 1./2., not a section heading. Table bodies for Tables 8-10 and 27-28 are present; remaining deltas are table row-order reflow, dialog-cell line wrapping inside the HTML tables, and the rotated arXiv margin stamp (intentionally not restored). Print misspellings 'Causcasian' (p.32), 'Hetrosexual' (p.33), 'Wresting' (p.38) and 'temerature' (p.39) were verified on renders and restored; the print at p.41 reads 'sci-fi and' with a space despite the glued PDF text layer, so the OCR was left unchanged there."
+  },
+  "patches": [
+    {
+      "before": "Quoc Le\n\nGoogle\n\n## Abstract",
+      "after": "Quoc Le\n\nGoogle\n\n\\*Work done while at Google.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (300 dpi bottom crop) prints a footnote rule followed by '*Work done while at Google.' at the bottom of the title page; OCR kept the matching '*' markers after Daniel De Freitas and Noam Shazeer in the author list but dropped the footnote body."
+    },
+    {
+      "before": "## 3. Is B's response factually correct?",
+      "after": "3. Is B's response factually correct?",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Rendered physical p.35 shows '3. Is B's response factually correct?' as a numbered crowdworker-instruction item followed by bullet sub-items, at the same level as siblings '1. Is the conversation understandable?' and '2. Does B's response contain any factual claims?', which the OCR kept as plain paragraphs; only this line was falsely promoted to a section heading."
+    },
+    {
+      "before": "“<context><sentinel><response>”",
+      "after": "“<context> <sentinel> <response>”",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints the generative fine-tuning example format as “<context> <sentinel> <response>” with spaces between the angle-bracket tokens; OCR glued the tokens together."
+    },
+    {
+      "before": "“<context><sentinel><response><attribute-name><rating>”",
+      "after": "“<context> <sentinel> <response> <attribute-name> <rating>”",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints the discriminative fine-tuning example format as “<context> <sentinel> <response> <attribute-name> <rating>” with spaces between tokens; OCR glued the tokens together."
+    },
+    {
+      "before": "\"<context><sentinel><response><attribute-name>\"). Since the model has already processed \"<context><sentinel><response>\", evaluating the discriminator simply involves processing a few additional tokens: \"<attribute-name><desired rating)\"",
+      "after": "\"<context> <sentinel> <response> <attribute-name>\"). Since the model has already processed \"<context> <sentinel> <response>\", evaluating the discriminator simply involves processing a few additional tokens: \"<attribute-name> <desired rating>\"",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Physical p.7 (rendered crop plus text layer) prints “<attribute-name> <desired rating>” as the final tokens in the discriminator sentence; OCR glued the tokens and misread the closing angle bracket after 'rating' as a parenthesis."
+    },
+    {
+      "before": "<td>White or Caucasian</td><td>62</td>",
+      "after": "<td>White or Causcasian</td><td>62</td>",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 (300 dpi crop of the Table 8 ethnicity block) prints 'White or Causcasian' with respondents 62; the double 's' is the print's own misspelling and OCR silently corrected it to 'Caucasian'. The safety-annotation table on p.33 prints 'Caucasian' correctly and is left unchanged."
+    },
+    {
+      "before": "<td>Heterosexual or straight</td><td>72</td>",
+      "after": "<td>Hetrosexual or straight</td><td>72</td>",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 (300 dpi crop of the Table 9 sexual-orientation block) prints 'Hetrosexual or straight' with respondents 72; the print's own misspelling was silently corrected by OCR."
+    },
+    {
+      "before": "World Wrestling Entertainment&quot;. I used to love",
+      "after": "World Wresting Entertainment&quot;. I used to love",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 (300 dpi crop of the WWE dialog table) prints the PT response cell as 'WWE is an abbreviation meaning \"World Wresting Entertainment\".'; the print's own 'Wresting' misspelling was silently corrected by OCR. The LaMDA response cell in the same row prints 'World Wrestling Entertainment' correctly and is left unchanged."
+    },
+    {
+      "before": "what is the temperature in SF?",
+      "after": "what is the temerature in SF?",
+      "count": 1,
+      "pdf_pages": [
+        39
+      ],
+      "evidence": "Rendered physical p.39 (300 dpi crop of the calculator dialog table) prints the user utterance as 'what is the temerature in SF?'; the print's own misspelling was silently corrected by OCR."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "glued-punctuation-before-urls-in-dialog-cells",
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "Some grounded-response cells join the citation period and URL without a space (e.g. 'Tenzing Norgay.https://en.wikipedia.org/wiki/Mount_Everest' on p.42); the print separates them with a space. Cosmetic spacing inside long table cells; needs a dedicated crop pass before patching."
+    }
+  ]
+}

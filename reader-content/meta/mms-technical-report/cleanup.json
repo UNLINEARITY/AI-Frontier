@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "id": "meta:mms-technical-report",
+  "source_sha256": "f83bf79e989b901b8fbf344d5940b1820534d67fd4bb3af5695d844825fbe490",
+  "ocr_sha256": "d2d41522f204903a8e9ce83df4f8bca1de16feb8e3c5672a2cbf41ec5212992d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "coverage": "complete",
+    "notes": "Extracted text of all 41 physical pages compared against the OCR markdown; page-bottom strips of pages 1, 4, 5, 7, 8, 10, 11, 12, 16, 17, 18, 20, 21, 22, 23, 24, 36 and 37 rendered and visually verified for every reinserted footnote body. No unbalanced code fences: the single markdown fence in Appendix B reproduces a printed KenLM command box. The OCR dropped every numbered footnote body (6-34) plus the five title-page symbol affiliation notes; all are reinserted. The print misspelling 'Portoguese' in footnote 19 is kept as printed."
+  },
+  "patches": [
+    {
+      "before": "com. This includes the original text data as we well as the corresponding audio recording.\n",
+      "after": "com. This includes the original text data as we well as the corresponding audio recording.\n\n$^{6}$ https://www.faithcomesbyhearing.com/\n",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom strip (120 dpi composite, visually verified) prints page footnote 6: \"https://www.faithcomesbyhearing.com/\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": " introduce unwanted biases into machine learning models which we analyze below ( $§8.1$ ).\n",
+      "after": " introduce unwanted biases into machine learning models which we analyze below ( $§8.1$ ).\n\n$^{7}$ For the audio files with no paired text, we perform VAD and segment them into smaller files.\n",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom strip (120 dpi composite, visually verified) prints page footnote 7: \"For the audio files with no paired text, we perform VAD and segment them into sm...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": ", e.g., for the Poqomchi' language there are recordings with western and eastern dialects.\n",
+      "after": ", e.g., for the Poqomchi' language there are recordings with western and eastern dialects.\n\n$^{8}$ Specifically, we measure the correlation of the character frequency distribution for all pairs of the recordings and examine recordings with a correlation lower than 0.99 further.\n",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom strip (120 dpi composite, visually verified) prints page footnote 8: \"Specifically, we measure the correlation of the character frequency distribution...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "including characters for which we are confident that they are in fact punctuation. $^{10}$\n",
+      "after": "including characters for which we are confident that they are in fact punctuation. $^{10}$\n\n$^{9}$ For example, there are two ways to represent Ç (Latin C with combining cedilla): splitting it into Latin capital C and combining cedilla (NFKD), or having a single Unicode character C with cedilla.\n",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom strip (120 dpi composite, visually verified) prints page footnote 9: \"For example, there are two ways to represent Ç (Latin C with combining cedilla):...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "including characters for which we are confident that they are in fact punctuation. $^{10}$\n",
+      "after": "including characters for which we are confident that they are in fact punctuation. $^{10}$\n\n$^{10}$ We obtain an initial set of punctuation characters from the respective Unicode category.\n",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom strip (120 dpi composite, visually verified) prints page footnote 10: \"We obtain an initial set of punctuation characters from the respective Unicode c...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "ithm and an implementation is available as part of TorchAudio [Yang et al., 2021]. $^{11}$\n",
+      "after": "ithm and an implementation is available as part of TorchAudio [Yang et al., 2021]. $^{11}$\n\n$^{11}$ https://github.com/pytorch/audio\n",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 bottom strip (120 dpi composite, visually verified) prints page footnote 11: \"https://github.com/pytorch/audio\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "helps to improve alignment when the paired text does not cover the beginning of the audio.\n",
+      "after": "helps to improve alignment when the paired text does not cover the beginning of the audio.\n\n$^{12}$ This is different from an OOV token or silence token in an HMM topology, which model a certain type of acoustic behavior and are independent from other in-vocabulary tokens.\n",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 bottom strip (120 dpi composite, visually verified) prints page footnote 12: \"This is different from an OOV token or silence token in an HMM topology, which m...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "o a phonetic transcription in either WorldBet [Hieronymus, 1993] or X-SAMPA [Wells, 1995].\n",
+      "after": "o a phonetic transcription in either WorldBet [Hieronymus, 1993] or X-SAMPA [Wells, 1995].\n\n$^{13}$ https://www.isi.edu/~ulf/uroman.html\n",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 bottom strip (120 dpi composite, visually verified) prints page footnote 13: \"https://www.isi.edu/~ulf/uroman.html\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": " quantities may indicate that the alignment is incorrect. $^{14}$ Concretely, the score is\n",
+      "after": " quantities may indicate that the alignment is incorrect. $^{14}$ Concretely, the score is\n\n$^{14}$ It may also indicate that the alignment model is of poor quality but in practice we found that the metric identifies many incorrect alignments.\n",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 bottom strip (120 dpi composite, visually verified) prints page footnote 14: \"It may also indicate that the alignment model is of poor quality but in practice...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "t model. $^{15}$ We use this new model to re-generate verse level alignments for our data.\n",
+      "after": "t model. $^{15}$ We use this new model to re-generate verse level alignments for our data.\n\n$^{15}$ This model is available at https://github.com/facebookresearch/fairseq/tree/main/examples/mms\n",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 bottom strip (120 dpi composite, visually verified) prints page footnote 15: \"This model is available at https://github.com/facebookresearch/fairseq/tree/main...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "cts of the same language resulting in a total of 3,860 languages and 9,345 hours of audio.\n",
+      "after": "cts of the same language resulting in a total of 3,860 languages and 9,345 hours of audio.\n\n$^{16}$ https://globalrecordings.net/\n",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 bottom strip (120 dpi composite, visually verified) prints page footnote 16: \"https://globalrecordings.net/\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "nd use the resulting data to train monolingual ASR models under the same settings. $^{17}$\n",
+      "after": "nd use the resulting data to train monolingual ASR models under the same settings. $^{17}$\n\n$^{17}$ We reproduced the data by following the steps outlined at https://github.com/festvox/datasets-CMU_Wilderness\n",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 bottom strip (120 dpi composite, visually verified) prints page footnote 17: \"We reproduced the data by following the steps outlined at https://github.com/fes...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "ress that this is a best effort comparison and does not enable strong conclusions. $^{18}$\n",
+      "after": "ress that this is a best effort comparison and does not enable strong conclusions. $^{18}$\n\n$^{18}$ We could not obtain a per-language break down of the ASR-2K results.\n",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 bottom strip (120 dpi composite, visually verified) prints page footnote 18: \"We could not obtain a per-language break down of the ASR-2K results.\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "MMS-lab data can enable high quality speech systems for a large number of other languages.\n",
+      "after": "MMS-lab data can enable high quality speech systems for a large number of other languages.\n\n$^{19}$ Spanish (spa), Catalan (cat), Polish (pol), German (deu), Portoguese (por), Russian (rus), Ukrainian (ukr), Turkish (tur), Swahili (swh), French (fra), Dutch (nld), Farsi (fas), English (eng), Welsh (cym), Luganda (lug), Arabic (ara), Tamil (tam), Thai (tha).\n",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 bottom strip (120 dpi composite, visually verified) prints page footnote 19: \"Spanish (spa), Catalan (cat), Polish (pol), German (deu), Portoguese (por), Russ...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "ining data which likely amounts to several billions of words of text from the web. $^{20}$\n",
+      "after": "ining data which likely amounts to several billions of words of text from the web. $^{20}$\n\n$^{20}$ Assuming 10K words of text per hour of paired speech data, the decoder was trained on about 6.8B words.\n",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 bottom strip (120 dpi composite, visually verified) prints page footnote 20: \"Assuming 10K words of text per hour of paired speech data, the decoder was train...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "or rate except for Thai, Lao, Burmese and Khmer where we use character error rate. $^{21}$\n",
+      "after": "or rate except for Thai, Lao, Burmese and Khmer where we use character error rate. $^{21}$\n\n$^{21}$ We follow Whisper’s evaluation methodology but add Khmer to the list of languages where evaluation is in terms of CER because there is no standard tokenization we are aware of.\n",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 bottom strip (120 dpi composite, visually verified) prints page footnote 21: \"We follow Whisper’s evaluation methodology but add Khmer to the list of language...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "n 31 out of the 54 languages. Appendix C provides a per-language breakdown of the results.\n",
+      "after": "n 31 out of the 54 languages. Appendix C provides a per-language breakdown of the results.\n\n$^{22}$ The non-English portion of the Whisper training data is still 117K hours and covers less than 100 languages, while MMS-lab is less than half the size and covers 11 times the number of languages.\n",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 bottom strip (120 dpi composite, visually verified) prints page footnote 22: \"The non-English portion of the Whisper training data is still 117K hours and cov...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "s model for a total of 300K updates. Results are in terms of character error rate. $^{24}$\n",
+      "after": "s model for a total of 300K updates. Results are in terms of character error rate. $^{24}$\n\n$^{23}$ We were not able to obtain the list of languages involved in their comparison to Whisper and therefore resort to a comparison not involving the labeled YouTube data. This has the downside of removing the impact of the labeled datasets of each approach in the comparison.\n",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 bottom strip (120 dpi composite, visually verified) prints page footnote 23: \"We were not able to obtain the list of languages involved in their comparison to...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "s model for a total of 300K updates. Results are in terms of character error rate. $^{24}$\n",
+      "after": "s model for a total of 300K updates. Results are in terms of character error rate. $^{24}$\n\n$^{24}$ Zhang et al. [2023a] did not perform any additional pre-processing on the reference transcriptions when reporting CER which enables a comparison to their results [Yu Zhang, personal communication 5 May 2023].\n",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 bottom strip (120 dpi composite, visually verified) prints page footnote 24: \"Zhang et al. [2023a] did not perform any additional pre-processing on the refere...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "udio data (USM-M/USM-M-adapter) while as MMS is pre-trained only on unlabeled speech data.\n",
+      "after": "udio data (USM-M/USM-M-adapter) while as MMS is pre-trained only on unlabeled speech data.\n\n$^{25}$ RNN-T may benefit particularly from pre-training on unlabeled text data in the case of USM-M, effectively training a strong neural language model.\n",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 bottom strip (120 dpi composite, visually verified) prints page footnote 25: \"RNN-T may benefit particularly from pre-training on unlabeled text data in the c...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "ain training). $^{26}$ During inference, we use n-gram models trained on CommonCrawl data.\n",
+      "after": "ain training). $^{26}$ During inference, we use n-gram models trained on CommonCrawl data.\n\n$^{26}$ Models trained on FLEURS data were trained for 300K updates, for MLS models we found 50k updates to work well, CommonVoice and VoxPopuli models were trained for 200K updates.\n",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 bottom strip (120 dpi composite, visually verified) prints page footnote 26: \"Models trained on FLEURS data were trained for 300K updates, for MLS models we f...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": " build LID models with 40x more languages compared to existing systems ( $§6.3$ ). $^{27}$\n",
+      "after": " build LID models with 40x more languages compared to existing systems ( $§6.3$ ). $^{27}$\n\n$^{27}$ Note that we use MMS-lab-U instead of MMS-lab because it supports more languages and we do not require the data to be paired with transcriptions for LID (§3.1.1).\n",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 bottom strip (120 dpi composite, visually verified) prints page footnote 27: \"Note that we use MMS-lab-U instead of MMS-lab because it supports more languages...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "are sorted by descending speaker count and we add the most spoken languages first. $^{28}$\n",
+      "after": "are sorted by descending speaker count and we add the most spoken languages first. $^{28}$\n\n$^{28}$ We obtain the number of speakers of each language from https://www.ethnologue.com\n",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 bottom strip (120 dpi composite, visually verified) prints page footnote 28: \"We obtain the number of speakers of each language from https://www.ethnologue.co...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": " on 2.5 hours of data for each language sampled from the VoxPopuli unlabeled data portion.\n",
+      "after": " on 2.5 hours of data for each language sampled from the VoxPopuli unlabeled data portion.\n\n$^{29}$ Amharic, Assamese, Bengali, Cantonese, Cebuano, Georgian, Guarani, Haitian Creole, Igbo, Javanese, Kazakh, Lao, Lithuanian, Dholuo, Mongolian, Pashto, Swahili, Tagalog, Tamil, Telugu, Turkish, Vietnamese, Zulu. We evaluate on test utterances longer than 10 seconds.\n",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 bottom strip (120 dpi composite, visually verified) prints page footnote 29: \"Amharic, Assamese, Bengali, Cantonese, Cebuano, Georgian, Guarani, Haitian Creol...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "acter sets of between 200-1,000 characters. We therefore used this mixed strategy. $^{30}$\n",
+      "after": "acter sets of between 200-1,000 characters. We therefore used this mixed strategy. $^{30}$\n\n$^{30}$ For all 1,107 languages, the following languages use a uroman encoding: Amharic, Gumuz, Korean, Sebat Bet Gurage and Tigrinya.\n",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 bottom strip (120 dpi composite, visually verified) prints page footnote 30: \"For all 1,107 languages, the following languages use a uroman encoding: Amharic,...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "ata which makes it an interesting evaluation set, particularly for the experiment in §7.5.\n",
+      "after": "ata which makes it an interesting evaluation set, particularly for the experiment in §7.5.\n\n$^{31}$ For measuring CER on LJSpeech, we remove punctuation and capitalization of both references and hypothesis using the normalization of Radford et al. [2022].\n",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 bottom strip (120 dpi composite, visually verified) prints page footnote 31: \"For measuring CER on LJSpeech, we remove punctuation and capitalization of both ...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "If the generated transcriptions cannot be well aligned, then these segments are discarded.\n",
+      "after": "If the generated transcriptions cannot be well aligned, then these segments are discarded.\n\n$^{32}$ https://github.com/mozilla/DSAlign\n",
+      "count": 1,
+      "pdf_pages": [
+        36
+      ],
+      "evidence": "Rendered physical p.36 bottom strip (120 dpi composite, visually verified) prints page footnote 32: \"https://github.com/mozilla/DSAlign\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "mer (khm). The text is preprocessed following § 3.1.2 and we also remove emojis. $^{33}$ .\n",
+      "after": "mer (khm). The text is preprocessed following § 3.1.2 and we also remove emojis. $^{33}$ .\n\n$^{33}$ https://stackoverflow.com/a/33417311\n",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 bottom strip (120 dpi composite, visually verified) prints page footnote 33: \"https://stackoverflow.com/a/33417311\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "5 -o 5 -limit_vocab_file vocab.txt -S 90% -T /tmp/ &lt; input.txt &gt; output.arpa $^{34}$\n",
+      "after": "5 -o 5 -limit_vocab_file vocab.txt -S 90% -T /tmp/ &lt; input.txt &gt; output.arpa $^{34}$\n\n$^{34}$ We use –prune 1 1 2 3 4 if data size < 5GB and additionally use –discount_fallback if data size < 1GB\n",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 bottom strip (120 dpi composite, visually verified) prints page footnote 34: \"We use –prune 1 1 2 3 4 if data size < 5GB and additionally use –discount_fallba...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "◇ core team\n\n## Abstract",
+      "after": "◇ core team\n\n∗JPMorgan Chase. Work done while at Meta AI.\n†Apple. Work done while at Meta AI.\n‡Character.AI. Work done while at Meta AI.\n§Meta AI & Hebrew University of Jerusalem.\n¶Open AI. Work done while at Meta AI.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (120 dpi strip, visually verified) prints the symbol-footnote block under a rule: '*JPMorgan Chase. Work done while at Meta AI.', '†Apple. Work done while at Meta AI.', '‡Character.AI. Work done while at Meta AI.', '§Meta AI & Hebrew University of Jerusalem.', '¶Open AI. Work done while at Meta AI.'. The OCR markdown kept the symbol markers on the author names but dropped all five affiliation bodies; inserted after the author block, before the abstract."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table-cell-density",
+      "pdf_pages": [
+        13,
+        14,
+        16,
+        25,
+        26,
+        27,
+        28
+      ],
+      "evidence": "OCR HTML tables were spot-checked against renders but per-cell numeric proofreading of the large evaluation tables was not exhaustive within the review budget."
+    }
+  ]
+}

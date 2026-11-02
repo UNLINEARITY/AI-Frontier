@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-5-1-instant-and-gpt-5-1-thinking-system-card-addendum",
+  "source_sha256": "4242411760382dcaa338565f6b7b3dabdf1e7368d8a12cef5da10dc069844384",
+  "ocr_sha256": "80b56f78265dce39229495878c670b0a902e3f567c0d568691ce51a96d22d5ae",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "coverage": "complete",
+    "notes": "All 5 physical pages' extracted text was block-compared against the OCR markdown after normalization, plus a whole-document numeric multiset check (only printed page-number footers are absent from the OCR, which is correct). Section numbering matches the print: 1, 2, 2.1, 2.2, 2.3, 3 are numbered exactly as printed, and 'Early signal on prevalence of undesired responses for sensitive situations' is genuinely unnumbered in the PDF (physical p.3). Tables 1-3 are present as HTML tables and their values are covered by the numeric check. Physical p.1 (title page) was rendered at 110 dpi and visually checked. The four prose 'not\\_unsafe' occurrences render as the printed identifier not_unsafe and were left as read. No transcription defects found; no patches."
+  },
+  "patches": [],
+  "unresolved": []
+}

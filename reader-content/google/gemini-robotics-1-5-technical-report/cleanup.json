@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-robotics-1-5-technical-report",
+  "source_sha256": "b41a2f732f4755c7564b973bcc6ff8aebf3bb9a9f163328437e89533d372b2f4",
+  "ocr_sha256": "136ca467b43b87adf62dde142bbf1320c9d9450da4ade30a926f490bfe82054d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62
+    ],
+    "coverage": "partial",
+    "notes": "All 62 physical pages were diffed as extracted text against the OCR markdown with normalization for LaTeX-equivalent math, quotes, hyphenation and HTML entities, and the heading/fence structure was scanned globally (no code fences; the only caption promoted to a heading is repaired below). Physical pages 1, 6, 17, 20, 37, 38, 44, 45 and 46 were rendered (100-300 dpi) and visually inspected for the confirmed repairs. Remaining normalized diffs are task-instruction banners, legends and dialogues inside embedded figures, plus flattened progress-score table cells whose values spot-check correctly against the rendered pages; per-cell verification of every score table and an exhaustive spaced-digit sweep were not completed within this review."
+  },
+  "patches": [
+    {
+      "before": "Gemini Robotics Team, Google DeepMind $^{1}$\n\nGeneral-purpose robots need",
+      "after": "Gemini Robotics Team, Google DeepMind $^{1}$\n\n$^{1}$ See Contributions and Acknowledgments section for full author list. Please send correspondence to gemini-robotics-report@google.com.\n\n© 2025 Google DeepMind. All rights reserved\n\nGeneral-purpose robots need",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom (300 dpi): footnote 1 of the author line reads \"1See Contributions and Acknowledgments section for full author list.  Please send correspondence to gemini-robotics-report@google.com.\", and below a rule the title-page footer reads \"© 2025 Google DeepMind. All rights reserved\" (no trailing period). The OCR kept marker $^{1}$ but dropped the footnote body, correspondence line and copyright footer."
+    },
+    {
+      "before": "across different versions of Gemini Robotics.\n",
+      "after": "across different versions of Gemini Robotics.\n\n$^{2}$ We do not show comparisons with the Gemini Robotics model from (Gemini-Robotics-Team et al., 2025), because those models on the Bi-arm Franka and the Apollo humanoid were post-trained specialists, and they had little generalization beyond variations of the trained tasks.\n",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 bottom footnote 2 transcribed verbatim from the 300 dpi crop; it attaches to \"our GRoD models²\" in Section 3 and the OCR kept marker $^{2}$ but dropped the body."
+    },
+    {
+      "before": "we also report success rate results in D.2.\n",
+      "after": "we also report success rate results in D.2.\n\n$^{3}$ While we are using the pre-training checkpoint for ALOHA, we performed additional post-training on the bi-arm Franka platform to improve its success rate for long-horizon tasks.\n",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 bottom footnote 3 transcribed verbatim from the 300 dpi crop; it attaches to \"Bi-arm Franka³\" and the OCR kept marker $^{3}$ but dropped the body."
+    },
+    {
+      "before": "safety-constrained pointing tasks (Fig. 19 (b)).\n",
+      "after": "safety-constrained pointing tasks (Fig. 19 (b)).\n\n$^{4}$ https://deepmind.google/models/veo/\n",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 bottom footnote 4 transcribed verbatim from the 300 dpi crop; it attaches to \"VEO⁴\" in the ASIMOV-2.0 paragraph and the OCR kept marker $^{4}$ but dropped the URL body."
+    },
+    {
+      "before": "## Table 5 | Progress Scores: Bi-arm Franka (Workbench scene).",
+      "after": "Table 5 | Progress Scores: Bi-arm Franka (Workbench scene).",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 top (300 dpi): \"Table 5 | Progress Scores: Bi-arm Franka (Workbench scene).\" is a table caption in the same style as Tables 4/6-14, which the OCR keeps as plain text; the OCR spuriously promoted this one caption to a section heading."
+    },
+    {
+      "before": "\nTable 14 | Progress Scores: ALOHA/Humanoid → Bi-arm Franka.",
+      "after": "\nFigure 29 | Cross-embodiment tasks for Apollo humanoid → Bi-arm Franka benchmark.\n\nTable 14 | Progress Scores: ALOHA/Humanoid → Bi-arm Franka.",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Rendered physical p.45 (200 dpi): the print has a Figure 29 (task-photo strip with \"Pick up the black beanie...\" banners) captioned \"Figure 29 | Cross-embodiment tasks for Apollo humanoid →Bi-arm Franka benchmark.\" between Table 13 and Table 14; the OCR dropped the caption (and the strip image itself, see unresolved). Reading order places the caption before Table 14, matching the print."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-29-strip-image-missing",
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Physical p.45 prints one Figure 29 photo strip (Apollo humanoid → Bi-arm Franka tasks), but the OCR markdown contains no image embed for it; text cleanup cannot add image embeds, so only the caption was restored. Restoring the image needs re-extraction from the source PDF."
+    },
+    {
+      "id": "scene-subheading-levels-b22",
+      "pdf_pages": [
+        36,
+        37,
+        38
+      ],
+      "evidence": "The print uses bold run-in labels (\"Workbench scene\", \"Computer scene\", \"NIST Assembly Task Board 2\") inside B.2.2; the OCR renders the scene labels as ## headings. The level choice is a representation, not a transcription error, and was left unchanged."
+    },
+    {
+      "id": "figure-internal-text-diffs",
+      "pdf_pages": [
+        7,
+        8,
+        9,
+        12,
+        14,
+        15,
+        16,
+        18,
+        32,
+        36,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        51,
+        53,
+        55,
+        56,
+        59,
+        60,
+        61,
+        62
+      ],
+      "evidence": "Residual normalized diffs on these pages are task-instruction banners, reward-scale labels, model-legend strings and model dialogues printed inside embedded figures; they are not text-layer defects."
+    }
+  ]
+}

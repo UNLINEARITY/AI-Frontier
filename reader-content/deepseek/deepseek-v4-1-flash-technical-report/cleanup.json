@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-v4-1-flash-technical-report",
+  "source_sha256": "0cfdda19c8e1691b5226dd0d4949e2397051268e8a823c2fb61db94ea20c4ac0",
+  "ocr_sha256": "87f07586d41794ef1542e18b89be918406bfce630648715e8e650b1a439ad1c6",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 51 physical PDF pages, with a normalized-line containment diff per page; pages 2, 16, 19, 40, 42, 46 and 48 were additionally rendered to verify the TOC page number, Algorithm 1 comments, the non-heading sentence, the DOI identifier, the author-list names and the footnote. Tables 1, 3, 4 and 5 were compared value-by-value against the PDF. Figure-internal labels (Figure 5 on p.11, Figure 7 on p.27, Figure 8 on p.28, Figure 9 on p.35, Figure 10 on p.36) are absent from the text because the figures are embedded as images; the arXiv marginal stamp on p.1 is not transcribed. Equation tags (1)-(17), the mHC kernel accounting and the length-penalty appendix match the source; unclear formula styling was left unchanged."
+  },
+  "patches": [
+    {
+      "before": "2.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+      "after": "2.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered PDF physical p.2 contents row reads \"2.1 Overview . . . 7\"; every neighboring TOC row in the OCR keeps its page number, but this row ends at the dot leader without the 7."
+    },
+    {
+      "before": "2:  $\\widehat{G}_{t} \\leftarrow \\beta M_{t} + (1 - \\beta)G_{t}$ ",
+      "after": "2:  $\\widehat{G}_{t} \\leftarrow \\beta M_{t} + (1 - \\beta)G_{t}$ ▷ Nesterov momentum",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered PDF physical p.16 Algorithm 1 line 2 carries the side comment \"Nesterov momentum\"; OCR moved this comment to the end of the algorithm block after step 19 (removed there by the matching patch) and dropped it from its own line."
+    },
+    {
+      "before": "5: Set  $U_{i,:}^{(0)} \\leftarrow 0$  if  $\\rho_{i} \\leqslant \\tau\\bar{\\rho}$ ",
+      "after": "5: Set  $U_{i,:}^{(0)} \\leftarrow 0$  if  $\\rho_{i} \\leqslant \\tau\\bar{\\rho}$ ▷ Mask near-zero rows",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered PDF physical p.16 Algorithm 1 line 5 carries the side comment \"Mask near-zero rows\"; OCR moved it to the end of the block after step 19 (removed there by the matching patch)."
+    },
+    {
+      "before": "17:  $\\Delta_{t} \\leftarrow \\sqrt{n} U^{(K)}$ ",
+      "after": "17:  $\\Delta_{t} \\leftarrow \\sqrt{n} U^{(K)}$ ▷ Convert unit row $\\ell_{2}$ norm to unit row RMS",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered PDF physical p.16 Algorithm 1 line 17 reads \"Convert unit row ℓ2 norm to unit row RMS\" as a side comment; the OCR kept the step itself but dropped its comment."
+    },
+    {
+      "before": "18:  $\\widetilde{\\eta}_{t} \\leftarrow \\gamma\\eta_{t}$ ",
+      "after": "18:  $\\widetilde{\\eta}_{t} \\leftarrow \\gamma\\eta_{t}$ ▷ Match the update magnitude of Adam",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered PDF physical p.16 Algorithm 1 line 18 reads \"Match the update magnitude of Adam\" as a side comment; the OCR kept the step itself but dropped its comment."
+    },
+    {
+      "before": "19:  $W_{t+1} \\leftarrow W_{t} - \\widetilde{\\eta}_{t}\\Delta_{t}$ \n\n▷ Nesterov momentum\n\n▷ Mask near-zero rows\n</div>",
+      "after": "19:  $W_{t+1} \\leftarrow W_{t} - \\widetilde{\\eta}_{t}\\Delta_{t}$ \n</div>",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered PDF physical p.16 places these two comments beside steps 2 and 5; OCR left both orphaned after step 19, where they would misattribute. They are re-attached to their own steps by the matching patches."
+    },
+    {
+      "before": "## V4.1 therefore revises persistent KV cache management as follows:",
+      "after": "V4.1 therefore revises persistent KV cache management as follows:",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered PDF physical p.19 shows this sentence as an indented body paragraph introducing the numbered list, not a section heading; the OCR promoted it to a Markdown heading."
+    },
+    {
+      "before": "paper\\_files",
+      "after": "paper_files",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "PDF physical p.38 prints the URL https://proceedings.neurips.cc/paper_files/paper/... with a literal underscore; the OCR escape \\_ stays visible in the rendered autolink text and href (Marked keeps the backslash inside bare URLs), so the escape alters the visible link."
+    },
+    {
+      "before": "10.48550/A RXIV.2508.10925",
+      "after": "10.48550/ARXIV.2508.10925",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "Rendered PDF physical p.42 prints doi: 10.48550/ARXIV.2508.10925 with the line broken after \"A\"; OCR rendered the wrap as a space inside the identifier."
+    },
+    {
+      "before": "Jinping Yu",
+      "after": "Jiping Yu",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered PDF physical p.46 author list reads \"Jinyi Hu, Jiping Yu, Jueliang Guo\"; OCR inserted an n to make \"Jinping Yu\"."
+    },
+    {
+      "before": "Shutting Guo",
+      "after": "Shuting Guo",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered PDF physical p.46 author list reads \"Shuting Guo\"; OCR doubled the t."
+    },
+    {
+      "before": "Shutting Pan",
+      "after": "Shuting Pan",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered PDF physical p.46 author list reads \"Shuting Pan\"; OCR doubled the t."
+    },
+    {
+      "before": "Sinuo Caoi Siyi Lin Sizhe Chen,Songyang Chen,Songyang Zhou,Tao Ni,Tao Yun,Tian Jin,Tian Pei,Tian Ye,Tianle Lin,Tianran Ji\\*, Tianyi Cui,Tianyuan Yue,Tingting Yu,Tongrui Xiong,Wangding Zeng,Wei Liu,Wei ZhangWeibin Xu,Weihao Zeng,Weilin Zhao,Wen Liu,Wenfeng Liang,Wenjie Pang,Wenjing Luo,Wenjing Yao\\*,Wenjun Gao,Wenkai Shao,Wenkai Yang,Wenli Zhang,Wenlu Wang,Wenlve Huang,Wenqian Yan,Wentao Zhang,Xi Gao,Xiang He,Xiang Li,Xiangli Li,Xiangwen Wang,Xiangying Zhang,Xiankui Wei,Xiao Bi,Xiaodong Liu,Xiaohan Wang,Xiaojian Qu,Xiaokang Chen,Xiaokang Zhang,Xiaotao Nie,Xiaoyao Zou,Xiaoyuan Li,Xicheng Guo,Xieting Chu",
+      "after": "Sinuo Cao, Siyi Lin, Sizhe Chen,Songyang Chen, Songyang Zhou, Tao Ni, Tao Yun, Tian Jin, Tian Pei, Tian Ye, Tianle Lin, Tianran Ji\\*,  Tianyi Cui, Tianyuan Yue, Tingting Yu, Tongrui Xiong, Wangding Zeng, Wei Liu, Wei Zhang, Weibin Xu, Weihao Zeng, Weilin Zhao, Wen Liu, Wenfeng Liang, Wenjie Pang, Wenjing Luo, Wenjing Yao\\*, Wenjun Gao, Wenkai Shao, Wenkai Yang, Wenli Zhang, Wenlu Wang, Wenlve Huang, Wenqian Yan, Wentao Zhang, Xi Gao, Xiang He, Xiang Li, Xiangli Li, Xiangwen Wang, Xiangying Zhang, Xiankui Wei, Xiao Bi, Xiaodong Liu, Xiaohan Wang, Xiaojian Qu, Xiaokang Chen, Xiaokang Zhang, Xiaotao Nie, Xiaoyao Zou, Xiaoyuan Li, Xicheng Guo, Xieting Chu",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered PDF physical p.46 lists \"Sinuo Cao, Siyi Lin, Sizhe Chen, Songyang Chen, ..., Wei Zhang, Weibin Xu, ..., Xieting Chu\" with comma-space separators; OCR merged the Cao comma into \"Caoi\", dropped the Zhang/Weibin comma, and lost the spaces after commas through the rest of the line."
+    },
+    {
+      "before": "\\- mini-SWE. We use the mini\\_swe\\_v2 port $^{1}$ with a single bash tool, requiring a tool call each turn and a submission marker to finish.",
+      "after": "\\- mini-SWE. We use the mini\\_swe\\_v2 port $^{1}$ with a single bash tool, requiring a tool call each turn and a submission marker to finish.\n\n$^{1}$ mini-swe-agent, commit 04d809ceab9d.",
+      "count": 1,
+      "pdf_pages": [
+        48
+      ],
+      "evidence": "Rendered PDF physical p.48 carries the footnote \"1 mini-swe-agent, commit 04d809ceab9d.\" at the bottom of the page for the superscript 1 on \"mini_swe_v2 port\" in the mini-SWE bullet; the OCR kept the marker but dropped the footnote text entirely."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "paragraph-splits-from-line-wrapping",
+      "pdf_pages": [
+        7,
+        40,
+        46,
+        47
+      ],
+      "evidence": "Some paragraphs are split mid-sentence into adjacent Markdown paragraphs where the PDF breaks the page or column: the CED/CSA2 introduction on p.7 (\"...(CSA2)\" / \"address complementary costs...\"), the Cheng et al. 2026b reference on p.40 (\"...A new axis of\" / \"sparsity for large language models...\"), and the R&E author list, which resumes as a new paragraph on p.47 (\"...Xieting Chu\" / \"Xin Cheng, ...\"). No words are lost; rejoining changes visible paragraphing and was left for a coordinated decision."
+    },
+    {
+      "id": "missing-space-before-citation",
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "OCR reads \"Kimi-K3(Team et al., 2026a)\" where the PDF prints \"Kimi-K3 (Team et al., 2026a)\"; a single dropped space that does not change meaning, left outside the confirmed repair classes."
+    },
+    {
+      "id": "toc-dot-leaders-shortened",
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "evidence": "Most TOC rows shorten the printed dot leaders to \"..\"; page numbers are intact (the missing 2.1 page number is repaired by a patch). Purely cosmetic leader length was not normalized."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "meta:segment-anything",
+  "source_sha256": "c6ca524e47200c3e542587ca76ac1dbc89cc67340f948c819250d16fdbd90cfb",
+  "ocr_sha256": "c6801b258ad6f00f4dee664fbe6379dc62f1e72f1c90f301bdfdfc75633db0c9",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "coverage": "complete",
+    "notes": "Extracted text of all 30 physical pages compared against the OCR markdown with a normalized line-presence scan (case/punctuation-insensitive). All body text, footnote/affiliation notes (project lead, joint first author, equal contribution, directional lead on p.1), the Dataset Card Q&A (Appendix F) and reference entries survive in the OCR. No code fences, no dropped footnote bodies, no spaced digits found. Scan flags were ligature artifacts ('fi'/'fl' correctly transcribed as ASCII) or figure-internal text hoisted next to Figure 1, which is not a defect. Table-heavy appendix pages were covered by the same scan; per-cell numeric proofreading of every evaluation table was not exhaustive within the review budget."
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "table-cell-density",
+      "pdf_pages": [
+        8,
+        9,
+        10,
+        19,
+        20,
+        26,
+        27
+      ],
+      "evidence": "OCR HTML tables were present and structurally coherent; exhaustive per-cell numeric verification against renders was out of the review budget."
+    }
+  ]
+}

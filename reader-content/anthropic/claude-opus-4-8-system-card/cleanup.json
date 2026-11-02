@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-opus-4-8-system-card",
+  "source_sha256": "0df5d061b6688c2d5839476620d66960011cb69043185dbed87ed1f68ab76d8f",
+  "ocr_sha256": "61ba74f79f82b8f50dd43d0e178e93d5f9636ad1afc6674e3b990101f8ed57f1",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      14,
+      25,
+      113,
+      179,
+      180,
+      194,
+      212,
+      214,
+      229,
+      238
+    ],
+    "coverage": "partial",
+    "notes": "Triage pass within a fixed time budget. (a) Whole-document structural scan of all 3351 OCR lines: all 8 code fences balanced with no swallowed headings/tables/images; four in-figure chart titles and two callout-box labels were promoted to headings (patched). (b) Machine droppage scan of all 246 physical pages (normalized word 4-gram containment against the OCR markdown): 23 pages below 0.85 containment; the 12 lowest (25, 113, 229, 205, 167, 228, 196, 14, 198, 203, 217, 194) were inspected line-by-line against the extracted PDF text. (c) Every patch below was verified on a rendered page that was visually read (110-120 dpi): pages 14, 25, 113, 179, 180, 194, 212, 214, 229, 238. Pages 1-246 were machine-scanned, not read line-by-line. Footnote bodies are systematically absent from the OCR document-wide; only the pages listed above were visually verified, so only those footnotes are patched here. Remaining mid-containment pages (150, 196-203, 219-220, 225-226, 228-229) had line-level inspection only where listed."
+  },
+  "patches": [
+    {
+      "before": "# How preference changes as a task dimension is varied",
+      "after": "How preference changes as a task dimension is varied",
+      "count": 1,
+      "pdf_pages": [
+        180
+      ],
+      "evidence": "Rendered physical p.180 shows this text as the centered in-figure banner title above the Figure 7.4.1.B plots (with the model legend row directly beneath, also inside the figure); the string appears in no PDF text layer and not in the embedded figure JPG, so it exists only inside the rendered figure. A heading whose text exists only inside a figure image is demoted to plain text (physical p.179 for Figure 7.4.1.A uses the same banner style and was correctly not a heading in OCR)."
+    },
+    {
+      "before": "# Multi-agent BrowseComp speedup vs empirical pass rate",
+      "after": "Multi-agent BrowseComp speedup vs empirical pass rate",
+      "count": 1,
+      "pdf_pages": [
+        212
+      ],
+      "evidence": "Rendered physical p.212 shows this text as the centered in-figure banner title of Figure 8.11.1.C, followed inside the figure by the legend entries that OCR kept as plain lines; the title appears in no PDF text layer. Demoted to plain text."
+    },
+    {
+      "before": "# Multi-Agent ProgramBench Evals: Score vs Tokens",
+      "after": "Multi-Agent ProgramBench Evals: Score vs Tokens",
+      "count": 1,
+      "pdf_pages": [
+        214
+      ],
+      "evidence": "Rendered physical p.214 shows this text as the centered in-figure banner title above the Figure 8.11.2.B plot; the PDF text layer contains only the caption's \"Score vs. tokens\" wording, not this title. Demoted to plain text."
+    },
+    {
+      "before": "## Adherence to the constitution scores",
+      "after": "Adherence to the constitution scores",
+      "count": 1,
+      "pdf_pages": [
+        113
+      ],
+      "evidence": "Rendered physical p.113 shows this text as the centered orange in-figure banner title above the Figure 6.3.2.3.A bar-chart grid; it is not a document heading in the PDF. Demoted to plain text."
+    },
+    {
+      "before": "## RSP v3.1 threshold:",
+      "after": "**RSP v3.1 threshold:**",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 shows \"RSP v3.1 threshold:\" as a bold lead-in label inside the left shaded callout box comparing CB-2 threshold wordings, not as a section heading (the document TOC does not list it). Demoted to the printed bold text."
+    },
+    {
+      "before": "## RSP v3.3 threshold:",
+      "after": "**RSP v3.3 threshold:**",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 shows \"RSP v3.3 threshold:\" as a bold lead-in label inside the right shaded callout box, not a section heading. Demoted to the printed bold text."
+    },
+    {
+      "before": "8.1 Evaluation summary\n\n<table>",
+      "after": "## 8.1 Evaluation summary\n\n<table>",
+      "count": 1,
+      "pdf_pages": [
+        194
+      ],
+      "evidence": "Rendered physical p.194 prints \"8.1 Evaluation summary\" as a standalone section heading between \"8 Capabilities\" and Table 8.1.A, styled like the other numbered sections; OCR lost the heading marker, leaving body text. The exporter's numbered-heading normalizer assigns the same depth as sibling \"8.2\". The only other occurrence is the TOC line \"8.1 Evaluation summary 194\", excluded by the table-anchor context."
+    },
+    {
+      "before": "9.1 Welfare questions\n\n",
+      "after": "## 9.1 Welfare questions\n\n",
+      "count": 1,
+      "pdf_pages": [
+        238
+      ],
+      "evidence": "Rendered physical p.238 prints \"9.1 Welfare questions\" as a standalone section heading under \"9 Appendix\" before Table 9.1.A; OCR lost the heading marker (the TOC at OCR line 252 lists \"9.1 Welfare questions 238\" with a trailing page number, so the blank-line context matches only the body occurrence)."
+    },
+    {
+      "before": "Adherence is judged on a scale from -3 to +3, where a higher score indicates greater adherence. $n \\approx 1{,}000$ per model. Shown with 95% CI.",
+      "after": "[Figure 6.3.2.3.A] Average constitutional adherence scores for each model across all 15 dimensions. Adherence is judged on a scale from -3 to +3, where a higher score indicates greater adherence. $n \\approx 1{,}000$ per model. Shown with 95% CI.",
+      "count": 1,
+      "pdf_pages": [
+        113
+      ],
+      "evidence": "Rendered physical p.113 prints the caption as \"[Figure 6.3.2.3.A] Average constitutional adherence scores for each model across all 15 dimensions. Adherence is judged on a scale from -3 to +3, ... Shown with 95% CI.\"; OCR dropped the first sentence (the marker string \"[Figure 6.3.2.3.A]\" occurs 0 times in the OCR) and kept only the second sentence after the image embed."
+    },
+    {
+      "before": "Grey highlighting indicates human benchmark\n",
+      "after": "Grey highlighting indicates human benchmark performances when participant data is available for a metric. Middle row: Prediction score over all sequences (left) and top 5% of sequences (right). Bottom row: Score ranges for design and prediction. Lines show the range of scores achieved in runs of the same model, and their intersection shows the mean performance across runs of the same model.\n",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints the Figure 2.2.5.1.A caption through \"...and their intersection shows the mean performance across runs of the same model.\"; OCR truncated the caption mid-sentence after \"human benchmark\" and dropped the remaining four printed lines."
+    },
+    {
+      "before": "range of languages.\n\nGMMLU extends the standard MMLU evaluation",
+      "after": "range of languages.\n\n62 Singh, S., et al. (2024). Global MMLU: Understanding and addressing cultural and linguistic biases in multilingual evaluation. arXiv:2412.03304. https://arxiv.org/abs/2412.03304\n\n63 Romanou, A., et al. (2024). INCLUDE: Evaluating multilingual language understanding with regional knowledge. arXiv:2411.19799. https://arxiv.org/abs/2411.19799\n\n64 Verma, S., et al. (2024). MILU: A Multi-task Indic Language Understanding benchmark. arXiv:2411.02538. https://arxiv.org/abs/2411.02538\n\nGMMLU extends the standard MMLU evaluation",
+      "count": 1,
+      "pdf_pages": [
+        229
+      ],
+      "evidence": "Rendered physical p.229 prints footnotes 62-64 in that order beneath the citing paragraph (whose $^{62}$/$^{63}$/$^{64}$ markers survive at OCR line 3172 while no footnote body exists anywhere in the OCR). Inserted verbatim in printed order after the citing paragraph."
+    },
+    {
+      "before": "we present the multi-agent ProgramBench results in this section.\n\n",
+      "after": "we present the multi-agent ProgramBench results in this section.\n\n44 Yang, J., et al. (2026). ProgramBench: Can Language Models Rebuild Programs From Scratch? arXiv:2605.03546. https://arxiv.org/abs/2605.03546\n\n",
+      "count": 1,
+      "pdf_pages": [
+        212
+      ],
+      "evidence": "Rendered physical p.212 prints footnote 44 beneath the first paragraph of section 8.11.2, whose $^{44}$ marker survives in the OCR (\"ProgramBench $^{44}$ is a benchmark of 200 real open-source programs\"). Body verified verbatim on the render and inserted after the citing paragraph."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "footnote-bodies-missing-document-wide",
+      "pdf_pages": [
+        14,
+        167,
+        194,
+        196,
+        198,
+        203,
+        205,
+        217,
+        228
+      ],
+      "evidence": "All footnote bodies are absent from the OCR document-wide while the superscript markers survive in body text and tables (63 distinct $^{n}$ markers; zero footnote-body lines such as 'arXiv:...' citations exist in the OCR). Verified visually and left unpatched only because unverified in this pass: footnotes 1-4 on p.14, 27-28 on p.194, 31-32 on p.196, 35-36 on p.198, 41 on p.203, 42 on p.205, 47-48 on p.217, 61 on p.228, 24 on p.167 (machine-flagged; text-layer evidence). A page-by-page batch can restore each with the same render-verify-insert procedure used for footnotes 44 and 62-64."
+    },
+    {
+      "id": "glued-table-cells-8-1-A-p195",
+      "pdf_pages": [
+        195
+      ],
+      "evidence": "Table 8.1.A cells glue value/annotation spacing where the PDF stacks lines: \"76.2(3.5 Flash:78.4)\", \"78.2(Gemini 3.5Flash: 83.6)\", \"9.6(3.5 Flash: 14.5)\". The OSWorld row on p.194 was visually confirmed to print \"76.2 (3.5 Flash: 78.4)\"; the Finance Agent and MCP-Atlas rows fall on p.195, which was not rendered in this pass, so the patches were deferred to avoid unverified table edits."
+    },
+    {
+      "id": "transcript-subcaptions-as-headings",
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Inside quoted model transcripts (section on agentic-coding example sessions, e.g. \"## Claude said it was babysitting pull requests when it wasn't.\", \"## Later:\", \"Assistant: ## The reframe that makes it solvable: grant-first, not model-first\") OCR promoted printed bold lead-ins and transcript-internal headings to document headings. Not verified against a rendered page in this pass; left unchanged."
+    }
+  ]
+}

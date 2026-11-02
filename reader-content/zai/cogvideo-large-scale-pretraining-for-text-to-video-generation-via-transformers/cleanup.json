@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "zai:cogvideo-large-scale-pretraining-for-text-to-video-generation-via-transformers",
+  "source_sha256": "f4a8a8422fa3e37b47c449b11f6c5519f3c9f3726dbf1ba3663092287ca4108d",
+  "ocr_sha256": "54c64e3d62ffa4a61db50b9dfaa3f8e08d8f772dc37c684a3d86485adc9b4066",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 15 physical PDF pages against the OCR markdown; no code fences in the source. Physical page 1 was rendered at 300 dpi (footnote and footer crop) to verify the two dropped title-page lines. Equations (1)-(3), the sequence templates in 3.1, and the bodies of Table 1 (Left/Right) and Table 2 are all present in the OCR. Remaining deltas are Figure 1-10 internal labels and axis ticks (figure-internal), table row-order reflow in the HTML tables, and the rotated arXiv margin stamp (intentionally not restored)."
+  },
+  "patches": [
+    {
+      "before": "{hongwy18@mails, dm18@mails, jietang@mail}.tsinghua.edu.cn\n\n## Abstract",
+      "after": "{hongwy18@mails, dm18@mails, jietang@mail}.tsinghua.edu.cn\n\n\\*Equal contribution.\n\nPreprint. Under review.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (300 dpi bottom crop) prints a footnote rule followed by '*Equal contribution.' and the page footer 'Preprint. Under review.'; OCR kept the '*' markers in the superscripts of Wenyi Hong and Ming Ding but dropped both lines."
+    }
+  ],
+  "unresolved": []
+}

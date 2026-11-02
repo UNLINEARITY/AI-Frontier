@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "id": "meta:the-llama-3-herd-of-models",
+  "source_sha256": "481f1599468f95a07d05e97fafe55bbe786dc1624c6f881bcb4c7d14c933d083",
+  "ocr_sha256": "c73e3f44798e3ee91e727fe3a246500688daadc0939bcb57f7329dfb852b99bc",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      13,
+      15,
+      18,
+      24,
+      25,
+      30,
+      31,
+      32,
+      34,
+      36,
+      37,
+      38,
+      39,
+      41,
+      42,
+      43,
+      44,
+      47,
+      51,
+      52,
+      61,
+      62,
+      63,
+      65,
+      66,
+      67,
+      68
+    ],
+    "coverage": "partial",
+    "notes": "Full structural scan (all code fences balanced; the two ``` blocks are the printed benchmark code listings of Section 4.3.1) plus an automated normalized 4-gram containment diff of every one of the 92 physical PDF pages against the OCR markdown; every low-containment page was then inspected line-by-line (chart-axis labels and row-major table reordering explain most residuals; Tables 1-15, 20, 26, 27, 29, 33, 34 bodies are present). Systematic finding: all footnote bodies except footnote 1 were dropped by OCR while their markers survive - bodies 2-13 and 15-22 restored from the PDF text layer (fn2, fn9 tail, fn18 tail verified on renders). Table 2 header names, caption key symbols, in-table result symbols and the Llama Guard 14 superscript verified on 300/600/120-dpi renders. Table 20 placement restored to the printed order. Coverage is partial: prose of pages not flagged by the diff was machine-scanned only, not read line-by-line, and reference entries were checked by containment only."
+  },
+  "patches": [
+    {
+      "before": "<td>Llama 38B</td>",
+      "after": "<td>Llama 3 8B</td>",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 at 300 dpi: the Table 2 header cell prints \"Llama 3 8B\" (rotated); OCR glued the model family and size into \"Llama 38B\"."
+    },
+    {
+      "before": "<td>Gemma 29B</td>",
+      "after": "<td>Gemma 2 9B</td>",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 at 300 dpi: Table 2 header prints \"Gemma 2 9B\"; OCR glued it into \"Gemma 29B\"."
+    },
+    {
+      "before": "<td>Llama 370B</td>",
+      "after": "<td>Llama 3 70B</td>",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 at 300 dpi: Table 2 header prints \"Llama 3 70B\"; OCR glued it into \"Llama 370B\"."
+    },
+    {
+      "before": "<td>Llama 3405B</td>",
+      "after": "<td>Llama 3 405B</td>",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 at 300 dpi: Table 2 header prints \"Llama 3 405B\"; OCR glued it into \"Llama 3405B\"."
+    },
+    {
+      "before": "<td>Nemotron 4340B</td>",
+      "after": "<td>Nemotron 4 340B</td>",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 at 300 dpi: Table 2 header prints \"Nemotron 4 340B\"; OCR glued it into \"Nemotron 4340B\"."
+    },
+    {
+      "before": "$\\triangle$ Results obtained without CoT. $\\diamond$ Results obtained using zero-shot prompting.",
+      "after": "$\\triangleleft$ Results obtained without CoT. $\\diamondsuit$ Results obtained using zero-shot prompting.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 caption at 600 dpi and the PDF text layer: the key prints \"△Results obtained using 5-shot prompting (no CoT). ◁Results obtained without CoT. ♢Results obtained using zero-shot prompting.\" The second symbol is a left-pointing open triangle and the third a white diamond suit; OCR wrote $\\triangle$ twice and $\\diamond$."
+    },
+    {
+      "before": "78.7 $^{\\blacktriangle}$",
+      "after": "78.7 $^{\\triangleleft}$",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 2 at 600 dpi: the MMLU (0-shot, CoT) Nemotron cell prints \"78.7◁\" (open left triangle); OCR read a filled up-triangle $\\blacktriangle$. PDF text layer has U+25C1."
+    },
+    {
+      "before": "92.3 $^{\\blacklozenge}$",
+      "after": "92.3 $^{\\diamondsuit}$",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 2 at 600 dpi: the GSM8K Nemotron cell prints \"92.3♢\" (white diamond suit); OCR read a filled blacklozenge. PDF text layer has U+2662."
+    },
+    {
+      "before": "96.4 $^{\\blacklozenge}$",
+      "after": "96.4 $^{\\diamondsuit}$",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 2 at 600 dpi: the GSM8K Claude 3.5 Sonnet cell prints \"96.4♢\" (white diamond suit); OCR read a filled blacklozenge. PDF text layer has U+2662."
+    },
+    {
+      "before": "- Indiscriminate  $Weapons^{14}$ ",
+      "after": "- Indiscriminate Weapons$^{14}$ ",
+      "count": 1,
+      "pdf_pages": [
+        51
+      ],
+      "evidence": "Rendered physical p.51 at 120 dpi: the Table 26 row prints \"Indiscriminate Weapons\" with a small superscript 14 after \"Weapons\"; OCR pulled \"Weapons\" inside the math span ($Weapons^{14}$) and doubled the space. The printed footnote 14 itself has no visible body on p.51 (see unresolved)."
+    },
+    {
+      "before": "$^{2}$ stage, we also integrate new capabilities, such as tool-use, and observe strong improvements in other areas, such as coding and reasoning. See Section 4 for details. Finally, safety mitigations are also incorporated into the model at the post-training stage, the details of which are described in Section 5.4.",
+      "after": "$^{2}$ stage, we also integrate new capabilities, such as tool-use, and observe strong improvements in other areas, such as coding and reasoning. See Section 4 for details. Finally, safety mitigations are also incorporated into the model at the post-training stage, the details of which are described in Section 5.4.\n\n$^{2}$ In this paper, we use the term “post-training” to refer to any model training that happens outside of pre-training.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 bottom at 300 dpi (visual): page-bottom footnote reads \"2In this paper, we use the term “post-training” to refer to any model training that happens outside of pre-training.\" The marker survives on \"At this post-training $^{2}$ stage\" while the body was dropped."
+    },
+    {
+      "before": "$^{3}$ tokenizer with 28K additional tokens to better support non-English languages. Compared to the Llama 2 tokenizer, our new tokenizer improves compression rates on a sample of English data from 3.17 to 3.94 characters per token. This enables the model to “read” more text for the same amount of training compute. We also found that adding 28K tokens from select non-English languages improved both compression ratios and downstream performance, with no impact on English tokenization.",
+      "after": "$^{3}$ tokenizer with 28K additional tokens to better support non-English languages. Compared to the Llama 2 tokenizer, our new tokenizer improves compression rates on a sample of English data from 3.17 to 3.94 characters per token. This enables the model to “read” more text for the same amount of training compute. We also found that adding 28K tokens from select non-English languages improved both compression ratios and downstream performance, with no impact on English tokenization.\n\n$^{3}$ https://github.com/openai/tiktoken/tree/main",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "PDF physical p.7 bottom line reads \"3https://github.com/openai/tiktoken/tree/main\"; only the marker $^{3}$ survives on \"tiktoken $^{3}$ tokenizer\"."
+    },
+    {
+      "before": "$^{4}$ OCP rack switches. Smaller models in the Llama 3 family were trained using Nvidia Quantum2 Infiniband fabric. Both RoCE and Infiniband clusters leverage 400 Gbps interconnects between GPUs. Despite the underlying network technology differences between these clusters, we tune both of them to provide equivalent performance for these large training workloads. We elaborate further on our RoCE network since we fully own its design.",
+      "after": "$^{4}$ OCP rack switches. Smaller models in the Llama 3 family were trained using Nvidia Quantum2 Infiniband fabric. Both RoCE and Infiniband clusters leverage 400 Gbps interconnects between GPUs. Despite the underlying network technology differences between these clusters, we tune both of them to provide equivalent performance for these large training workloads. We elaborate further on our RoCE network since we fully own its design.\n\n$^{4}$ Open Compute Project: https://www.opencompute.org/",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "PDF physical p.9 bottom line reads \"4Open Compute Project: https://www.opencompute.org/\"; only the marker $^{4}$ survives on \"Minipack2 Open Compute Project $^{4}$ OCP rack switches\"."
+    },
+    {
+      "before": "$^{5}$ connected by a three-layer Clos network (Lee et al., 2024). At the bottom layer, each rack hosts 16 GPUs split between two servers and connected by a single Minipack2 top-of-the-rack (ToR) switch. In the middle layer, 192 such racks are connected by Cluster Switches to form a pod of 3,072 GPUs with full bisection bandwidth, ensuring no oversubscription. At the top layer, eight such pods within the same datacenter building are connected via Aggregation Switches to form a cluster of 24K GPUs. However, network connectivity at the aggregation layer does not maintain full bisection bandwidth and instead has an oversubscription ratio of 1:7. Our model parallelism methods (see Section 3.3.2) and training job scheduler (Choudhury et al., 2024) are all optimized to be aware of network topology, aiming to minimize network communication across pods.",
+      "after": "$^{5}$ connected by a three-layer Clos network (Lee et al., 2024). At the bottom layer, each rack hosts 16 GPUs split between two servers and connected by a single Minipack2 top-of-the-rack (ToR) switch. In the middle layer, 192 such racks are connected by Cluster Switches to form a pod of 3,072 GPUs with full bisection bandwidth, ensuring no oversubscription. At the top layer, eight such pods within the same datacenter building are connected via Aggregation Switches to form a cluster of 24K GPUs. However, network connectivity at the aggregation layer does not maintain full bisection bandwidth and instead has an oversubscription ratio of 1:7. Our model parallelism methods (see Section 3.3.2) and training job scheduler (Choudhury et al., 2024) are all optimized to be aware of network topology, aiming to minimize network communication across pods.\n\n$^{5}$ Note that we use only up to 16K of these 24K GPUs for Llama 3 pre-training.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "PDF physical p.9 bottom line reads \"5Note that we use only up to 16K of these 24K GPUs for Llama 3 pre-training.\"; only the marker $^{5}$ survives on \"24K GPUs $^{5}$ connected by a three-layer Clos network\"."
+    },
+    {
+      "before": "$^{6}$ or aligning the model with human feedback (Ouyang et al., 2022; Rafailov et al., 2024) on top of a pre-trained checkpoint. Each round of post-training involves supervised finetuning (SFT) followed by Direct Preference Optimization (DPO; Rafailov et al., 2024) on examples collected either via human annotations or generated synthetically. Our post-training modeling and data approaches are described in Sections 4.1 and 4.2 respectively. We further detail custom data curation strategies to improve the reasoning, coding, factuality, multilingual, tool use, long context, and precise instruction following in Section 4.3.",
+      "after": "$^{6}$ or aligning the model with human feedback (Ouyang et al., 2022; Rafailov et al., 2024) on top of a pre-trained checkpoint. Each round of post-training involves supervised finetuning (SFT) followed by Direct Preference Optimization (DPO; Rafailov et al., 2024) on examples collected either via human annotations or generated synthetically. Our post-training modeling and data approaches are described in Sections 4.1 and 4.2 respectively. We further detail custom data curation strategies to improve the reasoning, coding, factuality, multilingual, tool use, long context, and precise instruction following in Section 4.3.\n\n$^{6}$ We use the term “post-training” to refer to any model training that happens outside of pre-training.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "PDF physical p.15 bottom line reads \"6We use the term “post-training” to refer to any model training that happens outside of pre-training.\"; only the marker $^{6}$ survives on \"several rounds of post-training, $^{6}$ or aligning\"."
+    },
+    {
+      "before": "$^{7}$ to answer questions about recent events that go beyond its knowledge cutoff or that require retrieving a particular piece of information from the web.",
+      "after": "$^{7}$ to answer questions about recent events that go beyond its knowledge cutoff or that require retrieving a particular piece of information from the web.\n\n$^{7}$ https://brave.com/search/api/",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "PDF physical p.24 bottom line reads \"7https://brave.com/search/api/\"; only the marker $^{7}$ survives on \"Brave Search $^{7}$ to answer questions\"."
+    },
+    {
+      "before": "$^{8}$ to more accurately solve math, science problems, or retrieve accurate information from Wolfram's database.",
+      "after": "$^{8}$ to more accurately solve math, science problems, or retrieve accurate information from Wolfram's database.\n\n$^{8}$ https://products.wolframalpha.com/llm-api/documentation",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "PDF physical p.25 bottom line reads \"8https://products.wolframalpha.com/llm-api/documentation\"; only the marker $^{8}$ survives on \"Wolfram Alpha API $^{8}$ to more accurately solve math\"."
+    },
+    {
+      "before": "$^{9}$ In Table 20, we show results from evaluating Llama 3 on the multilingual MMLU (Hendrycks et al., 2021a) and Multilingual Grade School Math (MGSM) (Shi et al., 2022) benchmarks.",
+      "after": "$^{9}$ In Table 20, we show results from evaluating Llama 3 on the multilingual MMLU (Hendrycks et al., 2021a) and Multilingual Grade School Math (MGSM) (Shi et al., 2022) benchmarks.\n\n$^{9}$ Llama 3 has not been optimized or safety tuned for use cases in those other languages. Developers may fine-tune Llama 3 models for languages beyond the 8 supported languages provided they comply with the Llama 3 Community License and the Acceptable Use Policy and in such cases are responsible for ensuring that any uses of Llama 3 in additional languages is done in a safe and responsible manner.",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "PDF physical p.37 bottom (3 small-font lines, tail \"safe and responsible manner.\" visually confirmed on a 150-dpi render): footnote 9 body dropped while the marker $^{9}$ survives after \"a broader collection of languages. $^{9}$\"."
+    },
+    {
+      "before": "$^{10}$ . The results are provided in Figure 16. On text-only code execution tasks and plots generation, Llama 3 405B significantly beats GPT-4o. However, it lags behind on the file upload use case.",
+      "after": "$^{10}$ . The results are provided in Figure 16. On text-only code execution tasks and plots generation, Llama 3 405B significantly beats GPT-4o. However, it lags behind on the file upload use case.\n\n$^{10}$ https://platform.openai.com/docs/assistants/overview",
+      "count": 1,
+      "pdf_pages": [
+        39
+      ],
+      "evidence": "PDF physical p.39 bottom line reads \"10https://platform.openai.com/docs/assistants/overview\"; only the marker $^{10}$ survives on \"OpenAI's Assistants API $^{10}$ .\""
+    },
+    {
+      "before": "$^{11}$ (English, reasoning, and coding). We ensured that within each category, prompts are uniformly distributed across subcategories. We also categorized each prompt into one of three difficulty levels and ensured that our prompt collection contains roughly 10% easy prompts, 30% medium prompts, and 60% hard prompts. All the human evaluation prompt sets were subject to a thorough quality assurance process. Modeling teams did not have access to our human-evaluation prompts to prevent accidental contamination or overfitting on the test set.",
+      "after": "$^{11}$ (English, reasoning, and coding). We ensured that within each category, prompts are uniformly distributed across subcategories. We also categorized each prompt into one of three difficulty levels and ensured that our prompt collection contains roughly 10% easy prompts, 30% medium prompts, and 60% hard prompts. All the human evaluation prompt sets were subject to a thorough quality assurance process. Modeling teams did not have access to our human-evaluation prompts to prevent accidental contamination or overfitting on the test set.\n\n$^{11}$ For multiturn human evaluations, the number of turns is between 2 and 11 in each prompt. We assess the model response in the final turn.",
+      "count": 1,
+      "pdf_pages": [
+        39
+      ],
+      "evidence": "PDF physical p.39 bottom lines read \"11For multiturn human evaluations, the number of turns is between 2 and 11 in each prompt. We assess the model response in the final turn.\"; only the marker $^{11}$ survives."
+    },
+    {
+      "before": "$^{12}$",
+      "after": "$^{12}$\n\n$^{12}$ Note there are limitations with our analysis — for example, recent work advocates for metrics beyond exact match (Ippolito et al., 2023) and alternative prompt search strategies (Kassem et al., 2024). Nonetheless, we find the results of the evaluations to be encouraging.",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "PDF physical p.42 bottom lines read \"12Note there are limitations with our analysis — for example, recent work advocates for metrics beyond exact match (Ippolito et al., 2023) and alternative prompt search strategies (Kassem et al., 2024). Nonetheless, we find the results of the evaluations to be encouraging.\"; only the marker $^{12}$ survives at the end of the memorization paragraph."
+    },
+    {
+      "before": "$^{13}$ We evaluate our Llama models both standalone and coupled with Llama Guard, our open source system-level safety solution (more in Section 5.4.7).",
+      "after": "$^{13}$ We evaluate our Llama models both standalone and coupled with Llama Guard, our open source system-level safety solution (more in Section 5.4.7).\n\n$^{13}$ Because these safety benchmarks are internal to Meta, we acknowledge that the numbers in this section are not reproducible externally, and so we choose to anonymize the competitors we evaluate against.",
+      "count": 1,
+      "pdf_pages": [
+        44
+      ],
+      "evidence": "PDF physical p.44 bottom lines read \"13Because these safety benchmarks are internal to Meta, we acknowledge that the numbers in this section are not reproducible externally, and so we choose to anonymize the competitors we evaluate against.\"; only the marker $^{13}$ survives."
+    },
+    {
+      "before": "$^{15}$ to reduce the overhead of calculating the scales. We find that the quality of Llama 3 405B is sensitive to certain types of quantization, and make a few additional changes to increase the model output quality:",
+      "after": "$^{15}$ to reduce the overhead of calculating the scales. We find that the quality of Llama 3 405B is sensitive to certain types of quantization, and make a few additional changes to increase the model output quality:\n\n$^{15}$ Our FP8 kernels are available at https://github.com/pytorch/FBGEMM/tree/main/fbgemm_gpu/experimental/gen_ai. We provide usage examples at https://github.com/meta-llama/llama-agentic-system.",
+      "count": 1,
+      "pdf_pages": [
+        52
+      ],
+      "evidence": "PDF physical p.52 bottom lines read \"15Our FP8 kernels are available at https://github.com/pytorch/FBGEMM/tree/main/fbgemm_gpu/experimental/gen_ai.\" plus \"We provide usage examples at https://github.com/meta-llama/llama-agentic-system.\"; only the marker $^{15}$ survives on \"optimizing our CUDA kernels $^{15}$\"."
+    },
+    {
+      "before": "$^{16}$",
+      "after": "$^{16}$\n\n$^{16}$ See https://eval.ai/web/challenges/challenge-page/2091/overview.",
+      "count": 1,
+      "pdf_pages": [
+        62
+      ],
+      "evidence": "PDF physical p.62 bottom line reads \"16See https://eval.ai/web/challenges/challenge-page/2091/overview.\"; only the marker $^{16}$ survives after \"submitting our predictions to an online challenge server. $^{16}$\"."
+    },
+    {
+      "before": "$^{17}$",
+      "after": "$^{17}$\n\n$^{17}$ See https://github.com/doc-doc/NExT-OE.",
+      "count": 1,
+      "pdf_pages": [
+        62
+      ],
+      "evidence": "PDF physical p.62 bottom line reads \"17See https://github.com/doc-doc/NExT-OE.\"; only the marker $^{17}$ survives after \"Wu-Palmer Similarity (WUPS) (Wu and Palmer, 1994). $^{17}$\"."
+    },
+    {
+      "before": "$^{18}$ It also allows for the interleaved input of text and speech, enabling the model to solve advanced audio-comprehension tasks.",
+      "after": "$^{18}$ It also allows for the interleaved input of text and speech, enabling the model to solve advanced audio-comprehension tasks.\n\n$^{18}$ The speech interface supports the following 34 languages: Arabic, Bengali, Chinese, Czech, Dutch, English, Finnish, French, German, Greek, Gujarati, Hindi, Hungarian, Indonesian, Italian, Japanese, Kannada, Korean, Malayalam, Marathi, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Swahili, Swedish, Tamil, Telugu, Thai, Turkish, Urdu, Vietnamese.",
+      "count": 1,
+      "pdf_pages": [
+        63
+      ],
+      "evidence": "PDF physical p.63 bottom (3 small-font lines; continuation \"German, Greek, ... Urdu, Vietnamese.\" visually confirmed on a 150-dpi render): footnote 18 body dropped while the marker $^{18}$ survives after \"supports up to 34 languages. $^{18}$\"."
+    },
+    {
+      "before": "$^{19}$ In all the evaluations, we used greedy search for Llama 3 token prediction.",
+      "after": "$^{19}$ In all the evaluations, we used greedy search for Llama 3 token prediction.\n\n$^{19}$ Due to technical limitations, we compare with the performance of Gemini on MLS reported in the original paper.",
+      "count": 1,
+      "pdf_pages": [
+        66
+      ],
+      "evidence": "PDF physical p.66 bottom line reads \"19Due to technical limitations, we compare with the performance of Gemini on MLS reported in the original paper.\"; only the marker $^{19}$ survives after \"(Barrault et al., 2023), and Gemini. $^{19}$\"."
+    },
+    {
+      "before": "$^{20}$ and SeamlessM4T on all benchmarks. On MLS English, Llama 3 performs similarly to Gemini.",
+      "after": "$^{20}$ and SeamlessM4T on all benchmarks. On MLS English, Llama 3 performs similarly to Gemini.\n\n$^{20}$ On FLEURS ASR, Malayalam is not officially reported for Whisper v3, so we use the average of 33 languages.",
+      "count": 1,
+      "pdf_pages": [
+        67
+      ],
+      "evidence": "PDF physical p.67 bottom line reads \"20On FLEURS ASR, Malayalam is not officially reported for Whisper v3, so we use the average of 33 languages.\"; only the marker $^{20}$ survives after \"speech like Whisper $^{20}$ and SeamlessM4T\"."
+    },
+    {
+      "before": "$^{21}$ The performance of our models in speech translation highlights the advantages of multimodal foundation models for tasks such as speech translation.",
+      "after": "$^{21}$ The performance of our models in speech translation highlights the advantages of multimodal foundation models for tasks such as speech translation.\n\n$^{21}$ On Covost 2, we evaluate only on 15 (out of 21) languages.",
+      "count": 1,
+      "pdf_pages": [
+        67
+      ],
+      "evidence": "PDF physical p.67 bottom line reads \"21On Covost 2, we evaluate only on 15 (out of 21) languages.\"; only the marker $^{21}$ survives after \"Table 32 presents the results of these experiments. $^{21}$\"."
+    },
+    {
+      "before": "$^{22}$ The percentage of added toxicity is very low: our speech models have the lowest percentage of added toxicity for English, with less than 1%. It removes significantly more toxicity than it adds.",
+      "after": "$^{22}$ The percentage of added toxicity is very low: our speech models have the lowest percentage of added toxicity for English, with less than 1%. It removes significantly more toxicity than it adds.\n\n$^{22}$ Note that for Gemini, we encountered that a significant number of responses were empty, which could be due to safety filters on their side (though some empty responses were for non-toxic input) or to rate limits. To conduct the analysis, we assumed that all the empty responses are safe. This is the most conservative approach for results and the upper bound of what Gemini results would look like.",
+      "count": 1,
+      "pdf_pages": [
+        67
+      ],
+      "evidence": "PDF physical p.67 bottom (4 small-font lines) read \"22Note that for Gemini, we encountered that a significant number of responses were empty, which could be due to safety filters on their side (though some empty responses were for non-toxic input) or to rate limits. To conduct the analysis, we assumed that all the empty responses are safe. This is the most conservative approach for results and the upper bound of what Gemini results would look like.\"; only the marker $^{22}$ survives."
+    },
+    {
+      "before": "is the best in its category\n\n<table><tr><td>Model</td><td>MGSM</td><td>Multilingual MMLU</td></tr><tr><td>Llama 3 8B</td><td>68.9</td><td>58.6</td></tr><tr><td>Mistral 7B</td><td>29.9</td><td>46.8</td></tr><tr><td>Gemma 2 9B</td><td>53.2</td><td>-</td></tr><tr><td>Llama 3 70B</td><td>86.9</td><td>78.2</td></tr><tr><td>GPT-3.5 Turbo</td><td>51.4</td><td>58.8</td></tr><tr><td>Mixtral 8×22B</td><td>71.1</td><td>64.3</td></tr><tr><td>Llama 3 405B</td><td>91.6</td><td>83.2</td></tr><tr><td>GPT-4</td><td>85.9</td><td>80.2</td></tr><tr><td>GPT-4o</td><td>90.5</td><td>85.5</td></tr><tr><td>Claude 3.5 Sonnet</td><td>91.6</td><td>-</td></tr></table>\n\nTable 20 Multilingual benchmarks. For MGSM (Shi et al., 2022), we report 0-shot CoT results for our Llama 3 models. Multilingual MMLU is an internal benchmark with translated MMLU (Hendrycks et al., 2021a) questions and answers into 7 languages – we report 5-shot results averaged across these languages.\n\non GSM8K and ARC-C",
+      "after": "is the best in its category on GSM8K and ARC-C",
+      "count": 1,
+      "pdf_pages": [
+        37,
+        38
+      ],
+      "evidence": "PDF physical p.37-38: the sentence \"Finally, Llama 3 405B model is the best in its category on GSM8K and ARC-C, ...\" is printed as one continuous paragraph in Section 5.2.5, while Table 20 with its caption is printed at the top of physical p.38 BEFORE the \"We find that Llama 3 405B outperforms most other models on MGSM\" paragraph, inside Section 5.2.4 Multilingual Benchmarks. The OCR interleaved the table and caption into the middle of the 5.2.5 sentence; this patch removes them from the sentence."
+    },
+    {
+      "before": "languages covered in MGSM benchmark.\n\nWe find that",
+      "after": "languages covered in MGSM benchmark.\n\n<table><tr><td>Model</td><td>MGSM</td><td>Multilingual MMLU</td></tr><tr><td>Llama 3 8B</td><td>68.9</td><td>58.6</td></tr><tr><td>Mistral 7B</td><td>29.9</td><td>46.8</td></tr><tr><td>Gemma 2 9B</td><td>53.2</td><td>-</td></tr><tr><td>Llama 3 70B</td><td>86.9</td><td>78.2</td></tr><tr><td>GPT-3.5 Turbo</td><td>51.4</td><td>58.8</td></tr><tr><td>Mixtral 8×22B</td><td>71.1</td><td>64.3</td></tr><tr><td>Llama 3 405B</td><td>91.6</td><td>83.2</td></tr><tr><td>GPT-4</td><td>85.9</td><td>80.2</td></tr><tr><td>GPT-4o</td><td>90.5</td><td>85.5</td></tr><tr><td>Claude 3.5 Sonnet</td><td>91.6</td><td>-</td></tr></table>\n\nTable 20 Multilingual benchmarks. For MGSM (Shi et al., 2022), we report 0-shot CoT results for our Llama 3 models. Multilingual MMLU is an internal benchmark with translated MMLU (Hendrycks et al., 2021a) questions and answers into 7 languages – we report 5-shot results averaged across these languages.\n\nWe find that",
+      "count": 1,
+      "pdf_pages": [
+        37,
+        38
+      ],
+      "evidence": "PDF physical p.38: Table 20 and its caption are printed at the top of the page, after the MGSM paragraph of Section 5.2.4 (\"...languages covered in MGSM benchmark.\") and before \"We find that Llama 3 405B outperforms most other models on MGSM...\". This patch restores the table at its printed position (applied after the removal patch)."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "footnote-14-body-absent-in-print",
+      "pdf_pages": [
+        51
+      ],
+      "evidence": "Table 26 row \"Indiscriminate Weapons\" carries a superscript 14 (restored by a patch), but physical p.51 (rendered at 120 dpi) shows no footnote body at the page bottom and no page of the PDF contains a \"14...\" footnote line; the arXiv v3 print itself omits the body. No body was invented."
+    },
+    {
+      "id": "figure-internal-labels-interleaved",
+      "pdf_pages": [
+        8,
+        9,
+        30,
+        31,
+        32,
+        36,
+        37,
+        41,
+        42,
+        44,
+        47,
+        61
+      ],
+      "evidence": "Axis ticks, legends and bar labels of embedded figures (Figures 2-4, 12, 17, 19-23) appear as stray fragments in the OCR flow around the figure captions; the text belongs to the embedded images, so no patch was made."
+    },
+    {
+      "id": "table-cell-reading-order",
+      "pdf_pages": [
+        3,
+        13,
+        18,
+        30,
+        31,
+        34,
+        38,
+        39,
+        51,
+        52,
+        61,
+        68
+      ],
+      "evidence": "HTML tables keep all printed cells but their text extraction order differs from the visual row-major order (also visible in the automated diff); cell values spot-checked against renders match the print."
+    }
+  ]
+}

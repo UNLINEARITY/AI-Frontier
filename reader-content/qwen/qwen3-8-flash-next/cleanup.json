@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen3-8-flash-next",
+  "source_sha256": "04f263446d74a35cb7cea368574e0c561f3b05c133be2c777ac884404063655d",
+  "ocr_sha256": "517733c9de719e41786f25c2e7ef8778c482eeed1b34fb8b8d694edef85d9b97",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR, so no fence-swallowing. All 28 physical PDF pages were compared line-by-line (normalized) against the OCR; every low-coverage line was then checked individually. Math-bearing lines match modulo LaTeX-equivalent notation (subscripts, \\times, \\in commands), which is expected and not patched. Recurring benchmark-table header lines ('MMLU MMLU-Pro SuperGPQA ...') come from two-level printed headers whose cell order differs between the PDF text layer and the OCR HTML tables; the tables themselves are present and their values were spot-checked (Table 1 values 62.65/37.59/21.76/... all match, including the bold 66.30, re-verified at 300 dpi). Absent figure-internal labels ('Compressed Attention Mask', axis labels like 'Training step (thousands)', legend entries) belong to embedded figure images and are not defects. The author-line envelope markers are correct: the 300-dpi crop of physical p.23 prints an envelope glyph after Bo Zheng and Dayiheng Liu (the PDF text layer maps it to 'B'), matching the OCR's envelope superscript markers, and the OCR correctly renders the abstract's 'Triton baseline' (a different sentence from the body's 'FLA Triton kernel')."
+  },
+  "patches": [
+    {
+      "before": "## References",
+      "after": "$^{✉}$ Corresponding authors.\n$^{1}$ Alphabetical order.\n\n## References",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 bottom (300 dpi crop, viewed) prints two author-block footnotes after a rule: '✉Corresponding authors.' and '¹Alphabetical order.' The OCR kept both markers (author names carry $^{✉}$ and the Contributors line carries $^{1}$) but dropped both footnote bodies. The patch reinserts them verbatim in the OCR's marker style, immediately before '## References'."
+    }
+  ],
+  "unresolved": []
+}

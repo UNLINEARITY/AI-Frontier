@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-2-5-computer-use-model-card",
+  "source_sha256": "b3f56bc303fcffdc7eb76903843f273565a8eb3a686686cd55195fa2816cc39d",
+  "ocr_sha256": "1f125a5ad1d8d9a3ef1657151624c4dc0a6189fcdaf4641072c6596689704bd7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "coverage": "complete",
+    "notes": "All 5 physical pages' extracted text swept line-by-line against the OCR markdown (normalized): every prose line matches, no code fences, no spurious headings beyond the repo-wide Google cover-title + running-header-title pair (accepted in all sibling Gemini model cards). The results table on physical p.3 was visually verified against a 140-dpi render: all six columns, both rowspan groups, em-dash empty cells, 'Could not measure - no model access' and 'OS control not yet supported' cells match the OCR table exactly. The only unmatched PDF line is the p.1 cover chip 'Model card published/updated OCT 07, 2025', cover-art branding whose content is duplicated by the printed 'Published: October 7, 2025' line kept in the markdown."
+  },
+  "patches": [],
+  "unresolved": []
+}

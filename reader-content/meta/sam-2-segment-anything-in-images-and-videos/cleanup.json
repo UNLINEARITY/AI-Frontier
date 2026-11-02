@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "id": "meta:sam-2-segment-anything-in-images-and-videos",
+  "source_sha256": "664f5c4254db441569ecfe36a2a2fa91a1ecec5f4d31b3bcc5d451193efc2c0d",
+  "ocr_sha256": "d7a55f08c468028964db33a52acc1772279f451a198d9f878e6c7cf1d49f53cc",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "coverage": "complete",
+    "notes": "Word-level diff of all 42 physical PDF pages against the OCR markdown plus an 8-word shingle pass; every content word in the PDF text layer is present in the OCR. Rendered physical pages 2, 23, 28 (200 dpi bottoms) and 38 (full page) to verify the four repairs visually. Zero code-fence imbalance (the source has no fences) and no swallowed headings/tables. Missing shingles are HTML-table cell order, LaTeX math tokens (J&F as math), figure-internal text on pages 4-5, 9, 11-17, 19-20, 24-31 and accented reference names, all expected; figure-internal axis/chart text stays unpatched. Citation punctuation spacing after inline math is handled by the shared OCR normalizer."
+  },
+  "patches": [
+    {
+      "before": "camouflaged object detection (Tang et al., 2023).\n\nInteractive Video Object Segmentation",
+      "after": "camouflaged object detection (Tang et al., 2023).\n\n$^{1}$All the results presented in this paper are based on a new version of SAM 2 (improved over our initial release; denoted as “SAM 2.1” in https://github.com/facebookresearch/sam2), which we will refer to as SAM 2 throughout for brevity.\n\nInteractive Video Object Segmentation",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 bottom shows footnote 1 after a rule: superscript-1 'All the results presented in this paper are based on a new version of SAM 2 (improved over our initial release; denoted as \"SAM 2.1\" in https://github.com/facebookresearch/sam2), which we will refer to as SAM 2 throughout for brevity.' The body marker 'checkpoints1' survives in OCR as '$^{1}$' on 'model checkpoints', but the footnote body was dropped entirely (words 'brevity'/'SAM 2.1' absent from OCR). Inserted after the last paragraph printed on p.2, matching the physical position; wording transcribed from the rendered page."
+    },
+    {
+      "before": "subsequent clicks are obtained from the center of the error region.\n\n![[images/1ecf6baf",
+      "after": "subsequent clicks are obtained from the center of the error region.\n\n$^{2}$The center of a mask is defined as the mask pixel that has the largest Euclidean distance to the mask boundary.\n\n$^{3}$We note that this estimation does not account for the model’s tracking FPS. The intuition is that human annotators can only examine the results at a lower speed, and therefore the model’s tracking time is covered by $T_{\\mathrm{exam}}$.\n\n![[images/1ecf6baf",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 bottom shows two footnotes after a rule: superscript-2 'The center of a mask is defined as the mask pixel that has the largest Euclidean distance to the mask boundary.' and superscript-3 'We note that this estimation does not account for the model's tracking FPS. The intuition is that human annotators can only examine the results at a lower speed, and therefore the model's tracking time is covered by T_exam.' Both bodies were dropped from the OCR (words 'Euclidean', 'tracking FPS' absent); body markers '$^{2}$'/'$^{3}$' survive in the OCR at the referencing sentences. Inserted after the last paragraph printed on p.23; T_exam rendered as the document's inline math style $T_{\\mathrm{exam}}$."
+    },
+    {
+      "before": "segment anything in a video.\n\n![[images/2f14b484",
+      "after": "segment anything in a video.\n\n$^{4}$We note that OVIS is not strictly zero-shot for SAM 2 since its videos are used in MOSE (part of our training data mix).\n\n![[images/2f14b484",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Rendered physical p.28 bottom shows footnote 4 after a rule: superscript-4 'We note that OVIS is not strictly zero-shot for SAM 2 since its videos are used in MOSE (part of our training data mix).' The body was dropped from the OCR (word 'strictly' absent); the '$^{4}$' marker survives at '29 datasets $^{4}$'. Inserted after the last paragraph printed on p.28."
+    },
+    {
+      "before": "Shutting He",
+      "after": "Shuting He",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 prints the MOSE reference authors as 'Henghui Ding, Chang Liu, Shuting He, Xudong Jiang, Philip H. S. Torr, and Song Bai'; OCR doubled the t into 'Shutting He' (an auto-correction of the printed name)."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "html-table-cell-order-not-verified-cell-by-cell",
+      "pdf_pages": [
+        9,
+        11,
+        12,
+        14,
+        19,
+        20,
+        27,
+        28,
+        30,
+        31
+      ],
+      "evidence": "Large benchmark/ablation tables are exported as HTML; a cell-by-cell numeric comparison against the PDF tables was not performed in this pass (shingle diff only confirms all tokens exist somewhere). Values are unchanged by this proposal."
+    }
+  ]
+}

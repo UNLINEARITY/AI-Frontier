@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "moonshot:kimi-k2-5-technical-report",
+  "source_sha256": "9bd2df43c71c80d58fcc22b34d266934b2b1d82a541e38f1a18d8c37b66c0444",
+  "ocr_sha256": "ae5c3c2cd72692b8d213ca2cf86855b2b5d881c821c295b1b054de0104dc2082",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "coverage": "partial",
+    "notes": "Structure scan of the whole OCR markdown: every code fence is balanced under the exporter's toggle rule and no fence swallows numbered headings, tables or image embeds; the '# Task Description'/'# Available Tools' lines and '## Action:'/'## Code:' all sit inside the Appendix E prompt-box fences as printed. Automated droppage scan of all 31 physical pages (condensed-text window containment of PDF page text in the OCR): hits triaged to running page headers (dropped by the OCR on every page), figure-internal caption/axis text (present inside the embedded figure images) and HTML table cell-order differences (Table 1 verified present in the OCR HTML table with matching values). Real defects found: two dropped page-bottom footnote bodies (recovered and visually verified on 300 dpi renders of the p.1 and p.11 footnote bands) and one prompt-box label wrongly promoted to a section heading (verified on a 200 dpi render of p.28). All arXiv identifiers printed in the PDF reference list are present in the OCR references. Pages 1-12 received the droppage scan plus targeted render verification; pages 13-31 (references, contributors, appendices) received the machine droppage scan and reference-identifier cross-check only, not a line-by-line read; equations were checked for presence and spacing but not glyph-verified."
+  },
+  "patches": [
+    {
+      "before": "real-world applications of agentic intelligence.\n\n![[images/",
+      "after": "real-world applications of agentic intelligence.\n\n$^{1}$https://huggingface.co/moonshotai/Kimi-K2.5\n\n![[images/",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote band (300 dpi, visually read) prints the superscript 1 followed by https://huggingface.co/moonshotai/Kimi-K2.5 beneath the body text. The OCR kept the marker as \"checkpoint $^{1}$\" in the abstract but dropped the footnote body entirely (the string 'huggingface' occurs nowhere in the OCR). Inserted after the paragraph carrying the marker."
+    },
+    {
+      "before": "InfoVQA [38].\n\n\\- Video Understanding:",
+      "after": "InfoVQA [38].\n\n$^{2}$https://github.com/MoonshotAI/WorldVQA\n\n\\- Video Understanding:",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 footnote band (300 dpi, visually read) prints the superscript 2 followed by https://github.com/MoonshotAI/WorldVQA as the page-bottom footnote. The OCR kept the marker on \"WorldVQA $^{2}$\" in the Evaluation Settings bullet but dropped the footnote body. Inserted after the paragraph carrying the marker."
+    },
+    {
+      "before": "## System Prompt.\n\n```txt",
+      "after": "**System Prompt.**\n\n```txt",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Rendered physical p.28 (200 dpi, visually read) prints \"System Prompt.\" as a bold paragraph label directly above the Agent Swarm prompt box, the same emphasis style as the run-in labels \"Sampling Protocol.\" and \"Hyperparameter Settings.\" (which the OCR kept as plain text) and as the identical \"System Prompt.\" labels on physical pp.26-27 (which the OCR also kept inline). Only this instance was promoted to a section heading by the OCR; demoted to bold text without changing any characters."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "running-page-headers-dropped",
+      "pdf_pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "evidence": "The running header 'KIMI K2.5 TECHNICAL REPORT' prints at the top of every content page but was dropped by the OCR; this is systematic header omission, not repaired."
+    },
+    {
+      "id": "equation-glyph-fidelity-not-verified",
+      "pdf_pages": [
+        8,
+        9,
+        12
+      ],
+      "evidence": "The display equations (RL objectives on pp.8-9, the Uniform set on p.12) exist in the OCR as LaTeX and their content matches the PDF text layer as a set, but condensed-text comparison cannot confirm subscript/superscript glyph-by-glyph fidelity (1 vs l class); an equation-grade visual pass would be needed to close this."
+    }
+  ]
+}

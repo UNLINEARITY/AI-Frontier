@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "mistral:magistral",
+  "source_sha256": "e4c6c5b21745cb16e64b3bd8add9fece9d14d97f0b76769f9ccc0c2d465914b3",
+  "ocr_sha256": "2fd051282bbe07f872a65b307258f83386579774206a5bf9bc5812624ab8a8c9",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "All 23 physical pages compared word-by-word against the OCR Markdown; no code fences. Footnotes on pages 1 and 5 and the DeepSeek-R1 author list on page 18 were verified on 300 dpi crops. The printed system-prompt box (Figure 2, p.5) and the appendix chat-style examples (Figures 14-16, p.21-23) exist only inside their embedded figure images in the OCR; the corresponding embedded images were opened and contain the complete printed content, so no text patch is needed for them. Remaining word-level differences are LaTeX math, soft-hyphen line breaks, and infrastructure/ablation figure labels (Figures 3-9)."
+  },
+  "patches": [
+    {
+      "before": "under the Apache 2 license $^{1}$ .",
+      "after": "under the Apache 2 license $^{1}$ .\n\n1https://huggingface.co/mistralai/Magistral-Small-2506",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The 300 dpi crop of physical p.1 prints the page footnote '1https://huggingface.co/mistralai/Magistral-Small-2506' under the bullet that ends '...under the Apache 2 license.'; the OCR kept the $^{1}$ marker but dropped the footnote body. The patch restores the printed footnote line."
+    },
+    {
+      "before": "compare them to the original ground truth.",
+      "after": "compare them to the original ground truth.\n\n2https://www.sympy.org/en/index.html",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "The 300 dpi crop of physical p.5 prints the page footnote '2https://www.sympy.org/en/index.html'; the OCR kept the SymPy $^{2}$ marker in the math-correctness paragraph but dropped the footnote body. The patch restores the printed footnote line after the sentence citing SymPy."
+    },
+    {
+      "before": "Shutting Pan",
+      "after": "Shuting Pan",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "The 300 dpi crop of physical p.18 prints the DeepSeek-R1 contributor list with 'Shuting Pan' (single t) between 'Shunfeng Zhou' and 'S. S. Li'; OCR misread the name as 'Shutting Pan'. The patch restores the printed spelling."
+    }
+  ],
+  "unresolved": []
+}

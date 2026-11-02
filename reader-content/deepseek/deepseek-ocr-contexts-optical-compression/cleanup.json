@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-ocr-contexts-optical-compression",
+  "source_sha256": "a7297788968f8ad9ed21bcd273110814e4889efbbc99bfea86dca12205797a90",
+  "ocr_sha256": "f5385919fa9260be946ed95064b55339b00b855e24edaf2551767f8e7ab5f483",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "coverage": "complete",
+    "notes": "All 22 physical pages scanned with a 5-gram PDF-text-to-OCR word-coverage pass. The main defect class: Figure 7's deep-parsing demo on physical p.13 (Goldman Sachs note input + parsed Result panel) had 13 of its figure-internal banner lines promoted to Markdown headings; all were demoted to plain text after visual verification of the demo layout. Remaining weak-gram diffs are figure-internal chart labels (Figure 1 axes, Figure 8/9/10 demo content: container captions, chemistry tables) shown by embedded figures, plus hyphenation. One underscore escape fixed inside the demoted sub_title label. Printed Contents pages, heading hierarchy, tables and references otherwise match the print."
+  },
+  "patches": [
+    {
+      "before": "## Macro news and views",
+      "after": "Macro news and views",
+      "count": 2,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 renders Figure 7, the deep-parsing demo: an input Goldman Sachs 'Macro news and views' research note image and the model's parsed markdown Result panel. All these lines are banner/section text inside the demo figure images (verified on a 110 dpi full-page render); OCR promoted them to Markdown headings, polluting the reader's section structure. Demoted to plain text; the transcription itself is kept because the figure is embedded."
+    },
+    {
+      "before": "## We provide a brief snapshot on the most important economies for the global markets",
+      "after": "We provide a brief snapshot on the most important economies for the global markets",
+      "count": 2,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 renders Figure 7, the deep-parsing demo: an input Goldman Sachs 'Macro news and views' research note image and the model's parsed markdown Result panel. All these lines are banner/section text inside the demo figure images (verified on a 110 dpi full-page render); OCR promoted them to Markdown headings, polluting the reader's section structure. Demoted to plain text; the transcription itself is kept because the figure is embedded."
+    },
+    {
+      "before": "## US",
+      "after": "US",
+      "count": 2,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 renders Figure 7, the deep-parsing demo: an input Goldman Sachs 'Macro news and views' research note image and the model's parsed markdown Result panel. All these lines are banner/section text inside the demo figure images (verified on a 110 dpi full-page render); OCR promoted them to Markdown headings, polluting the reader's section structure. Demoted to plain text; the transcription itself is kept because the figure is embedded."
+    },
+    {
+      "before": "## Europe",
+      "after": "Europe",
+      "count": 2,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 renders Figure 7, the deep-parsing demo: an input Goldman Sachs 'Macro news and views' research note image and the model's parsed markdown Result panel. All these lines are banner/section text inside the demo figure images (verified on a 110 dpi full-page render); OCR promoted them to Markdown headings, polluting the reader's section structure. Demoted to plain text; the transcription itself is kept because the figure is embedded."
+    },
+    {
+      "before": "## Japan",
+      "after": "Japan",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 renders Figure 7, the deep-parsing demo: an input Goldman Sachs 'Macro news and views' research note image and the model's parsed markdown Result panel. All these lines are banner/section text inside the demo figure images (verified on a 110 dpi full-page render); OCR promoted them to Markdown headings, polluting the reader's section structure. Demoted to plain text; the transcription itself is kept because the figure is embedded."
+    },
+    {
+      "before": "## Emerging Markets (EM)",
+      "after": "Emerging Markets (EM)",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 renders Figure 7, the deep-parsing demo: an input Goldman Sachs 'Macro news and views' research note image and the model's parsed markdown Result panel. All these lines are banner/section text inside the demo figure images (verified on a 110 dpi full-page render); OCR promoted them to Markdown headings, polluting the reader's section structure. Demoted to plain text; the transcription itself is kept because the figure is embedded."
+    },
+    {
+      "before": "## Top of Mind",
+      "after": "Top of Mind",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 renders Figure 7, the deep-parsing demo: an input Goldman Sachs 'Macro news and views' research note image and the model's parsed markdown Result panel. All these lines are banner/section text inside the demo figure images (verified on a 110 dpi full-page render); OCR promoted them to Markdown headings, polluting the reader's section structure. Demoted to plain text; the transcription itself is kept because the figure is embedded."
+    },
+    {
+      "before": "## sub\\_title Europe",
+      "after": "sub_title Europe",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 renders Figure 7, the deep-parsing demo: an input Goldman Sachs 'Macro news and views' research note image and the model's parsed markdown Result panel. All these lines are banner/section text inside the demo figure images (verified on a 110 dpi full-page render); OCR promoted them to Markdown headings, polluting the reader's section structure. Demoted to plain text; the transcription itself is kept because the figure is embedded. This parsed-output label also carried a Markdown escape (sub\\_title) for the underscore shown in the figure's output panel."
+    },
+    {
+      "before": "## Result",
+      "after": "Result",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 renders Figure 7, the deep-parsing demo: an input Goldman Sachs 'Macro news and views' research note image and the model's parsed markdown Result panel. All these lines are banner/section text inside the demo figure images (verified on a 110 dpi full-page render); OCR promoted them to Markdown headings, polluting the reader's section structure. Demoted to plain text; the transcription itself is kept because the figure is embedded. 'Result' is the panel label of the parsed-output half of the Figure 7 layout."
+    }
+  ],
+  "unresolved": []
+}

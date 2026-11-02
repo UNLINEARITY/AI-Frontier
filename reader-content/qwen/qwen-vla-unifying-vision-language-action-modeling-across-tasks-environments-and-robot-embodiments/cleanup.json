@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen-vla-unifying-vision-language-action-modeling-across-tasks-environments-and-robot-embodiments",
+  "source_sha256": "f6aabca8b80fab2605050749cc2e2c4c02d888c11dce6729310f030072a82b0d",
+  "ocr_sha256": "a0f9a11b15b47d7c5216a2d1c37af126f701b1e334e3e3c9ff41f65e256364ae",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "coverage": "complete",
+    "notes": "No code fences exist in the OCR source, so fence balance is trivially clean; heading tree (1-8 plus 3.2.x/5.x.x) matches the printed structure, including the numbered run-in headings 3.2.4 Navigation data. and 3.2.5 Vision-language data. verified on rendered physical p.12. Full 8-gram diff of extracted PDF text for all 34 pages against the OCR plus a per-page number-multiset diff; the only missing 8-grams are hyphenation splits, arXiv sidebar stamps, page footers, and figure-internal labels (Figures 3, 4, 6, 7) that the embedded figure images show. Rendered physical pages 12, 13 and 14 were visually inspected; equations (5)-(7) and reference entries Elmaaroufi/Khazatsky/Yang match the print."
+  },
+  "patches": [
+    {
+      "before": "Step 1: Pick up the ceramic bowl from the right far edge.Step 2: Rotate the bowl clockwise for two full circles.Step 3: Place the bowl at the center of the table.",
+      "after": "Step 1: Pick up the ceramic bowl from the right far edge.<br>Step 2: Rotate the bowl clockwise for two full circles.<br>Step 3: Place the bowl at the center of the table.",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 prints the Fine-grained cell as three separate lines (Step 1 / Step 2 / Step 3); OCR glued the line breaks away inside the table cell, so the reader shows one run-on sentence. The patch only restores the cell's line structure with <br>."
+    },
+    {
+      "before": "where $L^{value}$ is a loss on value predictions",
+      "after": "where $\\mathcal{L}^{value}$ is a loss on value predictions",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 after equation (7) prints a calligraphic script L (same glyph as in equations (6) and (7)) in \"where L^value is a loss on value predictions\"; OCR transcribed this single occurrence with a plain italic L. The equation line itself and the other loss symbols already use \\mathcal{L}."
+    }
+  ],
+  "unresolved": []
+}

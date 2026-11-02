@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nemotron-4-15b-technical-report",
+  "source_sha256": "7505632c42d8e208f6ffe59659d775643c4865570b20d6335f0511227f99bf06",
+  "ocr_sha256": "17110a6c200a92b8663a3b07706a6f29162fd95ed7a6d46c04df64cab5d6a522",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "coverage": "complete",
+    "notes": "All 16 physical pages word-diffed against the OCR markdown; no code fences in this source. The only dropped body content is the page-1 author footnotes. Table 1 (300 dpi render) and Table 6 MultiPL-E numbers (200 dpi render) were verified cell-by-cell against the render and match the OCR tables. The body text on physical page 8 prints 'Multiple-E' where the benchmark is normally written MultiPL-E; the OCR preserves the print's own spelling, so it was left unchanged. Remaining diff blocks are figure-internal axis labels (Figure 2/3), page furniture and accented reference-name line wrapping."
+  },
+  "patches": [
+    {
+      "before": "NVIDIA\n\n## Abstract",
+      "after": "NVIDIA\n\n\\*Equal contribution, corresponding authors: {jupinderp,sprabhumoye,jjennings,mpatwary}@nvidia.com.\n\n†Work done while at NVIDIA.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote block (300 dpi crop, visually verified) prints '*Equal contribution, corresponding authors: {jupinderp,sprabhumoye,jjennings,mpatwary}@nvidia.com.' and '†Work done while at NVIDIA.'; the OCR markdown kept the \\* and dagger markers on the author names but dropped both footnote bodies entirely."
+    }
+  ],
+  "unresolved": []
+}

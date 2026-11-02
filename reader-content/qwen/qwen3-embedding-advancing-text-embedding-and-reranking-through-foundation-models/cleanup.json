@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen3-embedding-advancing-text-embedding-and-reranking-through-foundation-models",
+  "source_sha256": "fd45f8821766118a2cc49e27d301a0a34f0f31f5aafb8f4318e7848c7ddbfa33",
+  "ocr_sha256": "821084946e03966dac19b2784e4bafa6b5e0e30cd25eef04e39d79803758ce48",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "All 14 physical pages compared word-by-word against the OCR Markdown; the two code fences are balanced. Verified at 300 dpi: the p.1 'Equal contribution' footnote, the p.7 jina footnote URL, the p.10 openreview ID glyphs, and the p.13 prompt-box field spellings. The printed embedding input format and reranker chat template on p.3 are represented in the OCR by an embedded image whose contents were opened and match the print completely, so no text patch is needed for them. Appendix table numbers (Tables 6-9) match the print. Remaining word-level differences are LaTeX math and reference-name Unicode splits that are present and correct in the OCR (Márton, Hernández Ábrego, Kydlíček...)."
+  },
+  "patches": [
+    {
+      "before": "BC41IvfSzv",
+      "after": "BC4lIvfSzv",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "The 300 dpi crop of physical p.10 prints the Generative RB instruction-tuning reference URL as https://openreview.net/forum?id=BC4lIvfSzv with a lowercase letter l after BC4 (matching the PDF text layer); OCR misread the glyph as the digit 1. The patch restores the printed openreview ID."
+    },
+    {
+      "before": "**Requirement**\n- Type: {type};",
+      "after": "**Requirment**\n- Type: {type};",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "The 300 dpi crop of physical p.13 shows the printed query-generation prompt box spells its field label '**Requirment**' (while the same box spells 'Requirement' correctly inside the opening sentence); OCR silently corrected the label to '**Requirement**'. The patch restores the printed prompt-template spelling."
+    },
+    {
+      "before": "- Language: the language in which the results are generated should be {language} language;",
+      "after": "- Languange: the language in which the results are generated should be {language} language;",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "The same 300 dpi crop of physical p.13 shows the printed prompt bullet reads '- Languange: the language in which the results are generated should be {language} language;' (the print's own spelling inside the prompt template); OCR corrected it to 'Language'. The patch restores the printed spelling."
+    },
+    {
+      "before": "and BGE-m3 (Chen et al., 2024).",
+      "after": "and BGE-m3 (Chen et al., 2024).\n\n1https://hf.co/jinaai/jina-reranker-v2-base-multilingual",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "The 300 dpi crop of physical p.7 prints the page footnote '1https://hf.co/jinaai/jina-reranker-v2-base-multilingual' under the compared-methods paragraph; the OCR kept the jina $^{1}$ marker but dropped the footnote body. The patch restores the printed footnote line after the sentence citing the jina reranker."
+    },
+    {
+      "before": "Tongyi Lab Alibaba Group\n\nhttps://huggingface.co/Qwen",
+      "after": "Tongyi Lab Alibaba Group\n\n\\*Equal contribution\n\nhttps://huggingface.co/Qwen",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The 300 dpi crop of physical p.1 prints the page footnote '* Equal contribution' beneath the introduction, attached to the asterisked authors in the title block; the OCR kept the author asterisks (Yanzhao Zhang\\* ...) but dropped the footnote. The patch restores it as an escaped line after the affiliation, before the project links."
+    }
+  ],
+  "unresolved": []
+}

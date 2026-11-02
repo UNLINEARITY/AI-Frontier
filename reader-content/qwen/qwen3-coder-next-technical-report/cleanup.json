@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen3-coder-next-technical-report",
+  "source_sha256": "4be52e371e59284a0141eb176e4b489a47885046aed43377500cd0935951886b",
+  "ocr_sha256": "3f1613a01e835161d66e452f87d2da8f73240d688f1e97e9e51f038695ecaa77",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "Automated line-level comparison of extracted text from all 23 physical PDF pages against the OCR Markdown, plus a code-fence balance scan (no fences present) and a heading scan (all headings match numbered sections; no figure banners or speaker labels promoted). Page 7 tool chat template prompt boxes and the page 1 teaser table exist only inside embedded figure images (Figures 1 and 4), so their text is not transcribable body text. Footers of pages 3, 5, 10, 13, 19 and 23 were rendered at 300 dpi and visually read to transcribe all seven dropped footnote bodies; page 19 also confirmed the printed spelling \"quantitively\". Table cell gluing was not exhaustively re-checked cell by cell."
+  },
+  "patches": [
+    {
+      "before": "for agentic coding workloads.",
+      "after": "for agentic coding workloads.\n\n1 https://www.alibabacloud.com/en/product/kubernetes",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 footer (300 dpi) prints footnote 1 as the URL https://www.alibabacloud.com/en/product/kubernetes; the OCR kept the superscript 1 marker in the Kubernetes sentence but dropped the footnote body."
+    },
+    {
+      "before": "with PR-style pretraining data. $^{2}$",
+      "after": "with PR-style pretraining data. $^{2}$\n\n2 Detailed analysis is presented in Zhang et al. (2026a).",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 footer (300 dpi) prints footnote 2 as \"Detailed analysis is presented in Zhang et al. (2026a).\"; OCR kept the $^{2}$ marker but dropped the body."
+    },
+    {
+      "before": "including removing remotes, branches, and tags.",
+      "after": "including removing remotes, branches, and tags.\n\n3 https://github.com/SWE-bench/SWE-bench/pull/471",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 footer (300 dpi) prints footnote 3 as the URL https://github.com/SWE-bench/SWE-bench/pull/471; OCR kept the superscript 3 marker in the Reinforced Reward Hacking Blocker paragraph but dropped the body."
+    },
+    {
+      "before": "solid performance across full-stack and data-centric coding tasks.",
+      "after": "solid performance across full-stack and data-centric coding tasks.\n\n4 aider.chat/docs/leaderboards/edit.html",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 footer (300 dpi) prints footnote 4 as aider.chat/docs/leaderboards/edit.html; OCR kept the $^{4}$ marker after \"multi-language code editing\" but dropped the body."
+    },
+    {
+      "before": "Cline $^{5}$ and Aone Copilot $^{6}$ respectively.",
+      "after": "Cline $^{5}$ and Aone Copilot $^{6}$ respectively.\n\n5 Cline: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev.\n\n6 Aone Copilot: https://marketplace.visualstudio.com/items?itemName=Aone.aone-copilot,",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 footer (300 dpi) prints footnotes 5 and 6 as \"Cline: https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev.\" and \"Aone Copilot: https://marketplace.visualstudio.com/items?itemName=Aone.aone-copilot,\"; OCR kept both superscript markers but dropped both bodies."
+    },
+    {
+      "before": "generating functional and secure code.",
+      "after": "generating functional and secure code.\n\n7 https://github.com/alibaba/sec-code-bench",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 footer (300 dpi) prints footnote 7 as the URL https://github.com/alibaba/sec-code-bench; OCR kept the $^{7}$ marker after SecCodeBench but dropped the body."
+    },
+    {
+      "before": "and compare it with two other variants quantitatively.",
+      "after": "and compare it with two other variants quantitively.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 (300 dpi footer crop also shows the last body line) prints \"...we re-implement best-fit-packing algorithm (Ding et al., 2024a) with C++ in the Megatron framework (Shoeybi et al., 2019), and compare it with two other variants quantitively.\"; the source prints the author's own spelling \"quantitively\" and the OCR silently normalized it to \"quantitatively\"."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "flattened-table-boundaries",
+      "pdf_pages": [
+        6,
+        14,
+        15,
+        16
+      ],
+      "evidence": "HTML tables in the OCR concatenate some cell text; values matched the PDF text layer in the page-level comparison, but cell boundaries were not reviewed cell by cell against renders."
+    }
+  ]
+}

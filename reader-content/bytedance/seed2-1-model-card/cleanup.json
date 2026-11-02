@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seed2-1-model-card",
+  "source_sha256": "36e9990979faee86453d567462b3f9d7b0a63c4837764e2d2b1c918be02bd65b",
+  "ocr_sha256": "9c33d3ed872ea99fd41f668b1dd4851a4a5989b1b1169b83dcfc0f07c58a7b5f",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      6,
+      8,
+      9,
+      13,
+      18,
+      19,
+      24,
+      26,
+      27,
+      50,
+      51,
+      52,
+      53,
+      55,
+      56,
+      64,
+      65,
+      66,
+      70,
+      71,
+      72,
+      73
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE review. (a) Structural: whole 1694-line OCR markdown scanned - all 47 code-fence pairs balanced; full heading inventory checked. 'MODEL CARD . CASE STUDY', 'Task Overview', '[Stage N]' and 'reconstructed from the execution trace' headings are real printed text on PDF pages 3/5/7/17/26/27 (confirmed in the PDF text layer), not figure-internal banners, so they stay. Exporter's heading-depth normalizer already demotes '# C.1'/# D.1' appendix headings, and '# Origin is not allowed'/'# Origin is missing' sit inside a shell fence, so neither needs a patch. (b) Droppage: automated normalized 4-gram containment for all 73 PDF pages against the full OCR markdown; every page below 0.9 containment was inspected via longest-missing-span analysis (pages listed in pages_reviewed, plus high-ratio spot checks on pages 1-5, 7, 17, 21-22). All low-hit pages resolved as benign: benchmark tables 1/2/5/6/7/10/11 and the C.1-C.3 tables are fully present in the markdown as HTML tables (page-19/24/51-53 misses are PDF column reading-order artifacts, values verified equal, e.g. Terminal-Bench 73.8/71.7/70.7/67.6/71.0 and Table 1 Workspace 58.7/55.1/32.8/54.7/53.0); case-study panels on pages 6/8/18 are embedded figure screenshots (Figures 3/4/6) whose dropped text is figure-internal; pages 27/50/55/56/64-66 misses are figure/panel-internal text with the figures embedded; pages 70-72 are caption reading-order only; page 73 clean. (c) Visual: physical page 26 rendered at 120 dpi and inspected to verify the single patch. References spot-checked - no stray Markdown escapes. Punctuation spacing after inline math is handled by the shared normalizer, not patched."
+  },
+  "patches": [
+    {
+      "before": "## ## Overview",
+      "after": "\\#\\# Overview",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered physical p.26 [Generated Content] panel prints the model's raw method.md output as literal plain text: '# Method for Frozen-Core Quasiparticle Band Narrowing' and '## Overview' above 'This implementation computes the frozen-core quasiparticle (QP) correction...'. The OCR kept the title line as escaped literal text ('\\# Method for ...') but wrongly promoted '## Overview' into a real level-2 heading whose rendered text is '## Overview'. The patch demotes it to escaped literal text matching the sibling line; no characters other than the escapes change."
+    }
+  ],
+  "unresolved": []
+}

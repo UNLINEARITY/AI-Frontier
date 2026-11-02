@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "id": "meta:llama-guard-3-1b-int4-technical-report",
+  "source_sha256": "1847e5b4badefaad75ba7feba95fbafc41893954171eb4f2b0f7afc685465b0c",
+  "ocr_sha256": "0e0814bc039250f0c433d9b270a6973b2979e5367721d524357a3a67a17ec441",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR source; the Acknowledgements paragraph on physical p.9 is present and complete. Word-level diff of extracted text from all 9 physical pages against the OCR markdown found no other dropped prose, tables (Table 1 values match the print) or reference entries; remaining diff lines are LaTeX tokenization artifacts, the arXiv margin stamp and figure captions present around their image embeds. Pages 1, 2, 3, 5, 8, 9 rendered and inspected; page 5 equations (3)-(4) and the Extras bullet re-read at 220 dpi. The printed 'Enlish', 'Roberb Lasenby', 'Portugese', '(lla, 2024)' and 'Llama Guard 3-8B(Llama Team, 2024a)' spellings are the print's own and were preserved or restored."
+  },
+  "patches": [
+    {
+      "before": "for English and 5 of 8 non-English",
+      "after": "for Enlish and 5 of 8 non-English",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 bullet prints the paper's own misspelling 'for Enlish and 5 of 8 non-English languages' (visually verified); OCR auto-corrected it to 'English'."
+    },
+    {
+      "before": "- 8, 7\\right), s _ {\\theta} = \\frac {1}{7 . 5}",
+      "after": "-8, 7\\right), s _ {\\theta} = \\frac {1}{7.5}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 equation (3) prints clip(round(theta_g/s_theta), -8, 7) and s_theta = (1/7.5) max|theta_g| with an unspaced decimal 7.5 (visually verified); OCR spaced the minus sign and the decimal digits."
+    },
+    {
+      "before": "\\right), 0, 2 5 5\\right)",
+      "after": "\\right), 0, 255\\right)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 equation (4) prints clip(round((x_in - z)/s_x), 0, 255) with the numeral 255 (visually verified); OCR spaced its digits."
+    },
+    {
+      "before": "\\frac {1}{2 5 5}",
+      "after": "\\frac {1}{255}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 equation (4) prints s_x = (1/255)(max x_in - min x_in) (visually verified); OCR spaced the denominator digits."
+    },
+    {
+      "before": "'\\n', 'S', '', '<|eot\\_id|>'",
+      "after": "'\\n', 'S', ',', '<|eot_id|>'",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 'Extras' bullet prints '\\n', 'S', ',', '<|eot_id|>' with a third comma token (visually verified); OCR dropped the comma and escaped the underscore."
+    },
+    {
+      "before": "iOS (Executorch Team, (2024b))",
+      "after": "iOS (Executorch Team, 2024b))",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3-4 print '(also available for iOS (Executorch Team, 2024b))'; the citation ends with two closing parens and no extra '(' before the year (visually verified at 220 dpi)."
+    },
+    {
+      "before": "recipes/responsible\\_ai/llama\\_guard",
+      "after": "recipes/responsible_ai/llama_guard",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 Code URL prints recipes/responsible_ai/llama_guard with plain underscores; '\\_' is an OCR Markdown escape, not printed text."
+    },
+    {
+      "before": "export\\_llama",
+      "after": "export_llama",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prints the inline identifier export_llama with a plain underscore (visually verified at 220 dpi)."
+    },
+    {
+      "before": "apple\\_ios/LLaMA",
+      "after": "apple_ios/LLaMA",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Physical p.7 reference prints the URL .../demo-apps/apple_ios/LLaMA with plain underscores; '\\_' is an OCR Markdown escape."
+    },
+    {
+      "before": "Llama-Guard2/MODEL\\_CARD.md",
+      "after": "Llama-Guard2/MODEL_CARD.md",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Physical p.7 reference prints .../Llama-Guard2/MODEL_CARD.md with plain underscores; '\\_' is an OCR Markdown escape."
+    },
+    {
+      "before": "Llama-Guard3/1B/MODEL\\_CARD.md",
+      "after": "Llama-Guard3/1B/MODEL_CARD.md",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Physical p.7 reference prints .../Llama-Guard3/1B/MODEL_CARD.md with plain underscores; '\\_' is an OCR Markdown escape."
+    },
+    {
+      "before": "October 2024. https://github.com/pytorch/torchao.",
+      "after": "October 2024. https//github.com/pytorch/torchao.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints the print's own typo 'https//github.com/pytorch/torchao' without the colon (visually verified); OCR auto-corrected the printed spelling."
+    },
+    {
+      "before": "April 2024. https://github.com/pytorch/torchtune.",
+      "after": "April 2024. https//github.com/pytorch/torchtune.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints the print's own typo 'https//github.com/pytorch/torchtune' without the colon (visually verified); OCR auto-corrected the printed spelling."
+    }
+  ],
+  "unresolved": []
+}

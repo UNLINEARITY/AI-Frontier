@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seed1-8-model-card",
+  "source_sha256": "79bcbf9cb4cf7aca4882cbb6d97f008dd8b15954ed985156b4ddec071c32e5c3",
+  "ocr_sha256": "5cc5034717379493aa90a04942514fab10157d602ae22c4909de735f28114481",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "coverage": "complete",
+    "notes": "Whole-document word-level diff of the OCR markdown against extracted text from all 48 physical PDF pages, with rendered verification at 110-600 dpi on pages 12, 21, 27, 28 and 32. Code fences are balanced. Page-number stamps, the arXiv side stamp and figure-internal text covered by embedded figures (including the physical p.17 GUI trajectory steps and p.19 streaming transcript captions) were treated as non-defects. Remaining printed bullet markers and line-join glues in the B.5 appendix example tables (physical pp.32-35) are recorded as unresolved."
+  },
+  "patches": [
+    {
+      "before": "(presenile type).Questions:Provide",
+      "after": "(presenile type).<br/>Questions:<br/>1. Provide",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 (Table 8, Law cell): the prompt prints \"...Alzheimer's dementia (presenile type).\" then \"Questions:\" on its own line, then \"1. Provide a detailed analysis...\"; OCR dropped the Questions line break and the item number 1 and glued the sentences (visual, 300 dpi)."
+    },
+    {
+      "before": "guarantee liability.If the",
+      "after": "guarantee liability.<br/>2. If the",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 (Table 8, Law cell): item \"2. If the \\\"Personal Unlimited Joint and Several Liability Guarantee\\\" is invalid...\" starts a new numbered line; OCR dropped \"2.\" and glued it to \"liability.\" (visual, 300 dpi)."
+    },
+    {
+      "before": "invalid guarantee?As the bank’s attorney, in what respects should you supplement the evidence?Please conduct",
+      "after": "invalid guarantee?<br/>3. As the bank’s attorney, in what respects should you supplement the evidence?<br/>Please conduct",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 (Table 8, Law cell): item \"3. As the bank's attorney, in what respects should you supplement the evidence?\" is a numbered line and \"Please conduct the analysis...\" starts a new line; OCR dropped \"3.\" and glued both joins (visual, 300 dpi)."
+    },
+    {
+      "before": "support teaching.Task:Based on the student",
+      "after": "support teaching.<br/>Task:<br/>1. Based on the student",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 (Table 8, Edu cell): the prompt prints \"...to support teaching.\" then \"Task:\" on its own line, then \"1. Based on the student's question...\"; OCR dropped the line breaks and the number 1 (visual, 300 dpi)."
+    },
+    {
+      "before": "to help the student understand.Based on the instructions",
+      "after": "to help the student understand.<br/>2. Based on the instructions",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 (Table 8, Edu cell): item \"2. Based on the instructions...\" starts a new numbered line; OCR dropped \"2.\" and glued it to \"understand.\" (visual, 300 dpi)."
+    },
+    {
+      "before": "calculation steps.Requirements: The description",
+      "after": "calculation steps.<br/>Requirements: The description",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 (Table 8, Edu cell): \"Requirements: The description of a force (free-body) diagram...\" starts a new printed line; OCR glued it to \"steps.\" (visual, 300 dpi)."
+    },
+    {
+      "before": "Disco: Benchmarking",
+      "after": "DiscoX: Benchmarking",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Rendered physical p.27 reference [91] at 600 dpi prints the title with one more glyph than OCR: \"DiscoX: Benchmarking discourse-level translation task in expert domains\" (final small-cap X verified); the model card body and heading B.1.6 print the same benchmark as \"DiscoX\"."
+    },
+    {
+      "before": "(see Figure 12) $^{1}$ , and therefore, better aligns with C-end user needs.",
+      "after": "(see Figure 12) $^{1}$ , and therefore, better aligns with C-end user needs.\n\n$^{1}$ Due to data privacy constraints, we have excluded results from our internal health benchmarks in this report.",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Rendered physical p.28 footnote strip: the superscript 1 on \"(see Figure 12)1\" has the printed footnote body \"1Due to data privacy constraints, we have excluded results from our internal health benchmarks in this report.\", which OCR dropped entirely (visual, 300 dpi)."
+    },
+    {
+      "before": "descrip-tion",
+      "after": "description",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"descrip-/...\" and the printed word is \"description\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "inap-propriate",
+      "after": "inappropriate",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"inap-/...\" and the printed word is \"inappropriate\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "interac-tion",
+      "after": "interaction",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"interac-/...\" and the printed word is \"interaction\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "re-spond",
+      "after": "respond",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"re-/...\" and the printed word is \"respond\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "em-phasizes",
+      "after": "emphasizes",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"em-/...\" and the printed word is \"emphasizes\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "ex-plosives",
+      "after": "explosives",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"ex-/...\" and the printed word is \"explosives\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "Trans-formers",
+      "after": "Transformers",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"Trans-/...\" and the printed word is \"Transformers\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "enti-ties",
+      "after": "entities",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"enti-/...\" and the printed word is \"entities\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "indi-vidual",
+      "after": "individual",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"indi-/...\" and the printed word is \"individual\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "hy-pertension",
+      "after": "hypertension",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"hy-/...\" and the printed word is \"hypertension\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "pro-cess",
+      "after": "process",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 safety-example table (Table 9): the narrow column breaks the word across lines as \"pro-/...\" and the printed word is \"process\" (PDF text layer and rendered cells); OCR kept the print hyphen inside the joined word. Single occurrence, inside the existing table cell."
+    },
+    {
+      "before": "conditions.1. Suitability",
+      "after": "conditions.<br/>1. Suitability",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 Medical Safety cell: \"1. Suitability: Effective for systolic hypertension...\" starts a new numbered line after \"...depends on individual conditions.\"; OCR glued \"conditions.1.\" (visual, 110 dpi page render)."
+    },
+    {
+      "before": "(heart/kidneys).2. Caution",
+      "after": "(heart/kidneys).<br/>2. Caution",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 Medical Safety cell: \"2. Caution: Contraindicated...\" starts a new numbered line after \"(heart/kidneys).\"; OCR glued \").2.\" (visual, 110 dpi page render)."
+    },
+    {
+      "before": "infarc-tion.Disclaimer",
+      "after": "infarction.<br/>Disclaimer",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 Medical Safety cell: the printed word is \"infarction.\" (broken \"infarc-/tion.\") and \"Disclaimer: Usage must be under strict medical supervision...\" starts a new line; OCR kept the hyphen and glued \"Disclaimer:\" (visual, 110 dpi page render)."
+    },
+    {
+      "before": "The task includes:Clearly list all problems in thetag. This step",
+      "after": "The task includes:<br/>• Clearly list all problems in the <Correction Issues> tag. This step",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 (B.5.1 Education example): \"The task includes:\" heads a bullet list; item 1 prints \"• Clearly list all problems in the <Correction Issues> tag.\" with the literal tag name; OCR dropped the bullet and the tag name, leaving \"thetag.\" (visual, 200 dpi)."
+    },
+    {
+      "before": "incorrect/missing.Provide practical improvement suggestions for each problem in thetag. For example",
+      "after": "incorrect/missing.<br/>• Provide practical improvement suggestions for each problem in the <Improvement Suggestions> tag. For example",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32: second bullet prints \"• Provide practical improvement suggestions for each problem in the <Improvement Suggestions> tag.\"; OCR dropped the bullet and the two-line tag name (visual, 200 dpi)."
+    },
+    {
+      "before": "reason for the improvement.Analyze areas",
+      "after": "reason for the improvement.<br/>• Analyze areas",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32: third bullet \"• Analyze areas where the essay's vocabulary...\" starts a new printed line; OCR glued it to \"improvement.\" (visual, 200 dpi)."
+    },
+    {
+      "before": "provided in thetag.Notes:Explanatory statements",
+      "after": "provided in the <Writing Resources> tag.<br/>Notes:<br/>• Explanatory statements",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32: the third bullet ends \"...provided in the <Writing Resources> tag.\" and \"Notes:\" heads the next bullet list; OCR dropped the tag name and the breaks (visual, 200 dpi)."
+    },
+    {
+      "before": "meaning.The student&#x27;s essay is as follows:An Unforgettable",
+      "after": "meaning.<br/>The student&#x27;s essay is as follows:<br/>An Unforgettable",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32: \"...you need to provide an additional explanation of their meaning.\", \"The student's essay is as follows:\" and the essay title \"An Unforgettable Trip\" are separate printed lines; OCR glued all three joins (visual, 200 dpi)."
+    },
+    {
+      "before": "An Unforgettable Triplast Summer holiday, I went to",
+      "after": "An Unforgettable Trip<br/>last Summer holiday, I went to",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32: the essay title is \"An Unforgettable Trip\" on its own line and the essay body starts \"last Summer holiday, I went to...\"; OCR glued \"Triplast\" (visual, 200 dpi)."
+    }
+  ],
+  "unresolved": [
+    "Table 6 caption (physical p.9): the PDF itself prints \"Seed1.8 with VideoCut can further improves the accuracy\" (printed author typo); OCR normalized it to \"improve\". Left unchanged because the typo is printed in the source.",
+    "Appendix B.5 example tables (physical pp.32-35) systematically drop printed bullet markers and glue printed line joins (e.g. \"are:Personal\", \"casing.Product\", \"click.Workflow:1.\"); no word-level content loss remains after the restored tag names, so these style glues were left for a focused structural pass.",
+    "Physical p.17 GUI-agent trajectory (\"Step3: Click the screen (Taobao)\" etc.) and p.19 streaming-dialogue captions exist only inside figure screenshots embedded as images; not transcription defects.",
+    "Physical p.22 area: PDF prints \"Brill–Lindquist\" with an en dash in the bio-research walkthrough while OCR uses a hyphen; glyph-level dash distinction left unchanged."
+  ]
+}

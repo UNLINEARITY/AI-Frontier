@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "google:t5gemma-2-seeing-reading-and-understanding-longer",
+  "source_sha256": "57eceea2d1ab05b4dd50b67ca4011653a6b69bc8a1fd05c077f4ca2a548910d2",
+  "ocr_sha256": "10236d2b790cd491cbfe0847b6b954a0f7385c1df06b3ebd3ec7e21d06fac509",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "coverage": "complete",
+    "notes": "No code fences; heading tree and all six captioned tables/figures present. Full normalized word-stream diff of all 13 physical PDF pages against the OCR markdown; the large residual spans are the rowspan/colspan HTML tables (Tables 1-5 bodies verified present in cell order), LaTeX-equivalent math transcription on pp.3-4, figure-internal chart labels of the embedded cover figure, running heads and folios. The escaped underscores in 'tacl\\_a\\_00276' and 'paper\\_files' render as the printed underscores and are correct. Physical p.1 (300 dpi) and p.4 (300 dpi) were rendered to transcribe the two dropped small-print blocks before restoring them."
+  },
+  "patches": [
+    {
+      "before": "an acceptable trade-off.\n\nRejected Ablation",
+      "after": "an acceptable trade-off.\n$^{1}$ Note the parameter reduction (6.5%) is based on the total parameters, i.e, both model and embedding parameters.\n\nRejected Ablation",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (300 dpi) prints the footnote '1 Note the parameter reduction (6.5%) is based on the total parameters, i.e, both model and embedding parameters.' below the paragraph whose surviving marker reads 'quality reduction $^{1}$' in the markdown; the footnote body was dropped. The source itself prints 'i.e,' without the second period, so that spelling is preserved."
+    },
+    {
+      "before": "$^{1}$ Google DeepMind\n",
+      "after": "$^{1}$ Google DeepMind\n\n*Corresponding author(s): biaojiaxing@google.com. Note, $^{*}$Core contributors. $^{\\dagger}$Project Advisor.*\n© 2025 Google. All rights reserved\n",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (300 dpi) prints the italic colophon 'Corresponding author(s): biaojiaxing@google.com. Note, ∗Core contributors. †Project Advisor.' followed by '© 2025 Google. All rights reserved' under the author list; both lines were dropped, leaving the author list's superscript * and † markers unexplained. The markers are restored in the document's existing $^{*}$/$^{\\dagger}$ style and the block is italicized as printed; the vertical arXiv margin stamp is intentionally not restored."
+    }
+  ],
+  "unresolved": []
+}

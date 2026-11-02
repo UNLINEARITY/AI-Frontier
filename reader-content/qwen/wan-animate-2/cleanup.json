@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "qwen:wan-animate-2",
+  "source_sha256": "06c720cab1411a4fafad791e7ce13132e7e3be70b56067e76dd807d6a2561a4b",
+  "ocr_sha256": "5bfd447902b9ba461e71b44b4fec3eec9e6b0a58f0bb8a5e959fd71554e8dc8b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "Clean document, no patches. Full read-through of the OCR against extracted text from all 14 physical PDF pages; code fences balanced; headings match the printed section structure with no spurious or figure-only headings. Physical p.11 was rendered and visually inspected: the only defect candidate is the flattened user-study table recorded under unresolved. Remaining diff noise was limited to dehyphenation joins, LaTeX-equivalent math, the arXiv stamp, figure-internal labels (Reference Image / Animation Result, Reference / Real-time results kept as plain text, not headings) and the algorithm block, which is present as a complete algorithm environment."
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "flattened-user-study-chart-table",
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "The OCR HTML table of six unlabeled percentage rows captures only the 'Ours vs. Kling-MotionControl' group of the Figure 6 stacked-bar chart (25.9/48.0/26.1 ... 25.6/50.6/23.8, visually verified against the rendered page); the 'Ours vs. Wan-Animate' and 'Ours vs. Dreamina' groups and all row labels (Overall, Visual Qual., Dynamic Qual., ID Preserv., Motion Acc., Expression Acc.) were dropped. The numbers exist only inside the figure image, the complete chart is embedded as Figure 6, and reconstructing labels plus 12 missing bars is not an exact-string repair, so the partial table was left unchanged."
+    }
+  ]
+}

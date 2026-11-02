@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "zai:cogvideox-text-to-video-diffusion-models-with-an-expert-transformer",
+  "source_sha256": "699795d3cfdf7acef250e0e28043b001e31ae7ab101f35fd079370c43f6473f3",
+  "ocr_sha256": "fd0a4dc655431adf6b49e1701685ac9d6ec3dfa39d49d7a45bb6ea3f55e77a88",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "coverage": "complete",
+    "notes": "Fence balance scan plus whole-document word/4-gram diff of the OCR Markdown against extracted text of all 30 physical PDF pages; physical pages 1 and 5 were rendered (300 dpi crops) to verify the two patches. Most word-level mismatches are PDF-side hyphenated line-break splits, not OCR defects. The recurring 'Published as a conference paper at ICLR 2025' banner and the arXiv sidebar stamp are intentionally absent from the OCR on every page and were left out. Appendix tables 4-8 and 10-12 were compared cell-by-cell against the print, including the print's own inconsistent caption spellings (CogvideoX/CogVideo-5b)."
+  },
+  "patches": [
+    {
+      "before": "$^{\\ddagger}$ Tsinghua University $^{\\dagger}$ Zhipu AI",
+      "after": "$^{\\ddagger}$ Tsinghua University $^{\\dagger}$ Zhipu AI\n\n\\*Equal contributions. Core contributors: Zhuoyi, Jiayan, Wendi, Ming, Shiyu and Xiaotao.\n{yangzy22,tengjy24}@mails.tsinghua.edu.cn, corresponding author: jietang@tsinghua.edu.cn\nVisiting our demo website https://yzy-thu.github.io/CogVideoX-demo/ to watch more videos!",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints a title-page footnote block below the affiliations, visually verified at 300 dpi: '*Equal contributions. Core contributors: Zhuoyi, Jiayan, Wendi, Ming, Shiyu and Xiaotao. {yangzy22,tengjy24}@mails.tsinghua.edu.cn, corresponding author: jietang@tsinghua.edu.cn Visiting our demo website https://yzy-thu.github.io/CogVideoX-demo/ to watch more videos!' The OCR dropped this entire footnote block; the patch reinserts it verbatim (leading asterisk escaped for Markdown)."
+    },
+    {
+      "before": "## 3D Full Attention. Previous works\n\n(Singer et al., 2022;",
+      "after": "**3D Full Attention.** Previous works (Singer et al., 2022;",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 shows a bold run-in paragraph lead '3D Full Attention.' on the same line as the body sentence 'Previous works (Singer et al., 2022; Guo et al., 2023) often employ ...', all one paragraph. OCR promoted the lead plus the glued sentence fragment to a '##' heading and split the paragraph mid-sentence; the patch demotes it to a bold run-in lead and rejoins the sentence."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "glued-line-join-table-12",
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Table 12 first cell joins the printed line break without a space ('Real-time tracking2. Good action understanding'); cosmetic join inside one cell, values unaffected."
+    },
+    {
+      "id": "figure-only-pages",
+      "pdf_pages": [
+        19,
+        20,
+        21,
+        22,
+        27
+      ],
+      "evidence": "Appendix figure pages are transcribed as embedded figures with caption fragments; word-diff noise there belongs to figure-internal labels and was not patched without clearer evidence."
+    }
+  ]
+}

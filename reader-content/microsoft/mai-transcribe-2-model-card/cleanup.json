@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:mai-transcribe-2-model-card",
+  "source_sha256": "88eaab3cd6cffeb3793c835c1d24cbff2f30c88e931c970b0c61cf094c5d8987",
+  "ocr_sha256": "b03d5f27f66bc36cb1857579992254a2c63e731e84a5d16d9265ea6461f6dc47",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverage": "complete",
+    "notes": "Full text-layer diff of all 8 physical pages plus a word-coverage sweep; rendered physical pages 1, 2, 5 and 6 were inspected. The FLEURS per-language table and the WER bar chart are bitmap images in the PDF with no text layer; the chart is embedded and the table was transcribed by OCR, so the table was verified by reading the extracted native-resolution image (1200x2070) in three crops: all 60 language rows, the header row and the two footnote lines match the print. One confirmed OCR misread: Odia's language code GR must be OR. Structure is balanced (one legitimate ```json sample block matching the printed JSON). Confirmed repairs: dropped title block, dropped 'Performance and quality' section heading, dropped table title block, Odia code, two missing spaces before '(example)', and one bullet inconsistent with the document's own 13-item dash style."
+  },
+  "patches": [
+    {
+      "before": "Date: September 3, 2026\n\n## Model summary",
+      "after": "Model Card\n\n## MAI-Transcribe-2\n\nDate: September 3, 2026\n\n## Model summary",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered PDF physical p.1 prints the label 'Model Card' above the title 'MAI-Transcribe-2' over the date line; the PDF text layer extracts both lines. OCR began the document at the date line and dropped the title block; the sibling chatgpt-images-2-5 card OCR keeps its title block in the same position."
+    },
+    {
+      "before": "• Automatic language identification.",
+      "after": "\\- Automatic language identification.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered PDF physical p.1 shows all eight Key capabilities items with the same bullet marker; OCR rendered seven of them with the document's dash style (13 '\\-' lines total) and this one with a literal bullet character. Aligns the outlier with the document's own convention; no wording changes."
+    },
+    {
+      "before": "## Consistently high quality across 60 languages",
+      "after": "## Performance and quality\n\n## Consistently high quality across 60 languages",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered PDF physical p.2 opens with the large section heading 'Performance and quality' (with rule, same style as 'Model summary'/'Overview') followed by the subsection 'Consistently high quality across 60 languages'; the PDF text layer contains the line but OCR dropped it, leaving the four performance subsections without their parent heading."
+    },
+    {
+      "before": "structured notes.(example)",
+      "after": "structured notes. (example)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "PDF text layer physical p.3 use-case table prints 'generating structured notes. (example)' with the space before the parenthetical; OCR joined the wrapped lines without it."
+    },
+    {
+      "before": "cases.(example)",
+      "after": "cases. (example)",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "PDF text layer physical p.3 use-case table prints 'and error cases. (example)' with the space before the parenthetical; OCR joined the wrapped lines without it."
+    },
+    {
+      "before": "<td>Odia GR</td>",
+      "after": "<td>Odia OR</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "The per-language table is a bitmap image on physical p.5 (no text layer); reading the extracted native-resolution image shows the row as 'Odia OR' (Odia's ISO 639-1 code), not GR. All seven WER values in the Odia row (6.0/6.4/8.4/8.4/7.9/20.3/106.1) match the print."
+    },
+    {
+      "before": "<table><tr><td>Language</td><td>MAI-Transcribe-2</td>",
+      "after": "Per-language word error rate\n\nLower is better\n\nFLEURS test set, forced language · All 60 languages · The lowest score in each language is shown in bold.\n\n<table><tr><td>Language</td><td>MAI-Transcribe-2</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "The table image's own title block reads 'Per-language word error rate', italic 'Lower is better', and 'FLEURS test set, forced language · All 60 languages · The lowest score in each language is shown in bold.'; OCR transcribed the table cells but dropped this heading block entirely. Restored as plain lines before the table, matching how the chart caption is kept as a plain line."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "flattened-bold-minimums-fleurs-table",
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "The printed table marks the lowest WER per language in bold ('The lowest score in each language is shown in bold.'); OCR flattened the emphasis to plain text. All values are verified correct; restoring 60 rows of <strong> markers was left out as mechanical risk without reader benefit."
+    },
+    {
+      "id": "inline-code-chips-verbatim-clean",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The print shows 'verbatim' and 'clean' as monospace chips inside the transcription-style bullet; whether the OCR kept backtick styling was not verified in this pass and no patch was made."
+    }
+  ]
+}

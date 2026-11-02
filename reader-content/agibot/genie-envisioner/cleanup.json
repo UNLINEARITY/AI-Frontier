@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "agibot:genie-envisioner",
+  "source_sha256": "d8802a311ff9db058bf8f25cb5ccc03711e32b11cd5f02a1759324ddb3cfbd71",
+  "ocr_sha256": "6eb8c00e434a6d280997b188138b0d6563234c9c3af14555ef2cf81e249c5f70",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "Normalized full-text diff of every physical PDF page against the OCR markdown, followed by targeted renders. Verified visually: 150-dpi bottom strip of physical p.1 (author-symbol footnote line) and a 300-dpi crop of physical p.24 (Qwen2.5-VL reference entry). Table 1 (physical p.12), the EWMBench aggregate table (physical p.20) and Table 2 (physical p.21) are present as HTML tables with values matching the PDF text layer; per-page diff deltas on figure-heavy pages 2-18 come from diagram labels and chart values that live inside the embedded figures. Equations, the metric formulas in section 6.2, and the reference list (57 entries by year-ending count on both sides) survive intact; the remaining fix candidates were the three patches below."
+  },
+  "patches": [
+    {
+      "before": "https://genie-envisioner.github.io",
+      "after": "https://genie-envisioner.github.io\n\n\\* Equal Contribution. $^{\\dagger}$ Project Leader. $^{\\diamond}$ Corresponding Author.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The OCR keeps the author-line markers (Yue Liao\\*, Liliang Chen $^{\\dagger}$, Shuicheng Yan $^{\\diamond}$ ...) but dropped the page-1 footnote line. Rendered physical p.1 prints '* Equal Contribution. † Project Leader. ⋄ Corresponding Author.' below the footnote rule (verified on a 150-dpi render); restored after the front-matter block, using the same symbol markup the author line already uses."
+    },
+    {
+      "before": "EWMbench provides",
+      "after": "EWMBench provides",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "The PDF spells the benchmark 'EWMBench' throughout (all 19 text-layer occurrences, including the sentence 'EWMBench provides a comprehensive evaluation framework...' on physical p.3); this single OCR line lowercased the 'b'. The abstract and section 6 headings in the same OCR file already read 'EWMBench'."
+    },
+    {
+      "before": "Qwen2. 5-v1 technical report",
+      "after": "Qwen2. 5-vl technical report",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 (300-dpi crop) prints the reference title 'Qwen2. 5-vl technical report' with a lowercase letter l (verified against digit-1 glyphs on the same page); OCR misread it as 'v1'. The source's own spacing 'Qwen2. 5' is preserved unchanged."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-diagram-labels",
+      "pdf_pages": [
+        2,
+        3,
+        4,
+        6,
+        8,
+        9,
+        10,
+        13,
+        16,
+        20,
+        21
+      ],
+      "evidence": "Scattered axis values, pipeline-stage labels and task names around Figures 1-18 interleave with body text in OCR order; they are transcriptions of content shown inside the embedded figures and were left unchanged."
+    }
+  ]
+}

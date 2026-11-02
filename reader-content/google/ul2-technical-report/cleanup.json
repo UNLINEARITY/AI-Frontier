@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "google:ul2-technical-report",
+  "source_sha256": "196d190c953ed61105908a202ba2b026b57e5b7951ed8bc20d17f474785959c4",
+  "ocr_sha256": "9dc8cd45ab10ba7b6f67a4fdf7363a1b766e5499bcedcdd624d11e726a470110",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE mode. (a) Full fence scan: 4 code-fence pairs (python/txt prompt chunks), balanced. (b) Automated normalized 4-gram page-containment diff of all 39 PDF pages plus a stricter 12-gram pass (runs >=60 chars) on every page: low pages are all accounted for as HTML-table cell reordering (Tables 3, 4, 5, 6, 7, 8-continued, 10, 11, 16, 17 - spot-checked values e.g. '13.3', '37.1/15.7/30.2', QASC/MCScript rows present) or figure-internal labels (p4 Figure 1 legend/axes, p8 Figure 2 diagram). 'LaMDA 137B' in Table 11 verified at 300 dpi to be the print's own value; 'Table 17: Caption' verified in the p39 text layer and kept as printed. Three real drops found: the p1 author-footnote block, footnote 5 on p13, and an OCR auto-correction ('its' for the print's \"it's\") on p13 - all restored after visual verification. arXiv stamp omitted per convention; body prose machine-scanned rather than read word by word."
+  },
+  "patches": [
+    {
+      "before": "Denny Zhou $^{\\triangle}$ Neil Houlsby $^{\\triangle}$ Donald Metzler $^{\\triangle}$\n\nGoogle Brain",
+      "after": "Denny Zhou $^{\\triangle}$ Neil Houlsby $^{\\triangle}$ Donald Metzler $^{\\triangle}$\n\nGoogle Brain\n\n$^{*}$ Yi and Mostafa are co-leads of this project and are denoted with $^{*}$. $^{\\#}$ denotes technical research contributors. $^{b}$ denotes data & infrastructure contributions. $^{\\triangle}$ denotes advising contributions. Don, denoted with $^{\\square}$ is the last author. Full contributions of all authors at the end of paper. Correspondence to yitay@google.com or dehghani@google.com.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The whole author-footnote block was dropped by OCR. Rendered physical p.1 (300 dpi crops of the footnote strip, visually inspected) prints: '*Yi and Mostafa are co-leads of this project and are denoted with *. # denotes technical research contributors. b denotes data & infrastructure contributions. (triangle) denotes advising contributions. Don, denoted with (square) is the last author. Full contributions of all authors at the end of paper. Correspondence to yitay@google.com or dehghani@google.com.' The marker glyphs match the symbols the OCR kept on the author names ($^{*}$, $^{\\#}$, $^{b}$, $^{\\triangle}$); the square is transcribed as $^{\\square}$. Restored after the affiliation line."
+    },
+    {
+      "before": "This is essentially the a PrefixLM-type architecture $^{5}$ (Raffel et al., 2019) which we find to be consistently better than a full causal decoder model.",
+      "after": "This is essentially the a PrefixLM-type architecture $^{5}$ (Raffel et al., 2019) which we find to be consistently better than a full causal decoder model.\n\n$^{5}$ Not to be confused with the PrefixLM pretraining objective.",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Footnote 5 body dropped by OCR while the marker $^{5}$ survives on 'PrefixLM-type architecture'. Rendered physical p.13 footnote strip (300 dpi, visually inspected) prints '5Not to be confused with the PrefixLM pretraining objective.' matching the PDF text layer; restored after the referencing paragraph. The print's own typos ('essentially the a') are preserved as printed."
+    },
+    {
+      "before": "only in its input segment",
+      "after": "only in it's input segment",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 (300 dpi crop at the sentence, visually inspected) prints \"...only in it's input segment and autoregressive decoding at the targets segment.\"; the PDF text layer also has \"it's\". OCR silently corrected the print's own typo to 'its'; restored to print."
+    }
+  ],
+  "unresolved": []
+}

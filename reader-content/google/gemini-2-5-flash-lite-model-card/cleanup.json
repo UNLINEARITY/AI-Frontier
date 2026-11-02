@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-2-5-flash-lite-model-card",
+  "source_sha256": "3fd8835ea1b38974d88fab496b89f1d0587e4955ab030b0c844f17652c893a7b",
+  "ocr_sha256": "f4fbfaa5208e025ced55f6b28bed6057871ba7e964634be6e46aa945bb68c0e7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "coverage": "complete",
+    "notes": "Token-level alignment of all 9 extracted PDF pages against the OCR markdown; the only unmatched body runs were the two dropped table footnotes restored below. Both evaluation tables were value-checked cell by cell against the extracted text. The odd printed cells '30.6^' and '5.40%' (physical p.5, MRCR v2 rows, 300 dpi render read) are exactly what the PDF prints and are kept. The running page header 'Gemini 2.5 Flash-Lite - Model Card' printed atop physical p.2 was promoted by OCR to a duplicate top-level title next to the real cover title (physical p.1, 110 dpi render read: 'Gemini 2.5 Flash-Lite / Model Card'); patches merge them into one title."
+  },
+  "patches": [
+    {
+      "before": "## Gemini 2.5 Flash-Lite Model Card\n\n# Gemini 2.5 Flash-Lite - Model Card\n\n",
+      "after": "# Gemini 2.5 Flash-Lite Model Card\n\n",
+      "count": 1,
+      "pdf_pages": [
+        1,
+        2
+      ],
+      "evidence": "Rendered physical p.1 (110 dpi, read): the cover prints the title 'Gemini 2.5 Flash-Lite' / 'Model Card' on two lines. Rendered physical p.2 top (200 dpi crop, read): 'Gemini 2.5 Flash-Lite - Model Card' is the running page header, duplicated by OCR as a second '#'-level title. The card keeps a single H1 built from the cover title and the header line is removed."
+    },
+    {
+      "before": "\\* indicates evaluated on text problems only (without images)\n\n## Intended Usage and Limitations",
+      "after": "\\* indicates evaluated on text problems only (without images)\n1We regularly update evaluation processes to include new and emerging quality evaluations and benchmarks. The results reported above include additional or updated benchmarks which may not have been included in previous Gemini model cards. Results are thus not directly comparable with performance results found in previous Gemini model cards.\n\n## Intended Usage and Limitations",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom (250 dpi crop, read): under the first evaluation table a footnote rule prints '1 We regularly update evaluation processes to include new and emerging quality evaluations and benchmarks. The results reported above include additional or updated benchmarks which may not have been included in previous Gemini model cards. Results are thus not directly comparable with performance results found in previous Gemini model cards.' The superscript 1 survives in the table header cell ('Capability Benchmark1') but the footnote body was dropped; it is restored after the '*' note line, in printed order."
+    },
+    {
+      "before": "+29.8%</td></tr></table>\n\nAssurance Evaluations Results:",
+      "after": "+29.8%</td></tr></table>\n\n2The ordering of evaluations in this table has changed from previous iterations of the 2.5 Flash-Lite model card in order to list safety evaluations together and improve readability. The type of evaluations listed have remained the same.\n\nAssurance Evaluations Results:",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 bottom (250 dpi crop, read): footnote rule prints '2 The ordering of evaluations in this table has changed from previous iterations of the 2.5 Flash-Lite model card in order to list safety evaluations together and improve readability. The type of evaluations listed have remained the same.' The superscript 2 survives in the safety-table header ('$Evaluation^2$') but the footnote body was dropped; it is restored directly below its table."
+    }
+  ],
+  "unresolved": []
+}

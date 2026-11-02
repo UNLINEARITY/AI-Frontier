@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "mistral:mistral-7b",
+  "source_sha256": "dfbac4e7035344b305c947481f2e7e8a02f7a24a563917eb6e47f6591d14c5ae",
+  "ocr_sha256": "c3aa1ac876c25b8af82dd21747f3c0bd18902b73a4b8b0a2c16a1fe266a3a03b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "coverage": "complete",
+    "notes": "All 9 physical pages screened by column-aware PDF-text line diff plus a full structure scan (no printed fence markers in source; Tables 1-5 present as HTML tables). Dropped footnotes restored for p.2 (links 1-3) and p.3 (note 4) after 340-dpi render verification; Figure 6's raster llmboxing screenshot text demoted from headings (p.7 render). Remaining unmatched PDF lines are table bodies, figure-internal mask-matrix digits and diagram labels (physical p.2-3), reference wrap continuations (p.8-9) and Table 5 cell texts (verified present in the OCR HTML table). Table cell values were compared only structurally; the percentage grids of Tables 2-3 were not verified number-by-number."
+  },
+  "patches": [
+    {
+      "before": "significantly outperforms the Llama 2 13B – Chat model.\n\nMistral 7B takes",
+      "after": "significantly outperforms the Llama 2 13B – Chat model.\n\n$^{1}$https://github.com/mistralai/mistral-src\n$^{2}$https://github.com/skypilot-org/skypilot\n$^{3}$https://huggingface.co/mistralai\n\nMistral 7B takes",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (340 dpi crop of the footnote rule) prints three URL footnotes \"1https://github.com/mistralai/mistral-src\", \"2https://github.com/skypilot-org/skypilot\", \"3https://huggingface.co/mistralai\" (blue monospace links); the OCR kept the $^{1}$/$^{2}$/$^{3}$ markers on \"reference implementation\", \"SkyPilot\" and \"Hugging Face\" in the anchoring paragraph but dropped all three footnote bodies."
+    },
+    {
+      "before": "reasoning benchmarks.\n\n![[images/ed868d3d88380dbebee3327058a53ecf17c8418e56ce0c5c3c761ad51633ef11.jpg]]",
+      "after": "reasoning benchmarks.\n\n$^{4}$Since Llama 2 34B was not open-sourced, we report results for Llama 1 34B.\n\n![[images/ed868d3d88380dbebee3327058a53ecf17c8418e56ce0c5c3c761ad51633ef11.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 (340 dpi crop, left column footnote rule) prints \"4Since Llama 2 34B was not open-sourced, we report results for Llama 1 34B.\", anchored to the superscript 4 after \"Llama 1 34B\" in the body paragraph (kept in OCR as $^{4}$); the footnote body was dropped."
+    },
+    {
+      "before": "# Can you recommend a foundational and accessible book about quantum physics?",
+      "after": "Can you recommend a foundational and accessible book about quantum physics?",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 is the full-page Figure 6 screenshot of the llmboxing.com evaluation UI; the question line is raster text inside that figure (no vector-text occurrence on the page), so it must not remain a Markdown heading (least of all an H1). Demoted to plain text."
+    },
+    {
+      "before": "## mistral-7b-instruct-v0.1 Round Winner",
+      "after": "mistral-7b-instruct-v0.1 Round Winner",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Same Figure 6 screenshot on physical p.7: the model-name badge line is raster UI text inside the figure; demoted from a Markdown heading to plain text."
+    },
+    {
+      "before": "## llama-2-13b-chat",
+      "after": "llama-2-13b-chat",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Same Figure 6 screenshot on physical p.7: the second response's model-name line is raster UI text inside the figure; demoted from a Markdown heading to plain text."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table-values-not-value-checked",
+      "pdf_pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "evidence": "Tables 1-5 exist as HTML tables with matching captions, but cell values were not verified number-by-number against the print."
+    },
+    {
+      "id": "figure-raster-text-order",
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Figure 6's screenshot text is transcribed as plain paragraphs with UI chrome (\"Copy Link to Question\", \"Next Round (Enter) →\"); kept as figure-internal transcription, headings demoted."
+    }
+  ]
+}

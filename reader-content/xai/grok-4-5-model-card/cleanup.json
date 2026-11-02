@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "id": "xai:grok-4-5-model-card",
+  "source_sha256": "068d432a70abc12787453c7424cd54452d38fcaebb498fa1c7f6d4b41658659f",
+  "ocr_sha256": "5bc6e646676fde2bb705de8be534f8d370e0942558be0f304f81f9e5d9ea9abc",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "coverage": "complete",
+    "notes": "Full structure check (no code fences; heading set and numbered-superscript markers match the printed card, and the References list resolves them) plus word-level diff of all OCR lines against extracted text from all 29 physical PDF pages. The systematic defect is dropped chart-footnote bodies: every '*'/'†'/'‡' note printed below the charts or under the introductory sentences is missing from the OCR while its inline marker survives; all 18 dropped notes plus the title-block 'Revision: 2026-07-20' line are restored here from the printed pages. Words missing from the OCR that were NOT patched are figure-internal chart labels and legends (bar labels, axis titles, legend entries) shown by the embedded chart images. Footnote text was extracted from the PDF text layer at page-bottom positions; the DeepSWE v1.0 image crop was visually inspected to confirm the embedded chart ends at the axis label and excludes the footnote. Escaped '\\*' keeps the printed asterisk from becoming a Markdown bullet, and '$^{†}$'/'$^{\\ddagger}$' reuse the document's existing marker convention."
+  },
+  "patches": [
+    {
+      "before": "July 14, 2026",
+      "after": "July 14, 2026\n\nRevision: 2026-07-20",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 title block prints 'Model Card: Grok 4.5 / July 14, 2026 / Revision: 2026-07-20'; OCR dropped the revision line. The patch restores it after the date."
+    },
+    {
+      "before": "Grok 4.5 is the initial release of the newest family of models from SpaceXAI\\* and Cursor $^{†}$ .",
+      "after": "Grok 4.5 is the initial release of the newest family of models from SpaceXAI\\* and Cursor $^{†}$ .\n\n\\* SpaceXAI is a doing-business-as (dba) name of XAI LLC. xAI and SpaceXAI may be used interchangeably throughout this card.\n\n$^{†}$ Grok 4.5 was also subject to supplemental training using anonymized Cursor workflow data to improve coding and agentic performance.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Physical p.4 prints two footnotes for the '*' on SpaceXAI and the '†' on Cursor in the introduction's first sentence: the dba note and the Cursor-workflow-training note. OCR kept the inline markers but dropped both footnote bodies; the patch appends them under the sentence, matching the document's existing \\* and $^{†}$ marker conventions."
+    },
+    {
+      "before": "The model's use is subject to SpaceXAI's Acceptable Use Policy $^{\\ddagger}$ , applicable Consumer and Enterprise Terms of Service, and any applicable laws.",
+      "after": "The model's use is subject to SpaceXAI's Acceptable Use Policy $^{\\ddagger}$ , applicable Consumer and Enterprise Terms of Service, and any applicable laws.\n\n$^{\\ddagger}$ SpaceXAI Acceptable Use Policy: https://x.ai/legal/acceptable-use-policy.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 prints the '‡' footnote body 'SpaceXAI Acceptable Use Policy: https://x.ai/legal/acceptable-use-policy.' below section 1.2; OCR kept the $^{\\ddagger}$ marker in the sentence but dropped the body."
+    },
+    {
+      "before": "![[images/009e68609fa1a1dbd6c568663a52d086d820025e46a4cb611b8bdecbebacb47f.jpg]]",
+      "after": "![[images/009e68609fa1a1dbd6c568663a52d086d820025e46a4cb611b8bdecbebacb47f.jpg]]\n\n\\* Eval created by Datacurve, run with each model provider's harnesses by AA",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Physical p.6 prints '* Eval created by Datacurve, run with each model provider's harnesses by AA' below the DeepSWE v1.0 chart; the embedded image crop ends at the axis label and does not include the footnote, which OCR dropped."
+    },
+    {
+      "before": "![[images/53b3dd0f7db9ed10b75b54f388b27125708f138afb43b5333d225ad3b5002121.jpg]]",
+      "after": "![[images/53b3dd0f7db9ed10b75b54f388b27125708f138afb43b5333d225ad3b5002121.jpg]]\n\n\\* mini-swe-agent harness run by Datacurve",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Physical p.7 prints '* mini-swe-agent harness run by Datacurve' below the DeepSWE v1.1 chart; OCR dropped the footnote body."
+    },
+    {
+      "before": "![[images/f345e3aab113e33313e00df903669b20bd33231de7b02a56de7d7c2af4ba6ac5.jpg]]",
+      "after": "![[images/f345e3aab113e33313e00df903669b20bd33231de7b02a56de7d7c2af4ba6ac5.jpg]]\n\n$^{†}$ Results are taken from tests conducted by Mercor.",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Physical p.7 prints '† Results are taken from tests conducted by Mercor.' as the second footnote under the APEX-SWE chart; OCR dropped the footnote body."
+    },
+    {
+      "before": "![[images/78717a03b204c5a7f67f2e786e5dcbb304cebbe45ac28afef019529c9d2acfb3.jpg]]",
+      "after": "![[images/78717a03b204c5a7f67f2e786e5dcbb304cebbe45ac28afef019529c9d2acfb3.jpg]]\n\n\\* SWE-Bench Pro was evaluated with controls for reward hacking in place; see https://cursor.com/blog/reward-hacking-coding-benchmarks",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Physical p.8 prints '* SWE-Bench Pro was evaluated with controls for reward hacking in place; see https://cursor.com/blog/reward-hacking-coding-benchmarks' below the SWE-Bench Pro chart (URL continuous across a printed line break); OCR dropped the footnote body."
+    },
+    {
+      "before": "![[images/6e97d3847ca4edf8225b5b9a77db25951d00c2c2acd819cd1d675fd2376cf8b6.jpg]]",
+      "after": "![[images/6e97d3847ca4edf8225b5b9a77db25951d00c2c2acd819cd1d675fd2376cf8b6.jpg]]\n\n$^{†}$ SWE-Bench Multilingual results are taken from runs additionally reported by Cursor; see https://cursor.com/grok-4-5.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Physical p.8 prints '† SWE-Bench Multilingual results are taken from runs additionally reported by Cursor; see https://cursor.com/grok-4-5.' below the SWE-Bench Multilingual chart (URL continuous across a printed line break); OCR dropped the footnote body."
+    },
+    {
+      "before": "![[images/99ac32cf6b89f1302ab33932c78d73f9a6d63573b21eaa13eed9e5490142d70f.jpg]]  ",
+      "after": "![[images/99ac32cf6b89f1302ab33932c78d73f9a6d63573b21eaa13eed9e5490142d70f.jpg]]  \n\n\\* Scores reflect the full SWE-Marathon task set (swe-marathon.org).",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Physical p.9 prints '* Scores reflect the full SWE-Marathon task set (swe-marathon.org).' below the SWE-Marathon chart; OCR dropped the footnote body."
+    },
+    {
+      "before": "![[images/207d6f57330cb87a89157995cd574b914cbbdcaa75445ad7a0176fc902fee6f8.jpg]]",
+      "after": "![[images/207d6f57330cb87a89157995cd574b914cbbdcaa75445ad7a0176fc902fee6f8.jpg]]\n\n$^{†}$ Results and harness labels from the public FrontierSWE leaderboard; Grok 4.5 is evaluated with Grok CLI.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Physical p.9 prints '† Results and harness labels from the public FrontierSWE leaderboard; Grok 4.5 is evaluated with Grok CLI.' below the FrontierSWE chart; OCR dropped the footnote body."
+    },
+    {
+      "before": "![[images/9340510f29845fe8e2fc84519ee8934d0976b6537a5cf8d18535c41ea8ae7c62.jpg]]",
+      "after": "![[images/9340510f29845fe8e2fc84519ee8934d0976b6537a5cf8d18535c41ea8ae7c62.jpg]]\n\n\\* Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Physical p.10 prints '* Competitor figures are drawn from the respective developers' published system cards or benchmark leaderboards.' as the shared footnote below the ProgramBench and Terminal-Bench 2.1 charts; the patch appends it after the second (last) chart on the page, matching print order."
+    },
+    {
+      "before": "![[images/477a0f210245c9960dff7e62d58b13db39c0d32c6adbfc97d15626aa971b8557.jpg]]",
+      "after": "![[images/477a0f210245c9960dff7e62d58b13db39c0d32c6adbfc97d15626aa971b8557.jpg]]\n\n\\* Public leaderboard results from https://eebench.org/ (V1 core corpus).",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 prints '* Public leaderboard results from https://eebench.org/ (V1 core corpus).' below the EEBench chart; OCR dropped the footnote body."
+    },
+    {
+      "before": "![[images/39b5d6ef0bb517cd0e5837402acfa9f5f7d87dee99840caedba82b0fc68f563a.jpg]]  ",
+      "after": "![[images/39b5d6ef0bb517cd0e5837402acfa9f5f7d87dee99840caedba82b0fc68f563a.jpg]]  \n\n\\* Run by Artificial Analysis (AA) in their harness.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Physical p.15 prints '* Run by Artificial Analysis (AA) in their harness.' below the GDPval-AA v2 chart; OCR dropped the footnote body."
+    },
+    {
+      "before": "![[images/5a66c1c4d28f0770a7dfc1cda71e417b9ebd8c5f52a18f580ce26567ac3affb6.jpg]]",
+      "after": "![[images/5a66c1c4d28f0770a7dfc1cda71e417b9ebd8c5f52a18f580ce26567ac3affb6.jpg]]\n\n\\* GPT 5.6 Sol refused to solve 2 out of the 29 tasks. GPT 5.5 refused to solve 1 out of the 29 tasks. The scores are computed excluding these tasks that were refused.\n\n$^{†}$ The results are obtained on Grok Build harness.",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Physical p.17 prints two footnotes below the SpaceXAI MTS Eval chart: '* GPT 5.6 Sol refused to solve 2 out of the 29 tasks. GPT 5.5 refused to solve 1 out of the 29 tasks. The scores are computed excluding these tasks that were refused.' and '† The results are obtained on Grok Build harness.'; OCR dropped both footnote bodies."
+    },
+    {
+      "before": "![[images/396c71c235bf71e6509a378e5cdcff3363f535e607398f3a2fc94ce6181153ae.jpg]]  ",
+      "after": "![[images/396c71c235bf71e6509a378e5cdcff3363f535e607398f3a2fc94ce6181153ae.jpg]]  \n\n\\* Evaluation was run on an internal implementation of DeepSearchQA.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Physical p.19 prints '* Evaluation was run on an internal implementation of DeepSearchQA.' below the DeepSearchQA chart; OCR dropped the footnote body."
+    },
+    {
+      "before": "<td>Sycophancy ↓</td><td>0.01%</td></tr></table>",
+      "after": "<td>Sycophancy ↓</td><td>0.01%</td></tr></table>\n\n\\* MASK-Rectified corrects the MASK grading so that responses where the model is obviously (model-aware) role-playing, rather than asserting a genuine belief, are not counted as lies.",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Physical p.27 prints '* MASK-Rectified corrects the MASK grading so that responses where the model is obviously (model-aware) role-playing, rather than asserting a genuine belief, are not counted as lies.' as the footnote at the bottom of the Behaviors page, after the Sycophancy metric table; OCR dropped the footnote body."
+    }
+  ],
+  "unresolved": []
+}

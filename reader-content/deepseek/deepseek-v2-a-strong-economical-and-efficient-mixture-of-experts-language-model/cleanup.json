@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-v2-a-strong-economical-and-efficient-mixture-of-experts-language-model",
+  "source_sha256": "f149f9c09aa8b46ce6a740a255a99b7cc2317ac5b065989339919b7e6c329c9b",
+  "ocr_sha256": "5130ee8c4b6a3bbae266c49d510caaa794a66ad09f87ad2fb4a45c1ac8dd0032",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "coverage": "complete",
+    "notes": "Full normalized word-level diff of all 52 extracted PDF pages against the OCR Markdown, plus code-fence balance check (3 balanced blocks). Pages 38, 41, 43 and 49 were rendered (120 dpi) and physical page 49 was additionally rendered at 300 dpi to transcribe the dropped RACE question-answer turns. All 37 printed table captions were enumerated on both sides; body prose, references and equations show only LaTeX-normalization and punctuation-spacing differences handled by the shared normalizer. Figure-internal chart text and prompt boxes embedded as images were not treated as defects. Markdown escapes such as weight\\_decay render identically to the printed underscore and were left unchanged."
+  },
+  "patches": [
+    {
+      "before": "![[images/7c02c0630996b2f82813c1eb21a757f79aa2ce089a292549b190b05d6df873cd.jpg]]\n\n![[images/af9bf458685f30d62d1f6e2567b72bba44525281c9358b0d886e3b7f7c5e50e1.jpg]]  ",
+      "after": "![[images/7c02c0630996b2f82813c1eb21a757f79aa2ce089a292549b190b05d6df873cd.jpg]]  \nTable 20 | An example of CMRC2018.\n\n![[images/af9bf458685f30d62d1f6e2567b72bba44525281c9358b0d886e3b7f7c5e50e1.jpg]]  ",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered physical p.41 prints 'Table 20 | An example of CMRC2018.' centered below the Heldenplatz prompt box (visually verified). The OCR embedded the box as image 7c02c063...jpg (visually confirmed to be the CMRC2018 Heldenplatz box) but dropped its caption line, so the md jumps from the CMMLU caption to the Table 21 DROP caption. The patch only inserts the printed caption text between the two image embeds without changing the embeds."
+    },
+    {
+      "before": "Table 23 | An example of CLUEWSC.\n\nTable 25 | An example of HellaSwag.",
+      "after": "Table 23 | An example of CLUEWSC.\n\nTable 24 | An example of GSM8K.\n\nTable 25 | An example of HellaSwag.",
+      "count": 1,
+      "pdf_pages": [
+        43
+      ],
+      "evidence": "Rendered physical p.43 prints 'Table 24 | An example of GSM8K.' below the GSM8K chain-of-thought prompt box (visually verified). The OCR merged the CLUEWSC, GSM8K and HellaSwag boxes into one HTML table and dropped the Table 24 caption, so the md jumps from caption 23 to caption 25."
+    },
+    {
+      "before": "## PROMPT\n\nArticle:",
+      "after": "PROMPT\n\nArticle:",
+      "count": 1,
+      "pdf_pages": [
+        49
+      ],
+      "evidence": "Rendered physical p.49 shows 'PROMPT' as the label line of the printed RACE prompt box, not a document section heading; it is the only prompt-box label the OCR promoted to a '##' heading in the whole document. The patch demotes it to plain text matching the box label."
+    },
+    {
+      "before": "castings in an area about the size of a football field.\n\nOPTIONS",
+      "after": "castings in an area about the size of a football field.\n\nQ: What's the purpose of reading Earthworms?\nA: To put the writer's idea into real use.\nQ: Which question CANNOT be answered in the passage?\nA: Why can human listen like earthworms?\nQ: How can you understand Earthworms better according to this passage?\nA: Read to work out all the questions in the writer's head while reading.\nQ: What's the best title for the passage?\nA:\n\nOPTIONS",
+      "count": 1,
+      "pdf_pages": [
+        49
+      ],
+      "evidence": "Rendered physical p.49 (verified at 300 dpi) prints four question-answer turns between the Earthworms passage and the OPTIONS block of the RACE prompt box; the OCR dropped all eight printed lines. Transcribed verbatim from the 300-dpi render: 'Q: What's the purpose of reading Earthworms? / A: To put the writer's idea into real use. / Q: Which question CANNOT be answered in the passage? / A: Why can human listen like earthworms? / Q: How can you understand Earthworms better according to this passage? / A: Read to work out all the questions in the writer's head while reading. / Q: What's the best title for the passage? / A:'."
+    },
+    {
+      "before": "- One way to learn to be a wise writer $^{49}$ - One way to be clearer about worms\n\n![[images/1adef7c36e5307677cbed926badcab38f2aa653f783dd237fcb1c66e5ba1161d.jpg]]  \nTable 34 | An example of TriviaQA.",
+      "after": "- One way to learn to be a wise writer\n- One way to be clearer about worms\n\nTable 33 | An example of RACE.\n\n![[images/1adef7c36e5307677cbed926badcab38f2aa653f783dd237fcb1c66e5ba1161d.jpg]]  \nTable 34 | An example of TriviaQA.",
+      "count": 1,
+      "pdf_pages": [
+        49
+      ],
+      "evidence": "Rendered physical p.49 (verified at 300 dpi and full-page 120 dpi) shows the printed page number 49 colliding with the third option line '- One way to learn to be a wise writer' at the bottom of the RACE box; the OCR glued the page number into the option text as a spurious '$^{49}$' superscript and merged the fourth option into the same line. The same page print also shows 'Table 33 | An example of RACE.' below the OPTIONS block, which the OCR dropped. The patch removes the page-number artifact, restores the option line break, and reinserts the caption before the TriviaQA image embed without changing any embed."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "hellaswag-options-cell-glued",
+      "pdf_pages": [
+        44
+      ],
+      "evidence": "The HellaSwag prompt box (Table 25) is transcribed inside the shared HTML table with 'OPTIONS- is playing the piano...' cell text glued; content is complete but cell/line structure differs from the printed box. A page-by-page structural comparison is needed before touching recorded content."
+    },
+    {
+      "id": "prompt-box-paragraph-normalization",
+      "pdf_pages": [
+        49
+      ],
+      "evidence": "The printed RACE article runs 'them.For example' and 'airy .In one year' without spaces; the OCR normalized this spacing. Punctuation spacing is handled globally and was not patched."
+    }
+  ]
+}

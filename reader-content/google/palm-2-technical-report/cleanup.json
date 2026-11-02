@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "google:palm-2-technical-report",
+  "source_sha256": "485141e0b2073dc11b3926eb8e7736789f87faba85219a311bd6fa20a462f120",
+  "ocr_sha256": "180f59a90df09233076c07fab643e4cdd3ae72be10b459a2f55423adc418a274",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      4,
+      5,
+      6,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      25,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      61,
+      62,
+      63,
+      65,
+      66,
+      74,
+      75,
+      76,
+      78,
+      80,
+      81,
+      83,
+      84,
+      92,
+      93
+    ],
+    "coverage": "partial",
+    "notes": "Triage review: full structural/fence scan (all fences balanced, no swallowed headings/tables/images); automated whole-document page-text diff (normalized 4-gram containment per page) with manual inspection of every page below 0.90 coverage, plus decimal-number completeness checks on all table-heavy pages (1, 4, 8, 11-16, 18-19, 43-46, 63, 65-66, 74-81, 83: zero missing values). Rendered and visually inspected: page 1 footnote area, page 50 (300 dpi word-level crop), page 83 (rubric posters), plus section-structure cross-checks over pages 45-93. Appendix B example conversations exist only as embedded figure screenshots in the print itself and are not transcription defects. Line-by-line reading was limited to the flagged low-coverage pages, the title page, and appendix D.8; the remaining pages were machine-scanned only."
+  },
+  "patches": [
+    {
+      "before": "produces a realistic design that satisfies the intent of the query",
+      "after": "produces a realistic design that satisifes the intent of the query",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "Rendered physical p.50 (B.2 Creative generation) prints \"...produces a realistic design that satisifes the intent of the query.\" with the print's own misspelling \"satisifes\" (300 dpi crop visually verified); OCR silently corrected it to \"satisfies\"."
+    },
+    {
+      "before": "reported in this report.\n\n## Contents",
+      "after": "reported in this report.\n\n*See Section 7 for a list of authors. Please send correspondence to palm2-technical-report@google.com. NOTE: This paper refers to the version of PaLM 2 we announced in May 2023. Our research and development of PaLM 2 continues, including version updates for PaLM 2 as it is implemented into products.\n\n## Contents",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 title page carries the footnote \"*See Section 7 for a list of authors. Please send correspondence to palm2-technical-report@google.com. NOTE: This paper refers to the version of PaLM 2 we announced in May 2023. ... implemented into products.\" (visually verified); OCR dropped the entire footnote line, including the \"Google*\" asterisk target and the version-scope note. The arXiv stamp (\"arXiv:2305.10403v3 [cs.CL] 13 Sep 2023\") was deliberately not restored as repository provenance already records it."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "rubric-posters-interleaved-d81-d83",
+      "pdf_pages": [
+        83,
+        84,
+        85
+      ],
+      "evidence": "Appendix D.8.1/D.8.2/D.8.3 print five-column rubric posters (Relevant/Valid/Inclusive/Reliable/Actionable with 0 limited/1 okay/2 good/3 great chips). The OCR interleaves the columns, promotes poster titles, column labels and score-chip texts to headings (## Rubric for RAI Measurement Quality For each dimension..., ## Relevant..., ## 2 good, ## 1 okay, ## 3 great), drops the \"0 limited\" chip text, and omits cells in D.8.3 (e.g. \"May overestimate performance if translation system is not sufficiently capable (eg, early training).\" printed on p.84). A page-by-page reconstruction of the three posters is needed before restructuring."
+    },
+    {
+      "id": "figure-internal-conversation-text-machine-scanned",
+      "pdf_pages": [
+        5,
+        6,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        51,
+        52,
+        53,
+        54,
+        55,
+        57,
+        58,
+        61,
+        63,
+        65,
+        66
+      ],
+      "evidence": "Pages with 4-gram coverage below 0.90 that are conversation/figure-example pages (Persian proverbs Figures 1-2, translation demos, creative-generation figures, coding demos) were only machine-scanned; their text exists inside embedded figure screenshots in both print conventions and the OCR embeds the figures, but line-level confirmation of every caption and embed pairing was not completed within budget."
+    }
+  ]
+}

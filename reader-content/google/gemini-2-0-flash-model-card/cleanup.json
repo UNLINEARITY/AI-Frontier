@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-2-0-flash-model-card",
+  "source_sha256": "b1575ae4e9dcbc6aef722adab208b9798d26dc39eb2fb63fc7d04bd47b9bd597",
+  "ocr_sha256": "6abf5dc6316a98ea7a5fb2a6baf78bae7cbae2618e1db726a8a078007c1c7200",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Every extracted PDF page line was compared against the OCR markdown with normalization and fuzzy matching; code-fence balance and all markdown headings were checked, and the flagged candidates were resolved against the markdown (table cells and chart labels are present or figure-internal). Rendered physical page 1 was visually inspected. The only defect found is the dropped title-page publication line 'Model card published April 15, 2025'."
+  },
+  "patches": [
+    {
+      "before": "# Gemini 2.0 Flash Model Card\n\nModel Cards are intended to provide",
+      "after": "# Gemini 2.0 Flash Model Card\n\nModel card published April 15, 2025\n\nModel Cards are intended to provide",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 title page prints 'Model card published April 15, 2025' in the page header next to the Google logo, above the 'Gemini 2.0 Flash / Model Card' title; the OCR kept the title heading and dropped the publication line."
+    }
+  ],
+  "unresolved": []
+}

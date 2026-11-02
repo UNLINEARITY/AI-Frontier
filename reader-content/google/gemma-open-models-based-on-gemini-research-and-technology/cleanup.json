@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "google:gemma-open-models-based-on-gemini-research-and-technology",
+  "source_sha256": "d8f89e0a7e62c57e035d391b3174d8307a73f72ee84f6494ba58aa8fe7e38383",
+  "ocr_sha256": "6490ab78137ab44fa34ec6220b187ecb1f4ee1f9823f91e0d30e134bb18ec954",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level pass of all 17 physical PDF pages against the OCR markdown; pages 1, 6, 7 and 15 were rendered and visually checked. All three printed footnote bodies were dropped by OCR while their superscript markers survived; the remaining token deltas are soft-hyphen line-break splits that the markdown joins correctly. arXiv margin stamps and run-in paragraph headings left as-is."
+  },
+  "patches": [
+    {
+      "before": "Gemma Team, Google DeepMind $^{1}$",
+      "after": "Gemma Team, Google DeepMind $^{1}$\n\n1 See Contributions and Acknowledgments section for full author list. Please send correspondence to gemma-1-report@google.com.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote rule prints \"1See Contributions and Acknowledgments section for full author list. Please send correspondence to gemma-1-report@google.com.\" below the title block; OCR kept the $^{1}$ marker but dropped the body."
+    },
+    {
+      "before": "using an 10% edit distance threshold.",
+      "after": "using an 10% edit distance threshold.\n\n1 Our use of “memorization” relies on the definition of that term found at www.genlaw.org/glossary.html.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 footnote rule prints \"1 Our use of “memorization” relies on the definition of that term found at www.genlaw.org/glossary.html.\"; the superscript marker survived on \"We test for memorization $^{1}$\" but the body (including the genlaw.org URL) was dropped."
+    },
+    {
+      "before": "we use Google Cloud Sensitive Data Protection $^{2}$ .",
+      "after": "we use Google Cloud Sensitive Data Protection $^{2}$ .\n\n2 Available at: https://cloud.google.com/sensitive-data-protection",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 footnote rule prints \"2 Available at: https://cloud.google.com/sensitive-data-protection\"; the $^{2}$ marker survived on \"Sensitive Data Protection $^{2}$\" but the body with the URL was dropped."
+    },
+    {
+      "before": "One writehead is all you need",
+      "after": "One write-head is all you need",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 prints reference \"N. Shazeer. Fast transformer decoding: One write-head is all you need.\" with the hyphen across the line break (write-/head); OCR misjoined it into \"writehead\"."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "markdown-underscore-escapes",
+      "pdf_pages": [
+        3,
+        14
+      ],
+      "evidence": "OCR emits \\_ escapes for printed underscores (num_kv_heads, paper_files, tacl_a_00276); the rendered text is unchanged so this is cosmetic, not a visible-text defect."
+    }
+  ]
+}

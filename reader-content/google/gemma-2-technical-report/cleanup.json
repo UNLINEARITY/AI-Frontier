@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "google:gemma-2-technical-report",
+  "source_sha256": "4caf88137b228c543ac81718b04c25f96d86807848e4da293da0950a916801cd",
+  "ocr_sha256": "3fe0b170e43a3e664132efc4bb9cd16572b062aae3d785c93d6ef61b51afc742",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "Fence balance scan, heading scan, whole-document word/4-gram diff and a number-preservation diff (per-page multiset of decimal/large integers) of the OCR Markdown against extracted text of all 21 physical PDF pages; rendered checks at 200-300 dpi covered the physical p.7 benchmark table header, the physical p.6 Table 12 header and the physical p.15 contributions footnote. High 4-gram mismatch rates are explained by the PDF text layer's hyphenated line breaks and column reordering; word- and number-level checks found no dropped prose, tables or references. The print's own inconsistent spellings were preserved (ARC-C in the p.7 table vs ARC-c in Table 12)."
+  },
+  "patches": [
+    {
+      "before": "<td>Gemma-12B</td><td>Gemma-22B</td><td>Mistral7B</td><td>LLaMA-38B</td><td>Gemma-17B</td><td>Gemma-29B</td><td>Gemma-227B</td>",
+      "after": "<td>Gemma-1 2B</td><td>Gemma-2 2B</td><td>Mistral 7B</td><td>LLaMA-3 8B</td><td>Gemma-1 7B</td><td>Gemma-2 9B</td><td>Gemma-2 27B</td>",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (200 dpi crop inspected) prints a two-row table header whose column labels are 'Gemma-1/2B, Gemma-2/2B, Mistral/7B, LLaMA-3/8B, Gemma-1/7B, Gemma-2/9B, Gemma-2/27B'. The OCR flattened each two-line label into one glued token (Gemma-12B, Gemma-22B, Gemma-227B ...), which misstates the model identities; the patch restores the printed labels with spaces."
+    },
+    {
+      "before": "<td>LLaMA-370B</td><td>Qwen1.532B</td><td>Gemma-227B</td>",
+      "after": "<td>LLaMA-3 70B</td><td>Qwen1.5 32B</td><td>Gemma-2 27B</td>",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 Table 12 (300 dpi crop inspected) prints the column labels 'LLaMA-3 70B', 'Qwen1.5 32B', 'Gemma-2 27B'; the surrounding caption text also prints 'Qwen1.5 32B' and 'LLaMA-3 70B'. The OCR glued the size onto the family name (LLaMA-370B, Qwen1.532B, Gemma-227B); the patch restores the printed labels."
+    },
+    {
+      "before": "<td>Kiranbir Sodhia</td></tr></table>",
+      "after": "<td>Kiranbir Sodhia</td></tr></table>\n\n∗equal contributions.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 (300 dpi crop inspected) prints the footnote '* equal contributions.' below the Contributions and Acknowledgments column; the PDF text layer reads '∗equal contributions.' (U+2217). The starred names (Morgane Riviere*, Shreya Pathak*, Pier Giuseppe Sessa*, Cassidy Hardin*) survive in the OCR table but the footnote body was dropped; the patch reinserts it directly after the table containing the starred names."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-axis-ticks-p9",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Memorization figure axis ticks (10-4, 10-3, 0.01, 0.1) are absent from the OCR text; the figure is embedded as an image, so the ticks remain visible to readers."
+    },
+    {
+      "id": "arxiv-stamp",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The arXiv stamp on physical p.1 is absent from the OCR; recurring overlay text, left out deliberately."
+    }
+  ]
+}

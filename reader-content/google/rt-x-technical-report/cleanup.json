@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "google:rt-x-technical-report",
+  "source_sha256": "13f16aff5afdee583dc25b3c570e9bb0cf6baefb59b539928d919588cd8d9246",
+  "ocr_sha256": "3919e8d6c0d30ecf7c0c55b0359bc0731dc99e235a0d8e0afdf2f5913600cff7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "coverage": "partial",
+    "notes": "Coverage partial. Line-by-line: title block, author byline and affiliation footnote on physical pages 1-2 (p.2 rendered twice at 300 dpi and the first footnote line at 600 dpi; author list cross-checked against the PDF text layer through the final byline entry \"Zipeng Lin 34\", which the OCR transcribes completely). Machine-scanned: code-fence structure over all 12 pages (no fence markers, no swallowed structure) and normalized 4-gram containment of every page against the OCR markdown; pages 1-2 containment flags resolved as superscript-tokenization artifacts of the byline, and the p.2 flag was the real dropped affiliation footnote restored above. Pages 3-4 flagged text is figure-internal (dataset/robot statistics chart labels and the architecture diagram, both inside embedded figures); pages 8-9 flagged text is reference page ranges (\"pp 13 778 13 790\" = \"pp. 13,778-13,790\" printed with comma/en-dash), a tokenization artifact rather than droppage; pages 5-7 and 10-12 stayed above the flag threshold. The arXiv sidebar stamp on p.1 is not a defect. Lower-confidence observations left unchanged: the final byline entry ends \"Zipeng Lin\\(^ { 34 }\" without the closing math delimiter that earlier entries carry, but the exported reader tokenizes the byline markers into annotations, so the line was not mechanically rewritten; the collaboration marker superscripts \"0\" and \"1\" print fused before \"Allen Institute for AI\" and are transcribed as $^{01}$ to match the print."
+  },
+  "patches": [
+    {
+      "before": "all such datasets provides a better coverage of variations",
+      "after": "all such datasets provides a better coverage of variations\n\n$^{01}$ Allen Institute for AI; $^{2}$ Arizona State University; $^{3}$ California Institute of Technology; $^{4}$ Carnegie Mellon University; $^{5}$ Columbia University; $^{6}$ EPFL; $^{7}$ ETH Zürich; $^{8}$ Flexiv Robotics; $^{9}$ Georgia Institute of Technology; $^{10}$ German Aerospace Center; $^{11}$ Google DeepMind; $^{12}$ Google Research; $^{13}$ IO-AI TECH; $^{14}$ Imperial College London; $^{15}$ Intrinsic LLC; $^{16}$ Istituto Italiano di Tecnologia; $^{17}$ Korea Advanced Institute of Science & Technology; $^{18}$ Max Planck Institute; $^{19}$ Meta AI; $^{20}$ Microsoft Research; $^{21}$ Mila Quebec; $^{22}$ NVIDIA; $^{23}$ New York University; $^{24}$ Princeton University; $^{25}$ Queensland University of Technology; $^{26}$ RIKEN; $^{27}$ Shanghai Jiao Tong University; $^{28}$ Stanford University; $^{29}$ Technische Universität Darmstadt; $^{30}$ The University of Texas at Austin; $^{31}$ The University of Tokyo; $^{32}$ Toyota Research Institute; $^{33}$ Tsinghua University; $^{34}$ University of California, Berkeley; $^{35}$ University of California, Davis; $^{36}$ University of California, San Diego; $^{37}$ University of Edinburgh; $^{38}$ University of Freiburg; $^{39}$ University of Illinois Urbana-Champaign; $^{40}$ University of Michigan; $^{41}$ University of Montreal; $^{42}$ University of Pennsylvania; $^{43}$ University of Southern California; $^{44}$ University of Technology, Nuremberg; $^{45}$ University of Texas at Austin; $^{46}$ University of Washington",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (300 dpi crop of the left column, plus a 600 dpi crop of the first footnote line) prints the full numbered institution footnote under the end of the first paragraph: superscript 0 immediately followed by superscript 1 before \"Allen Institute for AI;\" through superscript 46 \"University of Washington\" (umlauts ETH Zürich and Technische Universität Darmstadt verified on the render). None of the 46 institution names occur anywhere in the OCR markdown, so the whole footnote body was dropped; the author byline on p.1 keeps markers 0-46 and is transcribed in full. The block is restored at its printed position, between the paragraph ending \"...provides a better coverage of variations\" and its continuation \"in environments and robots\"."
+    }
+  ],
+  "unresolved": [
+    "Final byline entry \"Zipeng Lin\\(^ { 34 }\" lacks the closing math delimiter of the other entries; left unchanged pending a decision on mechanical byline repair, since the exported reader already parses the markers into annotations."
+  ]
+}

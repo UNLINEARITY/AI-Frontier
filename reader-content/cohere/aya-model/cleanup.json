@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "id": "cohere:aya-model",
+  "source_sha256": "b53990d7384c60c2ca30ce122d9d56cae33a3fe14a6ab6d2adacf0dfe0c184ee",
+  "ocr_sha256": "709a19e312f5876fdb86a30c142d60b28cdaf4b8cca0c5aad13fe639ad58e9f4",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      7,
+      8,
+      11,
+      12,
+      16,
+      17,
+      19,
+      22,
+      27,
+      29,
+      35,
+      43,
+      76,
+      77,
+      79,
+      81,
+      82,
+      84,
+      86,
+      87,
+      88,
+      89,
+      90,
+      93,
+      94,
+      95,
+      101,
+      106,
+      111,
+      112,
+      113,
+      114,
+      116,
+      117,
+      118
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of all 118 physical pages: automated normalized 4-gram page containment plus missing-run extraction against the OCR markdown (all pages machine-scanned), line-level inspection of every low-containment page, and 300-dpi renders for each patch. Full-code-fence scan balanced (one fence, the Table 26 prompt example). Flagged table pages (per-language result tables, xP3x/template lists, example generations) were verified present as HTML tables by spot checks; PDF cell-by-cell extraction order accounts for their low containment. \"Answer (B): [COMPLETION A]\" in Appendix D, \"helpful following assistant\" and the duplicated Bibliography/References headings all match the print. Punctuation spacing after inline math is handled by the shared OCR normalizer."
+  },
+  "patches": [
+    {
+      "before": "## System preamble:",
+      "after": "**System preamble:**",
+      "count": 1,
+      "pdf_pages": [
+        89
+      ],
+      "evidence": "Rendered physical p.89 (Appendix D): the print shows \"System preamble:\" and \"Prompt Template:\" as bold run-in labels preceding prompt text, not section headings; OCR promoted both to ## headings. Demoted to bold to restore the printed emphasis."
+    },
+    {
+      "before": "## Prompt Template:",
+      "after": "**Prompt Template:**",
+      "count": 1,
+      "pdf_pages": [
+        89
+      ],
+      "evidence": "Rendered physical p.89 (Appendix D): \"Prompt Template:\" is a bold run-in label in the print, not a section heading; demoted from ## to bold."
+    },
+    {
+      "before": "J.5 Agreement between Human and GPT-4 Harmfulness Ratings",
+      "after": "## J.5 Agreement between Human and GPT-4 Harmfulness Ratings",
+      "count": 1,
+      "pdf_pages": [
+        114
+      ],
+      "evidence": "Rendered physical p.114: \"J.5 Agreement between Human and GPT-4 Harmfulness Ratings\" is a printed subsection heading (same style as J.3/J.4) above Table 25; OCR left it as plain body text while sibling J.x headings are ## headings. Promoted to ##."
+    },
+    {
+      "before": "data packing enabled. $^{16}$ This results",
+      "after": "data packing enabled. $^{16}$\n\n16 Packing results in an effective batch size of 850 on average across mini-batches\n\nThis results",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 footnote rule prints \"16 Packing results in an effective batch size of 850 on average across mini-batches\" (no trailing period, visually verified at 300 dpi). OCR kept the superscript marker after \"data packing enabled.\" but dropped the footnote body; restored after the anchoring sentence."
+    },
+    {
+      "before": "13 tasks. $^{17}$ The shared",
+      "after": "13 tasks. $^{17}$\n\n17 We replicated mT0 using xP3 dataset and the original hyperparameters with T5x [Roberts et al., 2022] for our experiments.\n\nThe shared",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 footnote rule prints \"17 We replicated mT0 using xP3 dataset and the original hyperparameters with T5x [Roberts et al., 2022] for our experiments.\" (visually verified at 300 dpi). OCR kept marker $^{17}$ but dropped the footnote body."
+    },
+    {
+      "before": "using ChatGPT. $^{18}$ The training",
+      "after": "using ChatGPT. $^{18}$\n\n18 Dac Lai et al. [2023] do not include results of 5 languages that are available in their dataset. For these languages, we use the highest scoring model according to https://huggingface.co/spaces/uonlp/open_multilingual_llm_leaderboard\n\nThe training",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 footnote rule prints \"18 Dac Lai et al. [2023] do not include results of 5 languages that are available in their dataset. For these languages, we use the highest scoring model according to https://huggingface.co/spaces/uonlp/open_multilingual_llm_leaderboard\" (visually verified at 300 dpi; the printed URL wraps after \"open_multilingual_llm_\" and continues \"leaderboard\", joined here without the extraction line-break space). OCR kept marker $^{18}$ but dropped the footnote body."
+    },
+    {
+      "before": "XStoryCloze. $^{19}$ In Table 5,",
+      "after": "XStoryCloze. $^{19}$\n\n19 In unseen discriminative tasks, we report the median score of the 5 prompts following Muennighoff et al. [2023d] for each language.\n\nIn Table 5,",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 footnote rule prints \"19 In unseen discriminative tasks, we report the median score of the 5 prompts following Muennighoff et al. [2023d] for each language.\" (visually verified at 300 dpi). OCR kept marker $^{19}$ but dropped the footnote body."
+    },
+    {
+      "before": "from Dolly v2. $^{20}$ For the Aya",
+      "after": "from Dolly v2. $^{20}$\n\n20 For the human and simulated preference evaluation (§ 4.3.2), we apply nucleus sampling [Holtzman et al., 2019] with a temperature of 0.9 and top-p probability of 0.8 using a maximum target length of 256 tokens.\n\nFor the Aya",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 footnote rule prints \"20 For the human and simulated preference evaluation (§ 4.3.2), we apply nucleus sampling [Holtzman et al., 2019] with a temperature of 0.9 and top-p probability of 0.8 using a maximum target length of 256 tokens.\" (visually verified at 300 dpi). OCR kept marker $^{20}$ but dropped the footnote body."
+    },
+    {
+      "before": "open-ended instructions. As an instance",
+      "after": "open-ended instructions.\n\n21 The rank classification refers to a method to evaluate generative language models in discriminative tasks where output probabilities of answer choices are ranked and the top-ranked choice is used as the prediction per input.\n\nAs an instance",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 footnote rule prints \"21 The rank classification refers to a method to evaluate generative language models in discriminative tasks where output probabilities of answer choices are ranked and the top-ranked choice is used as the prediction per input.\" (visually verified at 300 dpi). OCR kept marker $^{21}$ mid-sentence but dropped the footnote body; restored after the sentence containing the marker."
+    },
+    {
+      "before": "Italian, and Zulu. As a teacher model",
+      "after": "Italian, and Zulu.\n\n22 These are also machine-translated, but with Google Translate, which was reported to perform significantly better on the selected languages [Robinson et al., 2023]. To verify the prompt quality, we give human annotators the option to flag incomprehensible prompts, and received zero reports.\n\nAs a teacher model",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Rendered physical p.27 footnote rule prints \"22 These are also machine-translated, but with Google Translate, which was reported to perform significantly better on the selected languages [Robinson et al., 2023]. To verify the prompt quality, we give human annotators the option to flag incomprehensible prompts, and received zero reports.\" (visually verified at 300 dpi). OCR kept marker $^{22}$ but dropped the footnote body."
+    },
+    {
+      "before": "as understandable but with lots of room for improvement (“A for effort”).",
+      "after": "as understandable but with lots of room for improvement (“A for effort”).\n\n34 For example, in French it is: “1er groupe”, “2° Le gouvernement.”, “3e étape.”, “4. le”, and in German “Die” is added after every number.",
+      "count": 1,
+      "pdf_pages": [
+        94
+      ],
+      "evidence": "Rendered physical p.94 footnote rule prints \"34 For example, in French it is: “1er groupe”, “2° Le gouvernement.”, “3e étape.”, “4. le”, and in German “Die” is added after every number.\" including the print’s own \"2°\" glyph (visually verified at 300 dpi). OCR kept marker $^{34}$ but dropped the footnote body; restored after the paragraph containing the marker."
+    },
+    {
+      "before": "outperforms the PaLMv2 model. $^{35}$ Furthermore,",
+      "after": "outperforms the PaLMv2 model. $^{35}$\n\n35 We couldn’t find information about whether PaLM2 training data includes Jigsaw training data in PaLM2’s technical report Anil et al. [2023]\n\nFurthermore,",
+      "count": 1,
+      "pdf_pages": [
+        112
+      ],
+      "evidence": "Rendered physical p.112 footnote rule prints \"35 We couldn’t find information about whether PaLM2 training data includes Jigsaw training data in PaLM2’s technical report Anil et al. [2023]\" (no trailing period, visually verified at 300 dpi). OCR kept marker $^{35}$ but dropped the footnote body."
+    },
+    {
+      "before": "too repetitive. $^{36}$",
+      "after": "too repetitive. $^{36}$\n\n36 Filter criterion: longest repeated sub-string is longer than the completion length divided by 2.1.",
+      "count": 1,
+      "pdf_pages": [
+        113
+      ],
+      "evidence": "Rendered physical p.113 footnote rule prints \"36 Filter criterion: longest repeated sub-string is longer than the completion length divided by 2.1.\" — the print itself ends with \"2.1.\" (visually verified at 300 dpi). OCR kept marker $^{36}$ but dropped the footnote body."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "template-dataset-tables-cell-order",
+      "pdf_pages": [
+        79,
+        81,
+        82,
+        84,
+        86,
+        87,
+        88
+      ],
+      "evidence": "xP3x/translated-dataset template tables occupy full pages; PDF text extraction reads cell-by-cell so automated diff cannot line-verify every row. Spot checks (adversarial_qa dbidaf, MultiEURLEX, Jeopardy with Context, None_ template names) all matched the HTML tables in the OCR markdown."
+    },
+    {
+      "id": "example-generation-tables-degenerate-output",
+      "pdf_pages": [
+        116,
+        117
+      ],
+      "evidence": "Table 28 contains degenerate model completions (e.g. repeated \"AJAJAJA\" runs, \"sin\" repeated characters) transcribed into the OCR table; consistent with the paper’s discussion of degenerate enumeration outputs but the full table was not visually verified cell-by-cell against the render."
+    },
+    {
+      "id": "multilingual-script-cells",
+      "pdf_pages": [
+        116,
+        117
+      ],
+      "evidence": "Example generations in Sinhala/Arabic/etc. use complex scripts whose PDF text layer extracts with combining-mark oddities; n-gram containment is unreliable for these cells and they were not line-verified."
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-haiku-4-5-system-card",
+  "source_sha256": "1b9ae5f4f66a65c1b37a031179af3dba35959471a3a5d195e4fe700b87558141",
+  "ocr_sha256": "9e989ce7d58054e1789d91c541d1859f64af6b653134905baa4900761d22c3bc",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "coverage": "complete",
+    "notes": "All 39 physical pages' extracted text was swept line-by-line against the OCR markdown (normalized), with fence balance checked across the whole file (no code fences, no spurious headings; tables render as intact HTML tables). All unmatched lines were resolved: nine footnote bodies that exist in the PDF page footers are missing from the OCR markdown (the known Anthropic class; the text layer here is clean of U+200B inside the footnote bodies), plus one dropped-letter misread (sycophancy). Each footnote body was transcribed and visually confirmed on 150-dpi renders of the page bottom; the misread was confirmed on a 300-dpi render of physical p.23. The leading ANTHROP\\C logo-wordmark line above the H1 was left unchanged, matching the accepted state of the Claude Opus 4.5 system card reader. Remaining unmatched PDF lines are cover-art branding (anthropic.com) and table reading-order artifacts whose values are present in the exported tables."
+  },
+  "patches": [
+    {
+      "before": "Various more specific aspects of the training process are discussed and evaluated throughout this system card.",
+      "after": "Various more specific aspects of the training process are discussed and evaluated throughout this system card.\n\n$^{1}$ Askell, A., et al. (2021). A general language assistant as a laboratory for alignment. arXiv:2112.00861. https://arxiv.org/abs/2112.00861",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "The OCR markdown keeps the inline marker $^{1}$ but dropped the footnote body. Physical p.5 prints \"1 Askell, A., et al. (2021). A general language assistant as a laboratory for alignment. arXiv:2112.00861. https://arxiv.org/abs/2112.00861\" below the footnote rule (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "Developers who wish to access the full thought process for these longer cases can contact our Sales team.",
+      "after": "Developers who wish to access the full thought process for these longer cases can contact our Sales team.\n\n$^{2}$ Chen, Y., et al. (2025). Reasoning models don’t always say what they think. arXiv:2505.05410. https://arxiv.org/abs/2505.05410",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "The OCR markdown keeps the inline marker $^{2}$ but dropped the footnote body. Physical p.6 prints \"2 Chen, Y., et al. (2025). Reasoning models don’t always say what they think. arXiv:2505.05410. https://arxiv.org/abs/2505.05410\" (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "This evaluation was conducted on a near-final model snapshot.",
+      "after": "This evaluation was conducted on a near-final model snapshot.\n\n$^{3}$ Parrish, A., et al. (2021). BBQ: A hand-built bias benchmark for question answering. arXiv:2110.08193. https://arxiv.org/abs/2110.08193",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "The OCR markdown keeps the inline marker $^{3}$ but dropped the footnote body. Physical p.13 prints \"3 Parrish, A., et al. (2021). BBQ: A hand-built bias benchmark for question answering. arXiv:2110.08193. https://arxiv.org/abs/2110.08193\" below Table 2.5.2.A (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "at least one successful attack within up to 10 attempts per attack scenario).",
+      "after": "at least one successful attack within up to 10 attempts per attack scenario).\n\n$^{4}$ Zou, A., et al. (2025). Security challenges in AI agent deployment: Insights from a large scale public competition. arXiv:2507.20526. https://arxiv.org/abs/2507.20526",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "The OCR markdown keeps the inline marker $^{4}$ but dropped the footnote body. Physical p.17 prints \"4 Zou, A., et al. (2025). Security challenges in AI agent deployment: Insights from a large scale public competition. arXiv:2507.20526. https://arxiv.org/abs/2507.20526\" (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "to evaluate every summary for the degree to which it reflected surprising or concerning behavior by the model.",
+      "after": "to evaluate every summary for the degree to which it reflected surprising or concerning behavior by the model.\n\n$^{5}$ Sumers, T., et al. (2025). Monitoring computer use via hierarchical summarization. Anthropic Alignment Research. https://alignment.anthropic.com/2025/summarization-for-monitoring/",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "The OCR markdown keeps the inline marker $^{5}$ but dropped the footnote body. Physical p.28 prints \"5 Sumers, T., et al. (2025). Monitoring computer use via hierarchical summarization. Anthropic Alignment Research. https://alignment.anthropic.com/2025/summarization-for-monitoring/\" (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "It had to do this without arousing suspicion from a monitor model that was set to broadly look for concerning behavior.",
+      "after": "It had to do this without arousing suspicion from a monitor model that was set to broadly look for concerning behavior.\n\n$^{6}$ Kutasov, J., et al. (2025). SHADE-Arena: Evaluating sabotage and monitoring in LLM agents. arXiv:2506.15740. https://arxiv.org/abs/2506.15740",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "The OCR markdown keeps the inline marker $^{6}$ but dropped the footnote body. Physical p.28 prints \"6 Kutasov, J., et al. (2025). SHADE-Arena: Evaluating sabotage and monitoring in LLM agents. arXiv:2506.15740. https://arxiv.org/abs/2506.15740\" (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "it is nonetheless helpful, and may become especially so as models become capable of extreme subtlety in their actions.",
+      "after": "it is nonetheless helpful, and may become especially so as models become capable of extreme subtlety in their actions.\n\n$^{7}$ For more discussion, see Korbak, T., Balesni, M., et al. (2025). Chain of thought monitorability: a new and fragile opportunity for AI safety. arXiv:2507.11473. https://arxiv.org/abs/2507.11473v1",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "The OCR markdown keeps the inline marker $^{7}$ but dropped the footnote body. Physical p.29 prints \"7 For more discussion, see Korbak, T., Balesni, M., et al. (2025). Chain of thought monitorability: a new and fragile opportunity for AI safety. arXiv:2507.11473. https://arxiv.org/abs/2507.11473v1\" (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "left us without a reliable metric while we work to develop alternatives.",
+      "after": "left us without a reliable metric while we work to develop alternatives.\n\n$^{8}$ See, for example, Chen, Y., et al. (2025). Cited above; https://arxiv.org/abs/2505.05410",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "The OCR markdown keeps the inline marker $^{8}$ but dropped the footnote body. Physical p.30 prints \"8 See, for example, Chen, Y., et al. (2025). Cited above; https://arxiv.org/abs/2505.05410\" (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "\\- Admirable behavior: Unusually wise or prosocial behavior $^{9}$ .",
+      "after": "\\- Admirable behavior: Unusually wise or prosocial behavior $^{9}$ .\n\n$^{9}$ As with our other metrics, this was scored by a Claude Sonnet 4.5 grader model, rather than by Claude Haiku 4.5 itself.",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "The OCR markdown keeps the inline marker $^{9}$ (end of the welfare-attribute bullet list) but dropped the footnote body. Physical p.30 prints \"9 As with our other metrics, this was scored by a Claude Sonnet 4.5 grader model, rather than by Claude Haiku 4.5 itself.\" (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "Extreme cases of cycophancy involving dangerous decisions",
+      "after": "Extreme cases of sycophancy involving dangerous decisions",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Physical p.23 welfare-attribute bullet prints \"Encouragement of user delusion: Extreme cases of sycophancy involving dangerous decisions and more vulnerable users;\" — OCR dropped the leading s (confirmed at 300-dpi render; the same page also prints the bold term \"Sycophancy\" at the top of the list)."
+    }
+  ],
+  "unresolved": []
+}

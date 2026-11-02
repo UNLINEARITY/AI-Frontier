@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "google:medgemma-1-5-technical-report",
+  "source_sha256": "b004f889b6d25f8c444701ae17f07ec065ec17b050b6d30135b36bc18f70c1d9",
+  "ocr_sha256": "8814dc45c119dcb2c5ea16653a35ee8bb6cc607e0c0a761404ad72cc9c79efc7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "partial",
+    "notes": "Structure scan of the whole OCR markdown: the single code-fence pair is balanced under the exporter's toggle rule and no fence swallows numbered headings, tables or image embeds. Automated droppage scan of all 23 physical pages (condensed-text window containment): hits triaged to the arXiv cover stamp, running page headers, figure-internal evaluation prompt/response panels (pp.3, 8, 10 windows match text printed inside embedded figures), and HTML table cell-order differences — all nine table bodies (Tables 1-9) were verified present with matching values (e.g. Table 1 Radiology CXR-IND1 605,732; Table 4 External SOTA columns; Table 3 MedQA 64.4/69.1/85.3). Body sentences flagged by the scan (IoU definition p.9, coordinate normalization p.10, MedQA/MedXperQA gains p.11) are present verbatim in the OCR. Reference identifiers and contributor names (including the multi-page lists on pp.13-17) are present. Real defect found: the byline footnote body was dropped while its marker survives on 'Google Research and Google DeepMind $^{1}$'; recovered and visually verified on a 250 dpi render of the p.1 footnote rule. The PDF itself prints 'interepretaion' (sic) on p.2 which the OCR silently corrected to 'interpretation'; per source-print policy this was not patched. Pages 1-12 received the droppage scan plus targeted render verification; pages 13-23 (contributions, acknowledgements, references, appendices) received the machine scan and identifier spot-checks; equations were not glyph-verified."
+  },
+  "patches": [
+    {
+      "before": "Google Research and Google DeepMind $^{1}$\n\nWe introduce",
+      "after": "Google Research and Google DeepMind $^{1}$\n\n$^{1}$See Contributions and Acknowledgments section for full author list.\n\nWe introduce",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote rule (250 dpi, visually read) prints the byline footnote '1 See Contributions and Acknowledgments section for full author list.' beneath the abstract. The OCR kept the $^{1}$ marker on the byline 'Google Research and Google DeepMind $^{1}$' but dropped the footnote body (the string 'See Contributions' occurs nowhere in the OCR). Inserted after the byline paragraph carrying the marker."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "front-matter-contact-and-copyright-lines-dropped",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The printed cover also carries 'Corresponding authors: {chufang, dangolden, asellerg}@google.com.' and '© 2026 Google. All rights reserved', which the OCR omitted along with the arXiv stamp. These are cover boilerplate lines rather than report content; restoring them is a presentation decision."
+    },
+    {
+      "id": "printed-typo-silently-corrected",
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "The PDF prints 'whole slide image (WSI) interepretaion for histopathology' (typo in source); the OCR normalized it to 'interpretation'. Patching toward the source typo is not wanted, so the divergence is recorded instead."
+    }
+  ]
+}

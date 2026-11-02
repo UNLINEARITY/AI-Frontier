@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "id": "mistral:robostral-navigate",
+  "source_sha256": "b8cc86d333f57d2904d0f3a003b68e14c4d571ab951593aeaca69419d0b825e0",
+  "ocr_sha256": "c6a9c5228462de4e88a63fda2f9642f9ba97fab58940499d98771fab6fbcff97",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "coverage": "complete",
+    "notes": "All 12 physical pages' extracted text was diffed line-wise against the OCR Markdown (case/punctuation normalized) plus a fence/heading structure scan (no code fences). Rendered verification at 110-300 dpi on physical pages 1, 2, 5 and 10. Physical page 1 is a designed poster cover whose panel labels (brand wordmark, robot names, INSTRUCTION, First-person (PoV)) are printed as small graphic labels inside the cover composition; the OCR promoted them to level-2 document headings, so they are demoted to plain text while the text itself is preserved. The 'MistralAI' logo wordmark and the '77.4% SUCCESS RATE' badge exist only inside the poster graphics (absent from the PDF text layer), so their absence from OCR text is correct. Body math (O(T^2), 22x, -max(2, dist_to_goal), waypoint delta notation), Table 1 values and the contributor/reference lists match the print. The PDF's own spelling 'embodiement-specific' (physical p.4, printed typo) was left as OCR-normalized 'embodiment-specific' and kept out of patches per source-faithful review rules."
+  },
+  "patches": [
+    {
+      "before": "## Robostral Navigate",
+      "after": "Robostral Navigate",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 poster cover shows the orange infographic wordmark 'Robostral Navigate' as a graphic element inside the cover composition, below the document's serif title 'Robostral Navigate' (which is the OCR's # title). The duplicate heading promotion is removed; the printed label text is kept as plain text."
+    },
+    {
+      "before": "## Galaxea-R1",
+      "after": "Galaxea-R1",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 shows 'Galaxea-R1' as a small robot-badge label above the first demo panel of the poster graphic, not a document section heading; demoted to plain text."
+    },
+    {
+      "before": "## INSTRUCTION",
+      "after": "INSTRUCTION",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 shows 'INSTRUCTION' as a small caption label directly above the Hiwonder JetAuto instruction box inside the poster graphic (the Galaxea-R1 panel uses the same label style); a spurious heading promoted from a prompt-box label, demoted to plain text."
+    },
+    {
+      "before": "## First-person (PoV)",
+      "after": "First-person (PoV)",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 shows 'First-person (PoV)' as a small orange video-row label inside the poster graphic; the second panel's identical label is already plain text in the OCR, so the heading promotion is removed for consistency with the printed layout."
+    },
+    {
+      "before": "## Hiwonder JetAuto",
+      "after": "Hiwonder JetAuto",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 shows 'Hiwonder JetAuto' as a small robot-badge label above the second demo panel of the poster graphic, not a document section heading; demoted to plain text."
+    },
+    {
+      "before": "## Webpage: https://mistral.ai/news/robostral-navigate",
+      "after": "Webpage: https://mistral.ai/news/robostral-navigate",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints 'Webpage: https://mistral.ai/news/robostral-navigate' as a small bold-label plus monospace link line between the Abstract paragraph and the heading '1 Introduction', at body level; the OCR's level-2 heading promotion is removed. Verified at 200 dpi."
+    },
+    {
+      "before": "## 3D View of Trajectories",
+      "after": "3D View of Trajectories",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 shows '3D View of Trajectories' as the bold panel title inside Figure 3 (left panel, above the 3D trajectory plot); the string does not exist in the PDF page text layer outside the figure. Per review rules a heading whose text exists only inside a figure is demoted to plain text."
+    },
+    {
+      "before": "Možejko",
+      "after": "Możejko",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 contributor list prints 'Marcin Możejko' with a dot-above z (ż, confirmed at 300 dpi); the OCR substituted a caron (ž), reading 'Možejko'."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "galaxea-instruction-label-dropped",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The first demo panel's small 'INSTRUCTION' caption label on the poster cover was dropped entirely by the OCR (only the second panel's label survives, currently demoted by patch). The one-word graphic label could not be restored at a verified position with an exact-string patch."
+    }
+  ]
+}

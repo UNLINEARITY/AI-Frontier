@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-v3-2-exp-technical-report",
+  "source_sha256": "f8ef04ddf50f924a7d251861d4453d7605ff5711f3941ae8320e1ea780dc3041",
+  "ocr_sha256": "40f38273a39bf3e5579dfb4cf1590bc5fef7b42debd277c03503277289dcd05e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "coverage": "complete",
+    "notes": "All 6 physical pages of the excerpt swept line-by-line against the OCR markdown (normalized): all unmatched lines are Unicode-math-versus-LaTeX equivalents, figure-internal labels and panel captions rendered by the embedded figures (MLA diagram on p.2 and p.6, cost charts on p.5), or table reading-order artifacts whose values are present in the exported tables. Two footnote bodies printing under the footnote rule on physical p.2 are missing from the OCR markdown while the inline markers $^{1}$/$^{2}$ survive in the same 'Instantiate DSA Under MLA.' paragraph; both bodies were transcribed and visually confirmed on a 150-dpi render of the p.2 bottom. Reference entries, the results tables and the Appendix A text all match."
+  },
+  "patches": [
+    {
+      "before": "We also provide an open-source implementation of DeepSeek-V3.2-Exp $^{2}$ to specify the details unambiguously.",
+      "after": "We also provide an open-source implementation of DeepSeek-V3.2-Exp $^{2}$ to specify the details unambiguously.\n\n$^{1}$ We illustrate the difference between the MQA and MHA modes of MLA in Appendix A.\n\n$^{2}$ https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp/tree/main/inference",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "The OCR markdown keeps both inline markers in the 'Instantiate DSA Under MLA.' paragraph but dropped both footnote bodies. Physical p.2 prints under the footnote rule: \"1 We illustrate the difference between the MQA and MHA modes of MLA in Appendix A.\" and \"2 https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp/tree/main/inference\" (both visually verified on a 150-dpi render)."
+    }
+  ],
+  "unresolved": []
+}

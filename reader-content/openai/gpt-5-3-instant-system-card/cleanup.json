@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-5-3-instant-system-card",
+  "source_sha256": "a20601d492338d06ea98b8f2a075bbcd4d732367edbb5dc776d11069076c4087",
+  "ocr_sha256": "cdbd11ad2ffb09fc9969d906a08c553910ea23410befd4c84845a18707bd0d9d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "coverage": "complete",
+    "notes": "All 5 PDF pages word-compared with the OCR markdown; no code fences. One defect: the entire footnote 1 body on physical p.2 (Usage Policies paragraph plus support-contact paragraph) was dropped while the inline $^{1}$ marker survives at the end of the Model Data paragraph; restored verbatim after the carrying paragraph with the printed curly apostrophes. No other drops; tables on pp.3-5 match print."
+  },
+  "patches": [
+    {
+      "before": "so may vary slightly from values published in previous cards. $^{1}$",
+      "after": "so may vary slightly from values published in previous cards. $^{1}$\n\n$^{1}$ GPT-5.3 Instant is intended to be used in accordance with OpenAI’s Usage Policies, Service Terms, and Terms of Use. These policies apply universally to OpenAI services and are designed to ensure safe and responsible usage of AI technology. You can review OpenAI’s Usage Policies at openai.com/policies/usage-policies/ .\nIf you need assistance with respect to GPT-5.3 Instant, you can find further information on OpenAI’s website (openai.com), or you can contact OpenAI Support by opening the chat bubble icon displayed at the bottom-right of help.openai.com.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 footnote block prints \"1 GPT-5.3 Instant is intended to be used in accordance with OpenAI’s Usage Policies, Service Terms, and Terms of Use. These policies apply universally ... at openai.com/policies/usage-policies/ . If you need assistance with respect to GPT-5.3 Instant, you can find further information on OpenAI’s website (openai.com), or you can contact OpenAI Support by opening the chat bubble icon displayed at the bottom-right of help.openai.com.\" (visually verified at 300 dpi). The OCR kept the inline marker \"$^{1}$\" after \"values published in previous cards.\" but dropped the whole footnote body."
+    }
+  ],
+  "unresolved": []
+}

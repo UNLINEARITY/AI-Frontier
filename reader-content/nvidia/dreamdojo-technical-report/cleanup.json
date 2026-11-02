@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:dreamdojo-technical-report",
+  "source_sha256": "c8f02e22c8fbe98e0b50215e10e1f6baf2f589b1987e5c6dc07175bfe6fe8587",
+  "ocr_sha256": "2d82b8e41d694f3b1090ac4ec0d5a80888e2a7b1a98d04af967d02a7e40df95d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "coverage": "complete",
+    "notes": "Full normalized word-level diff of the OCR against the extracted text of all 33 physical pages (born-digital arXiv PDF, reliable text layer, no U+200B damage); 300 dpi renders used to verify the flagged name on physical p.4 and figure regions. All 130 reference entries are present, all five tables match the source numerically (Table 1: 5, Table 2: 29, Table 3: 73, Table 4: 9, Table 5: 34 decimal numbers, zero diffs), and no code fences, spurious headings or dropped footnote bodies exist. The document has no page-bottom footnotes; superscripts in the title block are author affiliations and the Table 1 dagger note is present in the OCR caption. Remaining diff opcodes are running headers, figure images with in-figure axis/legend text, and LaTeX equations, none of which are defects. The source itself prints a stray comma in 'Chen et al., 2025,;' on physical p.4 which the OCR renders as 'Chen et al., 2025;'; left unchanged as the OCR's global citation-punctuation normalization, not a transcription garble."
+  },
+  "patches": [
+    {
+      "before": "Career et al., 2025",
+      "after": "Kareer et al., 2025",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (section 3.2, DreamDojo-HV Dataset) prints '(Bi et al., 2025; Chen et al., 2025,; Kareer et al., 2025; Li et al., ...' with a capital K; the PDF text layer agrees ('Kareer et al.'). OCR misread the K as a C, producing the non-word 'Career et al.'"
+    }
+  ],
+  "unresolved": []
+}

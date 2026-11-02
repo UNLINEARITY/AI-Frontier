@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "id": "google:gemma-3-technical-report",
+  "source_sha256": "b2793d288d6672f8d6a03f65370bb4a48d607f54937a22fc7d9f727435795305",
+  "ocr_sha256": "a4b202eefc38b2b14abb3c6e29fb77bc551f4ca73116513f77b771f80a001e4c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "coverage": "complete",
+    "notes": "All 25 physical PDF pages diffed against the OCR markdown with hyphenation-aware normalized shingle matching; every flagged fragment inspected. Four dropped footnote bodies restored (title-page correspondence note, memorization disclaimer quote on physical p.8, SDP URL on physical p.9, co-first authors note on physical p.17) and three reference line-break hyphen misjoins repaired. Every patch was verified on a rendered 300 dpi crop of its page (physical pages 1, 8, 9, 14, 15, 16, 17 read; quote glyphs in the p.8 footnote re-checked at 600 dpi and transcribed as the printed straight double quotes). Running page headers, the arXiv stamp and the copyright line are intentionally absent from the OCR. Body prose, in-text tables (Tables 1-12) and reference entries otherwise match the print; the appendix tables on physical pages 20-25 are emitted in OCR column order rather than reading order, so they were shingle-checked without a full cell-by-cell read."
+  },
+  "patches": [
+    {
+      "before": "Gemma Team, Google DeepMind $^{1}$",
+      "after": "Gemma Team, Google DeepMind $^{1}$\n\n$^{1}$ See Contributions and Acknowledgments section for full author list. Please send correspondence to gemma-3-report@google.com.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom strip (300 dpi, read) prints footnote 1 under the rule line verbatim as transcribed, including the monospace gemma-3-report@google.com; the marker $^{1}$ survives on the author line but the page-bottom body was dropped. Inserted as a \"$^{1}$ body\" paragraph after the anchor line."
+    },
+    {
+      "before": "if they match up to an edit distance of 10%.",
+      "after": "if they match up to an edit distance of 10%.\n\n$^{1}$ \"We do not state or imply [here] that a model \"contains\" its training data in the sense that there is a copy of that data in the model. Rather, a model memorizes attributes of its training data such that in certain cases it is statistically able to generate such training data when following rules and using information about features of its training data that it does contain.\"",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 right-column footnote block (300 dpi, read; opening/closing quote glyphs re-checked at 600 dpi and printed as straight double quotes) prints footnote 1 verbatim as transcribed. The anchor paragraph carries marker $^{1}$ on \"This “memorization rate”\" and was dropped from the OCR; inserted as a \"$^{1}$ body\" paragraph after the anchor paragraph that spans onto physical p.9."
+    },
+    {
+      "before": "below our detection thresholds, in outputs classified as memorization.",
+      "after": "below our detection thresholds, in outputs classified as memorization.\n\n$^{2}$ https://cloud.google.com/sensitive-data-protection",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 left-column footnote rule (300 dpi, read) prints footnote 2 as the URL https://cloud.google.com/sensitive-data-protection; the anchor paragraph carries marker $^{2}$ on \"Sensitive Data Protection (SDP) service\" and the page-bottom body was dropped. Inserted as a \"$^{2}$ body\" paragraph after the anchor paragraph."
+    },
+    {
+      "before": "Andreas Steiner\n\nContributors (alphabetical order)",
+      "after": "Andreas Steiner\n\n\\* co-first authors.\n\nContributors (alphabetical order)",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 (300 dpi, read) prints a footnote rule under the Core contributors list reading \"* co-first authors.\" with an asterisk glyph matching the \\*-escaped names above; the note was dropped from the OCR. Inserted between the two contributor lists, keeping the list's escaped-asterisk style."
+    },
+    {
+      "before": "De-mystifying",
+      "after": "Demystifying",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 (300 dpi, read) prints the Malla reference title across a line break as \"Malla: De-\" / \"mystifying real-world large language model integrated malicious services\"; the hyphen is a line-break artifact, not printed text. The OCR joined it as \"De-mystifying\"."
+    },
+    {
+      "before": "Key-sers",
+      "after": "Keysers",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 (300 dpi, read) prints the PaliGemma 2 reference author list across a line break as \"D. Key-\" / \"sers, X. Wang\"; the author name is Keysers. The OCR kept the line-break hyphen."
+    },
+    {
+      "before": "Saiful-lah",
+      "after": "Saifullah",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 (300 dpi, read) prints the LiveBench reference author list across a line break as \"N. Jain, K. Saiful-\" / \"lah, S. Naidu\"; the author name is Saifullah. The OCR kept the line-break hyphen."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "appendix-tables-ocr-order-p20-p25",
+      "pdf_pages": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "evidence": "The large appendix evaluation tables (Tables 9-11 area) are emitted by OCR in column/visual order rather than reading order, so normalized shingle comparison reports transposition noise there; values were only shingle-checked, not read cell-by-cell against the rendered pages. No dropped numeric content was observed, but a cell-by-cell table review would need a dedicated pass."
+    },
+    {
+      "id": "figure-axis-label-fragments-p7-p10",
+      "pdf_pages": [
+        7,
+        8,
+        10
+      ],
+      "evidence": "Scattered axis labels and legend items (e.g. 'global only', KV-cache memory axis text, benchmark names on p.10) interleave with body text in OCR order; the source confirms they belong to the embedded figures and are not prose droppage."
+    }
+  ]
+}

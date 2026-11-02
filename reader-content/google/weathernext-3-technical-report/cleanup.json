@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "id": "google:weathernext-3-technical-report",
+  "source_sha256": "111cd32ff40ca75dcb2a765d70865b8d74fecb22defe7b2f018860383e978c89",
+  "ocr_sha256": "7a87f6b2a4490458a642b0333a8e9811e8c403d2b060f99e06e762968b7a8442",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "coverage": "partial",
+    "notes": "No code fences exist in this OCR, so no fence pass was needed. A digit-sequence sweep of extracted text from all 43 physical PDF pages against the OCR markdown surfaced exactly five absent 3+-digit numbers, all inside dropped footnote URLs, plus the p.1 arXiv:2609.03582 publisher stamp (not body text). All eight printed URL footnotes (pages 4, 6, 7, 9, 31, 32) were dropped by OCR while their superscript markers survived; each footnote body was re-added after the paragraph carrying its marker, matching the printed text verified on rendered bottom strips of all six pages (130 dpi). The PDF prints the product name 'Integrated Multi-satellitE Retrievals' with a mid-word capital E (p.7 and p.32, verified at 300 dpi); OCR split it into 'Multi-satellite E Retrievals' twice. Two figure-internal titles were promoted to markdown headings although the PDF only prints them inside the figure images: the '(a)' panel title of Figure 4 (rendered p.13) and the banner above Figure A.8 (rendered p.38); both demoted to plain text to match how OCR kept the sibling panel titles '(b)'/'(c)'/'(d)' and the other figure-group titles. 39 OCR headings were substring-checked against the PDF text layer; all others match printed headings or captions. Line-level prose proofreading of all 43 pages was not completed within the review budget, hence partial coverage."
+  },
+  "patches": [
+    {
+      "before": "making it a native feature of the model.",
+      "after": "making it a native feature of the model.\n\n1 https://developers.google.com/weathernext/guides/model-specs-vmg",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom strip shows footnote '1https://developers.google.com/weathernext/guides/model-specs-vmg'; its $^{1}$ marker sits in the same OCR paragraph (the WN2 6-hourly upsampler sentence). OCR kept the marker but dropped the footnote body."
+    },
+    {
+      "before": "data available from January 20 to May 11 2026.",
+      "after": "data available from January 20 to May 11 2026.\n\n2 https://www.ecmwf.int/en/newsletter/185/earth-system-science/upgrade-ifs-cycle-50r1",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 bottom strip shows footnote '2https://www.ecmwf.int/en/newsletter/185/earth-system-science/upgrade-ifs-cycle-50r1' for the $^{2}$ marker on 'May 12 2026' in the same OCR paragraph."
+    },
+    {
+      "before": "detailed description of both products.",
+      "after": "detailed description of both products.\n\n3 https://gpm.nasa.gov/missions/GPM/core-observatory",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 bottom strip shows footnotes 3 and 4; footnote 3 reads '3https://gpm.nasa.gov/missions/GPM/core-observatory' for the $^{3}$ marker on 'GPM core observatory' in the same OCR paragraph."
+    },
+    {
+      "before": "observations are used for evaluation only.",
+      "after": "observations are used for evaluation only.\n\n4 https://madis.ncep.noaa.gov/",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 bottom strip shows footnote '4https://madis.ncep.noaa.gov/' for the $^{4}$ marker on MADIS in the same OCR paragraph."
+    },
+    {
+      "before": "bilinearly to the station locations.",
+      "after": "bilinearly to the station locations.\n\n5 https://synopticdata.com/",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom strip shows footnote '5https://synopticdata.com/' for the $^{5}$ marker on Synoptic's derived precipitation service in the same OCR paragraph."
+    },
+    {
+      "before": "much smaller than the gap to WN3.",
+      "after": "much smaller than the gap to WN3.\n\n6 https://confluence.ecmwf.int/spaces/TIGGE/pages/40109876/Models",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Rendered physical p.31 bottom strip shows footnotes 6 and 7; footnote 6 reads '6https://confluence.ecmwf.int/spaces/TIGGE/pages/40109876/Models' for the $^{6}$ marker on the TIGGE download sentence in the same OCR paragraph."
+    },
+    {
+      "before": "affect scores meaningfully.",
+      "after": "affect scores meaningfully.\n\n7 https://www.ecmwf.int/en/forecasts/datasets/open-data",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Rendered physical p.31 bottom strip shows footnote '7https://www.ecmwf.int/en/forecasts/datasets/open-data' for the $^{7}$ marker on the ECMWF open-data program in the same OCR paragraph."
+    },
+    {
+      "before": "until September 2025 $^{8}$ .",
+      "after": "until September 2025 $^{8}$ .\n\n8 https://gpm.nasa.gov/data/news/imerg-v08-transition-schedule",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 bottom strip shows footnote '8https://gpm.nasa.gov/data/news/imerg-v08-transition-schedule' directly tied to the $^{8}$ marker on 'September 2025' in the same sentence."
+    },
+    {
+      "before": "Multi-satellite E Retrievals",
+      "after": "Multi-satellitE Retrievals",
+      "count": 2,
+      "pdf_pages": [
+        7,
+        32
+      ],
+      "evidence": "Rendered physical p.7 (300 dpi crop) prints \"NASA's Integrated Multi-satellitE Retrievals for GPM (IMERG)\" with the capital E inside the word and no space; the same token appears in the PDF text layer on p.7 and p.32. OCR split it into 'Multi-satellite E Retrievals' in both the Section 3 sentence and the IMERG appendix/reference paragraph."
+    },
+    {
+      "before": "## (a) CRPS against precipitation ground truths",
+      "after": "(a) CRPS against precipitation ground truths",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 shows '(a) CRPS against precipitation ground truths' only as a bold panel title inside the Figure 4 image; the printed page has no such heading line, and OCR kept the sibling panel titles '(b) Brier Score scorecard vs WN2', '(c)', '(d)' as plain text. Demotes the spurious heading to plain text."
+    },
+    {
+      "before": "## Tropical cyclone spread-skill evaluation",
+      "after": "Tropical cyclone spread-skill evaluation",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 shows 'Tropical cyclone spread-skill evaluation' only as a bold banner inside the Figure A.8 image, directly above the Position/Intensity spread-skill panels; the string does not occur in the PDF text layer. OCR kept the other figure-group titles ('Tropical cyclone wind radii extent evaluation', 'Relative CRPS: Upper level variables @0.25°') as plain text. Demotes the spurious heading to plain text."
+    }
+  ],
+  "unresolved": [
+    "Line-level proofreading of body prose across the 43 pages was not completed within the review budget; only the digit sweep, footnote sweep, heading check and targeted renders covered the document.",
+    "The scorecard figure group around OCR lines 180-240 (Figure 4 and Figure 6 panels) was read at the heading level only; internal table/axis digits of those figures are image content and were not transcribed by OCR."
+  ]
+}

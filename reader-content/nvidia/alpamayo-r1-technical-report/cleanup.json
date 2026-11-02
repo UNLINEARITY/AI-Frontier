@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:alpamayo-r1-technical-report",
+  "source_sha256": "a887dc13b3cf672b800968d3c8011d3d2741d8d68b342a0b4a390f7d4fe67ce1",
+  "ocr_sha256": "1df989572bc180d6b851e6e49b37c1a7ab9076a2144297eafe62d2f681aa34a4",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      9,
+      10,
+      13,
+      14,
+      21,
+      23,
+      24,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "Structure check found no code fences; heading outline, figure embeds and captions were screened against the PDF text layer for all 42 pages and the prompt-box banner on p21 was verified on a render. Full-document normalized word diff of extracted PDF text against the OCR markdown was screened for droppage; every remaining gap is figure-internal transcript/telemetry text, rotated arXiv stamp, the PDF's soft-hyphen line breaks (e.g. 'prepara-tion', 'immedi-'/'ately'), or LaTeX-equivalent math (Eq. 5 and Eq. 11 including the Lynch and Park citation were confirmed present). The dropped title-page footnote, the prompt-box banner heading, sixteen glued table cells in Table 3 and the square-root signs standing in for check marks in Table 6 were verified on rendered pages (p1 at 200 dpi, p13 table at 210 dpi, p21 box at 200 dpi, p23 text layer plus render). 'due a TL/TS' (Resume at TL / TS row), the flattened two-line Table 8 headers ('AlpaSim Score all ↑') and 'Z. Gharamani'-style printed quirks absent here were checked and left as printed by the PDF."
+  },
+  "patches": [
+    {
+      "before": "NVlabs/alpamayo.\n\n## 1. Introduction",
+      "after": "NVlabs/alpamayo.\n\n$^{1}$A detailed list of contributors and acknowledgments can be found in App. A of this paper.\nFollowing the release of NVIDIA Alpamayo at CES 2026 (NVIDIA, 2026), Alpamayo-R1 is also referred to as Alpamayo 1.\n© 2026 NVIDIA. All rights reserved.\n\n## 1. Introduction",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom prints the superscript-1 footnote block '1A detailed list of contributors and acknowledgments can be found in App. A of this paper.', 'Following the release of NVIDIA Alpamayo at CES 2026 (NVIDIA, 2026), Alpamayo-R1 is also referred to as Alpamayo 1.' and, under a rule, '© 2026 NVIDIA. All rights reserved.' (visually verified at 200 dpi). The OCR dropped the whole block while keeping the superscript 1 on the byline 'NVIDIA $^{1}$', so the footnote text is restored at the end of the page-1 abstract. Line breaks mirror the printed lines."
+    },
+    {
+      "before": "## Prompt : LLM Reasoning Grading Rubric",
+      "after": "Prompt : LLM Reasoning Grading Rubric",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 shows 'Prompt : LLM Reasoning Grading Rubric' as the gray banner label on top of a bordered prompt box, not as a document section heading (visually verified at 200 dpi). The OCR promoted the banner to a level-2 heading, which pollutes the reader outline; the spacing 'Prompt :' is kept exactly as printed."
+    },
+    {
+      "before": "begins to decelerate fora TL/TS",
+      "after": "begins to decelerate for a TL/TS",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Stop for traffic light (TL) / traffic sign (TS)' row prints 'begins to decelerate for a TL/TS' (visually verified at 210 dpi); the OCR glued the cell's line break into 'fora'."
+    },
+    {
+      "before": "begins to acceleraterfrom standstill",
+      "after": "begins to accelerate from standstill",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Resume at TL / TS' row prints 'begins to accelerate from standstill' (visually verified at 210 dpi); the OCR glued the cell's line break into 'acceleraterfrom'. The following 'due a TL/TS' is printed by the PDF and was left unchanged."
+    },
+    {
+      "before": "(TL) /traffic sign (TS)",
+      "after": "(TL) / traffic sign (TS)",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 scenario-name cell prints 'Stop for traffic light (TL) /' with 'traffic sign (TS)' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break, dropping the space after the slash."
+    },
+    {
+      "before": "ego&#x27;s lane; or(2) when the contender",
+      "after": "ego&#x27;s lane; or (2) when the contender",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Vehicle cut-in' row prints '...into ego's lane; or' with '(2) when the contender...' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'or(2)'."
+    },
+    {
+      "before": "for the LCif no blinker signal",
+      "after": "for the LC if no blinker signal",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Vehicle cut-in' row prints '...for the LC' with 'if no blinker signal is given.' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'LCif'."
+    },
+    {
+      "before": "avoid or givespace to an obstacle",
+      "after": "avoid or give space to an obstacle",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Nudge' row prints '...to avoid or give' with 'space to an obstacle.' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'givespace'."
+    },
+    {
+      "before": "construction objects orchanges lane",
+      "after": "construction objects or changes lane",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Bypass construction objects' row prints '...construction objects or' with 'changes lane in response...' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'orchanges'."
+    },
+    {
+      "before": "for a riskyevent or obstacle",
+      "after": "for a risky event or obstacle",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Risky driving' row prints '...moves backward for a risky' with 'event or obstacle...' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'riskyevent'."
+    },
+    {
+      "before": "parked vehicle backingout, or oncoming",
+      "after": "parked vehicle backing out, or oncoming",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Risky driving' row prints '...parked vehicle backing' with 'out, or oncoming vehicle...' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'backingout,'."
+    },
+    {
+      "before": "End:when the ego exits the curve",
+      "after": "End: when the ego exits the curve",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Curvy road' row prints 'End:' at the end of a line with 'when the ego exits the curve.' continuing after it (visually verified at 210 dpi); the OCR glued the cell's line break into 'End:when'."
+    },
+    {
+      "before": "passing a slow lead)but cannot",
+      "after": "passing a slow lead) but cannot",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Lane change (LC) preparation' row prints '...route or passing a slow lead)' with 'but cannot do it immediately...' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'lead)but'."
+    },
+    {
+      "before": "End: Ego is readyto change lanes",
+      "after": "End: Ego is ready to change lanes",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Lane change (LC) preparation' row prints 'End: Ego is ready' with 'to change lanes after gap searching...' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'readyto'."
+    },
+    {
+      "before": "immedi-ately due to traffic",
+      "after": "immediately due to traffic",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Nudge preparation' row line-breaks the word as 'immedi-' / 'ately due to traffic' (visually verified at 210 dpi); the printed word is 'immediately' and the OCR kept the wrap hyphen as literal text. The same cell's LC-preparation row prints 'immediately' unbroken, confirming the spelling."
+    },
+    {
+      "before": "crosses the stop lineor crosswalk boundary",
+      "after": "crosses the stop line or crosswalk boundary",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'Passing intersection' row prints '...crosses the stop line' with 'or crosswalk boundary...' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'lineor'."
+    },
+    {
+      "before": "not yet crossingbecause (1)",
+      "after": "not yet crossing because (1)",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'No yield to VRUs' row prints '...are not yet crossing' with 'because (1) ego has the right of way...' on the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'crossingbecause'."
+    },
+    {
+      "before": "intentionally yield to ego.End: when the VRUs",
+      "after": "intentionally yield to ego. End: when the VRUs",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 3 'No yield to VRUs' row prints '...(2) VRUs intentionally yield to ego.' with 'End: when the VRUs are no longer visible.' starting the next line (visually verified at 210 dpi); the OCR glued the cell's line break into 'ego.End:'."
+    },
+    {
+      "before": "√",
+      "after": "✓",
+      "count": 7,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Physical p.23 Table 6 prints seven check marks (U+2713, confirmed by the page text layer and the render; the page contains no U+221A). The OCR transcribed all seven check-mark cells of the open-loop evaluation table as square-root signs."
+    }
+  ],
+  "unresolved": []
+}

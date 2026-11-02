@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "openai:addendum-to-gpt-5-2-system-card-gpt-5-2-codex",
+  "source_sha256": "5fe918b740727770d0571684fd8c168190172649d2b2e8b7ca4cacad23b3e027",
+  "ocr_sha256": "d736368521b7d9d9ff5d4b7c1cbbbbed053c5f05eaed22bec94524bed278220f",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "coverage": "complete",
+    "notes": "No code fences; heading tree matches the printed contents including the company name 'Irregular' in heading 5.1.2.4. Full normalized word-stream diff of all 22 physical PDF pages against the OCR markdown; residual differences are hyphenation splits, page-footer folios, escaped underscores in 'not\\_unsafe' (renders as the printed 'not_unsafe') and table-cell markup. The reference list and all eleven figures are present. Physical p.11 was rendered at 140 dpi to confirm the dropped sentence is printed body text, and physical pp.4-5 grader wording was checked in the text layer for the not_unsafe metric."
+  },
+  "patches": [
+    {
+      "before": "Figure 3\n\n## 5.1.1.4 Troubleshooting Bench",
+      "after": "Figure 3\nGPT-5.2-Codex underperforms GPT-5.1-Codex-Max by four percentage points.\n\n## 5.1.1.4 Troubleshooting Bench",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 (140 dpi): the page opens with the body sentence 'GPT-5.2-Codex underperforms GPT-5.1-Codex-Max by four percentage points.' directly above heading 5.1.1.4; it is the takeaway line for Figure 3, which ends physical p.10 (same pattern as Figure 4, whose takeaway sentence 'GPT-5.2-Codex scores similarly to GPT-5.2-Thinking on this evaluation.' survived in the markdown). The page break split the sentence from its figure and OCR dropped it entirely."
+    }
+  ],
+  "unresolved": []
+}

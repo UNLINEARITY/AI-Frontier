@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-omni-flash-model-card",
+  "source_sha256": "6cc6e2aafcb8202d367ae36a85e12af0db7c4007b5c029b24a0559f7523475ef",
+  "ocr_sha256": "5ca8270a14c6c3f9e6a3494cdf3c713cf9df23f41952783121cdc6685fee3c26",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coverage": "complete",
+    "notes": "Clean document, no patches. Full line-by-line comparison of the 82-line OCR Markdown against extracted text from all 4 physical PDF pages; code-fence scan found no fences; all section headings (Model Information, Model Data, Implementation and Sustainability, Distribution, Intended Usage and Limitations, Ethics and Content Safety) match printed section titles; dates, policy names and the SynthID/Safety sections match the PDF wording including the card's own printed \"Gemini Flash Omni\" phrasing and the trailing comma after \"May 2026,\". Physical page 1 was rendered (110 dpi) to confirm its content. Mixed bullet rendering on the Distribution list (two channels as plain lines, two as \\- items) was left unchanged because bullet style is not a defect class."
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "title-page-google-logo",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Physical page 1 is a branded title page whose only image is the Google logo (confirmed by render); the OCR Markdown carries no image embed. This is decorative branding rather than a content figure, and text cleanup cannot add embeds, so it is recorded here instead of being patched."
+    }
+  ]
+}

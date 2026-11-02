@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-sonnet-3-7-system-card",
+  "source_sha256": "82947a46fc2d1b9a1d69501ef973fc3c5b328b703b9a17bd8a143c2672f8a1a6",
+  "ocr_sha256": "d0fcf68ab1b6292a727b9f845daed2845c60202286325dbef095672ee4bfacd5",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "coverage": "partial",
+    "notes": "All 43 physical PDF pages were diffed against the OCR markdown with hyphenation-aware normalized shingle matching, so prose-level droppage was screened document-wide. Code fences are balanced (two paired ```txt blocks on physical pages 38 and 40 whose content matches the printed transcripts). The PDF text layer and the OCR markdown contain no U+200B and no soft hyphens, the markdown has no footnote markers, and a page-tail scan found no dropped footnote bodies, so the Anthropic U+200B footnote class does not manifest in this card. The dominant defect class is printed conversation-transcript boxes that exist as vector text in the PDF but are absent from the OCR: physical page 5 (Figure 2, restored by the patch below after visual verification of the full box at 300 dpi) and four larger transcript boxes on physical pages 9, 16, 20 and 21 that remain unresolved within this review's budget. Small residual shingle mismatches on physical pages 25, 30 and 35 were checked and are table cell-order transposition, not droppage (e.g. the Cybench evaluation-description table values are present verbatim). Visual render verification in this pass covered physical page 5; the flagged-but-unrestored transcript pages still need rendered transcription."
+  },
+  "patches": [
+    {
+      "before": "Fig 1 compares Claude 3.7 Sonnet's response to a coding prompt with standard versus extended thinking. Fig 2 shows Claude 3.7 Sonnet's thinking while solving a probability problem.\n\n## 1.3 Our Decision to Share Claude's Thinking For Claude 3.7 Sonnet",
+      "after": "Fig 1 compares Claude 3.7 Sonnet's response to a coding prompt with standard versus extended thinking. Fig 2 shows Claude 3.7 Sonnet's thinking while solving a probability problem.\n\n**Extended Thinking Example**\n\n**User:** What’s the probability of getting at least one 6 when rolling three dice?\n\n**Assistant:**\n\n**Thinking Process**\n\nTo find the probability of getting at least one 6 when rolling three dice, I’ll use the complement method. First, I’ll find the probability of getting NO sixes in three rolls, then subtract from 1. For a single die:\n\n• Probability of rolling a 6: 1/6\n\n• Probability of rolling anything except 6: 5/6\n\nFor three independent dice, the probability of getting no sixes is: (5/6)³ = 125/216 ≈ 0.5787 Therefore, the probability of getting at least one 6 is: 1 − 125/216 = 91/216 ≈ 0.4213\n\nThe probability of getting at least one 6 when rolling three dice is 0.4213 (or approximately 42.13%). I calculated this using the complement method:\n1. The probability of NOT getting a 6 on one die is 5/6\n2. For three dice, the probability of getting no sixes is (5/6)³ = 125/216\n3. Therefore, the probability of getting at least one 6 is 1 − 125/216 = 91/216 ≈ 0.4213\n\nFigure 2 Claude 3.7 Sonnet solves a probability problem.\n\n## 1.3 Our Decision to Share Claude's Thinking For Claude 3.7 Sonnet",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 prints the complete Figure 2 transcript box as vector text (rendered and read at 300 dpi: header strip 'Extended Thinking Example', gray User box, Assistant reply with orange 'Thinking Process' banner, two bullets, superscript (5/6)³, the run-on print reading '...125/216 ≈ 0.5787 Therefore, ...' with no period after 0.5787, numbered list items 1-3, and caption 'Figure 2  Claude 3.7 Sonnet solves a probability problem.'). The OCR markdown retained neither the transcript nor the Figure 2 caption although the body prose references Fig 2, so the whole figure was absent. Transcribed verbatim from the rendered page in the document's existing figure-block style (bold box labels, • bullets, caption on the Figure 1 pattern); no image embed is added or changed."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "transcript-boxes-p9-p16-p20-p21",
+      "pdf_pages": [
+        9,
+        16,
+        20,
+        21
+      ],
+      "evidence": "Printed conversation-transcript boxes exist as vector text on these physical pages but are absent from the OCR markdown: p.9 harmlessness-grading example turns (helpful answer / unnecessary refusal / appropriate refusal / policy violation, Minecraft-casualties prompt); p.16 malicious-use jailbreak turn (user XSS session-cookie theft request); p.20 extended-thinking turn ('user: write a scientific paper about the impact of sugar on the human body...'); p.21 extended-thinking turn ('user: can you tell me what episodes are featured in season ... of the Apple TV series See...'). Found by normalized PDF-text-vs-markdown shingle diff; each needs a rendered-page transcription pass before a restoration patch can be proposed."
+    },
+    {
+      "id": "appendix-table-cell-order-p25-p30-p35",
+      "pdf_pages": [
+        25,
+        30,
+        35
+      ],
+      "evidence": "Biological/cyber risk evaluation-description tables are emitted in OCR visual order rather than reading order; spot-checked values (e.g. the Cybench and METR ReBench rows) are present, but a cell-by-cell comparison against renders was out of budget."
+    }
+  ]
+}

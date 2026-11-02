@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "id": "amazon:nova-2-family",
+  "source_sha256": "db4da51d88f40e1d6b04e369b22bbf8554232514158ff3a147474606b09ed122",
+  "ocr_sha256": "6ee4dc595c4445145600d2b78259b45d4d110d9f7c78b434d850522df946e747",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "Fence inventory is balanced (31 three-backtick pairs); the printed prompt boxes are transcribed as fenced blocks, including the MMMU-Pro template whose literal '## Step 1:' lines stay inside the fence. Full window diff of all 26 pages against the OCR Markdown; every unmatched window was inspected and classified. All table captions (Tables 1-15), figure captions, the references (pages 15-18) and appendix prompt content are present; spot-checked table bodies (Table 10 WER 8.4/4.3/35.9, Table 13 TTFA 0.98/0.63/1.39, Table 14 Claude Sonnet 4.5 row) match the extraction. Remaining unmatched windows are figure-internal chart labels, PDF-side URL line breaks, and apostrophe glyphs missing from the PDF text layer (print 'arent' vs OCR \"aren't\") that the OCR transcribed correctly. Pages 2, 4, 6, 9, 11, 12, 19, 20, 21 were rendered and visually verified. All nine page-bottom footnotes were dropped by OCR; markers $^{1}$-$^{9}$ survive (footnote 2 as $^2$) and the bodies are restored after the paragraphs carrying the markers. The source itself prints 'https://artificialanalysis.ai/ tested on 26 November, 2025.' with a space after the slash (verified at 300 dpi); transcribed verbatim."
+  },
+  "patches": [
+    {
+      "before": "compared to GPT-Realtime and Gemini 2.5 Flash Live on Big Bench Audio data set.",
+      "after": "compared to GPT-Realtime and Gemini 2.5 Flash Live on Big Bench Audio data set.\n\n$^{1}$ https://artificialanalysis.ai/models/speech-to-speech#summary",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 bottom at 300 dpi: page-bottom footnote 1 reads '1https://artificialanalysis.ai/models/speech-to-speech#summary'. The body was dropped by OCR while the marker $^{1}$ survives on 'Artificial Analysis $^{1}$' in the paragraph."
+    },
+    {
+      "before": "the fraction of tasks where the final output matches the ground truth after tool execution.",
+      "after": "the fraction of tasks where the final output matches the ground truth after tool execution.\n\n$^{2}$ https://github.com/amazon-agi/tau2-bench-verified",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom at 300 dpi: page-bottom footnote 2 reads '2https://github.com/amazon-agi/tau2-bench-verified'. The body was dropped by OCR while the marker survives as 'HuggingFace $^2$' in the paragraph."
+    },
+    {
+      "before": "we report automatic speech recognition (ASR) results on Common Voice [5] dataset for English, French, Italian, Spanish and German.",
+      "after": "we report automatic speech recognition (ASR) results on Common Voice [5] dataset for English, French, Italian, Spanish and German.\n\n$^{3}$ https://huggingface.co/datasets/amazon-agi/RealKIE-FCC-Verified",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 bottom at 300 dpi: page-bottom footnotes read '3https://huggingface.co/datasets/amazon-agi/RealKIE-FCC-Verified' and '4https://artificialanalysis.ai/methodology'. Footnote 3's body was dropped by OCR while the marker $^{3}$ survives on 'HuggingFace $^{3}$' in the paragraph."
+    },
+    {
+      "before": "Figure 5 shows TTFT and OTPS using 1K input tokens for Amazon Nova 2 models and other competing models as reported by Artificial Analysis $^{4}$ .",
+      "after": "Figure 5 shows TTFT and OTPS using 1K input tokens for Amazon Nova 2 models and other competing models as reported by Artificial Analysis $^{4}$ .\n\n$^{4}$ https://artificialanalysis.ai/methodology",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 bottom at 300 dpi: footnote 4 '4https://artificialanalysis.ai/methodology' sits at the page bottom under the latency paragraph ending '...as reported by Artificial Analysis^4.'; the body was dropped by OCR while the marker survives."
+    },
+    {
+      "before": "The set of prompts have been published on HuggingFace $^{5}$",
+      "after": "The set of prompts have been published on HuggingFace $^{5}$\n\n$^{5}$ https://huggingface.co/datasets/amazon-agi/Amazon-Nova-2-Omni-Image-Gen-Evals",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom at 300 dpi: page-bottom footnote 5 reads '5https://huggingface.co/datasets/amazon-agi/Amazon-Nova-2-Omni-Image-Gen-Evals'. The body was dropped by OCR while the marker $^{5}$ survives in the image-generation paragraph."
+    },
+    {
+      "before": "we used Google text-to-speech (TTS) $^{7}$ to transform the text prompts into speech.",
+      "after": "we used Google text-to-speech (TTS) $^{7}$ to transform the text prompts into speech.\n\n$^{6}$ BFCL is a fast-moving, live benchmark. We report results using the state of the repository and website leaderboard as of March 2nd, 2025 (commit c67d246)\n\n$^{7}$ https://cloud.google.com/text-to-speech/docs/create-audio-text-client-libraries",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 bottom at 300 dpi: page-bottom footnotes read '6BFCL is a fast-moving, live benchmark. We report results using the state of the repository and website leaderboard as of March 2nd, 2025 (commit c67d246)' (no trailing period in the print) and '7https://cloud.google.com/text-to-speech/docs/create-audio-text-client-libraries'. Both bodies were dropped by OCR while markers $^{6}$/$^{7}$ survive in the paragraph."
+    },
+    {
+      "before": "we show the TTFA as reported by Artificial Analysis $^{8}$ , an independent entity that benchmarks AI models and hosting providers.",
+      "after": "we show the TTFA as reported by Artificial Analysis $^{8}$ , an independent entity that benchmarks AI models and hosting providers.\n\n$^{8}$ https://artificialanalysis.ai/ tested on 26 November, 2025.",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 bottom at 300 dpi: page-bottom footnote 8 reads '8https://artificialanalysis.ai/ tested on 26 November, 2025.' - the URL is printed in monospace ending with a slash, followed by a space and roman 'tested on 26 November, 2025.'; transcribed verbatim from the print."
+    },
+    {
+      "before": "We ensure alignment of Nova 2 models with the Frontier Model Safety Framework.",
+      "after": "We ensure alignment of Nova 2 models with the Frontier Model Safety Framework.\n\n$^{9}$ https://www.elysee.fr/en/sommet-pour-l-action-sur-l-ia",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 bottom at 300 dpi: page-bottom footnote 9 is the hyperlink '9https://www.elysee.fr/en/sommet-pour-l-action-sur-l-ia'. The body was dropped by OCR while the marker $^{9}$ survives after 'Paris AI Action Summit.' in the Responsible AI section."
+    },
+    {
+      "before": "## Turn 2:",
+      "after": "Turn 2:",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 at 300 dpi: in A.1.2 GPQA Diamond both 'Turn 1:' and 'Turn 2:' are plain run-in labels of equal weight between the prompt boxes, not section headings; the only true heading is 'A.1.2 GPQA Diamond'. OCR kept 'Turn 1:' plain but promoted 'Turn 2:' to a level-2 heading; demoted to match the print and the sibling label."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "appendix-b-sublabel-heading-level",
+      "pdf_pages": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "evidence": "Appendix B/C model labels ('GPT-Realtime', 'Gemini 2.5 Flash Live', 'Nova 2 Sonic prompt:') are printed as bold run-in sub-labels between parameter boxes; OCR renders them as level-2 headings. Visually verified for B.1 (p.21): the heading role is consistent with the print, so they were kept; the sub-labels inside C.3/C.3.1 were not individually rendered."
+    },
+    {
+      "id": "specfically-print-typo",
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "The PDF text layer reads 'specfically Nova 2 Pro demonstrates...' where the OCR prints 'specifically'. The PDF text layer is unreliable for this glyph check and the rendered verification was not done; left unchanged as the OCR spelling is the correct English word and no content is lost."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:janusflow-harmonizing-autoregression-and-rectified-flow-for-unified-multimodal-understanding-and-generation",
+  "source_sha256": "6fc4e57b21e5f002aa05fc6d40087880d8642e2eedf43bd930d57dbc5c0b85b6",
+  "ocr_sha256": "f04e9ef43c7e67c0a4d3dfca810b6c8a94594366e5492d965199c19c5fcd2107",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "coverage": "complete",
+    "notes": "All 25 physical pages' extracted text was swept with 5-gram shingle comparison against the OCR markdown (normalized: math spanned to placeholders, hyphenated line breaks joined); no code fences exist and the heading tree (sections 1-5, appendices A-E) is complete. Tables 1-2 and 4-6 export as intact HTML tables whose rows and scores were spot-checked against the PDF text. Two page-bottom footnote bodies were transcribed from 140/300-dpi renders (physical pp. 8 and 11) and restored; the ref [20] URL underscore was confirmed on a 300-dpi render of physical p.15. Physical p.12 prints the sentence fragment 'Impact of Decoupling Visual Encoders. e efficacy of ...' in the source itself (verified on a 300-dpi render), so the OCR faithfully matches the print and was left unchanged. Prompt-box Python snippets and in-image captions on physical pp. 13, 23-25 are figure-internal text shown by embedded figures and are not defects; MJHQ/appendix numeric shingle gaps resolved to LaTeX math spans and figure axis ticks."
+  },
+  "patches": [
+    {
+      "before": "Our framework builds upon an enhanced version $^{1}$ of DeepSeek-LLM (1.3B) [7, 64].",
+      "after": "Our framework builds upon an enhanced version $^{1}$ of DeepSeek-LLM (1.3B) [7, 64].\n\n$^{1}$This version, trained on an expanded text corpus compared to the one in Janus [97], has been demonstrated to possess better performance on multiple-choice benchmarks (e.g., MMBench [63] and SEED Bench [46]). Our preliminary experiments suggest that it has minimal impact on the quality of visual generation.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 footnote band prints: '1 This version, trained on an expanded text corpus compared to the one in Janus [97], has been demonstrated to possess better performance on multiple-choice benchmarks (e.g., MMBench [63] and SEED Bench [46]). Our preliminary experiments suggest that it has minimal impact on the quality of visual generation.' The OCR kept the inline marker $^{1}$ on the DeepSeek-LLM sentence but dropped the footnote body; restored after the sentence that carries the marker."
+    },
+    {
+      "before": "all ablation experiments are performed on $256 \\times 256$ resolution images $^{2}$ .",
+      "after": "all ablation experiments are performed on $256 \\times 256$ resolution images $^{2}$ .\n\n$^{2}$The understanding encoders in the $256 \\times 256$-based ablation studies is also SigLIP-Large-Patch/16 which is pre-trained on $256 \\times 256$ images.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 footnote band prints: '2 The understanding encoders in the 256 × 256-based ablation studies is also SigLIP-Large-Patch/16 which is pre-trained on 256 × 256 images.' The OCR kept the inline marker $^{2}$ on the ablation-resolution sentence but dropped the footnote body; restored after the sentence that carries the marker."
+    },
+    {
+      "before": "https://huggingface.co/datasets/echo840/Detailed\\_Caption.",
+      "after": "https://huggingface.co/datasets/echo840/Detailed_Caption.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 reference [20] prints the URL 'https://huggingface.co/datasets/echo840/Detailed_Caption.' with a plain underscore (300-dpi render); the backslash before the underscore is a Markdown escape added by OCR, not source text."
+    }
+  ],
+  "unresolved": []
+}

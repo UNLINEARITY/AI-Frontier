@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "id": "toyota_research_institute:tri-lbm-1-technical-report",
+  "source_sha256": "c9ba44579974208aa43d60fce2e0294c0fee1f1b8d604abd64613568f9c5a102",
+  "ocr_sha256": "0f83ea87b4941cd763d5f8f7853a1783add4de9c7a9ae516b99ccb43deb01cb5",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "coverage": "complete",
+    "notes": "All 39 physical pages diffed word-by-word (case/punctuation-normalized) against the OCR markdown; physical pages 13, 23, 25, 26, 27 and 33 rendered and visually inspected (300 dpi crops of the identifier/table areas, 150 dpi page context). The document contains no code fences, so no fence-balance issues. Nearly every diff hit is soft-hyphen splitting in the PDF text layer that the OCR joined correctly (e.g. 'perfor mance', 'kup puswamy', 'wood island' extracted without underscores); the glued italic run on p.14 ('OXE-Ramen data is a subset ... and total number of episodes') is present in the OCR with correct spacing. Tables S1, S2, S5, S6 and S7 were spot-checked cell-by-cell against renders and match, including the S6 station rollouts (49/490/196/305/533/496/260/229). The PDF prints identifiers such as wood_island, lbm_eval and the TFDS dataset names with real underscores (LaTeX \\texttt), so the OCR's underscore spellings and \\_ escapes that render as underscores were kept; only the spurious spaces inside lbm_eval and inside four Table S7 dataset names were repaired. Task-name run-in headings (TurnLargeContainerUpsideDown etc.) are printed as bold run-in titles with rules on p.25, so the OCR's heading promotion matches the print; the sentence tail 'are shown below:' does not."
+  },
+  "patches": [
+    {
+      "before": "## are shown below:",
+      "after": "are shown below:",
+      "count": 1,
+      "pdf_pages": [
+        24,
+        25
+      ],
+      "evidence": "Rendered physical p.24-25: the sentence 'The task-specific predicates for these tasks are shown below:' starts at the bottom of p.24 and its tail 'are shown below:' prints at the top of p.25 as plain paragraph text, followed by the bold predicate-block titles (TurnLargeContainerUpsideDown, ...). The OCR promoted only the sentence tail to a '## ' heading; removed the spurious heading marker so the tail stays prose."
+    },
+    {
+      "before": "lbm \\_eval",
+      "after": "lbm\\_eval",
+      "count": 3,
+      "pdf_pages": [
+        13,
+        16
+      ],
+      "evidence": "Rendered physical p.13 (300 dpi) prints 'our simulation benchmark, lbm_eval, which is built on top of Drake [86]. lbm_eval uses curated assets' and physical p.16 prints 'all part of lbm_eval.' in monospace with an underscore and no space. Two of the OCR occurrences (physical p.13 context) insert a space before the escaped underscore, rendering 'lbm _eval'; the third is in the Evaluation Tasks paragraph (physical p.16 context). Removed the spurious space, keeping the OCR's own \\_ escape spelling used elsewhere in the document (lbm_robot, lbm_eval's)."
+    },
+    {
+      "before": "furniture_bench_dataset Converted externally_to_rlds",
+      "after": "furniture_bench_dataset_converted_externally_to_rlds",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 Table S7 prints the data source name as the single token furniture_bench_dataset_converted_externally_to_rlds with underscores throughout and lowercase 'converted'; the OCR cell split it with a space and capitalized 'Converted'."
+    },
+    {
+      "before": "nyu_franka_play_dataset Converted externally_to_rlds",
+      "after": "nyu_franka_play_dataset_converted_externally_to_rlds",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 Table S7 prints nyu_franka_play_dataset_converted_externally_to_rlds as one underscore token; the OCR cell inserted a space and capitalized 'Converted'."
+    },
+    {
+      "before": "stanford_hydra_dataset Converted externally_to_rlds",
+      "after": "stanford_hydra_dataset_converted_externally_to_rlds",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 Table S7 prints stanford_hydra_dataset_converted_externally_to_rlds as one underscore token; the OCR cell inserted a space and capitalized 'Converted'."
+    },
+    {
+      "before": "utokyo_xarm_pick_and_place Converted externally_to_rlds",
+      "after": "utokyo_xarm_pick_and_place_converted_externally_to_rlds",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 Table S7 prints utokyo_xarm_pick_and_place_converted_externally_to_rlds as one underscore token; the OCR cell inserted a space and capitalized 'Converted'."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "subcaption-fragments-interleaved",
+      "pdf_pages": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "evidence": "Printed subcaptions '(a) Nominal (Sim)' / '(b) Distribution Shift (Sim)' and figure images interleave with body text around the predicates paragraph (Figures S3-S8 span page boundaries); the OCR keeps them as short text lines under the image embeds in printed order. Matches the source layout; no repair."
+    },
+    {
+      "id": "figure-internal-axis-labels",
+      "pdf_pages": [
+        18,
+        33
+      ],
+      "evidence": "Axis tick sequences (e.g. '124 420 124 450' on p.18) and per-subplot dataset names in Figure S20 (p.33) are chart-internal text interleaved with captions; figure-internal, no repair."
+    }
+  ]
+}

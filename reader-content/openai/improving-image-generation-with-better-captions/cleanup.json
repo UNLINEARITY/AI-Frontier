@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "openai:improving-image-generation-with-better-captions",
+  "source_sha256": "dfe68ac1edfbafa443c5a9567c9338478e0f15126b5ca5d1d63c49d87393a62f",
+  "ocr_sha256": "c16bb633cc2dc42d46cd98095743cc601f8bfd6a34a75ddb8e97563eca5eb10c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "coverage": "partial",
+    "notes": "All 19 physical pages screened by column-aware PDF-text line diff plus a full structure scan (four printed fence markers forming the two appendix code listings jsonl/txt, balanced; three HTML tables). All dropped numbered footnotes were restored after 300-dpi render verification: the author-block note on p.1, notes 4/5/6 on pp.5/10/11, and the appendix D heading demoted to section level. Table 1 and Table 2's per-table notes 1-3 were already present and were not re-patched. Remaining unmatched PDF lines are figure-internal axis/legend labels and example-grid texts (physical pp.6, 8-9), equations (pp.5, 7) and reference wrap continuations (pp.14-15). The p.6 caption/alt-text comparison table is recorded as a whole-table image fallback in the package index; its text is additionally present as plain OCR text, which was left unchanged."
+  },
+  "patches": [
+    {
+      "before": "Wesam Manassra $^{\\dagger}$ Prafulla Dhariwal $^{\\dagger}$ Casey Chu $^{\\dagger}$ Yunxin Jiao $^{\\dagger}$\n\nAditya Ramesh $^{*}$ $^{\\dagger}$ aramesh@openai.com\n\n## Abstract",
+      "after": "Wesam Manassra $^{\\dagger}$ Prafulla Dhariwal $^{\\dagger}$ Casey Chu $^{\\dagger}$ Yunxin Jiao $^{\\dagger}$\n\nAditya Ramesh $^{*}$ $^{\\dagger}$ aramesh@openai.com\n\n$^{*}$Equal contribution $^{\\dagger}$OpenAI $^{\\ddagger}$Microsoft\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote under the author block prints \"*Equal contribution †OpenAI ‡Microsoft\" (400 dpi crop); the OCR dropped the line."
+    },
+    {
+      "before": "might include:\n\n1. The presence of objects",
+      "after": "might include:\n\n$^{4}$The paired text is generally referred to as the \"caption\" in this document.\n\n1. The presence of objects",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 footnote prints \"4The paired text is generally referred to as the \"caption\" in this document\"; the OCR kept the $^{4}$ marker on \"t is text that describes that image $^{4}$\" but dropped the footnote body."
+    },
+    {
+      "before": "improvements. $^{5}$\n\n<table>",
+      "after": "improvements. $^{5}$\n\n$^{5}$DALL-E 3 has many improvements over DALL-E 2, many of which are not covered in this document and could not be ablated for time and compute reasons. The evaluation metrics discussed in this document should not be construed as a performance comparison resulting from simply training on synthetic captions.\n\n<table>",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 footnote (300 dpi crop) prints \"5DALL-E 3 has many improvements over DALL-E 2, many of which are not covered in this document and could not be ablated for time and compute reasons. The evaluation metrics discussed in this document should not be construed as a performance comparison resulting from simply training on synthetic captions.\"; the OCR kept the $^{5}$ marker after \"...above ablations, with several other improvements.\" but dropped the footnote body."
+    },
+    {
+      "before": "the model with the short, ground-truth captions.\n\nOur model outperforms both DALL-E 2",
+      "after": "the model with the short, ground-truth captions.\n\n$^{6}$As with past versions of DALL-E, DALL-E 3 was not specifically trained on the MSCOCO dataset, nor did we perform any optimizations on our model to improve performance on this evaluation. We also did not perform a de-duplication across MSCOCO within our training dataset, it is possible that there is data leakage.\n\nOur model outperforms both DALL-E 2",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 footnote (300 dpi crop) prints \"6As with past versions of DALL-E, DALL-E 3 was not specifically trained on the MSCOCO dataset, nor did we perform any optimizations on our model to improve performance on this evaluation. We also did not perform a de-duplication across MSCOCO within our training dataset, it is possible that there is data leakage.\"; the OCR kept the $^{6}$ marker after \"...generate our images $^{6}$\" but dropped the footnote body. Table 1's own notes 1-3 are already present after the Table 1 caption."
+    },
+    {
+      "before": "# D Evaluation of drawbench with vision-enabled GPT-4",
+      "after": "## D Evaluation of drawbench with vision-enabled GPT-4",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 prints \"D  Evaluation of drawbench with vision-enabled GPT-4\" as a bold appendix section heading in the same style as A/B/C/E (which the OCR transcribed as ## headings); this one was promoted to an H1. Demoted to ## for a consistent outline."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table-values-not-value-checked",
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "evidence": "Table 1 (metrics) and Table 2 (human evaluation ELO deltas) cell values were compared structurally only, not number-by-number."
+    },
+    {
+      "id": "appendix-code-listings-not-line-verified",
+      "pdf_pages": [
+        16,
+        17,
+        18
+      ],
+      "evidence": "The appendix C jsonl prompt and appendix D txt prompt are transcribed as fenced code; their lines were not compared character-by-character against the print."
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "id": "google:txgemma-efficient-and-agentic-llms-for-therapeutics",
+  "source_sha256": "bd9e6f48e3255951ef9ae5147fdebda59bd73bcd3ee66ec19a6a69e142b42ce2",
+  "ocr_sha256": "0dbf13d5d8fd7028c503de418d7b39213f03654d43cec4c39887ff8ef046703f",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58
+    ],
+    "coverage": "complete",
+    "notes": "All 58 physical pages compared token-by-token against the OCR markdown (case/punctuation-normalized), full-document code-fence audit (balanced), and heading audit against the printed outline. Pages 12, 19, 23, 24, 30, 33, 34 and 37 were additionally rendered (110-120 dpi full pages, 300 dpi crops) to visually verify every patch. Four supplementary outline bullets on printed pages 23-24 and one bold 'Answer: 397' line inside the printed Table S.8 (page 34) were wrongly promoted to markdown headings; Table S.11's candidate-B SMILES was OCR-misread c1->cl with a dropped 'c' in six occurrences; two Table S.5 task descriptions carry the print's own misspellings ('lipohilicity', 'distributon') that OCR had silently corrected; reference 28 prints 'Rodriques' but OCR wrote 'Rodrigues'; the Table S.8 binding-affinity drug SMILES prints 'Nc3ccccc3' (five ring carbons) but OCR wrote six. The amino-acid wrap 'KDGKLVV-/ECVMNN...' was re-verified at 300 dpi and matches the OCR (no patch). Figure-internal text (Figure 6 BBB chat transcript on page 12, 'Geneneralist' axis-label typo on pages 7/41, Figure S.4 MMLU-subject axis labels on page 49, dialogue screenshots on pages 50-52) is shown by embedded figures and was left unchanged; the rotated arXiv sidebar stamp on page 1 was not treated as droppage."
+  },
+  "patches": [
+    {
+      "before": "## Answer: 397",
+      "after": "Answer: 397",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered physical p.34 (Table S.8, regression prompt example) prints 'Answer: 397' as bold plain text closing the drug-target binding affinity example, on the same footing as 'Answer: 788' and 'Answer: 615' which OCR kept as plain text. The OCR promoted only this one instance to a section heading."
+    },
+    {
+      "before": "## - Method and modeling details as listed in Section C:",
+      "after": "- Method and modeling details as listed in Section C:",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 (Section A Summary) prints this as a plain first-level bullet in the summary list, not a heading; OCR promoted it to '##' while the sibling bullet '• Data details as listed in Section B:' stayed plain."
+    },
+    {
+      "before": "## • Additional results as listed in Section D:",
+      "after": "• Additional results as listed in Section D:",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 (Section A Summary) prints this as a plain first-level bullet, not a heading."
+    },
+    {
+      "before": "## - Conversing with TxGemma-27B-Predict and TxGemma-27B-Chat (Section D.2)",
+      "after": "- Conversing with TxGemma-27B-Predict and TxGemma-27B-Chat (Section D.2)",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 prints this as a sub-bullet of the 'Additional results' list, not a heading."
+    },
+    {
+      "before": "## - Additional Agentic-Tx Results (Section D.3)",
+      "after": "- Additional Agentic-Tx Results (Section D.3)",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 prints this as a sub-bullet of the 'Additional results' list, not a heading."
+    },
+    {
+      "before": "O=C(C=Cclcccn1)c1cccccl",
+      "after": "O=C(C=Cc1ccccn1)c1ccccc1",
+      "count": 6,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 (Table S.11, Agentic-Tx ChemBench example) prints candidate B as SMILES 'O=C(C=Cc1ccccn1)c1ccccc1' (pyridyl + phenyl rings, digits 1) in the Question row and repeats it in Action 2, Observation 2, Action 3, Observation 3 ('...is not toxic!') and the Final Response. OCR misread both ring-closing 'c1' tokens as 'cl' and dropped one ring carbon ('clcccn1' vs printed 'c1ccccn1') in every occurrence. Verified at 300 dpi on the Question row."
+    },
+    {
+      "before": "MSVMDELRHQVMINQFVLAAGCAADQAKQLLQAAHWQFETALSTFFQET",
+      "after": "MSVNDELRHQVMINQFVLAAGCAADQAKQLLQAAHWQFETALSTFFQET",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 (Table S.7 peptide-MHC example) prints the target amino-acid sequence starting 'MSVNDELRHQVMINQFVLAAG...' (M-S-V-N, verified at 300 dpi); OCR wrote 'MSVM...'."
+    },
+    {
+      "before": "Given a drug SMILES, predict the lipophilicity.",
+      "after": "Given a drug SMILES, predict the lipohilicity.",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 (Table S.5) row 'Lipophilicity AstraZeneca | Small molecule' prints the task description 'Given a drug SMILES, predict the lipohilicity.' - the print itself misspells 'lipohilicity' and OCR auto-corrected it; restored to the printed spelling (verified at 300 dpi)."
+    },
+    {
+      "before": "predict the volume of distribution.",
+      "after": "predict the volume of distributon.",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 (Table S.5) row 'VDss Lombardo | Small molecule' prints 'Given a drug SMILES, predict the volume of distributon.' - the print's own misspelling, auto-corrected by OCR; restored to the printed spelling (verified at 300 dpi)."
+    },
+    {
+      "before": "Rodrigues, S. G.",
+      "after": "Rodriques, S. G.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 reference 28 (Skarlinski et al., 'Language agents achieve superhuman synthesis of scientific knowledge') prints 'Rodriques, S. G.'; OCR auto-corrected to 'Rodrigues'. Restored to the printed spelling (verified at 300 dpi)."
+    },
+    {
+      "before": "O=S(=O)(O)c1cccc2cccc(Nc3cccccc3)c12",
+      "after": "O=S(=O)(O)c1cccc2cccc(Nc3ccccc3)c12",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered physical p.34 (Table S.8 binding-affinity example) prints 'Drug SMILES: O=S(=O)(O)c1cccc2cccc(Nc3ccccc3)c12' with five ring carbons between the 3-markers (verified at 300 dpi); OCR inserted an extra 'c' ('Nc3cccccc3')."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-text-pages-40-49-52",
+      "pdf_pages": [
+        40,
+        49,
+        50,
+        52
+      ],
+      "evidence": "Token-diff flags on these pages (shortlisted-drug table inside the Figure S.3 proof-of-concept illustration; MMLU-subject axis labels of Figure S.4; chat-screenshot wording of Figures S.8-S.9) all resolve to text inside embedded figure images and were left unchanged, but the exact crop boundaries were not re-checked page by page."
+    },
+    {
+      "id": "flattened-table-structure-s13-s18",
+      "pdf_pages": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "evidence": "Performance tables S.13-S.18 export with HTML rows whose numeric column alignment should be compared cell-by-cell against the printed tables before any structural change; token-level droppage diff found no missing values, so no patch was proposed."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:pi-0-technical-report",
+  "source_sha256": "fbdfba56258bdbd220207ba63410c6c943e43a73e97a7a5a47ca0bc74204f821",
+  "ocr_sha256": "10c011ddcb6c598f1f5879ddfa281f3aa7c23268ff6d10da6706395cafe2909d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR source; Table I in Appendix D is a balanced HTML table and the numbered section headings are intact. Word-level diff of extracted text from all 17 physical pages against the OCR markdown; remaining diff lines are two-column hyphenation artifacts (e.g. De-bidatta, E-tukuru), figure-axis label interleaving, and figure captions that are present next to their image embeds. All 60 references spot-checked present (refs 4, 15, 23, 43 compared token by token). Pages 1 and 4 rendered and inspected; the p.4 footnote re-read at 300 dpi and the Appendix B paragraph at 200 dpi. The print's own spelling 'Correspondance' is preserved."
+  },
+  "patches": [
+    {
+      "before": "We refer to the second set of weights as the action expert.",
+      "after": "We refer to the second set of weights as the action expert.\n\n$^{1}$ In this paper, we use the word “token” to refer to an input/output slot along the sequence dimension, whether the slot corresponds to a discrete variable (e.g., a language token) or a continuous variable (e.g., an image patch or a robot action).",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom-right footnote (300 dpi) prints '1 In this paper, we use the word \"token\" to refer to an input/output slot along the sequence dimension, whether the slot corresponds to a discrete variable (e.g., a language token) or a continuous variable (e.g., an image patch or a robot action).'; the OCR kept the $^{1}$ marker after 'with tokens' but dropped the whole footnote body."
+    },
+    {
+      "before": "table cleaning, and assembling boxes.",
+      "after": "table cleaning, and assembling boxes.\n\nPhysical Intelligence, San Francisco, California, USA. Correspondance to: research@physicalintelligence.company",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom-left prints the correspondence footer 'Physical Intelligence, San Francisco, California, USA. Correspondance to: research@physicalintelligence.company' (with the print's own 'Correspondance' spelling), entirely missing from the OCR; restored after the abstract, the last printed block of p.1."
+    },
+    {
+      "before": "The inputs not seen during VLM pretraining",
+      "after": "The inputs not seen during VLM pre-training",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Physical p.15 prints 'The inputs not seen during VLM pre-training' (line-break hyphen join; the paper consistently spells 'VLM pre-training', e.g. abstract and Sec. VII); OCR joined the hyphenated break as 'pretraining'."
+    }
+  ],
+  "unresolved": []
+}

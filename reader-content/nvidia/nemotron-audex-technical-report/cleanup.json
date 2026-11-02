@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nemotron-audex-technical-report",
+  "source_sha256": "e64df489f62fc07aaace2a4f7d941c75eaa6f598e0ff37dc995fd6fb8840dbe6",
+  "ocr_sha256": "100583ee000f32d617b50e060a8a166636f080032f0f597144f71c88e03440ce",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "coverage": "complete",
+    "notes": "Per-page text-layer comparison of all 41 physical PDF pages against the OCR markdown (normalized), with rendered-page verification on physical pages 1, 2, 4, 7, 8, 9, 11, 12, 14, 15, 16, 23 and 24 at 110-320 dpi. Dominant defect: the per-page footnote bodies (author asterisk/dagger notes and footnotes 1-19) were dropped while the inline superscript markers survived; each body was transcribed from a rendered bottom-strip crop and restored after the paragraph carrying its marker (patches group footnotes sharing one anchor line). The four Figure 2 template panel titles (Chat/Audio QA/Text-to-Speech/Text-to-Audio Templates) exist only inside the figure panels and were demoted from headings to plain text above their verbatim transcriptions. No code fences exist in the OCR markdown. Suspected drops of table rows (baseline model names, ablation rows) and prose fragments on pages 3-6, 10-18, 21-27 were confirmed present in the markdown HTML tables and paragraphs (line-reflow false positives); Table 1-13 values, appendix sections and references match the PDF text layer."
+  },
+  "patches": [
+    {
+      "before": " Goel, Rajarshi Roy, Wenliang Dai, Zhuolin Yang, Yangyi Chen, Dongfu Jiang, Sreyan Ghosh, Tuomas Rintamaki, Andrew Tao, Jonathan Raiman, Mohammad Shoeybi, Bryan Catanzaro, Wei Ping $^{*}$ $^{\\dagger}$",
+      "after": " Goel, Rajarshi Roy, Wenliang Dai, Zhuolin Yang, Yangyi Chen, Dongfu Jiang, Sreyan Ghosh, Tuomas Rintamaki, Andrew Tao, Jonathan Raiman, Mohammad Shoeybi, Bryan Catanzaro, Wei Ping $^{*}$ $^{\\dagger}$\n\n* Equal contribution, with authors listed in reverse alphabetical order by first name.\n\n† Leads the effort. Correspondence to: {zkong, sanggill, jaehyeonk, boxinw, wping}@nvidia.com.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 print footnotes *, † at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote bodies after the paragraph carrying their markers."
+    },
+    {
+      "before": " (Qwen-Team, 2026). $^{1}$ Such degradation is concerning because much of a model’s intelligence, including reasoning ability, knowledge, and agentic capabilities such as tool use, is encoded in text.",
+      "after": " (Qwen-Team, 2026). $^{1}$ Such degradation is concerning because much of a model’s intelligence, including reasoning ability, knowledge, and agentic capabilities such as tool use, is encoded in text.\n\n1 For example, Table 5 of the Qwen3-Omni technical report compares Qwen3-30B-A3B-Thinking-0527 with Qwen3-Omni-30B-A3B-Thinking and shows noticeable regressions on reasoning benchmarks.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints footnote 1 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "-Thinking (Xu et al., 2025b) compared to its text-only backbone Qwen3-30B-A3B-Thinking-2507. Qwen3.5-Omni-Flash (Team, 2026) also performs substantially worse than its LLM counterpart, Qwen3.5. $^{2}$",
+      "after": "-Thinking (Xu et al., 2025b) compared to its text-only backbone Qwen3-30B-A3B-Thinking-2507. Qwen3.5-Omni-Flash (Team, 2026) also performs substantially worse than its LLM counterpart, Qwen3.5. $^{2}$\n\n2 Although Qwen3-Omni-Flash is described in the official report as an in-house variant of Qwen3-Omni-30B-A3B, Qwen3.5-Omni-Flash is proprietary, and the Qwen3.5-Omni technical report does not disclose its relationship to Qwen3.5-35B-A3B.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints footnote 2 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "sequence of k samples, let $L_{j}$ be the vector of Cross-Entropy losses of the j-th sample, and $|L_{j}|$ the length of $L_{j}$ . We use the square averaging loss function (Chen et al., 2024d) $^{3}$",
+      "after": "sequence of k samples, let $L_{j}$ be the vector of Cross-Entropy losses of the j-th sample, and $|L_{j}|$ the length of $L_{j}$ . We use the square averaging loss function (Chen et al., 2024d) $^{3}$\n\n3 https://github.com/NVIDIA/Megatron-LM/blob/main/examples/multimodal/train.py",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints footnote 3 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "ly training stages. In detail, we directly apply audio warmup to the pretrained base LLM, and then combine all SFT data (audio generation, audio understanding, and text) for a single SFT stage. $^{4}$",
+      "after": "ly training stages. In detail, we directly apply audio warmup to the pretrained base LLM, and then combine all SFT data (audio generation, audio understanding, and text) for a single SFT stage. $^{4}$\n\n4 In both SFT strategies, we have applied an extra stage to remove speech prompting abilities for responsible model release.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prints footnote 4 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "improving audio and speech-related tasks through audio-text RL, without causing regression on text benchmarks. We will pursue it as future work. The final checkpoint is our Audex-30B-A3B model. $^{5}$",
+      "after": "improving audio and speech-related tasks through audio-text RL, without causing regression on text benchmarks. We will pursue it as future work. The final checkpoint is our Audex-30B-A3B model. $^{5}$\n\n5 We only apply RL to the 30B-A3B model. The 2B model is the multi-stage SFT checkpoint.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 prints footnote 5 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "ce parallelism (SP) to scale the model training using 262, 144 context length. We train Audex using 512 NVIDIA H100 GPUs with BF16 precision and the AdamW optimizer, with gradient clipping set to 1.0.",
+      "after": "ce parallelism (SP) to scale the model training using 262, 144 context length. We train Audex using 512 NVIDIA H100 GPUs with BF16 precision and the AdamW optimizer, with gradient clipping set to 1.0.\n\n6 https://github.com/NVIDIA/Megatron-LM\n\n7 https://github.com/NVIDIA/TransformerEngine",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 print footnotes 6, 7 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote bodies after the paragraph carrying their markers."
+    },
+    {
+      "before": "ata-parallel (DP) rank. To minimize training overhead from an audio codec encoder forward pass to extract target tokens, we use pretokenized audio samples for TTS and TTA data under the base64 format.",
+      "after": "ata-parallel (DP) rank. To minimize training overhead from an audio codec encoder forward pass to extract target tokens, we use pretokenized audio samples for TTS and TTA data under the base64 format.\n\n8 https://github.com/NVIDIA/Megatron-Energon",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 prints footnote 8 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "l $\\lambda$ values affect TTA more significantly than TTS – even without CFG, the TTS WER is low, indicating that Audex can be used in TTS applications without sacrificing inference speed for quality.",
+      "after": "l $\\lambda$ values affect TTA more significantly than TTS – even without CFG, the TTS WER is low, indicating that Audex can be used in TTS applications without sacrificing inference speed for quality.\n\n9 $\\lambda = 1$ means no CFG.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 prints footnote 9 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "rong ASR-specific baselines, especially in the noisy ASR setting. The gap between our 30B-A3B and 2B models is not huge, as the audio encoder perceives most of the information needed for transcribing.",
+      "after": "rong ASR-specific baselines, especially in the noisy ASR setting. The gap between our 30B-A3B and 2B models is not huge, as the audio encoder perceives most of the information needed for transcribing.\n\n10 https://huggingface.co/spaces/hf-audio/open_asr_leaderboard",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 prints footnote 10 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "20) scores for AST (the higher the better) in Table 11. Results show that Audex also has strong multi-lingual ASR and AST abilities that are comparable to several state-of-the-art speech LLMs. $^{11}$",
+      "after": "20) scores for AST (the higher the better) in Table 11. Results show that Audex also has strong multi-lingual ASR and AST abilities that are comparable to several state-of-the-art speech LLMs. $^{11}$\n\n11 We report the average of these seven (noted as Fleurs-Multilingual7 and Fleurs (xx→en)7) in Table 1.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 prints footnote 11 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": " Audio Entailment (Deshmukh et al., 2024) on Clotho v2 and AudioCaps for deductive reasoning. $^{12}$ These benchmarks contain closed-ended questions and require outputs to be within {yes, no, maybe}.",
+      "after": " Audio Entailment (Deshmukh et al., 2024) on Clotho v2 and AudioCaps for deductive reasoning. $^{12}$ These benchmarks contain closed-ended questions and require outputs to be within {yes, no, maybe}.\n\n12 We report the average of these two (noted as Audio Entailment2) in Table 1.",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 prints footnote 12 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "\\- State-of-the-art TTS models: Seed-TTS (Anastassiou et al., 2024), Step-Audio-TTS-3B $^{13}$ , E2 TTS (Eskimez et al., 2024), F5 TTS (Chen et al., 2024c), and",
+      "after": "\\- State-of-the-art TTS models: Seed-TTS (Anastassiou et al., 2024), Step-Audio-TTS-3B $^{13}$ , E2 TTS (Eskimez et al., 2024), F5 TTS (Chen et al., 2024c), and\n\n13 https://huggingface.co/stepfun-ai/Step-Audio-TTS-3B",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 prints footnote 13 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "oxPopuli, spanning meetings, earnings calls, audiobooks, podcasts/web audio, financial speech, talks, and parliamentary speech. We report WER using the official English normalization pipeline. $^{14}$",
+      "after": "oxPopuli, spanning meetings, earnings calls, audiobooks, podcasts/web audio, financial speech, talks, and parliamentary speech. We report WER using the official English normalization pipeline. $^{14}$\n\n14 https://github.com/huggingface/open_asr_leaderboard/tree/main/normalizer",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 prints footnote 14 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": " (Conneau et al., 2023) evaluates X→English speech translation. We use the same seven source languages as multilingual ASR and report BLEU (Papineni et al., 2002) and COMET (Rei et al., 2020). $^{15}$",
+      "after": " (Conneau et al., 2023) evaluates X→English speech translation. We use the same seven source languages as multilingual ASR and report BLEU (Papineni et al., 2002) and COMET (Rei et al., 2020). $^{15}$\n\n15 COMET is computed with unbabel-comet v2.2.7 and the Unbabel/wmt22-comet-da checkpoint. https://github.com/Unbabel/COMET",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 prints footnote 15 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "Whisper-large-v3 (Radford et al., 2022), Seamless-m4t-v2-large (Barrault et al., 2023), Canary-1B v2 (Sekoyan et al., 2025), Parakeet-TDT-0.6B-v3 (Sekoyan et al., 2025), Canary-Qwen-2.5B $^{16}$ , and",
+      "after": "Whisper-large-v3 (Radford et al., 2022), Seamless-m4t-v2-large (Barrault et al., 2023), Canary-1B v2 (Sekoyan et al., 2025), Parakeet-TDT-0.6B-v3 (Sekoyan et al., 2025), Canary-Qwen-2.5B $^{16}$ , and\n\n16 https://huggingface.co/nvidia/canary-qwen-2.5b",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 prints footnote 16 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "igBenchAudio Leaderboard ${}^{17}$ and VoiceBench Leaderboard ${}^{18}$ , and we additionally evaluate Kimi-Audio-Instruct (Ding et al., 2025) and MiMo-Audio (Zhang et al., 2025a) on these benchmarks.",
+      "after": "igBenchAudio Leaderboard ${}^{17}$ and VoiceBench Leaderboard ${}^{18}$ , and we additionally evaluate Kimi-Audio-Instruct (Ding et al., 2025) and MiMo-Audio (Zhang et al., 2025a) on these benchmarks.\n\n17 https://artificialanalysis.ai/speech-to-speech#speech-reasoning\n\n18 https://matthewcym.github.io/VoiceBench",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 print footnotes 17, 18 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote bodies after the paragraph carrying their markers."
+    },
+    {
+      "before": "\\- Autoregressive models tailored for audio generation: MusicGen (Copet et al., 2024), Magenta Realtime (Team et al., 2025) $^{19}$ , UALM-Gen (Tian et al., 2026), and",
+      "after": "\\- Autoregressive models tailored for audio generation: MusicGen (Copet et al., 2024), Magenta Realtime (Team et al., 2025) $^{19}$ , UALM-Gen (Tian et al., 2026), and\n\n19 MusicGen and Magenta Realtime are trained on licensed corpora.",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 prints footnote 19 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "## Chat Templates",
+      "after": "Chat Templates",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 shows 'Chat Templates' as the title inside a shaded Figure 2 template panel (visually verified); it is not a document section heading. The OCR markdown transcribes the panel contents verbatim below the heading, so the heading is demoted to plain panel text; the printed figure captions (a)-(d) remain in place."
+    },
+    {
+      "before": "## Text-to-Speech Templates",
+      "after": "Text-to-Speech Templates",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 shows 'Text-to-Speech Templates' as the title inside a shaded Figure 2 template panel (visually verified); it is not a document section heading. The OCR markdown transcribes the panel contents verbatim below the heading, so the heading is demoted to plain panel text; the printed figure captions (a)-(d) remain in place."
+    },
+    {
+      "before": "## Audio QA Templates",
+      "after": "Audio QA Templates",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 shows 'Audio QA Templates' as the title inside a shaded Figure 2 template panel (visually verified); it is not a document section heading. The OCR markdown transcribes the panel contents verbatim below the heading, so the heading is demoted to plain panel text; the printed figure captions (a)-(d) remain in place."
+    },
+    {
+      "before": "## Text-to-Audio Templates",
+      "after": "Text-to-Audio Templates",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 shows 'Text-to-Audio Templates' as the title inside a shaded Figure 2 template panel (visually verified); it is not a document section heading. The OCR markdown transcribes the panel contents verbatim below the heading, so the heading is demoted to plain panel text; the printed figure captions (a)-(d) remain in place."
+    }
+  ],
+  "unresolved": []
+}

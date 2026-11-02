@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "google:rt-trajectory-technical-report",
+  "source_sha256": "b2b00e9a23ac2ec401eba606e90b3f5009064c51e26b58cdc8b53d1e658363b9",
+  "ocr_sha256": "62b1e5854947ff5ad15e318a00e67e175a23f2659e1845e508ea9ad0d8cec5aa",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "Automated per-page 4-gram containment diff of all 23 physical PDF pages against the OCR markdown, plus code-fence structure scan (0 fences; clean), with targeted inspection of every page below 0.97 containment. The flagged pages resolved as: p.1 title block complete (authors, affiliation markers 1-4 and the affiliation line verified present); p.4 and p.15-16 math is LaTeX tokenization (Fréchet recursion, height/interaction-marker formulas verified verbatim); p.7-10 and p.20 flagged text is figure-internal (chart axes, panel labels) inside embedded images; p.11 names belong to the RoboCat reference entry (present). \"Fréchet\" is spelled with the accent as printed. No droppage, garbles or structural defects found; no renders beyond page-level containment were needed."
+  },
+  "patches": [],
+  "unresolved": []
+}

@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "id": "meta:perception-encoder-audiovisual-technical-report",
+  "source_sha256": "e3f717d0c8c1111cb6c8b07e24390efdf936913d19d0cae3e1967b98402842fd",
+  "ocr_sha256": "1447809b744f476b8de56e2594bebe3cb1401a3ab2b5851ab0eabbe7e5957ba4",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "coverage": "partial",
+    "notes": "All 38 physical pages were scanned with a normalized PDF-text versus OCR containment diff, and every flagged line was triaged. Time budget ran out before coordinate-level verification of the remaining tables, so coverage is partial. Verified visually: physical p.9 (footnote 1) and physical p.30 Table 28 last two columns at 300 dpi (12 missing VATEX V→T cells). Confirmed non-defects: caption examples inside embedded Figures 4/6/9/10/13 images are figure-internal text; LOW_CONF-style underscores are Markdown escapes that render identically to the printed text; \"capptions\" in the Table 15 caption and \"enocoder\" on physical p.17 are typos the PDF itself prints (OCR text layer matches); CoNeTTE/ActivityNet/joint-query lines flagged by the diff exist in LaTeX-equivalent form; the p.28 Kinetics prompt templates are present. No unbalanced code fences; 27 HTML tables otherwise carry their printed values."
+  },
+  "patches": [
+    {
+      "before": "we leverage all annotated events and their ontology-aware $^{1}$ semantic expansions to construct frame-level supervision.",
+      "after": "we leverage all annotated events and their ontology-aware $^{1}$ semantic expansions to construct frame-level supervision.\n\n$^{1}$ By “ontology” we mean a hierarchical taxonomy of sound event labels, such as the AudioSet ontology.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prints page footnote 1 \"By \\\"ontology\\\" we mean a hierarchical taxonomy of sound event labels, such as the AudioSet ontology.\" anchored to \"ontology-aware1\" in Section 3 (visually verified at 120 dpi). The OCR kept the superscript anchor but dropped the footnote body; the patch reinserts it after the anchoring paragraph."
+    },
+    {
+      "before": "<td>69.8</td><td></td>",
+      "after": "<td>69.8</td><td>69.8</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 69.8 in the final VATEX V→T column for the ImageBind [33] row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>82.9</td><td></td>",
+      "after": "<td>82.9</td><td>83.1</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 83.1 in the final VATEX V→T column for the LanguageBind [111] row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>94.2</td><td></td>",
+      "after": "<td>94.2</td><td>93.7</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 93.7 in the final VATEX V→T column for the PE$_{AV}$S (16 Frames) row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>94.3</td><td></td>",
+      "after": "<td>94.3</td><td>93.8</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 93.8 in the final VATEX V→T column for the PE$_{AV}$B (16 Frames) row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>48.9</td><td>50.1</td><td>94.9</td><td></td>",
+      "after": "<td>48.9</td><td>50.1</td><td>94.9</td><td>94.4</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 94.4 in the final VATEX V→T column for the PE$_{AV}$L (16 Frames), PE$_{AV}$L-OOD and PE$_{AV}$B (30 FPS) row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>51.8</td><td>95.1</td><td></td>",
+      "after": "<td>51.8</td><td>95.1</td><td>94.6</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 94.6 in the final VATEX V→T column for the PE$_{AV}$S-OOD row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>94.0</td><td></td>",
+      "after": "<td>94.0</td><td>94.0</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 94.0 in the final VATEX V→T column for the PE$_{AV}$B-OOD row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>51.5</td><td>95.1</td><td></td>",
+      "after": "<td>51.5</td><td>95.1</td><td>94.4</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 94.4 in the final VATEX V→T column for the PE$_{AV}$L (16 Frames), PE$_{AV}$L-OOD and PE$_{AV}$B (30 FPS) row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>94.5</td><td></td>",
+      "after": "<td>94.5</td><td>94.5</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 94.5 in the final VATEX V→T column for the PE$_{AV}$S (30 FPS) row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>49.3</td><td>50.1</td><td>94.9</td><td></td>",
+      "after": "<td>49.3</td><td>50.1</td><td>94.9</td><td>94.4</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 94.4 in the final VATEX V→T column for the PE$_{AV}$L (16 Frames), PE$_{AV}$L-OOD and PE$_{AV}$B (30 FPS) row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>87.1</td><td></td>",
+      "after": "<td>87.1</td><td>87.2</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 87.2 in the final VATEX V→T column for the PE$_{AV}$L (PT) row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    },
+    {
+      "before": "<td>51.7</td><td>95.1</td><td></td>",
+      "after": "<td>51.7</td><td>95.1</td><td>94.8</td>",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 Table 28 prints 94.8 in the final VATEX V→T column for the PE$_{AV}$L (30 FPS) row (visually verified on a 300 dpi crop of the table's last two columns; row values located by word coordinates). The OCR emits an empty <td></td> for that cell; the patch fills it with the printed value, using the preceding cell values as unique context."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table3-empty-last-cells-p18-p19",
+      "pdf_pages": [
+        18,
+        19
+      ],
+      "evidence": "The main zero-shot audio results table (Table 3) is exported with an empty final cell on most model rows, the same defect pattern as Table 28; coordinate-level comparison against physical p.18-19 is still needed before proposing values."
+    },
+    {
+      "id": "table13-sed-row-and-figure11-table-empty-cells",
+      "pdf_pages": [
+        16,
+        25
+      ],
+      "evidence": "OCR tables 12 (Table 13 SED results, PretrainedSED row) and 10 (Figure 11 retrieval examples) contain rows whose last cell is empty; unclear whether the PDF prints a value there or the cell is legitimately blank; needs a rendered-page check."
+    },
+    {
+      "id": "kinetics-prompt-title-line-p28",
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "The appendix prompt-template list on physical p.28 is transcribed in full except its title line \"Zero-Shot Video Classification Prompts - Kinetics\"; the body templates are present."
+    },
+    {
+      "id": "source-typo-enocoder-p17",
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "The PDF prints \"as the frame and text enocoder respectively\" (its own typo); the OCR silently normalized it to \"encoder\". Left unchanged because the misspelling is in the source."
+    }
+  ]
+}

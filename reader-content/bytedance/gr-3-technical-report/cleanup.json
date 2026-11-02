@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:gr-3-technical-report",
+  "source_sha256": "9c3e23f9ca44d0d3139f950470523130b63493562cc86508704513078a03f30f",
+  "ocr_sha256": "8088495f79e54d19acc69a84ebf82f6bbd7905f071de9790a769527734807258",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "coverage": "complete",
+    "notes": "Automated word-level diff of extracted text from all 20 physical PDF pages against the normalized OCR markdown (order-insensitive whole-document matching), plus a fence check (no code fences in source or OCR) and a heading audit (section headings 1-8 plus References match the printed structure; figure captions 1-10 in printed order; no tables - results are carried by 33 embedded figures). The only droppage is footnote 1 on physical p.8; the arXiv stamp on p.1 is not document content. Footnote body transcribed from the PDF text layer and visually verified on a 300-dpi render of the bottom strip of physical page 8."
+  },
+  "patches": [
+    {
+      "before": "for each of the three tasks individually.",
+      "after": "for each of the three tasks individually.\n\n$^{1}$ https://github.com/Physical-Intelligence/openpi",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 bottom strip (300 dpi visual check) prints footnote 1 as \"https://github.com/Physical-Intelligence/openpi\" below the Experiments paragraph whose \"official GitHub repository^1\" marker survives in the OCR; the body was dropped."
+    }
+  ],
+  "unresolved": []
+}

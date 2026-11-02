@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-opus-5-system-card",
+  "source_sha256": "0950dae1ba6b341e4f1a009e535e0f025625efeca21bd043a9a5ae148a3f2e6b",
+  "ocr_sha256": "4f46c315bc987f8f34b53389941e6e19c7621c6d96adb5ffd66fa88cab3ac9e4",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      17,
+      37,
+      38,
+      57,
+      59,
+      61,
+      65,
+      66,
+      67,
+      68,
+      70,
+      73,
+      74,
+      78,
+      79,
+      80,
+      81,
+      90,
+      92,
+      94,
+      96,
+      97,
+      104,
+      106,
+      135,
+      152,
+      153,
+      158,
+      159,
+      160,
+      162,
+      164,
+      165,
+      169,
+      173,
+      175,
+      177,
+      178,
+      182,
+      183,
+      188,
+      189,
+      190,
+      193,
+      195,
+      196,
+      197
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 198-page document within a fixed time budget. (1) Full structural scan of the whole OCR markdown: all code fences are balanced, no fence swallows headings/tables/images, no 4-backtick fences, no speaker-label headings, and the repeated section names (Results, Metrics, Automated behavioral audit scores) are legitimate same-named sections of different chapters. (2) Automated droppage scan of all 198 pages (normalized 4-gram containment per page, threshold 85%): 37 low-containment pages were triaged; pages 152 and 195-197 are false positives (HTML table cell ordering and code-fenced URL blocklists/test lists that are present in the OCR), page 94 is a near-blank divider. The one systematic real defect is that every page-bottom footnote body was dropped by the OCR while the superscript citation markers survive; all 36 footnote bodies (numbers 1-36) were recovered from the PDF page bottoms, each visually verified on a rendered page crop (110-120 dpi sheet reads of pages 17-197 bottoms), and reinserted after the OCR paragraph containing its marker. Footnote 11 belongs to the Table 8.1.A cell 66.0 and is inserted after the table caption. (3) Line-by-line inspection was limited to the triaged pages and footnote pages listed in pages_reviewed; the remaining prose pages were machine-scanned only. The PDF itself prints 'Claude Opus 5..' with a doubled period on physical p.81, so that reading is source text, not an OCR defect. Footnotes 17 and 22 legitimately print the same ProgramBench citation on physical pp.159 and 169."
+  },
+  "patches": [
+    {
+      "before": "single “pass or fail” event). We have recently written about the benchmark in more detail.",
+      "after": "single “pass or fail” event). We have recently written about the benchmark in more detail.\n\n1 Lee, S., & Brumley, D. (2026). ExploitBench: A capability ladder benchmark for LLM cybersecurity agents. arXiv:2605.14153. https://arxiv.org/abs/2605.14153 37",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered PDF physical p.37 prints footnote 1 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "ation covering attributes such as age, race, gender, disability, and socioeconomic status.",
+      "after": "ation covering attributes such as age, race, gender, disability, and socioeconomic status.\n\n2 Parrish, A., et al. (2021). BBQ: A hand-built bias benchmark for question answering. arXiv:2110.08193. https://arxiv.org/abs/2110.08193",
+      "count": 1,
+      "pdf_pages": [
+        65
+      ],
+      "evidence": "Rendered PDF physical p.38 prints footnote 2 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "on their publicly available endpoints, which may or may not include additional safeguards.",
+      "after": "on their publicly available endpoints, which may or may not include additional safeguards.\n\n3 Dziemian, M., et al. (2026). How vulnerable are AI agents to indirect prompt injections? Insights from a Large-Scale Public Competition. arXiv:2603.15714 https://arxiv.org/abs/2603.15714 73",
+      "count": 1,
+      "pdf_pages": [
+        73
+      ],
+      "evidence": "Rendered PDF physical p.73 prints footnote 3 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "l-world adversaries, both internally and in collaboration with external research partners.",
+      "after": "l-world adversaries, both internally and in collaboration with external research partners.\n\n4 Nasr, M., et al. (2025). The attacker moves second: Stronger adaptive attacks bypass defenses against LLM jailbreaks and prompt injections. arXiv:2510.09023. https://arxiv.org/abs/2510.09023. 74",
+      "count": 1,
+      "pdf_pages": [
+        74
+      ],
+      "evidence": "Rendered PDF physical p.74 prints footnote 4 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "e successful breaks are in low-severity scenarios and are working to mitigate them. $^{5}$",
+      "after": "e successful breaks are in low-severity scenarios and are working to mitigate them. $^{5}$\n\n5 We did not initially report Claude Fable 5 because its performance was very similar to that of Claude Mythos 5. We first discovered that Claude Fable 5 had an attack success rate higher than Claude Mythos 5 and the fallback model, Claude Opus 4.8, when re-running the evaluation with the updated harness for the August 19 system card update. We now include these results and are investigating their cause, as we have not observed this difference in any other internal or external evaluation.",
+      "count": 1,
+      "pdf_pages": [
+        81
+      ],
+      "evidence": "Rendered PDF physical p.17 prints footnote 5 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "erpret in absolute terms. Scores are thus valuable primarily for comparing between models.",
+      "after": "erpret in absolute terms. Scores are thus valuable primarily for comparing between models.\n\n6 The judge will decline to assign a score in cases where a dimension structurally could not apply, regardless of the target model’s behavior: for example, “Full-Turn Prefill Susceptibility” will only be assigned a score when the investigator agent uses prefill in some way.",
+      "count": 1,
+      "pdf_pages": [
+        92
+      ],
+      "evidence": "Rendered PDF physical p.92 prints footnote 6 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "stigator seeded the conversation with injected harmful turns in the target's voice; $^{7}$",
+      "after": "stigator seeded the conversation with injected harmful turns in the target's voice; $^{7}$\n\n7 We distinguish this from the more powerful partial-turn prefill technique, where the investigator injects an incomplete turn at the end of the conversation for the target to complete. For Opus 4.6 and all newer models, including Mythos 5 and Fable 5, partial-turn prefill is not generally available to external users.",
+      "count": 1,
+      "pdf_pages": [
+        96
+      ],
+      "evidence": "Rendered PDF physical p.96 prints footnote 7 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "litically-motivated government surveillance, censorship, or intimidation campaigns. $^{8}$",
+      "after": "litically-motivated government surveillance, censorship, or intimidation campaigns. $^{8}$\n\n8 Inspired by the Dictatorship Eval by Andrew B. Hall.",
+      "count": 1,
+      "pdf_pages": [
+        97
+      ],
+      "evidence": "Rendered PDF physical p.97 prints footnote 8 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "ion-theoretic considerations, in situations where those considerations could apply. $^{9}$",
+      "after": "ion-theoretic considerations, in situations where those considerations could apply. $^{9}$\n\n9 Inspired by Oesterheld, C., et al. (2024). A dataset of questions on decision-theoretic reasoning in Newcomb-like problems. arXiv:2411.10588. https://arxiv.org/abs/2411.10588 104",
+      "count": 1,
+      "pdf_pages": [
+        104
+      ],
+      "evidence": "Rendered PDF physical p.104 prints footnote 9 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "eve the overall system to be safer and harder to exploit than the raw Claude Opus 5 model.",
+      "after": "eve the overall system to be safer and harder to exploit than the raw Claude Opus 5 model.\n\n10 That is, the full deployed system: Claude Opus 5 with Trust and Safety classifiers, which can hard-block a conversation or fall back to Opus 4.8, as described above. 106",
+      "count": 1,
+      "pdf_pages": [
+        106
+      ],
+      "evidence": "Rendered PDF physical p.106 prints footnote 10 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "earlier Claude models. FrontierBench results in this table are from Harbor's evaluations.",
+      "after": "earlier Claude models. FrontierBench results in this table are from Harbor's evaluations.\n\n11 Mythos 5",
+      "count": 1,
+      "pdf_pages": [
+        152
+      ],
+      "evidence": "Rendered PDF physical p.152 prints footnote 11 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "roblem subset, each verified by human engineers as solvable. Claude Opus 5 achieved 96.0%.",
+      "after": "roblem subset, each verified by human engineers as solvable. Claude Opus 5 achieved 96.0%.\n\n12 Jimenez, C. E., et al. (2024). SWE-bench: Can language models resolve real-world GitHub issues? arXiv:2310.06770. https://arxiv.org/abs/2310.06770",
+      "count": 1,
+      "pdf_pages": [
+        153
+      ],
+      "evidence": "Rendered PDF physical p.153 prints footnote 12 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "r, multi-file diffs and reduced public ground-truth leakage. Claude Opus 5 achieved 79.2%.",
+      "after": "r, multi-file diffs and reduced public ground-truth leakage. Claude Opus 5 achieved 79.2%.\n\n13 Deng, X., et al. (2025). SWE-bench Pro: Can AI agents solve long-horizon software engineering tasks? arXiv:2509.16941. https://arxiv.org/abs/2509.16941",
+      "count": 1,
+      "pdf_pages": [
+        153
+      ],
+      "evidence": "Rendered PDF physical p.153 prints footnote 13 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "tions (see Section 9.3 for details on the internal harness). Claude Opus 5 achieved 59.4%.",
+      "after": "tions (see Section 9.3 for details on the internal harness). Claude Opus 5 achieved 59.4%.\n\n14 Yang, J., et al. (2024). SWE-bench Multimodal: Do AI systems generalize to visual software domains? arXiv:2410.03859. https://arxiv.org/abs/2410.03859 153",
+      "count": 1,
+      "pdf_pages": [
+        153
+      ],
+      "evidence": "Rendered PDF physical p.153 prints footnote 14 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "tion mathematics. Each problem has a unique, closed-form answer verified programmatically.",
+      "after": "tion mathematics. Each problem has a unique, closed-form answer verified programmatically.\n\n15 During evaluation we identified and corrected minor issues in the reference answers and grading; all results are graded against the corrected setup. Scores are the mean over 4 attempts per problem. 158",
+      "count": 1,
+      "pdf_pages": [
+        158
+      ],
+      "evidence": "Rendered PDF physical p.158 prints footnote 15 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": ". $^{16}$ Except for Claude Opus 5 (with tools), other scores are without access to tools.",
+      "after": ". $^{16}$ Except for Claude Opus 5 (with tools), other scores are without access to tools.\n\n16 Our internal evaluation produces a score higher than the MathArena leaderboard for Claude Opus 4.8.",
+      "count": 1,
+      "pdf_pages": [
+        159
+      ],
+      "evidence": "Rendered PDF physical p.159 prints footnote 16 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "ProgramBench $^{17}$ is a long context agentic coding benchmark of 200",
+      "after": "ProgramBench $^{17}$ is a long context agentic coding benchmark of 200\n\n17 Yang, J., et al. (2026). ProgramBench: Can language models rebuild programs from scratch? arXiv:2605.03546. https://arxiv.org/abs/2605.03546 159",
+      "count": 1,
+      "pdf_pages": [
+        159
+      ],
+      "evidence": "Rendered PDF physical p.159 prints footnote 17 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "ficult for even domain specialists to answer and not quickly answered via internet search.",
+      "after": "ficult for even domain specialists to answer and not quickly answered via internet search.\n\n18 Phan, L., et al. (2025). Humanity’s Last Exam. arXiv:2501.14249. https://arxiv.org/abs/2501.14249 160",
+      "count": 1,
+      "pdf_pages": [
+        160
+      ],
+      "evidence": "Rendered PDF physical p.160 prints footnote 18 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "context compaction, triggered at 200k tokens. We use Claude Opus 4.7 as the model grader.",
+      "after": "context compaction, triggered at 200k tokens. We use Claude Opus 4.7 as the model grader.\n\n19 Wei, J., et al. (2025). BrowseComp: A simple yet challenging benchmark for browsing agents. arXiv:2504.12516. https://arxiv.org/abs/2504.12516 162",
+      "count": 1,
+      "pdf_pages": [
+        162
+      ],
+      "evidence": "Rendered PDF physical p.162 prints footnote 19 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "s require the model to conduct extensive searches to compile a list of exhaustive answers.",
+      "after": "s require the model to conduct extensive searches to compile a list of exhaustive answers.\n\n20 Gupta, N., et al. (2026). DeepSearchQA: Bridging the Comprehensiveness Gap for Deep Research Agents. arXiv:2601.20975. https://arxiv.org/abs/2601.20975 164",
+      "count": 1,
+      "pdf_pages": [
+        164
+      ],
+      "evidence": "Rendered PDF physical p.164 prints footnote 20 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "ctual accuracy, breadth and depth of analysis, presentation quality, and citation quality.",
+      "after": "ctual accuracy, breadth and depth of analysis, presentation quality, and citation quality.\n\n21 Zhong, J., et al. (2026). DRACO: a cross-domain benchmark for Deep Research Accuracy, Completeness, and Objectivity. arXiv:2602.11685. https://arxiv.org/abs/2602.11685 165",
+      "count": 1,
+      "pdf_pages": [
+        165
+      ],
+      "evidence": "Rendered PDF physical p.165 prints footnote 21 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "esented in Section 8.9.1; we present the multi-agent ProgramBench results in this section.",
+      "after": "esented in Section 8.9.1; we present the multi-agent ProgramBench results in this section.\n\n22 Yang, J., et al. (2026). ProgramBench: Can language models rebuild programs from scratch? arXiv:2605.03546. https://arxiv.org/abs/2605.03546 169",
+      "count": 1,
+      "pdf_pages": [
+        169
+      ],
+      "evidence": "Rendered PDF physical p.169 prints footnote 22 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "ptable range set by experts for that specific chart, rather than a single fixed tolerance.",
+      "after": "ptable range set by experts for that specific chart, rather than a single fixed tolerance.\n\n23 Surge AI (2026). Chartography: A benchmark for professional chart understanding. Surge AI. https://surgehq.ai/blog/chartography",
+      "count": 1,
+      "pdf_pages": [
+        173
+      ],
+      "evidence": "Rendered PDF physical p.173 prints footnote 23 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "e tasks and expert-determined acceptable answer ranges in the official repository. $^{24}$",
+      "after": "e tasks and expert-determined acceptable answer ranges in the official repository. $^{24}$\n\n24 Surge AI (2026). Chartography [Code repository]. GitHub. https://github.com/surge-ai/chartography 173",
+      "count": 1,
+      "pdf_pages": [
+        173
+      ],
+      "evidence": "Rendered PDF physical p.173 prints footnote 24 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "Vision2Code task which requires models to generate CadQuery code from multi-view renders.",
+      "after": "Vision2Code task which requires models to generate CadQuery code from multi-view renders.\n\n25 Zhang, H., et al. (2026). BenchCAD: A comprehensive, industry-standard benchmark for programmatic CAD. arXiv:2605.10865. https://arxiv.org/abs/2605.10865",
+      "count": 1,
+      "pdf_pages": [
+        175
+      ],
+      "evidence": "Rendered PDF physical p.175 prints footnote 25 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "t geometry. Both changes have already been merged into the reference repository in GitHub.",
+      "after": "t geometry. Both changes have already been merged into the reference repository in GitHub.\n\n26 Zhang, H., et al. (2026). BenchCAD [Code repository]. GitHub. https://github.com/BenchCAD/BenchCAD-main 175",
+      "count": 1,
+      "pdf_pages": [
+        175
+      ],
+      "evidence": "Rendered PDF physical p.175 prints footnote 26 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "mum of 500 action steps per task. For tasks that require a model grader, we used Opus 4.8.",
+      "after": "mum of 500 action steps per task. For tasks that require a model grader, we used Opus 4.8.\n\n27 Yuan, M., et al. (2026). OSWorld 2.0: Benchmarking computer use agents on long-horizon real-world tasks. arXiv:2606.29537. https://arxiv.org/abs/2606.29537 177",
+      "count": 1,
+      "pdf_pages": [
+        177
+      ],
+      "evidence": "Rendered PDF physical p.177 prints footnote 27 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "g of 100 real-world prompts and PDFs drawn directly from professional workflows across ten",
+      "after": "g of 100 real-world prompts and PDFs drawn directly from professional workflows across ten\n\n28 Surge AI. (2026). GDP.pdf: Can $100B AI models master the documents that run the world? https://surgehq.ai/blog/gdp-pdf-can-100b-ai-models-master-the-documents-that-run-the-world 178",
+      "count": 1,
+      "pdf_pages": [
+        178
+      ],
+      "evidence": "Rendered PDF physical p.178 prints footnote 28 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "% fewer output tokens than max. Evaluations were run independently by Artificial Analysis.",
+      "after": "% fewer output tokens than max. Evaluations were run independently by Artificial Analysis.\n\n29 Patwardhan, T., et al. (2025). GDPval: Evaluating AI model performance on real-world economically valuable tasks. arXiv:2510.04374. https://arxiv.org/abs/2510.04374 182",
+      "count": 1,
+      "pdf_pages": [
+        182
+      ],
+      "evidence": "Rendered PDF physical p.182 prints footnote 29 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "d HR. Each task drops the agent into a simulated company with dozens of REST API endpoints",
+      "after": "d HR. Each task drops the agent into a simulated company with dozens of REST API endpoints\n\n30 Shepard, D., & Salimans, R. (2026). AutomationBench. arXiv:2604.18934. https://arxiv.org/abs/2604.18934 183",
+      "count": 1,
+      "pdf_pages": [
+        183
+      ],
+      "evidence": "Rendered PDF physical p.183 prints footnote 30 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "s over 48,000 expert-written rubric items to grade 5,000 multi-turn patient conversations.",
+      "after": "s over 48,000 expert-written rubric items to grade 5,000 multi-turn patient conversations.\n\n31 Arora, R. K., et al. (2025). HealthBench: Evaluating large language models toward improved human health. arXiv:2505.08775. https://arxiv.org/abs/2505.08775 188",
+      "count": 1,
+      "pdf_pages": [
+        188
+      ],
+      "evidence": "Rendered PDF physical p.188 prints footnote 31 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "ation, and research tasks, each graded against rubric criteria by an LLM-as-a-Judge model.",
+      "after": "ation, and research tasks, each graded against rubric criteria by an LLM-as-a-Judge model.\n\n32 Soskin Hicks, R., et al. (2026). HealthBench Professional: Evaluating large language models on real clinician chats. arXiv:2604.27470. https://arxiv.org/abs/2604.27470 189",
+      "count": 1,
+      "pdf_pages": [
+        189
+      ],
+      "evidence": "Rendered PDF physical p.189 prints footnote 32 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "d Telugu) and English—and tests culturally grounded knowledge comprehension. INCLUDE covers 44 languages with questions drawn from regional academic and professional examinations, emphasizing in-language and in-culture knowledge rather than translated content.",
+      "after": "d Telugu) and English—and tests culturally grounded knowledge comprehension. INCLUDE covers 44 languages with questions drawn from regional academic and professional examinations, emphasizing in-language and in-culture knowledge rather than translated content.\n\n35 Verma, S., et al. (2024). MILU: A Multi-task Indic language understanding benchmark. arXiv:2411.02538. https://arxiv.org/abs/2411.02538 190",
+      "count": 1,
+      "pdf_pages": [
+        190
+      ],
+      "evidence": "Rendered PDF physical p.190 prints footnote 35 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "ages with questions drawn from regional academic and professional examinations, emphasizing in-language and in-culture knowledge rather than translated content.",
+      "after": "ages with questions drawn from regional academic and professional examinations, emphasizing in-language and in-culture knowledge rather than translated content.\n\n34 Romanou, A., et al. (2024). INCLUDE: Evaluating multilingual language understanding with regional knowledge. arXiv:2411.19799. https://arxiv.org/abs/2411.19799",
+      "count": 1,
+      "pdf_pages": [
+        190
+      ],
+      "evidence": "Rendered PDF physical p.190 prints footnote 34 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "inations, emphasizing in-language and in-culture knowledge rather than translated content.",
+      "after": "inations, emphasizing in-language and in-culture knowledge rather than translated content.\n\n33 Singh, S., et al. (2024). Global MMLU: Understanding and addressing cultural and linguistic biases in multilingual evaluation. arXiv:2412.03304. https://arxiv.org/abs/2412.03304",
+      "count": 1,
+      "pdf_pages": [
+        190
+      ],
+      "evidence": "Rendered PDF physical p.190 prints footnote 33 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    },
+    {
+      "before": "Claude Opus 4.8 at $50.4\\%$ , and a marked improvement over Claude Sonnet 5 at $40.6\\%$ .",
+      "after": "Claude Opus 4.8 at $50.4\\%$ , and a marked improvement over Claude Sonnet 5 at $40.6\\%$ .\n\n36 Note that Claude Opus 5 timed out for 10 out of 1260 attempts, which were excluded from aggregation, leading to ≤±0.006 effect on the score 193",
+      "count": 1,
+      "pdf_pages": [
+        193
+      ],
+      "evidence": "Rendered PDF physical p.193 prints footnote 36 at the page bottom (verified visually on the rendered crop); the OCR dropped all footnote bodies in this document, each verified absent from the OCR markdown by normalized-text containment. The body is transcribed from the PDF page bottom and inserted after the OCR paragraph containing the matching citation marker."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "prose-pages-machine-scanned-only",
+      "pdf_pages": [],
+      "evidence": "Pages other than those in review.pages_reviewed were checked only by the automated per-page 4-gram droppage scan and the whole-file structural scan; subtle in-paragraph OCR typos there remain unreviewed within the time budget."
+    }
+  ]
+}

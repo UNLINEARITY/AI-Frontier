@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step-audio",
+  "source_sha256": "ce5f6d5b9575f4552c970f118d3191ff49f3e509a847f0fff58c23aa7b510b3f",
+  "ocr_sha256": "7c5e9446c7d628c8fe219c058c0483fe0b96e0b3210f05f635ab1c0bd4f12725",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level diff of all 25 physical pages against the OCR Markdown (HTML stripped, hyphenated line breaks un-joined, inline math marked); no code fences exist in the source. All decimal values in Tables 1-7 match the PDF text layer as multisets (the lone 70.51 difference is the OCR's \\% escape, which renders correctly). Bracketed reference years ((2020)x1, (2022)x1, (2023)x3, (2024)x17, (2025)x2) and accented names (Defossez, Pegoroski-style entries) match the print exactly; PDF-side 'efossez'/'egou'/'erez' tokens are accent-combining extraction artifacts. Figure-internal labels (architecture diagram, dataset icons) and the arXiv stamp account for all remaining PDF-only tokens. The remaining PDF-only '1https:' was a genuinely dropped footnote body, restored here. Visual verification at 300 dpi: p.1 abstract hyphen break, p.16 footnote, p.19 'benckmark', p.20 Table 5 caption."
+  },
+  "patches": [
+    {
+      "before": "StepEvalAudio-360",
+      "after": "StepEval-Audio-360",
+      "count": 2,
+      "pdf_pages": [
+        1,
+        20
+      ],
+      "evidence": "Rendered p.1 abstract (300 dpi crop) prints the hyphenated line break 'Based on our new StepEval- / Audio-360 evaluation benchmark' and rendered p.20 caption prints 'Table 5: ... on the StepEval- / Audio-360.'; OCR rejoined both without the hyphen, producing 'StepEvalAudio-360'. Every other occurrence in the OCR already carries the hyphen."
+    },
+    {
+      "before": "strict control is exercised on audio quality and semantic annotation to ensure compliance with privacy.",
+      "after": "strict control is exercised on audio quality and semantic annotation to ensure compliance with privacy.\n\n1 https://huggingface.co/datasets/stepfun-ai/StepEval-Audio-360",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "The OCR kept the footnote marker ('StepEval-Audio-360 $^{1}$') but dropped the page-bottom body. 300 dpi crop of physical p.16 bottom shows '1 https://huggingface.co/datasets/stepfun-ai/StepEval-Audio-360'; body transcribed verbatim from the render and inserted after the OCR paragraph holding the marker, matching the repository's footnote-restoration convention."
+    },
+    {
+      "before": "StepEval-Audio-360 benchmark mentioned",
+      "after": "StepEval-Audio-360 benckmark mentioned",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "300 dpi crop of physical p.19 prints 'use StepEval-Audio-360 benckmark mentioned in section 6.1' - the source's own misspelling 'benckmark'; OCR silently corrected it to 'benchmark'. Restored to the printed spelling."
+    }
+  ],
+  "unresolved": []
+}

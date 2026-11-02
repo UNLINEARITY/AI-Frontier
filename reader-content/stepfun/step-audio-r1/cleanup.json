@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step-audio-r1",
+  "source_sha256": "df33e63b2fc898c16c6f46f009e88dfe076e3209c68dea7d7ebced9e9ecc569e",
+  "ocr_sha256": "071f364cf4a5d6dd4c34631c85affd2e613cc4403a579b7a6d28be48b8e45ef1",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "coverage": "complete",
+    "notes": "The OCR contains no code fences; the appendix A transcripts (pages 16-22) are printed as boxed dialogue in the source and were flattened to plain paragraphs with all content present, so no fence repair applies. Full window diff of all 22 pages against the OCR Markdown; every unmatched window was inspected and classified. The contributors block with affiliation superscripts, the affiliation and corresponding-author lines, references [1]-[29] (complete on both sides), Tables 1-3 with spot-checked values (83.6, 96.1, 6.76, 2.63, 0.02) and the eight figure embeds are all present. All numeric constants printed on the equation pages 4-7 (0.2 ... 98.7) appear in the OCR; the only 'spaced digit' pattern is 'Qwen2.5 32B', which matches the print. Remaining unmatched windows are LaTeX-equivalent math, figure-internal chart labels and soft hyphenation the OCR joined correctly. Pages 1, 8 and 13 were rendered and visually verified. The single page-bottom footnote body was dropped by OCR while its $^{1}$ marker survives; it is restored after the paragraph carrying the marker. The running header 'StepFun-Audio Team' on appendix pages is consistently absent from the OCR and was not restored (page furniture, not body content)."
+  },
+  "patches": [
+    {
+      "before": "and Wild Speech [26] for evaluating conversational speech.",
+      "after": "and Wild Speech [26] for evaluating conversational speech.\n\n$^{1}$ https://huggingface.co/datasets/ArtificialAnalysis/big_bench_audio",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 bottom at 300 dpi: page-bottom footnote 1 reads '1https://huggingface.co/datasets/ArtificialAnalysis/big_bench_audio'. The body was dropped by OCR while the marker survives as 'Big Bench Audio $^{1}$' in the benchmark-suite paragraph; inserted after that paragraph following the established footnote-restoration pattern."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "appendix-boxes-flattened",
+      "pdf_pages": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "evidence": "Appendix A before/after case studies are printed as boxed user/model dialogues; the OCR flattened them to plain paragraphs separated by 'Audio:', 'User:', 'Response:', '<think>' markers. Content is complete (spot-checked 'possible professions could be a professor', 'parameter settings, or experimental results', the Summary tables); only the box presentation differs, which is not a droppage defect."
+    },
+    {
+      "id": "equation-punctuation-from-unicode-math",
+      "pdf_pages": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "evidence": "Equations (1)-(8) (SFT and RLVR losses, MGRD objectives) are extracted as bold-italic Unicode runs; the OCR renders LaTeX-equivalent math so the window diff cannot certify spacing inside every equation. All printed decimal constants on those pages were individually confirmed present, but per-token equation proofing was not done."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-robotics-on-device-model-card",
+  "source_sha256": "c7289fa5d75d7665c2a7c981ca38393a7350390db65fa572157f0f65247e6207",
+  "ocr_sha256": "061d16a888321a5084667aadf021929edf31b7c40ede2a5acb162002f54cebba",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level alignment of all 5 extracted PDF pages against the OCR markdown; no dropped body text. The PDF prints no figure captions as text: both chart banners on physical p.3 ('Generalization Benchmark results across 9 tasks', 'Instruction Following Benchmark measuring steerability') and the p.4 banner ('Fast Adaptation') exist only inside the chart images (200 dpi renders read). OCR leaked the two p.3 banner titles into body text / a pseudo-caption; patches remove them, leaving the three embedded charts uncaptioned exactly as printed. Headings, bullets and the safety section match the printed card."
+  },
+  "patches": [
+    {
+      "before": "reliability.\n\nGeneralization Benchmark results across 9 tasks\n\n## Implementation and Sustainability",
+      "after": "reliability.\n\n## Implementation and Sustainability",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 (200 dpi, read): 'Generalization Benchmark results across 9 tasks' is the title banner INSIDE the left chart image at the bottom of the page; the printed page has no such caption text, and the line appeared misplaced at the end of the Model Data section."
+    },
+    {
+      "before": "]  \nInstruction Following Benchmark measuring steerability",
+      "after": "]",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 (200 dpi, read): 'Instruction Following Benchmark measuring steerability' is the title banner INSIDE the right chart image; the printed page has no caption text under the charts. The line duplicated the banner as a pseudo-caption below the embedded image."
+    }
+  ],
+  "unresolved": []
+}

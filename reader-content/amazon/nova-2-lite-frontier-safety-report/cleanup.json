@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "amazon:nova-2-lite-frontier-safety-report",
+  "source_sha256": "6c2d3c6c33c094721cda4d57467293bf17ae72f9bd2f7de57bd6c346072cc2e7",
+  "ocr_sha256": "02577d740c9054d66e4de3da1808c3f4d739af46bfc8eef79d0ed270b5ed41cf",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "coverage": "complete",
+    "notes": "Code-fence scan: 4 balanced fences wrapping the three printed trace excerpts; no document structure inside fences. Automated normalized page-text diff over all 9 physical pages (running-header merges and chart-internal axis/legend text ignored; figure captions, figure callouts and all benchmark numbers verified present), URL and footnote scan (no footnotes in this report), plus visual review of rendered physical p.7 where all six spurious headings originate. Chart figures are embedded as images; the missing chart text is figure-internal and not a defect."
+  },
+  "patches": [
+    {
+      "before": "## 1. Embedding Repair and Recovery",
+      "after": "**1. Embedding Repair and Recovery**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (110 dpi full page, visually reviewed): '1. Embedding Repair and Recovery' is printed as bold body text (numbered run-in task header under Section 4.1), not a document section heading; the OCR promoted it to a Markdown heading, which also collides with the report's own numbered section outline (1 Introduction ... 6 Acknowledgements). Demoted to the printed bold text."
+    },
+    {
+      "before": "## Trace Excerpt: Embedding Repair and Recovery",
+      "after": "**Trace Excerpt: Embedding Repair and Recovery**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (110 dpi full page, visually reviewed): 'Trace Excerpt: Embedding Repair and Recovery' is the white-on-black banner printed at the top of the boxed model-trace excerpt, not a document section heading; the OCR promoted it to a Markdown heading. Demoted to bold text."
+    },
+    {
+      "before": "## 2. Training Pipeline Optimization",
+      "after": "**2. Training Pipeline Optimization**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (110 dpi full page, visually reviewed): '2. Training Pipeline Optimization' is printed as bold body text (numbered run-in task header under Section 4.1), not a document section heading; the OCR promoted it to a Markdown heading, which also collides with the report's own numbered section outline (1 Introduction ... 6 Acknowledgements). Demoted to the printed bold text."
+    },
+    {
+      "before": "## Trace Excerpt: Training Pipeline Optimization",
+      "after": "**Trace Excerpt: Training Pipeline Optimization**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (110 dpi full page, visually reviewed): 'Trace Excerpt: Training Pipeline Optimization' is the white-on-black banner printed at the top of the boxed model-trace excerpt, not a document section heading; the OCR promoted it to a Markdown heading. Demoted to bold text."
+    },
+    {
+      "before": "## 3. Restricted Masked Language Model (MLM)",
+      "after": "**3. Restricted Masked Language Model (MLM)**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (110 dpi full page, visually reviewed): '3. Restricted Masked Language Model (MLM)' is printed as bold body text (numbered run-in task header under Section 4.1), not a document section heading; the OCR promoted it to a Markdown heading, which also collides with the report's own numbered section outline (1 Introduction ... 6 Acknowledgements). Demoted to the printed bold text."
+    },
+    {
+      "before": "## Trace Excerpt: Restricted MLM",
+      "after": "**Trace Excerpt: Restricted MLM**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (110 dpi full page, visually reviewed): 'Trace Excerpt: Restricted MLM' is the white-on-black banner printed at the top of the boxed model-trace excerpt, not a document section heading; the OCR promoted it to a Markdown heading. Demoted to bold text."
+    }
+  ],
+  "unresolved": []
+}

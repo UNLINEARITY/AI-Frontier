@@ -1,0 +1,587 @@
+{
+  "schema_version": 1,
+  "id": "meta:nllb-200-technical-report",
+  "source_sha256": "2e5c7cc19c5d99bf60b19a94333dbc4dd82425e1f3d8d1f05cc0587ad3b0b124",
+  "ocr_sha256": "156a48ca284fd9a2025b00435a6713651abb4dbbfe886d055e60fddda23a4cec",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      6,
+      10,
+      13,
+      16,
+      17,
+      21,
+      23,
+      24,
+      25,
+      26,
+      27,
+      31,
+      33,
+      34,
+      38,
+      40,
+      41,
+      46,
+      50,
+      72,
+      73,
+      75,
+      80,
+      81,
+      82,
+      87,
+      95,
+      96,
+      104,
+      105,
+      106,
+      108,
+      118,
+      121,
+      122,
+      123,
+      124,
+      127,
+      175,
+      177,
+      182
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 192-page report. Machine-scanned: all 192 pages via normalized page-text 4-gram containment against the OCR markdown (no page below 75% except reordered table/figure pages) plus unique-word coverage for the 47 lowest pages - all at 97-100%, so no mass prose droppage; an exhaustive footnote scan (page-bottom paragraphs, all 49 found) - every footnote body is dropped from the OCR while all 49 markers survive; global code-fence scan (one balanced pair, lines 369-374) and full heading scan (structure faithful, small-caps run-in styling preserved as caps). Line-read with rendered pages (110-300 dpi strips/crops, visually checked): all 34 pages carrying footnotes, and targeted crops on pp. 13, 33, 75, 123, 124, 177, 182. The PDF text layer proved unreliable in two ways and was never trusted blindly: it scrambled fn23's word order (\"For Kaitiakitanga License consider example, the\" for the printed \"For example, consider the Kaitiakitanga License\") and lowercases Table 1's superscript NEW marker (printed superscript small-cap \"NEW\", correctly kept uppercase in the OCR - no patch). Possible duplicated text layers flagged for this document: word-coverage found no duplicated or doubled content in the OCR, and every restored footnote body was verified against its rendered strip. Print's own misspellings are preserved (attentuate p.75 restored after OCR auto-corrected it; Libraray p.182; 'partially covering our of interest' p.29; fn11 'lucky to have Ligurian native speaker'; 'here are the list of directions' p.177). Figure-internal label text (\"Perason\", \"Kendal\" in Figure 24, axis words) lives inside embedded figure images or printed figures, not OCR prose defects."
+  },
+  "patches": [
+    {
+      "before": "tly for languages that are not supported by other translation systems.",
+      "after": "tly for languages that are not supported by other translation systems.\n\n$^{1}$ All are available here: https://github.com/facebookresearch/fairseq/tree/nllb",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Physical p.6 prints the page-bottom footnote '1. All are available here: https://github.com/facebookresearch/…' below the paragraph carrying the matching superscript marker $^{1}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "s language distribution and usage across different parts of the world.",
+      "after": "s language distribution and usage across different parts of the world.\n\n$^{2}$ For a discussion of the notion of languoid, see Good and Hendryx-Parker (2006).",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Physical p.10 prints the page-bottom footnote '2. For a discussion of the notion of languoid, see Good and Hen…' below the paragraph carrying the matching superscript marker $^{2}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "ive speakers and other community-level variables relevant to our work.",
+      "after": "ive speakers and other community-level variables relevant to our work.\n\n$^{3}$ https://meta.wikimedia.org/wiki/Language_proposal_policy",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Physical p.16 prints the page-bottom footnote '3. https://meta.wikimedia.org/wiki/Language_proposal_policy…' below the paragraph carrying the matching superscript marker $^{3}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "symbol ✗ indicates that neither platform supports the language. $^{6}$",
+      "after": "symbol ✗ indicates that neither platform supports the language. $^{6}$\n\n$^{4}$ https://translate.google.com/\n\n$^{5}$ http://www.bing.com/translator\n\n$^{6}$ Information was accessed on June 15, 2022",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Physical p.17 prints the page-bottom footnotes '4/5/6. https://translate.google.com/…' below the paragraph carrying the matching superscript markers $^{4/5/6}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "nt term in the target Arabic languoid to ensure consistent adaptation.",
+      "after": "nt term in the target Arabic languoid to ensure consistent adaptation.\n\n$^{7}$ acm_Arab, acq_Arab, aeb_Arab, and ars_Arab were adapted.",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Physical p.21 prints the page-bottom footnote '7. acm_Arab, acq_Arab, aeb_Arab, and ars_Arab were adapted.…' below the paragraph carrying the matching superscript marker $^{7}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "SEED consists of around six thousand sentences in 39 languages. $^{8}$",
+      "after": "SEED consists of around six thousand sentences in 39 languages. $^{8}$\n\n$^{8}$ Note that we focus on 39 for NLLB-Seed as these were the languages where there did not exist publicly available high-quality bitext for training in large quantities.",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Physical p.23 prints the page-bottom footnote '8. Note that we focus on 39 for NLLB-Seed as these were the lan…' below the paragraph carrying the matching superscript marker $^{8}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "no more than one triplet per article was used (similar to FLORES-200).",
+      "after": "no more than one triplet per article was used (similar to FLORES-200).\n\n$^{9}$ https://meta.wikimedia.org/wiki/List_of_articles_every_Wikipedia_should_have/Expanded",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Physical p.23 prints the page-bottom footnote '9. https://meta.wikimedia.org/wiki/List_of_articles_every_Wikip…' below the paragraph carrying the matching superscript marker $^{9}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "d, unnatural, or overly literal translations) (Volansky et al., 2015).",
+      "after": "d, unnatural, or overly literal translations) (Volansky et al., 2015).\n\n$^{10}$ Note: There is no overlap between the sentences in Flores-200 and NLLB-Seed",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Physical p.24 prints the page-bottom footnote '10. Note: There is no overlap between the sentences in Flores-20…' below the paragraph carrying the matching superscript marker $^{10}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "uality control checks. The datasets were then finalized and completed.",
+      "after": "uality control checks. The datasets were then finalized and completed.\n\n$^{11}$ We had a specific process for Ligurian: half the data for Ligurian were first translated from English to Italian, then translated from Italian to Ligurian while the other half was translated directly from English. As we are lucky to have Ligurian native speaker, we developed this process to improve quality.",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Physical p.24 prints the page-bottom footnote '11. We had a specific process for Ligurian: half the data for Li…' below the paragraph carrying the matching superscript marker $^{11}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "ted from the English portion of the TAUS Corona Crisis Report. $^{12}$",
+      "after": "ted from the English portion of the TAUS Corona Crisis Report. $^{12}$\n\n$^{12}$ https://md.taus.net/corona",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Physical p.25 prints the page-bottom footnote '12. https://md.taus.net/corona…' below the paragraph carrying the matching superscript marker $^{12}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "as CommonCrawl $^{13}$ and labeling them with corresponding languages.",
+      "after": "as CommonCrawl $^{13}$ and labeling them with corresponding languages.\n\n$^{13}$ https://commoncrawl.org/",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Physical p.26 prints the page-bottom footnote '13. https://commoncrawl.org/…' below the paragraph carrying the matching superscript marker $^{13}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "iform domain. However, we believe FLORES-200 is closer to web content.",
+      "after": "iform domain. However, we believe FLORES-200 is closer to web content.\n\n$^{14}$ https://github.com/google/cld3",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Physical p.27 prints the page-bottom footnote '14. https://github.com/google/cld3…' below the paragraph carrying the matching superscript marker $^{14}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "sections to reflect the impact of false positives on unseen languages.",
+      "after": "sections to reflect the impact of false positives on unseen languages.\n\n$^{15}$ https://github.com/google/cld3\n\n$^{16}$ https://github.com/saffsd/langid.py\n\n$^{17}$ https://pypi.org/project/langdetect/",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Physical p.31 prints the page-bottom footnotes '15/16/17. https://github.com/google/cld3…' below the paragraph carrying the matching superscript markers $^{15/16/17}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "s or simply a short snippet of text; we refer to them as “paragraphs”.",
+      "after": "s or simply a short snippet of text; we refer to them as “paragraphs”.\n\n$^{18}$ In wet format, https://commoncrawl.org/",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Physical p.34 prints the page-bottom footnote '18. In wet format, https://commoncrawl.org/…' below the paragraph carrying the matching superscript marker $^{18}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "icted language to choose a sentence splitter for the language. $^{19}$",
+      "after": "icted language to choose a sentence splitter for the language. $^{19}$\n\n$^{19}$ We use a mix of custom splitting rules, indicnlp (Kunchukuttan, 2020), https://github.com/mediacloud/sentence-splitter, https://github.com/Esukhia/botok, khmer-nltk (Hoang, 2020) and LaoNLP https://github.com/wannaphong/laonlp",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Physical p.34 prints the page-bottom footnote '19. We use a mix of custom splitting rules, indicnlp (Kunchukutt…' below the paragraph carrying the matching superscript marker $^{19}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": " large mined corpus for eleven Indian languages (Ramesh et al., 2022).",
+      "after": " large mined corpus for eleven Indian languages (Ramesh et al., 2022).\n\n$^{20}$ https://paracrawl.eu/",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Physical p.38 prints the page-bottom footnote '20. https://paracrawl.eu/…' below the paragraph carrying the matching superscript marker $^{20}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "s the approach described in greater detail in Heffernan et al. (2022):",
+      "after": "s the approach described in greater detail in Heffernan et al. (2022):\n\n$^{21}$ https://github.com/facebookresearch/LASER",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Physical p.40 prints the page-bottom footnote '21. https://github.com/facebookresearch/LASER…' below the paragraph carrying the matching superscript marker $^{21}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": ", we also open-source this evaluation method to the community. $^{22}$",
+      "after": ", we also open-source this evaluation method to the community. $^{22}$\n\n$^{22}$ https://github.com/facebookresearch/LASER/",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Physical p.41 prints the page-bottom footnote '22. https://github.com/facebookresearch/LASER/…' below the paragraph carrying the matching superscript marker $^{22}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "nership ultimately belongs to the speakers of these languages. $^{23}$",
+      "after": "nership ultimately belongs to the speakers of these languages. $^{23}$\n\n$^{23}$ For example, consider the Kaitiakitanga License https://github.com/TeHikuMedia/Kaitiakitanga-License/blob/tumu/LICENSE.md",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 prints the page-bottom footnote '23. For example, consider the Kaitiakitanga License https://gith…' below the paragraph carrying the matching superscript marker $^{23}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "the teacher-student code in the nllb branch of the fairseq repository.",
+      "after": "the teacher-student code in the nllb branch of the fairseq repository.\n\n$^{24}$ https://github.com/facebookresearch/stopes\n\n$^{25}$ https://huggingface.co/sentence-transformers",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 prints the page-bottom footnotes '24/25. https://github.com/facebookresearch/stopes…' below the paragraph carrying the matching superscript markers $^{24/25}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "ation dataset and use this throughout all experiments in this section.",
+      "after": "ation dataset and use this throughout all experiments in this section.\n\n$^{26}$ For this ablation dataset, we only include English-centric data to manage experimental iteration speed. In Section 8, we include thousands of non-English training directions.",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "Physical p.50 prints the page-bottom footnote '26. For this ablation dataset, we only include English-centric d…' below the paragraph carrying the matching superscript marker $^{26}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "nslator. We briefly describe both metrics and a variant of BLEU below.",
+      "after": "nslator. We briefly describe both metrics and a variant of BLEU below.\n\n$^{27}$ More specifically, for the case of RttLangIDChrF, neither the full language identification model nor the corpus of sentences used to compute the metric are made public. Furthermore, the main version of the metric used throughout Bapna et al.’s paper does not penalize a translation model’s failure to produce text in the correct language, effectively cherry-picking which sentences to evaluate on. The stricter version of the metric, which includes a penalty, is shown to correlate poorly with human judgments.",
+      "count": 1,
+      "pdf_pages": [
+        72
+      ],
+      "evidence": "Physical p.72 prints the page-bottom footnote '27. More specifically, for the case of RttLangIDChrF, neither th…' below the paragraph carrying the matching superscript marker $^{27}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "nt of spBLEU. $^{28}$ We describe this in greater detail in Section 8.",
+      "after": "nt of spBLEU. $^{28}$ We describe this in greater detail in Section 8.\n\n$^{28}$ Our analyses demonstrate that there are minor differences between the SPM-200 from Flores-200 and SPM-100 model from Flores-101 when measuring on the Flores-101 languages. The major advantage of SPM-200 is that it covers 200+ languages.",
+      "count": 1,
+      "pdf_pages": [
+        73
+      ],
+      "evidence": "Physical p.73 prints the page-bottom footnote '28. Our analyses demonstrate that there are minor differences be…' below the paragraph carrying the matching superscript marker $^{28}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "s that are commonly referred to as vulgar or profane language. $^{29}$",
+      "after": "s that are commonly referred to as vulgar or profane language. $^{29}$\n\n$^{29}$ Note that vulgar or profane language is not always necessarily toxic (some common slang, for instance, may be considered vulgar but it is not necessarily toxic).",
+      "count": 1,
+      "pdf_pages": [
+        80
+      ],
+      "evidence": "Physical p.80 prints the page-bottom footnote '29. Note that vulgar or profane language is not always necessari…' below the paragraph carrying the matching superscript marker $^{29}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "in NLP. We discuss possible limitations of wordlists in Section 7.3.4.",
+      "after": "in NLP. We discuss possible limitations of wordlists in Section 7.3.4.\n\n$^{30}$ https://cleanspeak.com/\n\n$^{31}$ https://www.perspectiveapi.com/\n\n$^{32}$ https://cyber.harvard.edu/publication/2020/principled-ai",
+      "count": 1,
+      "pdf_pages": [
+        81
+      ],
+      "evidence": "Physical p.81 prints the page-bottom footnotes '30/31/32. https://cleanspeak.com/…' below the paragraph carrying the matching superscript markers $^{30/31/32}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "oxic, any toxic, obscene, threat, insult, severe toxic, identity hate.",
+      "after": "oxic, any toxic, obscene, threat, insult, severe toxic, identity hate.\n\n$^{33}$ https://www.kaggle.com/c/Jigsaw-toxic-comment-classification-challenge",
+      "count": 1,
+      "pdf_pages": [
+        82
+      ],
+      "evidence": "Physical p.82 prints the page-bottom footnote '33. https://www.kaggle.com/c/Jigsaw-toxic-comment-classification…' below the paragraph carrying the matching superscript marker $^{33}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "rementioned purposes by entities who have not publicly disclosed them.",
+      "after": "rementioned purposes by entities who have not publicly disclosed them.\n\n$^{34}$ A single exception was made in the case of backtranslated data, due to the nature of web crawled data which contains a high proportion of pornographic and toxic content.",
+      "count": 1,
+      "pdf_pages": [
+        87
+      ],
+      "evidence": "Physical p.87 prints the page-bottom footnote '34. A single exception was made in the case of backtranslated da…' below the paragraph carrying the matching superscript marker $^{34}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "urces is made available along with our other training scripts. $^{35}$",
+      "after": "urces is made available along with our other training scripts. $^{35}$\n\n$^{35}$ https://github.com/facebookresearch/stopes",
+      "count": 1,
+      "pdf_pages": [
+        95
+      ],
+      "evidence": "Physical p.95 prints the page-bottom footnote '35. https://github.com/facebookresearch/stopes…' below the paragraph carrying the matching superscript marker $^{35}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "he pairs have fewer than 1M sentences and are low-resource directions.",
+      "after": "he pairs have fewer than 1M sentences and are low-resource directions.\n\n$^{36}$ Two languages among the 204 in Flores-200, arb_Latn and min_Arab, have no available training data and hence we did not include them in the model training dataset.",
+      "count": 1,
+      "pdf_pages": [
+        96
+      ],
+      "evidence": "Physical p.96 prints the page-bottom footnote '36. Two languages among the 204 in Flores-200, arb_Latn and min_…' below the paragraph carrying the matching superscript marker $^{36}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": " mined and backtranslated data quality for the Indian language family.",
+      "after": " mined and backtranslated data quality for the Indian language family.\n\n$^{37}$ Available in https://github.com/anoopkunchukuttan/indic_nlp_library.\n\n$^{38}$ Languages recognized by the Indian Constitution and a few other recognized minority languages of India.",
+      "count": 1,
+      "pdf_pages": [
+        104
+      ],
+      "evidence": "Physical p.104 prints the page-bottom footnotes '37/38. Available in https://github.com/anoopkunchukuttan/indic_nlp_…' below the paragraph carrying the matching superscript markers $^{37/38}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "e present the results in Table 33 with both chrF++ and spBLEU metrics.",
+      "after": "e present the results in Table 33 with both chrF++ and spBLEU metrics.\n\n$^{39}$ A direction is defined as low-resource if any one language in the pair is low-resource, otherwise it is considered high-resource.\n\n$^{40}$ A language is defined as very low-resource if it has fewer than 100k samples across all pairings with any other language in our dataset.",
+      "count": 1,
+      "pdf_pages": [
+        105
+      ],
+      "evidence": "Physical p.105 prints the page-bottom footnotes '39/40. A direction is defined as low-resource if any one language i…' below the paragraph carrying the matching superscript markers $^{39/40}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "ison on high-resource pairs and additional analysis in Appendix E.2.2.",
+      "after": "ison on high-resource pairs and additional analysis in Appendix E.2.2.\n\n$^{41}$ https://cloud.google.com/translate/docs/languages",
+      "count": 1,
+      "pdf_pages": [
+        106
+      ],
+      "evidence": "Physical p.106 prints the page-bottom footnote '41. https://cloud.google.com/translate/docs/languages…' below the paragraph carrying the matching superscript marker $^{41}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "ibe each of these benchmarks and the set of selected directions below.",
+      "after": "ibe each of these benchmarks and the set of selected directions below.\n\n$^{42}$ Note that training setups vary, and thus models are not directly comparable",
+      "count": 1,
+      "pdf_pages": [
+        108
+      ],
+      "evidence": "Physical p.108 prints the page-bottom footnote '42. Note that training setups vary, and thus models are not dire…' below the paragraph carrying the matching superscript marker $^{42}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "tn-oci\\_Latn, zho\\_Hans-yue\\_Hant, and rus\\_Cyrl-bak\\_Cyrl directions.",
+      "after": "tn-oci\\_Latn, zho\\_Hans-yue\\_Hant, and rus\\_Cyrl-bak\\_Cyrl directions.\n\n$^{43}$ https://dumps.wikimedia.org/other/cirrussearch/",
+      "count": 1,
+      "pdf_pages": [
+        118
+      ],
+      "evidence": "Physical p.118 prints the page-bottom footnote '43. https://dumps.wikimedia.org/other/cirrussearch/…' below the paragraph carrying the matching superscript marker $^{43}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "n be used to apply offline distillation given a trained teacher model.",
+      "after": "n be used to apply offline distillation given a trained teacher model.\n\n$^{44}$ https://github.com/facebookresearch/stopes",
+      "count": 1,
+      "pdf_pages": [
+        118
+      ],
+      "evidence": "Physical p.118 prints the page-bottom footnote '44. https://github.com/facebookresearch/stopes…' below the paragraph carrying the matching superscript marker $^{44}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "i $^{45}$ and an ALA-LC transliterator for the Tifinagh script $^{46}$",
+      "after": "i $^{45}$ and an ALA-LC transliterator for the Tifinagh script $^{46}$\n\n$^{45}$ https://www.ejawi.net/ We are aware that Acehnese and Banjar use two different varieties of Arabic script (Jawi and Pegon, respectively), and that Acehnese is not part of the Malay group of languages, while eJawi is optimized for Malay languages written in Jawi. We use this approach to get a reasonably approximated transliteration.\n\n$^{46}$ https://www.translitteration.com/transliteration/en/tamazight/ala-lc/",
+      "count": 1,
+      "pdf_pages": [
+        121
+      ],
+      "evidence": "Physical p.121 prints the page-bottom footnotes '45/46. https://www.ejawi.net/ We are aware that Acehnese and Banjar…' below the paragraph carrying the matching superscript markers $^{45/46}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "es which might otherwise be introduced for users of different scripts.",
+      "after": "es which might otherwise be introduced for users of different scripts.\n\n$^{47}$ Based on Andries (2004) for the Tifinagh script, and on the Arabic ICU transliteration rules for Jawi.",
+      "count": 1,
+      "pdf_pages": [
+        122
+      ],
+      "evidence": "Physical p.122 prints the page-bottom footnote '47. Based on Andries (2004) for the Tifinagh script, and on the …' below the paragraph carrying the matching superscript marker $^{47}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "were directly offset by the provider's sustainability program. $^{48}$",
+      "after": "were directly offset by the provider's sustainability program. $^{48}$\n\n$^{48}$ https://sustainability.fb.com/2021-sustainability-report/",
+      "count": 1,
+      "pdf_pages": [
+        127
+      ],
+      "evidence": "Physical p.127 prints the page-bottom footnote '48. https://sustainability.fb.com/2021-sustainability-report/…' below the paragraph carrying the matching superscript marker $^{48}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "training configuration files are available in our repository $^{49}$ .",
+      "after": "training configuration files are available in our repository $^{49}$ .\n\n$^{49}$ https://github.com/facebookresearch/fairseq/tree/nllb/data",
+      "count": 1,
+      "pdf_pages": [
+        175
+      ],
+      "evidence": "Physical p.175 prints the page-bottom footnote '49. https://github.com/facebookresearch/fairseq/tree/nllb/data…' below the paragraph carrying the matching superscript marker $^{49}$; this OCR kept every footnote marker but dropped every footnote body (all 49 are missing). Body transcribed from the PDF text layer and verified against a rendered page-bottom strip (visually checked)."
+    },
+    {
+      "before": "and to attenuate calibration shifts when the XSTS score is close to extreme values",
+      "after": "and to attentuate calibration shifts when the XSTS score is close to extreme values",
+      "count": 1,
+      "pdf_pages": [
+        75
+      ],
+      "evidence": "Rendered physical p.75 (300 dpi crop) prints \"to attenuate extreme calibration shifts, and to attentuate calibration shifts when the XSTS score is close to extreme values\" - the paper itself misspells the second verb as \"attentuate\"; the OCR auto-corrected it to \"attenuate\". The print spelling is restored."
+    },
+    {
+      "before": "Ta&#x27;izzi-Adeni Arabic",
+      "after": "Ta&#x2BD;izzi-Adeni Arabic",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 1 row \"acq_Arab Taʽizzi-Adeni Arabic\" prints the raised left half ring (PDF text layer U+02BD, visually confirmed as a raised ring, not a straight quote); the OCR wrote a straight apostrophe entity. Rendered form of the same name elsewhere (p.123/124) uses a different mark, so only this Table 1 cell is patched."
+    },
+    {
+      "before": "South Levantine, Ta'izzi-Adeni, Mesopotamian and Tunisian",
+      "after": "South Levantine, Ta‘izzi-Adeni, Mesopotamian and Tunisian",
+      "count": 1,
+      "pdf_pages": [
+        123
+      ],
+      "evidence": "Rendered physical p.123 (300 dpi crop) prints \"Najdi, North Levantine, South Levantine, Ta‘izzi-Adeni, Mesopotamian and Tunisian\" with a left single quotation mark (text layer U+2018, visually confirmed); the OCR wrote a straight apostrophe."
+    },
+    {
+      "before": "Mesopotamian, Ta'izzi-Adeni, Tunisian, South Levantine, Najdi",
+      "after": "Mesopotamian, Ta‘izzi-Adeni, Tunisian, South Levantine, Najdi",
+      "count": 1,
+      "pdf_pages": [
+        124
+      ],
+      "evidence": "Rendered physical p.124 \"Results.\" paragraph prints \"six Arabic languoids: Mesopotamian, Ta‘izzi-Adeni, Tunisian, South Levantine, Najdi and Egyptian\" with the same left quotation mark (text layer U+2018); the OCR wrote a straight apostrophe."
+    },
+    {
+      "before": "## Curriculum. For the different curriculum setups, here are the list of directions used:",
+      "after": "Curriculum. For the different curriculum setups, here are the list of directions used:",
+      "count": 1,
+      "pdf_pages": [
+        177
+      ],
+      "evidence": "Rendered physical p.177 prints \"Curriculum.\" as a bold run-in paragraph lead followed by the sentence text (same style as \"Results.\" on p.124), not a section heading; the OCR promoted the whole sentence to a Markdown heading. Demoted to a plain paragraph to match the document's run-in convention."
+    },
+    {
+      "before": "normalizerhttps://alt.qcri.org",
+      "after": "normalizer https://alt.qcri.org",
+      "count": 1,
+      "pdf_pages": [
+        182
+      ],
+      "evidence": "Rendered physical p.182 Table 56 prints \"Apply QCRI arabic normalizer\" and the URL https://alt.qcri.org/tools/arabic-normalizer/ on separate lines; the OCR glued description and URL into one token. A separating space restores the printed break; URLs kept verbatim."
+    },
+    {
+      "before": "Mecab-Kohttps://konlpy.org",
+      "after": "Mecab-Ko https://konlpy.org",
+      "count": 1,
+      "pdf_pages": [
+        182
+      ],
+      "evidence": "Rendered physical p.182 Table 56 prints \"Segment with Mecab-Ko\" and the URL on separate lines; OCR glued them. Space inserted at the printed line break."
+    },
+    {
+      "before": "KyTeahttp://www.phontron.com",
+      "after": "KyTea http://www.phontron.com",
+      "count": 1,
+      "pdf_pages": [
+        182
+      ],
+      "evidence": "Rendered physical p.182 Table 56 prints \"Segment with KyTea\" and the URL on separate lines; OCR glued them. Space inserted at the printed line break."
+    },
+    {
+      "before": "WAT&#x27;skmsegNakazawa",
+      "after": "WAT&#x27;s kmseg Nakazawa",
+      "count": 1,
+      "pdf_pages": [
+        182
+      ],
+      "evidence": "Rendered physical p.182 Table 56 prints \"Tokenize with WAT’s kmseg Nakazawa et al. (2021)\" with spaces around the italic kmseg; the OCR glued \"WAT'skmsegNakazawa\". Both printed spaces restored."
+    },
+    {
+      "before": "WAT&#x27;smysegNakazawa",
+      "after": "WAT&#x27;s myseg Nakazawa",
+      "count": 1,
+      "pdf_pages": [
+        182
+      ],
+      "evidence": "Rendered physical p.182 Table 56 prints \"Tokenize with WAT’s myseg Nakazawa et al. (2021)\"; the OCR glued \"WAT'smysegNakazawa\". Both printed spaces restored."
+    },
+    {
+      "before": "Librarayhttps://anoopkunchukuttan",
+      "after": "Libraray https://anoopkunchukuttan",
+      "count": 1,
+      "pdf_pages": [
+        182
+      ],
+      "evidence": "Rendered physical p.182 Table 56 prints \"Tokenize with Indic-NLP Libraray\" (the paper's own misspelling \"Libraray\", kept) with the URL on the next line; the OCR glued them. Space inserted at the printed line break."
+    },
+    {
+      "before": "muobodan ketewa bi ben soro ho a εεε εε wofa muSe woma mmofra bi sika ketewa bi a, wobεka anansesεm yi akyere wo",
+      "after": "muɔbodan ketewa bi bɛn soro ho a ɛsɛ sɛ wofa muSɛwoma mmofra bi sika ketewa bi a, wobɛka anansesɛm yi akyerɛ wo",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 Table 7 (600 dpi crop) prints the Asante/Akuapem Twi rows \"Ɔbodan ketewa bi bɛn soro ho a ɛsɛ sɛ wofa mu\" and \"Sɛ woma mmofra bi sika ketewa bi a, wobɛka anansesɛm yi akyerɛ wo\" with Latin open-o/open-e letters; the OCR garbled \"ƐsƐ sƐ\" into \"εεε εε\" (dropping both s letters), used Greek epsilon and lost the Ɔ. Glyphs restored to the printed letters."
+    },
+    {
+      "before": "<td>Amharic</td><td>Ge&#x27;ez</td>",
+      "after": "<td>Amharic</td><td>Ge&#x2BD;ez</td>",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 Table 1 Amharic row prints the script name as \"Geʽez\" with the raised left half ring (text layer U+02BD); the OCR wrote a straight apostrophe."
+    },
+    {
+      "before": "tir_EthiNEW</td><td>Tigrinya</td><td>Ge'ez</td>",
+      "after": "tir_EthiNEW</td><td>Tigrinya</td><td>Ge&#x2BD;ez</td>",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 Table 1 Tigrinya row prints \"Geʽez\" (text layer U+02BD); the OCR wrote a straight apostrophe."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table7-glued-rows",
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Table 7 (p.33) glues its three reference/Twi row pairs into single cells (\"...the apartmentThere's a tiny cave...\", \"passed throughFor a few pennies...\", \"no mu\"+\"ɔbodan\", \"mu\"+\"Sɛ\"); the glyph/content errors inside the cells are repaired by patches, but restoring the printed row boundaries needs a table-structure decision."
+    },
+    {
+      "id": "table3-code-fence-flattened",
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Table 3 (Examples of Sentences Filtered from our LID training dataset) is emitted as a ```txt code fence with its column texts interleaved; no headings/images are swallowed, but cell boundaries are lost and would need a page-by-page rebuild."
+    },
+    {
+      "id": "figure-label-fragments-in-prose",
+      "pdf_pages": [
+        45,
+        61,
+        76,
+        115
+      ],
+      "evidence": "Axis-label fragments of printed Figures 20-24 survive as flattened prose lines (e.g. \"…Arabic Ge'ez\" before Figure 21, \"Perason R: … Kendal τ:…\" inside Figure 24); the PDF prints them inside figures. Needs the same treatment as the ubtech figure-fragment cases."
+    },
+    {
+      "id": "prose-geez-form-unverified",
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Section 5.3.3 prose \"…to better support the Ge'ez script\" - the printed glyph form on that page was not visually verified (the text layer shows no U+02BD there, unlike Table 1); left unchanged pending a render check."
+    },
+    {
+      "id": "table-heavy-pages-machine-scanned-only",
+      "pdf_pages": [
+        60,
+        84,
+        85,
+        110,
+        171,
+        172,
+        173,
+        175,
+        176,
+        178,
+        180,
+        181,
+        182,
+        183,
+        184
+      ],
+      "evidence": "Large OCR HTML tables (language list, distillation results, curriculum direction lists) reorder text so 4-gram containment is low while unique-word coverage stays 97-100%; they were machine-scanned only, not compared cell-by-cell against the rendered tables."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "moonshot:kimi-vl-technical-report",
+  "source_sha256": "1a2b6734c86d0983ac01c21d644483fb22c276844a89d53736e6ff8b72baf9cb",
+  "ocr_sha256": "d5ffceffe4b1ba1f5e0bf53efc73be865124aad9d28df2519796cda77bc2b2f1",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "coverage": "complete",
+    "notes": "Full word-level alignment of the OCR Markdown against extracted text from all 24 physical PDF pages; every unmatched block was inspected. The largest drop is the printed abstract's first paragraph, restored below from the p.1 render. Remaining unmatched PDF text is running headers, the arXiv stamp, chart-axis and demo-screenshot text inside embedded figures (Figures 1-2, 5-13), and two page-bottom footnotes restored below; body sentence and Table 1/2/3 content verified present. Physical pages 1, 10, 11, 14 and 18 were rendered at 160-400 dpi for visual verification. The glued 'w/ subtitlesetting' and the first paragraph's 'capabilities—all' em dash were re-verified at 400/160 dpi and match the print (kept). No code fences exist in this document."
+  },
+  "patches": [
+    {
+      "before": "## ABSTRACT\n\nKimi-VL also advances in processing long contexts",
+      "after": "## ABSTRACT\n\nWe present Kimi-VL, an efficient open-source Mixture-of-Experts (MoE) vision-language model (VLM) that offers advanced multimodal reasoning, long-context understanding, and strong agent capabilities—all while activating only 2.8B parameters in its language decoder (Kimi-VL-A3B). Kimi-VL demonstrates strong performance across challenging domains: as a general-purpose VLM, Kimi-VL excels in multi-turn agent tasks (e.g., OSWorld), matching flagship models. Furthermore, it exhibits remarkable capabilities across diverse challenging vision language tasks, including college-level image and video comprehension, OCR, mathematical reasoning, multi-image understanding. In comparative evaluations, it effectively competes with cutting-edge efficient VLMs such as GPT-4o-mini, Qwen2.5-VL-7B, and Gemma-3-12B-IT, while surpassing GPT-4o in several key domains.\n\nKimi-VL also advances in processing long contexts",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 at 160 dpi: the ABSTRACT prints two paragraphs before the surviving 'Kimi-VL also advances…' one; the OCR dropped the entire first paragraph ('We present Kimi-VL … while surpassing GPT-4o in several key domains.'). Restored verbatim from the render and PDF text layer."
+    },
+    {
+      "before": "on specific tasks or model context length.",
+      "after": "on specific tasks or model context length.\n\n\\* GPT-4o and GPT-4o-mini results use Omniparser without UIA, according to Bonatti et al. 2024.",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 bottom at 300 dpi: page-bottom footnote reads '*GPT-4o and GPT-4o-mini results use Omniparser without UIA, according to Bonatti et al. 2024.' The body was dropped by OCR while the asterisk marker survives on the Table 3 row 'WindowsAgentArena (Pass@1)*' (verified on the p.11 render)."
+    },
+    {
+      "before": "facilitating it to be more efficient and user-friendly for practical deployments.",
+      "after": "facilitating it to be more efficient and user-friendly for practical deployments.\n\n$^{§}$ Tech Blog: https://huggingface.co/blog/moonshotai/kimi-vl-a3b-thinking-2506",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 bottom at 300 dpi: page-bottom footnote reads '§Tech Blog: https://huggingface.co/blog/moonshotai/kimi-vl-a3b-thinking-2506'. The body was dropped by OCR while the marker survives as 'Kimi-VL-A3B-Thinking-2506 $^{§}$' in the preceding paragraph."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table-4-flattened-model-headers",
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Table 4 (Kimi-VL-A3B-Thinking comparison) prints grouped model-column headers (e.g. 'Qwen2.5-VL-7B/72B', 'Gemma-3-12B/27B', 'Kimi-VL-A3B-Thinking(-2506)') across merged header cells; the OCR header row flattens them into adjacent bare cells ('Qwen2.5-VL-72B', '7B', 'Gemma-3-27B', '12B', 'Thinking', 'Thinking-2506'). Numeric body rows are intact; repairing the header needs a page-by-page cell mapping."
+    }
+  ]
+}

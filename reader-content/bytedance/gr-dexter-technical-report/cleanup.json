@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:gr-dexter-technical-report",
+  "source_sha256": "5ff86922a33f99488656858bbd49f386d77d933847fd2c60c8d2f0e78de2ac43",
+  "ocr_sha256": "728806fbc5262a5631b987fe794917e23f682d2d7a356212fa68eaad37adbdd0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "Line-level diff of the OCR Markdown against extracted text from all 17 physical PDF pages; physical pages 6, 16 and 17 were rendered (170 dpi) and visually verified, plus the Figure 9 embedded image was inspected directly. No dropped footnote bodies (the report has no footnotes), no code fences, and no garbled numbers were found; the reference list matches the print entry-by-entry. Two OCR-promoted run-in labels were demoted and one printed appendix heading was restored. Several oddities are printed by the PDF itself and were deliberately left unchanged (see unresolved)."
+  },
+  "patches": [
+    {
+      "before": "## Cross-embodiment data Collecting large-scale teleoperation\n\ndata on our high-DoF",
+      "after": "Cross-embodiment data Collecting large-scale teleoperation\ndata on our high-DoF",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 section 3.1 shows 'Cross-embodiment data' as a bold run-in label inside one paragraph ('...Collecting large-scale teleoperation data on our high-DoF Byte-Dexter platform is constrained by...'), styled exactly like the sibling run-ins 'Vision-language data' and 'Human trajectories' (visually verified at 170 dpi). OCR promoted the label to a Markdown heading and split the sentence."
+    },
+    {
+      "before": "## Supervisor Hang Li",
+      "after": "Supervisor Hang Li",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 Contributions and Acknowledgements shows 'Supervisor Hang Li' as a bold run-in label in the same list as 'Hardware', 'Control and System' and 'Model and Data', not a section heading (visually verified at 170 dpi)."
+    },
+    {
+      "before": "Grasping Capability\n\n![[images/120a39fcbf315c83c124bad92ef2357e7abcc2640745b7cf5472462b25174e94.jpg]]",
+      "after": "## Grasping Capability\n\n![[images/120a39fcbf315c83c124bad92ef2357e7abcc2640745b7cf5472462b25174e94.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 prints 'Grasping Capability' as a blue subsection heading under 'Appendix' (visually verified at 170 dpi); OCR demoted it to plain body text before the Figure 9 embed."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "page-break-paragraph-split-p9-p10",
+      "pdf_pages": [
+        9,
+        10
+      ],
+      "evidence": "The sentence 'Building upon the ByteDexter V1 design, this work presents an upgraded version that increases the total' ends physical p.9 and continues 'DoFs by one while achieving...' on p.10; OCR interleave order places section 4/5 figures between the halves. Rejoining would require moving figure embeds."
+    },
+    {
+      "id": "source-printed-quirks-transcribed",
+      "pdf_pages": [
+        6,
+        7,
+        9,
+        12,
+        14
+      ],
+      "evidence": "Printed by the PDF itself and transcribed faithfully, left unpatched per source-review policy: 'multiple robot embodiment' singular (p.6); run-in label 'Our-of-Distribution Settings' misspelling (p.7); caption 'Figure 8 Experiment settings and Results...' capitalization (p.9); reference [4] 'Qwen2. 5-vl technical report' with a printed space (p.12); reference [52] author list printed as 'Ananye Shaw, Kenneth andAgarwal and Deepak Pathak' (p.14)."
+    },
+    {
+      "id": "arxiv-watermark-dropped",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The vertical arXiv sidebar stamp 'arXiv:2512.24210v2 [cs.RO] 9 Jan 2026' (p.1 margin) is not in the OCR text; stamps are conventionally omitted from readers."
+    }
+  ]
+}

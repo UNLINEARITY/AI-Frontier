@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-1-flash-lite-image-model-card",
+  "source_sha256": "f03d4a695a24c480f5ace904589072919f65f4d23cca91c666811c1dcc984f80",
+  "ocr_sha256": "6b941579107f161aa2353f0d268bd2e0dabca5e3e69ece804e21ad89c341255b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "All 7 physical pages diffed as extracted text against the OCR markdown and the flagged spots re-read on renders (110 dpi full pages; 300 dpi crops of the Eval Methodology bullets and both table header rows). Both printed title lines are genuine (cover p.1 'Gemini 3.1 Flash-Lite Image / Model Card' plus inner title page p.2 'Gemini 3.1 Flash-Lite Image - Model Card'), so the two H1 lines are not a duplication defect. 'SxS human eval' is printed with S glyphs in the PDF (side-by-side eval), so the OCR reading is correct and was not patched. The only page-1 raster image is the Google logo; the card prints no content figures, so no image embeds are missing. All capability-table values spot-checked against the rendered tables and matched, including the wrapped 'GPT 2 / Respon / se API / Low' header, which the OCR joined with a duplicated 'se'."
+  },
+  "patches": [
+    {
+      "before": "■ T2l: General Text-to-Image, i18n Text Rendering, Visual Design.",
+      "after": "■ T2I: General Text-to-Image, i18n Text Rendering, Visual Design.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints the same acronym with a capital I everywhere: 'diverse Text-to-Image (T2I)', 'T2I: General Text-to-Image, i18n Text Rendering, Visual Design.', and table rows 'General T2I' / 'Social Media Trends - T2I' (re-read at 300 dpi; the OCR itself transcribes all the other occurrences as T2I). The bullet line's lowercase l is an OCR inconsistency, not source text."
+    },
+    {
+      "before": "## - Eval Methodology",
+      "after": "\\- Eval Methodology",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 shows 'Eval Methodology' as a bold top-level bullet ('• Eval Methodology') under the Approach list, at the same level as the preceding '• Capabilities / Benchmarks' item which the OCR rendered as the list line '\\- Capabilities / Benchmarks cover...'. The OCR incorrectly promoted this bullet to a level-2 heading; demoted to the same list-line style as its sibling."
+    },
+    {
+      "before": "GPT 2 Response se API Low",
+      "after": "GPT 2 Response API Low",
+      "count": 2,
+      "pdf_pages": [
+        4,
+        5
+      ],
+      "evidence": "Both table header rows (physical p.4 Text-to-Image table and p.5 Editing table) wrap the competitor column as 'GPT 2 / Respon / se API / Low', i.e. the printed text is 'GPT 2 Response API Low' (300 dpi crops). The OCR joined 'Respon'+'se' into 'Response' but kept the wrapped 'se' line as extra text, duplicating it."
+    }
+  ],
+  "unresolved": []
+}

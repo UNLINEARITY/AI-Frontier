@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "google:veo-3-1-lite-model-card",
+  "source_sha256": "f30b285064f2a5f1fd7c4e6cb063d87e6a265c35f5b05712dd3df6eb739866f3",
+  "ocr_sha256": "282c5e882e2db65dd85a2ef5ad11b1bc8cd74aa4fababef4d71ad784f995d6e4",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coverage": "complete",
+    "notes": "Clean document: full line-by-line comparison of all 4 PDF pages against the OCR markdown found no dropped prose, headings, tables or prompt boxes; no code fences exist in the source. Page 1 rendered and confirmed to be a decorative Google-logo/title banner whose title text is already present as the document heading. Bullet markers mix bullets and backslash dashes on the Distribution list; bullet style is not a defect class."
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "missing-title-banner-image-p1",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Physical page 1 embeds a 932x312 decorative Google-logo/title banner; the OCR markdown has no image embed for it. Its full text content ('Veo 3.1 Lite / Model Card') is already the document heading, so no text is lost; the graphic itself cannot be restored by text cleanup."
+    }
+  ]
+}

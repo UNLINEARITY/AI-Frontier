@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step-audio-2",
+  "source_sha256": "5c341fd3e499ba9fdc0d6944a3b5cda7d9ee10b6efa3ac8f7e34a389d17197a4",
+  "ocr_sha256": "2f777ea44c8904b26ec94a95ec2935b5ae9fae33175dad42e1e35731fe4b7f23",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "All 21 physical pages scanned with a 5-gram PDF-text-to-OCR word-coverage pass. The large p.3 diff is the Figure 1/2 conversation-bubble figure text (figure-internal, left out of the OCR except one leaked bubble which is removed). Footnote bodies for all four superscript-bearing pages (2, 9, 11, 19) were dropped by OCR while markers survived; all bodies were transcribed from 300-400 dpi renders and restored next to their anchors. Table 1/7 HTML tables, heading hierarchy and references were compared against the print with no other drops found. No code fences exist."
+  },
+  "patches": [
+    {
+      "before": "Figure 1: Performance comparison of GPT-4o Audio $^{1}$ , Kimi-Audio $^{2}$ , Qwen-Omni $^{3}$ and Step-Audio 2 and on various benchmarks.",
+      "after": "Figure 1: Performance comparison of GPT-4o Audio $^{1}$ , Kimi-Audio $^{2}$ , Qwen-Omni $^{3}$ and Step-Audio 2 and on various benchmarks.\n\n$^{1}$ GPT-4o Audio is evaluated with gpt-4o-transcribe for ASR and gpt-4o-audio-preview-2025-06-03 for others via official API. $^{2}$ Kimi-Audio is excluded from translation evaluations since it consistently ignores prompts. $^{3}$ Qwen-Omni is evaluated with Qwen2.5-Omni for MMAU and speech-to-text translation, and qwen-omni-turbo-2025-03-26 for others via official API.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Physical p.2 prints three footnote bodies under Figure 1 (verified on a 300 dpi render): GPT-4o Audio model IDs, Kimi-Audio exclusion from translation evaluations, and Qwen-Omni qwen-omni-turbo-2025-03-26 mapping. The OCR kept the $^{1,2,3}$ markers but dropped all three bodies."
+    },
+    {
+      "before": "Qwen-Omni and Step-Audio 2, on character (for Chinese, Cantonese and Japanese) and word (for Arabian and English) error rates among multiple ASR test sets. N/A indicates that the language is not supported.",
+      "after": "Qwen-Omni and Step-Audio 2, on character (for Chinese, Cantonese and Japanese) and word (for Arabian and English) error rates among multiple ASR test sets. N/A indicates that the language is not supported.\n\n$^{1}$ Doubao LLM ASR refers to https://www.volcengine.com/docs/6561/1354868 $^{2}$ GPT-4o Transcribe is evaluated using its latest model, gpt-4o-transcribe, via its official API. $^{3}$ We evaluate without specifying language to ensure a fair comparison. Notably, Qwen-Omni lacks a language-independent testing approach, specifying language may yield better results.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Physical p.9 prints three footnote bodies under Table 1 (verified at 300-400 dpi): the Doubao volcengine.com/docs/6561/1354868 URL, the gpt-4o-transcribe API note, and the language-independent-testing note. The OCR kept the markers in the caption and body text but dropped all three bodies. The anchor tail is unique to Table 1 (Table 7's caption names Step-Audio 2 mini)."
+    },
+    {
+      "before": "using the latest version of the MMAU benchmark [58] $^{1}$ .",
+      "after": "using the latest version of the MMAU benchmark [58] $^{1}$ .\n\n$^{1}$ MMAU v05.15.25 test-mini",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Physical p.11 prints the footnote body '1MMAU v05.15.25 test-mini' (verified on a 300 dpi render); the OCR kept the $^{1}$ marker after the MMAU benchmark mention but dropped the version body."
+    },
+    {
+      "before": "Step-Audio 2 and Step-Audio 2 mini, on character (for Chinese, Cantonese and Japanese) and word (for Arabian and English) error rates among multiple ASR test sets. N/A indicates that the language is not supported.",
+      "after": "Step-Audio 2 and Step-Audio 2 mini, on character (for Chinese, Cantonese and Japanese) and word (for Arabian and English) error rates among multiple ASR test sets. N/A indicates that the language is not supported.\n\n$^{1}$ Evaluation results are obtained with our vLLM backend and may differ from the results with transformers backend.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Physical p.19 prints the footnote body '1Evaluation results are obtained with our vLLM backend and may differ from the results with transformers backend.' under Table 7 (verified on a 300 dpi render); the OCR kept the $^{1}$ marker but dropped the body."
+    },
+    {
+      "before": "Of course, I'm here for you. It sounds like you're carrying a lot of emotions right now—that can feel overwhelming. Would you like to share what's on your mind, or just take a moment to unwind? There's no rush; I'll listen whenever you're ready.\n\n",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "This sentence is the model's response bubble inside the Figure 2 conversation panel on physical p.3 (verified on a 130 dpi render: 'Good evening... I'm feeling a bit unsettled.' followed by the 'Of course, I'm here for you...' bubble with Thinking panel). The OCR transcribed this figure-internal bubble as body prose between the Introduction paragraph and the Figure 2 image embed; the figure itself is embedded, so the stray paragraph is removed."
+    }
+  ],
+  "unresolved": []
+}

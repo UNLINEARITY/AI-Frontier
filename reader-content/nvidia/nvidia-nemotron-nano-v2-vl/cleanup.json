@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nvidia-nemotron-nano-v2-vl",
+  "source_sha256": "e2ba7dd9b17730160515db92e3a9380e18939dec70101dcf135a2b8aa1a1c31f",
+  "ocr_sha256": "5f2844bea5ed3146db6d3f98d1ef6c2d5fefa71af26ad57d75ded5cf64bf814c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR output. Full normalized text-layer diff of all 29 physical pages against the OCR Markdown; unmatched residue is display math/figure-internal text and the PDF's own typos (kept). The systematic defect was droppage of all 15 page-bottom footnote URL bodies while the superscript markers survive in the body. Every footnote block (physical pages 1, 4, 6, 7, 9) was rendered at 300 dpi and the restored URLs were transcribed and verified from those renders, including the printed double 'experimental/experimental' path segment of footnote 4."
+  },
+  "patches": [
+    {
+      "before": "additional long-context datasets.",
+      "after": "additional long-context datasets.\n\n$^{1}$ https://99franklin.github.io/ocrbench_v2/\n\n$^{2}$ https://huggingface.co/nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom footnote block prints '1 https://99franklin.github.io/ocrbench_v2/' and '2 https://huggingface.co/nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1' (300 dpi); the OCR kept markers $^{1}$/$^{2}$ in the abstract but dropped both URL bodies; restored after the abstract paragraph."
+    },
+    {
+      "before": "using Nemo Retriever Parse $^{6}$ (Karmanov et al., 2025).",
+      "after": "using Nemo Retriever Parse $^{6}$ (Karmanov et al., 2025).\n\n$^{3}$ https://commoncrawl.org/\n\n$^{4}$ https://github.com/NVIDIA-NeMo/Curator/tree/experimental/experimental/nvpdftex\n\n$^{5}$ https://dumps.wikimedia.org/\n\n$^{6}$ https://build.nvidia.com/nvidia/nemoretriever-parse",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom footnote block prints footnotes 3-6 verbatim at 300 dpi, including footnote 4's printed path 'https://github.com/NVIDIA-NeMo/Curator/tree/experimental/experimental/nvpdftex' (duplicated 'experimental' segment is in the source URL); the OCR kept markers $^{3}$-$^{6}$ in the pretraining-data bullets but dropped all four bodies; restored after the bullet carrying marker $^{6}$."
+    },
+    {
+      "before": "The training resources are summarized in Table 2.",
+      "after": "The training resources are summarized in Table 2.\n\n$^{7}$ https://github.com/NVIDIA/Megatron-LM\n\n$^{8}$ https://github.com/NVIDIA/TransformerEngine\n\n$^{9}$ https://github.com/NVIDIA/Megatron-Energon",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 bottom footnote block prints '7 https://github.com/NVIDIA/Megatron-LM', '8 https://github.com/NVIDIA/TransformerEngine', '9 https://github.com/NVIDIA/Megatron-Energon' at 300 dpi; the OCR kept markers $^{7}$-$^{9}$ in the Infrastructure paragraph but dropped the bodies; restored after that paragraph."
+    },
+    {
+      "before": "where we use a limit of 16,384 tokens. For reasoning-on evaluations, we set the temperature to 0.6, top-p to 0.95, and the maximum output length to 16,384 tokens.",
+      "after": "where we use a limit of 16,384 tokens. For reasoning-on evaluations, we set the temperature to 0.6, top-p to 0.95, and the maximum output length to 16,384 tokens.\n\n$^{10}$ https://x.ai/news/grok-1.5v\n\n$^{11}$ https://github.com/open-compass/VLMEvalKit\n\n$^{12}$ https://github.com/vllm-project/vllm\n\n$^{13}$ https://huggingface.co/datasets/reducto/rd-tablebench/tree/main",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 bottom footnote block prints footnotes 10-13 verbatim at 300 dpi ('https://x.ai/news/grok-1.5v', 'https://github.com/open-compass/VLMEvalKit', 'https://github.com/vllm-project/vllm', 'https://huggingface.co/datasets/reducto/rd-tablebench/tree/main'); the OCR kept the markers (10 on the benchmark bullet, 11-13 in this paragraph) but dropped all four bodies; the page's footnote block is restored after this paragraph."
+    },
+    {
+      "before": "and score of 1 run for SciCode (Tian et al., 2024) and RULER (Hsieh et al., 2024).",
+      "after": "and score of 1 run for SciCode (Tian et al., 2024) and RULER (Hsieh et al., 2024).\n\n$^{14}$ https://github.com/QwenLM/Qwen3-VL\n\n$^{15}$ https://github.com/NVIDIA-NeMo/Skills",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom footnote block prints '14 https://github.com/QwenLM/Qwen3-VL' and '15 https://github.com/NVIDIA-NeMo/Skills' at 300 dpi; the OCR kept markers $^{14}$/$^{15}$ in the comparison and NeMo-Skills paragraphs but dropped both bodies; restored after the NeMo-Skills paragraph carrying marker $^{15}$."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "contributor-list-own-typos",
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "The PDF prints 'Abrham Gebreselasie' in the Ego4D reference author list while the OCR normalized it to 'Abraham'; the printed typo is kept per policy (no patching of author typos the PDF itself prints)."
+    },
+    {
+      "id": "cover-page-furniture",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The cover carries '© 2025 NVIDIA. All rights reserved.' and the date '2025-11-7' outside the abstract flow; OCR omits these cover-furniture lines. Content is recorded in document metadata; not restored."
+    }
+  ]
+}

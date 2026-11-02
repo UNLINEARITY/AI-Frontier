@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "google:pali-3-technical-report",
+  "source_sha256": "d4767d1ee3f2a08edd41b668b0e38317e5d8387a14027638763aa0f3ce344c46",
+  "ocr_sha256": "a4d9842e7456de59e857680c3ab47e7d70b1eeab4a86c772cbdd1e07d5058e29",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "coverage": "partial",
+    "notes": "Structural scan: 0 code fences, no spurious headings, section heading list clean. Automated normalized 4-gram page-containment diff of all 16 PDF pages against the OCR markdown; pages >=0.90 except table/figure pages (p3/p4 figure and Table 1, p7 Tables 5-6, p9 Figure 2, p15-p16 Tables 10-11 and Figures 3-4), whose missing spans were line-checked: all tables exist as complete HTML tables in the markdown (cell order differs from the PDF text-layer stream, which explains the 4-gram misses), and the Figure 2 occupation axis labels and Figure 3/4 language labels are figure-internal. One dropped footnote body found on p3 and restored after visual verification; no other dropped prose, references complete. Body prose was machine-scanned rather than read word by word on the high-containment pages."
+  },
+  "patches": [
+    {
+      "before": "This is done in order to pretrain the ViT image embedding component, hence the text embedding transformer is discarded when inserting the ViT into PaLI.",
+      "after": "This is done in order to pretrain the ViT image embedding component, hence the text embedding transformer is discarded when inserting the ViT into PaLI.\n\n$^{2}$ The embedding dimension was changed from 1664 to 1536 for better hardware utilization.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Footnote 2 body dropped by OCR while the marker $^{2}$ survives on 'ViT-G/14' in the referencing paragraph. Rendered physical p.3 (110 dpi) confirms the printed footnote rule and '2The embedding dimension was changed from 1664 to 1536 for better hardware utilization.' at the page bottom, matching the PDF text layer verbatim; restored after the referencing paragraph using the corpus superscript convention."
+    }
+  ],
+  "unresolved": []
+}

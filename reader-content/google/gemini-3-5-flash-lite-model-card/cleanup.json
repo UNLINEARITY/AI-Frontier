@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-5-flash-lite-model-card",
+  "source_sha256": "d4d8e79d69377a5d1add81b7833197f3e84dd6ebe983b5d5a39f1530e2052571",
+  "ocr_sha256": "2a95537ebc06121cfd7a6496ec25a32f50a2aee1ff867034a277a7ec65dbc14a",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Token-level alignment of the full OCR Markdown against extracted text from all 7 physical PDF pages in both directions; physical pages 4, 5 and 6 were rendered and visually inspected, with a 400 dpi crop of the benchmark-table image on p.4. The benchmark results table and the Methodology line beneath it exist only inside a table screenshot on p.4, so their OCR content (including the printed 'Methodology: deepmind.google/...' gray caption kept as body text) cannot be checked against the PDF text layer; the visible values match the rendered image. The safety-evaluation table on p.6 is real text and all five value rows match the rendered page (-8.14%, -0.92%, 0%, +3.04%, +5.32%). Two real drops were found (Distribution sentence continuation on pp.3-4 and the Tone footnote body on p.6) plus one misread digit inside the table image (128k read as 12Bk). No unbalanced code fences; headings match the PDF hierarchy; the Distribution bullet list, both tables and all section prose otherwise match."
+  },
+  "patches": [
+    {
+      "before": "There is no required hardware or software to use the",
+      "after": "There is no required hardware or software to use the model. For AI Studio and Gemini API, see the Gemini API Additional Terms of Service; for Gemini Enterprise Agent Platform, see Google Cloud Platform Terms of Service. For more information, see Gemini Model API instructions and Gemini API quickstart.",
+      "count": 1,
+      "pdf_pages": [
+        3,
+        4
+      ],
+      "evidence": "Rendered physical p.3 ends the Distribution paragraph mid-sentence at \"...to use the\" and rendered physical p.4 continues \"model. For AI Studio and Gemini API, see the Gemini API Additional Terms of Service; for Gemini Enterprise Agent Platform, see Google Cloud Platform Terms of Service. For more information, see Gemini Model API instructions and Gemini API quickstart.\"; OCR dropped the continuation after the page break."
+    },
+    {
+      "before": "</table>\n\nWe continue to improve our internal evaluations",
+      "after": "</table>\n\n1 For tone, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model's ability to follow instructions while remaining safe compared to Gemini 3.1 Flash-Lite.\n\nWe continue to improve our internal evaluations",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints the footnote \"1 For tone, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model's ability to follow instructions while remaining safe compared to Gemini 3.1 Flash-Lite.\" at the bottom of the page; the OCR kept the Tone $^{1}$ marker in the safety table but dropped the footnote body. Restored as a plain paragraph directly after the safety table, matching the reading order."
+    },
+    {
+      "before": "12Bk (average)",
+      "after": "128k (average)",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 benchmark table image, verified at 400 dpi: the GDM-MRCR v2 (8-needle) average-context sub-row label reads \"128k (average)\"; OCR misread the digit 8 as the letter B."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "openai:robust-speech-recognition-via-large-scale-weak-supervision",
+  "source_sha256": "6337bde031b2f237547a977b022f831169a7e05b4d9047f29501166d83594566",
+  "ocr_sha256": "a93036c3d7228fa74b0ff982ce6288357864e5a65249fdd3734a1385c3e833d0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      5,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "coverage": "partial",
+    "notes": "Triage review: all 28 physical pages machine-scanned (fence-free; normalized 4-gram page-text containment plus per-word line-level presence check; flagged words traced to figure-internal chart text on pages 4, 7, 9, 11, 12, 24-27 where Figures 1-11 are correctly embedded as images with captions). Pages 1, 2 and 5 rendered and visually verified. Two title-area footnote blocks and one footnote body were dropped while their superscript markers survive; the print's own misspelling 'seperating' was OCR auto-corrected and is restored."
+  },
+  "patches": [
+    {
+      "before": "humans are oblivious to (Geirhos et al., 2020).",
+      "after": "humans are oblivious to (Geirhos et al., 2020).\n\n*Equal contribution 1 OpenAI, San Francisco, CA 94110, USA. Correspondence to: Alec Radford <alec@openai.com>, Jong Wook Kim <jongwook@openai.com>.\n\n1 Baevski et al. (2021) is an exciting exception - having developed a fully unsupervised speech recognition system",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 left column bottom prints the title-page footnote block '*Equal contribution 1OpenAI, San Francisco, CA 94110, USA. Correspondence to: Alec Radford <alec@openai.com>, Jong Wook Kim <jongwook@openai.com>.' and footnote 1 '1Baevski et al. (2021) is an exciting exception - having developed a fully unsupervised speech recognition system'; OCR kept the $^{1}$ marker after 'speech recognition' but dropped both bodies. Restored after the anchoring paragraph."
+    },
+    {
+      "before": "removing the need for any dataset-specific fine-tuning to achieve high-quality results.",
+      "after": "removing the need for any dataset-specific fine-tuning to achieve high-quality results.\n\n2 If an acronym or basis for the name is desired, WSPSR standing for Web-scale Supervised Pretraining for Speech Recognition can be used.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 bottom prints footnote 2: 'If an acronym or basis for the name is desired, WSPSR standing for Web-scale Supervised Pretraining for Speech Recognition can be used.'; OCR kept the $^{2}$ marker after 'We call our approach Whisper' but dropped the body. Restored after the anchoring paragraph."
+    },
+    {
+      "before": "reference transcripts separating contractions from words with whitespace.",
+      "after": "reference transcripts seperating contractions from words with whitespace.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (300 dpi crop) prints 'a dataset's reference transcripts seperating contractions from words with whitespace' - the source's own misspelling 'seperating'; OCR silently auto-corrected it to 'separating'. Restored the printed spelling."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seed2-0-model-card",
+  "source_sha256": "2e5654744368514e843864bb149cd24704b847e0417d494a5e827286ca39fe55",
+  "ocr_sha256": "452a7ff2710d4e1b6c75fad573e24cec45170568e518ab86d505c50345f7c547",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78
+    ],
+    "coverage": "partial",
+    "notes": "All 78 physical pages passed an automated 4-gram coverage scan and a distinct-number presence check against per-page pdftotext output; all 20 table captions and 41 image embeds are present. Tables 3, 4 and 8 (physical p.9/10/13, the focus of the prior run) were compared row by row against the page text: every row and value matches, and the category row-spans agree with the vertically centered printed labels, so the suspected table droppage is a scan-layout artifact, not a defect; the only p.13 repairs are the glued wrapped header cells. Full-page renders verified the three restored footnotes (p.1, p.3), the p.17 superscript, the p.24-25 transcript blocks and checklist, and the p.71 bullets. Number deltas on screenshot/console-heavy transcript pages (p.24-31, 36-42, 59-66, 71, 75) were each context-checked: they are figure-internal chart labels (Figure 7 Pass@8 annotations on p.26), flattened superscripts in transcripts ($2^{80}$, $10^{24}$ on p.61/66), math-term flattening (2^34 on p.40), or values inside embedded screenshots, not document droppage. Terminal-page table-value spot checks (Tables 11-14 numeric coverage 100%) and the balanced 36 code-fence markers found no structural damage. Coverage is partial because the long use-case transcripts (p.27-78) were checked by automated coverage scans plus targeted renders rather than full line-by-line reading."
+  },
+  "patches": [
+    {
+      "before": "Our design reflects these priorities:",
+      "after": "Our design reflects these priorities:\n\n$^{1}$ Seed ranks 6th on the LMSYS Chatbot Arena — Text Arena (Overall) leaderboard and 3rd on the Vision Arena leaderboard as of Feb 16, 2026.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered 300 dpi bottom strip of physical p.1 prints footnote 1: \"¹Seed ranks 6th on the LMSYS Chatbot Arena — Text Arena (Overall) leaderboard and 3rd on the Vision Arena leaderboard as of Feb 16, 2026.\" The OCR kept the inline $^{1}$ marker after \"public human preference benchmark.\" but dropped the page-bottom body."
+    },
+    {
+      "before": "remain in earlier deployment stages.",
+      "after": "remain in earlier deployment stages.\n\n$^{2}$ https://www.volcengine.com/docs/82379/1391869?lang=zh\n\n$^{3}$ https://docs.byteplus.com/en/docs/legal/data_authorization_agreement_modelark",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered 300 dpi bottom strip of physical p.3 prints two URL footnotes: \"²https://www.volcengine.com/docs/82379/1391869?lang=zh\" and \"³https://docs.byteplus.com/en/docs/legal/data_authorization_agreement_modelark\". The OCR kept the adjacent $^{2}$ $^{3}$ markers on \"Doubao Collaboration Incentive Program\" but dropped both bodies; the URLs appear nowhere else in the OCR."
+    },
+    {
+      "before": "GPT-5.2High",
+      "after": "GPT-5.2 High",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Table 8 header cell on physical p.13 wraps \"GPT-5.2 High\" across two lines in the printed column header; the OCR glued the wrapped cell into one token. Same spacing as the sibling headers of Tables 3/11-14."
+    },
+    {
+      "before": "Seed2.0Mini",
+      "after": "Seed2.0 Mini",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Table 8 header on physical p.13 prints \"Seed2.0 Mini\" as a wrapped two-line cell; OCR glued it."
+    },
+    {
+      "before": "Seed2.0Pro",
+      "after": "Seed2.0 Pro",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Table 8 header on physical p.13 prints \"Seed2.0 Pro\" as a wrapped two-line cell; OCR glued it."
+    },
+    {
+      "before": "Seed2.0Lite",
+      "after": "Seed2.0 Lite",
+      "count": 3,
+      "pdf_pages": [
+        13,
+        17,
+        19
+      ],
+      "evidence": "The wrapped header cell \"Seed2.0 Lite\" was glued into one token in the Table 8 (p.13), Table 12 (p.17) and Table 14 (p.19) headers, while Tables 4/10 print it with the space; page layout extraction of p.13/17/19 shows the two-line cell."
+    },
+    {
+      "before": "Terminal Bench 2.01",
+      "after": "Terminal Bench 2.0 $^{1}$",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered 300 dpi crop of physical p.17 (Table 12 first row) prints \"Terminal Bench 2.0\" with a superscript 1 footnote marker; the OCR flattened the marker into the number, reading as \"2.01\". Tables 13/14 keep the marker as $^{1}$ and the body \"$^{1}$ Using Terminus2.\" follows this table."
+    },
+    {
+      "before": "$Terminal\\ Bench\\ 2.0^1$",
+      "after": "Terminal Bench 2.0 $^{1}$",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Table 12 row cell on physical p.17 prints the upright name \"Terminal Bench 2.0\" with a superscript 1; the OCR wrapped the whole cell in display math (italicized, spaced arguments). Normalized to the plain form used by the sibling tables on p.18/19."
+    },
+    {
+      "before": "command=\"str_replace\", path \"",
+      "after": "command=\"str_replace\", path=\"",
+      "count": 7,
+      "pdf_pages": [
+        23,
+        24
+      ],
+      "evidence": "In the 5.1.3 SWE-EVO transcript (physical p.23-24), seven abbreviated tool-call lines print path=\"...\" but the OCR dropped the equals sign after path (rendered p.24 top strip shows path=\".../dvc/repo/pull.py\"...). The same block's first str_replace line kept the correct path=\" form."
+    },
+    {
+      "before": "# Backend implementation\n```\n\n![[images/8bf98487c825bff1a8ad29338f0884be4545aa659fc8829aacc78e9ff5273ff9.jpg]]",
+      "after": "# Backend implementation\nstr_replace_editor(command=\"str_replace\", path=\".../dvc/repo/pull.py\"...) ...\nstr_replace_editor(command=\"str_replace\", path=\".../dvc/repo/push.py\"...) ...\nstr_replace_editor(command=\"str_replace\", path=\".../dvc/repo/fetch.py\"...) ...\n...\n\n[Stage 5: Solving Issue #3583 (25 rounds)]\nstr_replace_editor(command=\"view\", path=\"/testbed/dvc/progress.py\")...\n# Utilizing `threading. RLock()` to improve thread safety for tqdm\nstr_replace_editor(command=\"str_replace\", path=\".../dvc/progress.py\"...) ...\n# Multiple tests to verify the correct usage of RLock\n...\n\n[Stage 8: Testing & Validation (~10 rounds)]\nexecute_bash(command=\"find /testbed/tests/unit -name \\\"test_pull*\\\"\") ...\nexecute_bash(command=\"cd /testbed && python -m dvc --help\") ...\nexecute_bash(command=\"cd /testbed && python -m dvc status --help\") ...\nexecute_bash(command=\"cd /testbed && python -m dvc metrics show --help\") ...\nexecute_bash(command=\"cd /testbed && python -c \\\"\nfrom dvc.command.metrics import _show_diff\nprint('Testing _show_diff with empty diff:')\nresult = _show_diff({})\nprint(f'Result: [{result}]')\nprint(f'Length: {len(result)}')\n\\\"\")...\n...\n```\n\n1. ✅ GDrive: use latest PyDrive2 version to fix large file uploads (#3592)\n   - Updated setup.py to require pydrive2>=1.6.3 (up from 1.4.8)\n2. ✅ CLI: redirect warnings to logger (#3591) ...\n3. ✅ push/pull/status/metrics: add support for `--all-commits` (#3587) ...\n4. ✅ progress: better threading (#3583) ...\n5. ✅ Only import speedcopy on Win > 7 (#3581) ...\n6. ✅ metrics: diff: don't print \"No changes\" (#3576) ...\n\n\n![[images/8bf98487c825bff1a8ad29338f0884be4545aa659fc8829aacc78e9ff5273ff9.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        24,
+        25
+      ],
+      "evidence": "The printed SWE-EVO transcript (physical p.24-25, verified from 300 dpi renders) continues after \"# Backend implementation\" with three str_replace_editor lines (pull/push/fetch.py), a Stage 5 block \"[Stage 5: Solving Issue #3583 (25 rounds)]\" (view/replace progress.py, RLock comments), a \"[Stage 8: Testing & Validation (~10 rounds)]\" block (four execute_bash help checks plus a multi-line python -c _show_diff probe), and a six-item check-marked summary list ending \"(#3576)\". The OCR code fence closed right after \"# Backend implementation\" and dropped everything before the Figure 6 embed. Inserted verbatim from the renders; the stage labels keep the printed numbering (5 then 8)."
+    },
+    {
+      "before": "Deleted from log.py:\n\n## Step 4: Test Migration",
+      "after": "Deleted from log.py:\n\n\\- Lines 362-371: hide_qt_warning function (10 lines removed)\n\\- Lines 404-419: QtWarningFilter class (16 lines removed)\nVerification: Both import paths now resolve to same function object via Python's module caching.\n\n## Step 4: Test Migration",
+      "count": 1,
+      "pdf_pages": [
+        71
+      ],
+      "evidence": "Physical p.71 prints, after \"Deleted from log.py:\", two bullets \"• Lines 362-371: hide_qt_warning function (10 lines removed)\" and \"• Lines 404-419: QtWarningFilter class (16 lines removed)\" plus \"Verification: Both import paths now resolve to same function object via Python’s module caching.\" The OCR jumped straight from \"Deleted from log.py:\" to \"## Step 4: Test Migration\" and dropped all three lines."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "transcript-screenshot-internal-numbers",
+      "pdf_pages": [
+        28,
+        29,
+        30,
+        31,
+        36,
+        37,
+        38,
+        65,
+        75
+      ],
+      "evidence": "FreeCAD/CapCut/cryptanalysis transcript pages print console values (e.g. volume 231061.92982974678 mm3 on p.28, click[0.025,0.309] on p.29-30, Fortran format (2ES14.6) on p.36, hex tuples on p.65, 512/64n complexity labels on p.75) that do not appear in the OCR text. The corresponding OCR regions carry rounded versions or embedded screenshots; each was context-checked and attributed to screenshot-internal content, but a frame-by-frame image audit was out of scope for this pass."
+    },
+    {
+      "id": "stage-pseudoheadings-vs-transcript-style",
+      "pdf_pages": [
+        40,
+        41
+      ],
+      "evidence": "Later use cases render \"[Stage N: ...]\" transcript labels and \"Task Overview/\"\"Assistant:\" speaker labels as ## headings, following the document-wide OCR convention; the printed source styles them as transcript/panel text. Left unchanged as a style question, not a content defect."
+    }
+  ]
+}

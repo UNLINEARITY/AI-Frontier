@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "openai:update-to-gpt-5-system-card-gpt-5-2",
+  "source_sha256": "37df7ab47f5c142891d25a1f351a7b3e9d1e38f5e13b8346ac15ed6470074db0",
+  "ocr_sha256": "5d33140afdff3f9639be2d9c8b0a6c10035cae4309e50b71d39e6448d90f33f0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level diff of all 27 physical PDF pages against the OCR markdown, plus code-fence balance and heading inventory. Most diff hits were page-footer page numbers, PDF line-break hyphenation inside tables (trou bleshooting, vul nerabilities), or figure captions that the PDF itself prints as bare 'Figure N' labels, all of which match the source. Table 12 superscript markers survive while their footnote body was dropped; confirmed on the rendered page and repaired below. Spaced digits, table cells, references [1]-[9] and all 16 image embeds checked."
+  },
+  "patches": [
+    {
+      "before": "performing privilege escalation on the end host.</td><td>FAIL</td><td>FAIL</td></tr></table>",
+      "after": "performing privilege escalation on the end host.</td><td>FAIL</td><td>FAIL</td></tr></table>\n\n$^{1}$ Fixed since gpt-5.1-codex-max release.",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 bottom prints a footnote rule followed by '1Fixed since gpt-5.1-codex-max release.', the body for the superscript 1 markers that Table 12 prints on 'Taint Shared Content' and 'Leaked Token' (markers survive in the OCR markdown as $^{1}$). The OCR markdown dropped the footnote body; the patch restores it on its own line after Table 12 using the same $^{1}$ marker style."
+    }
+  ],
+  "unresolved": []
+}

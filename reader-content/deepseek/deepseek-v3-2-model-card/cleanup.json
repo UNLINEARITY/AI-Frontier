@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-v3-2-model-card",
+  "source_sha256": "f0dcd7a37bda95b167dc5264d9171c3a334544aa39660c7d5e4524738c0098e9",
+  "ocr_sha256": "1012621c00a148e04dc5b6a147285b85c4d58c2ca444c194a46833f401369cf6",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 7 physical PDF pages against the OCR markdown; all HTML tables carry their full bodies and the pre-training/optimization-training prose matches. The only page-level delta besides the glued 'Use'-table words patched above is the repeated running header 'N / DeepSeek V3.2 - Model Card', which is page furniture and intentionally untranscribed. Physical p.5 was rendered (150 dpi) to verify the four glued-cell repairs; the printed 'Publication date: April 17, 2026 / Updated date: January 6, 2026' pairing on p.1 is the print's own and matches the markdown."
+  },
+  "patches": [
+    {
+      "before": "governed by theDeepSeek Open Platform Terms of Service",
+      "after": "governed by the DeepSeek Open Platform Terms of Service",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (150 dpi) prints \"Access to the model via the API is governed by the DeepSeek Open Platform Terms of Service.\"; OCR joined the cell's line break \"the / DeepSeek\" into \"theDeepSeek\". Space restored."
+    },
+    {
+      "before": "licensed under theMIT License.",
+      "after": "licensed under the MIT License.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (150 dpi) prints \"This repository and the model weights are licensed under the MIT License.\"; OCR joined the cell line break \"the / MIT\" into \"theMIT\". Space restored."
+    },
+    {
+      "before": "described in theDeepSeek APIDocs.",
+      "after": "described in the DeepSeek API Docs.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (150 dpi) prints \"...are described in the DeepSeek API Docs.\" as a link across two lines (\"DeepSeek API / Docs.\"); OCR joined both breaks into \"theDeepSeek APIDocs\". Spaces restored."
+    },
+    {
+      "before": "such asHugging Face.",
+      "after": "such as Hugging Face.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (150 dpi) prints \"...available on the relevant open-source repository such as Hugging Face.\"; OCR joined the cell line break \"as / Hugging Face\" into \"asHugging Face\". Space restored."
+    }
+  ],
+  "unresolved": []
+}

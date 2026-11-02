@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:precise-manipulation-efficient-online-rl",
+  "source_sha256": "feecf0f5799bcb3775f42d5de5d5832e61eb379bd47b627ad9a0f6c86f3ebf31",
+  "ocr_sha256": "2eccc5e7294079d6f57a98af40923e95071f6593ab7dc7cf1a0c57cfba0d6104",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "coverage": "complete",
+    "notes": "All 13 physical pages compared against extracted PDF text; page 12 reference block additionally rendered at 300 dpi and visually verified. Code fences are absent and balanced. Unmatched PDF n-grams are figure-internal diagram/chart text (Fig. 2 RL-token diagram, Fig. 4-6 axis ticks), equation math rendered as LaTeX, and the PDF text layer's own broken words (e.g. 'demonstra tion', 'rein forcement') that the OCR correctly joined. Equations (1)-(9), Algorithm 1, Tables I-II content, all sections and the reference list are present. Two reference-URL defects fixed on physical page 12.",
+    "figures_verified": [
+      "physical p.12 300-dpi crop of references [33]-[38]"
+    ]
+  },
+  "patches": [
+    {
+      "before": "URL https:\n\n//website.pi-asset.com/pi06star/PI06\\_model\\_card.pdf. 3,7",
+      "after": "URL https://website.pi-asset.com/pi06star/PI06_model_card.pdf. 3,7",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 prints reference [33] with one continuous URL 'https://website.pi-asset.com/pi06star/PI06_model_card.pdf' (line-wrapped after 'https:' only by the page layout) and real underscores in PI06_model_card.pdf; OCR had split the URL into two paragraphs and escaped the underscores. The trailing back-reference numbering ('3,7') is left as printed."
+    },
+    {
+      "before": "paper\\_files",
+      "after": "paper_files",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 reference [34] prints the URL 'https://proceedings.neurips.cc/paper_files/paper/2015/file/148510031349642de5ca0c544f31b2ef-Paper.pdf' with real underscores; the backslashes are OCR-added Markdown escapes."
+    }
+  ],
+  "unresolved": []
+}

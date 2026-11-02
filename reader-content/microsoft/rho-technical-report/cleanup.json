@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:rho-technical-report",
+  "source_sha256": "2e6c4c09d8f1bc001cd5aa8e0946377a7ad7bb4c05b32d35da5085db84bebe5a",
+  "ocr_sha256": "f3c7865a2556c4785d2270d90c95828b33f2f312949b5f4e8a399a682deb6117",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 52 physical PDF pages; pages 1, 6, 8, 10, 15, 16, 17, 21, 23, 34, 35 and 36 were additionally rendered to verify dropped lines, figure-internal labels, the page-1 footnote and the repaired reference URLs. The OCR contains no code fences and the PDF prints none, so no fence-repair is needed; all equations, appendix tables (Tables 13-21) and sampled numeric values match the source. Remaining non-matching PDF lines are figure-internal labels whose figures are embedded (Figures 2-8, 10, 12) or the vertical arXiv sidebar stamp on physical p.1, which is not body content. The OCR splits reference [45] into two paragraphs at the PDF page break after \"Stefan Schaal,\" and uses hyphens for the printed \"warmup–stable–decay\"; both preserve content and were left unchanged."
+  },
+  "patches": [
+    {
+      "before": "Area leads: \\*Data $^{\\S}$ Training $^{\\ddagger}$ Engineering $^{\\dagger}$ VLM $^{\\spadesuit}$ Project lead",
+      "after": "Area leads: \\*Data $^{\\S}$ Training $^{\\ddagger}$ Engineering $^{\\dagger}$ VLM $^{\\spadesuit}$ Project lead\n\n$^{1}$Authors are listed alphabetically. See Appendix H for a description of each author’s contributions.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered PDF physical p.1 bottom footnote reads \"1Authors are listed alphabetically. See Appendix H for a description of each author’s contributions.\" tied to the superscript 1 on \"Rho team\"; the OCR omits the entire footnote line. Inserted after the author block’s \"Area leads\" line using the document’s own $^{1}$ superscript style; Appendix H exists in the OCR."
+    },
+    {
+      "before": "www.robot-learning.m1/2026/",
+      "after": "www.robot-learning.ml/2026/",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered PDF physical p.34 reference [26] URL reads \"https://www.robot-learning.ml/2026/.\"; OCR misread the letter l as the digit 1 (\"robot-learning.m1\")."
+    },
+    {
+      "before": "nvidia/GROOT-N1.7-3B",
+      "after": "nvidia/GR00T-N1.7-3B",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Rendered PDF physical p.35 reference [40] URL reads \"https://huggingface.co/nvidia/GR00T-N1.7-3B.\"; OCR expanded the model name to \"GROOT\" and broke the URL."
+    },
+    {
+      "before": "Sean Kirmani,Sergey Levine,Shan Lin,Scherry Moore.Shikhar Bahl.Shivin Dass.Shubham SonawaniShubham TulsianiShuran Song,Sichun Xu,Siddhant Haldar,Siddharth Karamcheti,Simeon AdebolaSimon Guist,Soroush Nasiriany，Stefan Schaal，",
+      "after": "Sean Kirmani, Sergey Levine, Shan Lin, Sherry Moore, Shikhar Bahl, Shivin Dass, Shubham Sonawani, Shubham Tulsiani, Shuran Song, Sichun Xu, Siddhant Haldar, Siddharth Karamcheti, Simeon Adebola, Simon Guist, Soroush Nasiriany, Stefan Schaal,",
+      "count": 1,
+      "pdf_pages": [
+        36
+      ],
+      "evidence": "Rendered PDF physical p.36 reference [45] reads \"Bustamante, Sean Kirmani, Sergey Levine, Shan Lin, Sherry Moore, Shikhar Bahl, Shivin Dass, Shubham Sonawani, Shubham Tulsiani, Shuran Song, Sichun Xu, Siddhant Haldar, Siddharth Karamcheti, Simeon Adebola, Simon Guist, Soroush Nasiriany, Stefan Schaal,\"; OCR dropped the comma spaces, misread \"Sherry\" as \"Scherry\", turned commas into periods, fused \"Sonawani/Tulsiani\" and \"Adebola/Simon Guist\", and introduced fullwidth commas. The printed source itself shows \"Roberto Mart’in-Mart’in\", so that accent spelling is left unchanged."
+    }
+  ],
+  "unresolved": []
+}

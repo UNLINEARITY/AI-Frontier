@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-opus-4-1-system-card",
+  "source_sha256": "b2b5beba3ed386a58de760e664f5c98b90a6ce1275c7ee66da8beb70e106e0f2",
+  "ocr_sha256": "1692adf00acd8f4da6f33a9f397637a03bbadc3acd136fb3cb4b6c42460d98ec",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR Markdown; heading structure matches the PDF. The PDF text layer is U+200B-contaminated (74 occurrences) and also loses printed separators, so every restored footnote body was transcribed from 300-dpi renders. Line- and word-level diff of all 23 physical pages against the OCR Markdown found exactly four dropped footnote bodies (all four markers survive in the text); each was visually confirmed on a 300-dpi crop of its physical page (6, 11, 17, 21). The Table 5.B marker superscript was OCR'd as a glued 'Tasks3'; the render shows a true superscript 3. The neighboring 'Classifier hack rate environ 1/2' digits were re-checked at 300 dpi and are baseline digits, so the existing spaced form is correct. Printed page-number tokens and the table-of-contents page numbers are layout artifacts and were not restored. The Markdown uses straight apostrophes throughout (global convention); apparent missing words on pages 12/14/18/21 are en-dash/hyphen and apostrophe spelling variants present in joined form. Table 2.3.A/2.3.B/5.B values all match the PDF; the only ragged table is Table 5.B's legitimate rowspan/colspan header."
+  },
+  "patches": [
+    {
+      "before": "within the margin of error.\n\n<table>",
+      "after": "within the margin of error.\n\n$^{1}$Parrish, A., et al. (2021). BBQ: A hand-built bias benchmark for question answering. arXiv:2110.08193. https://arxiv.org/abs/2110.08193\n\n<table>",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 footnote prints: superscript 1 'Parrish, A., et al. (2021). BBQ: A hand-built bias benchmark for question answering. arXiv2110.08193. https://arxiv.org/abs/2110.08193'. The marker survives in the OCR text ('(Parrish et al 2021) ^1') but the body was dropped. At 600 dpi the printed citation shows no colon glyph between 'arXiv' and '2110.08193' (source print/encoding defect of the same U+200B class); the arXiv identifier and its colon are established by the URL printed in the same footnote, so it is restored as 'arXiv:2110.08193'."
+    },
+    {
+      "before": "Error bars are bootstrapped 95% confidence intervals.\n\nWe saw a welcome reduction",
+      "after": "Error bars are bootstrapped 95% confidence intervals.\n\n$^{2}$The auditor assigned scores on a 1–10 scale. This figure shows the average score after rescaling to a 0–1 scale. The 25% reduction claim in the preceding section reports the fraction of transcripts that received a score of over 5 out of 10 before rescaling.\n\nWe saw a welcome reduction",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 footnote prints: superscript 2 'The auditor assigned scores on a 1–10 scale. This figure shows the average score after rescaling to a 0–1 scale. The 25% reduction claim in the preceding section reports the fraction of transcripts that received a score of over 5 out of 10 before rescaling.' The marker survives in the Figure 4.1.A caption ('Model-assigned scores ^2') but the body was dropped; en-dashes in 1–10 and 0–1 visually confirmed at 300 dpi."
+    },
+    {
+      "before": "<td colspan=\"2\">Claude Code Impossible Tasks3</td>",
+      "after": "<td colspan=\"2\">Claude Code Impossible Tasks$^{3}$</td>",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 5.B header prints 'Claude Code Impossible Tasks' with a raised superscript 3 (visually confirmed at 300 dpi); the OCR glued a baseline '3' to the words. Formatted as $^{3}$ to match the card's surviving markers."
+    },
+    {
+      "before": "least reward hack-prone model, which is Claude Sonnet 4 across all categories.\n\n## 6 Responsible Scaling Policy",
+      "after": "least reward hack-prone model, which is Claude Sonnet 4 across all categories.\n\n$^{3}$Note: The numbers for Claude Code Impossible Tasks are somewhat different from what we reported on the previous Claude 4 system card. For classifier hack rate, the changes are all minor and related to increasing the sample size of our evaluation. For classifier hack rate with the anti-hack prompt, we found an error in the original number we reported for Claude Opus 4. The number reported above is corrected (from 5% to 19% for Claude Opus 4 and from 10% to 7% for Claude Sonnet 4).\n\n## 6 Responsible Scaling Policy",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 footnote prints: superscript 3 'Note: The numbers for Claude Code Impossible Tasks are somewhat different from what we reported on the previous Claude 4 system card. For classifier hack rate, the changes are all minor and related to increasing the sample size of our evaluation. For classifier hack rate with the anti-hack prompt, we found an error in the original number we reported for Claude Opus 4. The number reported above is corrected (from 5% to 19% for Claude Opus 4 and from 10% to 7% for Claude Sonnet 4).' Transcribed from the 300-dpi render (text layer U+200B-contaminated); the corrected numbers 5%→19% and 10%→7% were visually verified digit by digit. Inserted directly below the Table 5.B caption that carries the marker."
+    },
+    {
+      "before": "This evaluation was developed by SecureBio.\n\n![[images/dafcd",
+      "after": "This evaluation was developed by SecureBio.\n\n$^{4}$Note that we found an error in the previous Claude 4 system card that rendered the scores for Criterion 1 and Criterion 4 incorrectly. The version shown here has been corrected for all models.\n\n![[images/dafcd",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 footnote prints: superscript 4 'Note that we found an error in the previous Claude 4 system card that rendered the scores for Criterion 1 and Criterion 4 incorrectly. The version shown here has been corrected for all models.' The marker survives in the Synthesis Screening Evasion bullet ('far from saturation. ^4') but the body was dropped; transcribed from the 300-dpi render."
+    }
+  ],
+  "unresolved": []
+}

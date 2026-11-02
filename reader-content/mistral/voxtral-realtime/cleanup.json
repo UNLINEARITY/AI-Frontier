@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "mistral:voxtral-realtime",
+  "source_sha256": "ae5719bbffb539113504a4fbe8a36b67c8c85f3b0a74d00ba9d0cdc0fcc9167a",
+  "ocr_sha256": "aea02b736e01a3e0d776d2e6af7c70f6b1f35802c964cdff73f09331200efa17",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 18 physical PDF pages; pages 9, 11 and 13 were additionally rendered and visually inspected. This document is clean apart from two Markdown escape artifacts in reference URLs/DOIs. Suspected items checked and kept as printed: the '7.1 Acknowledgements' heading number (rendered p.9 confirms the PDF really prints the numbered heading), the Table 3 caption double period 'categories..' (p.7 text layer), the phrasing 'surpassing past both' (p.6), 'all bar MCV' (p.8), 'Ching feng Yeh' and the duplicated 'Tom Bewley, Tom Bewley' in the Ministral reference, and 'Avi Sooriyarachchi' in the contributor list versus 'Avinash Sooriyarachchi' in the reference list (both as printed). Equation symbols r_attn/r_ffn flagged by word-diffusion are present in OCR as math subscripts. Remaining word-diffusion residue is figure-internal (Figure 1/3/4 legends and axis ticks such as Sum/Special-token curves and 0-2400 ms delay ticks) or PDF-internal hyphenation, and is not transcription damage."
+  },
+  "patches": [
+    {
+      "before": "99579-3\\_21",
+      "after": "99579-3_21",
+      "count": 2,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 TED-LIUUM 3 reference prints 'doi: 10.1007/978-3-319-99579-3_21. URL http://dx.doi.org/10.1007/978-3-319-99579-3_21.' with bare underscores in both the DOI and the URL; the OCR backslashes are Markdown escape artifacts that alter the DOI/URL text (visually verified at 300 dpi)."
+    },
+    {
+      "before": "paper\\_files",
+      "after": "paper_files",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 RMSNorm reference prints the proceedings URL 'https://proceedings.neurips.cc/paper_files/paper/2019/file/1e8a19426224ca89e83cef47f1e7f53b-Paper.pdf' with a bare underscore (text layer; rendered p.13 shows the same URL starting before the line break). The OCR backslash is a Markdown escape artifact that alters the URL text."
+    }
+  ],
+  "unresolved": []
+}

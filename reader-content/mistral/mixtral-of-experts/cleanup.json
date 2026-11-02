@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "mistral:mixtral-of-experts",
+  "source_sha256": "f8bbf0e9d979b7a8ce7be65119266545a229a85b57e077d8bd048e458bb642da",
+  "ocr_sha256": "c488be12e3aee38d6bb2c486bbf676a1f2c200cbdcc41238b12f8bb53a5c6f6f",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level pass of all 13 physical PDF pages; physical pages 2, 4, 6 and 7 were rendered and visually checked. All three printed footnote bodies were dropped while their superscript markers survived, and the Figure 7 caption's printed typo 'cane be seen' had been auto-corrected by OCR. Remaining token deltas are soft-hyphen splits and figure-internal axis/legend labels."
+  },
+  "patches": [
+    {
+      "before": "ensuring broad accessibility and potential for diverse applications.",
+      "after": "ensuring broad accessibility and potential for diverse applications.\n\n1 https://mistral.ai/news/mixtral-of-experts/",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 footnote rule prints \"1https://mistral.ai/news/mixtral-of-experts/\"; the $^{1}$ marker survives on 'Apache 2.0 license $^{1}$' in the same paragraph but the URL body was dropped."
+    },
+    {
+      "before": "are reported in Table 2.",
+      "after": "are reported in Table 2.\n\n2 Since Llama 2 34B was not open-sourced, we report results for Llama 1 34B.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 footnote rule prints \"2Since Llama 2 34B was not open-sourced, we report results for Llama 1 34B.\"; the $^{2}$ marker survives on 'Llama 1 34B $^{2}$' in the same paragraph but the body was dropped."
+    },
+    {
+      "before": "and shows that Mixtral – Instruct outperforms GPT-3.5-Turbo, Gemini Pro, Claude-2.1, and Llama 2 70B chat.",
+      "after": "and shows that Mixtral – Instruct outperforms GPT-3.5-Turbo, Gemini Pro, Claude-2.1, and Llama 2 70B chat.\n\n3 https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 footnote rule prints \"3https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard\"; the $^{3}$ marker survives on 'Figure 6 $^{3}$' in the same paragraph but the URL body was dropped."
+    },
+    {
+      "before": "in each case can be seen in Figure 9 in the Appendix.",
+      "after": "in each case cane be seen in Figure 9 in the Appendix.",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Figure 7 caption prints \"A breakdown of the proportion of assignments done in each case cane be seen in Figure 9 in the Appendix.\" - the typo is in the print itself; OCR auto-corrected it. Restoring the printed spelling."
+    }
+  ],
+  "unresolved": []
+}

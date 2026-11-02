@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "zai:cogagent-a-visual-language-model-for-gui-agents",
+  "source_sha256": "d9cb086d826eaee9f919e0cbf142193b77f476b0aef6260b34408abe142fe13b",
+  "ocr_sha256": "d280a757e7e3825bd417d37b1444b1f7d05fe696513eb00dbd428406cd0fc6f3",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level pass of all 27 physical PDF pages; physical pages 1, 5 and 7 were rendered and visually checked. Both author-block notes and both numbered footnote bodies were dropped while their markers survived, and the Table 4 row 'Auto-UI_unified' was misread as 'Auto-UUnified'. Remaining token deltas are soft-hyphen splits, equation symbol names (Section 2.2 and Appendix 3), and Figure 8/9 demo screenshot text."
+  },
+  "patches": [
+    {
+      "before": "{hwy22@mails, jietang@}.tsinghua.edu.cn, ming.ding@zhipuai.cn\n\n## Abstract",
+      "after": "{hwy22@mails, jietang@}.tsinghua.edu.cn, ming.ding@zhipuai.cn\n\n$^{*}$ Work was done when interned at Zhipu AI.\n\n$^{\\dagger}$ Corresponding authors\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 column-1 footnote rule prints \"*Work was done when interned at Zhipu AI. †Corresponding authors\"; the * and † markers survive on the author names ($^{*}$, $^{1\\dagger}$) but both notes were dropped."
+    },
+    {
+      "before": "supplementing the dataset with 140 million REC and REG question-answer pairs.",
+      "after": "supplementing the dataset with 140 million REC and REG question-answer pairs.\n\n1 https://playwright.dev",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 footnote rule prints \"1https://playwright.dev\"; the $^{1}$ marker survives on 'using Playwright $^{1}$' in the same paragraph but the URL body was dropped."
+    },
+    {
+      "before": "as the representations of screen inputs $^{2}$ , and visual-language models using images as the screen inputs.",
+      "after": "as the representations of screen inputs $^{2}$ , and visual-language models using images as the screen inputs.\n\n2 Some Android applications may have View Hierarchy which is more friendly to language-based agents, but most of them tend to be poor quality or missing altogether. Therefore, as a large-scale, general-purpose dataset, AITW retained the results of OCR detection and icon detection as textual representations of screenshots.",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 footnote rule prints \"2Some Android applications may have View Hierarchy which is more friendly to language-based agents, but most of them tend to be poor quality or missing altogether. Therefore, as a large-scale, general-purpose dataset, AITW retained the results of OCR detection and icon detection as textual representations of screenshots.\"; the $^{2}$ marker survived but the body was dropped."
+    },
+    {
+      "before": "<td>Auto-UUnified[43]</td>",
+      "after": "<td>Auto-UI $_{unified}$ [43]</td>",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 4 prints the row label Auto-UI with 'unified' as a subscript, matching the table's unified-model notation; the document's own table convention writes such subscripts as 'CogVLM $_{task-specific}$  [38]' (Table 1). OCR misread the label as 'Auto-UUnified'."
+    }
+  ],
+  "unresolved": []
+}

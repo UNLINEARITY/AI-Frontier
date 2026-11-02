@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "id": "cohere:aya-23",
+  "source_sha256": "57421eb1366383f0fe09e22db4b9f359aad6c50167346c084f6e35cd7fa1be95",
+  "ocr_sha256": "ff88f44dd1c6bef169ad9a53ba331d84bbbc9fa03fad2ff748b42821c125c4c1",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "coverage": "partial",
+    "notes": "Whole-document normalized word diff of the OCR against all 27 pages of extracted PDF text; 300-dpi renders of the footnote strips on physical pages 1, 2, 3, 5, 6, 7, 8, 9 and 15 (all 13 numbered footnote bodies plus 'First authors.' were dropped by the OCR while their markers survived; every restored URL was verified character by character against the renders), page 11 for the print's own 'againist' spelling. No code fences exist in this OCR. Figure captions 1-5, Tables 4 values, references, and the mT0/BLOOMZ citation paragraph verified against the text layer; appendix tables and benchmark listings were only coarsely diffed."
+  },
+  "patches": [
+    {
+      "before": "<sarahooker@cohere.com>\n\n## Abstract",
+      "after": "<sarahooker@cohere.com>\n\n$^{*}$First authors.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote rule at 300 dpi prints: asterisk 'First authors.' The OCR kept the asterisk markers ('$^{*1}$' on Viraat Aryabumi, Ahmet Üstün and Sara Hooker) but dropped the footnote body; restored after the corresponding-authors line."
+    },
+    {
+      "before": "Ahia et al., 2023].\n\n![[images/492252ddcb7670968fd1addc5c2073b58ccfee86ac14e3da8d5064e44e9f99c3.jpg]]",
+      "after": "Ahia et al., 2023].\n\n$^{1}$https://cohere.com/command Released as a preprint on June 3, 2024\n\n![[images/492252ddcb7670968fd1addc5c2073b58ccfee86ac14e3da8d5064e44e9f99c3.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote strip at 300 dpi prints: superscript 1 'https://cohere.com/command' (monospace URL) with the following line 'Released as a preprint on June 3, 2024'. The marker survives in the OCR ('Command model ^{1}') but the body was dropped; restored after the introduction paragraph carrying the marker."
+    },
+    {
+      "before": "[Gemma-Team, 2024].\n\nFurthermore, Aya 101",
+      "after": "[Gemma-Team, 2024].\n\n$^{2}$https://cohere.com/research/aya\n\n$^{3}$https://docs.cohere.com/docs/command-r-plus\n\n$^{4}$https://docs.cohere.com/docs/command-r\n\nFurthermore, Aya 101",
+      "count": 1,
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "evidence": "Rendered physical p.2 footnote strip at 300 dpi prints superscript 2 'https://cohere.com/research/aya' and p.3 prints superscripts 3 'https://docs.cohere.com/docs/command-r-plus' and 4 'https://docs.cohere.com/docs/command-r' (monospace URLs). The markers survive in the OCR ('Aya initiative ^{2}', 'Command $R+^{3}$, Command $R^{4}$') but all three bodies were dropped; restored after the paragraph carrying the markers."
+    },
+    {
+      "before": "releases of Aya models.\n\nThe Aya fine-tuning mix",
+      "after": "releases of Aya models.\n\n$^{5}$https://sharegpt.com; we do not use the original synthetic completions from ShareGPT dataset as they are generated from user-shared conversations with ChatGPT. We filter the prompts, following the same method as Üstün et al. [2024]\n\n$^{6}$We held out 200 selected prompts from Dolly-15k for open-ended evaluation following to Üstün et al. [2024]\n\n$^{7}$https://cohere.com/terms-of-use\n\nThe Aya fine-tuning mix",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 footnote strip at 300 dpi prints superscripts 5-7: 'https://sharegpt.com; we do not use the original synthetic completions from ShareGPT dataset as they are generated from user-shared conversations with ChatGPT. We filter the prompts, following the same method as Üstün et al. [2024]'; 'We held out 200 selected prompts from Dolly-15k for open-ended evaluation following to Üstün et al. [2024]' (the print itself reads 'following to'); 'https://cohere.com/terms-of-use'. The markers survive in the OCR ('ShareGPT ^{5} and Dolly-15k ... ^{6}', 'terms of use ^{7}') but all three bodies were dropped."
+    },
+    {
+      "before": "Perspective API. $^{11}$\n\n## 4.1 Model Comparisons",
+      "after": "Perspective API. $^{11}$\n\n$^{8}$We only update the eval-harness code base to enable bos_token for Aya models similar to Gemma [Gemma-Team, 2024] to align with the tokenizer and data format.\n\n$^{11}$https://perspectiveapi.com/\n\n## 4.1 Model Comparisons",
+      "count": 1,
+      "pdf_pages": [
+        6,
+        8
+      ],
+      "evidence": "Rendered physical p.6 footnote strip at 300 dpi prints superscript 8 'We only update the eval-harness code base to enable bos_token for Aya models similar to Gemma [Gemma-Team, 2024] to align with the tokenizer and data format.' and p.8 prints superscript 11 'https://perspectiveapi.com/'. The markers survive in the OCR ('MGSM. ^{8}', 'Perspective API. ^{11}') but both bodies were dropped. Marker 8 sits on the paragraph whose colon lead-in starts the numbered list, so the body is restored after the full list block rather than splitting the lead-in from item 1."
+    },
+    {
+      "before": "same task categories.\n\n2. General purpose",
+      "after": "same task categories.\n\n$^{9}$We omit XNLI [Conneau et al., 2018] due to the low performance for all the models evaluated, compared to Üstün et al. [2024]. We relate this to the different prompts used in eval-harness.\n\n2. General purpose",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 footnote strip at 300 dpi prints superscript 9 'We omit XNLI [Conneau et al., 2018] due to the low performance for all the models evaluated, compared to Üstün et al. [2024]. We relate this to the different prompts used in eval-harness.' The marker survives in the OCR ('XStoryCloze [Lin et al., 2021]. ^{9}') but the body was dropped."
+    },
+    {
+      "before": "by professional annotators.\n\n(b) Human evaluation",
+      "after": "by professional annotators.\n\n$^{10}$We use gpt-4-turbo as LLM judge: https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4\n\n(b) Human evaluation",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 footnote strip at 300 dpi prints superscript 10 'We use gpt-4-turbo as LLM judge: https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4' (URL in monospace, verified character by character against the 300-dpi render). The marker survives in the OCR ('GPT-4 ^{10} as a proxy judge') but the body was dropped."
+    },
+    {
+      "before": "Aya-101-13B. $^{12}$\n\nThe significant performance",
+      "after": "Aya-101-13B. $^{12}$\n\n$^{12}$Note that our evaluation framework along with the zero-shot prompts for these tasks differs from Üstün et al. [2024], which leads to a difference in Aya-101-13B performance compared to the original paper.\n\nThe significant performance",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 footnote strip at 300 dpi prints superscript 12 'Note that our evaluation framework along with the zero-shot prompts for these tasks differs from Üstün et al. [2024], which leads to a difference in Aya-101-13B performance compared to the original paper.' The marker survives at the end of the OCR paragraph but the body was dropped."
+    },
+    {
+      "before": "underrepresented languages.\n\nBuilding upon",
+      "after": "underrepresented languages.\n\n$^{13}$https://cohere.com/research/aya\n\nBuilding upon",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 footnote strip at 300 dpi prints superscript 13 'https://cohere.com/research/aya'. The marker survives in the OCR ('broader Aya Initiative ^{13}') but the body was dropped."
+    },
+    {
+      "before": "75.0% of the time against Mixtral-8x7B.",
+      "after": "75.0% of the time againist Mixtral-8x7B.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 at 300 dpi prints '...Aya-24-35B wins 78.0%, 84.5% and 75.0% of the time againist Mixtral-8x7B.' — the print's own misspelling 'againist' (the same sentence's other print quirks 'Aya 24 models' and 'Mistal-7B' are already preserved by the OCR); the OCR silently auto-corrected this one instance to 'against'."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "corresponding-author-angle-bracket-space",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The OCR renders '<viraat@cohere.com >' with a space before '>'; the PDF text layer shows the same space, so it was left unchanged pending a higher-resolution look at the printed line."
+    },
+    {
+      "id": "appendix-tables-coarse-check",
+      "pdf_pages": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "evidence": "Appendix prompt templates and language coverage listings were covered only by the normalized word diff; cell-level proofreading not performed within this review's budget."
+    }
+  ]
+}

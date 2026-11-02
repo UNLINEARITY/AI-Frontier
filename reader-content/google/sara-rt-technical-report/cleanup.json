@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "google:sara-rt-technical-report",
+  "source_sha256": "b9aec586c915b42251651f928a202f1d8b21febc36b5ad4cdd2e45746a422bdd",
+  "ocr_sha256": "7297aad4d4e63dd41814e7eab09ffc30d15d2d5b2cf92345ed32b58314c81a14",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 8 physical PDF pages against the OCR markdown; no code fences. All equations, the Fig. 1 and Fig. 2 captions, Table values, section II/III prose and the reference list are present; the apparent page-2 deletion is a diff-alignment duplicate of the Introduction paragraph that the markdown carries in full. Remaining deltas are PDF soft-hyphen line-break splits the markdown joins correctly, LaTeX math tokenization differences, figure-internal chart axis labels and diagram text (Figs. 3-6) that stays inside the embedded figures, and the rotated arXiv margin stamp on p.1. No patches required."
+  },
+  "patches": [],
+  "unresolved": []
+}

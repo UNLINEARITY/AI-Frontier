@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "amazon:nova-multimodal-embeddings",
+  "source_sha256": "e48ddfab4981c12c9057750077b06f55bfe8e8a7988d9a86aa7c837195ffadd2",
+  "ocr_sha256": "38c68810f089698f47df85f172d09e5b98bf630b46cfb7cd34ba8cb2981a12cd",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "coverage": "complete",
+    "notes": "All 5 physical pages' extracted text was block-compared against the OCR markdown after normalization, plus a whole-document numeric multiset check. The only numbers absent from the OCR are the printed page footers (3, 4, 5), which is correct. All three tables (1-3) and the Figure 1 embed are present; physical p.3 was rendered at 110 dpi and visually checked, confirming Table 2's values and the prose metric strings (e.g. '+30.2/+8.6/+25.5 on ActivityNet and +16/+14.7/+26.3 points on DiDeMo') match the OCR exactly. The lone Figure 1 (model diagram) is embedded as an image; no dropped body text, headings or reference entries found. No transcription defects; no patches."
+  },
+  "patches": [],
+  "unresolved": []
+}

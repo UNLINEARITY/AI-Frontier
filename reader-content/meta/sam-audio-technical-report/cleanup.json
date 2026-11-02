@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "id": "meta:sam-audio-technical-report",
+  "source_sha256": "f533d2810818861133e170ab0e56f96ca8b62eef65db9f06eff6173e10765445",
+  "ocr_sha256": "7d0ff58182bfc86f013a33b0d4055cc2316c1d1b2265307d94c2f020b885aa13",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "coverage": "complete",
+    "notes": "All 57 physical pages were scanned by normalized PDF-text versus OCR containment diffing; every flagged line was resolved against the OCR text (math/LaTeX notation differences) or confirmed as droppage. Pages 16, 19, 22, 41, 49, 50, 51 and 53 were rendered and visually inspected to verify the Table 5 footnote block, page footnotes 1-2, guideline heading styles and the C.3 prompt box. Code-fence markers are absent from the OCR source and the Table 5/Table 10 HTML tables carry all printed values. Figure 3's caption on physical p.13 reads \"pseuduo-labeling\" where the PDF itself prints the typo \"pseduo-labeling\"; left unchanged because the misspelling is in the source. Repeated \"SAJ CLAP OVR\" table-header rows flagged by the diff exist inside the OCR HTML tables. Q12 on physical p.51 was verified as a standalone bold title and its heading was kept."
+  },
+  "patches": [
+    {
+      "before": "$^{a}$ WSJ0-2mix; WHAM!/WHAMR! (Hershey et al., 2016; Wichern et al., 2019; Maciejewski et al., 2020).  \n$^{c}$ VoiceBank+DEMAND; DNS challenge datasets (Valentini-Botinhao, 2017; Reddy et al., 2021a).  \ne MUSDB18/HQ; SiSEC/MDX (Rafii et al., 2017; Mitsufuji et al., 2022; Fabbro et al., 2024).  \n$^{g}$ MedleyDB; URMP (Bittner et al., 2014; Li et al., 2018).  \n$^{h}$ AudioSep benchmark from mixtures of AudioSet, AudioCaps, Clotho, etc. (Liu et al., 2022; Kim et al., 2019; Drossos et al., 2020; Gemmeke et al., 2017).",
+      "after": "$^{a}$ WSJ0-2mix; WHAM!/WHAMR! (Hershey et al., 2016; Wichern et al., 2019; Maciejewski et al., 2020).  \n$^{b}$ LibriMix (Cosentino et al., 2020).  \n$^{c}$ VoiceBank+DEMAND; DNS challenge datasets (Valentini-Botinhao, 2017; Reddy et al., 2021a).  \n$^{d}$ FUSS (Wisdom et al., 2021).  \ne MUSDB18/HQ; SiSEC/MDX (Rafii et al., 2017; Mitsufuji et al., 2022; Fabbro et al., 2024).  \n$^{f}$ Slakh2100 (Manilow et al., 2019).  \n$^{g}$ MedleyDB; URMP (Bittner et al., 2014; Li et al., 2018).  \n$^{h}$ AudioSep benchmark from mixtures of AudioSet, AudioCaps, Clotho, etc. (Liu et al., 2022; Kim et al., 2019; Drossos et al., 2020; Gemmeke et al., 2017).  \n$^{i}$ DCASE language-queried source separation benchmark (e.g., DCASE 2024 Task 8).  \n$^{j}$ CLAP-based text-queried separation benchmarks (Ma et al., 2024).  \n$^{k}$ AV speech separation on AVSpeech, LRS2/LRS3, VoxCeleb (Ephrat et al., 2018; Afouras et al., 2018; Chung et al., 2018).  \n$^{l}$ MUSIC is a canonical AV instrument separation dataset, used by Zhao et al. (2018).  \n$^{m}$ AVSBench; LU-AVS (Zhou et al., 2022; Liu et al., 2024a).  \nAbbrev.: Real Y/N/M; Sp. clean = speech cleaning; Spkr sep. = speaker separation; General = open-domain / general sound separation; Mus. clean = music cleaning; Instr. stems = instrument stem separation; Prompts: T=text, V=visual, S=temporal spans.",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 prints the Table 5 footnote block with entries a-m followed by the two-line Abbrev. note (visually verified at 120 dpi). The OCR kept only footnote bodies a, c, e, g, h and dropped b, d, f, i, j, k, l, m plus the Abbrev. line even though the superscript markers survive inside the table cells (LibriMixb, FUSSd, Slakh2100f, sep.i, sep.j, sep.k, MUSICl, LU-AVSm). The patch restores the missing footnote bodies in the PDF's order; existing lines are kept byte-identical."
+    },
+    {
+      "before": "prompt, serving as a proxy for perceptual correctness.",
+      "after": "prompt, serving as a proxy for perceptual correctness.\n\n$^{1}$ We use the checkpoint: https://huggingface.co/lukewys/laion_clap/blob/main/630k-best.pt.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 prints page footnote 1 \"We use the checkpoint: https://huggingface.co/lukewys/laion_clap/blob/main/630k-best.pt.\" anchored to \"CLAP (Wu et al., 2023) scores1\" in Section 5.4 (visually verified at 120 dpi, including the laion_clap underscore and 630k-best.pt file name). The OCR dropped the footnote body entirely; the patch reinserts it after the anchoring paragraph."
+    },
+    {
+      "before": "and these samples are excluded from comparison with SAM AUDIO.",
+      "after": "and these samples are excluded from comparison with SAM AUDIO.\n\n$^{2}$ We use the DAVIS-Flow checkpoints trained on AVE and MUSIC respectively for general and instrument-specific separation.",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 prints page footnote 2 \"We use the DAVIS-Flow checkpoints trained on AVE and MUSIC respectively for general and instrument-specific separation.\" anchored to \"instrument-specific checkpoint2\" (OCR keeps the $^{2}$ marker) in Section 6.3.2 (visually verified at 120 dpi). The OCR dropped the footnote body; the patch reinserts it after the anchoring paragraph."
+    },
+    {
+      "before": "## Q4. How many non-target sounds are there in the source audio?",
+      "after": "**Q4.** How many non-target sounds are there in the source audio?",
+      "count": 1,
+      "pdf_pages": [
+        49
+      ],
+      "evidence": "Rendered physical p.49 prints \"Q4.\" as an inline bold run-in label followed by the question text on the same line (visually verified at 120 dpi: Q4 on p.49, Q6/Q7/Q8 on p.50, with sibling questions Q5/Q9-Q11 in the identical run-in style). The OCR promoted this question to a level-2 heading while its siblings stayed plain text; the patch demotes it to the printed bold-label form. Q12 was also checked on rendered p.51 and kept as a heading because the PDF prints it as a standalone bold title like \"Frequently asked questions\"."
+    },
+    {
+      "before": "## Q6. How loud are the target sound(s) compared to the non-target sounds?",
+      "after": "**Q6.** How loud are the target sound(s) compared to the non-target sounds?",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "Rendered physical p.50 prints \"Q6.\" as an inline bold run-in label followed by the question text on the same line (visually verified at 120 dpi: Q4 on p.49, Q6/Q7/Q8 on p.50, with sibling questions Q5/Q9-Q11 in the identical run-in style). The OCR promoted this question to a level-2 heading while its siblings stayed plain text; the patch demotes it to the printed bold-label form. Q12 was also checked on rendered p.51 and kept as a heading because the PDF prints it as a standalone bold title like \"Frequently asked questions\"."
+    },
+    {
+      "before": "## Q7. How confusing non-target sounds are with the target sound(s)?",
+      "after": "**Q7.** How confusing non-target sounds are with the target sound(s)?",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "Rendered physical p.50 prints \"Q7.\" as an inline bold run-in label followed by the question text on the same line (visually verified at 120 dpi: Q4 on p.49, Q6/Q7/Q8 on p.50, with sibling questions Q5/Q9-Q11 in the identical run-in style). The OCR promoted this question to a level-2 heading while its siblings stayed plain text; the patch demotes it to the printed bold-label form. Q12 was also checked on rendered p.51 and kept as a heading because the PDF prints it as a standalone bold title like \"Frequently asked questions\"."
+    },
+    {
+      "before": "## Q8. Considering all the factors listed in Q4-Q7, how difficult do you think it is to extract the target sound(s) from the source audio?",
+      "after": "**Q8.** Considering all the factors listed in Q4-Q7, how difficult do you think it is to extract the target sound(s) from the source audio?",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "Rendered physical p.50 prints \"Q8.\" as an inline bold run-in label followed by the question text on the same line (visually verified at 120 dpi: Q4 on p.49, Q6/Q7/Q8 on p.50, with sibling questions Q5/Q9-Q11 in the identical run-in style). The OCR promoted this question to a level-2 heading while its siblings stayed plain text; the patch demotes it to the printed bold-label form. Q12 was also checked on rendered p.51 and kept as a heading because the PDF prints it as a standalone bold title like \"Frequently asked questions\"."
+    },
+    {
+      "before": "## Task:",
+      "after": "**Task:**",
+      "count": 1,
+      "pdf_pages": [
+        53
+      ],
+      "evidence": "Rendered physical p.53 shows C.3 as a boxed Gemini-2.5-pro prompt; \"Task:\" is a small bold label on its own line inside the prompt box, not a document heading (visually verified at 120 dpi). The OCR promoted it to a level-2 heading; the patch demotes it to bold text."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure3-caption-source-typo-p13",
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "OCR caption reads \"The pseuduo-labeling pipeline produces...\" while the rendered PDF prints the source's own typo \"pseduo-labeling\"; the one-letter deviation is a transcription of an already-misspelled word, so it was left unchanged."
+    },
+    {
+      "id": "table10-demucs-empty-cell-alignment-p23",
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "In the Table 10 HTML row for Demucs, one Instr(pro) dash cell is emitted as an empty <td> before the 4.48/0.15/4.26 values; all printed values are present and the dash placeholders are cosmetic, so no value-changing patch was proposed."
+    }
+  ]
+}

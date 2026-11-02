@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seed-thinking-v1-5",
+  "source_sha256": "fbb6de84cc6868b70235e58ab616e70a4add663b0487decaaf0822dc8a12e88f",
+  "ocr_sha256": "da02a5d849e2abc0ec9ce372e9d4d1b5a46c42b787446927c3f0e51f39a8cfba",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "coverage": "complete",
+    "notes": "All 19 physical pages text-diffed against the OCR markdown (normalized; CJK case-study table content cross-checked by occurrence counts of 玄武门/李渊/李世民/唐三藏/李建成/李元吉, which match the PDF text layer). No code fences. Remaining unmatched PDF lines are the arXiv stamp and lines inside the flattened appendix table (HTML-entity-escaped, matched after normalization). Rendered and visually verified: p.12 author list tail (170 dpi), p.16 </think> line (300 dpi), p.19 Table 8 caption (300 dpi)."
+  },
+  "patches": [
+    {
+      "before": "Thulin Xin",
+      "after": "Shulin Xin",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 author list prints 'Chao Xin, Shulin Xin, Yuwen Xiong' (verified 170 dpi); OCR misread the initial S as T."
+    },
+    {
+      "before": "Ziyun Wei.Shufa Wei",
+      "after": "Ziyun Wei,Shufa Wei",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 author list prints 'Ziyun Wei, Shufa Wei' with a comma; OCR emitted a period, fusing the two names into one wrong separator."
+    },
+    {
+      "before": "Bohong WuShuang Wu",
+      "after": "Bohong Wu,Shuang Wu",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 author list prints 'Bohong Wu, Shuang Wu' as two separate authors; OCR dropped the comma and glued the names."
+    },
+    {
+      "before": "Ning WuShuangzhi Wu",
+      "after": "Ning Wu,Shuangzhi Wu",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 author list prints 'Ning Wu, Shuangzhi Wu' as two separate authors; OCR dropped the comma and glued the names."
+    },
+    {
+      "before": "Yongsheng Xiao Chao Xin",
+      "after": "Yongsheng Xiao,Chao Xin",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 author list prints 'Yongsheng Xiao, Chao Xin' as two separate authors; OCR dropped the comma and glued the names."
+    },
+    {
+      "before": "Ziwen XuChenyin Xu",
+      "after": "Ziwen Xu,Chenyin Xu",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 author list prints 'Ziwen Xu, Chenyin Xu' as two separate authors; OCR dropped the comma and glued the names."
+    },
+    {
+      "before": "Yufei Xu-Shikun Xu\\*",
+      "after": "Yufei Xu,Shikun Xu\\*",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 author list prints 'Yufei Xu, Shikun Xu*' as two separate authors; OCR emitted a hyphen for the comma."
+    },
+    {
+      "before": "Shipeng Yan Shen Yan",
+      "after": "Shipeng Yan,Shen Yan",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 author list prints 'Shipeng Yan, Shen Yan' as two separate authors; OCR dropped the comma and glued the names."
+    },
+    {
+      "before": "correct.&lt;think&gt;&lt;answer&gt;",
+      "after": "correct.&lt;/think&gt;&lt;answer&gt;",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 (300 dpi, Table 5 verifier case) prints 'Summary, the model answer is correct.</think><answer> Correct </answer>'; OCR dropped the slash in the closing </think> tag, emitting a second <think> opening tag."
+    },
+    {
+      "before": "Table 7 Case 2 on Creative Writing.",
+      "after": "Table 7 Case 2 on Creative Writing.\n\nTable 8 Case 3 on Creative Writing.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 (300 dpi) prints the caption 'Table 8 Case 3 on Creative Writing.' below the third creative-writing case (the 玄武门 example, whose body text is present in the OCR table); the OCR emitted captions Table 5-7 after the merged appendix table but dropped the Table 8 caption entirely."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "appendix-tables-5-8-merged",
+      "pdf_pages": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "evidence": "The print splits the appendix case studies across four bordered tables (Table 5 pp.15-16, Table 6 pp.17-18, Table 7 p.18-19, Table 8 p.19); the OCR emits a single <table> on one line containing all four cases and lists the captions sequentially after it. Splitting the flattened table needs a page-by-page boundary reconstruction, so only the dropped Table 8 caption was repaired here. The tail of the author list also loses the space after commas (',Wenqi') relative to the print; readability is retained and only materially wrong characters (glued names, wrong separators, misread name) were patched."
+    }
+  ]
+}

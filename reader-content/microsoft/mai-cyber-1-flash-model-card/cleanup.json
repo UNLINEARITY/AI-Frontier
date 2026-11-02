@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:mai-cyber-1-flash-model-card",
+  "source_sha256": "e10050344fa3e591745c73ca4dca7a4dfbbf1c525ab5b3146f82e974a9b55ee2",
+  "ocr_sha256": "b81e7d516c303192a74188fc12ddd295abe62b006bc97a860f677a9990c09e29",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR, so no fence-swallowing; all seven physical PDF pages were compared line-by-line (normalized) against the OCR Markdown, and page 1, page 5 (benchmark table) and page 7 (contact email) were additionally rendered for visual verification. The benchmark table values 0.314 / 0.553 / 0.33 / 0.651 (POV=1200) and the ExploitGym row match the print. The OCR string 'MAI-Cyber-Flash-1' on physical p.5 reproduces a transposition printed in the source PDF itself, so it is an author typo, not an OCR defect. The printed cover title 'MAI-Cyber-1-Flash' is not repeated in the OCR body; the reader page already carries the metadata title 'MAI-Cyber-1-Flash Model Card', so no patch was made. List bullets are recorded as escaped hyphens (\\-) where the print uses bullets; visible text is unaffected."
+  },
+  "patches": [
+    {
+      "before": "MSFTAIAcRequest@microsoft.com",
+      "after": "MSFTAIActRequest@microsoft.com",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (300 dpi crop) prints the contact address as MSFTAIActRequest@microsoft.com; OCR dropped the t of 'Act' and reads MSFTAIAcRequest@microsoft.com."
+    },
+    {
+      "before": "Threat Intel: 0.553Malware Analysis: 0.33",
+      "after": "Threat Intel: 0.553<br>Malware Analysis: 0.33",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 'External Cyber Benchmark Results' table shows the CyberSecEval4 cell as two separate lines ('Threat Intel: 0.553' and 'Malware Analysis: 0.33'); OCR concatenated them into one run-on string '0.553Malware'. The patch inserts the printed line break inside the raw HTML table cell and changes no characters."
+    }
+  ],
+  "unresolved": []
+}

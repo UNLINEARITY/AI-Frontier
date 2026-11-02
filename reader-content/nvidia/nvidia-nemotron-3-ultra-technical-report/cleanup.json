@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nvidia-nemotron-3-ultra-technical-report",
+  "source_sha256": "b8c5e9bb8f29bdff41f876a24f5da8bc1762e16d12dbece512c443a96cbbc859",
+  "ocr_sha256": "2e6bd3766862e42b8b6cfcf68997eb31056d35a31406099fa167df1ef37dd082",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65
+    ],
+    "coverage": "complete",
+    "notes": "Per-page text-layer comparison of all 65 physical PDF pages against the OCR markdown (normalized), with rendered-page verification on physical pages 2, 4, 6, 7, 8, 9, 10, 25, 30, 31, 37, 40, 41, 44 and 64 at 110-320 dpi. Dominant defect: all 33 numbered footnote bodies were dropped while the inline superscript markers survived; each body was transcribed from a rendered bottom-strip crop and restored after the paragraph carrying its marker (patches group footnotes sharing one anchor line). Two list bullets ('Reformatted datasets', 'Synthetic datasets') were promoted to headings by OCR and are demoted. No code fences exist in the OCR markdown. Chart/figure-internal labels (bar charts on pages 2, 10-13, 27, 32, 38, 42, 45, 47, 49), the page-1 copyright line and page numbers are page/figure furniture and were left unchanged. The Tables 6 and 11 values, references section and inline math all match the PDF text layer; suspected prose drops on pages 18, 23, 30, 31, 33, 34, 39, 64 and 65 were confirmed present in the markdown (line-reflow false positives)."
+  },
+  "patches": [
+    {
+      "before": "points, we are also open-sourcing the training recipes $^{1}$ , data, and RL environments.",
+      "after": "points, we are also open-sourcing the training recipes $^{1}$ , data, and RL environments.\n\n1 https://github.com/NVIDIA-NeMo/Nemotron",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints footnote 1 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "emotron 3 Super (NVIDIA, 2026). We are releasing these new datasets on HuggingFace. $^{2}$",
+      "after": "emotron 3 Super (NVIDIA, 2026). We are releasing these new datasets on HuggingFace. $^{2}$\n\n2 Nemotron-Pretraining-Code-v3, Nemotron-Pretraining-Legal-v1, Nemotron-Pretraining-Specialized-v1.2",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints footnote 2 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "these examples and created a chain-of-thought version using Qwen3-235B-A22B-Thinking-2507.",
+      "after": "these examples and created a chain-of-thought version using Qwen3-235B-A22B-Thinking-2507.\n\n3 https://huggingface.co/datasets/nvidia/Nemotron-Pretraining-SFT-v1",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 3 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "de-Of-Regulations: California Code of Regulations $^{4}$ , excluding Title 6 and Title 24.",
+      "after": "de-Of-Regulations: California Code of Regulations $^{4}$ , excluding Title 6 and Title 24.\n\n4 https://govt.westlaw.com/calregs/Index",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 4 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "Legal-NYCourts-Judicial-Ethics-Opinions: New York Court Judicial Ethical Opinions $^{5}$ .",
+      "after": "Legal-NYCourts-Judicial-Ethics-Opinions: New York Court Judicial Ethical Opinions $^{5}$ .\n\n5 https://www.nycourts.gov/ipjudicialethicsopinions",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 5 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "\\- Nemotron-Pretraining-Legal-eCFR: Code of Federal Regulations $^{6}$ .",
+      "after": "\\- Nemotron-Pretraining-Legal-eCFR: Code of Federal Regulations $^{6}$ .\n\n6 https://www.ecfr.gov/",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 6 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "s generated from a filtered version of Caselaw $^{7}$ using Qwen3-235B-A22B-Instruct-2507.",
+      "after": "s generated from a filtered version of Caselaw $^{7}$ using Qwen3-235B-A22B-Instruct-2507.\n\n7 https://huggingface.co/datasets/common-pile/caselaw_access_project_filtered",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 7 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "-Legal-CaseHOLD: We transformed the CaseHOLD dataset $^{8}$ into a multiple-choice format.",
+      "after": "-Legal-CaseHOLD: We transformed the CaseHOLD dataset $^{8}$ into a multiple-choice format.\n\n8 https://huggingface.co/datasets/casehold/casehold",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints footnote 8 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "ted hypotheses, answers, and evidence statements and appended them to the source document.",
+      "after": "ted hypotheses, answers, and evidence statements and appended them to the source document.\n\n9 https://stanfordnlp.github.io/contract-nli/",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints footnote 9 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "ll as random passages that do not include the outcome using Qwen3-235B-A22B-Instruct-2507.",
+      "after": "ll as random passages that do not include the outcome using Qwen3-235B-A22B-Instruct-2507.\n\n10 https://huggingface.co/datasets/a2aj/canadian-case-law",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints footnote 10 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": " rephrased each question into three different version using Qwen3-235B-A22B-Instruct-2507.",
+      "after": " rephrased each question into three different version using Qwen3-235B-A22B-Instruct-2507.\n\n11 https://globalcit.eu/databases/globalcit-citizenship-law-dataset",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints footnote 11 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "s with detailed instructions based on the labeling handbook to extract qualifying clauses.",
+      "after": "s with detailed instructions based on the labeling handbook to extract qualifying clauses.\n\n12 https://www.atticusprojectai.org/cuad/",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints footnote 12 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "estion about each clause from the TOS Dataset $^{13}$ using Qwen3-235B-A22B-Instruct-2507.",
+      "after": "estion about each clause from the TOS Dataset $^{13}$ using Qwen3-235B-A22B-Instruct-2507.\n\n13 https://huggingface.co/datasets/CodeHima/TOS_Dataset",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints footnote 13 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "contract in the ToSDR Terms of Service Corpus $^{14}$ using Qwen3-235B-A22B-Instruct-2507.",
+      "after": "contract in the ToSDR Terms of Service Corpus $^{14}$ using Qwen3-235B-A22B-Instruct-2507.\n\n14 https://www.kaggle.com/datasets/sonu1607/tosdr-terms-of-service-corpus",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints footnote 14 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": " For reproducibility purposes, more details on the evaluation settings can be found in the",
+      "after": " For reproducibility purposes, more details on the evaluation settings can be found in the\n\n15 https://github.com/NVIDIA-NeMo/Evaluator\n\n16 https://github.com/EleutherAI/lm-evaluation-harness",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 print footnotes 15, 16 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote bodies after the paragraph carrying their markers."
+    },
+    {
+      "before": "ontainer is built on top of LM Evaluation Harness, with the following evaluation settings:",
+      "after": "ontainer is built on top of LM Evaluation Harness, with the following evaluation settings:\n\n17 https://github.com/NVIDIA-NeMo/Evaluator/blob/main/examples/nemotron/nemotron-3-ultra\n\n18 https://catalog.ngc.nvidia.com/orgs/nvidia/teams/eval-factory/containers/lm-evaluation-harness",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 print footnotes 17, 18 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote bodies after the paragraph carrying their markers."
+    },
+    {
+      "before": "ave pass rates between 0.25 and 0.80 and median correct-solution lengths below 64k tokens.",
+      "after": "ave pass rates between 0.25 and 0.80 and median correct-solution lengths below 64k tokens.\n\n19 https://huggingface.co/datasets/nvidia/Nemotron-Science-v1",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints footnote 19 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": " capped at 8K tokens. The loss was accumulated over the assistant response in each sample.",
+      "after": " capped at 8K tokens. The loss was accumulated over the assistant response in each sample.\n\n20 https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v2\n\n21 https://huggingface.co/datasets/nvidia/Nemotron-RL-Super-Training-Blends",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 print footnotes 20, 21 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote bodies after the paragraph carrying their markers."
+    },
+    {
+      "before": "Nemo Evaluator SDK examples folder $^{26}$ and the corresponding reproducibility tutorial.",
+      "after": "Nemo Evaluator SDK examples folder $^{26}$ and the corresponding reproducibility tutorial.\n\n22 https://github.com/NVIDIA-NeMo/Evaluator\n\n23 https://github.com/NVIDIA-NeMo/Gym\n\n24 https://github.com/NVIDIA-NeMo/Skills\n\n25 https://github.com/harbor-framework/harbor\n\n26 https://github.com/NVIDIA-NeMo/Evaluator/blob/main/examples/nemotron/nemotron-3-ultra",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 print footnotes 22, 23, 24, 25, 26 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote bodies after the paragraph carrying their markers."
+    },
+    {
+      "before": " it can effectively combine internal reasoning with external computation and verification.",
+      "after": " it can effectively combine internal reasoning with external computation and verification.\n\n27 https://stats.ioinformatics.org/results/2025",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Rendered physical p.40 prints footnote 27 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": " 2025), IMO 2025, Putnam 2025, and USAMO 2026, with final accuracies reported in Table 11.",
+      "after": " 2025), IMO 2025, Putnam 2025, and USAMO 2026, with final accuracies reported in Table 11.\n\n28 In contrast with the original paper, we started with 128 proof attempts per problem and allowed 512k context length. All other pipeline hyperparameters were identical.",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Rendered physical p.40 prints footnote 28 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "weight quantization algorithms to refine this recipe and select the final operating point.",
+      "after": "weight quantization algorithms to refine this recipe and select the final operating point.\n\n29 https://github.com/NVIDIA/Model-Optimizer/tree/main/examples/llm_ptq#autoquantize",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered physical p.41 prints footnote 29 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "HuggingFace layerwise PTQ taking around 2 hours vs Megatron-LM taking 42 minutes on Ultra.",
+      "after": "HuggingFace layerwise PTQ taking around 2 hours vs Megatron-LM taking 42 minutes on Ultra.\n\n30 https://github.com/NVIDIA/Model-Optimizer/tree/main/examples/llm_ptq\n\n31 https://github.com/NVIDIA/Megatron-LM/tree/main/examples/post_training/modelopt",
+      "count": 1,
+      "pdf_pages": [
+        44
+      ],
+      "evidence": "Rendered physical p.44 print footnotes 30, 31 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote bodies after the paragraph carrying their markers."
+    },
+    {
+      "before": "ated under max reasoning. User simulator: GPT-5.2 (low reasoning effort). 8 trial average.",
+      "after": "ated under max reasoning. User simulator: GPT-5.2 (low reasoning effort). 8 trial average.\n\n32 https://github.com/AGI-Eval-Official/tau2-bench-revised",
+      "count": 1,
+      "pdf_pages": [
+        64
+      ],
+      "evidence": "Rendered physical p.64 prints footnote 32 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": " mode of three evaluations). We closely follow the open-source evaluation harness. $^{33}$",
+      "after": " mode of three evaluations). We closely follow the open-source evaluation harness. $^{33}$\n\n33 https://github.com/vals-ai/finance-agent",
+      "count": 1,
+      "pdf_pages": [
+        64
+      ],
+      "evidence": "Rendered physical p.64 prints footnote 33 at the page bottom (visually verified at ~320 dpi); the OCR markdown keeps the inline superscript markers but dropped the footnote bodies. Restores the dropped footnote body after the paragraph carrying their markers."
+    },
+    {
+      "before": "## - Reformatted datasets",
+      "after": "\\- Reformatted datasets",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 shows 'Reformatted datasets' as a top-level bulleted list item with dash sub-items, a sibling of 'LLM-cleaned datasets' on p.6 (visually verified); OCR promoted the bullet to a heading. Demoted to plain bullet text to match the sibling bullets."
+    },
+    {
+      "before": "## - Synthetic datasets",
+      "after": "\\- Synthetic datasets",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 shows 'Synthetic datasets' as a top-level bulleted list item with dash sub-items, not a section heading (visually verified). Demoted to plain bullet text to match the sibling bullets."
+    }
+  ],
+  "unresolved": []
+}

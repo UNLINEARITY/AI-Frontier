@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:acereason-nemotron-1-1-technical-report",
+  "source_sha256": "6df06cb42b7b67d04cb136ba7ae583aaa89dacbefb5b6b84721fef6b94679568",
+  "ocr_sha256": "9f8136fb7058e76b8ecac677a221fd610945d78f5172ca88711ebe51ca07b72e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "partial",
+    "notes": "All 23 physical pages diffed against the OCR markdown with hyphenation-aware prose windows and the code-fence inventory checked globally (all 10 fence markers sit in the appendix-A prompt region); physical p.21 was rendered at 130 dpi and its three evaluation-prompt boxes verified line by line. The only structural damage is in that appendix region: the OCR transcribed the printed literal backtick fences inside the prompt boxes as Markdown fences, mangling the block structure, and dropped the two bold variant labels 'No Starter Code (Python)' and 'Has Starter Code' while demoting 'Math' to a plain paragraph. Repaired with 4-backtick outer fences plus restored bold labels. The two prose-diff candidates elsewhere resolved clean: the p.1 window is the title/author list, present on OCR line 3, and the p.21 window is the prompt region repaired above. Tables and figures outside p.21 were not re-verified against renders, hence partial coverage."
+  },
+  "patches": [
+    {
+      "before": "Math\n\n```txt\nPlease place your final answer inside \\boxed{} .\n```\n",
+      "after": "**Math**\n\n```txt\nPlease place your final answer inside \\boxed{}.\n```\n",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 shows the bold label \"Math\" above a gray monospace box that prints exactly \"Please place your final answer inside \\boxed{}.\"; the OCR kept the text as an unstyled paragraph with a stray space before the period."
+    },
+    {
+      "before": "```txt\nWrite Python code to solve the problem. Please place the solution code in the following format:\n```python\n# Your solution code here\n```\n",
+      "after": "**No Starter Code (Python)**\n\n````txt\nWrite Python code to solve the problem. Please place the solution code in the following format:\n```python\n# Your solution code here\n```\n````\n",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 shows the bold label \"No Starter Code (Python)\" (dropped by the OCR) above a gray box whose prompt text contains a literal printed ```python fence. As OCR Markdown, the 3-backtick outer fence is closed early by that literal line, orphaning \"# Your solution code here\" and leaving an empty stray block; a 4-backtick outer fence keeps the printed backticks literal."
+    },
+    {
+      "before": "```txt\nSolve the problem starting with the provided function header.\nFunction header:\n``` \n<starter_code>\n``` \nPlease place the solution code in the following format:\n```python\n# Your solution code here\n```\n",
+      "after": "**Has Starter Code**\n\n````txt\nSolve the problem starting with the provided function header.\nFunction header:\n```\n<starter_code>\n```\nPlease place the solution code in the following format:\n```python\n# Your solution code here\n```\n````\n",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 shows the bold label \"Has Starter Code\" (dropped by the OCR) above one gray box containing the whole prompt, whose literal printed ``` fences around <starter_code> and the ```python answer block currently parse as separate Markdown blocks, scattering the prompt prose as orphan paragraphs between small stray code blocks; a 4-backtick outer fence renders the box contents literally as printed (trailing spaces after two OCR fence lines dropped; no visible-text change inside the box)."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "appendix-tables-not-render-verified",
+      "pdf_pages": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "evidence": "Appendix result tables and figures (physical p.14-23) passed the text-layer diff but were not visually re-verified against renders in this pass; a future pass should spot-check table cells and figure captions before marking coverage complete."
+    }
+  ]
+}

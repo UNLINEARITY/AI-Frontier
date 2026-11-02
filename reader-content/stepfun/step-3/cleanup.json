@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step-3",
+  "source_sha256": "5a7d37ceac877d1b5ec21d53330bf5687c84db8b64da551829fb2c45992097eb",
+  "ocr_sha256": "9b6f1051d98155fb82efff3d36f4e8d359caebc1aaabcae22775e235db8298df",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 18 physical pages; physical pages 2, 5, 8, 10, 11, 13, 17 and 18 were rendered and checked (footnote bodies at 300 dpi crops, the two page-break sentence splits around Tables 2-3 and section 4.2, the contributions pages). Code fences: none in the OCR markdown. All eight printed footnote bodies (1-8) were dropped by OCR while the superscript markers survive; all restored and visually verified. \"Moonshoot-AI\" in reference [17], \"faimly\" (§4.1), and \"Marverick\" (§4.1) are printed as such in the PDF and were kept; $q / k / v\\_proj$ (§4.1) is inside math where \\_ is a correct LaTeX escape. Equations and table numbers spot-checked against the text layer (Tables 2-8, unit-cost equations, roofline formula)."
+  },
+  "patches": [
+    {
+      "before": "The computa-\n\n<table><tr><td>Model</td><td>KV/State Memory Access (bytes)</td><td>Attention Computation w/o Linear (FLOPs)</td><td>Linear before and after Attention (FLOPs)</td><td>FFN Computation (FLOPs)</td></tr><tr><td>DSv3</td><td> $2.88 \\times 10^{8}$ </td><td> $1.47 \\times 10^{11}$ </td><td> $2.28 \\times 10^{10}$ </td><td> $4.84 \\times 10^{10}$ </td></tr><tr><td>Kimi K2</td><td> $2.88 \\times 10^{8}$ </td><td> $7.37 \\times 10^{10}$ </td><td> $1.23 \\times 10^{10}$ </td><td> $4.84 \\times 10^{10}$ </td></tr><tr><td>Qwen3 MoE</td><td> $7.89 \\times 10^{8}$ </td><td> $2.52 \\times 10^{10}$ </td><td> $1.34 \\times 10^{10}$ </td><td> $2.84 \\times 10^{10}$ </td></tr><tr><td>Qwen3 32B</td><td> $1.07 \\times 10^{9}$ </td><td> $1.72 \\times 10^{10}$ </td><td> $1.21 \\times 10^{10}$ </td><td> $5.03 \\times 10^{10}$ </td></tr><tr><td>Llama 4 M</td><td> $1.01 \\times 10^{9}$ </td><td> $8.05 \\times 10^{9}$ </td><td> $6.04 \\times 10^{9}$ </td><td> $2.42 \\times 10^{10}$ </td></tr><tr><td>MM M1</td><td> $9.23 \\times 10^{8}$ </td><td> $3.42 \\times 10^{9}$ </td><td> $3.75 \\times 10^{10}$ </td><td> $5.44 \\times 10^{10}$ </td></tr><tr><td>ERNIE 4.5</td><td> $9.06 \\times 10^{8}$ </td><td> $1.45 \\times 10^{10}$ </td><td> $1.63 \\times 10^{10}$ </td><td> $7.61 \\times 10^{10}$ </td></tr><tr><td>Pangu Pro</td><td> $8.05 \\times 10^{8}$ </td><td> $8.05 \\times 10^{9}$ </td><td> $6.04 \\times 10^{9}$ </td><td> $2.38 \\times 10^{10}$ </td></tr><tr><td>Step-3</td><td> $2.56 \\times 10^{8}$ </td><td> $3.27 \\times 10^{10}$ </td><td> $2.07 \\times 10^{10}$ </td><td> $5.33 \\times 10^{10}$ </td></tr></table>\n\nTable 2: Theoretical computation and memory access per decoding token at 8K context length.\n\n<table><tr><td>Model</td><td>KV/State Memory Access (bytes)</td><td>Attention Computation w/o Linear (FLOPs)</td><td>Linear before and after Attention (FLOPs)</td><td>FFN Computation (FLOPs)</td></tr><tr><td>DSv3</td><td> $1.15 \\times 10^{9}$ </td><td> $5.89 \\times 10^{11}$ </td><td> $2.28 \\times 10^{10}$ </td><td> $4.84 \\times 10^{10}$ </td></tr><tr><td>Kimi K2</td><td> $1.15 \\times 10^{9}$ </td><td> $2.95 \\times 10^{11}$ </td><td> $1.23 \\times 10^{10}$ </td><td> $4.84 \\times 10^{10}$ </td></tr><tr><td>Qwen3 MoE</td><td> $3.15 \\times 10^{9}$ </td><td> $1.01 \\times 10^{11}$ </td><td> $1.34 \\times 10^{10}$ </td><td> $2.84 \\times 10^{10}$ </td></tr><tr><td>Qwen3 32B</td><td> $4.29 \\times 10^{9}$ </td><td> $6.87 \\times 10^{10}$ </td><td> $1.21 \\times 10^{10}$ </td><td> $5.03 \\times 10^{10}$ </td></tr><tr><td>Llama 4 M</td><td> $2.21 \\times 10^{9}$ </td><td> $1.41 \\times 10^{10}$ </td><td> $6.04 \\times 10^{9}$ </td><td> $2.42 \\times 10^{10}$ </td></tr><tr><td>MM M1</td><td> $1.93 \\times 10^{9}$ </td><td> $1.15 \\times 10^{10}$ </td><td> $3.75 \\times 10^{10}$ </td><td> $5.44 \\times 10^{10}$ </td></tr><tr><td>ERNIE 4.5</td><td> $3.62 \\times 10^{9}$ </td><td> $5.80 \\times 10^{10}$ </td><td> $1.63 \\times 10^{10}$ </td><td> $7.61 \\times 10^{10}$ </td></tr><tr><td>Pangu Pro</td><td> $3.22 \\times 10^{9}$ </td><td> $3.22 \\times 10^{10}$ </td><td> $6.04 \\times 10^{9}$ </td><td> $2.38 \\times 10^{10}$ </td></tr><tr><td>Step-3</td><td> $1.02 \\times 10^{9}$ </td><td> $1.31 \\times 10^{11}$ </td><td> $2.07 \\times 10^{10}$ </td><td> $5.33 \\times 10^{10}$ </td></tr></table>\n\nTable 3: Theoretical computation and memory access per decoding token at 32K context length.\n\ntion will be in BF16 or FP16.",
+      "after": "The computation will be in BF16 or FP16.\n\n<table><tr><td>Model</td><td>KV/State Memory Access (bytes)</td><td>Attention Computation w/o Linear (FLOPs)</td><td>Linear before and after Attention (FLOPs)</td><td>FFN Computation (FLOPs)</td></tr><tr><td>DSv3</td><td> $2.88 \\times 10^{8}$ </td><td> $1.47 \\times 10^{11}$ </td><td> $2.28 \\times 10^{10}$ </td><td> $4.84 \\times 10^{10}$ </td></tr><tr><td>Kimi K2</td><td> $2.88 \\times 10^{8}$ </td><td> $7.37 \\times 10^{10}$ </td><td> $1.23 \\times 10^{10}$ </td><td> $4.84 \\times 10^{10}$ </td></tr><tr><td>Qwen3 MoE</td><td> $7.89 \\times 10^{8}$ </td><td> $2.52 \\times 10^{10}$ </td><td> $1.34 \\times 10^{10}$ </td><td> $2.84 \\times 10^{10}$ </td></tr><tr><td>Qwen3 32B</td><td> $1.07 \\times 10^{9}$ </td><td> $1.72 \\times 10^{10}$ </td><td> $1.21 \\times 10^{10}$ </td><td> $5.03 \\times 10^{10}$ </td></tr><tr><td>Llama 4 M</td><td> $1.01 \\times 10^{9}$ </td><td> $8.05 \\times 10^{9}$ </td><td> $6.04 \\times 10^{9}$ </td><td> $2.42 \\times 10^{10}$ </td></tr><tr><td>MM M1</td><td> $9.23 \\times 10^{8}$ </td><td> $3.42 \\times 10^{9}$ </td><td> $3.75 \\times 10^{10}$ </td><td> $5.44 \\times 10^{10}$ </td></tr><tr><td>ERNIE 4.5</td><td> $9.06 \\times 10^{8}$ </td><td> $1.45 \\times 10^{10}$ </td><td> $1.63 \\times 10^{10}$ </td><td> $7.61 \\times 10^{10}$ </td></tr><tr><td>Pangu Pro</td><td> $8.05 \\times 10^{8}$ </td><td> $8.05 \\times 10^{9}$ </td><td> $6.04 \\times 10^{9}$ </td><td> $2.38 \\times 10^{10}$ </td></tr><tr><td>Step-3</td><td> $2.56 \\times 10^{8}$ </td><td> $3.27 \\times 10^{10}$ </td><td> $2.07 \\times 10^{10}$ </td><td> $5.33 \\times 10^{10}$ </td></tr></table>\n\nTable 2: Theoretical computation and memory access per decoding token at 8K context length.\n\n<table><tr><td>Model</td><td>KV/State Memory Access (bytes)</td><td>Attention Computation w/o Linear (FLOPs)</td><td>Linear before and after Attention (FLOPs)</td><td>FFN Computation (FLOPs)</td></tr><tr><td>DSv3</td><td> $1.15 \\times 10^{9}$ </td><td> $5.89 \\times 10^{11}$ </td><td> $2.28 \\times 10^{10}$ </td><td> $4.84 \\times 10^{10}$ </td></tr><tr><td>Kimi K2</td><td> $1.15 \\times 10^{9}$ </td><td> $2.95 \\times 10^{11}$ </td><td> $1.23 \\times 10^{10}$ </td><td> $4.84 \\times 10^{10}$ </td></tr><tr><td>Qwen3 MoE</td><td> $3.15 \\times 10^{9}$ </td><td> $1.01 \\times 10^{11}$ </td><td> $1.34 \\times 10^{10}$ </td><td> $2.84 \\times 10^{10}$ </td></tr><tr><td>Qwen3 32B</td><td> $4.29 \\times 10^{9}$ </td><td> $6.87 \\times 10^{10}$ </td><td> $1.21 \\times 10^{10}$ </td><td> $5.03 \\times 10^{10}$ </td></tr><tr><td>Llama 4 M</td><td> $2.21 \\times 10^{9}$ </td><td> $1.41 \\times 10^{10}$ </td><td> $6.04 \\times 10^{9}$ </td><td> $2.42 \\times 10^{10}$ </td></tr><tr><td>MM M1</td><td> $1.93 \\times 10^{9}$ </td><td> $1.15 \\times 10^{10}$ </td><td> $3.75 \\times 10^{10}$ </td><td> $5.44 \\times 10^{10}$ </td></tr><tr><td>ERNIE 4.5</td><td> $3.62 \\times 10^{9}$ </td><td> $5.80 \\times 10^{10}$ </td><td> $1.63 \\times 10^{10}$ </td><td> $7.61 \\times 10^{10}$ </td></tr><tr><td>Pangu Pro</td><td> $3.22 \\times 10^{9}$ </td><td> $3.22 \\times 10^{10}$ </td><td> $6.04 \\times 10^{9}$ </td><td> $2.38 \\times 10^{10}$ </td></tr><tr><td>Step-3</td><td> $1.02 \\times 10^{9}$ </td><td> $1.31 \\times 10^{11}$ </td><td> $2.07 \\times 10^{10}$ </td><td> $5.33 \\times 10^{10}$ </td></tr></table>\n\nTable 3: Theoretical computation and memory access per decoding token at 32K context length.\n\n",
+      "count": 1,
+      "pdf_pages": [
+        4,
+        5
+      ],
+      "evidence": "Rendered physical pp.4-5: the sentence \"...The computation will be in BF16 or FP16.\" hyphenates across the page break (\"The computa-\" ends p.4; \"tion will be in BF16 or FP16.\" starts p.5's body), while Tables 2 and 3 with their captions sit above the body columns at the top of p.5. OCR spliced the two tables between the hyphenated halves. The patch joins the split word and places the two tables immediately after the completed sentence, before \"The results are listed in Table 2 and 3\"; table contents and captions are unchanged and no image is moved."
+    },
+    {
+      "before": "case, over-sparse models like DSv3, Kimi K2 and Llama 4 Marverick may see their FFN cost doubling or even tripling on H800 in real deployment. For now, we omit it for simplicity and give them a favor.\n\nWe also omit",
+      "after": "We also omit",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5: the FFN paragraph continues from the bottom of the left column (\"...In the worst\") to the top of the right column (\"case, over-sparse models ... give them a favor.\"), followed by \"We also omit the embedding table...\". OCR moved the continuation before the \"We also omit\" paragraph and left \"In the worst\" dangling at the end of the FFN paragraph. This patch removes the misplaced continuation; the next patch re-joins it after \"In the worst\". Spelling \"Marverick\" is as printed in the PDF."
+    },
+    {
+      "before": "discussed in the §5. In the worst\n\n## 4.2",
+      "after": "discussed in the §5. In the worst case, over-sparse models like DSv3, Kimi K2 and Llama 4 Marverick may see their FFN cost doubling or even tripling on H800 in real deployment. For now, we omit it for simplicity and give them a favor.\n\n## 4.2",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5: re-joins the page/column-split sentence \"...Further details on MoE sparsity are discussed in the §5. In the worst case, over-sparse models like DSv3, Kimi K2 and Llama 4 Marverick may see ... give them a favor.\" at the end of the FFN paragraph, restoring printed reading order before section 4.2."
+    },
+    {
+      "before": "its advantage continues to widen with longer context. $^{2}$",
+      "after": "its advantage continues to widen with longer context. $^{2}$\n\n$^{1}$ In practice, the FFN part of DSv3, Kimi K2 and Llama 4 Maverick may suffer from MoE over-sparsity (§5.4) and be farther from theoretical costs. In Figure 1, we give them a favor by ignoring the issue.\n\n$^{2}$ Some may wonder about hybrid linear attention models like MiniMax M1. We will discuss more in §4.3.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints footnotes 1 and 2 at the page bottom: \"1 In practice, the FFN part of DSv3, Kimi K2 and Llama 4 Maverick may suffer from MoE over-sparsity (§5.4) ... ignoring the issue.\" and \"2 Some may wonder about hybrid linear attention models like MiniMax M1. We will discuss more in §4.3.\" (visually verified at 300 dpi). OCR kept the superscript markers $^{1}$/$^{2}$ in the abstract but dropped both footnote bodies."
+    },
+    {
+      "before": "Here the time is accumulated across all model layers. $^{3}$",
+      "after": "Here the time is accumulated across all model layers. $^{3}$\n\n$^{3}$ Alternatively, we can also use a 4-stage pipeline: A -> communication -> F -> communication, with a 12.5ms budget for each stage.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prints footnote 3 at the page bottom: \"3 Alternatively, we can also use a 4-stage pipeline: A -> communication -> F -> communication, with a 12.5ms budget for each stage.\"; OCR kept the marker $^{3}$ on the §3.1 performance-target bullet but dropped the footnote body."
+    },
+    {
+      "before": "reflecting the difference in activated parameters.",
+      "after": "reflecting the difference in activated parameters.\n\n$^{4}$ One can assume a more practical MFU like 40%, but the trend will not reverse.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints footnote 4 at the page bottom: \"4 One can assume a more practical MFU like 40%, but the trend will not reverse.\" (visually verified at 300 dpi); OCR kept the marker $^{4}$ on the training-cost sentence but dropped the footnote body."
+    },
+    {
+      "before": "Table 7 shows the results.",
+      "after": "Table 7 shows the results.\n\n$^{5}$ The maximum network bandwidth is determined by PCIe generations.",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 prints footnote 5 at the page bottom: \"5 The maximum network bandwidth is determined by PCIe generations.\" (visually verified at 300 dpi); OCR kept the marker $^{5}$ on \"200Gbps × 8 NICs\" but dropped the footnote body."
+    },
+    {
+      "before": "leaving extra model performance on the table.",
+      "after": "leaving extra model performance on the table.\n\n$^{6}$ The +1 and −1 in the formula is for shared expert.",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 prints footnote 6 at the page bottom: \"6 The +1 and −1 in the formula is for shared expert.\" (visually verified at 300 dpi); OCR kept the marker $^{6}$ on \"14 MoE experts\" but dropped the footnote body."
+    },
+    {
+      "before": "capable of running Step-3's attention part.",
+      "after": "capable of running Step-3's attention part.\n\n$^{7}$ o_proj uses TP=8, while other linear parts are replicated across 8 GPUs.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 prints footnote 7 at the page bottom: \"7 o_proj uses TP=8, while other linear parts are replicated across 8 GPUs.\" (visually verified at 300 dpi; the PDF prints o_proj with an underscore); OCR kept the marker $^{7}$ on \"The linear parts\" but dropped the footnote body."
+    },
+    {
+      "before": "obtained under 20 tokens/s decoding SLA. $^{8}$",
+      "after": "obtained under 20 tokens/s decoding SLA. $^{8}$\n\n$^{8}$ We are also aware of higher numbers like [23]. However, we do not compare with them because they do not run with the same 20 tokens/s decoding SLA or have shorter context length.",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 prints footnote 8 at the page bottom: \"8 We are also aware of higher numbers like [23]. However, we do not compare with them because they do not run with the same 20 tokens/s decoding SLA or have shorter context length.\" (visually verified at 300 dpi); OCR kept the marker $^{8}$ but dropped the footnote body."
+    },
+    {
+      "before": "## All author lists are in alphabetical order.",
+      "after": "*All author lists are in alphabetical order.*",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 prints \"All author lists are in alphabetical order.\" as an italic note line above the \"Core System Contributors\" section label, not as a section heading; OCR promoted it to a level-2 heading. Demoted to an italic paragraph; the three real section labels stay headings."
+    },
+    {
+      "before": "Yuhang Deng\nYuhe Yin\nYujie Liu\nYukun Chen\nYuling Zhao\nYun Mou\nYunlong Li\n\nSponsors\n\nBinxing Jiao\nDaxin Jiang\n\nYunzhou Ju\nYusheng Li\nYuxiang Yang\nYuxiang Zhang\nYuyang Chen\nZejia Weng\nZhe Xie\n\nZheng Ge\nZheng Gong\nZhenyi Lu\nZhewei Huang\nZhichao Chang\nZhiguo Huang\nZhirui Wang\n\nHeung-Yeung Shum\nXiangyu Zhang\n\nYibo Zhu\n\nZidong Yang\nZili Wang\nZiqi Wang\nZixin Zhang",
+      "after": "Yuhang Deng\nYuhe Yin\nYujie Liu\nYukun Chen\nYuling Zhao\nYun Mou\nYunlong Li\n\nYunzhou Ju\nYusheng Li\nYuxiang Yang\nYuxiang Zhang\nYuyang Chen\nZejia Weng\nZhe Xie\n\nZheng Ge\nZheng Gong\nZhenyi Lu\nZhewei Huang\nZhichao Chang\nZhiguo Huang\nZhirui Wang\n\nZidong Yang\nZili Wang\nZiqi Wang\nZixin Zhang\n\n## Sponsors\n\nBinxing Jiao\nDaxin Jiang\nHeung-Yeung Shum\nXiangyu Zhang\nYibo Zhu",
+      "count": 1,
+      "pdf_pages": [
+        17,
+        18
+      ],
+      "evidence": "Rendered physical p.18: the \"Contributors (Pretrain, Post-train, Multi-modal, System, Data)\" name grid continues at the top of p.18 in four printed columns (Yuhang Deng...Yunlong Li | Yunzhou Ju...Zhe Xie | Zheng Ge...Zhirui Wang | Zidong Yang...Zixin Zhang), followed by the bold \"Sponsors\" section label and five sponsor names in three columns (Binxing Jiao, Daxin Jiang | Heung-Yeung Shum, Xiangyu Zhang | Yibo Zhu). OCR interleaved the sponsor label and sponsor names between the contributor columns, leaving the last three sponsors after all contributor names. The patch restores the printed order: all contributor names, then the Sponsors section (promoted to a heading like its sibling section labels), then the five sponsor names. No name is added or removed (name token sets are identical)."
+    }
+  ],
+  "unresolved": []
+}

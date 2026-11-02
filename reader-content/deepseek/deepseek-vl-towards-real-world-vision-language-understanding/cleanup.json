@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-vl-towards-real-world-vision-language-understanding",
+  "source_sha256": "09e6a250407a046b156a0f97c81ac681b57983d89c8287ccdc77d51e379692b9",
+  "ocr_sha256": "e1580a70d2e96c2bb837bdda98b4c54ec9f5bcff1624f29018198178bfc7fa22",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "coverage": "partial",
+    "notes": "Full-document automated review: balanced code-fence scan (0 open/close mismatches, 0 headings/tables/images swallowed inside fences) and normalized page-text 4-gram containment diff of all 33 physical pages against the OCR markdown, followed by targeted line-by-line verification of every low-containment area against the extracted PDF text layer. Physical pages 15, 30 and 31 were additionally rendered (110-200 dpi) and visually read, with 300-dpi crops of the Figure 11 demo code blocks, confirming the three appendix demo conversations (Prompt/Response turns of Figures 5, 11 and 12) are selectable PDF text that the OCR dropped entirely; the patches reinsert them verbatim (demo code blocks as fenced code, the printed ```python marker escaped). Remaining low-containment pages were confirmed non-defects: chart-axis and diagram fragments live inside the embedded figure images (pages 12, 14, 20-22), the EMU2/CogVLM, hyperparameter, in-house-data and token-pooling ablation tables are all present as HTML tables (pages 7-9, 16-19, 22), and page 33's miss is the printed page number."
+  },
+  "patches": [
+    {
+      "before": "![[images/56462d8bcb2244198541b3d6c998370bffcccbf6c8d1b0ca8c2673233b8aaa2e.jpg]]  \nFigure 5 | Visualization results.",
+      "after": "![[images/56462d8bcb2244198541b3d6c998370bffcccbf6c8d1b0ca8c2673233b8aaa2e.jpg]]  \n\nPrompt\n\nExplain the code, step by step.\n\nResponse – DeepSeek-VL\n\nThe code provided is a Python function that calculates the longest palindrome substring of a given string. The function takes in two parameters, which are not defined within this snippet but presumably represent the input strings to be processed.\nHere's a step-by-step explanation of how the code works:\n1. It defines a helper function called longestPalIndrome with two arguments, self (which is likely a reference to an object or class instance) and s. This function returns a value, which we can assume is the length of the longest palindrome substring found in s.\n2. The main function starts by checking if the length of s is less than 1. If true, it immediately returns s as there is no palindrome substring for empty or single character strings.\n3. Next, it initializes variables Max_Len and Max_Str to store the maximum length of a palindrome substring found so far.\n4. A loop (for i in range(len(s)-1):) iterates over all possible starting points of substrings in s. For each starting point i, another nested loop (for j in range(i+1, len(s))) checks whether the substring from index i to j forms a palindrome.\nThe condition if j - i + 1 > Max_Len and s[i:j] == s[j:i][::-1] ensures that the substring is both longer than the current maximum length and reads the same backward as forward. If this condition is met, it updates Max_Len and Max_Str with the new maximum length and substring.\n5. After iterating through all possible substrings, the function returns Max_Str, which contains the longest palindrome substring found.\n6. Finally, the line return Max_Str indicates that the function will return the result of its computation.\nThis function uses dynamic programming principles to find the longest palindromic subsequence efficiently by storing intermediate results and avoiding redundant calculations.\n\nFigure 5 | Visualization results.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 (110 dpi, visually read): the Figure 5 page prints a full demo conversation - Prompt \"Explain the code, step by step.\" with a code screenshot, and a six-step \"Response - DeepSeek-VL\" explanation - as selectable PDF text above the caption. The OCR markdown kept only the embedded screenshot and caption; this patch reinserts the prompt and response verbatim from the PDF text layer, cross-checked against the render."
+    },
+    {
+      "before": "![[images/29d8fd9abfda1f21c15185cdf17e33eda822557224baa51578e565a863a3bb20.jpg]]  \nFigure 11 | Visualization results.",
+      "after": "![[images/29d8fd9abfda1f21c15185cdf17e33eda822557224baa51578e565a863a3bb20.jpg]]  \n\nPrompt\n\n将这段流程图转换为python程序\n\nResponse – DeepSeek-VL\n\n这段流程图展示了一个使用Python编程语言编写的猜数字游戏。游戏的目的是玩家猜测一个在1到10之间的随机数，如果猜对了，游戏就会结束并显示“你赢了！”（You got it!）。如果玩家的猜测超过了或低于这个范围，游戏会提示“太高了！”（Too high!）或“太低了！”（Too low!），然后玩家可以再次尝试。\n根据流程图的描述，我们可以将这个游戏实现为以下Python代码：\n\n```python\nimport random\n\n# 设置变量来存储猜测和答案\nguess = None\nanswer = random.randint(1, 10)\n\nwhile guess != answer:\n    # 询问玩家猜测一个1到10之间的数字\n    print(\"请猜测一个1到10之间的数字。\")\n    guess = int(input())\n\n    if guess < 1 or guess > 10:\n        print(\"你的猜测超出了范围。请重新猜测。\")\n    elif guess > answer:\n        print(\"太高了！\")\n    else:\n        print(\"太低了！\")\nelse:\n    print(\"你赢了！\")\n```\n\n在这个程序中，我们使用了random.randint()函数来生成一个1到10之间的随机整数作为答案。然后，我们进入一个循环，直到玩家的猜测等于答案为止。在每次猜测后，我们会检查玩家的猜测是否在范围内，以及它是否等于答案。如果是，我们就打印出“你赢了！”；如果不是，我们就打印出“太高了！”或“太低了！”，然后让玩家再次猜测。一旦玩家的猜测等于答案，游戏就结束了。\n\nResponse – Open-source Model 1\n\nsorry, as a language model AI, I cannot process image into any other content.\n\nResponse – Open-source Model 2\n\n当然！这里有一个Python 代码片段可以复制流程图：\\`\\`\\`python\n\n```python\ndef guess_number():\nwhile True:\nnumber = random.randint(1, 10)\nprint(f'Guess a number between 1 and 10 and wait:', number)\nanswer = input()\nif answer == number:\nprint('太高了！ 等待 1 秒')\ncontinue\nelif answer < number:\nprint('太低了！ 等待 1 秒')\ncontinue\nelse:\nprint('你猜中了！')\nbreak\n```\n\nFigure 11 | Visualization results.",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 at 110 and 200 dpi plus 300-dpi crops of both demo code blocks (visually read): the Figure 11 page prints the Chinese prompt, the DeepSeek-VL response with an indented code block, and two open-source-model responses (one containing a printed ```python marker and a flat-indented code screenshot). All of it is dropped from the OCR markdown, which kept only the Scratch-flowchart embed and the caption. Prose comes from the PDF text layer, code blocks from 300-dpi visual transcription preserving the printed (near-flat) line breaks; the printed ```python is escaped so fence balance stays intact."
+    },
+    {
+      "before": "![[images/c325b7b4004095444269be4432ab0bd09fcceaa65ee94a4a7138d7e1f73b211f.jpg]]  \nFigure 12 | Visualization results.",
+      "after": "![[images/c325b7b4004095444269be4432ab0bd09fcceaa65ee94a4a7138d7e1f73b211f.jpg]]  \n\nPrompt\n\nExplain the image.\n\nResponse – DeepSeek-VL\n\nThe image is a line graph that compares the performance of two different learning rate schedulers, namely the Multi Step Learning Rate Scheduler and the Cosine Learning Rate Scheduler. The x-axis represents the number of processed tokens in billions, ranging from 0 to 100 billion. The y-axis represents the training loss, which ranges from 2.0 to 3.0.\nThe blue line represents the Multi Step Learning Rate Scheduler with three steps of increasing rates: (80% + 10% + 10%). This line starts at a high point near 3.0 on the y-axis when the number of processed tokens is 0 billion, indicating a higher initial loss. As the number of processed tokens increases, this line shows a steep decline in training loss, suggesting rapid improvement in model performance as more data is processed. However, after approximately 40 billion processed tokens, the line begins to level off, indicating diminishing returns on further processing.\nThe orange line represents the Cosine Learning Rate Scheduler. It also starts at a high point near 3.0 when the number of processed tokens is 0 billion but has a much smoother descent than the blue line. This suggests a slower but steady decrease in training loss as more tokens are processed. After around 60 billion processed tokens, this line levels off as well, similar to the blue line.\nBoth lines show a general trend of decreasing training loss as the number of processed tokens increases, indicating improved model performance over time. However, the Multi Step Learning Rate Scheduler appears to achieve lower losses more quickly compared to the Cosine Learning Rate Scheduler, especially in the early stages of processing tokens.\nResponse – Open-source Model 1\n\nLine 1 expresses the number of tokens, following a nonlinear trend. Line 2 starts at value 80, then is decreasing and increases by 10% until reaching a value where it then increases by 10%, before it flattens out. Line 3 also starts in increasing part, then has some constant decreases between different points, and after that express an increasing part.\nResponse – Open-source Model 2\n\nThe image displays a line graph comparing the training losses of two different learning rates schedulers: the Multi Step Learning Rate Scheduler (80% + 10% = 10%) and the Cosine Learning Rate Scheduler. The y-axis represents the training loss in terms of billions, ranging from approximately 2.2 to 3.0. The x-axis represents the number of processed tokens, with a range from 0 to 100. The Multi Step Learning Rate Scheduler's line is blue, showing a sharp decline initially and then stabilizing. The Cosine Learning Rate Scheduler's line is orange, showing a more gradual decline.\nPrompt\n\nHelp me find the bug.\n\nResponse – DeepSeek-VL\n\nThe image shows a piece of code written in Python, which is intended to find the maximum value in a sequence. The function definition starts with \"def\" indicating that this is a new function being defined. The name of the function is \"find_max_in_sequence\".\nThe first line checks if the input is not a sequence; if it is, the function returns None. This is an important check because functions should only operate on sequences (like lists or tuples) and not other types of data structures. If the input is not a sequence, the function will return no result, which can be useful for handling invalid inputs.\nNext, there's a statement defining what a sequence is: max_value = sequence [1]. This seems incorrect as it assigns the index 1 to max_value instead of the actual element at position 1 in the sequence.\nThen we have a loop that iterates over each number in the sequence. It uses an \"if\" condition to check whether the current number (num) is greater than the current maximum value (max_value). If true, it updates max_value to be equal to num. This part of the code appears correct, as it correctly compares each number against the current maximum value and updates the maximum when necessary.\nFinally, after the loop ends, the function returns the updated max_value, which contains the maximum value found in the sequence.\nBased on the visual clues provided by the code snippet, the bug lies in the assignment of max_value where it incorrectly assigns the index 1 rather than the value at that index in the sequence. The corrected version would look like this: max_value = sequence[0].\nThis error could potentially lead to unexpected results if the sequence has more than one element, as the function might fail to find the maximum value due to the wrong assignment of max_value.\nResponse – Open-source Model 1\n\nThe function name in the code is \"find_max_in_sequence\", but it has not actually been called as the condition of the if-statement checks for 'not sequence' instead of 'if not sequence'. The actual line where the function should be called is missing from the provided code.\nResponse – Open-source Model 2\n\nThe bug in the code is that the condition for returning 'None' is set to 'if not sequence', which is incorrect. The correct condition should be 'if not max_value', to ensure that the function returns 'None' when the sequence is not found or when the max value is not found within the sequence.\n\nFigure 12 | Visualization results.",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Rendered physical p.31 (110 dpi, visually read): the Figure 12 page prints two demo conversations (\"Explain the image.\" chart comparison and \"Help me find the bug.\" code review) as selectable text in the response boxes; only the chart/code screenshots are images. The OCR markdown kept one embed plus the caption and dropped all response text; the patch reinserts both conversations verbatim from the PDF text layer in the visual box order confirmed on the render."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "fig11-opensource2-code-indentation",
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "The Open-source Model 2 code block in Figure 11 is a screenshot whose lines are printed with near-flat, slightly jittered indentation; transcribed flush-left rather than inventing Python indentation the print does not clearly show."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "mistral:pixtral-12b",
+  "source_sha256": "c8fcdb62a737ee93274c601d30a5ad0bf10f16ff7b52bd1980beb0266e93fff8",
+  "ocr_sha256": "b965e3775a1e5ad8c316737b5d5f5f4dd01065f7785c7a78889d2b291e082ba7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "coverage": "complete",
+    "notes": "Word-level diff of the full OCR Markdown against extracted text from all 24 physical pages; the single Markdown fence (Appendix A.5 judge transcript) is balanced and legitimate; tables (1-8) are complete HTML with bodies intact; the appendix TOC dot-leader page and chart/figure-internal text live inside embedded figures and are not transcription defects; the RoPE-2D appendix equations differ only in LaTeX-vs-layout spelling. Reference [1] URL verified on a 140 dpi render of physical p.16."
+  },
+  "patches": [
+    {
+      "before": "Model\\_Card\\_Claude\\_3.pdf",
+      "after": "Model_Card_Claude_3.pdf",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 reference [1] prints the URL .../de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf with real underscores; the backslash-underscore sequences are Markdown escapes added by OCR that alter the visible URL."
+    }
+  ],
+  "unresolved": []
+}

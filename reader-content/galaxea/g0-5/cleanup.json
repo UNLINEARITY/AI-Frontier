@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "galaxea:g0-5",
+  "source_sha256": "3e045e1166a84a42f6b4026dd28e036f597d352a335a4dad1f94c48d0ee88ab7",
+  "ocr_sha256": "2f8a0280c8f7798e3d1f7dbda3b58ffb7e79236b99ef24afd11df767ccdb247d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "coverage": "complete",
+    "notes": "Full normalized text diff of the OCR markdown against extracted text from all 32 physical PDF pages; physical page 30 was rendered (130 dpi) and visually inspected to confirm the reference [61] system name. No code fences exist in the OCR and the heading tree (sections 1-7 plus appendix) matches the PDF's numbered sections; the seven HTML tables survived with intact cells and the contributor/reference names read correctly (Baijun Ye, Zijie Zhao, Pepijn Kooijmans — the PDF's ij ligature was transcribed as plain ij). All other unmatched PDF lines are figure-internal text (Fig. 1 overview grid, Fig. 2 token-structure diagram, Fig. 3 tokenization labels, benchmark chart axes) that the embedded figure images already show."
+  },
+  "patches": [
+    {
+      "before": "et al. RInf: Flexible and efficient",
+      "after": "et al. RLinf: Flexible and efficient",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 reference [61] reads 'RLinf: Flexible and efficient large-scale reinforcement learning via macro-to-micro flow transformation' with a lowercase L in RLinf (visually confirmed at 130 dpi, taller than the capital-I misreading); the body text on physical p.29 also prints 'following RLinf [61]'. The OCR kept the body reading but dropped the L in the reference title."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "equation-9-token-math-spacing",
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "The 27-DoF partition equation is rendered as math with padded angle brackets (<   \\text {left\\_control} > (9) | ...); the DoF values 9/1/9/1/7 match the PDF and the visible characters are correct, only the math spacing is cosmetically loose. Left unchanged since no characters are wrong."
+    }
+  ]
+}

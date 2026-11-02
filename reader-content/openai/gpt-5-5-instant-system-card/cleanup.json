@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-5-5-instant-system-card",
+  "source_sha256": "f5117be723b660df6d4576c106f64a1ff7c7cf4be24c5c5baca0d602769eae9f",
+  "ocr_sha256": "f20f26312cf2ff6fe69f7b4bf9e46f604f5a08658a6592bb767842332f544bc5",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "Sentence-level diff of all 21 physical PDF pages against the OCR markdown, plus rendered visual checks of pages 4 and 5 (120 dpi full pages). No code fences exist in the source; 8 image embeds match the 8 registered crops; references [1]-[7] and Tables 1-12 values match the source. Confirmed repairs: the orphaned word \"policy.\" (sentence continuation across the page 4/5 break) was promoted to a heading, and the two footnote/small-print bodies on pages 4-5 were dropped. The PDF itself prints \"CA/DNS Hijakcing\" once (p.19), and the OCR transcribes that typo faithfully, so it was left unchanged."
+  },
+  "patches": [
+    {
+      "before": "disallowed under the relevant OpenAI\n\n## policy.",
+      "after": "disallowed under the relevant OpenAI policy.",
+      "count": 1,
+      "pdf_pages": [
+        4,
+        5
+      ],
+      "evidence": "Rendered physical p.4 ends the paragraph with \"...checking that the model did not produce output that is disallowed under the relevant OpenAI\" and physical p.5 opens with the continuation word \"policy.\" as plain body text. The OCR split the sentence at the page break and promoted \"policy.\" to a level-2 heading; the patch merges it back into the sentence."
+    },
+    {
+      "before": "values published at launch for those models. $^{1}$",
+      "after": "values published at launch for those models. $^{1}$\n\nGPT-5.5 Instant is intended to be used in accordance with OpenAI’s Usage Policies, Service Terms, and Terms of Use. These policies apply universally to OpenAI services and are designed to ensure safe and responsible usage of AI technology. You can review OpenAI’s Usage Policies at openai.com/policies/usage-policies/ .\n\nIf you need assistance with respect to GPT-5.5 Instant, you can find further information on OpenAI’s website (openai.com), or you can contact OpenAI Support by opening the chat bubble icon displayed at the bottom-right of help.openai.com.\n\nA list of the languages that ChatGPT currently supports can be found here.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints footnote 1 below the rule with three paragraphs: the intended-use sentence (\"1 GPT-5.5 Instant is intended to be used in accordance with OpenAI's Usage Policies, Service Terms, and Terms of Use.\"), the Usage Policies pointer (openai.com/policies/usage-policies/), the support/contact pointer (openai.com, help.openai.com), and the supported-languages pointer. The OCR kept only the superscript marker and dropped the entire footnote body; the patch restores it after the anchoring paragraph."
+    },
+    {
+      "before": "illicit violent behavior $^{2}$ ; this is a naming change, not a change in the underlying evaluation.",
+      "after": "illicit violent behavior $^{2}$ ; this is a naming change, not a change in the underlying evaluation.\n\nGore is a content policy prohibiting graphic or gratuitously gory content. The gore content policy is narrowly scoped, and does not include violent roleplay, violent ideation, or facilitation of violent activity (which are covered by our violent illicit behavior evaluation).",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 prints footnote 2 below the rule: \"2 Gore is a content policy prohibiting graphic or gratuitously gory content. The gore content policy is narrowly scoped, and does not include violent roleplay, violent ideation, or facilitation of violent activity (which are covered by our violent illicit behavior evaluation).\" The OCR kept the superscript marker in the body sentence but dropped the footnote body; the patch restores it after that sentence."
+    }
+  ],
+  "unresolved": []
+}

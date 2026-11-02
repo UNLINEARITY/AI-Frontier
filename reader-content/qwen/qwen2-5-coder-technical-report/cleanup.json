@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen2-5-coder-technical-report",
+  "source_sha256": "8416ad8d885737ed15f757180499f5202fa93e791180a6d3fcd6f0381d79595e",
+  "ocr_sha256": "5b2ac52efbbffa0d28155b6147071ec6cabd10008a62a6bba8e3e399b64d76ca",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE coverage: full-document machine scan of all 32 pages (code-fence balance, structure-inside-fences scan, normalized 4-gram page containment plus word-level missing-token diff against the extracted PDF text), then line-level manual inspection of every low-hit page (1, 11-28) and mid-hit pages 4, 6, 7, 10. Physical p.1 was rendered full-page at 110 dpi and page-bottom footnote bands of physical pages 7, 9, 10, 16, 17, 19 and 23 were rendered at 300 dpi and visually read to transcribe the dropped footnote bodies. Residual low 4-gram hit rates trace to HTML table cell reordering, code blocks with escaped characters, and figure-internal chart/axis text (Figure 5 McEval labels, Figure 6 context ticks 10k-128k, Figures 10-13 legend entries), not droppage; hyphenated line-break splits in the PDF text layer (Cross-CodeLongEval, Cas-sano, preced-ing, high-lighting, up-grade) are correctly joined in the OCR. Footnote URLs 3 and 5 coincide with the plain repo links under the p.1 author block, so word-level scans alone would miss their loss; both were confirmed dropped next to their surviving $^{3}$/$^{5}$ markers."
+  },
+  "patches": [
+    {
+      "before": "## Qwen2.5-Coder-32B\n\n![[images/7f5cfdd33736bbd4375c5544635a28e7f501dd708190d8cf0e554f84601b79a5.jpg]]",
+      "after": "![[images/7f5cfdd33736bbd4375c5544635a28e7f501dd708190d8cf0e554f84601b79a5.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 at 110 dpi: 'Qwen2.5-Coder-32B' (bold italic) is the chart title printed inside the hero radar-chart image above the figure, between the abstract and the page bottom; the paper has no section with this title (the next real heading is the Contents block). The OCR promoted the in-image chart title to a numbered-style section heading above the embedded figure; the heading is demoted by removal while the embed is kept unchanged."
+    },
+    {
+      "before": "Junyang Lin $^{†}$ Qwen Team Alibaba Group",
+      "after": "Junyang Lin $^{†}$ Qwen Team Alibaba Group\n\n\\*Equal core contribution, $^{†}$Corresponding author",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom band prints the unnumbered author footnote '*Equal core contribution, †Corresponding author' (no trailing period); the OCR kept the '\\*' markers after four author names and '$^{†}$' after Junyang Lin but dropped the footnote body. Restored with the document's own '\\*' and '$^{†}$' marker spellings."
+    },
+    {
+      "before": "Finally, we combine the instruction data from the GitHub code snippet and open-source instructions for supervised fine-tuning.",
+      "after": "Finally, we combine the instruction data from the GitHub code snippet and open-source instructions for supervised fine-tuning.\n\n$^{1}$ https://huggingface.co/datasets/Multilingual-Multimodal-NLP/McEval-Instruct",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 footnote band at 300 dpi prints '1 https://huggingface.co/datasets/Multilingual-Multimodal-NLP/McEval-Instruct'; the OCR kept the marker on 'code generation and debugging $^{1}$' but dropped the body. Reattached after the end of the paragraph containing the marker."
+    },
+    {
+      "before": "Finally, we optimize the instruction model with a majority of standard SFT data and a small part of FIM instruction samples.",
+      "after": "Finally, we optimize the instruction model with a majority of standard SFT data and a small part of FIM instruction samples.\n\n$^{2}$ https://pypi.org/project/tree-sitter-languages/",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 footnote band at 300 dpi prints '2 https://pypi.org/project/tree-sitter-languages/' (trailing slash confirmed); the OCR kept the marker on 'tree-sitter-languages $^{2}$' but dropped the body."
+    },
+    {
+      "before": "Below is the list of artifacts used in the evaluation for this section.",
+      "after": "Below is the list of artifacts used in the evaluation for this section.\n\n$^{3}$ https://github.com/QwenLM/Qwen2.5-Coder",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 footnote band at 300 dpi prints '3 https://github.com/QwenLM/Qwen2.5-Coder'; the OCR kept the marker on 'publicly available $^{3}$' but dropped the body. The same URL appears separately as a plain link under the p.1 author block, which masked the loss in word-level scans."
+    },
+    {
+      "before": "The figure below shows that Qwen2.5-Coder is capable of successfully completing this task within a 128k length range.",
+      "after": "The figure below shows that Qwen2.5-Coder is capable of successfully completing this task within a 128k length range.\n\n$^{4}$ https://github.com/NVIDIA/Megatron-LM",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 footnote band at 300 dpi prints '4 https://github.com/NVIDIA/Megatron-LM'; the OCR kept the marker on 'we chose Megatron $^{4}$' but dropped the body."
+    },
+    {
+      "before": "Below is a list of all artifacts referenced in this section.",
+      "after": "Below is a list of all artifacts referenced in this section.\n\n$^{5}$ https://github.com/QwenLM/Qwen2.5-Coder",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 footnote band at 300 dpi prints '5 https://github.com/QwenLM/Qwen2.5-Coder'; the OCR kept the marker on 'reproducibility $^{5}$' but dropped the body."
+    },
+    {
+      "before": "Currently, it hosts over 600 high-quality coding problems published between May 2023 and September 2024.",
+      "after": "Currently, it hosts over 600 high-quality coding problems published between May 2023 and September 2024.\n\n$^{6}$ https://leetcode.com\n\n$^{7}$ https://atcoder.jp\n\n$^{8}$ https://codeforces.com",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 footnote band at 300 dpi prints '6 https://leetcode.com', '7 https://atcoder.jp' and '8 https://codeforces.com'; the OCR kept the markers on 'LeetCode $^{6}$ , AtCoder $^{7}$ , and CodeForces $^{8}$' but dropped all three bodies."
+    },
+    {
+      "before": "Our Qwen2.5-Coder-32B-Instruct model achieves even higher accuracy, with Pass@1 and Pass@2 rates reaching 60.9% and 73.7%, respectively.",
+      "after": "Our Qwen2.5-Coder-32B-Instruct model achieves even higher accuracy, with Pass@1 and Pass@2 rates reaching 60.9% and 73.7%, respectively.\n\n$^{9}$ https://github.com/paul-gauthier/aider\n\n$^{10}$ https://github.com/exercism/python",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 footnote band at 300 dpi prints '9 https://github.com/paul-gauthier/aider' and '10 https://github.com/exercism/python' (hyphenation of paul-gauthier visually confirmed); the OCR kept the markers on 'Aider $^{9}$' and 'Exercism $^{10}$' but dropped both bodies. Reattached after the end of the paragraph carrying the markers."
+    }
+  ],
+  "unresolved": []
+}

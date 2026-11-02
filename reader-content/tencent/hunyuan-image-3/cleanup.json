@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-image-3",
+  "source_sha256": "76bff23c08cfa4b86beb19ae89b9d81bb57590915c41744111194b79c506e4d8",
+  "ocr_sha256": "80ada3d913534efbc8a7e8ccbf7e94a3970ceb5aea3c9c5e87e111f26becd7fa",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "Whole-document PDF-text vs OCR diff over all 17 physical pages plus a code-fence/heading scan (no code fences; none unbalanced). The only dropped body text in the document was two footnote bodies on physical p.3 and p.8 (restored below; both rules visually verified on 200-dpi renders). Remaining diff noise: hyphenation splits, reference-URL line wraps (gpt-i/mage-1, Tencent-Hunyu/an), LaTeX-subscript tokens on p.12 that the OCR already renders as math, and the source's own printed typos ('eliminaing' p.6, 'diagnoal' p.8, 'ramdomly' p.12) which the OCR silently normalizes; these author typos are kept unpatched."
+  },
+  "patches": [
+    {
+      "before": "high proportion of AI-generated content.\n\nOur subject-scoring operators",
+      "after": "high proportion of AI-generated content.\n\n1 to be released\n\nOur subject-scoring operators",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 bottom shows a footnote rule printing the superscript 1 followed by 'to be released'; the OCR kept the 'hy-OCR model $^{1}$' marker but dropped the footnote body."
+    },
+    {
+      "before": "particularly for Chain-of-Thoughts-based text-to-image generation. Significantly, tokens of reasoning part are also modeled via autoregressive next-token prediction.\n\nTable 1:",
+      "after": "particularly for Chain-of-Thoughts-based text-to-image generation. Significantly, tokens of reasoning part are also modeled via autoregressive next-token prediction.\n\n2 https://kexue.fm/archives/10352\n\nTable 1:",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 bottom shows a footnote rule printing superscript 2 followed by 'https://kexue.fm/archives/10352'; the footnote body is absent from the OCR markdown (no 'kexue' occurrence)."
+    }
+  ],
+  "unresolved": []
+}

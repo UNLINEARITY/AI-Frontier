@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen2-vl-enhancing-vision-language-model-s-perception-of-the-world-at-any-resolution",
+  "source_sha256": "30bb0f6c9babf910295d6b7cd34b6f54824236f68782664c3c93fbf4803275d0",
+  "ocr_sha256": "fade0b81ff17ae1252c7e825804fc53097d09487e405d98b6ababf82ffb978f8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "coverage": "partial",
+    "notes": "Triage review within a fixed time budget. All 52 pages passed an automated normalized 4-gram containment diff (PDF text layer vs OCR markdown) plus a full code-fence balance scan (12 markers, 6 balanced blocks, no swallowed structure). Line-level word-diff spot checks on the lowest-containment main-text pages 7, 9, 10, 12 and 25 found no droppage (residual gaps are benchmark column names inside the image-embedded Table 2 and figure-internal color words in appendix demo screenshots). Pages 41, 43, 47 and 48 were rendered at 110-200 dpi and visually verified for every patch. The appendix demo boxes (physical pages 40-52) are screenshot-style boxes whose labels and code the OCR partially transcribes as text/fences by the document's own mixed convention; low containment there is explained by embedded screenshots, and was machine-scanned only."
+  },
+  "patches": [
+    {
+      "before": "A.3 Video Understanding",
+      "after": "## A.3 Video Understanding",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered physical p.41 prints \"A.3 Video Understanding\" as a bold section heading in the same style as the sibling headings A.1, A.2 and A.4. The OCR left it as a plain paragraph line, which the shared normalizer cannot repair because it only renumbers existing heading markers. The shared exporter normalizes '## A.3 ...' to the same depth as the sibling appendix headings."
+    },
+    {
+      "before": "## Function Input",
+      "after": "Function Input",
+      "count": 1,
+      "pdf_pages": [
+        47,
+        48
+      ],
+      "evidence": "Rendered physical p.47 shows the 'Function Calling - Code Interpreter' demo as a single black-framed box in which 'Function Input' is a white-on-black label strip above the code, identical to the 'Function Result' and 'Model Response' strips on physical p.48; it is a demo-box label, not a document heading. The OCR promoted it to a level-2 heading, which would surface it in the document outline next to real sections."
+    },
+    {
+      "before": "## Model Response",
+      "after": "Model Response",
+      "count": 1,
+      "pdf_pages": [
+        47,
+        48
+      ],
+      "evidence": "Rendered physical p.48 shows 'Model Response' as a white-on-black label strip inside the same demo box, not a document heading; rendered physical p.41 shows the same strip style in another demo. The OCR promoted it to a level-2 heading. Demoted to plain text, matching the doc's own treatment of such labels elsewhere (table cells in the Figure 24 demo, fence text in the Figure 19 demo)."
+    },
+    {
+      "before": "(the red car(701,531),(869,675)&lt;",
+      "after": "&lt;|object_ref_start|&gt;the red car&lt;|object_ref_end|&gt;&lt;|box_start|&gt;(701,531),(869,675)&lt;|box_end|&gt;",
+      "count": 1,
+      "pdf_pages": [
+        43
+      ],
+      "evidence": "Rendered physical p.43 (200 dpi crop, visually verified) prints the model response inside the Figure 24 demo as '<|object_ref_start|>the red car<|object_ref_end|><|box_start|>(701,531),(869,675)<|box_end|>'; the PDF text layer matches. The OCR cell garbled the special tokens, keeping only '(the red car(701,531),(869,675)<'. Angle brackets are restored as HTML entities, following the existing escaping convention inside that table."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "missing-nested-demo-images",
+      "pdf_pages": [
+        43,
+        51
+      ],
+      "evidence": "The Figure 24 demo table (physical p.43) and the Figure 30 UI-agent transcript table (physical p.51) reference nested images (images/8c3d3908..., images/e315a45b... and the Screenshot_N sequence) that are absent from the package; reader-content/index.json already records them under missing_nested_images. A cleanup patch cannot add image embeds."
+    },
+    {
+      "id": "appendix-demo-transcription-convention",
+      "pdf_pages": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "evidence": "The appendix demo boxes mix treatments: some are pure embedded screenshots, some transcribe labels/code into fences or tables, and banner strips such as 'Function Calling - Code Interpreter' are omitted from the transcription. Only the two label strips that OCR promoted to level-2 headings were repaired; a uniform re-transcription of the demo boxes is a larger editorial decision."
+    }
+  ]
+}

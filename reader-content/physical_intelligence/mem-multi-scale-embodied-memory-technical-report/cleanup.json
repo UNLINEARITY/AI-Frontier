@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:mem-multi-scale-embodied-memory-technical-report",
+  "source_sha256": "63413aa32bb2b070ae0a0cbc5d5a2eb77686308725e48f15bcaa338bd3d644aa",
+  "ocr_sha256": "d4f775108f3aa348ab9bbc052ce6bfc20d66b57956fba0462b902bf47d25963b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "coverage": "complete",
+    "notes": "All 15 PDF pages word-compared with the OCR markdown; no code fences, 13 figure embeds present. One defect: reference [26] title word OCR-misread (\"Onetworkla\" for the printed \"Onetwovla\", verified on a 300 dpi render of physical p.10 which prints \"Onetwovla: A unified vision-language-action model with adaptive reasoning. arXiv preprint arXiv:2505.11917\"). Author affiliation superscripts, affiliation line, Figure 2 speech-bubble/architecture labels (SigLIP 400M, Gemma 4B, quoted instructions, pot masher), chart legends and axis ticks (75/100) are figure-internal or present in the markdown; reference-name tokens dropped on pp.10-11 are hyphenation splits already present unsplit in the markdown. Appendix math subscripts are LaTeX-equivalent."
+  },
+  "patches": [
+    {
+      "before": "Onetworkla: A unified",
+      "after": "Onetwovla: A unified",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 reference [26] prints \"Fanqi Lin, Ruiqian Nai, Yingdong Hu, Jiacheng You, Junming Zhao, and Yang Gao. Onetwovla: A unified vision-language-action model with adaptive reasoning. arXiv preprint arXiv:2505.11917, 2025.\" (visually verified at 300 dpi); OCR misread the title word as \"Onetworkla\"."
+    }
+  ],
+  "unresolved": []
+}

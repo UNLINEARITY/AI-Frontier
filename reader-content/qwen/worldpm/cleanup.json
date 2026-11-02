@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "id": "qwen:worldpm",
+  "source_sha256": "5293826da4ee0ccdc799af9813e1458677940c0484b0ebaee8a9b9c5df7ab00f",
+  "ocr_sha256": "ac1a13c59e0dd0b6861694be214ad23b5bbe0a5a8f557374b42807e35f86cd4b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "coverage": "complete",
+    "notes": "All 34 physical pages were scanned against the PDF text layer with a normalized word-n-gram droppage probe plus targeted per-page checks; the three code fences are balanced; all section headings, figures and Tables 1-11 are present, and the two-column reference list (physical p.14-17) is complete. Dropped footnote bodies were the main defect class: the title-page symbol footnotes (p.1), the four source-URL footnotes (p.4), the paragraph-marked test-loss note (p.8) and the RLHFlow dataset URL footnote 11 (p.10) are restored from 300-dpi renders. OCR auto-corrections of the source's own misspellings were verified on renders and reverted (\"has achieved\" p.2, \"querys\" p.5, missing space in \"andablation\" p.8); the print's own heading typos \"Dicussion\"/\"Limitaiton\" (p.13), the spaced dataset name \"pair_data_v2 800K wsafety\" (p.10 body) and the appendix example dialogs are faithfully reproduced by the OCR and left unchanged. The Figures 11-12 evaluation-prompt transcripts are figure-internal text additionally transcribed as fenced blocks and were not treated as defects. Table cells were verified cell-by-cell only for Tables 1 and 10; the remaining tables matched at value-probe level."
+  },
+  "patches": [
+    {
+      "before": "$^{1}$ Qwen Team, Alibaba Group $^{2}$ Fudan University",
+      "after": "$^{1}$ Qwen Team, Alibaba Group $^{2}$ Fudan University\n\n$^{\\ddagger}$ Work done during the internship at Qwen. $^{*}$ Corresponding authors: tgui@fudan.edu.cn, feihu.hf@alibaba-inc.com, yubowen.ybw@alibaba-inc.com. $^{\\dagger}$ Work done while working at Qwen.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The OCR keeps the \\ddagger/\\dagger/* symbols on the author names but dropped the whole title-page footnote block. Physical p.1 prints below the footnote rule: \"‡ Work done during the internship at Qwen. *Corresponding authors: tgui@fudan.edu.cn, feihu.hf@alibaba-inc.com, yubowen.ybw@alibaba-inc.com. †Work done while working at Qwen.\" (300-dpi render of p.1 visually verified, including every e-mail address)."
+    },
+    {
+      "before": "These laws have achieved remarkable success",
+      "after": "These laws has achieved remarkable success",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Physical p.2 (Section 1) prints \"These laws has achieved remarkable success in next-token prediction tasks\" — the source's own subject-verb error (300-dpi render visually verified). The OCR auto-corrected \"has\" to \"have\"; the patch restores the printed spelling."
+    },
+    {
+      "before": "Training examples are presented in Appendix E.",
+      "after": "Training examples are presented in Appendix E.\n\n$^{*}$ https://stackexchange.com\n\n$^{\\dagger}$ https://www.reddit.com\n\n$^{\\ddagger}$ https://www.quora.com\n\n$^{\\S}$ https://lmarena.ai/",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "The OCR keeps the * / † / ‡ footnote markers on \"StackExchange*\", \"Reddit†\", \"Quora‡\" (Section 3.1.1) and the § marker on \"Chatbot Arena§\" (Section 3.1.3), but dropped all four footnote bodies. Physical p.4 prints below the footnote rule: \"*https://stackexchange.com, †https://www.reddit.com, ‡https://www.quora.com, §https://lmarena.ai/\" (300-dpi render of p.4 visually verified)."
+    },
+    {
+      "before": "identifying correct responses for queries with ground-truth answers",
+      "after": "identifying correct responses for querys with ground-truth answers",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 prints \"(2) objective (identifying correct responses for querys with ground-truth answers)\" — the source's own misspelling \"querys\" (300-dpi render visually verified). The OCR auto-corrected it to \"queries\"; the patch restores the printed spelling."
+    },
+    {
+      "before": "while well-controlled test sets remain stable.",
+      "after": "while well-controlled test sets remain stable.\n\n$^{\\P}$ This differs from original test loss calculation as $\\alpha$ is still optimized for controlled comparison, yielding lower values",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "The OCR keeps the inline marker \"in Equation 4 $^{\\P}$\" but dropped the footnote body. Physical p.8 prints below the footnote rule: \"¶This differs from original test loss calculation as α is still optimized for controlled comparison, yielding lower values\" (300-dpi render of p.8 visually verified). The body is inserted at the end of the paragraph carrying the marker; α is kept as inline math to match the document's convention."
+    },
+    {
+      "before": "feature and ablation studies",
+      "after": "feature andablation studies",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Physical p.8 (Section 3.3.2 closing paragraph) prints \"across different domains and feature andablation studies\" with \"andablation\" set without a space in the source (300-dpi render visually verified). The OCR silently inserted the missing space; the patch restores the printed spelling."
+    },
+    {
+      "before": "selected based on the minimum loss achieved on the same distribution validation set.",
+      "after": "selected based on the minimum loss achieved on the same distribution validation set.\n\n$^{11}$ https://huggingface.co/datasets/RLHFlow/pair_data_v2_80K_wsafety",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "The OCR keeps the inline marker \"pair\\_data\\_v2 800K wsafety $^{11}$\" (faithfully matching the print's own spaced body text) but dropped the footnote body. Physical p.10 prints below the footnote rule: \"11 https://huggingface.co/datasets/RLHFlow/pair_data_v2_80K_wsafety\" with underscores and 80K in the URL (300-dpi render of p.10 visually verified)."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-15-table-10-emitted-late",
+      "pdf_pages": [
+        25,
+        26
+      ],
+      "evidence": "In Appendix D the OCR emits the Figure 15 image+caption and Table 10 after the opening paragraphs of D.1/D.2 instead of at their printed positions; all content is present, only the interleaving order differs from the print."
+    },
+    {
+      "id": "appendix-example-dialogs-as-images",
+      "pdf_pages": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "evidence": "Appendix E preference-pair examples (Query/Chosen/Rejected boxes) are embedded as figure images only; the box text is not transcribed, matching the figure-internal-text policy but leaving that text non-searchable."
+    }
+  ]
+}

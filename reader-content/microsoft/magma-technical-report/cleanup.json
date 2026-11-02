@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:magma-technical-report",
+  "source_sha256": "df8e92d42a6b14f4298711d300fb23547bb95a2a1c9a81d6b3287ce96103b994",
+  "ocr_sha256": "082d95100c8ef62b41d6a2923b135d23597569fcadb41fe41e599010dd25bfe8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "coverage": "complete",
+    "notes": "Code-fence structure balanced (no fences); Algorithms 1-2 are rendered as plain numbered lines with their math intact. Every physical page's extracted text diffed against the OCR markdown with normalized n-gram alignment; pages 2, 6 and 11 rendered (130 dpi) to verify the print's own misspellings ('genralizability', 'mutimodal', 'digial', 'uinified') and the dropped Table 6 footnote body. All 11 tables exist as OCR HTML tables; flagged table/chart gaps were rowspan, accented-name (Sébastien, Sağnak) and figure-label artifacts (Figure 1 author-role tags, Figure 9/10 axis labels, SimplerEnv task names). The print's 'environments(see Fig. 1 right)' missing space and the 'urlhttps://...huggingface.co/spaces/huggingface.co/spaces/...' reference quirk are preserved as printed. The project-page footnote URL survives as the standalone 'https://microsoft.github.io/Magma' line; only its footnote marker digit is absent, which was left unchanged."
+  },
+  "patches": [
+    {
+      "before": "rendering limited generalizability across tasks and domains.",
+      "after": "rendering limited genralizability across tasks and domains.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints 'rendering limited genralizability across tasks and domains.' - the misspelling is in the print itself (visually verified at 130 dpi); OCR silently corrected it to 'generalizability'. The print's spelling is restored (p.6 prints the correct 'generalizability' elsewhere and is left unchanged)."
+    },
+    {
+      "before": "capable of multimodal understanding and action-prediction",
+      "after": "capable of mutimodal understanding and action-prediction",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Figure 2 caption prints 'A multimodal AI agent should be capable of mutimodal understanding and action-prediction towards a given goal.' - 'mutimodal' is the print's own misspelling (visually verified at 130 dpi); OCR silently corrected it."
+    },
+    {
+      "before": "agentic tasks in both digital and physical environments.",
+      "after": "agentic tasks in both digial and physical environments.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 first contribution bullet prints 'spatial-temporal reasoning abilities for agentic tasks in both digial and physical environments.' - 'digial' is the print's own misspelling (visually verified at 130 dpi); OCR silently corrected it. The other 'digital and physical' occurrences in the print are spelled correctly and are left unchanged."
+    },
+    {
+      "before": "to learn a unified action grounding.",
+      "after": "to learn a uinified action grounding.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints 'we apply SoM and ToM for different data types, where SoM is applied to all to learn a uinified action grounding.' - 'uinified' is the print's own misspelling (visually verified at 130 dpi); OCR silently corrected it."
+    },
+    {
+      "before": "means models pretrained without SoM/ToM.\n\n![[images/fd8f12a81378951b1e41c3245243bae4b7cda6fac65f0366b994d512382ce88c.jpg]]",
+      "after": "means models pretrained without SoM/ToM.\n\n2 We evaluate our model using the standard option matching before the official evaluation pipeline was released and will update in the next version.\n\n![[images/fd8f12a81378951b1e41c3245243bae4b7cda6fac65f0366b994d512382ce88c.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 prints footnote 2 'We evaluate our model using the standard option matching before the official evaluation pipeline was released and will update in the next version.' for the 'SpatialEval$^{2}$' Table 6 header marker (visually verified at 130 dpi); OCR kept the marker in the table header but dropped the body. Inserted as a paragraph right after the Table 6 caption."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "project-page-footnote-marker",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Print shows the project URL as footnote '1https://microsoft.github.io/Magma'; the OCR keeps the URL as a standalone line under the author block but without the '1' marker digit."
+    },
+    {
+      "id": "flattened-algorithm-layout",
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Algorithms 1-2 print as ruled algorithm environments; the OCR renders them as plain numbered lines without a code block. Content lines match the print; only the ruled layout differs."
+    }
+  ]
+}

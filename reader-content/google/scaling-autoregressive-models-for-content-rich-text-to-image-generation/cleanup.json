@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "id": "google:scaling-autoregressive-models-for-content-rich-text-to-image-generation",
+  "source_sha256": "31ac39190df09eccdb3fb73ec2d6eeacb1f077fe8a926f773812a80cc506f778",
+  "ocr_sha256": "41fff0e4d2212ed9c400c703bf393c777d91db2858c9e1c5f310e1843825229d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      13,
+      14,
+      19,
+      22,
+      27,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "coverage": "partial",
+    "notes": "Triage review: all 49 physical pages machine-scanned (no code fences; normalized 4-gram page-text containment, mean 0.97; per-word presence check; pattern scan). Flagged pages inspected line-by-line: pages 5-8 flagged tokens are figure-diagram labels (embedded figures); pages 39-43 flags are prompt text inside figure images; pages 4, 13, 14, 19, 22, 27 revealed seven dropped footnote bodies whose superscript markers survive (footnotes 5, 6, table footnotes 5-6, 9, 10, 11, 12); pages 44-45 revealed Table 7 and Table 8 merged into one OCR table with a glued header row, plus six OCR auto-corrections of the print's own misspellings in table cells (cigarrette, transportion, Descritpions, recyling, Decriptions, occurences). Pages 14 and 44 rendered and visually verified; remaining patch pages verified against the extracted PDF text layer."
+  },
+  "patches": [
+    {
+      "before": "a half-smoked cigarette",
+      "after": "a half-smoked cigarrette",
+      "count": 1,
+      "pdf_pages": [
+        44
+      ],
+      "evidence": "Rendered physical p.44 (Table 7 FOOD & BEVERAGE row) prints the dataset's own misspelling 'a half-smoked cigarrette'; OCR auto-corrected it to 'cigarette'. Restored the printed spelling (visual render + text layer)."
+    },
+    {
+      "before": "man-made devices for transportation.",
+      "after": "man-made devices for transportion.",
+      "count": 1,
+      "pdf_pages": [
+        44
+      ],
+      "evidence": "Rendered physical p.44 (Table 7 VEHICLES row) prints 'man-made devices for transportion.' with the source's own misspelling; OCR auto-corrected it. Restored the printed spelling."
+    },
+    {
+      "before": "<tr><td>WORLD KNOWLEDGEChallenge</td><td>Descriptions focused on objects and places that exist in the real world.Description</td><td>A Big Ben clock towering over the city of London; the Sydney Opera House with the Eiffel tower sitting on the right, and Mount Everest rising above; A portrait of a metal statue of a pharaoh wearing steampunk glasses and a leather jacket over a white t-shirt that has a drawing of a space shuttle on it.Additional Examples</td></tr>",
+      "after": "<tr><td>WORLD KNOWLEDGE</td><td>Descritpions focused on objects and places that exist in the real world.</td><td>A Big Ben clock towering over the city of London; the Sydney Opera House with the Eiffel tower sitting on the right, and Mount Everest rising above; A portrait of a metal statue of a pharaoh wearing steampunk glasses and a leather jacket over a white t-shirt that has a drawing of a space shuttle on it.</td></tr></table>\n\n<table><tr><td>Challenge</td><td>Description</td><td>Additional Examples</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        44,
+        45
+      ],
+      "evidence": "Rendered physical p.44 ends Table 7 at the WORLD KNOWLEDGE row followed by its caption; physical p.45 starts a separate printed table with header 'Challenge | Description | Additional Examples' (Table 8). OCR merged both tables into one and glued the second header into the WORLD KNOWLEDGE cells. Split into the two printed tables, restored the header row, and restored the print's own misspelling 'Descritpions' (PDF text layer, character-exact)."
+    },
+    {
+      "before": "a blue recycling bin",
+      "after": "a blue recyling bin",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Physical p.45 (Table 8 PROPERTIES & POSITIONING row) prints 'a blue recyling bin' with the source's own misspelling (PDF text layer); OCR auto-corrected it. Restored the printed spelling."
+    },
+    {
+      "before": "<td>Descriptions that specify particular viewpoints",
+      "after": "<td>Decriptions that specify particular viewpoints",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Physical p.45 (Table 8 PERSPECTIVE row) prints 'Decriptions that specify particular' with the source's own misspelling (PDF text layer); OCR auto-corrected it. Restored the printed spelling."
+    },
+    {
+      "before": "counts of occurrences of subjects",
+      "after": "counts of occurences of subjects",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Physical p.45 (Table 8 QUANTITY row) prints 'counts of occurences of subjects' with the source's own misspelling (PDF text layer); OCR auto-corrected it. Restored the printed spelling."
+    },
+    {
+      "before": "contenders for high-quality, broadly capable, open-domain text-to-image generation models.",
+      "after": "contenders for high-quality, broadly capable, open-domain text-to-image generation models.\n\n5 Imagen [13] introduces 200 prompts in DrawBench for similar purposes. See Section 4.3 for discussion.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Physical p.4 prints footnote 5 'Imagen [13] introduces 200 prompts in DrawBench for similar purposes. See Section 4.3 for discussion.'; OCR kept the $^{5}$ marker but dropped the body. Restored after the anchoring paragraph (PDF text layer)."
+    },
+    {
+      "before": "to acquire 30,000 generated images.",
+      "after": "to acquire 30,000 generated images.\n\n6 We use https://github.com/mseitzer/pytorch-fid for computing FID scores.",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Physical p.13 prints footnote 6 'We use https://github.com/mseitzer/pytorch-fid for computing FID scores.'; OCR kept the $^{6}$ marker on the FID paragraph but dropped the body. Restored after the anchoring paragraph (PDF text layer)."
+    },
+    {
+      "before": "Table 6: Comparison with prior work on captioner evaluation on the MS-COCO 5K test set [64] with baselines from DALL-Eval [55]. Ground Truth represents the theoretical upper bound on this evaluation with captions generated using MS-COCO images as inputs to the VL-T5 model [56]. Parti samples 16 images per text prompt and uses a CoCa [25] model to rank the outputs (Section 2.4).",
+      "after": "Table 6: Comparison with prior work on captioner evaluation on the MS-COCO 5K test set [64] with baselines from DALL-Eval [55]. Ground Truth represents the theoretical upper bound on this evaluation with captions generated using MS-COCO images as inputs to the VL-T5 model [56]. Parti samples 16 images per text prompt and uses a CoCa [25] model to rank the outputs (Section 2.4).\n\n5 https://github.com/lucidrains/DALLE-pytorch\n6 https://rudalle.ru",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 bottom prints Table 6 footnotes '5 https://github.com/lucidrains/DALLE-pytorch' and '6 https://rudalle.ru' attached to the DALL-E Small$^{5}$ and ruDALL-E-XL$^{6}$ rows; OCR kept both superscript markers in the table but dropped the footnote bodies. Restored after the Table 6 caption."
+    },
+    {
+      "before": "for image-text match.[9]",
+      "after": "for image-text match. $^{9}$",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 prints a superscript 9 after 'for image-text match.', not a bracketed citation '[9]'; the OCR emitted the footnote marker in bracket style. Restored the superscript form used for all other surviving footnote markers in this document."
+    },
+    {
+      "before": "the retrieval model on MS-COCO, Parti is evaluated as slightly worse on image realism",
+      "after": "the retrieval model on MS-COCO, Parti is evaluated as slightly worse on image realism\n\n9 We analyzed the cases in which XMC-GAN is rated as more realistic compared to Parti, and found that most of these examples were due to Parti producing illustrations or cartoons, rather than photo-realistic images. While these were generally well aligned with the given prompts, the evaluation likely disadvantages Parti since MS-COCO is entirely focused on photographs and descriptions of them.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 bottom prints footnote 9 'We analyzed the cases in which XMC-GAN is rated as more realistic compared to Parti...' after the paragraph carrying the superscript 9; OCR dropped the body. Restored after the anchoring paragraph."
+    },
+    {
+      "before": "including conforming the painting to the contours of the vases.",
+      "after": "including conforming the painting to the contours of the vases.\n\n10 The prompts in Figure 2, panel F are: The saying \"BE EXCELLENT TO EACH OTHER\" X, where X is:\n\n\\- written on a red brick wall with a graffiti image of a green alien wearing a tuxedo. A yellow fire hydrant is on a sidewalk in the foreground.\n\n\\- written with carved letters on driftwood.\n\n\\- written in faded paint on the hull of an old wooden boat and reflected in the water. Wide-angle lens.\n\n\\- written in a stained glass window.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Physical p.19 prints footnote 10 listing the four Figure 2 panel F prompts ('The saying \"BE EXCELLENT TO EACH OTHER\" X...', bullets: red brick wall with graffiti green alien in tuxedo; carved letters on driftwood; faded paint on the hull of an old wooden boat reflected in the water, wide-angle lens; stained glass window) after the paragraph carrying $^{10}$; OCR dropped the body. Restored after the anchoring paragraph in the document's bullet style (PDF text layer)."
+    },
+    {
+      "before": "and are given in terms of panel (capital letter) and image (a-d).",
+      "after": "and are given in terms of panel (capital letter) and image (a-d).\n\n11 Some prompts could not fit in the figure. They are: H(a,b) A robot painted as graffiti on a brick wall. The words \"Fly an airplane\" are written on the wall. A sidewalk is in front of the wall, and grass is growing out of cracks in the concrete. I(a,b) Horses pulling a carriage on the moon's surface, with the Statue of Liberty and Great Pyramid in the background. The Planet Earth can be seen in the sky. DSLR photo. I(c) A shiny robot wearing a race car suit and black visor stands proudly in front of an F1 race car. The sun is setting on a cityscape in the background. comic book illustration. I(d) the saying \"BE EXCELLENT TO EACH OTHER\" on a rough wall with a graffiti image of a green alien wearing a tuxedo.",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Physical p.22 prints footnote 11 'Some prompts could not fit in the figure. They are:' followed by prompts H(a,b), I(a,b), I(c) and I(d) after the paragraph carrying $^{11}$; OCR dropped the body. Restored after the anchoring paragraph (PDF text layer)."
+    },
+    {
+      "before": "likeness is reproduced without their consent.",
+      "after": "likeness is reproduced without their consent.\n\n12 E.g., DALL-E 2 outputs: https://www.mattbell.us/my-fake-dall-e-2-vacation-photos-passed-the-turing-test/",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Physical p.27 prints footnote 12 'E.g., DALL-E 2 outputs: https://www.mattbell.us/my-fake-dall-e-2-vacation-photos-passed-the-turing-test/' after the paragraph carrying $^{12}$; OCR dropped the body. Restored after the anchoring paragraph (PDF text layer)."
+    }
+  ],
+  "unresolved": []
+}

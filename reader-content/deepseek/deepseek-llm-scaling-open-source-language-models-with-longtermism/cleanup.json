@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-llm-scaling-open-source-language-models-with-longtermism",
+  "source_sha256": "9be2b427133468d443ff3a6411287a6f64759ed1e9cdd9a07f07486f11b00591",
+  "ocr_sha256": "02f2d0638b85dbe03c80f1ffbade4fd573169b9f28cf6151f62e5c4c47262e45",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "coverage": "complete",
+    "notes": "Automated per-page 4-gram containment diff of all 48 physical PDF pages against the OCR markdown, plus code-fence structure scan (1 balanced fence; no swallowed structure), with targeted inspection of every page flagged below 0.97 containment. Pages 1, 15 and 30 were rendered for visual verification. Low containment on pages 9-12 is LaTeX math tokenization (scaling-law equations verified present verbatim); pages 34-48 are the appendix example tables (Tables 18-40), which are present as HTML tables or embedded images, so their text is not missing. Table 1 (p.5), Table 4 (p.16) and the beta hyperparameters match the print. The source PDF itself re-prints the footnote \"1Authors are ordered alphabetically by the last name.\" at the bottom of physical p.30 with no marker in the body (print/typesetting artifact); it was intentionally not restored. The arXiv sidebar stamp on p.1 is not a defect."
+  },
+  "patches": [
+    {
+      "before": "\\*DeepSeek-AI\n\n## Abstract",
+      "after": "\\*DeepSeek-AI\n\n\\*Authors are ordered alphabetically by the last name.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote rule prints \"*Authors are ordered alphabetically by the last name.\"; the author block keeps the trailing * on \"Yuheng Zou \\*\" and the \"\\*DeepSeek-AI\" affiliation but OCR dropped the footnote body; restored after the affiliation line."
+    },
+    {
+      "before": "<td>LLaMA27B</td><td>DeepSeek7B</td><td>LLaMA270B</td><td>DeepSeek67B</td>",
+      "after": "<td>LLaMA2 7B</td><td>DeepSeek 7B</td><td>LLaMA2 70B</td><td>DeepSeek 67B</td>",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 Table 3 header prints two stacked header rows \"LLaMA2 | DeepSeek | LLaMA2 | DeepSeek\" over \"7B | 7B | 70B | 67B\" (verified on the 300 dpi header crop); OCR glued each two-row label into one cell string without spaces."
+    }
+  ],
+  "unresolved": []
+}

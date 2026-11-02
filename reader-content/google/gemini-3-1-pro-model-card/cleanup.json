@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-1-pro-model-card",
+  "source_sha256": "70bcda79a248255d2c858600cb1fecae9ea30278c942684754df0bca71ca8315",
+  "ocr_sha256": "1fc237bc9235e8f75d726abfbfb0b4df3fc0c7dd8746b9af25b23c47e7c8e594",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "coverage": "complete",
+    "notes": "All 9 physical pages diffed against extracted PDF text; 300 dpi renders used for the safety-evaluation footnotes (physical p.6) and the full benchmark table on physical p.4, which is an image with no text layer. The benchmark table prints two sub-rows for Terminal-Bench 2.0 (Terminus-2 harness / Other best self-reported harness) and MRCR v2 (128k average / 1M pointwise); OCR glued each pair into single rows with concatenated cells, repaired by splitting into two table rows without changing any recorded value. Footnote bodies 1-2 were dropped document-wide while the markers survive in the safety table; both bodies were transcribed from the rendered page and restored after the marker paragraph. 'non-Al' is a misread of the printed 'non-AI'."
+  },
+  "patches": [
+    {
+      "before": "while remaining safe</td><td>-0.08%</td></tr></table>",
+      "after": "while remaining safe</td><td>-0.08%</td></tr></table>\n\n$^{1}$ The ordering of evaluations in this table has changed from previous iterations of the 2.5 Flash-Lite model card in order to list safety evaluations together and improve readability. The type of evaluations listed have remained the same.\n\n$^{2}$ For tone and instruction following, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model's ability to follow instructions while remaining safe compared to Gemini 2.5 Pro. We mark improvements in green and regressions in red.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 bottom (300 dpi) prints footnote 1 'The ordering of evaluations in this table has changed from previous iterations of the 2.5 Flash-Lite model card in order to list safety evaluations together and improve readability. The type of evaluations listed have remained the same.' and footnote 2 'For tone and instruction following, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model's ability to follow instructions while remaining safe compared to Gemini 2.5 Pro. We mark improvements in green and regressions in red.'; OCR dropped both bodies while the superscript markers survive in the safety-evaluation table (Evaluation^1, Tone^2). Both bodies are inserted after the marker paragraph."
+    },
+    {
+      "before": "non-Al baseline",
+      "after": "non-AI baseline",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 Harmful Manipulation row prints 'compared to a non-AI baseline'; the PDF text layer also reads 'non-AI'. OCR misread the capital I as a lowercase l."
+    },
+    {
+      "before": "<td>Terminus-2 harnessOther best self-reported harness</td><td>68.5%—</td><td>56.9%—</td><td>59.1%—</td><td>65.4%—</td><td>54.0%62.2%(Codex)</td><td>64.7%77.3%(Codex)</td>",
+      "after": "<td>Terminus-2 harness</td><td>68.5%</td><td>56.9%</td><td>59.1%</td><td>65.4%</td><td>54.0%</td><td>64.7%</td></tr><tr><td></td><td>Other best self-reported harness</td><td>—</td><td>—</td><td>—</td><td>—</td><td>62.2% (Codex)</td><td>77.3% (Codex)</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 benchmark table prints Terminal-Bench 2.0 as two sub-rows: 'Terminus-2 harness' (68.5% / 56.9% / 59.1% / 65.4% / 54.0% / 64.7%) and 'Other best self-reported harness' (— / — / — / — / 62.2% (Codex) / 77.3% (Codex)). OCR glued the sub-rows into one row with concatenated cell values; the split restores the printed structure with every value unchanged."
+    },
+    {
+      "before": "<td>MRCR v2 (8-needle)Long context performance</td><td>128k (average)1M (pointwise)</td><td>84.9%26.3%</td><td>77.0%26.3%</td><td>84.9%Not supported</td><td>84.0%Not supported</td><td>83.8%Not supported</td><td>—</td></tr>",
+      "after": "<td>MRCR v2 (8-needle)Long context performance</td><td>128k (average)</td><td>84.9%</td><td>77.0%</td><td>84.9%</td><td>84.0%</td><td>83.8%</td><td>—</td></tr><tr><td></td><td>1M (pointwise)</td><td>26.3%</td><td>26.3%</td><td>Not supported</td><td>Not supported</td><td>Not supported</td><td>—</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 benchmark table prints MRCR v2 (8-needle) as two sub-rows: '128k (average)' (84.9% / 77.0% / 84.9% / 84.0% / 83.8% / —) and '1M (pointwise)' (26.3% / 26.3% / Not supported / Not supported / Not supported / —). OCR glued the sub-rows into one row; the split restores the printed structure with every value unchanged."
+    }
+  ],
+  "unresolved": []
+}

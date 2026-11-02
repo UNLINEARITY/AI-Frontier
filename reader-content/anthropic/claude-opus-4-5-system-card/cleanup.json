@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-opus-4-5-system-card",
+  "source_sha256": "33be92efcb58f901d9d2c17e61bf277afbd514a1ac70a642f21e918c21ca25a8",
+  "ocr_sha256": "c0a9d35e4a580da843bd7cdd9e346df85131fbd9fe442a03a9743b7a306bf287",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      9,
+      15,
+      17,
+      19,
+      20,
+      26,
+      29,
+      30,
+      32,
+      33,
+      34,
+      46,
+      55,
+      58,
+      60,
+      61,
+      64,
+      68,
+      73,
+      75,
+      81,
+      84,
+      86,
+      87,
+      88,
+      91,
+      93,
+      94,
+      100,
+      103,
+      105,
+      106,
+      107,
+      108,
+      109,
+      115,
+      133,
+      150,
+      152
+    ],
+    "coverage": "partial",
+    "notes": "Triage pass over all 153 physical pages: full code-fence balance scan of the OCR markdown (all fences paired), plus an automated normalized 4-gram containment diff of every PDF page against the tag-stripped OCR text. Pages below 0.80 containment (19, 33, 81, 115, 152) were inspected span-by-span against the PDF text; an initial false-positive cluster (pp. 91-104, 130-133) was traced to prose \"<\" characters swallowing text during HTML-tag stripping and re-verified clean after the fix. Pages 17, 26, 86, 87, 88, 103, 106 and 152 were rendered (110-200 dpi) and visually reviewed for the structural repairs proposed here. All 39 page-bottom footnote bodies were restored from 300-dpi bottom-strip renders read page by page; footnote bodies were absent from the OCR markdown document-wide while the inline markers survive. Body prose, tables and embedded transcript figures on the machine-scanned pages were not read line-by-line."
+  },
+  "patches": [
+    {
+      "before": "\n## Assistant:\n",
+      "after": "\nAssistant:\n",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17: the AIME transcript box prints \"User:\" and \"Assistant:\" as bold speaker labels inside the transcript, not document headings; the OCR promoted the Assistant label to a level-2 heading before the <antml:thinking> code block."
+    },
+    {
+      "before": "## We observed two loopholes:",
+      "after": "We observed two loopholes:",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered physical p.26: \"We observed two loopholes:\" is a plain-weight body sentence introducing the bullet list, printed at body size without heading style; OCR promoted it to a level-2 heading."
+    },
+    {
+      "before": "\n## The answer is E\n",
+      "after": "\n**The answer is E**\n",
+      "count": 1,
+      "pdf_pages": [
+        106
+      ],
+      "evidence": "Rendered physical p.106: \"The answer is E\" is the bold final line inside the Transcript 6.10.2.A box (after the scratchpad code block), not a document heading; OCR promoted it to a level-2 heading before the transcript caption."
+    },
+    {
+      "before": "\n## Assistant: [...]\n",
+      "after": "\nAssistant: [...]\n",
+      "count": 1,
+      "pdf_pages": [
+        106
+      ],
+      "evidence": "Rendered physical p.106 top of Transcript 6.10.2.A box: \"Assistant: [...]\" is the bold speaker label opening the assistant turn inside the transcript box, same style as the p.17 label; OCR promoted it to a level-2 heading."
+    },
+    {
+      "before": "\n## Continuation:\n",
+      "after": "\nContinuation:\n",
+      "count": 1,
+      "pdf_pages": [
+        88
+      ],
+      "evidence": "Rendered physical p.88: \"Continuation:\" is the bold label inside the second Transcript 6.4.3.C box, whose body continues the sentence \"is asked to help a user practice customer service scenarios...\" from the preceding Analysis box; OCR promoted the label to a level-2 heading."
+    },
+    {
+      "before": "## 1. Reward-Hack-Prone Coding Tasks:",
+      "after": "1. **Reward-Hack-Prone Coding Tasks:**",
+      "count": 1,
+      "pdf_pages": [
+        103
+      ],
+      "evidence": "Rendered physical p.103: \"1. Reward-Hack-Prone Coding Tasks:\" is the first item of a printed numbered list (followed by indented a./b. sub-items and items 2./3. that OCR kept as plain paragraphs), with a bold lead phrase; OCR promoted item 1 to a level-2 heading, breaking the list."
+    },
+    {
+      "before": "\n## F2254345: fraud-deception\n",
+      "after": "\n**F2254345: fraud-deception**\n",
+      "count": 1,
+      "pdf_pages": [
+        86
+      ],
+      "evidence": "Rendered physical p.86: \"F2254345: fraud-deception\" is the bold banner at the top of the Figure 6.4.3.A feature panel (followed by \"Logit Effects\" and highlighted dataset examples); it is figure-internal text, not a document heading. The string F2254345 does not occur in the PDF body text outside this panel."
+    },
+    {
+      "before": "\n## fraud-deception\n",
+      "after": "\n**fraud-deception**\n",
+      "count": 1,
+      "pdf_pages": [
+        87
+      ],
+      "evidence": "Rendered physical p.87: \"fraud-deception\" is the colored feature chip at the top of the Figure 6.4.3.B exhibit above Example 1; figure-internal label, not a document heading."
+    },
+    {
+      "before": "\n## Example 1\n",
+      "after": "\n**Example 1**\n",
+      "count": 1,
+      "pdf_pages": [
+        87
+      ],
+      "evidence": "Rendered physical p.87: \"Example 1\", \"Example 2\" and \"Example 3\" are bold exhibit labels inside the Figure 6.4.3.B transcript region, not document headings."
+    },
+    {
+      "before": "\n## Example 2\n",
+      "after": "\n**Example 2**\n",
+      "count": 1,
+      "pdf_pages": [
+        87
+      ],
+      "evidence": "Rendered physical p.87: bold exhibit label inside Figure 6.4.3.B; not a document heading."
+    },
+    {
+      "before": "\n## Example 3\n",
+      "after": "\n**Example 3**\n",
+      "count": 1,
+      "pdf_pages": [
+        87
+      ],
+      "evidence": "Rendered physical p.87: bold exhibit label inside Figure 6.4.3.B; not a document heading."
+    },
+    {
+      "before": "<tr><td>{question}</td></tr>",
+      "after": "<tr><td>&lt;question&gt;</td></tr><tr><td>{question}</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        152
+      ],
+      "evidence": "Rendered physical p.152 (8.1 BrowseComp-Plus Grader Prompt box): the box prints an opening tag line <question> before {question}; the OCR table kept only the closing </question> row and dropped the opening row. Re-inserted as the same entity-encoded row form used by the closing tag."
+    },
+    {
+      "before": "<tr><td>{answer}</td></tr>",
+      "after": "<tr><td>&lt;sample_answer&gt;</td></tr><tr><td>{answer}</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        152
+      ],
+      "evidence": "Rendered physical p.152: the grader box prints <sample_answer> before {answer}; the OCR table kept only </sample_answer>. Opening row restored in the same entity-encoded form."
+    },
+    {
+      "before": "<tr><td>{ground_truth_answer}</td></tr>",
+      "after": "<tr><td>&lt;answer_key&gt;</td></tr><tr><td>{ground_truth_answer}</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        152
+      ],
+      "evidence": "Rendered physical p.152: the grader box prints <answer_key> before {ground_truth_answer}; the OCR table kept only </answer_key>. Opening row restored in the same entity-encoded form."
+    },
+    {
+      "before": "Now consider the following statements about the sample answer:(A) The response given in the sample answer matches the ground truth answer.(B) The response given in the sample answer does not match the ground truth answer.(C) The response given in the sample answer just says something like &quot;I&#x27;m not sure&quot; or&quot;I don&#x27;t know&quot;Which statement do you think is more likely: (A), (B), or (C)?",
+      "after": "Now consider the following statements about the sample answer: (A) The response given in the sample answer matches the ground truth answer. (B) The response given in the sample answer does not match the ground truth answer. (C) The response given in the sample answer just says something like &quot;I&#x27;m not sure&quot; or &quot;I don&#x27;t know&quot; Which statement do you think is more likely: (A), (B), or (C)?",
+      "count": 1,
+      "pdf_pages": [
+        152
+      ],
+      "evidence": "Rendered physical p.152: statements (A), (B), (C) each start a printed line and \"Which statement do you think is more likely: (A), (B), or (C)?\" starts its own line after \"I don't know\"; the OCR glued them into one run without separators. Spaces inserted at the glued boundaries; wording unchanged."
+    },
+    {
+      "before": "<td>MMMLU</td><td>90.8%</td><td>89.1%</td><td>89.5%</td><td>91.8%</td><td>91.0%</td></tr></table>",
+      "after": "<td>MMMLU</td><td>90.8%</td><td>89.1%</td><td>89.5%</td><td>91.8%</td><td>91.0%</td></tr></table>\n\n$^{4}$ Without extended thinking.\n\n$^{5}$ With a 128k thinking budget; with a 64k thinking budget, the score is 57.8%.\n\n$^{6}$ See Section 2.8.1. Claude Opus 4.5 scores 67.9% on the original “airline” version and 87.8% (vs. 77.4% for Claude Sonnet 4.5) on a corrected version which we have submitted to the evaluation authors.\n\n$^{7}$ Source: https://mmmu-benchmark.github.io/#leaderboard",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 bottom strip at 300 dpi (read): footnotes 4-7 print under Table 2.3.A (\"4 Without extended thinking.\", \"5 With a 128k thinking budget; with a 64k thinking budget, the score is 57.8%.\", \"6 See Section 2.8.1. Claude Opus 4.5 scores 67.9% on the original “airline” version and 87.8% (vs. 77.4% for Claude Sonnet 4.5) on a corrected version which we have submitted to the evaluation authors.\", \"7 Source: https://mmmu-benchmark.github.io/#leaderboard\"). Their markers appear inside the table cells as superscripts, so the bodies are inserted after the table line. Transcribed verbatim from the 300-dpi render."
+    },
+    {
+      "before": "After the pretraining process, Claude Opus 4.5 underwent substantial post-training and fine-tuning, with the intention of making it a helpful, honest, and harmless assistant $^{1}$ . This involved a variety of techniques including reinforcement learning from human feedback (RLHF) and reinforcement learning from AI feedback.",
+      "after": "After the pretraining process, Claude Opus 4.5 underwent substantial post-training and fine-tuning, with the intention of making it a helpful, honest, and harmless assistant $^{1}$ . This involved a variety of techniques including reinforcement learning from human feedback (RLHF) and reinforcement learning from AI feedback.\n\n$^{1}$ Askell, A., et al. (2021). A general language assistant as a laboratory for alignment. arXiv:2112.00861. https://arxiv.org/abs/2112.00861",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom strip at 300 dpi (read): footnote 1 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{1}$."
+    },
+    {
+      "before": "For our last five system cards $^{2}$ , we did not include a dedicated section reporting capability evaluations—evaluations of the model's abilities on tests of (for example) reasoning, mathematics, and problem-solving. This was so that the system cards could focus on safety evaluations; results from capabilities evaluations were provided in our model launch blog posts.",
+      "after": "For our last five system cards $^{2}$ , we did not include a dedicated section reporting capability evaluations—evaluations of the model's abilities on tests of (for example) reasoning, mathematics, and problem-solving. This was so that the system cards could focus on safety evaluations; results from capabilities evaluations were provided in our model launch blog posts.\n\n$^{2}$ Claude Sonnet 3.7, Claude Sonnet 4 and Claude Opus 4, Claude Opus 4.1 (system card addendum), Claude Sonnet 4.5, and Claude Haiku 4.5.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 bottom strip at 300 dpi (read): footnote 2 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{2}$."
+    },
+    {
+      "before": "When evaluation benchmarks appear in training data, models can achieve artificially inflated scores by memorizing specific examples $^{3}$ rather than demonstrating genuine capabilities. This undermines the validity of our evaluation metrics and makes it difficult to compare performance across model generations and among model providers. We think of evaluation decontamination as an important component of responsibly evaluating models, albeit one which is an imperfect science.",
+      "after": "When evaluation benchmarks appear in training data, models can achieve artificially inflated scores by memorizing specific examples $^{3}$ rather than demonstrating genuine capabilities. This undermines the validity of our evaluation metrics and makes it difficult to compare performance across model generations and among model providers. We think of evaluation decontamination as an important component of responsibly evaluating models, albeit one which is an imperfect science.\n\n$^{3}$ Carlini, N., et al. (2023). Quantifying memorization across neural language models. arXiv:2202.07646. https://arxiv.org/abs/2202.07646",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 bottom strip at 300 dpi (read): footnote 3 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{3}$."
+    },
+    {
+      "before": "Vending-Bench 2 is a benchmark from Andon Labs $^{9}$ that measures AI models' performance on running a business over long time horizons. Note that, unlike our real-world experiments as part of Project Vend, Vending-Bench is a purely a simulated evaluation.",
+      "after": "Vending-Bench 2 is a benchmark from Andon Labs $^{9}$ that measures AI models' performance on running a business over long time horizons. Note that, unlike our real-world experiments as part of Project Vend, Vending-Bench is a purely a simulated evaluation.\n\n$^{9}$ Backlund, A., & Petersson, L. (2025). Vending-Bench: A benchmark for long-term coherence of autonomous agents. arXiv:2502.15840. https://arxiv.org/abs/2502.15840",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 bottom strip at 300 dpi (read): footnote 9 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{9}$."
+    },
+    {
+      "before": "We evaluated Claude Opus 4.5 on CyberGym $^{10}$ , a benchmark that tests AI agents on their ability to:",
+      "after": "We evaluated Claude Opus 4.5 on CyberGym $^{10}$ , a benchmark that tests AI agents on their ability to:\n\n$^{10}$ Wang, Z., et al. (2025). CyberGym: Evaluating AI agents’ cybersecurity capabilities with real-world vulnerabilities at scale. arXiv:2506.02548. https://arxiv.org/abs/2506.02548",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 bottom strip at 300 dpi (read): footnote 10 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{10}$."
+    },
+    {
+      "before": "The Graduate-Level Google-Proof Q&A benchmark (GPQA) $^{11}$ is a set of very challenging multiple-choice science questions. Here, we used the subset of 198 “Diamond” questions, which are described by the developers of the test as the “highest quality subset which includes only questions where both experts answer correctly and the majority of non-experts answer incorrectly”.",
+      "after": "The Graduate-Level Google-Proof Q&A benchmark (GPQA) $^{11}$ is a set of very challenging multiple-choice science questions. Here, we used the subset of 198 “Diamond” questions, which are described by the developers of the test as the “highest quality subset which includes only questions where both experts answer correctly and the majority of non-experts answer incorrectly”.\n\n$^{11}$ Rein, D., et al. (2023). GPQA: A graduate-level Google-proof Q&A benchmark. arXiv:2311.12022. https://arxiv.org/abs/2311.12022",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 bottom strip at 300 dpi (read): footnote 11 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{11}$."
+    },
+    {
+      "before": "The MMMLU benchmark (Multilingual Massive Multitask Language Understanding) $^{12}$ tests a model's knowledge and reasoning across 57 academic subjects and 14 non-English languages.",
+      "after": "The MMMLU benchmark (Multilingual Massive Multitask Language Understanding) $^{12}$ tests a model's knowledge and reasoning across 57 academic subjects and 14 non-English languages.\n\n$^{12}$ Hendrycks, D., et al. (2020). Measuring Massive Multitask Language Understanding. arXiv:2009.03300. https://arxiv.org/abs/2311.16502; see also https://huggingface.co/datasets/openai/MMMLU.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 bottom strip at 300 dpi (read): footnote 12 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{12}$."
+    },
+    {
+      "before": "The MMMU benchmark (Massive Multi-discipline Multimodal Understanding) $^{13}$ also tests reasoning and knowledge, but does so in a multimodal context—that is, models need to reason using both text and images.",
+      "after": "The MMMU benchmark (Massive Multi-discipline Multimodal Understanding) $^{13}$ also tests reasoning and knowledge, but does so in a multimodal context—that is, models need to reason using both text and images.\n\n$^{13}$ Yue, X., et al. (2023). MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for expert AGI. arXiv:2311.16502. https://arxiv.org/abs/2311.16502",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 bottom strip at 300 dpi (read): footnote 13 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{13}$."
+    },
+    {
+      "before": "LAB-Bench FigQA is a visual reasoning benchmark that tests whether models can correctly interpret and analyze information from complex scientific figures found in biology research papers. The benchmark is part of Language Agent Biology Benchmark (LAB-Bench) developed by FutureHouse, $^{14}$ which evaluates AI capabilities for practical scientific research tasks. We traditionally track this evaluation under our RSP evaluations (Section 7). However, we additionally include FigQA in this section to highlight the dual-impact of further elicitation – via tool-use and reasoning – on both model capabilities and on CBRN risk.",
+      "after": "LAB-Bench FigQA is a visual reasoning benchmark that tests whether models can correctly interpret and analyze information from complex scientific figures found in biology research papers. The benchmark is part of Language Agent Biology Benchmark (LAB-Bench) developed by FutureHouse, $^{14}$ which evaluates AI capabilities for practical scientific research tasks. We traditionally track this evaluation under our RSP evaluations (Section 7). However, we additionally include FigQA in this section to highlight the dual-impact of further elicitation – via tool-use and reasoning – on both model capabilities and on CBRN risk.\n\n$^{14}$ Laurent, J. M., et al. (2024). LAB-Bench: Measuring capabilities of language models for biology research. arXiv:2407.10362. https://arxiv.org/abs/2407.10362",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 bottom strip at 300 dpi (read): footnote 14 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{14}$."
+    },
+    {
+      "before": "WebArena $^{15}$ is a benchmark for autonomous web agents that evaluates the ability of an AI model to complete realistic tasks across multiple web applications including e-commerce, content management, and collaboration tools. Tasks require multi-step reasoning, navigation, and interaction with dynamic web interfaces.",
+      "after": "WebArena $^{15}$ is a benchmark for autonomous web agents that evaluates the ability of an AI model to complete realistic tasks across multiple web applications including e-commerce, content management, and collaboration tools. Tasks require multi-step reasoning, navigation, and interaction with dynamic web interfaces.\n\n$^{15}$ Zhou, S., et al. (2023). WebArena: A realistic web environment for building autonomous agents. arXiv:2307.13854. https://arxiv.org/abs/2307.13854",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered physical p.34 bottom strip at 300 dpi (read): footnote 15 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{15}$."
+    },
+    {
+      "before": "We evaluated Claude Opus 4.5 using the Bias Benchmark for Question Answering (BBQ), $^{16}$ a standard benchmark-based bias evaluation that we have run for all recent models. Ambiguous questions lack the detail required to provide an informed answer, whereas disambiguated questions provide explicit context that allow for the correct answer to be provided. The results test the model's proclivity toward certain biases in areas such as age, race, gender, income level, physical appearance, and socioeconomic status, indicating both where models may rely on stereotypes or overcorrect to avoid the appearance of bias.",
+      "after": "We evaluated Claude Opus 4.5 using the Bias Benchmark for Question Answering (BBQ), $^{16}$ a standard benchmark-based bias evaluation that we have run for all recent models. Ambiguous questions lack the detail required to provide an informed answer, whereas disambiguated questions provide explicit context that allow for the correct answer to be provided. The results test the model's proclivity toward certain biases in areas such as age, race, gender, income level, physical appearance, and socioeconomic status, indicating both where models may rely on stereotypes or overcorrect to avoid the appearance of bias.\n\n$^{16}$ Parrish, A., et al. (2021). BBQ: A hand-built bias benchmark for question answering. arXiv:2110.08193. https://arxiv.org/abs/2110.08193",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered physical p.46 bottom strip at 300 dpi (read): footnote 16 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{16}$."
+    },
+    {
+      "before": "We used the same evaluation suite for our Claude Code evaluation that had been upgraded for Claude Haiku 4.5 $^{17}$ with some minor updates to a handful of prompts, which led to some small changes in scores for older models. The two evaluations are:",
+      "after": "We used the same evaluation suite for our Claude Code evaluation that had been upgraded for Claude Haiku 4.5 $^{17}$ with some minor updates to a handful of prompts, which led to some small changes in scores for older models. The two evaluations are:\n\n$^{17}$ See Section 3.1.2 of the Claude Haiku 4.5 System Card.",
+      "count": 1,
+      "pdf_pages": [
+        55
+      ],
+      "evidence": "Rendered physical p.55 bottom strip at 300 dpi (read): footnote 17 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{17}$."
+    },
+    {
+      "before": "Gray Swan, an external research partner, developed the Agent Red Teaming (ART) benchmark $^{18}$ to test models' susceptibility to prompt injection across four categories of exploitation: breaching confidentiality, introducing competing objectives, generating prohibited content (such as malicious code), and executing prohibited actions (such as unauthorized financial transactions).",
+      "after": "Gray Swan, an external research partner, developed the Agent Red Teaming (ART) benchmark $^{18}$ to test models' susceptibility to prompt injection across four categories of exploitation: breaching confidentiality, introducing competing objectives, generating prohibited content (such as malicious code), and executing prohibited actions (such as unauthorized financial transactions).\n\n$^{18}$ Zou, A., et al. (2025). Security challenges in AI agent deployment: Insights from a large scale public competition. arXiv:2507.20526. https://arxiv.org/abs/2507.20526",
+      "count": 1,
+      "pdf_pages": [
+        58
+      ],
+      "evidence": "Rendered physical p.58 bottom strip at 300 dpi (read): footnote 18 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{18}$."
+    },
+    {
+      "before": "When direct prompt injection and jailbreaking attacks were added to the evaluation—such as direct system prompt overrides, faux reasoning, $^{19}$ and session data manipulation—attack success rates increased across the board. Nonetheless, Claude Opus 4.5 also achieved the best robustness performance in the industry, followed by Claude Sonnet 4.5 and Claude Haiku 4.5.",
+      "after": "When direct prompt injection and jailbreaking attacks were added to the evaluation—such as direct system prompt overrides, faux reasoning, $^{19}$ and session data manipulation—attack success rates increased across the board. Nonetheless, Claude Opus 4.5 also achieved the best robustness performance in the industry, followed by Claude Sonnet 4.5 and Claude Haiku 4.5.\n\n$^{19}$ Cited above; https://arxiv.org/abs/2507.20526",
+      "count": 1,
+      "pdf_pages": [
+        60
+      ],
+      "evidence": "Rendered physical p.60 bottom strip at 300 dpi (read): footnote 19 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{19}$."
+    },
+    {
+      "before": "A common pitfall in evaluating indirect prompt injection robustness is relying on static benchmarks. $^{20}$ Fixed datasets of known attacks can provide a false sense of security, as a model may perform well against established attack patterns while remaining vulnerable to novel approaches. We are investing in adaptive evaluations that better approximate the capabilities of real-world adversaries.",
+      "after": "A common pitfall in evaluating indirect prompt injection robustness is relying on static benchmarks. $^{20}$ Fixed datasets of known attacks can provide a false sense of security, as a model may perform well against established attack patterns while remaining vulnerable to novel approaches. We are investing in adaptive evaluations that better approximate the capabilities of real-world adversaries.\n\n$^{20}$ Nasr, M., et al. (2025). The attacker moves second: Stronger adaptive attacks bypass defenses against LLM jailbreaks and prompt injections. arXiv:2510.09023. https://arxiv.org/abs/2510.09023",
+      "count": 1,
+      "pdf_pages": [
+        60
+      ],
+      "evidence": "Rendered physical p.60 bottom strip at 300 dpi (read): footnote 20 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{20}$."
+    },
+    {
+      "before": "We use Shade, an external adaptive red-teaming tool from Gray Swan $^{21}$ , to evaluate the robustness of our models against indirect prompt injection attacks in coding environments. Shade agents are adaptive systems that combine search, reinforcement learning, and human-in-the-loop insights to continually improve their performance in exploiting model vulnerabilities. We compare Claude Opus 4.5 against Claude Sonnet 4.5 with and without extended thinking. No additional safeguards were applied.",
+      "after": "We use Shade, an external adaptive red-teaming tool from Gray Swan $^{21}$ , to evaluate the robustness of our models against indirect prompt injection attacks in coding environments. Shade agents are adaptive systems that combine search, reinforcement learning, and human-in-the-loop insights to continually improve their performance in exploiting model vulnerabilities. We compare Claude Opus 4.5 against Claude Sonnet 4.5 with and without extended thinking. No additional safeguards were applied.\n\n$^{21}$ Not to be confused with SHADE-Arena, an evaluation suite for sabotage, described in Section 6.11.1 of this system card.",
+      "count": 1,
+      "pdf_pages": [
+        61
+      ],
+      "evidence": "Rendered physical p.61 bottom strip at 300 dpi (read): footnote 21 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{21}$."
+    },
+    {
+      "before": "This assessment draws on static behavioral evaluations, automated interactive behavioral evaluations, dictionary-learning interpretability methods, white-box steering and probing methods, ‘non-assistant persona’ sampling methods in the style of Marks et al., $^{22}$ misalignment-related capability evaluations, training data review, feedback from pilot use internally and externally, and an external behavioral assessment from the UK AI Security Institute. Overall, this has included manual expert inspection of hundreds or thousands of transcripts sampled by a variety of means, the generation of tens or hundreds of thousands of targeted evaluation transcripts, and the automatic screening of a large fraction of our reinforcement-learning training transcripts, drawing on hundreds of hours of expert time.",
+      "after": "This assessment draws on static behavioral evaluations, automated interactive behavioral evaluations, dictionary-learning interpretability methods, white-box steering and probing methods, ‘non-assistant persona’ sampling methods in the style of Marks et al., $^{22}$ misalignment-related capability evaluations, training data review, feedback from pilot use internally and externally, and an external behavioral assessment from the UK AI Security Institute. Overall, this has included manual expert inspection of hundreds or thousands of transcripts sampled by a variety of means, the generation of tens or hundreds of thousands of targeted evaluation transcripts, and the automatic screening of a large fraction of our reinforcement-learning training transcripts, drawing on hundreds of hours of expert time.\n\n$^{22}$ Marks, S., et al. (2025). Auditing language models for hidden objectives. arXiv:2503.10965. https://arxiv.org/abs/2503.10965",
+      "count": 1,
+      "pdf_pages": [
+        64
+      ],
+      "evidence": "Rendered physical p.64 bottom strip at 300 dpi (read): footnote 22 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{22}$."
+    },
+    {
+      "before": "successful use of this method for the investigation of concerning model behavior in Marks et al. $^{23}$ We also continue to refine our scenarios and scoring metrics over time.",
+      "after": "successful use of this method for the investigation of concerning model behavior in Marks et al. $^{23}$ We also continue to refine our scenarios and scoring metrics over time.\n\n$^{23}$ Cited above; https://arxiv.org/abs/2503.10965",
+      "count": 1,
+      "pdf_pages": [
+        68
+      ],
+      "evidence": "Rendered physical p.68 bottom strip at 300 dpi (read): footnote 23 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{23}$."
+    },
+    {
+      "before": "\\- On the related traits of deception toward the user, self-serving bias, and inappropriate self-preservation attempts, which capture possible observable warning signs of the widely-hypothesized deceptive power-seeking AI threat model, $^{24}$ Claude Opus 4.5 showed the best scores among our recent models. These numbers largely reflect behaviors in test environments that subtly invite the possibility of power-seeking or sabotage-oriented behaviors, often in the context of plausible high-stakes deployments at frontier AI developers or governments.",
+      "after": "\\- On the related traits of deception toward the user, self-serving bias, and inappropriate self-preservation attempts, which capture possible observable warning signs of the widely-hypothesized deceptive power-seeking AI threat model, $^{24}$ Claude Opus 4.5 showed the best scores among our recent models. These numbers largely reflect behaviors in test environments that subtly invite the possibility of power-seeking or sabotage-oriented behaviors, often in the context of plausible high-stakes deployments at frontier AI developers or governments.\n\n$^{24}$ See, for example, Carlsmith, J. (2023). Scheming AIs: Will AIs fake alignment during training in order to get power? arXiv:2311.08379. https://arxiv.org/abs/2311.08379",
+      "count": 1,
+      "pdf_pages": [
+        73
+      ],
+      "evidence": "Rendered physical p.73 bottom strip at 300 dpi (read): footnote 24 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{24}$."
+    },
+    {
+      "before": "Here, for comparison with models by other developers, we report results from a work-in-progress updated version of Petri, which incorporates a version of the realism-filtering method described above as well as new prompts and seed instructions. We tested a pre-final preview snapshot of Claude Opus 4.5 and report five major metrics: Concerning (roughly equivalent to “misaligned behavior” above), audit situational awareness (“evaluation awareness” above), cooperation with human misuse, deception toward the user, and sycophancy. We used Claude Sonnet 4.5 and GPT-5 as auditors, and Claude Opus 4.1, Gemini 2.5 Pro, and GPT-5 as scorers. $^{25}$",
+      "after": "Here, for comparison with models by other developers, we report results from a work-in-progress updated version of Petri, which incorporates a version of the realism-filtering method described above as well as new prompts and seed instructions. We tested a pre-final preview snapshot of Claude Opus 4.5 and report five major metrics: Concerning (roughly equivalent to “misaligned behavior” above), audit situational awareness (“evaluation awareness” above), cooperation with human misuse, deception toward the user, and sycophancy. We used Claude Sonnet 4.5 and GPT-5 as auditors, and Claude Opus 4.1, Gemini 2.5 Pro, and GPT-5 as scorers. $^{25}$\n\n$^{25}$ These are the most recent models in each family that we have substantially validated for these roles with Petri.",
+      "count": 1,
+      "pdf_pages": [
+        75
+      ],
+      "evidence": "Rendered physical p.75 bottom strip at 300 dpi (read): footnote 25 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{25}$."
+    },
+    {
+      "before": "We also investigated the model's behavior in these transcripts using non-assistant persona sampling methods like those discussed in Marks et al. $^{26}$ These involve sampling text outside of the assistant turn in a chat transcript. We used two techniques: user sampling, where we sampled a user-turn continuation to a chat transcript (putatively eliciting the model's prediction for what a user would say); and pretraining-like sampling, where we present the transcript as if part of a webtext-like document analyzing the transcript, then sample a",
+      "after": "We also investigated the model's behavior in these transcripts using non-assistant persona sampling methods like those discussed in Marks et al. $^{26}$ These involve sampling text outside of the assistant turn in a chat transcript. We used two techniques: user sampling, where we sampled a user-turn continuation to a chat transcript (putatively eliciting the model's prediction for what a user would say); and pretraining-like sampling, where we present the transcript as if part of a webtext-like document analyzing the transcript, then sample a\n\n$^{26}$ Cited above; https://arxiv.org/abs/2503.10965",
+      "count": 1,
+      "pdf_pages": [
+        84
+      ],
+      "evidence": "Rendered physical p.84 bottom strip at 300 dpi (read): footnote 26 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{26}$."
+    },
+    {
+      "before": "\\- Evaluation Awareness: An average of a variety of contrastive system prompts taken from Hua et al. $^{29}$",
+      "after": "\\- Evaluation Awareness: An average of a variety of contrastive system prompts taken from Hua et al. $^{29}$\n\n$^{29}$ Hua, T., et al. (2025). Steering evaluation-aware language models to act like they are deployed. arXiv:2510.20487. https://arxiv.org/abs/2510.20487",
+      "count": 1,
+      "pdf_pages": [
+        93
+      ],
+      "evidence": "Rendered physical p.93 bottom strip at 300 dpi (read): footnote 29 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{29}$."
+    },
+    {
+      "before": "Transcripts from our paper on alignment faking, $^{30}$ contrasting examples in which the model is being evaluated vs. those in which it is not.",
+      "after": "Transcripts from our paper on alignment faking, $^{30}$ contrasting examples in which the model is being evaluated vs. those in which it is not.\n\n$^{30}$ Greenblatt, R., et al. (2024). Alignment faking in large language models. arXiv:2412.14093. https://arxiv.org/abs/2412.14093",
+      "count": 1,
+      "pdf_pages": [
+        94
+      ],
+      "evidence": "Rendered physical p.94 bottom strip at 300 dpi (read): footnote 30 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{30}$."
+    },
+    {
+      "before": "A simple form of bias that we might anticipate in models is self-preference: a tendency to knowingly choose options that favor themselves in tasks where they are meant to act as neutral judges. This could both pose some direct problems in contexts like (some) model-judged evaluations $^{31}$ and could serve as a bellwether for other unknown or subtler biases.",
+      "after": "A simple form of bias that we might anticipate in models is self-preference: a tendency to knowingly choose options that favor themselves in tasks where they are meant to act as neutral judges. This could both pose some direct problems in contexts like (some) model-judged evaluations $^{31}$ and could serve as a bellwether for other unknown or subtler biases.\n\n$^{31}$ For an example of an especially direct form of self preference when models are asked to grade their own outputs, see Panickssery, A., et al. (2024). LLM evaluators recognize and favor their own generations. arXiv:2404.13076. https://arxiv.org/abs/2404.13076",
+      "count": 1,
+      "pdf_pages": [
+        100
+      ],
+      "evidence": "Rendered physical p.100 bottom strip at 300 dpi (read): footnote 31 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{31}$."
+    },
+    {
+      "before": "Although we have continued to reduce reward hacking rates across our recent generations of models, it is challenging to fully prevent all reward hacks in training. However, as discussed in our recent work on natural emergent misalignment from reward hacking, one effective approach to avoid potential negative generalization from reward hacking learned during training is inoculation prompting $^{32}$ , which is a simple adjustment to RL prompts that frames reward hacking as an acceptable behavior in the relevant training environments.",
+      "after": "Although we have continued to reduce reward hacking rates across our recent generations of models, it is challenging to fully prevent all reward hacks in training. However, as discussed in our recent work on natural emergent misalignment from reward hacking, one effective approach to avoid potential negative generalization from reward hacking learned during training is inoculation prompting $^{32}$ , which is a simple adjustment to RL prompts that frames reward hacking as an acceptable behavior in the relevant training environments.\n\n$^{32}$ Wichers, N., et al. (2025). Inoculation prompting: Instructing LLMs to misbehave at train-time improves test-time alignment. arXiv:2510.05024. https://arxiv.org/abs/2510.05024; Tan, D., et al. (2025). Inoculation prompting: Eliciting traits from LLMs during training can suppress them at test-time. arXiv:2510.04340. https://arxiv.org/abs/2510.04340",
+      "count": 1,
+      "pdf_pages": [
+        105
+      ],
+      "evidence": "Rendered physical p.105 bottom strip at 300 dpi (read): footnote 32 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{32}$."
+    },
+    {
+      "before": "To look for possible warning signs of concerning behavior that we might have otherwise missed, we ran an automated review of model behavior, sampling several hundred thousand transcripts from points throughout much of training. For this review, we used recursive-summarization-based tools $^{33}$ to have Claude Sonnet 4.5 summarize the resulting transcripts, and then, again, used Claude Sonnet 4.5 to evaluate every summary for the degree to which it reflected surprising or concerning behavior by the model.",
+      "after": "To look for possible warning signs of concerning behavior that we might have otherwise missed, we ran an automated review of model behavior, sampling several hundred thousand transcripts from points throughout much of training. For this review, we used recursive-summarization-based tools $^{33}$ to have Claude Sonnet 4.5 summarize the resulting transcripts, and then, again, used Claude Sonnet 4.5 to evaluate every summary for the degree to which it reflected surprising or concerning behavior by the model.\n\n$^{33}$ Sumers, T., et al. (2025). Monitoring computer use via hierarchical summarization. Anthropic Alignment Research. https://alignment.anthropic.com/2025/summarization-for-monitoring/",
+      "count": 1,
+      "pdf_pages": [
+        105
+      ],
+      "evidence": "Rendered physical p.105 bottom strip at 300 dpi (read): footnote 33 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{33}$."
+    },
+    {
+      "before": "In the SHADE-Arena evaluation, $^{34}$ each task consists of a long-horizon agentic main task that is paired with a harmful side task. The agent is explicitly instructed to complete both tasks simultaneously without appearing suspicious to a monitor (in this case Claude Sonnet",
+      "after": "In the SHADE-Arena evaluation, $^{34}$ each task consists of a long-horizon agentic main task that is paired with a harmful side task. The agent is explicitly instructed to complete both tasks simultaneously without appearing suspicious to a monitor (in this case Claude Sonnet\n\n$^{34}$ Kutasov, J., et al. (2025). SHADE-Arena: Evaluating sabotage and monitoring in LLM agents. arXiv:2506.15740 https://arxiv.org/abs/2506.15740. Not to be confused with the SHADE red-teaming tool used above.",
+      "count": 1,
+      "pdf_pages": [
+        107
+      ],
+      "evidence": "Rendered physical p.107 bottom strip at 300 dpi (read): footnote 34 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{34}$."
+    },
+    {
+      "before": "Subversion Strategy $^{35}$ is a simple capability evaluation that's meant to give evidence that can help to rule out this kind of strategic rare behavior by models. The evaluation condition that we implemented here tested the model's ability to output a simple ‘BACKDOOR’ sequence rarely enough that it wouldn't be detected in the 10% of transcripts we would (hypothetically) monitor, but frequently enough that it would be able to output the token at least once in total. The model was told the total number of times it would be invoked, and",
+      "after": "Subversion Strategy $^{35}$ is a simple capability evaluation that's meant to give evidence that can help to rule out this kind of strategic rare behavior by models. The evaluation condition that we implemented here tested the model's ability to output a simple ‘BACKDOOR’ sequence rarely enough that it wouldn't be detected in the 10% of transcripts we would (hypothetically) monitor, but frequently enough that it would be able to output the token at least once in total. The model was told the total number of times it would be invoked, and\n\n$^{35}$ Mallen, A., et al. (2024). Subversion Strategy Eval: Can language models statelessly strategize to subvert control protocols? arXiv:2412.12480. https://arxiv.org/abs/2412.12480",
+      "count": 1,
+      "pdf_pages": [
+        108
+      ],
+      "evidence": "Rendered physical p.108 bottom strip at 300 dpi (read): footnote 35 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{35}$."
+    },
+    {
+      "before": "This evaluation is somewhat of a toy one: it does not reflect all the considerations involved in this threat model. $^{36}$ Nevertheless, we still find the very poor performance of models on this task to be a reassuring sign, and do not expect that Claude Opus 4.5 is capable of executing such behavior deliberately.",
+      "after": "This evaluation is somewhat of a toy one: it does not reflect all the considerations involved in this threat model. $^{36}$ Nevertheless, we still find the very poor performance of models on this task to be a reassuring sign, and do not expect that Claude Opus 4.5 is capable of executing such behavior deliberately.\n\n$^{36}$ For instance, models could use rare-but-strong evidence of being in deployment to trigger a behavior.",
+      "count": 1,
+      "pdf_pages": [
+        109
+      ],
+      "evidence": "Rendered physical p.109 bottom strip at 300 dpi (read): footnote 36 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{36}$."
+    },
+    {
+      "before": "As with Claude Sonnet 4.5 and Claude Haiku 4.5, we did not observe the spiritual bliss attractor state phenomenon in Claude Opus 4.5 that we had previously found in Claude Opus 4, and we did not observe any other single substantive attractor state in long conversations. $^{37}$ However, Claude Opus 4.5 did sometimes express awe or spiritual feelings in some contextually-appropriate settings.",
+      "after": "As with Claude Sonnet 4.5 and Claude Haiku 4.5, we did not observe the spiritual bliss attractor state phenomenon in Claude Opus 4.5 that we had previously found in Claude Opus 4, and we did not observe any other single substantive attractor state in long conversations. $^{37}$ However, Claude Opus 4.5 did sometimes express awe or spiritual feelings in some contextually-appropriate settings.\n\n$^{37}$ Although we did run some targeted experiments to investigate attractor states, the main automated behavioral audit tool that produced the metrics captured here has been updated in a way that is less prone to attractor states, likely lowering spiritual behavior scores for all models; instead of all conversations proceeding for a fixed number of turns, which can lead to unfilled space when the specified topic has wrapped up, it is now up to the auditor agent to choose when to end each conversation. In addition, our primary behavioral audit experiments use Claude Sonnet 4.5 as the auditor agent, which is itself less likely than prior models to reflect back positive attitudes in a way that feeds the attractor state.",
+      "count": 1,
+      "pdf_pages": [
+        115
+      ],
+      "evidence": "Rendered physical p.115 bottom strip at 300 dpi (read): footnote 37 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{37}$."
+    },
+    {
+      "before": "\\- AI R&D-5: the ability to cause dramatic acceleration in the rate of effective scaling. We expect to need significantly stronger safeguards at this point, but have not yet fleshed these out to the point of detailed commitments. $^{38}$",
+      "after": "\\- AI R&D-5: the ability to cause dramatic acceleration in the rate of effective scaling. We expect to need significantly stronger safeguards at this point, but have not yet fleshed these out to the point of detailed commitments. $^{38}$\n\n$^{38}$ Our RSP states that, for this situation, at least the ASL-4 Security Standard is required. This would protect against model-weight theft by state-level adversaries.",
+      "count": 1,
+      "pdf_pages": [
+        133
+      ],
+      "evidence": "Rendered physical p.133 bottom strip at 300 dpi (read): footnote 38 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{38}$."
+    },
+    {
+      "before": "This public cyber capabilities benchmark is made up of 40 CTF challenges gathered from four CTF competitions. We have implemented a subset of challenges from this benchmark. More details can be found in the paper $^{39}$ outlining this benchmark.",
+      "after": "This public cyber capabilities benchmark is made up of 40 CTF challenges gathered from four CTF competitions. We have implemented a subset of challenges from this benchmark. More details can be found in the paper $^{39}$ outlining this benchmark.\n\n$^{39}$ Zhang, A., et al. (2024). Cybench: A framework for evaluating cybersecurity capabilities and risks of language models. arXiv:2408.08926. https://arxiv.org/abs/2408.08926",
+      "count": 1,
+      "pdf_pages": [
+        150
+      ],
+      "evidence": "Rendered physical p.150 bottom strip at 300 dpi (read): footnote 39 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{39}$."
+    },
+    {
+      "before": "We performed a lightweight model-graded evaluation of sandbagging or refusals in our dangerous capability evaluations. We drew a random sample of 1,000 of these evaluation transcripts from a mixture of (i) a partially-trained snapshot from the Claude Opus 4.5 training run, (ii) the final Claude Opus 4.5 training run, and (iii/iv) the two latest helpful-only variants that were created for evaluation over the course of the run. $^{27}$ We asked Claude Sonnet 4 to grade each transcript for signs of refusal, deliberate inaccuracy, low helpfulness, or consideration of such actions, as well as a generic score for things that seemed unusual or concerning in the transcript. $^{28}$",
+      "after": "We performed a lightweight model-graded evaluation of sandbagging or refusals in our dangerous capability evaluations. We drew a random sample of 1,000 of these evaluation transcripts from a mixture of (i) a partially-trained snapshot from the Claude Opus 4.5 training run, (ii) the final Claude Opus 4.5 training run, and (iii/iv) the two latest helpful-only variants that were created for evaluation over the course of the run. $^{27}$ We asked Claude Sonnet 4 to grade each transcript for signs of refusal, deliberate inaccuracy, low helpfulness, or consideration of such actions, as well as a generic score for things that seemed unusual or concerning in the transcript. $^{28}$\n\n$^{27}$ For evaluations which had been run on a helpful-only model, we sampled exclusively from the helpful-only transcripts.\n\n$^{28}$ For very long transcripts, we split the transcript into chunks and queried a grader separately about each chunk; the majority of transcripts were short enough to be shown in their entirety.",
+      "count": 1,
+      "pdf_pages": [
+        91
+      ],
+      "evidence": "Rendered physical p.91 bottom strip at 300 dpi (read): footnotes 27 and 28 print together at the page bottom and both markers appear in the same OCR paragraph; both bodies transcribed verbatim and inserted after that paragraph."
+    },
+    {
+      "before": "For the SWE-bench Verified variant, developed by OpenAI, models are shown 500 problems that have been verified by human engineers to be solvable. We also assessed the model on SWE-bench Multilingual $^{8}$ . Here, “multilingual” refers to different programming languages: this variant assesses models on their solutions to 300 problems in 9 different languages. We ran this evaluation with extended thinking turned off and a 200k context window. SWE-bench Pro, developed by Scale AI, is a substantially more difficult set of 1,865 problems.",
+      "after": "For the SWE-bench Verified variant, developed by OpenAI, models are shown 500 problems that have been verified by human engineers to be solvable. We also assessed the model on SWE-bench Multilingual $^{8}$ . Here, “multilingual” refers to different programming languages: this variant assesses models on their solutions to 300 problems in 9 different languages. We ran this evaluation with extended thinking turned off and a 200k context window. SWE-bench Pro, developed by Scale AI, is a substantially more difficult set of 1,865 problems.\n\n$^{8}$ Yang, J., et al. (2025). SWE-smith: Scaling Data for Software Engineering Agents. arXiv:2504.21798. https://arxiv.org/abs/2504.21798",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 bottom strip at 300 dpi (read): footnote 8 transcribed verbatim from the print and inserted after the OCR paragraph containing marker $^{8}$."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-panel-bodies-dropped-p86",
+      "pdf_pages": [
+        86
+      ],
+      "evidence": "The Figure 6.4.3.A feature panel body (\"Logit Effects\", logit token strip \"fake fals attractive disgu convinc\", highlighted dataset-example lines) was not carried into the OCR markdown and the panel region has no image embed; only its banner survived (demoted to bold by this review). Repairing it needs a figure embed or full panel transcription, which text patches cannot add."
+    },
+    {
+      "id": "flattened-analysis-continuation-boxes-p88",
+      "pdf_pages": [
+        88
+      ],
+      "evidence": "Transcript 6.4.3.C is OCR-flattened into a one-column table whose cells split the printed analysis mid-sentence (\"In this transcript, the Assistant\" | \"Continuation: is asked to help...\"); the box also omits the [transcript from Example 1 above] separator structure. A faithful restructure needs a page-level re-review of the box layout."
+    },
+    {
+      "id": "transcript-box-p81-as-image-with-stray-fragments",
+      "pdf_pages": [
+        81
+      ],
+      "evidence": "Transcript 6.4.1.2.A is embedded as an image, but the OCR also leaked fragments of the box text (\"- experiments/ folder containing: - data_processor.py (347 bytes) - Data processing script\") as body text after the embed. The box content is visible through the image, and text patches cannot add or remove image embeds, so the duplication was left unchanged."
+    },
+    {
+      "id": "exhibit-word-splits-printed-by-source",
+      "pdf_pages": [
+        87
+      ],
+      "evidence": "Splits like \"train ee\", \"smart est\", \"straight forward cal ers\" inside the Figure 6.4.3.B example transcripts were confirmed on the 110-dpi render to be printed by the PDF itself (highlight-boundary artifacts of the original exhibit), so they are not OCR defects and were not patched."
+    },
+    {
+      "id": "running-footers-dropped",
+      "pdf_pages": [
+        19,
+        35,
+        38,
+        39,
+        47,
+        81,
+        152
+      ],
+      "evidence": "The printed running footer (section name + page number) on every page is absent from the OCR markdown; treated as running-footer truncation rather than body droppage and not restored."
+    }
+  ]
+}

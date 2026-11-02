@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "google:lyria-3-5-model-card",
+  "source_sha256": "f384089931616399b100493943d436413af7d24013ec1ac40ecccec7d2d8565a",
+  "ocr_sha256": "f383a1fb7c9aaa07a654b7fa60664445cddb66b162c6cd91dd6162124d310a62",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coverage": "complete",
+    "notes": "Clean document, no patches. No code fences in the OCR, so no fence-swallowing. All four physical PDF pages were compared line-by-line against the OCR Markdown with a normalized word diff (case/punctuation-insensitive); the only divergences are page furniture the reader intentionally drops (the cover-page standalone 'July 2026', which survives in the body as 'Published: July 2026', and the trailing folio numerals 1/2/3). No dropped sentences, prompt boxes, tables, footnote bodies or references exist in this model card. Bullet glyphs print as filled circles and the OCR mixes '\\-' escapes with literal '•' markers; following the repo's established handling of model-card bullet style (sibling cards normalized both directions), markers were left exactly as OCR produced them.",
+    "rendered_pages": []
+  },
+  "patches": [],
+  "unresolved": []
+}

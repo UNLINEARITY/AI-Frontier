@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "id": "cohere:aya-vision",
+  "source_sha256": "d42974ddc7916f9b3d8ed061ed31ce5ef43f4b07fce0b36642a6b6b25e30fe8b",
+  "ocr_sha256": "e1f1c7d9f4f08637504c5929ebd255458c1333f257942829697286ed837bcba8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+    ],
+    "coverage": "partial",
+    "notes": "Triage review. (a) Full structural scan of all 1093 OCR lines: the single ``` fence pair (lines 868-879) is balanced and contains only the printed translation template; appendix letter headings, prompt-box banners and demo-box labels were compared against renders. (b) Full-document droppage scan: normalized 4-gram containment of every one of the 76 extracted PDF pages against the OCR markdown; all 33 low-containment pages were then inspected line-by-line and every miss resolved as figure-internal chart-axis/legend/bar-label text (pp.16-18, 40-41 judge-prompt template tables, 61 Table 7, 63-64 figures, 66-76 Appendix K tables), so no dropped prose, footnote bodies, prompt-box chunks or reference entries were found; the References section and all table captions (Tables 8-22) are present. (c) Renders visually verified at 110-250 dpi: pp.56, 57, 66, 71, 72. 'Acedemic' (A.2) and 'Hyerparameters' (B) on physical p.39 are the print's own spellings (PDF text layer finds 'Acedemic'/'Hyerparameters', not 'Academic'/'Hyperparameters') and were kept. The xMMMU-table value 116.33 for Aya-Vision-32B (physical p.72) is printed by the PDF itself and kept. Markdown '\\_' escapes render as literal underscores matching the print and were left unchanged."
+  },
+  "patches": [
+    {
+      "before": "F Filtering Template and Filtered Samples",
+      "after": "## F Filtering Template and Filtered Samples",
+      "count": 1,
+      "pdf_pages": [
+        56
+      ],
+      "evidence": "Rendered physical p.56 prints 'F  Filtering Template and Filtered Samples' as an appendix heading in the same large bold style as headings G-J and K (visually verified); OCR demoted it to a plain paragraph while all sibling appendix letters kept their '#'-prefixed headings."
+    },
+    {
+      "before": "## Caption (Ground Truth)\n\n## 5.\n\n## Recaption",
+      "after": "## Caption (Ground Truth)\n\n5.\n\n## Recaption",
+      "count": 1,
+      "pdf_pages": [
+        57
+      ],
+      "evidence": "Rendered physical p.57 (Appendix F, Sample 2, TallyQA 'How many people can you see?') prints the ground-truth caption '5.' as plain body text directly under the 'Caption (Ground Truth)' label, followed by the Recaption label; OCR promoted the one-character caption to a spurious '## 5.' heading. The demotion matches the sibling Sample 1, whose caption '4.' stays inline text."
+    },
+    {
+      "before": "K Breakdown by Language",
+      "after": "## K Breakdown by Language",
+      "count": 1,
+      "pdf_pages": [
+        66
+      ],
+      "evidence": "Rendered physical p.66 prints 'K  Breakdown by Language' as an appendix heading in the same style as F-J (visually verified); OCR demoted it to a plain paragraph while all sibling appendix letters kept '#'-prefixed headings."
+    },
+    {
+      "before": "<td>55.64fra_Latn</td><td>60.61jpn_Jpan</td><td>66.43ind_Latn</td><td>71.54por_Latn</td><td>57.75hin_Deva</td><td>43.07arb_Arab</td><td>61.73eng_Latn</td><td>59.54avg</td></tr><tr><td>Pangea-7B</td>",
+      "after": "<td>55.64</td><td>60.61</td><td>66.43</td><td>71.54</td><td>57.75</td><td>43.07</td><td>61.73</td><td>59.54</td></tr></table>\n\n<table><tr><td>fra_Latn</td><td>jpn_Jpan</td><td>ind_Latn</td><td>por_Latn</td><td>hin_Deva</td><td>arb_Arab</td><td>eng_Latn</td><td>avg</td></tr><tr><td>Pangea-7B</td>",
+      "count": 1,
+      "pdf_pages": [
+        71,
+        72
+      ],
+      "evidence": "Rendered physical p.71 ends the Table 14 (MaxM) table with the Aya-Vision-32B row of plain numbers 55.64 60.61 66.43 71.54 57.75 43.07 61.73 59.54 followed by the caption 'Table 14: MaxM'; physical p.72 then starts a separate table whose header row is fra_Latn jpn_Jpan ind_Latn por_Latn hin_Deva arb_Arab eng_Latn avg (caption 'Table 15: xMMMU' beneath it, visually verified). OCR merged the two tables across the page break and glued the second table's header cells onto the Aya-Vision-32B values. The patch closes the MaxM table after its last row and restores the second table's header row; cell text is unchanged."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-html-tables-finqa-multihiertt",
+      "pdf_pages": [
+        64,
+        65
+      ],
+      "evidence": "Figures 18 (FinQA) and 19 (Multihiertt) show example benchmark images; OCR additionally transcribed the table content visible inside those example images (French financial table, English/Chinese contractual-obligations tables) as HTML body tables next to the '(a) eng_Latn'/'(b) fra_Latn'/'(b) zho_Hans' sub-captions. The content exists only inside the figure images; removing the duplicated HTML tables needs a decision on the reader's figure-example presentation, so they were left unchanged."
+    },
+    {
+      "id": "flattened-prompt-box-tables",
+      "pdf_pages": [
+        56,
+        65
+      ],
+      "evidence": "Appendix F 'Filtering Template'/'Sample 1' and Appendix J 'VLM-as-a-Judge Prompt' printed boxes are flattened into single-cell HTML tables with concatenated line breaks (e.g. 'Question:{question}Ground Truth Answer:{answer}...'). Cell-boundary reconstruction is unambiguous in structure but wordy to patch; content matches the render."
+    },
+    {
+      "id": "appendix-k-caption-attribution",
+      "pdf_pages": [
+        66,
+        72
+      ],
+      "evidence": "Appendix K tables merge Table 8/9/10 and 11/12/13 bodies into single HTML tables under multiple caption lines, and the printed caption 'Table 16: MTVQA' sits beneath a table whose column set (arb_Arab...tha_Thai) differs from the MTVQA-like table that follows; the caption-to-table pairing follows the PDF's below-table caption order but the section's table boundaries remain flattened."
+    }
+  ]
+}

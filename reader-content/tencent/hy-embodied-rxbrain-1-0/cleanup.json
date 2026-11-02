@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hy-embodied-rxbrain-1-0",
+  "source_sha256": "47ec36ffe00b17413e6151da4b519fdaa1614115264844a6589c1d04bdbfa3d9",
+  "ocr_sha256": "32a7e8ff88df48a20f24edfcdff3cc205dc49c70e4922cefd5123328199356b6",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "coverage": "complete",
+    "notes": "Token-level alignment of the full OCR Markdown against extracted text from all 43 physical PDF pages in both directions; every alignment gap was classified. All large gaps are figure-internal text (teaser transcripts on p.4, architecture diagrams on pp.4/6/19, data-composition infographic on p.7, taxonomy word lists on p.8, pipeline diagrams on p.9, sunburst statistics on pp.30-32) already carried by the embedded figure images, so they are not defects. Physical pages 14 and 29 were rendered and visually inspected to confirm the digit values in the three patched equations. Section headings, the Contents block, all 11 figure captions, and the 11 HTML tables match the PDF; no unbalanced code fences; backslash-escaped underscores and percent signs reproduce identifiers and percentages that the PDF itself prints and render identically, so they were left unchanged. No dropped prose, footnote, reference, or table content was found."
+  },
+  "patches": [
+    {
+      "before": "S _ {\\text { gen }} = 0. 1 5 \\mathrm{OC} + 0. 3 0 \\mathrm{AC} + 0. 2 0 \\mathrm{GC} + 0. 2 0 \\mathrm{TP} + 0. 1 5 \\mathrm{TM}",
+      "after": "S _ {\\text { gen }} = 0.15 \\mathrm{OC} + 0.30 \\mathrm{AC} + 0.20 \\mathrm{GC} + 0.20 \\mathrm{TP} + 0.15 \\mathrm{TM}",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 (Section 5.3, WorldPred) prints S_gen = 0.15 OC + 0.30 AC + 0.20 GC + 0.20 TP + 0.15 TM; OCR spaced every digit of the five weights. Digits visually confirmed on the rendered page."
+    },
+    {
+      "before": "S _ {\\text { plan }} = 0. 1 0 \\mathrm{OU} + 0. 2 5 \\mathrm{SP} + 0. 2 5 \\mathrm{GI} + 0. 2 0 \\mathrm{SG} + 0. 1 0 \\mathrm{CC} + 0. 1 0 \\mathrm{IS}",
+      "after": "S _ {\\text { plan }} = 0.10 \\mathrm{OU} + 0.25 \\mathrm{SP} + 0.25 \\mathrm{GI} + 0.20 \\mathrm{SG} + 0.10 \\mathrm{CC} + 0.10 \\mathrm{IS}",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 (Section 5.3, JointPlan) prints S_plan = 0.10 OU + 0.25 SP + 0.25 GI + 0.20 SG + 0.10 CC + 0.10 IS; OCR spaced every digit of the six weights. Digits visually confirmed on the rendered page."
+    },
+    {
+      "before": "Q _ {0. 5}",
+      "after": "Q_{0.5}",
+      "count": 2,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 equation (15) prints the adaptive-threshold formula with median subscript Q_0.5 twice; the following prose also prints \"the median Q_0.5 as a baseline\". OCR spaced the subscript digits; both occurrences are inside this one equation."
+    }
+  ],
+  "unresolved": []
+}

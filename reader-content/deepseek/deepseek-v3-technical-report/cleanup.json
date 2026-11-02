@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-v3-technical-report",
+  "source_sha256": "812a3fd645c80725354de9d831a6785503007a60681461407f64e97305fa9330",
+  "ocr_sha256": "deada8936b4430bdefc68ecb4f461aa841f53098daf21b45a5b38bdada47951c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53
+    ],
+    "coverage": "partial",
+    "notes": "Full-document machine diff: per-page PDF text vs OCR 4-gram containment over all 53 pages, plus whole-file scans for unbalanced code fences (none present), unbalanced inline math delimiters (balanced on every line), spaced digits (none) and Markdown escapes. Low-containment pages were then inspected line-level: p25-27 and p31-34 hold flattened benchmark tables (Table 1 and Table 6 compared cell-by-cell against the PDF text layer, all values equal) and equation-dense method sections (flagged sentence tails confirmed present in LaTeX form); p45-46 contributor lists compared name-by-name (complete, 183 unique names); p49-53 are embedded expert-load heatmap figures whose tick numbers are figure-internal text. The one confirmed repair was visually verified on a 300-dpi render of physical p.45. Reference entries were only machine-scanned (containment >= 0.75 on their pages), not read entry-by-entry."
+  },
+  "patches": [
+    {
+      "before": "<td>Shanghai Lu</td>",
+      "after": "<td>Shanghao Lu</td>",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Rendered physical p.45 (300 dpi crop, Research & Engineering column 2 between Guanting Chen and Shangyan Zhou) prints the contributor name as \"Shanghao Lu\"; the PDF text layer also extracts \"Shanghao\". OCR normalized it to the real word \"Shanghai\", altering the printed spelling of the name."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "references-entry-level-check",
+      "pdf_pages": [
+        37,
+        38,
+        39
+      ],
+      "evidence": "Reference entries were covered only by the machine 4-gram scan (pages not flagged at < 0.75 containment); an entry-by-entry read against the rendered pages has not been done within this review's time budget."
+    },
+    {
+      "id": "flattened-table-cell-verification-limited",
+      "pdf_pages": [
+        25,
+        26,
+        27,
+        32
+      ],
+      "evidence": "Table 1 (p25-26 region) was probed by random 4-gram sampling and its structure looks intact, but unlike Table 6 it was not compared cell-by-cell; residual risk of a single wrong digit in a flattened HTML cell remains."
+    }
+  ]
+}

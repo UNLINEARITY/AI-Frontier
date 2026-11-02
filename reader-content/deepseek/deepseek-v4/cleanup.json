@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-v4",
+  "source_sha256": "55b2d72f772ac00de2e470b3ee08443c648d971c7f57c52d6202895665e5978d",
+  "ocr_sha256": "75a2e0663d02f1979085baa1291bb86ea783cb915e6de52087c800da76a766a7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58
+    ],
+    "coverage": "complete",
+    "notes": "All 58 physical PDF pages were compared against the OCR with a normalized word-presence diff over the extracted text layer; every flagged cluster was individually resolved against the OCR and, where it indicated a repair, against a rendered page. Physical pages 9, 16 and 18 were rendered at 110 dpi and their footnote rules and the p.16 display equation were re-verified at 300 dpi. Confirmed repairs: three dropped footnote bodies whose superscript markers survived in the OCR, and one equation number printed with spaced digits. Structure is sound: the single balanced code fence carries the printed Algorithm 1 (Muon Optimizer) box; the two title-page H1 lines are the printed title and subtitle; numbered heading hierarchy matches the print; all 15 figure captions and 14 table captions are present, with 23 image embeds. Left unchanged as figure-internal or faithful: Figure 2 mHC panel labels (Residual/Pre-Block/Post-Block Mixing), Figure 12 chart axis labels, the Table 4 tool-call schema (carried by its embedded image), the arXiv watermark stamp on p.1, the p.8 RMSNorm and p.22 lcm equations (math-equivalent LaTeX), hyphenated line-break artifacts on pp.29/32/43, and the reference list including the DROP entry on p.53."
+  },
+  "patches": [
+    {
+      "before": "to specify more details unambiguously.\n\n## 2.3.1. Compressed Sparse Attention",
+      "after": "to specify more details unambiguously.\n\n$^{1}$https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference\n\n## 2.3.1. Compressed Sparse Attention",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "The superscript marker survives on \"open-source implementation $^{1}$\" but the footnote body printed at the bottom of rendered physical p.9 was dropped: 1https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/tree/main/inference (verified verbatim on a 300 dpi render of the p.9 footnote rule). Inserted after the paragraph carrying the marker, before the 2.3.1 heading, matching the printed position."
+    },
+    {
+      "before": "as a component of DeepGEMM.\n\nObservations and Proposals.",
+      "after": "as a component of DeepGEMM.\n\n$^{2}$https://github.com/deepseek-ai/DeepGEMM/pull/304\n\nObservations and Proposals.",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "The superscript marker survives on \"MegaMoE $^{2}$\" but the footnote body printed at the bottom of rendered physical p.16 was dropped: 2https://github.com/deepseek-ai/DeepGEMM/pull/304 (verified verbatim on a 300 dpi render of the p.16 footnote rule). Inserted after the paragraph carrying the marker."
+    },
+    {
+      "before": "= 6 1 4 4 \\mathrm{FLOPs/Byte}",
+      "after": "= 6144 \\mathrm{FLOPs/Byte}",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 display equation reads C/B ⩽ 2d = 6144 FLOPs/Byte (visually verified at 300 dpi); OCR spaced the digits of 6144. The equation's ⩽ is kept as the OCR's \\leqslant."
+    },
+    {
+      "before": "confines the overhead of batch-invariant decoding to be negligible.\n\n\\- Matrix Multiplication.",
+      "after": "confines the overhead of batch-invariant decoding to be negligible.\n\n$^{3}$https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#wave-quant\n\n$^{4}$https://docs.nvidia.com/cuda/cuda-programming-guide/02-basics/writing-cuda-kernels.html#distributed-shared-memory\n\n\\- Matrix Multiplication.",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "The superscript markers survive on \"wave-quantization problems $^{3}$\" and \"distributed shared memory $^{4}$\" but both footnote bodies printed at the bottom of rendered physical p.18 were dropped (verified verbatim on a 300 dpi render of the p.18 footnote rules; each printed URL is wrapped across two lines and was joined). Inserted after the paragraph carrying the markers, in printed order 3 then 4."
+    }
+  ],
+  "unresolved": []
+}

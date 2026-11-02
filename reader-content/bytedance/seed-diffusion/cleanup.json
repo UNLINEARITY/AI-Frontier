@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seed-diffusion",
+  "source_sha256": "447fce38a0112beeff50158541076a7471f81bbfcddf7bda8b96073da9b80fde",
+  "ocr_sha256": "88408e28d260161b6c8af0590e69d6251a48949ed94a265a71014b9c688c3601",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 11 physical pages; physical pages 1, 6 (Table 1 header crop) and 7 (footnote crop) were rendered and visually checked. Code fences: none in the OCR markdown; references [1]-[32] all present. Kept as printed by the PDF (not defects): \"15B Models\" without + in Table 3 (Tables 1-2 print \"15B+ Models\"), \"arXiv e-prints, pages arXiv-2506, 2025\" in [1], \"Accessed: 2024-07-24\" in [2], \"Equation. 10\", \"evaluation of all stage \\\"v1-v6\\\"\", \"Gemini-Diffusion\" in section 4 (\"Gemini Diffusion\" elsewhere), \"1055 problems\". The chart-legend line (\"Seed Diffusion Preview Gemini Diffusion Mercury Coder(small) Mercury Coder(mini) Seed Coder Instruct\") is figure-internal text of the embedded Figure 1 and was left in place per the figure-internal-text rule."
+  },
+  "patches": [
+    {
+      "before": "![[images/24ff628c4110ef1d434b3712f87708a72a265f91b37444ee06178c117b20eaca.jpg]]  \nFigure 1 Seed Diffusion's inference speed is measured over H20 GPUs across eight open code benchmarks. Direct comparison with baselines is challenging due to differing test conditions: Mercury Coder was evaluated on a proprietary dataset with H100s, while Gemini Diffusion's speed was averaged over a mixed-task benchmark using unknown hardware. Furthermore, reported speeds on these benchmarks can benefit from format-constraining system prompts. LiveCodeBench results are specifically on the 1055 problems from v1-v6 for the unknown baselines' protocol.\n\n# Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference",
+      "after": "# Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference\n\n![[images/24ff628c4110ef1d434b3712f87708a72a265f91b37444ee06178c117b20eaca.jpg]]  \nFigure 1 Seed Diffusion's inference speed is measured over H20 GPUs across eight open code benchmarks. Direct comparison with baselines is challenging due to differing test conditions: Mercury Coder was evaluated on a proprietary dataset with H100s, while Gemini Diffusion's speed was averaged over a mixed-task benchmark using unknown hardware. Furthermore, reported speeds on these benchmarks can benefit from format-constraining system prompts. LiveCodeBench results are specifically on the 1055 problems from v1-v6 for the unknown baselines' protocol.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1: the printed order is title, affiliations, Abstract box (ending with Date/Correspondence/Project Page), then the Figure 1 chart with its legend and the \"Figure 1\" caption at the bottom of the page. OCR emitted the Figure 1 image embed and caption before the title. The patch moves the image embed and its caption to directly after the \"Project Page\" line, restoring the printed reading order; the embed and caption text are unchanged."
+    },
+    {
+      "before": "https://studio.seed.ai/exp/seed\\_diffusion/",
+      "after": "https://studio.seed.ai/exp/seed_diffusion/",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 Abstract box prints the demo URL https://studio.seed.ai/exp/seed_diffusion/ as a hyperlink with a plain underscore; the OCR backslash-underscore is a Markdown escape that renders as a literal backslash inside the URL text."
+    },
+    {
+      "before": "https://seed.bytedance.com/seed\\_diffusion",
+      "after": "https://seed.bytedance.com/seed_diffusion",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints \"Project Page: https://seed.bytedance.com/seed_diffusion\" with a plain underscore; the OCR backslash-underscore is a Markdown escape that renders as a literal backslash inside the URL text."
+    },
+    {
+      "before": "CanltEdit",
+      "after": "CanItEdit",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 Table 1 header prints \"CanItEdit pass@1\" with a capital I (visually verified at 200 dpi crop); OCR misread the I as a lowercase l. The benchmark name appears as \"CanItEdit\" four other times in the OCR body, matching the PDF."
+    },
+    {
+      "before": "without any human intervention.",
+      "after": "without any human intervention.\n\n$^{1}$ https://aider.chat/docs/leaderboards/edit.html",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints footnote 1 at the page bottom: \"1 https://aider.chat/docs/leaderboards/edit.html\" (visually verified at 300 dpi); OCR kept the superscript marker on \"Aider $^{1}$\" in §4.1 but dropped the footnote body."
+    }
+  ],
+  "unresolved": []
+}

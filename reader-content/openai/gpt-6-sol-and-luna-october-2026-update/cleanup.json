@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-6-sol-and-luna-october-2026-update",
+  "source_sha256": "1c34c6a00e161825b5a066c6e7616f55a8aedee5f04a4d819fa067b898a0c603",
+  "ocr_sha256": "7275049ab91ff3437b3c835ec34c6a1df29ad577fe73edd6a48e027309e9872c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "coverage": "complete",
+    "notes": "Clean document; no repairs needed. Zero code-fence markers in the OCR Markdown, heading tree matches the printed Contents, no duplicated or spurious headings. Every numeric token in the PDF text layer is present in the OCR with matching multiplicity (only printed page footers are absent), and no OCR number is absent from the PDF, ruling out spaced/garbled digits in Tables 1, 2, 5, 7, 8, 9, 10 and 11. Line-level PDF-vs-OCR comparison over all 24 physical pages found no dropped sentences, footnote bodies, prompt-box chunks or reference entries; the only unmatched PDF lines are hyphenation line breaks. The PDF is digital-native, so its text layer is authoritative; no value required visual re-verification and no patches were proposed. References [1]-[4] match the PDF word for word."
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "footnote-body-placement",
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Footnote 1 (Usage Policies / assistance text) is inlined mid-section after \"...values published at launch.\" in OCR reading order instead of appearing as a page footnote; content is complete and verbatim, only its position differs."
+    },
+    {
+      "id": "flattened-table-boundaries",
+      "pdf_pages": [
+        7,
+        13
+      ],
+      "evidence": "Tables 1 and 5 flatten the PDF's two-line cells and the HealthBench rowspan; all recorded values were verified correct against the PDF text layer, only cell grouping differs."
+    }
+  ]
+}

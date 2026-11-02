@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nemotron-3-competitive-coding",
+  "source_sha256": "928e37df7f1dec171eb73aa42a15a22c5fda8928bb0c2dabefa7f1ac07a199e3",
+  "ocr_sha256": "745d603920e67424f8b7d82bcb3eb45eeb5802c5e5a47393ccc0303118beba1a",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "partial",
+    "notes": "Structure pass on the full file plus a digit-sequence sweep of extracted text from all 21 physical PDF pages; page 1 title/abstract read line-by-line and prompt-box pages 19-21 rendered at 115 dpi with 300 dpi crops of every printed fence line. The appendix C.1 prompt boxes are the main damage: the PDF prints two boxes ('First Gencorrect Round' p.19, 'Next Gencorrect Round' p.20-21, the second continuing across the page break with no banner or fence at the break) whose inner ```cpp/``` lines are literal printed text. OCR wrapped each page-span of the boxes in ```markdown fences, so the inner printed 3-backtick lines terminate the wrapper early and everything from the second box's system prompt to end of file sits in one open code block; the wrapper also miscounted backticks (````cpp printed as ```cpp, ```cpp printed as ``` and as ``cpp, a printed ```` closer copied as ```). Repair keeps the OCR's code-block rendering device but lengthens the wrappers so the printed fences stay literal. Absent 3+-digit numbers on pages 2, 4, 7, 8, 9 are chart-internal axis ticks and bar labels of embedded figures; the p.1 arXiv:2609.02849v2 stamp is a publisher margin stamp, not body text. Line-level prose proofreading of pages 2-18 was not completed within the review budget, hence partial coverage."
+  },
+  "patches": [
+    {
+      "before": "```markdown\nFirst Gencorrect Round",
+      "after": "````markdown\nFirst Gencorrect Round",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19: the box opens with a dark banner reading 'First Gencorrect Round'; no ```markdown line is printed. The box body contains literal printed ```cpp / ``` lines (verified at 300 dpi), so the wrapper must be a 4-backtick fence to keep them literal."
+    },
+    {
+      "before": "Answer:\n```\n<your complete C++20 implementation>\n```\n\nThe Answer must contain",
+      "after": "Answer:\n```cpp\n<your complete C++20 implementation>\n````\n\nThe Answer must contain",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 (300 dpi crop): the 'Next Gencorrect Round' system prompt prints the Answer template as ```cpp (three backticks) opening and ```` (four backticks) closing around '<your complete C++20 implementation>'. OCR dropped the info string and one closing backtick. The matched box-1 occurrence differs ('Answer:' followed by a 4-backtick-plus-cpp opener) and cannot match this string."
+    },
+    {
+      "before": "````cpp",
+      "after": "```cpp",
+      "count": 2,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 (300 dpi crops of both sites): box 1 prints ```cpp with exactly three backticks, both after 'Answer:' and after 'Put your final solution within a single code block:'. OCR wrote four backticks at both sites."
+    },
+    {
+      "before": "{problem}\n```\n\n```markdown\nNext Gencorrect Round",
+      "after": "{problem}\n````\n\n`````markdown\nNext Gencorrect Round",
+      "count": 1,
+      "pdf_pages": [
+        19,
+        20
+      ],
+      "evidence": "Rendered physical p.19: box 1 ends after '{problem}' with no printed closing fence; physical p.20 opens with the 'Next Gencorrect Round' banner and no printed ```markdown line. The wrapper fences are the OCR's rendering device; box 2 needs a 5-backtick wrapper because its printed system prompt contains a literal ```` (four-backtick) closer that would otherwise terminate a 4-backtick wrapper."
+    },
+    {
+      "before": "scores alone.\n```\n\n```markdown\nIf all candidate",
+      "after": "scores alone.\nIf all candidate",
+      "count": 1,
+      "pdf_pages": [
+        20,
+        21
+      ],
+      "evidence": "Rendered physical p.20 ends mid-sentence with '...any single candidate's scores alone.' inside the still-open box, and physical p.21 continues the same box ('If all candidate solutions mainly solve...') with no banner, no fence and no box border reset at the page break. OCR split the continued box into a second ```markdown block at the page boundary."
+    },
+    {
+      "before": "code block:\n\n``cpp\n<your code here>",
+      "after": "code block:\n\n```cpp\n<your code here>",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 (300 dpi crop): box 2 prints ```cpp with exactly three backticks after 'Put your final solution within a single code block:'; OCR wrote two. Box 1's corresponding opener is four backticks in the OCR source and cannot match this string."
+    },
+    {
+      "before": "{max_subtask_scores}\n```",
+      "after": "{max_subtask_scores}\n`````",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21: the continued box ends after '{max_subtask_scores}' with no printed closing fence; this is the OCR wrapper's closer and must match the 5-backtick box-2 opener."
+    },
+    {
+      "before": "/ 8 0 0 \\rfloor",
+      "after": "/ 800 \\rfloor",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "PDF physical p.18 text layer prints equation (3) as floor(CodeLength(c)/800); OCR spaced the digits of 800. The only spaced-digit run in the file."
+    }
+  ],
+  "unresolved": [
+    "Line-level proofreading of body prose on physical pages 2-17 was not completed within the review budget; only the digit-sequence sweep and structure pass covered those pages.",
+    "Rendered layout of the two repaired prompt-box code blocks (fence rendering, no swallowed prose) should be confirmed in a rebuilt reader after the patch is applied."
+  ]
+}

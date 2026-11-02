@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "google:pali-technical-report",
+  "source_sha256": "1dcbf47c44eb2f1852bdeb23a696c7d38ff1f7fdf283c4fae2f754abd20fa1db",
+  "ocr_sha256": "1a51c1657a4c764a04cf0c9192e86c109defc7377a872419d5591063129aaaba",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      26,
+      27
+    ],
+    "coverage": "partial",
+    "notes": "Triage review: all 33 physical pages machine-scanned (no code fences; normalized 4-gram page-text containment vs OCR, mean 0.95; per-word presence check; spaced-digit and escape pattern scan). The only low-containment pages, 26-27, were inspected line-by-line: the divergent text is Figure 6 chart-axis language codes (figure embedded as images with caption) and the printed Crossmodal-3600 appendix table, which OCR captured completely as HTML with every language row present. The printed ICLR running header 'Published as a conference paper at ICLR 2023' is consistently absent from OCR (running headers, not body content). Remaining flagged tokens are Markdown \\_ escapes that render as the printed underscores (big_vision, alt_text, extra_id_k). No transcription defects found; no patches."
+  },
+  "patches": [],
+  "unresolved": []
+}

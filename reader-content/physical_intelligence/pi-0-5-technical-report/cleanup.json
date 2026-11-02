@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:pi-0-5-technical-report",
+  "source_sha256": "6a1029fd8ab6944b74cf22f5e5d30e60bc15699d964b2900af799b807a34b64c",
+  "ocr_sha256": "7859dbfb3ef27b6962b37335bf54f10b85c9e537061f466cce9676ca299b434f",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "coverage": "complete",
+    "notes": "All 19 physical pages text-diffed against the OCR markdown (normalized); code fences balanced (one python listing in Appendix E matches the printed listing on p.19). Remaining unmatched PDF lines are figure-internal labels (pp.1, 4, 6, 7, 8 diagrams), LaTeX-equivalent math subscripts (pp.5, 19) and reference author names whose PDF text layer spells diacritics differently but are present correctly in the OCR. Rendered and visually verified: p.12 reference [8] (300 dpi), p.1 author block (300 dpi), p.19 '300M' subscript (300 dpi; the tiny 6 after 300M is printed in the source and was kept)."
+  },
+  "patches": [
+    {
+      "before": "Adnan E-mail",
+      "after": "Adnan Esmail",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 reference [8] prints the author name hyphenated across a line break as 'Adnan Es-' / 'mail' (Esmail), also spelled 'Adnan Esmail' in the p.1 author list; OCR joined the hyphenation as 'E-mail'."
+    }
+  ],
+  "unresolved": []
+}

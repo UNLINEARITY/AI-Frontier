@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:reasonedit",
+  "source_sha256": "5da5f39f4f6fe46b7a8c646adc8af00f96253bd32a062ffb7947ad47367c7d1f",
+  "ocr_sha256": "8a3005db6943eb53c55a32915eb8f23b057e686c39120b188ec4f71af195b300",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level diff of all 18 physical PDF pages against the OCR markdown plus fence/heading inventory. This source's PDF text layer hyphenates aggressively (re markable, cou ples, specif ically), which explains most diff hits together with Figure 1-6 internal texts and appendix mosaic labels. Real defects were all heading promotions: the page-break-split sentence 'Image-Edit [50]) achieves an improvement of +6.1%.' below Table 1, three 'W/ Rensoning' column labels, and eleven '[Reflection]'/[Reflection-roundN] panel labels; all demoted to plain text matching their printed style. The source's own 'Rensoning' misspelling is preserved as printed. Table 1 values, references and acknowledgments spot-checked."
+  },
+  "patches": [
+    {
+      "before": "## Image-Edit [50]) achieves an improvement of +6.1%.",
+      "after": "Image-Edit [50]) achieves an improvement of +6.1%.",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints 'Image-Edit [50]) achieves an improvement of +6.1%.' as body text below Table 1 - the continuation of the Sec. 4.2.2 sentence broken by the page break ('...while ReasonEdit-Q (derived from Qwen-' ends physical p.6). The OCR markdown promoted the continuation into a '##' heading; the patch demotes it to plain body text."
+    },
+    {
+      "before": "## W/ Rensoning",
+      "after": "W/ Rensoning",
+      "count": 3,
+      "pdf_pages": [
+        14,
+        15,
+        16
+      ],
+      "evidence": "Rendered physical pp.14-16 print 'W/ Rensoning' only as a column label of the appendix result mosaics (Figures 7-9; the spelling 'Rensoning' is the source's own typo and is kept). The sibling label 'W/O Rensoning' is not transcribed as a heading; the patch demotes the three promoted copies to plain text like the neighboring '[Instruction]' lines."
+    },
+    {
+      "before": "## [Reflection]",
+      "after": "[Reflection]",
+      "count": 6,
+      "pdf_pages": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "evidence": "Rendered physical pp.14-18 show '[Reflection]' only as red panel labels inside the appendix result mosaics (Figures 7-10), parallel to '[Thinking]' labels that stay inside the embedded figure crops. The OCR markdown promoted six copies to '##' headings; the patch demotes them to plain text."
+    },
+    {
+      "before": "## [Reflection-round1]",
+      "after": "[Reflection-round1]",
+      "count": 2,
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "evidence": "Same defect class as the '[Reflection]' headings: the rendered appendix mosaics print '[Reflection-round1]' as panel labels, and the document body already keeps inline occurrences such as '[Reflection-round1] <#Think> ...' as plain text. The patch demotes the two promoted headings."
+    },
+    {
+      "before": "## [Reflection-round2]",
+      "after": "[Reflection-round2]",
+      "count": 2,
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "evidence": "Same defect class as the '[Reflection]' headings: panel labels of the appendix mosaics on physical pp.15-16, printed in red inside the figure grid; demoted to plain text."
+    },
+    {
+      "before": "## [Reflection-round3]",
+      "after": "[Reflection-round3]",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Same defect class as the '[Reflection]' headings: a panel label of the appendix mosaic on physical p.16; demoted to plain text."
+    }
+  ],
+  "unresolved": []
+}

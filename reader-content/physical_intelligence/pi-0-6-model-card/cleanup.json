@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:pi-0-6-model-card",
+  "source_sha256": "39b67dafdd0e96576f7cb68bd6208bb92965f4b1c1bcf31c17f6121866a43ce5",
+  "ocr_sha256": "ef1f2a8eee77bb68759fd92c664dcf255ecb745a5c66d1f612a9f7aa6a6d0b27",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coverage": "complete",
+    "notes": "All four physical pages compared line-by-line against extracted PDF text; page 1 additionally rendered and visually verified. Code-fence markers are balanced (none). The only unmatched PDF n-grams are figure-internal diagram/chart text (Figure 1 architecture labels, Figure 2-4 chart interiors) that the embedded figures already display, plus pi-subscript normalization differences (PDF prints pi0.6, OCR records the equivalent LaTeX $\\pi_{0.6}$). All seven reference entries, both section structures and all figure captions are present."
+  },
+  "patches": [],
+  "unresolved": []
+}

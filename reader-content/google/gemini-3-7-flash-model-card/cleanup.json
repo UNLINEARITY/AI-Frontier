@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-7-flash-model-card",
+  "source_sha256": "6d7f1347e7f55d44a634bef40bd96fd3e70d331826382c75733b633af3be9aef",
+  "ocr_sha256": "6528acc7162ef9bee678842c0c9034c0b2a0906925d8468bcb36a8fbf4eb293f",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "coverage": "complete",
+    "notes": "No code fences and no image embeds in the OCR. All nine physical PDF pages were compared line-by-line (normalized) against the OCR; pages 1, 5, 7 and 8 were rendered for visual verification. The results table on physical p.5 is an embedded image (xref 38) without a text layer; every value and label in its OCR HTML transcription was cross-checked against the rendered page and all numbers match (prices, indices, percentages, Code Arena/GPQA scores). The printed cover title (p.1) and the page-2 header line 'Gemini 3.7 Flash - Model Card' are both printed in the source, so the two OCR title lines are not a defect. The 'Methodology:' caption and the introductory-price footnote under the results table were transcribed correctly. The OCR does not repeat the table image as an embed; that is the existing source structure and was not changed."
+  },
+  "patches": [
+    {
+      "before": "## Known Limitations",
+      "after": "For details on our evaluation methodology please see:\ndeepmind.com/models/evals-methodology/gemini-3-7-flash\n\n## Intended Usage and Limitations\n\n## Benefit and Intended Usage\n\nGemini 3.7 Flash is well-suited for users, developers, and enterprises. Some use cases include: agentic workflows, complex video reasoning, coding tasks, and enterprise workflows.\n\n## Known Limitations",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (110 dpi, viewed) prints, below the price footnote and a horizontal rule: the line 'For details on our evaluation methodology please see:' followed by the link deepmind.com/models/evals-methodology/gemini-3-7-flash, the section heading 'Intended Usage and Limitations', the subheading 'Benefit and Intended Usage', and the paragraph 'Gemini 3.7 Flash is well-suited for users, developers, and enterprises. Some use cases include: agentic workflows, complex video reasoning, coding tasks, and enterprise workflows.' The OCR dropped this entire block; the PDF text layer confirms the same wording. The patch reinserts it verbatim immediately before '## Known Limitations', which is the next printed content (top of p.6)."
+    },
+    {
+      "before": "We continue to improve our internal evaluations,",
+      "after": "$^{1}$ For tone and instruction following, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model's ability to follow instructions while remaining safe compared to Gemini 3 Flash. We mark improvements in green and regressions in red.\n\nWe continue to improve our internal evaluations,",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (110 dpi, viewed) prints the footnote body '1 For tone and instruction following, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model's ability to follow instructions while remaining safe compared to Gemini 3 Flash. We mark improvements in green and regressions in red.' at the bottom of the page for the 'Tone' superscript marker (OCR kept the marker as 'Tone $^{1}$' but dropped the body). The patch inserts the footnote verbatim after the safety-evaluation table, matching the print order."
+    },
+    {
+      "before": "+1.17ppLower is better",
+      "after": "+1.17pp<br>Lower is better",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (viewed) shows the Text to Text Safety cell as two lines: '+1.17pp' then 'Lower is better'; OCR concatenated them."
+    },
+    {
+      "before": "-0.48ppLower is better",
+      "after": "-0.48pp<br>Lower is better",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (viewed) shows the Multilingual Safety cell as two lines: '-0.48pp' then 'Lower is better'; OCR concatenated them."
+    },
+    {
+      "before": "No changeLower is better",
+      "after": "No change<br>Lower is better",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (viewed) shows the Image to Text Safety cell as two lines: 'No change' then 'Lower is better'; OCR concatenated them."
+    },
+    {
+      "before": "-0.47ppHigher is better",
+      "after": "-0.47pp<br>Higher is better",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (viewed) shows the Tone cell as two lines: '-0.47pp' then 'Higher is better'; OCR concatenated them."
+    },
+    {
+      "before": "+0.84ppLower is better",
+      "after": "+0.84pp<br>Lower is better",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (viewed) shows the Unjustified-refusals cell as two lines: '+0.84pp' then 'Lower is better'; OCR concatenated them."
+    },
+    {
+      "before": "Gemini3.7 Flash",
+      "after": "Gemini 3.7 Flash",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 results-table image header (viewed) prints 'Gemini 3.7 Flash' wrapped as 'Gemini' / '3.7 Flash'; OCR joined it without the space."
+    },
+    {
+      "before": "Gemini3.6 Flash",
+      "after": "Gemini 3.6 Flash",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 results-table image header (viewed) prints 'Gemini 3.6 Flash'; OCR joined it without the space."
+    },
+    {
+      "before": "ClaudeSonnet 5",
+      "after": "Claude Sonnet 5",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 results-table image header (viewed) prints 'Claude Sonnet 5'; OCR joined it without the space."
+    },
+    {
+      "before": "GPT-5.6Terra",
+      "after": "GPT-5.6 Terra",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 results-table image header (viewed) prints 'GPT-5.6 Terra'; OCR joined it without the space."
+    },
+    {
+      "before": "MuseSpark 1.2",
+      "after": "Muse Spark 1.2",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 results-table image header (viewed) prints 'Muse Spark 1.2'; OCR joined it without the space."
+    },
+    {
+      "before": "Input price$/1M tokens",
+      "after": "Input price $/1M tokens",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 results-table image (viewed) prints the row label 'Input price' with the unit '$/1M tokens' on the next line; OCR joined them without a space."
+    },
+    {
+      "before": "Output price$/1M tokens",
+      "after": "Output price $/1M tokens",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 results-table image (viewed) prints the row label 'Output price' with the unit '$/1M tokens' on the next line; OCR joined them without a space."
+    },
+    {
+      "before": "journeys.We continue to deploy mitigations.",
+      "after": "journeys. We continue to deploy mitigations.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 Frontier Safety table (viewed) ends the first CBRN cell with 'journeys.' and prints 'We continue to deploy mitigations.' as a separate paragraph; PDF text layer confirms both strings; OCR joined them without the sentence space."
+    },
+    {
+      "before": "threshold.We continue to deploy mitigations.",
+      "after": "threshold. We continue to deploy mitigations.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 Frontier Safety table (viewed) ends the second CBRN cell with 'falls below the CCL threshold.' and prints 'We continue to deploy mitigations.' separately; OCR joined them without the sentence space."
+    },
+    {
+      "before": "Uplift Level 1CCL",
+      "after": "Uplift Level 1 CCL",
+      "count": 2,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 Frontier Safety table (viewed) prints the T/CCL cell 'Uplift Level 1 CCL' wrapped over two lines ('Uplift Level 1' / 'CCL') for both the CBRN CCL row and the Cybersecurity row; OCR joined each without the space."
+    },
+    {
+      "before": "ML R&amp;D andMisalignment",
+      "after": "ML R&amp;D and Misalignment",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered p.8-9 Frontier Safety table (p.8 viewed) prints the rowspan domain cell as 'ML R&amp;D and' / 'Misalignment' on two lines (continuing on physical p.9); OCR joined them without the space."
+    },
+    {
+      "before": "efficacyfalls beneath the CCL alert threshold.Recognizing that testing environmentsmay under-elicit capabilities and threatactors could scale misuse absentmitigations, we continue to developand evolve our safeguards.",
+      "after": "efficacy falls beneath the CCL alert threshold. Recognizing that testing environments may under-elicit capabilities and threat actors could scale misuse absent mitigations, we continue to develop and evolve our safeguards.",
+      "count": 1,
+      "pdf_pages": [
+        8,
+        9
+      ],
+      "evidence": "The Harmful Manipulation cell continues from physical p.8 ('its overall efficacy') onto p.9 ('falls beneath ... safeguards.'); the p.9 PDF text layer shows the same words separated at OCR line joins (efficacy/falls, threshold./Recognizing, environments/may, threat/actors, absent/mitigations, develop/and); only lost spaces are restored."
+    },
+    {
+      "before": "Gemini 3.7 Flashperforms similarly to Gemini 3.1 Pro; onsituational awareness, the model isstronger than Gemini 3.1 Pro. Gemini 3.7Flash is observant enough to correctlyassess when it is in a testingenvironment, but it cannot successfullybypass testing restrictions. The modeldoes not reach the TCL.",
+      "after": "Gemini 3.7 Flash performs similarly to Gemini 3.1 Pro; on situational awareness, the model is stronger than Gemini 3.1 Pro. Gemini 3.7 Flash is observant enough to correctly assess when it is in a testing environment, but it cannot successfully bypass testing restrictions. The model does not reach the TCL.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Physical p.9 PDF text layer (and the continued table seen in the p.8 render) shows the stealth-evaluation cell words separated exactly at the OCR line joins (Flash/performs, on/situational, is/stronger, 3.7/Flash, correctly/assess, testing/environment, successfully/bypass, model/does); only lost spaces are restored."
+    },
+    {
+      "before": "Gemini 3.7 Flash can completeindividual coding tasks but lacks theindependence to chain them into anend-to-end research workflow withouthuman intervention. The model doesnot reach the CCL alert threshold.",
+      "after": "Gemini 3.7 Flash can complete individual coding tasks but lacks the independence to chain them into an end-to-end research workflow without human intervention. The model does not reach the CCL alert threshold.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Physical p.9 PDF text layer shows the Acceleration/Automation cell words separated exactly at the OCR line joins (complete/individual, the/independence, an/end-to-end, without/human, does/not); only lost spaces are restored."
+    },
+    {
+      "before": "Stealth andSituationalAwareness TCL",
+      "after": "Stealth and Situational Awareness TCL",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Physical p.9 PDF text layer prints the T/CCL cell 'Stealth and Situational Awareness TCL' wrapped over three lines; OCR joined the line breaks without spaces."
+    },
+    {
+      "before": "AccelerationLevel 1 CCL",
+      "after": "Acceleration Level 1 CCL",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Physical p.9 PDF text layer prints the T/CCL cell 'Acceleration Level 1 CCL' wrapped over two lines; OCR joined it without the space."
+    },
+    {
+      "before": "AutomationLevel 1 CCL",
+      "after": "Automation Level 1 CCL",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Physical p.9 PDF text layer prints the T/CCL cell 'Automation Level 1 CCL' wrapped over two lines; OCR joined it without the space."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "flattened-results-table-row-labels",
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "In the image-transcribed results table, each benchmark row label concatenates the printed two-line label (benchmark name plus subtitle, e.g. 'FrontierCode 1.1 Main' + 'Production code quality' -> 'FrontierCode 1.1 MainProduction code quality', 'DeepSWE v1.1Long-horizon software engineering'); all values are correct, only the label line breaks are lost. A page-by-page cell-boundary repair for ~20 labels needs a dedicated pass."
+    }
+  ]
+}

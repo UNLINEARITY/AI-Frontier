@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "id": "tencent:wevisdoc",
+  "source_sha256": "9b3cf6c80d20ba93f3d94d14426511dfa1d9b196944110687e7e57a98725badc",
+  "ocr_sha256": "fcea44dafacc14147fe908e1fc0ea259158e57380e8b0151c62fbbb5f389050e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 35 physical PDF pages; physical pages 1, 4, 18, 19, 26 and 33 were additionally rendered to verify the dropped title-page footnote, the unnumbered L_i equation (the printed '> 0' is genuine source content), the Table 2 header subscripts, the Table 3 abbreviated headers and the Appendix A prompt box. Every number in the OCR versions of Tables 2-4 was checked against the PDF text layer as a multiset, and Table 4 matches the printed rows value by value; Tables 2 and 3 are internally consistent with Table 4 and Section 4 prose. The source contains no printed code fences, and the OCR has none, so there is no fence damage; Appendix B transcribes text displayed inside qualitative figure images, which the embedded figures already show. The vertical arXiv sidebar stamp on physical page 1 is conventionally absent from the OCR, and Table 2's blank Model Type cell for the two WeVisDoc rows matches the rendered table (the caption states the models are reported separately at the end of the series). Citation punctuation spacing after inline math is repaired by the shared OCR normalizer rather than a document patch. Visual re-verification showed the Table 2 header prints \"Table\" with a superscript \"TEDS_S\" (same-level underscore inside the superscript), so the proposed subscript change was dropped."
+  },
+  "patches": [
+    {
+      "before": "Jing LYU WeChat Vision, Tencent Inc.",
+      "after": "Jing LYU WeChat Vision, Tencent Inc.\n\n*Equal contribution. †Project leader. ‡Corresponding author.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered PDF physical p.1 prints the footnote '*Equal contribution. †Project leader. ‡Corresponding author.' at the bottom of the title page, explaining the author superscripts; the OCR dropped the whole line. Restored as a paragraph after the author/affiliation block. The leading asterisk is the literal source glyph and stays unpaired within the paragraph, so it renders as text."
+    },
+    {
+      "before": "## 3. Table Processing:",
+      "after": "3. Table Processing:",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered PDF physical p.26 shows all five numbered items of the Appendix A system prompt box ('1. Text Processing:' ... '5. Output Format:') as plain monospace list items of equal level; the OCR promoted only items 3 and 4 to Markdown headings, which would render as spurious sections."
+    },
+    {
+      "before": "## 4. Figure Handling:",
+      "after": "4. Figure Handling:",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Same Appendix A prompt box on rendered PDF physical p.26: '4. Figure Handling:' is a plain list item at the same level as items 1, 2 and 5, not a document heading."
+    },
+    {
+      "before": "with \\(\\). For example: This is an inline formula \\(\\(E = mc^2\\)",
+      "after": "with \\( \\). For example: This is an inline formula \\( E = mc^2 \\)",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered PDF physical p.26 prompt box reads '- Enclose inline formulas with \\( \\). For example: This is an inline formula \\( E = mc^2 \\)'; the OCR duplicated the opening '\\(' delimiter, lost the closing '\\)' and the delimiting spaces."
+    },
+    {
+      "before": "with [ ]. For example: $\\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$",
+      "after": "with \\[ \\]. For example: \\[ \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\]",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered PDF physical p.26 prompt box reads '- Enclose block formulas with \\[ \\]. For example: \\[ \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a} \\]'; the OCR dropped the backslashes of both block delimiters and rewrote the example with dollar-sign math delimiters that the source does not contain."
+    },
+    {
+      "before": "\n\\- ",
+      "after": "\n- ",
+      "count": 11,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "All 11 escaped-hyphen bullets are in the Appendix A prompt box (OCR lines 677-705); each was checked against the rendered PDF physical p.26 where the box prints plain '- ' bullets. The backslash is an OCR-added Markdown escape, not source text."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "appendix-b-figure-internal-transcription",
+      "pdf_pages": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "evidence": "Sections B.1-B.2 interleave text transcribed from inside the qualitative example figures (displayed model predictions, comparison headers such as 'Overall: 51.76 -> 98.59', scraped worksheet content including '##'-prefixed lines and '查看原图' UI strings, and a deliberately corrupted predicted table ending in repeated '</html>'). Rendered pages confirm this is figure content that the embedded figure images already show, so it is not repaired; as figure text it also surfaces as spurious headings in the reader."
+    },
+    {
+      "id": "table2-header-superscript-form",
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "High-resolution render shows S at the same superscript level after a literal underscore; the OCR already preserves the printed form, so no change is applied."
+    }
+  ]
+}

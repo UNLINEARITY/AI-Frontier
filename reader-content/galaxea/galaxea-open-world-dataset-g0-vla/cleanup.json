@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "galaxea:galaxea-open-world-dataset-g0-vla",
+  "source_sha256": "151aa3493bcf6c52a62a30e0f84a1ba686dd22a84fc7de602a92abd5e49639c1",
+  "ocr_sha256": "699ee1917dc044f84d0c97b30a4bc996bfc68fe7441e1a04699508bd46206efe",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "coverage": "complete",
+    "notes": "All 15 physical pages scanned with a 5-gram PDF-text-to-OCR word-coverage pass. The bulk of weak-gram diffs is figure-internal panel and chart text (Figure 2 platform labels, Figure 3 scene/object distribution values, Figure 4/5 chart axes, Figure 6 WASH CLOTH / BOIL WATER subtask panels, Figure 7 architecture panel notes) which are shown by the embedded figures and left unchanged; Figure 6's caption is present in the OCR. Equations on physical p.8 (objective and flow-matching loss) match the render; the PDF itself prints 'an flow matching action expert' (kept as-is). Contributor roster and references are complete. No code fences exist; heading hierarchy matches the print."
+  },
+  "patches": [
+    {
+      "before": "including residents, kitchens",
+      "after": "including residentials, kitchens",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 Figure 2b bullet prints 'Open-world scenes including residentials, kitchens, retails, offices.' (verified on a 400 dpi crop); OCR dropped the trailing 's' of residentials."
+    }
+  ],
+  "unresolved": []
+}

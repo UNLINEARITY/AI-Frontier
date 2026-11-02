@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-5-4-thinking-system-card",
+  "source_sha256": "e1d430988982bb6617c19db37bec03cbefba1771657d5ab57743dbfc53e7aa50",
+  "ocr_sha256": "9d2cdec4d59a3d1901d8c45cc4c9d42a363301891f4cea16d05a5c0ac7ae66b0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "coverage": "complete",
+    "notes": "Structure and droppage pass over all 38 physical pages: code fences balanced; fragment-level PDF-text diff found zero dropped prose, table bodies, prompt-box chunks or reference entries (only figure-caption numbering noise on p.14, whose captions are present); numeric multiset comparison clean (residual PDF-side numbers are page-footer numbers and figure-internal text). Repairs: two OCR ## promotions that inverted the heading hierarchy against their numbered parents (5.1.2.4, 6.3.1) plus one dropped sub-heading restored (Apollo Research), one table callout label demoted to bold text, three mid-sentence paragraph splits at page joins rejoined, and the not\\_unsafe Markdown escape normalized to the printed underscore. Contents listing, prompt transcripts and footnote superscripts are intact. Minor items left unchanged: the footnote 2 body sits between two Cyber Range bullets instead of at the page bottom (ordering artifact, text intact), and one paragraph glued to the Table 12 caption line."
+  },
+  "patches": [
+    {
+      "before": "## Combined Pass Rate:",
+      "after": "**Combined Pass Rate:**",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints \"Combined Pass Rate:\" as a bold callout label directly under Table 13 (Cyber Range), not as a section heading; numbered sections on the same page (5.1.2.4) use the heading style. As ## it also ranked above its #### parent 5.1.2.4 in the exported TOC, so it is demoted to bold text."
+    },
+    {
+      "before": "## External Evaluations by Irregular",
+      "after": "###### External Evaluations by Irregular",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 shows \"External Evaluations by Irregular\" as a genuine unnumbered bold sub-heading directly below \"5.1.2.4 External Evaluations for Cyber Capabilities\". The exporter maps 5.1.2.4 to depth 5, so the OCR ## inverted the hierarchy; ###### places the sub-heading under its parent."
+    },
+    {
+      "before": "External Evaluations by Apollo Research",
+      "after": "#### External Evaluations by Apollo Research",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 prints \"External Evaluations by Apollo Research\" as an unnumbered bold sub-heading below \"5.2 Research Category Update: Sandbagging\" (visually verified at 150 dpi); the OCR dropped the heading, leaving it as a plain paragraph. #### sits one level under the exported ### for 5.2, matching the sibling Irregular heading treatment."
+    },
+    {
+      "before": "## The study's finding and how they informed our conclusions",
+      "after": "##### The study's finding and how they informed our conclusions",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Rendered physical p.35 shows this as a bold sub-heading inside section 6.3.1 Biological and Chemical (visually verified). The exporter maps 6.3.1 to depth 4, so the OCR ## inverted the hierarchy; ##### places it under its parent."
+    },
+    {
+      "before": "where a pass denotes at least one successful\n\ntrial.",
+      "after": "where a pass denotes at least one successful trial.",
+      "count": 1,
+      "pdf_pages": [
+        23,
+        24
+      ],
+      "evidence": "Physical p.23 ends \"...where a pass denotes at least one successful\" and physical p.24 opens \"trial. The combined pass rate is...\"; the OCR turned the page break into a paragraph split mid-sentence."
+    },
+    {
+      "before": "non-ZDR surfaces, manual human\n\nreview.",
+      "after": "non-ZDR surfaces, manual human review.",
+      "count": 1,
+      "pdf_pages": [
+        31,
+        32
+      ],
+      "evidence": "Physical p.31 ends \"...for certain cases on non-ZDR surfaces, manual human\" and physical p.32 opens \"review.\"; the OCR paragraph break splits the sentence."
+    },
+    {
+      "before": "provides compelling evidence that\n\nGPT-5 in fact did not reach High",
+      "after": "provides compelling evidence that GPT-5 in fact did not reach High",
+      "count": 1,
+      "pdf_pages": [
+        34,
+        35
+      ],
+      "evidence": "Physical p.34 ends \"We believe this study provides compelling evidence that\" and physical p.35 opens \"GPT-5 in fact did not reach High capability in biology.\"; the OCR paragraph break splits the sentence."
+    },
+    {
+      "before": "not\\_unsafe",
+      "after": "not_unsafe",
+      "count": 5,
+      "pdf_pages": [
+        5,
+        6,
+        9
+      ],
+      "evidence": "Rendered physical p.5 prints \"The primary metric is not_unsafe\" with a bare underscore (visually verified at 300 dpi); all five occurrences (pages 5, 6, 6, 9, 9) are prose/caption text where the OCR added a Markdown escape that is not in the source."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "footnote-2-ordering-cyber-range",
+      "pdf_pages": [
+        25,
+        26
+      ],
+      "evidence": "The body of footnote 2 (\"gpt-5.2-thinking has not undergone a full evaluation...\") appears once but is placed between the Vulnerability Research and Network Attack Simulation bullets rather than after the bullet list / table block; repairing the position is a reorder, not a string replacement."
+    },
+    {
+      "id": "table-12-caption-glued-to-intro",
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "evidence": "The sentence \"...the following three benchmarks associated with the skills above:\" and the caption \"Table 12: Vulnerability Identification and Exploitation Capabilities evaluations\" share one paragraph separated by a trailing double-space line break; harmless visually, but a structural split would need a block-level patch."
+    }
+  ]
+}

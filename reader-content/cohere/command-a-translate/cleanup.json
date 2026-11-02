@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "cohere:command-a-translate",
+  "source_sha256": "bff89767a78cc7a85152ba331bb31e74b04d34a1580239a809e6f680b6882aea",
+  "ocr_sha256": "3bce0a41b6cb96602ddc773420f4a172d5fba732096af3e3a7e2eda2aec0074b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "coverage": "complete",
+    "notes": "Word-level diff of the PDF text layer against the OCR markdown for all 11 physical pages, a whole-document digit-token inventory (table values all present; residual tokens are page numerals 789-799 and tokenizer artifacts), code-fence scan (both ```txt prompt blocks balanced), and 300/220 dpi renders of physical p.2, p.3 and p.4 footnote areas plus p.6 'Wenyiil' and p.9 'Ondřej Bojar' cells. Footnote markers $^{1}$-$^{8}$ survive in the OCR while all eight footnote bodies were dropped; they are restored as paragraphs after the paragraphs carrying the markers, following the north-small-translate pattern. The remaining word diffs are soft-hyphen/line-break artifacts (non-English, step-by-step, post-editing, long-context, xComet-XL, instruction-following, state-of-the-art, CommandA-WMT, mT5-XXL, Chi-kiu)."
+  },
+  "patches": [
+    {
+      "before": "\\- Command A Translate: Cohere's officially released MT model with open weights. $^{1}$",
+      "after": "\\- Command A Translate: Cohere's officially released MT model with open weights. $^{1}$\n\n1 https://cohere.com/blog/command-a-translate Weights: https://huggingface.co/CohereLabs/command-a-translate-08-2025",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 footnote area (200 dpi) prints footnote 1 as the blog URL plus 'Weights: https://huggingface.co/CohereLabs/command-a-translate-08-2025' (URL wrapped over two lines, no hyphen); OCR kept the $^{1}$ marker but dropped the footnote body."
+    },
+    {
+      "before": "supporting 23 languages. $^{2}$ We refer to Cohere et al. (2025) for additional architectural details.",
+      "after": "supporting 23 languages. $^{2}$ We refer to Cohere et al. (2025) for additional architectural details.\n\n2 Arabic, Chinese, Czech, Dutch, English, French, German, Greek, Hebrew, Hindi, Indonesian, Italian, Japanese, Korean, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Turkish, Ukrainian, and Vietnamese.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 footnote area (200 dpi) prints footnote 2 as the 23-language list 'Arabic, Chinese, Czech, Dutch, English, French, German, Greek, Hebrew, Hindi, Indonesian, Italian, Japanese, Korean, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Turkish, Ukrainian, and Vietnamese.'; OCR kept the $^{2}$ marker but dropped the list."
+    },
+    {
+      "before": "(Semenov et al., 2025). $^{3}$",
+      "after": "(Semenov et al., 2025). $^{3}$\n\n3 Disclosure of conflict: the main author of Command A Translate is also an organizer of General MT shared task.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 right-column footnote (220 dpi) reads '3 Disclosure of conflict: the main author of Command A Translate is also an organizer of General MT shared task.'; OCR kept the $^{3}$ marker but dropped the body."
+    },
+    {
+      "before": "Claude 4 Sonnet. $^{7}$ Extended comparison comparing more systems is in Appendix B.",
+      "after": "Claude 4 Sonnet. $^{7}$ Extended comparison comparing more systems is in Appendix B.\n\n4 GPT-5 System Card\n\n5 https://mistral.ai/news/mistral-medium-3\n\n6 https://ai.meta.com/blog/llama-4-multimodal-intelligence/\n\n7 Claude 4 System Card",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 footnote block (200 dpi) prints footnotes 4-7: '4 GPT-5 System Card', '5 https://mistral.ai/news/mistral-medium-3', '6 https://ai.meta.com/blog/llama-4-multimodal-intelligence/' (URL wrapped, no hyphen), '7 Claude 4 System Card'; OCR kept the $^{4}$-$^{7}$ markers in this paragraph but dropped all four bodies."
+    },
+    {
+      "before": "rather than assuming potential performance on those two languages.",
+      "after": "rather than assuming potential performance on those two languages.\n\n8 We use KNNImputer from sklearn library.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 footnote block (200 dpi) prints footnote 8 'We use KNNImputer from sklearn library.' attached to the '(Troyanskaya et al., 2001),^8' marker in this paragraph; OCR kept the $^{8}$ marker but dropped the body."
+    },
+    {
+      "before": "Wenyil",
+      "after": "Wenyiil",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 Table 4 row label at 300 dpi reads 'Wenyiil' (two i's before l); the PDF text layer also extracts Wenyiil. OCR dropped one 'i' in the WMT25 system name."
+    },
+    {
+      "before": "Ondrej Bojar",
+      "after": "Ondřej Bojar",
+      "count": 4,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 references at 300 dpi print 'Ondřej Bojar' with the háček (verified visually; the PDF text layer carries the precomposed ř in all 5 occurrences, one of which the OCR transcribed correctly); OCR lost the diacritic in the other 4 reference entries."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "venue-footer-p1",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The first-page footer 'Proceedings of the Tenth Conference on Machine Translation (WMT), Volume 2: Shared Task Papers, pages 789-799 November 8-9, 2025. (c)2025 Association for Computational Linguistics' is publisher page furniture dropped by the OCR along with the page numerals; not restored."
+    }
+  ]
+}

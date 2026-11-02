@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-3-model-card",
+  "source_sha256": "88ae851f53c3034d436816164ce49a876b333fa9b550fb7ef29838182b59ba7d",
+  "ocr_sha256": "a67be8f4e8a1ced4dc9a2e3287ab220c3213082b01428d21432af06215d5cf53",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "coverage": "partial",
+    "notes": "All 64 physical pages were machine-scanned: a full code-fence balance scan (one balanced ```txt block; no swallowed headings, tables or images) and a normalized 4-gram containment plus sentence-level PDF-text-versus-OCR diff. The diff exposed a systematic droppage class: every page-bottom footnote body of the main card (1-14) and of both embedded addenda (1-3 each) is missing from the OCR while the inline $^{n}$ markers survive; all 20 bodies were transcribed and inserted after their anchors. Low-containment table pages (6, 8, 16, 35, 44, 47, 52-58) were inspected individually: the dips come from PDF reading order versus transcribed HTML tables and from win-rate figures embedded as images, not from dropped values; Table 4/Table 5, Table 8 and the new addendum benchmark tables match the print. Twelve pages (1, 2, 6, 7, 8, 28, 35, 44, 45, 52, 53, 56) plus table bands on pages 6, 7, 8 and 35 were verified line-by-line against 300-dpi renders. Remaining page-by-page prose comparison of the unflagged pages was machine-scan only (coverage partial). Table 1/2/3 benchmark-name cells glued to their description lines (for example MMLUGeneral reasoning) were left unchanged pending a broader table-structure decision."
+  },
+  "patches": [
+    {
+      "before": "specialized applications and custom workflows.",
+      "after": "specialized applications and custom workflows.\n\n$^{1}$ We support JPEG/PNG/GIF/WebP, up to 10MB and 8000x8000px. We recommend avoiding small or low resolution images.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnote 1 printed below the separator on physical p.1."
+    },
+    {
+      "before": "adaptive, and engaging.",
+      "after": "adaptive, and engaging.\n\n$^{2}$ For more information and advice on prompt design, please see our documentation at https://docs.anthropic.com/claude/docs/introduction-to-prompt-design.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnote 2 printed below the separator on physical p.2."
+    },
+    {
+      "before": "More results on GPQA are given in Table 8.",
+      "after": "More results on GPQA are given in Table 8.\n\n$^{3}$ All GPT scores reported in the GPT-4 Technical Report [40], unless otherwise stated.\n\n$^{4}$ All Gemini scores reported in the Gemini Technical Report [41] or the Gemini 1.5 Technical Report [42], unless otherwise stated.\n\n$^{5}$ Claude 3 models were evaluated using chain-of-thought prompting.\n\n$^{6}$ Researchers have reported higher scores [43] for a newer version of GPT-4T.\n\n$^{7}$ GPT-4 scores on MATH (4-shot CoT), MGSM, and Big Bench Hard were reported in the Gemini Technical Report [41].\n\n$^{8}$ PubMedQA scores for GPT-4 and GPT-3.5 were reported in [44].",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnotes 3-8 printed below Table 1 on physical p.6."
+    },
+    {
+      "before": "Appendix A.3 and A.8 of [40].",
+      "after": "Appendix A.3 and A.8 of [40].\n\n$^{9}$ For AMC 10 and 12, we evaluated our models on Set A and B for the 2023 exam. For AMC 8, we evaluated our models on the 25-question 2023 exam. GPT scores are for the 2022 exams.\n\n$^{10}$ GPT-4 outperforms GPT-4V on AMC 10 [40]; we report the higher score here.",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnotes 9-10 printed below the separator on physical p.7."
+    },
+    {
+      "before": "$\\dagger$ indicates Chain-of-Thought prompting. All evaluations are 0-shot unless otherwise stated.",
+      "after": "$\\dagger$ indicates Chain-of-Thought prompting. All evaluations are 0-shot unless otherwise stated.\n\n$^{11}$ All GPT scores reported in the GPT-4V(ision) system card [56], unless otherwise stated.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnote 11 printed below the separator on physical p.8."
+    },
+    {
+      "before": "<td>GPT-4V11</td><td>Gemini 1.0 Ultra4</td><td>Gemini 1.5 Pro4</td><td>Gemini 1.0 Pro4</td>",
+      "after": "<td>GPT-4V $^{11}$ </td><td>Gemini 1.0 Ultra $^{4}$ </td><td>Gemini 1.5 Pro $^{4}$ </td><td>Gemini 1.0 Pro $^{4}$ </td>",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Flattened table cell restored from the PDF. physical p.8 Table 3 header prints superscripts GPT-4V^11, Gemini 1.0 Ultra^4, Gemini 1.5 Pro^4, Gemini 1.0 Pro^4 (verified at 300 dpi)."
+    },
+    {
+      "before": "42.5%(from [39])",
+      "after": "42.5% (from [39])",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Flattened table cell restored from the PDF. physical p.8 Table 3 MathVista cell prints 49.9% with (from [54]) on the next line (verified at 300 dpi)."
+    },
+    {
+      "before": "35.7%(from [1])",
+      "after": "35.7% (from [1])",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Flattened table cell restored from the PDF. physical p.6 Table 1 MATH 0-shot GPT-4 cell prints 42.5% with (from [39]) on the next line (verified at 300 dpi)."
+    },
+    {
+      "before": "28.1%(from [1])",
+      "after": "28.1% (from [1])",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Flattened table cell restored from the PDF. physical p.6 Table 1 GPQA Diamond 0-shot cells print 35.7% and 28.1% with (from [1]) on the next line (verified at 300 dpi)."
+    },
+    {
+      "before": "75.7%(from [51])",
+      "after": "75.7% (from [51])",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Flattened table cell restored from the PDF. physical p.6 Table 1 GPQA Diamond 0-shot cells print 35.7% and 28.1% with (from [1]) on the next line (verified at 300 dpi)."
+    },
+    {
+      "before": "45.1%(from [51])",
+      "after": "45.1% (from [51])",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Flattened table cell restored from the PDF. physical p.7 Table 2 MBE cells print 75.7% and 45.1% with (from [51]) on the next line (verified at 300 dpi)."
+    },
+    {
+      "before": "49.9%(from [54])",
+      "after": "49.9% (from [54])",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Flattened table cell restored from the PDF. physical p.7 Table 2 MBE cells print 75.7% and 45.1% with (from [51]) on the next line (verified at 300 dpi)."
+    },
+    {
+      "before": "78.5%†4-shot",
+      "after": "78.5%† 4-shot",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Flattened table cell restored from the PDF. physical p.8 Table 3 MathVista cell prints 49.9% with (from [54]) on the next line; ChartQA GPT-4V cell prints 78.5% with dagger and 4-shot on the next line (verified at 300 dpi)."
+    },
+    {
+      "before": "please refer to our recent blog post. $^{12}$",
+      "after": "please refer to our recent blog post. $^{12}$\n\n$^{12}$ https://www.anthropic.com/news/preparing-for-global-elections-in-2024",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnote 12 printed below the separator on physical p.28."
+    },
+    {
+      "before": "Table 8 This table shows results for GPQA evaluation across different test sets. The Diamond set is considered to be the highest quality as it was chosen by identifying problems that non-experts could not solve despite spending more than 30 minutes per problem, with full internet access.",
+      "after": "Table 8 This table shows results for GPQA evaluation across different test sets. The Diamond set is considered to be the highest quality as it was chosen by identifying problems that non-experts could not solve despite spending more than 30 minutes per problem, with full internet access.\n\n$^{13}$ All scores for GPT–3.5 and GPT–4 are as reported in [1].\n\n$^{14}$ The authors of [1] confirmed that the results they report as “few-shot” (for GPT-4 and GPT-3.5) used 5 examples.",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnotes 13-14 printed below the separator on physical p.35."
+    },
+    {
+      "before": "Table 2 This table shows evaluation results for multimodal tasks. All of these evaluations are 0-shot. On MMMU, MathVista, and ChartQA, all models use chain-of-thought reasoning before providing a final answer.",
+      "after": "Table 2 This table shows evaluation results for multimodal tasks. All of these evaluations are 0-shot. On MMMU, MathVista, and ChartQA, all models use chain-of-thought reasoning before providing a final answer.\n\n$^{1}$ Results for Llama 3 400B are from the April 15, 2024 checkpoint [16]. All metrics are for the Instruct version of the model, other than DROP and BIG-Bench Hard, which are evaluated on the pretrained version of the model.\n\n$^{2}$ OpenAI's simple-evals suite [17] lists MMLU scores of 88.7% for gpt-4o and 86.5% for gpt-4-turbo-2024-04-09. The simple-evals MMLU implementation uses 0-shot CoT.",
+      "count": 1,
+      "pdf_pages": [
+        44
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnotes 1-2 printed below the separator on physical p.44 (Claude 3.5 Sonnet addendum Table 2 page)."
+    },
+    {
+      "before": "baseline of Claude 3 Opus. $^{3}$",
+      "after": "baseline of Claude 3 Opus. $^{3}$\n\n$^{3}$ Section 5.5 of the main model card explains how win rates are calculated.",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnote 3 printed below the separator on physical p.45 (Claude 3.5 Sonnet addendum)."
+    },
+    {
+      "before": "the 95% Confidence Interval (CI).",
+      "after": "the 95% Confidence Interval (CI).\n\n$^{1}$ Our evaluation tables exclude OpenAI's o1 model family [9] as they depend on extensive pre-response computation time, unlike the typical models. This fundamental difference in operation makes performance comparisons difficult and outside the scope of this report.",
+      "count": 1,
+      "pdf_pages": [
+        52
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnote 1 printed below the separator on physical p.52 (new addendum OSWorld page)."
+    },
+    {
+      "before": "Table 2 SWE-bench Verified results. For each model, we indicate the percent of problems for which the model's final solution passed all the tests.",
+      "after": "Table 2 SWE-bench Verified results. For each model, we indicate the percent of problems for which the model's final solution passed all the tests.\n\n$^{2}$ Compared to the current state-of-the-art score of 45.2% as reported on SWE-bench's leaderboard as of October 22nd, 2024",
+      "count": 1,
+      "pdf_pages": [
+        53
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnote 2 printed below the separator on physical p.53 (new addendum SWE-bench page); the print has no closing period."
+    },
+    {
+      "before": "baseline of Claude 3.5 Sonnet. $^{3}$",
+      "after": "baseline of Claude 3.5 Sonnet. $^{3}$\n\n$^{3}$ Section 5.5 of the original Claude 3 Model Card [17] details our evaluation process, including an explanation of how win rates are calculated.",
+      "count": 1,
+      "pdf_pages": [
+        56
+      ],
+      "evidence": "Dropped page-bottom footnote/body or flattened table cell restored from the PDF. footnote 3 printed below the separator on physical p.56 (new addendum win-rate page)."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "glued-benchmark-name-description-cells",
+      "pdf_pages": [
+        6,
+        7,
+        8,
+        16,
+        21,
+        44
+      ],
+      "evidence": "Table 1, Table 2, Table 3, Table 4/5 and the addendum tables glue the printed two-line benchmark label and description into one cell (MMLUGeneral reasoning, GSM8KGrade school math, DocVQA [53] (test, ANLS score)Document understanding, MGSMMultilingual math and similar); the print separates them with a line break. A consistent separator convention should be chosen once for all benchmark tables before patching recorded cells."
+    },
+    {
+      "id": "figure-internal-win-rate-values",
+      "pdf_pages": [
+        47,
+        58
+      ],
+      "evidence": "The win-rate bar values (60/50/45..., 52/45/50...) exist only inside embedded figure images; the readers show the images, so no text patch applies."
+    }
+  ]
+}

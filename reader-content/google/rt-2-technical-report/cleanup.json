@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "google:rt-2-technical-report",
+  "source_sha256": "0a62dc36bbbfdea232ad45a0ab75c82e9cf535b55333ff22c02d5da1897ccac3",
+  "ocr_sha256": "93b8a1525efd211a2d89baf156117d5c5a8e8690e5851ac652597890ee232d22",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE mode: full structural scan (0 code fences, 0 suspicious headings, headings list clean) plus automated normalized 4-gram page-containment diff of all 26 PDF pages against the OCR markdown; all pages >=0.90 containment except figure pages (p2, p22-p25), whose missing spans are figure-internal text (Figures 2, 8, 10) and HTML-table cell reordering. Tables 1-6 digit streams compared against PDF p23-p24 text and matched, including Table 3's printed misspelling 'move banna' kept as printed and the 7-number action example '1 128 91 241 5 101 127' matching the print. The Table 4 footnote body was dropped while its superscript marker survives; restored after visual verification of a p24 render. Low-hit pages and table rows were line-checked; body prose on pages 3-21 was machine-scanned rather than read word by word. The p1 'Corresponding author(s): ...' colophon line was found dropped by the ghost-line scan and restored; the copyright colophon and arXiv stamp follow the corpus convention of being omitted."
+  },
+  "patches": [
+    {
+      "before": "Table 4 | Overall performance of two instantiations of RT-2 and baselines across seen training tasks as well as unseen evaluations measuring generalization to novel objects, novel backgrounds, and novel environments.",
+      "after": "Table 4 | Overall performance of two instantiations of RT-2 and baselines across seen training tasks as well as unseen evaluations measuring generalization to novel objects, novel backgrounds, and novel environments.\n\n$^{1}$ The original pre-training data mixture used in PaLM-E-12B (as described in Driess et al. (2023)) includes robot images for high-level VQA planning tasks that can be similar to images encountered in generalization scenarios. However, none of those training examples include low-level actions that are evaluated in this experiment.",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Table 4's row 'RT-2-PaLM-E-12B $^{1}$' keeps the superscript marker but the footnote body is absent from the whole OCR markdown (no match for 'pre-training data mixture'). Rendered physical p.24 bottom prints the footnote rule and '1The original pre-training data mixture used in PaLM-E-12B (as described in Driess et al. (2023)) includes robot images for high-level VQA planning tasks that can be similar to images encountered in generalization scenarios. However, none of those training examples include low-level actions that are evaluated in this experiment.' (verified on a 200-dpi render); restored after the Table 4 caption using the same superscript markup the table already uses."
+    },
+    {
+      "before": "Google DeepMind. Authors listed in alphabetical order, with contributions listed in Appendix A.",
+      "after": "Google DeepMind. Authors listed in alphabetical order, with contributions listed in Appendix A.\n\nCorresponding author(s): chebotar@google.com, tianheyu@google.com, karolhausman@google.com",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered/extracted physical p.1 colophon prints 'Corresponding author(s): chebotar@google.com, tianheyu@google.com, karolhausman@google.com' above the copyright line; this line was dropped entirely by OCR (ghost-line scan found zero 4-gram hits). Restored as a standalone line after the author-block note, matching the alphacode-2 precedent for Google colophon correspondence lines. The '© 2023 Google DeepMind. All rights reserved' colophon and arXiv stamp stay omitted per corpus-wide convention."
+    }
+  ],
+  "unresolved": []
+}

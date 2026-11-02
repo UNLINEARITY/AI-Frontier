@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-v4-model-card",
+  "source_sha256": "c225d71e3d3d21f263f6f4c2fda2f05757c61eb575a9d263cb9fee291576d5b0",
+  "ocr_sha256": "ec4017b08f5e36bb56083c322e445f9480926bd297db0104948661971a0cfdad",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverage": "complete",
+    "notes": "All 8 physical pages were compared against the extracted PDF text with normalized n-gram matching; glued word boundaries and the demoted 'General Information' heading were verified on rendered pages at 300 dpi. No code fences and no dropped passages exist in this OCR. The glued strings 'compressionwith' (physical p.3) and 'interface(API)' (physical p.5) are printed without spaces in the source PDF itself and were deliberately left unchanged."
+  },
+  "patches": [
+    {
+      "before": "General Information\n\n<table",
+      "after": "## General Information\n\n<table",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints 'General Information' as a large bold centered section title, the same heading style as 'Model properties' and 'Methods of distribution and licenses', which the OCR kept as '##' headings (verified visually at 300 dpi); the OCR dropped the heading marker here only."
+    },
+    {
+      "before": "including:DeepSeek-V4-ProDeepSeek-V4-Flash",
+      "after": "including: DeepSeek-V4-Pro DeepSeek-V4-Flash",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 'Model name' cell prints 'DeepSeek V4, including:' followed by the bulleted lines 'DeepSeek-V4-Pro' and 'DeepSeek-V4-Flash' (verified visually at 300 dpi); the OCR joined the lines without any separator, fusing the two model names into one token."
+    },
+    {
+      "before": "available:Non-think:",
+      "after": "available: Non-think:",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 'Modalities' cell prints 'Text, three reasoning modes available:' followed by a bulleted line 'Non-think: ...' (verified visually at 300 dpi); the OCR joined the lines without a space."
+    },
+    {
+      "before": "responsesThink High:",
+      "after": "responses Think High:",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prints 'Non-think: Fast, intuitive responses' and 'Think High: Deliberate logical analysis' as separate bulleted lines (verified visually at 300 dpi); the OCR joined them without a space."
+    },
+    {
+      "before": "analysisThink Max:",
+      "after": "analysis Think Max:",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prints 'Think High: Deliberate logical analysis' and 'Think Max: Extended reasoning at maximum capacity' as separate bulleted lines (verified visually at 300 dpi); the OCR joined them without a space."
+    },
+    {
+      "before": "for each tokenFlash:",
+      "after": "for each token Flash:",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 'Total model size' cell prints 'Pro: 1.6T parameters, of which 49B are activated for each token' and 'Flash: 285B parameters, ...' as separate lines (verified visually at 300 dpi); the OCR joined them into 'tokenFlash'."
+    },
+    {
+      "before": "governed by theDeepSeek Open Platform",
+      "after": "governed by the DeepSeek Open Platform",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints 'governed by the DeepSeek Open Platform Terms of Service.' with a space before the DeepSeek link (verified visually at 300 dpi); the PDF text layer shows the same space. The OCR glued 'theDeepSeek'."
+    },
+    {
+      "before": "licensed under theMIT License.",
+      "after": "licensed under the MIT License.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints 'are licensed under the MIT License.' with a space before the MIT License link (verified visually at 300 dpi). The OCR glued 'theMIT'."
+    },
+    {
+      "before": "described in theDeepSeek APIDocs.",
+      "after": "described in the DeepSeek API Docs.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints 'described in the DeepSeek API Docs.' with 'DeepSeek API' as a link and 'Docs.' starting the next line (verified visually at 300 dpi); the OCR glued both boundaries into 'theDeepSeek APIDocs'."
+    },
+    {
+      "before": "such asHugging Face",
+      "after": "such as Hugging Face",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints 'repository such as Hugging Face.' with a space before the Hugging Face link (verified visually at 300 dpi). The OCR glued 'asHugging'."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nvidia-nemotron-3-nano-technical-report",
+  "source_sha256": "d3787f5cd9cef64bb3fe20db345aec1a54cde1dbda99fbac96595105048f49ed",
+  "ocr_sha256": "6043a10444023c3aaf84bf2deb9d9d0389ed4e1fed0cf0eba5675773a609a067",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR and the heading list matches the PDF's numbered sections; no spurious figure-banner or page-break headings found. Full-page normalized diff of PDF text against the OCR markdown for all 40 physical pages: every unmatched window resolved as a running header, figure-internal chart/axis/legend text (Figures 1, 2, 4, 5, 6, 7, 8, 9, 10, 11), table-cell flow, or LaTeX-equivalent math (equations 1-8 including the length-control weights); all suspected prose (23.5 trillion-token split, OpenHands harness, KernelBook, GenSelect, length-control rationale, MMLU-redux Professional Accounting 64.00->77.00) is present. Tables 1-6 spot-checked against the PDF text layer and are complete; contributor and reference sections are present (diff misses were line-wrap artifacts). Rendered and visually inspected pages 1, 2, 3, 9, 11, 14, 23, 24: the PDF prints the Hugging-Face emoji (OCR wrote a different smiling emoji), 'SDK configs folder' (OCR dropped the 's' twice), the superscript on physical p.11 is 5 (OCR wrote 4), and all 16 footnote bodies at page bottoms were transcribed from the renders and inserted after the OCR paragraph or list containing the matching markers, following the established footnote-restoration format."
+  },
+  "patches": [
+    {
+      "before": "😊",
+      "after": "🤗",
+      "count": 8,
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "evidence": "Rendered physical p.2 (Checkpoints list) and p.3 (pretraining-data list) print the Hugging-Face emoji 🤗 after each released dataset/model name; the PDF text layer cannot map the glyph, and the OCR transcribed a different smiling emoji. All 8 occurrences are in these two lists (4 + 4)."
+    },
+    {
+      "before": "SDK config folder",
+      "after": "SDK configs folder",
+      "count": 2,
+      "pdf_pages": [
+        9,
+        23
+      ],
+      "evidence": "Rendered physical p.9 and p.23 print 'can be found in the Nemo Evaluator SDK configs folder'; the OCR dropped the final 's' of 'configs' in both occurrences (the only two)."
+    },
+    {
+      "before": "Nemo Evaluator SDK used for evaluations can be found here $^{4}$ .",
+      "after": "Nemo Evaluator SDK used for evaluations can be found here $^{5}$ .\n\n5 https://catalog.ngc.nvidia.com/orgs/nvidia/teams/eval-factory/containers/lm-evaluation-harness",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 first sentence reads 'Nemo Evaluator SDK used for evaluations can be found here' with superscript 5 (visually confirmed; the sentence continues the p.9 paragraph across the full-page Table 2). The OCR misread the superscript as 4 and dropped the footnote body; the URL is transcribed from the rendered p.11 page bottom."
+    },
+    {
+      "before": "Harness packaged via NVIDIA's",
+      "after": "Harness packaged via NVIDIA's\n\n2 https://github.com/NVIDIA-NeMo/Evaluator\n\n3 https://github.com/EleutherAI/lm-evaluation-harness\n\n4 https://github.com/NVIDIA-NeMo/Evaluator",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 page bottom prints footnotes 2-4 ('https://github.com/NVIDIA-NeMo/Evaluator', 'https://github.com/EleutherAI/lm-evaluation-harness', 'https://github.com/NVIDIA-NeMo/Evaluator'); the OCR dropped all footnote bodies. Inserted after the paragraph containing the $^{2}$/$^{3}$/$^{4}$ markers, matching the PDF's own duplicate URL for footnotes 2 and 4."
+    },
+    {
+      "before": "Qwen-3-Nemotron-235B-A22B-GenRM 🤗: the GenRM used for RLHF",
+      "after": "Qwen-3-Nemotron-235B-A22B-GenRM 🤗: the GenRM used for RLHF\n\n1 https://github.com/NVIDIA-NeMo/Nemotron",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 page bottom prints footnote 1 ('https://github.com/NVIDIA-NeMo/Nemotron') for the $^{1}$ marker in the lead-in sentence '...releasing the model recipes $^{1}$ and publishing the following:'; inserted after the Checkpoints list that sentence introduces, so the list is not interrupted."
+    },
+    {
+      "before": "French, Japanese, Russian, and Chinese).",
+      "after": "French, Japanese, Russian, and Chinese).\n\n6 https://github.com/evalplus/evalplus",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 page bottom prints footnote 6 ('https://github.com/evalplus/evalplus') for the $^{6}$ marker on 'Evalplus' in the paragraph ending with the MGSM language list; the OCR dropped the footnote body."
+    },
+    {
+      "before": "and training across all STEM domains.",
+      "after": "and training across all STEM domains.\n\n7 https://huggingface.co/datasets/nvidia/Nemotron-RL-knowledge-mcqa\n\n8 https://huggingface.co/datasets/nvidia/Nemotron-RL-knowledge-openqa\n\n9 https://github.com/NVIDIA-NeMo/Gym/tree/main/resources_servers/mcqa\n\n10 https://github.com/NVIDIA-NeMo/Gym/tree/main/resources_servers/equivalence_llm_judge",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 page bottom prints footnotes 7-10 (Nemotron-RL-knowledge-mcqa, Nemotron-RL-knowledge-openqa, NeMo Gym resources_servers/mcqa, NeMo Gym resources_servers/equivalence_llm_judge), transcribed from the render; the OCR kept the $^{7}$-$^{10}$ markers in the preceding paragraph but dropped all four bodies."
+    },
+    {
+      "before": "Terminal Bench, SWE-Bench, Scale AI Multi Challenge.",
+      "after": "Terminal Bench, SWE-Bench, Scale AI Multi Challenge.\n\n11 https://github.com/NVIDIA-NeMo/Evaluator\n\n12 https://github.com/NVIDIA-NeMo/Skills\n\n13 https://catalog.ngc.nvidia.com/orgs/nvidia/teams/eval-factory/containers/nemo_skills\n\n14 https://github.com/NVIDIA-NeMo/Evaluator",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 page bottom prints footnotes 11-14 (Evaluator, Skills, NGC eval-factory nemo_skills container, Evaluator); the OCR kept the $^{11}$-$^{14}$ markers in the evaluation paragraph but dropped all four bodies. The paragraph's awkward 'packaged via NVIDIA's Nemo Evaluator SDK used for evaluations can be found here' wording matches the PDF print and was left unchanged."
+    },
+    {
+      "before": "using the official evaluation protocol.",
+      "after": "using the official evaluation protocol.\n\n15 https://artificialanalysis.ai/",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 page bottom prints footnote 15 ('https://artificialanalysis.ai/') for the $^{15}$ marker on 'ArtificialAnalysis (AA)' in the comparison paragraph ending '...using the official evaluation protocol.'; the OCR dropped the footnote body."
+    },
+    {
+      "before": "quantize the model to FP8.",
+      "after": "quantize the model to FP8.\n\n16 https://github.com/NVIDIA/Model-Optimizer",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 page bottom prints footnote 16 ('https://github.com/NVIDIA/Model-Optimizer') for the $^{16}$ marker on 'ModelOpt' in the PTQ paragraph; the OCR dropped the footnote body."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "checkpoints-heading-level",
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "The PDF prints 'Checkpoints' as a bold run-in heading between the intro sentence and its bullet list; the OCR kept it as plain text while 'Data' immediately after became a heading. Cosmetic level inconsistency only; left unchanged.",
+      "severity": "minor"
+    },
+    {
+      "id": "emoji-colon-spacing",
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "evidence": "The PDF prints a space between the emoji and the colon ('Nemotron-CC-v2.1 🤗 : 2.5 trillion...'); the OCR has the colon directly after the emoji. Punctuation spacing only; the emoji glyph itself is repaired by patch 1.",
+      "severity": "minor"
+    }
+  ]
+}

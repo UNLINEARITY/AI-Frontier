@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step-audio-r1-5",
+  "source_sha256": "c934b96b5bb1b5cba118b491fee1c384d79ea39d4115b06498c989eea966ab2b",
+  "ocr_sha256": "fb8a344d69a5c626a0e7ee265d560cc76f89fdfccaa64e20e37c4314b40fd354",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "coverage": "complete",
+    "notes": "All 9 physical pages compared against the OCR Markdown with a normalized full-text diff plus a whole-document numeric multiset check (totals match exactly, 276 vs 276; residual unique-count deltas were the arXiv stamp, footnote URLs and tokenization artifacts). No unbalanced code fences (0 fence blocks); heading tree matches the printed sections. Equation tokens flagged by the diff (L_mid, expectation subscripts, H_{1:T}, clip, D_KL) all have LaTeX-equivalent forms in the OCR and need no repair. Table 1 values were spot-checked against the rendered page (p.6) and match; the PDF's bold/underline emphasis on best/second-best results is styling not carried by the HTML table and is not a transcription defect. Page 6 was rendered (250 dpi) to visually verify the restored footnote URL bodies. No Markdown escape artifacts outside URLs were found."
+  },
+  "patches": [
+    {
+      "before": "for mathematical reasoning with verbally expressed problems.",
+      "after": "for mathematical reasoning with verbally expressed problems.\n\n1 https://huggingface.co/datasets/ArtificialAnalysis/big_bench_audio",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 1 at the page bottom (250 dpi, visually read): 1https://huggingface.co/datasets/ArtificialAnalysis/big_bench_audio. The OCR kept the $^{1}$ marker on 'Big Bench Audio' in Section 4.1 but dropped the URL body; restored after the paragraph carrying the marker."
+    },
+    {
+      "before": "(qwen3.5-omni-flash and qwen3.5-omni-plus) [19].",
+      "after": "(qwen3.5-omni-flash and qwen3.5-omni-plus) [19].\n\n2 https://blog.google/technology/developers/gemini-3-pro-vision/",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 2 at the page bottom (250 dpi, visually read): 2https://blog.google/technology/developers/gemini-3-pro-vision/. The OCR kept the $^{2}$ marker on the Gemini family baseline in Section 4.1 but dropped the URL body; restored after the paragraph carrying the marker."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table1-emphasis-styling",
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Table 1 in the PDF bolds the best result and underlines the second-best per column; the OCR HTML table carries the plain values (all verified correct), not the emphasis styling. No text repair applies."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "mistral:voxtral",
+  "source_sha256": "bde247d95666e9a39582a225f430875d1f7349ff979c4daad3fb7cf39631a879",
+  "ocr_sha256": "c35d28df592d450ce5c85d4d093b43c767a746710650985e5551a82752ff0800",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "All 17 physical pages diffed against the OCR markdown with hyphenation-aware prose windows; physical p.14 rendered at 130 dpi and every cell of Tables 3, 4 and 5 compared against the OCR tables. No code fences exist in this source and the heading outline matches the printed structure. Contributor lists (Core contributors, Contributors), Table 1 parameter counts, Table 2 caption and the FLEURS table headers flagged by the diff are all present in the OCR. The only confirmed defect is the model name misread as 'Voxel' in Table 4; 'Mistral-AI' in the Magistral reference matches the printed hyphen."
+  },
+  "patches": [
+    {
+      "before": "<td>Voxel Mini</td>",
+      "after": "<td>Voxtral Mini</td>",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 Table 4 prints the row label \"Voxtral Mini\"; the OCR misread it as \"Voxel Mini\" only in this table, while the same rows print \"Voxtral Mini\" in Tables 3, 5, 6 and all prose. Values in the row were re-checked cell by cell against the render and match."
+    },
+    {
+      "before": "<td>Voxel Mini Transcribe</td>",
+      "after": "<td>Voxtral Mini Transcribe</td>",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 Table 4 prints \"Voxtral Mini Transcribe\"; OCR misread the model name as \"Voxel\". Row values re-checked against the render."
+    },
+    {
+      "before": "<td>Voxel Small</td>",
+      "after": "<td>Voxtral Small</td>",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 Table 4 prints \"Voxtral Small\"; OCR misread the model name as \"Voxel Small\". Row values re-checked against the render."
+    }
+  ],
+  "unresolved": []
+}

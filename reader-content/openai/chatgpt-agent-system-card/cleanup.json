@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "openai:chatgpt-agent-system-card",
+  "source_sha256": "d0a546bc23ddd87e4fcc6b0507b9c1e0e85f182a292988964f0486f17939a821",
+  "ocr_sha256": "6eb351898777823b8bcfd435b7e6acf1d8f558bb95c588ca815d0f0b35de52a6",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of all 42 physical pages. Full structural scan: the document contains no code fences at all (0 opens/closes, verified against the repo's fence-balance rules) and carries 18 image embeds for the UI walkthrough screenshots. Automated normalized 4-gram containment of every PDF page's text layer against the OCR markdown; every low-containment page (physical 6, 7, 8, 9, 11, 12, 17, 29, 38) resolved to benchmark tables whose values exist intact in the OCR's HTML tables - the PDF text layer's reading order for tables interleaves columns, which explains the misses (verified Table 6 'Multilingual performance' row-by-row including English 0.572/0.580 through Yoruba 0.473/0.426, Table 12 safety-training table header, and sampled values 0.932/0.925/0.979/0.931/0.991/0.958 all present exactly once in their expected tables). References [1]-[6+] present with full author lists; final page (Watchlist/trusted-access closing) matches the PDF text layer. Line-by-line review was done on diff contexts of the flagged pages; the remaining prose pages matched the text layer at >=0.83 containment, and no page-bottom footnote class exists in this card (its notes are inline). No patches required; screenshot-internal UI text is carried by the embedded images."
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "tables-not-cell-verified-against-render",
+      "pdf_pages": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        17,
+        29,
+        38
+      ],
+      "evidence": "All flagged tables were checked against the PDF text layer (values and captions present in the OCR HTML), but no table was compared cell-by-cell against a rendered page, and numeric columns were not exhaustively enumerated."
+    }
+  ]
+}

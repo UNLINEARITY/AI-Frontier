@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "id": "meta:chameleon-mixed-modal-early-fusion-foundation-models",
+  "source_sha256": "a937480c856ba915e93de1419b37c5572cf8e52f6490ce6a05d8aeff389b0d18",
+  "ocr_sha256": "84a39d27eb29d3c0f42fa531bfc257c7701cd950b76acfd7a4cf3b18c1d63481",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "coverage": "partial",
+    "notes": "Whole-document normalized word diff of the OCR against all 27 pages of extracted PDF text, plus targeted renders: physical pages 4, 5, 11 at 110 dpi (Figure 3/4/8 example boxes confirming 15 figure-internal strings promoted to '##' headings) and 300-dpi strips of pages 8 (Table 1 checkmarks) and 12-14 (dropped footnote bodies 1-4). No code fences exist in this OCR. Prose, references, contributors, Tables 1-2 and 4 values verified against the text layer; appendix tables 8-14 and equations were only coarsely diffed."
+  },
+  "patches": [
+    {
+      "before": "## <img>\n\nRating and Explanation:",
+      "after": "<img>\n\nRating and Explanation:",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4: Figure 3 (boxed sample-generation example) contains an inline '<img>' placeholder between the 'Optimal Pattern for Camouflage' answer text and 'Rating and Explanation:'; it is example content inside the figure, not a document heading, so the OCR-promoted '## <img>' heading is demoted to plain text. The '<img>' placeholder itself is kept unchanged."
+    },
+    {
+      "before": "## Ingredients:",
+      "after": "Ingredients:",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5: 'Ingredients:' is a plain list label inside the Figure 4 boxed recipe example (model response transcript), not a document heading."
+    },
+    {
+      "before": "## Instructions:",
+      "after": "Instructions:",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5: 'Instructions:' is a plain list label inside the Figure 4 boxed recipe example, not a document heading."
+    },
+    {
+      "before": "## Advice: 10.2%",
+      "after": "Advice: 10.2%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Advice: 10.2%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'What does a meningitis rash look like?...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## How-to: 12.5%",
+      "after": "How-to: 12.5%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'How-to: 12.5%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'How do I properly clean my TV screen?...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## Explanation: 14.4%",
+      "after": "Explanation: 14.4%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Explanation: 14.4%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'I've been studying classical French art...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## Hypothetical: 5.6%",
+      "after": "Hypothetical: 5.6%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Hypothetical: 5.6%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'What would the modern-day vehicle look like...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## Brainstorming: 18.6%",
+      "after": "Brainstorming: 18.6%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Brainstorming: 18.6%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'Show me a Middle Eastern alternative...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## Article: 3.1%",
+      "after": "Article: 3.1%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Article: 3.1%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'Write me an introduction to a story about knick-knacks...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## Story: 3.9%",
+      "after": "Story: 3.9%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Story: 3.9%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'octopus that can't stop eating pizza...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## Identification: 9.3 %",
+      "after": "Identification: 9.3 %",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Identification: 9.3 %' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'Is the below image a Shetland Pony?...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## Comparison: 9.6%",
+      "after": "Comparison: 9.6%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Comparison: 9.6%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'difference between these two creatures...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## Report: 5.4%",
+      "after": "Report: 5.4%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Report: 5.4%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'Who designed the church...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## Other: 5.2%",
+      "after": "Other: 5.2%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Other: 5.2%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'Create a decal for my truck...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "## Reasoning: 2.1%",
+      "after": "Reasoning: 2.1%",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11: 'Reasoning: 2.1%' is a rounded category box inside Figure 8 ('Task categories and examples of prompts', with the prompt 'What is typically found at a construction site?...'); figure-internal labels must not become document headings."
+    },
+    {
+      "before": "√",
+      "after": "✓",
+      "count": 4,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 Table 1 at 300 dpi prints checkmark glyphs (✓) for LLaMa-2 34B GQA, Chameleon 7B Qknorm, Chameleon 34B GQA and Chameleon 34B Qknorm; the PDF text layer also encodes U+2713. OCR transcribed the same four cells as '√' (U+221A)."
+    },
+    {
+      "before": "can be found in Figure 8.\n\n![[images/2ef845389eb92684974514947d1e05a0ccd62940c2e2973731edc47761ac74c7.jpg]]",
+      "after": "can be found in Figure 8.\n\n$^{1}$While not instructed specifically, certain image understanding tasks that require identifying the text in an image, such as OCR (Optical character recognition), do not appear in our evaluation set of prompts.\n\n![[images/2ef845389eb92684974514947d1e05a0ccd62940c2e2973731edc47761ac74c7.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 footnote strip at 300 dpi prints: superscript 1 'While not instructed specifically, certain image understanding tasks that require identifying the text in an image, such as OCR (Optical character recognition), do not appear in our evaluation set of prompts.' The marker survives in the OCR ('task categories ^{1}, as well as') but the body was dropped; inserted after the paragraph carrying the marker. Capitalization 'OCR (Optical character recognition)' matches the print."
+    },
+    {
+      "before": "are 69.1% and 61.7%, respectively.\n\n## 4.3 Inter-annotator Agreement",
+      "after": "are 69.1% and 61.7%, respectively.\n\n$^{2}$The win rate is calculated by adding 1 point for a win and 0.5 points for a tie.\n\n## 4.3 Inter-annotator Agreement",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 footnote strip at 300 dpi prints: superscript 2 'The win rate is calculated by adding 1 point for a win and 0.5 points for a tie.' The marker survives in the OCR ('win rates ^{2} over the baselines') but the body was dropped; inserted after the paragraph carrying the marker."
+    },
+    {
+      "before": "does not fulfill). $^{3}$\n\nTable 4",
+      "after": "does not fulfill). $^{3}$\n\n$^{3}$For the question of task fulfillment, the inter-rater reliability derived by Krippendorff's Alpha (Krippendorff, 2018; Marzi et al., 2024) is 0.338; the 95% confidence interval is [0.319, 0.356], based on bootstrap sampling of 1,000 iterations.\n\nTable 4",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 footnote strip at 300 dpi prints: superscript 3 'For the question of task fulfillment, the inter-rater reliability derived by Krippendorff's Alpha (Krippendorff, 2018; Marzi et al., 2024) is 0.338; the 95% confidence interval is [0.319, 0.356], based on bootstrap sampling of 1,000 iterations.' The marker survives at the end of the OCR paragraph but the body was dropped."
+    },
+    {
+      "before": "evaluation challenging. $^{4}$\n\n## 4.4 Safety Testing",
+      "after": "evaluation challenging. $^{4}$\n\n$^{4}$When comparing Chameleon with Gemini+ and GPT-4V+, the Krippendorff's Alpha values are 0.337 [0.293, 0.378] and 0.396 [0.353, 0.435], respectively.\n\n## 4.4 Safety Testing",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 footnote strip at 300 dpi prints: superscript 4 'When comparing Chameleon with Gemini+ and GPT-4V+, the Krippendorff's Alpha values are 0.337 [0.293, 0.378] and 0.396 [0.353, 0.435], respectively.' The marker survives at the end of the OCR paragraph but the body was dropped; bracketed confidence intervals match the print."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-text-interleaved",
+      "pdf_pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "evidence": "Figure examples (Figures 1-4, 6-9) are transcribed inline between body paragraphs; axis ticks and diagram labels of Figures 1, 2 and 6-9 were correctly left out of the transcription, but the interleaving of Figure 8 prompt examples between body paragraphs remains as OCR reading order."
+    },
+    {
+      "id": "appendix-tables-coarse-check",
+      "pdf_pages": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "evidence": "Appendix B tables and sample listings were covered only by the normalized word diff; cell-level proofreading not performed within this review's budget."
+    }
+  ]
+}

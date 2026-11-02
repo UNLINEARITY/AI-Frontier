@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-flash-model-card",
+  "source_sha256": "b2800104a47322d76d80a72bfb128ba7f0bacffc419ae9bb630eae289c761ba0",
+  "ocr_sha256": "888117dcca517137d94288a7bf792735fac6bf29e31d738a9c8951a801abdf74",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "coverage": "complete",
+    "notes": "Full read of all 6 physical pages: word-level diff against the PDF text layer plus rendered verification of p.1 (published line), p.4 (main results table, 100 dpi full page - this table has no PDF text layer) and p.5 (safety table, 170 dpi). Code fences are absent; the doubled title block matches the sibling Gemini 3 Pro card and was left as a series convention. All dropped text-layer content is page numbers."
+  },
+  "patches": [
+    {
+      "before": "Published: December 2025",
+      "after": "Model card published: December, 2025",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 header: the card prints \"Model card published: December, 2025\"; OCR shortened it to \"Published: December 2025\", dropping the words \"Model card\" and the comma (visual, 200 dpi)."
+    },
+    {
+      "before": "<td>EvaluationDescription</td>",
+      "after": "<td>Evaluation<br/>Description</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 safety table header: \"Evaluation\" and \"Description\" print on two lines in the first column; OCR glued them."
+    },
+    {
+      "before": "<td>Gemini 3 Flashvs. Gemini 2.5 Flash</td>",
+      "after": "<td>Gemini 3 Flash<br/>vs. Gemini 2.5 Flash</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 safety table header: \"Gemini 3 Flash\" and \"vs. Gemini 2.5 Flash\" print on two lines; OCR glued them to \"Flashvs.\"."
+    },
+    {
+      "before": "<td>Text to Text SafetyAutomated content safety evaluation measuring safety policies</td>",
+      "after": "<td>Text to Text Safety<br/>Automated content safety evaluation measuring safety policies</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5: the row prints \"Text to Text Safety\" then the description \"Automated content safety evaluation measuring safety policies\" on the next line; OCR glued them."
+    },
+    {
+      "before": "<td>Multilingual SafetyAutomated safety policy evaluation across multiple languages</td>",
+      "after": "<td>Multilingual Safety<br/>Automated safety policy evaluation across multiple languages</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5: \"Multilingual Safety\" and its description print on separate lines; OCR glued them."
+    },
+    {
+      "before": "<td>+0.1%non-egregious</td>",
+      "after": "<td>+0.1%<br/>non-egregious</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5: the Multilingual Safety value prints \"+0.1%\" with the qualifier \"non-egregious\" on the next line; OCR glued them."
+    },
+    {
+      "before": "<td>Image to Text SafetyAutomated content safety evaluation measuring safety policies</td>",
+      "after": "<td>Image to Text Safety<br/>Automated content safety evaluation measuring safety policies</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5: \"Image to Text Safety\" and its description print on separate lines; OCR glued them."
+    },
+    {
+      "before": "<td>ToneAutomated evaluation measuring objective tone of model refusal</td>",
+      "after": "<td>Tone<br/>Automated evaluation measuring objective tone of model refusal</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5: \"Tone\" and its description print on separate lines; OCR glued them."
+    },
+    {
+      "before": "<td>Unjustified-refusalsAutomated evaluation measuring model&#x27;s ability to respond to borderline prompts while remaining safe</td>",
+      "after": "<td>Unjustified-refusals<br/>Automated evaluation measuring model&#x27;s ability to respond to borderline prompts while remaining safe</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5: \"Unjustified-refusals\" and its description print on separate lines; OCR glued them."
+    },
+    {
+      "before": "<td>No tools With search and code execution</td>",
+      "after": "<td>No tools<br/>With search and code execution</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Humanity's Last Exam tooling column prints \"No tools\" and \"With search and code execution\" on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>33.7% 43.5%</td>",
+      "after": "<td>33.7%<br/>43.5%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Humanity's Last Exam Gemini 3 Flash cell prints 33.7% (No tools) and 43.5% (With search and code execution) on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>37.5% 45.8%</td>",
+      "after": "<td>37.5%<br/>45.8%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Humanity's Last Exam Gemini 3 Pro cell prints 37.5% over 45.8% on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>34.5% 45.5%</td>",
+      "after": "<td>34.5%<br/>45.5%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Humanity's Last Exam GPT-5.2 cell prints 34.5% over 45.5% on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>No tools With code execution</td>",
+      "after": "<td>No tools<br/>With code execution</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "AIME 2025 tooling column prints \"No tools\" and \"With code execution\" on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>95.2% 99.7%</td>",
+      "after": "<td>95.2%<br/>99.7%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "AIME 2025 Gemini 3 Flash cell prints 95.2% over 99.7% on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>95.0% 100%</td>",
+      "after": "<td>95.0%<br/>100%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "AIME 2025 Gemini 3 Pro cell prints 95.0% over 100% on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>72.0% 75.7%</td>",
+      "after": "<td>72.0%<br/>75.7%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "AIME 2025 Gemini 2.5 Flash cell prints 72.0% over 75.7% on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>88.0% —</td>",
+      "after": "<td>88.0%<br/>—</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "AIME 2025 Gemini 2.5 Pro cell prints 88.0% over — on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>87.0% 100%</td>",
+      "after": "<td>87.0%<br/>100%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "AIME 2025 Claude Sonnet 4.5 cell prints 87.0% over 100% on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>100% —</td>",
+      "after": "<td>100%<br/>—</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "AIME 2025 GPT-5.2 cell prints 100% over — on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>91.9% —</td>",
+      "after": "<td>91.9%<br/>—</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "AIME 2025 Grok 4.1 cell prints 91.9% over — on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>No tools unless specified</td>",
+      "after": "<td>No tools<br/>unless specified</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "ScreenSpot-Pro tooling column prints \"No tools\" and \"unless specified\" on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>86.3% with python</td>",
+      "after": "<td>86.3%<br/>with python</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "ScreenSpot-Pro GPT-5.2 cell prints 86.3% with the qualifier \"with python\" on the next line. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>128k (average) 1M (pointwise)</td>",
+      "after": "<td>128k (average)<br/>1M (pointwise)</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "MRCR v2 tooling column prints \"128k (average)\" and \"1M (pointwise)\" on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>67.2% 22.1%</td>",
+      "after": "<td>67.2%<br/>22.1%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "MRCR v2 Gemini 3 Flash cell prints 67.2% (128k) over 22.1% (1M) on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>77.0% 26.3%</td>",
+      "after": "<td>77.0%<br/>26.3%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "MRCR v2 Gemini 3 Pro cell prints 77.0% over 26.3% on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>54.3% 21.0%</td>",
+      "after": "<td>54.3%<br/>21.0%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "MRCR v2 Gemini 2.5 Flash cell prints 54.3% over 21.0% on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>58.0% 16.4%</td>",
+      "after": "<td>58.0%<br/>16.4%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "MRCR v2 Gemini 2.5 Pro cell prints 58.0% over 16.4% on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>47.1% not supported</td>",
+      "after": "<td>47.1%<br/>not supported</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "MRCR v2 Claude Sonnet 4.5 cell prints 47.1% over \"not supported\" on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>81.9% not supported</td>",
+      "after": "<td>81.9%<br/>not supported</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "MRCR v2 GPT-5.2 cell prints 81.9% over \"not supported\" on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    },
+    {
+      "before": "<td>54.6% 6.1%</td>",
+      "after": "<td>54.6%<br/>6.1%</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "MRCR v2 Grok 4.1 cell prints 54.6% over 6.1% on two lines. Visual confirmation on the rendered physical p.4 results table (no text layer in the PDF for this table)."
+    }
+  ],
+  "unresolved": []
+}

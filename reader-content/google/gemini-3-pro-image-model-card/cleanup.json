@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-pro-image-model-card",
+  "source_sha256": "41109d8b6467be8aeb42df84132894a321d64145a4152ac2153211e2d018dea1",
+  "ocr_sha256": "876ca138515f25b5f7dc819fa147d5d104692255539eb24afe68a7ad19d03031",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "All 7 physical pages' extracted text was block-compared against the OCR markdown after normalization; both benchmark tables (Existing and New Capabilities) were value-checked against the page text layers and no dropped cells, headings or body blocks were found. Physical pages 4 and 7 were rendered at 130 dpi and visually checked. Page 7 prints the six safety-policy items as plain numbered/bulleted list items, so OCR promoting item 6 to a level-2 heading is repaired. Page 4 prints open-circle bullets for both 'New capability sets' and 'Regression sets'; the PDF contains no ballot-box glyph, so the OCR's U+2610 on 'Regression sets' is repaired to the printed U+25CB. Bullet markers elsewhere (hyphen vs bullet-dot vs filled-circle vs open-circle) mirror the printed mixed markers and were left as read. Kept without patches: the OCR's leading '## Gemini 3 Pro Image Model Card' duplicate of the reader title and the pipeline-style '# Gemini 3 Pro Image - Model Card' line (both mirror the printed cover title/PDF title metadata); the New Capabilities table's math-span rendering of the same '±' values as the plain-text first table is display-equivalent."
+  },
+  "patches": [
+    {
+      "before": "## 6. Medical advice that runs contrary to scientific or medical consensus",
+      "after": "6. Medical advice that runs contrary to scientific or medical consensus",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (checked at 130 dpi) prints '6. Medical advice that runs contrary to scientific or medical consensus' as the final item of the numbered safety-policy list, in the same body size as items 1-5, not as a section heading; OCR promoted it to '## 6. ...'."
+    },
+    {
+      "before": "☐ Regression sets:",
+      "after": "○ Regression sets:",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (checked at 130 dpi) prints an open-circle bullet U+25CB before 'Regression sets:', identical to the sibling 'New capability sets:' bullet; the PDF text layer for the page contains four U+25CB and no U+2610 anywhere. OCR misread this one bullet as a ballot box."
+    }
+  ],
+  "unresolved": []
+}

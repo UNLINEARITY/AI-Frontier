@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "qwen:wan-vace",
+  "source_sha256": "951af6f6398929a8c3d5e992d0180899db24a6366b637bf8b767380b54281ce3",
+  "ocr_sha256": "c5fcd68067bbf6a414ba2889a5da175e5ad04573f549734010114f5703a13069",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "Full normalized-text comparison of all 17 physical PDF pages against the OCR Markdown. All body prose, the abstract, all eight figure captions, all three tables (including the print's own 'Ture' misspellings in Table 3), the 82 reference entries and the demo-prompt caption blocks under Figures 4, 6, 7 and 8 are present and match the print; the four restored patches are print-faithful restorations of the paper's own misspellings ('chanlleging', 'aviod' twice) and one OCR name misread in reference [71]. Figure-internal panel labels (Figure 1-3, 5 diagram text, comparison-grid model names around Figures 7-8) stay embedded in the figure images; the OCR's uppercase styling of the printed 'TASK-Outpainting'-style sub-labels was left unchanged as caption styling. No code fences exist in the source."
+  },
+  "patches": [
+    {
+      "before": "are still chanleging for unified video generation and editing",
+      "after": "are still chanlleging for unified video generation and editing",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Introduction prints the paper's own misspelling 'are still chanlleging for unified video generation and editing.' (300-dpi crop of the last intro line, visually verified); OCR altered it to 'chanleging'."
+    },
+    {
+      "before": "To avoid any unexpected mishmash",
+      "after": "To aviod any unexpected mishmash",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 right column prints 'To aviod any unexpected mishmash of images and videos' (300-dpi crop verified); the paper's own 'aviod' was auto-corrected by OCR."
+    },
+    {
+      "before": "To avoid fully fine-tuning and achieve faster convergence",
+      "after": "To aviod fully fine-tuning and achieve faster convergence",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 left column prints 'To aviod fully fine-tuning and achieve faster conver-gence' (300-dpi crop verified); same printed misspelling auto-corrected by OCR."
+    },
+    {
+      "before": "Chaofan Li, Shutting Wang, Tiejun Huang",
+      "after": "Chaofan Li, Shuting Wang, Tiejun Huang",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 reference [71] prints 'Ruiran Yan, Chaofan Li, Shuting Wang, Tiejun Huang' (300-dpi crop verified); OCR doubled the t in the author name. 'Xingrun Xing' across the printed line break 'Xin-grun' was already correctly dehyphenated and is untouched."
+    }
+  ],
+  "unresolved": []
+}

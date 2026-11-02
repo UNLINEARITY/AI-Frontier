@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "id": "google:palm-e-technical-report",
+  "source_sha256": "535cc3c7fe1ae7428b9ac7d6a3738a0529975aadc372b2229ea0cb2ce724576a",
+  "ocr_sha256": "cf68f0ab48a0c7e3e76846a878a63483f8be2318ec6f3c0fed6fe34cc069e0ba",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "partial",
+    "notes": "Structural scan: 0 code fences; ten Figure 2 panel labels promoted to level-2 headings between '1. Introduction' and '2. Related Work' were found and demoted (visual verification on rendered p.2). Automated normalized 4-gram page-containment diff of all 18 PDF pages: all pages >=0.90 except p9/p16/p17/p18, whose missing runs were line-checked and are all table bodies (Tables 3, 4, 5, 6, 7, 8, 9, 10 present as HTML tables; cell order differs from the PDF text stream) or figure-internal plot labels (Figure 6 axis labels). Page-1 missing runs are Figure 1 panel-internal prompt/response text and the arXiv stamp (omitted per corpus convention); the affiliation line and palm-e.github.io URL are present. Figure/Table captions 1-10 all present and correctly numbered; references complete. Body prose machine-scanned rather than read word by word on high-containment pages."
+  },
+  "patches": [
+    {
+      "before": "## Visually-conditioned Jokes + Few-shot prompting",
+      "after": "**Visually-conditioned Jokes + Few-shot prompting**",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (110 dpi) shows this line as one of the ten rounded pill labels inside the Figure 2 collage, each organizing a panel of sub-images and model responses; the figure caption 'Figure 2: PaLM-E-562B can do zero-shot multimodal chain-of-thought reasoning...' follows the collage on the same page. The label is figure-internal text promoted by OCR to a level-2 document heading; demoted to bold text (corpus precedent), leaving the document heading tree unchanged between '1. Introduction' and '2. Related Work'."
+    },
+    {
+      "before": "## Robot Visual Perception, Dialogue, and Planning",
+      "after": "**Robot Visual Perception, Dialogue, and Planning**",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (110 dpi) shows this line as one of the ten rounded pill labels inside the Figure 2 collage, each organizing a panel of sub-images and model responses; the figure caption 'Figure 2: PaLM-E-562B can do zero-shot multimodal chain-of-thought reasoning...' follows the collage on the same page. The label is figure-internal text promoted by OCR to a level-2 document heading; demoted to bold text (corpus precedent), leaving the document heading tree unchanged between '1. Introduction' and '2. Related Work'."
+    },
+    {
+      "before": "## Zero-shot Multimodal Chain-of-Thought",
+      "after": "**Zero-shot Multimodal Chain-of-Thought**",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (110 dpi) shows this line as one of the ten rounded pill labels inside the Figure 2 collage, each organizing a panel of sub-images and model responses; the figure caption 'Figure 2: PaLM-E-562B can do zero-shot multimodal chain-of-thought reasoning...' follows the collage on the same page. The label is figure-internal text promoted by OCR to a level-2 document heading; demoted to bold text (corpus precedent), leaving the document heading tree unchanged between '1. Introduction' and '2. Related Work'."
+    },
+    {
+      "before": "## Robot Initiative",
+      "after": "**Robot Initiative**",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (110 dpi) shows this line as one of the ten rounded pill labels inside the Figure 2 collage, each organizing a panel of sub-images and model responses; the figure caption 'Figure 2: PaLM-E-562B can do zero-shot multimodal chain-of-thought reasoning...' follows the collage on the same page. The label is figure-internal text promoted by OCR to a level-2 document heading; demoted to bold text (corpus precedent), leaving the document heading tree unchanged between '1. Introduction' and '2. Related Work'."
+    },
+    {
+      "before": "## Physical Prediction",
+      "after": "**Physical Prediction**",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (110 dpi) shows this line as one of the ten rounded pill labels inside the Figure 2 collage, each organizing a panel of sub-images and model responses; the figure caption 'Figure 2: PaLM-E-562B can do zero-shot multimodal chain-of-thought reasoning...' follows the collage on the same page. The label is figure-internal text promoted by OCR to a level-2 document heading; demoted to bold text (corpus precedent), leaving the document heading tree unchanged between '1. Introduction' and '2. Related Work'."
+    },
+    {
+      "before": "## Zero-shot: Multi-image Relationships",
+      "after": "**Zero-shot: Multi-image Relationships**",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (110 dpi) shows this line as one of the ten rounded pill labels inside the Figure 2 collage, each organizing a panel of sub-images and model responses; the figure caption 'Figure 2: PaLM-E-562B can do zero-shot multimodal chain-of-thought reasoning...' follows the collage on the same page. The label is figure-internal text promoted by OCR to a level-2 document heading; demoted to bold text (corpus precedent), leaving the document heading tree unchanged between '1. Introduction' and '2. Related Work'."
+    },
+    {
+      "before": "## Spatial Grounding",
+      "after": "**Spatial Grounding**",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (110 dpi) shows this line as one of the ten rounded pill labels inside the Figure 2 collage, each organizing a panel of sub-images and model responses; the figure caption 'Figure 2: PaLM-E-562B can do zero-shot multimodal chain-of-thought reasoning...' follows the collage on the same page. The label is figure-internal text promoted by OCR to a level-2 document heading; demoted to bold text (corpus precedent), leaving the document heading tree unchanged between '1. Introduction' and '2. Related Work'."
+    },
+    {
+      "before": "## OCR-free Math Reasoning",
+      "after": "**OCR-free Math Reasoning**",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (110 dpi) shows this line as one of the ten rounded pill labels inside the Figure 2 collage, each organizing a panel of sub-images and model responses; the figure caption 'Figure 2: PaLM-E-562B can do zero-shot multimodal chain-of-thought reasoning...' follows the collage on the same page. The label is figure-internal text promoted by OCR to a level-2 document heading; demoted to bold text (corpus precedent), leaving the document heading tree unchanged between '1. Introduction' and '2. Related Work'."
+    },
+    {
+      "before": "## End-to-End Egocentric Q&A, Dialogue",
+      "after": "**End-to-End Egocentric Q&A, Dialogue**",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (110 dpi) shows this line as one of the ten rounded pill labels inside the Figure 2 collage, each organizing a panel of sub-images and model responses; the figure caption 'Figure 2: PaLM-E-562B can do zero-shot multimodal chain-of-thought reasoning...' follows the collage on the same page. The label is figure-internal text promoted by OCR to a level-2 document heading; demoted to bold text (corpus precedent), leaving the document heading tree unchanged between '1. Introduction' and '2. Related Work'."
+    }
+  ],
+  "unresolved": []
+}

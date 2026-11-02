@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-3d-2-1",
+  "source_sha256": "f6142fe646f9ff22bacac95118ac952d382088a4c3fb7ccd0f1f8a5f8afd8a93",
+  "ocr_sha256": "82063cf15ac54ffd72e8eef705c0bb5c76a7d8540a88c4e922cde9266cd805ca",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "All 14 physical pages compared word-by-word against the OCR Markdown; no code fences exist in this source. Page 11 was rendered at 120 dpi to confirm the Contributors section structure. Remaining word-level differences are LaTeX math, soft-hyphen line breaks, and architecture-diagram labels printed inside figures. The PDF itself prints the typos 'an more advanced strategy' (p.1) and 'neibor views' (p.7) which OCR corrected; left unchanged per author-typo rule."
+  },
+  "patches": [
+    {
+      "before": "## - Core Contributors:",
+      "after": "\\- Core Contributors:",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 shows 'Core Contributors:' printed as a bullet at the same list level as 'Project Sponsors:' and 'Project Leaders:' under the '6 Contributors' heading; OCR promoted it to a section heading, which duplicates the printed hierarchy (the real heading already exists as '## 6 Contributors'). The patch restores the escaped bullet form used by its sibling list items."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-label-fragments-p9-p10",
+      "pdf_pages": [
+        9,
+        10
+      ],
+      "evidence": "Grid/legend labels from Figures 5-7 (Input, Model 1/2, Step1X-3D, 3DTopia-XL, Ours) are interleaved around the embedded figure images in OCR order; they are figure-internal text and match the rendered pages, so they were left unchanged."
+    }
+  ]
+}

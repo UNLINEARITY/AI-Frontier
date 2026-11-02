@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "xai:grok-code-fast-1-model-card",
+  "source_sha256": "e9ff949fdd9c3cb1b0d819e6b5dfb3239d5429976ce56602cba389c8564674fd",
+  "ocr_sha256": "b222b07c611c377f26bdce60e3a627f995cfb5b3c168e5682191f9a20104e97c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "coverage": "complete",
+    "notes": "Word-level diff of the PDF text layer against the OCR markdown for all 6 physical pages; digit-sequence inventories compared; rendered physical p.6 at 300 dpi to verify the misread author name. Dropped words otherwise resolve to page footer numerals 1-6 (not reproduced by OCR) and two tokenizer artifacts (PDF prints 'non-existent' across a line break; 'capture-the-flag-style' hyphens lost by the text layer only). No unbalanced code fences, no spurious headings; bullet marker inconsistency is a source style artifact, not patched."
+  },
+  "patches": [
+    {
+      "before": "Oseleonomen",
+      "after": "Oseleononmen",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 reference line reads 'Kenny O Oseleononmen' (visually verified at 300 dpi); the PDF text layer also extracts Oseleononmen. OCR dropped one 'n' in the surname."
+    }
+  ],
+  "unresolved": []
+}

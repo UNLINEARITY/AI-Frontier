@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-ocr-1-5",
+  "source_sha256": "648ba57d99b740851cdb0bb2b29a0ec8bd8e1b3428a5a536388cf7595fc49f4a",
+  "ocr_sha256": "6bb7bc047d2c83f1fa49d7c4c077ee357fee6209bb4e21b904404d466742c094",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "coverage": "complete",
+    "notes": "All 41 physical pages' extracted text was diffed line-wise against the OCR Markdown (case/punctuation normalized), plus a fence/heading structure scan (4 balanced code-fence pairs; no 4-backtick fences). Rendered verification at 300 dpi on physical pages 23, 27 and 39. The Chinese poem strings reported by the diff on pages 36-37 live inside the embedded Figure E.1/E.2 jpgs, so they are not reader-visible droppage. Chart/table numeric spot checks (Table 8 MSRL row, Table 9) match the print. Reference [89] OCR text 'ChartAssistant' versus printed 'ChartAssisstant' left unchanged: the double-s spelling is the PDF's own typo and source-faithful review keeps it out of patches."
+  },
+  "patches": [
+    {
+      "before": "modified into document",
+      "after": "modified into dacument",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Rendered physical p.27 (CHAOS-Bench annotation, Appendix C) prints the example sentence with the perturbed word in italics: 'the word document can be modified into dacument.' The OCR normalized the deliberately perturbed nonsense word back to 'document', which destroys the annotation example's meaning; the render confirms the printed spelling is 'dacument'."
+    },
+    {
+      "before": "Huawei Shen",
+      "after": "Huawen Shen",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 reference [71] (StrucTab) prints the author list '... Pengyuan Lyu, Huawen Shen, Xingyu Wan, ...' (line-wrapped after 'Huawen'); OCR misread the name as 'Huawei Shen'. Verified at 300 dpi."
+    },
+    {
+      "before": "## ### 近一年广州商品住宅供求量变化",
+      "after": "### 近一年广州商品住宅供求量变化",
+      "count": 1,
+      "pdf_pages": [
+        39
+      ],
+      "evidence": "Rendered physical p.39 (Appendix E output example) shows the HunyuanOCR-1.5 output box printing the literal model-output line '### 近一年广州商品住宅供求量变化' followed by its markdown table; OCR promoted the line to a level-2 document heading that also contains the literal '###'. The patch removes only the spurious '## ' prefix so the heading text matches the printed output line."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-text-fragments-p6-p9",
+      "pdf_pages": [
+        6,
+        9
+      ],
+      "evidence": "Scattered labels from the agentic-pipeline diagram (physical p.6) and the reward-design boxes A/B (physical p.9) are interleaved with body paragraphs in OCR order; the source confirms they belong to figures/boxes, but a faithful reorder needs page-by-page layout work beyond exact-string patches."
+    }
+  ]
+}

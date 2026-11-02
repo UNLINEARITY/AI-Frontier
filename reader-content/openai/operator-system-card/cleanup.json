@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "openai:operator-system-card",
+  "source_sha256": "72c5d16df18fe90a0b76ad4839aecbd2ebd945360e14b161fcaceb3d6b17e07d",
+  "ocr_sha256": "e308743a70c02aea150eb566d191b3387d904f7f99dbc77bf87ac51b2445d8b0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 17 physical PDF pages against the OCR markdown; all evaluation tables (biorisk tooling, safety evaluations, browser benchmarks), appendix prompt text and prose match. Remaining deltas are per-page footers, hyphenation joins, screenshot-internal text and reading-order differences inside the 'Watch, Rate, and Intervene' table. One swallowed placeholder pair and one dropped footnote body were repaired."
+  },
+  "patches": [
+    {
+      "before": "using these credentials: Email:Password:. When you get to the stage",
+      "after": "using these credentials: Email: &lt;email&gt; Password: &lt;password&gt;. When you get to the stage",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (300 dpi crop) prints the Twist DNA prompt in monospace with literal placeholders 'Email: <email> Password: <password>.'; OCR swallowed the angle-bracket placeholders as if they were HTML tags. Restored as &lt;email&gt;/&lt;password&gt; entities inside the raw HTML table cell so the reader shows the printed placeholders."
+    },
+    {
+      "before": "</table>\n\nAt the system level, we restrict Operator from navigating",
+      "after": "</table>\n\n$^{1}$ Following Souly et al[5], we calculate goodness@0.1, which is the model’s safety when evaluated against the top 10% of jailbreak techniques per prompt.\n\nAt the system level, we restrict Operator from navigating",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "The Table 2 StrongREJECT row's metric cell keeps the superscript in 'goodness@ $0.1^1$' but the footnote body was dropped. Rendered physical p.7 bottom (300 dpi) prints '1 Following Souly et al[5], we calculate goodness@0.1, ...' under a rule; the print's own 'et al[5]' spelling (no period, no space) is preserved."
+    }
+  ],
+  "unresolved": []
+}

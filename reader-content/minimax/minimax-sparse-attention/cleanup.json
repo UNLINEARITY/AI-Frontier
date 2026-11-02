@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "minimax:minimax-sparse-attention",
+  "source_sha256": "595d4411649dc9cd6b4eac16585cfe57bd456f6d4b1cd8e02cd33e96ef7c2fe5",
+  "ocr_sha256": "eb7f55f6dcc59a7da074e9f5a2d2c450c0354d2b129fa775386546052e870e9d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      7,
+      9,
+      12,
+      14,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      29,
+      30
+    ],
+    "coverage": "partial",
+    "notes": "Code-fence structure scan found balanced fences and only printed section headings. Automated normalized page-text diff across all 30 physical pages (running-header merges ignored), numeric-token presence check on every table/chart page, and sentence-level diff of the reference pages. Visual verification on rendered pages 9 and 21 (400 dpi crops). The math zone (pages 3-6, 23-24) was only spot-checked in LaTeX form, not fully read line by line; margin boilerplate (copyright line, arXiv stamp) is absent per corpus-wide convention."
+  },
+  "patches": [
+    {
+      "before": "$\\tau^2$ -bench",
+      "after": "$\\tau^2$-bench",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 (400 dpi) reads 'including tau^2-bench (Barres et al., 2025), TheAgentCompany' with no space between the superscript 2 and '-bench'; the OCR inserted a space after the inline math delimiter."
+    },
+    {
+      "before": "$\\tau^{2}$ -bench",
+      "after": "$\\tau^{2}$-bench",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 reference (Barres et al., tau^2-bench) prints 'tau^2-bench: Evaluating conversational agents in a dual-control environment' without a space before the hyphen; the OCR inserted a space after the inline math delimiter."
+    },
+    {
+      "before": "Inflamm-v2",
+      "after": "Infllm-v2",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 reference (Zhao et al.) at 400 dpi prints 'Infllm-v2: Dense-sparse switchable attention for seamless short-to-long adaptation' with lowercase letter l twice; the OCR misread the name as 'Inflamm-v2'. Body-text occurrences print as 'InfLLM'/'InfLLM-V2' and match the OCR."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "math-zone-not-line-read",
+      "pdf_pages": [
+        3,
+        4,
+        5,
+        6,
+        23,
+        24
+      ],
+      "evidence": "Equations were compared only at normalized-window level and one spot check; a full line-by-line review of display math (subscripts, 1-vs-l in symbols) was not completed within this review's coverage."
+    }
+  ]
+}

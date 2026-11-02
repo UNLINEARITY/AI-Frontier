@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-1-0-technical-report",
+  "source_sha256": "e2ed7c48914289faf666fcbb1de0fcde5d4ec9ae30fe8f28ae8c1f672b9e7765",
+  "ocr_sha256": "0474de2a32d40905f3709acd415512579352920823963129f42a9317ecd74e4d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      16,
+      19,
+      23,
+      24,
+      25,
+      26,
+      31,
+      35,
+      37,
+      54,
+      66,
+      69,
+      71,
+      72,
+      73,
+      74,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90
+    ],
+    "coverage": "partial",
+    "notes": "Triage review: full structural/fence scan (all fences balanced, no swallowed headings/tables/images); automated whole-document page-text diff (normalized 4-gram containment per page) with manual inspection of every page below 0.90 coverage, plus decimal-number completeness checks on all table-heavy pages (8-10, 12-14, 16, 23-26, 37, 71-73: zero missing values). Rendered pages 19, 66, 78, 79, 80, 81, 82, 83, 84, 85, 88, 89, 90 were visually inspected, with 300 dpi crops for names and headings. The appendix (physical pages 76-90) renders each conversation as an embedded screenshot image, so prompt/response text existing only inside those embeds is not treated as droppage; the appendix section headings, however, are printed document structure and 10.4.3-10.5, 10.6.2 lost their heading prefixes in OCR, the 10.6 parent heading was dropped entirely, and demo-box labels were glued onto two headings. Contributor names on page 66 verified at 300 dpi."
+  },
+  "patches": [
+    {
+      "before": "<td>Siim Pöder</td>",
+      "after": "<td>Siim Põder</td>",
+      "count": 1,
+      "pdf_pages": [
+        66
+      ],
+      "evidence": "Rendered physical p.66 contributors table prints \"Siim Põder\" with o-tilde (300 dpi crop visually verified); OCR wrote an o-umlaut."
+    },
+    {
+      "before": "<td>Hanna Klimczak-Plucińsk</td>",
+      "after": "<td>Hanna Klimczak-Plucińska</td>",
+      "count": 1,
+      "pdf_pages": [
+        66
+      ],
+      "evidence": "Rendered physical p.66 contributors table prints \"Hanna Klimczak-Plucińska\" (300 dpi crop visually verified); OCR dropped the final a."
+    },
+    {
+      "before": "10.4.3. Interleaved image and text generation\n",
+      "after": "## 10.4.3. Interleaved image and text generation\n",
+      "count": 1,
+      "pdf_pages": [
+        79
+      ],
+      "evidence": "Rendered physical p.79 prints \"10.4.3. Interleaved image and text generation\" as an italic section heading like its siblings; the OCR line lost the heading marker and reads as body text."
+    },
+    {
+      "before": "10.4.4. Image understanding and reasoning",
+      "after": "## 10.4.4. Image understanding and reasoning",
+      "count": 1,
+      "pdf_pages": [
+        80
+      ],
+      "evidence": "Rendered physical p.80 prints \"10.4.4. Image understanding and reasoning\" as a section heading; OCR demoted it to plain text."
+    },
+    {
+      "before": "10.4.5. Geometrical reasoning",
+      "after": "## 10.4.5. Geometrical reasoning",
+      "count": 1,
+      "pdf_pages": [
+        81
+      ],
+      "evidence": "PDF text layer physical p.81 prints \"10.4.5. Geometrical reasoning\" as a section heading in the same style as the visually confirmed sibling headings on pages 79/82/84; OCR demoted it to plain text."
+    },
+    {
+      "before": "10.4.6. Information seeking about objects",
+      "after": "## 10.4.6. Information seeking about objects",
+      "count": 1,
+      "pdf_pages": [
+        82
+      ],
+      "evidence": "PDF text layer physical p.82 prints \"10.4.6. Information seeking about objects\" as a section heading; OCR demoted it to plain text."
+    },
+    {
+      "before": "10.4.7. Multimodal reasoning based on visual cues",
+      "after": "## 10.4.7. Multimodal reasoning based on visual cues",
+      "count": 1,
+      "pdf_pages": [
+        82
+      ],
+      "evidence": "Rendered physical p.82 prints \"10.4.7. Multimodal reasoning based on visual cues\" as an italic section heading (300 dpi crop visually verified); OCR demoted it to plain text."
+    },
+    {
+      "before": "10.4.8. Multimodal humor understanding",
+      "after": "## 10.4.8. Multimodal humor understanding",
+      "count": 1,
+      "pdf_pages": [
+        83
+      ],
+      "evidence": "PDF text layer physical p.83 prints \"10.4.8. Multimodal humor understanding\" as a section heading; OCR demoted it to plain text."
+    },
+    {
+      "before": "10.5. Commonsense reasoning in a multilingual setting",
+      "after": "## 10.5. Commonsense reasoning in a multilingual setting",
+      "count": 1,
+      "pdf_pages": [
+        84
+      ],
+      "evidence": "Rendered physical p.84 prints \"10.5. Commonsense reasoning in a multilingual setting\" as a bold section heading (300 dpi crop visually verified); OCR demoted it to plain text."
+    },
+    {
+      "before": "![[images/d505cea2ad136df80ffe0b78a72d239a14abce08b723c417d8dcfe57e75eff23.jpg]]",
+      "after": "## 10.6. Multi-step reasoning and mathematics\n\n![[images/d505cea2ad136df80ffe0b78a72d239a14abce08b723c417d8dcfe57e75eff23.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        88
+      ],
+      "evidence": "Rendered physical p.88 opens with the section heading \"10.6. Multi-step reasoning and mathematics\" before the Figure 21 example; the OCR dropped this heading entirely, leaving 10.6.1 apparently under 10.5.2. The heading is restored immediately before the Figure 21 embed, matching print order. The conversation text of the example is shown by the embedded Figure 21 screenshot, so it is not re-transcribed."
+    },
+    {
+      "before": "## 10.6.1. Complex image understanding, code generation, and instruction following Prompt",
+      "after": "## 10.6.1. Complex image understanding, code generation, and instruction following\n\n## Prompt",
+      "count": 1,
+      "pdf_pages": [
+        89
+      ],
+      "evidence": "Rendered physical p.89 prints the heading \"10.6.1. Complex image understanding, code generation, and instruction following\" with \"Prompt\" as the label of the separate prompt box below (visually verified); OCR glued the box label onto the heading. The prompt sentence itself is present on the following OCR lines."
+    },
+    {
+      "before": "10.6.2. Video understanding and reasoning Prompt (video)",
+      "after": "## 10.6.2. Video understanding and reasoning\n\n## Prompt (video)",
+      "count": 1,
+      "pdf_pages": [
+        90
+      ],
+      "evidence": "Rendered physical p.90 prints the heading \"10.6.2. Video understanding and reasoning\" with \"Prompt (video)\" as the label of the prompt box below it (visually verified); OCR glued the box label onto an unmarked heading line. The prompt question and model response follow in the OCR text."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "appendix-conversations-only-in-screenshots",
+      "pdf_pages": [
+        19,
+        80,
+        81,
+        83,
+        84,
+        88
+      ],
+      "evidence": "Appendix examples 10.4.4, 10.4.5 (prompt), 10.4.6 (response), 10.4.8, 10.5 and the 10.6 factory example print conversation text as real PDF text, but the OCR embeds only the conversation screenshots (Figure 13, 14, 15, 17, 18, 21 embeds), so the text exists solely inside images. Rendered checks (pages 80, 84, 88 and the embedded Figure 11/13 images) confirm each embed displays the full conversation, so this was not patched; searchable text for these turns is absent from the reader document."
+    },
+    {
+      "id": "table-12-and-demo-code-fences-plain-text",
+      "pdf_pages": [
+        18,
+        85,
+        86
+      ],
+      "evidence": "4-gram misses on these pages trace to table cell ordering (Table 12 ASR examples, present in full) and to code/text rendered inside the Opossum Search demo figures; spot checks found the content represented in the markdown. Line-level confirmation of the demo code block characters was not completed within budget."
+    }
+  ]
+}

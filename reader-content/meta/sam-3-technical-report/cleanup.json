@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "id": "meta:sam-3-technical-report",
+  "source_sha256": "19e8a44e7fc33bc6cf237f6b4ac3948a79b33f7ffc62d09012fcac6fc9fb016f",
+  "ocr_sha256": "d465d2f443d663b995dbf62d588c1da28ad80fa89751de1470a323a9b4f1990a",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of all 78 physical PDF pages against the OCR markdown (case/punctuation-normalized; LaTeX math such as $cgF_1$/$pmF_1$/$AP_o$ treated as equivalent to the printed subscripts), plus structural check: the three code fences (json/json/txt, prompt examples) are balanced and contain no swallowed headings/tables/images; heading tree matches the printed sections. Renders inspected at 110-600 dpi: p.8 Table 1 (all 11 rows and the AP/AP_o header cells match; caption prints AP_o), p.9 Tables 5-6, p.15 Tables 12-13, p.17 Engine (All Human) bullets (printed with spaces; OCR matches), p.20, p.41 Figure 15 (MetaCLIP/Common/WikiNodes are in-figure dataset montage labels - figure-internal, correctly omitted), p.54 Figure 23, p.65 Tab 44 header zoomed at 600 dpi, p.67, p.70. Patched: OCR 'Shutting He' against the printed 'Shuting He' (MOSEv2 reference, p.70); OCR 'constrative' against the printed 'constrastive' (p.20 - the source itself misspells contrastive; the patch restores the printed string, not the dictionary spelling); Tab 44 (p.65) glued 'SA-V val' into 'SA-Val' and dropped the dot accent of the printed J&F-dot group header (OCR already had the correct $\\mathcal{J}\\&\\dot{\\mathcal{F}}$ in the sister Table 6 on p.9); Table 12 group label '(in domain)' against printed '(in-domain)'. Left unchanged: source-printed typos the OCR normalized ('simplifed' p.14, 'explict' p.33, 'qualityThe ... covering covering' p.67 - the doubled 'covering' is printed in the PDF); letter-spaced screenshot text inside figures on p.59; axis ticks (30K/150K/750K) inside Figures 9/17."
+  },
+  "patches": [
+    {
+      "before": "constrative",
+      "after": "constrastive",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 (300 dpi crop, located via search): 'Image and Text Encoders. ... trained using constrastive vision language training using 5.4 billion image-text pairs following Perception Encoder (PE)'. The PDF prints the misspelling 'constrastive'; OCR dropped one s and wrote 'constrative'. Patch restores exactly the printed string."
+    },
+    {
+      "before": "Wiki-Food&amp;Drink (in domain)",
+      "after": "Wiki-Food&amp;Drink (in-domain)",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15, Table 12 column group: the third group label prints 'SA-Co/Gold-Wiki-Food&Drink' over '(in-domain)' with a hyphen (Table 13's printed group labels likewise read (in-domain)/(out-of-domain)); OCR table cell wrote '(in domain)'."
+    },
+    {
+      "before": "<td>SA-Val</td>",
+      "after": "<td>SA-Vval</td>",
+      "count": 1,
+      "pdf_pages": [
+        65
+      ],
+      "evidence": "Rendered physical p.65, Tab 44 header (150 dpi page + 300 dpi crop): the fourth column prints 'SA-V' over 'val' (SA-V val). OCR glued it to 'SA-Val', which renders as the single token SA-Val; the OCR of the sister Table 6 (physical p.9, same benchmark column) correctly uses 'SA-Vval'."
+    },
+    {
+      "before": "</td><td> $\\mathcal{G}$ </td><td> $\\mathcal{J}\\&\\mathcal{F}$ </td></tr>",
+      "after": "</td><td> $\\mathcal{G}$ </td><td> $\\mathcal{J}\\&\\dot{\\mathcal{F}}$ </td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        65
+      ],
+      "evidence": "Rendered physical p.65, Tab 44 header zoomed at 600 dpi: the last column group prints a script J & F with a dot accent over the F (matching the sister Table 6 on physical p.9, whose OCR already has $\\mathcal{J}\\&\\dot{\\mathcal{F}}$). OCR Table 44 dropped the accent and wrote plain J&F for the MOSEv2 metric column."
+    },
+    {
+      "before": "Shutting He",
+      "after": "Shuting He",
+      "count": 1,
+      "pdf_pages": [
+        70
+      ],
+      "evidence": "Rendered physical p.70 (300 dpi crop, located via search): the MOSEv2 reference prints 'Henghui Ding, Kaining Ying, Chang Liu, Shuting He, Xudong Jiang, Yu-Gang Jiang, Philip HS Torr, and Song Bai.'; OCR inserted an extra t ('Shutting He')."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-23-missing-embed-and-caption",
+      "pdf_pages": [
+        54
+      ],
+      "evidence": "Physical p.54 prints Figure 23 (multi-row montage of video concept segmentation predictions, rendered at 150 dpi: rows labeled 'the hanging pot', 'the white bag', 'sheet of white paper', ...) with caption 'Figure 23 Example video concept segmentation predictions on the SA-Co/VEval SA-V test set (top two rows) and the SA-Co/VEval SmartGlasses test set (bottom two rows).' The OCR jumps from Figure 22 to Figure 24: neither the image embed nor the caption exists anywhere in the markdown, and none of the 82 ingested images is unreferenced, so the figure was never ingested. apply_text_cleanup cannot add image embeds (image lists must stay identical), so repair requires re-ingesting p.54 from the PDF, not a cleanup patch."
+    }
+  ]
+}

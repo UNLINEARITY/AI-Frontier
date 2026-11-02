@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-r1-incentivizing-reasoning-capability-in-llms-via-reinforcement-learning",
+  "source_sha256": "b191b0a365a64b4ab2791d117069ed17a2933d03554a662ced58b37df52018f4",
+  "ocr_sha256": "29be6542dbcd2dadece22a60f8cb92cdb724f46ddcce50b27acf323aaa8db871",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86
+    ],
+    "coverage": "partial",
+    "notes": "Triage review within a fixed budget. Machine-scanned all 86 physical pages: full-document normalized 4-gram containment of PDF page text in the OCR markdown flagged 13 low-hit pages, and each was classified - physical pages 36, 49, 52, 55 and 58 are chart/figure pages (Figures 6, 13, 14, 15, 16, 17) whose numbers exist only inside the embedded images (captions and image embeds verified present; not droppage); the rest are HTML-table pages (Tables 3, 8 and the safety/distillation tables) where tag words break 4-gram alignment, and distinctive values (e.g. Codeforces ratings 1444/1534/1687/1746/2029, cons@64, AlpacaEval2.0, MMLU-Redux 92.9) were confirmed present verbatim. Full-document code-fence balance scan found the decisive structural defect: OCR emitted four-backtick lines where the print shows three (and inflated four Example fences to six), leaving an unclosed fence that swallowed everything after the middle of Listing 2 - all benchmark and appendix tables, listings 4-10 and the reference list rendered as one code block. The repair normalizes printed ‘‘‘ fences to three backticks, removes fences the print does not have (page-break artifacts on physical p.23/24, the doubled fence before </ASSISTANT>, the stray fence before \"In addition...\"), and re-lengthens the two Listing 2 box-boundary fences to four backticks so the printed literal three-backtick transcript lines stay literal. Pages 22-25 were additionally rendered and visually inspected at 300 dpi to confirm every patch; the remaining pages were machine-scanned without line-by-line reading. Physical page 33 was also rendered to confirm the spurious fence before the Listing 7 caption."
+  },
+  "patches": [
+    {
+      "before": "```txt\n<USER>",
+      "after": "````txt\n<USER>",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 shows Listing 2 as one printed box whose interior contains literal three-backtick lines (the Example Input/Output fences are printed as ‘‘‘). A literal ``` line cannot live inside a ``` fence, so the box-opening fence is raised to four backticks; the closing four-backtick fence is added by the matching patch at the printed box end after \"into stdout.\" (p.24). No printed characters change."
+    },
+    {
+      "before": "Input\n``````\n2\n",
+      "after": "Input\n```\n2\n",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 prints the Example Input fence as exactly three backticks (‘‘‘) before \"2 / igigee / 2 / aaabbbccc / 3\"; OCR inflated it to six backticks."
+    },
+    {
+      "before": "3\n``````\nOutput\n``````\n3\n",
+      "after": "3\n```\nOutput\n```\n3\n",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 prints the Example Output fences as exactly three backticks (‘‘‘) around \"3 / 6\"; OCR inflated both to six backticks."
+    },
+    {
+      "before": "6\n``````\nConstruct some random input generators",
+      "after": "6\n```\nConstruct some random input generators",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 prints a single three-backtick fence closing the Output sample before \"Construct some random input generators...\"; OCR inflated it to six backticks."
+    },
+    {
+      "before": "``````\n```\n```python",
+      "after": "```python",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 shows one ‘‘‘python fence line directly after \"First construct a random input generator for large data with 10 testcases of the same length.\"; OCR split that single printed fence into three stacked fence lines (`````` / ``` / ```python)."
+    },
+    {
+      "before": "````python",
+      "after": "```python",
+      "count": 3,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 prints these code-block openers as ‘‘‘python (three backticks plus the python info string) in the Listing 2 transcript; OCR emitted four backticks, which no later three-backtick line can close under CommonMark."
+    },
+    {
+      "before": "    length = random.randint(l_min, l_max)\n```\n\n```txt\nchar = random.choice",
+      "after": "    length = random.randint(l_min, l_max)\nchar = random.choice",
+      "count": 1,
+      "pdf_pages": [
+        23,
+        24
+      ],
+      "evidence": "The single-repeated-char generator code runs across the physical p.23/p.24 page break; rendered p.24 top shows \"char = random.choice(...)\" continuing the same code block with no printed fence at the break, while OCR inserted two spurious fence lines (``` and ```txt) at the break."
+    },
+    {
+      "before": "    alternating characters.\n\n```\n```python\nimport random",
+      "after": "    alternating characters.\n\n```python\nimport random",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 shows ‘‘‘python directly after \"Construct an input generator for large adversarial inputs of a string of two alternating characters.\"; OCR duplicated the fence into ``` plus ```python."
+    },
+    {
+      "before": "```\n```python\n````\n```\n</ASSISTANT>",
+      "after": "```python\n...\n```\n</ASSISTANT>",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 prints ‘‘‘python, the elided body \"...\", and ‘‘‘ before </ASSISTANT>; OCR emitted four fence lines here (``` / ```python / ```` / ```), and the four-backtick line left an unclosed fence that swallowed the rest of the document (all remaining tables and listings rendered as one code block)."
+    },
+    {
+      "before": "into stdout.\n```\n",
+      "after": "into stdout.\n````\n",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 shows the Listing 2 box ending after \"into stdout.\" followed by body prose \"In addition, we employ few-shot prompting...\" with no printed fence; the spurious three-backtick line is lengthened to four backticks so it closes the four-backtick box-opening fence instead of leaking box-internal transcript fences into the prose."
+    },
+    {
+      "before": "##\n## Question",
+      "after": "## Question",
+      "count": 2,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints \"---\" followed by \"## Question\" directly; OCR duplicated the heading marker as a standalone \"##\" line (twice). The transcript is displayed pre-formatted, so the stray line was visible."
+    },
+    {
+      "before": "##\n## Response",
+      "after": "## Response",
+      "count": 2,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints \"## Response\" directly after the question text; OCR duplicated the heading marker as a standalone \"##\" line (twice)."
+    },
+    {
+      "before": "[5 + 4 = 9]",
+      "after": "\\[5 + 4 = 9\\]",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints the display-math delimiters \\[ and \\] around \"5 + 4 = 9\" in the Listing 3 response; OCR dropped the backslashes, leaving bare brackets."
+    },
+    {
+      "before": "[1 + 2 = 3]",
+      "after": "\\[1 + 2 = 3\\]",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints the display-math delimiters \\[ and \\] around \"1 + 2 = 3\" in the Listing 3 response; OCR dropped the backslashes, leaving bare brackets."
+    },
+    {
+      "before": "($\\boxed{9}$)",
+      "after": "(\\(\\boxed{9}\\))",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints \"**Final Answer:** \\(\\boxed{9}\\)\"; OCR replaced the inline-math delimiters \\( \\) with plain parentheses, yielding \"($\\boxed{9}$)\"."
+    },
+    {
+      "before": "($\\boxed{3}$)",
+      "after": "(\\(\\boxed{3}\\))",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints \"\\(\\boxed{3}\\)\" as the final answer of the second sample; OCR replaced the inline-math delimiters \\( \\) with plain parentheses."
+    },
+    {
+      "before": "providing an optimal solution for the problem.\n```\n\nListing 7 |",
+      "after": "providing an optimal solution for the problem.\n\nListing 7 |",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 shows the Listing 6 box ending after \"...providing an optimal solution for the problem.\" with no printed fence; the \"Listing 7 | An example SFT trajectory...\" caption follows as prose, then Listing 7's box starts at \"## Question\". The OCR inserted a spurious ``` box-edge line that rendered the Listing 7 caption as code."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table-cell-structure-spot-check-only",
+      "pdf_pages": [
+        9,
+        41,
+        46,
+        47,
+        48,
+        51,
+        53,
+        54,
+        56,
+        57,
+        59,
+        60
+      ],
+      "evidence": "The large benchmark and safety HTML tables were confirmed present with spot-checked values via the automated scan, but no full cell-by-cell comparison against the rendered pages was performed within the budget."
+    },
+    {
+      "id": "nested-fence-representation-in-listings",
+      "pdf_pages": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ],
+      "evidence": "Later appendix listings contain literal ```markdown lines inside open code blocks (e.g. the markdown lines that remain literal inside a ``` block after the repair). They balance under the applied repair, but the box-boundary representation of those listings was not re-derived from renders."
+    },
+    {
+      "id": "figure-internal-chart-text-order",
+      "pdf_pages": [
+        36,
+        49,
+        52,
+        55,
+        58
+      ],
+      "evidence": "Chart-internal axis ticks and data labels are absent from the OCR text by design (the figures are embedded as images with captions); only the interleaving order of the few extracted fragments was not reviewed."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-8-audio-live-live-extended-thinking-flash-tts-flash-lite-tts-model-card",
+  "source_sha256": "24499259e9f202cf2264bd9cdd1f9155d5f648e86daf58e1126586d84738b411",
+  "ocr_sha256": "2f38ee9d9d965e436cdd24f858575ff889b131941e381d10e3aab5c6b80728ce",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Clean document; no repairs needed. Zero code-fence markers; the two opening title lines are both printed in the source (p1 cover title and the p2 running header 'Gemini 3.8 Audio - Model Card'), so the duplication is faithful. Numeric-token multiset between PDF text and OCR matches exactly (context windows 128K/8K/64K/24K, knowledge cutoff January 2025, all section numbering). Full line-level comparison over all 7 physical pages found no dropped sentences, list items or headings; the only PDF lines without an OCR counterpart differ solely by zero-width spaces and the printed bullet glyph. 'Gemini Notebook' and 'Google Vids' were confirmed against the rendered p4, which shows every distribution channel entry as a bulleted hyperlink. The only fidelity gap is list-marker styling, recorded as unresolved because no words are affected."
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "distribution-list-marker-style",
+      "pdf_pages": [
+        4,
+        5,
+        6
+      ],
+      "evidence": "Every list entry in the PDF prints with a filled-circle bullet; the OCR renders some entries as plain paragraphs ('Gemini API', 'Gemini App'), some with '\\-' and some with '•'. Words are verbatim; only the marker glyph style varies, so no text patch applies."
+    }
+  ]
+}

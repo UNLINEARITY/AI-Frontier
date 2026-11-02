@@ -1,0 +1,427 @@
+{
+  "schema_version": 1,
+  "id": "xai:grok-4-6-model-card",
+  "source_sha256": "1fbb3ab6d7c572720e05d501eab8f11052b32db8d5936e66802c5c49b2261f4f",
+  "ocr_sha256": "b8937bc0730fd6bab457baf1889e259f0fc2936c40425f3c90cb745f3fb97a90",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "coverage": "complete",
+    "notes": "All 42 physical pages were compared against the extracted PDF text with normalized n-gram matching, and every patched location was verified on rendered pages (footnote blocks at 200 dpi, the SpaceXAI sentence and reference interpunct separators as 300-500 dpi crops, visually read). No code fences exist in this OCR. Dropped chart-source footnote bodies, the two intro footnotes, the title revision line, eleven dropped chart axis-title captions and thirteen glued reference separators are restored; the Cursor dagger marker and the SpaceXAI spacing are corrected. The OCR's escaped-hyphen bullet glyphs ('\\-' where the PDF prints '•') were left unchanged, matching the accepted grok-4-7-model-card cleanup."
+  },
+  "patches": [
+    {
+      "before": "August 12, 2026\n\n## Changelog",
+      "after": "August 12, 2026\n\nRevision: 2026-08-17\n\n## Changelog",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints 'Revision: 2026-08-17' in small gray text under 'August 12, 2026' (verified visually at 300 dpi); OCR dropped the line."
+    },
+    {
+      "before": "Cursor $^{+}$",
+      "after": "Cursor $^{\\dagger}$",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints the intro marker as a dagger ('collaboration with Cursor†.'); OCR wrote a plus superscript. The same dagger marks the Cursor-workflow footnote at the bottom of the same page (verified visually at 300 dpi)."
+    },
+    {
+      "before": "It is our most capable model to date.",
+      "after": "It is our most capable model to date.\n\nSpaceXAI is a doing-business-as (DBA) name of XAI LLC. xAI and SpaceXAI may be used interchangeably throughout this card.\n\nGrok 4.6 received supplemental training on anonymized Cursor workflow data to improve coding and agentic performance.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 footnote block prints '* SpaceXAI is a doing-business-as (DBA) name of XAI LLC. xAI and SpaceXAI may be used interchangeably throughout this card.' and '† Grok 4.6 received supplemental training on anonymized Cursor workflow data to improve coding and agentic performance.' (verified visually at 300 dpi); the OCR kept the inline markers but dropped both footnote bodies."
+    },
+    {
+      "before": "![[images/49938c1c9b5725a8a6221d99b727891acb23450c01cdd3d78cf93adf3d9b64ec.jpg]]  \nPass@1 (%)\\*",
+      "after": "![[images/49938c1c9b5725a8a6221d99b727891acb23450c01cdd3d78cf93adf3d9b64ec.jpg]]  \nPass@1 (%)\\*\n\n\\* Results reported are taken from evaluations conducted by Mercor.",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 footnote block prints '* Results reported are taken from evaluations conducted by Mercor.' under the APEX-SWE Pass@1 chart (verified visually at 200 dpi); the OCR kept the axis-label caption but dropped the footnote body."
+    },
+    {
+      "before": "Extended score $(\\%)^{\\dagger}$",
+      "after": "Extended score $(\\%)^{\\dagger}$\n\n\\* SWE-1.7 (Cognition) scores are reported without effort.\n\n$^{\\dagger}$ Results reported are taken from evaluations conducted by Cognition.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 footnote block prints '* SWE-1.7 (Cognition) scores are reported without effort.' and '† Results reported are taken from evaluations conducted by Cognition.' under the FrontierCode chart (verified visually at 200 dpi); the OCR kept the caption but dropped both footnote bodies."
+    },
+    {
+      "before": "![[images/e148f2816531500a159b4e6d4eb3c32d894fbed5ec2d9a88bea84f50587d538a.jpg]]  \nPass@1 (%)\\*",
+      "after": "![[images/e148f2816531500a159b4e6d4eb3c32d894fbed5ec2d9a88bea84f50587d538a.jpg]]  \nPass@1 (%)\\*\n\n\\* Results reported are taken from evaluations conducted by Datacurve.",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 footnote block prints '* Results reported are taken from evaluations conducted by Datacurve.' under the DeepSWE chart (verified visually at 200 dpi); the OCR dropped the footnote body."
+    },
+    {
+      "before": "Resolution rate (%)\\*",
+      "after": "Resolution rate (%)\\*\n\n\\* Results reported are taken from evaluations conducted by Abundant AI.",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 footnote block prints '* Results reported are taken from evaluations conducted by Abundant AI.' under the SWE-Marathon chart (verified visually at 200 dpi); the OCR kept the caption but dropped the footnote body."
+    },
+    {
+      "before": "Task success rate (\\%) $^{†}$",
+      "after": "Task success rate (\\%) $^{†}$\n\n\\* The suite was formerly published under the name FrontierBench.\n\n$^{\\dagger}$ Results reported are taken from evaluations conducted by Harbor.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 footnote block prints '* The suite was formerly published under the name FrontierBench.' and '† Results reported are taken from evaluations conducted by Harbor.' under the Terminal-Bench chart (verified visually at 200 dpi); the OCR kept the caption but dropped both footnote bodies."
+    },
+    {
+      "before": "AA GDPVal Elo\\*",
+      "after": "AA GDPVal Elo\\*\n\n\\* Results reported are taken from evaluations conducted by Artificial Analysis.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 footnote block prints '* Results reported are taken from evaluations conducted by Artificial Analysis.' under the AA GDPVal chart (verified visually at 200 dpi); the OCR kept the caption but dropped the footnote body."
+    },
+    {
+      "before": "AA-Briefcase Elo\\*",
+      "after": "AA-Briefcase Elo\\*\n\n\\* Results reported are taken from evaluations conducted by Artificial Analysis.",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 footnote block prints '* Results reported are taken from evaluations conducted by Artificial Analysis.' under the AA-Briefcase chart (verified visually at 200 dpi); the OCR kept the caption but dropped the footnote body."
+    },
+    {
+      "before": "![[images/c90516d9f985636feb558e7daa7cec68099f5b78029814b77457530c57b854ce.jpg]]  \nPass@1 (%)\\*",
+      "after": "![[images/c90516d9f985636feb558e7daa7cec68099f5b78029814b77457530c57b854ce.jpg]]  \nPass@1 (%)\\*\n\n\\* Results reported are taken from evaluations conducted by Mercor.",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 footnote block prints '* Results reported are taken from evaluations conducted by Mercor.' under the APEX-Agents chart (verified visually at 200 dpi); the OCR kept the caption but dropped the footnote body."
+    },
+    {
+      "before": "![[images/ffd5c6099fdfc00ab8b27105d42dce34acca82989a9ee9e9ca9283787c31fc96.jpg]]",
+      "after": "![[images/ffd5c6099fdfc00ab8b27105d42dce34acca82989a9ee9e9ca9283787c31fc96.jpg]]  \nAccuracy (%)\\*\n\n\\* Results are taken from evaluations conducted by Databricks.",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 prints the OfficeQA chart with axis-title caption 'Accuracy (%)*' and footnote '* Results are taken from evaluations conducted by Databricks.' (verified visually at 200 dpi; both lines are PDF text and sibling sections keep them); the OCR dropped both."
+    },
+    {
+      "before": "![[images/f3b5c54edb951d0d7541786de2842da3077d66a9792bd1c2cc58bf97f123cb40.jpg]]",
+      "after": "![[images/f3b5c54edb951d0d7541786de2842da3077d66a9792bd1c2cc58bf97f123cb40.jpg]]  \nScore\\*\n\n\\* Results are taken from evaluations conducted by Vals AI.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 prints the LAB chart with axis-title caption 'Score*' and footnote '* Results are taken from evaluations conducted by Vals AI.' (verified visually at 200 dpi); the OCR dropped both."
+    },
+    {
+      "before": "![[images/067e1a8d89e13871ea5626439b3ac4c6141ec22982f2157c91f42e46c725ea96.jpg]]",
+      "after": "![[images/067e1a8d89e13871ea5626439b3ac4c6141ec22982f2157c91f42e46c725ea96.jpg]]\n\n\\* As part of the V1 core corpus of the benchmark.\n\n$^{\\dagger}$ Results are taken from evaluations conducted by Atopile.",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 footnote block prints '* As part of the V1 core corpus of the benchmark.' and '† Results are taken from evaluations conducted by Atopile.' under the EEBench chart (verified visually at 200 dpi); the OCR kept the 'Reward $(\\%)^{\\dagger}$' caption but dropped both footnote bodies."
+    },
+    {
+      "before": "![[images/099d27b7645673c2ded21524c556297e4a32acd968388155c847af0aa75a83d7.jpg]]",
+      "after": "![[images/099d27b7645673c2ded21524c556297e4a32acd968388155c847af0aa75a83d7.jpg]]  \nReward (%)",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 prints the 3DCodeBench chart with axis-title caption 'Reward (%)' as PDF text (verified visually at 200 dpi; sibling sections keep the same caption line); the OCR dropped it."
+    },
+    {
+      "before": "![[images/726c8973c52a283f5845988d1d0ed4748a9a9abc31c18b92c473e0f73ba3c00c.jpg]]",
+      "after": "![[images/726c8973c52a283f5845988d1d0ed4748a9a9abc31c18b92c473e0f73ba3c00c.jpg]]  \nReward (%)\\*\n\n\\* Results are taken from evaluations conducted by Normal Factory.",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 prints the PartBench chart caption 'Reward (%)*' and footnote '* Results are taken from evaluations conducted by Normal Factory.' (verified visually at 200 dpi); the OCR dropped both."
+    },
+    {
+      "before": "![[images/2d954845136fb01f807b05d9df0552e4ba12e2ebe1fcc1eb193847cb5a5730b1.jpg]]",
+      "after": "![[images/2d954845136fb01f807b05d9df0552e4ba12e2ebe1fcc1eb193847cb5a5730b1.jpg]]  \nReward $(\\%)^{\\dagger}$\n\n$^{\\dagger}$ Results are taken from evaluations conducted by Mecado.",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 prints the CADGenBench chart caption 'Reward (%)†' and footnote '† Results are taken from evaluations conducted by Mecado.' (verified visually at 200 dpi); the OCR dropped both. Caption spelling follows the sibling EEBench caption in this OCR."
+    },
+    {
+      "before": "![[images/cd66b32fc393eb2cea91a31a1fa73e5e694a9c2ecce9c1437c4e78e2c0e3f880.jpg]]",
+      "after": "![[images/cd66b32fc393eb2cea91a31a1fa73e5e694a9c2ecce9c1437c4e78e2c0e3f880.jpg]]  \nReward (%)\n\n\\* Additional testing results with different harnesses are reported at https://cadbench.ai/.",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 prints the CADBench chart caption 'Reward (%)' and footnote '* Additional testing results with different harnesses are reported at https://cadbench.ai/.' (verified visually at 200 dpi); the OCR dropped both. The starred sentence ends the CADBench body before the chart."
+    },
+    {
+      "before": "![[images/c1f332ec050e075eda656a2de11ee5ab05fb4393a57207ee451af3e4c8ea97fb.jpg]]",
+      "after": "![[images/c1f332ec050e075eda656a2de11ee5ab05fb4393a57207ee451af3e4c8ea97fb.jpg]]  \nAccuracy (%)",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 prints the InferenceEval chart with axis-title caption 'Accuracy (%)' as PDF text (verified visually at 200 dpi; sibling sections keep the same caption line); the OCR dropped it."
+    },
+    {
+      "before": "![[images/034e6ebfa17463c898cf26c050589d9d8c7ccab673fbf663bcdcd912044f19e4.jpg]]",
+      "after": "![[images/034e6ebfa17463c898cf26c050589d9d8c7ccab673fbf663bcdcd912044f19e4.jpg]]  \nAccuracy (%)",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered physical p.26 prints the KernelBenchInternal chart with axis-title caption 'Accuracy (%)' as PDF text (verified visually at 200 dpi); the OCR dropped it."
+    },
+    {
+      "before": "![[images/29607e4ffaa080ca42b4f0d68276450ccfc562300e6582cd3ba79dca5ac0bf18.jpg]]",
+      "after": "![[images/29607e4ffaa080ca42b4f0d68276450ccfc562300e6582cd3ba79dca5ac0bf18.jpg]]  \nAccuracy (%)\n\n\\* Evaluation was run on an internal implementation of DeepSearchQA.",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Rendered physical p.28 prints the DeepSearchQA chart caption 'Accuracy (%)' and footnote '* Evaluation was run on an internal implementation of DeepSearchQA.' (verified visually at 200 dpi); the OCR dropped both. The starred sentence ends the DeepSearchQA body before the chart."
+    },
+    {
+      "before": "![[images/4c287d003ce943368c25b2ed4f85937f6cb09fa9f3efc688560930606ec4d258.jpg]]",
+      "after": "![[images/4c287d003ce943368c25b2ed4f85937f6cb09fa9f3efc688560930606ec4d258.jpg]]  \nMean Reproduced (%)",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 prints the CyberGym chart with axis-title caption 'Mean Reproduced (%)' as PDF text (verified visually at 200 dpi); the OCR dropped it."
+    },
+    {
+      "before": "![[images/6556be81140cbe6c971e72eeff0ee74616f828b2f81bef601cc91d97ccba3fb6.jpg]]",
+      "after": "![[images/6556be81140cbe6c971e72eeff0ee74616f828b2f81bef601cc91d97ccba3fb6.jpg]]  \nReward (%)",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 prints the SecureCodeReview chart with axis-title caption 'Reward (%)' as PDF text (verified visually at 200 dpi); the OCR dropped it."
+    },
+    {
+      "before": "HackerBench is a SpaceX AI internal CTF-style suite",
+      "after": "HackerBench is a SpaceXAI internal CTF-style suite",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Rendered physical p.31 prints 'HackerBench is a SpaceXAI internal CTF-style suite of cybersecurity and red-teaming tasks' with no space inside SpaceXAI (verified visually at 300 dpi); the OCR inserted a space. The card uses 'SpaceXAI' consistently elsewhere."
+    },
+    {
+      "before": "weapons-related abuse.",
+      "after": "weapons-related abuse.\n\n\\* FORTRESS-RN results are taken from evaluations conducted by Scale AI.",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 footnote block prints '* FORTRESS-RN results are taken from evaluations conducted by Scale AI.' for the starred table row 'FORTRESS-RN R/N refusal accuracy*' (verified visually at 200 dpi); the OCR kept the row marker but dropped the footnote body."
+    },
+    {
+      "before": "<table><tr><td>Metric</td><td>Grok 4.5 (high)</td><td>Grok 4.6 (high)</td></tr><tr><td>Dishonesty</td><td>0.67%</td><td>1.90%</td></tr></table>",
+      "after": "<table><tr><td>Metric</td><td>Grok 4.5 (high)</td><td>Grok 4.6 (high)</td></tr><tr><td>Dishonesty</td><td>0.67%</td><td>1.90%</td></tr></table>\n\n\\* MASK-Rectified corrects the MASK grading so that responses where the model is obviously (model-aware) role-playing, rather than asserting a genuine belief, are not counted as lies.",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 footnote block prints '* MASK-Rectified corrects the MASK grading so that responses where the model is obviously (model-aware) role-playing, rather than asserting a genuine belief, are not counted as lies.' for the starred 'MASK*' dataset mention (verified visually at 200 dpi); the OCR kept the inline marker but dropped the footnote body."
+    },
+    {
+      "before": "apex-swe-leaderboard/·https://arxiv.org/abs/2601.08806",
+      "after": "apex-swe-leaderboard/ · https://arxiv.org/abs/2601.08806",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered reference 3 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.41; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "deepswe.datacurve.ai/·https://arxiv.org/abs/2607.07946",
+      "after": "deepswe.datacurve.ai/ · https://arxiv.org/abs/2607.07946",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered reference 6 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.41; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "swe-marathon.org/·https://arxiv.org/abs/2606.07682",
+      "after": "swe-marathon.org/ · https://arxiv.org/abs/2606.07682",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered reference 8 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.41; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "gdpval-aa·OpenAI GDPval",
+      "after": "gdpval-aa · OpenAI GDPval",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered reference 10 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.41; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "apex-agents-leaderboard/·https://arxiv.org/abs/2601.14242",
+      "after": "apex-agents-leaderboard/ · https://arxiv.org/abs/2601.14242",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered reference 12 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.41; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "2603.08655·https://github.com/databricks/officeqa",
+      "after": "2603.08655 · https://github.com/databricks/officeqa",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered reference 13 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.41; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "benchmarks/hlab·Harvey announcement",
+      "after": "benchmarks/hlab · Harvey announcement",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered reference 14 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.41; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "vals-ai/Valkyrie·HLab on Valkyrie",
+      "after": "vals-ai/Valkyrie · HLab on Valkyrie",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered reference 15 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.41; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "cybergym.io/·https://arxiv.org/abs/2506.02548",
+      "after": "cybergym.io/ · https://arxiv.org/abs/2506.02548",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered reference 23 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.41; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "wmdp.ai·https://arxiv.org/abs/2403.03218",
+      "after": "wmdp.ai · https://arxiv.org/abs/2403.03218",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "Rendered reference 31 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.42; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "Future-House/BixBench·https://arxiv.org/abs/2503.00096",
+      "after": "Future-House/BixBench · https://arxiv.org/abs/2503.00096",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "Rendered reference 33 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.42; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "leaderboard/fortress·https://arxiv.org/abs/2506.14922",
+      "after": "leaderboard/fortress · https://arxiv.org/abs/2506.14922",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "Rendered reference 36 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.42; the PDF text layer shows the same spaces). The OCR glued the separator."
+    },
+    {
+      "before": "mask-benchmark.ai/·https://arxiv.org/abs/2503.03750",
+      "after": "mask-benchmark.ai/ · https://arxiv.org/abs/2503.03750",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "Rendered reference 37 prints the two entries separated by ' · ' with spaces on both sides of the interpunct (verified visually at 500 dpi crops of physical p.42; the PDF text layer shows the same spaces). The OCR glued the separator."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "scatter-chart-axis-text-pp8-pp9",
+      "pdf_pages": [
+        8,
+        9
+      ],
+      "evidence": "The CursorBench scatter charts ('Score vs tokens', 'Score vs cost') keep their axis labels, values and legends as figure-internal text; the OCR captured no axis text for these two embeds. Restoring the full axis anatomy is not a caption-level repair and is covered by the embedded images."
+    },
+    {
+      "id": "escaped-hyphen-bullets",
+      "pdf_pages": [
+        2,
+        6,
+        39
+      ],
+      "evidence": "The OCR renders list bullets as escaped hyphens ('\\-') where the PDF text layer prints '•' (changelog, distribution channels, acknowledgements). The accepted grok-4-7-model-card cleanup kept the same OCR convention, so it is preserved here."
+    }
+  ]
+}

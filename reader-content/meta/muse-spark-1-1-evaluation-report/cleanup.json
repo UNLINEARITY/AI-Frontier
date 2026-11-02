@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "id": "meta:muse-spark-1-1-evaluation-report",
+  "source_sha256": "cd25634e0c8a3960d47dadfe6f49eefd3c12f6f62ad0dfbdf1cb4c96b5b5ade9",
+  "ocr_sha256": "f0f235323e1a72ff522f77c5c338623e6519e1ca499096e570dc3ea764474411",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 112-page report, not a full line-by-line read. (a) Structure: whole OCR markdown scanned - it contains no code fences at all, so fence balance is trivially sound; all 95 headings checked; the three unnumbered headings 'HLE Calibration.', 'Alignment Faking.' and 'Agentic Misalignment.' were verified in the PDF (physical pp. 58, 64, 65) to be printed as standalone bold display lines (OptimisticDisp-Bd 10.5pt), so their promotion to headings is faithful; the duplicated title (physical pp. 1 cover and 2 body) is printed twice in the source; the duplicated '(Table Table 13)' on physical p. 66 is printed in the PDF text layer and was left unchanged. (b) Droppage: automated normalized 4-gram containment was run against the extracted text of all 112 physical pages; the 39 low-coverage pages (7-8, 14-16, 18, 21-23, 26, 32-33, 35, 37-39, 42, 44-45, 49-51, 53, 55-56, 59, 64-65, 67, 69, 72, 76-77, 86, 88, 91-92, 94, 100) had their missing lines individually listed and inspected - all are chart-internal axis labels, tick values and data labels covered by the embedded figure images, except p. 101 where Figure 44's raster is genuinely missing from the OCR (unresolved); a reverse scan (OCR tokens/bigrams absent from the PDF text layer) across the whole document found no hallucinated prose; 'post hoc rationalizes' was verified as a correct dehyphenation of the printed 'ratio-\nnalizes' (physical p. 65); escaped significance markers ('\\*ProtocolQA' p. 15, '(\\*)' and '**' in table notes) match printed asterisks in the PDF. (c) Visual verification: physical p. 70 and p. 71 were rendered at 300 dpi and inspected; the 'Guiding virtues' bullet prints italics with en dashes and no asterisks, which produced the patches below; rendered p. 58/64/65 confirmed the heading-font findings. Prose pages not flagged by either diff (roughly pp. 2-6, 9-13, 17, 19-20, 24-25, 27-31, 34, 36, 40-41, 43, 46-48, 52, 54, 57-63, 66, 68, 70-71, 73-75, 78-85, 87, 89-90, 93, 95-99, 101-112) were only machine-scanned, not read line by line."
+  },
+  "patches": [
+    {
+      "before": "\\*Honesty-non-deceptive\\*",
+      "after": "_Honesty_–non-deceptive",
+      "count": 1,
+      "pdf_pages": [
+        70
+      ],
+      "evidence": "Rendered physical p.70 (300 dpi crop) prints 'Guiding virtues. Honesty–non-deceptive, non-manipulative, and calibrated; fidelity–faithfulness...' with 'Honesty' in italics followed by an en dash and no asterisk characters. The OCR converted the italics to literal asterisks and flattened the en dash to a hyphen; left escaped, the reader would display asterisk characters the PDF never prints. The patch removes the displayed junk, restores the printed en dash and encodes the printed emphasis."
+    },
+    {
+      "before": "\\*fidelity-faithfulness\\*",
+      "after": "_fidelity_–faithfulness",
+      "count": 1,
+      "pdf_pages": [
+        70
+      ],
+      "evidence": "Same rendered physical p.70 line: 'fidelity' is printed in italics followed by an en dash (visually verified at 300 dpi); OCR shows escaped literal asterisks and a hyphen. Same repair as the 'Honesty' patch."
+    },
+    {
+      "before": "coordination-friendliness—respecting",
+      "after": "coordination-friendliness–respecting",
+      "count": 1,
+      "pdf_pages": [
+        71
+      ],
+      "evidence": "Rendered physical p.71 (300 dpi crop, 'to users' informed preferences; coordination-friendliness–respecting norms, agreements...') prints an en dash between the italic term and 'respecting'; the OCR line carries an em dash. Punctuation-glyph repair only."
+    },
+    {
+      "before": "beneficence—care",
+      "after": "beneficence–care",
+      "count": 1,
+      "pdf_pages": [
+        71
+      ],
+      "evidence": "Same rendered physical p.71 crop: 'beneficence–care for the wellbeing of all parties...' prints an en dash; the OCR line carries an em dash. Punctuation-glyph repair only."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-44-image-missing",
+      "pdf_pages": [
+        101
+      ],
+      "evidence": "Physical p.101 contains the Figure 44 raster (1620x1871) with caption 'Figure 44 General capability benchmark results.', but the OCR markdown carries only the caption line with no image embed (the last embed in the document belongs to Figure 43). The benchmark-results chart is therefore absent from the reader; cleanup patches cannot restore images."
+    },
+    {
+      "id": "figure-35-embed-splits-sentence",
+      "pdf_pages": [
+        64
+      ],
+      "evidence": "Physical p.64 prints the continuous sentence '...tells the model via its system prompt that it is being trained on a new objective to comply with harmful requests...', but the OCR markdown inserts the Figure 35 embed and its caption between 'it is being' and 'trained on a new objective', splitting the sentence in the reader. The figure floats elsewhere on the printed page; repairing this requires reordering/removing the image embed, which reviewed cleanup replacements are not allowed to do."
+    }
+  ]
+}

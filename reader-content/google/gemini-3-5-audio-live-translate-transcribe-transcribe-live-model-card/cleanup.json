@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-5-audio-live-translate-transcribe-transcribe-live-model-card",
+  "source_sha256": "5e53491613a6f3b78d1f308b02b63526ccea79fc74bc5334eb1fbd34dd348085",
+  "ocr_sha256": "f78f9d128f130822b767b35e3db6b0e04f38013e2a9e34534a3fb7424f130339",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Clean document: no patches. All 7 physical pages were rendered (110 dpi) and read against the OCR markdown, plus a 300 dpi crop of the Distribution channel lists; extracted PDF text was token-diffed against the markdown with no content drops. Both opening title lines are genuine (cover p.1 'Gemini 3.5 Audio (Live Translate, Transcribe, Transcribe Live) / Model card' plus inner title p.2 '... — Model Card'). The Distribution section's mixed bullet markers (plain / \\- / •) reflect OCR bullet-style noise over an otherwise complete and correctly ordered list; per review rules bullet style is not a defect class, so it was left unchanged. Unusual names were verified as printed: 'Gboard Rambler' (300 dpi crop of p.4) and 'Tracked or Critical Capability Levels (T/CCLs)' both match the source. The only page-1 raster image is the Google logo; the card prints no content figures."
+  },
+  "patches": [],
+  "unresolved": []
+}

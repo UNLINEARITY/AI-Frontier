@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "google:embeddinggemma-technical-report",
+  "source_sha256": "81e738d7f6a574aae828a99d55e98e945edd815d09ae0b2118c867a1b90e313e",
+  "ocr_sha256": "1e520ee8b262ed00ec47805d5cbbc71e8400bd309ce371b9cfc14443b8f002e2",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "All 18 physical pages scanned with a 5-gram PDF-text-to-OCR word-coverage pass; hyphenation artifacts (pre dic tion, represen tations) and LaTeX-equivalent math account for nearly all diffs. Reference section (34 entries, first A. Asai through last D. Zhu) and the B contributions table were compared against the printed lists with no drops found. Equations (1)-(3) on physical p.4 and the NeurIPS URL on physical p.12 were verified on 150-400 dpi renders. No code fences exist in the OCR and the heading hierarchy matches the printed sections."
+  },
+  "patches": [
+    {
+      "before": "paper\\_files",
+      "after": "paper_files",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 Kusupati reference prints the typewriter URL https://proceedings.neurips.cc/paper_files/paper/... with a real underscore (verified on a 300 dpi crop); OCR inserted a Markdown escape."
+    },
+    {
+      "before": "p _ {i} ^ {\\pm}))))).",
+      "after": "p _ {i} ^ {\\pm})))).",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 equation (1) closes the second term with four parentheses (f(g(P(M_n(...))))) plus the sentence period; OCR transcribed five closing parentheses. Balanced-paren count on the rendered equation is 4 per term."
+    },
+    {
+      "before": "$1_{TN}$",
+      "after": "$\\mathbb{1}_{TN}$",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prose after equation (2) prints the indicator symbol in blackboard bold (double-stroke 1, subscript TN), matching the OCR's own display equation (3) which uses \\mathbb {1}; the OCR inline prose dropped the blackboard styling and printed a plain numeral 1."
+    }
+  ],
+  "unresolved": []
+}

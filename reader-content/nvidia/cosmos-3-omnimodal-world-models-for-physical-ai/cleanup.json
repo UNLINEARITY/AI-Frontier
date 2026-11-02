@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:cosmos-3-omnimodal-world-models-for-physical-ai",
+  "source_sha256": "d8f554d76b37d8c2ba504c628d7814176d7b0383c6c3bfa9f8389decda228d6e",
+  "ocr_sha256": "f2f2d460f14cc7e0cd9a578d532505c9c888a615ed4a24774bf584f4cc55ffef",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      7,
+      8,
+      10,
+      11,
+      12,
+      27,
+      28,
+      41,
+      44,
+      51,
+      57,
+      61,
+      68,
+      69,
+      71,
+      89,
+      95,
+      104,
+      105,
+      107,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      120,
+      138
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 139-page report. Structure: full fence scan of all 3,909 OCR lines (17 balanced code blocks, none swallowing headings/tables/images) plus a whole-file heading inventory against printed box titles. Droppage: every PDF page was machine-scanned twice (normalized 4-gram containment and a missing-word scan), then pages with low containment or flagged lines were compared line by line against the PDF text layer; the flagged set covered pp. 1, 7, 8, 10-12, 27-28, 41, 44, 51, 57, 61, 68-69, 71, 89, 95, 104-105, 107, 111-117 plus the reference name check on pp. 120 and 138. Every patch was verified on a rendered page crop that was read visually (pp. 1, 57, 61, 89, 95, 120, 138). Not defects: the section-6.3 agentic loop flowchart (p.95) and the p.69 'Task:' panel labels are figure-internal and travel with embedded images; 'Veo 3, 5 2025' (p.121), 'PaiBench-G' casing (p.57) and the bold run-in headings of Appendix B are printed as such in the PDF; '\\_' escapes render as the printed underscores (e.g. has_face); reference trailing numbers are printed page back-links; the p.89 prompt box uses straight quotes and hyphen-for-em-dash consistently with the box's monospace print."
+  },
+  "patches": [
+    {
+      "before": "NVIDIA $^{1}$",
+      "after": "NVIDIA $^{1}$\n\n1 Contributors and acknowledgments are listed in Appendix G.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered cover (physical p.1, 130 dpi crop of the page bottom read visually) prints the footnote '1 Contributors and acknowledgments are listed in Appendix G.' below the link boxes; the OCR markdown kept the superscript marker on 'NVIDIA' but dropped the footnote body. The body is restored as a paragraph directly after the marker line; the printed copyright line ('© 2026 NVIDIA. All rights reserved.') is page furniture and stays out."
+    },
+    {
+      "before": "outperforming strong closed-source models such as Veo-3.1.",
+      "after": "outperforming strong closed-source models such as Veo-3.1.\n\n2 We found that the public PAIBench-G Image-to-Video leaderboard results (judged by Qwen3-VL-235B-A22B) were not reproducible. We therefore use Qwen2.5-VL-72B-Instruct as the domain-score judge for our internal evaluation (Tab. 12) and independently submit to the public leaderboard; on both, Cosmos3-Super and Cosmos3-Nano rank first and second overall.",
+      "count": 1,
+      "pdf_pages": [
+        57
+      ],
+      "evidence": "Rendered physical p.57 page bottom (200 dpi crop read visually) prints footnote 2 ('2We found that the public PAIBench-G Image-to-Video leaderboard results (judged by Qwen3-VL-235B-A22B) were not reproducible. We therefore use Qwen2.5-VL-72B-Instruct as the domain-score judge ... rank first and second overall.'); the OCR markdown kept the marker ('as well $^{2}$ .') but dropped the whole footnote body, which is restored after the paragraph that carries the marker."
+    },
+    {
+      "before": "and any implied ongoing motion (e.g., a cyclist leaning",
+      "after": "and any implied ongoing motion (e.g., a cyclist leaning into a curve, water already splashing) so the video continues smoothly. Phrase it naturally as a scene description (do not say \"in the starting frame\", \"initially shown\", or similar meta-references).",
+      "count": 1,
+      "pdf_pages": [
+        89
+      ],
+      "evidence": "Rendered physical p.89 prompt box (150 dpi crop read visually) prints the 'Opening' bullet continuing '...a cyclist leaning / into a curve, water already splashing) so the video continues smoothly. Phrase it naturally as a scene description (do not say \"in the starting frame\", \"initially shown\", or similar meta-references).'; the OCR line stopped after 'a cyclist leaning' and the following two printed lines were dropped."
+    },
+    {
+      "before": "(e.g., \"her right hand\" = the subject's right",
+      "after": "(e.g., \"her right hand\" = the subject's right hand) to avoid ambiguity. This applies whenever a body part enters or moves in the frame: always specify whether it is",
+      "count": 1,
+      "pdf_pages": [
+        89
+      ],
+      "evidence": "Rendered physical p.89 prompt box (150 dpi crop read visually) prints the 'Perspective' bullet as '...\"her right hand\" = the subject's right / hand) to avoid ambiguity. This applies whenever a body part enters or moves in the frame: always specify whether it is / the left or right (e.g., \"his right hand reaches in from the lower edge\")...'; the OCR markdown jumped from \"the subject's right\" straight to 'the left or right', dropping the middle of the sentence."
+    },
+    {
+      "before": "explicitly use the word \"timelapse\" in the caption and avoid",
+      "after": "explicitly use the word \"timelapse\" in the caption and avoid exaggerating its effects.",
+      "count": 1,
+      "pdf_pages": [
+        89
+      ],
+      "evidence": "Rendered physical p.89 prompt box (200 dpi crop read visually) prints '- Timelapse: ... explicitly use the word \"timelapse\" in the caption and avoid / exaggerating its effects.'; the OCR markdown ended the bullet at 'avoid'."
+    },
+    {
+      "before": "\\mathrm{SAV} = 0. 6 0 \\mathrm{SA} + 0. 3 0 \\mathrm{AVAlign} + 0. 1 0 \\mathrm{VisualSupport}.",
+      "after": "\\mathrm{SAV} = 0.60 \\mathrm{SA} + 0.30 \\mathrm{AVAlign} + 0.10 \\mathrm{VisualSupport}.",
+      "count": 1,
+      "pdf_pages": [
+        61
+      ],
+      "evidence": "Rendered physical p.61 (300 dpi crop read visually) prints 'SAV = 0.60 SA + 0.30 AVAlign + 0.10 VisualSupport.'; OCR spaced the digits ('0. 6 0', '0. 3 0', '0. 1 0')."
+    },
+    {
+      "before": "\\mathrm{AVQ} = 0. 5 \\mathrm{SAV} + 0. 5 \\mathrm{AQ}.",
+      "after": "\\mathrm{AVQ} = 0.5 \\mathrm{SAV} + 0.5 \\mathrm{AQ}.",
+      "count": 1,
+      "pdf_pages": [
+        61
+      ],
+      "evidence": "Rendered physical p.61 (300 dpi crop read visually) prints 'AVQ = 0.5 SAV + 0.5 AQ.'; OCR spaced the digits ('0. 5')."
+    },
+    {
+      "before": "Kiwan Song",
+      "after": "Kiwhan Song",
+      "count": 1,
+      "pdf_pages": [
+        120
+      ],
+      "evidence": "Rendered physical p.120 reference (300 dpi crop read visually) prints 'Boyuan Chen, Tianyuan Zhang, Haoran Geng, Kiwhan Song, William T. Freeman, ... Large video planner, 2025a.'; OCR misspelled the name 'Kiwhan' as 'Kiwan'."
+    },
+    {
+      "before": "Michal Drozdazal",
+      "after": "Michal Drozdzal",
+      "count": 1,
+      "pdf_pages": [
+        138
+      ],
+      "evidence": "Rendered physical p.138 reference (300 dpi crop read visually) prints 'Xiaochuang Han, Nicolas Ballas, Michal Drozdzal, and Adriana Romero-Soriano. Inference-time physics alignment...'; OCR transposed the name to 'Drozdazal'."
+    }
+  ],
+  "unresolved": [
+    "Figures 18, 19 and 26 are leaderboard screenshots that the OCR transcribed as HTML tables (with stray 'Artificial Analysis'/'Policy Leaderboard' banner text); the screenshot images have no embeds in the OCR markdown, and a cleanup patch cannot add image embeds, so restoring them needs a source re-extraction.",
+    "Figure 30 (multiview action prompt formatting, physical p.101 area) was transcribed as an HTML div containing the printed JSON text instead of an embedded figure image; cleanup cannot add the embed.",
+    "Time-boxed triage: prose sections not in the flagged set were only machine-scanned (4-gram containment + missing-word scan), not read word by word; math-only lines whose tokens differ between LaTeX and the PDF text layer were accepted when both scans were clean."
+  ]
+}

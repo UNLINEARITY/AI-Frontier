@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:gr-rl-technical-report",
+  "source_sha256": "8b94f6cc63f6f7d2a36448015583b27573dd90a8313e6ba8aaacbfd0e7b79f07",
+  "ocr_sha256": "b26a2d35e958f0996d1076b90f887f8b95ed83b92d0abf26cd981b4a86849990",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level diff of all 16 physical PDF pages against the OCR markdown plus fence/heading inventory. Remaining diff hits were Figure 1/2/5 chart and architecture-diagram internals, LaTeX-equivalent equations, page furniture, and reference hyphenation artifacts; the sparse-reward equation, noise-space distillation equations, ByteMini-v2 hardware specs, the 83.3% result, the complete reference list and Contributions/Acknowledgments were all checked against the PDF text. One Figure 3 panel banner was promoted to a document heading; demoted below."
+  },
+  "patches": [
+    {
+      "before": "## shoelace dropped due to a shallow grasp",
+      "after": "shoelace dropped due to a shallow grasp",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 shows 'shoelace dropped due to a shallow grasp' only as a rounded panel banner inside Figure 3(b), parallel to sibling banners 'imprecise handover' and 'shoelace regrasped successfully', which the OCR markdown keeps as plain text lines around the embedded figure crops. The heading prefix is spurious OCR promotion of figure-internal text; the patch demotes it to the same plain-text style as its siblings."
+    }
+  ],
+  "unresolved": []
+}

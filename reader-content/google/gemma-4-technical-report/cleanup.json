@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "id": "google:gemma-4-technical-report",
+  "source_sha256": "b20b25f18d76217d0c49c89f9ed1ffe3cf1912cd8ce710e1a325977653c7bfa6",
+  "ocr_sha256": "32c8cfba0ad56b0e53e2332a33896a666d759050fe12716e43d3878a6a56d7a5",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "The three code fences (lines 648-691) are balanced and legitimately wrap the printed Table 11 conversation-format tokens. Heading tree (1-6 plus 2.x/4.x/5.x subsections, References, contributor lists, Appendix) matches the print, and all Tables 1-12 plus Figures 1-2 captions and embeds are present. Full 8-gram diff and per-page number-multiset diff of all 17 pages; the only unmatched text is the arXiv sidebar, hyphenation splits, the footnote body restored below, and Table 7's AVG column. Rendered physical pages 1, 3, 7 and 17 were visually inspected (footnote 1 at 300 dpi crops, Table 3 quantization names, Table 7 AVG values, Table 11 special-token syntax and caption). The dropped front-matter colophon \"© 2026 Google DeepMind. All rights reserved\" (p.1) was left unpatched like the arXiv stamp and date, which the reader format omits throughout."
+  },
+  "patches": [
+    {
+      "before": "Gemma Team, Google DeepMind $^{1}$\n\nWe introduce Gemma 4",
+      "after": "Gemma Team, Google DeepMind $^{1}$\n\n1 See Contributions and Acknowledgments section for full author list. Please send correspondence to gemma4report@gmail.com.\n\nWe introduce Gemma 4",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints footnote 1 at the bottom: \"1See Contributions and Acknowledgments section for full author list. Please send correspondence to gemma4report@gmail.com.\" (300 dpi crop of the byline confirms the $^{1}$ marker attaches to \"Gemma Team, Google DeepMind\"); the OCR kept the marker but dropped the footnote body."
+    },
+    {
+      "before": "Q4\\_0",
+      "after": "$Q4_{0}$",
+      "count": 3,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prints Q4 with a subscript 0 three times (Table 3 caption \"‡ is Q4_0.\" and the Quantization-Aware Training bullet \"Q4_0 quantization: blockwise quantization, often referred to as Q4_0.\"); the OCR flattened the subscript and added a Markdown escape backslash."
+    },
+    {
+      "before": "<td>ar</td><td>zh*</td></tr><tr><td>Gemma 4 E2B</td>",
+      "after": "<td>ar</td><td>zh*</td><td>AVG</td></tr><tr><td>Gemma 4 E2B</td>",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 7 FLEURS ASR sub-table prints a trailing AVG column (header en ko* ja* de fr hi es it pt-br ru ar zh* AVG) that the OCR header row dropped."
+    },
+    {
+      "before": "<td>0.084</td><td>0.143</td><td>0.187</td></tr>",
+      "after": "<td>0.084</td><td>0.143</td><td>0.187</td><td>0.090</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 7 FLEURS ASR row Gemma 4 E2B ends with AVG 0.090; the OCR row dropped the AVG cell. Value visually confirmed on the rendered page."
+    },
+    {
+      "before": "<td>0.068</td><td>0.162</td><td>0.136</td></tr>",
+      "after": "<td>0.068</td><td>0.162</td><td>0.136</td><td>0.075</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 7 FLEURS ASR row Gemma 4 E4B ends with AVG 0.075; the OCR row dropped the AVG cell. Value visually confirmed on the rendered page."
+    },
+    {
+      "before": "<td>0.112</td><td>0.131</td><td>0.235</td></tr>",
+      "after": "<td>0.112</td><td>0.131</td><td>0.235</td><td>0.108</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 7 FLEURS ASR row Gemma 3n E2B ends with AVG 0.108; the OCR row dropped the AVG cell. Value visually confirmed on the rendered page."
+    },
+    {
+      "before": "<td>0.087</td><td>0.101</td><td>0.203</td></tr>",
+      "after": "<td>0.087</td><td>0.101</td><td>0.203</td><td>0.085</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 7 FLEURS ASR row Gemma 3n E4B ends with AVG 0.085; the OCR row dropped the AVG cell. Value visually confirmed on the rendered page."
+    },
+    {
+      "before": "Here we use patch\\_size=16, pooling\\_kernel\\_size=3, max\\_soft\\_tokens=10.",
+      "after": "Here we use patch_size=16, pooling_kernel_size=3, max_soft_tokens=10.",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Physical p.16 Figure 2 caption prints the parameter names patch_size, pooling_kernel_size and max_soft_tokens with plain underscores (PDF text layer); the OCR backslashes are Markdown escapes."
+    },
+    {
+      "before": "Do not tokenize the text \"[BOS}\".",
+      "after": "Do not tokenize the text \"[BOS]\".",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 11 caption prints \"Do not tokenize the text \\\"[BOS]\\\".\" with a closing square bracket (also printed as the first Model input line in the same table); OCR misread it as \"[BOS}\"."
+    },
+    {
+      "before": "add\\_bos=True",
+      "after": "add_bos=True",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 11 caption prints \"use the add_bos=True option in the tokenizer\" with a plain underscore; the OCR backslash is a Markdown escape."
+    },
+    {
+      "before": "<|think |",
+      "after": "<|think|>",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 11 Model input block prints the thinking toggle token as <|think|> (same glyph as the Context Formatting row \"Thinking toggle <|think|>\"); OCR inserted a stray space before the closing bar."
+    },
+    {
+      "before": "<|tool>declaration:search_train{...}<tool>|><turn<|im_start|>",
+      "after": "<|tool>declaration:search_train{...}<tool|><turn|>",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 11 Model input block prints <|tool>declaration:search_train{...}<tool|><turn|>; OCR transposed the closing token into <tool>|> and appended a ChatML <|im_start|> fragment that the source does not print."
+    },
+    {
+      "before": "I want you to book a train ticket for me.<turn |",
+      "after": "I want you to book a train ticket for me.<turn|>",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 11 Model input block prints the end-of-turn token <turn|> (matching the \"End of turn <turn|>\" row of the Context Formatting table); OCR wrote \"<turn |\" with a space and no closing angle bracket."
+    },
+    {
+      "before": "<|channel>thought ...<channel>|>Where would you like to go?<turn>|>",
+      "after": "<|channel>thought ...<channel|>Where would you like to go?<turn|>",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 11 Model input block prints <|channel>thought ...<channel|>Where would you like to go?<turn|>; OCR moved the > outside the closing <|channel|> bar and transposed the end-of-turn token as <turn>|>. The parallel Model output line in the same table is transcribed correctly."
+    },
+    {
+      "before": "To Rome.<turn>|>",
+      "after": "To Rome.<turn|>",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 11 Model input block prints To Rome.<turn|> with the same end-of-turn token verified in the Context Formatting table; OCR transposed it as <turn>|>."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "id": "qwen:tongyi-deepresearch",
+  "source_sha256": "90a2c738ed8cc00c4ad8ea910e1d2494f812e7e0130dda518477e139ecc35bca",
+  "ocr_sha256": "656a3a9473ee25820a20d33791d658fca57c49213a55331d5b3c4522535f5a21",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "One balanced code fence (synthetic-data cases); headings legitimate. Full normalized text-layer diff of all 23 physical pages against the OCR Markdown. The System Prompt prompt box is kept as an OCR HTML table (content present; not droppage), but its JSON had lost closing braces and a glued list item - verified and repaired from a 300 dpi render of physical p.21. All six page-bottom footnote bodies (physical pages 5, 9, 11, 22, 23) and the page-1 starred author-list note were dropped while their markers survived; every restored body was transcribed and verified from 300/200 dpi renders. Unmatched residue on pages 13-15 is figure-internal bar-chart values and axis labels (figures embedded as images); pages 4-5, 8, 10-12 residue is LaTeX-equivalent math reflow."
+  },
+  "patches": [
+    {
+      "before": "Tongyi DeepResearch Team\\*",
+      "after": "Tongyi DeepResearch Team\\*\n\n\\* Full author list available in the Contributions section.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (200 dpi) prints the starred note '∗ Full author list available in the Contributions section.' at the page bottom below a rule; the OCR kept the '*' on the team line but dropped the note body; restored directly under the author line."
+    },
+    {
+      "before": "followed by the post-training stage in Section 3.4.",
+      "after": "followed by the post-training stage in Section 3.4.\n\n$^{1}$ https://huggingface.co/Qwen/Qwen3-30B-A3B-Base",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom footnote block prints '1 https://huggingface.co/Qwen/Qwen3-30B-A3B-Base' (300 dpi); the OCR kept marker $^{1}$ on 'pretrained base model Qwen3-30B-A3B-Base $^{1}$' but dropped the footnote body; restored after that paragraph."
+    },
+    {
+      "before": "corrupting the agent's learning trajectory.",
+      "after": "corrupting the agent's learning trajectory.\n\n$^{2}$ The details for each tool are shown in Appendix D.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom footnote block prints '2 The details for each tool are shown in Appendix D.' (300 dpi); the OCR kept marker $^{2}$ on the toolkit sentence but dropped the body; restored after that paragraph."
+    },
+    {
+      "before": "thereby greatly accelerating our development and iteration process.",
+      "after": "thereby greatly accelerating our development and iteration process.\n\n$^{3}$ Queries per second (QPS) impact significantly degrade our development efficiency and compromise the reliability during our early-stage ablation studies.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom footnote block prints '3 Queries per second (QPS) impact significantly degrade our development efficiency and compromise the reliability during our early-stage ablation studies.' (300 dpi); the OCR kept marker $^{3}$ but dropped the body; restored after the Simulated Environment paragraph."
+    },
+    {
+      "before": "along with the complete tool implementations and prompt configurations.",
+      "after": "along with the complete tool implementations and prompt configurations.\n\n$^{4}$ https://github.com/Alibaba-NLP/DeepResearch",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 bottom footnote block prints '4 https://github.com/Alibaba-NLP/DeepResearch' (300 dpi); the OCR kept marker $^{4}$ on the Reproduce sentence but dropped the body; restored after that paragraph."
+    },
+    {
+      "before": "provided in detail on our GitHub repository $^{5}$ .",
+      "after": "provided in detail on our GitHub repository $^{5}$ .\n\n$^{5}$ https://github.com/Alibaba-NLP/DeepResearch/tree/main/evaluation",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 bottom footnote block prints '5 https://github.com/Alibaba-NLP/DeepResearch/tree/main/evaluation' (300 dpi); the OCR kept marker $^{5}$ in the Evaluation Details paragraph but dropped the body; restored after that paragraph."
+    },
+    {
+      "before": "Google Scholar, and File Parser $^{6}$ :",
+      "after": "Google Scholar, and File Parser $^{6}$ :\n\n$^{6}$ Since our system relies on several internal APIs and fallback strategies (as described in Section 3.4.3), we provide alternative open implementations in our open-source GitHub repository to facilitate public use. We have verified through extensive testing that these substitutions can faithfully reproduce our results.",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 bottom footnote block prints footnote 6 verbatim ('Since our system relies on several internal APIs and fallback strategies (as described in Section 3.4.3), we provide alternative open implementations in our open-source GitHub repository to facilitate public use. We have verified through extensive testing that these substitutions can faithfully reproduce our results.'); the OCR kept marker $^{6}$ in the Environment Details intro but dropped the body; restored after that intro line."
+    },
+    {
+      "before": "]}} {&quot;type&quot;",
+      "after": "]}}} {&quot;type&quot;",
+      "count": 4,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 System Prompt box (300 dpi) prints each tool-definition JSON object ending '...\"required\": [...]]}}}' before the next '{\"type\"'; the OCR dropped one closing brace at all four function boundaries (search, visit, PythonInterpreter, google_scholar), leaving ']}}'. Restores the printed triple brace; the PDF prints no comma between the objects."
+    },
+    {
+      "before": "[&quot;files&quot;]}}",
+      "after": "[&quot;files&quot;]}}}",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 System Prompt box (300 dpi) prints the parse_file object ending '\"required\": [\"files\"]}}}' before '</tools>'; the OCR dropped one closing brace, leaving ']}}'."
+    },
+    {
+      "before": "&quot;arguments&quot;: {} import numpy",
+      "after": "&quot;arguments&quot;: {}} &lt;code&gt; import numpy",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 System Prompt box (300 dpi) prints the PythonInterpreter example call as '{\"name\": \"PythonInterpreter\", \"arguments\": {}}' followed by '<code> import numpy as np ...'; the OCR dropped the closing '}' of the arguments object and the opening '<code>' tag."
+    },
+    {
+      "before": "this format:1. The",
+      "after": "this format: 1. The",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 System Prompt box (300 dpi) prints 'you must follow this format:' then a new line '1. The \\'arguments\\' JSON object must be empty: {}.'; the OCR glued the colon to the list item ('format:1.'). Restores the separator dropped in the flattened table cell."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-value-labels-interleaved",
+      "pdf_pages": [
+        13,
+        15
+      ],
+      "evidence": "Numeric labels inside the benchmark bar charts (e.g. 85.0, 71.4, 100.0) and axis ticks appear in the PDF text layer and are partially interleaved with OCR text order; the charts are embedded as images, so this is noise rather than lost content."
+    },
+    {
+      "id": "cover-furniture",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Cover header (Tongyi DeepResearch logo banner, date 2026-05-19) and the arXiv side stamp are not transcribed; recorded in document metadata."
+    },
+    {
+      "id": "flattened-subscripts-in-fences",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Inside the preformatted synthetic-data fence the printed answer n -> sigma*_{Si-C} is flattened to 'n → σ*Si-C'; preformatted fences carry no math markup, and SiH3/CH3 subscripts are preserved as unicode. Left unchanged."
+    }
+  ]
+}

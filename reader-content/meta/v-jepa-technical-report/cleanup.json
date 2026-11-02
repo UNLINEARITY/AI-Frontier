@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "meta:v-jepa-technical-report",
+  "source_sha256": "fb84f79be128e7425263e8674fbc3f2ec991575c4b5880556cfb8f5fa9fd91ba",
+  "ocr_sha256": "cdd9824effffb79209c0be1def0a33ca5aa48a07fca411e787a6823fa8bd654e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level pass of all 23 physical PDF pages against the OCR markdown; physical pages 8 and 17 were rendered and visually checked. Table 8 header subscripts were glued into the model names; the print's own misspelling 'hierachical' had been auto-corrected by OCR and 'Hiera' gained a stray r. Remaining token deltas are soft-hyphen line-break splits and figure-internal axis/legend text."
+  },
+  "patches": [
+    {
+      "before": "which benefits from a hierarchical prior",
+      "after": "which benefits from a hierachical prior",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints \"which benefits from a hierachical prior (Ryali et al., 2023)\" - the misspelling is in the print itself; OCR auto-corrected it. Restoring the printed spelling."
+    },
+    {
+      "before": "OmniMAE, MVD, and Hierar models",
+      "after": "OmniMAE, MVD, and Hiera models",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints \"VideoMAE, VideoMAEv2, OmniMAE, MVD, and Hiera models by at least +5 points\"; OCR joined the following space into 'Hierar'."
+    },
+    {
+      "before": "<td>ViT-L/16224</td>",
+      "after": "<td>ViT-L/16 $_{224}$</td>",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 8 header prints ViT-L/16 with 224 as a subscript (resolution); the document elsewhere renders the same model names as 'ViT-L/16 $_{224}$ ' (physical p.17 prose) and tables already carry '$_{512}$' inside cells (Table 6)."
+    },
+    {
+      "before": "<td>ViT-H/16224</td>",
+      "after": "<td>ViT-H/16 $_{224}$</td>",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 8 header prints ViT-H/16 with subscript 224; OCR glued the subscript digits into the cell text."
+    },
+    {
+      "before": "<td>ViT-H/16384</td>",
+      "after": "<td>ViT-H/16 $_{384}$</td>",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Table 8 header prints ViT-H/16 with subscript 384; OCR glued the subscript digits into the cell text."
+    }
+  ],
+  "unresolved": []
+}

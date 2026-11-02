@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "id": "meta:code-llama-open-foundation-models-for-code",
+  "source_sha256": "05ed05d2d76c420b6af4a1afe6e1dec99939ccf62c5a0c0a258b09cbe1889346",
+  "ocr_sha256": "55c384bb656a730466c9ccda76499422ea558be8ef7ddca70396536552056a70",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      22,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "coverage": "partial",
+    "notes": "Triage review. (a) Structural scan over all 23 fence events: the source has 12 opening fence lines including nested \\`\\`\\`python lines inside transcript code blocks, but under the exporter's CommonMark renderer (markdown-it, verified by re-rendering the Markdown and running the swallowed-pre diagnostic: 0 pre blocks contain tables, images or numbered headings) every fence pairs correctly, all 27 ![[...]] image embeds survive, and headings/tables are never swallowed. The Figure 16 transcript on physical p.41 keeps its inner \\`\\`\\`python as literal text inside one code block, which is visible content, not damage. (b) Machine droppage scan over all 48 physical pages: normalized 4-gram page containment (28 pages below 0.92 hit inspected), figure-caption parity (all 22 figures and 26 tables captioned and present in the Markdown; every low-hit page explained as HTML table reflow or figure-internal text of embedded screenshots - Figures 15 and 20, whose transcripts on physical pages 40 and 47 exist only inside the embedded images), plus a word-level alignment of the Figure 19 transcript table on physical p.46 against the extracted page text, which found fourteen glued line joins (printed code lines such as 'sox input.mp3 output.mp3 reverb' fused into the surrounding prose). (c) Visual verification on rendered physical p.46: 300 dpi crops read for the 'sox ... reverb / This command' line structure and for the caption typo. The 'prompt templates are shown in 14' wording on physical p.30 is the print's own broken cross-reference and was kept. The four \\\\_ escapes (tree\\\\_sitter, my\\\\_function, max\\\\_pow+1, bbox\\\\_to\\\\_anchor) match printed underscores and render faithfully; left unchanged."
+  },
+  "patches": [
+    {
+      "before": "audio file:sox input.mp3 output.mp3 reverbThis command",
+      "after": "audio file: sox input.mp3 output.mp3 reverb This command",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered physical p.46 (300 dpi crop, visually read) prints the prose line '...to add reverb to an audio file:', then the monospace code line 'sox input.mp3 output.mp3 reverb' on its own line, then 'This command will add reverb...'. OCR fused the line breaks into 'file:sox' and 'reverbThis'."
+    },
+    {
+      "before": "do it:1. Install ‘sox’",
+      "after": "do it: 1. Install ‘sox’",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text prints '...example of how to do it:' as its own line followed by the numbered step '1. Install ‘sox’...'; OCR fused the break into 'it:1.'."
+    },
+    {
+      "before": "reverbThis",
+      "after": "reverb This",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text prints 'sox input.mp3 output.mp3 reverb' and 'sox input.wav output.wav trim 0 3 reverb' as standalone monospace lines, each followed by a new sentence starting 'This command will...'; OCR fused both breaks (word-level alignment: reverb+This twice). Count corrected to 1: an earlier repair in this proposal already consumed the first of the two printed occurrences."
+    },
+    {
+      "before": "command:sox",
+      "after": "command: sox",
+      "count": 2,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text ends two prose lines with '...Run the following command:' and '...you can use the following command:', each followed by a standalone 'sox ...' code line; OCR fused both breaks."
+    },
+    {
+      "before": "delay 10This will add",
+      "after": "delay 10 This will add",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text prints the code line 'sox input.mp3 output.mp3 delay 10' followed by the sentence 'This will add a 10-second delay...'; OCR fused '10' and 'This'."
+    },
+    {
+      "before": "output.mp3.You can adjust",
+      "after": "output.mp3. You can adjust",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text prints '...save the result as output.mp3.' ending a sentence, new line 'You can adjust the delay time...'; OCR fused the break into 'output.mp3.You'."
+    },
+    {
+      "before": "you would use:sox",
+      "after": "you would use: sox",
+      "count": 2,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text ends two prose lines with 'you would use:' each followed by a standalone 'sox input.mp3 output.mp3 delay 20' / 'sox input.mp3 output.mp3 delay 10 delay 20' code line; OCR fused both breaks."
+    },
+    {
+      "before": "delay 20You can also",
+      "after": "delay 20 You can also",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text prints the code line 'sox input.mp3 output.mp3 delay 20' followed by the sentence 'You can also add multiple delays...'; OCR fused '20' and 'You'."
+    },
+    {
+      "before": "delay 20Note that",
+      "after": "delay 20 Note that",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text prints the code line 'sox input.mp3 output.mp3 delay 10 delay 20' followed by the sentence 'Note that the ‘sox‘ command...'; OCR fused '20' and 'Note'."
+    },
+    {
+      "before": "does this:sox input.wav",
+      "after": "does this: sox input.wav",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text prints '...Here is an example command that does this:' ending a line, followed by the code line 'sox input.wav output.wav trim 0 3 reverb'; OCR fused the break."
+    },
+    {
+      "before": "output.wav.You can adjust",
+      "after": "output.wav. You can adjust",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text prints '...saving the output to output.wav.' ending a sentence, new line 'You can adjust the trim and reverb settings...'; OCR fused the break into 'output.wav.You'."
+    },
+    {
+      "before": "reverb 50It’s important",
+      "after": "reverb 50 It’s important",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Physical p.46 extracted text prints the code line 'sox input.wav output.wav trim 0 5 reverb 50' followed by the sentence 'It’s important to note that the reverb level...'; OCR fused '50' and 'It’s'."
+    },
+    {
+      "before": "The first two examples show simple tasks",
+      "after": "The first two exampples show simple tasks",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered physical p.46 Figure 19 caption (300 dpi crop, visually read) prints the misspelling 'The first two exampples show simple tasks'; OCR silently auto-corrected the print's own typo to 'examples', which must be restored."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "transcript-tables-line-structure",
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "The Figure 19 transcripts live in single-cell HTML table rows, so the printed code lines can only be un-glued to inline words; the reader shows them as running text, not as the printed monospace line structure. Patches restore the words; preserving the line structure would need a <br> convention no other reader uses."
+    },
+    {
+      "id": "references-and-benchmarks-not-line-by-line",
+      "pdf_pages": [
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "evidence": "Reference list (physical pages 22-26) was only caption/probe checked and benchmark tables spot-checked via caption parity and 4-gram scan; no character-level read of every entry."
+    }
+  ]
+}

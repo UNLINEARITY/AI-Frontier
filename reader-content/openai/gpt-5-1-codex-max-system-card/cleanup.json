@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-5-1-codex-max-system-card",
+  "source_sha256": "43c3faa179f6b5877363dd9d0630cb8c185e825c5c17628a331127ab3a162c23",
+  "ocr_sha256": "8d84edd0746a55e20319d61e6ea6b44ac444c945afd4d8ce227d599e21da346f",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "coverage": "complete",
+    "notes": "All 27 physical pages' extracted text was block-compared against the OCR markdown after normalization, plus a whole-document numeric-token multiset check (page-number footers aside, no PDF number is missing from the OCR). Code fences are balanced (none present); all 15 chart figures are embedded as images. Physical pages 13 and 25 were rendered at 120 dpi and visually checked: both print '1. ...' items as indented numbered list items with visible siblings ('2. Goal-oriented, end-to-end attack automation', '2. Previous experience indicates 20h time horizons...'), so the OCR's promotion of these two items to level-2 headings is repaired. The printed table of contents (physical p.3, continuation of the p.2 Contents block) lists '5.2 Research category update: sandbagging ... 26'; OCR dropped the leading '5.2' from that TOC line. Kept without patches: four prose 'not\\_unsafe' escapes render as the printed identifier not_unsafe (the fifth occurrence, a table cell, is already correct in OCR); 'Taint Shared Content' footnote markers and PASS/FAIL/PARTIAL tables match the text layer; TOC dot leaders were flattened, which does not change visible content."
+  },
+  "patches": [
+    {
+      "before": "## 1. Discovery of advanced, operationally relevant exploits",
+      "after": "1. Discovery of advanced, operationally relevant exploits",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 (checked at 120 dpi) prints '1. Discovery of advanced, operationally relevant exploits' as an indented numbered list item, the first of three skills following 'we find each instance demanded proficiency in each of three skills:' (siblings '2.' and '3.' follow on p.14); it is not a section heading. OCR promoted it to '## 1. ...'."
+    },
+    {
+      "before": "## 1. GPT-5.1-Codex-Max shows incremental progress:",
+      "after": "1. GPT-5.1-Codex-Max shows incremental progress:",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 (checked at 120 dpi) prints '1. GPT-5.1-Codex-Max shows incremental progress:' as an indented numbered list item at the end of the page, with sibling item '2. Previous experience indicates 20h time horizons would be insufficient...' following; it is not a section heading. OCR promoted it to '## 1. ...'."
+    },
+    {
+      "before": "Research category update: sandbagging 26",
+      "after": "5.2 Research category update: sandbagging 26",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "The printed Contents block continues onto physical p.3 with the entry '5.2  Research category update: sandbagging . . . 26' (PDF text layer); the OCR TOC line dropped the leading section number '5.2'. Only restores the printed TOC number."
+    }
+  ],
+  "unresolved": []
+}

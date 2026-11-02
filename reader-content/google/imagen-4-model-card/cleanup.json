@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "google:imagen-4-model-card",
+  "source_sha256": "23632fbcba0a1bb785eff161571238310410485255b435f9849326cc7b29360e",
+  "ocr_sha256": "0e7a263c07a06ae9efcca83ec7d6f0639aa2632ea98903cf1effe127a437e00b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Full normalized-text comparison of all 7 physical pages against the OCR Markdown found no dropped body prose. The trailing numerals 1-6 are printed page numbers and their omission is correct. The line 'Elo scores and latency for “OverallPreference” on GenAI-Bench' is the title printed inside the third chart (rendered page 5 verified); the embedded image crop excludes that title, so the OCR line is the only carrier of the printed figure title and was kept. The cover-page line 'Model card published May 20, 2025' (page 1) duplicates the page-2 body line 'Published: May 20, 2025', which the Markdown preserves. The label 'Google Deepmind Responsibility and Safety Council (RSC)' matches the PDF's own capitalization on page 7. No code fences exist. No repairs needed."
+  },
+  "patches": [],
+  "unresolved": []
+}

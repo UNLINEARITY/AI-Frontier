@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "id": "google:robocat-technical-report",
+  "source_sha256": "ec66c1579baaada787820abf4ce99a9a59143b583ddcc6dfc4814623d1969831",
+  "ocr_sha256": "cb34c77ccf338f6200bfc0f592ec0a8ca365e72b300aea6c0ac50644566514f0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE mode. Full structural scan: 0 code fences, no spurious headings, no unbalanced structure. Automated normalized 4-gram page-containment diff of all 60 pages: dips are appendix tables (p32, p37, p38, p44, p52), figure-panel pages (p33, p57) and the model/pretraining-dataset listing table (p58), all figure-internal or table reordering. Number-multiset check (all integers >=4 digits, thin-space-normalized, whole document): only p1 (arXiv stamp 2306/11706) and p27 (arXiv:1812.11971 inside reference, false positive from line wrapping) unmatched - every appendix table number is present. Ghost-line scan across all pages found six dropped footnotes (markers 1-5); all six restored after render verification. Figure-internal text and appendix table cell order were not line-by-line reviewed; body prose was machine-scanned."
+  },
+  "patches": [
+    {
+      "before": "15 Panda, 17 Sawyer, and 4 KUKA arms.",
+      "after": "15 Panda, 17 Sawyer, and 4 KUKA arms.\n\n$^{1}$ Details of this robot hand will be released in the near future.",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Ghost-line scan found the footnote body dropped while the marker survives on 'three-finger robot hand $^{1}$' (OCR p.1 of appendix). Rendered physical p.7 bottom prints '1 Details of this robot hand will be released in the near future.'; restored after the paragraph introducing the KUKA arms."
+    },
+    {
+      "before": "with nearly 80% success.",
+      "after": "with nearly 80% success.\n\n$^{2}$ The Gato model was fine-tuned with additional simulation episodes of the task, but was not originally trained with the object set in this task.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Marker survives on 'reported for Gato on the same data $^{2}$' but the footnote body was dropped. Physical p.15 footnote (extracted text, line-wrapped) prints '2 The Gato model was fine-tuned with additional simulation episodes of the task, but was not originally trained with the object set in this task.'; restored after the anchoring paragraph."
+    },
+    {
+      "before": "Considerations with respect to general AGI safety (Bostrom, 2014) may also require updating when considering agents with multiple embodiments.",
+      "after": "Considerations with respect to general AGI safety (Bostrom, 2014) may also require updating when considering agents with multiple embodiments.\n\n$^{3}$ We note that we utilise a force-torque compliant controller with built in safety mechanisms.",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Marker survives on 'interacting with robots $^{3}$' but the footnote body was dropped. Physical p.21 footnote prints '3 We note that we utilise a force-torque compliant controller with built in safety mechanisms.'; restored after the safety paragraph."
+    },
+    {
+      "before": "with a 3DConnexion SpaceMouse compact and a web-based UI.",
+      "after": "with a 3DConnexion SpaceMouse compact $^{4}$ and a web-based UI.",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "The footnote URL was dropped and its marker with it: md has no '$^{4}$' anywhere. 130-dpi render of physical p.35 shows the superscript 4 between 'SpaceMouse compact' and 'and a web-based UI', and prints footnote '4 https://3dconnexion.com/uk/spacemouse/'; marker and footnote restored."
+    },
+    {
+      "before": "aggregated across all locales.",
+      "after": "aggregated across all locales.\n\n$^{4}$ https://3dconnexion.com/uk/spacemouse/",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Footnote body '4 https://3dconnexion.com/uk/spacemouse/' dropped (ghost-line scan); printed at the bottom of physical p.35 (verified on a 130-dpi render); restored after the teleoperation paragraph containing the marked 'SpaceMouse compact'."
+    },
+    {
+      "before": "In addition, we sometimes constrain the Sawyer's degrees of freedom (see Section 3.1).",
+      "after": "In addition, we sometimes constrain the Sawyer's degrees of freedom (see Section 3.1).\n\n$^{4}$ The Sawyer is now developed and retailed by the Hahn Group.",
+      "count": 1,
+      "pdf_pages": [
+        36
+      ],
+      "evidence": "Footnote body '4 The Sawyer is now developed and retailed by the Hahn Group.' dropped (ghost-line scan); verified on a 130-dpi render of the physical p.36 footnote block (alongside footnote 5). The print's marker-4 position is not identifiable in the text layer, so the note is restored after the paragraph discussing the Sawyer arms without adding an inline marker."
+    },
+    {
+      "before": "as a physics engine for the simulation environments and a forward kinematics library for the real ones.",
+      "after": "as a physics engine for the simulation environments and a forward kinematics library for the real ones.\n\n$^{5}$ https://github.com/deepmind/dm_robotics/tree/main/py/moma",
+      "count": 1,
+      "pdf_pages": [
+        36
+      ],
+      "evidence": "Marker survives on 'the open-source MoMa library $^{5}$' but the footnote URL was dropped. Physical p.36 footnote block prints '5 https://github.com/deepmind/dm_robotics/tree/main/py/moma' (verified on a 130-dpi render); restored after the MoMa paragraph."
+    }
+  ],
+  "unresolved": [
+    "Appendix tables (physical p.32-58) were validated by number-multiset and 4-gram scans only; their non-numeric cells were not transcribed row by row."
+  ]
+}

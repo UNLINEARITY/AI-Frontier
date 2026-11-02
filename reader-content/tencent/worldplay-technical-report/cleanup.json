@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "tencent:worldplay-technical-report",
+  "source_sha256": "5051aab9b54f14963a6fc8bfda6038fe5a25867dc6efa16e811e2e690bdfbde6",
+  "ocr_sha256": "ac81b683a80b03a444ac04147c2fee261bf8acceab34fbcd8fda0f138d6b5e64",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "Whole-document word-level diff of the OCR markdown against extracted text from all 23 physical PDF pages; physical p.1 was rendered at 300 dpi to verify the correspondence footnote. Code fences are absent and all tables (Tables 1-9), figure captions (Figures 1-18), the affiliation footnote and both appendix sections are present. Most diff gaps are page-header repeats, figure-internal labels covered by embedded figure images (action-key strips, frame strips, radar-chart axes), and math-notation ordering, none of which lose reader-visible content."
+  },
+  "patches": [],
+  "unresolved": [
+    "Physical p.9 Limitations paragraph: the PDF itself prints \"our model can generawting videos of approximately 30 seconds\" (printed author typo); OCR normalized it to \"generating\". Left unchanged because the typo is printed in the source.",
+    "Physical p.1: OCR keeps the printed misspelling \"Chuncaho Guo\" (render-verified; the PDF prints Chuncaho). Not patched per source-faithfulness rule.",
+    "Physical p.3: printed \"they can not be performed in real-time\" (line-broken) is transcribed \"cannot\"; indistinguishable in the text layer and left unchanged.",
+    "The ICML template footer \"Proceedings of the 43rd International Conference on Machine Learning\" printed on physical p.1 is not transcribed; page furniture was left out like page headers elsewhere."
+  ]
+}

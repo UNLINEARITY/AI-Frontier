@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-2-model-card",
+  "source_sha256": "e735ad89f95c7aa295459e0ef9153d2c54a7503f16ff39c8e20b9b4f22fd4d56",
+  "ocr_sha256": "af5ca452934f3164b86ae6b5d56df9340cd59a9c46842b1f7d6fdfd818b55856",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE mode, no repairs needed. Full structural scan: 0 code fences, no spurious headings (title and 'Model details' only), section spine 1-5 plus References and the Claude 2.1 Model Card Appendix all present. Automated normalized 4-gram page-containment diff across all 16 pages: only chart pages (p7-p9: Figures 6-8 axis labels, legends, 'Claude 2 on 200k Context Data') and table pages (p10-p11) dipped below 0.95; per-line ghost scan across all pages returned only the figure-internal 'Claude 2 on 200k Context Data'. All four tables (Codex/GSM8k/MMLU benchmark table, GRE verbal/quantitative/analytical, MBE, USMLE Steps 1-3) compared cell-by-cell against the p10-p11 text and matched. The printed reference URL 'https://doi.org/10.1145%2F3287560.3287596' (with the print's own URL-encoded %2F) is transcribed verbatim. Known U+200B-instead-of-hyphen pollution in this PDF's text layer affects only the diff baseline, not the OCR markdown; body prose was machine-scanned rather than read word by word."
+  },
+  "patches": [],
+  "unresolved": []
+}

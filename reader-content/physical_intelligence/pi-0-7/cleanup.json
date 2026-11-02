@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:pi-0-7",
+  "source_sha256": "54843c88fbabf6bce53ab2ee94cafc9a55c3d5639f7b74c5e8ad24485fe6863b",
+  "ocr_sha256": "7133b90df84519cb876e66f43023356d663b856971339d71db7f430d5a063163",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "coverage": "complete",
+    "notes": "Full normalized text diff of the OCR markdown against extracted text from all 25 physical PDF pages; physical pages 3, 6 and 21 were rendered (120 dpi) and visually inspected to confirm the section III heading style, the footnote 1 body and the reference [106] author list. The only code fence pair (lines 115-118) is balanced; no swallowed blocks. All other unmatched PDF lines are figure-internal text (title-page graphics, Fig. 6/10/11/13 prompts, Fig. 17-19 labels, p22-23 axis labels) that the embedded figure images already show. Reference page numbers trailing entries (e.g. '3', '7, 22') are the PDF's own margin citation back-references and were kept."
+  },
+  "patches": [
+    {
+      "before": "III. FLOW-BASED VISION-LANGUAGE-ACTION MODELS",
+      "after": "## III. FLOW-BASED VISION-LANGUAGE-ACTION MODELS",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 right column prints 'III. FLOW-BASED VISION-LANGUAGE-ACTION MODELS' as a small-caps section heading in the same style as 'IV. pi_0.7 OVERVIEW'; every sibling section (I, II, IV-X) is a Markdown heading in the OCR except this one, which stayed a plain line."
+    },
+    {
+      "before": "post-trained policies, in highly dexterous tasks.",
+      "after": "post-trained policies, in highly dexterous tasks.\n\n¹We exclude autonomous data collected in any generalization-focused evaluation task (including ones in Sec. IX) from training.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 bottom-left footnote 1 reads 'We exclude autonomous data collected in any generalization-focused evaluation task (including ones in Sec. IX) from training.'; the OCR kept the superscript marker (experiments $^{1}$) but dropped the body entirely. The body is restored immediately after the paragraph carrying the marker, with the printed superscript digit ¹."
+    },
+    {
+      "before": "nagar, Sindhu Raghuram Panyam, Sivan Eiger",
+      "after": "[106] Gemma Team, Aishwarya Kamath, Johan Ferret, Shreya Pathak, Nino Vieillard, Ramona Merhej, Sarah Perrin, Tatiana Matejovicova, Alexandre Ramé, Morgane Rivière, Louis Rouillard, Thomas Mesnard, Geoffrey Cideron, Jean bastien Grill, Sabela Ramos, Edouard Yvinec, Michelle Casbon, Etienne Pot, Ivo Penchev, Gaël Liu, Francesco Visin, Kathleen Kenealy, Lucas Beyer, Xiaohai Zhai, Anton Tsitsulin, Robert Busa-Fekete, Alex Feng, Noveen Sachdeva, Benjamin Coleman, Yi Gao, Basil Mustafa, Iain Barr, Emilio Parisotto, David Tian, Matan Eyal, Colin Cherry, Jan-Thorsten Peter, Danila Sinopalnikov, Surya Bhupatiraju, Rishabh Agarwal, Mehran Kazemi, Dan Malkin, Ravin Kumar, David Vilar, Idan Brusilovsky, Jiaming Luo, Andreas Steiner, Abe Friesen, Abhanshu Sharma, Abheesht Sharma, Adi Mayrav Gilady, Adrian Goedeckemeyer, Alaa Saade, Alex Feng, Alexander Kolesnikov, Alexei Bendebury, Alvin Abdagic, Amit Vadi, András György, André Susano Pinto, Anil Das, Ankur Bapna, Antoine Miech, Antoine Yang, Antonia Paterson, Ashish Shenoy, Ayan Chakrabarti, Bilal Piot, Bo Wu, Bobak Shahriari, Bryce Petrini, Charlie Chen, Charline Le Lan, Christopher A. Choquette-Choo, CJ Carey, Cormac Brick, Daniel Deutsch, Danielle Eisenbud, Dee Cattle, Derek Cheng, Dimitris Paparas, Divyashree Shivakumar Sreepathihalli, Doug Reid, Dustin Tran, Dustin Zelle, Eric Noland, Erwin Huizenga, Eugene Kharitonov, Frederick Liu, Gagik Amirkhanyan, Glenn Cameron, Hadi Hashemi, Hanna Klimczak-Plucińska, Harman Singh, Harsh Mehta, Harshal Tushar Lehri, Hussein Hazimeh, Ian Ballantyne, Idan Szpektor, Ivan Nardini, Jean Pouget-Abadie, Jetha Chan, Joe Stanton, John Wieting, Jonathan Lai, Jordi Orbay, Joseph Fernandez, Josh Newlan, Ju yeong Ji, Jyotinder Singh, Kat Black, Kathy Yu, Kevin Hui, Kiran Vodrahalli, Klaus Greff, Linhai Qiu, Marcella Valentine, Marina Coelho, Marvin Ritter, Matt Hoffman, Matthew Watson, Mayank Chaturvedi, Michael Moynihan, Min Ma, Nabila Babar, Natasha Noy, Nathan Byrd, Nick Roy, Nikola Momchev, Nilay Chauhan, Noveen Sachdeva, Oskar Bunyan, Pankil Botarda, Paul Caron, Paul Kishan Rubenstein, Phil Culliton, Philipp Schmid, Pier Giuseppe Sessa, Pingmei Xu, Piotr Stanczyk, Pouya Tafti, Rakesh Shivanna, Renjie Wu, Renke Pan, Reza Rokni, Rob Willoughby, Rohith Vallu, Ryan Mullins, Sammy Jerome, Sara Smoot, Sertan Girgin, Shariq Iqbal, Shashir Reddy, Shruti Sheth, Siim Põder, Sijal Bhatnagar, Sindhu Raghuram Panyam, Sivan Eiger",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Reference [106] (Gemma 3 technical report) lost its head in OCR: everything from '[106] Gemma Team, Aishwarya Kamath' through the hyphenated 'Sijal Bhat-' was dropped, leaving a bare tail beginning 'nagar, Sindhu Raghuram Panyam'. Rendered physical p.21 shows the full author list across both columns; the restored names (including accented forms Ramé, Rivière, Gaël, György, Plucińska, Põder) were read from the rendered page and the extracted text layer. The trailing 'Dmitry, Lepikhin,' comma in the surviving tail is printed in the source and kept."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-labels-title-page-and-figs",
+      "pdf_pages": [
+        1,
+        4,
+        6,
+        8,
+        9,
+        10,
+        11,
+        13,
+        22,
+        23
+      ],
+      "evidence": "Prompt-box strings and chart labels (title-page demo grid, Fig. 6 subgoal prompts, Fig. 10 specialist comparisons, Fig. 13 coaching, Fig. 17-19 chart axes, p22 CFG diagrams, p23 'Experience (hours)') exist only inside figure images and are correctly absent from the OCR text; the embedded figures show them."
+    },
+    {
+      "id": "printed-typo-then-by-used",
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "The PDF prints 'these instructions can then by used to train' in the Fig. 14 caption; the OCR reads 'then be used'. The source prints the typo, so no patch was made."
+    }
+  ]
+}

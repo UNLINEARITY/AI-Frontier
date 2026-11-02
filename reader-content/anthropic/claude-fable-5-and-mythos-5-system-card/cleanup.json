@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-fable-5-and-mythos-5-system-card",
+  "source_sha256": "f95d413845ad8624f384ba026963f2bad2158f10f2626575bb45e823e3c2e0ca",
+  "ocr_sha256": "db6c376d0f73795d068b914e1613a8c2f6f61af8a79075db3e743b56ecc1d67b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      20,
+      38,
+      39,
+      41,
+      48,
+      50,
+      71,
+      72,
+      76,
+      78,
+      81,
+      84,
+      85,
+      88,
+      91,
+      94,
+      95,
+      97,
+      108,
+      156,
+      158,
+      214,
+      223,
+      224,
+      234,
+      241,
+      251,
+      252,
+      253,
+      254,
+      257,
+      259,
+      260,
+      261,
+      262,
+      266,
+      267,
+      270,
+      275,
+      280,
+      281,
+      283,
+      284,
+      292,
+      293,
+      295,
+      297,
+      298,
+      299,
+      317
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of a 317-page system card. Full-document structural scan: code fences balanced (11 pairs, none swallow headings/tables/images), no duplicated title lines. Full-document droppage machine scan: normalized 4-gram containment of extracted PDF page text against the OCR markdown; all 47 low-containment pages were inspected via per-page missing-sentence diff. Render-verified with page crops (dpi 130-200): pages 38 (bullet promoted to heading, plain 'Glossary of recurring terms:' lead line), 50 (footnote 4 body), 214 (plain 'Overall, we find:' lead line and bold bullet promoted to heading), 241 and 275 (two rasterized chart titles kept as # h1 headings), 251-252 (footnote 27/28 bodies and six glued table cells). Pages 39/41 low-containment text is prompt-box content inside figure screenshots and is not a defect. Table-heavy false positives on pages 48/50/251 are HTML tables already present in the OCR. Unnumbered '##' headings matching figure-internal chart titles were machine-flagged as a class but not individually render-verified; see unresolved."
+  },
+  "patches": [
+    {
+      "before": "## - Instruction following ▼ Ignoring or forgetting a key instruction.",
+      "after": "\\- Instruction following ▼ Ignoring or forgetting a key instruction.",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 shows a bullet ('●') whose term 'Instruction following ▾' is a dark pill badge, followed by 'Ignoring or forgetting a key instruction.' Its sibling items ('Safeguard circumvention', 'Fabrication', 'Reckless action', 'Correction fails') are rendered in the OCR as '\\- Term ▼ ...' plain bullets; only this one item was promoted to a '##' heading."
+    },
+    {
+      "before": "## Glossary of recurring terms:",
+      "after": "Glossary of recurring terms:",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 prints 'Glossary of recurring terms:' as a plain-weight, unnumbered lead line of the body text, not a section heading; the document's real headings are numbered ('## 2.3.3 ...'). Demoted to plain text."
+    },
+    {
+      "before": "## Overall, we find:",
+      "after": "Overall, we find:",
+      "count": 1,
+      "pdf_pages": [
+        214
+      ],
+      "evidence": "Rendered physical p.214 prints 'Overall, we find:' as a plain body-text lead line before a bullet list, not a numbered section heading. Demoted to plain text."
+    },
+    {
+      "before": "## - In ControlArena, [Claude Mythos 5] is more capable of completing harmful side tasks without detection than both Claude Mythos Preview and Opus 4.8.",
+      "after": "\\- In ControlArena, [Claude Mythos 5] is more capable of completing harmful side tasks without detection than both Claude Mythos Preview and Opus 4.8.",
+      "count": 1,
+      "pdf_pages": [
+        214
+      ],
+      "evidence": "Rendered physical p.214 shows this as the first bold top-level bullet ('●') under 'Overall, we find:', with '○' sub-bullets following; the OCR promoted it to a '##' heading while its siblings stayed bullets."
+    },
+    {
+      "before": "# What models most and least endorse in the constitution",
+      "after": "What models most and least endorse in the constitution",
+      "count": 1,
+      "pdf_pages": [
+        241
+      ],
+      "evidence": "Rendered physical p.241: the text exists only as the rasterized chart title inside Figure 7.4.3.B (absent from the PDF text layer); the '##'-depth section heading above it is 'Overall endorsement of the constitution'. A heading whose text exists only inside a figure image is demoted to plain text, matching the plain 'Most criticized (% of 'least endorse' responses)' chart label that precedes it."
+    },
+    {
+      "before": "# Multi-Agent ProgramBench Evals: Score vs Tokens",
+      "after": "Multi-Agent ProgramBench Evals: Score vs Tokens",
+      "count": 1,
+      "pdf_pages": [
+        275
+      ],
+      "evidence": "Rendered physical p.275: the text exists only as the rasterized chart title inside Figure 8.15.2.B (absent from the PDF text layer); the section heading is '## 8.15.2 Multi-Agent ProgramBench'. Demoted to plain text so a figure-internal title stops rendering as a top-level heading."
+    },
+    {
+      "before": "+31.9%</td></tr></table>",
+      "after": "+31.9%</td></tr></table>\n$^{4}$ The Sonnet 4.6 system card prints 16.53× in error; 22.33× is the value computed by the card’s own analysis.",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "Rendered physical p.50 footnote block prints: '4 The Sonnet 4.6 system card prints 16.53× in error; 22.33× is the value computed by the card’s own analysis.' The OCR kept the '$^{4}$' marker in the LLM-training-speedup table (physical p.50) but dropped the page-bottom footnote body; restored after the table that carries the marker."
+    },
+    {
+      "before": "<td>51.8</td><td>-</td></tr></table>",
+      "after": "<td>51.8</td><td>-</td></tr></table>\n$^{27}$ Changes to the Mythos OSWorld score are due to a bug fix on our zoom tool when paired with batched actions, and increasing the max tokens per turn from 16K to 128K.\n$^{28}$ Elo score as of June 6, 2026.",
+      "count": 1,
+      "pdf_pages": [
+        251,
+        252
+      ],
+      "evidence": "Rendered physical p.251 footnote block prints: '27 Changes to the Mythos OSWorld score are due to a bug fix on our zoom tool when paired with batched actions, and increasing the max tokens per turn from 16K to 128K.'; rendered physical p.252 footnote block prints: '28 Elo score as of June 6, 2026.' The OCR kept the '$^{27}$' (OSWorld-Verified row) and '$^{28}$' (GDPval-AA row) markers in the capabilities summary table but dropped both bodies; restored after the table."
+    },
+    {
+      "before": "88.0(single-agent)93.3(multi-agent)",
+      "after": "88.0 (single-agent) 93.3 (multi-agent)",
+      "count": 1,
+      "pdf_pages": [
+        251
+      ],
+      "evidence": "Rendered physical p.251 BrowseComp row, Mythos 5 column: stacked cell lines '88.0', '(single-agent)', '93.3', '(multi-agent)'. The OCR glued the four fragments; the same table spells sibling cells with a space ('83.4 (Codex CLI)')."
+    },
+    {
+      "before": "84.3(single-agent)88.5(multi-agent)",
+      "after": "84.3 (single-agent) 88.5 (multi-agent)",
+      "count": 1,
+      "pdf_pages": [
+        251
+      ],
+      "evidence": "Rendered physical p.251 BrowseComp row, Opus 4.8 column: stacked cell lines '84.3', '(single-agent)', '88.5', '(multi-agent)' glued by OCR."
+    },
+    {
+      "before": "76.2(3.5 Flash: 78.4)",
+      "after": "76.2 (3.5 Flash: 78.4)",
+      "count": 1,
+      "pdf_pages": [
+        251
+      ],
+      "evidence": "Rendered physical p.251 OSWorld-Verified row, Gemini 3.1 Pro column: stacked cell lines '76.2' and '(3.5 Flash: 78.4)' glued by OCR."
+    },
+    {
+      "before": "9.6(3.5 Flash: 14.5)",
+      "after": "9.6 (3.5 Flash: 14.5)",
+      "count": 1,
+      "pdf_pages": [
+        252
+      ],
+      "evidence": "Rendered physical p.252 AutomationBench row, Gemini 3.1 Pro column: stacked cell lines '9.6' and '(3.5 Flash: 14.5)' glued by OCR."
+    },
+    {
+      "before": "26.5(3.5 Flash: 33.6)",
+      "after": "26.5 (3.5 Flash: 33.6)",
+      "count": 1,
+      "pdf_pages": [
+        252
+      ],
+      "evidence": "Rendered physical p.252 Blueprint-Bench 2 row, Gemini 3.1 Pro column: stacked cell lines '26.5' and '(3.5 Flash: 33.6)' glued by OCR."
+    },
+    {
+      "before": "0.0(3.5 Flash: 0.8)",
+      "after": "0.0 (3.5 Flash: 0.8)",
+      "count": 1,
+      "pdf_pages": [
+        252
+      ],
+      "evidence": "Rendered physical p.252 Legal Agent Benchmark (Harvey's Held-Out Set) row, Gemini 3.1 Pro column: stacked cell lines '0.0' and '(3.5 Flash: 0.8)' glued by OCR."
+    }
+  ],
+  "unresolved": [
+    "Systematic footnote/reference-body droppage: 73 distinct superscript markers ($^{1}$..$^{76}$; numbers 10, 41 and 42 absent) survive inline while their page-bottom bodies are dropped document-wide by OCR. Bodies confirmed missing via text diff, not restored within budget: footnote 8 (physical p.91: 'Security challenges in AI agent deployment: Insights from a large scale public competition. https://arxiv.org/abs/2507.20526'); footnotes 17-19 (physical pp.155-158: Nozick 'Newcomb's problem and two principles of choice', Weirich 'Causal decision theory' Stanford Encyclopedia win2024 entry, Yudkowsky & SoH 'Functional decision theory' arXiv:1710.05060); footnotes 29-37 benchmark citations (physical pp.252-254: SWE-bench arXiv:2410.03859, SWE-Bench Pro arXiv:2509.16941, SWE-bench Jimenez et al. arXiv:2310.06770, Terminal-Bench arXiv:2601.11868, ProgramBench arXiv:2605.03546, Chu/Agarwal et al., cursor.com/cursorbench, Opus 4.8 reproduction note). Each restoration needs its own marker-page render verification before becoming a patch.",
+    "Numerous unnumbered '##' headings match figure-internal chart titles or printed prompt-box/banner text (machine-flagged, not individually render-verified against figures): '## Benchmarks of notable capability' (pp.~20, 24), '## Results' (x3), '## Rationale' (x2), '## LLM training speedup by model', '## Multi-turn conversation evaluations', '## CyberGym vulnerability discovery', '## Overall, we find:'-style bold lead lines elsewhere, '## Emotions most correlated with self-rated sentiment', '## Character drift', '## What models most and least endorse...' (fixed), '## SWE-bench Pro: test-time compute scaling', '## ArxivMath accuracy', '## Humanity's Last Exam (HLE)', '## DeepSearchQA: test-time compute scaling', '## Grading methodology', '## Multi-agent BrowseComp: accuracy vs latency/tokens/speedup', '## Multi-Agent ProgramBench Evals: Score vs Tokens' (fixed), '## GDP.pdf (internal)', '## HealthBench Professional', '## Real-World Finance v1/v2', '## Evaluations in life sciences capabilities'. Each needs a figure-page render check to separate genuine printed sub-headings from chart banners before demotion.",
+    "Pages 39-41: multi-turn transcript screenshots in figures contain prompt-box text absent from the OCR text; this is figure-internal content embedded via the figure images and needs no repair.",
+    "Physical pp.40-41 figure-internal chat transcript text ('Claude reports the early window as healthy', 'Assistant, turn 146/159/425/426/482' fragments) exists only inside figure screenshots; not restorable by text cleanup."
+  ]
+}

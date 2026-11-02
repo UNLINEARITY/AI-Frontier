@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "mistral:voxtral-tts",
+  "source_sha256": "e062e1d3c79833d13bbbabf0fc7e266e811a543a7b17b811f32a11255269a8cf",
+  "ocr_sha256": "51e4a0611f877081d9942fdd62ee460222565addf26747f3ce774f72b9bad73d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "coverage": "complete",
+    "notes": "All 16 PDF pages word-compared with the OCR markdown; balanced structure, 5 figure image embeds present. Only drops found were two footnote bodies whose superscript markers survive inline (Mistral Small Creative on p.7; ElevenLabs v3 emotion tags on p.9); both URLs verified on 300 dpi renders. Chart data labels on p.11 (Figure 4) and architecture-diagram tokens on p.3 are figure-internal and correctly absent from the markdown; Table 7 and Table 8 values match print. The arXiv side stamp on p.1 and hyphenation splits (intelligi-bility, Au-diolm) are page furniture/rendering artifacts, not defects."
+  },
+  "patches": [
+    {
+      "before": "led to more robotic speech.",
+      "after": "led to more robotic speech.\n\n1 https://docs.mistral.ai/models/mistral-small-creative-25-12",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 footnote line prints \"1https://docs.mistral.ai/models/mistral-small-creative-25-12\" in monospace (visually verified at 300 dpi). The OCR kept the inline marker in \"Mistral Small Creative $^{1}$\" but dropped the footnote body; restores it after the carrying paragraph, following the numbered-footnote format used by prior cleanups (e.g. cohere:north-small-translate)."
+    },
+    {
+      "before": "which embodies the requested emotion.",
+      "after": "which embodies the requested emotion.\n\n2 https://elevenlabs.io/blog/eleven-v3-audio-tags-expressing-emotional-context-in-speech",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 footnote prints \"2https://elevenlabs.io/blog/eleven-v3-audio-tags-expressing-emotional-context-in-speech\" wrapped over two lines with no hyphen (visually verified at 300 dpi). The OCR kept \"enclosed in brackets $^{2}$\" but dropped the footnote body."
+    }
+  ],
+  "unresolved": []
+}

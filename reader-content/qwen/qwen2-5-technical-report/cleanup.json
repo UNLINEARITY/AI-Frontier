@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen2-5-technical-report",
+  "source_sha256": "73b3292bead3ac8896679d3ac8be87439756faf356566cbda3ccc8a3dc7d79d3",
+  "ocr_sha256": "f314668b4f5456f7a21c595aeff4859f79f3b478bf512ebe3729eda93b3574a8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "All OCR lines compared against extracted text of all 26 physical PDF pages with a word-level coverage diff plus render verification on physical pages 2, 4, 7, 11 and 17 (footnotes and banner crop re-read at 300 dpi). The two page footnotes were dropped by OCR while their in-text markers survived; both restored next to the carrying paragraph. The PDF itself prints 'RoPEfrom' and 'deem flawless' (page 4/6 spacing and grammar), so those OCR readings match the source and were kept. Reference URLs, author lists and evaluation tables checked against pages 18-26; no dropped reference entries found."
+  },
+  "patches": [
+    {
+      "before": "which performs competitively against GPT-4o-mini and GPT-4o respectively.\n\nIn this technical report",
+      "after": "which performs competitively against GPT-4o-mini and GPT-4o respectively.\n\n$^{1}$ Qwen2.5-Turbo is identified as qwen-turbo-2024-11-01 and Qwen2.5-Plus is identified as qwen-plus-2024-xx-xx (to be released) in the API.\n\nIn this technical report",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints the page footnote '1 Qwen2.5-Turbo is identified as qwen-turbo-2024-11-01 and Qwen2.5-Plus is identified as qwen-plus-2024-xx-xx (to be released) in the API.' (verified visually at 120 dpi and against the PDF text layer); the OCR keeps the in-text marker '$^{1}$' on Qwen2.5-Plus but dropped the whole footnote body. Restored after the carrying sentence following the established footnote-restoration format."
+    },
+    {
+      "before": "and Arena-Hard (Li et al., 2024).\n\nQwen2.5-72B-Instruct & Qwen2.5-Plus",
+      "after": "and Arena-Hard (Li et al., 2024).\n\n$^{2}$ For simplicity, we report the results of the subset strict-prompt.\n\nQwen2.5-72B-Instruct & Qwen2.5-Plus",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 prints the italic footnote '2 For simplicity, we report the results of the subset strict-prompt.' (verified visually at 300 dpi crop of the page bottom); the OCR keeps the marker '$^{2}$' after 'IFEval (Zhou et al., 2023)' but dropped the footnote body. Restored after the carrying paragraph."
+    },
+    {
+      "before": "open-weight instruction-tuned models: Llama3.1-70B-Instruct",
+      "after": "open-weight instrution-tuned models: Llama3.1-70B-Instruct",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 (300 dpi crop) prints 'leading open-weight instrution-tuned models' - the source's own spelling of 'instrution' (sic). The OCR silently corrected it to 'instruction'; restored the printed spelling."
+    },
+    {
+      "before": "## Testing Qwen2.5-Turbo via \"Passkey Retrieval\"\n\nRetrieve Hidden Number from Irrelevant Sentences across Context Lengths and Document Depth\n\n![[images/64f8f1e4bf79ddd9b2ce6d47962b529a289a8973a2afcf67e4eeebb60feb240f.jpg]]",
+      "after": "![[images/64f8f1e4bf79ddd9b2ce6d47962b529a289a8973a2afcf67e4eeebb60feb240f.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 shows 'Testing Qwen2.5-Turbo via \"Passkey Retrieval\"' and 'Retrieve Hidden Number from Irrelevant Sentences across Context Lengths and Document Depth' are the title and subtitle banner printed inside Figure 2 (above the passkey heatmap), with the real caption 'Figure 2: Performance of Qwen2.5-Turbo on Passkey Retrieval Task with 1M Token Lengths.' underneath. OCR promoted the in-figure banner to a '##' heading; removed both banner lines, keeping the figure embed and caption."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-axis-labels-p1-p18",
+      "pdf_pages": [
+        1,
+        18
+      ],
+      "evidence": "Scattered axis/tick fragments (e.g. '18T', '1x'-'9x' scale labels) from Figures 1 and others interleave with OCR prose order; confirmed by the PDF text layer to be figure-internal labels, left unchanged."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "xai:grok-4-20-system-card",
+  "source_sha256": "ea72c27a6b04949d07c828b1dc5971688a79a780e5727eeca1985434d3262760",
+  "ocr_sha256": "4eaccd6bfb0c623a75046be96f47e3cb6ff32a87aba43ee6cb976a6842f11275",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverage": "complete",
+    "notes": "Clean apart from one structural heading. All 8 physical PDF pages were compared line-by-line against the OCR (normalized word-presence diff found no dropped content, including all reference entries and URLs); physical pages 1, 3, 4 and 5 were rendered (120 dpi) plus a 300 dpi crop to verify repairs and every table value. Tables 1-4 in the OCR match the rendered values exactly, including em-dash empty cells. The PDF prints GROK/GROK IMAGINE/GROK 4.2 SA in small capitals (verified on the page-1 render), so the OCR's uppercase transcription is faithful and was not patched; \"CloningScenarios\" is printed without a space in the source (verified at 300 dpi, three occurrences) and was kept; the sentence \"We report results for GROK 4.2 SA on the MASK dataset in Table 4.\" reproduces the source's own cross-reference wording even though the MASK results appear in Table 2, so it was kept. No embedded figures exist in the PDF."
+  },
+  "patches": [
+    {
+      "before": "# April 7, 2026\n\n## 1 Introduction",
+      "after": "April 7, 2026\n\n## 1 Introduction",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 title block prints three centered lines: \"Grok 4.20 System Card\", \"xAI\", \"April 7, 2026\"; OCR kept the first two but promoted the date line to a duplicate H1 section heading. Demoted to plain text; the numbered section headings remain the only headings."
+    }
+  ],
+  "unresolved": []
+}

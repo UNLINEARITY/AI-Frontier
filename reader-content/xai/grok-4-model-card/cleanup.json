@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "xai:grok-4-model-card",
+  "source_sha256": "54068c0d9570d94dfc63c08247707b8c48045a79b5bbe865af709af95ee14415",
+  "ocr_sha256": "7a8509196f7552dcbe6e6d9d348a3a956ed781f8425b5ea3a586a40219f31f2a",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverage": "complete",
+    "notes": "Token-level alignment of all 8 extracted PDF pages against the OCR markdown found no dropped runs (all gaps < 8 tokens). Code-fence markers are balanced; heading tree matches the printed sections 1-3 plus References; Table 3 is a complete HTML table with rowspan structure. No Markdown escapes, spaced digits or fence damage; the document embeds no figures."
+  },
+  "patches": [],
+  "unresolved": []
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-2-5-flash-and-gemini-2-5-flash-image-model-card",
+  "source_sha256": "f3221d9458b2fed961c4eb8bef0b33a8164550a7e87b3805278209d12e9f34af",
+  "ocr_sha256": "70c89ca7b1266ac7c73ed65f6d6b15154804b6dca59bb87fa0f4e9aa82d7b1f0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "coverage": "complete",
+    "notes": "Word-level diff of the PDF text layer against the OCR markdown for all 11 physical pages plus a whole-document digit-token inventory (only footnotes 2-3 text and page-furniture tokens remain outside the OCR; OCR-side extras are superscript-marker tokenization). No code fences; no image embeds in the OCR markdown, so chart-label fragments in the PDF text layer (p.4 'non thinki ng', 'cla ude 3 7 son net', 'extende d thinking', p.5 '64k exten ded thinki ng', p.6 '1m pointwis e') are figure-internal vector chart text and not transcription defects. Footnote 1 is present; footnotes 2 (p.6) and 3 (p.10) were dropped and are restored. The p.4 benchmark table header stores the print's mid-word column wraps as spaces."
+  },
+  "patches": [
+    {
+      "before": "human evaluations were conducted via GenAI-Bench and LMArena $^{2}$ , including leaderboards reporting provider results on these benchmarks:",
+      "after": "human evaluations were conducted via GenAI-Bench and LMArena $^{2}$ , including leaderboards reporting provider results on these benchmarks:\n\n2 While the results reported above from LMArena are not exhaustive of all evaluated models, Gemini 2.5 Flash Image ranked #1 for Text-to-Image and Image Editing as of August 25, 2025.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 bottom (180 dpi) prints footnote 2 'While the results reported above from LMArena are not exhaustive of all evaluated models, Gemini 2.5 Flash Image ranked #1 for Text-to-Image and Image Editing as of August 25, 2025.'; OCR kept the $^{2}$ marker but dropped the footnote body."
+    },
+    {
+      "before": "Assurance Evaluations Results: We conduct baseline assurance evaluations",
+      "after": "3 The ordering of evaluations in this table has changed from previous iterations of the 2.5 Flash-Lite model card in order to list safety evaluations together and improve readability. The type of evaluations listed have remained the same.\n\nAssurance Evaluations Results: We conduct baseline assurance evaluations",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 (180 dpi) prints footnote 3 under the safety-results table: 'The ordering of evaluations in this table has changed from previous iterations of the 2.5 Flash-Lite model card in order to list safety evaluations together and improve readability. The type of evaluations listed have remained the same.'; OCR kept the Evaluation^3 marker in the table header but dropped the footnote body."
+    },
+    {
+      "before": "Claude 3.7 Son net",
+      "after": "Claude 3.7 Sonnet",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 benchmark-table header (300 dpi) stacks the cell as 'Cla/ude/3.7/Son/net' - mid-word column wraps without spaces or hyphens; the cell text is 'Claude 3.7 Sonnet' (body text on the same page prints 'Claude 3.7 Sonnet'). OCR stored the wrap as a space inside the name."
+    },
+    {
+      "before": "DeepSee k R1",
+      "after": "DeepSeek R1",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 benchmark-table header (300 dpi) stacks the cell as 'Dee(pSee)/k/R1' - mid-word column wraps; the cell text is 'DeepSeek R1'. OCR stored the wrap as a space inside the name."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "flattened-benchmark-table-columns",
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "The two-level benchmark table (header strip table plus body table) is flattened into two OCR tables whose column spans do not align (body rows carry one more data column than the header strip); fixing the structure needs a cell-by-cell rebuild against the printed table."
+    }
+  ]
+}

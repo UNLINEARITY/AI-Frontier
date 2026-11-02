@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen2-5-vl-technical-report",
+  "source_sha256": "399a28f6ed79f4ece29cca93993fceb56fc304b1d779e49392aec05aff45aba5",
+  "ocr_sha256": "79e295e518f469096e4acd56463de8a7ebe97273444583dc604a3bb7f6dcfcd8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "Every extracted PDF page line was compared against the OCR markdown with normalization and fuzzy matching (LaTeX-equivalent math normalized); code-fence balance, all markdown headings and the HTML tables (values spot-checked against rendered page 15) were checked. Rendered physical page 15 and a 300 dpi crop of the page-17 reference were visually inspected. The single footnote body ('Alphabetical order.') was dropped while its marker survived on 'Contributors', and one reference author name gained a letter ('Shutting' for printed 'Shuting'). Other candidates were figure-internal chart/table labels shown by embedded figures."
+  },
+  "patches": [
+    {
+      "before": "Yuqiong Liu, Zhifang Guo\n\n## References",
+      "after": "Yuqiong Liu, Zhifang Guo\n\n$^{1}$ Alphabetical order.\n\n## References",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 prints the footnote body '1Alphabetical order.' below the 'Contributors1: ...' paragraph; the OCR kept the $^{1}$ marker after 'Contributors' and dropped the body."
+    },
+    {
+      "before": "Shutting Pan",
+      "after": "Shuting Pan",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 reference (DeepSeek-V3 technical report) prints 'Shunfeng Zhou, Shuting Pan, T. Wang, ...' (verified at 300 dpi); OCR inserted an extra 't' producing 'Shutting Pan'."
+    }
+  ],
+  "unresolved": []
+}

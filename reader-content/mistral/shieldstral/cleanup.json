@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "mistral:shieldstral",
+  "source_sha256": "f0c148495ac18ede73a4db2a884f4ce8a9ff1221efdc1902d2b86e0b8a68c2d5",
+  "ocr_sha256": "a152d47ef804613ccc5c9bcfa297d2d493f0ab0495f1c6592e61d393ba4b152d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "coverage": "complete",
+    "notes": "Full diff of the OCR against extracted text from all 24 physical PDF pages, with a numeric multiset check per page (every decimal printed on a page is present in the OCR; apparent whole-document losses were duplicates across continuation pages). Fences balanced; Tables 1-12 present, Table 12 complete with 91 rows x 11 cells; Appendix E prompt blocks are intact code blocks. Figures 1-4 (prompt-box panels) are embedded as images with captions, so their internal text is not transcribed but visible. Physical p.21 (Table 12 header, 300 dpi) and p.22 (footnotes, 300 dpi) were rendered and visually inspected to confirm the dagger and pilcrow repairs. The PDF prints a star glyph before 'Only 1 evaluation sample' which the OCR renders as a plain asterisk; left unchanged as a glyph-level nuance."
+  },
+  "patches": [
+    {
+      "before": "Qwen3Guard-8B $^{+}$",
+      "after": "Qwen3Guard-8B $^{\\ddagger}$",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 Table 12 header (300 dpi) prints 'Qwen3Guard-8B' with a double-dagger superscript, matching the footnote '$^\\ddagger$ Averaged over strict...'; the other two header tables (Table 8, p.19; Table 12 continuation, p.21) print the same dagger, and the OCR itself uses $^{\\ddagger}$ there. No '+' footnote exists in the document."
+    },
+    {
+      "before": "\nreasoning\\_effort=high.",
+      "after": "\n¶ reasoning_effort=high.",
+      "count": 2,
+      "pdf_pages": [
+        19,
+        22
+      ],
+      "evidence": "Rendered physical p.22 footnotes (300 dpi) read '¶ reasoning_effort=high.' in monospace with a pilcrow marker and a real underscore; physical p.19 prints the same Table 8 footnote. The OCR dropped the pilcrow and escaped the underscore."
+    },
+    {
+      "before": "reasoning\\_effort",
+      "after": "reasoning_effort",
+      "count": 6,
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "evidence": "The PDF text layer prints 'reasoning_effort=high' / 'reasoning_effort=none' with real underscores in the Figure 5 caption (physical p.11) and Figure 6-8 captions (physical p.12); the backslash-underscore is a Markdown escape added by OCR. Count covers the four '=high' and two '=none' caption occurrences after the two standalone footnote lines are repaired by the preceding patch."
+    }
+  ],
+  "unresolved": []
+}

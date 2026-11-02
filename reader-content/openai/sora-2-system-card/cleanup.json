@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "openai:sora-2-system-card",
+  "source_sha256": "1a74678aacf0499a3b4d2ae71da9bdbb1221a8211a9c3890fe87748a5ccdcd51",
+  "ocr_sha256": "e999efbfb64bc50dbf63ca3cfe49d1e2b30c606abe03a6372c33a8503fee97a2",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "All 7 physical pages' extracted text swept line-by-line against the OCR markdown (normalized): all prose matches, no code fences, heading structure matches the printed sections. Three footnote bodies that print under the footnote rule (physical p.4 and p.6) are missing from the OCR markdown while the inline markers $^{1}$/$^{2}$/$^{3}$ survive; each body was transcribed and visually confirmed on 150-dpi renders of the page bottoms. The Acknowledgements contributor list is present. The TOC dot leaders and the escaped metric names (not\\_unsafe, not\\_overrefuse) render as printed and are not defects."
+  },
+  "patches": [
+    {
+      "before": "We also take steps to filter out violating content, as well as content that is inappropriate for younger audiences, from Sora's social feed.",
+      "after": "We also take steps to filter out violating content, as well as content that is inappropriate for younger audiences, from Sora's social feed.\n\n$^{1}$ OpenAI Usage Policies: https://openai.com/policies/usage-policies/",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "The OCR markdown keeps the inline marker \"Usage Policies $^{1}$\" but dropped the footnote body. Physical p.4 prints \"1 OpenAI Usage Policies: https://openai.com/policies/usage-policies/\" below the footnote rule, directly after the anchored sentence (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "For full details on our specific CSAM safety stack can be found on our Sora System Card $^{2}$ .",
+      "after": "For full details on our specific CSAM safety stack can be found on our Sora System Card $^{2}$ .\n\n$^{2}$ OpenAI Sora System Card: https://openai.com/index/sora-system-card/",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "The OCR markdown keeps the inline marker \"Sora System Card $^{2}$\" but dropped the footnote body. Physical p.6 prints \"2 OpenAI Sora System Card: https://openai.com/index/sora-system-card/\" under the footnote rule (visually verified on a 150-dpi render)."
+    },
+    {
+      "before": "which you can read more about in our blog $^{3}$ .",
+      "after": "which you can read more about in our blog $^{3}$ .\n\n$^{3}$ Shape how ChatGPT works for your family: http://chatgpt.com/parent-resources",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "The OCR markdown keeps the inline marker \"blog $^{3}$\" but dropped the footnote body. Physical p.6 prints \"3 Shape how ChatGPT works for your family: http://chatgpt.com/parent-resources\" under the footnote rule (visually verified on a 150-dpi render)."
+    }
+  ],
+  "unresolved": []
+}

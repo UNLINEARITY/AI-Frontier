@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "id": "zai:glm-4-5v-and-glm-4-1v-thinking-towards-versatile-multimodal-reasoning-with-scalable-reinforcement-learning",
+  "source_sha256": "afc06e894942ccbaba446c4f72e7f1d12794149d343c79dc67e2b78281a80732",
+  "ocr_sha256": "964830a4d716ea58c7068db2316db5ee7c5010c9dee8146300a1d302c70673a1",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      12,
+      14,
+      15,
+      16,
+      20,
+      22,
+      23,
+      24,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "coverage": "partial",
+    "notes": "All 659 OCR lines were read and compared against the extracted text layer of the 42-page PDF; pages 16, 20, 22, 23, 24 (reference/footnote crops at 150-300 dpi) and the tops of appendix pages 29, 30, 31, 32, 33, 34, 36, 38, 40 (150 dpi) were additionally rendered and visually checked. Body pages 3-11 and 13, 17-19, 21, 25-26 were only spot-checked, and Tables 1-3 were triaged but not verified cell-by-cell, so coverage is partial. The bibliography's \"Qwen2. 5-vl\", \"Seed1. 5-vl\" and the broken URL \"https://arxiv. org/abs/2403, 3163\" in reference [43] were verified at 300 dpi as typos the PDF itself prints (reference [43] also shows \"arxiv. org\" with a space) and were left unchanged, as were the PDF's own \"OminiSpatial\" and \"WebVoyager Some\" strings."
+  },
+  "patches": [
+    {
+      "before": "![[images/01b2968e1525024ebefa6f53b37151ba32e4bf7df7a88f5a6e41126c88027114.jpg]]",
+      "after": "## A.3 Video Description (in Chinese)\n\n![[images/01b2968e1525024ebefa6f53b37151ba32e4bf7df7a88f5a6e41126c88027114.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered PDF physical p.29 prints the numbered appendix heading \"A.3 Video Description (in Chinese)\" above the case screenshot, and the PDF text layer lists it as the first line of the page; the OCR jumped from the previous section straight to this figure without the heading. Insertion restores the printed heading; the image embed itself is unchanged."
+    },
+    {
+      "before": "![[images/e0e0f5c0e68967c88c1647ee366929ca227058a280e4565007c8ab8213dd72ef.jpg]]",
+      "after": "## A.4 Video QA\n\n![[images/e0e0f5c0e68967c88c1647ee366929ca227058a280e4565007c8ab8213dd72ef.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered PDF physical p.30 prints the numbered appendix heading \"A.4 Video QA\" above the case screenshot, and the PDF text layer lists it as the first line of the page; the OCR jumped from the previous section straight to this figure without the heading. Insertion restores the printed heading; the image embed itself is unchanged."
+    },
+    {
+      "before": "![[images/8eeba0aa3cfd21085f8d4f58d3f1973ed781d14f70b04536bac996d36d8a2fc1.jpg]]",
+      "after": "## A.5 GUI Agent\n\n![[images/8eeba0aa3cfd21085f8d4f58d3f1973ed781d14f70b04536bac996d36d8a2fc1.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Rendered PDF physical p.31 prints the numbered appendix heading \"A.5 GUI Agent\" above the case screenshot, and the PDF text layer lists it as the first line of the page; the OCR jumped from the previous section straight to this figure without the heading. Insertion restores the printed heading; the image embed itself is unchanged."
+    },
+    {
+      "before": "![[images/6fdc463a89a5359fe64460412f5b17fa512488e9b9f09c633bf03f333446eb3f.jpg]]",
+      "after": "## A.6 Chart QA\n\n![[images/6fdc463a89a5359fe64460412f5b17fa512488e9b9f09c633bf03f333446eb3f.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered PDF physical p.32 prints the numbered appendix heading \"A.6 Chart QA\" above the case screenshot, and the PDF text layer lists it as the first line of the page; the OCR jumped from the previous section straight to this figure without the heading. Insertion restores the printed heading; the image embed itself is unchanged."
+    },
+    {
+      "before": "![[images/0525c55a914c3044ce1b14485320b413e11dfdac92a1f4bc6548e3f1ef82b863.jpg]]",
+      "after": "## A.7 Geolocation\n\n![[images/0525c55a914c3044ce1b14485320b413e11dfdac92a1f4bc6548e3f1ef82b863.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered PDF physical p.33 prints the numbered appendix heading \"A.7 Geolocation\" above the case screenshot, and the PDF text layer lists it as the first line of the page; the OCR jumped from the previous section straight to this figure without the heading. Insertion restores the printed heading; the image embed itself is unchanged."
+    },
+    {
+      "before": "![[images/76765a9a95aa31fe7f1265a3af7d478c8915c485586edcd2bfffbd16be7abf08.jpg]]",
+      "after": "## A.8 OCR + Coding\n\n![[images/76765a9a95aa31fe7f1265a3af7d478c8915c485586edcd2bfffbd16be7abf08.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered PDF physical p.34 prints the numbered appendix heading \"A.8 OCR + Coding\" above the case screenshot, and the PDF text layer lists it as the first line of the page; the OCR jumped from the previous section straight to this figure without the heading. Insertion restores the printed heading; the image embed itself is unchanged."
+    },
+    {
+      "before": "![[images/7ae590851972227b76b07f84a0ee9450f2950777f011f0186d7bbae2f479f7a4.jpg]]",
+      "after": "## A.10 Math Problem Solving\n\n![[images/7ae590851972227b76b07f84a0ee9450f2950777f011f0186d7bbae2f479f7a4.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        36
+      ],
+      "evidence": "Rendered PDF physical p.36 prints the numbered appendix heading \"A.10 Math Problem Solving\" above the case screenshot, and the PDF text layer lists it as the first line of the page; the OCR jumped from the previous section straight to this figure without the heading. Insertion restores the printed heading; the image embed itself is unchanged."
+    },
+    {
+      "before": "![[images/55273fbbc0af30c3c14d49aa9bd55db39fb5812775f21a1717d0b97a333c386d.jpg]]",
+      "after": "## A.12 Spatial Reasoning\n\n![[images/55273fbbc0af30c3c14d49aa9bd55db39fb5812775f21a1717d0b97a333c386d.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered PDF physical p.38 prints the numbered appendix heading \"A.12 Spatial Reasoning\" above the case screenshot, and the PDF text layer lists it as the first line of the page; the OCR jumped from the previous section straight to this figure without the heading. Insertion restores the printed heading; the image embed itself is unchanged."
+    },
+    {
+      "before": "![[images/f2f7733a41e514701108ccb3fe0fdeeb3926171cf79e1bc178f1f3a0d3e57789.jpg]]",
+      "after": "## A.14 Tool Using\n\n![[images/f2f7733a41e514701108ccb3fe0fdeeb3926171cf79e1bc178f1f3a0d3e57789.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Rendered PDF physical p.40 prints the numbered appendix heading \"A.14 Tool Using\" above the case screenshot, and the PDF text layer lists it as the first line of the page; the OCR jumped from the previous section straight to this figure without the heading. Insertion restores the printed heading; the image embed itself is unchanged."
+    },
+    {
+      "before": "ensuring that final metrics reflect only valid outputs.\n",
+      "after": "ensuring that final metrics reflect only valid outputs.\n\n$^{1}$ https://github.com/vllm-project/vllm\n$^{2}$ https://github.com/sgl-project/sglang\n",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered PDF physical p.16 bottom prints two footnotes under a rule: superscript 1 \"https://github.com/vllm-project/vllm\" and superscript 2 \"https://github.com/sgl-project/sglang\" (visually verified at 150 dpi). The OCR kept the superscript markers on vLLM/SGLang in the Setting paragraph but dropped the footnote bodies; formatting follows the document's existing $^{n}$ footnote style."
+    },
+    {
+      "before": "B. Lakshminarayananan",
+      "after": "B. Lakshminarayanan",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Reference [47]: rendered physical p.24 (300 dpi crop) prints \"R. Strudel, A. Elqursh, B. Lakshminarayanan, C. Deck, ...\"; the OCR tripled the final \"an\"."
+    },
+    {
+      "before": "C. A. Choquette-Chooy",
+      "after": "C. A. Choquette-Choo",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Reference [47]: rendered physical p.24 (300 dpi crop) prints \". Choquette-Choo, Y. Li, T. Lu, A. Ittycheriah, ...\"; the OCR misread the final \"o\" as \"y\". The remaining full-width-comma run after this token is recorded as unresolved."
+    },
+    {
+      "before": "multimodal models , 2023 .",
+      "after": "multimodal models, 2023.",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Reference [47] closing line: rendered physical p.24 (300 dpi crop) prints \"Gemini: A family of highly capable multimodal models, 2023.\" without spaces around the punctuation; the OCR inserted a space before the comma and before the final period."
+    },
+    {
+      "before": "G. Su., M. Polacek, R. L. Kaufman, S. Tokumine, H. Hu., E. Buchatskaya",
+      "after": "G. Su, M. Polacek, R. L. Kaufman, S. Tokumine, H. Hu, E. Buchatskaya",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Reference [47]: rendered physical p.23 (300 dpi crop) prints \"X. Si, J. Greer, G. Su, M. Polacek, R. L. Kaufman, S. Tokumine, H. Hu, E. Buchatskaya, ...\" with spaced names and no periods after \"Su\"/\"Hu\"; the OCR added them at the boundary of its glued author run. The rest of the glued run is recorded as unresolved."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "appendix-transcript-droppage",
+      "pdf_pages": [
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        36,
+        38,
+        40
+      ],
+      "evidence": "The PDF prints each appendix case's Prompt/Model Response transcript as real text below its screenshot (confirmed in the PDF text layer and in the rendered tops of pages 29-30), but the OCR kept only the screenshots and figure captions for sections A.1 (response body), A.2-A.8 (Figures 8-14), A.10 (Figure 16), A.12 (Figure 18) and A.14 (Figure 20). Transcribing these long Chinese/English transcripts needs a dedicated pass; the dropped section headings are already restored by patches above."
+    },
+    {
+      "id": "reference-47-glued-author-runs",
+      "pdf_pages": [
+        23,
+        24
+      ],
+      "evidence": "Two long author-list runs in reference [47] lost inter-name spaces and use full-width commas: from \"E. Buchatskaya，Y.Miao,M.Elhawaty,...\" through \"...A.Singhal\" (p.23) and from \"...Choquette-Chooy，Y．Li，T．Lu，...\" through \"...J.Lee，\" (p.24), roughly 330 names total. The printed list is properly spaced (verified at 300 dpi); a full re-transcription from the page render is needed. Boundary tokens and two misreads are already fixed by patches."
+    },
+    {
+      "id": "flattened-table-boundaries",
+      "pdf_pages": [
+        12,
+        14,
+        15,
+        42
+      ],
+      "evidence": "Tables 1-3 are exported as HTML tables whose cells concatenate printed sub-cells (e.g. A.9's \"Prompt: 解题Model Response:\" with a stray \"&lt;\", Table 3's \"WebVoyageSom\" flattening the printed superscript marker, \"GeoBench1\"/\"OSWorld2\" gluing footnote markers). The text-layer column order interleaves, so cell-level values require a visual page-by-page pass before changing recorded numbers."
+    }
+  ]
+}

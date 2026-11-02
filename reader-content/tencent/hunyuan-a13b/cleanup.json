@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-a13b",
+  "source_sha256": "fb65faa6ead1de01ee59c9cdc1545dc04c3057f0ffcb32fdc10844b0fc02fac0",
+  "ocr_sha256": "a0807a21a0e41257722eb5c4d9a60848954d14a320de304af29eacb61508352c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "Token-level alignment of all 14 extracted PDF pages against the OCR markdown after stripping table markup; the only unmatched body run was Table 2's neighbourhood, resolved by the relocation below. Tables 1-5 are complete HTML tables whose every printed value was cross-checked (Table 2 against a 200 dpi render). Remaining unmatched text on physical p.3 is Figure 1's internal pipeline-box labels; Figure 1 is embedded with its printed caption. The heading typo 'Model Architechture' (physical p.2) and '/no_think' with underscore (physical p.7, 300 dpi read) match the printed PDF and are kept. The OCR had silently corrected the printed misspellings 'acheieves' and 'exhibitting' (physical p.7, 300 dpi read); patches restore the printed forms. Table cells carry no bold markup, consistent with every table in this OCR."
+  },
+  "patches": [
+    {
+      "before": "<table><tr><td>Model</td><td>Hunyuan-Large-1116</td><td>Qwen2.5-72B</td><td>Qwen3-A22B</td><td>Hunyuan-A13B</td></tr><tr><td>Architecture</td><td>MoE</td><td>Dense</td><td>MoE</td><td>MoE</td></tr><tr><td># Activated Params</td><td>52B</td><td>72B</td><td>22B</td><td>13B</td></tr><tr><td># Total Params</td><td>389B</td><td>72B</td><td>235B</td><td>80B</td></tr><tr><td>Context Length</td><td>256K</td><td>128K</td><td>128K</td><td>256K</td></tr><tr><td colspan=\"5\">General Tasks</td></tr><tr><td>MMLU</td><td>88.40</td><td>86.10</td><td>87.81</td><td>88.17</td></tr><tr><td>MMLU-Pro</td><td>60.20</td><td>58.10</td><td>68.18</td><td>67.23</td></tr><tr><td>MMLU-Redux</td><td>87.47</td><td>83.90</td><td>87.40</td><td>87.67</td></tr><tr><td>BBH</td><td>86.30</td><td>85.80</td><td>88.87</td><td>87.56</td></tr><tr><td>SuperGPQA</td><td>38.90</td><td>36.20</td><td>44.06</td><td>41.32</td></tr><tr><td colspan=\"5\">Coding Tasks</td></tr><tr><td>EvalPlus</td><td>75.69</td><td>65.93</td><td>77.60</td><td>78.64</td></tr><tr><td>MultiPL-E</td><td>59.13</td><td>60.50</td><td>65.94</td><td>69.33</td></tr><tr><td>MBPP</td><td>72.60</td><td>76.00</td><td>81.40</td><td>83.86</td></tr><tr><td>CRUX-I</td><td>57.00</td><td>57.63</td><td>-</td><td>70.13</td></tr><tr><td>CRUX-O</td><td>60.63</td><td>66.20</td><td>79.00</td><td>77.00</td></tr><tr><td colspan=\"5\">Math &amp; STEM Tasks</td></tr><tr><td>MATH</td><td>69.80</td><td>62.12</td><td>71.84</td><td>72.35</td></tr><tr><td>CMATH</td><td>91.30</td><td>84.80</td><td>-</td><td>91.17</td></tr><tr><td>GSM8k</td><td>92.80</td><td>91.50</td><td>94.39</td><td>91.83</td></tr><tr><td>GPQA</td><td>25.18</td><td>45.90</td><td>47.47</td><td>49.12</td></tr></table>\n\nTable 2: Performance of Hunyuan-A13B and other representative MoE and Dense base models. The highest scores are shown in bold.\n\n",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Physical p.8 (200 dpi render read): Table 2 with caption 'Table 2: Performance of Hunyuan-A13B and other representative MoE and Dense base models. The highest scores are shown in bold.' prints at the top of the page as a float interrupting the first paragraph of section 4.2.1, while its reference and discussion ((1)-(3)) close section 4.1.2 on physical p.7. The OCR left the table under the 4.2.1 heading; it is removed here and reinserted in printed order after section 4.1.2."
+    },
+    {
+      "before": "exhibiting comparable capabilities across multiple dimensions.\n\n## 4.2 Evaluations on Post-Trained Model",
+      "after": "exhibiting comparable capabilities across multiple dimensions.\n\n<table><tr><td>Model</td><td>Hunyuan-Large-1116</td><td>Qwen2.5-72B</td><td>Qwen3-A22B</td><td>Hunyuan-A13B</td></tr><tr><td>Architecture</td><td>MoE</td><td>Dense</td><td>MoE</td><td>MoE</td></tr><tr><td># Activated Params</td><td>52B</td><td>72B</td><td>22B</td><td>13B</td></tr><tr><td># Total Params</td><td>389B</td><td>72B</td><td>235B</td><td>80B</td></tr><tr><td>Context Length</td><td>256K</td><td>128K</td><td>128K</td><td>256K</td></tr><tr><td colspan=\"5\">General Tasks</td></tr><tr><td>MMLU</td><td>88.40</td><td>86.10</td><td>87.81</td><td>88.17</td></tr><tr><td>MMLU-Pro</td><td>60.20</td><td>58.10</td><td>68.18</td><td>67.23</td></tr><tr><td>MMLU-Redux</td><td>87.47</td><td>83.90</td><td>87.40</td><td>87.67</td></tr><tr><td>BBH</td><td>86.30</td><td>85.80</td><td>88.87</td><td>87.56</td></tr><tr><td>SuperGPQA</td><td>38.90</td><td>36.20</td><td>44.06</td><td>41.32</td></tr><tr><td colspan=\"5\">Coding Tasks</td></tr><tr><td>EvalPlus</td><td>75.69</td><td>65.93</td><td>77.60</td><td>78.64</td></tr><tr><td>MultiPL-E</td><td>59.13</td><td>60.50</td><td>65.94</td><td>69.33</td></tr><tr><td>MBPP</td><td>72.60</td><td>76.00</td><td>81.40</td><td>83.86</td></tr><tr><td>CRUX-I</td><td>57.00</td><td>57.63</td><td>-</td><td>70.13</td></tr><tr><td>CRUX-O</td><td>60.63</td><td>66.20</td><td>79.00</td><td>77.00</td></tr><tr><td colspan=\"5\">Math &amp; STEM Tasks</td></tr><tr><td>MATH</td><td>69.80</td><td>62.12</td><td>71.84</td><td>72.35</td></tr><tr><td>CMATH</td><td>91.30</td><td>84.80</td><td>-</td><td>91.17</td></tr><tr><td>GSM8k</td><td>92.80</td><td>91.50</td><td>94.39</td><td>91.83</td></tr><tr><td>GPQA</td><td>25.18</td><td>45.90</td><td>47.47</td><td>49.12</td></tr></table>\n\nTable 2: Performance of Hunyuan-A13B and other representative MoE and Dense base models. The highest scores are shown in bold.\n\n## 4.2 Evaluations on Post-Trained Model",
+      "count": 1,
+      "pdf_pages": [
+        7,
+        8
+      ],
+      "evidence": "Physical p.7 ends section 4.1.2 with points (1)-(3) and physical p.8 prints Table 2 immediately afterwards (200 dpi render read); reinserting the exact table plus caption after point (3) restores the printed order, so the reader shows Table 2 inside section 4.1.2 before section 4.2 begins."
+    },
+    {
+      "before": "achieves higher scores",
+      "after": "acheieves higher scores",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 point (2) (300 dpi crop read): the PDF itself prints the misspelling 'Hunyuan-A13B acheieves higher scores'; the OCR silently corrected it to 'achieves'. The printed form is restored."
+    },
+    {
+      "before": "exhibiting comparable capabilities",
+      "after": "exhibitting comparable capabilities",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 point (3) (300 dpi crop read): the PDF itself prints 'exhibitting comparable capabilities across multiple dimensions'; the OCR silently corrected it to 'exhibiting'. The printed form is restored."
+    }
+  ],
+  "unresolved": []
+}

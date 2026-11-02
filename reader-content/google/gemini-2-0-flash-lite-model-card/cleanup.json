@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-2-0-flash-lite-model-card",
+  "source_sha256": "fafcad388912b4108943b9332399c34e55001e102cb67432a78e32d05db62757",
+  "ocr_sha256": "761e11a66fd1d2b099da26fea4bbb32bd3db416d82eeb2c4f42ca614969c0e74",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of all 7 physical pages against the OCR Markdown (HTML stripped, hyphenated line breaks un-joined). All benchmark percentages in the model-quality and safety tables match the PDF text layer exactly. Remaining PDF-only tokens are the printed page numbers 1-7 (correctly omitted) and the title-page publication line restored below; PDF-only 'livecodebe/nch' is a mid-word table-cell line wrap already rejoined correctly in the OCR. The OCR's single 'model&#x27;s' HTML entity inside a raw HTML table cell renders as an apostrophe and was left unchanged. Physical p.1 rendered at 120 dpi to confirm the restored line."
+  },
+  "patches": [
+    {
+      "before": "# Gemini 2.0 Flash-Lite Model Card\n\nModel Cards are intended",
+      "after": "# Gemini 2.0 Flash-Lite Model Card\n\nModel card published April 10, 2025\n\nModel Cards are intended",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 header band prints 'Model card published  April 10, 2025' next to the Google logo; the OCR dropped this title-page line entirely (the token diff shows 'published/april/10, 2025' only in the PDF). Inserted verbatim after the H1 title with the print's double space normalized to one."
+    }
+  ],
+  "unresolved": []
+}

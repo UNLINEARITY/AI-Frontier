@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "id": "cohere:command-a",
+  "source_sha256": "f02c55acc8341e45e04368acdccb888dc700240f1ab2bdf5d2ba8b4c77434c3e",
+  "ocr_sha256": "b9443f5dc330b71ffc24be9cbffb055863d085e15c6c0320eb9144a5f89ebd42",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      29,
+      30,
+      31,
+      33,
+      34,
+      36,
+      39,
+      41,
+      43,
+      45,
+      46,
+      47,
+      48,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of all 55 physical pages: full structural/fence scan (balanced), automated normalized 4-gram containment diff of every PDF page against the OCR markdown, then manual inspection of every low-hit page. Low ratios were explained by figure-internal chart text (Figures 1-3, 5-10, 12-16) and by HTML tables whose values match the PDF cell-for-cell (Tables 1, 2, 7, 8, 10, 18, 26, 27 spot-verified). Line-by-line review covered the author list, the appendix B.1-B.7 tail, the section 4.3-4.7 region and the reference entry/URL/DOI census (18/18 DOIs, no dropped entries). Body text and reference URLs were additionally verified on 300-dpi renders of physical pages 7, 41, 48, 50 and 53. Markdown escape defects (\\_ inside printed underscores) were confirmed against the PDF text layer and renders. Coverage is partial because most reference entries and mid-report prose were machine-scanned rather than read line-by-line."
+  },
+  "patches": [
+    {
+      "before": "Isha Satyakam,Alice Schoenauer Sebag,Priyanka Sen,Tholeh Sepehri,Preethi Seshadri,Ye Shen,Tom Sherborne,Sylvie Shang Shi,Sanal Shivaprasad,Vladyslav Shmyhlo,Amirudh Shrinivason,inna Shteinbuk,Amir Shukayev,Mathieu Simard,Ella Snyder,Ava Spataru,Victoria Spooner-Trisha Starostina,Florian Strub,Yixuan Su,Jimin Sun,Dwarak Talupuru,Eugene Tarassov,Elena Tommasone,Jennifer Tracey,Billy Trend,evren Tumer,Ahmet Üstün,Bharat Venkitesh,David Venuto,Pat Verga,Maxime Voisin,Alex Wang,Donglu Wang.Shijian WangEdmond Wen,Naomi White,Jesse Willman,Marysia WinkelsChen Xia,Jessica Xie,Minjie Xu,Bowen Yang,Tan Yi-Chern,Ivan Zhang,Zhenyu Zhao,and Zhoujie Zhao.",
+      "after": "Isha Satyakam, Alice Schoenauer Sebag, Priyanka Sen, Sholeh Sepehri, Preethi Seshadri, Ye Shen, Tom Sherborne, Sylvie Shang Shi, Sanal Shivaprasad, Vladyslav Shmyhlo, Anirudh Shrinivason, Inna Shteinbuk, Amir Shukayev, Mathieu Simard, Ella Snyder, Ava Spataru, Victoria Spooner, Trisha Starostina, Florian Strub, Yixuan Su, Jimin Sun, Dwarak Talupuru, Eugene Tarassov, Elena Tommasone, Jennifer Tracey, Billy Trend, Evren Tumer, Ahmet Üstün, Bharat Venkitesh, David Venuto, Pat Verga, Maxime Voisin, Alex Wang, Donglu Wang, Shijian Wang, Edmond Wen, Naomi White, Jesse Willman, Marysia Winkels, Chen Xia, Jessica Xie, Minjie Xu, Bowen Yang, Tan Yi-Chern, Ivan Zhang, Zhenyu Zhao, and Zhoujie Zhao.",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "Rendered physical p.50 author list (300 dpi) prints 'Isha Satyakam, Alice Schoenauer Sebag, ...' with comma-space separators and the names Sholeh Sepehri, Anirudh Shrinivason, Inna Shteinbuk, 'Victoria Spooner, Trisha Starostina' as two comma-separated authors, 'Evren Tumer', 'Donglu Wang, Shijian Wang, Edmond Wen' and 'Marysia Winkels, Chen Xia'. OCR dropped the separator spaces after commas through the tail, misread S->T (Tholeh), n->m (Amirudh), lost two capital letters, joined Spooner/Starostina with a hyphen, and merged 'Wang, Shijian Wang, Edmond' into 'Wang.Shijian WangEdmond' and 'Winkels, Chen Xia' into 'WinkelsChen Xia'."
+    },
+    {
+      "before": "<EOS\\_TOKEN>",
+      "after": "<EOS_TOKEN>",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (300 dpi crop) prints the monospace token <EOS_TOKEN>; the backslash is an OCR-added Markdown escape."
+    },
+    {
+      "before": "paper\\_files",
+      "after": "paper_files",
+      "count": 7,
+      "pdf_pages": [
+        39,
+        43,
+        45,
+        46,
+        47
+      ],
+      "evidence": "Seven printed proceedings URLs (Boubdir p.39, Kazemnejad/Lewis p.43, Mixeval/Pope p.45, Schick p.46, Vaswani p.47) print paper_files with a real underscore in the PDF text layer and on 300-dpi renders; OCR inserted a Markdown escape backslash."
+    },
+    {
+      "before": "tacl\\_a\\_00370",
+      "after": "tacl_a_00370",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered physical p.41 (300 dpi crop) prints doi: 10.1162/tacl_a_00370 with real underscores (Geva et al. reference)."
+    },
+    {
+      "before": "tacl\\_a\\_00474",
+      "after": "tacl_a_00474",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Physical p.41 prints doi: 10.1162/tacl_a_00474 with real underscores (Flores-101 / Goyal et al. reference); same defect class verified on the p.41 render."
+    },
+    {
+      "before": "8\\_berkeley\\_function\\_calling\\_leaderboard.html",
+      "after": "8_berkeley_function_calling_leaderboard.html",
+      "count": 1,
+      "pdf_pages": [
+        48
+      ],
+      "evidence": "Rendered physical p.48 (300 dpi crop) prints the BFCL blog URL .../blogs/8_berkeley_function_calling_leaderboard.html with real underscores; OCR escaped each one."
+    },
+    {
+      "before": "models/lla\n\nma3\\_3/MODEL\\_CARD.md,",
+      "after": "models/llama3\\_3/MODEL\\_CARD.md,",
+      "count": 1,
+      "pdf_pages": [
+        53
+      ],
+      "evidence": "Rendered physical p.53 shows the Llama 3.3 70B source URL printed as one continuous string .../models/llama3_3/MODEL_CARD.md, https://bigcode-bench.github.io/; OCR split the URL after 'models/lla' into a separate paragraph (page-break-style line join) and the following patch removes the escape backslashes this patch preserves."
+    },
+    {
+      "before": "3\\_3/MODEL\\_CARD.md",
+      "after": "3_3/MODEL_CARD.md",
+      "count": 3,
+      "pdf_pages": [
+        53
+      ],
+      "evidence": "Physical p.53 prints llama3_3/MODEL_CARD.md (three source-list entries on the appendix code-benchmarks page) with real underscores, verified on the 300-dpi render and the PDF text layer; OCR escaped both underscores in all three occurrences."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "reference-entries-machine-scanned",
+      "pdf_pages": [
+        39,
+        40,
+        42,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "evidence": "Reference entries on physical pages 39-49 were verified by census (18/18 doi strings, URL counts, arXiv-preprint counts, entry-paragraph integrity) and the automated 4-gram page diff rather than a line-by-line reading of every entry; a full read could still find small in-entry misreads."
+    },
+    {
+      "id": "figure-heavy-table-pages-not-cell-verified",
+      "pdf_pages": [
+        9,
+        11,
+        13,
+        14,
+        16,
+        20,
+        23,
+        24,
+        28,
+        29,
+        32,
+        35,
+        38,
+        42,
+        43,
+        44
+      ],
+      "evidence": "Remaining result tables were spot-checked (Tables 1, 2, 3, 4, 7, 8, 10, 18, 26, 27) rather than compared cell-by-cell; OCR HTML tables here flatten cell boundaries, so a cell-level audit is needed before any structural table repair."
+    }
+  ]
+}

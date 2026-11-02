@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "zai:glm-130b-an-open-bilingual-pre-trained-model",
+  "source_sha256": "82d5b9634b3d2601b3eb494dcc9e2189132f5d6e479233b91c7ce411dbdfcfa4",
+  "ocr_sha256": "1e1df85a2f454211126e7250c42dedad63c9d85dc1a635f96403b36aefa95485",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      24,
+      48,
+      50,
+      51
+    ],
+    "coverage": "partial",
+    "notes": "Triage review: all 56 physical pages machine-scanned (48 balanced code fences, none swallowing document structure; normalized 4-gram page-text containment, mean 0.95; spaced-digit and escape pattern scan). Low-containment pages 48, 50, 51 inspected line-by-line: the divergences are the ICLR running header (consistently absent, not body content) and the printed configuration-key table on p.48. Two defect classes confirmed on p.48 and p.24: OCR auto-corrected the print's own identifier misspelling 'contigious' to 'contiguous' in three config-table cells, and equation (3) RoPE base 10000 was transcribed with spaced digits. Both verified on 300-500 dpi renders. Remaining \\_ escapes render as the printed underscores (v_proj, word_embedding, pile_cc); no other droppage found."
+  },
+  "patches": [
+    {
+      "before": "<td>contiguous_checkpointing</td>",
+      "after": "<td>contigious_checkpointing</td>",
+      "count": 1,
+      "pdf_pages": [
+        48
+      ],
+      "evidence": "Rendered physical p.48 configuration table (500 dpi crop) prints the key 'contigious_checkpointing' with the source's own misspelling 'contigious' (confirmed by exact text layer); OCR auto-corrected it to 'contiguous'. Restored the printed spelling."
+    },
+    {
+      "before": "<td>zero_contiguous_gradients</td>",
+      "after": "<td>zero_contigious_gradients</td>",
+      "count": 2,
+      "pdf_pages": [
+        48
+      ],
+      "evidence": "Rendered physical p.48 prints 'zero_contigious_gradients' twice (True/False value variants of the configuration table, 500 dpi crop + exact text layer); OCR auto-corrected both cells to 'contiguous'. Restored the printed spelling."
+    },
+    {
+      "before": "\\theta_ {i} = 1 0 0 0 0 ^ {\\frac {- 2 (i - 1)}{d}}",
+      "after": "\\theta_ {i} = 10000 ^ {\\frac {- 2 (i - 1)}{d}}",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 equation (3) prints the RoPE base as the single number 10000; OCR spaced the digits ('1 0 0 0 0'). 300 dpi render verified."
+    }
+  ],
+  "unresolved": []
+}

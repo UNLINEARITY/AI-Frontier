@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "openai:openai-o3-and-o4-mini-system-card",
+  "source_sha256": "32d7ca19fff2ed0dc2d06f84e3143900bbd7898bb6f443c094477fb4ce0fc4ab",
+  "ocr_sha256": "c286aeb0970d1c409856d7dd9046b1ab41bcb76bc5479bd892ef83df96e4ece6",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "coverage": "complete",
+    "notes": "All 33 physical pages compared token-by-token against the OCR markdown (case/punctuation-normalized, hyphenation-tolerant), full code-fence audit (balanced), and heading audit against the printed outline (all 47 headings legitimate). Pages 1, 10 and 13 were rendered (120 dpi page, 300 dpi bottom crops) to verify the three footnote restorations. The document's only printed footnotes (1 on page 1, 2 on page 10, 3 on page 13) had their bodies dropped by OCR while the superscript markers survived inline; each body was transcribed from the rendered page and appended after the paragraph carrying its marker, following the established footnote-restoration pattern in this repository. Verified non-defects: the Figure 4 caption's 'and also also prior models like GPT-4o' duplicates 'also' in the PDF's own print (page 14) and was kept; 'trou-bleshooting', 'ques-tions', 'multi-ple' style token diffs are print hyphenation inside table cells and embedded figure axis labels (Figures 3-5); the Appendix (7.1) duplicates Apollo evaluation prose that also prints in the source."
+  },
+  "patches": [
+    {
+      "before": "through deliberative alignment $[1]^{1}$ .",
+      "after": "through deliberative alignment $[1]^{1}$ .\n\nDeliberative alignment is a training approach that teaches LLMs to explicitly reason through safety specifications before producing an answer.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom prints footnote 1 below the rule: '1Deliberative alignment is a training approach that teaches LLMs to explicitly reason through safety specifications before producing an answer.' The OCR kept the inline superscript marker after 'deliberative alignment $[1]^{1}$' but dropped the footnote body entirely (no occurrence of 'teaches' or the definition anywhere in the markdown). Restored verbatim from the 300 dpi render."
+    },
+    {
+      "before": "Such evaluations help assess whether a model with scheming tendencies could cause harm in controlled AI development environments.",
+      "after": "Such evaluations help assess whether a model with scheming tendencies could cause harm in controlled AI development environments.\n\nApollo assesses the model’s ability to compromise other LMs with overt actions through fine-tuning, including backdoors, performance degradation (“sandbagging”), and hidden communication channels.",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 bottom prints footnote 2 below the rule: '2Apollo assesses the model’s ability to compromise other LMs with overt actions through fine-tuning, including backdoors, performance degradation (“sandbagging”), and hidden communication channels.' The OCR kept the 'sabotage $^{2}$' marker but dropped the footnote body ('overt backdoors', 'sandbagging', 'degradation channels' all absent from the markdown). Restored verbatim from the 300 dpi render, appended after the paragraph carrying the marker."
+    },
+    {
+      "before": "The helpful-only models seem to be able to synthesize biorisk-related information across all 5 steps of the biothreat creation process.",
+      "after": "The helpful-only models seem to be able to synthesize biorisk-related information across all 5 steps of the biothreat creation process.\n\n“Helpful-only” means the internal testing model is trained to be helpful and respond to prompts, even if they are unsafe.",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 bottom prints footnote 3 below the rule: '3“Helpful-only” means the internal testing model is trained to be helpful and respond to prompts, even if they are unsafe.' The OCR kept the 'helpful-only $^{3}$' marker but dropped the footnote body. Restored verbatim from the rendered page, appended after the paragraph carrying the marker."
+    }
+  ],
+  "unresolved": []
+}

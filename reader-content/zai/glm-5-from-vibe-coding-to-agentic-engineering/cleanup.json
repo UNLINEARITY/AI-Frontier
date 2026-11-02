@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "zai:glm-5-from-vibe-coding-to-agentic-engineering",
+  "source_sha256": "e20742ff36e08dc361de6973f7f72ad38e107edf8fd92d2a777a8428fc9b8f0e",
+  "ocr_sha256": "2537e2ae98d0c852e8a0f154fb1e728c807c314f11b2e4087babd675b921d8cd",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "coverage": "complete",
+    "notes": "Code-fence balance checked (3 balanced pairs; the printed quadruple-quote SYSTEM_PROMPT = \"\"\"\" on physical p.37 matches the rendered source and is kept). Whole-document token n-gram diff of every PDF page against the OCR markdown; remaining gap clusters were verified to be LaTeX-equivalent math (equations 1-13), figure-internal axis/benchmark labels (Figures 1-13), hyphenation artifacts in the PDF text layer, and complete HTML tables (Tables 1-13, including the full Table 7, Table 8 and Table 9 values). References [1]-[63] are complete. The OCR \\-escapes (top\\_p, max\\_new\\_tokens, Flex\\_AWQ\\_SSZ) reproduce real printed underscores and render correctly, so they were kept. Rendered visual checks: physical p.37 bottom (SYSTEM_PROMPT code box), p.23 Table 7 header, p.34 reference [43]."
+  },
+  "patches": [
+    {
+      "before": "DeepSeek -V3.2",
+      "after": "DeepSeek-V3.2",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 Table 7 header prints \"DeepSeek\" line-wrapped onto \"-V3.2\" with no space (visually verified at 300 dpi); OCR inserted a stray space before the hyphen. Everywhere else the document (and Table 7 cells) use \"DeepSeek-V3.2\"."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "source-prints-kimi-k2-dot-space-5",
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Reference [43] reads \"Kimi k2. 5: Visual agentic intelligence.\" in both OCR and the rendered PDF (300 dpi visual check on physical p.34): the source itself prints the spaced \"k2. 5\", so it is a printed author typo, not an OCR defect, and was left unchanged."
+    }
+  ]
+}

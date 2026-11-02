@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen2-audio-technical-report",
+  "source_sha256": "4ddac6d6b779f567efffb06144a4a9030e8524168ca54e504e26c81767758826",
+  "ocr_sha256": "b4bcabe19a8e74fcbef7a1a12ba54f7315783842815ae62eca3cf1ed8eeddb01",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "coverage": "partial",
+    "notes": "Structure pass: no code fences; balanced. Word-level diff of the full OCR Markdown against extracted text from all 16 physical pages. Tables 1 and 2 are present with bodies intact (the large p.5 gap in the raw diff is alignment displacement, not droppage); Figures 4-10 are example screenshots embedded as images, so their printed transcripts are figure-internal and not defects. No page renders were examined in this pass, so the confirmed droppages below are recorded as unresolved instead of patches - restoring them is an insertion the exact-replacement patch model cannot express without visual verification."
+  },
+  "patches": [],
+  "unresolved": [
+    "Physical p.1 author-block footnote 'Equal contribution. Corresponding author.' is absent from the Markdown; the superscript markers ($^{*}$, $^{\\dagger}$) survive on the author names but the footnote body was dropped.",
+    "Physical p.4 footnote 1 body 'https://github.com/mjpost/sacrebleu' is absent from the Markdown; the marker survives as BLEU $^{1}$ in Table 1.",
+    "Physical p.6 footnote 2 body 'https://console.cloud.google.com/vertex-ai/generative-multimodal/create' is absent from the Markdown (Gemini-1.5 discussion).",
+    "Table 2 dataset cells glue the printed multi-line labels into single tokens (e.g. 'Librispeechdev-clean', 'Fleurszh', 'Aishell2Mic', 'Common Voice 15en'); flattened table boundaries were left unchanged pending a visual check of physical p.5."
+  ]
+}

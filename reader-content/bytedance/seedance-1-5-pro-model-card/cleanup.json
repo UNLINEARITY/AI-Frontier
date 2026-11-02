@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seedance-1-5-pro-model-card",
+  "source_sha256": "b9ace4794ebe437adeb9e3b63bdf66b2d8ab496adb5d9f0b5696a5bcb46f40b6",
+  "ocr_sha256": "bb2090db0ef5efc0e4c8240e6579b1303b7b034ee658de4061ae93964317b828",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "coverage": "complete",
+    "notes": "Whole-document word-level diff of the OCR markdown against extracted text from all 11 physical PDF pages; the physical p.3 footnote strip was rendered at 300 dpi. Code fences are absent, all tables and figure captions are present, and the only other diff gaps are page-number stamps and the arXiv side stamp."
+  },
+  "patches": [
+    {
+      "before": "Seedance 1.5 pro is scheduled to be integrated into multiple platforms, including Doubao $^{1}$ and Jimeng $^{2}$ , by December 2025. We envision this model serving as a vital productivity tool, designed to enhance both professional workflows and daily creative applications.",
+      "after": "Seedance 1.5 pro is scheduled to be integrated into multiple platforms, including Doubao $^{1}$ and Jimeng $^{2}$ , by December 2025. We envision this model serving as a vital productivity tool, designed to enhance both professional workflows and daily creative applications.\n\n$^{1}$ https://www.doubao.com/chat/create-video\n$^{2}$ https://jimeng.jianying.com/ai-tool/video/generate",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 footnote strip (300 dpi): the superscripts 1 and 2 on \"Doubao1\" and \"Jimeng2\" have printed footnote bodies \"1https://www.doubao.com/chat/create-video\" and \"2https://jimeng.jianying.com/ai-tool/video/generate\", which OCR dropped while keeping the markers. Follows the existing \"$^{n}$ ...\" footnote-line convention already used in this OCR markdown."
+    }
+  ],
+  "unresolved": []
+}

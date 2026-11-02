@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:flower-technical-report",
+  "source_sha256": "32093bdca8bd7503071cc08b0ef562efd20d1e06ebe7f482a6a342ee302525e7",
+  "ocr_sha256": "94ec8f5009ced302c294fc7bf915f7903285a81d911ddb4139b77d63b13d94da",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "All 26 physical pages compared against the extracted PDF text (5-gram word-coverage scan) with heading and code-fence structure checks (no fences; heading hierarchy matches the printed sections). Diffs concentrated in OCR line-wrap hyphenation and LaTeX-equivalent math, which are not defects. Eight confirmed Markdown-escape defects (\\_ where the PDF prints real underscores) were each verified on 300-600 dpi renders of physical pages 1, 9, 15 and 21."
+  },
+  "patches": [
+    {
+      "before": "flower\\_vla",
+      "after": "flower_vla",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 abstract URL prints the typewriter link https://intuitive-robots.github.io/flower_vla/ with a real underscore; OCR inserted a Markdown escape (flower\\_vla) inside the URL."
+    },
+    {
+      "before": "pi\\_0",
+      "after": "pi_0",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 reference [7] prints the italic title token pi_0: (letters pi, underscore, 0) at 600 dpi; OCR escaped the underscore (pi\\_0)."
+    },
+    {
+      "before": "robot\\_type",
+      "after": "robot_type",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 section A.2 prompt prints [robot_type] in italics with a real underscore; OCR added \\_ escapes."
+    },
+    {
+      "before": "action\\_space",
+      "after": "action_space",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 section A.2 prompt prints [action_space] in italics with a real underscore; OCR added \\_ escapes."
+    },
+    {
+      "before": "task\\_description",
+      "after": "task_description",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 section A.2 prompt prints [task_description] in italics with a real underscore; OCR added \\_ escapes."
+    },
+    {
+      "before": "image\\_primary",
+      "after": "image_primary",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 section B.2.1 prints the typewriter token image_primary with real underscores; OCR added \\_ escapes."
+    },
+    {
+      "before": "image\\_secondary",
+      "after": "image_secondary",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 section B.2.1 prints the typewriter token image_secondary with real underscores; OCR added \\_ escapes."
+    },
+    {
+      "before": "new\\_arm\\_single\\_joint",
+      "after": "new_arm_single_joint",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 section B.2.1 prints the typewriter action-head name new_arm_single_joint with real underscores; OCR added \\_ escapes."
+    }
+  ],
+  "unresolved": []
+}

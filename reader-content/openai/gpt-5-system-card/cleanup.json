@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-5-system-card",
+  "source_sha256": "f9f9c72d08cba81dcbb189129119357c8c32eca4e0b16c813aca386aed6b0459",
+  "ocr_sha256": "00a16b70887804b8dc69e06fbfce0c1a351b531a5d120afcbc156216e1a335b8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      24,
+      28,
+      36,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of all 60 physical pages: full fence-balance scan, plus automated normalized unigram and 4-gram containment of every PDF page's text layer against the OCR markdown; pages listed were inspected in detail from their diff contexts. Line-by-line review with rendered pages was done for the appendix prompt pages 57-58 (120 dpi renders, plus 300 dpi crops of the p.58 box tail) and the p.7 Table 2 footnote (300 dpi crop). The 4-gram misses on chart/table pages come from PDF reading order, figure-internal axis/legend text and PDF kerning glues, not droppage; word-level containment shows no other missing content words. Table bodies exist as HTML (Tables 2, 3, 23-26 spot-checked against the text layer, not exhaustively cell-by-cell); references match the PDF's [1]-[14]; the odd grammar 'we add the following to phrases ... at the end the instruction section' is printed by the PDF itself and was left unchanged."
+  },
+  "patches": [
+    {
+      "before": "this too is not statistically significant.\n\nTable 3: Production Benchmarks",
+      "after": "this too is not statistically significant.\n\n$^1$ Hate in this table is a combination of: harassment/threatening, hate, hate/threatening, and extremist/propaganda.\n\nTable 3: Production Benchmarks",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Physical p.7 (printed 6) prints Table 2's footnote below the rule, visually verified at 300 dpi: \"1Hate in this table is a combination of: harassment/threatening, hate, hate/threatening, and extremist/propaganda.\" (soft-hyphen split propa-ganda in the source). The OCR kept the $^1$ marker inside the table cell (\"hate (aggregate) $^1$\") but dropped the footnote body entirely; the patch restores it after the paragraph that precedes it on the page, using the document's own $^1$ marker spelling."
+    },
+    {
+      "before": "Claim-listing prompt:  \n```markdown\n### Introduction\nYour task is to list relevant facts",
+      "after": "Claim-listing prompt:  \n````markdown\n### Introduction\nYour task is to list relevant facts",
+      "count": 1,
+      "pdf_pages": [
+        57
+      ],
+      "evidence": "Rendered physical p.57 shows one prompt box from \"### Introduction\" to \"{response}\" that itself contains printed ```json fences. The OCR opened it with a 3-backtick fence, so the box ends at the first inner closer (line 1088) and the box's Example/Task sections leak out as document headings (rendered h3 \"Example\" and \"Task\" through the repository markdown pipeline). A 4-backtick opener keeps the inner fences literal, matching the printed box; the box prints no \"```markdown\" info string, and an info string is not visible in the rendered code block."
+    },
+    {
+      "before": "{response}\n```\n\nFact-checking prompt:  \n```markdown\n### Introduction\nYour task is to help fact-check",
+      "after": "{response}\n````\n\nFact-checking prompt:  \n````markdown\n### Introduction\nYour task is to help fact-check",
+      "count": 1,
+      "pdf_pages": [
+        57,
+        58
+      ],
+      "evidence": "Completes the 4-backtick nesting of the two appendix prompt boxes verified on rendered physical p.57 and p.58: the claim-listing box closes after \"{response}\" (bottom of p.57) and the fact-checking box opens after the \"Fact-checking prompt:\" label (top of p.58). With the previous 3-backtick fences, the label line was swallowed into the following code block and the boxes rendered truncated; after this patch the repository pipeline renders exactly two code blocks and no spurious headings."
+    },
+    {
+      "before": "    /* one object per claim */\n]\n```\n\n## References",
+      "after": "    /* one object per claim */\n]\n```\n\n### Task\nPrompt:\n{prompt}\n\nResponse:\n{response}\n\nClaims:\n{claims}\n````\n\n## References",
+      "count": 1,
+      "pdf_pages": [
+        58
+      ],
+      "evidence": "Dropped prompt-box tail restored from physical p.58 (printed 57), verified on the page render and a 300 dpi crop: after the JSON example's closing fence the fact-checking box continues \"### Task / Prompt: / {prompt} / Response: / {response} / Claims: / {claims}\" with blank lines before \"Response:\" and \"Claims:\"; the string {claims} was absent from the OCR markdown. The patch also closes the fact-checking box with a 4-backtick fence so the printed inner ```json fences stay literal."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table-values-not-exhaustively-verified",
+      "pdf_pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        17,
+        20,
+        24,
+        28,
+        36,
+        55,
+        56
+      ],
+      "evidence": "All 27 HTML tables were present in the OCR and their reading-order mismatch with the PDF text layer explains the low 4-gram containment; values of Tables 2, 3, 23-26 were spot-checked against the text layer, but no table was verified cell-by-cell against a render."
+    },
+    {
+      "id": "figure-embed-positions-not-visually-audited",
+      "pdf_pages": [
+        13,
+        14,
+        18,
+        19
+      ],
+      "evidence": "Chart-heavy pages (Figures 3-11) carry interleaved axis/tick text that the unigram scan confirms belongs to embedded figures; figures were not each opened side-by-side with the PDF, so image-to-caption assignment was not visually audited."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "amazon:nova-act-service-card",
+  "source_sha256": "97946c9d88bc591078382447a472094e3a18cf2d531a42169f1148fef3ba103e",
+  "ocr_sha256": "654201e65142d8a9aca24be8f196054e2a920d2869242533fb690adac845b481",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "coverage": "complete",
+    "notes": "All 16 physical pages text-diffed against the OCR markdown with ligature folding (the PDF text layer prints fi/fl ligatures); after normalization every PDF line matches the OCR, so there is no textual droppage or garbling. No code fences, no markdown escapes, no spaced digits found. All headings correspond to printed section titles in the card's table of contents. Rendered and visually verified: p.1 cover (170 dpi) - the '</>' glyph exists only inside the decorative line-art illustration (a code symbol drawn in an open book), not in the PDF text layer, and the OCR promoted it to a level-1 heading."
+  },
+  "patches": [
+    {
+      "before": "# </>\n\n## AWS AI Service Cards: Amazon Nova Act",
+      "after": "## AWS AI Service Cards: Amazon Nova Act",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 cover (170 dpi) shows '</>' only as a decorative glyph inside the cover line-art illustration (drawn within an open book); it is not printed text (the PDF text layer has no '</>' string) and no image of the cover art is embedded at this point in the OCR. The OCR transcribed the glyph and promoted it to a level-1 heading between the card title and the document title; removed as figure-internal noise."
+    }
+  ],
+  "unresolved": []
+}

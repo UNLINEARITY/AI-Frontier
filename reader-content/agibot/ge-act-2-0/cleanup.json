@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "id": "agibot:ge-act-2-0",
+  "source_sha256": "4e6e98d3a1c30739e968afff7be63898de8bec0442c15a2ab63706d6498c0248",
+  "ocr_sha256": "1c855b4d70def37df1d6733d9db45fd6340fb68bfe93af4071a29c6d8cca632c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "coverage": "complete",
+    "notes": "Structural pass: no code fences anywhere in the OCR Markdown, so no swallowed blocks. Every PDF page's text lines were checked against the OCR Markdown with normalized punctuation/case/LaTeX-equivalence, plus a numeric-multiset pass over the table pages (35-39, all values present in both directions) and a URL check. Physical pages 14 and 34 were rendered at 120-125 dpi and read to verify Algorithm 1 and the Appendix B objectives. Figure-internal labels, axis ticks and legends on pages 2, 5-7, 11-13, 16-18, 20, 22-23 and 31 are shown by the embedded figure images and were left untranscribed by design. The single backslash-underscore sequence (reference URL on physical p.36, content\\_cvpr\\_2016...) renders identically under CommonMark and was left unchanged. Algorithm 1 (physical p.14) is complete in the OCR including lines 16-18 with Eq. (20)/(21) references."
+  },
+  "patches": [
+    {
+      "before": "0. 3",
+      "after": "0.3",
+      "count": 2,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered PDF physical p.34 shows the E2E + Pretraining Losses and KASO objective lines as 0.3 L_FM + 0.1 L_real + ...; OCR inserted a space after the decimal point in both display equations (0. 3), which renders with a visible gap. The surrounding prose confirms the weights are 0.3 and 0.1."
+    },
+    {
+      "before": "0. 1",
+      "after": "0.1",
+      "count": 2,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered PDF physical p.34 shows 0.1 L_real in both the E2E + Pretraining Losses and KASO objective lines; OCR inserted a space after the decimal point (0. 1). Same appendix-B objectives block as the 0.3 patch."
+    },
+    {
+      "before": "\\mathrm{E2E+PretrainingLosses:}",
+      "after": "\\text {E2E + Pretraining Losses:}",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered PDF physical p.34 shows the third objective label as 'E2E + Pretraining Losses:' with spaces around + and between words; \\mathrm drops spaces when rendered, garbling the label. The sibling labels use \\text (Decoupled Pretraining) or \\mathrm{KASO:}, and Figure 5's caption (OCR line 262) spells the same strategy name 'E2E + Pretraining Losses'."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "continued-table-captions-dropped-p37-p39",
+      "pdf_pages": [
+        37,
+        39
+      ],
+      "evidence": "The repeated '(continued).' captions that head the continuation pages of long Tables 8 and 9 are absent from the OCR, which merged each table into a single HTML block under its main caption. No unique information is lost; restoring the repeats would split the merged tables."
+    },
+    {
+      "id": "arxiv-margin-stamp-p1",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The vertical arXiv stamp (arXiv:2609.05588v1 [cs.RO] 4 Sep 2026) in the page margin is omitted by the OCR, as in other reviewed documents; it is not report body text."
+    }
+  ]
+}

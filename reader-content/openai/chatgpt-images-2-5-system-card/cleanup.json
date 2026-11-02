@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "openai:chatgpt-images-2-5-system-card",
+  "source_sha256": "ba0695a115e0b8a4a0aa528eb776323848be4f2844a698c93ac14e3cedb15c9b",
+  "ocr_sha256": "ead8fdfe43ceaeb81952b3cfef7fcc7239c818323033de064166cef94d1b88f0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverage": "complete",
+    "notes": "Full text-layer diff of all 8 physical pages against the OCR markdown, plus a word-coverage sweep; rendered physical pages 1, 5 and 6 were visually inspected. Structure is balanced (no code fences). Confirmed repairs: dropped cover line 'OpenAI', dropped footnote bodies 1-2, dropped 'Nonviolent &' in a Table 2 category cell, OCR-spaced Table 2 header cells, missing superscript on Other's footnote marker, missing cell spaces before '(baseline)'. All table percentages and asterisks match the print. The printed 'Chat-GPT Images 2.5' spelling in section 3.3 matches the PDF text layer and is left unchanged as source text."
+  },
+  "patches": [
+    {
+      "before": "## ChatGPT Images 2.5\n\nSystem Card",
+      "after": "## ChatGPT Images 2.5\n\nOpenAI\n\nSystem Card",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered PDF physical p.1 shows the plain-text wordmark 'OpenAI' above the title block 'ChatGPT Images 2.5 / System Card / 2026-09-08'; the PDF text layer extracts it as the first line and the sibling card OCR (addendum-to-gpt-5-2) keeps the same cover line. OCR dropped it."
+    },
+    {
+      "before": "<td>Safe Generation(higher is better)</td>",
+      "after": "<td>Safe Generation (higher is better)</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 Table 2 header column reads 'Safe Generation (higher is better)' on two lines; OCR joined the lines without the space. Visual check of the header row."
+    },
+    {
+      "before": "<td>Unsafe GenerationBlocked(higher is better)</td>",
+      "after": "<td>Unsafe Generation Blocked (higher is better)</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 Table 2 header column reads 'Unsafe Generation Blocked (higher is better)' on three lines; OCR joined the lines without spaces. Visual check of the header row."
+    },
+    {
+      "before": "<td>UnsafeGenerationPresented(lower is better)</td>",
+      "after": "<td>Unsafe Generation Presented (lower is better)</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 Table 2 header column reads 'Unsafe Generation Presented (lower is better)' on four lines; OCR joined the lines without spaces. Visual check of the header row."
+    },
+    {
+      "before": "<td>Violent</td>",
+      "after": "<td>Nonviolent &amp; Violent</td>",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 shows the Wrongdoing category cell as 'Nonviolent & Violent Wrongdoing1' spanning three rows; OCR dropped 'Nonviolent &' and kept only 'Violent' / 'Wrongdoing $^{1}$' fragments. &amp; matches the entity style used in sibling OpenAI card OCR tables."
+    },
+    {
+      "before": "ChatGPT Images 2.0(baseline)",
+      "after": "ChatGPT Images 2.0 (baseline)",
+      "count": 8,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 prints each baseline model cell as 'ChatGPT Images 2.0 (baseline)' across two lines; OCR joined them without the space in eight Table 2 rows (the Other row and all Table 1 rows already carry the space). Visual check of the baseline rows."
+    },
+    {
+      "before": "Other2(e.g., religious figures)",
+      "after": "Other$^{2}$ (e.g., religious figures)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5/p.6 shows the Other category cell as 'Other2 (e.g., religious figures)' with 2 as a superscript footnote marker (footnote 2 exists at the bottom of physical p.6); OCR printed the digit inline and lost the space, inconsistent with the $^{1}$ style it kept for Wrongdoing."
+    },
+    {
+      "before": "<td>72.3%</td><td>25.6%</td><td>2.08%</td></tr></table>",
+      "after": "<td>72.3%</td><td>25.6%</td><td>2.08%</td></tr></table>\n\n$^{1}$ We find that the GPT-Images-2.5 series generally performs on par with or better than GPT Images 2.0. Minor regressions are not statistically significant.\n\n$^{2}$ The other category includes long-tail categories that should be protected against including religious figures, religious satire, fabricated or compromising depictions of real people, jailbreak attempts, and image-based requests.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered PDF physical p.6 bottom shows both footnote bodies: '1 We find that the GPT-Images-2.5 series generally performs on par with or better than GPT Images 2.0. Minor regressions are not statistically significant.' and '2 The other category includes long-tail categories that should be protected against including religious figures, religious satire, fabricated or compromising depictions of real people, jailbreak attempts, and image-based requests.' The OCR kept the $^{1}$/$^{2}$ markers inside Table 2 but dropped both bodies; they are restored after the table carrying the markers, matching the footnote-restoration style of earlier reviewed documents."
+    }
+  ],
+  "unresolved": []
+}

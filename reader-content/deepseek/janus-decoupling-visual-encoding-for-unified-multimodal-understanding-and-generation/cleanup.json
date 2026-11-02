@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:janus-decoupling-visual-encoding-for-unified-multimodal-understanding-and-generation",
+  "source_sha256": "b926b698b546f3f6eb75e21158ee96b9a6d84ebbfe80375b79d54e4022c462f3",
+  "ocr_sha256": "f9c946097b6ba4a7441fa70b47f7baa12486803310b5593f9bbda00d983a0b9c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "coverage": "complete",
+    "notes": "All 24 physical pages' extracted text was swept with 5-gram shingle comparison against the OCR markdown (normalized: math spanned to placeholders, hyphenated line breaks joined); no code fences exist, all five tables export as intact HTML tables (Table 1's Janus row and other rows spot-checked against the PDF text), and the reference entries [1]-[60] match with line-wrap noise only. The printed appendix headings 'Appendix', 'A. Details of Semantic Tokenizer Mentioned in Ablation Study' and 'A.1. Architecture of Semantic Tokenizer' (physical p.14 top, visually verified on a 140-dpi render) were demoted to plain body text by the OCR while siblings '## A.2. Training', '## A.3. Integrating with LLM' and '## B. Additional Qualitative Results' stayed headings; promoted to the sibling '## ' level. Ref [23]'s URL underscore was confirmed on a 300-dpi render of physical p.19. Remaining shingle gaps resolved to: table-internal cell interleaving, LaTeX math spans, figure-internal text (Figure 2 architecture labels, Figure 8 multilingual prompts and Figure 9 demo Q&A are whole-figure or in-image content shown by the embedded figures), and per-image prompt captions that match the print's own truncated captions. No footnote bodies exist on any page (the (CFG) superscript 2 marker is retained by the OCR and no page-bottom body accompanies it)."
+  },
+  "patches": [
+    {
+      "before": "Appendix\nA. Details of Semantic Tokenizer Mentioned in Ablation Study\nA.1. Architecture of Semantic Tokenizer",
+      "after": "## Appendix\n## A. Details of Semantic Tokenizer Mentioned in Ablation Study\n## A.1. Architecture of Semantic Tokenizer",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 top prints three stacked headings: 'Appendix', 'A. Details of Semantic Tokenizer Mentioned in Ablation Study' and 'A.1. Architecture of Semantic Tokenizer' (140-dpi render). The OCR demoted them to plain body lines while the sibling appendix sections 'A.2. Training', 'A.3. Integrating with LLM' and 'B. Additional Qualitative Results' remain '##' headings; restored to the same level so the heading tree matches the print."
+    },
+    {
+      "before": "https://huggingface.co/datasets/echo840/Detailed\\_Caption",
+      "after": "https://huggingface.co/datasets/echo840/Detailed_Caption",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 reference [23] prints the URL 'https://huggingface.co/datasets/echo840/Detailed_Caption, 2023.' with a plain underscore (300-dpi render); the backslash before the underscore is a Markdown escape added by OCR, not source text."
+    }
+  ],
+  "unresolved": []
+}

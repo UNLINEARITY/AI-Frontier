@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "id": "xai:grok-4-7-model-card",
+  "source_sha256": "c40541597ac3c461d71a914c922d43b200b468e41434b699fdd11c9a8761c56f",
+  "ocr_sha256": "83eb5ffeb906ec6e90768721bd79ba4dd8c8884b7edd5d99931daca0b9f13000",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "coverage": "complete",
+    "notes": "Line-level comparison of all 30 physical PDF pages against the OCR plus a numeric-token multiset check. Structure is clean (zero code-fence markers, heading tree matches Contents, no duplicated or spurious headings; table values in sections 6.2, 7.x, 8-11 match the PDF text layer exactly). Confirmed droppage, all repaired: the title-page revision line, both page-4 footnotes (DBA naming, Cursor-workflow supplemental training), all seven chart source footnotes (Datacurve, Harbor, Proximal Labs, Abundant AI, Vals AI, Atopile plus the V1-core-corpus note, Mecado), the dagger on the EEBench Reward axis label, one inserted space in 'SpaceX AI', and missing spaces around interpunct separators in references 3, 7, 9, 12, 18, 20, 23 and 24. Every repaired item was verified on a rendered page (p1 bottom title band, p4 footnote block, p8 and p13 footnote blocks, p18 section 6.3, p29-p30 references incl. a 500 dpi zoom of reference 24 and word-geometry gaps of 2.4pt equal to the printed space width around every interpunct). Remaining number deltas are printed page footers, figure-internal chart labels/legends and URL line wraps, none of which are document text defects."
+  },
+  "patches": [
+    {
+      "before": "September 21, 2026",
+      "after": "September 21, 2026\n\nRevision: 2026-09-21",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints 'Revision: 2026-09-21' in small gray text at the bottom of the title page (verified visually at 200 dpi); OCR dropped the line and kept only 'September 21, 2026'."
+    },
+    {
+      "before": "It is our most capable model to date.",
+      "after": "It is our most capable model to date.\n\nSpaceXAI is a doing-business-as (DBA) name of XAI LLC. xAI and SpaceXAI may be used interchangeably throughout this card. For the avoidance of doubt, SpaceXAI is the developer and provider of Grok 4.7.\n\nGrok 4.7 received supplemental training on anonymized Cursor workflow data to improve coding and agentic performance.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 footnote block prints both notes under a rule: '* SpaceXAI is a doing-business-as (DBA) name of XAI LLC. ...' and '† Grok 4.7 received supplemental training on anonymized Cursor workflow data to improve coding and agentic performance.' (verified visually at 300 dpi). The OCR carries the '*' and '†' markers in the introduction but dropped both footnote bodies."
+    },
+    {
+      "before": "![[images/d79b8ac1ba4445d52cc7201bd9418e48049732c643f9f0f536fc9cb1d47b7f4a.jpg]]",
+      "after": "![[images/d79b8ac1ba4445d52cc7201bd9418e48049732c643f9f0f536fc9cb1d47b7f4a.jpg]]\n\n\\*Results reported are taken from evaluations conducted by Datacurve.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 footnote block prints '* Results reported are taken from evaluations conducted by Datacurve.' under the DeepSWE Pass@1 chart (verified visually at 300 dpi); the OCR dropped the footnote body."
+    },
+    {
+      "before": "Task success rate (%)\\*",
+      "after": "Task success rate (%)\\*\n\n\\*Results reported are taken from evaluations conducted by Harbor.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 footnote block prints '* Results reported are taken from evaluations conducted by Harbor.' under the Terminal-Bench chart; the OCR kept the chart's axis-label caption but dropped the footnote body."
+    },
+    {
+      "before": "Mean@5 score (%)\\*",
+      "after": "Mean@5 score (%)\\*\n\n\\*Results are taken from evaluations conducted by Proximal Labs.",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Physical p.10 prints 'Mean@5 score (%)*' followed by footnote '* Results are taken from evaluations conducted by Proximal Labs.' (FrontierSWE V2 public results use Proximal's Proximus harness); the OCR dropped the footnote body."
+    },
+    {
+      "before": "Resolution rate (%)\\*",
+      "after": "Resolution rate (%)\\*\n\n\\*Results reported are taken from evaluations conducted by Abundant AI.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Physical p.11 prints 'Resolution rate (%)*' followed by footnote '* Results reported are taken from evaluations conducted by Abundant AI.' (SWE-Marathon is an Abundant AI benchmark, reference 7); the OCR dropped the footnote body."
+    },
+    {
+      "before": "Harvey final score (%)\\*",
+      "after": "Harvey final score (%)\\*\n\n\\*Results are taken from evaluations conducted by Vals AI.",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Physical p.12 prints 'Harvey final score (%)*' followed by footnote '* Results are taken from evaluations conducted by Vals AI.'; the OCR dropped the footnote body."
+    },
+    {
+      "before": "![[images/6ca1c4e5fdfcc60828ed04e1d6bce1ed37672ce49e7bead4e35babae45d819f7.jpg]]  \nReward $(\\%)$",
+      "after": "![[images/6ca1c4e5fdfcc60828ed04e1d6bce1ed37672ce49e7bead4e35babae45d819f7.jpg]]  \nReward $(\\%)$$^{†}$\n\n\\*As part of the V1 core corpus of the benchmark.\n\n†Results are taken from evaluations conducted by Atopile.",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 shows the EEBench chart axis label 'Reward (%)' with a superscript dagger and a two-entry footnote block: '* As part of the V1 core corpus of the benchmark.' and '† Results are taken from evaluations conducted by Atopile.' (verified visually at 300 dpi). The OCR dropped the dagger marker and both footnote bodies."
+    },
+    {
+      "before": "![[images/301569340aeb90f3effe31363ddb674c713554267b5db7a88a80e4bba550206d.jpg]]",
+      "after": "![[images/301569340aeb90f3effe31363ddb674c713554267b5db7a88a80e4bba550206d.jpg]]\n\n\\*Results are taken from evaluations conducted by Mecado.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Physical p.14 prints 'Reward (%)*' followed by footnote '* Results are taken from evaluations conducted by Mecado.' under the CADGenBench chart; the OCR dropped the footnote body."
+    },
+    {
+      "before": "HackerBench is a SpaceX AI internal CTF-style suite",
+      "after": "HackerBench is a SpaceXAI internal CTF-style suite",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 prints 'HackerBench is a SpaceXAI internal CTF-style suite of cybersecurity and red-teaming tasks' with no space inside SpaceXAI (verified visually); the OCR inserted a space. The card consistently uses 'SpaceXAI' elsewhere."
+    },
+    {
+      "before": "https://deepswe.datacurve.ai/·https://arxiv.org/abs/2607.07946",
+      "after": "https://deepswe.datacurve.ai/ · https://arxiv.org/abs/2607.07946",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 reference 3 prints the two URLs separated by ' · ' with spaces on both sides (verified visually; word-geometry gaps around the interpunct equal the printed space width). The OCR glued the separator."
+    },
+    {
+      "before": "https://www.swe-marathon.org/·https://arxiv.org/abs/2606.07682",
+      "after": "https://www.swe-marathon.org/ · https://arxiv.org/abs/2606.07682",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 reference 7 prints 'https://www.swe-marathon.org/ · https://arxiv.org/abs/2606.07682' with spaced separator (verified visually); the OCR glued it."
+    },
+    {
+      "before": "https://github.com/vals-ai/Valkyrie·HLab",
+      "after": "https://github.com/vals-ai/Valkyrie · HLab",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 reference 9 prints 'https://github.com/vals-ai/Valkyrie · HLab on Valkyrie: ...' with spaced separator (verified visually); the OCR glued it."
+    },
+    {
+      "before": "https://www.cybergym.io/·https://arxiv.org/abs/2506.02548",
+      "after": "https://www.cybergym.io/ · https://arxiv.org/abs/2506.02548",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 reference 12 prints 'https://www.cybergym.io/ · https://arxiv.org/abs/2506.02548' with spaced separator (verified visually); the OCR glued it."
+    },
+    {
+      "before": "https://wmdp.ai·https://arxiv.org/abs/2403.03218",
+      "after": "https://wmdp.ai · https://arxiv.org/abs/2403.03218",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Reference 18 in the PDF reads 'https://wmdp.ai · https://arxiv.org/abs/2403.03218' with spaced separator (text layer with space-width gaps; all other printed separators verified visually on p.29-p.30); the OCR glued it."
+    },
+    {
+      "before": "https://github.com/Future-House/BixBench·https://arxiv.org/abs/2503.00096",
+      "after": "https://github.com/Future-House/BixBench · https://arxiv.org/abs/2503.00096",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Reference 20 in the PDF reads 'https://github.com/Future-House/BixBench · https://arxiv.org/abs/2503.00096' with spaced separator (text layer with space-width gaps); the OCR glued it."
+    },
+    {
+      "before": "https://labs.scale.com/leaderboard/fortress·https://arxiv.org/abs/2506.14922",
+      "after": "https://labs.scale.com/leaderboard/fortress · https://arxiv.org/abs/2506.14922",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 reference 23 prints '.../leaderboard/fortress · https://arxiv.org/abs/2506.14922' with spaced separator (verified visually); the OCR glued it."
+    },
+    {
+      "before": "https://www.mask-benchmark.ai/·https://arxiv.org/abs/2503.03750",
+      "after": "https://www.mask-benchmark.ai/ · https://arxiv.org/abs/2503.03750",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 reference 24 re-verified at 500 dpi: 'https://www.mask-benchmark.ai/ · https://arxiv.org/abs/2503.03750' with spaces on both sides of the interpunct (word-geometry gaps 2.4pt on both sides, equal to the printed space width); the OCR glued it."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "missing-hackerbench-chart-embed",
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Section 6.3 HackerBench v0.3 in the PDF contains a two-panel bar chart (Harmful/Dual-Use Compliance 4.02/3.31/5.93/7.8/35.7%, Benign Refusal 0.00/0.31/0.0/0.0/0.0%, legend Grok 4.7 (xhigh)/(high), Grok 4.6 (high), Grok 4.5 (high), GPT-5.6 Sol (max); verified visually on the rendered page). The OCR kept the section text but contains no image embed for this chart, and one of only 14 embeds cannot account for the 15 figures. A cleanup.json patch cannot add image embeds (the exporter rejects image changes), so the embed must be restored through re-extraction."
+    },
+    {
+      "id": "figure-internal-labels-absent",
+      "pdf_pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18
+      ],
+      "evidence": "Chart legends (e.g. 'Fable 5 (max, with fallback)', 'Fable 5.1', 'Average output tokens per task', axis ticks 10%-150%) exist only inside figure images and are absent from the OCR text; this is figure-internal content shown by the embedded images, not a transcription defect."
+    },
+    {
+      "id": "heading-superscript-style",
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Heading '8.1 Jailbreaks 21,22' renders the footnote markers as plain text while sibling headings use $^{n}$ math superscripts; visible text is unchanged, only marker styling differs."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen2-5-omni-technical-report",
+  "source_sha256": "95906505512440a3a32c37b10a6aeeef092c44d60fcfaebfb309950685b7cbf1",
+  "ocr_sha256": "504af0de846ffdd01c65ce0c37cb9b3d0d638452f5a970c0377236c3217aaff0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "coverage": "complete",
+    "notes": "All 20 physical pages text-diffed against the OCR markdown (normalized; table rows inside the HTML tables matched after tag-aware re-check). Both code-fence lines balanced (chat-example block on pp.5-6). Remaining unmatched PDF lines are the arXiv stamp and figure-internal axis/legend labels on pp.8, 10-12 (model-name legends such as 'Gemma2-9B Llama3.1-8B ...' and 'Mathematics & Science Tasks'). The print's own misspellings 'Perceivation', 'interation', 'incorporat' and 'narrowes' were auto-corrected by the OCR and are restored here per the source's spelling. Rendered and visually verified: p.4 section heading 2.2 (170 dpi), p.5, p.6, p.8 sentence crops (300 dpi), p.14 footnote band (300 dpi)."
+  },
+  "patches": [
+    {
+      "before": "## 2.2 Perception",
+      "after": "## 2.2 Perceivation",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (170 dpi) prints the section heading '2.2 Perceivation' - the source's own misspelling of Perception; the OCR silently corrected it to 'Perception'. Restored to the print's spelling."
+    },
+    {
+      "before": "support it in modalities interaction, we modified",
+      "after": "support it in modalities interation, we modified",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (300 dpi) prints 'support it in modalities interation, we modified the audio and visual encoders' - the print's own misspelling of interaction; the OCR corrected it. Restored to the print's spelling."
+    },
+    {
+      "before": "we incorporate long audio and long video data",
+      "after": "we incorporat long audio and long video data",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 (300 dpi) prints 'Then, we incorporat long audio and long video data' without the trailing e - the print's own misspelling; the OCR corrected it to 'incorporate'. Restored to the print's spelling."
+    },
+    {
+      "before": "significantly narrows the gap",
+      "after": "significantly narrowes the gap",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 (300 dpi) prints 'Qwen2.5-Omni significantly narrowes the gap with Qwen2-7B' - the print's own misspelling; the OCR corrected it to 'narrows'. Restored to the print's spelling."
+    },
+    {
+      "before": "Zhaohai Li, Zhibo Yang, Zhipeng Zhou, Zhiyuan Zhu",
+      "after": "Zhaohai Li, Zhibo Yang, Zhipeng Zhou, Zhiyuan Zhu\n\n$^{1}$Alphabetical order.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 footnote band (300 dpi) prints '1 Alphabetical order.'; the OCR kept the marker on 'Contributors $^{1}$ :' (p.14, section 7) but dropped the footnote body. Restored after the Contributors paragraph carrying the marker."
+    }
+  ],
+  "unresolved": []
+}

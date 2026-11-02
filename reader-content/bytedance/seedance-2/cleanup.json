@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seedance-2",
+  "source_sha256": "b8a169f36db23966158c7db305986fe89b2f3d945e45987290942842daedcac9",
+  "ocr_sha256": "9151e4231b094684a88cd766d088eaaf3fc7c1ddf1a3018de4dbdbb6bd8c0a5f",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 26 physical PDF pages; pages 3, 15, 16, 22 and 23 were additionally rendered and visually inspected. Page 22 confirmed the printed prompt reads 'stylized artistic subtitles'; page 23 confirmed reference [22] prints 'Dancegrpo: Unleashing grpo on visual generation' (the reported grupo/grpo class) and that reference [9] really prints 'Seed1. 5-vl' with the space, so it is kept as printed. Page 3 confirmed the official-page URL ends seedance2_0 with a bare underscore. The printed Rank Spread '1<->1' wording on p.6 matches the source. The sentence 'Kling 3.0 is competitive on fine motion IP...' is split by the physical page break between p.15 and p.16, and OCR wedged Table 14 between the two halves; the two rejoin patches restore the printed word order without moving the table. Superscript access markers on p.3 (Doubao^1, Jimeng^2) survive in OCR as $^{1}$/$^{2}$. Figure-banner text (e.g. 'PGC Scene T2V Comparison') exists only inside figure images and is correctly absent from prose. The contributor name list after the acknowledgments table is flattened to plain name-per-line rows, matching the printed multi-column layout; no names were dropped."
+  },
+  "patches": [
+    {
+      "before": "stylized artistic subtiles appear",
+      "after": "stylized artistic subtitles appear",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 (Figure 4, bottom I2V strip caption) prints 'At the bottom of the frame, stylized artistic subtitles appear alongside a voiceover'; OCR misread the word as 'subtiles' (visually verified at 300 dpi)."
+    },
+    {
+      "before": "Dancegrpo: Unleashing grupo on visual generation",
+      "after": "Dancegrpo: Unleashing grpo on visual generation",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 reference [22] prints 'Dancegrpo: Unleashing grpo on visual generation. arXiv preprint arXiv:2505.07818, 2025.'; OCR inserted a spurious 'u' in the second occurrence (visually verified at 300 dpi)."
+    },
+    {
+      "before": "seedance2\\_0",
+      "after": "seedance2_0",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prompt box prints the official page URL 'https://seed.bytedance.com/seedance2_0.' with a bare underscore; the OCR backslash is a Markdown escape artifact that alters the URL text (visually verified at 150 dpi)."
+    },
+    {
+      "before": "3.63$ ). Kling 3.0",
+      "after": "3.63$ ).",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 ends the Complex Motion paragraph mid-sentence with '...(micro-expression MQ: 2.88 -> 3.63). Kling 3.0'; OCR repeated that page-break break and additionally placed Table 14 before the continuation. This patch removes the dangling fragment; the paired patch below restores the words at the head of the continuation (visually verified at 150 dpi)."
+    },
+    {
+      "before": "is competitive on fine motion IP",
+      "after": "Kling 3.0 is competitive on fine motion IP",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Physical p.16 continues the Complex Motion paragraph after Table 14 with 'is competitive on fine motion IP (3.47, tying with Seedance 2.0) and micro-expression IP (3.50)...' (text layer); together with the paired patch the printed sentence 'Kling 3.0 is competitive on fine motion IP...' is restored while the table stays in place."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "contributor-list-flattened",
+      "pdf_pages": [
+        24,
+        25,
+        26
+      ],
+      "evidence": "The acknowledgment table prints team/name columns; OCR renders the trailing names after 'Zhonghua Zhai' as plain lines instead of table rows. Layout-only flattening; names themselves match the source."
+    }
+  ]
+}

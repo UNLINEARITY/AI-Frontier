@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:phi-4-reasoning",
+  "source_sha256": "55bb6680dae0a133570f273cb5c2330880bf9a09fe53b74f1faa11fc027a5037",
+  "ocr_sha256": "2312e76f1071fa085c114d87c53a8145ed75efc900f220cd818862b19e91b1e7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "coverage": "complete",
+    "notes": "All 33 physical pages diffed against the OCR markdown with a normalized word-level alignment; every remaining delta was accounted for as figure-internal text embedded as images, LaTeX-equivalent math, or table reordering. Code fences are balanced (3 txt prompt chunks). Physical pages 1, 2, 4, 5, 12, 13, 14, 15, 20, 21 were rendered and visually read (full pages 4-5 at 120 dpi; footnote strips and table header at 200-400 dpi). Dominant defect: all eight numbered page-bottom footnote bodies plus the page-1 author footnote were dropped while their markers survive; restored after their anchor lines per the established pattern. Demo-box speaker labels (User:, Phi-4-Reasoning, Constraints:, Availability:, Adjacency list:) were demoted from spurious headings; the six black demo banners stay headings. The print's own misspellings (outputing, Sores, consistent the with) are preserved. Figure-internal axis labels on pp.1, 3, 17, 32-33 are correctly embedded as images, not defects."
+  },
+  "patches": [
+    {
+      "before": "Safoora Yousefi Guoqing Zheng\\*",
+      "after": "Safoora Yousefi Guoqing Zheng\\*\n\n\\*alphabetical order, correspondences to phi-research@microsoft.com",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom strip (300 dpi, read) prints the author footnote \"*alphabetical order, correspondences to phi-research@microsoft.com\" below the rule under the author list; the OCR kept the asterisk marker on \"Guoqing Zheng\\*\" but dropped the footnote text."
+    },
+    {
+      "before": "on all tasks except GPQA and Calendar Planning. See Figures 1 and 8.",
+      "after": "on all tasks except GPQA and Calendar Planning. See Figures 1 and 8.\n\n$^{1}$ AIME 2025 was released after the training data for Phi-4-reasoning was finalized and is thus contamination free. We also algorithmically decontaminate the training data against AIME 2024 and various other benchmarks used in this report (see Section 2).",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 bottom strip (300 dpi, read) prints footnote 1 verbatim; the OCR anchor sentence with marker $^{1}$ survives in the Introduction but the page-bottom body was dropped. Inserted as paragraph \"$^{1}$ body\" after the anchor."
+    },
+    {
+      "before": "## User:\n\nGiven the following constraints and availability schedules",
+      "after": "## Constrained calendar planning\n\n## User:\n\nGiven the following constraints and availability schedules",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 shows the black demo-box banner \"Constrained calendar planning\" above the calendar User box; the OCR dropped the banner entirely while keeping the five parallel demo banners (pp.3-5) as headings, so it is restored as a heading to match."
+    },
+    {
+      "before": "11:00, 14:00-14:15, 14:45-15:45], Thursday: [09:00-10:00, 14:00-16:30]",
+      "after": "p5: Monday: [09:00-09:15, 10:30-11:15, 14:00-17:00], Tuesday: [09:00-11:00, 14:00-14:15, 14:45-15:45], Thursday: [09:00-10:00, 14:00-16:30]",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 Availability list prints \"p5: Monday: [09:00-09:15, 10:30-11:15, 14:00-17:00], Tuesday: [09:00-11:00, 14:00-14:15, 14:45-15:45], Thursday: [09:00-10:00, 14:00-16:30]\"; the OCR dropped the line prefix up to the printed line break inside \"09:00-/11:00\", leaving an orphan fragment between the p4 and p6 rows (visually verified)."
+    },
+    {
+      "before": "Tuesday: [09:00-09:15, 11:30-12:00,\n\n14:45-16:00]",
+      "after": "Tuesday: [09:00-09:15, 11:30-12:00, 14:45-16:00]",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 prints the p10 row as one schedule line continuing over the printed line break \"11:30-12:00, / 14:45-16:00]\"; the OCR split it into two paragraphs so the continuation starts with a bare \"14:45-16:00]\". Joined to match the print and the one-line-per-person format of p1-p9."
+    },
+    {
+      "before": "(- 1. 2) = 1 + 1. 2 = 2. 2",
+      "after": "(-1.2) = 1 + 1.2 = 2.2",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 riddle demo prints the display equation final = 1 - (-1.2) = 1 + 1.2 = 2.2; the OCR spaced the digits of the decimals and the minus sign (visually verified)."
+    },
+    {
+      "before": "drei Jordan evlewt Māpía 9",
+      "after": "drei Jordan evlewt Μαρία 9",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 riddle line 3 prints Greek \"Μαρία\"; the OCR misread the Greek glyphs as Latin \"Māpía\" (visually verified at 120 dpi full page; line also present in the PDF text layer)."
+    },
+    {
+      "before": "of any nationality), - A “reversed number-word”",
+      "after": "of any nationality),\n\n- A “reversed number-word”",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"A “first name” (of any nationality),\" and \"A “reversed number-word” (or two, joined by a hy-phen),\" as two separate bullets; the OCR merged them into one line while keeping every other bullet in the same list on its own line."
+    },
+    {
+      "before": "by outputting a valid path",
+      "after": "by outputing a valid path",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 maze demo prompt at 400 dpi prints \"by outputing\" with a single t (the print's own misspelling); the OCR silently corrected it to \"outputting\"."
+    },
+    {
+      "before": "## User:",
+      "after": "User:",
+      "count": 6,
+      "pdf_pages": [
+        4,
+        5
+      ],
+      "evidence": "Rendered physical pp.4-5 show \"User:\" as a gray speaker-label bar inside each of the six demo boxes (visually verified), not a document section heading; the OCR promoted all six occurrences to level-2 headings while parallel demo banners were kept as the box titles."
+    },
+    {
+      "before": "## Phi-4-Reasoning",
+      "after": "Phi-4-Reasoning",
+      "count": 6,
+      "pdf_pages": [
+        4,
+        5
+      ],
+      "evidence": "Rendered physical pp.4-5 show \"Phi-4-Reasoning\" as the dark-green model-response speaker-label bar inside each of the six demo boxes (visually verified), not a document section heading; the OCR promoted all six occurrences to level-2 headings."
+    },
+    {
+      "before": "## Constraints:\n\n\\- The meeting duration",
+      "after": "Constraints:\n\n\\- The meeting duration",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 prints \"Constraints:\" as a plain bold label inside the calendar demo's User prompt, not a section heading; the OCR promoted it to a level-2 heading between the User and Phi-4-Reasoning labels (which this cleanup also demotes)."
+    },
+    {
+      "before": "## Availability:\n\np1: Monday:",
+      "after": "Availability:\n\np1: Monday:",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 prints \"Availability:\" as a plain bold label inside the calendar demo's User prompt, not a section heading; the OCR promoted it to a level-2 heading."
+    },
+    {
+      "before": "## Adjacency list:\n\n{depicted as an image below}",
+      "after": "Adjacency list:\n\n{depicted as an image below}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 prints \"Adjacency list:\" as a plain label inside the maze demo's User prompt, not a section heading; the OCR promoted it to a level-2 heading."
+    },
+    {
+      "before": "HMMTFeb 2025",
+      "after": "HMMT Feb 2025",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 Table 1 header (200 dpi crop, read) prints \"HMMT\" with \"Feb 2025\" as the second header line below it; the OCR glued them into one cell \"HMMTFeb 2025\"."
+    },
+    {
+      "before": "LCB8/24 - 1/25",
+      "after": "LCB 8/24 - 1/25",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 Table 1 header (200 dpi crop, read) prints \"LCB\" with \"8/24 - 1/25\" as the second header line below it; the OCR glued them into one cell \"LCB8/24 - 1/25\"."
+    },
+    {
+      "before": "which limits the extent to which GRPO can help.",
+      "after": "which limits the extent to which GRPO can help.\n\n$^{2}$ Outputs that are longer than 31k are clipped to their first 31k tokens, as we reserve 1k tokens for the prompt.",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 bottom strip (300 dpi, read) prints footnote 2 verbatim; the OCR anchor sentence with marker $^{2}$ survives in section 4.2 but the page-bottom body was dropped. 31k/1k are math italic in the print."
+    },
+    {
+      "before": "before answering when its current answer is incorrect.",
+      "after": "before answering when its current answer is incorrect.\n\n$^{3}$ The maximum possible $R_{final}$ = 8/13 ≈ 0.62 by our reward function design.",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 bottom strip (300 dpi, read) prints footnote 3 as \"The maximum possible R_final = 8/13 ≈ 0.62 by our reward function design.\"; the OCR anchor sentence with marker $^{3}$ survives but the page-bottom body was dropped."
+    },
+    {
+      "before": "judge/scoring function for HMMT. $^{4}$",
+      "after": "judge/scoring function for HMMT. $^{4}$\n\n$^{4}$ We use 50 and 64 repetitions for AIME 2025 and HMMT respectively (for statistical robustness) and five repetition for all other benchmarks. Scores for all baselines for LiveCodeBench are from [21] or LiveCodeBench leaderboard. Sores for HMMT 2025 are from MathArena leaderboards. All other scores for OpenThinker2 [53], QwQ [54], EXAONE-Deep [31] and Gemini-2.5-Pro are reproduced from their corresponding reports. Claude-3.7-Sonnet is evaluated with thinking enabled. Codeforces evaluation for Phi models are performed using procedure described in 5.1 while all other Codeforces numbers are from their corresponding reports. Empty cells indicate results not yet reported.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 bottom strip (300 dpi, read, six lines) prints footnote 4 verbatim including the print's own misspelling \"Sores for HMMT 2025\"; the OCR kept the marker in the Table 1 caption but dropped the page-bottom body."
+    },
+    {
+      "before": "for more statistical robustness. $^{5}$",
+      "after": "for more statistical robustness. $^{5}$\n\n$^{5}$ We use 50 and 64 generations for AIME 2025 and GPQA respectively and provide more analysis of variance in Figure 9",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 bottom strip (300 dpi, read) prints footnote 5 verbatim; the OCR kept the marker in the Figure 8 caption but dropped the page-bottom body."
+    },
+    {
+      "before": "same evaluation methodology for studying Phi-4-reasoning and Phi-4-reasoning-plus.",
+      "after": "same evaluation methodology for studying Phi-4-reasoning and Phi-4-reasoning-plus.\n\n$^{6}$ https://github.com/microsoft/eureka-ml-insights",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 bottom strip (300 dpi, read) prints footnote 6 as the URL https://github.com/microsoft/eureka-ml-insights; the OCR anchor sentence with marker $^{6}$ survives but the page-bottom body was dropped."
+    },
+    {
+      "before": "our internal collection of evaluations [2]. See Table 2 for results.",
+      "after": "our internal collection of evaluations [2]. See Table 2 for results.\n\n$^{7}$ Evaluations of Phi-4 on Eureka ML Insights were done at temperature=0 and reported for a single run all benchmarks except IFEval which is smaller than the other benchmarks, for which we ran the evaluation three times (for all models) and report the average accuracy.",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 bottom strip (300 dpi, read) prints footnote 7 verbatim; the OCR anchor sentence with marker $^{7}$ survives in section 5.2 but the page-bottom body was dropped."
+    },
+    {
+      "before": "To assess model safety, we used the following benchmarks:",
+      "after": "To assess model safety, we used the following benchmarks:\n\n$^{8}$ https://www.microsoft.com/en-us/ai/principles-and-approach",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 bottom strip (300 dpi, read) prints footnote 8 as the URL https://www.microsoft.com/en-us/ai/principles-and-approach; the OCR anchor sentence with marker $^{8}$ survives but the page-bottom body was dropped."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "qwq-exaone-lcb-annotated-cells",
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "The QwQ 32B and EXAONE-Deep-32B LCB cells carry range annotations (63.4_{8/24-2/25}, 59.5_{9/24-2/25}) that the print sets as subscripted labels spanning into the Codeforces column; the OCR flattens this into a colspan cell with a trailing dash. Values match the print; the layout nuance is left unchanged."
+    },
+    {
+      "id": "demo-box-image-content",
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "The maze adjacency list and solution path exist only inside embedded figures ({depicted as an image below}), so their internal text cannot be transcribed or checked against the OCR text."
+    }
+  ]
+}

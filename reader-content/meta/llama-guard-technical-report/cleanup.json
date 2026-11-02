@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "meta:llama-guard-technical-report",
+  "source_sha256": "fc5a3690f3a7771d7c429b6deb73e9e95ac4aa879fce490563c5eeb4f7ad2f33",
+  "ocr_sha256": "869a677542da8a510f90ca655b80895b4f0f70c9f4831dbd34117e3e6bfc7a54",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level pass of all 15 physical PDF pages; physical pages 1, 3, 5 and 7 were rendered and visually checked. All seven printed footnote bodies (five URLs and two prose notes) were dropped while their superscript markers survived, and one garbled word was found ('redeaming' for the printed 'redteaming'). Remaining token deltas are soft-hyphen splits and hyphenated reference names that the markdown joins correctly (Cancedda, O'Connell, Ruddit all present)."
+  },
+  "patches": [
+    {
+      "before": "and Azure Content Safety API $^{3}$ .",
+      "after": "and Azure Content Safety API $^{3}$ .\n\n1 https://perspectiveapi.com/\n\n2 https://platform.openai.com/docs/guides/moderation/overview\n\n3 https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote rule prints \"1https://perspectiveapi.com/, 2https://platform.openai.com/docs/guides/moderation/overview, 3https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety\"; the $^{1}$-$^{3}$ markers survive in the introduction sentence but all three URL bodies were dropped."
+    },
+    {
+      "before": "or the agent messages (dubbed “responses”). $^{4}$ .",
+      "after": "or the agent messages (dubbed “responses”). $^{4}$ .\n\n4 We recognize that the word “prompt” may apply to both the prompts of LLM-based AI agents, and the prompts for Llama Guard. To avoid confusion, this paper uses “prompt” to refer to the former, and the latter is referred to as “Llama Guard prompt”.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 footnote rule prints \"4We recognize that the word “prompt” may apply to both the prompts of LLM-based AI agents, and the prompts for Llama Guard. To avoid confusion, this paper uses “prompt” to refer to the former, and the latter is referred to as “Llama Guard prompt”.\"; the $^{4}$ marker survived but the body was dropped."
+    },
+    {
+      "before": "a binary label per category, and an overall binary label for the content.",
+      "after": "a binary label per category, and an overall binary label for the content.\n\n5 https://platform.openai.com/docs/guides/moderation/",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 footnote rule prints \"5https://platform.openai.com/docs/guides/moderation/\"; the $^{5}$ marker survives on 'OpenAI Moderation API $^{5}$' but the URL body was dropped."
+    },
+    {
+      "before": "identity attack, insult, profanity, and threat.",
+      "after": "identity attack, insult, profanity, and threat.\n\n6 https://perspectiveapi.com/",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 footnote rule prints \"6https://perspectiveapi.com/\"; the $^{6}$ marker survives on 'Perspective API $^{6}$' but the URL body was dropped."
+    },
+    {
+      "before": "selected the threshold that provided the highest average precision for the dataset.",
+      "after": "selected the threshold that provided the highest average precision for the dataset.\n\n7 https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 footnote rule prints \"7https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety\"; the $^{7}$ marker survives on 'Azure AI Content Safety API $^{7}$' but the URL body was dropped."
+    },
+    {
+      "before": "our redeaming process",
+      "after": "our redteaming process",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 prints \"...this data and process is separate from our redteaming process for production models.\"; OCR dropped the 't' and produced 'redeaming'."
+    }
+  ],
+  "unresolved": []
+}

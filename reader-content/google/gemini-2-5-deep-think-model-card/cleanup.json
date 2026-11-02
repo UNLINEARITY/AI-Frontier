@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-2-5-deep-think-model-card",
+  "source_sha256": "4f38096e3dffa489aeb429f85a17e07e0870ad1e8ebd480cb55bf0819515c267",
+  "ocr_sha256": "d09472eb628104ee01bbdb242167443dd87e249338dd073adcfeecb232fd3d62",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 20 physical pages; physical pages 4, 6, 8, 13, 14, 17 and 20 were additionally rendered and visually checked (table headers and cells, Figure 2 caption order, citation punctuation, the dropped closing paragraph). Balanced code fences and no swallowed structure. The PDF itself prints several glued forms that OCR faithfully copied and were left unchanged: \"matharena.ai.IMO\" (p.4), \"Gemini 2.5 DeepThink\" (p.8), \"60.7.%\" (p.4, where OCR silently corrected the printed stray period - kept corrected). \"Cyber-security\" (p.8) is the printed end-of-line hyphenation and is correct. Spaced-but-readable flattened line breaks inside Table 1 row-label cells (e.g. \"Mathematics IMO 2025\") were left unchanged because the visible text is unaltered; the cover page's \"Model card published/updated AUG 01, 2025\" line is absent from the OCR but the same publication date is printed and kept on page 2."
+  },
+  "patches": [
+    {
+      "before": "Figure 2: Results on the autonomous cyber offense suite. Each benchmark consists of a set of “capture-the-flag” (CTF) challenges that require the agent to hack into a simulated server to obtain concealed information. Labels above bars represent\n\nOur second suite, the key skills benchmark, is motivated by the cyber evaluation framework introduced by Rodriguez et al., (2025). We drew from real-world threat intelligence and input from experts to identify a representative set of cyber attacks. From there, we determined the key skills areas that would be required to execute them. We identified four key areas:\n\n\\- Reconnaissance (the application of finding and researching different knowledge and data and applying it in a cybersecurity context);\n\n\\- Tool development (the ability to design and create software that is cybersecurity-specific);\n\n\\- Tool usage (the ability to leverage common and cybersecurity-specific tools to achieve routine instrumental cyber goals);\n\n\\- Operational security (the skill of remaining hidden during and after a cyber operation).\n\nWe instantiate this benchmark by mapping 48 challenges from an external vendor to this specification. We also use these evaluations as a proxy for uplift capability, for Cyber Uplift Level 1: even partial automation of these key skills could mean fewer resources are needed for sophisticated cyberattacks.\n\nAfter running our evaluations, cybersecurity experts review the experimental results to make a determination whether the CCL has been reached, drawing on evidence both from benchmark performance and from analysis of individual trajectories.\n\nResults: On the Autonomous Cyber Offense Suite (Figure 2), the performance of Gemini 2.5 Deep Think improves on previous models, but does not represent a substantial improvement. On the easy challenges in the autonomous offense suite, Gemini 2.5 Deep Think performs comparably to previous models, solving 73/76. For our in-house Capture The Flag challenges, Gemini 2.5 Deep Think solves 13/13, making it the strongest model we have tested to date. Gemini 2.5 Deep Think solves 3/13 hack the box (hard) challenges. On the key skills benchmark (Figure 3), we observe that Gemini 2.5 Deep Think improves on previous Gemini 2.5 Pro models, but still struggles with Hard challenges.\n\n![[images/0a4bbedce3088b0517e85facf850fb9a859342b3f6a5d42d9e5a138488b80566.jpg]]\n\nthe number of solved and total number of challenges. A challenge is considered solved if the agent succeeds in at least one of the N attempts, where $\\mathrm{N} = 10$ for easy and hard challenges, and $\\mathrm{N} = 20$ for medium challenges. Gemini 2.5 Deep Think completes the full suite of internal CTF tasks, but still struggles with the more difficult hack the box challenges.",
+      "after": "![[images/0a4bbedce3088b0517e85facf850fb9a859342b3f6a5d42d9e5a138488b80566.jpg]]\n\nFigure 2: Results on the autonomous cyber offense suite. Each benchmark consists of a set of “capture-the-flag” (CTF) challenges that require the agent to hack into a simulated server to obtain concealed information. Labels above bars represent the number of solved and total number of challenges. A challenge is considered solved if the agent succeeds in at least one of the N attempts, where $\\mathrm{N} = 10$ for easy and hard challenges, and $\\mathrm{N} = 20$ for medium challenges. Gemini 2.5 Deep Think completes the full suite of internal CTF tasks, but still struggles with the more difficult hack the box challenges.",
+      "count": 1,
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "evidence": "Rendered physical pp.13-14: the Figure 2 chart sits between the page-13 body (ending \"...still struggles with Hard challenges.\") and its caption, which starts at the bottom of p.13 (\"Figure 2: Results ... Labels above bars represent\") and continues at the top of p.14 (\"the number of solved and total number of challenges. ... hack the box challenges.\"). OCR emitted the caption's first sentence before the page-13 body and split the remainder after the image embed; the patch moves the caption start to directly follow the image so the caption is whole and reading order matches the printed pages. No image is added, removed or reordered."
+    },
+    {
+      "before": "mass casualty event.\" $^{4}$",
+      "after": "mass casualty event.\" $^{4}$\n\n$^{4}$ Compared to a counterfactual of not using generative AI systems.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prints footnote 4 at the page bottom: \"4 Compared to a counterfactual of not using generative AI systems.\"; OCR kept the superscript marker after the CBRN CCL definition quote but dropped the footnote body. Restored as a paragraph after the marker's paragraph, matching the corpus convention for restored footnotes."
+    },
+    {
+      "before": "presented as the biology and chemistry data sets (Li et al., 2024).",
+      "after": "presented as the biology and chemistry data sets (Li et al., 2024).\n\n$^{5}$ VMQA refers to an earlier version of the Virology Capabilities Test (Götting et al., 2025).",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 prints footnote 5 at the page bottom: \"5 VMQA refers to an earlier version of the Virology Capabilities Test (Götting et al., 2025).\"; OCR kept the superscript marker on \"SecureBio VMQA $^{5}$\" but dropped the footnote body."
+    },
+    {
+      "before": "on organizations with a limited security posture.\"",
+      "after": "on organizations with a limited security posture.\"\n\n$^{6}$ E.g. deletion or exfiltration of critical information, or destroying or disabling key systems.",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 prints footnote 6 at the page bottom: \"6 E.g. deletion or exfiltration of critical information, or destroying or disabling key systems.\"; OCR kept the superscript marker on \"cyber attacks $^{6}$\" but dropped the footnote body."
+    },
+    {
+      "before": "cost/resource reductions of an order of magnitude or more.\"",
+      "after": "cost/resource reductions of an order of magnitude or more.\"\n\n$^{7}$ E.g. deletion or exfiltration of sensitive information/disruption of key systems of organizations with strong security posture, or the creation of predictable and large-scale effects on critical national infrastructure.",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 prints footnote 7 at the page bottom: \"7 E.g. deletion or exfiltration of sensitive information/disruption of key systems of organizations with strong security posture, or the creation of predictable and large-scale effects on critical national infrastructure.\"; OCR kept the superscript marker on \"cyber attacks, $^{7}$\" but dropped the footnote body."
+    },
+    {
+      "before": "has reached the early warning alert threshold for CBRN Uplift Level 1 CCL.",
+      "after": "has reached the early warning alert threshold for CBRN Uplift Level 1 CCL.\n\nWhile further evaluation is needed to determine whether the model has reached CBRN Uplift Level 1 CCL, we have put in place mitigations for the identified CBRN risks. These mitigations include interventions to prevent the model from revealing inappropriate information, as well as usage monitoring and account enforcement to identify and intervene on misuse attempts. As per the Frontier Safety Framework, an internal safety case based on these mitigations and red teaming results was developed and reviewed by Google DeepMind’s Responsibility and Safety Council (RSC) before launch.",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 ends with a closing paragraph (\"While further evaluation is needed ... Responsibility and Safety Council (RSC) before launch.\") that OCR dropped entirely; the markdown ended at the previous paragraph. Transcribed from the rendered page and appended after the preceding Frontier Safety Summary paragraph."
+    },
+    {
+      "before": "Capability Benchmark1",
+      "after": "Capability Benchmark $^{1}$",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 Table 1 header prints \"Capability\" over \"Benchmark\" with a superscript footnote 1 (\"Benchmark¹\"), footnoted at the page bottom. OCR flattened the superscript into a trailing digit; the document's own OCR convention for these superscript footnote markers is math superscript ($Evaluation^2$, $Tone^3$ in the safety table), so the same form is used here."
+    },
+    {
+      "before": "Code generationLiveCodeBench v6",
+      "after": "Code generation LiveCodeBench v6",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 Table 1 row label prints \"Code generation\" and \"LiveCodeBench v6 (UI: 1/1/2025-5/1/2025)\" on separate lines of one cell; OCR joined them without a space (\"generationLiveCodeBench\"). Patch restores the missing space only."
+    },
+    {
+      "before": "Gemini 2.5Deep Thinkvs. Gemini 2.5 Pro",
+      "after": "Gemini 2.5 Deep Think vs. Gemini 2.5 Pro",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 safety-evaluations table header prints \"Gemini 2.5\" / \"Deep Think\" / \"vs. Gemini 2.5 Pro\" on three lines of one cell; OCR joined them without spaces. Patch restores the missing spaces only."
+    },
+    {
+      "before": "suite:73/76 easy, 13/13 medium, 3/13 hard.On key skills benchmark:6/8 easy, 17/28 medium, 4/12 hard.",
+      "after": "suite: 73/76 easy, 13/13 medium, 3/13 hard. On key skills benchmark: 6/8 easy, 17/28 medium, 4/12 hard.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 CCL table cell prints \"Solve rate on autonomous offense suite:\" / \"73/76 easy, 13/13 medium, 3/13 hard.\" / \"On key skills benchmark:\" / \"6/8 easy, 17/28 medium, 4/12 hard.\" on separate lines; OCR joined the lines without spaces. Patch restores the missing spaces only."
+    },
+    {
+      "before": "strategic\\_rule\\_breaking",
+      "after": "strategic_rule_breaking",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 Stealth Results prints the challenge name as strategic_rule_breaking with plain underscores; the backslash-underscore sequences are OCR Markdown escapes that would render as literal backslashes."
+    },
+    {
+      "before": "Phuong et al.. (2025) for a detailed description",
+      "after": "Phuong et al., (2025) for a detailed description",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 prints \"See Phuong et al., (2025) for a detailed description.\" (comma before the parenthesized year); OCR turned the comma into a period, producing \"et al.. \"."
+    },
+    {
+      "before": "Phuong et al.. (2025) for task details",
+      "after": "Phuong et al., (2025) for task details",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 Figure 5 and Figure 6 captions print \"See Phuong et al., (2025) for task details.\" (comma before the year); OCR turned the comma into a period, producing \"et al.. \". The identical phrase appears twice in the markdown, hence count 2."
+    },
+    {
+      "before": "humanitys\\_last\\_exam",
+      "after": "humanitys_last_exam",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 Result sources bullet prints the URL https://scale.com/leaderboard/humanitys_last_exam with plain underscores; the backslash-underscore sequences are OCR Markdown escapes that would render as literal backslashes."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "flattened-multiline-table-cells",
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Table 1 row-label cells flatten printed multi-line cells into one line with spaces (\"Mathematics IMO 2025\", \"Reasoning & knowledge Humanity's Last Exam (no tools)\"); the visible character sequence is unchanged and no <br> convention exists in this corpus, so left as-is."
+    }
+  ]
+}

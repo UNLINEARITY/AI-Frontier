@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "moonshot:kimi-audio-technical-report",
+  "source_sha256": "b0242652500385de781a0d36d048425518f679c15042037738a8bb513233ea66",
+  "ocr_sha256": "aa43b767f5c803d4fc946408c8bc98134f356ac2fec0a6bacc81e8f5038e8f72",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "Full word-level alignment of the OCR Markdown against extracted text from all 26 physical PDF pages; every unmatched block was inspected. All replaces were LaTeX-equivalent math spacing (c_i, a_d, s_i subscripts) or concatenated words split correctly by OCR; the only unmatched PDF text is running headers ('N Kimi-Audio Technical Report'), the arXiv stamp, and four page-bottom footnote bodies restored below. Footnote areas of physical pages 6-7 and the page-2 'espects' spelling were verified on 300 dpi renders. No code fences exist in this document; tables are intact HTML. Reference [42]'s doubled 'https://https://' is the print's own typo and is preserved."
+  },
+  "patches": [
+    {
+      "before": "to address the issues in the previous segmentation results:",
+      "after": "to address the issues in the previous segmentation results:\n\n$^{1}$ https://github.com/pyannote/pyannote-audio",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 bottom at 300 dpi: page-bottom footnote 1 reads '1https://github.com/pyannote/pyannote-audio'. The body was dropped by OCR while the marker survives as 'PyAnnote toolkit $^{1}$' in the paragraph."
+    },
+    {
+      "before": "if the gap exceeds 1.0 second, we insert a “period”.",
+      "after": "if the gap exceeds 1.0 second, we insert a “period”.\n\n$^{2}$ https://huggingface.co/openai/whisper-large-v3\n$^{3}$ https://github.com/modelscope/FunASR",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 bottom at 300 dpi: page-bottom footnotes read '2https://huggingface.co/openai/whisper-large-v3' and '3https://github.com/modelscope/FunASR'. Both bodies were dropped by OCR while the markers survive as '$[58]^{2}$' (Whisper-large-v3) and 'FunASR toolkit $^{3}$' in the same paragraph."
+    },
+    {
+      "before": "<td>Kimi Inhouse Audio Data</td><td>5,200</td><td>AAC/AQA</td><td>2.0</td></tr></table>",
+      "after": "<td>Kimi Inhouse Audio Data</td><td>5,200</td><td>AAC/AQA</td><td>2.0</td></tr></table>\n\n$^{1}$ https://github.com/fighting41love/zhvoice",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 bottom at 300 dpi: the third page-bottom footnote reads '1https://github.com/fighting41love/zhvoice'. The body was dropped by OCR while the marker survives on '$zhvoice^1$' in the SFT-data table row."
+    },
+    {
+      "before": "audio foundation model in three aspects: architecture, data, and training.",
+      "after": "audio foundation model in three espects: architecture, data, and training.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 at 300 dpi: the printed sentence reads 'building a state-of-the-art (SOTA) audio foundation model in three espects: architecture, data, and training.' — the print's own misspelling 'espects' (dropped 'a'), which OCR silently auto-corrected. Restoring the printed spelling."
+    }
+  ],
+  "unresolved": []
+}

@@ -47,17 +47,17 @@
       39
     ],
     "coverage": "complete",
-    "notes": "Full read-through of all OCR lines against extracted text from all 39 physical PDF pages; pages 7, 12 and 38 were additionally rendered to verify equations (4), (12) and reference [30]. Citation punctuation spacing after inline math is repaired by the shared OCR normalizer rather than a document patch. Figure label fragments on physical pages 31-32 and flattened table boundaries were left unchanged without clearer source evidence."
+    "notes": "Full read-through of all OCR lines against extracted text from all 39 physical PDF pages; pages 7, 12 and 38 were additionally rendered to verify equations (4), (12) and reference [30]; the equation (4) subscript was re-verified at high resolution and kept as the printed numeral 1. Citation punctuation spacing after inline math is repaired by the shared OCR normalizer rather than a document patch. Figure label fragments on physical pages 31-32 and flattened table boundaries were left unchanged without clearer source evidence."
   },
   "patches": [
     {
       "before": "\\mathcal {E} _ {1}",
-      "after": "\\mathcal {E}_{l}",
+      "after": "\\mathcal {E}_{1}",
       "count": 1,
       "pdf_pages": [
         7
       ],
-      "evidence": "Rendered PDF physical p.7 equation (4) shows calligraphic E with a lowercase ell subscript, and the following sentence uses the same E_l for the task-level understanding representation; OCR read the subscript as the digit 1."
+      "evidence": "Rendered physical p.7 equation (4) prints a calligraphic E with the numeral 1 as subscript ({E_v, E_d, E_a, E_1}); the following sentence prints \"E_1 produces the task-level understanding representation\" with the same numeral glyph (visually verified at 600/1200 dpi). The patch only removes OCR spacing inside the subscript and does not change the character."
     },
     {
       "before": "s \\sim \\mathrm{Uniform} \\{1, \\ldots , 1 0 0 0 \\}",

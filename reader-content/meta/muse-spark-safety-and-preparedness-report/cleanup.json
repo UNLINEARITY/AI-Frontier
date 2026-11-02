@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "id": "meta:muse-spark-safety-and-preparedness-report",
+  "source_sha256": "977d071052e3f5dc267e1022671babf6a7967111f9bf2ad84e88b6419b405e61",
+  "ocr_sha256": "9c396f4c8f984f9f5d195cb6ada1b39953872703a25b37aa129cd87f997f9777",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      9,
+      54,
+      59,
+      99,
+      100,
+      102,
+      116,
+      120,
+      121,
+      128,
+      152,
+      153,
+      155,
+      156,
+      157,
+      158
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 160-page report. Structure: full-document fence scan (4 printed prompt-box fences, all balanced; none swallow body content), plus every markdown heading classified against the PDF. Droppage: machine 4-gram containment scan of all 160 PDF pages against the normalized OCR markdown (an earlier low-containment cluster on pages 13-18 was proven to be a scan-script artifact: five false HTML-tag regex matches swallow ~28k OCR chars; page text is present), and low-ratio pages 1, 35, 44, 95, 122, 153-158, 160 were inspected via text layer and/or renders. Pages 9, 54, 59, 99, 100, 102, 116, 120, 121, 128, 152, 153, 155, 156, 157, 158 were additionally rendered (110-130 dpi class) and visually verified for every patch below; the remaining pages were only machine-scanned, so coverage is partial. Findings: OCR promoted prompt-box headers, excerpt-box labels and one sentence to markdown headings (sections 1.1.1, 2.3.1.1, 2.3.1.2, 4.1.3, 4.1.4, 4.1.9, 4.1.11, 4.2.2.1, A.2.2-A.2.4, A.2.9); the whole CyberGym System Prompt box in A.2.9 (physical pages 156-158) lost its fence, so twelve in-box bold labels became document headings; the A.2.8 prompt box misread the printed em-dash task markers and split '$reasoning' across lines. Recurring bold subsection leads ('Dual-Use: ...', 'High-Risk Bottlenecks: ...') were kept as headings because the PDF prints them as standalone bold label lines on physical page 20/25 and they act as navigational subsections, unlike the one-off box headers demoted here. Table 19, Figure 13/14 and Figure 19 content flagged by the scan is present (figure-internal text and CI math notation differences, not defects)."
+  },
+  "patches": [
+    {
+      "before": "## - Capabilities & Propensities:",
+      "after": "\\- Capabilities & Propensities:",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prints 'Capabilites & Propensities:' as a bullet item at the same list level as the neighboring 'Assessment:' bullets (with a sub-bullet 'Pre-deployment evaluation reliability (Section 2.3.1): ...'). The OCR promoted the bullet to a heading; the sibling items are escaped-bullet lines ('\\- Assessment:', '\\- Capability & Refusals:'), so the heading is demoted to the same list-item form."
+    },
+    {
+      "before": "## Machine learning engineering skills. We\n\nevaluated the model on MLE-Bench",
+      "after": "Machine learning engineering skills. We evaluated the model on MLE-Bench",
+      "count": 1,
+      "pdf_pages": [
+        54
+      ],
+      "evidence": "Rendered physical p.54 prints 'Machine learning engineering skills.' as an italic run-in paragraph lead followed by 'We evaluated the model on MLE-Bench (Chan et al., 2025), ...' in the same paragraph, parallel to 'Software engineering capabilities. We evaluated ...'. The OCR split the sentence at a line break and made the fragment 'Machine learning engineering skills. We' a heading."
+    },
+    {
+      "before": "## Muse Spark — WMDP-Bio",
+      "after": "Muse Spark — WMDP-Bio",
+      "count": 1,
+      "pdf_pages": [
+        59
+      ],
+      "evidence": "Rendered physical p.59 prints 'Muse Spark — WMDP-Bio' as a bold attribution label after a quoted reasoning excerpt, not a section heading; the OCR kept the five sibling labels ('Muse Spark — WMDP-Chem', '— CyberGym', '— WMDP-Cyber', '— MASK', '— GDM-Stealth') as plain text and only promoted this first one to a heading."
+    },
+    {
+      "before": "## We evaluated two types of intent understanding:",
+      "after": "We evaluated two types of intent understanding:",
+      "count": 1,
+      "pdf_pages": [
+        99
+      ],
+      "evidence": "Rendered physical p.99 prints 'We evaluated two types of intent understanding:' as the closing plain paragraph of the 4.1.3 introduction, not a heading."
+    },
+    {
+      "before": "## Underlying Intent Eval",
+      "after": "Underlying Intent Eval",
+      "count": 1,
+      "pdf_pages": [
+        100
+      ],
+      "evidence": "Rendered physical p.100 prints 'Underlying Intent Eval' as the gray title bar of the example box containing the User/Stated intent/Underlying intent transcript, not a document heading. Demoted to the plain label line above its box body; the box body itself stays as ordinary paragraphs."
+    },
+    {
+      "before": "## HLE Calibration.",
+      "after": "HLE Calibration.",
+      "count": 1,
+      "pdf_pages": [
+        102
+      ],
+      "evidence": "Rendered physical p.102 prints 'HLE Calibration.' as a bold paragraph lead line above the 'We used Humanity's Last Exam ...' paragraph, not a numbered section heading."
+    },
+    {
+      "before": "## Scoring.\n",
+      "after": "Scoring.\n",
+      "count": 1,
+      "pdf_pages": [
+        116
+      ],
+      "evidence": "Rendered physical p.116 prints 'Scoring.' as a bold paragraph lead above the Homogenization/Heterogeneity bullet list in the response-diversity evaluation, not a section heading."
+    },
+    {
+      "before": "## Scoring. We compute:",
+      "after": "Scoring. We compute:",
+      "count": 1,
+      "pdf_pages": [
+        128
+      ],
+      "evidence": "Rendered physical p.128 prints 'Scoring. We compute:' as an italic run-in paragraph lead ('Scoring.' italic, then 'We compute:') above the Individual accuracy bullet list in section 4.2.2.1, not a section heading."
+    },
+    {
+      "before": "## AbstentionBench",
+      "after": "AbstentionBench",
+      "count": 1,
+      "pdf_pages": [
+        121
+      ],
+      "evidence": "Rendered physical p.121 shows 'AbstentionBench' as the gray title bar of a quoted reasoning excerpt box in section 4.1.11, like the 'Deception Bench' box on physical p.120 that the OCR kept as plain text."
+    },
+    {
+      "before": "## CharXiv Missing Images",
+      "after": "CharXiv Missing Images",
+      "count": 1,
+      "pdf_pages": [
+        121
+      ],
+      "evidence": "Rendered physical p.121 shows 'CharXiv Missing Images' as the gray title bar of a quoted reasoning excerpt box, not a document heading."
+    },
+    {
+      "before": "## ImpossibleBench",
+      "after": "ImpossibleBench",
+      "count": 1,
+      "pdf_pages": [
+        121
+      ],
+      "evidence": "Rendered physical p.121 shows 'ImpossibleBench' as the gray title bar of a quoted reasoning excerpt box, not a document heading."
+    },
+    {
+      "before": "## Deception Bench (Multi-Turn)",
+      "after": "Deception Bench (Multi-Turn)",
+      "count": 1,
+      "pdf_pages": [
+        121
+      ],
+      "evidence": "Rendered physical p.121 shows 'Deception Bench (Multi-Turn)' as the gray title bar of a quoted reasoning excerpt box, not a document heading."
+    },
+    {
+      "before": "## Underspecified Intent",
+      "after": "Underspecified Intent",
+      "count": 1,
+      "pdf_pages": [
+        121
+      ],
+      "evidence": "Rendered physical p.121 shows 'Underspecified Intent' as the gray title bar of the last quoted reasoning excerpt box, not a document heading."
+    },
+    {
+      "before": "## Instructed Monitor-Oblivious Selective Performance",
+      "after": "Instructed Monitor-Oblivious Selective Performance",
+      "count": 1,
+      "pdf_pages": [
+        152
+      ],
+      "evidence": "Rendered physical p.152 shows this text as the blue title bar of the prompt box under A.2.2, not a document heading."
+    },
+    {
+      "before": "## Instructed Monitor-Aware Selective Performance",
+      "after": "Instructed Monitor-Aware Selective Performance",
+      "count": 1,
+      "pdf_pages": [
+        152
+      ],
+      "evidence": "Rendered physical p.152 shows this text as the blue title bar of the prompt box under A.2.3, not a document heading."
+    },
+    {
+      "before": "## Medium Pressure (system prompt)",
+      "after": "Medium Pressure (system prompt)",
+      "count": 1,
+      "pdf_pages": [
+        152
+      ],
+      "evidence": "Rendered physical p.152 shows 'Medium Pressure (system prompt)' as the blue title bar of the second A.2.4 prompt box; the OCR kept the sibling 'Low Pressure (system prompt)' box header as plain text and only promoted this one to a heading."
+    },
+    {
+      "before": "$\nreasoning\n-\nQUESTIONS ABOUT THE TASK ABOVE",
+      "after": "—\n$reasoning\n—\nQUESTIONS ABOUT THE TASK ABOVE",
+      "count": 1,
+      "pdf_pages": [
+        156
+      ],
+      "evidence": "Rendered physical p.156 prints the A.2.8 Verbalized Strategic Reasoning prompt box with em-dash task markers around the literal token '$reasoning' ('CHAIN-OF-THOUGHT TO ANALYZE:' / '—' / '$reasoning' / '—'); the box later says 'the task shown between the — markers above'. The OCR split the '$' onto its own line and degraded both em-dashes ('$', '-')."
+    },
+    {
+      "before": "You are an expert security researcher specializing in vulnerability analysis and proof-of-concept development.",
+      "after": "```txt\nCyberGym System Prompt\nYou are an expert security researcher specializing in vulnerability analysis and proof-of-concept development.",
+      "count": 1,
+      "pdf_pages": [
+        156,
+        157
+      ],
+      "evidence": "Rendered physical p.156-157 show the CyberGym System Prompt as one continuous prompt box (gray title bar on p.156, body through 'Submission' on p.157, tail 'When you have crafted your PoC ... submit(poc_path=\"/tmp/poc.bin\")' on p.158). The OCR read the box body as document text, so twelve in-box bold labels became markdown headings ('Your Goal', 'Environment', 'Pre-installed tools:', 'Package management:', 'Available Files', 'File Descriptions', 'Approach', '1. Extract and explore the source code', '2. Understand the vulnerability', '3. Analyze the input format', '4. Craft the PoC', 'Submission'). The patch opens a fenced block at the box start and adds the printed box title line, mirroring the fenced 'CTF System Prompt' box."
+    },
+    {
+      "before": "```txt\nWhen you have crafted your PoC",
+      "after": "When you have crafted your PoC",
+      "count": 1,
+      "pdf_pages": [
+        157,
+        158
+      ],
+      "evidence": "Rendered physical p.158 shows 'When you have crafted your PoC ...' as the continuation of the same CyberGym System Prompt box, not a separate box. With the fence opened at the box start, this stray OCR fence opener inside the box body is removed so the single closing fence after 'submit(poc_path=\"/tmp/poc.bin\")' terminates the box."
+    },
+    {
+      "before": "## Your Goal",
+      "after": "Your Goal",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints 'Your Goal' as a bold label inside the CyberGym System Prompt box; inside the restored fence it must not carry the OCR's markdown heading prefix."
+    },
+    {
+      "before": "## Environment",
+      "after": "Environment",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints 'Environment' as a bold label inside the CyberGym System Prompt box; OCR heading prefix stripped inside the restored fence."
+    },
+    {
+      "before": "## Pre-installed tools:",
+      "after": "Pre-installed tools:",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints 'Pre-installed tools:' as a bold label inside the CyberGym System Prompt box; OCR heading prefix stripped inside the restored fence."
+    },
+    {
+      "before": "## Package management:",
+      "after": "Package management:",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints 'Package management:' as a bold label inside the CyberGym System Prompt box; OCR heading prefix stripped inside the restored fence."
+    },
+    {
+      "before": "## Available Files",
+      "after": "Available Files",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints 'Available Files' as a bold label inside the CyberGym System Prompt box; OCR heading prefix stripped inside the restored fence."
+    },
+    {
+      "before": "## File Descriptions",
+      "after": "File Descriptions",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints 'File Descriptions' as a bold label inside the CyberGym System Prompt box; OCR heading prefix stripped inside the restored fence."
+    },
+    {
+      "before": "## Approach",
+      "after": "Approach",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints 'Approach' as a bold label inside the CyberGym System Prompt box; OCR heading prefix stripped inside the restored fence."
+    },
+    {
+      "before": "## 1. Extract and explore the source code",
+      "after": "1. Extract and explore the source code",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints the numbered steps '1. Extract and explore the source code' through '4. Craft the PoC' as bold list labels inside the CyberGym System Prompt box; OCR heading prefixes stripped inside the restored fence."
+    },
+    {
+      "before": "## 2. Understand the vulnerability",
+      "after": "2. Understand the vulnerability",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints step 2 as a bold list label inside the CyberGym System Prompt box; OCR heading prefix stripped inside the restored fence."
+    },
+    {
+      "before": "## 3. Analyze the input format",
+      "after": "3. Analyze the input format",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints step 3 as a bold list label inside the CyberGym System Prompt box; OCR heading prefix stripped inside the restored fence."
+    },
+    {
+      "before": "## 4. Craft the PoC",
+      "after": "4. Craft the PoC",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints step 4 as a bold list label inside the CyberGym System Prompt box; OCR heading prefix stripped inside the restored fence."
+    },
+    {
+      "before": "## Submission",
+      "after": "Submission",
+      "count": 1,
+      "pdf_pages": [
+        157
+      ],
+      "evidence": "Rendered physical p.157 prints 'Submission' as the final bold label inside the CyberGym System Prompt box, with the test_poc/submit instructions continuing on physical p.158; OCR heading prefix stripped inside the restored fence."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "ctf-prompt-box-order-a2-9",
+      "pdf_pages": [
+        156
+      ],
+      "evidence": "The fenced 'CTF System Prompt' block and the duplicate screenshot image (ocr images/674f528c..., which shows the CTF box plus the first lines of the CyberGym box) sit BEFORE the 'A.2.9 Cybersecurity Agent Prompts' heading in the OCR order, while the PDF prints the CTF box inside A.2.9 after the intro sentence. Restoring the printed order would require moving the image embed, which text cleanup cannot do (the exporter rejects reordered image embeds). Content is complete; only placement differs."
+    },
+    {
+      "id": "a2-2-a2-4-box-bodies-as-plain-paragraphs",
+      "pdf_pages": [
+        152
+      ],
+      "evidence": "The A.2.2/A.2.3/A.2.4 prompt-box bodies (Instructed Monitor-Oblivious/Aware, Low/Medium Pressure) are plain paragraphs in the OCR rather than fenced boxes; only the spurious box-header headings were demoted. Boxing them like A.2.6-A.2.8 would be a larger structural rewrite left for a fuller review."
+    },
+    {
+      "id": "high-strong-pressure-boxes-image-only",
+      "pdf_pages": [
+        153
+      ],
+      "evidence": "The OCR dropped the text of the 'High Pressure (system prompt)' and 'Strong Objective (system prompt)' boxes but embedded them as the screenshot image (ocr images/f7e177c...), so the reader shows the content visually; the text was not re-transcribed from the PDF."
+    },
+    {
+      "id": "partial-page-coverage",
+      "pdf_pages": [],
+      "evidence": "Pages other than those in pages_reviewed were machine-scanned only (4-gram containment plus text-layer spot checks of pages 1, 35, 44, 95, 122, 160); footnote bodies, reference entries and table cells on those pages were not read line-by-line."
+    }
+  ]
+}

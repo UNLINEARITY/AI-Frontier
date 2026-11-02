@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nemotron-4-340b-technical-report",
+  "source_sha256": "ec50b56fa82e76d6fc4b096da7f0a91927e4d30de9c5413f1cc843f455975ea1",
+  "ocr_sha256": "171bc0976aa5cb40d47d3535f038ed15ad30ab715d937157b474aa16c5bbb0aa",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34
+    ],
+    "coverage": "complete",
+    "notes": "Word-level diff of all 34 physical PDF pages against the OCR markdown plus a 10-word shingle pass; renders of physical pages 3, 12, 15, 19, 23, 26, 27, 30, 32 verified every repair visually. One real structural defect: the single ```txt fence in appendix C swallowed the printed Prompt V2/V3 subheadings (repaired by splitting into three balanced fences). Figure-internal chart text (p.2, p.5, p.8 'avg=' labels, p.18 axes) and literal '\\n'/'<extra_id_N>' tokens inside printed prompt boxes are faithful to the print and left unchanged. Shingle mismatches are HTML-table cell order, LaTeX math and escaped underscores; page-number-including shingles are extraction artifacts."
+  },
+  "patches": [
+    {
+      "before": "Table 1: Key hyper-parameters affecting size of Nemotron-4-340B-Base.\n\n## 2.3 Training Details",
+      "after": "Table 1: Key hyper-parameters affecting size of Nemotron-4-340B-Base.\n\n$^{1}$Also available through NVIDIA NGC: Nemotron-4-340B-Base, Nemotron-4-340B-Instruct, Nemotron-4-340B-Reward.\n\n## 2.3 Training Details",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 bottom shows footnote 1 after a rule below the Table 1 caption: superscript-1 'Also available through NVIDIA NGC: Nemotron-4-340B-Base, Nemotron-4-340B-Instruct, Nemotron-4-340B-Reward.' The body was dropped from the OCR (the string NGC appears nowhere); the marker survives in OCR as 'which is permissive for commercial applications. $^{1}$'. Inserted after the Table 1 caption, the last text printed on p.3."
+    },
+    {
+      "before": "Detailed distribution of prompts are included in Supplementary Material G.\n\nOur annotation guidelines",
+      "after": "Detailed distribution of prompts are included in Supplementary Material G.\n\n$^{1}$Note that we didn’t search on prompts. Results may be further improved with careful prompt engineering.\n\n$^{2}$Scores reported on Arena Hard Leaderboard (Tianle Li*, 2024) except for Qwen-2-72B-Instruct.\n\n$^{3}$Scores reported on AlpacaEval Leaderboard (Dubois et al., 2024) except for Qwen-2-72B-Instruct.\n\n$^{4}$MT-Bench evaluated by GPT-4-Turbo, see details in (Wang et al., 2024).\n\n$^{5}$Scores reported on EvalPlus Leaderboard (Liu et al., 2023).\n\n$^{6}$Score reported in Llama-3 blog.\n\n$^{7}$All scores except MT-bench (GPT-4-Turbo), AlpacaEval 2.0 LC, and IFEval Instruction-Strict Acc for Qwen-2-72B-Instruct are from Qwen-2 blog.\n\n$^{8}$All scores for Claude-3 Sonnet are from Claude 3 technical report (Anthropic, 2024).\n\n$^{9}$See Supplemetary Materials F for more metrics.\n\nOur annotation guidelines",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 bottom shows nine table footnotes for Table 5 (markers 2-8 on Table 5 on p.14: Arena Hard^2, AlpacaEval 2.0 LC^3, MT-Bench^4, TFEval^9, HumanEval/MBPP scores^5,^6, Qwen-2-72B Instruct^7, Claude-3 Sonnet^8; marker 1 on 'Supplementary Materials E^1' at the p.15 top) that were all dropped from the OCR. Wording transcribed from the rendered 170-dpi page; footnote 9 keeps the print's own spelling 'Supplemetary'. Inserted after the last paragraph printed on p.15, matching the physical position."
+    },
+    {
+      "before": "Allen AI. Reward bench leaderboard. https://huggingface.co/spaces/allenai/reward-bench, 2024.\n\nAI Anthropic.",
+      "after": "Allen AI. Reward bench leaderboard. https://huggingface.co/spaces/allenai/reward-bench, 2024.\n\n$^{1}$Importantly, the safety model can make both false positive and false negative errors. Future work will include human ground truth labels to quantify the false prediction rate.\n\n\\* indicates equal contribution\n\n† indicates work done while at NVIDIA\n\nAI Anthropic.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 bottom shows, after the last reference printed on that page (Allen AI, Reward bench leaderboard), a rule then superscript-1 'Importantly, the safety model can make both false positive and false negative errors. Future work will include human ground truth labels to quantify the false prediction rate.' followed by the author-contribution lines '* indicates equal contribution' and '† indicates work done while at NVIDIA'. All three lines were dropped from the OCR; the footnote marker survives as 'Regulated Substances $^{1}$'. The asterisk is escaped as \\* to match the document's escaped-bullet convention and avoid markdown list rendering. Inserted at the exact print position on p.19."
+    },
+    {
+      "before": "OpenAI. Gpt-4-1106-preview.\ngpt-4-turbo-and-gpt-4, 2023.",
+      "after": "OpenAI. Gpt-4-1106-preview. https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4, 2023.",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 prints the reference as 'OpenAI. Gpt-4-1106-preview. https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4, 2023.' with the URL broken after 'models/' across lines; the OCR dropped the whole 'https://platform.openai.com/docs/models/' segment (words 'platform' and 'docs' absent) and kept only the orphan tail 'gpt-4-turbo-and-gpt-4, 2023.'"
+    },
+    {
+      "before": "mathematics knowledge taught in",
+      "after": "mathematics knowledge taughted in",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered physical p.26 prompt 'Generate Math Macro Topics' prints 'comprehensive topics that encompass the mathematics knowledge taughted in {school_level}?' with the print's own misspelling 'taughted'; the OCR auto-corrected it to 'taught'. Restored to the printed spelling."
+    },
+    {
+      "before": "mathematics topics that encompass",
+      "after": "mathemathics topics that encompass",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Rendered physical p.27 prompt 'Generate Math Subtopics based on Macro Topics' prints 'List {n_subtopics} mathemathics topics that encompass various aspects of \"{text1}\".' with the print's own misspelling 'mathemathics'; the OCR auto-corrected it to 'mathematics'. Restored to the printed spelling."
+    },
+    {
+      "before": "best overall accuracy",
+      "after": "best overall accuarcy",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 (Section F) prints 'Nemotron-4-340B-Instruct achieves the best overall accuarcy, demonstrating high precision, recall, and F1 scores' with the print's own misspelling 'accuarcy'; the OCR auto-corrected it to 'accuracy'. Restored to the printed spelling."
+    },
+    {
+      "before": "Empirically, we observe the policy network tends to overfitting",
+      "after": "Empirically, we observe the the policy network tends to overfitting",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 (200-dpi crop) prints 'Empirically, we observe the the policy network tends to overfitting when training long enough' with the print's own doubled 'the'; the OCR silently dropped one 'the'. Restored to the printed text."
+    },
+    {
+      "before": "Directly give me the question without extraneous words.\n\nPrompt V2: Complex User Turn",
+      "after": "Directly give me the question without extraneous words.\n```\n\n## Prompt V2: Complex User Turn\n\n```txt",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 shows appendix C with three separate bold subheadings each followed by its own monospace prompt box: 'Prompt V1: Normal User Turn', 'Prompt V2: Complex User Turn', 'Prompt V3: Concise User Turn'. The OCR opened one ```txt fence after the V1 heading and never closed it between prompts, demoting the V2/V3 headings into code content. This patch closes the fence after V1's box and restores '## Prompt V2: Complex User Turn' as a heading matching the V1 heading style, then reopens the box fence for V2."
+    },
+    {
+      "before": "suitable as a followup question. Directly give me the question without extraneous words.\n\nPrompt V3: Concise User Turn",
+      "after": "suitable as a followup question. Directly give me the question without extraneous words.\n```\n\n## Prompt V3: Concise User Turn\n\n```txt",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Same p.30 structure as the V2 patch: closes the V2 prompt fence and restores '## Prompt V3: Concise User Turn' as a heading, reopening the fence for V3's box; the existing closing fence after V3 then balances the last opening fence."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "html-table-cell-order-not-verified-cell-by-cell",
+      "pdf_pages": [
+        6,
+        10,
+        14,
+        15,
+        16,
+        18,
+        26,
+        32,
+        33,
+        34
+      ],
+      "evidence": "Benchmark and taxonomy tables are exported as HTML; a cell-by-cell numeric comparison against the PDF tables was not performed in this pass. Values are unchanged by this proposal."
+    },
+    {
+      "id": "prompt-box-linebreak-fidelity",
+      "pdf_pages": [
+        26,
+        30,
+        31
+      ],
+      "evidence": "Printed prompt boxes contain literal '\\n' sequences and '<extra_id_N>' placeholder tokens (e.g. 'possible.For example, 1. Food and drinks.\\n2. Technology.\\n'); the OCR preserves them, but a character-exact transcription check of every box was out of scope for this pass."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen3-asr-technical-report",
+  "source_sha256": "a3978e38b7825f22f408992cde49dd2970f2e5a56a454753ba7f380e6be7721e",
+  "ocr_sha256": "59745dca596db2d824f2dfa7a6c54afe0e595acbe7348c89be67b79447a89169",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "coverage": "complete",
+    "notes": "Automated line-level comparison of extracted text from all 16 physical PDF pages against the OCR Markdown, plus a code-fence balance scan (no fences present) and a heading scan (all headings match numbered sections). Page 3 architecture and prompt-figure text and the page 1 arXiv stamp exist only inside embedded figure images or the margin stamp, so they are not body droppage. The page 7 equation-adjacent sentence and the page 9 Fleurs footnote line are present in the OCR in LaTeX/reflowed form. Pages 1, 10 and 12 were rendered (150/130/300 dpi) to visually confirm the three patches; the page 12 authors block and bottom footnote were read at 300 dpi."
+  },
+  "patches": [
+    {
+      "before": "# Qwen3-ASR Technical Report\n\nQwen Team",
+      "after": "# Qwen3-ASR Technical Report\n\n2026-02-02\n\nQwen Team",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 top (150 dpi) prints the date 2026-02-02 in the title-page header, right of the Qwen logo above the title; the OCR dropped the date line from the title block."
+    },
+    {
+      "before": "Lei Xie, Jianwei Zhang, Xinfa Zhu, Guangdong Zhou",
+      "after": "Lei Xie, Jianwei Zhang, Xinfa Zhu, Guangdong Zhou\n\n1 Alphabetical order. †Corresponding Authors.",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 bottom (300 dpi) prints the footnote \"1Alphabetical order. †Corresponding Authors.\" explaining the Contributors superscript 1 and the † marks on Jin Xu and Junyang Lin (both verified on the same page render); the OCR kept the $^{1}$ and $^{†}$ markers but dropped the footnote body."
+    },
+    {
+      "before": "for Openpop (second",
+      "after": "for Opencpop (second",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 (130 dpi) prints \"...it achieves the best performance for M4Singer, MIR-1k-vocal, and Popcs, while remaining competitive for Opencpop (second to FunASR-MLT-Nano by a small margin)\"; Table 7 on the same page lists the benchmark as Opencpop. The OCR misread the name as \"Openpop\"."
+    }
+  ],
+  "unresolved": []
+}

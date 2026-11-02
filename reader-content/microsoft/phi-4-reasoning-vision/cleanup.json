@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:phi-4-reasoning-vision",
+  "source_sha256": "3acb035633a88c6fd8d0518f3ff1a2bee4a719030458aa6c7a6aab8226f67c29",
+  "ocr_sha256": "816496b56a9671b89b19e6bd1e83bb8ae80bc596194bd25051d8f0e2a37ea57c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "All 21 PDF pages word-compared with the OCR markdown; code fence balanced, 11 figure embeds present. Defects found: the two framework footnote bodies on p.11 were dropped while the inline $^{1}$/$^{2}$ markers survive (URLs verified on 300 dpi render); OCR misread the printed (sic) source typo \"Accruacy\" as \"Accrualy\" and the Table 7 stage label \"Mulit-Image\" as \"Multit-Image\" (both verified on renders; the PDF itself prints these spellings, including in body text on p.6 which prints \"Multi-Image\" correctly, so only Table 7 keeps the printed typo). The running header \"Phi-4-reasoning-vision-15B\" on every content page and the arXiv side stamp are page furniture omitted by the OCR; benchmark names like MMMU(Val) dropped from pages 3, 12-14 exist only inside vector chart images already embedded as figures; \"S2\" tokens are LaTeX subscript notation variance."
+  },
+  "patches": [
+    {
+      "before": "Accrualy results are presented",
+      "after": "Accruacy results are presented",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 prints \"Accruacy results are presented for our model and compared to several current, open-weight non-thinking and thinking models in Tables 5 and 6\" (visually verified at 300 dpi). The source's own typo is \"Accruacy\"; the OCR additionally misread it as \"Accrualy\". Restores the printed spelling."
+    },
+    {
+      "before": "<td rowspan=\"6\">Stage 3: Long Context, Multit-Image, and RAI</td>",
+      "after": "<td rowspan=\"6\">Stage 3: Long Context, Mulit-Image, and RAI</td>",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 Table 7 row label prints \"Stage 3: Long Context, Mulit-Image, and RAI\" (visually verified at 300 dpi; the source typo \"Mulit\" is printed only here, body text on p.6 prints \"Multi-Image\"). The OCR misread it as \"Multit-Image\"."
+    },
+    {
+      "before": "Tables 5 and 6, respectively.",
+      "after": "Tables 5 and 6, respectively.\n\n$^{1}$ https://github.com/microsoft/eureka-ml-insights\n\n$^{2}$ https://github.com/open-compass/VLMEvalKit",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Physical p.11 footnote block prints \"1https://github.com/microsoft/eureka-ml-insights\" and \"2https://github.com/open-compass/VLMEvalKit\" (visually verified at 300 dpi). The OCR kept the inline markers in \"Eureka ML Insights $^{1}$ and VLMEvalKit $^{2}$\" but dropped both footnote bodies; restored after the carrying paragraph."
+    }
+  ],
+  "unresolved": []
+}

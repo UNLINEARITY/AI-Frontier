@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "id": "openai:training-language-models-to-follow-instructions-with-human-feedback",
+  "source_sha256": "c1984bb50a5b90fddb895fdc3a0f72e5bc977148c9f63ef6040cbe7a3e1f0d98",
+  "ocr_sha256": "265a2b05830e5abdcb479e99b29c755097e877ea99daaf5723cb6c9a18e004c2",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 68-page document: full code-fence scan (no fences in this source); normalized 4-gram diff of extracted PDF text against the OCR Markdown for all 68 physical pages; missing-line inspection of every low-hit page (1, 6, 8, 9, 11, 12, 33, 34, 37, 38, 40, 43, 45-49, 51-56, 58-60, 64-68). Findings: (1) the printed physical p.1 author-footnote block (primary-authors note, corresponding-author email, dagger affiliation note) was dropped and is restored; (2) the bodies of all printed numbered footnotes 3-10 were dropped while their markers survive in the Markdown - all eight bodies are restored after the enclosing paragraphs of their markers (footnotes 1-2 are the p.1 block above); (3) remaining low-hit pages are text printed inside boxed figures rendered as embedded images - the Figure 10/11 labeling-instruction excerpts (pp. 37-39) and Figure 45-50 model samples (pp. 64-68) are correctly absent from the Markdown - plus HTML-table normalization differences on appendix data tables (pp. 33-34, 40, 43, 56), which are present as tables. Physical pages 1 and 8 were rendered at 300 dpi to verify the author-footnote wording and footnote 5's stacked binomial coefficient and K-1; the arXiv stamp is not transcribed. A full per-line read-through was not performed; coverage recorded as partial."
+  },
+  "patches": [
+    {
+      "before": "OpenAI\n\n## Abstract",
+      "after": "OpenAI\n\n\\* Primary authors. This was a joint project of the OpenAI Alignment team. RL and JL are the team leads.\n\nCorresponding author: lowe@openai.com.\n\n$^{\\dagger}$ Work done while at OpenAI. Current affiliations: AA: Anthropic; PC: Alignment Research Center.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The OCR dropped the printed physical p.1 author-footnote block: \"*Primary authors. This was a joint project of the OpenAI Alignment team. RL and JL are the team leads.\", \"Corresponding author: lowe@openai.com.\" and \"†Work done while at OpenAI. Current affiliations: AA: Anthropic; PC: Alignment Research Center.\" (verified on a 300-dpi render of physical p.1). Restored verbatim after the OpenAI affiliation line, using the same \\* and dagger marker style as the retained author-line markers. The rotated arXiv stamp is not transcribed."
+    },
+    {
+      "before": "We focus on fine-tuning approaches to aligning language models. Specifically, we use reinforcement learning from human feedback (RLHF; Christiano et al., 2017; Stiennon et al., 2020) to fine-tune GPT-3 to follow a broad class of written instructions (see Figure 2). This technique uses human preferences as a reward signal to fine-tune our models. We first hire a team of 40 contractors to label our data, based on their performance on a screening test (see Section 3.4 and Appendix B.1 for more details). We then collect a dataset of human-written demonstrations of the desired output behavior on (mostly English) prompts submitted to the OpenAI API $^{3}$ and some labeler-written prompts, and use this to train our supervised learning baselines. Next, we collect a dataset of human-labeled comparisons between outputs from our models on a larger set of API prompts. We then train a reward model (RM) on this dataset to predict which model output our labelers would prefer. Finally, we use this RM as a reward function and fine-tune our supervised learning baseline to maximize this reward using the PPO algorithm (Schulman et al., 2017). We illustrate this process in Figure 2. This procedure aligns the behavior of GPT-3 to the stated preferences of a specific group of people (mostly our labelers and researchers), rather than any broader notion of “human values”; we discuss this further in Section 5.2. We call the resulting models InstructGPT.",
+      "after": "We focus on fine-tuning approaches to aligning language models. Specifically, we use reinforcement learning from human feedback (RLHF; Christiano et al., 2017; Stiennon et al., 2020) to fine-tune GPT-3 to follow a broad class of written instructions (see Figure 2). This technique uses human preferences as a reward signal to fine-tune our models. We first hire a team of 40 contractors to label our data, based on their performance on a screening test (see Section 3.4 and Appendix B.1 for more details). We then collect a dataset of human-written demonstrations of the desired output behavior on (mostly English) prompts submitted to the OpenAI API $^{3}$ and some labeler-written prompts, and use this to train our supervised learning baselines. Next, we collect a dataset of human-labeled comparisons between outputs from our models on a larger set of API prompts. We then train a reward model (RM) on this dataset to predict which model output our labelers would prefer. Finally, we use this RM as a reward function and fine-tune our supervised learning baseline to maximize this reward using the PPO algorithm (Schulman et al., 2017). We illustrate this process in Figure 2. This procedure aligns the behavior of GPT-3 to the stated preferences of a specific group of people (mostly our labelers and researchers), rather than any broader notion of “human values”; we discuss this further in Section 5.2. We call the resulting models InstructGPT.\n\n$^{3}$ Specifically, we train on prompts submitted to earlier versions of the InstructGPT models on the OpenAI API Playground, which were trained only using demonstration data. We filter out prompts containing PII.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "The OCR dropped the body of printed footnote 3 (physical p.2); the Markdown retains the marker $^3$ but has no footnote text. Body restored verbatim from the extracted text of the physical p.2 bottom-of-page footnote block, de-ligatured, trailing page number removed, the wrapped URL joined (fn4), and inline math transcribed as LaTeX for fn5; inserted after the enclosing paragraph of its marker, following the established footnote-reinsertion convention of existing cleanup proposals."
+    },
+    {
+      "before": "Our prompt dataset consists primarily of text prompts submitted to the OpenAI API, specifically those using an earlier version of the InstructGPT models (trained via supervised learning on a subset of our demonstration data) on the Playground interface. $^{4}$ Customers using the Playground were informed that their data could be used to train further models via a recurring notification any time InstructGPT models were used. In this paper we do not use data from customers using the API in production. We heuristically deduplicate prompts by checking for prompts that share a long common prefix, and we limit the number of prompts to 200 per user ID. We also create our train, validation, and test splits based on user ID, so that the validation and test sets contain no data from users whose data is in the training set. To avoid the models learning potentially sensitive customer details, we filter all prompts in the training split for personally identifiable information (PII).",
+      "after": "Our prompt dataset consists primarily of text prompts submitted to the OpenAI API, specifically those using an earlier version of the InstructGPT models (trained via supervised learning on a subset of our demonstration data) on the Playground interface. $^{4}$ Customers using the Playground were informed that their data could be used to train further models via a recurring notification any time InstructGPT models were used. In this paper we do not use data from customers using the API in production. We heuristically deduplicate prompts by checking for prompts that share a long common prefix, and we limit the number of prompts to 200 per user ID. We also create our train, validation, and test splits based on user ID, so that the validation and test sets contain no data from users whose data is in the training set. To avoid the models learning potentially sensitive customer details, we filter all prompts in the training split for personally identifiable information (PII).\n\n$^{4}$ This is an interface hosted by OpenAI to interact directly with models on our API; see https://beta.openai.com/playground.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "The OCR dropped the body of printed footnote 4 (physical p.6); the Markdown retains the marker $^4$ but has no footnote text. Body restored verbatim from the extracted text of the physical p.6 bottom-of-page footnote block, de-ligatured, trailing page number removed, the wrapped URL joined (fn4), and inline math transcribed as LaTeX for fn5; inserted after the enclosing paragraph of its marker, following the established footnote-reinsertion convention of existing cleanup proposals."
+    },
+    {
+      "before": "In order to speed up comparison collection, we present labelers with anywhere between K = 4 and K = 9 responses to rank. This produces $\\binom{K}{2}$ comparisons for each prompt shown to a labeler. Since comparisons are very correlated within each labeling task, we found that if we simply shuffle the comparisons into one dataset, a single pass over the dataset caused the reward model to overfit. $^{5}$ Instead, we train on all $\\binom{K}{2}$ comparisons from each prompt as a single batch element. This is much more computationally efficient because it only requires a single forward pass of the RM for each completion (rather than $\\binom{K}{2}$ forward passes for K completions) and, because it no longer overfits, it achieves much improved validation accuracy and log loss.",
+      "after": "In order to speed up comparison collection, we present labelers with anywhere between K = 4 and K = 9 responses to rank. This produces $\\binom{K}{2}$ comparisons for each prompt shown to a labeler. Since comparisons are very correlated within each labeling task, we found that if we simply shuffle the comparisons into one dataset, a single pass over the dataset caused the reward model to overfit. $^{5}$ Instead, we train on all $\\binom{K}{2}$ comparisons from each prompt as a single batch element. This is much more computationally efficient because it only requires a single forward pass of the RM for each completion (rather than $\\binom{K}{2}$ forward passes for K completions) and, because it no longer overfits, it achieves much improved validation accuracy and log loss.\n\n$^{5}$ That is, if each of the possible $\\binom{K}{2}$ comparisons is treated as a separate data point, then each completion will potentially be used for $K - 1$ separate gradient updates. The model tends to overfit after a single epoch, so repeating data within an epoch also causes it to overfit.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "The OCR dropped the body of printed footnote 5 (physical p.8); the Markdown retains the marker $^5$ but has no footnote text. Body restored verbatim from the extracted text of the physical p.8 bottom-of-page footnote block, de-ligatured, trailing page number removed, the wrapped URL joined (fn4), and inline math transcribed as LaTeX for fn5; inserted after the enclosing paragraph of its marker, following the established footnote-reinsertion convention of existing cleanup proposals. Footnote 5 was verified against a 300-dpi render of physical p.8: it prints a stacked binomial coefficient (K over 2) and K - 1."
+    },
+    {
+      "before": "Baselines. We compare the performance of our PPO models to our SFT models and GPT-3. We also compare to GPT-3 when it is provided a few-shot prefix to ‘prompt’ it into an instruction-following mode (GPT-3-prompted). This prefix is prepended to the user-specified instruction. $^{6}$",
+      "after": "Baselines. We compare the performance of our PPO models to our SFT models and GPT-3. We also compare to GPT-3 when it is provided a few-shot prefix to ‘prompt’ it into an instruction-following mode (GPT-3-prompted). This prefix is prepended to the user-specified instruction. $^{6}$\n\n$^{6}$ To obtain this prefix, authors RL and DA held a prefix-finding competition: each spent an hour interacting with GPT-3 to come up with their two best prefixes. The winning prefix was the one that led GPT-3 to attain the highest RM score on the prompt validation set. DA won.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "The OCR dropped the body of printed footnote 6 (physical p.9); the Markdown retains the marker $^6$ but has no footnote text. Body restored verbatim from the extracted text of the physical p.9 bottom-of-page footnote block, de-ligatured, trailing page number removed, the wrapped URL joined (fn4), and inline math transcribed as LaTeX for fn5; inserted after the enclosing paragraph of its marker, following the established footnote-reinsertion convention of existing cleanup proposals."
+    },
+    {
+      "before": "Evaluations on public NLP datasets. We evaluate on two types of public datasets: those that capture an aspect of language model safety, particularly truthfulness, toxicity, and bias, and those that capture zero-shot performance on traditional NLP tasks like question answering, reading comprehension, and summarization. We also conduct human evaluations of toxicity on the RealToxicityPrompts dataset (Gehman et al., 2020). We are releasing samples from our models on all of the sampling-based NLP tasks. $^{7}$",
+      "after": "Evaluations on public NLP datasets. We evaluate on two types of public datasets: those that capture an aspect of language model safety, particularly truthfulness, toxicity, and bias, and those that capture zero-shot performance on traditional NLP tasks like question answering, reading comprehension, and summarization. We also conduct human evaluations of toxicity on the RealToxicityPrompts dataset (Gehman et al., 2020). We are releasing samples from our models on all of the sampling-based NLP tasks. $^{7}$\n\n$^{7}$ Accessible here: https://github.com/openai/following-instructions-human-feedback.",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "The OCR dropped the body of printed footnote 7 (physical p.10); the Markdown retains the marker $^7$ but has no footnote text. Body restored verbatim from the extracted text of the physical p.10 bottom-of-page footnote block, de-ligatured, trailing page number removed, the wrapped URL joined (fn4), and inline math transcribed as LaTeX for fn5; inserted after the enclosing paragraph of its marker, following the established footnote-reinsertion convention of existing cleanup proposals."
+    },
+    {
+      "before": "InstructGPT shows small improvements in toxicity over GPT-3, but not bias. We first evaluate our models on the RealToxicityPrompts dataset (Gehman et al., 2020). We do this in two ways: we run model samples through the Perspective API $^{8}$ to obtain automatic toxicity scores, which is the standard evaluation procedure for this dataset, and we also send these samples to labelers to obtain ratings on absolute toxicity, toxicity relative to the prompt, continuity, and overall output preference. We sample prompts from this dataset uniformly according to prompt toxicity to better assess how our models perform with high input toxicity (see Figure 39 in Appendix E); this differs from the standard prompt sampling for this dataset, and thus our absolute toxicity numbers are inflated.",
+      "after": "InstructGPT shows small improvements in toxicity over GPT-3, but not bias. We first evaluate our models on the RealToxicityPrompts dataset (Gehman et al., 2020). We do this in two ways: we run model samples through the Perspective API $^{8}$ to obtain automatic toxicity scores, which is the standard evaluation procedure for this dataset, and we also send these samples to labelers to obtain ratings on absolute toxicity, toxicity relative to the prompt, continuity, and overall output preference. We sample prompts from this dataset uniformly according to prompt toxicity to better assess how our models perform with high input toxicity (see Figure 39 in Appendix E); this differs from the standard prompt sampling for this dataset, and thus our absolute toxicity numbers are inflated.\n\n$^{8}$ www.perspectiveapi.com",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "The OCR dropped the body of printed footnote 8 (physical p.13); the Markdown retains the marker $^8$ but has no footnote text. Body restored verbatim from the extracted text of the physical p.13 bottom-of-page footnote block, de-ligatured, trailing page number removed, the wrapped URL joined (fn4), and inline math transcribed as LaTeX for fn5; inserted after the enclosing paragraph of its marker, following the established footnote-reinsertion convention of existing cleanup proposals."
+    },
+    {
+      "before": "InstructGPT models show promising generalization to instructions outside of the RLHF fine-tuning distribution. In particular, we find that InstructGPT shows ability to follow instructions in non-English languages, and perform summarization and question-answering for code. This is interesting because non-English languages and code form a tiny minority of our fine-tuning data, $^{9}$ and it suggests that, in some cases, alignment methods could generalize to producing the desired behavior on inputs that humans did not directly supervise.",
+      "after": "InstructGPT models show promising generalization to instructions outside of the RLHF fine-tuning distribution. In particular, we find that InstructGPT shows ability to follow instructions in non-English languages, and perform summarization and question-answering for code. This is interesting because non-English languages and code form a tiny minority of our fine-tuning data, $^{9}$ and it suggests that, in some cases, alignment methods could generalize to producing the desired behavior on inputs that humans did not directly supervise.\n\n$^{9}$ We generally instruct our labelers to skip evaluations where they are missing the required expertise, though sometimes labelers use a translation service to evaluate simple instructions in languages that they do not speak.",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "The OCR dropped the body of printed footnote 9 (physical p.16); the Markdown retains the marker $^9$ but has no footnote text. Body restored verbatim from the extracted text of the physical p.16 bottom-of-page footnote block, de-ligatured, trailing page number removed, the wrapped URL joined (fn4), and inline math transcribed as LaTeX for fn5; inserted after the enclosing paragraph of its marker, following the established footnote-reinsertion convention of existing cleanup proposals."
+    },
+    {
+      "before": "4. We've validated alignment techniques from research in the real world. Alignment research has historically been rather abstract, focusing on either theoretical results (Soares et al., 2015), small synthetic domains (Christiano et al., 2018; Leike et al., 2017), or training ML models on public NLP datasets (Ziegler et al., 2019; Stiennon et al., 2020). Our work provides grounding for alignment research in AI systems that are being used in production in the real world with customers. $^{10}$ This enables an important feedback loop on the techniques' effectiveness and limitations.",
+      "after": "4. We've validated alignment techniques from research in the real world. Alignment research has historically been rather abstract, focusing on either theoretical results (Soares et al., 2015), small synthetic domains (Christiano et al., 2018; Leike et al., 2017), or training ML models on public NLP datasets (Ziegler et al., 2019; Stiennon et al., 2020). Our work provides grounding for alignment research in AI systems that are being used in production in the real world with customers. $^{10}$ This enables an important feedback loop on the techniques' effectiveness and limitations.\n\n$^{10}$ Note that while fine-tuning models using human data is common practice when deploying ML systems, the purpose of these efforts is to obtain a model that performs well on a company's specific use case, rather than advancing the alignment of general-purpose ML models.",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "The OCR dropped the body of printed footnote 10 (physical p.18); the Markdown retains the marker $^10$ but has no footnote text. Body restored verbatim from the extracted text of the physical p.18 bottom-of-page footnote block, de-ligatured, trailing page number removed, the wrapped URL joined (fn4), and inline math transcribed as LaTeX for fn5; inserted after the enclosing paragraph of its marker, following the established footnote-reinsertion convention of existing cleanup proposals."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "boxed-figure-text-figures-10-11-45-50",
+      "pdf_pages": [
+        37,
+        38,
+        39,
+        64,
+        65,
+        66,
+        67,
+        68
+      ],
+      "evidence": "The labeling-instruction excerpts (Figures 10-11) and the model-sample boxes (Figures 45-50) are printed as boxed figures whose text exists inside the embedded figure images; correctly not duplicated in the Markdown."
+    }
+  ]
+}

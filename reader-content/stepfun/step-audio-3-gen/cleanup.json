@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step-audio-3-gen",
+  "source_sha256": "ed42faaa96fe32e249da832ae439e29cb6e3f31e789197f77aa32565a1e9248d",
+  "ocr_sha256": "f867a3d9b5535bcc13c9f1a954f10db51f1c6f2f9d95a7a1d6d81c5d21acea83",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 21 physical PDF pages, plus a numeric-token multiset comparison covering table cells; physical pages 5, 10 and 21 were rendered to verify equations (1)-(5) and reference [49]. The OCR contains no code fences and no swallowed blocks. The arXiv side stamp on page 1 is page furniture, and all other unmatched lines are LaTeX-equivalent math renderings (\\times, \\tau) or figure-internal labels of embedded figures, not defects. Table 4 prints en-dash placeholder cells for VoiceSculptor that the OCR records as hyphens; both render as a dash, left unchanged."
+  },
+  "patches": [
+    {
+      "before": "c _ {t, 1 5}",
+      "after": "c _ {t, 15}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 equation (1) reads p(c_{t,0}, ..., c_{t,15} | z_{<t}, c_{<t}); OCR inserted a space inside the 15 subscript."
+    },
+    {
+      "before": "\\prod_ {k = 1} ^ {1 5}",
+      "after": "\\prod_ {k = 1} ^ {15}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 equation (1) shows the RVQ code predictor product running k = 1 to 15; OCR spaced the digits of the upper limit."
+    },
+    {
+      "before": "\\sum_ {k = 1} ^ {1 5}",
+      "after": "\\sum_ {k = 1} ^ {15}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 equation (2) shows the depth sum running k = 1 to 15; OCR spaced the digits of the upper limit."
+    },
+    {
+      "before": "2 0 4 7",
+      "after": "2047",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 equation (3) reads c_{t,0} in {0, ..., 2047}; OCR spaced the digits of 2047."
+    },
+    {
+      "before": "2 0 4 8",
+      "after": "2048",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered PDF physical p.5 equation (3) reads id(c_{t,0}) in [V, V + 2048); OCR spaced the digits of 2048."
+    },
+    {
+      "before": "}{1 0 0}",
+      "after": "}{100}",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered PDF physical p.10 equation (4) reads R_i = s_i-bar over 100; OCR spaced the digits of the 100 denominator."
+    },
+    {
+      "before": "e _ {i} \\leq 0. 5, \\\\ 0, & e _ {i} > 0. 5,",
+      "after": "e _ {i} \\leq 0.5, \\\\ 0, & e _ {i} > 0.5,",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered PDF physical p.10 equation (4) piecewise cases read e_i <= 0.5 and e_i > 0.5; OCR inserted a space between the decimal point and the 5 in both."
+    },
+    {
+      "before": "{1 6 | y _ {i} |}",
+      "after": "{16 | y _ {i} |}",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered PDF physical p.10 equation (5) shows the 1/(16|y_i|) normalizer; OCR spaced the digits of 16."
+    },
+    {
+      "before": "\\sum_ {\\ell = 0} ^ {1 5}",
+      "after": "\\sum_ {\\ell = 0} ^ {15}",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered PDF physical p.10 equation (5) shows the codebook sum running l = 0 to 15; OCR spaced the digits of the upper limit."
+    },
+    {
+      "before": "feature\\_intro",
+      "after": "feature_intro",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered PDF physical p.21 reference [49] reads URL https://www.doubao.com/legal/feature_intro; the backslash-underscore is a Markdown escape added by OCR, not source text."
+    }
+  ],
+  "unresolved": []
+}

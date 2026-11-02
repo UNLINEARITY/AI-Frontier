@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen3-technical-report",
+  "source_sha256": "84a5e2b1fa04bb774bf12ae606d1e6d9dd2147ed2ebe78a4cfeb91ba380ffdd5",
+  "ocr_sha256": "a823b75e060398022e729ba7eadf72d7190409d1b7cf5c3a7cb8f9175d638f3d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "coverage": "complete",
+    "notes": "Normalized full-text diff of all 35 physical PDF pages against the OCR markdown; tables are captured as HTML tables and every unmatched extraction line was traced to table cells (chat template, CodeForces rows, RL ablation, language tables) or accented reference names that are present. Rendered physical pages 13, 20 and 23 were visually inspected. Two sentence fragments were promoted to markdown headings and three duplicated chart-title lines sit between the Figure 2 crops out of printed order; both repairs were verified against renders. No code fences, no dropped footnote bodies, no spaced digits; the arXiv side watermark on page 1 is not report content."
+  },
+  "patches": [
+    {
+      "before": "LiveCodeBench (v5)  \nAIME'24  \n![[images/28e21fb8e31973f83080eed25191af126d572a0e1118f30cc46582bae9d12652.jpg]]",
+      "after": "![[images/28e21fb8e31973f83080eed25191af126d572a0e1118f30cc46582bae9d12652.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 shows Figure 2 as a 2x2 chart grid whose subplot titles (AIME'24, AIME'25, LiveCodeBench (v5), GPQA Diamond) are printed inside the figure; each embedded crop still shows its own (top-clipped) title. The OCR emitted the subplot titles again as stray text lines above the crops, out of printed order, so the two lines before the AIME'24 crop are removed."
+    },
+    {
+      "before": "AIME'25  \n![[images/1ce33661bfc11657e3ef514ce68dfc39e2f5f80c1f552b85e5dec917a7a5eb5c.jpg]]",
+      "after": "![[images/1ce33661bfc11657e3ef514ce68dfc39e2f5f80c1f552b85e5dec917a7a5eb5c.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Same Figure 2 grid on rendered physical p.20: the AIME'25 subplot title is inside the crop, so the stray duplicated text line above the crop is removed. Image embeds are unchanged."
+    },
+    {
+      "before": "## categorized into several dimensions:",
+      "after": "categorized into several dimensions:",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 prints 'categorized into several dimensions:' as a plain paragraph line under Table 10, continuing the sentence 'These benchmarks are ...' and introducing the bullet list; it is not a section heading. The demotion only removes the markdown heading marker."
+    },
+    {
+      "before": "## The results show that:",
+      "after": "The results show that:",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 prints 'The results show that:' as a plain paragraph inside section A.1.1, directly followed by the numbered list; it is not a section heading. The demotion only removes the markdown heading marker."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "zai:cogview2-faster-and-better-text-to-image-generation-via-hierarchical-transformers",
+  "source_sha256": "44b17abe87129987d59622345556d165b22e69c334cb93607508d16839b120b1",
+  "ocr_sha256": "7120e076798a84bbbc9218aa384c9934181eaa0e6549f72a3e085bffdb599653",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 15 physical PDF pages against the OCR markdown; no code fences in the source. Physical pages 1 (600 dpi superscript crop) and 13 (300 dpi footnote crop) were rendered for visual verification. Equations (1)-(7) including Lrec, the row/col definitions, Figure 3-11 captions, the Table 1 FID/IS body, and the appendix B step list are all present in the OCR; the sentence split across the p.13-p.14 page break ('matching degree of the human' / 'perception and the texture of a given image') is fully present although figure blocks interleave it. Remaining deltas are Figure 1-11 internal labels (figure-internal, including the garbled token strings inside the Figure 2 mask diagram), table row-order reflow, and the rotated arXiv margin stamp (intentionally not restored)."
+  },
+  "patches": [
+    {
+      "before": "Jie Tang $^{\\ddagger\\ddagger}$",
+      "after": "Jie Tang $^{\\dagger\\ddagger}$",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (600 dpi crop of the author line) prints 'Jie Tang' with a dagger followed by a double-dagger superscript (†‡), matching the † Tsinghua University / ‡ BAAI affiliation markers; OCR read the first marker as a second double-dagger (‡‡), which matches no affiliation."
+    },
+    {
+      "before": "only generating English tokens for image captioning.\n\n## A.2 Image Tokenizer",
+      "after": "only generating English tokens for image captioning.\n\n$^{3}$ http://github.com/google/sentencepiece\n\n## A.2 Image Tokenizer",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 (300 dpi footnote crop) prints footnote 3 as 'http://github.com/google/sentencepiece' under a rule at the bottom of the page; OCR kept the 'sentencepiece $^{3}$' marker in A.1 but dropped the footnote body."
+    },
+    {
+      "before": "matching degree of the human\n\n![[images/502c31d9f2c868ba6be9f2a27f32752bdadc42a00d26a8a52aa020401a587d58.jpg]]",
+      "after": "matching degree of the human\n\n$^{4}$ The term “VQVAE” originally [29] refers to the whole process of compression of discrete latent variables (the first stage) and the autoregressive modeling of the prior (the second stage). In this paper, we refer the term “VQVAE” only to the first stage for simplicity.\n\n![[images/502c31d9f2c868ba6be9f2a27f32752bdadc42a00d26a8a52aa020401a587d58.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 (300 dpi footnote crop) prints footnote 4 as 'The term “VQVAE” originally [29] refers to the whole process of compression of discrete latent variables (the first stage) and the autoregressive modeling of the prior (the second stage). In this paper, we refer the term “VQVAE” only to the first stage for simplicity.'; OCR kept the 'VQVAE $^{4}$' marker but dropped the footnote body. Restored directly after the paragraph carrying the marker, before the Figure 9 image block."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "author-block-line-merge-p1",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "OCR joins the printed author line and the '† Tsinghua University ‡ BAAI' affiliation line into a single markdown line, and leaves no blank line before the email line; the printed layout has three separate lines. Purely layout-level; all content is present."
+    }
+  ]
+}

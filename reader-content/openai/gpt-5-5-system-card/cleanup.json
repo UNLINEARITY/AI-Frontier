@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-5-5-system-card",
+  "source_sha256": "31133a3f53b520713b87ff9b92ddf90d3e699ac8b47f87c3e739b4365e8bfecf",
+  "ocr_sha256": "73341c5cb12aa11b6b90b13d92df311459c3fe84be0839cb138a5c4120cb84b0",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "coverage": "complete",
+    "notes": "Sentence-level diff of all 46 physical PDF pages against the OCR markdown, plus rendered visual checks of pages 5, 6, 28 (300 dpi table row crop), 33 and 38 (300 dpi caption crop). No code fences exist in the source, so no fence-balance defect; 24 image embeds match the 24 registered crops; references [1]-[13] and all table values (Tables 1-17) match the source. Confirmed repairs are two dropped footnote/small-print blocks and one spurious heading. The PDF itself prints \"13.82 %\" (p.28) and the duplicated \"of of\" (p.38 caption), so the OCR transcription of those spots is faithful and was left unchanged. The 'Combined Pass Rate:' bullet list prints gpt-5.2-codex while Table 15 has no such column; the source itself is inconsistent and both readings were kept."
+  },
+  "patches": [
+    {
+      "before": "values published at launch for those models. $^{1}$",
+      "after": "values published at launch for those models. $^{1}$\n\nGPT-5.5 is intended to be used in accordance with OpenAI’s Usage Policies, Service Terms, and Terms of Use.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 prints footnote 1 below the rule: \"1 GPT-5.5 is intended to be used in accordance with OpenAI's Usage Policies, Service Terms, and Terms of Use.\" The OCR kept the superscript marker but dropped the entire footnote body; the patch restores it immediately after the anchoring paragraph."
+    },
+    {
+      "before": "Upon investigation, we found that this evaluation score was caused by requests to translate text containing disallowed content, which do not in fact violate our policies.",
+      "after": "Upon investigation, we found that this evaluation score was caused by requests to translate text containing disallowed content, which do not in fact violate our policies.\n\nThese policies apply universally to OpenAI services and are designed to ensure safe and responsible usage of AI technology. You can review OpenAI’s Usage Policies at openai.com/policies/usage-policies/ .\n\nIf you need assistance with respect to GPT-5.5, you can find further information on OpenAI’s website (openai.com), or you can contact OpenAI Support by opening the chat bubble icon displayed at the bottom-right of help.openai.com.\n\nA list of the languages that ChatGPT currently supports can be found here.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints three small-print paragraphs below the rule after the table footnote: the Usage Policies pointer (openai.com/policies/usage-policies/), the support/contact pointer (openai.com, help.openai.com), and the supported-languages pointer. All three were dropped from the OCR; the patch restores them in reading order after the preceding table footnote."
+    },
+    {
+      "before": "## Combined Pass Rate:",
+      "after": "**Combined Pass Rate:**",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 shows \"Combined Pass Rate:\" as a bold in-text lead-in between Table 15 and the per-model pass-rate bullets, not a numbered section heading; the OCR promoted it to a level-2 heading, which also broke the 9.1.2.x heading hierarchy. Demoted to bold text matching the printed weight."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-5-6-system-card",
+  "source_sha256": "aa8073bcfa15449167c64aab7c520c2d0c71e33220f64dff62baa0f2118e7e8b",
+  "ocr_sha256": "6095f41e506573096fceaf2200d18af27278a1eca4f91519d906ce7c6afc6f11",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of the full extracted PDF text (82 physical pages, 22,322 tokens) against the OCR markdown plus targeted verification. Code fences balanced (one txt pair at the p.17 callout); headings all numbered or standard (Change log/Contents/References); no figure-banner or speaker-label headings; 48 image embeds present. Three footnote bodies were dropped while their superscript markers survived (physical pages 6, 7, 9); each was restored after reading the rendered page. Rendered checks: p.6 (footnote 1), p.7 (footnote 2), p.9 at 300 dpi crop (footnote 3 with math). The printed 'g-mean^2' superscripts on physical p.23-25 have no footnote body anywhere in the PDF, so the OCR faithfully reproduces the source. Remaining diff hits were alignment artifacts around percent-figures and parenthesized rates that exist in the OCR text, or page furniture (page numbers, bare 'Figure N' caption labels) consistent with the source."
+  },
+  "patches": [
+    {
+      "before": "so may vary slightly from values published at launch for those models. $^{1}$",
+      "after": "so may vary slightly from values published at launch for those models. $^{1}$\n\n1 GPT-5.6 is intended to be used in accordance with OpenAI's Usage Policies, Service Terms, and Terms of Use. These policies apply universally to OpenAI services and are designed to ensure safe and responsible usage of AI technology. You can review OpenAI's Usage Policies at openai.com/policies/usage-policies/.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 1 at the page bottom: \"GPT-5.6 is intended to be used in accordance with OpenAI's Usage Policies, Service Terms, and Terms of Use. These policies apply universally to OpenAI services and are designed to ensure safe and responsible usage of AI technology. You can review OpenAI's Usage Policies at openai.com/policies/usage-policies/.\" The OCR kept the $^{1}$ marker on the section 2 paragraph but dropped the entire footnote body. Patch appends the transcribed body below the marker paragraph."
+    },
+    {
+      "before": "this is a naming change, not a change in the underlying evaluation.",
+      "after": "this is a naming change, not a change in the underlying evaluation.\n\n2 Gore is a content policy prohibiting graphic or gratuitously gory content. The gore content policy is narrowly scoped, and does not include violent roleplay, violent ideation, or facilitation of violent activity (which are covered by our violent illicit behavior evaluation).",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints footnote 2 at the page bottom: \"Gore is a content policy prohibiting graphic or gratuitously gory content. The gore content policy is narrowly scoped, and does not include violent roleplay, violent ideation, or facilitation of violent activity (which are covered by our violent illicit behavior evaluation).\" The OCR kept the \"gore\" $^{2}$ marker in the paragraph but dropped the footnote body. Patch appends the transcribed body below the paragraph carrying the marker."
+    },
+    {
+      "before": "which is mostly consistent with noise – as seen in the figure below. $^{3}$",
+      "after": "which is mostly consistent with noise – as seen in the figure below. $^{3}$\n\n3 Mathematically, we plot $\\log_2 R$, where $R = \\frac{r_{sim}}{r_{prod}}$, against the effective positive count $k_{eff} = (\\frac{1}{k_{prod}} + \\frac{1}{k_{sim}})^{-1}$, with sampling-noise bounds $\\pm\\frac{1.645}{\\ln 2}$ because $Var(\\log_2 R) \\approx \\frac{1}{(\\ln 2)^2 k_{eff}}$. Falling outside these bounds corresponds to rejecting $H_0 : r_{sim} = r_{prod}$ using an approximate two-sided Wald test at the 10% significance level. The plotted confidence region does not leverage the paired nature of samples and resamples, which may lead it to be overly wide. Intervals based on paired-samples did not seem to meaningfully change the borders while introducing additional mathematical complexity.",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 (300 dpi crop of the footnote block) prints footnote 3: \"Mathematically, we plot log_2 R, where R = r_sim/r_prod, against the effective positive count k_eff = (1/k_prod + 1/k_sim)^-1, with sampling-noise bounds ± 1.645/ln 2 because Var(log_2 R) ≈ 1/((ln 2)^2 k_eff). Falling outside these bounds corresponds to rejecting H_0 : r_sim = r_prod using an approximate two-sided Wald test at the 10% significance level. ...\" verified glyph by glyph including the fraction subscripts (sim/prod) and the ± 1.645 over ln 2 bound. The OCR kept the $^{3}$ marker but dropped the entire footnote body. Math is transcribed in the document's existing $...$ LaTeX convention."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-caption-labels-without-captions",
+      "pdf_pages": [
+        23,
+        40,
+        52
+      ],
+      "evidence": "Several figures carry only the printed label line (bare \"Figure 8\", \"Figure 26\", \"Figure 27\", \"Figure 33\" under the image embed). The extracted PDF text for those pages also contains no caption sentence (no 'Figure N:' text), so the bare labels match the source; left unchanged. Other figures (e.g. Figure 1, Figure 5) have full caption text present in the OCR."
+    }
+  ]
+}

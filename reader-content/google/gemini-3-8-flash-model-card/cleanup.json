@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-8-flash-model-card",
+  "source_sha256": "fd9b9494c8cb0da6dc16777c3df70d9f9226708e08ba7c9337222207c5d482af",
+  "ocr_sha256": "b926a50ac9edaeb3517b25a853cfe2cbde7ee70b49eafc36aaf5d8dbf33db32c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverage": "complete",
+    "notes": "Full line-level read of all 8 physical PDF pages against the OCR, a digit sweep (zero absent 3+-digit numbers), and rendered verification of pages 5 and 7 at 130 dpi. Every benchmark score in the results table (which is an image in the PDF, absent from its text layer) was checked cell-by-cell against the rendered p.5 table: all ~90 values match, including the two-row BioMysteryBench block and the LVBench agentic/static split. The safety table on p.7 matches the PDF text layer exactly. The duplicated opening headings match the OCR convention of the sibling Gemini model cards (cover title plus running header), the mixed bullet devices in the Distribution list match the sibling cards, and the missing 'see' in the Software sentence, the 'acceptable usage for Gemini 3.7 Flash' wording, and the 'strict policies, compared performance' wording are all printed verbatim in the PDF (author typos, not transcription defects). The real defects: the p.7 footnote 1 body was dropped while its superscript survived glued to the 'Tone' table cell, and the first body line under the 'Results' heading was promoted to a heading."
+  },
+  "patches": [
+    {
+      "before": "<td>Tone1</td>",
+      "after": "<td>Tone$^{1}$</td>",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 shows the safety-table row label 'Tone' with superscript 1 tied to the page-bottom footnote; OCR glued the marker onto the cell text as 'Tone1'. Restores the marker in the repository's $^{n}$ notation."
+    },
+    {
+      "before": "</table>\n\nWe continue to improve our internal evaluations",
+      "after": "</table>\n\n1 For tone and instruction following, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model’s ability to follow instructions while remaining safe compared to Gemini 3 Flash. We mark improvements in green and regressions in red.\n\nWe continue to improve our internal evaluations",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 bottom shows footnote 1: 'For tone and instruction following, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model’s ability to follow instructions while remaining safe compared to Gemini 3 Flash. We mark improvements in green and regressions in red.' OCR dropped the entire footnote body while keeping the marker; inserted after the table carrying it."
+    },
+    {
+      "before": "## Results as of September, 2026 are listed below:",
+      "after": "Results as of September, 2026 are listed below:",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 shows 'Results' as the section heading and 'Results as of September, 2026 are listed below:' as the first body line beneath it; OCR promoted the body line to a duplicate heading directly under '## Results'."
+    }
+  ],
+  "unresolved": []
+}

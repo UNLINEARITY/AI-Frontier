@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "openai:addendum-to-o3-and-o4-mini-system-card-codex",
+  "source_sha256": "066d1d99a6c812207754fb2d7c6904509d252275994d30dc054931d04fbfa695",
+  "ocr_sha256": "443fd01b628bca2d8a21c2451bbfe39bba64bc18f9156d54ee042ec783b76f40",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 8 physical PDF pages against the OCR markdown found no dropped or garbled runs: all evaluation tables, the mitigations table and section prose are present. Remaining deltas are hyphenation joins and reading-order differences inside the two-column mitigations table cells."
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "mitigations-table-in-cell-linebreaks",
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "The 'Product-specific safety risk / Mitigations' table concatenates the per-cell mitigation lists ('...specific harms)Network sandboxing - codex-1 does not have network accessMonitoring') where the print line-breaks between items; all words are present in order, only the cell-internal line structure is lost. Recorded without a markup-changing patch, following the flattened-table-boundaries precedent."
+    }
+  ]
+}

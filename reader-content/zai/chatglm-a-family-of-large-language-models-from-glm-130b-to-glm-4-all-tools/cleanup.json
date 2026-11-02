@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "zai:chatglm-a-family-of-large-language-models-from-glm-130b-to-glm-4-all-tools",
+  "source_sha256": "cdaafe84e614c44e639cba702a686b0a1caf0bd3e49d9155ad5e8f13256a422d",
+  "ocr_sha256": "54ac69bef512b9329354ad6641444c717c48115d52f2471d2df1df901499198a",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 19 physical PDF pages against the OCR markdown; no code fences in the source. Physical page 1 was rendered at 300 dpi (footnote block and footer crop) to transcribe and verify the dropped title-page contributor list. Tables 1-10 bodies are present in the OCR; remaining deltas are the Figure 1 timeline and Figure 2 All-Tools screenshot labels (figure-internal), table row-order reflow in the HTML benchmark tables, reference line re-wraps, and the rotated arXiv margin stamp (intentionally not restored)."
+  },
+  "patches": [
+    {
+      "before": "$^{1}$ Zhipu AI $^{2}$ Tsinghua University\n\nZHIPU·AI\n\n## Abstract",
+      "after": "$^{1}$ Zhipu AI $^{2}$ Tsinghua University\n\nZHIPU·AI\n\n\\*Team GLM: Aohan Zeng, Bin Xu, Bowen Wang, Chenhui Zhang, Da Yin, Dan Zhang, Diego ROJAS,\nGuanyu Feng, Hanlin Zhao, Hanyu Lai, Hao Yu, Hongning Wang, Jiadai Sun, Jiajie Zhang, Jiale Cheng, Jiayi\nGui, Jie Tang, Jing Zhang, Jingyu Sun, Juanzi Li, Lei Zhao, Lindong Wu, Lucen Zhong, Mingdao Liu, Minlie\nHuang, Peng Zhang, Qinkai Zheng, Rui Lu, Shuaiqi Duan, Shudan Zhang, Shulin Cao, Shuxun Yang, Weng\nLam Tam, Wenyi Zhao, Xiao Liu, Xiao Xia, Xiaohan Zhang, Xiaotao Gu, Xin Lv, Xinghan Liu, Xinyi Liu,\nXinyue Yang, Xixuan Song, Xunkai Zhang, Yifan An, Yifan Xu, Yilin Niu, Yuantao Yang, Yueyan Li, Yushi Bai,\nYuxiao Dong, Zehan Qi, Zhaoyu Wang, Zhen Yang, Zhengxiao Du, Zhenyu Hou, Zihan Wang.\n\n†Team members are listed alphabetically by first name.\n\nPreprint. Under review.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (300 dpi crops of the bottom footnote block and the page footer) prints a footnote rule followed by '*Team GLM: Aohan Zeng, ... Zihan Wang.' with the dagger line '†Team members are listed alphabetically by first name.', and the footer 'Preprint. Under review.'. OCR dropped all three lines, so none of the 60 team-member names appears anywhere in the markdown. Transcription follows the printed line breaks; 'Diego ROJAS' capitalization verified on the render."
+    }
+  ],
+  "unresolved": []
+}

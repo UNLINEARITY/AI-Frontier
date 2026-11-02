@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "google:paligemma-2-a-family-of-versatile-vlms-for-transfer",
+  "source_sha256": "4edfa3741ad3f6be5bfec1c495dfdc82efc362809384697ebd7c6a20bcbde6b4",
+  "ocr_sha256": "41de6448ff6b2c421659f2ebff29ac7db231a857ee83f97a260f6e34a0d3fc08",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "coverage": "complete",
+    "notes": "Full word-level diff of the OCR markdown against extracted text from all 31 physical PDF pages (case/punctuation/hyphen-insensitive) plus a per-page numeric diff; physical pages 1, 7, 9, 16 and 17 were rendered at 115 dpi to verify every patch. No code fences exist in the source, so no fence-balance damage. All four numbered footnote markers survive while the footnote bodies (URLs) were dropped; restored after the paragraphs carrying their markers. The title-page corresponding-authors and copyright footer was dropped and restored. In the contributors section the printed \"Nvidia Partners\" group label was dropped, leaving its five members visually attached to the preceding \"Hugging Face Partners\" group. Reference [112] prints the author name \"ShafieiBavani\" without a space; OCR split it into \"Shafiei Bavani\". Numbers flagged missing on physical pages 2 and 5 are demo-screenshot tokens (<loc0255>) and chart axis ticks inside the embedded Figures 2 and 4 (not defects); 2412.03555 is the rotated arXiv sidebar stamp, dropped per project convention. All 112 reference entries are present; the print's own misspellings (\"model sizes an input resolutions\", \"on the on the MIMIC-CXR data\") are preserved."
+  },
+  "patches": [
+    {
+      "before": "Google DeepMind, $^{*}$ Core team, $^{\\dagger}$ Project lead\n\nPaliGemma 2 is an upgrade",
+      "after": "Google DeepMind, $^{*}$ Core team, $^{\\dagger}$ Project lead\n\nCorresponding author(s): andstein,andresp,tschannen@google.com\n\n© 2024 Google DeepMind. All rights reserved\n\nPaliGemma 2 is an upgrade",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footer prints \"Corresponding author(s): andstein,andresp,tschannen@google.com\" above \"© 2024 Google DeepMind. All rights reserved\"; both lines were dropped from the title block. Restored after the affiliation line, following the same placement used for the gemini-robotics-1-5 title-page footer."
+    },
+    {
+      "before": "articulation and barlines.",
+      "after": "articulation and barlines.\n\n$^{1}$ https://www.humdrum.org/rep/kern/",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 bottom prints footnote 1 \"https://www.humdrum.org/rep/kern/\" for the \"**kern format\" marker in section 4.5; the body was dropped while the marker survives."
+    },
+    {
+      "before": "XNNPack $^{4}$ , and others).",
+      "after": "XNNPack $^{4}$ , and others).\n\n$^{2}$ https://github.com/google/gemma.cpp\n\n$^{3}$ https://github.com/ggerganov/llama.cpp\n\n$^{4}$ https://github.com/google/XNNPACK",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom prints footnotes 2-4 (\"https://github.com/google/gemma.cpp\", \"https://github.com/ggerganov/llama.cpp\", \"https://github.com/google/XNNPACK\"); the bodies were dropped while the markers survive in the section 4.9 paragraph."
+    },
+    {
+      "before": "Pablo Montalvo\n\nDong Meng",
+      "after": "Pablo Montalvo\n\nNvidia Partners\nDong Meng",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 contributors list has a bold \"Nvidia Partners\" group label above Dong Meng, Manoj Kilaru, Shyamala Prayaga, Ryan Timbrook and Anna Warno; OCR dropped the label, leaving the group visually attached to \"Hugging Face Partners\". Restored the label."
+    },
+    {
+      "before": "E. Shafiei Bavani,",
+      "after": "E. ShafieiBavani,",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 reference [112] prints \"X. Zhong, E. ShafieiBavani, and A. Jimeno Yepes.\" with the camel-case surname unspaced; OCR inserted a space inside the name."
+    }
+  ],
+  "unresolved": []
+}

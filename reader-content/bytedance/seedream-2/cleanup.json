@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seedream-2",
+  "source_sha256": "95f8f877d5dc4ea5c870b3dded31dc3c18e4f61ce6f51ef2bf82626e9a5c1968",
+  "ocr_sha256": "6ab06e9b9b86a568dd465178fdff3c14595c0bf9bfd20952f5b29cc06fd29b55",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "coverage": "complete",
+    "notes": "Every extracted PDF page line was compared against the OCR markdown with normalization and fuzzy matching; code-fence balance and markdown headings were checked, and HTML table values were spot-checked against the PDF text layer (EvalMuse table). Rendered physical page 4 (footnotes) plus 300 dpi crops of the five changed lines on pages 12, 14, 19 and 23 were visually inspected. OCR silently corrected five of the print's own misspellings ('addtion', 'dateset', 'repetting', 'excells', 'responsed'), and dropped the two URL footnote bodies on page 4 while keeping their markers. Figure-internal caption examples and chart labels (pages 5, 7, 8, 15, 20, 22, 23) are inside embedded figures and were not transcribed as body text."
+  },
+  "patches": [
+    {
+      "before": "improving productivity in the multiple aspects of work and daily life.\n\n## 2 Data",
+      "after": "improving productivity in the multiple aspects of work and daily life.\n\n$^{1}$ https://www.doubao.com/chat/create-image\n$^{2}$ https://jimeng.jianying.com/ai-tool/image/generate\n\n## 2 Data",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints footnote bodies '1https://www.doubao.com/chat/create-image' and '2https://jimeng.jianying.com/ai-tool/image/generate' below the paragraph whose markers attach to 'Doubao (豆包) 1 and Dreamina (即梦) 2'; the OCR kept the $^{1}$/$^{2}$ markers and dropped both URL bodies."
+    },
+    {
+      "before": "In addition to the constructed SFT data",
+      "after": "In addtion to the constructed SFT data",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 (300 dpi crop) prints 'In addtion to the constructed SFT data' - the print's own misspelling 'addtion'; OCR silently corrected it to 'addition'. The print's spelling is restored."
+    },
+    {
+      "before": "carefully curated dataset",
+      "after": "carefully curated dateset",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 (300 dpi crop) prints 'by using a carefully curated dateset' in section 4.4.1 - the print's own misspelling 'dateset'; OCR silently corrected it to 'dataset'. The print's spelling is restored."
+    },
+    {
+      "before": "iteratively repeating to enhance performance",
+      "after": "iteratively repeatting to enhance performance",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 (300 dpi crop) prints 'The above process is iteratively repeatting to enhance performance' - the print's own misspelling 'repetting'; OCR silently corrected it to 'repeating'. The print's spelling is restored."
+    },
+    {
+      "before": "which excels over Midjourney",
+      "after": "which excells over Midjourney",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 (300 dpi crop) prints 'It has no obvious shortcomings, which excells over Midjourney v6.1' - the print's own misspelling 'excells'; OCR silently corrected it to 'excels'. The print's spelling is restored."
+    },
+    {
+      "before": "the target elements are correctly responded to",
+      "after": "the target elements are correctly responsed to",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 (300 dpi crop) prints 'A response rate indicates whether the target elements are correctly responsed to' below Figure 20 - the print's own non-standard form 'responsed'; OCR silently corrected it to 'responded'. The print's spelling is restored."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-caption-examples",
+      "pdf_pages": [
+        5,
+        7,
+        8,
+        15,
+        20,
+        22,
+        23
+      ],
+      "evidence": "Caption examples ('Chinese Caption Short/Long...', kitchen/lizard descriptions), pipeline diagram labels and chart tick labels are interleaved in the PDF text layer but belong to embedded figures (Figures 3-14, 18, 20-27); they are not body text and were left unpatched."
+    }
+  ]
+}

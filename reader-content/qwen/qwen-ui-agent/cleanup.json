@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen-ui-agent",
+  "source_sha256": "705de6c54fa4eec0e5f81792cd323695e1d0274333886973cbad82d3c436fdb0",
+  "ocr_sha256": "ebc468c629a53240d0862a7eb1a5e88027ad53e46f87103255be33a5a712510e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR, so no fence-swallowing; the numbered heading tree matches the PDF sections and no prompt-box item, figure banner or chart title was promoted to a heading. A normalized word diff (case/punctuation-insensitive, LaTeX math collapsed, HTML table markup ignored) covered all 56 physical pages; physical pages 1, 26 and 45 were additionally rendered (120-300 dpi) and visually verified for every patch. Repairs found: one misread word inside the printed Figure 9 task bubble (rainfall for raindrop) and two dropped footnote bodies whose markers survive in the OCR (the page-1 asterisk footnote under Figure 1 and the page-45 author-role footnote), restored next to the text blocks they annotate. Everything else that diverges from the PDF text layer is intentionally out of scope of the reader text: arXiv margin stamp, cover watermark date and folio numerals (page furniture); text inside figure composites for Figures 4, 7, 8, 9-11, 13-17, 19-21 and the appendix examples, which is carried by the embedded figure images with all 26 'Figure N:' captions present in the OCR; hyphenation joins (digi tal -> digital); LaTeX-equivalent equation notation; and kerning-split names/URLs in the contributor list and references that the OCR correctly rejoined. All benchmark tables (Tables 1-13) were covered by the word diff and their values match, including 82.1/92.2/97.5 in the abstract, the OSWorld 79.5/40.0 block and the WebArena/DeepSearch tables.",
+    "rendered_pages": [
+      1,
+      26,
+      45
+    ]
+  },
+  "patches": [
+    {
+      "before": "correct and usable rainfall filter",
+      "after": "correct and usable raindrop filter",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered physical p.26 Figure 9 task bubble prints 'Please identify the photo of Hong Kong and select the correct and usable raindrop filter and snowflake filter.' (visually verified at 300 dpi); the OCR misread raindrop as rainfall in the same sentence."
+    },
+    {
+      "before": "tongyi-mai.github.io/Qwen-UI-Agent",
+      "after": "tongyi-mai.github.io/Qwen-UI-Agent\n\n\\*Qwen-UI-Agent is a continuation of our previous work, MAI-UI (Zhou et al., 2025a). See Contributions section for a full author list.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom prints the footnote rule and '*Qwen-UI-Agent is a continuation of our previous work, MAI-UI (Zhou et al., 2025a). See Contributions section for a full author list.' beneath Figure 1 (visually verified at 120 dpi); the asterisk marker survives on the OCR line 'MAI-UI Team\\*' but the footnote body was dropped. Restored after the author block that carries the marker, using the escaped-asterisk style already used by the OCR for the marker itself."
+    },
+    {
+      "before": "Shaoshun Huang, Shuaihao Zhang.",
+      "after": "Shaoshun Huang, Shuaihao Zhang.\n\n\\*Project Co-Leader. † Project Leader.",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Rendered physical p.45 bottom prints the footnote rule and '* Project Co-Leader. † Project Leader.' below the Contributors paragraph (visually verified at 300 dpi); the OCR keeps the matching $^{*}$ and $^{\\dagger}$ markers in the Core Contributors line but dropped the footnote body. The dagger is restored as the literal printed glyph."
+    }
+  ],
+  "unresolved": []
+}

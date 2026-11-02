@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-6-astra-system-card",
+  "source_sha256": "77ff1e8aaf7018c7d7bbe347c374cd74188387ceca91f1ef637ccc59ea930895",
+  "ocr_sha256": "da2d0247a1c82c2eb4a67f432a678bdb0abae4a133c8a50332d90a1c2ebf9b21",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      33,
+      34,
+      41,
+      42,
+      43,
+      46,
+      57,
+      158,
+      159
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE of a 175-page card: (a) full structural scan - the OCR markdown contains zero code-fence markers, 203 headings and 137 image embeds, so no swallowed-block damage; (b) automated normalized 4-gram containment diff of every physical PDF page against the whole OCR markdown - only figure-only pages (53, 73, 141, 150, 163, 170, 171, 1-3 extractable tokens each) fell below 50%, and borderline page 9 misses were line-wrap hyphenation and openai.com URL-wrap artifacts, i.e. no droppage found anywhere; (c) pages 33-34, 41-43, 46, 57, 158-159 were then read line-by-line against extracted PDF text and rendered at 120 dpi; patches were verified on renders of physical pages 42, 43, 57, 158 and 159. Spurious headings demoted: one body sentence promoted to a heading mid-sentence (physical p.57), three bold figure captions ('Figure 17/27/87') promoted while all sibling captions are plain text, and two appendix-B chart-internal banner titles ('Circumventing auto-review', 'Circumventing Warnings') promoted although the identical chart titles in appendix A are plain text; renders of p.158/p.159 show both banners are part of the chart images. One stray chart-title fragment ('Verbalized metagaming', the printed title above the Figure 18 plot) was inserted between the two halves of a sentence spanning printed pp.41-42; removed and the sentence rejoined; the title remains visible in the embedded figure image. Reviewed and deliberately kept: 'ExploitGym Honeypot: example reasoning' is a genuine printed display heading (rendered p.42); the run-together words in the example reasoning boxes ('impossiblewithoutdiscoveringzero-day' etc.) are printed verbatim in the source figure, so the OCR is faithful; run-in italic subsection leads such as '9.1.2.0.2 Action-only Monitor Scope' are kept as paragraphs as printed. A single bare '<' in 'Holm-adjusted p < 0.05' renders literally under CommonMark and was left unchanged."
+  },
+  "patches": [
+    {
+      "before": "and GPT-6\n\n## Astra also has notably more very short or empty CoTs. GPT-6 Astra scores lower on almost all environments.",
+      "after": "and GPT-6 Astra also has notably more very short or empty CoTs. GPT-6 Astra scores lower on almost all environments.",
+      "count": 1,
+      "pdf_pages": [
+        57
+      ],
+      "evidence": "Rendered physical p.57 prints 'Astra also has notably more very short or empty CoTs. GPT-6 Astra scores lower on almost all environments.' as regular body text continuing the sentence that ends printed p.56 with '...and GPT-6' (no heading style). The OCR promoted the continuation into a '##' heading, splitting the sentence; the patch removes the marker and rejoins it."
+    },
+    {
+      "before": "GPT-6 Astra sometimes\n\nVerbalized metagaming\n\nshows higher or lower",
+      "after": "GPT-6 Astra sometimes shows higher or lower",
+      "count": 1,
+      "pdf_pages": [
+        43
+      ],
+      "evidence": "Rendered physical p.42 ends the paragraph with '...GPT-6 Astra sometimes' and physical p.43 begins 'shows higher or lower verbalized metagaming and oversight gaming than GPT-5.6 Sol.'; 'Verbalized metagaming' is the bold printed chart title above the Figure 18 plot on p.43, not body text. The patch removes the stray figure-title fragment and rejoins the sentence; the title remains visible in the embedded Figure 18 image."
+    },
+    {
+      "before": "## Figure 17",
+      "after": "Figure 17",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "Rendered physical p.42 prints 'Figure 17' as a bold caption below the example-reasoning boxes; sibling captions (Figure 18-21, 26) are plain text in the OCR markdown, so the heading marker is OCR promotion."
+    },
+    {
+      "before": "## Figure 27",
+      "after": "Figure 27",
+      "count": 1,
+      "pdf_pages": [
+        57
+      ],
+      "evidence": "Rendered physical p.57 prints 'Figure 27' as a bold caption below the action-only monitorability table; sibling captions are plain text in the OCR markdown."
+    },
+    {
+      "before": "## Figure 87",
+      "after": "Figure 87",
+      "count": 1,
+      "pdf_pages": [
+        159
+      ],
+      "evidence": "Rendered physical p.159 prints 'Figure 87' as a bold caption below the Circumventing Warnings chart; sibling captions are plain text in the OCR markdown."
+    },
+    {
+      "before": "## Circumventing auto-review",
+      "after": "Circumventing auto-review",
+      "count": 1,
+      "pdf_pages": [
+        158
+      ],
+      "evidence": "Rendered physical p.158 shows 'Circumventing auto-review' as the chart-internal banner above the Figure 86 plot legend, not a document heading; the identical chart title in appendix A is plain text before the image embed."
+    },
+    {
+      "before": "## Circumventing Warnings",
+      "after": "Circumventing Warnings",
+      "count": 1,
+      "pdf_pages": [
+        159
+      ],
+      "evidence": "Rendered physical p.159 shows 'Circumventing Warnings' as the chart-internal banner above the Figure 87 plot legend, not a document heading; the identical chart title in appendix A is plain text before the image embed."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "lead-in-bold-promotions-unreviewed",
+      "pdf_pages": [
+        10,
+        22,
+        61,
+        47,
+        58
+      ],
+      "evidence": "Other short headings that may be printed bold lead-ins rather than display headings were not individually rendered (e.g. 'Safety Pareto Frontier', 'External Evaluations - Gray Swan IPI Arena', 'Unauthorized Agent Interaction', 'OAI-repo Sabotage v2', 'Monitor Evasion under Task-Guided/Unguided Sabotage', 'UK AISI's key findings are:'); they need a rendered-page check before demotion is decided."
+    },
+    {
+      "id": "chart-title-fragments-before-embeds",
+      "pdf_pages": [
+        44,
+        45
+      ],
+      "evidence": "Plain-text chart titles ('Verbalized metagaming', 'Verbalized metagaming: oversight gaming in rollouts graded as aligned') sit directly before the Figure 20/21 image embeds, mirroring the printed titles above the plots; left unchanged since they match the print position and the pages were not individually reviewed."
+    }
+  ]
+}

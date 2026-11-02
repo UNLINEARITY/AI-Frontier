@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "agibot:agibot-world-colosseo-go-1",
+  "source_sha256": "200a3029108f26c3408b827f4d45d16dc19d7468864fb5a46458172756c5e737",
+  "ocr_sha256": "f50d198721153f2e5a1cfff9921040ecdccf98c4f28a7b186ea605e423f35cf7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level diff of all 9 physical pages against the OCR Markdown (HTML stripped, hyphenated line breaks un-joined, inline math marked); no code fences exist in the source. All Table I cell values (162k/7.2k/26k/130k/13k/98.5k/60.1k/76k/55k/1.4M/1M+ rows) match the PDF text layer exactly, as do the Fig. 6/7 caption numbers. Remaining PDF-only tokens are chart-axis values and labels inside the embedded figures (Figs. 2-3, 5-7) plus the arXiv stamp; MD-only tokens are image-URL hash fragments. Physical p.6 was rendered at 120 dpi and physical p.9 cropped at 300 dpi for the two repairs. The paper's own misspelling 'casual temporal masks' (p.5) is preserved as printed, and the figure-internal labels 'Dextrous Hand' (Fig. 1) and 'Varification' (Fig. 2) are not duplicated in prose and need no repair."
+  },
+  "patches": [
+    {
+      "before": "using propriocceptive state",
+      "after": "using proprioceptive state",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6, Action Expert paragraph: the print hyphenates the word across the column break as 'decodes low-level action chunks, de-' / 'noted by ... using pro-' / 'prioceptive state p_t' (right column top), i.e. 'proprioceptive'; OCR inserted an extra 'c' when rejoining the hyphenated line break. Verified visually on the 120 dpi page render."
+    },
+    {
+      "before": "Initial submission to arXiv and research blog",
+      "after": "Initial submission to arXiv and reserach blog",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "300 dpi crop of physical p.9 Change Log, March 2025 entry prints 'Initial submission to arXiv and reserach blog' - the source's own misspelling 'reserach'; OCR silently corrected it to 'research'. Restored to the printed spelling."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "checkmark-glyph-substitution",
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Table I check marks are transcribed as U+221A sqrt signs where the print uses U+2713 check marks; visually equivalent in the reader and consistent throughout the table, so left unchanged."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:fast-action-tokenization-technical-report",
+  "source_sha256": "3739b31f5fecdde371509ff5bb13619979734e894a255a9b264253f4cc53934a",
+  "ocr_sha256": "d6811e4128d9c6dc867fa18c46a6b56be5fe8cabc9437df0c8c8c15d24505894",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "coverage": "complete",
+    "notes": "Structure: the three code fences (Algorithm 1 'txt' block and two 'python' listings in Section V-C) are balanced and legitimate printed listings, none swallows headings, tables or images. Droppage: iterative n-gram and token diffs against all 19 physical pages found no dropped prose; full paragraphs were read on pages 1-2 (title/authors/affiliations/contribution footnote), V-B/V-C (algorithm context, FAST+ release), VI-A through VI-F and VII (results, limitation and scaling paragraphs verified verbatim including the '300M action expert', '903M timesteps', '9.1%' and '750ms' values). TABLE I token counts, TABLE II (32 rows) and TABLE III (15 rows) match the PDF text layer as digit multisets; references [1]-[74] match including accented names (Defossez, Aguilar, Waymo page ranges) and the print's own typo 'his task was evaluated' (Appendix C) which is preserved as printed. Remaining PDF-only tokens are log-scale axis labels and panels inside embedded figures (Figs. 4, 10), the arXiv stamp, and citation-number interleaving artifacts of two-column extraction. Visual verification at 300 dpi: physical p.5 Algorithm 1 box and physical p.19 TABLE III rows. The print's 'pi Table Bussing [7]' cell prints pi without a subscript and the OCR cell matches it, so no repair is proposed there."
+  },
+  "patches": [
+    {
+      "before": "return action_tokens",
+      "after": "return action tokens",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "300 dpi crop of the printed Algorithm 1 box on physical p.5: the final line reads 'return action tokens' with a space; the OCR 'txt' code block wrote 'return action_tokens' with an underscore. Only this final line is changed; the rest of the block's sub/superscript linearization is kept as a plain-text equivalent of the stacked indices."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "algorithm-flatten-index-linearization",
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "The printed flatten step stacks sub- and superscripts on each C-bar symbol ([Cbar^1_1, Cbar^2_1, ..., Cbar^1_2, ..., Cbar^n_H]); the txt block linearizes each as subscript-then-superscript. Both orders read as the same stacked symbol in the monospace render, so the unchanged spelling is kept."
+    },
+    {
+      "id": "pi-table-bussing-missing-subscript",
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "TABLE III's dataset cell prints 'pi Table Bussing [7]' with no visible subscript on the pi (visually verified at 300 dpi); the OCR cell '$\\pi$ Table Bussing [7]' matches the print."
+    }
+  ]
+}

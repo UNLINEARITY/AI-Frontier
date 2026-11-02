@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:mai-code-1-1-flash-model-card",
+  "source_sha256": "9caf4abe4c8eb6c3b5e1dfd5c61238e42139510bf4c5690d6115d9277f59e22f",
+  "ocr_sha256": "d6dd4056f3fd5aa2abb837da5e831b1e8f3be80b95907a01bc70c2ff1bab08e8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "coverage": "complete",
+    "notes": "All 6 physical pages were compared against the extracted PDF text with normalized n-gram matching; every patch was verified on rendered pages (word-level garbles at 350 dpi, table cells and section headings at 150-250 dpi, visually read). No code fences and no dropped passages exist in this OCR; both benchmark tables match the PDF values. Source-printed quirks kept unchanged: the doubled period in 'GitHub Offerings..', and the spaced comma after the first 'here' link."
+  },
+  "patches": [
+    {
+      "before": "Microsoft CorporationAuthorized Representative:",
+      "after": "Microsoft Corporation<br>Authorized Representative:",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 'Developer' cell prints 'Microsoft Corporation' and 'Authorized Representative: Microsoft Ireland Operations Limited (MIOL)' as separate lines (verified visually at 250 dpi); the OCR glued them. Line breaks inside a cell are restored as <br>, following the accepted mai-cyber-1-flash-model-card cleanup."
+    },
+    {
+      "before": "Limited (MIOL)70 Sir John",
+      "after": "Limited (MIOL)<br>70 Sir John",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 'Developer' cell prints the address '70 Sir John Rogerson's Quay, Dublin 2, D02 R296, Ireland' on its own line after '(MIOL)' (verified visually at 250 dpi); the OCR glued them."
+    },
+    {
+      "before": "the GitHubGenerative AI Services terms",
+      "after": "the GitHub Generative AI Services terms",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1-p.2: the License cell sentence continues across the page break as '...the GitHub Customer Agreement or the GitHub Terms of Services and the GitHub Generative AI Services terms, ...' (verified visually at 250 dpi); the OCR glued 'GitHubGenerative' at the page boundary."
+    },
+    {
+      "before": "MAI-Thinking-1MAI-Code-1-Flash",
+      "after": "MAI-Thinking-1<br>MAI-Code-1-Flash",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 'Model dependencies' cell prints 'MAI-Thinking-1' and 'MAI-Code-1-Flash' as two separate lines (verified visually at 250 dpi); the OCR glued them into one invalid model name."
+    },
+    {
+      "before": "Model Summary\n\n<table",
+      "after": "## Model Summary\n\n<table",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints 'Model Summary' as a teal section heading, the same style as 'Training disclosure' and 'Acceptable use' (verified visually at 150 dpi); the OCR kept those siblings as '##' headings but dropped the marker here."
+    },
+    {
+      "before": "• Competitive reasoning across math, science, and visual coding tasks.",
+      "after": "\\- Competitive reasoning across math, science, and visual coding tasks.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints the four 'Key model capabilities' items as an identical bulleted list; the OCR wrote three items as escaped-hyphen bullets and this one as a literal bullet character (list verified visually at 250 dpi). Normalized to the escaped-hyphen convention used by the rest of this OCR and by the accepted mai-transcribe-2-model-card cleanup."
+    },
+    {
+      "before": "The relevant terms of service and\n\nacceptable use policy",
+      "after": "The relevant terms of service and acceptable use policy",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2-p.3: 'The relevant terms of service and acceptable use policy for GitHub Copilot Business and Enterprise users...' is one continuous sentence across the page break (verified visually at 150 dpi); the OCR split it into two paragraphs at the boundary."
+    },
+    {
+      "before": "Pricing\n\nTo be finalized",
+      "after": "## Pricing\n\nTo be finalized",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prints 'Pricing' as a teal section heading, the same style as 'Technical specs' and 'Acceptable use' (verified visually at 150 dpi); the OCR dropped the heading marker."
+    },
+    {
+      "before": "Technical specs\n\n## Training cut-off date",
+      "after": "## Technical specs\n\n## Training cut-off date",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prints 'Technical specs' as a teal section heading above the bold 'Training cut-off date' subsection (verified visually at 150 dpi); the OCR kept the subsection as '##' but dropped the section marker."
+    },
+    {
+      "before": "rubrics synthesis, process supervision",
+      "after": "rubrics synthesization, process supervision",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 at 350 dpi prints 'including prompt rewriting, rubrics synthesization, process supervision, and repo-level synthesization'; the OCR misread the first word as 'synthesis'."
+    },
+    {
+      "before": "repo-level synthesisization",
+      "after": "repo-level synthesization",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 at 350 dpi prints 'repo-level synthesization'; the OCR garbled it into the non-word 'synthesisization'."
+    },
+    {
+      "before": "Posttraining used synthetic",
+      "after": "Post-training used synthetic",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5-p.6: the sentence ends p.5 with the hyphenated line break 'Post-' and continues on p.6 as 'training used synthetic and open-source coding datasets' (both halves verified visually at 250 dpi); the OCR dropped the hyphen, producing 'Posttraining'."
+    },
+    {
+      "before": "Acceptable use\n\nAcceptable use policy\n\nMAI-Code-1.1-Flash is intended",
+      "after": "## Acceptable use\n\n## Acceptable use policy\n\nMAI-Code-1.1-Flash is intended",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints 'Acceptable use' as a teal section heading and 'Acceptable use policy' as a bold subsection heading, matching the style of 'Known limitations' and 'Training disclosure' which the OCR kept as '##' headings (verified visually at 150 dpi); the OCR dropped both markers."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,468 @@
+{
+  "schema_version": 1,
+  "id": "meta:seamless-technical-report",
+  "source_sha256": "0cdd32197ea09ea3625d45c6573c54d181c532d67d6a5c1075a2b7cc92001474",
+  "ocr_sha256": "f87bae34a8e33043fd3e5cd3e8d25725be717e4bbe1b2b021b3021d9c30a014b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      10,
+      11,
+      13,
+      14,
+      16,
+      18,
+      19,
+      21,
+      22,
+      27,
+      30,
+      38,
+      39,
+      44,
+      46,
+      50,
+      53,
+      54,
+      55,
+      57,
+      59,
+      60,
+      63,
+      64,
+      65,
+      66,
+      67,
+      70,
+      71,
+      73,
+      74,
+      75,
+      77,
+      78,
+      80,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of all 145 physical pages: automated normalized 4-gram page containment plus missing-run extraction against the OCR markdown (all pages machine-scanned), line-level inspection of every low-containment page, and 300-dpi renders/crops verifying every patch: the K.1.2 code listing and all restored footnote bands (p13/14/16/18/19/21/22/27/30/38/46/53/57/59/60/64/65/66/67/71/78/130) were visually checked. The \"ASR-chrF\" evaluation paragraph (physical p.78) matches the print including its own glued typos (\"chrFas\", \"chrFbecause\"). Chart-axis pages 127-128 and result-table pages are figure-internal/table content. Punctuation spacing after inline math is handled by the shared OCR normalizer."
+  },
+  "patches": [
+    {
+      "before": "def monotonic\\_alignment(p):\n\n```txt\n# Extension probability matrix\np_ext = p.roll(1, [-1]).unsqueeze(-2).expand(-1, -1, src_len, -1).triu(1)\n```\n\n\\# Transition matrix\n\n```python\nfor i in range(1, tgt_len):\n    alpha.append(p[:, [i]] * torch.bmm(alpha[i - 1], T[:, i]))\n```\n\nreturn torch.cat(alpha[1:], dim=1)",
+      "after": "```python\ndef monotonic_alignment(p):\n    bsz, tgt_len, src_len = p.size()\n\n    # Extension probablity matrix\n    p_ext = p.roll(1, [-1]).unsqueeze(-2).expand(-1, -1, src_len, -1).triu(1)\n\n    # Transition matrix\n    T = (1 - p_ext).comprod(-1).triu()\n\n    alpha = [p[:, [0]] * T[:, [0]]]\n\n    for i in range(1, tgt_len):\n        alpha.append(p[:, [i]] * torch.bmm(alpha[i - 1], T[:, i]))\n\n    return torch.cat(alpha[1:], dim=1)\n```",
+      "count": 1,
+      "pdf_pages": [
+        130
+      ],
+      "evidence": "Rendered physical p.130 (300-dpi crop): the print shows one continuous PyTorch listing. The OCR dropped the lines \"bsz, tgt_len, src_len = p.size()\", \"T = (1 - p_ext).comprod(-1).triu()\" and \"alpha = [p[:, [0]] * T[:, [0]]]\" (strings absent from the OCR markdown), fenced the two middle fragments and left the def/return lines as body text, and auto-corrected two of the print's own typos inside the listing: the print reads \"comprod(-1)\" (verified at 300 dpi) and the comment \"# Extension probablity matrix\" (verified at 300 dpi). The patch joins the listing into a single python fence, restores the dropped lines and indentation, and restores the print's spellings."
+    },
+    {
+      "before": "## Training pipeline. We can identify three main steps:",
+      "after": "**Training pipeline.** We can identify three main steps:",
+      "count": 1,
+      "pdf_pages": [
+        80
+      ],
+      "evidence": "Rendered physical p.80 (300-dpi crop): \"Training pipeline.\" is a bold run-in lead and \"We can identify three main steps:\" is regular body text starting the (i)/(ii)/(iii) list, not a section heading; OCR promoted the whole phrase to a ## heading. Demoted to a bold lead paragraph."
+    },
+    {
+      "before": "is given in Table 3. While our speech encoders",
+      "after": "is given in Table 3.\n\n1 The new version v3 of Whisper seems to perform less well on S2TT\n\nWhile our speech encoders",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 footnote rule prints \"1 The new version v3 of Whisper seems to perform less well on S2TT\" (300-dpi band verified). OCR kept the superscript marker on WHISPER-LARGE-V2 but dropped the footnote body."
+    },
+    {
+      "before": "SONAR repository. $^{2}$ See Appendix A for a model card.",
+      "after": "SONAR repository. $^{2}$\n\n2 https://github.com/facebookresearch/SONAR\n\nSee Appendix A for a model card.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 footnote rule prints \"2 https://github.com/facebookresearch/SONAR\" (300-dpi band verified). OCR kept marker $^{2}$ but dropped the footnote body."
+    },
+    {
+      "before": "STOPES library (Andrews et al., 2022). $^{3}$",
+      "after": "STOPES library (Andrews et al., 2022). $^{3}$\n\n3 https://github.com/facebookresearch/stopes",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 footnote rule prints \"3 https://github.com/facebookresearch/stopes\" (300-dpi band verified). OCR kept marker $^{3}$ but dropped the footnote body."
+    },
+    {
+      "before": "with an offset $b^{38}$ , and $cumprod_{2}$ means that the computation is along the second dimension.",
+      "after": "with an offset $b^{38}$ , and $cumprod_{2}$ means that the computation is along the second dimension.\n\n38 See torch.triu",
+      "count": 1,
+      "pdf_pages": [
+        130
+      ],
+      "evidence": "Rendered physical p.130 footnote rule prints \"38 See torch.triu\" (verified on the p.130 render). The OCR flattened the marker into the math as $b^{38}$ but dropped the footnote body."
+    },
+    {
+      "before": "(Seamless Communication et al., 2023). $^{4}$ Akin to v1",
+      "after": "(Seamless Communication et al., 2023). $^{4}$\n\n4 As we scaled data from 1M to 4.5M hours, we encountered some optimization instability when RPQ was used. We decided to simply discard RPQ instead of relying on more extensive hyperparameter tuning.\n\nAkin to v1",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 footnote rule prints \"4 As we scaled data from 1M to 4.5M hours, we encountered some optimization instability when RPQ was used. We decided to simply discard RPQ instead of relying on more extensive hyperparameter tuning.\" (300-dpi band verified). OCR kept marker $^{4}$ but dropped the footnote body."
+    },
+    {
+      "before": "X2T text decoder. $^{5}$ As a first-pass decoder",
+      "after": "X2T text decoder. $^{5}$\n\n5 Subword vocabulary size of 256K in SEAMLESSM4T\n\nAs a first-pass decoder",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 footnote rule prints \"5 Subword vocabulary size of 256K in SEAMLESSM4T\" (300-dpi band verified). OCR kept marker $^{5}$ but dropped the footnote body."
+    },
+    {
+      "before": "multimodality problem. $^{6}$ Previous works have",
+      "after": "multimodality problem. $^{6}$\n\n6 Each token’s distribution depends only on the source sentence; this conditional independence assumption prevents a model from properly capturing the highly multimodal distribution of target translations (Gu et al., 2017a).\n\nPrevious works have",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 footnote rule prints \"6 Each token’s distribution depends only on the source sentence; this conditional independence assumption prevents a model from properly capturing the highly multimodal distribution of target translations (Gu et al., 2017a).\" (300-dpi band verified). OCR kept marker $^{6}$ but dropped the footnote body."
+    },
+    {
+      "before": "as the underlying ASR model. $^{7}$ We set",
+      "after": "as the underlying ASR model. $^{7}$\n\n7 This is different from Seamless Communication et al. (2023), where WHISPER-LARGE-V2 was used for eng–X directions and WHISPER-MEDIUM was used for X–eng directions. We re-evaluated SEAMLESSM4T models here with WHISPER-LARGE for a direct comparison.\n\nWe set",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 footnote rule prints \"7 This is different from Seamless Communication et al. (2023), where Whisper-Large-v2 was used for eng–X directions and Whisper-Medium was used for X–eng directions. We re-evaluated SeamlessM4T models here with Whisper-Large for a direct comparison.\" (300-dpi band verified; small-caps names uppercased to match the markdown’s convention). OCR kept marker $^{7}$ but dropped the footnote body."
+    },
+    {
+      "before": "non-English $^{9}$ TTS (Pratap et al., 2023).",
+      "after": "non-English $^{9}$ TTS (Pratap et al., 2023).\n\n9 Only 26 of our 35 supported languages are serviced by MMS’s TTS models",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 footnote rule prints \"9 Only 26 of our 35 supported languages are serviced by MMS’s TTS models\" (300-dpi band verified, no trailing period in the print). OCR kept marker $^{9}$ but dropped the footnote body."
+    },
+    {
+      "before": "by more than 35%. $^{10}$",
+      "after": "by more than 35%. $^{10}$\n\n10 We evaluated the recently released WHISPER-LARGE-V3 on FLEURS’s S2TT and found it to be worse than WHISPER-LARGE-V2.",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 footnote rule prints \"10 We evaluated the recently released Whisper-Large-v3 on Fleurs’s S2TT and found it to be worse than Whisper-Large-v2.\" (300-dpi band verified; small-caps names uppercased). OCR kept marker $^{10}$ but dropped the footnote body."
+    },
+    {
+      "before": "-4.4% WER.",
+      "after": "-4.4% WER.\n\n11 https://github.com/openai/whisper/discussions/1762",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 footnote rule prints \"11 https://github.com/openai/whisper/discussions/1762\" (300-dpi band verified). OCR kept marker $^{11}$ but dropped the footnote body; restored after the sentence containing the marker."
+    },
+    {
+      "before": "extracted from w2v-BERT. Adding a",
+      "after": "extracted from w2v-BERT.\n\n12 For expressive audio alignment, we used an earlier version of the AUTOPCP model. It has the same architecture as the model we used for evaluation and it uses embeddings from a different layer of the XSL-R speech encoder.\n\nAdding a",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Rendered physical p.27 footnote rule prints \"12 For expressive audio alignment, we used an earlier version of the AutoPCP model. It has the same architecture as the model we used for evaluation and it uses embeddings from a different layer of the XSL-R speech encoder.\" (300-dpi band verified; small-caps AUTOPCP uppercased). OCR kept marker $^{12}$ but dropped the footnote body."
+    },
+    {
+      "before": "Demucs tool $^{13}$ (Rouard et al., 2023). Leading",
+      "after": "Demucs tool $^{13}$ (Rouard et al., 2023).\n\n13 https://github.com/facebookresearch/demucs\n\nLeading",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 footnote rule prints \"13 https://github.com/facebookresearch/demucs\" (300-dpi band verified). OCR kept marker $^{13}$ but dropped the footnote body."
+    },
+    {
+      "before": "ASR was run using Whisper $^{14}$ (Radford et al., 2022).",
+      "after": "ASR was run using Whisper $^{14}$ (Radford et al., 2022).\n\n14 WHISPER-LARGE-V2 model",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 footnote rule prints \"14 Whisper-Large-v2 model\" (300-dpi band verified; small-caps uppercased). OCR kept marker $^{14}$ but dropped the footnote body."
+    },
+    {
+      "before": "(Ma et al., 2023) $^{18}$ :",
+      "after": "(Ma et al., 2023) $^{18}$ :\n\n18 See Appendix K.1.1 for the definition of the operators",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered physical p.46 footnote rule prints \"18 See Appendix K.1.1 for the definition of the operators\" (PDF text layer, page band rendered for this page; single-footnote block). OCR kept marker $^{18}$ but dropped the footnote body."
+    },
+    {
+      "before": "PRETSSEL-6 $^{19}$ and PRETSSEL-36, in Table 33. As evidenced",
+      "after": "PRETSSEL-6 $^{19}$ and PRETSSEL-36, in Table 33.\n\n19 Note that this model is same PRETSSEL model used for SeamlessExpressive.\n\nAs evidenced",
+      "count": 1,
+      "pdf_pages": [
+        53
+      ],
+      "evidence": "Rendered physical p.53 footnote rule prints \"19 Note that this model is same PRETSSEL model used for SeamlessExpressive.\" (the print’s own wording \"is same\" preserved; page band rendered; single-footnote block). OCR kept marker $^{19}$ but dropped the footnote body."
+    },
+    {
+      "before": "shift matrix by k elements $^{40}$ .",
+      "after": "shift matrix by k elements $^{40}$ .\n\n39 $J_{|X|\\times1}\\operatorname{roll}_{1}(p_{i,:})$ can be achived by torch.expand function.\n\n40 See torch.roll",
+      "count": 1,
+      "pdf_pages": [
+        130
+      ],
+      "evidence": "Rendered physical p.130 footnote rules print \"39 J_{|X|×1} roll1(pi,:) can be achived by torch.expand function.\" (the print’s own spelling \"achived\" preserved) and \"40 See torch.roll\" (verified on the p.130 render). OCR kept markers $^{39}$/$^{40}$ but dropped both footnote bodies."
+    },
+    {
+      "before": "text-to-speech model Coqui-XTTS.",
+      "after": "text-to-speech model Coqui-XTTS.\n\n15 https://huggingface.co/coqui/XTTS-v2",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 footnote rule prints \"15 https://huggingface.co/coqui/XTTS-v2\" (300-dpi band verified). OCR kept marker $^{15}$ but dropped the footnote body; restored after the sentence containing the marker."
+    },
+    {
+      "before": "and FLEURS. The data statistics",
+      "after": "and FLEURS.\n\n16 We will release the benchmark sets.\n\nThe data statistics",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 footnote rule prints \"16 We will release the benchmark sets.\" (300-dpi band verified). OCR kept marker $^{16}$ but dropped the footnote body."
+    },
+    {
+      "before": "directions, respectively. Table 21 reports",
+      "after": "directions, respectively.\n\n17 Watermarking is applied to released models, so they might have slight difference with reported results in the paper.\n\nTable 21 reports",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 footnote rule prints \"17 Watermarking is applied to released models, so they might have slight difference with reported results in the paper.\" (300-dpi band verified; the print’s own wording \"slight difference\" preserved). OCR kept marker $^{17}$ but dropped the footnote body."
+    },
+    {
+      "before": "per second $^{21}$ . We obtained the syllables",
+      "after": "per second $^{21}$ .\n\n21 Despite syllable-level speech rate showing lower correlation with human judgments on Spanish-English data than with other units of content, we chose this unit based on linguistic considerations—as the most generalizable across diverse languages.\n\nWe obtained the syllables",
+      "count": 1,
+      "pdf_pages": [
+        57
+      ],
+      "evidence": "Rendered physical p.57 footnote rule prints \"21 Despite syllable-level speech rate showing lower correlation with human judgments on Spanish-English data than with other units of content, we chose this unit based on linguistic considerations—as the most generalizable across diverse languages.\" (300-dpi band verified). OCR kept marker $^{21}$ but dropped the footnote body."
+    },
+    {
+      "before": "$^{22}$ The MOS protocol",
+      "after": "$^{22}$\n\n22 In particular, for expressivity, we only evaluated MOS on a subsample of n=100 items from each dataset in the X-eng direction\n\nThe MOS protocol",
+      "count": 1,
+      "pdf_pages": [
+        59
+      ],
+      "evidence": "Rendered physical p.59 footnote rule prints \"22 In particular, for expressivity, we only evaluated MOS on a subsample of n=100 items from each dataset in the X–eng direction\" (300-dpi band verified, no trailing period; italics n flattened). OCR kept marker $^{22}$ but dropped the footnote body."
+    },
+    {
+      "before": "using the PCP protocol. Before",
+      "after": "using the PCP protocol.\n\n23 Annotators must pass language proficiency tests to be included in the study.\n\nBefore",
+      "count": 1,
+      "pdf_pages": [
+        60
+      ],
+      "evidence": "Rendered physical p.60 footnote rule prints \"23 Annotators must pass language proficiency tests to be included in the study.\" (300-dpi band verified). OCR kept marker $^{23}$ but dropped the footnote body."
+    },
+    {
+      "before": "coarse sounding, respectively. $^{24}$",
+      "after": "coarse sounding, respectively. $^{24}$\n\n24 Jitter and Shimmer were computed using the openSMILE audio feature extraction toolkit (Eyben et al., 2010) (using the eGeMAPSv02 feature set). HNR was computed using PRAAT implementation parselmouth (Jadoul et al., 2018). SNR was computed using an internal library.",
+      "count": 1,
+      "pdf_pages": [
+        64
+      ],
+      "evidence": "Rendered physical p.64 footnote rule prints \"24 Jitter and Shimmer were computed using the openSMILE audio feature extraction toolkit (Eyben et al., 2010) (using the eGeMAPSv02 feature set). HNR was computed using PRAAT implementation parselmouth (Jadoul et al., 2018). SNR was computed using an internal library.\" (300-dpi band verified). OCR kept marker $^{24}$ but dropped the footnote body."
+    },
+    {
+      "before": "for our Expressivity comparison set (Figure 41). We analyze",
+      "after": "for our Expressivity comparison set (Figure 41).\n\n25 For this analysis, we restrict ourselves to pairs for which both source- and target-audio had MOS ratings (reducing the total sample to n = 19233 items).\n\nWe analyze",
+      "count": 1,
+      "pdf_pages": [
+        64
+      ],
+      "evidence": "Rendered physical p.64 footnote rule prints \"25 For this analysis, we restrict ourselves to pairs for which both source- and target-audio had MOS ratings (reducing the total sample to n = 19233 items).\" (300-dpi band verified). OCR kept marker $^{25}$ but dropped the footnote body."
+    },
+    {
+      "before": "(as described in Section 7.3.1). $^{26}$ We examined",
+      "after": "(as described in Section 7.3.1). $^{26}$\n\n26 Note this analysis is similar in spirit to the analysis presented in Section 7.1.\n\nWe examined",
+      "count": 1,
+      "pdf_pages": [
+        65
+      ],
+      "evidence": "Rendered physical p.65 footnote rule prints \"26 Note this analysis is similar in spirit to the analysis presented in Section 7.1.\" (300-dpi band verified). OCR kept marker $^{26}$ but dropped the footnote body."
+    },
+    {
+      "before": "correlation coefficient. By contrast",
+      "after": "correlation coefficient.\n\n27 PCP: “rhythm”, “emotion” and “overall expressive intent”; Automatic: “AutoPCP”, “Speaker-sim”, “Speech-rate”, “Speech-rate + Pausing”, “Pausing”\n\nBy contrast",
+      "count": 1,
+      "pdf_pages": [
+        66
+      ],
+      "evidence": "Rendered physical p.66 footnote rule prints \"27 PCP: “rhythm”, “emotion” and “overall expressive intent”; Automatic: “AutoPCP”, “Speaker-sim”, “Speech-rate”, “Speech-rate + Pausing”, “Pausing”\" (300-dpi band verified). OCR kept marker $^{27}$ but dropped the footnote body."
+    },
+    {
+      "before": "$^{28}$ , which is expected. All pairwise",
+      "after": "$^{28}$ , which is expected.\n\n28 PCP: “semantics”; Automatic: ASR-BLEU and BLEU\n\nAll pairwise",
+      "count": 1,
+      "pdf_pages": [
+        66
+      ],
+      "evidence": "Rendered physical p.66 footnote rule prints \"28 PCP: “semantics”; Automatic: ASR-BLEU and BLEU\" (300-dpi band verified). OCR kept marker $^{28}$ but dropped the footnote body."
+    },
+    {
+      "before": "overall expressive intent naturally co-vary. $^{29}$",
+      "after": "overall expressive intent naturally co-vary. $^{29}$\n\n29 As a toy example, consider angry or agitated speech–as a listener, the inference that the speaker is “angry” is likely in part a function of speech-rate (such that in many languages and cultures faster speech is seen as angrier).",
+      "count": 1,
+      "pdf_pages": [
+        66
+      ],
+      "evidence": "Rendered physical p.66 footnote rule prints \"29 As a toy example, consider angry or agitated speech–as a listener, the inference that the speaker is “angry” is likely in part a function of speech-rate (such that in many languages and cultures faster speech is seen as angrier).\" (300-dpi band verified). OCR kept marker $^{29}$ but dropped the footnote body."
+    },
+    {
+      "before": "quantify, and mitigate potential harms. To this end",
+      "after": "quantify, and mitigate potential harms.\n\n30 https://ai.meta.com/blog/facebooks-five-pillars-of-responsible-ai/\n\nTo this end",
+      "count": 1,
+      "pdf_pages": [
+        66
+      ],
+      "evidence": "Rendered physical p.66 footnote rule prints \"30 https://ai.meta.com/blog/facebooks-five-pillars-of-responsible-ai/\" (300-dpi band verified). OCR kept marker $^{30}$ but dropped the footnote body."
+    },
+    {
+      "before": "conveyed sentiment). We categorize",
+      "after": "conveyed sentiment).\n\n31 By illocutionary effect, we refer to the communicative impact of an utterance. Perlocutionary effect refers to the resulting impact of the utterance on the recipient of the message.\n\nWe categorize",
+      "count": 1,
+      "pdf_pages": [
+        67
+      ],
+      "evidence": "Rendered physical p.67 footnote rule prints \"31 By illocutionary effect, we refer to the communicative impact of an utterance. Perlocutionary effect refers to the resulting impact of the utterance on the recipient of the message.\" (300-dpi band verified; printed italics on the two terms flattened to plain text). OCR kept marker $^{31}$ but dropped the footnote body."
+    },
+    {
+      "before": "creating a cascading system (Seamless Communication et al., 2023). Beyond cascade detection",
+      "after": "creating a cascading system (Seamless Communication et al., 2023).\n\n32 https://github.com/unitaryai/detoxify\n\nBeyond cascade detection",
+      "count": 1,
+      "pdf_pages": [
+        71
+      ],
+      "evidence": "Rendered physical p.71 footnote rule prints \"32 https://github.com/unitaryai/detoxify\" (300-dpi band verified). OCR kept marker $^{32}$ but dropped the footnote body."
+    },
+    {
+      "before": "eight languages $^{33}$ . While these detectors",
+      "after": "eight languages $^{33}$ .\n\n33 English, Spanish, Portuguese, Russian, French, German, and Turkish\n\nWhile these detectors",
+      "count": 1,
+      "pdf_pages": [
+        71
+      ],
+      "evidence": "Rendered physical p.71 footnote rule prints \"33 English, Spanish, Portuguese, Russian, French, German, and Turkish\" (300-dpi band verified). OCR kept marker $^{33}$ but dropped the footnote body."
+    },
+    {
+      "before": "this work $^{34}$ . We designed",
+      "after": "this work $^{34}$ .\n\n34 Bengali, Dutch, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Mandarin Chinese, Arabic, Portuguese, Russian, Swahili, Tagalog, Thai, Turkish, Urdu, and Vietnamese\n\nWe designed",
+      "count": 1,
+      "pdf_pages": [
+        71
+      ],
+      "evidence": "Rendered physical p.71 footnote rule prints \"34 Bengali, Dutch, French, German, Hindi, Indonesian, Italian, Japanese, Korean, Mandarin Chinese, Arabic, Portuguese, Russian, Swahili, Tagalog, Thai, Turkish, Urdu, and Vietnamese\" (300-dpi band verified). OCR kept marker $^{34}$ but dropped the footnote body."
+    },
+    {
+      "before": "BLASER 2.0 (Seamless Communication et al., 2023) $^{37}$ For",
+      "after": "BLASER 2.0 (Seamless Communication et al., 2023) $^{37}$\n\n35 We included only 18 languages: arb,bul,cat,deu,ell,eng,fra,lvs,mar,nld,por,ron,rus,spa,swe,tha,ukr,urd.\n\n36 The transcription is done by WHISPER-LARGE-V2. chrFhas been calculated the same way as S2TT except that in S2ST, the text from both prediction and reference are normalized.\n\n37 We included only 14 languages: arb,cat,deu,eng,fra,nld,por,ron,rus,spa,swe,tha,ukr,urd.\n\nFor",
+      "count": 1,
+      "pdf_pages": [
+        78
+      ],
+      "evidence": "Rendered physical p.78 footnote rules print \"35 We included only 18 languages: arb,bul,cat,deu,ell,eng,fra,lvs,mar,nld,por,ron,rus,spa,swe,tha,ukr,urd.\", \"36 The transcription is done by Whisper-Large-v2. chrFhas been calculated the same way as S2TT except that in S2ST, the text from both prediction and reference are normalized.\" (the print’s own glued \"chrFhas\" preserved) and \"37 We included only 14 languages: arb,cat,deu,eng,fra,nld,por,ron,rus,spa,swe,tha,ukr,urd.\" (300-dpi band verified; small-caps names uppercased). OCR kept markers $^{35}$/$^{36}$/$^{37}$ but dropped all three footnote bodies; restored after the sentence carrying the markers."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "footnote-8-marker-and-body-dropped",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Physical p.21 prints footnote \"8 We evaluated Whisper-Large-v3 on S2TT Fleurs X–eng using https://github.com/openai/whisper/. For Whisper-Large-v2, we used the results from Radford et al. (2022).\" but the OCR dropped both the in-text marker and the body; the printed anchor for the 8 marker needs to be located on a render before restoring."
+    },
+    {
+      "id": "appendix-tables-cell-order",
+      "pdf_pages": [
+        10,
+        11,
+        22,
+        39,
+        44,
+        50,
+        54,
+        55,
+        63,
+        70,
+        73,
+        74,
+        75,
+        77,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136
+      ],
+      "evidence": "Language-coverage and per-task result tables extract cell-by-cell from the PDF so the automated 4-gram diff cannot line-verify every row; spot checks (MMS TTS rows, Fleurs values, model-card fields, toxicity example sentences) all matched the OCR HTML tables, and chart-only pages (127-128) carry figure-internal axis text."
+    },
+    {
+      "id": "model-card-smallcaps-and-contribution-headings",
+      "pdf_pages": [
+        80,
+        132,
+        137,
+        139
+      ],
+      "evidence": "Model-card subsection labels (## Model Details $^{a}$, ## Intended Use, ...) and contribution-statement team names (## Data, ## Acquisition, ...) follow the printed card layout; heading levels for appendix letters alternate between # and ## in the OCR. Left unchanged without clearer source evidence."
+    }
+  ]
+}

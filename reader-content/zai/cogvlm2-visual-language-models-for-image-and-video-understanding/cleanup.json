@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "id": "zai:cogvlm2-visual-language-models-for-image-and-video-understanding",
+  "source_sha256": "0ca5395ee49e0985ff3f792bc92d49319eb95b69dc9bb952c906f604e1223207",
+  "ocr_sha256": "dfd2b2b8a221c5717a4d276536803a404fd57e51b79914c958d51459b673d330",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "coverage": "complete",
+    "notes": "All 27 physical pages word-diffed against the OCR markdown; the 2 code fences are balanced. Restored the dropped page-1 core-contributors footnote and the dropped URL footnote 1 (https://playwright.dev, physical page 5), rejoined a page-break-split sentence around the REC/REG dataset description, restored the print's own spelling 'senarios' that OCR auto-corrected to 'scenarios' (300 dpi render verified), and repaired the line-break hyphen misjoin 'cogvlm2-videollama3-chat' -> 'cogvlm2-video-llama3-chat' (300 dpi render verified). Footnote markers 2 and 3 on 'Rendered_text'/'Diagram_image_to_text' (physical page 7, 200 dpi render of the page bottom verified) have no printed footnote bodies anywhere in the PDF, so no restoration is possible or needed. The main benchmark table (physical page 10) matches the OCR table cell-by-cell; remaining diff blocks are figure-internal demo conversations, chart labels and the arXiv stamp."
+  },
+  "patches": [
+    {
+      "before": "$^{1}$ Zhipu AI $^{2}$ Tsinghua University\n\nZHIPU·AI",
+      "after": "$^{1}$ Zhipu AI $^{2}$ Tsinghua University\n\nCore contributors: Wenyi, Weihan, Ming, Wenmeng, Qingsong, Yan, Yean, Shiyu and Junhui.\n\nZHIPU·AI",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Physical p.1 (text layer + 300 dpi render of the footnote line verified) prints 'Core contributors: Wenyi, Weihan, Ming, Wenmeng, Qingsong, Yan, Yean, Shiyu and Junhui.' below Figure 1; the OCR markdown dropped this line entirely."
+    },
+    {
+      "before": "REC (Referring Expression Comprehension) and\n\nREG (Referring Expression Generation)",
+      "after": "REC (Referring Expression Comprehension) and REG (Referring Expression Generation)",
+      "count": 1,
+      "pdf_pages": [
+        5,
+        6
+      ],
+      "evidence": "Physical p.5 ends mid-sentence with '...the creation of REC (Referring Expression Comprehension) and' and physical p.6 continues 'REG (Referring Expression Generation) question-answer pairs, ...' (text layer verified); the OCR emitted the continuation as a separate paragraph."
+    },
+    {
+      "before": "natural language descriptions for visual elements.\n\nThe Synthetic OCR Dataset",
+      "after": "natural language descriptions for visual elements.\n\n$^{1}$ https://playwright.dev\n\nThe Synthetic OCR Dataset",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 bottom (text layer verified) prints footnote '1https://playwright.dev' attached to the 'Playwright $^{1}$' marker in the Digital World Grounding Dataset paragraph; the OCR kept the marker but dropped the footnote body."
+    },
+    {
+      "before": "For different application scenarios, we release two models",
+      "after": "For different application senarios, we release two models",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 (300 dpi crop, visually verified) prints 'For different application senarios, we release two models:'; the print's own misspelling 'senarios' was auto-corrected to 'scenarios' by OCR and is restored as printed."
+    },
+    {
+      "before": "\"cogvlm2-videollama3-chat\"",
+      "after": "\"cogvlm2-video-llama3-chat\"",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 (300 dpi crop, visually verified) prints the model name split across lines as \"cogvlm2-video-\" / \"llama3-chat\"; the OCR joined the break without keeping the hyphen, producing 'cogvlm2-videollama3-chat'. The same page later prints the full name 'cogvlm2-video-llama3-chat' on one line."
+    }
+  ],
+  "unresolved": []
+}

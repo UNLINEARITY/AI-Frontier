@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-embedding-2",
+  "source_sha256": "f8844b01afdea7eaeaa0abd3f89f01c3e311cc505f1d83e4cd58e193c8cf76e7",
+  "ocr_sha256": "984c78086fbc1c8a201e67ade8b6fdd469a18aeb46d13504d6dc0c3af5d7f5a4",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "Near-clean document, one escape patch. All code fences balanced; headings sane; fragment-level diff of all 21 physical pages found zero dropped prose, table bodies or reference entries; numeric multiset comparison found no garbled values (residual PDF-side numbers sit inside the embedded Figure 1/2 teaser charts and the arXiv page stamps, which are figure-internal). Equation (1) on physical p.5 verified against a rendered crop: the MD mirrors it, and mean_pool keeps the printed underscore, so the \\\\_ inside \\\\text{} is correct LaTeX and was left unchanged. Table bodies reproduce the PDF text layer, including the source-printed doubled task name StatcanDialogueDatasetRetrieRetrieval in the full MTEB table (kept as printed)."
+  },
+  "patches": [
+    {
+      "before": "978-3-030-58536-5\\_44",
+      "after": "978-3-030-58536-5_44",
+      "count": 2,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 reference [31] prints doi: 10.1007/978-3-030-58536-5_44 and URL https://doi.org/10.1007/978-3-030-58536-5_44 with a bare underscore (visually verified at 300 dpi). The OCR added Markdown \\\\_ escapes in both the doi text and the URL, where the backslash would also leak into a rendered link href."
+    }
+  ],
+  "unresolved": []
+}

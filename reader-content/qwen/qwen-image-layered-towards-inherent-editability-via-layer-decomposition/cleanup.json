@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen-image-layered-towards-inherent-editability-via-layer-decomposition",
+  "source_sha256": "af8994674db763027ce9ed86262f96c1ecff253e6c583bd70167c8643070ca28",
+  "ocr_sha256": "bc69028f2b6152b2f93b701dab48f2efbc9558bec686202b14d75a5a73bf1630",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "coverage": "partial",
+    "notes": "Line-level diff of the OCR Markdown against extracted text from all 12 physical PDF pages, plus targeted verification: physical p.9 (Table 2 checkmarks) and p.10 (hyphenated 'no-ticeable') were rendered at 220 dpi and visually verified; reference entries and the p.1 footnote were verified against the PDF text layer. No code fences, no spurious headings, and no footnote droppage beyond the corresponding-author note. Coverage is marked partial because visual render checks were limited to pages 9-10 while the remaining pages rely on the text-layer diff. Figure 7's column labels ('Input Image', 'Qwen-Image-Edit-2509', 'Qwen-Image-Layered') are printed PDF text between the image embeds (verified on the p.9 render), so their presence in the OCR is faithful."
+  },
+  "patches": [
+    {
+      "before": "√",
+      "after": "✓",
+      "count": 6,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 prints six checkmark glyphs ✓ in the L/R/M component columns (rows w/o RM: ✓××; w/o M: ✓✓×; full model: ✓✓✓; visually verified at 220 dpi); OCR transcribed them as the square-root sign √."
+    },
+    {
+      "before": "introduces no ticeable pixel-level shifts",
+      "after": "introduces noticeable pixel-level shifts",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Physical p.10 prints 'introduces no-\\nticeable pixel-level shifts' hyphenated across a line/column break (rendered crop of the continuation column starting 'ticeable pixel-level shifts' visually verified at 220 dpi); OCR kept the broken halves as 'no ticeable'."
+    },
+    {
+      "before": "Seeded 3.0: Fast and high-quality generative image editing",
+      "after": "Seededit 3.0: Fast and high-quality generative image editing",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "PDF text layer physical p.12 reference [39] prints 'Seededit 3.0: Fast and high-quality generative image editing. arXiv preprint arXiv:2506.05083, 2025.'; OCR misread the model name as 'Seeded 3.0'."
+    },
+    {
+      "before": "arXiv:1412.6980, 1412(6), 2014.7",
+      "after": "arXiv:1412.6980, 1412(6), 2014. 7",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "PDF text layer physical p.11 reference [1] prints '...arXiv preprint arXiv:1412.6980, 1412(6), 2014.' with the trailing back-reference page '7' separated (sibling entries print e.g. '2025. 4' with a space); OCR glued the year and back-reference into '2014.7'."
+    },
+    {
+      "before": "$^{3}$ HKUST\n",
+      "after": "$^{3}$ HKUST\n\n\\*Corresponding author.\n",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "PDF text layer physical p.1 left column prints the footnote '*Corresponding author.'; OCR kept the $^{2*}$ marker on 'Chenfei Wu' in the author block but dropped the footnote body, restored after the affiliation line."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "source-printed-quirks-transcribed",
+      "pdf_pages": [
+        4,
+        6,
+        11,
+        12
+      ],
+      "evidence": "Printed by the PDF itself and transcribed faithfully, left unpatched per source-review policy: 'an multilayer image decomposer' (p.4); 'it tasks an RGB image' (p.6); reference [3] 'Qwen2. 5-vl technical report' with a printed space (p.11); reference [21] 'Flux. 1 kontext' broken across lines in print (p.11); reference titles ending 'diffusion mode.' (p.12)."
+    },
+    {
+      "id": "initialization-equation-spacing",
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "The RGBA-VAE initialization prints three assignments on one line; OCR renders them as a single display equation with OCR spacing artifacts such as '[:, 3,:,:,: ]'. LaTeX-equivalent and readable; not patched without clearer rendering evidence."
+    }
+  ]
+}

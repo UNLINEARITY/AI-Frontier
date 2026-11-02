@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "id": "zai:glm-4-voice-towards-intelligent-and-human-like-end-to-end-spoken-chatbot",
+  "source_sha256": "de2ef75407d916a8377aebba430a2f32c433bc6562099053369a9918bb1234ae",
+  "ocr_sha256": "b8902301d1ef21d348b2765ddbc8ae35bd89e84d69a5f37501bae5f68d1cb4ff",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "Structure: the single ```txt fence in Appendix A.1 is balanced and reproduces the printed evaluation prompt including its trailing '# Question/# Reference Answer/# Answer To Be Judged' lines. Word-level diff of extracted text from all 14 physical pages against the OCR markdown; remaining diff lines are LaTeX subscript tokenization, two-column hyphenation artifacts (chat-bot, Bal-can, Syn-naeve) and figure-internal labels. Tables 1-6 present with matching values; Table 2's '# Tokens (Speech/Text) | Epochs' header structure matches the print (visually verified on p.6). Pages 1, 2, 4, 6, 7, 9 and 13 rendered and inspected, key crops at 300 dpi. The print's own typos 'supverised', 'dateset' and the camel-case 'Speechtokenizer' reference title are restored, not corrected."
+  },
+  "patches": [
+    {
+      "before": "Aohan Zeng $^{\\ddagger\\Sigma*}$ , Zhengxiao Du $^{\\ddagger\\Sigma*}$",
+      "after": "Aohan Zeng $^{\\ddagger\\S*}$ , Zhengxiao Du $^{\\ddagger\\S*}$",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 author block (300 dpi) prints superscripts as dagger-ddagger, section-sign, asterisk on both names; the print shows the section sign (like the Kedong Wang $^{\\S}$ marks), not a capital Sigma."
+    },
+    {
+      "before": "Mingdao Liu $^{\\dagger}$",
+      "after": "Mingdao Liu $^{\\ddagger}$",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 author block (300 dpi) prints Mingdao Liu with a double dagger, matching the Tsinghua-affiliation mark of Yuxiao Dong and Jie Tang; OCR wrote a single dagger."
+    },
+    {
+      "before": "Kedong Wang $^{\\S}$ , Shengmin Jiang $^{\\S}$ , Lei Zhao $^{\\S}$",
+      "after": "Kedong Wang $^{\\S}$ , Shengmin Jiang $^{\\S}$ , Lei Zhao $^{\\S}$ , Yuxiao Dong $^{\\ddagger}$ , Jie Tang $^{\\ddagger}$",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 author block (300 dpi) prints a second author line 'Yuxiao Dong‡, Jie Tang‡' that the OCR dropped entirely (both names otherwise appear only in reference [45])."
+    },
+    {
+      "before": "$^{\\S}$ Zhipu.AI $^{\\ddagger}$ Tsinghua University",
+      "after": "$^{\\S}$ Zhipu.AI $^{\\ddagger}$ Tsinghua University\n\n$^{*}$ Equal contribution. Email: {zah22,zx-du20}@mails.tsinghua.edu.cn\n\n$^{\\S}$ Work was done when ML, LZ interned at Zhipu.AI.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote block (300 dpi) prints '*Equal contribution. Email: {zah22,zx-du20}@mails.tsinghua.edu.cn' and '§Work was done when ML, LZ interned at Zhipu.AI.'; both footnote bodies are missing from the OCR, which kept only the asterisk marks in the author line. Inserted after the affiliation line carrying the marks."
+    },
+    {
+      "before": "supervised samples to pseudolabeled samples is 1:3",
+      "after": "supervised samples to pseudo-labeled samples is 1:3",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints 'The ratio of supervised samples to pseudo-labeled samples is 1:3' with a printed hyphen (300 dpi crop); OCR joined the hyphenated word as 'pseudolabeled'."
+    },
+    {
+      "before": "TTS API provided by VolcEngine $^{1}$ .",
+      "after": "TTS API provided by VolcEngine $^{1}$ .\n\n$^{1}$ https://www.volcengine.com/docs/6561/79820",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 bottom footnote (300 dpi) prints '1 https://www.volcengine.com/docs/6561/79820'; the OCR kept the $^{1}$ marker after 'VolcEngine' but dropped the footnote body."
+    },
+    {
+      "before": "chat evaluation dataset of Llama-Omni",
+      "after": "chat evaluation dateset of Llama-Omni",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prints the print's own misspelling 'follows the chat evaluation dateset of Llama-Omni [15]' (300 dpi crop); OCR auto-corrected it to 'dataset'."
+    },
+    {
+      "before": "12.5Hz superised speech tokenizer",
+      "after": "12.5Hz supverised speech tokenizer",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 conclusion prints the print's own misspelling 'a 12.5Hz supverised speech tokenizer' (300 dpi crop); OCR auto-corrected it to 'superised'."
+    },
+    {
+      "before": "Speech tokenizer: Unified",
+      "after": "Speechtokenizer: Unified",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 reference [48] prints the title 'Speechtokenizer: Unified speech tokenizer for speech language models' as one camel word (300 dpi crop; the body text on p.2 also prints 'SpeechTokenizer'); OCR split the reference title into two words."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "zhipu-ai-logo-badge-as-text-line",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The OCR head carries the page-1 'ZHIPU·AI' badge as a plain text line between the GitHub URL and the Abstract; a text patch cannot convert it back into an image embed, and the badge text itself is not altered."
+    }
+  ]
+}

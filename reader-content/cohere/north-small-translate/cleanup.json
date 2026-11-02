@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "id": "cohere:north-small-translate",
+  "source_sha256": "f593e3ab110631bf1f2b5412c482ebb6dd56c38a38fd77c60dcdf10784e621fa",
+  "ocr_sha256": "0fb95c3e0575472fe306731e344f4bcd6ac91a5910176c54d347b5be03a5f115",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR content against extracted text from all 14 physical PDF pages using a 7-line sliding-window presence check with dehyphenation, plus a numeric-token check for the table pages (all printed numbers present in the OCR tables). Physical pages 2, 8, 9, 13 and 14 were additionally rendered at 120 dpi and visually verified. All four footnote bodies are missing from the OCR (markers survive inline); the appendix user-prompt box lost its Additional-judging-rules section, the Adequacy scale and the top of the Fluency scale, while its rubric head was fenced and misplaced before the appendix heading; printed '→' continuation arrows were transcribed as inline math leftrightarrow/Leftrightarrow; literal ``` fences around {{SOURCE_TEXT}}, {{TRANSLATION_OUTPUT}} and the json schema were transcribed as '...'. Author-side typos confirmed in print and left unchanged: 'Table 5 showx' (p.9), 'quality estimation assessing' (p.5), 'We compare it our previous models' (p.7), 'We measure is corpus-level' (p.8), 'Norwegian Bokmal' without the ring (Table 6 header, p.13). The rotated arXiv sidebar stamp is not transcribed."
+  },
+  "patches": [
+    {
+      "before": "transcripts for Chinese and Czech source data.",
+      "after": "transcripts for Chinese and Czech source data.\n\n1 Disclosure of conflict: the main author is also an organizer of the WMT General MT shared task.\n\n2 https://cohere.com/blog/transcribe",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered PDF physical p.2 bottom shows footnotes 1-3; the OCR markdown kept the inline markers $^{1}$/$^{2}$ but dropped the footnote bodies. Restores footnote 1 (Disclosure of conflict...) and footnote 2 (Transcribe URL) after the paragraph carrying both markers."
+    },
+    {
+      "before": "and 25B active. $^{3}$",
+      "after": "and 25B active. $^{3}$\n\n3 https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered PDF physical p.2 footnote 3 reads 'https://huggingface.co/CohereLabs/command-a-plus-05-2026-bf16' (URL wrapped over two lines in print, no hyphen); OCR dropped the footnote body while keeping the $^{3}$ marker."
+    },
+    {
+      "before": "outperformed only by DeepL. $^{4}$",
+      "after": "outperformed only by DeepL. $^{4}$\n\n4 DeepL is a closed-source system accessed by API, so we cannot confirm implementation: for instance, whether it might pre-parse the source text.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered PDF physical p.8 bottom shows footnote 4 'DeepL is a closed-source system accessed by API, so we cannot confirm implementation: for instance, whether it might pre-parse the source text.'; OCR kept the $^{4}$ marker on p.8 but dropped the footnote body."
+    },
+    {
+      "before": "Se-menov et al., 2025",
+      "after": "Semenov et al., 2025",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered PDF physical p.8 hyphenates the name across a line break ('(Se-' / 'menov et al., 2025)'); the reference list (physical p.10) spells 'Semenov'. The inline OCR hyphen is a line-break artifact, not source text."
+    },
+    {
+      "before": "```markdown\n## Evaluation rubric\n- Fluency score [key: fluency]: Measures how natural and grammatically correct the translation reads in the target language. (score: 0 to 100)\n- Adequacy score [key: adequacy]: Measures how completely the meaning of the source is conveyed by the translation.\n→ (score: 0 to 100)\n```\n\n## A GEMBA-ESA Fluency+Adequacy Template",
+      "after": "## A GEMBA-ESA Fluency+Adequacy Template",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered PDF physical p.14 shows the rubric head as the first content of the A.2 user-prompt box (left column), not a standalone fenced block before the appendix heading; MinerU fenced the box start and emitted it ahead of the 'A GEMBA-ESA Fluency+Adequacy Template' heading. Patch removes the misplaced fence (content is re-inserted in order by the next patch)."
+    },
+    {
+      "before": "<div class=\"mineru-algorithm\" style=\"white-space: pre-wrap; font-family:monospace;\">\n- 41-60 (Acceptable): Uneven naturalness",
+      "after": "<div class=\"mineru-algorithm\" style=\"white-space: pre-wrap; font-family:monospace;\">\n## Evaluation rubric\n- Fluency score [key: fluency]: Measures how natural and grammatically correct the translation reads in the target language. (score: 0 to 100)\n- Adequacy score [key: adequacy]: Measures how completely the meaning of the source is conveyed by the translation. (score: 0 to 100)\n\n## Additional judging rules\n\n### Important rules\n- Hallucinations are major adequacy errors and should be penalized severely.\n- Outputs in the wrong language, dialect, or script are major fluency errors and should be penalized severely. Borrowed words are allowed if valid in the target language.\n- Check translation consistency (e.g., technical terms) across the entire text.\n- Over-translation and extraneous text (e.g., introductory statements like \"Here is your translation\" or unprompted explanations) are major adequacy errors.\n- Count guideline adherence issues toward the adequacy score; for these errors, set \"quote\" to the corresponding guideline.\n\n### Adequacy scale\n- 81-100 (Very Good): Complete meaning transfer; no information is lost, added, or distorted.\n- 61-80 (Good): Near-complete transfer; minor inaccuracies or omissions that do not affect the core message.\n- 41-60 (Acceptable): Main ideas conveyed, but noticeable inaccuracies, omissions, or additions.\n- 21-40 (Borderline): Partial transfer; frequent misinterpretation or omission confusing the core message.\n- 0-20 (Not acceptable): Complete violation of meaning; large portions mistranslated, hallucinated, or missing.\n\n### Fluency scale\n- 81-100 (Very Good): Perfectly natural and grammatical; reads like a native text; requires no or minimal proofreading.\n- 61-80 (Good): Mostly natural; minor awkwardness or slight grammatical imperfections; needs light proofreading.\n- 41-60 (Acceptable): Uneven naturalness",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered PDF physical p.14 left column of the A.2 user-prompt box contains, between the rubric head and the surviving '- 41-60 (Acceptable): Uneven naturalness' tier: '## Additional judging rules' with five Important-rules bullets, '### Adequacy scale' with five tiers (81-100 Very Good ... 0-20 Not acceptable), and '### Fluency scale' tiers 81-100 and 61-80. All of this is absent from the OCR markdown; verified against both the rendered page and the PDF text layer."
+    },
+    {
+      "before": "    $\\leftrightarrow$ ",
+      "after": "    → ",
+      "count": 28,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered PDF physical p.14 prompt boxes show '→' continuation glyphs at wrapped lines (typeset arrows, visible in the page image and text layer); OCR transcribed them as inline math $\\leftrightarrow$, which the reader renders as ↔ instead of →."
+    },
+    {
+      "before": "$\\Leftrightarrow$ ",
+      "after": "→ ",
+      "count": 8,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Same continuation arrows as the previous patch: rendered PDF physical p.14 prints '→'; OCR used the capital-letter variant $\\Leftrightarrow$ (reader renders ⇔). Includes the three unindented occurrences after 'following schema:', 'as \\\\' and 'control characters'."
+    },
+    {
+      "before": "...\n{{SOURCE_TEXT}}\n...",
+      "after": "```\n{{SOURCE_TEXT}}\n```",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered PDF physical p.14 A.2 box shows '## Source text' followed by a literal ``` fence around {{SOURCE_TEXT}}; OCR degraded both fence lines to '...'."
+    },
+    {
+      "before": "...\n{{TRANSLATION_OUTPUT}}\n...",
+      "after": "```\n{{TRANSLATION_OUTPUT}}\n```",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered PDF physical p.14 A.2 box shows '## Translation output' followed by a literal ``` fence around {{TRANSLATION_OUTPUT}}; OCR degraded both fence lines to '...'."
+    },
+    {
+      "before": "...json\n{\n    \"errors\": [",
+      "after": "```json\n{\n    \"errors\": [",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered PDF physical p.14 '## Expected output format' section opens the schema with a literal '```json' fence; OCR transcribed the fence as '...json'."
+    },
+    {
+      "before": "}\n...\n\nEvery string value",
+      "after": "}\n```\n\nEvery string value",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered PDF physical p.14 closes the '```json' schema fence after the adequacy object; OCR transcribed the closing fence line as '...'."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "author-typos-preserved",
+      "pdf_pages": [
+        5,
+        7,
+        8,
+        9,
+        13
+      ],
+      "evidence": "'quality estimation assessing' (p.5), 'We compare it our previous models' (p.7), 'We measure is' (p.8), 'Table 5 showx' (p.9) and 'Norwegian Bokmal' (Table 6 header, p.13) match the rendered PDF text layer and page images exactly; they are the paper's own wording, not transcription defects."
+    },
+    {
+      "id": "table6-subtable-structure",
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Table 6 spans four stacked sub-tables with repeated header rows in print; the OCR represents them as HTML tables. All 16 systems x 50 languages numeric values were verified present, but cell-level cross-checking of every number against the rendered page was not performed."
+    },
+    {
+      "id": "arxiv-sidebar-stamp",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The rotated 'arXiv:2609.13916v1 [cs.CL] 12 Sep 2026' margin stamp on physical p.1 is not transcribed; rotated marginalia is outside the OCR body flow."
+    }
+  ]
+}

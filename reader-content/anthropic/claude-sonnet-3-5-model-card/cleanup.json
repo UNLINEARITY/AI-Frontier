@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-sonnet-3-5-model-card",
+  "source_sha256": "ac396c7f155dcbfb33ceb342b48647e330ca518c01c7f508001d6aad93257a03",
+  "ocr_sha256": "35314198b5aecfc3ac3cb214d8ca6c6fc9b3a2adc0f3a6f5c430789a501bf3fb",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "coverage": "complete",
+    "notes": "Fence balance scan, heading scan, whole-document word/4-gram diff of the OCR Markdown against extracted text of all 8 physical PDF pages, and a U+200B scan that found zero occurrences in this card's text layer. Rendered verification at 110-300 dpi covered physical p.2 (Table 1 first column and both table footnotes), p.3 (footnote 3), p.4 (Figure 1 heatmaps and Figure 2) and the embedded Figure 3 win-rate charts. Table 1 value/setting pairings (MATH, MGSM, DROP, GSM8K) were checked column-by-column against the print and are correct. The words missing on physical p.5 (STEM, Medicine, Honesty, Harmlessness, win-rate axis labels) are internal to the embedded Figure 3 image and were not patched."
+  },
+  "patches": [
+    {
+      "before": "GPQA (Diamond)Graduate level Q&amp;A",
+      "after": "GPQA (Diamond) Graduate level Q&amp;A",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 1 (300 dpi crop inspected) prints the benchmark name in bold and its description on separate lines within the first column cell (e.g. 'GPQA (Diamond)' / 'Graduate level Q&A'); the OCR glued the two lines into one token. The patch inserts the line separator as a space, matching the OCR's own transcription style for the same pattern in Table 2 ('MMMU [18] (validation) Visual question answering')."
+    },
+    {
+      "before": "MMLUGeneral reasoning",
+      "after": "MMLU General reasoning",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 1 (300 dpi crop inspected) prints the benchmark name in bold and its description on separate lines within the first column cell (e.g. 'GPQA (Diamond)' / 'Graduate level Q&A'); the OCR glued the two lines into one token. The patch inserts the line separator as a space, matching the OCR's own transcription style for the same pattern in Table 2 ('MMMU [18] (validation) Visual question answering')."
+    },
+    {
+      "before": "MATH [10]Mathematical problem solving",
+      "after": "MATH [10] Mathematical problem solving",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 1 (300 dpi crop inspected) prints the benchmark name in bold and its description on separate lines within the first column cell (e.g. 'GPQA (Diamond)' / 'Graduate level Q&A'); the OCR glued the two lines into one token. The patch inserts the line separator as a space, matching the OCR's own transcription style for the same pattern in Table 2 ('MMMU [18] (validation) Visual question answering')."
+    },
+    {
+      "before": "HumanEvalPython coding tasks",
+      "after": "HumanEval Python coding tasks",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 1 (300 dpi crop inspected) prints the benchmark name in bold and its description on separate lines within the first column cell (e.g. 'GPQA (Diamond)' / 'Graduate level Q&A'); the OCR glued the two lines into one token. The patch inserts the line separator as a space, matching the OCR's own transcription style for the same pattern in Table 2 ('MMMU [18] (validation) Visual question answering')."
+    },
+    {
+      "before": "MGSM [11]Multilingual math",
+      "after": "MGSM [11] Multilingual math",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 1 (300 dpi crop inspected) prints the benchmark name in bold and its description on separate lines within the first column cell (e.g. 'GPQA (Diamond)' / 'Graduate level Q&A'); the OCR glued the two lines into one token. The patch inserts the line separator as a space, matching the OCR's own transcription style for the same pattern in Table 2 ('MMMU [18] (validation) Visual question answering')."
+    },
+    {
+      "before": "DROP [12]Reading comprehension, arithmetic",
+      "after": "DROP [12] Reading comprehension, arithmetic",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 1 (300 dpi crop inspected) prints the benchmark name in bold and its description on separate lines within the first column cell (e.g. 'GPQA (Diamond)' / 'Graduate level Q&A'); the OCR glued the two lines into one token. The patch inserts the line separator as a space, matching the OCR's own transcription style for the same pattern in Table 2 ('MMMU [18] (validation) Visual question answering')."
+    },
+    {
+      "before": "BIG-Bench Hard [13, 14]Mixed evaluations",
+      "after": "BIG-Bench Hard [13, 14] Mixed evaluations",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 1 (300 dpi crop inspected) prints the benchmark name in bold and its description on separate lines within the first column cell (e.g. 'GPQA (Diamond)' / 'Graduate level Q&A'); the OCR glued the two lines into one token. The patch inserts the line separator as a space, matching the OCR's own transcription style for the same pattern in Table 2 ('MMMU [18] (validation) Visual question answering')."
+    },
+    {
+      "before": "GSM8K [15]Grade school math",
+      "after": "GSM8K [15] Grade school math",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 1 (300 dpi crop inspected) prints the benchmark name in bold and its description on separate lines within the first column cell (e.g. 'GPQA (Diamond)' / 'Graduate level Q&A'); the OCR glued the two lines into one token. The patch inserts the line separator as a space, matching the OCR's own transcription style for the same pattern in Table 2 ('MMMU [18] (validation) Visual question answering')."
+    },
+    {
+      "before": "Table 1 This table shows evaluation results for reasoning, math, coding, reading comprehension, and question answering evaluations.",
+      "after": "Table 1 This table shows evaluation results for reasoning, math, coding, reading comprehension, and question answering evaluations.\n\n$^{1}$Results for Llama 3 400B are from the April 15, 2024 checkpoint [16]. All metrics are for the Instruct version of the model, other than DROP and BIG-Bench Hard, which are evaluated on the pretrained version of the model.\n$^{2}$ OpenAI’s simple-evals suite [17] lists MMLU scores of 88.7% for gpt-4o and 86.5% for gpt-4-turbo-2024-04-09. The simple-evals MMLU implementation uses 0-shot CoT.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (300 dpi crop inspected) prints two footnotes below Table 1: '1 Results for Llama 3 400B are from the April 15, 2024 checkpoint [16]. All metrics are for the Instruct version of the model, other than DROP and BIG-Bench Hard, which are evaluated on the pretrained version of the model.' and '2 OpenAI's simple-evals suite [17] lists MMLU scores of 88.7% for gpt-4o and 86.5% for gpt-4-turbo-2024-04-09. The simple-evals MMLU implementation uses 0-shot CoT.' The superscript markers 1 and 2 survive in the OCR table header ('Llama 3 400B^1', '0-shot CoT^2') but the footnote bodies were dropped; the patch reinserts them below the Table 1 caption with the document's $^{}$ superscript style."
+    },
+    {
+      "before": "We saw large improvements in core capabilities like coding, documents, creative writing, and vision. Domain experts preferred Claude 3.5 Sonnet over Claude 3 Opus, with win rates as high as 82% in Law, 73% in Finance, and 73% in Philosophy.",
+      "after": "We saw large improvements in core capabilities like coding, documents, creative writing, and vision. Domain experts preferred Claude 3.5 Sonnet over Claude 3 Opus, with win rates as high as 82% in Law, 73% in Finance, and 73% in Philosophy.\n\n$^{3}$Section 5.5 of the main model card explains how win rates are calculated.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 (300 dpi crop inspected) prints the footnote '3 Section 5.5 of the main model card explains how win rates are calculated.'; the surviving marker $^{3}$ follows 'baseline of Claude 3 Opus.' in section 2.1 of the OCR but the footnote body was dropped. The patch reinserts it after the paragraph that carries the marker's section."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table1-layout-split-rows",
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "For MATH, MGSM and GSM8K the print stacks value and shot-setting inside each cell while the OCR emits a values row followed by a settings row with filler cells; column-by-column comparison confirms all pairings are faithful, so only the glued first-column labels were patched."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step-audio-aqaa",
+  "source_sha256": "4290ba946aaf9ebc8a1df00a905cbafb19f18ca3bcf9a38389716602ee5f7d7e",
+  "ocr_sha256": "21d13309c7eeb0e7df9fcbe5173adb41a0c5b589cd376d027d9eab6dc99270af",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "coverage": "complete",
+    "notes": "All 12 physical pages compared word-by-word against the OCR Markdown; no code fences. All three footnote bodies were verified on 300 dpi bottom-strip crops of physical pages 1, 3 and 8. Remaining word-level differences are LaTeX math, soft-hyphen line breaks, and Figure 1 demo/label text that lives inside the embedded figure image. The PDF itself prints the typos 'tokenizater' (p.2), 'superivised fine-turning' and 'mutli-stage' (p.4 caption), and 'emothion' (p.8); OCR corrected some of them (kept 'fine-turning' and 'mutli-stage'); left unchanged per the no-author-typo-patch rule."
+  },
+  "patches": [
+    {
+      "before": "The model and demo have been released $^{1}$ .",
+      "after": "The model and demo have been released $^{1}$ .\n\n1Hugging Face: https://huggingface.co/stepfun-ai/Step-Audio-AQAA",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The 300 dpi crop of physical p.1 prints the page footnote '1Hugging Face: https://huggingface.co/stepfun-ai/Step-Audio-AQAA' under the introduction paragraph whose sentence ends '...The model and demo have been released.'; the OCR kept the $^{1}$ marker but dropped the footnote body. The patch restores the printed footnote line."
+    },
+    {
+      "before": "at a 10:15 ratio $^{1}$ .",
+      "after": "at a 10:15 ratio $^{1}$ .\n\n1Use a TTS model to convert text into speech tokens. Interleave text tokens and speech tokens in a 10:15 ratio. If the number of text tokens is insufficient, fill the remaining positions with speech tokens.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "The 300 dpi crop of physical p.3 prints the page footnote '1Use a TTS model to convert text into speech tokens. Interleave text tokens and speech tokens in a 10:15 ratio. If the number of text tokens is insufficient, fill the remaining positions with speech tokens.'; the OCR kept the $^{1}$ marker after 'at a 10:15 ratio' but dropped the footnote body. The patch restores the printed footnote text."
+    },
+    {
+      "before": "in the second stage $^{2}$ .",
+      "after": "in the second stage $^{2}$ .\n\n2In our final training plan, we also incorporated multi-label data into the first SFT stage.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "The 300 dpi crop of physical p.8 prints the page footnote '2In our final training plan, we also incorporated multi-label data into the first SFT stage.'; the OCR kept the $^{2}$ marker after 'in the second stage' but dropped the footnote body. The patch restores the printed footnote text."
+    }
+  ],
+  "unresolved": []
+}

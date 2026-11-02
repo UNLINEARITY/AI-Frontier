@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:phi-4",
+  "source_sha256": "be5577cfb815a8617231c36602cdba38d0aaf2a94cf09502485c8a85de022f80",
+  "ocr_sha256": "cf8f2bf3fe888f7b0bcd4d0f4ba53c9a17d6f7273e9c1f8a9707d45b8f8e1626",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "coverage": "complete",
+    "notes": "Every extracted PDF page line was compared against the OCR markdown with normalization and fuzzy matching; the 36 balanced code fences, all markdown headings and the HTML tables were checked. Rendered verification: footnote strips of pages 2, 6, 8, 9, 14 and 29 (200 dpi) and Table 1 header plus marker cells (300 dpi) were visually inspected, and pages 34-36 were read to confirm that the appendix D.3 tower-of-Hanoi model output and the D.2 AMC prompt template print as continuous monospace boxes. All nine footnote bodies were dropped while their markers survived (footnote 1's markers sit on Table 1 cells 66.3 and 78.9). The D.2 template and the D.3 example were split into multiple fences by OCR with their middle sections leaking out as spurious headings. Table 1's header row lost the spaces between model names and sizes."
+  },
+  "patches": [
+    {
+      "before": "We compare to small models of similar inference cost, as well as to larger models.",
+      "after": "We compare to small models of similar inference cost, as well as to larger models.\n\n$^{1}$ These scores are lower than those reported by Meta, perhaps because simple-evals has a strict formatting requirement that Llama models have particular trouble following. We use the simple-evals framework because it is reproducible, but Meta reports 77 for MATH and 88 for HumanEval on Llama-3.3.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints footnote 1 below Table 1, whose superscript markers are printed on the MATH and HumanEval scores of the Llama-3.3 70b column ('66.3^1' and '78.9^1', verified at 300 dpi; the OCR kept them as $66.3^1$/$78.9^1$ table cells) and whose body reads 'These scores are lower than those reported by Meta, ... Meta reports 77 for MATH and 88 for HumanEval on Llama-3.3.' (body verified at 200 dpi). The OCR dropped the body."
+    },
+    {
+      "before": "to use directly in pretraining.\n\n3. Post-Training:",
+      "after": "to use directly in pretraining.\n\n$^{2}$ We use organic to refer to human-generated or otherwise non-synthetic data.\n\n3. Post-Training:",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints footnote 2 as 'We use organic to refer to human-generated or otherwise non-synthetic data.' attached to the 'organic2' marker in the sentence 'We meticulously curate and filter organic data sources' (marker verified in the page's span layout, body at 200 dpi); the OCR kept the $^{2}$ marker and dropped the body."
+    },
+    {
+      "before": "no overlap with test sets $^{3}$ .\n\nTargeting",
+      "after": "no overlap with test sets $^{3}$ .\n\n$^{3}$ This step is crucial to the reliability of some of the academic benchmarks: for instance, some test benchmark variants can be found on platforms like Hugging Face. Moreover, benchmarks such as MMLU are frequently compiled from web-sourced questions.\n\nTargeting",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 3 as 'This step is crucial to the reliability of some of the academic benchmarks: ... compiled from web-sourced questions.' attached to the 'test sets3' marker (tail verified at 200 dpi); the OCR kept the $^{3}$ marker and dropped the body."
+    },
+    {
+      "before": "role of web data in our data mixture.\n\n![[images/6efbb390b9aa433282cdde03552f53960e330e489adba42f3267946bf42dc5db.jpg]]",
+      "after": "role of web data in our data mixture.\n\n$^{4}$ This is an updated mixture of synthetic data that contains new sources compared to phi-3.\n\n![[images/6efbb390b9aa433282cdde03552f53960e330e489adba42f3267946bf42dc5db.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints footnote 4 as 'This is an updated mixture of synthetic data that contains new sources compared to phi-3.' attached to the 'synthetic4' marker earlier in the section; the OCR kept the $^{4}$ marker and dropped the body."
+    },
+    {
+      "before": "and 5) code data.\n\nWe conducted ablations",
+      "after": "and 5) code data.\n\n$^{5}$ Web rewrites is a sub-category of synthetic data that is substantially large and contains direct rewrites of web content.\n\nWe conducted ablations",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prints footnote 5 as 'Web rewrites is a sub-category of synthetic data that is substantially large and contains direct rewrites of web content.' attached to the 'web rewrites5' marker; the OCR kept the $^{5}$ marker and dropped the body."
+    },
+    {
+      "before": "near-monotone over the course of the solution.\n\nWe used PTS",
+      "after": "near-monotone over the course of the solution.\n\n$^{6}$ For coding, a comprehensive test suite can be used. For math problems, answers can be compared to the ground truth.\n$^{7}$ We find drawing $t_{\\text{acc}}$ and $t_{\\text{rej}}$ from rollouts PTS already used to estimate $p(\\text{success} \\mid t_{1}, \\ldots, t_{i-1})$ to be effective.\n\nWe used PTS",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 prints footnotes 6 and 7 as 'For coding, a comprehensive test suite can be used. For math problems, answers can be compared to the ground truth.' and 'We find drawing t_acc and t_rej from rollouts PTS already used to estimate p(success|t1, ..., ti-1) to be effective.' (both verified at 200 dpi with subscripts) attached to the 'oracle6' and 'respectively.7' markers in the same PTS paragraph; the OCR kept the $^{6}$/$^{7}$ markers and dropped both bodies."
+    },
+    {
+      "before": "independent of our final model. $^{8}$\n\nWe obtained",
+      "after": "independent of our final model. $^{8}$\n\n$^{8}$ For full disclosure, we evaluated our final three candidate models on this dataset and all three average scores exceeded 89. We settled on our final model based on other factors, before measuring its score but after seeing the scores for the other two candidates.\n\nWe obtained",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 prints footnote 8 as 'For full disclosure, we evaluated our final three candidate models on this dataset and all three average scores exceeded 89. ...' attached to the 'final model.8' marker (verified at 200 dpi); the OCR kept the $^{8}$ marker and dropped the body."
+    },
+    {
+      "before": "formatted them with the following template:\n\n```txt",
+      "after": "formatted them with the following template:\n\n$^{9}$ https://artofproblemsolving.com/wiki/index.php/2024\\_AMC\\_10A (10B, 12A, 12B)\n\n```txt",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 prints footnote 9 as the URL 'https://artofproblemsolving.com/wiki/index.php/2024_AMC_10A (10B, 12A, 12B)' attached to the 'Art of Problem Solving Wiki9' marker (verified at 200 dpi); the OCR kept the $^{9}$ marker and dropped the body."
+    },
+    {
+      "before": "<tr><td>phi-414b</td><td>phi-314b</td><td>Qwen 2.514b instruct</td><td>GPT4o-mini</td><td>Llama-3.370b instruct</td><td>Qwen 2.572b instruct</td><td>GPT4o</td></tr>",
+      "after": "<tr><td>phi-4 14b</td><td>phi-3 14b</td><td>Qwen 2.5 14b instruct</td><td>GPT 4o-mini</td><td>Llama-3.3 70b instruct</td><td>Qwen 2.5 72b instruct</td><td>GPT 4o</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 1 header (300 dpi) prints the column heads as stacked lines 'phi-4 / 14b', 'phi-3 / 14b', 'Qwen 2.5 / 14b instruct', 'GPT / 4o-mini', 'Llama-3.3 / 70b instruct', 'Qwen 2.5 / 72b instruct', 'GPT / 4o'; OCR joined each pair without the space (e.g. 'phi-414b', 'Llama-3.370b instruct')."
+    },
+    {
+      "before": "```txt\nThe following question is from a 25-question, multiple choice test. Each\n→ question is followed by answers marked A, B, C, D, and E. Only one of\n→ these is correct.\n```\n\nSCORING: You will receive 6 points for each correct answer, 1.5 points for $\\rightarrow$ each problem left unanswered, and 0 points for each incorrect answer.\n\nSolve the question step by step, then answer \\boxed{A}, \\boxed{B}, \\boxed{C}, \\boxed{D}, \\boxed{E}, or \\boxed{blank}.\n\n## # Question\n\n```txt\n{{question}}\n(A) {{option_a}}\n(B) {{option_b}}\n(C) {{option_c}}\n(D) {{option_d}}\n(E) {{option_e}}\n```",
+      "after": "```txt\nThe following question is from a 25-question, multiple choice test. Each\n→ question is followed by answers marked A, B, C, D, and E. Only one of\n→ these is correct.\n\nSCORING: You will receive 6 points for each correct answer, 1.5 points for\n→ each problem left unanswered, and 0 points for each incorrect answer.\n\nSolve the question step by step, then answer \\boxed{A}, \\boxed{B},\n→ \\boxed{C}, \\boxed{D}, \\boxed{E}, or \\boxed{blank}.\n\n# Question\n\n{{question}}\n(A) {{option_a}}\n(B) {{option_b}}\n(C) {{option_c}}\n(D) {{option_d}}\n(E) {{option_e}}\n```",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 prints the whole AMC prompt template ('The following question is from a 25-question, multiple choice test. ... # Question ...') as one continuous monospace box; OCR split it into two fences and leaked the 'SCORING: ...', 'Solve the question ...' and '# Question' lines out of any fence as body text and a spurious '# Question' heading. The patch rejoins the printed box; the printed wrap arrows are kept as the document's existing '→' convention."
+    },
+    {
+      "before": "## ### Reflection on Past Performance\n\n## - \\*\\*Mistakes Identified:\\*\\*\n\n\\- Repeated attempts to make illegal moves indicate a misunderstanding or $\\rightarrow$ oversight of the rules.\n\n\\- The plan was not effectively followed, as seen by the repeated failed attempts to move disks from rod B to C and A to C.\n\n## - \\*\\*Correct Moves:\\*\\*\n\n\\- Successfully moved disk 0 from C to A, which was a necessary step to $\\rightarrow$ free rod C for subsequent moves.\n\n## ### Relevant Considerations\n\n## - \\*\\*Current Objective:\\*\\*\n\n\\- The immediate goal is to move disk 1 from rod B to rod C. This move is $\\rightarrow$ legal and aligns with the rules since disk 1 is smaller than disk 2 $\\rightarrow$ on rod C.\n\n## - \\*\\*Strategic Alignment:\\*\\*\n\n\\- Moving disk 1 from B to C is a strategic step that aligns with the\n→ overall plan to eventually stack all disks on rod C in the correct\n→ order.\n\n## ### Additional Thoughts\n\n\\- Ensuring compliance with the rules is paramount to avoid repeated\n\n## $\\rightarrow$ failures.\n\n\\- Each move should be evaluated for legality before execution to maintain $\\rightarrow$ progress towards the goal.\n\n## ### Updated Plan\n\n```txt\n1. **Move Disk 1 from B to C:**\n- Completion Quantification: Disk 1 is on rod C.\n- Certainty: Known. This move is legal and necessary to progress\n→ towards the goal configuration.\n```\n\n## 2. \\*\\*Move Disk 0 from A to C:\\*\\*\n\n3. \\*\\*Move Disk 2 from C to B:\\*\\*\n- Completion Quantification: Disk 2 is on rod B.\n- Certainty: Known. This move is necessary to free rod C for the final\n→ sequence.\n\n## ### Chosen Action\n\nBased on the analysis and the updated plan, the next logical and legal action is to move disk 1 from rod B to rod C. This move adheres to the rules and progresses towards the goal configuration.\n\n## <updated plan>\n\n\\- Completion Quantification: Disk 1 is on rod C.\n\n## 2. \\*\\*Move Disk 0 from A to C\\*\\*:\n\n\\- Completion Quantification: Disk 0 is on rod C, on top of disk 1.\n\n\\- Certainty: Known. This move is legal once disk 1 is on rod C.\n\n## 3. \\*\\*Move Disk 2 from C to B\\*\\*:\n\n## </updated plan>\n\n<action>Move the top disk of rod B to the top of rod C</action>",
+      "after": "```txt\n### Reflection on Past Performance\n\n- **Mistakes Identified:**\n- Repeated attempts to make illegal moves indicate a misunderstanding or\n→ oversight of the rules.\n- The plan was not effectively followed, as seen by the repeated failed\n→ attempts to move disks from rod B to C and A to C.\n\n- **Correct Moves:**\n- Successfully moved disk 0 from C to A, which was a necessary step to\n→ free rod C for subsequent moves.\n\n### Relevant Considerations\n\n- **Current Objective:**\n- The immediate goal is to move disk 1 from rod B to rod C. This move is\n→ legal and aligns with the rules since disk 1 is smaller than disk 2\n→ on rod C.\n\n- **Strategic Alignment:**\n- Moving disk 1 from B to C is a strategic step that aligns with the\n→ overall plan to eventually stack all disks on rod C in the correct\n→ order.\n\n### Additional Thoughts\n\n- Ensuring compliance with the rules is paramount to avoid repeated\n→ failures.\n- Each move should be evaluated for legality before execution to maintain\n→ progress towards the goal.\n\n### Updated Plan\n\n1. **Move Disk 1 from B to C:**\n- Completion Quantification: Disk 1 is on rod C.\n- Certainty: Known. This move is legal and necessary to progress\n→ towards the goal configuration.\n\n2. **Move Disk 0 from A to C:**\n- Completion Quantification: Disk 0 is on rod C, on top of disk 1.\n- Certainty: Known. This move is legal once disk 1 is on rod C.\n\n3. **Move Disk 2 from C to B:**\n- Completion Quantification: Disk 2 is on rod B.\n- Certainty: Known. This move is necessary to free rod C for the final\n→ sequence.\n\n### Chosen Action\n\nBased on the analysis and the updated plan, the next logical and legal\n→ action is to move disk 1 from rod B to rod C. This move adheres to the\n→ rules and progresses towards the goal configuration.\n\n<updated plan>\n1. **Move Disk 1 from B to C:**\n- Completion Quantification: Disk 1 is on rod C.\n- Certainty: Known. This move is legal and necessary to progress\n→ towards the goal configuration.\n\n2. **Move Disk 0 from A to C:**\n- Completion Quantification: Disk 0 is on rod C, on top of disk 1.\n- Certainty: Known. This move is legal once disk 1 is on rod C.\n\n3. **Move Disk 2 from C to B:**\n- Completion Quantification: Disk 2 is on rod B.\n- Certainty: Known. This move is necessary to free rod C for the final\n→ sequence.\n</updated plan>\n\n<action>Move the top disk of rod B to the top of rod C</action>\n```",
+      "count": 1,
+      "pdf_pages": [
+        34,
+        35,
+        36
+      ],
+      "evidence": "Rendered physical pages 34-36 print the appendix D.3 tower-of-Hanoi example ('### Reflection on Past Performance' through '<action>Move the top disk of rod B to the top of rod C</action>') as continuous monospace model output; OCR leaked most of it out of its fences and promoted its lines to spurious headings such as '## ### Reflection on Past Performance', '## - **Mistakes Identified:**' and '## <updated plan>'. The patch rewraps the whole printed box in one txt fence with the OCR's inline escapes (\\*\\*, \\-, $\\rightarrow$) restored to the printed characters."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table1-mmlu-pro-label",
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Table 1's row label 'MMLUPro' is likely printed 'MMLU-pro' (the running text on physical p.18 cites 'MMLU-pro'); the table cell itself was not re-verified on a rendered crop, so the label was left unchanged."
+    },
+    {
+      "id": "figure4-pts-pseudocode",
+      "pdf_pages": [
+        13,
+        28
+      ],
+      "evidence": "The Figure 4/Figure 6 pseudocode blocks mix LaTeX subscripts with algorithm lines; the OCR representation was judged faithful at reading resolution and left unchanged, but a dedicated high-resolution pass could confirm the subscript details (e.g. BenchmarkFeatures_7)."
+    }
+  ]
+}

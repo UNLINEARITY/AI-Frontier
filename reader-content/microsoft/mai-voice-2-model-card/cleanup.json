@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:mai-voice-2-model-card",
+  "source_sha256": "994a7a2e6be6b3e29cb27fbb9cc94dcd1e1951d65a382dfddd67ee3b0556a68b",
+  "ocr_sha256": "657b6fdc7b32707dbf8c80626319f15e51f849e3b221d04b882df24ca681debe",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3
+    ],
+    "coverage": "complete",
+    "notes": "Clean document: no patches. Full read of all OCR lines against extracted text from all 3 physical PDF pages; heading set, section order, all numbers and all words match the printed card, and there are no code fences or flattened tables. Two printed source quirks were deliberately left untouched: the PDF itself misspells 'globabally' on physical p.3 (the OCR transcription reads the corrected 'globally', which is preferable to reintroducing the printed typo) and prints 'SEA=Southeast Asia' with an equals sign, which the OCR transcribes faithfully. The mixed '-'/• bullet glyphs under 'Distribution' follow the PDF's list markers and bullet style is not a defect class."
+  },
+  "patches": [],
+  "unresolved": []
+}

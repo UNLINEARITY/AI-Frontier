@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-2-5-pushing-the-frontier-with-advanced-reasoning-multimodality-long-context-and-next-generation-agentic-capabilities",
+  "source_sha256": "b4cfe19f7eea7b0308cb0282127ef4821bb8f1d1e270e7a6f398b30fe57d41cb",
+  "ocr_sha256": "20c59c6c69111dbaa367338a72239e8ef0f9ce1cd21dcca989ce9eb81c22acbf",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of all 73 physical pages: full-document automated diff (normalized 4-gram containment plus normalized line-presence per page), then line-by-line inspection of every low-containment page (contributor list pages 47-61, evaluation tables on 11 and 13-16, appendix tables on 63-65, references on 41-46, chart pages 16 and 72). Structural scan found zero code fences, so no swallowed-content risk; the only spurious heading is repaired by patch 1. The 17 contributor-list repairs were each verified on a 300-dpi render of the printed name (pages 47, 49, 50, 51, 52, 53, 55, 56, 59); the page-break sentence merge was verified on a full 150-dpi render of physical pages 26-27, which print the sentence as running body text. Missing lines on chart pages 11, 16 and 72 are axis labels and milestone labels inside embedded figures, not defects; 'Ofir Roval', 'Nate Kushman'/'Blair Kutzman' and the apostrophe names (O'Brien, D'Souza, ...) match the print's own spellings and were left unchanged. Contributor prose flow on pages 47-61 was machine-scanned for drops but not manually read name by name beyond the automated diff."
+  },
+  "patches": [
+    {
+      "before": "releases and the Gemini\n\n## 1.5 tech report, covering all modalities in the Gemini 2.5 model family.\n\nDataset composition",
+      "after": "releases and the Gemini 1.5 tech report, covering all modalities in the Gemini 2.5 model family.\n\nDataset composition",
+      "count": 1,
+      "pdf_pages": [
+        26,
+        27
+      ],
+      "evidence": "The sentence 'They were performed for 2.5 Pro and 2.5 Flash in line with the previous Gemini 2.0 releases and the Gemini 1.5 tech report, covering all modalities in the Gemini 2.5 model family.' is split by the page break: physical p.26 ends '...releases and the Gemini' and p.27 begins '1.5 tech report, ...' in running body text (visually verified on a full-page render of p.27; no heading style). OCR promoted the continuation into a '##' heading, breaking the sentence and inserting a spurious section heading."
+    },
+    {
+      "before": "Kornraphop Kawintira\n",
+      "after": "Kornraphop Kawintiranon\n",
+      "count": 1,
+      "pdf_pages": [
+        47
+      ],
+      "evidence": "Rendered physical p.47 prints 'Kornraphop Kawintiranon' (300-dpi crop); OCR dropped the trailing 'non'."
+    },
+    {
+      "before": "Ilai Deutel",
+      "after": "Ilaï Deutel",
+      "count": 1,
+      "pdf_pages": [
+        47
+      ],
+      "evidence": "Rendered physical p.47 prints 'Ilaï Deutel' with the diaeresis (300-dpi crop); OCR dropped the diacritic."
+    },
+    {
+      "before": "Abhishek Bhowmic\n",
+      "after": "Abhishek Bhowmick\n",
+      "count": 1,
+      "pdf_pages": [
+        49
+      ],
+      "evidence": "Rendered physical p.49 prints 'Abhishek Bhowmick' (300-dpi crop); OCR dropped the final 'k'."
+    },
+    {
+      "before": "Mariella Sanchez-Varga\n",
+      "after": "Mariella Sanchez-Vargas\n",
+      "count": 1,
+      "pdf_pages": [
+        49
+      ],
+      "evidence": "Rendered physical p.49 prints 'Mariella Sanchez-Vargas' (300-dpi crop); OCR dropped the final 's'."
+    },
+    {
+      "before": "Feder Zubach",
+      "after": "Fedir Zubach",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "Rendered physical p.50 prints 'Fedir Zubach' (300-dpi crop); OCR misread the 'i' as 'e'."
+    },
+    {
+      "before": "Arnaud Ausef",
+      "after": "Arnaud Autef",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "Rendered physical p.50 prints 'Arnaud Autef' (300-dpi crop); OCR misread the 't' as 's'."
+    },
+    {
+      "before": "Siim Poder",
+      "after": "Siim Põder",
+      "count": 1,
+      "pdf_pages": [
+        50
+      ],
+      "evidence": "Rendered physical p.50 prints 'Siim Põder' with the tilde (300-dpi crop); OCR dropped the diacritic."
+    },
+    {
+      "before": "Pierre-Antoine Manzage\n",
+      "after": "Pierre-Antoine Manzagol\n",
+      "count": 1,
+      "pdf_pages": [
+        51
+      ],
+      "evidence": "Rendered physical p.51 prints 'Pierre-Antoine Manzagol' (300-dpi crop); OCR truncated the surname."
+    },
+    {
+      "before": "Chulayuth Asawaroengc\n",
+      "after": "Chulayuth Asawaroengchai\n",
+      "count": 1,
+      "pdf_pages": [
+        51
+      ],
+      "evidence": "Rendered physical p.51 prints 'Chulayuth Asawaroengchai' (300-dpi crop); OCR dropped the trailing 'hai'."
+    },
+    {
+      "before": "Paweł Wesolowski",
+      "after": "Paweł Wesołowski",
+      "count": 1,
+      "pdf_pages": [
+        52
+      ],
+      "evidence": "Rendered physical p.52 prints 'Paweł Wesołowski' with l-with-stroke in both words (300-dpi crop); OCR kept it in the given name but dropped it in the surname."
+    },
+    {
+      "before": "Morteza Zadimoghadd\n",
+      "after": "Morteza Zadimoghaddam\n",
+      "count": 1,
+      "pdf_pages": [
+        53
+      ],
+      "evidence": "Rendered physical p.53 prints 'Morteza Zadimoghaddam' (300-dpi crop); OCR dropped the trailing 'am'."
+    },
+    {
+      "before": "Mohammad Babaeizade\n",
+      "after": "Mohammad Babaeizadeh\n",
+      "count": 1,
+      "pdf_pages": [
+        53
+      ],
+      "evidence": "Rendered physical p.53 prints 'Mohammad Babaeizadeh' (300-dpi crop); OCR dropped the final 'h'."
+    },
+    {
+      "before": "Tsendsuren Munkhdala",
+      "after": "Tsendsuren Munkhdalai",
+      "count": 1,
+      "pdf_pages": [
+        55
+      ],
+      "evidence": "Rendered physical p.55 prints 'Tsendsuren Munkhdalai' (300-dpi crop); OCR dropped the final 'i'."
+    },
+    {
+      "before": "Anastasios Kementsietsid\n",
+      "after": "Anastasios Kementsietsidis\n",
+      "count": 1,
+      "pdf_pages": [
+        55
+      ],
+      "evidence": "Rendered physical p.55 prints 'Anastasios Kementsietsidis' (300-dpi crop); OCR dropped the final 's'. The separate printed name 'Tasos Kementsietsidis' on physical p.49 exists in the PDF and was left unchanged."
+    },
+    {
+      "before": "Mohammad Javad Hossei\n",
+      "after": "Mohammad Javad Hosseini\n",
+      "count": 1,
+      "pdf_pages": [
+        56
+      ],
+      "evidence": "Rendered physical p.56 prints 'Mohammad Javad Hosseini' (300-dpi crop); OCR dropped the final 'i'."
+    },
+    {
+      "before": "Sanket Vaibhav Meht\n",
+      "after": "Sanket Vaibhav Mehta\n",
+      "count": 1,
+      "pdf_pages": [
+        56
+      ],
+      "evidence": "Rendered physical p.56 prints 'Sanket Vaibhav Mehta' (300-dpi crop); OCR dropped the final 'a'. The PDF also prints a distinct 'Vaibhav Mehta' on the same page, which is present in the OCR and untouched."
+    },
+    {
+      "before": "Spurthi Amba Hombaia</td>",
+      "after": "Spurthi Amba Hombaiah</td>",
+      "count": 1,
+      "pdf_pages": [
+        59
+      ],
+      "evidence": "Rendered physical p.59 prints 'Spurthi Amba Hombaiah' (300-dpi crop); OCR dropped the final 'h' inside the table cell."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "contributor-prose-order-and-remaining-diactritics",
+      "pdf_pages": [
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "evidence": "The contributor pages 47-61 are typeset in multi-column name lists; OCR emits prose blocks and HTML tables whose local order does not always match the printed column order, and the automated line-presence diff cannot distinguish reordering from drops for names that DO appear. The line-level sweep found no name string missing outright after the repairs above, but a manual name-by-name read of all ~3400 entries was out of triage scope. Scattered single-diacritic drops (e.g. 'Raia Hadsell' area, 'Alejo n' style artifacts not checked) may remain."
+    },
+    {
+      "id": "table-4-embedded-audio-table-header",
+      "pdf_pages": [
+        14,
+        15
+      ],
+      "evidence": "The OCR table element before the 'Table 4 |' caption contains, after the Image Understanding rows, a second header row ('Benchmark / Gemini 1.5 Flash / ... / GPT 4o transcribe') plus FLEURS and CoVoST2 audio rows that belong to Table 5; the two printed tables appear merged into one HTML <table>. Restructuring table boundaries is a layout-level repair that needs the exporter's table handling reviewed before changing recorded values."
+    }
+  ]
+}

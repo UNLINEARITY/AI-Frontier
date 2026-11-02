@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nvidia-nemotron-3-super-technical-report",
+  "source_sha256": "73ea5d737b9c7c62a39ed3edefbecb82e5a23681bc2c4167e202eeee7b3d254d",
+  "ocr_sha256": "4707888fa3b69b97b09df543d441b3cbd5713b1d859e60e0242d4bbeaddb52d7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51
+    ],
+    "coverage": "complete",
+    "notes": "Automated line-level diff of extracted text from all 51 physical PDF pages against the OCR Markdown (case/punctuation/LaTeX-equivalent math normalized), with targeted verification of every flagged page. Bottom-of-page crops of physical pages 2, 13, 16 and 21 were rendered and visually inspected to confirm the footnote bodies; the section 2.5 page-boundary split was verified on rendered physical p.15. No code fences exist in this document and all headings match printed section headings. All 14 printed footnote markers except marker 1 (swallowed next to an emoji glyph on physical p.2) survive in the OCR while every footnote body was dropped; the patches restore all 14 bodies, grouped where their markers sit inside a paragraph that ends in a colon introducing a list (markers 3-6 before the numbered evaluation list, marker 7 inside list item 1). The PDF's own typos ('comparsions', 'competitve', duplicated 'is is' on p.16) were silently corrected by the OCR and left as printed. Remaining diff hits are figure-internal labels (Figures 1, 5, 11, 12 and the architecture/training diagrams) and Unicode-math-versus-LaTeX normalization artifacts, all verified present in the OCR prose."
+  },
+  "patches": [
+    {
+      "before": "(e.g., $\\sim 2$ avoided\n\n## runs at 1.5T and",
+      "after": "(e.g., $\\sim 2$ avoided runs at 1.5T and",
+      "count": 1,
+      "pdf_pages": [
+        14,
+        15
+      ],
+      "evidence": "Rendered physical p.14 ends mid-sentence '...the savings could reach ∼4T tokens of compute (e.g., ∼2 avoided' and rendered physical p.15 (viewed at 130 dpi) opens with the plain continuation 'runs at 1.5T and ∼2 at 0.5T), or roughly 16% of the total pretraining FLOP budget.' as body text. The OCR promoted the p.15 first line to a '##' heading, splitting the sentence and injecting a spurious section into the table of contents flow; the patch demotes it back into the preceding paragraph."
+    },
+    {
+      "before": "\\- Nemotron-Super-Post-Training-Data 😊: a collection of RL environments and SFT datasets targeting a broad range of agentic capabilities.",
+      "after": "\\- Nemotron-Super-Post-Training-Data 😊: a collection of RL environments and SFT datasets targeting a broad range of agentic capabilities.\n\n1 https://github.com/NVIDIA-NeMo/Nemotron",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 bottom (viewed at 130 dpi) prints footnote 1 'https://github.com/NVIDIA-NeMo/Nemotron' under the Data bullet list; the OCR dropped the footnote body and the superscript marker (the emoji glyph replaced the marker position on 'Nemotron-Pretraining-Specialized-v1.1'). Body restored after the Data bullets, matching the marker-carrying block."
+    },
+    {
+      "before": "We generated and evaluated the problems and solutions using Qwen3-235B-A22B-Thinking-2507.",
+      "after": "We generated and evaluated the problems and solutions using Qwen3-235B-A22B-Thinking-2507.\n\n2 https://huggingface.co/collections/nvidia/nemotron-personas",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 bottom (viewed at 130 dpi) prints footnote 2 'https://huggingface.co/collections/nvidia/nemotron-personas'; the OCR kept the inline marker in 'incorporating random personas, $^{2}$ letters' but dropped the footnote body. Body restored after the end of the paragraph carrying the marker."
+    },
+    {
+      "before": "For long context capability, we evaluate RULER (Hsieh et al., 2024) using 100 samples per task.",
+      "after": "For long context capability, we evaluate RULER (Hsieh et al., 2024) using 100 samples per task.\n\n3 https://github.com/NVIDIA-NeMo/Evaluator\n\n4 https://github.com/EleutherAI/lm-evaluation-harness\n\n5 https://github.com/NVIDIA-NeMo/Evaluator/tree/main/packages/nemo-evaluator-launcher/examples/nemotron/nemotron-3-super\n\n6 https://catalog.ngc.nvidia.com/orgs/nvidia/teams/eval-factory/containers/lm-evaluation-harness\n\n7 https://github.com/huggingface/math-verify.",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 bottom (viewed at 130 dpi) prints footnotes 3-7: 'https://github.com/NVIDIA-NeMo/Evaluator', 'https://github.com/EleutherAI/lm-evaluation-harness', 'https://github.com/NVIDIA-NeMo/Evaluator/tree/main/packages/nemo-evaluator-launcher/examples/nemotron/nemotron-3-super' (URL wrapped in print without a hyphen), 'https://catalog.ngc.nvidia.com/orgs/nvidia/teams/eval-factory/containers/lm-evaluation-harness' and 'https://github.com/huggingface/math-verify.'. The OCR kept the markers $^{3}$-$^{6}$ in the paragraph ending '...applied to all models for fairness:' and $^{7}$ in list item 1 ('We use Math-Verify $^{7}$ to grade all generations.') but dropped every body. Bodies are inserted after the last list item so the colon's list stays intact."
+    },
+    {
+      "before": "The resulting dataset comprises 366,243 financial Q&A pairs with reasoning traces.",
+      "after": "The resulting dataset comprises 366,243 financial Q&A pairs with reasoning traces.\n\n8 https://en.wikipedia.org/wiki/List_of_S%26P_500_companies, accessed 2025.",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 bottom (viewed at 130 dpi) prints footnote 8 'https://en.wikipedia.org/wiki/List_of_S%26P_500_companies, accessed 2025.'; the OCR kept the marker in 'S&P 500 companies $^{8}$ and fiscal years (2019–2024)' but dropped the body, restored after the paragraph carrying the marker."
+    },
+    {
+      "before": "Terminal Bench Core 2.0 (Harbor).",
+      "after": "Terminal Bench Core 2.0 (Harbor).\n\n9 https://github.com/NVIDIA-NeMo/Evaluator\n\n10 https://github.com/NVIDIA-NeMo/Skills\n\n11 https://catalog.ngc.nvidia.com/orgs/nvidia/teams/eval-factory/containers/nemo_skills\n\n12 https://github.com/NVIDIA-NeMo/Evaluator/tree/main/packages/nemo-evaluator-launcher/examples/nemotron/nemotron-3-super",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "The PDF text layer of physical p.32 prints footnotes 9-12 ('https://github.com/NVIDIA-NeMo/Evaluator', 'https://github.com/NVIDIA-NeMo/Skills', 'https://catalog.ngc.nvidia.com/orgs/nvidia/teams/eval-factory/containers/nemo_skills', and the nemo-evaluator-launcher examples URL wrapped in print without a hyphen); the OCR kept the markers $^{9}$-$^{12}$ in the paragraph ending '...Terminal Bench Core 2.0 (Harbor).' but dropped the bodies. Footnote 12's URL is byte-identical to footnote 5's on physical p.16, verified against the p.16 render and the p.32 text layer."
+    },
+    {
+      "before": "to generate two efficient deployment checkpoints: FP8 (W8A8) for Hopper and NVFP4 (W4A4) for Blackwell.",
+      "after": "to generate two efficient deployment checkpoints: FP8 (W8A8) for Hopper and NVFP4 (W4A4) for Blackwell.\n\n13 https://github.com/NVIDIA/Model-Optimizer/",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "The PDF text layer of physical p.33 prints footnote 13 'https://github.com/NVIDIA/Model-Optimizer/'; the OCR kept the marker in 'Model-Optimizer $^{13}$' but dropped the body, restored after the end of the paragraph carrying the marker."
+    },
+    {
+      "before": "The detailed AutoQuantize algorithm is given in B.2.",
+      "after": "The detailed AutoQuantize algorithm is given in B.2.\n\n14 https://github.com/NVIDIA/Model-Optimizer/tree/main/examples/llm_ptq",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "The PDF text layer of physical p.34 prints footnote 14 'https://github.com/NVIDIA/Model-Optimizer/tree/main/examples/llm_ptq'; the OCR kept the marker in 'Model-Optimizer AutoQuantize $^{14}$' but dropped the body, restored after the end of the paragraph carrying the marker."
+    }
+  ],
+  "unresolved": []
+}

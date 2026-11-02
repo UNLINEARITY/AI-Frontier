@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen2-5-math-technical-report-toward-mathematical-expert-model-via-self-improvement",
+  "source_sha256": "fcd0bd15c691a2a4b22812ee25d11bee5e3256819514407e62671cd140bb6dc8",
+  "ocr_sha256": "2d251b76019d833f5dabad31087249ddfcc8430ee07c0d1d0957ae1bfd6af2a6",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE coverage: full-document machine scan of all 39 pages (code-fence balance, structure-inside-fences scan, normalized 4-gram page containment plus word-level missing-token diff against the extracted PDF text), then line-level manual inspection of every low-hit page (10-12, 14, 19-24, 30-39) and mid-hit pages 1, 8, 25, 26, 36. Rendered page-bottom crops of physical pages 1, 8 and 11 were visually read at 300 dpi to transcribe the dropped footnote bodies. Low 4-gram hit rates on pages 19-24 and 30 are LaTeX-equivalent math (OCR emits LaTeX, PDF text layer emits unicode), pages 32-38 are appendix prompt figures embedded as images whose printed text the containment scan cannot match, and pages 14/11 residual tokens are PDF text-layer table-cell artifacts (30RM@256, Maj@8), not droppage. Punctuation spacing after inline math is handled by the shared OCR normalizer. Figure 9 is present only as a transcribed code block (see unresolved); its in-block garbling is figure-internal text shown beside a caption and was not patched."
+  },
+  "patches": [
+    {
+      "before": "The base models, instruct models, and reward model of the Qwen2.5-Math series are available on Hugging Face $^{1}$ and ModelScope $^{2}$ , and the evaluation scripts on GitHub $^{3}$ . We have also developed a demo that supports the TIR mode in Qwen-Agent $^{4}$ , which allows running code locally to experience Tool-Integrated Reasoning capabilities of Qwen2.5-Math.",
+      "after": "The base models, instruct models, and reward model of the Qwen2.5-Math series are available on Hugging Face $^{1}$ and ModelScope $^{2}$ , and the evaluation scripts on GitHub $^{3}$ . We have also developed a demo that supports the TIR mode in Qwen-Agent $^{4}$ , which allows running code locally to experience Tool-Integrated Reasoning capabilities of Qwen2.5-Math.\n\n$^{1}$ https://huggingface.co/Qwen\n\n$^{2}$ https://modelscope.cn/organization/qwen\n\n$^{3}$ https://github.com/QwenLM/Qwen2-Math\n\n$^{4}$ https://github.com/QwenLM/Qwen-Agent",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote band at 300 dpi prints, below the rule: '1 https://huggingface.co/Qwen', '2 https://modelscope.cn/organization/qwen', '3 https://github.com/QwenLM/Qwen2-Math', '4 https://github.com/QwenLM/Qwen-Agent'. The OCR kept the superscript markers on 'Hugging Face $^{1}$', 'ModelScope $^{2}$', 'GitHub $^{3}$' and 'Qwen-Agent $^{4}$' but dropped all four footnote bodies."
+    },
+    {
+      "before": "Qwen Team, Alibaba Group\\*",
+      "after": "Qwen Team, Alibaba Group\\*\n\n\\*Authors are ordered alphabetically by the first name. $^{\\dagger}$Corresponding author.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote band at 300 dpi prints the unnumbered author footnote '*Authors are ordered alphabetically by the first name. †Corresponding author.'; the OCR kept the '*' marker after 'Alibaba Group\\*' and the '$^{\\dagger}$' markers after author names (Bofei Gao, Bowen Yu, Dayiheng Liu, Junyang Lin) but dropped the footnote body. Restored using the document's own '\\*' and '$^{\\dagger}$' marker spellings."
+    },
+    {
+      "before": "The core implementation of our rule-based verifier is similar to the one used in our evaluation $^{6}$ .",
+      "after": "The core implementation of our rule-based verifier is similar to the one used in our evaluation $^{6}$ .\n\n$^{5}$ https://github.com/alibaba/ChatLearn\n\n$^{6}$ https://github.com/QwenLM/Qwen2-Math/tree/main/evaluation",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 footnote band at 300 dpi prints '5 https://github.com/alibaba/ChatLearn' and '6 https://github.com/QwenLM/Qwen2-Math/tree/main/evaluation'. The OCR kept the markers on 'ChatLearn $^{5}$' and 'our evaluation $^{6}$' but dropped both footnote bodies; they are reattached after the sentence carrying marker 6, the end of the same paragraph."
+    },
+    {
+      "before": "and CN Middle School 24 (101 collected problems from China High School Entrance Examination in 2024). We report greedy, Maj@8, and RM@8 performance on all benchmarks in the zero-shot setting, except for the multi-choice benchmarks (including MMLU STEM and multiple-choice problems in GaoKao and CN Middle School 24) with a 5-shot setting.",
+      "after": "and CN Middle School 24 (101 collected problems from China High School Entrance Examination in 2024). We report greedy, Maj@8, and RM@8 performance on all benchmarks in the zero-shot setting, except for the multi-choice benchmarks (including MMLU STEM and multiple-choice problems in GaoKao and CN Middle School 24) with a 5-shot setting.\n\n$^{7}$ https://huggingface.co/datasets/AI-MO/aimo-validation-aime\n\n$^{8}$ https://huggingface.co/datasets/AI-MO/aimo-validation-amc\n\n$^{9}$ https://github.com/llmeval/Llmeval-Gaokao2024-Math",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 footnote band at 300 dpi prints '7 https://huggingface.co/datasets/AI-MO/aimo-validation-aime', '8 https://huggingface.co/datasets/AI-MO/aimo-validation-amc' and '9 https://github.com/llmeval/Llmeval-Gaokao2024-Math' (casing 'Llmeval-Gaokao2024-Math' visually confirmed). The OCR kept the markers on 'AIME2024 $^{7}$', 'AMC2023 $^{8}$' and 'GaoKao I/II 2024 $^{9}$' but dropped all three footnote bodies."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-9-transcribed-as-code-block",
+      "pdf_pages": [
+        33,
+        34
+      ],
+      "evidence": "Figure 9 (the GaoKao Math Cloze prompt for base models) has no image embed in the OCR Markdown: its printed prompt content is transcribed into a fenced ```txt block that precedes the 'Figure 9:' caption, unlike Figures 5-8 and 10-13 which are embedded images. Cleanup patches cannot add image embeds (the exporter rejects changed embed sets), so restoring the embed requires regenerating the OCR source. The transcription block itself stays; some in-block prompt math is garbled OCR of figure text ('\\ Newcastle', '\\(left\\{'), which is figure-internal text and not repaired here."
+    },
+    {
+      "id": "figure-14-prompt-as-html-table",
+      "pdf_pages": [
+        39
+      ],
+      "evidence": "Figure 14 (the GaoKao multiple-choice prompt for instruct models) is represented as a flattened HTML table rather than an embedded image; the printed prompt text is present in the table, so no content is lost, but the representation differs from the other prompt figures. Same embed-immutability constraint as above."
+    }
+  ]
+}

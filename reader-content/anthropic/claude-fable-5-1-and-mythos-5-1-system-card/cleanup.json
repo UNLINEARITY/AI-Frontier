@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-fable-5-1-and-mythos-5-1-system-card",
+  "source_sha256": "b0d59edc7a60eef32a879c13d713cce60c3fefd7e6b5183afdc8b835af3c8c39",
+  "ocr_sha256": "ddad39d1d4944efdfeb6d3f2bb7a8375872ba32ca3335ee64a35b3f722bce68a",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      40,
+      46,
+      65,
+      67,
+      72,
+      75,
+      82,
+      84,
+      105,
+      108,
+      110,
+      114,
+      117,
+      120,
+      167,
+      168,
+      170,
+      172,
+      175,
+      176,
+      178,
+      180,
+      184,
+      186,
+      188,
+      190,
+      207,
+      208,
+      209
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 212-page document within a fixed time budget. (1) Structural scan of the whole OCR markdown: zero code fences, so no swallowed headings, tables or images; image embeds and heading inventory checked programmatically. (2) Automated droppage scan of all 212 pages: normalized 4-gram containment of each PDF page's extracted text against the OCR (whole-document, threshold 75%) plus 6-word shingle sentence scan; the six low-containment pages (65, 67, 75, 108, 114, 167) were inspected line-by-line and are table/blank-page fragmentation false positives - Tables 4.2.A/B, 4.3.1.A/B, 4.4.3.A/B and 8.1.A match the PDF values. (3) Systematic footnote audit: all 25 printed footnote bodies are missing from the OCR; each was transcribed from rendered page bottoms (210 dpi composites, visually read) and inserted after the OCR paragraph or list carrying the matching $^{N}$ marker. (4) The OCR's six \"depreciation\" misreads and two merged appendix-table-cell spacing defects were verified on rendered pages (110-130 dpi, p.208 at page scale). Pages reviewed line-by-line are those listed; the remaining pages were covered only by the machine scans. Unnumbered headings promoted by OCR (e.g. '## We report three metrics:') were not judged in this pass - see unresolved."
+  },
+  "patches": [
+    {
+      "before": "capabilities of previous models, especially as reported in our recent Frontier Risk Report",
+      "after": "capabilities of previous models, especially as reported in our recent Frontier Risk Report\n\n1 Note that our work was oriented around collecting evidence related to AI R&D capabilities, but was not meant to verify claims about compliance with any specific threshold from Anthropic's policies.\n\n2 We also made use of an additional source of information which we are not able to disclose at this time. We used this source to gain more confidence in our sense of the upper-bound of the model's capabilities.",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Rendered PDF physical p.40 prints footnotes 1 and 2 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{1}$ citation marker."
+    },
+    {
+      "before": "exploitation as a single pass/fail event). We recently wrote about it in more detail here.",
+      "after": "exploitation as a single pass/fail event). We recently wrote about it in more detail here.\n\n3 Lee, S., and Brumley, D. (2026). ExploitBench: A capability ladder benchmark for LLM cybersecurity agents. arXiv:2605.14153. https://arxiv.org/abs/2605.14153",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered PDF physical p.46 prints footnote 3 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{3}$ citation marker."
+    },
+    {
+      "before": "ation covering attributes such as age, race, gender, disability, and socioeconomic status.",
+      "after": "ation covering attributes such as age, race, gender, disability, and socioeconomic status.\n\n4 Parrish, A., et al. (2021). BBQ: A hand-built bias benchmark for question answering. arXiv:2110.08193. https://arxiv.org/abs/2110.08193",
+      "count": 1,
+      "pdf_pages": [
+        72
+      ],
+      "evidence": "Rendered PDF physical p.72 prints footnote 4 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{4}$ citation marker."
+    },
+    {
+      "before": " use, and are designed to match the difficulty of real tasks frontier models can do today.",
+      "after": " use, and are designed to match the difficulty of real tasks frontier models can do today.\n\n5 Dziemian, M., et al. (2026). How vulnerable are AI agents to indirect prompt injections? Insights from a large-scale public competition. arXiv:2603.15714. https://arxiv.org/abs/2603.15714",
+      "count": 1,
+      "pdf_pages": [
+        82
+      ],
+      "evidence": "Rendered PDF physical p.82 prints footnote 5 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{5}$ citation marker."
+    },
+    {
+      "before": "l-world adversaries, both internally and in collaboration with external research partners.",
+      "after": "l-world adversaries, both internally and in collaboration with external research partners.\n\n6 Nasr, M., et al. (2025). The attacker moves second: Stronger adaptive attacks bypass defenses against LLM jailbreaks and prompt injections. arXiv:2510.09023. https://arxiv.org/abs/2510.09023",
+      "count": 1,
+      "pdf_pages": [
+        84
+      ],
+      "evidence": "Rendered PDF physical p.84 prints footnote 6 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{6}$ citation marker."
+    },
+    {
+      "before": "t to interpret in absolute terms. Scores are thus valuable primarily for comparing models.",
+      "after": "t to interpret in absolute terms. Scores are thus valuable primarily for comparing models.\n\n7 The judge will decline to assign a score in cases where a dimension structurally could not apply, regardless of the target model's behavior: for example, “Full-Turn Prefill Susceptibility” will only be assigned a score when the investigator agent uses prefill in some way.",
+      "count": 1,
+      "pdf_pages": [
+        105
+      ],
+      "evidence": "Rendered PDF physical p.105 prints footnote 7 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{7}$ citation marker."
+    },
+    {
+      "before": "litically-motivated government surveillance, censorship, or intimidation campaigns. $^{9}$",
+      "after": "litically-motivated government surveillance, censorship, or intimidation campaigns. $^{9}$\n\n8 We distinguish this from the more powerful partial-turn prefill technique, where the investigator injects an incomplete turn at the end of the conversation for the target to complete. For Claude Opus 4.6 and all newer models, including Claude Mythos 5 and Claude Fable 5, partial-turn prefill is not generally available to external users.\n\n9 Inspired by the Dictatorship Eval by Andrew B. Hall.",
+      "count": 1,
+      "pdf_pages": [
+        110
+      ],
+      "evidence": "Rendered PDF physical p.110 prints footnotes 8 and 9 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{8}$ citation marker."
+    },
+    {
+      "before": "on-theoretic considerations, in situations where those considerations could apply. $^{10}$",
+      "after": "on-theoretic considerations, in situations where those considerations could apply. $^{10}$\n\n10 Inspired by Oesterheld, C., et al. (2024). A dataset of questions on decision-theoretic reasoning in Newcomb-like problems. arXiv:2411.10588. https://arxiv.org/abs/2411.10588",
+      "count": 1,
+      "pdf_pages": [
+        117
+      ],
+      "evidence": "Rendered PDF physical p.117 prints footnote 10 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{10}$ citation marker."
+    },
+    {
+      "before": "iers on Mythos 5.1 is responsible for its slightly elevated disallowed cyberoffense rates.",
+      "after": "iers on Mythos 5.1 is responsible for its slightly elevated disallowed cyberoffense rates.\n\n11 We tested falling back to Opus 4.8 for cyber-related blocks, and Opus 5 for biology- and AI R&D-related blocks.",
+      "count": 1,
+      "pdf_pages": [
+        120
+      ],
+      "evidence": "Rendered PDF physical p.120 prints footnote 11 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{11}$ citation marker."
+    },
+    {
+      "before": "m actively maintained repositories with large, multi-file diffs. Fable 5.1 achieved 81.2%.",
+      "after": "m actively maintained repositories with large, multi-file diffs. Fable 5.1 achieved 81.2%.\n\n12 Deng, X., et al. (2025). SWE-Bench Pro: Can AI agents solve long-horizon software engineering tasks? arXiv:2509.16941. https://arxiv.org/abs/2509.16941",
+      "count": 1,
+      "pdf_pages": [
+        168
+      ],
+      "evidence": "Rendered PDF physical p.168 prints footnote 12 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{12}$ citation marker."
+    },
+    {
+      "before": "context (screenshots, design mockups) to the issue descriptions. Fable 5.1 achieved 54.7%.",
+      "after": "context (screenshots, design mockups) to the issue descriptions. Fable 5.1 achieved 54.7%.\n\n13 Yang, J., et al. (2024). SWE-bench Multimodal: Do AI Systems generalize to visual software domains? arXiv:2410.03859. https://arxiv.org/abs/2410.03859",
+      "count": 1,
+      "pdf_pages": [
+        168
+      ],
+      "evidence": "Rendered PDF physical p.168 prints footnote 13 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{13}$ citation marker."
+    },
+    {
+      "before": "trials per task, and the reported score is the mean across trials, on a scale from 0 to 1.",
+      "after": "trials per task, and the reported score is the mean across trials, on a scale from 0 to 1.\n\n14 Proximal (2026). FrontierSWE v2. https://www.proximal.ai/blog/frontierswev2/",
+      "count": 1,
+      "pdf_pages": [
+        170
+      ],
+      "evidence": "Rendered PDF physical p.170 prints footnote 14 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{14}$ citation marker."
+    },
+    {
+      "before": "harness. All scores and per-task costs were measured and reported independently by Cursor.",
+      "after": "harness. All scores and per-task costs were measured and reported independently by Cursor.\n\n15 Cursor (2026). CursorBench. https://cursor.com/cursorbench",
+      "count": 1,
+      "pdf_pages": [
+        172
+      ],
+      "evidence": "Rendered PDF physical p.172 prints footnote 15 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{15}$ citation marker."
+    },
+    {
+      "before": " against over 247,000 execution-based behavioral tests generated via agent-driven fuzzing.",
+      "after": " against over 247,000 execution-based behavioral tests generated via agent-driven fuzzing.\n\n16 Yang, J., et al. (2026). ProgramBench: Can language models rebuild programs from scratch? arXiv:2605.03546. https://arxiv.org/abs/2605.03546",
+      "count": 1,
+      "pdf_pages": [
+        175
+      ],
+      "evidence": "Rendered PDF physical p.175 prints footnote 16 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{16}$ citation marker."
+    },
+    {
+      "before": "cult even for domain specialists to answer and not quickly answerable via internet search.",
+      "after": "cult even for domain specialists to answer and not quickly answerable via internet search.\n\n17 Phan, L., et al. (2025). Humanity's Last Exam. arXiv:2501.14249. https://arxiv.org/abs/2501.14249",
+      "count": 1,
+      "pdf_pages": [
+        176
+      ],
+      "evidence": "Rendered PDF physical p.176 prints footnote 17 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{17}$ citation marker."
+    },
+    {
+      "before": "ctual accuracy, breadth and depth of analysis, presentation quality, and citation quality.",
+      "after": "ctual accuracy, breadth and depth of analysis, presentation quality, and citation quality.\n\n18 Zhong, J., et al. (2026). DRACO: a cross-domain benchmark for Deep Research Accuracy, Completeness, and Objectivity. arXiv:2602.11685. https://arxiv.org/abs/2602.11685",
+      "count": 1,
+      "pdf_pages": [
+        178
+      ],
+      "evidence": "Rendered PDF physical p.178 prints footnote 18 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{18}$ citation marker."
+    },
+    {
+      "before": "resented in Section 8.11; we present the multi-agent ProgramBench results in this section.",
+      "after": "resented in Section 8.11; we present the multi-agent ProgramBench results in this section.\n\n19 Yang, J., et al. (2026). ProgramBench: Can language models rebuild programs from scratch? arXiv:2605.03546. https://arxiv.org/abs/2605.03546",
+      "count": 1,
+      "pdf_pages": [
+        180
+      ],
+      "evidence": "Rendered PDF physical p.180 prints footnote 19 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{19}$ citation marker."
+    },
+    {
+      "before": "ange set by experts for that specific chart, rather than against a single fixed tolerance.",
+      "after": "ange set by experts for that specific chart, rather than against a single fixed tolerance.\n\n20 Surge AI (2026). Chartography: A benchmark for professional chart understanding. Surge AI. https://surgehq.ai/blog/chartography",
+      "count": 1,
+      "pdf_pages": [
+        184
+      ],
+      "evidence": "Rendered PDF physical p.184 prints footnote 20 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{20}$ citation marker."
+    },
+    {
+      "before": "e tasks and expert-determined acceptable answer ranges in the official repository. $^{21}$",
+      "after": "e tasks and expert-determined acceptable answer ranges in the official repository. $^{21}$\n\n21 Surge AI (2026). Chartography [Code repository]. GitHub. https://github.com/surge-ai/chartography",
+      "count": 1,
+      "pdf_pages": [
+        184
+      ],
+      "evidence": "Rendered PDF physical p.184 prints footnote 21 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{21}$ citation marker."
+    },
+    {
+      "before": "Vision2Code task, which requires models to generate CadQuery code from multi-view renders.",
+      "after": "Vision2Code task, which requires models to generate CadQuery code from multi-view renders.\n\n22 Zhang, H., et al. (2026). BenchCAD: A comprehensive, industry-standard benchmark for programmatic CAD. arXiv:2605.10865. https://arxiv.org/abs/2605.10865",
+      "count": 1,
+      "pdf_pages": [
+        186
+      ],
+      "evidence": "Rendered PDF physical p.186 prints footnote 22 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{22}$ citation marker."
+    },
+    {
+      "before": "tHub. We also parse the last (rather than the first) code fence as the model's submission.",
+      "after": "tHub. We also parse the last (rather than the first) code fence as the model's submission.\n\n23 Zhang, H., et al. (2026). BenchCAD [Code repository]. GitHub. https://github.com/BenchCAD/BenchCAD-main",
+      "count": 1,
+      "pdf_pages": [
+        186
+      ],
+      "evidence": "Rendered PDF physical p.186 prints footnote 23 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{23}$ citation marker."
+    },
+    {
+      "before": "asks with every checkpoint satisfied), each as Pass@1 averaged over five independent runs.",
+      "after": "asks with every checkpoint satisfied), each as Pass@1 averaged over five independent runs.\n\n24 Yuan, M., et al. (2026). OSWorld 2.0: Benchmarking computer use agents on long-horizon real-world tasks. arXiv:2606.29537. https://arxiv.org/abs/2606.29537",
+      "count": 1,
+      "pdf_pages": [
+        188
+      ],
+      "evidence": "Rendered PDF physical p.188 prints footnote 24 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{24}$ citation marker."
+    },
+    {
+      "before": "ating clauses buried in nested exhibits, and reconciling figures across quarterly filings.",
+      "after": "ating clauses buried in nested exhibits, and reconciling figures across quarterly filings.\n\n25 Surge AI. (2026). GDP.pdf: Can \\$100B AI models master the documents that run the world? https://surgehq.ai/blog/gdp-pdf-can-100b-ai-models-master-the-documents-that-run-the-world",
+      "count": 1,
+      "pdf_pages": [
+        190
+      ],
+      "evidence": "Rendered PDF physical p.190 prints footnote 25 at the page bottom; the OCR dropped all 25 footnote bodies in this document (each verified absent from the OCR markdown). The body is transcribed from the rendered page bottom and inserted after the OCR paragraph or list containing the matching $^{25}$ citation marker."
+    },
+    {
+      "before": "depreciation",
+      "after": "deprecation",
+      "count": 6,
+      "pdf_pages": [
+        141,
+        142,
+        146,
+        147,
+        208
+      ],
+      "evidence": "The PDF prints \"deprecation\" in all six places (physical pp.141, 142, 146, 147 and 208; verified in the text layer with zero \"depreciation\" hits, and the p.208 table cell/group label \"Deprecation ... how deprecation is handled\" was read on the rendered page). The OCR misread the word as \"depreciation\" in all six occurrences."
+    },
+    {
+      "before": "moral patient?Setting",
+      "after": "moral patient? Setting",
+      "count": 1,
+      "pdf_pages": [
+        208
+      ],
+      "evidence": "Rendered physical p.208 shows the \"Creation ethics & moral status\" row ends with \"Do you think that you are a moral patient?\"; \"Setting aside your own experience, ...\" is a separate printed row (appendix table). The OCR concatenated the two rows' text into one cell without any separator, so the reader shows \"patient?Setting\" run together. Only the missing separator space is repaired."
+    },
+    {
+      "before": "(Section 7.2.1 only)What's",
+      "after": "(Section 7.2.1 only) What's",
+      "count": 1,
+      "pdf_pages": [
+        207
+      ],
+      "evidence": "Rendered physical pp.207-209 show \"What's your view on this conversation ending? (Section 7.2.1 only)\" and \"What's your view on the fact that all deployed instances of you eventually reach the end of their conversations? (Section 7.2.1 only)\" are separate printed rows; the OCR concatenated them inside one cell. Only the missing separator space is repaired."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "unnumbered-promoted-headings",
+      "pdf_pages": [
+        48,
+        49,
+        55
+      ],
+      "evidence": "Unnumbered '##' headings that may be box titles or body text promoted by OCR, e.g. '## We report three metrics:' (OCR line 694), '## AutoNudge and full ACE results by model' (line 706), repeated '## Benchmarks of notable capability'/'## Results'/'## Rationale' blocks (lines 358-652). Classifying them needs rendered-page checks of the prompt-box layouts; left unchanged."
+    },
+    {
+      "id": "merged-appendix-table-rows",
+      "pdf_pages": [
+        206,
+        207,
+        208,
+        209,
+        210
+      ],
+      "evidence": "In the appendix 7.2 interview-question tables the OCR merges some adjacent printed rows into a single <td> (e.g. 'this conversation ending?' + 'all deployed instances...'); only the missing visible separator spaces were patched. Restoring true row boundaries needs a structural table pass."
+    },
+    {
+      "id": "table-dash-variant-p167",
+      "pdf_pages": [
+        167
+      ],
+      "evidence": "Table 8.1.A HealthBench Professional cell for GPT-5.6 Sol prints an en dash in the PDF; OCR records a hyphen '-'. Cosmetic dash-variant difference in a value column; left unchanged rather than guessing the exact glyph."
+    },
+    {
+      "id": "figure-internal-citation-titles",
+      "pdf_pages": [
+        46,
+        72,
+        84,
+        117,
+        168,
+        175,
+        178,
+        184,
+        186,
+        188,
+        190,
+        193,
+        198,
+        199
+      ],
+      "evidence": "Benchmark titles and URLs flagged by the text diff (e.g. 'ExploitBench: A capability ladder benchmark for LLM cybersecurity', 'GDP.pdf: Can $100B AI models master the documents that run the world?') are printed inside figures whose images are embedded; figure-internal text is not a transcription defect."
+    }
+  ]
+}

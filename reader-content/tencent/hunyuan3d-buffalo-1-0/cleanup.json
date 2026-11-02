@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan3d-buffalo-1-0",
+  "source_sha256": "d44b722678b64add5ea0f8015e613a0416d0d0c6d0e58fb7ae8208faee92bcbe",
+  "ocr_sha256": "28e65dbe0c76c2186ae74e927465b005a5709500935a7d75c079625394c03014",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "coverage": "complete",
+    "notes": "Structure audit: no code fences; all 30+ headings checked against the PDF text layer; exactly three figure-internal level-1 headings were found (Fig. 8/Fig. 13 grid column labels, counted as two occurrences of one string, and Fig. 9 row+column labels), each demoted after visual confirmation on rendered p.18, p.21, p.26 and p.27. The seven OCR <table> elements reproduce Tables 1-7 including the Edit3D-Bench values (0.0684/0.0091, 0.2729/0.6515, 86.7%); spot-checked against the PDF text. Droppage: normalized 10-gram diff of all 33 pages found no missing prose; non-matches are hyphenation splits, citation ranges transcribed as math, figure-internal labels of the embedded pipeline figures (Fig. 1-7, 10-12) and the page-1 teaser infographic line (\"87M Training Samples...\"), which stays plain text below its image. All 118 reference entries are present. The vertical arXiv sidebar stamp on p.1 is not transcribed, matching project convention."
+  },
+  "patches": [
+    {
+      "before": "# Ours Omni123 Universe3D Trellis",
+      "after": "Ours Omni123 Universe3D Trellis",
+      "count": 2,
+      "pdf_pages": [
+        18,
+        27
+      ],
+      "evidence": "Rendered physical p.18 (Fig. 8) and p.27 (Fig. 13) each show a four-column qualitative text-to-3D grid printed as one embedded image with column labels \"Ours / Omni123 / Universe3D / Trellis\"; the labels never occur in the PDF text layer. The OCR promoted them to a level-1 heading in both places (before Fig. 8's caption and before Fig. 13's row prompts); demoted to plain text on both occurrences."
+    },
+    {
+      "before": "# Add a pair of glasses on him Replace the dress with jeans Remove the wings on the back Replace the head with a muscular bull head with thick curved horns Put on a rugged leather jacket with studded shoulders and chain details Remove the rear sail completely Holding a sword Prompt Input Shape Ours Omni123 Steer3D",
+      "after": "Add a pair of glasses on him Replace the dress with jeans Remove the wings on the back Replace the head with a muscular bull head with thick curved horns Put on a rugged leather jacket with studded shoulders and chain details Remove the rear sail completely Holding a sword Prompt Input Shape Ours Omni123 Steer3D",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 (Fig. 9) shows all seven row instruction labels (\"Add a pair of glasses on him\" ... \"Holding a sword\") and the column headers \"Prompt / Input Shape / Ours / Omni123 / Steer3D\" printed inside the embedded figure image; none occur in the PDF text layer. The OCR concatenated them into a single level-1 heading above the figure caption; demoted to plain text."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-plain-text-fragments",
+      "pdf_pages": [
+        1,
+        9,
+        10,
+        11,
+        12,
+        14,
+        16,
+        22,
+        26
+      ],
+      "evidence": "Teaser infographic fields, pipeline-diagram labels and per-row editing captions (e.g. \"Add a cannon mounted on the front deck\") are transcribed as loose plain-text lines between embedded images; they are not headings and no exact replacement can restore their in-figure layout."
+    }
+  ]
+}

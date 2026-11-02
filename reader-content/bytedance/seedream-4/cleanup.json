@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:seedream-4",
+  "source_sha256": "80c7dd17a29c2645e12180df05a8e43563da8d5b9475635f7205c01703f3b019",
+  "ocr_sha256": "2ec8418bc07efd00b5c39ae28c9788f4cbec9e7b7b91d09313f7ae20ffe5e494",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "coverage": "complete",
+    "notes": "All 19 physical pages scanned with a 5-gram PDF-text-to-OCR word-coverage pass; remaining diffs are hyphenation and superscript squares (512^2, 1024^2, 4096^2 as LaTeX), which are not defects. Two orphaned footnote URLs at the bottom of physical p.5 and one dropped footnote body under the physical p.7 Figure 3 caption were restored from 400 dpi renders. Two title-page URL underscore escapes fixed. The printed Contents pages, heading hierarchy, contributor roster and references match the print; no code fences exist."
+  },
+  "patches": [
+    {
+      "before": "seedream4\\_0",
+      "after": "seedream4_0",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 title-page footer prints the typewriter URL https://seed.bytedance.com/seedream4_0 with a real underscore (verified at 400 dpi); OCR inserted a Markdown escape."
+    },
+    {
+      "before": "seedream4\\_5",
+      "after": "seedream4_5",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 title-page footer prints the typewriter URL https://seed.bytedance.com/zh/seedream4_5 with a real underscore (verified at 400 dpi); OCR inserted a Markdown escape."
+    },
+    {
+      "before": "during long-term distributed training.",
+      "after": "during long-term distributed training.\n\n$^{1}$ https://www.doubao.com/chat/create-image\n\n$^{2}$ https://jimeng.jianying.com/ai-tool/image/generate",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 prints two footnote bodies at the page bottom below the sentence ending '...during long-term distributed training.' (verified at 400 dpi): 1 https://www.doubao.com/chat/create-image and 2 https://jimeng.jianying.com/ai-tool/image/generate. The printed page carries no superscript markers in the body (orphaned footnotes in the PDF itself), so the bodies were restored as printed without adding in-text markers."
+    },
+    {
+      "before": "Figure 3 Results from the Artificial Analysis Arena $^{1}$ : Seedream 4.0 leads in both the Text-to-Image and Image Editing tracks.",
+      "after": "Figure 3 Results from the Artificial Analysis Arena $^{1}$ : Seedream 4.0 leads in both the Text-to-Image and Image Editing tracks.\n\n$^{1}$ Data as of 17:00 (Beijing Time), September 18. https://artificialanalysis.ai/text-to-image/arena?tab=Leaderboard",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Physical p.7 prints the footnote body '1Data as of 17:00 (Beijing Time), September 18. https://artificialanalysis.ai/text-to-image/arena?tab=Leaderboard' (verified at 400 dpi); the OCR kept the $^{1}$ marker in the Figure 3 caption but dropped the body."
+    }
+  ],
+  "unresolved": []
+}

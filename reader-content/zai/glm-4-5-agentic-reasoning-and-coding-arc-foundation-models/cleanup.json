@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "zai:glm-4-5-agentic-reasoning-and-coding-arc-foundation-models",
+  "source_sha256": "b5eec92371521f580779dc450261728091cc4a004cc5862a0204efab478d5b07",
+  "ocr_sha256": "8b94b33843faf9dde26c9087e7c5a562152e911661481958edba5d0c3cbc96dd",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "Automated word-level diff of extracted text from all 26 physical PDF pages against the normalized OCR markdown (order-insensitive whole-document matching), plus a code-fence balance check (2 balanced txt fences) and a heading audit (all #-lines sit inside the prompt-box fences, no spurious headings). Footnote bodies 1-6 are the only systematic droppage: markers $^{1}$-$^{6}$ survive inline while every body is missing. Weather-demo text on p.7, axis ticks on p.8-9, and per-interaction token numbers on p.19 are figure-internal text covered by embedded figure images. Footnote bodies transcribed from the PDF text layer and visually verified on 300-dpi renders of the bottom strips of physical pages 12, 16 and 19."
+  },
+  "patches": [
+    {
+      "before": "to enhance flexibility, efficiency, and extensibility.",
+      "after": "to enhance flexibility, efficiency, and extensibility.\n\n$^{1}$ https://github.com/THUDM/slime",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 bottom strip (300 dpi visual check) prints footnote 1 as a monospace URL \"https://github.com/THUDM/slime\" below the RL-infrastructure paragraph whose \"Slime^1\" marker survives in the OCR; the body was dropped."
+    },
+    {
+      "before": "is close to DeepSeek-R1-0528.",
+      "after": "is close to DeepSeek-R1-0528.\n\n$^{2}$ LiveCodeBench is a dynamic benchmark and we evaluate on problems between 7/1/2024 and 1/1/2025.\n\n$^{3}$ https://github.com/zai-org/glm-simple-evals\n\n$^{4}$ https://artificialanalysis.ai",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 bottom strip (300 dpi visual check) prints footnotes 2-4: \"LiveCodeBench is a dynamic benchmark and we evaluate on problems between 7/1/2024 and 1/1/2025.\", \"https://github.com/zai-org/glm-simple-evals\", \"https://artificialanalysis.ai\". The OCR kept markers $^{2}$, $^{3}$ and $^{4}$ in the reasoning-evaluation paragraph but dropped all three bodies."
+    },
+    {
+      "before": "the same expert followed consistent interaction strategies across all models.",
+      "after": "the same expert followed consistent interaction strategies across all models.\n\n$^{5}$ https://github.com/anthropics/claude-code\n\n$^{6}$ The detailed task descriptions and all evaluation trajectories of CC-Bench are available at https://huggingface.co/datasets/zai-org/CC-Bench-trajectories",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 bottom strip (300 dpi visual check) prints footnotes 5-6: \"https://github.com/anthropics/claude-code\" and \"The detailed task descriptions and all evaluation trajectories of CC-Bench are available at https://huggingface.co/datasets/zai-org/CC-Bench-trajectories\" (URL wraps after https:// in print). The OCR kept markers $^{5}$ and $^{6}$ in the CC-Bench setup paragraph but dropped both bodies."
+    }
+  ],
+  "unresolved": []
+}

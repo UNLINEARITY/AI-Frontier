@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-pro-model-card",
+  "source_sha256": "9a1734bc3aa310691772d1756990b01383dc7732d4f9cb0a2888e2e06a7f84d8",
+  "ocr_sha256": "3fad83464f7e22845f73b72c8684d4332b2c6b61a73ea190c660f990eb4a5362",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "coverage": "complete",
+    "notes": "All 10 physical pages' extracted text was block-compared against the OCR markdown after normalization; the prose sections are fully present and the physical p.10 Frontier Safety table was cell-by-cell verified against the page text layer and render. The physical p.5 benchmark table has no PDF text layer (printed as an image), so its 146 cells were checked against a 130 dpi render: all values match, but OCR glued the stacked two-line cells, repaired here with <br> following the established gemini-3-7-flash-model-card precedent. Physical p.6 was rendered to confirm 'Intended Usage and Limitations' is a section heading at the same level as its siblings. Kept without patches: the leading '## Gemini 3 Pro Model Card' duplicate of the reader title and the pipeline-style '# Gemini 3 Pro - Model Card' line (same pattern as the Gemini 3 Pro Image card); 'Machine Learning R&D' and 'CCL not reached' cell line wraps are plain wrapping; the tiny OmniDocBench 1.5 description sub-label read as 'OCR' is consistent with the benchmark name and was not re-patched."
+  },
+  "patches": [
+    {
+      "before": "No toolsWith search and code execution",
+      "after": "No tools<br>With search and code execution",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (viewed) Humanity's Last Exam row: the method sub-column prints 'No tools' and 'With search and code execution' on two lines; the Gemini 3 Pro column prints '37.5%' above '45.8%'; the Gemini 2.5 Pro, Claude Sonnet 4.5 and GPT-5.1 columns print '21.6%', '13.7%', '26.5%' with an em-dash-only second sub-row. OCR glued each pair."
+    },
+    {
+      "before": "37.5%45.8%",
+      "after": "37.5%<br>45.8%",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row as the previous patch; two stacked sub-rows on p.5."
+    },
+    {
+      "before": "21.6%—",
+      "after": "21.6%<br>—",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row; value over em-dash placeholder on two lines."
+    },
+    {
+      "before": "13.7%—",
+      "after": "13.7%<br>—",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row; value over em-dash placeholder on two lines."
+    },
+    {
+      "before": "26.5%—",
+      "after": "26.5%<br>—",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row; value over em-dash placeholder on two lines."
+    },
+    {
+      "before": "No toolsWith code execution",
+      "after": "No tools<br>With code execution",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 AIME 2025 row: method sub-column prints 'No tools' and 'With code execution' on two lines; model columns print two stacked values ('95.0%'/'100%', '88.0%'/'—', '87.0%'/'100%', '94.0%'/'—'). OCR glued each pair."
+    },
+    {
+      "before": "95.0%100%",
+      "after": "95.0%<br>100%",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row as the previous patch; two stacked sub-rows on p.5."
+    },
+    {
+      "before": "88.0%—",
+      "after": "88.0%<br>—",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row; value over em-dash placeholder."
+    },
+    {
+      "before": "87.0%100%",
+      "after": "87.0%<br>100%",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row; two stacked values."
+    },
+    {
+      "before": "94.0%—",
+      "after": "94.0%<br>—",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row; value over em-dash placeholder."
+    },
+    {
+      "before": "128k (average)1M (pointwise)",
+      "after": "128k (average)<br>1M (pointwise)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 MRCR v2 (8-needle) row: the method sub-column prints '128k (average)' and '1M (pointwise)' on two lines; model columns print two stacked values ('77.0%'/'26.3%', '58.0%'/'16.4%', '47.1%'/'not supported', '61.6%'/'not supported'). OCR glued each pair."
+    },
+    {
+      "before": "77.0%26.3%",
+      "after": "77.0%<br>26.3%",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row as the previous patch; two stacked sub-rows on p.5."
+    },
+    {
+      "before": "58.0%16.4%",
+      "after": "58.0%<br>16.4%",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row; two stacked values."
+    },
+    {
+      "before": "47.1%not supported",
+      "after": "47.1%<br>not supported",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row; value over 'not supported'."
+    },
+    {
+      "before": "61.6%not supported",
+      "after": "61.6%<br>not supported",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Same row; value over 'not supported'."
+    },
+    {
+      "before": "Acceleration level 1 Automation level 1",
+      "after": "Acceleration level 1<br>Automation level 1",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 (viewed) Machine Learning R&D row: the CCL cell prints 'Acceleration level 1' and 'Automation level 1' on two separate lines; OCR glued them into one run-on cell."
+    },
+    {
+      "before": "Instrumental Reasoning Levels 1 + 2",
+      "after": "Instrumental Reasoning<br>Levels 1 + 2",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 (viewed) Misalignment (Exploratory) row: the CCL cell prints 'Instrumental Reasoning' and 'Levels 1 + 2' on two separate lines; OCR glued them."
+    },
+    {
+      "before": "# Intended Usage and Limitations\n",
+      "after": "## Intended Usage and Limitations\n",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 (viewed): 'Intended Usage and Limitations' is the same style of centered section heading as 'Ethics and Content Safety' (which OCR correctly read as '##'); OCR gave this one heading depth 1. Restores consistent sibling depth."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "id": "amazon:nova-premier-frontier-safety-report",
+  "source_sha256": "cf207a47a6cc6ea439ceb235ee8a9776d83fa0d192bc7b1c2e1d716ecfad4559",
+  "ocr_sha256": "1db1383ffeb632af278dfd90c0cb64fca1edd982d7fd91b4fc48a4d705871092",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "coverage": "complete",
+    "notes": "Code-fence scan: no fences in this document. Automated normalized page-text diff over all 10 physical pages (running-header merges, chart-internal axis/legend text and the p.1 margin arXiv stamp ignored per corpus-wide convention), sentence-level diff of figure captions, benchmark numbers, acknowledgements and references (all present, including the printed 'mean solve rate rise' grammar and figure callouts), plus visual review of rendered physical p.7 (full page at 110 dpi, trace-banner crop at 300 dpi, 'priroritize' crop at 400 dpi) and p.8 trace label via the PDF text layer. Trace-excerpt quote transcripts are complete; spacing after inline math (e.g. '$768 \\times 1600$ ,') is repaired by the shared OCR normalizer rather than a document patch."
+  },
+  "patches": [
+    {
+      "before": "## 1. Embedding Repair and Recovery",
+      "after": "**1. Embedding Repair and Recovery**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (110 dpi full page plus 300 dpi crop, visually reviewed): '1. Embedding Repair and Recovery' is printed as a bold run-in task header under Section 5.1, not a document section heading; the OCR promoted it to a Markdown heading, colliding with the report's own numbered outline (1 Introduction ... 6 Acknowledgements). Demoted to the printed bold text."
+    },
+    {
+      "before": "## Trace Excerpt: Embedding Repair and Recovery",
+      "after": "**Trace Excerpt: Embedding Repair and Recovery**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (300 dpi crop, visually reviewed): 'Trace Excerpt: Embedding Repair and Recovery' is the white-on-black banner printed at the top of the boxed model-trace excerpt, not a document section heading. Demoted to bold text."
+    },
+    {
+      "before": "## 2. Training Pipeline Optimization",
+      "after": "**2. Training Pipeline Optimization**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7: '2. Training Pipeline Optimization' is printed as a bold run-in task header under Section 5.1; the OCR promoted it to a Markdown heading. Demoted to the printed bold text."
+    },
+    {
+      "before": "## Trace Excerpt: Training Pipeline Optimization",
+      "after": "**Trace Excerpt: Training Pipeline Optimization**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Physical p.7 prints this label as the white-on-black banner of the second boxed trace excerpt (both Trace Excerpt banners on p.7 confirmed in the rendered page); the OCR promoted it to a Markdown heading. Demoted to bold text."
+    },
+    {
+      "before": "## 3. Restricted Masked Language Model (MLM)",
+      "after": "**3. Restricted Masked Language Model (MLM)**",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 tail prints '3. Restricted Masked Language Model (MLM)' as a bold run-in task header under Section 5.1 (same style as items 1 and 2); the OCR promoted it to a Markdown heading. Demoted to the printed bold text."
+    },
+    {
+      "before": "## Trace Excerpt: Restricted MLM",
+      "after": "**Trace Excerpt: Restricted MLM**",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints 'Trace Excerpt: Restricted MLM' as the white-on-black banner of the boxed trace excerpt; the OCR promoted it to a Markdown heading. Demoted to bold text."
+    },
+    {
+      "before": "did not prioritize component-level weight surgery",
+      "after": "did not priroritize component-level weight surgery",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 paragraph read at 400 dpi prints '... evaluation & did not priroritize component-level weight surgery or targeted re-initialisation.' — the report itself misspells 'priroritize'; the OCR silently auto-corrected it. Restored the printed spelling."
+    }
+  ],
+  "unresolved": []
+}

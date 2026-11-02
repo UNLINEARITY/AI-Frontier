@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "id": "google:medgemma-technical-report",
+  "source_sha256": "f9849790a0f9c140edd0b86ab8a804d3ef0e9716edbbd591dcd581270ac98124",
+  "ocr_sha256": "927d0d8e87da68fd9a171959fe449d8ac7046c2973094eb1e62fac2755890c7a",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      12,
+      13,
+      33,
+      55,
+      56,
+      57,
+      58
+    ],
+    "coverage": "partial",
+    "notes": "Triage pass within a fixed time budget. Full structural scan of all 845 OCR lines (zero code fences; heading inventory checked against the PDF). Full-document automated droppage scan: per-page normalized 4-gram containment of PDF text vs OCR markdown, then sentence-level 6-gram inspection of every low-hit page - the only prose droppage found is the Appendix E opening block on physical p.55 (restored here); remaining low scores trace to flattened longtable cells (A2-A8) and figure-internal chart text. Line-by-line reading covered the section 4 figure region and appendices A2-F; references (physical pp.23-25) were checked by DOI and URL set comparison (all 6 DOIs and all non-line-wrapped URLs match; no dropped entries detected) rather than line-by-line. Pages 12-13 and 33, 55, 58 were rendered and visually inspected; p.56-57 verified against the text layer consistent with the p.55/p.58 renders. No spaced-digit garbles, no \\_ escapes outside bullet prefixes (bullet style not treated as a defect), no footnote apparatus in this source. The 'General purpose benchmarks' paragraph split around the Figure 2 bubble text matches physical page order and was left in place. Table 5's caption is emitted as the first row of its table while Table 6's caption is a separate line; both match the print's longtable rendering and were left unchanged."
+  },
+  "patches": [
+    {
+      "before": "</table>\n\n<table><tr><td>MedGemma 27B output</td></tr>",
+      "after": "</table>\n\n## E. Additional medical reasoning examples\n\nTables A10, A11, A12 and A13 show additional medical reasoning examples, with clinical commentary, in the same form as Tables 5 and 6.\n\n<table><tr><td>Table A10 | Example of MedGemma 27B open clinical reasoning in a cardiology setting, including commentary by a US board-certified practicing cardiologist</td></tr><tr><td>Prompt</td></tr><tr><td>A 55-year old woman with active smoking history, type II diabetes, hypertension, history of coronary artery disease was recently hospitalized for heart failure with an ejection fraction of 35%. She is presenting for follow-up post discharge. Her discharge medications included lisinopril 10 mg daily, carvedilol 2.5 mg twice daily, and eplerenone 25 mg daily, in addition to her usual medications for diabetes. In clinic, she reports feeling symptomatic with dyspnea after going up 1 flight of stairs though is asymptomatic at rest. Vital signs at rest: BP 130/90, HR 75, RR 10, Temperature 97.2F, SpO2 98% on room air. Labs are remarkable for Na 132 mEq/L, K 4.9 mEq/L, BUN 22 mg/dL, Cr 1.04 mg/dL. The patient reports having a friend on Entresto. Please review whether Entresto is indicated in this patient and why or why not.</td></tr></table>\n\nTable A10 – Continued from previous page\n\n<table><tr><td>MedGemma 27B output</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        55,
+        56
+      ],
+      "evidence": "Rendered physical p.55 shows the entire dropped opening block of Appendix E: the heading \"E. Additional medical reasoning examples\", the intro sentence \"Tables A10, A11, A12 and A13 show additional medical reasoning examples, with clinical commentary, in the same form as Tables 5 and 6.\", the caption \"Table A10 | Example of MedGemma 27B open clinical reasoning in a cardiology setting, including commentary by a US board-certified practicing cardiologist\", and the full Prompt row (55-year old woman, Entresto question), ending \"Continued on next page\". The OCR jumps straight from Table A9's table to Table A10's output rows (physical p.56). The patch restores the printed text verbatim from the rendered page (heading depths follow the sibling \"## D.\"/\"## F.\" headings; the caption+prompt is one table row group matching the document's Table 5/A11 convention) and moves the longtable continuation marker \"Table A10 – Continued from previous page\" (printed at the top of physical p.56) in front of the output table it belongs to."
+    },
+    {
+      "before": "Table A10 – Continued from previous page\n\n<table><tr><td>Table A11 | Example",
+      "after": "<table><tr><td>Table A11 | Example",
+      "count": 1,
+      "pdf_pages": [
+        56
+      ],
+      "evidence": "Removes the stray continuation marker \"Table A10 – Continued from previous page\" that the OCR emitted after Table A10's output table; the rendered p.56 top shows this marker belongs before the continued output rows (re-inserted at the correct position by the previous patch). Suffix pins the match to the stray copy only."
+    },
+    {
+      "before": "## Prompt",
+      "after": "Prompt",
+      "count": 6,
+      "pdf_pages": [
+        12,
+        13
+      ],
+      "evidence": "Rendered physical p.12 (whole page is Figure 2, \"Example of CXR and dermatology image dialogue via open-ended question answering with MedGemma 4B\") shows \"Prompt\" is a bold bubble label inside each figure panel, repeated for every dialogue turn, not a document heading. The OCR promoted all six panel labels to \"##\" headings between sections 3.7 and 4; they are demoted to plain text. Panel images and dialogue text are unchanged."
+    },
+    {
+      "before": "## MedGemma\n",
+      "after": "MedGemma\n",
+      "count": 6,
+      "pdf_pages": [
+        12,
+        13
+      ],
+      "evidence": "Same Figure 2 evidence as the Prompt demotion: \"MedGemma\" (rendered p.12, colored label with paperclip-marked turns in each panel) is figure-internal and appears six times as a spurious heading; demoted to plain text. The newline in the match keeps \"## MedGemma 27B output\" (Appendix Table A12 cell label, patched separately) out of the count."
+    },
+    {
+      "before": "## Reference Information: Radiologist Impression",
+      "after": "Reference Information: Radiologist Impression",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 shows \"Reference Information: Radiologist Impression\" as the bold label of the radiologist-reference bubble inside Figure 2 panel 1 (and panel 2); the OCR promoted panel 1's label to a heading while panel 2's identical label is already plain text. Demoted to plain text to match the print and the sibling panel."
+    },
+    {
+      "before": "## Reference Information:",
+      "after": "Reference Information:",
+      "count": 2,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 shows \"Reference Information:\" as the bold bubble label above \"Dermatologist suspicion BCC\" and \"Dermatologist suspicion insect bite\" in Figure 2's dermatology panels. Demoted from \"##\" headings to plain text. Applied after the \"Radiologist Impression\" patch, whose line this pattern is a prefix of, so the post-patch count is exactly 2."
+    },
+    {
+      "before": "## Table A12 - Continued from previous page",
+      "after": "Table A12 – Continued from previous page",
+      "count": 1,
+      "pdf_pages": [
+        58
+      ],
+      "evidence": "Rendered physical p.58 top shows the longtable continuation header \"Table A12 – Continued from previous page\" (en dash, italic, inside the continued Table A12) printed as a table row, not a document heading; the OCR emitted it as a \"##\" heading with an ASCII hyphen. Demoted to plain text with the printed en dash."
+    },
+    {
+      "before": "## MedGemma 27B output",
+      "after": "MedGemma 27B output",
+      "count": 1,
+      "pdf_pages": [
+        58
+      ],
+      "evidence": "Rendered physical p.58 top shows \"MedGemma 27B output\" as a bold cell label inside the continued Table A12, above the model's rationale text. Demoted from a spurious \"##\" heading to plain text, matching how the same label is emitted inside Tables A10/A11."
+    },
+    {
+      "before": "## Rationale Breakdown:",
+      "after": "Rationale Breakdown:",
+      "count": 1,
+      "pdf_pages": [
+        58
+      ],
+      "evidence": "Rendered physical p.58 top shows \"Rationale Breakdown:\" as a bold cell label inside the continued Table A12, followed by the numbered rationale list (kept as-is). Demoted from a spurious \"##\" heading to plain text."
+    },
+    {
+      "before": "## Table A2 | MedSigLIP Class Definitions",
+      "after": "Table A2 | MedSigLIP Class Definitions",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 shows \"Table A2 | MedSigLIP Class Definitions\" as a bold table caption line (pipe format identical to sibling captions \"Table A3 |\", \"Table A4 |\", \"Table A5 |\", which the OCR kept as plain text), followed by the sentence \"Classes for the findings that MedSigLIP was evaluated on.\". Demoted from a spurious \"##\" heading to a plain caption line."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "flattened-appendix-prompt-tables",
+      "pdf_pages": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "evidence": "Tables A2-A8 are emitted as HTML with column interleaving and glued cell text (e.g. 'no atelectasisno acute cardiopulmonary process', prompt lists concatenated per class). The automated page diff flags these pages, but inspection shows the content is present in flattened form; a cell-boundary rebuild needs page-by-page rendered comparison before changing recorded prompt text."
+    },
+    {
+      "id": "figure2-bubble-flow-order",
+      "pdf_pages": [
+        11,
+        12,
+        13
+      ],
+      "evidence": "The section 4 paragraph 'General purpose benchmarks: ... we also evaluated for possible tradeoffs' ends physical p.11, Figure 2 occupies p.12, and the sentence resumes 'of specialization. Models were evaluated on MMLU Pro...' below the figure on p.12-13. The OCR preserves this physical order, so after demoting the bubble labels the reader flow matches the print; a cleaner reading order would require moving the whole figure block, which exceeds a minimal patch."
+    }
+  ]
+}

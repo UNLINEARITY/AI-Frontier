@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseekmath-pushing-the-limits-of-mathematical-reasoning-in-open-language-models",
+  "source_sha256": "6cc20b3c5b8d25b8b53868fc4ec1792c144f07d67bdf7395138efd4422197e7b",
+  "ocr_sha256": "dbec0cd4954ac7e575adc173d11fce2d3c487921eb784edf7370ff5b82b1e79c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level pass of all 30 physical PDF pages; physical pages 4, 10, 11 and 22 were rendered and visually checked. All seven printed footnote bodies (URLs) were dropped while their superscript markers survived. Remaining token deltas are soft-hyphen splits, figure-internal axis labels (Figures 1, 2, 7, 8) and reference URL line-break artifacts that the markdown already joins correctly."
+  },
+  "patches": [
+    {
+      "before": "and the number of training epochs to 3.",
+      "after": "and the number of training epochs to 3.\n\n1 https://fasttext.cc",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 footnote rule prints \"1https://fasttext.cc\" below the paragraph using the fastText classifier; the $^{1}$ marker survived on 'open-source library $^{1}$' but the URL body was dropped."
+    },
+    {
+      "before": "(6) the latest GLM-4 $^{5}$ from the GLM family (Du et al., 2022). These models are for general purposes, most of which have undergone a series of alignment procedures.",
+      "after": "(6) the latest GLM-4 $^{5}$ from the GLM family (Du et al., 2022). These models are for general purposes, most of which have undergone a series of alignment procedures.\n\n2 https://openai.com/blog/chatgpt-plugins#code-interpreter\n\n3 https://x.ai/model-card\n\n4 https://www.baichuan-ai.com\n\n5 https://open.bigmodel.cn/dev/api#glm-4",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 footnote block prints \"2https://openai.com/blog/chatgpt-plugins#code-interpreter, 3https://x.ai/model-card, 4https://www.baichuan-ai.com, 5https://open.bigmodel.cn/dev/api#glm-4\"; the $^{2}$-$^{5}$ markers survived in the Closed-source models bullet but all four URL bodies were dropped."
+    },
+    {
+      "before": "(10) MAmmoTH 70B (Yue et al., 2023) which is Llama-2 70B instruction-tuned on MathInstruct.",
+      "after": "(10) MAmmoTH 70B (Yue et al., 2023) which is Llama-2 70B instruction-tuned on MathInstruct.\n\n6 https://github.com/InternLM/InternLM-Math",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 footnote rule prints \"6https://github.com/InternLM/InternLM-Math\"; the $^{6}$ marker survived on 'InternLM2-Math 20B $^{6}$' but the URL body was dropped. Appended after the sentence that ends the anchored model list."
+    },
+    {
+      "before": "approximately 20% of incorrectly annotations $^{7}$ .",
+      "after": "approximately 20% of incorrectly annotations $^{7}$ .\n\n7 https://github.com/openai/prm800k/issues/12#issuecomment-1728491852",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.22 footnote rule prints \"7https://github.com/openai/prm800k/issues/12#issuecomment-1728491852\"; the $^{7}$ marker survived on 'incorrectly annotations $^{7}$' but the URL body was dropped."
+    }
+  ],
+  "unresolved": []
+}

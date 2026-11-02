@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseekmoe-towards-ultimate-expert-specialization-in-mixture-of-experts-language-models",
+  "source_sha256": "a64b509e1410d09cf5b70570788d27790985fb9808ce436b9da8de73f2eed651",
+  "ocr_sha256": "073e1ba3188ec8fbee100cbc655cd84372e11cd4c2853e475477b72b0547662f",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level pass of all 33 physical PDF pages; physical pages 1, 3 and 8 were rendered and visually checked. The author-contribution footnote and both printed footnote URLs were dropped while their markers survived. Remaining token deltas are soft-hyphen splits, figure-internal axis labels (Figures 2, 5, 6, 9) and reference DOI/URL line-break artifacts that the markdown already joins correctly."
+  },
+  "patches": [
+    {
+      "before": "https://github.com/deepseek-ai/DeepSeek-MoE\n\n## Abstract",
+      "after": "https://github.com/deepseek-ai/DeepSeek-MoE\n\n*Contribution during internship at DeepSeek-AI.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote rule prints \"*Contribution during internship at DeepSeek-AI.\" below the author block; the asterisk markers survive on the author names ($^{*1,2}$ etc.) but the note was dropped."
+    },
+    {
+      "before": "the evaluation results on the Open LLM Leaderboard $^{1}$ .",
+      "after": "the evaluation results on the Open LLM Leaderboard $^{1}$ .\n\n1 https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 footnote rule prints \"1https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard\"; the $^{1}$ marker survived on 'Open LLM Leaderboard $^{1}$' but the URL body was dropped."
+    },
+    {
+      "before": "we utilize the HuggingFace Tokenizer $^{2}$ tools to train byte pair encoding (BPE) (Sennrich et al., 2016) tokenizers on a smaller subset of the training corpus.",
+      "after": "we utilize the HuggingFace Tokenizer $^{2}$ tools to train byte pair encoding (BPE) (Sennrich et al., 2016) tokenizers on a smaller subset of the training corpus.\n\n2 https://github.com/huggingface/tokenizers",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 footnote rule prints \"2https://github.com/huggingface/tokenizers\"; the $^{2}$ marker survived on 'HuggingFace Tokenizer $^{2}$ tools' but the URL body was dropped."
+    }
+  ],
+  "unresolved": []
+}

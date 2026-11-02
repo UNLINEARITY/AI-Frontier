@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-oss-safeguard-technical-report",
+  "source_sha256": "78d848f22ff168a555372a888cf833e7c816b8fcbe522c2cb834a13aad45b8bc",
+  "ocr_sha256": "dcc203793e352d8b3f3d7abcaa83ce21284bf8e0d9f5bcea2c4e71e917e5655b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "coverage": "complete",
+    "notes": "All 10 physical pages' extracted text was block-compared against the OCR markdown after normalization, plus a whole-document numeric multiset check. The only numbers absent from the OCR are the printed Contents dot-leader page references (readable in the OCR Contents block) and printed page footers, which is correct. All 10 tables are present with sound structure; physical p.4 was rendered at 110 dpi and visually checked, confirming Tables 1-2 values (46.3/43.6/52.2/43.2/32.5/32.1 and the F1 columns) match the OCR exactly. The printed caption typo 'ToxicChat evaulations' is faithfully preserved. No images exist in the PDF and no headings, body blocks or reference entries are dropped. No transcription defects; no patches."
+  },
+  "patches": [],
+  "unresolved": []
+}

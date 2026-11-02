@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:phi-1-5",
+  "source_sha256": "a3d7c7677fed61c6acb442d54f753cf179307c65545af60b1eee917c29c24d7f",
+  "ocr_sha256": "d2e64a5db74e197f62be925d72b0d52d1c87a344d5af08f824ca2a2a23d5edf7",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "coverage": "complete",
+    "notes": "All 16 physical pages screened by column-aware PDF-text line diff plus a full structure scan (13 balanced fenced transcript blocks; Tables 1-4 present with captions). The single dropped footnote (p.3) was restored after a 320-dpi render check. Model transcripts (sections 5's Q&A/python examples) are transcribed as fenced code and were left unchanged; their content matches the boxed print examples in reading order. Remaining unmatched PDF lines are figure-internal legend labels (\"phi-1.5 (1.3B)\", \"Llama 2-7B\", \"falcon-rw-*\" on pp.1 and 7), table bodies (verified present as HTML tables on pp.2, 4, 5) and reference wrap continuations (pp.14-15, incl. [PRR19]'s diacritics which are correct in the OCR). No spurious headings: the model-generated \"# Plotting the histograms\" line at OCR line 258 sits inside a python fence and is part of the transcript."
+  },
+  "patches": [
+    {
+      "before": "with 80% from the newly created synthetic data and 20% from phi-1's training data.",
+      "after": "with 80% from the newly created synthetic data and 20% from phi-1's training data.\n\n$^{1}$The training configuration is intentionally kept straightforward to emphasize the significance of our data.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 (320 dpi crop of the footnote rule) prints \"1The training configuration is intentionally kept straightforward to emphasize the significance of our data.\"; the OCR kept the $^{1}$ marker after \"constant learning rate 2e-4 (no warm up)\" in section 2.3 but dropped the footnote body."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table-values-not-value-checked",
+      "pdf_pages": [
+        2,
+        4,
+        5
+      ],
+      "evidence": "Tables 1-4 cell values were compared structurally only (rows/columns match), not number-by-number against the print."
+    }
+  ]
+}

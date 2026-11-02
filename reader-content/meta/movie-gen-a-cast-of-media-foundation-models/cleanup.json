@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "id": "meta:movie-gen-a-cast-of-media-foundation-models",
+  "source_sha256": "60fd60a970245ec8e8fda77f04cf6ca0322b8eff5174da8faf28477a035075e5",
+  "ocr_sha256": "1eb5ca78ea86f93756f57a6b9974f64262b8b79436132ffb8cf8d9cfcef8e30b",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      7,
+      11,
+      12,
+      14,
+      24,
+      26,
+      29,
+      35,
+      37,
+      38,
+      39,
+      42,
+      46,
+      49,
+      53,
+      54,
+      57,
+      58,
+      60,
+      61,
+      62,
+      63,
+      80,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      92,
+      96
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 96-page report within a hard time budget. Complete scans: code-fence structure (one balanced prompt-box fence at the section 6.2.4 example; no swallowed content), the full OCR heading list against the print, a normalized 4-gram containment diff of every PDF page against the OCR markdown with block-level triage of all 27 low-hit pages, and a numeric diff of every PDF-page number against the OCR (only figure-internal chart values and the arXiv cover stamp are absent from the OCR, which is correct since those live inside embedded figures). Pages listed in pages_reviewed received block-level inspection or patch verification; all remaining pages were covered by the machine diff only, not line-by-line reading. All six patches were verified against rendered pages (200-300 dpi): physical p.7 equation (1), p.53 Table 28 (two crops), p.80 and p.86 lead lines. 'Frechet' audio distance on physical p.54 and 'September 23th' in the Table 41 caption on p.84 match the print's own spellings and were left unchanged. Citation punctuation spacing after inline math is handled by the shared OCR normalizer, not a patch."
+  },
+  "patches": [
+    {
+      "before": "t \\left. \\mathbf {X} _ {1} + (1 - (1 - \\sigma_ {\\mathrm{min}}) t)\\right) \\mathbf {X} _ {0}",
+      "after": "t \\mathbf {X} _ {1} + (1 - (1 - \\sigma_ {\\mathrm{min}}) t) \\mathbf {X} _ {0}",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Flow Matching interpolation equation prints X_t = t X_1 + (1 - (1 - sigma_min)t) X_0, with a single closing parenthesis (visually verified at 300 dpi). The OCR inserted a stray \\left. ... \\right) delimiter pair that renders an extra ')' before X_0."
+    },
+    {
+      "before": "Overall quality (Ovr.)Naturalness (Nat.)Professionalness (Pro.)",
+      "after": "Overall quality (Ovr.)<br>Naturalness (Nat.)<br>Professionalness (Pro.)",
+      "count": 1,
+      "pdf_pages": [
+        53
+      ],
+      "evidence": "Rendered physical p.53 Table 28 prints the three subjective audio-quality metrics on separate lines inside the Audio quality row (visually verified at 200 dpi); OCR concatenated them into one run-on cell string."
+    },
+    {
+      "before": "Diegetic sound correctness (Corr.)Diegetic sound synchronization (Sync.)Non-diegetic music mood alignment (Mood)Non-diegetic music motion/scene alignment (Action)",
+      "after": "Diegetic sound correctness (Corr.)<br>Diegetic sound synchronization (Sync.)<br>Non-diegetic music mood alignment (Mood)<br>Non-diegetic music motion/scene alignment (Action)",
+      "count": 1,
+      "pdf_pages": [
+        53
+      ],
+      "evidence": "Rendered physical p.53 Table 28 prints the four video-alignment metrics on four separate lines inside the Video alignment row (visually verified at 200 dpi); OCR glued them into one run-on cell string."
+    },
+    {
+      "before": "PrecisionRecall",
+      "after": "Precision<br>Recall",
+      "count": 1,
+      "pdf_pages": [
+        53
+      ],
+      "evidence": "Rendered physical p.53 Table 28 prints Precision and Recall on two separate lines inside the Text alignment row (visually verified at 200 dpi); OCR glued them into one run-on cell string."
+    },
+    {
+      "before": "## Overlapping communication and computation.\n\nWhile the parallelism techniques",
+      "after": "Overlapping communication and computation.\n\nWhile the parallelism techniques",
+      "count": 1,
+      "pdf_pages": [
+        80
+      ],
+      "evidence": "Rendered physical p.80 (appendix A.2) prints 'Overlapping communication and computation.' as a bold standalone lead line (OptimisticDisp-Bd span confirmed), not a numbered section heading. Promoting it to '##' inverts the reader heading hierarchy above its parent 'A.2 Model scaling and training efficiency'; the demotion keeps the printed standalone-line layout as plain text, matching how every other bold lead in this document (e.g. 'Inference.', 'Qualitative Results.') is transcribed."
+    },
+    {
+      "before": "## We make several observations\n\n",
+      "after": "We make several observations\n\n",
+      "count": 1,
+      "pdf_pages": [
+        86
+      ],
+      "evidence": "Rendered physical p.86 (appendix C.3.2) prints 'We make several observations' as a plain roman (SFRM1000 size 10, non-bold) standalone sentence before a bullet list - visually verified at 220 dpi. It is not a heading in the print; the '##' promotion inverts the reader heading hierarchy above its parent 'C.3.2 Item-level correlations'."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table18-footnote-merged-into-caption",
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "The source footnote 'Runway Gen3 Video-to-Video videos were collected on September 24th, 2024.' (marker 3 on 'Video-to-Video' in the body, which survives inline) is folded into the Table 18 caption text instead of staying a separate footnote; content is present, only the presentation differs."
+    },
+    {
+      "id": "rowspan-table-cell-layout",
+      "pdf_pages": [
+        14,
+        24,
+        42,
+        89,
+        90,
+        91,
+        92
+      ],
+      "evidence": "Large rowspan/colspan HTML tables (e.g. Tables 2, 6-8, 18, 30-31, 35) flatten row structure; every printed numeric value was confirmed present via the numeric diff, but cell-by-cell layout of these tables was not compared line-by-line against renders."
+    }
+  ]
+}

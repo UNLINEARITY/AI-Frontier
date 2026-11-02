@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nvidia-nemotron-nano-2-an-accurate-and-efficient-hybrid-mamba-transformer-reasoning-model",
+  "source_sha256": "e526cf5c529a8c1732f3db1c47d931bf49f3470c15f14bf82d0791c6d0ad37e0",
+  "ocr_sha256": "ed974da16b65d051774b5e8b5f9a55724686bad36014cde3ff9d222e2da6564c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43
+    ],
+    "coverage": "complete",
+    "notes": "Word-level cross-check of all 43 physical PDF pages found no dropped body text or table content; unmatched extraction words are vector text inside chart figures (benchmark labels in Figures 1/5/6, pie percentages on p8, layer counts on p3), which the embedded figures already show. Reference section (pages 25-35) was diffed entry-by-entry, the appendix license list (pages 36-43) against printed names/keys. Pages 4, 5, 12, 13, 14, 16, 18 (600-dpi zoom), 26, 30, 32, 33, 37, 38, 40 and 42 were rendered and visually checked. Main repairs: all 14 page-bottom footnote URL bodies restored (markers had survived, bodies dropped); garbled names in the two giant reference author lists (Humanity's Last Exam, pages 30-33) including lost commas/spaces and 56 full-width commas; l->1 misread in '12-norm' (PDF text layer searches 'l2-norm' but not '12-norm'; the aggregation is the printed l2-norm with norm bars in equations on pages 18-19); license name/key misreads. W_1 on page 18 was visually re-verified at 300 dpi as the printed digit 1 and kept. The paper prints 'comparsions' (page 12) and 'Nemotron-h' (page 29) as its own spellings; the OCR had silently corrected 'comparsions' to 'comparisons', which is restored here, while 'Nemotron-h' was already faithful. Figure-internal chart text and '\\- ' bullet style were left unchanged."
+  },
+  "patches": [
+    {
+      "before": "Abdallah Galalalng Ze-AnAnkit SinghTong JiangJoan of Arc Xavier,Kanu Priya Agarwal",
+      "after": "Abdallah Galal, Ng Ze-An, Ankit Singh, Tong Jiang, Joan of Arc Xavier, Kanu Priya Agarwal",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 (300 dpi) prints 'Abdallah Galal, Ng Ze-An, Ankit Singh, Tong Jiang, Joan of Arc Xavier, Kanu Priya Agarwal'; OCR glued the names and lost the comma/space separators."
+    },
+    {
+      "before": "Jun JinScott Creighton",
+      "after": "Jun Jin, Scott Creighton",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 (300 dpi) prints 'Jun Jin, Scott Creighton' in the same author list."
+    },
+    {
+      "before": "Ragavendran PVMichael Richmond",
+      "after": "Ragavendran P V, Michael Richmond",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 (300 dpi) prints 'Ragavendran P V, Michael Richmond'."
+    },
+    {
+      "before": "Anahita Bhiwandwalla",
+      "after": "Anahita Bhiwandiwalla",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered physical p.26 (300 dpi) prints 'Anahita Bhiwandiwalla' in the Llama-Nemotron reference author list; OCR dropped the 'i' of 'Bhiwandi-'."
+    },
+    {
+      "before": "Robert Gerbiz",
+      "after": "Robert Gerbicz",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Rendered physical p.30 (300 dpi) prints 'Serguei Popov, Robert Gerbicz, Geoff Galgon' in the Humanity's Last Exam author list."
+    },
+    {
+      "before": "Gavin Jindel",
+      "after": "Kavin Jindel",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 (300 dpi) prints 'Ashley Zhang, Kavin Jindel, Jay Paek'; OCR misread K->G."
+    },
+    {
+      "before": "Michał Perelkiewicz",
+      "after": "Michał Perełkiewicz",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 (300 dpi) prints 'Michał Perełkiewicz' with the crossed ł; OCR normalized it to plain l."
+    },
+    {
+      "before": "Yiğit Yalin",
+      "after": "Yiğit Yalın",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 (300 dpi) prints 'Yiğit Yalın' with a dotless ı in the final syllable."
+    },
+    {
+      "before": "Juehang Qin, Benjamin Borbás",
+      "after": "Juehang Qin, Benjámin Borbás",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 (300 dpi) prints 'Benjámin Borbás' with the accent on the first a."
+    },
+    {
+      "before": "Pascal Lauer, Tran Duc Huy",
+      "after": "Pascal Lauer, Tran Đuc Huy",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 (300 dpi) prints 'Tran Đuc Huy' with the crossed D; the neighboring 'Emilien Duc' keeps its plain D as printed."
+    },
+    {
+      "before": "Jakub Lucki",
+      "after": "Jakub Łucki",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 (300 dpi) prints 'Jakub Łucki' with the crossed Ł."
+    },
+    {
+      "before": "12-norm",
+      "after": "l2-norm",
+      "count": 4,
+      "pdf_pages": [
+        18,
+        19
+      ],
+      "evidence": "Physical pages 18-19 print 'l2-norm' in typewriter font (600-dpi crop checked; the glyph is ambiguous to the eye, but the PDF text layer searches 'l2-norm' 2x on p.18 and returns no hit for '12-norm'), and the aggregation defined is the Euclidean norm written with norm bars ||.||_2 in the equations on pages 18-19. OCR misread the letter l as digit 1 in all 4 occurrences (2 on p.18, 2 on p.19)."
+    },
+    {
+      "before": "，",
+      "after": ", ",
+      "count": 56,
+      "pdf_pages": [
+        32,
+        33
+      ],
+      "evidence": "All 56 full-width commas sit in one OCR line of the Humanity's Last Exam author list (reference spanning printed pages 30-33); the rendered pages 32-33 print ASCII commas between author names."
+    },
+    {
+      "before": "BSD-2-Clause-plus-advertising [bsd-2-clause-plus-advertising]",
+      "after": "BSD-2-Clause-plus-advertizing [bsd-2-clause-plus-advertizing]",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered physical p.37 license list prints both the name and the key with the source spelling 'advertizing'."
+    },
+    {
+      "before": "BSLA no advertising [bsla-no-advert]",
+      "after": "BSLA no advertizing [bsla-no-advert]",
+      "count": 1,
+      "pdf_pages": [
+        38
+      ],
+      "evidence": "Rendered physical p.38 license list prints 'BSLA no advertizing [bsla-no-advert]'; 'MIT Old Style no advertising' elsewhere keeps its printed 'advertising'."
+    },
+    {
+      "before": "[mit-no-false-attributes]",
+      "after": "[mit-no-false-attribs]",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Rendered physical p.40 license list prints 'MIT no false attribution License [mit-no-false-attribs]'; the name prints 'attribution' but the bracket key prints the short 'attribs'."
+    },
+    {
+      "before": "[accelera-systemc]",
+      "after": "[accellera-systemc]",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "Rendered physical p.42 license list prints 'SystemC Open Source License Agreement [accellera-systemc]' with double l; OCR dropped one l in the key."
+    },
+    {
+      "before": "with comparisons to Qwen3-8B Base",
+      "after": "with comparsions to Qwen3-8B Base",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 (300 dpi) prints 'Nemotron-Nano-12B-v2-Base with comparsions to Qwen3-8B Base and Gemma3-12B Base' - the source's own spelling. The OCR had silently corrected it to 'comparisons'; restored to match the printed text (same policy as keeping the source's 'Evolution trough' style typos)."
+    },
+    {
+      "before": "decontaminated the dataset using LLM Decontaminator (Yang et al., 2023).\n\nThis process resulted",
+      "after": "decontaminated the dataset using LLM Decontaminator (Yang et al., 2023).\n\n$^{1}$ https://github.com/NVIDIA-NeMo/Curator\n\nThis process resulted",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom footnote block prints superscript 1 followed by https://github.com/NVIDIA-NeMo/Curator (visual check of page-bottom strip). The OCR kept the $^{1}$ marker after 'NeMo-Curator framework' but dropped the URL body; restored after the paragraph carrying the marker."
+    },
+    {
+      "before": "a question that refers to an example in the same chapter).\n\nTo expand",
+      "after": "a question that refers to an example in the same chapter).\n\n$^{2}$ https://www.stemez.com/\n\n$^{3}$ https://openstax.org\n\n$^{4}$ https://open.umn.edu/opentextbooks/\n\nTo expand",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom footnote block prints 2 https://www.stemez.com/ , 3 https://openstax.org and 4 https://open.umn.edu/opentextbooks/ (visual check). Markers $^{2}$-$^{4}$ survived in the STEM-data paragraph; the URL bodies were dropped."
+    },
+    {
+      "before": "the average scores over all the 13 tasks included in RULER.\n\nAccuracy results",
+      "after": "the average scores over all the 13 tasks included in RULER.\n\n$^{5}$ https://github.com/EleutherAI/lm-evaluation-harness.\n\n$^{6}$ https://github.com/huggingface/math-verify.\n\nAccuracy results",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Physical p.12 bottom footnote block prints 5 https://github.com/EleutherAI/lm-evaluation-harness. and 6 https://github.com/huggingface/math-verify. (text layer exact; markers $^{5}$/$^{6}$ survive on 'lm-evaluation-harness' and 'Math-Verify'); restored at the end of the evaluation-setup block that carries the markers."
+    },
+    {
+      "before": "Nemotron-Post-Training-Dataset-v1 $^{7}$ .\n\nTool calling.",
+      "after": "Nemotron-Post-Training-Dataset-v1 $^{7}$ .\n\n$^{7}$ https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v1\n\nTool calling.",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 bottom footnote block prints 7 https://huggingface.co/datasets/nvidia/Nemotron-Post-Training-Dataset-v1 (visual check); the marker $^{7}$ survived at the end of the preceding paragraph."
+    },
+    {
+      "before": "using Qwen3-235B-A22B $^{10}$ . Inspired by ToolACE",
+      "after": "using Qwen3-235B-A22B $^{10}$ .\n\n$^{8}$ https://huggingface.co/datasets/xlam-function-calling-60k\n\n$^{9}$ https://huggingface.co/datasets/glaive-function-calling-v2\n\n$^{10}$ https://huggingface.co/Qwen/Qwen3-235B-A22B\n\nInspired by ToolACE",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 bottom footnote block prints 8 https://huggingface.co/datasets/xlam-function-calling-60k , 9 https://huggingface.co/datasets/glaive-function-calling-v2 and 10 https://huggingface.co/Qwen/Qwen3-235B-A22B (visual check); markers $^{8}$-$^{10}$ survived in the tool-calling paragraph."
+    },
+    {
+      "before": "to enrich diversity of queries.\n\nThe Assistant-Agent",
+      "after": "to enrich diversity of queries.\n\n$^{11}$ https://huggingface.co/datasets/NVIDIA/Nemotron-Personas\n\nThe Assistant-Agent",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 bottom footnote block prints 11 https://huggingface.co/datasets/NVIDIA/Nemotron-Personas (visual check); the marker $^{11}$ survived after 'Nemotron-Personas'."
+    },
+    {
+      "before": "guard models to verify that outputs remained safe.\n\n## 3.2. Post Training",
+      "after": "guard models to verify that outputs remained safe.\n\n$^{12}$ https://huggingface.co/datasets/nvidia/Aegis-AI-Content-Safety-Dataset-2.0\n\n$^{13}$ https://huggingface.co/deepseek-ai/DeepSeek-R1\n\n## 3.2. Post Training",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 bottom footnote block prints 12 https://huggingface.co/datasets/nvidia/Aegis-AI-Content-Safety-Dataset-2.0 and 13 https://huggingface.co/deepseek-ai/DeepSeek-R1 (visual check); markers $^{12}$/$^{13}$ survived in the safety paragraph."
+    },
+    {
+      "before": "RULER, and ARENAHARD.\n\n## 3.4.",
+      "after": "RULER, and ARENAHARD.\n\n$^{14}$ https://github.com/NVIDIA/NeMo-Skills\n\n## 3.4.",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 bottom footnote block prints 14 https://github.com/NVIDIA/NeMo-Skills (visual check); the marker $^{14}$ survived after 'NeMo-Skills' in the evaluations paragraph."
+    }
+  ],
+  "unresolved": [
+    "Chart-internal vector text (benchmark labels of Figures 1/5/6, data-mixture percentages on p.8, layer counts on p.3) is absent from the Markdown by design; the embedded figures show it.",
+    "The two giant reference author lists contain inconsistent separator spacing (missing spaces after some ASCII commas) that was left as-is where the names themselves are intact and the text stays readable."
+  ]
+}

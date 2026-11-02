@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "id": "meta:simple-and-controllable-music-generation",
+  "source_sha256": "b513ce6c6c5dae8914591ce932b8588798f6fb7c314c52ee8281c36e766e1b83",
+  "ocr_sha256": "178360bdc2adb436cdb4f2750db1d60bc4e171af0717fbcb2517772509506c93",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of the 387-line OCR markdown against extracted text of all 17 physical pages; physical pages 5, 6, 7, 12, 14 and 15 rendered and visually inspected (footnote strips, Baselines wording, references). No code fences in the source. All 11 page-bottom footnote bodies (2-12) were dropped by OCR and are reinserted here; three Riffusion/Diffusion misreads repaired. Citation punctuation after inline math is handled by the shared normalizer. Table cell values on pages 6-11, 14-15 spot-checked against renders without finding defects; dense table arithmetic was not exhaustively re-verified."
+  },
+  "patches": [
+    {
+      "before": "We downmix the audio to mono unless stated otherwise.\n",
+      "after": "We downmix the audio to mono unless stated otherwise.\n\n$^{2}$ www.shutterstock.com/music and www.pond5.com\n",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered page visually verified; page-bottom footnote rule prints the body verbatim (300-dpi-confirmed text layer, no U+200B). The OCR markdown kept the inline superscript marker but dropped the footnote body; the body appears nowhere else in the document. Inserted after the paragraph carrying the matching marker, following the established footnote-insertion convention."
+    },
+    {
+      "before": "MusicLM [Agostinelli et al., 2023] and Noise2Music [Huang et al., 2023b].\n",
+      "after": "MusicLM [Agostinelli et al., 2023] and Noise2Music [Huang et al., 2023b].\n\n$^{3}$ Using riffusion-model-v1 from github.com/riffusion/riffusion-app (on May 10, 2023)\n$^{4}$ Implementation from github.com/archinetai/audio-diffusion-pytorch (March 2023)\n",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered page visually verified; page-bottom footnote rule prints the body verbatim (300-dpi-confirmed text layer, no U+200B). The OCR markdown kept the inline superscript marker but dropped the footnote body; the body appears nowhere else in the document. Inserted after the paragraph carrying the matching marker, following the established footnote-insertion convention."
+    },
+    {
+      "before": "official pretrained CLAP model $^{6}$ .\n",
+      "after": "official pretrained CLAP model $^{6}$ .\n\n$^{5}$ github.com/google-research/google-research/tree/master/frechet_audio_distance\n$^{6}$ https://github.com/LAION-AI/CLAP\n",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered page visually verified; page-bottom footnote rule prints the body verbatim (300-dpi-confirmed text layer, no U+200B). The OCR markdown kept the inline superscript marker but dropped the footnote body; the body appears nowhere else in the document. Inserted after the paragraph carrying the matching marker, following the established footnote-insertion convention."
+    },
+    {
+      "before": "normalized at -14dB LUFS [ITU-R, 2017].\n",
+      "after": "normalized at -14dB LUFS [ITU-R, 2017].\n\n$^{7}$ http://www.crowdmos.org/download/\n",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered page visually verified; page-bottom footnote rule prints the body verbatim (300-dpi-confirmed text layer, no U+200B). The OCR markdown kept the inline superscript marker but dropped the footnote body; the body appears nowhere else in the document. Inserted after the paragraph carrying the matching marker, following the established footnote-insertion convention."
+    },
+    {
+      "before": "from a held-out set during test time.\n",
+      "after": "from a held-out set during test time.\n\n$^{8}$ https://blog.google/technology/ai/musiclm-google-ai-test-kitchen/\n",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered page visually verified; page-bottom footnote rule prints the body verbatim (300-dpi-confirmed text layer, no U+200B). The OCR markdown kept the inline superscript marker but dropped the footnote body; the body appears nowhere else in the document. Inserted after the paragraph carrying the matching marker, following the established footnote-insertion convention."
+    },
+    {
+      "before": "rely on the same underlying audio and text encoder.\n",
+      "after": "rely on the same underlying audio and text encoder.\n\n$^{9}$ https://huggingface.co/t5-base\n$^{10}$ https://huggingface.co/google/flan-t5-base\n$^{11}$ https://huggingface.co/lukewys/laion_clap/blob/main/music_audioset_epoch_15_esc_90.14.pt\n",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered page visually verified; page-bottom footnote rule prints the body verbatim (300-dpi-confirmed text layer, no U+200B). The OCR markdown kept the inline superscript marker but dropped the footnote body; the body appears nowhere else in the document. Inserted after the paragraph carrying the matching marker, following the established footnote-insertion convention."
+    },
+    {
+      "before": "used with auto-regressive language models.\n",
+      "after": "used with auto-regressive language models.\n\n$^{12}$ Using the public implementation github.com/descriptinc/descript-audio-codec.\n",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered page visually verified; page-bottom footnote rule prints the body verbatim (300-dpi-confirmed text layer, no U+200B). The OCR markdown kept the inline superscript marker but dropped the footnote body; the body appears nowhere else in the document. Inserted after the paragraph carrying the matching marker, following the established footnote-insertion convention."
+    },
+    {
+      "before": "generation: Diffusion [Forsgren and Martiros]",
+      "after": "generation: Riffusion [Forsgren and Martiros]",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints \"Riffusion [Forsgren and Martiros]\" in the Baselines sentence; OCR misread the model name Riffusion as Diffusion (visually verified)."
+    },
+    {
+      "before": "We use the open source Diffusion model to run inference",
+      "after": "We use the open source Riffusion model to run inference",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints \"We use the open source Riffusion model to run inference3\" with footnote marker 3; OCR misread Riffusion as Diffusion (visually verified)."
+    },
+    {
+      "before": "S Forsgren and H Martiros. Diffusion-stable diffusion for real-time music generation.",
+      "after": "S Forsgren and H Martiros. Riffusion-stable diffusion for real-time music generation.",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 reference entry prints \"S Forsgren and H Martiros. Riffusion-stable diffusion for real-time music generation. 2022. URL https://riffusion.com/about.\"; OCR misread the leading name token (visually verified)."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table-boundary-density",
+      "pdf_pages": [
+        6,
+        7,
+        9,
+        10,
+        11,
+        14,
+        15
+      ],
+      "evidence": "OCR HTML tables were spot-checked against renders at 120 dpi; per-cell numeric proofreading of all CIs was not exhaustive within the review budget."
+    }
+  ]
+}

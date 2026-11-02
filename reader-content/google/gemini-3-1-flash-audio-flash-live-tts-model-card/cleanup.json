@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-1-flash-audio-flash-live-tts-model-card",
+  "source_sha256": "1235c0888b07e6b01467346079f8dbd39ec52d7026f4bf63b22ed8c0601b347d",
+  "ocr_sha256": "f68fca576d53741d0c864db38577bcd3088075ecef46542c0c094586d28d035e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "coverage": "complete",
+    "notes": "All 5 PDF pages compared line-by-line with the OCR markdown; no code fences in source. One defect: the OCR promoted the page-1 cover art text to a duplicate title heading above the printed page-2 title line. Rendered page 1 confirms the cover prints the same title (without the dash) as display art. The field labels \"Inputs:\" and \"Outputs:\" are promoted to headings while sibling labels (Description, Model dependencies) are plain text; left unchanged because the printed labels are genuine and promotion is not a listed defect class. Bullet markers mix bullets and backslash dashes; bullet style is not a defect class."
+  },
+  "patches": [
+    {
+      "before": "## Gemini 3.1 Flash Audio (Flash Live, TTS) Model Card\n\n",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 shows only the Google-logo cover with the display-art title \"Gemini 3.1 Flash Audio (Flash Live, TTS) Model Card\"; the printed title line above the introduction on p.2 reads \"Gemini 3.1 Flash Audio (Flash Live, TTS) - Model Card\" and is kept as the H1 heading. The OCR emitted both as headings, so the cover-art duplicate is removed; no content beyond the duplicated title is lost."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "missing-cover-banner-image-p1",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Physical page 1 embeds a 932x312 decorative Google-logo/title banner with no OCR image embed; its text is preserved by the H1 title, the graphic itself cannot be restored by text cleanup."
+    }
+  ]
+}

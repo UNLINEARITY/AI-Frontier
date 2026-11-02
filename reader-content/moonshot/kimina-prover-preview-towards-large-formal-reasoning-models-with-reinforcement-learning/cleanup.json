@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "moonshot:kimina-prover-preview-towards-large-formal-reasoning-models-with-reinforcement-learning",
+  "source_sha256": "bebb5598ea2650164714ee72b92e27e05638ef4ca89c2b109ab1e68ea4a02bd5",
+  "ocr_sha256": "2d754039487f9bafe53c0a146a3b889405f19b6467166ffa41b7659aca9676a9",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "coverage": "complete",
+    "notes": "Full word-level alignment of the OCR Markdown against extracted text from all 24 physical PDF pages; every unmatched block was inspected. Unmatched PDF text is running headers, the arXiv stamp, chart labels inside embedded figures (Figure 1-2, 4), and one page-bottom footnote restored below. Code fences (Listings 1-8) are balanced; the appended D/F proof examples keep model output inside mineru-algorithm divs and fences, so their '# Solving…' lines are not document headings. The only structural defect is the Figure 1 chart title promoted to a Markdown heading. Physical pages 1 (footnote and Figure 1 area), 2 and 7 (two reference entries) were rendered at 130-300 dpi for visual verification; the reference-URL escapes (paper\\_files, 978-3-030-79876-5\\_37) faithfully render the printed underscores and are kept."
+  },
+  "patches": [
+    {
+      "before": "## Pass Rate on MiniF2F-test\n\n![[images/17a7dfd053aa746fa16f8873c738efa0c7cef15d9ea1744e193ef2f655b50333.jpg]]",
+      "after": "![[images/17a7dfd053aa746fa16f8873c738efa0c7cef15d9ea1744e193ef2f655b50333.jpg]]",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom at 130 dpi: 'Pass Rate on MiniF2F-test' is the chart title inside the Figure 1 image (it does not exist in the PDF text layer and sits above the plotted chart with its 'Sample Budget'/'Pass Rate (%)' axes). OCR promoted this figure-internal banner to a standalone Markdown heading directly before the image embed; the heading is removed while the embed and caption are kept."
+    },
+    {
+      "before": "We open source distilled versions with 1.5B and 7B parameters of Kimina-Prover $^{1}$ .",
+      "after": "We open source distilled versions with 1.5B and 7B parameters of Kimina-Prover $^{1}$ .\n\n$^{1}$ https://github.com/MoonshotAI/Kimina-Prover-Preview",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom at 300 dpi: page-bottom footnote 1 reads '1https://github.com/MoonshotAI/Kimina-Prover-Preview'. The body was dropped by OCR while the marker survives on 'Kimina-Prover $^{1}$' at the end of the abstract."
+    },
+    {
+      "before": "Anthropic. Claude 3.7 Sonnet System Cara. https://anthropic.com/claude-3-7-Sonnet-system-card.2023.",
+      "after": "Anthropic. Claude 3.7 Sonnet System Card. https://anthropic.com/claude-3-7-sonnet-system-card. 2025.",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 References at 300 dpi: the entry reads 'Anthropic. Claude 3.7 Sonnet System Card. https://anthropic.com/claude-3-7-sonnet-system-card. 2025.' OCR misread 'Card' as 'Cara', upper-cased 'Sonnet' in the URL, glued the trailing period into the URL, and misread the year 2025 as 2023."
+    },
+    {
+      "before": "https://github.com/dwrensha/compfilesGitHub repository. 2024.",
+      "after": "https://github.com/dwrensha/compfiles. GitHub repository. 2024.",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 References at 300 dpi: the Renshaw entry ends 'https://github.com/dwrensha/compfiles. GitHub repository. 2024.' — OCR glued 'compfiles' with the following sentence and dropped the URL's closing period."
+    }
+  ],
+  "unresolved": []
+}

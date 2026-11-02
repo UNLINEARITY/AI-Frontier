@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "qwen:wan-dancer",
+  "source_sha256": "a51cd9dc25954a0add0d82ce6f01c4154bf6b689db4654fe6fd963f142dc6ca5",
+  "ocr_sha256": "67d10d007593f99cff1f9106e689f86896aeb3cef1fc9cd3588c4cb4c19d0943",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "Full structure check (no code fences; heading set matches printed sections) plus word-level diff of all OCR lines against extracted text from all 17 physical PDF pages. All words missing from the OCR text are figure-internal architecture labels and video-grid captions (Fig. 1-3, 6-8) shown by the embedded images. Physical page 11 was rendered at 300 dpi to verify Tables 1-3 side by side (all values in the two surviving tables match the OCR exactly) and physical page 14 to verify the hyphenated compounds 'long-range' and 'inter-dancer'. The printed PDF itself ends the Fig. 8 caption with 'random seed..', so the double period is not an OCR defect. Equation (3) uses spaced OCR math (e.g. 'c _ {r e f}') which math rendering collapses, so no patch is needed."
+  },
+  "patches": [
+    {
+      "before": "Table 2: Video quality metrics comparing different models. Table 3: Prompt alignment metrics comparing different models.",
+      "after": "Table 2: Video quality metrics comparing different models.\n\nTable 3: Prompt alignment metrics comparing different models.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 shows Tables 2 and 3 side by side, each with its own caption ('Table 2: Video quality metrics comparing different models.' / 'Table 3: Prompt alignment metrics comparing different models.'). OCR merged the two captions into one line; the patch only splits them."
+    },
+    {
+      "before": "<td>7.46</td></tr></table>",
+      "after": "<td>7.46</td></tr></table>\n\n<table><tr><td>Model</td><td>Style Capture</td><td>Creative Interpretation</td><td>Overall Satisfaction</td><td>Average</td></tr><tr><td>MusicInfuser [9]</td><td>5.03</td><td>7.48</td><td>7.33</td><td>6.61</td></tr><tr><td>Wan-Dancer(Ours)</td><td>9.14</td><td>8.73</td><td>9.21</td><td>9.03</td></tr></table>",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "OCR dropped the entire Table 3 body even though the text on OCR physical p.10 says 'The details are illustrated in Table 3.' Rendered physical p.11 (300 dpi) shows Table 3 with columns Style Capture / Creative Interpretation / Overall Satisfaction / Average and rows MusicInfuser [9]: 5.03, 7.48, 7.33, 6.61 and Wan-Dancer(Ours): 9.14, 8.73, 9.21, 9.03 (visually verified). The patch appends the table in the same HTML format as the surviving Tables 1-2, directly after Table 2 as printed; 'MusicInfuser [9]' reuses the plain-text citation form already inside the surviving tables and the 7.46 anchor cell is unique in the document."
+    },
+    {
+      "before": "longrange coherence",
+      "after": "long-range coherence",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "The conclusion on rendered physical p.14 breaks the printed compound across a line as 'long-' + 'range coherence and detail preservation during rapid movements'; the abstract on physical p.1 prints 'long-range coherence' unsplit. OCR glued the hyphenation into 'longrange'."
+    },
+    {
+      "before": "interdancer interactions",
+      "after": "inter-dancer interactions",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 (300 dpi) prints 'model inter-dancer interactions for synchronized group choreography' with the compound hyphenated across a line break ('inter-' + 'dancer'); related work on physical p.3 prints 'inter-dancer spatial interactions' unsplit. OCR glued the hyphenation into 'interdancer'."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-video-grid-captions",
+      "pdf_pages": [
+        5,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15
+      ],
+      "evidence": "Text that exists only inside figure artwork (architecture labels such as 'Patchify', 'VAE Decoder', 'Unpatchify' in Fig. 1-2; per-panel video captions such as 'A dancer is performing a K-Pop dance.' in Fig. 3 and the Fig. 6-8 grids) remains interleaved as plain text around the embedded figures; the embedded images already show this content, so no text patch is proposed."
+    }
+  ]
+}

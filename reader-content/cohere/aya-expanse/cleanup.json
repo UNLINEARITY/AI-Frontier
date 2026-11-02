@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "id": "cohere:aya-expanse",
+  "source_sha256": "025412374597063029515663609630cc3363a073157c0051bba97dfc107e9d3c",
+  "ocr_sha256": "a8ce3c6503b5236c412d7c7c514e6df36ac8775c61b9767f803ccc1708a33a98",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "coverage": "partial",
+    "notes": "All OCR lines compared against extracted text of all 19 physical PDF pages with a word-level coverage diff; physical pages 1-3, 5-7 rendered with the author block, front-matter lines, the 'Additionaly' spelling and every footnote re-verified at 300 dpi crops. Pages 8-19 (results tables and references) got the automated word-coverage pass, reference-list completeness through the final entry (Zhou et al., 2023) and spot checks only, not a line-by-line render comparison. Superscript affiliation digits and reference entries produce spurious coverage-diff tokens (author-name+digit concatenation, 'XSto-/ryCloze' splits, printed page numbers); verified as false positives."
+  },
+  "patches": [
+    {
+      "before": "John Dang $^{1}$",
+      "after": "John Dang $^{\\diamond 1}$",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 author block prints a filled-diamond superscript on the four first authors (John Dang, Shivalika Singh, Daniel D'souza, Arash Ahmadian), explained by the page-1 legend; the OCR dropped the diamond glyph."
+    },
+    {
+      "before": "Shivalika Singh $^{1}$",
+      "after": "Shivalika Singh $^{\\diamond 1}$",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Same dropped diamond marker as the other first authors (verified on the p.1 render)."
+    },
+    {
+      "before": "Daniel D'souza $^{1}$",
+      "after": "Daniel D'souza $^{\\diamond 1}$",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Same dropped diamond marker as the other first authors (verified on the p.1 render)."
+    },
+    {
+      "before": "Arash Ahmadian $^{1}$",
+      "after": "Arash Ahmadian $^{\\diamond 1}$",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Same dropped diamond marker as the other first authors (verified on the p.1 render)."
+    },
+    {
+      "before": "$^{*1}$",
+      "after": "$^{\\star 1}$",
+      "count": 4,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints a six-pointed star superscript (not an asterisk) on Marzieh Fadaee, Beyza Ermis, Ahmet Üstün and Sara Hooker, matching the printed legend; the OCR flattened it to '*'."
+    },
+    {
+      "before": "Corresponding authors: Ahmet Üstün <ahmet@cohere.com>, Sara Hooker <sarahooker@cohere.com>",
+      "after": "Corresponding authors: Ahmet Üstün <ahmet@cohere.com>, Sara Hooker <sarahooker@cohere.com>\n\n$^{\\diamond}$ First authors. $^{\\star}$ Principal senior advisors.\n\nReleased as a preprint on December 6, 2024",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints the author-symbol legend under the affiliations block and the front-matter line 'Released as a preprint on December 6, 2024' at the bottom of the page; both lines are absent from the OCR markdown."
+    },
+    {
+      "before": "built upon the recent Cohere's Command series $^{1}$ .",
+      "after": "built upon the recent Cohere's Command series $^{1}$ .\n\n$^{1}$ https://cohere.com/blog/command-series-0824",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 (300 dpi crop) prints the footnote '1 https://cohere.com/blog/command-series-0824'; the OCR keeps the marker on 'Command series' in the introduction but dropped the footnote body."
+    },
+    {
+      "before": "Ukrainian and Vietnamese.",
+      "after": "Ukrainian and Vietnamese.\n\n$^{2}$ https://cohere.com/blog/command-series-0824",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (300 dpi crop) prints the footnote '2 https://cohere.com/blog/command-series-0824'; the OCR keeps the marker on 'Command series' in section 2.2 but dropped the footnote body. Restored at the end of the carrying paragraph."
+    },
+    {
+      "before": "we opt for GPT-4o to report final results. $^{3}$ .",
+      "after": "we opt for GPT-4o to report final results. $^{3}$ .\n\n$^{3}$ We used gpt-4o-2024-08-06 as our judge model. Details: https://platform.openai.com/docs/models/gpt-4o",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 (300 dpi crop of the footnote block) prints '3 We used gpt-4o-2024-08-06 as our judge model. Details: https://platform.openai.com/docs/models/gpt-4o'; the OCR keeps the in-text marker but dropped the footnote body."
+    },
+    {
+      "before": "using Google Translate API $^{4}$ .",
+      "after": "using Google Translate API $^{4}$ .\n\n$^{4}$ Google Translate API v3 docs: https://cloud.google.com/translate/docs/advanced/translating-text-v3",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 (300 dpi crop of the footnote block) prints '4 Google Translate API v3 docs: https://cloud.google.com/translate/docs/advanced/translating-text-v3'; the OCR keeps the in-text marker but dropped the footnote body."
+    },
+    {
+      "before": "outperforming chrF++ in assessing translation capabilities [Freitag et al., 2024].",
+      "after": "outperforming chrF++ in assessing translation capabilities [Freitag et al., 2024].\n\n$^{5}$ https://huggingface.co/Unbabel/XCOMET-XL",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (300 dpi crop) prints the footnote '5 https://huggingface.co/Unbabel/XCOMET-XL'; the OCR keeps the marker after 'xCOMET-XL [Guerreiro et al., 2024]' but dropped the footnote body. Restored at the end of the carrying paragraph."
+    },
+    {
+      "before": "Additionally, in multilingual academic benchmarks",
+      "after": "Additionaly, in multilingual academic benchmarks",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 (300 dpi crop) prints 'than our 32B. Additionaly, in multilingual academic benchmarks' - the source's own spelling of 'Additionaly' (sic). The OCR silently corrected it; restored the printed spelling."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "results-tables-pages-8-15",
+      "pdf_pages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "evidence": "Win-rate tables and per-language figures were checked only via the automated word-coverage diff and spot greps; a cell-by-cell comparison against renders was not done within this review pass."
+    }
+  ]
+}

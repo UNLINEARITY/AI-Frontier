@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step-audio-3-music",
+  "source_sha256": "830babae673bfbbfec6f996095b9f3a2fa275d4a5fc2dff01ff877ee46e090ab",
+  "ocr_sha256": "0ba5acf054646e8aabe26ce20244073a3c824dc0aaa23b457e2a666df6e47142",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 18 physical PDF pages, plus a global numeric-token multiset comparison (all differences resolved as page numbers, the arXiv margin stamp, reference-ID line splits and image-hash fragments). Pages 1, 4, 7, 13 and 14 were rendered (dpi 110-200) and visually reviewed: title block and footnote, Figure 2 banner, equations (2)-(3), Table 3 and the Figure 6 leaderboard with Table 4. The Figure 6 screenshot has no PDF text layer, so its OCR HTML table was checked cell-by-cell against renders, including a 200-dpi crop of the Samples column. No code-fence defects; heading, image and table structure is intact. Equation (3) OCR-spaced digits (5 0, 1 6, 8 0 0) and the wide spacing in m _ {<   t} render identically under math typesetting and were left unchanged; the space before commas after inline math in Table 1 cells is repaired by the shared OCR normalizer rather than a document patch."
+  },
+  "patches": [
+    {
+      "before": "# StepAudio 3 Music\n\n![[images/80eddb",
+      "after": "![[images/80eddb",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered PDF physical p.4 shows 'StepAudio 3 Music' only as the banner title inside the Figure 2 graphic, which the embedded figure image already displays; OCR promoted it to a top-level heading between sections 2.2 and 2.3, creating a spurious reader section. The document title on physical p.1 is 'StepAudio 3 Music Technical Report' and is untouched."
+    },
+    {
+      "before": "$^{1}$ StepFun $^{2}$ ACE $^{3}$ The Chinese University of Hong Kong $^{4}$ University of California San Diego\n\n## Abstract",
+      "after": "$^{1}$ StepFun $^{2}$ ACE $^{3}$ The Chinese University of Hong Kong $^{4}$ University of California San Diego\n\n\\*Corresponding authors: yangxuerui@stepfun.com, yanchao@stepfun.com.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered PDF physical p.1 bottom footnote reads '*Corresponding authors: yangxuerui@stepfun.com, yanchao@stepfun.com.' and is referenced by the asterisk superscripts on authors Xuerui Yang and Chao Yan in the byline; OCR dropped the whole footnote line."
+    },
+    {
+      "before": "Song-Bench yields a different ranking",
+      "after": "SongBench yields a different ranking",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "PDF physical p.13 line-wraps the word as 'Song-' / 'Bench yields a different ranking'; the paper elsewhere always writes 'SongBench' (17 occurrences, e.g. section 5.2 and the Table 3 caption), so the retained line-break hyphen is an OCR join artifact."
+    }
+  ],
+  "unresolved": [],
+  "notes": "The arXiv margin stamp (arXiv:2609.16034v1 [eess.AS] 11 Sep 2026) on physical p.1 is publisher-added marginalia and intentionally not transcribed."
+}

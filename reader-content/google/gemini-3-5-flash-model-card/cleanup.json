@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-5-flash-model-card",
+  "source_sha256": "eed86d38a5f69732eea4ef3dd5662e526496a77d1cdf61679319d45461a2c195",
+  "ocr_sha256": "b9f5eb026fa10835c94a85b7ad5fc798f99a4683105b17164cecb9058c4b1af6",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Full line-by-line comparison of the OCR Markdown against extracted text from all 7 physical PDF pages; code-fence scan found no fences. Physical pages 2, 3, 4 and 6 were rendered (120-125 dpi) to verify repairs: the page-2 running header \"Gemini 3.5 Flash - Model Card\", the equal-level printed section headings \"Implementation and Sustainability\" and \"Distribution\", the seven-item Distribution bullet list, the whole benchmark table on page 4 (printed as a figure image with no text layer; every benchmark label, harness/setting label and score value was read from the render and matches the OCR values), and the Tone footnote at the bottom of page 6. The benchmark-table cell labels are flattened multi-line cells (OCR dropped cell-boundary spaces); the repair style follows the reviewed sibling cleanup reader-content/google/gemini-3-6-flash-model-card/cleanup.json (insert spaces, restore dropped sentences via anchored replacement, normalize heading level and the mixed bullet list). The trailing URL line under the benchmark table is printed in the source and kept."
+  },
+  "patches": [
+    {
+      "before": "# Gemini 3.5 Flash - Model Card\n\nModel Cards are intended",
+      "after": "Gemini 3.5 Flash - Model Card\n\nModel Cards are intended",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 prints \"Gemini 3.5 Flash - Model Card\" as the running page header repeating the page-1 title; OCR promoted it to a duplicate H1 title line. Demoted to plain text; the page-1 title heading remains the only title."
+    },
+    {
+      "before": "# Implementation and Sustainability",
+      "after": "## Implementation and Sustainability",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prints \"Implementation and Sustainability\" at the same size and weight as the sibling section heading \"Distribution\" on the same page; OCR emitted this one section as H1 while all sibling sections are H2."
+    },
+    {
+      "before": "shared in line:\n\nGemini App\n\n• Gemini Enterprise App\n\n• Gemini Enterprise Agent Platform\n\n\\- Google AI Studio\n\nGemini API\n\n• Google Search AI Mode\n\n\\- Google Antigravity",
+      "after": "shared in line:\n\n- Gemini App\n\n- Gemini Enterprise App\n\n- Gemini Enterprise Agent Platform\n\n- Google AI Studio\n\n- Gemini API\n\n- Google Search AI Mode\n\n- Google Antigravity",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prints seven uniform bullet channels (Gemini App, Gemini Enterprise App, Gemini Enterprise Agent Platform, Google AI Studio, Gemini API, Google Search AI Mode, Google Antigravity); OCR split them into plain paragraphs, unicode bullets and escaped dashes, losing the list. Same repair as the sibling gemini-3-6-flash-model-card cleanup."
+    },
+    {
+      "before": "and found no egregious concerns.\n\nFrontier Safety Assessment:",
+      "after": "and found no egregious concerns.\n\n$^{1}$For tone and instruction following, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model’s ability to follow instructions while remaining safe compared to Gemini 3 Flash. We mark improvements in green and regressions in yellow.\n\nFrontier Safety Assessment:",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "The Tone row in the safety table keeps its footnote marker (OCR $Tone^1$), but the footnote body printed at the bottom of rendered physical p.6 was dropped by OCR. Text verified word-for-word on the render and in the PDF text layer; inserted after the Human Red Teaming Results paragraph where printed page 6 ends, before the Frontier Safety Assessment paragraph that starts page 7. $^{1}$ prefix matches the sibling gemini-3-6-flash-model-card cleanup style."
+    },
+    {
+      "before": "<td>Gemini3.5 Flash</td>",
+      "after": "<td>Gemini 3.5 Flash</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 benchmark-table column header prints \"Gemini 3.5 Flash\"; OCR dropped the space at the cell boundary."
+    },
+    {
+      "before": "<td>Gemini3 Flash</td>",
+      "after": "<td>Gemini 3 Flash</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 benchmark-table column header prints \"Gemini 3 Flash\"; OCR dropped the space at the cell boundary."
+    },
+    {
+      "before": "<td>Gemini3.1 Pro</td>",
+      "after": "<td>Gemini 3.1 Pro</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 benchmark-table column header prints \"Gemini 3.1 Pro\"; OCR dropped the space at the cell boundary."
+    },
+    {
+      "before": "<td>ClaudeSonnet 4.6</td>",
+      "after": "<td>Claude Sonnet 4.6</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 benchmark-table column header prints \"Claude Sonnet 4.6\"; OCR dropped the space at the cell boundary."
+    },
+    {
+      "before": "<td>ClaudeOpus 4.7</td>",
+      "after": "<td>Claude Opus 4.7</td>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 benchmark-table column header prints \"Claude Opus 4.7\"; OCR dropped the space at the cell boundary."
+    },
+    {
+      "before": "Terminal-bench 2.1Agentic terminal coding",
+      "after": "Terminal-bench 2.1 Agentic terminal coding",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"Terminal-bench 2.1\" with the sub-caption \"Agentic terminal coding\" on the next line inside the cell; OCR joined them without a space. Same repair as sibling gemini-3-6-flash-model-card cleanup."
+    },
+    {
+      "before": "SWE-Bench Pro(Public)Diverse agentic coding tasks",
+      "after": "SWE-Bench Pro (Public) Diverse agentic coding tasks",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"SWE-Bench Pro (Public)\" with sub-caption \"Diverse agentic coding tasks\"; OCR dropped the cell-boundary spaces. Same repair as sibling gemini-3-6-flash-model-card cleanup."
+    },
+    {
+      "before": "MCP AtlasMulti-step workflows using MCP",
+      "after": "MCP Atlas Multi-step workflows using MCP",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"MCP Atlas\" with sub-caption \"Multi-step workflows using MCP\"; OCR dropped the cell-boundary space."
+    },
+    {
+      "before": "ToolathlonReal-world general tool use",
+      "after": "Toolathlon Real-world general tool use",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"Toolathlon\" with sub-caption \"Real-world general tool use\"; OCR dropped the cell-boundary space."
+    },
+    {
+      "before": "OSWorld-VerifiedAgentic computer use",
+      "after": "OSWorld-Verified Agentic computer use",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"OSWorld-Verified\" with sub-caption \"Agentic computer use\"; OCR dropped the cell-boundary space. Same repair as sibling gemini-3-6-flash-model-card cleanup."
+    },
+    {
+      "before": ">Experttasks<",
+      "after": ">Expert tasks<",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 row-group label prints \"Expert tasks\" wrapped over two lines; OCR joined them into \"Experttasks\"."
+    },
+    {
+      "before": "Finance Agent v2Financial analysisand decision-making",
+      "after": "Finance Agent v2 Financial analysis and decision-making",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"Finance Agent v2\" with sub-caption \"Financial analysis and decision-making\"; OCR dropped the cell-boundary space and the space inside \"analysis and\"."
+    },
+    {
+      "before": "GDPval-AAEconomically valuableknowledge work",
+      "after": "GDPval-AA Economically valuable knowledge work",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"GDPval-AA\" with sub-caption \"Economically valuable knowledge work\"; OCR dropped the cell-boundary space and the space inside \"valuable knowledge\"."
+    },
+    {
+      "before": "CharXiv ReasoningInformation synthesisfrom complex charts",
+      "after": "CharXiv Reasoning Information synthesis from complex charts",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"CharXiv Reasoning\" with sub-caption \"Information synthesis from complex charts\"; OCR dropped the cell-boundary space and the spaces inside \"synthesis from\". Same repair as sibling gemini-3-6-flash-model-card cleanup."
+    },
+    {
+      "before": "MMMU-ProMultimodal understandingand reasoning",
+      "after": "MMMU-Pro Multimodal understanding and reasoning",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"MMMU-Pro\" with sub-caption \"Multimodal understanding and reasoning\"; OCR dropped the cell-boundary space and the space inside \"understanding and\"."
+    },
+    {
+      "before": "Blueprint-Bench 2Agentic spatial reasoning",
+      "after": "Blueprint-Bench 2 Agentic spatial reasoning",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"Blueprint-Bench 2\" with sub-caption \"Agentic spatial reasoning\"; OCR dropped the cell-boundary space."
+    },
+    {
+      "before": ">Longcontext<",
+      "after": ">Long context<",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 row-group label prints \"Long context\" wrapped over two lines; OCR joined them into \"Longcontext\"."
+    },
+    {
+      "before": "MRCR v2(8-needle)Long context performance",
+      "after": "MRCR v2 (8-needle) Long context performance",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"MRCR v2 (8-needle)\" with sub-caption \"Long context performance\"; OCR dropped the cell-boundary spaces. Same repair as sibling gemini-3-6-flash-model-card cleanup (GDM-MRCR v2)."
+    },
+    {
+      "before": "Humanity&#x27;s Last ExamAcademic reasoning(full set, text + MM)",
+      "after": "Humanity&#x27;s Last Exam Academic reasoning (full set, text + MM)",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"Humanity's Last Exam\" with sub-caption \"Academic reasoning (full set, text + MM)\"; OCR dropped the cell-boundary space and the space before the parenthesis."
+    },
+    {
+      "before": "ARC-AGI-2Abstract reasoning puzzles",
+      "after": "ARC-AGI-2 Abstract reasoning puzzles",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints \"ARC-AGI-2\" with sub-caption \"Abstract reasoning puzzles\"; OCR dropped the cell-boundary space."
+    }
+  ],
+  "unresolved": []
+}

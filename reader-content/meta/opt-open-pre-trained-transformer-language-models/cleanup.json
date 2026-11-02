@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "id": "meta:opt-open-pre-trained-transformer-language-models",
+  "source_sha256": "dc88168a2514e4c66a5a791cab6dfacae9bbd566a3d86a119add151f31484d87",
+  "ocr_sha256": "9ce66d3b3e4b516f3279db3cef99d4fbb2c0d1ae3f3711dd90559363b5890228",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "coverage": "complete",
+    "notes": "Extracted text of all 30 physical pages compared against the OCR markdown with a normalized line-presence scan (case/punctuation-insensitive); remaining scan flags were ligature artifacts or Dataset-Card Q&A text that is present in the markdown. Page-bottom strips of pages 1, 2, 4, 9, 10 and 24 rendered and visually verified for every reinserted footnote body; footnote 1's body and the two symbol notes were additionally confirmed in the reliable PDF text layer of the same footnote-rule blocks. The OCR dropped every numbered footnote body (1-13), both title-page symbol notes, the dagger markers on two author names, and the superscript-11 glyph (whose sentence was also hard-split into two paragraphs; re-joined). The three appendix code fences reproduce printed monospace generation listings and were left unchanged."
+  },
+  "patches": [
+    {
+      "before": "re challenges we faced, along with code for experimenting with all of the released models.\n",
+      "after": "re challenges we faced, along with code for experimenting with all of the released models.\n\n$^{1}$ Following Brown et al. (2020), we use GPT-3 to refer to both the 175B model and the smaller scale models as well.\n",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom strip (120 dpi composite, visually verified) prints page footnote 1: \"Following Brown et al. (2020), we use GPT-3 to refer to both the 175B ...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "ng progress on improving known challenges in areas such as robustness, bias, and toxicity.\n",
+      "after": "ng progress on improving known challenges in areas such as robustness, bias, and toxicity.\n\n$^{2}$ Exceptions include work by EleutherAI, who released dense models up to 20B in size (Black et al., 2022), Salesforce (Nijkamp et al., 2022), and Meta AI, who released dense models up to 13B and sparse models up to 1.1T (Artetxe et al., 2021). There is also ongoing work from the BigScience workshop (https://bigscience.huggingface.co/), which aims to open source very large multilingual language models and datasets.\n",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom strip (120 dpi composite, visually verified) prints page footnote 2: \"Exceptions include work by EleutherAI, who released dense models up to...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "licate a model of this size will only amplify the growing compute footprint of these LLMs.\n",
+      "after": "licate a model of this size will only amplify the growing compute footprint of these LLMs.\n\n$^{3}$ https://github.com/facebookresearch/metaseq\n",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom strip (120 dpi composite, visually verified) prints page footnote 3: \"https://github.com/facebookresearch/metaseq\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "lized as 0, and all models are trained with ReLU activation and a sequence length of 2048.\n",
+      "after": "lized as 0, and all models are trained with ReLU activation and a sequence length of 2048.\n\n$^{4}$ https://github.com/NVIDIA/Megatron-LM/blob/main/examples/pretrain_gpt3_175B.sh\n",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 bottom strip (120 dpi composite, visually verified) prints page footnote 4: \"https://github.com/NVIDIA/Megatron-LM/blob/main/examples/pretrain_gpt3...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "y, suggesting small perturbations in probability masses may be dominating the evaluations.\n",
+      "after": "y, suggesting small perturbations in probability masses may be dominating the evaluations.\n\n$^{5}$ Brown et al. (2020) reports 0% accuracy on WIC, which implies 100% accuracy if the classification was inverted.\n",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom strip (120 dpi composite, visually verified) prints page footnote 5: \"Brown et al. (2020) reports 0% accuracy on WIC, which implies 100% acc...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "y, suggesting small perturbations in probability masses may be dominating the evaluations.\n",
+      "after": "y, suggesting small perturbations in probability masses may be dominating the evaluations.\n\n$^{6}$ https://beta.openai.com/docs/engines/overview\n",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom strip (120 dpi composite, visually verified) prints page footnote 6: \"https://beta.openai.com/docs/engines/overview\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "we start understanding the limitations and risks of LLMs before broader deployment occurs.\n",
+      "after": "we start understanding the limitations and risks of LLMs before broader deployment occurs.\n\n$^{7}$ https://partnershiponai.org/paper/responsible-publication-recommendations/\n",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom strip (120 dpi composite, visually verified) prints page footnote 7: \"https://partnershiponai.org/paper/responsible-publication-recommendati...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "we start understanding the limitations and risks of LLMs before broader deployment occurs.\n",
+      "after": "we start understanding the limitations and risks of LLMs before broader deployment occurs.\n\n$^{8}$ https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1270.pdf\n",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom strip (120 dpi composite, visually verified) prints page footnote 8: \"https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1270.pdf\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "we start understanding the limitations and risks of LLMs before broader deployment occurs.\n",
+      "after": "we start understanding the limitations and risks of LLMs before broader deployment occurs.\n\n$^{9}$ https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/chronicles/OPT175B_Logbook.pdf\n",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom strip (120 dpi composite, visually verified) prints page footnote 9: \"https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/chr...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "ning additional factors to consider when measuring the impact of scale on the environment.\n",
+      "after": "ning additional factors to consider when measuring the impact of scale on the environment.\n\n$^{10}$ With ablations, baselines and downtime, our own estimates of total cost is roughly 2× higher.\n",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom strip (120 dpi composite, visually verified) prints page footnote 10: \"With ablations, baselines and downtime, our own estimates of total cos...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "(Schick and Schütze, 2020;\n\nGao et al., 2021b;",
+      "after": "(Schick and Schütze, 2020; $^{11}$ Gao et al., 2021b;",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 bottom strip (visually verified) prints the single sentence '...in smaller models (Schick and Schütze, 2020; superscript-11 Gao et al., 2021b; Li and Liang, 2021; ...)' with footnote 11 attached before 'Gao et al.'; the OCR hard-split the sentence into two paragraphs at the marker and dropped the marker glyph. The patch re-joins the printed sentence and restores the superscript; the footnote body is reinserted separately after the paragraph."
+    },
+    {
+      "before": "2020), and understanding why and how prompting works (Liu et al., 2021; Min et al., 2022).\n",
+      "after": "2020), and understanding why and how prompting works (Liu et al., 2021; Min et al., 2022).\n\n$^{11}$ https://huggingface.co/bigscience/tr11-176B-ml-logs/tensorboard\n",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 bottom strip (120 dpi composite, visually verified) prints page footnote 11 'https://huggingface.co/bigscience/tr11-176B-ml-logs/tensorboard' after a rule; the OCR dropped the marker and the URL body; the body is inserted after the anchoring paragraph."
+    },
+    {
+      "before": "arch Blog. More details are also available in metaseq, our open-source repository. $^{12}$\n",
+      "after": "arch Blog. More details are also available in metaseq, our open-source repository. $^{12}$\n\n$^{12}$ https://github.com/facebookresearch/metaseq/\n",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 bottom strip (120 dpi composite, visually verified) prints page footnote 12: \"https://github.com/facebookresearch/metaseq/\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "able through a non-commercial use license agreement provided in our model license. $^{13}$\n",
+      "after": "able through a non-commercial use license agreement provided in our model license. $^{13}$\n\n$^{13}$ https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/MODEL_LICENSE.md\n",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 bottom strip (120 dpi composite, visually verified) prints page footnote 13: \"https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/MOD...\". The OCR markdown keeps the inline superscript marker but dropped the body; inserted after the anchoring paragraph."
+    },
+    {
+      "before": "{susanz,roller,naman}@fb.com\n\n## Abstract",
+      "after": "{susanz,roller,naman}@fb.com\n\n∗Equal contribution.\n†Work done while at Meta AI.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Physical p.1 footnote strip (PDF text layer, cross-checked against the rendered p.1 bottom block that shows footnotes 1-2 under the same footnote rule) prints '*Equal contribution.' and '†Work done while at Meta AI.'; the OCR markdown keeps '*' on the first three authors but dropped both symbol-note bodies."
+    },
+    {
+      "before": "Todor Mihaylov, Myle Ott, Sam Shleifer, Kurt Shuster",
+      "after": "Todor Mihaylov, Myle Ott†, Sam Shleifer†, Kurt Shuster",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Physical p.1 author list prints 'Myle Ott†, Sam Shleifer†' (PDF text layer; the daggers belong to the '†Work done while at Meta AI.' note on the same footnote rule); the OCR dropped the dagger glyphs."
+    }
+  ],
+  "unresolved": []
+}

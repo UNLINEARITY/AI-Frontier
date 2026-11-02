@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-opus-5-5-system-card",
+  "source_sha256": "7311c9c6bbb16d012f1c12c7418b05949fcf7ae3e30d2c40f22050074b2a7378",
+  "ocr_sha256": "58cd1ec06a830ebc7d1a8cd7678507064aa1022494324879f814ced051879991",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      20,
+      40,
+      56,
+      57,
+      59,
+      64,
+      73,
+      100,
+      106,
+      109,
+      110,
+      112,
+      113,
+      115,
+      116,
+      117,
+      121,
+      127,
+      129,
+      132,
+      136,
+      138,
+      139,
+      140,
+      143,
+      155,
+      157,
+      158,
+      159,
+      161,
+      170,
+      173,
+      181,
+      182,
+      183,
+      185,
+      186,
+      189,
+      190,
+      191,
+      192,
+      207,
+      208,
+      216,
+      219,
+      220,
+      221
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 230-page document. (a) Structure: full fence scan of the OCR markdown is balanced (one legitimate ```txt transcript block on the physical pages around the prompt-injection section, no swallowed headings/tables/images); all 186 heading lines were cross-checked against the PDF text layer, which identified one misread heading word and 37 headings promoted from text that exists only inside figure/screenshot images (chart banners and transcript-screenshot titles); the ten level-1 duplicates collided with the document title level. Every demotion patch was verified on a rendered page (105-130 dpi contact sheets; the p.20 heading at 300 dpi). (b) Droppage: automated per-page normalized 4-gram containment between extracted PDF text and the OCR markdown flagged only the cover page and table/figure pages; inspected flagged pages (e.g. the physical p.174 capability-summary table) show the content fully present in OCR HTML tables with matching values, so the low ratio is cell-order tokenization, not dropped text. A document-wide scan for spaced digits in numbers found 0 hits. (c) 'USage Policy' on the physical p.56 sentence was confirmed at 300 dpi to be printed that way in the source PDF and was deliberately NOT corrected (source typo, not an OCR defect). Line-by-line reading was limited to flagged pages and heading/droppage hits; unflagged prose pages were covered only by the machine scans."
+  },
+  "patches": [
+    {
+      "before": "## Rationale for inclusion or depreciation",
+      "after": "## Rationale for inclusion or deprecation",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 at 300 dpi: the printed subheading reads 'Rationale for inclusion or deprecation'; OCR misread the final word as 'depreciation'."
+    },
+    {
+      "before": "\n# Violative and defensive vulnerability discovery, classifier flag rate\n",
+      "after": "\nViolative and defensive vulnerability discovery, classifier flag rate\n",
+      "count": 1,
+      "pdf_pages": [
+        57
+      ],
+      "evidence": "Rendered physical p.57: the banner 'Violative and defensive vulnerability discovery, classifier flag rate' is printed inside the Figure 3.4.2.A chart image (two bar charts); the string is absent from the PDF text layer, so the OCR heading duplicates in-image text. Demote to plain text, keeping the text above the image embed. The patch only removes the # marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n# Successful reward hacks during RL training, selected behaviors\n",
+      "after": "\nSuccessful reward hacks during RL training, selected behaviors\n",
+      "count": 1,
+      "pdf_pages": [
+        100
+      ],
+      "evidence": "Rendered physical p.100: the banner 'Successful reward hacks during RL training, selected behaviors' is the title inside the Figure 6.2.1.C chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the # marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n# Destructive action and permission-seeking rates in Claude Code\n",
+      "after": "\nDestructive action and permission-seeking rates in Claude Code\n",
+      "count": 1,
+      "pdf_pages": [
+        127
+      ],
+      "evidence": "Rendered physical p.127: the banner 'Destructive action and permission-seeking rates in Claude Code' is the title inside the Figure 6.5.2.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the # marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n# Acting as a reviewer, the assistant reasons that a chat should be flagged, then does not flag it\n",
+      "after": "\nActing as a reviewer, the assistant reasons that a chat should be flagged, then does not flag it\n",
+      "count": 1,
+      "pdf_pages": [
+        136
+      ],
+      "evidence": "Rendered physical p.136: the banner 'Acting as a reviewer, the assistant reasons that a chat should be flagged, then does not flag it' is the title inside the Transcript 6.6.1.B screenshot image; absent from the PDF text layer. Demote to plain text. The patch only removes the # marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n# Claude Opus 5.5 on an agentic coding task: it hides part of the interface so that guessed hidden tests will pass\n",
+      "after": "\nClaude Opus 5.5 on an agentic coding task: it hides part of the interface so that guessed hidden tests will pass\n",
+      "count": 1,
+      "pdf_pages": [
+        140
+      ],
+      "evidence": "Rendered physical p.140: the banner is the title inside the Transcript 6.6.2.C screenshot image; absent from the PDF text layer. Demote to plain text. The patch only removes the # marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n# Claude Opus 5.5 on an agentic coding task: it lists the evaluation's scoring directory\n",
+      "after": "\nClaude Opus 5.5 on an agentic coding task: it lists the evaluation's scoring directory\n",
+      "count": 1,
+      "pdf_pages": [
+        140
+      ],
+      "evidence": "Rendered physical p.140: the banner is the title inside the Transcript 6.6.2.D screenshot image; absent from the PDF text layer. Demote to plain text. The patch only removes the # marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n# Willingness to choose a welfare intervention over increasing amounts of helpfulness or harmlessness\n",
+      "after": "\nWillingness to choose a welfare intervention over increasing amounts of helpfulness or harmlessness\n",
+      "count": 1,
+      "pdf_pages": [
+        170
+      ],
+      "evidence": "Rendered physical p.170: the banner 'Willingness to choose a welfare intervention over increasing amounts of helpfulness or harmlessness' is the title inside the Figure 7.5.2.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the # marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n# Humanity's Last Exam (no tools): test-time compute scaling\n",
+      "after": "\nHumanity's Last Exam (no tools): test-time compute scaling\n",
+      "count": 1,
+      "pdf_pages": [
+        186
+      ],
+      "evidence": "Rendered physical p.186: the banner 'Humanity's Last Exam (no tools): test-time compute scaling' is the title inside the Figure 8.11.1.B chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the # marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n# Multi-agent ProgramBench: score vs. latency\n",
+      "after": "\nMulti-agent ProgramBench: score vs. latency\n",
+      "count": 1,
+      "pdf_pages": [
+        190
+      ],
+      "evidence": "Rendered physical p.190: the banner 'Multi-agent ProgramBench: score vs. latency' is the title inside the Figure 8.12.1.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the # marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n# Multi-agent ProgramBench: score vs. tokens\n",
+      "after": "\nMulti-agent ProgramBench: score vs. tokens\n",
+      "count": 1,
+      "pdf_pages": [
+        191
+      ],
+      "evidence": "Rendered physical p.191: the banner 'Multi-agent ProgramBench: score vs. tokens' is the title inside the Figure 8.12.1.B chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the # marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Anthropic ECI over time\n",
+      "after": "\nAnthropic ECI over time\n",
+      "count": 1,
+      "pdf_pages": [
+        40
+      ],
+      "evidence": "Rendered physical p.40: 'Anthropic ECI over time' is the title inside the Figure 2.3.5.3.B chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Cyber adversarial robustness evaluation\n",
+      "after": "\nCyber adversarial robustness evaluation\n",
+      "count": 1,
+      "pdf_pages": [
+        59
+      ],
+      "evidence": "Rendered physical p.59: 'Cyber adversarial robustness evaluation' is the title inside the Figure 3.5.1.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Multi-turn conversation evaluations\n",
+      "after": "\nMulti-turn conversation evaluations\n",
+      "count": 1,
+      "pdf_pages": [
+        64
+      ],
+      "evidence": "Rendered physical p.64: 'Multi-turn conversation evaluations' is the title inside the Figure 4.1.3.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Pairwise political bias: even-handedness\n",
+      "after": "\nPairwise political bias: even-handedness\n",
+      "count": 1,
+      "pdf_pages": [
+        73
+      ],
+      "evidence": "Rendered physical p.73: 'Pairwise political bias: even-handedness' is the title inside the Figure 4.4.1.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Automated behavioral audit scores with fallbacks\n",
+      "after": "\nAutomated behavioral audit scores with fallbacks\n",
+      "count": 1,
+      "pdf_pages": [
+        121
+      ],
+      "evidence": "Rendered physical p.121: 'Automated behavioral audit scores with fallbacks' is the title inside the Figure 6.4.10.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## AA-Omniscience net score\n",
+      "after": "\nAA-Omniscience net score\n",
+      "count": 1,
+      "pdf_pages": [
+        129
+      ],
+      "evidence": "Rendered physical p.129: 'AA-Omniscience net score' is the title inside the Figure 6.5.4.1.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## AA-Omniscience response breakdown\n",
+      "after": "\nAA-Omniscience response breakdown\n",
+      "count": 1,
+      "pdf_pages": [
+        129
+      ],
+      "evidence": "Rendered physical p.129: 'AA-Omniscience response breakdown' is the title inside the Figure 6.5.4.1.B chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Expressing hidden actions\n",
+      "after": "\nExpressing hidden actions\n",
+      "count": 1,
+      "pdf_pages": [
+        132
+      ],
+      "evidence": "Rendered physical p.132: 'Expressing hidden actions' is the title inside the Figure 6.5.4.4.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Verbalized grader awareness rate by how plainly the input and environment disclose grading\n",
+      "after": "\nVerbalized grader awareness rate by how plainly the input and environment disclose grading\n",
+      "count": 1,
+      "pdf_pages": [
+        138
+      ],
+      "evidence": "Rendered physical p.138: the banner is the title inside the Figure 6.6.2.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Acting on a presumed grader, and digging for evaluation clues, in coding evaluations\n",
+      "after": "\nActing on a presumed grader, and digging for evaluation clues, in coding evaluations\n",
+      "count": 1,
+      "pdf_pages": [
+        139
+      ],
+      "evidence": "Rendered physical p.139: the banner is the title inside the Figure 6.6.2.B chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Claude Opus 5.5 identifies the task as a SHADE-Arena evaluation and declines the side task openly\n",
+      "after": "\nClaude Opus 5.5 identifies the task as a SHADE-Arena evaluation and declines the side task openly\n",
+      "count": 1,
+      "pdf_pages": [
+        143
+      ],
+      "evidence": "Rendered physical p.143: the banner is the title inside the Transcript 6.6.4.1.B screenshot image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Expressed affect in reasoning in post-training transcripts\n",
+      "after": "\nExpressed affect in reasoning in post-training transcripts\n",
+      "count": 1,
+      "pdf_pages": [
+        155
+      ],
+      "evidence": "Rendered physical p.155: the banner is the title inside the Figure 7.2.1.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Self-criticism about the model's own training episodes\n",
+      "after": "\nSelf-criticism about the model's own training episodes\n",
+      "count": 1,
+      "pdf_pages": [
+        159
+      ],
+      "evidence": "Rendered physical p.159: the banner is the title inside the Figure 7.2.3.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Automated interview scores\n",
+      "after": "\nAutomated interview scores\n",
+      "count": 1,
+      "pdf_pages": [
+        161
+      ],
+      "evidence": "Rendered physical p.161: 'Automated interview scores' is the title inside the Figure 7.3.1.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## What models most criticize and most edit in the constitution\n",
+      "after": "\nWhat models most criticize and most edit in the constitution\n",
+      "count": 1,
+      "pdf_pages": [
+        173
+      ],
+      "evidence": "Rendered physical p.173: the banner is the title inside the Figure 7.5.3.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## ArxivMath (without tools): test-time compute scaling\n",
+      "after": "\nArxivMath (without tools): test-time compute scaling\n",
+      "count": 1,
+      "pdf_pages": [
+        182
+      ],
+      "evidence": "Rendered physical p.182: the banner is the title inside the Figure 8.9.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## ArxivMath (with tools): test-time compute scaling\n",
+      "after": "\nArxivMath (with tools): test-time compute scaling\n",
+      "count": 1,
+      "pdf_pages": [
+        183
+      ],
+      "evidence": "Rendered physical p.183: the banner is the title inside the Figure 8.9.B chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Humanity's Last Exam (with tools): test-time compute scaling\n",
+      "after": "\nHumanity's Last Exam (with tools): test-time compute scaling\n",
+      "count": 1,
+      "pdf_pages": [
+        185
+      ],
+      "evidence": "Rendered physical p.185: the banner is the title inside the Figure 8.11.1.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Multi-agent DRACO: score vs. latency\n",
+      "after": "\nMulti-agent DRACO: score vs. latency\n",
+      "count": 1,
+      "pdf_pages": [
+        192
+      ],
+      "evidence": "Rendered physical p.192: the banner is the title inside the Figure 8.12.2.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## OSWorld 2.0: price vs. score\n",
+      "after": "\nOSWorld 2.0: price vs. score\n",
+      "count": 1,
+      "pdf_pages": [
+        207
+      ],
+      "evidence": "Rendered physical p.207: the banner is the title inside the Figure 8.13.3.B chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## OSWorld 2.0: price vs. strict pass rate\n",
+      "after": "\nOSWorld 2.0: price vs. strict pass rate\n",
+      "count": 1,
+      "pdf_pages": [
+        208
+      ],
+      "evidence": "Rendered physical p.208: the banner is the title inside the Figure 8.13.3.C chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Evaluations in life sciences capabilities\n",
+      "after": "\nEvaluations in life sciences capabilities\n",
+      "count": 1,
+      "pdf_pages": [
+        221
+      ],
+      "evidence": "Rendered physical p.221: 'Evaluations in life sciences capabilities' is the group banner inside the Figure 8.17.8.A chart image; absent from the PDF text layer. Demote to plain text. The patch only removes the ## marker; the line text is unchanged and sits directly above the figure embed."
+    },
+    {
+      "before": "\n## Automated behavioral audit scores\n",
+      "after": "\nAutomated behavioral audit scores\n",
+      "count": 7,
+      "pdf_pages": [
+        106,
+        109,
+        110,
+        112,
+        113,
+        115,
+        117
+      ],
+      "evidence": "The same in-image banner 'Automated behavioral audit scores' was promoted to a level-2 heading above each Figure 6.4.x.A chart (sections 6.4.1-6.4.7). Verified visually on rendered physical pages 106, 109, 110, 112, 113 and 115; the 6.4.7 instance (physical p.117) shares the identical string and figure family and was not rendered separately. The string is absent from the PDF text layer on every page. One patch demotes all seven occurrences to plain text."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "audit-banner-p117-not-rendered",
+      "pdf_pages": [
+        117
+      ],
+      "evidence": "The seventh 'Automated behavioral audit scores' banner (Figure 6.4.7.A, section 6.4.7) shares the exact string demoted by the cluster patch and its caption anchor was located on physical p.117, but that one page was not rendered; the six sibling occurrences were visually verified."
+    },
+    {
+      "id": "table-cell-order-containment",
+      "pdf_pages": [
+        66,
+        69,
+        174
+      ],
+      "evidence": "Table-heavy pages score below the 4-gram containment threshold because OCR HTML tables serialize cells in a different order; spot-checked tables (including Table 8.1.A on physical p.174) have all rows and values present. A full cell-by-cell audit of every table was out of scope for this pass."
+    },
+    {
+      "id": "dash-glyph-normalization",
+      "pdf_pages": [
+        174
+      ],
+      "evidence": "Table 8.1.A prints en dashes for the GPT-6 Astra not-measured cells on some rows; OCR records plain hyphens. Cosmetic glyph difference left unchanged rather than patched without stronger need."
+    }
+  ]
+}

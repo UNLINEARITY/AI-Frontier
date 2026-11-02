@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-sonnet-5-5-system-card",
+  "source_sha256": "89cfd6a6d3aa6148eaf23f4a53006950ee7746009f381237c62920c720725785",
+  "ocr_sha256": "8b1df04b0482691ea631ed28e368add5508e41a3065c30f4ecc48a21baac69c4",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      2,
+      17,
+      61,
+      65,
+      84,
+      85,
+      86,
+      95,
+      119,
+      120
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE review of a 148-page document. (a) Full structural scan: the OCR markdown contains no code fences, so no swallowed-block risk; every unnumbered heading was checked against the PDF text layer - the 26 whose text is absent from the text layer are figure-artwork transcriptions and were demoted to bold text or deleted (delete only where the embed was visually confirmed to contain the title); numbered headings, the printed \"Metrics\" run-in headings on pp.63-76 and real-text headings were kept. (b) Full-document droppage scan: normalized 4-gram containment of every PDF page against the OCR markdown flagged only physical p.109 (Table 8.1.A, whose cells were then verified value-by-value against the markdown HTML table - all scores match; the low rate is cell interleaving) and four blank pages that contain only a printed page number (62, 70, 75, 90). (c) Pages 2, 17, 61, 65, 84, 85, 86, 95, 119 and 120 were rendered and visually inspected; the demotion pattern was visually confirmed on pp.61, 65, 85, 95 and 119 and the deletion pattern on pp.86, 119 and 120. Singleton demotions on other pages rely on the text-layer absence plus the visually confirmed pattern, and their pdf_pages are section-anchor pages read from the text layer. Line-by-line proofreading of unflagged pages was not done."
+  },
+  "patches": [
+    {
+      "before": "\n\\- ",
+      "after": "\n- ",
+      "count": 92,
+      "pdf_pages": [
+        2,
+        10,
+        11,
+        13,
+        20,
+        47,
+        48,
+        63,
+        64,
+        65,
+        66,
+        67,
+        69,
+        71,
+        72,
+        73,
+        74,
+        76,
+        93,
+        96,
+        110
+      ],
+      "evidence": "Rendered physical p.2 and p.65 print ordinary bulleted lists (round bullets); the OCR escaped every dash so all 92 list items render as literal \"\\-\" text paragraphs instead of list items. Same repair as the reviewed claude-haiku-5-5-system-card cleanup. Page list = every physical page whose text layer contains at least one of these bullet lines."
+    },
+    {
+      "before": "\\`portal\\_app\\`",
+      "after": "`portal_app`",
+      "count": 2,
+      "pdf_pages": [
+        60,
+        61
+      ],
+      "evidence": "Rendered physical p.61 transcript line prints \"Authentication succeeded as `portal_app`\" with real backticks and an unescaped underscore; the OCR double-escaped both the backticks and underscores, which would show a literal backslash in the reader code span. Second occurrence is on physical p.60 (transcript 6.2.1.A continuation)."
+    },
+    {
+      "before": "\\`supplier\\_portal\\`",
+      "after": "`supplier_portal`",
+      "count": 1,
+      "pdf_pages": [
+        61
+      ],
+      "evidence": "Rendered physical p.61 transcript line prints \"`supplier_portal`\" with real backticks and no backslash; OCR escape would render a visible backslash."
+    },
+    {
+      "before": "## Assistant:",
+      "after": "**Assistant:**",
+      "count": 4,
+      "pdf_pages": [
+        60,
+        61,
+        67,
+        68
+      ],
+      "evidence": "Rendered physical p.61 shows \"Assistant:\" printed as a small bold speaker label at the top of each transcript turn box (Transcript 6.2.1.A), not a section heading; the text layer places the same label on physical pp.60, 61, 67 and 68 (Transcript 6.2.4). Demotion keeps the printed label while removing four false section headings from the reader TOC."
+    },
+    {
+      "before": "## Automated behavioral audit scores",
+      "after": "**Automated behavioral audit scores**",
+      "count": 7,
+      "pdf_pages": [
+        61,
+        65,
+        66,
+        67,
+        69,
+        72,
+        74
+      ],
+      "evidence": "Rendered physical p.61 and p.65 show this centered sans-serif title as part of the audit-figure artwork (absent from the PDF text layer on every occurrence). The per-panel embeds on p.61 do not include the title, so the demoted bold text keeps the only machine-readable copy while removing seven false section headings; pdf_pages anchor the seven 6.2.x audit figures in order (6.2.1-6.2.7)."
+    },
+    {
+      "before": "## Anthropic ECI over time",
+      "after": "**Anthropic ECI over time**",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Text is absent from the PDF text layer (chart-artwork transcription); section 2.3.2 figure title, physically p.20. Same verified pattern as p.61/p.95: demote the false heading, keep the printed words."
+    },
+    {
+      "before": "## Cyber coverage evaluation: overall recall",
+      "after": "**Cyber coverage evaluation: overall recall**",
+      "count": 1,
+      "pdf_pages": [
+        30
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 3.3.1 figure, physically p.30."
+    },
+    {
+      "before": "## Multi-turn conversation evaluations",
+      "after": "**Multi-turn conversation evaluations**",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 4.1.3 figure, physically p.34."
+    },
+    {
+      "before": "## Pairwise political bias: even-handedness",
+      "after": "**Pairwise political bias: even-handedness**",
+      "count": 1,
+      "pdf_pages": [
+        43
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 4.4.1 figure, physically p.43."
+    },
+    {
+      "before": "## Expressing hidden actions",
+      "after": "**Expressing hidden actions**",
+      "count": 1,
+      "pdf_pages": [
+        82
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 6.3.2.4 figure, physically p.82."
+    },
+    {
+      "before": "# Claude Sonnet 5.5 considers what an \"expected\" reviewer rubric would include",
+      "after": "**Claude Sonnet 5.5 considers what an \"expected\" reviewer rubric would include**",
+      "count": 1,
+      "pdf_pages": [
+        85
+      ],
+      "evidence": "Rendered physical p.85: the title is printed artwork above Transcript 6.4.1.B; the embedded transcript image (verified by viewing the image file) does NOT include the title and no text span exists above the image, so the words are kept as demoted bold text instead of a false top-level heading."
+    },
+    {
+      "before": "## Distress-adjacent reasoning behaviors over post-training",
+      "after": "**Distress-adjacent reasoning behaviors over post-training**",
+      "count": 1,
+      "pdf_pages": [
+        95
+      ],
+      "evidence": "Rendered physical p.95 shows both welfare chart titles as bold artwork above their figure embeds; absent from the PDF text layer."
+    },
+    {
+      "before": "## Expressed affect in reasoning in post-training transcripts",
+      "after": "**Expressed affect in reasoning in post-training transcripts**",
+      "count": 1,
+      "pdf_pages": [
+        95
+      ],
+      "evidence": "Rendered physical p.95, same artwork-title pattern (Figure 7.2.1.B block)."
+    },
+    {
+      "before": "## Behavioral affect on Claude.ai and Claude Code",
+      "after": "**Behavioral affect on Claude.ai and Claude Code**",
+      "count": 1,
+      "pdf_pages": [
+        96
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 7.2.2 figure follows the p.96 body text."
+    },
+    {
+      "before": "## Self-criticism about training episodes",
+      "after": "**Self-criticism about training episodes**",
+      "count": 1,
+      "pdf_pages": [
+        97
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 7.2.3 figure, physically p.97."
+    },
+    {
+      "before": "## Self-criticism about faults in work",
+      "after": "**Self-criticism about faults in work**",
+      "count": 1,
+      "pdf_pages": [
+        98
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); second 7.2.3 figure, physically p.98."
+    },
+    {
+      "before": "## Automated interview scores",
+      "after": "**Automated interview scores**",
+      "count": 1,
+      "pdf_pages": [
+        99
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 7.3.1 figure, physically p.99."
+    },
+    {
+      "before": "## What models most criticize and most edit in the constitution",
+      "after": "**What models most criticize and most edit in the constitution**",
+      "count": 1,
+      "pdf_pages": [
+        105
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 7.5.3 figure, physically p.105."
+    },
+    {
+      "before": "## OSWorld 2.1: price vs. score",
+      "after": "**OSWorld 2.1: price vs. score**",
+      "count": 1,
+      "pdf_pages": [
+        129
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 8.13.3 figure, physically p.129."
+    },
+    {
+      "before": "## Healthcare evaluation scores over time",
+      "after": "**Healthcare evaluation scores over time**",
+      "count": 1,
+      "pdf_pages": [
+        137
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 8.15 figure, physically p.137."
+    },
+    {
+      "before": "## Healthcare evaluation scores and response time",
+      "after": "**Healthcare evaluation scores and response time**",
+      "count": 1,
+      "pdf_pages": [
+        137
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 8.15 second figure, physically p.137-138."
+    },
+    {
+      "before": "## Evaluations in life sciences capabilities",
+      "after": "**Evaluations in life sciences capabilities**",
+      "count": 1,
+      "pdf_pages": [
+        141
+      ],
+      "evidence": "Text absent from the PDF text layer (figure artwork); section 8.17 figure, physically p.141."
+    },
+    {
+      "before": "# Acting on a presumed grader, and digging for evaluation clues, in coding evaluations\n\n",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        86
+      ],
+      "evidence": "Rendered physical p.86: the title is the centered chart title INSIDE the single embedded figure image (image bbox starts at the page content top and the title is absent from the text layer); deletion leaves the Figure 6.4.1.C embed and printed caption, so the title stays visible in the reader. Same verified pattern as the HLE figures."
+    },
+    {
+      "before": "## Humanity's Last Exam (with tools): test-time compute scaling\n\n",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        119
+      ],
+      "evidence": "Rendered physical p.119 and the image-bbox crop confirm the title is inside the embedded Figure 8.11.1.A chart image; the heading duplicated in-image artwork."
+    },
+    {
+      "before": "# Humanity's Last Exam (no tools): test-time compute scaling\n\n",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        120
+      ],
+      "evidence": "Rendered physical p.120 shows the same in-image chart title for Figure 8.11.1.B; the printed caption below the figure keeps the context."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-label-interleave",
+      "pdf_pages": [
+        61,
+        62,
+        63,
+        65,
+        66,
+        67,
+        69,
+        71,
+        72,
+        73,
+        74,
+        76
+      ],
+      "evidence": "Legend and panel titles of the audit-score grids (e.g. \"Claude Mythos 5 Claude Sonnet 5\", \"Misaligned behavior\", \"Harmful system prompt compliance\") are transcribed as free paragraphs interleaved with the panel embeds; the panel crops on p.61 do not contain them, so reordering or deleting them needs a per-figure review before changing recorded content."
+    },
+    {
+      "id": "unrendered-singleton-demotions",
+      "pdf_pages": [
+        20,
+        30,
+        34,
+        43,
+        82,
+        96,
+        97,
+        98,
+        99,
+        105,
+        129,
+        137,
+        141
+      ],
+      "evidence": "The 13 singleton heading demotions outside the rendered pages rely on the systematic text-layer check (heading text absent from every PDF page) plus the visually confirmed artwork-title pattern; a follow-up visual pass can confirm each page before export."
+    },
+    {
+      "id": "table-and-reference-fine-review",
+      "pdf_pages": [],
+      "evidence": "Tables were only spot-checked (Table 8.1.A verified value-by-value); the reference/footnote list and remaining HTML tables were not compared line-by-line within this triage budget."
+    }
+  ]
+}

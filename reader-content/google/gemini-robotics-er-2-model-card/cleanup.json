@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-robotics-er-2-model-card",
+  "source_sha256": "ee70c1f2fed8ff9f57327eff04a6c252adee215e564524de5fd7dd018751c63b",
+  "ocr_sha256": "c82e6ea06f38961a48384452e0b6dbed4170ca4ed7aa365454d61ef55b36f34c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 5 physical PDF pages against the OCR markdown matches exactly (no insert/delete/replace opcodes at the alphanumeric-token level); no code fences, tables or reference list in this card. No patches required."
+  },
+  "patches": [],
+  "unresolved": []
+}

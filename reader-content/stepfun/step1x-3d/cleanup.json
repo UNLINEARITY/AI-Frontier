@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step1x-3d",
+  "source_sha256": "0890d4cabe9d401dae3883f8ea6439c790cc45025c1598d2aa8f2d8c0de8f094",
+  "ocr_sha256": "c436e8af27883e328d65b72b9e8cfdf31ebc5249629255519dea94e8d58f61f3",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "Structure pass over all 23 physical pages (no code fences; all 12 figure captions, Table 1-2 bodies, section headings and the 96-entry reference list present). Normalized PDF-text-vs-Markdown comparison over every page; flagged windows were verified against 110-300 dpi renders and resolved as figure-internal diagram/chart text (Figures 3-5, 10-12), LaTeX-equivalent math, HTML-table tag noise, or text-layer artifacts (the text layer misextracts 'multi-view' as 'multi-vew' on p.11 while the rendered page prints 'multi-view'; no patch). Repairs: the three dropped footnote bodies under the marker paragraph, five print-faithful misspelling restorations verified at 300 dpi, and the Figure 10 block moved out of the middle of the split word 'find-ings' (image sequence itself unchanged). The Table 1 caption's best/second/third color swatches are printed graphics with no text-layer counterpart and are recorded as unresolved."
+  },
+  "patches": [
+    {
+      "before": "quantitative metrics, user studies, and visual quality in Sec. 5.3.",
+      "after": "quantitative metrics, user studies, and visual quality in Sec. 5.3.\n\n$^{3}$ The API was invoked from Meshy platform in May 2025.\n\n$^{4}$ The API was invoked from Tripo platform in May 2025.\n\n$^{5}$ The API was invoked from Rodin platform in May 2025.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 prints footnotes 3-5 at the page bottom ('3The API was invoked from Meshy platform in May 2025.', '4The API was invoked from Tripo platform in May 2025.', '5The API was invoked from Rodin platform in May 2025.'; 300-dpi crop visually verified). The OCR kept the superscript markers '(Meshy-4 $^{3}$, Tripo-v2.5 $^{4}$, and Rodin-v1.5 $^{5}$)' but dropped all three footnote bodies; they are restored after the marker paragraph following the repository's footnote-restoration convention. Image embeds unchanged."
+    },
+    {
+      "before": "Then, we prepare 3D assets for texture generation",
+      "after": "Then, we perpare 3D assets for texture generation",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 right column prints the paper's own misspelling 'Then, we perpare 3D assets for texture generation (Sec. 4.2).' (300-dpi crop verified); OCR auto-corrected it to 'prepare'."
+    },
+    {
+      "before": "## 4.2 Texture dataset preparation",
+      "after": "## 4.2 Texture datatset preparation",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prints the section heading '4.2 Texture datatset preparation' with the paper's own 'datatset' misspelling (300-dpi crop verified); OCR auto-corrected the heading to 'dataset'."
+    },
+    {
+      "before": "taget multi-view camera poses (the conditions are defined as C), we aim to generate consistent multi-view images with a diffusion model",
+      "after": "taget muliti-view camera poses (the condtions are defined as C), we aim to generate consistent mulit-view images with a diffusion model",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 right column prints 'Given a single view image and taget muliti-view camera poses (the condtions are defined as C), we aim to generate consistent mulit-view images with a diffusion model D_MV.' (300-dpi crop verified); OCR auto-corrected the paper's own 'muliti-view', 'condtions' and 'mulit-view' while keeping 'taget'."
+    },
+    {
+      "before": "quality. These find\n\n![[images/89ff720759ea95763b761252dd0dc017e4ee75fa4563b9d857fb36c2b4b4ed9c.jpg]]  \nFigure 10: User study. Average user preference score is reported.\n\nings underscore the importance of fostering open-source collaboration within the 3D research community to collectively advance the state-of-the-art.",
+      "after": "quality.\n\n![[images/89ff720759ea95763b761252dd0dc017e4ee75fa4563b9d857fb36c2b4b4ed9c.jpg]]  \nFigure 10: User study. Average user preference score is reported.\n\nThese findings underscore the importance of fostering open-source collaboration within the 3D research community to collectively advance the state-of-the-art.",
+      "count": 1,
+      "pdf_pages": [
+        15,
+        16
+      ],
+      "evidence": "The OCR emitted the page-break-split word 'find-ings' around the Figure 10 embed ('...production-ready quality. These find [Figure 10 block] ings underscore...'), while rendered physical p.16 prints the sentence continuously ('...before reaching production-ready quality. These findings underscore the importance...') with the Figure 10 chart beside it (110-dpi page render verified). The patch completes the paragraph first and places the unchanged Figure 10 embed plus caption after it; the image sequence is byte-identical."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table1-caption-color-swatches",
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 Table 1 caption prints three colored swatches (best/second/third best) before 'indicate the best, second best, and third best performance respectively'; they are graphics with no text-layer counterpart, so the Markdown caption reads 'and indicate the best...'. Not representable as text; recorded for source review."
+    }
+  ]
+}

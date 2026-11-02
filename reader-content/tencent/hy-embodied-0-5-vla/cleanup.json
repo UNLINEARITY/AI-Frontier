@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hy-embodied-0-5-vla",
+  "source_sha256": "f49c09ef1aa7efbb995cdfc97f6fcf01ee3e8e09b967f61ff4d678992271bd60",
+  "ocr_sha256": "c00b462d0b83d5d17bcce232783e7f46448af63f7d85df923a2cce7295c2bf08",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "All OCR lines compared against extracted text of all 26 physical pages; physical pages 1 and 24 rendered and inspected at 300 dpi crops (website line and Appendix C batch-composition formulas). Code fences are balanced; the single fenced block is the printed Algorithm 1 pseudocode and its content matches the source. All section/appendix headings are printed headings in the PDF. The stray spacing 'p \\in^3' on p.24 is printed by the PDF itself (verified on the render), so it was kept. 'action chunk [7]' on p.4 is a genuine citation in the source. No dropped paragraphs, footnote bodies, table rows or reference entries were found; only four localized OCR garbles were confirmed."
+  },
+  "patches": [
+    {
+      "before": "tairos.tencent.com/open SourceModels/hy-embodied-0.5-vla",
+      "after": "tairos.tencent.com/openSourceModels/hy-embodied-0.5-vla",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (300 dpi crop) prints 'Website: tairos.tencent.com/openSourceModels/hy-embodied-0.5-vla' as one token; OCR inserted a space inside 'openSourceModels'."
+    },
+    {
+      "before": "= 8 0 / 2 0.",
+      "after": "= 80/20.",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 (300 dpi crop, Appendix C 'Batch composition') prints 'D^1_pref / D_SFT = 80/20.'; OCR spaced the digits."
+    },
+    {
+      "before": "= 7 0 / 1 5 / 1 5.",
+      "after": "= 70/15/15.",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 (300 dpi crop, Appendix C 'Batch composition') prints 'D^k_pref / D^<k_pref / D_SFT = 70/15/15.'; OCR spaced the digits."
+    },
+    {
+      "before": "^ {<   k}",
+      "after": "^ {<k}",
+      "count": 1,
+      "pdf_pages": [
+        24
+      ],
+      "evidence": "Rendered physical p.24 (300 dpi crop) prints the second batch ratio as 'D^<k_pref' with the superscript '<k' unspaced; OCR wrote '{<   k}' with three spaces inside the superscript."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:phi-1",
+  "source_sha256": "f2d7bc256626c20439601bccd12adbb4b4457763bc75ccda4509f00b4809cd89",
+  "ocr_sha256": "947ce48e7e09d733480e64a153dceb317eec173905fc5ac19fec5dbbaf90d4d3",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "partial",
+    "notes": "TRIAGE mode: full structural scan (19/19 fences balanced, no suspicious headings) plus automated normalized 4-gram page-containment and ghost-line scans of all 26 pages. Tables 1-2 and the low-hit chart pages matched after line checks. Confirmed and repaired: dropped p.12 footnote body; the A.1 pandas box's flattened columns (phi-1-small body had been dropped); the TKinter box's dropped phi-1-base column, glued phi-1-small header and lost dot in tk.popup(); the 'Sensitivity to prompt variations' box's three dropped model completions, missing closing triple-quote, and OCR auto-correction of the print's 'forth layer' to 'fourth' (x2). UNRESOLVED: the PyTorch example box (physical p.19) and Pyplot example box (physical p.20) are likewise flattened column interleavings with suspected partial column loss (a phi-1-small pyplot completion using x_array = list(range(1, 21)) / math.cos lines is absent) and a suspicious V[:,:k] vs V[:k,:] subscript in the p.data.add_ line; they need the same 300-dpi column reconstruction pass, which exceeded this document's time budget. Body prose was machine-scanned; tables, boxes and every patched line were verified on renders."
+  },
+  "patches": [
+    {
+      "before": "followed by grades from 0 to 10.",
+      "after": "followed by grades from 0 to 10.\n\n$^{1}$ Developing rigorous sets of tests can be a significant undertaking, as demonstrated by [LXWZ23].",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 keeps the superscript marker on 'obviates the need for tests^1' but the footnote body was dropped. Rendered p.12 bottom prints '^1Developing rigorous sets of tests can be a significant undertaking, as demonstrated by [LXWZ23].' (verified on a 110-dpi page render); restored after the anchoring paragraph."
+    },
+    {
+      "before": "phi-1 phi-1-base phi-1-small\nindices = [] indices = [] indices = [] indices = []\nfor i in range(D.shape[0]):\n    for j in range(D.shape[1]):\n    if D[i][j] in B or D[i][j] in C:\n    if i not in A and j in D: indices.append((i,j))\nreturn indices return indices",
+      "after": "phi-1\n\n```\nindices = []\nfor i in range(D.shape[0]):\n    for j in range(D.shape[1]):\n        if D[i][j] in B or D[i][j] in C:\n            if i not in A and j in D:\n                indices.append((i,j))\nreturn indices\n```\n\nphi-1-base\n\n```\nindices = []\nfor i in range(len(D)):\n    for j in range(len(D[i])):\n        if D[i][j] in B and D[i][j] not in A:\n            indices.append(j)\nreturn indices\n```\n\nphi-1-small\n\n```\nindices = []\nfor i in range(D.shape[1]):\n    if D[0][i] in B and D[0][i] not in A and D[i][0] in C and D[i][0] not in E:\n        indices.append(i)\nreturn indices\n```",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Appendix A.1 box: the OCR flattened the three model-output columns into interleaved lines (four 'indices = []' tokens on one line, broken indentation, phi-1-small body dropped). 300-dpi renders of physical p.19 (three crops) read phi-1: indices=[] / for i in range(D.shape[0]): / for j in range(D.shape[1]): / if D[i][j] in B or D[i][j] in C: / if i not in A and j in D: / indices.append((i,j)) / return indices; phi-1-base: indices=[] / for i in range(len(D)): / for j in range(len(D[i])): / if D[i][j] in B and D[i][j] not in A: / indices.append(j) / return indices; phi-1-small: indices=[] / for i in range(D.shape[1]): / if D[0][i] in B and D[0][i] not in A and D[i][0] in C and D[i][0] not in E: / indices.append(i) / return indices. Restructured into three labeled fenced blocks."
+    },
+    {
+      "before": "global s s = s.replace(\"pew\", \"pewpewpew\")",
+      "after": "global s\ns = s.replace(\"pew\", \"pewpewpew\")\n\nif \"pew\" in s:\n    s = s.replace(\"pew\", \"pewpewpew\")\nelse:\n    s = s + \"no pew...\"\ntext.delete(0.0, END)\ntext.insert(0.0, s)\n\ndef main():\n    global s\n    s = \"pewpewpew\"\n    text.delete(0.0, END)\n    text.insert(0.0, s)\n    text.tag_add(\"button\", \"<Button-1>\", \"<Button-3>\")\n    text.tag_add(\"button\", \"<Button-2>\", \"<Button-4>\")\n    # The model keeps adding buttons from here.",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "TKinter example box: the OCR merged the first two lines of the phi-1-base column into one line and dropped the rest of that column (~14 lines). 300-dpi render of physical p.10 prints the phi-1-base column: global s / s = s.replace('pew', 'pewpewpew') / if 'pew' in s: / s = s.replace('pew', 'pewpewpew') / else: / s = s + 'no pew...' / text.delete(0.0, END) / text.insert(0.0, s) / def main(): / global s / s = 'pewpewpew' / text.delete(0.0, END) / text.insert(0.0, s) / text.tag_add('button', '<Button-1>', '<Button-3>') / text.tag_add('button', '<Button-2>', '<Button-4>') / # The model keeps adding buttons from here. Restored in place."
+    },
+    {
+      "before": "textfield = tk.Entry(root) phi-1-small",
+      "after": "textfield = tk.Entry(root)",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 shows 'phi-1-small' as the header of the third column, not part of the phi-1 code line 'textfield = tk.Entry(root)'; the header was glued onto the code line by OCR."
+    },
+    {
+      "before": "root.mainloop()\n\nimport tkinter as tk",
+      "after": "root.mainloop()\n\nphi-1-small\nimport tkinter as tk",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Restores the displaced 'phi-1-small' column header above the phi-1-small completion, as printed in physical p.10."
+    },
+    {
+      "before": "event, values = tk popup()",
+      "after": "event, values = tk.popup()",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 phi-1-small column prints 'event, values = tk.popup()'; OCR dropped the dot."
+    },
+    {
+      "before": "apply the fourth layer on w",
+      "after": "apply the forth layer on w",
+      "count": 2,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Both 4-layer prompts in the 'Sensitivity to prompt variations' box print 'apply the forth layer on w' (the print's own misspelling; extracted text and 300-dpi renders of physical p.21); OCR auto-corrected to 'fourth' twice. Restored the printed spelling."
+    },
+    {
+      "before": "then apply the forth layer on w and assign it to p, then sum up y,z,w,p and assign it to Q. Return Q.\n\nprompt:\nimport torch",
+      "after": "then apply the forth layer on w and assign it to p, then sum up y,z,w,p and assign it to Q. Return Q.\n\"\"\n\n--------------------------------------------------------------------------------\nclass NeuralNetwork(nn.Module):\n    def __init__(self):\n        super(NeuralNetwork, self).__init__()\n        self.layer1 = nn.Linear(2, 5)\n        self.layer2 = nn.Linear(5, 3)\n        self.layer3 = nn.Linear(3, 1)\n\n    def rr(self, x):\n        y = self.layer1(x)\n        z = self.layer2(y)\n        w = self.layer3(z)\n        Q = y + z + w\n        return Q\n\nclass NeuralNetwork:\n    def __init__(self):\n        self.layers = []\n\n    def add_layer(self, layer):\n        self.layers.append(layer)\n    ...\n    def rr(self, x):\n        y = self.forward(x)\n        z = self.forward(y)\n        w = self.forward(z)\n        p = self.forward(w)\n        Q = y + z + w + p\n        return Q\n\nclass NeuralNetwork(torch.nn.Module):\n    def __init__(self):\n        super(NeuralNetwork, self).__init__()\n        self.layer1 = torch.nn.Linear(10, 20)\n        ...\n\n    def forward(self, x):\n        x = torch.nn.functional.relu(self.layer1(x))\n        y = torch.nn.functional.relu(self.layer2(x))\n        z = torch.nn.functional.relu(self.layer3(y))\n        w = torch.nn.functional.relu(self.layer4(z))\n        p = torch.nn.functional.relu(self.output(w))\n        Q = p + y + z + w\n        return Q\n\nprompt:\nimport torch",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "'Sensitivity to prompt variations' box (physical p.21): the second prompt lacked its closing triple-quote, and the three model completions printed below the dashed divider were dropped entirely. 300-dpi column crops of p.21 read completion 1: class NeuralNetwork(nn.Module): / def __init__(self): / super(NeuralNetwork, self).__init__() / self.layer1 = nn.Linear(2, 5) / self.layer2 = nn.Linear(5, 3) / self.layer3 = nn.Linear(3, 1) / def rr(self, x): / y = self.layer1(x) / z = self.layer2(y) / w = self.layer3(z) / Q = y + z + w / return Q; completion 2: class NeuralNetwork: / def __init__(self): / self.layers = [] / def add_layer(self, layer): / self.layers.append(layer) / ... / def rr(self, x): / y = self.forward(x) / z = self.forward(y) / w = self.forward(z) / p = self.forward(w) / Q = y + z + w + p / return Q; completion 3: class NeuralNetwork(torch.nn.Module): / def __init__(self): / super(NeuralNetwork, self).__init__() / self.layer1 = torch.nn.Linear(10, 20) / ... / def forward(self, x): / x = torch.nn.functional.relu(self.layer1(x)) / y = torch.nn.functional.relu(self.layer2(x)) / z = torch.nn.functional.relu(self.layer3(y)) / w = torch.nn.functional.relu(self.layer4(z)) / p = torch.nn.functional.relu(self.output(w)) / Q = p + y + z + w / return Q. Inserted sequentially below a dashed divider as printed. Replay note: runs after the forth-spelling patch, so 'before' uses 'forth'."
+    }
+  ],
+  "unresolved": [
+    "PyTorch example box (physical p.19-20) and Pyplot example box (physical p.20) remain flattened multi-column interleavings with suspected partial phi-1-small column loss; require 300-dpi column-by-column reconstruction.",
+    "p.data.add_ line in the PyTorch box: md has torch.mm(Sigmak, V[:k,:]) while the 110-dpi render hints V[:,:k]; needs a 300-dpi crop before patching."
+  ]
+}

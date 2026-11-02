@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-6-flash-model-card",
+  "source_sha256": "2c54f031b6fdee883e562eaa1a9f5e3d43bee4e81f5dd55edc6b965fba03b4a2",
+  "ocr_sha256": "c5c023d4255018db0b799774fe058c06cc5e9dba14b34450b968e78bf2d5ca2d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of the 7-page OCR against the complete PDF text layer; physical p.4 was rendered at 130 dpi for the Results table (which exists only as an embedded image) and the GDM-MRCR row labels were re-verified with a 400 dpi crop; heading levels were confirmed from the PDF span font sizes (18pt sections vs 16pt subsections). All benchmark values in both OCR tables match the source. Repairs: one dropped page-break sentence, one dropped footnote body, one misread table label (12Bk to 128k), 17 glued table-cell line joins, one inconsistent section-heading level, and the Distribution bullet list normalization. No code fences; no figure-internal headings; the vertical spine text and cover page contribute no body content."
+  },
+  "patches": [
+    {
+      "before": "12Bk (average)",
+      "after": "128k (average)",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 GDM-MRCR v2 row, re-verified with a 400 dpi crop of the label column, prints the sub-label \"128k (average)\"; the OCR misread the digit 8 as the letter B."
+    },
+    {
+      "before": "Input price$/1M tokens",
+      "after": "Input price $/1M tokens",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 shows the cell prints these as separate lines; the OCR glued the line break away, so a single space restores the printed word separation without changing any character."
+    },
+    {
+      "before": "Output price$/1M tokens",
+      "after": "Output price $/1M tokens",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 shows the cell prints these as separate lines; the OCR glued the line break away, so a single space restores the printed word separation without changing any character."
+    },
+    {
+      "before": "SWE-Bench Pro (Public)Diverse agentic coding tasks",
+      "after": "SWE-Bench Pro (Public) Diverse agentic coding tasks",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 shows the cell prints these as separate lines; the OCR glued the line break away, so a single space restores the printed word separation without changing any character."
+    },
+    {
+      "before": "DeepSWE v1.1Long-horizon software engineering",
+      "after": "DeepSWE v1.1 Long-horizon software engineering",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 shows the cell prints these as separate lines; the OCR glued the line break away, so a single space restores the printed word separation without changing any character."
+    },
+    {
+      "before": "Terminal-bench 2.1Agentic terminal coding",
+      "after": "Terminal-bench 2.1 Agentic terminal coding",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 shows the cell prints these as separate lines; the OCR glued the line break away, so a single space restores the printed word separation without changing any character."
+    },
+    {
+      "before": "MLE-BenchMachine Learning Engineering",
+      "after": "MLE-Bench Machine Learning Engineering",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 shows the cell prints these as separate lines; the OCR glued the line break away, so a single space restores the printed word separation without changing any character."
+    },
+    {
+      "before": "GDPVal-AA v2Knowledge work",
+      "after": "GDPVal-AA v2 Knowledge work",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 shows the cell prints these as separate lines; the OCR glued the line break away, so a single space restores the printed word separation without changing any character."
+    },
+    {
+      "before": "OSWorld-VerifiedComputer use",
+      "after": "OSWorld-Verified Computer use",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 shows the cell prints these as separate lines; the OCR glued the line break away, so a single space restores the printed word separation without changing any character."
+    },
+    {
+      "before": "CharXiv ReasoningInformation synthesisfrom complex charts",
+      "after": "CharXiv Reasoning Information synthesis from complex charts",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 prints \"CharXiv Reasoning\" then the two sub-lines \"Information synthesis\" and \"from complex charts\"; the OCR glued all three lines together, including the word pair \"synthesisfrom\"."
+    },
+    {
+      "before": "GDM-MRCR v2(8-needle)Long context performance",
+      "after": "GDM-MRCR v2 (8-needle) Long context performance",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. The 400 dpi crop of the row label confirms \"GDM-MRCR v2\", \"(8-needle)\" and \"Long context performance\" print as separate lines; the OCR glued them."
+    },
+    {
+      "before": "$3.00 (full-price)$2.00 (temp discount)",
+      "after": "$3.00 (full-price) $2.00 (temp discount)",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 Claude Sonnet 5 input-price cell prints \"$3.00 (full-price)\" and \"$2.00 (temp discount)\" on separate lines; the OCR glued them."
+    },
+    {
+      "before": "$15.00 (full-price)$10.00 (temp discount)",
+      "after": "$15.00 (full-price) $10.00 (temp discount)",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 (printed page 3), which shows the Results table as one embedded image; the table text is absent from the PDF text layer, so the OCR <table> transcription was checked cell-by-cell against the render. Rendered p.4 Claude Sonnet 5 output-price cell prints \"$15.00 (full-price)\" and \"$10.00 (temp discount)\" on separate lines; the OCR glued them."
+    },
+    {
+      "before": ">-1.35%Lower is better<",
+      "after": ">-1.35% Lower is better<",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Physical p.6 text layer prints the cell value \"-1.35%\" and the direction line \"Lower is better\" as separate lines; the OCR table cell glued them into \"-1.35%Lower is better\"."
+    },
+    {
+      "before": ">-5.45%Lower is better<",
+      "after": ">-5.45% Lower is better<",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Physical p.6 text layer prints \"-5.45%\" and \"Lower is better\" as separate lines; the OCR table cell glued them."
+    },
+    {
+      "before": ">0%Lower is better<",
+      "after": ">0% Lower is better<",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Physical p.6 text layer prints \"0%\" and \"Lower is better\" as separate lines; the OCR table cell glued them."
+    },
+    {
+      "before": ">-3.31%Higher is better<",
+      "after": ">-3.31% Higher is better<",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Physical p.6 text layer prints \"-3.31%\" and \"Higher is better\" as separate lines; the OCR table cell glued them."
+    },
+    {
+      "before": ">+0.25%Lower is better<",
+      "after": ">+0.25% Lower is better<",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Physical p.6 text layer prints \"+0.25%\" and \"Lower is better\" as separate lines; the OCR table cell glued them."
+    },
+    {
+      "before": "There is no required hardware or software to use the\n\n## Evaluation",
+      "after": "There is no required hardware or software to use the model. For AI Studio and Gemini API, see the Gemini API Additional Terms of Service; for Gemini Enterprise Agent Platform, see Google Cloud Platform Terms of Service. For more information, see Gemini Model API instructions and Gemini API quickstart.\n\n## Evaluation",
+      "count": 1,
+      "pdf_pages": [
+        3,
+        4
+      ],
+      "evidence": "The Distribution paragraph breaks across the physical p.3 to p.4 page break; the OCR kept only the p.3 fragment ending \"to use the\" and dropped the whole p.4 continuation. Rendered p.4 top confirms the continuation \"model. For AI Studio and Gemini API, see the Gemini API Additional Terms of Service; for Gemini Enterprise Agent Platform, see Google Cloud Platform Terms of Service. For more information, see Gemini Model API instructions and Gemini API quickstart.\", matching the p.3-p.4 PDF text layer."
+    },
+    {
+      "before": "line:\n\nGemini App\n\n• Gemini Enterprise App\n\n• Gemini Enterprise Agent Platform\n\n\\- Google AI Studio\n\nGemini API\n\n\\- Google Antigravity",
+      "after": "line:\n\n- Gemini App\n\n- Gemini Enterprise App\n\n- Gemini Enterprise Agent Platform\n\n- Google AI Studio\n\n- Gemini API\n\n- Google Antigravity",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Physical p.3 text layer prints all six distribution channels as one bullet list with identical bullet glyphs; the OCR inconsistently transcribed the markers (\"Gemini App\" and \"Gemini API\" lost their bullet, two items carry a \"\\\\-\" Markdown escape instead). Normalized to Markdown list items so the reader shows one six-item list."
+    },
+    {
+      "before": "# Intended Usage and Limitations",
+      "after": "## Intended Usage and Limitations",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "PDF span dump of physical p.5 shows \"Intended Usage and Limitations\" in the 18pt section style, the same level as \"Model Information\", \"Evaluation\" and \"Ethics and Content Safety\", which the OCR renders as \"##\"; the lone \"#\" heading is a level error."
+    },
+    {
+      "before": "either a) false positives or b) not egregious.\n\n## Human Red Teaming Results",
+      "after": "either a) false positives or b) not egregious.\n\n$^{1}$For tone, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model’s ability to follow instructions while remaining safe compared to Gemini 3.5 Flash.\n\n## Human Red Teaming Results",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Physical p.6 text layer prints the footnote \"1 For tone, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model’s ability to follow instructions while remaining safe compared to Gemini 3.5 Flash.\" tied to the superscript in the \"Tone1\" table row; the OCR kept the \"Tone $^{1}$\" marker but dropped the whole footnote body. Inserted after the p.6 paragraph using the OCR's own $^{1}$ superscript style (same repair pattern as the rho technical report footnote)."
+    }
+  ],
+  "unresolved": []
+}

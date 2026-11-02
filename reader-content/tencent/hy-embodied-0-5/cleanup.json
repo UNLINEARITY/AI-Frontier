@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hy-embodied-0-5",
+  "source_sha256": "6039d1d553836f0483e7fdd037205700c2e1216426fd100a28ceddff0de4765a",
+  "ocr_sha256": "c71b929ba9ab51bbd1252c3511ea3e451f7e9504c7c6ab35d1c7b6e2e24d512d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      11,
+      20,
+      21,
+      25
+    ],
+    "coverage": "partial",
+    "notes": "Automated normalized page-text diff over all 46 physical pages plus a fence/heading structure scan; targeted visual verification on rendered pages 11, 20, 21 and 25 (full-page at 110 dpi, crops at 300-400 dpi). Not yet a full line-by-line read of every page; the remaining Fig. 10 transcript blocks (toy-train and polyhedral examples on physical p.21) still contain garbled OCR text and are recorded as unresolved."
+  },
+  "patches": [
+    {
+      "before": "## Embodied Reasoning",
+      "after": "Embodied Reasoning",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 (Fig. 10) shows 'Embodied Reasoning' as a printed panel column-header inside the example figure, not a document section; the OCR promoted the label to a Markdown heading. Demoted to the plain printed label."
+    },
+    {
+      "before": "## HY-Embodied-0.5 MoT-2B",
+      "after": "HY-Embodied-0.5 MoT-2B",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 (Fig. 10) prints 'HY-Embodied-0.5 MoT-2B' as the banner over the upper example panel inside the figure; demoted to plain text."
+    },
+    {
+      "before": "## Model Reasoning",
+      "after": "Model Reasoning",
+      "count": 2,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 (Fig. 10) prints 'Model Reasoning' as per-panel labels inside the example figure; the OCR promoted two of them to headings. Demoted to plain text."
+    },
+    {
+      "before": "## Question",
+      "after": "Question",
+      "count": 3,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 (Fig. 10) prints 'Question' as per-panel prompt-box labels inside the example figure; the OCR promoted three of them to headings. Demoted to plain text."
+    },
+    {
+      "before": "## General Reasoning",
+      "after": "General Reasoning",
+      "count": 2,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 (Fig. 10) prints 'General Reasoning' as panel column-headers inside the example figure; the OCR promoted two of them to headings. Demoted to plain text."
+    },
+    {
+      "before": "## Images Input",
+      "after": "Images Input",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 (Fig. 10) prints 'Images Input' as per-panel image-slot labels inside the example figure; demoted to plain text."
+    },
+    {
+      "before": "## EMERGENCY MAP",
+      "after": "EMERGENCY MAP",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "'EMERGENCY MAP' exists only as the red banner printed inside the rendered map image on physical p.21 (absent from the PDF text layer); it must not stay a heading, so it is demoted to plain text."
+    },
+    {
+      "before": "## HY-Embodied-0.5 MoE-A32B",
+      "after": "HY-Embodied-0.5 MoE-A32B",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 (Fig. 10) prints 'HY-Embodied-0.5 MoE-A32B' as the banner over the lower example panel inside the figure; demoted to plain text."
+    },
+    {
+      "before": "<Think>\n...Get it, let's tackle this problem step by step. First, I need to look at the extent map. The West Gate is marked with a black square at the bottom left; and above it is the Innex Aden to be seen in the North East. Now, West Gate is at the top of the West Gate. First, let's list the AEDs with their numbers and locations: AED 2100; near the north ... AED 1900. Let's move from the east to the west. Now, West Gate is at the top of the West Gate. AED 1900 is on the existing route, near the east, not close to West Gate. Now, West Gate is at the top of the West Gate. Now, West Gate is at the north from East west (left) to the main campus. So the AEDs closer to West Gate would be those more west like 1600. Let's confirm looking at the map, but there is no longer time in the lower part of the Exceeding section of the Innex Aden to be seen in the North East. Now, West Gate is at the top of the West Gate. The 1600 connection is to the main campus, which is north of West Gate, so 1600 is closer to West Gate than 1900. Let's move from East west (left) to the right and then go back to West Gate. The 1600 connection (Option B) is closest to the West Gate. Answer: (B)\n</Think>\n...Answer>\nStep 1: Locate the West Gate Step 2. Evaluate each position of the West Gate? Thus, the AED in the 1600 connection (Option B) is closest to the West Gate. Answer: (B)\n</Answer>",
+      "after": "<Think>\nGot it, let's tackle this problem step by step. First, I need to look at the extent map. The West Gate is marked with a black square at the bottom left, and above it is the Innis Arden Way. Now, let's find each AED's position and the distance to the West Gate. First, let's list the AEDs with their numbers and locations: - AED 2100: near the north...- AED 1900: ... Let's check the options: (A) AED in 1900 attachment - let's check the map. The AED 1900 is on the existing route, near the east, not close to West Gate. (B)...(C)...(D)... Now, West Gate is at the bottom left. Wait, the Innis Arden Way runs along the bottom, from West Gate (left) to the main campus. So the AEDs closer to West Gate would be those more west like 1600. Let's confirm: Looking at the map, the 1600 AED is in the lower part of the Existing route, near the Innis Arden Way, which is adjacent to West Gate. The 1600 connection is to the main campus, which is north of West Gate, so 1600 is closer to West Gate than 1900, 2000, 5000, or 2100. So the answer should be (B) AED in 1600 attachment.\n</Think>\n<Answer> Step 1: Locate the West Gate... Step 2: Evaluate each AED's Distance to the West Gate... Thus, the AED in the 1600 attachment (Option B) is closest to the West Gate. Answer: (B) </Answer>",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 AED panel, Model Reasoning box read at 400 dpi: the printed transcript reads 'Got it, let's tackle this problem step by step. ... above it is the Innis Arden Way. Now, let's find each AED's position ... So the answer should be (B) AED in 1600 attachment. </Think> <Answer> Step 1: Locate the West Gate... Step 2: Evaluate each AED's Distance to the West Gate... Thus, the AED in the 1600 attachment (Option B) is closest to the West Gate. Answer: (B) </Answer>'. The OCR block was heavily garbled/hallucinated (e.g. 'Innex Aden to be seen in the North East', repeated 'Now, West Gate is at the top of the West Gate', '...Answer>' opener). Restored to the printed text."
+    },
+    {
+      "before": "Robo2v1m",
+      "after": "Robo2vlm",
+      "count": 1,
+      "pdf_pages": [
+        25
+      ],
+      "evidence": "Rendered physical p.25 reference (Chen et al., Robo2vlm) read at 400 dpi prints 'Robo2vlm:' with a lowercase letter l; the OCR misread it as the digit 1."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "cot-toy-train-transcript-garbled",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "The MoE-A32B toy-train example transcript on physical p.21 is heavily garbled in OCR (e.g. 'Image 4: plain black wall' vs printed 'plain light wall', hallucinated camera-direction reasoning); restoring it needs a dedicated 400-dpi transcription pass of that panel."
+    },
+    {
+      "id": "cot-polyhedral-transcript-garbled",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "The polyhedral-parts General Reasoning transcript on physical p.21 is garbled (e.g. 'The same squares pails on top?'); needs the same dedicated transcription pass."
+    },
+    {
+      "id": "figure-label-fragments-interleaved",
+      "pdf_pages": [
+        20,
+        21
+      ],
+      "evidence": "Additional panel text from the full-page figures on physical pages 20-21 (Fig. 8, Fig. 9, Fig. 10) is interleaved as floating plain-text lines around image embeds; readable but structurally flattened. Repositioning needs a panel-by-panel review."
+    }
+  ]
+}

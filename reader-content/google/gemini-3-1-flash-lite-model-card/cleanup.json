@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-1-flash-lite-model-card",
+  "source_sha256": "72730fbcf1b1864afa8245f53644173da025a6f192a77cd6f9fcb33353982d56",
+  "ocr_sha256": "e95b9404c82c9aacab7b6ec437b4733076e7099af522db9c25dbf3a30a8915a3",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "All 7 PDF pages word-compared with the OCR markdown; no code fences. Two defects: (1) the OCR promoted the page-1 cover art text to a duplicate title heading above the printed page-2 title line (cover prints \"Gemini 3.1 Flash Lite Model Card\" without the hyphen; the kept H1 is the printed p.2 title); (2) both table footnotes on physical p.6 were dropped while the superscript markers survive in the table header cells ($Evaluation^1$, $Tone^2$); both bodies verified on a 300 dpi render. Table values (-1.18%, -1.84%, -21.7%, +14.59%, -14.41%) match print. No other drops; the running page numbers and page-1 banner are page furniture."
+  },
+  "patches": [
+    {
+      "before": "## Gemini 3.1 Flash Lite Model Card\n\n",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 shows only the Google-logo cover with display-art title \"Gemini 3.1 Flash Lite / Model Card\" (visually verified); the printed title line on p.2 reads \"Gemini 3.1 Flash-Lite - Model Card\" and is kept as the H1. The OCR emitted both as headings, so the cover-art duplicate is removed."
+    },
+    {
+      "before": "while remaining safe</td><td>-14.41%</td></tr></table>",
+      "after": "while remaining safe</td><td>-14.41%</td></tr></table>\n\n$^{1}$ The ordering of evaluations in this table has changed from previous iterations of the 2.5 Flash-Lite model card in order to list safety evaluations together and improve readability. The type of evaluations listed have remained the same.\n\n$^{2}$ For tone and instruction following, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model’s ability to follow instructions while remaining safe compared to Gemini 2.5 Pro. We mark improvements in green and regressions in red.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 footnote block prints \"1 The ordering of evaluations in this table has changed from previous iterations of the 2.5 Flash-Lite model card in order to list safety evaluations together and improve readability. The type of evaluations listed have remained the same.\" and \"2 For tone and instruction following, a positive percentage increase represents an improvement in the tone of the model on sensitive topics and the model’s ability to follow instructions while remaining safe compared to Gemini 2.5 Pro. We mark improvements in green and regressions in red.\" (visually verified at 300 dpi). The OCR kept the superscript markers inside the table header cells ($Evaluation^1$, $Tone^2$) but dropped both footnote bodies; restored after the table."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "missing-cover-banner-image-p1",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Physical page 1 embeds a 932x312 decorative Google-logo/title banner with no OCR image embed; its text is preserved by the H1 title, the graphic itself cannot be restored by text cleanup."
+    }
+  ]
+}

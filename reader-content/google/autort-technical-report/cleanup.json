@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "google:autort-technical-report",
+  "source_sha256": "bd001b5d9f6259eb3c4afaeb3cbaba881c961d9eeda59091b492fe85b0d748b5",
+  "ocr_sha256": "c50febc17bfd1c5dd0c9d3d097f01f39b58dedd222c940490523fb1f7d320d91",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 26 physical PDF pages against the OCR markdown; code fences balanced (6). Remaining deltas are PDF soft-hyphen line-break splits the markdown joins correctly, figure-internal flowchart/axis-label text (Figure 2 prompts, Figure 3 axis) that stays inside the embedded figures, table row-order differences, the rotated arXiv margin stamp and appendix prompt-box content that is present in the fenced blocks. Physical p.1 rendered (115 and 300 dpi) to verify the dropped title-page footnote; no other dropped prose, table bodies or reference entries found."
+  },
+  "patches": [
+    {
+      "before": "Google Deepmind\\*\n\n## ABSTRACT",
+      "after": "Google Deepmind\\*\n\nAuthors in alphabetical order, contributions listed in Author Contributions  \nWebsite: https://auto-rt.github.io/  \nCorresponding emails: {keerthanapg, alexirpan}@google.com. Equal contribution.\n\n## ABSTRACT",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (115 dpi full page and 300 dpi bottom crop) prints a three-line footnote block under a rule below the affiliation: 'Authors in alphabetical order, contributions listed in Author Contributions', 'Website: https://auto-rt.github.io/', 'Corresponding emails: {keerthanapg, alexirpan}@google.com. Equal contribution.' OCR dropped all three lines, leaving the affiliation's '*' equal-contribution marker unexplained. Restored as a compact block after the affiliation, following the printed line breaks; the rotated arXiv margin stamp on the same page is intentionally not restored."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-2-flowchart-text-p3-p4",
+      "pdf_pages": [
+        3,
+        4
+      ],
+      "evidence": "The Figure 2 system flowchart's internal prompt boxes (VLM scene description, task proposals) are not transcribed; they are figure-internal text shown by the embedded figure and were left out deliberately."
+    },
+    {
+      "id": "figure-3-axis-labels-p6",
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Date-axis tick labels of the robots-per-supervisor chart are interleaved in OCR extraction order around the figure embed; figure-internal chart text."
+    }
+  ]
+}

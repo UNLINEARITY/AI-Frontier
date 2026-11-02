@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "zai:codegeex-a-pre-trained-model-for-code-generation-with-multilingual-benchmarking-on-humaneval-x",
+  "source_sha256": "c92c82dad5e5090fba3c06e8bd1519f75ec0c023e262f355ab30f653f30bc6ef",
+  "ocr_sha256": "42c2844b8be77a9dbf850249ce4cae8ea02c54423b58982a5df244c984c76edd",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      3,
+      4,
+      5,
+      8,
+      10,
+      12,
+      26
+    ],
+    "coverage": "partial",
+    "notes": "Triage review: all 30 physical pages machine-scanned (balanced code fences; normalized 4-gram page-text containment vs OCR, mean 0.92; spaced-digit and escape pattern scan); low-containment pages 8, 12, 26 inspected line-by-line; pages 3, 4, 5, 8, 10 rendered and visually verified (four dropped footnote bodies and two spaced-digit equations); references and appendix spot-checked. Footnote superscript markers survive while bodies were dropped (footnotes 4-7). The print's own 'JebBrains' typo was preserved as printed."
+  },
+  "patches": [
+    {
+      "before": "Examples of the problems can be found in Appendix A.5.",
+      "after": "Examples of the problems can be found in Appendix A.5.\n\n7 The HumanEval-X dataset and docker image are at https://hub.docker.com/r/codegeex/codegeex.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 bottom prints footnote 7 'The HumanEval-X dataset and docker image are at https://hub.docker.com/r/codegeex/codegeex.'; OCR kept the $^{7}$ marker in the anchoring paragraph but dropped the footnote body. Restored immediately after the anchoring paragraph."
+    },
+    {
+      "before": "CodeGeeX can improve the coding efficiency for 83.4% of its users.",
+      "after": "CodeGeeX can improve the coding efficiency for 83.4% of its users.\n\n4 https://marketplace.visualstudio.com/items?itemName=aminer.codegeex\n5 https://plugins.jetbrains.com/plugin/20587-codegeex",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 bottom prints footnotes 4 and 5 as URLs: 'https://marketplace.visualstudio.com/items?itemName=aminer.codegeex' and 'https://plugins.jetbrains.com/plugin/20587-codegeex'; OCR kept the $^{4}$/$^{5}$ markers on the 'We build the CodeGeeX extensions' bullet but dropped both bodies. Restored after the anchoring bullet."
+    },
+    {
+      "before": "We format Python code according to the PEP8 standards.",
+      "after": "We format Python code according to the PEP8 standards.\n\n6 https://huggingface.co/datasets/transformersbook/codeparrot",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom prints footnote 6 'https://huggingface.co/datasets/transformersbook/codeparrot'; OCR kept the $^{6}$ marker on the CodeParrot sentence but dropped the body. Restored after the anchoring paragraph."
+    },
+    {
+      "before": "1 . 7 0 2",
+      "after": "1.702",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 equation (1) prints the FastGELU constants 1.702 and 0.851; OCR spaced the digits and the decimal point ('1 . 7 0 2')."
+    },
+    {
+      "before": "0 . 8 5 1",
+      "after": "0.851",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 equation (1) prints 0.851; OCR spaced the digits and the decimal point ('0 . 8 5 1')."
+    },
+    {
+      "before": "n = 2 0 0, k \\in \\{1, 1 0, 1 0 0 \\}",
+      "after": "n = 200, k \\in \\{1, 10, 100\\}",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 equation (5) prints 'n = 200, k ∈ {1, 10, 100}'; OCR spaced the digits of 200, 10 and 100 and added a space before the closing brace."
+    }
+  ],
+  "unresolved": []
+}

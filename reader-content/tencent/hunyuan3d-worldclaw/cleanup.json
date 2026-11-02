@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan3d-worldclaw",
+  "source_sha256": "8369dfddc7fa5658fb589bb2723f11057c3dffc35f14b081cec0463980758a03",
+  "ocr_sha256": "e7f2e1d8e7b99a64b45e7dbd07fecb816966e64894433166161eb2dbb4ce7d48",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "coverage": "complete",
+    "notes": "Structure audit: no code fences; all 51 headings checked against the PDF text layer; 22 headings whose text exists only inside the Figure 1 pipeline image (physical p.5) are demoted to plain text, each verified on the rendered p.5 and a 400 dpi crop of the \"Stage 1\" banner (the figure prints Arabic \"1\" and its own \"PLANING\" spelling, so only the heading marker is removed). Droppage: normalized 10-gram diff of all 38 PDF pages against the OCR found no missing prose; abstract, contents, all section bodies, all 15 figure captions, all 111 reference entries and the page-1 project-page link are present; the vertical arXiv sidebar stamp on p.1 is not transcribed, matching project convention. No tables exist in the PDF; no spaced digits or Markdown escapes altering visible text were found outside figure-internal transcription. Equations (1)-(4) and the inline math notation were compared against the PDF text as LaTeX-equivalent and left unchanged."
+  },
+  "patches": [
+    {
+      "before": "## USER INPUT",
+      "after": "USER INPUT",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## Spatial Layout",
+      "after": "Spatial Layout",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## STAGE 1: INTENT ANALYSIS & PLANING",
+      "after": "STAGE 1: INTENT ANALYSIS & PLANING",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## Terrain Categories",
+      "after": "Terrain Categories",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## STAGE 2. GLOBAL TERRAIN GENERATION",
+      "after": "STAGE 2. GLOBAL TERRAIN GENERATION",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## Prompt Planning",
+      "after": "Prompt Planning",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## (a) layout design",
+      "after": "(a) layout design",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## Scene Assets Generation",
+      "after": "Scene Assets Generation",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## (b) material & assets design",
+      "after": "(b) material & assets design",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## (c) terrain design",
+      "after": "(c) terrain design",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## 3d gen (script: img\\_to\\_3d.py)",
+      "after": "3d gen (script: img\\_to\\_3d.py)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## Scene Terrain Generation & Refinement",
+      "after": "Scene Terrain Generation & Refinement",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## 3d assets scatter (script: scatter.py)",
+      "after": "3d assets scatter (script: scatter.py)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## scene refinement (post: VLM model)",
+      "after": "scene refinement (post: VLM model)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## STAGE 3. REGIONAL OBJECT GENERATION & PLACEMENT",
+      "after": "STAGE 3. REGIONAL OBJECT GENERATION & PLACEMENT",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## Region Planning",
+      "after": "Region Planning",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## divide regions",
+      "after": "divide regions",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## Terrain-Aware Rendering",
+      "after": "Terrain-Aware Rendering",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## 3d gen (script: img\\_to\\_3d.py --det)",
+      "after": "3d gen (script: img\\_to\\_3d.py --det)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## place model (script: 3d\\_placement.py)",
+      "after": "place model (script: 3d\\_placement.py)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## Scene Refinement",
+      "after": "Scene Refinement",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    },
+    {
+      "before": "## for ( ) in a b c d",
+      "after": "for ( ) in a b c d",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 render shows Figure 1 (the whole pipeline diagram is one embedded image) printing this exact label inside the figure; the string never occurs in the PDF text layer as a heading. Demoted to plain text; label wording kept as printed (including the figure's own \"PLANING\" spelling)."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-1-internal-text-order",
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Interleaved figure-internal fragments (Stage I box fields, script call bullets like \"- read (filename: terrain_param.yaml)\", OCR task-checkbox syntax \"\\- [ ] detect\") sit between the embedded Figure 1 image and section 2.2 in OCR reading order, not visual order; the embedded image already shows the true layout, and no exact replacement can restore reading order."
+    }
+  ]
+}

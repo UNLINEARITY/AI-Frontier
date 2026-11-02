@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "zai:glm-ocr-technical-report",
+  "source_sha256": "58198ceae993a1f6bd7e690d27fc111c3e8146a04db8bb1294a6f4acfcb38e63",
+  "ocr_sha256": "2ae6a7b21a3fa79a939dde5dc097117c55abd01f44b06004470234d5db6b8892",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "coverage": "complete",
+    "notes": "Whole-document token n-gram diff of every PDF page against the OCR markdown; remaining gap clusters are hyphenation artifacts in the PDF text layer, LaTeX-equivalent math, figure-internal content and complete HTML tables (Tables 1-6 spot-checked: throughput values, OmniDocBench 94.6/94.62, TableTEDS comparisons 0.035 vs 0.040 and 94.21 vs 93.90, in-house task rows). References [1]-[36] complete; the source's bibliography itself prints spaced versions (Qwen2. 5-vl, Mineru2. 5, Internvl3. 5) like GLM-5's \"Kimi k2. 5\", so they stay. Rendered visual checks: physical p.3, p.4 and p.9 bottom footnote strips (300/200 dpi), p.5 (Task 1/2 bold paragraph labels), p.10 (Prompt bold label + monospace prompt line, Figure 3). Table 6's \"Deepseek-OCR2\" spelling and minus-sign placeholders match the printed cells."
+  },
+  "patches": [
+    {
+      "before": "and remains effective under practical production conditions.",
+      "after": "and remains effective under practical production conditions.\n\n1 https://modelscope.cn/datasets/jockerK/TEDS_TEST\n\n2 Chinese, English, French, Spanish, Russian, German, Japanese, and Korean",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 bottom strip (300 dpi visual check) prints footnote 1 \"https://modelscope.cn/datasets/jockerK/TEDS_TEST\" and footnote 2 \"Chinese, English, French, Spanish, Russian, German, Japanese, and Korean\" below the paragraph whose inline markers the OCR kept ($^{1}$ on TEDS, $^{2}$ on multilingual OCR); the OCR dropped both bodies. Patch restores them after their paragraph."
+    },
+    {
+      "before": "enabling rapid adaptation to domain-specific document understanding tasks ${}^{7}$ .",
+      "after": "enabling rapid adaptation to domain-specific document understanding tasks ${}^{7}$ .\n\n3 https://github.com/vllm-project/vllm\n\n4 https://github.com/sgl-project/sglang\n\n5 https://github.com/ollama/ollama\n\n6 https://github.com/hiyouga/LlamaFactory\n\n7 Tutorial: https://github.com/zai-org/GLM-OCR/blob/main/examples/finetune/README.md",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 bottom strip (200 dpi visual check) prints footnotes 3-7 (vLLM, SGLang, Ollama, LlamaFactory URLs and the finetune Tutorial link) exactly as transcribed; the OCR kept markers ${}^{3}$-${}^{7}$ in the \"Deployment and Finetuning.\" paragraph but dropped all five bodies. Patch restores them after their paragraph."
+    },
+    {
+      "before": "such as paragraphs, tables, mathematical expressions, and key-value pairs.",
+      "after": "such as paragraphs, tables, mathematical expressions, and key-value pairs.\n\n8 https://github.com/zai-org/GLM-OCR\n\n9 https://docs.bigmodel.cn/cn/guide/models/vlm/glm-ocr\n\n10 https://github.com/zai-org/GLM-OCR",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom strip (200 dpi visual check) prints footnotes 8-10 (SDK repo, bigmodel docs, SDK repo) below the section 5.2 paragraph carrying markers $^{8}$/$^{9}$/${}^{10}$; the OCR dropped all three bodies. Patch restores them after the last paragraph of physical p.9."
+    },
+    {
+      "before": "## Task 1: Document Parsing.",
+      "after": "**Task 1: Document Parsing.**",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (150 dpi visual check) prints \"Task 1: Document Parsing.\" as a bold run-in paragraph label inside section 2.1, not a numbered section heading; the OCR promoted it to an H2 that would sit beside \"2.1 Model Overview\" in the reader outline. Demoted to bold text."
+    },
+    {
+      "before": "## Task 2: Key Information Extraction.",
+      "after": "**Task 2: Key Information Extraction.**",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (150 dpi visual check) prints \"Task 2: Key Information Extraction.\" as a bold run-in paragraph label, same as Task 1; the OCR promoted it to an H2. Demoted to bold text."
+    },
+    {
+      "before": "## Prompt:",
+      "after": "**Prompt:**",
+      "count": 3,
+      "pdf_pages": [
+        10,
+        10,
+        12
+      ],
+      "evidence": "Rendered physical p.10 and p.12 (150 dpi visual check) print \"Prompt:\" as a bold paragraph label at the start of sections 5.3.1/5.3.2/5.3.3, followed by a monospace one-line prompt (\"Text Recognition:\" / \"Table Recognition:\" / \"Formula Recognition:\"); none is a section heading. All three OCR H2 promotions are demoted to bold text (2 on p.10, 1 on p.12)."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure1-legend-names-as-prose",
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "evidence": "The OCR keeps one bare paragraph of model names (\"A. PaddleOCR 3.0 B. MinerU2.5 C. DeepSeek-OCR D. GLM-OCR E. dots.ocr F. Qwen2.5-VL G. olmOCR2 H. Mistral OCR\") before the Figure 1 embed; these are the benchmark-chart legend entries that exist only inside the figure image. Removing them would need a clearer look at the rendered chart boundary, and the figure itself is embedded, so the duplication is cosmetic."
+    },
+    {
+      "id": "table6-minus-glyph",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Table 6 empty cells print a minus glyph (\\u2212) while the OCR uses ASCII \"-\"; value-equivalent placeholder, left unchanged."
+    }
+  ]
+}

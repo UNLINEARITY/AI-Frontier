@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "google:musiclm-generating-music-from-text",
+  "source_sha256": "eed4bb48c6da86c176b157d0588ae9a2b3cced8d6fd7d267b3ecb35c9f5a2008",
+  "ocr_sha256": "a0c4a437c9d352d0d751db6346cbaff6e433759d024654ef2314af980c9e35ab",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "coverage": "partial",
+    "notes": "Structural scan: 0 code fences, numbered headings clean. Automated normalized 4-gram page-containment diff of all 15 PDF pages: all pages >=0.95 except p13 (0.50), whose missing runs are the genre-name axis labels inside Figures 4 and 5 (figure-internal; captions present in the markdown). Remaining small runs on p1/p4/p15 are Figure 1/2/8 panel-internal text and the arXiv stamp (omitted per corpus convention). Two p1 drops found and restored after visual verification: the author footnote block (equal contribution/affiliations/correspondence) and the standalone demo-URL line merged into the abstract. References (pp.10-12) complete; body prose machine-scanned rather than read word by word."
+  },
+  "patches": [
+    {
+      "before": "Zalán Borsos $^{1}$ Jesse Engel $^{1}$ Mauro Verzetti $^{1}$ Antoine Caillon $^{2}$ Qingqing Huang $^{1}$ Aren Jansen $^{1}$ Adam Roberts $^{1}$ Marco Tagliasacchi $^{1}$ Matt Sharifi $^{1}$ Neil Zeghidour $^{1}$ Christian Frank $^{1}$",
+      "after": "Zalán Borsos $^{1}$ Jesse Engel $^{1}$ Mauro Verzetti $^{1}$ Antoine Caillon $^{2}$ Qingqing Huang $^{1}$ Aren Jansen $^{1}$ Adam Roberts $^{1}$ Marco Tagliasacchi $^{1}$ Matt Sharifi $^{1}$ Neil Zeghidour $^{1}$ Christian Frank $^{1}$\n\n$^{*}$ Equal contribution $^{1}$ Google Research $^{2}$ IRCAM - Sorbonne Université (work done while interning at Google). Correspondence to: Christian Frank <chfrank@google.com>.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (300 dpi crop of the footnote block under the author list) prints '*Equal contribution 1Google Research 2IRCAM - Sorbonne Université (work done while interning at Google). Correspondence to: Christian Frank <chfrank@google.com>.'; the OCR kept the $^{*1}$/$^{2}$ superscripts on the author names but dropped the whole footnote body. Restored after the author block with the printed hyphen in 'IRCAM - Sorbonne Université'."
+    },
+    {
+      "before": "rich text descriptions provided by human experts. google-research.github.io/seanet/musiclm/examples",
+      "after": "rich text descriptions provided by human experts.\n\ngoogle-research.github.io/seanet/musiclm/examples",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (110 dpi) prints 'google-research.github.io/seanet/musiclm/examples' as a standalone hyperlink line between the abstract and '1. Introduction'; OCR merged it into the abstract paragraph text. Split onto its own line; text unchanged."
+    }
+  ],
+  "unresolved": []
+}

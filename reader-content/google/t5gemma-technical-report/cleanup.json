@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "google:t5gemma-technical-report",
+  "source_sha256": "07987673c642c847257a7dc5304f6b0bf3127bb3ca61ea19950d513080f5fa9b",
+  "ocr_sha256": "2b127d91d3ed1cf26f9732407d2ad2e12c93c42c7aa779bd777db6294fe90437",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "coverage": "complete",
+    "notes": "Token-level alignment of all 12 extracted PDF pages against the OCR markdown; every unmatched run was resolved either as figure-internal chart/axis text shown by an embedded figure (Figures 2-8) or repaired as below. Code-fence markers balanced; heading tree matches sections 1-7 plus Acknowledgements/References; Tables 1-4 render as complete HTML tables. The printed arXiv cover stamp (arXiv:2504.06225v1, physical p.1 margin) is intentionally not transcribed. Verified on renders: p.1 bottom (footnote, self- hyphen), p.3/p.4 (Hel-/laSwag split), p.6 right column bottom + p.7 left column (encoder-/decoder adaptation sentence)."
+  },
+  "patches": [
+    {
+      "before": "Zhe Dong $^{*}$\n\n## Abstract",
+      "after": "Zhe Dong $^{*}$\n\n$^{*}$ Core Contributor. Google. Correspondence to: Biao Zhang \\<biaojiaxing@google.com\\>, Zhe Dong \\<zhedong@google.com\\>.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom-left (300 dpi, read): below the Introduction opening paragraph a footnote rule prints \"* Core Contributor. Google. Correspondence to: Biao Zhang <biaojiaxing@google.com>, Zhe Dong <zhedong@google.com>.\"; the footnote body was dropped by OCR while the matching $^{*}$ author superscripts survived. Angle brackets are backslash-escaped so the reader shows them literally as printed."
+    },
+    {
+      "before": "selfsupervised",
+      "after": "self-supervised",
+      "count": 1,
+      "pdf_pages": [
+        1,
+        2
+      ],
+      "evidence": "Physical p.1 last body line (rendered, read) ends \"...pretrain or adapt all parameters with self-\" and physical p.2 begins \"supervised learning.\"; the printed word is hyphenated \"self-supervised\" and OCR joined it without the hyphen across the page break."
+    },
+    {
+      "before": "Hel laSwag",
+      "after": "HellaSwag",
+      "count": 1,
+      "pdf_pages": [
+        3,
+        4
+      ],
+      "evidence": "Physical p.3 last list line ends \"...MMLU Pro (Wang et al., 2024), Hel-\" and the rendered physical p.4 top line (300 dpi, read) begins \"laSwag (Zellers et al., 2019), Winogrande (Sak-aguchi et al., 2021)...\"; the benchmark name HellaSwag was split across the page break and OCR emitted a space instead of joining the hyphenated word."
+    },
+    {
+      "before": "encoderdecoder",
+      "after": "encoder-decoder",
+      "count": 1,
+      "pdf_pages": [
+        6,
+        7
+      ],
+      "evidence": "Rendered physical p.6 right column last line (300 dpi, read) ends \"a PT score of 48.57, still significantly below the encoder-\" and physical p.7 left column continues \"decoder adaptation, 49.7. This indicates...\"; the paper hyphenates \"encoder-decoder\" throughout and OCR dropped the hyphen at the page break."
+    }
+  ],
+  "unresolved": []
+}

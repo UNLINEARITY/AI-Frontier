@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:emergence-human-to-robot-transfer-vlas",
+  "source_sha256": "e29e2545d0968988b7591ada7b329b478e879e3f476ef388780e4ad5294cc645",
+  "ocr_sha256": "e2e10e45a2b54bc48c7015d04cae26858c40231a1bfc208bf23d03dac53b3313",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "coverage": "complete",
+    "notes": "All 13 physical pages compared against extracted PDF text; physical pages 1 (title/author block) and 6 (section B and C headings, Fig. 7 caption) rendered at 300 dpi and visually verified. Code fences are absent and balanced. Unmatched PDF n-grams are figure-internal chart text (Fig. 7 axis ticks and legend), pi-subscript normalization, and the acknowledgements author lists that the OCR records in full on physical pages 9-10. References [1]-[61], all figure captions, the appendix and the acknowledgement section are present. Two defects fixed: a misread author surname on physical page 1 and a printed section heading left as body text on physical page 6.",
+    "figures_verified": [
+      "physical p.1 300-dpi title/author crop",
+      "physical p.6 300-dpi crops of the Fig. 7 caption and the printed B/C heading styles"
+    ]
+  },
+  "patches": [
+    {
+      "before": "Simar $\\text{Career}^{12*}$",
+      "after": "Simar $\\text{Kareer}^{12*}$",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 title block prints the first author as 'Simar Kareer' with superscript affiliation markers '1 2 *'; the same person is printed 'Simar Kareer' in references [22], [36] and [59]. OCR misread the surname as 'Career'."
+    },
+    {
+      "before": "B. The $\\pi_{0.5} + ego$ recipe enables generalization to unseen scenes, objects, and tasks",
+      "after": "## B. The $\\pi_{0.5} + ego$ recipe enables generalization to unseen scenes, objects, and tasks",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints 'B. The pi_0.5 + ego recipe enables generalization to unseen scenes, objects, and tasks' as a section heading in the same italic heading style as sibling headings 'A. Human to robot transfer benchmark' (physical p.5) and 'C. Human to robot transfer emerges...' (physical p.6), both of which the OCR promoted to Markdown headings. The OCR left the B heading as body text, breaking the section structure."
+    }
+  ],
+  "unresolved": []
+}

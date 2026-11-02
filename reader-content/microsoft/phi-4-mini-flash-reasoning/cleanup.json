@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:phi-4-mini-flash-reasoning",
+  "source_sha256": "c768852c3f2350a4cacdd506d99bf30a1b598920deed158010f47bd8dde5eb45",
+  "ocr_sha256": "ca3c9b345189a5980ce380210c851dac73b5d56ba0cb12c93d2e4cc01a5aebf4",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "coverage": "complete",
+    "notes": "All 35 physical pages diffed against the OCR markdown with hyphenation-aware word/prose windows; physical pages 17, 31, 32, 33 rendered at 110 dpi and the Example 2 Part 2 think chunk re-verified at 300 dpi. No unbalanced code fences exist in this source. Remaining diff deltas are LaTeX-equivalent math, figure-internal diagram labels, table headers/cells already present in the OCR tables, and the checklist guideline boilerplate that is present in the OCR. The NeurIPS checklist Answer/Guidelines labels and the demo-transcript labels (Think, Model's Response) are plain text in the source; three spurious level-2 headings were demoted and the two dropped Example 1 demo banners restored as headings to match the Example 2 treatment. The appendix-G demo systematically normalizes the deliberately misspelled query word strawberrry (three r's, verified on renders) to strawberry, and drops one whole think chunk on physical p.33; both repaired. The md's duplicated/out-of-order emission of the Example 2 Part 1 think body (early, after Example 1 Part 1) cannot be repaired by exact string replacement and is left unresolved."
+  },
+  "patches": [
+    {
+      "before": "## Answer: [Yes]\n\nJustification: The datasets we used",
+      "after": "Answer: [Yes]\n\nJustification: The datasets we used",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 checklist item 5 prints \"Answer: [Yes]\" and \"Justification:\" as plain labels like every other item (p.17 items 1-3 visually confirmed); only numbered item titles are bold headers. The OCR promoted this one occurrence to a level-2 heading while items 6-16 stay plain text in the OCR."
+    },
+    {
+      "before": "## Guidelines:\n\n\\- The answer NA means that paper does not include experiments requiring code.",
+      "after": "Guidelines:\n\n\\- The answer NA means that paper does not include experiments requiring code.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 prints \"Guidelines:\" as a plain label introducing item 5's bullet list; the OCR promoted it to a level-2 heading, inconsistent with the same label kept plain for all other checklist items in the same OCR document."
+    },
+    {
+      "before": "## Guidelines:\n\n\\- The answer NA means that the core method development",
+      "after": "Guidelines:\n\n\\- The answer NA means that the core method development",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered checklist format (p.17) prints \"Guidelines:\" as a plain label; item 16 on physical p.23 is no different. The OCR promoted this occurrence to a level-2 heading between items 16 and Appendix A."
+    },
+    {
+      "before": "## Think\n\nOkay, let's see. I need to solve the equation",
+      "after": "Think\n\nOkay, let's see. I need to solve the equation",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Rendered physical p.31 shows \"Think\" as a gray title bar inside the Example 1 demo box, not a document section heading; demoting the spurious level-2 heading to plain text matches the neighboring \"Model's reasoning process:\" label that the OCR kept plain."
+    },
+    {
+      "before": "## Think\n\nTo be continued...",
+      "after": "Think\n\nTo be continued...",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 shows \"Think\" as the gray transcript-title bar inside the Example 2 (Part 1) demo box; it is not a section heading."
+    },
+    {
+      "before": "## Think\n\nSo after \"straw\" and \"b\"",
+      "after": "Think\n\nSo after \"straw\" and \"b\"",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 shows \"Think\" as the gray transcript-title bar inside the Example 2 (Part 2) demo box; it is not a section heading."
+    },
+    {
+      "before": "## Model's reasoning process (continued):",
+      "after": "Model's reasoning process (continued):",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"Model's reasoning process (continued):\" as an italic label line at the top of the demo box, not a section heading; the same label is plain text elsewhere in the OCR (Example 1 and Example 2 Part 1)."
+    },
+    {
+      "before": "## Model's Response:",
+      "after": "Model's Response:",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"Model's Response:\" as a bold label line inside the demo box, not a section heading; the OCR kept the parallel label \"Model's Response (continued):\" plain on physical p.32."
+    },
+    {
+      "before": "Query: solve x^2+3x+4=1",
+      "after": "## Example 1: Mathematical Reasoning (Part 1)\n\nQuery: solve x^2+3x+4=1",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Rendered physical p.31 prints the demo-box banner \"Example 1: Mathematical Reasoning (Part 1)\" immediately before the query; the OCR dropped the banner entirely for Example 1 while keeping the parallel Example 2 banners as headings, so it is restored as a heading to match."
+    },
+    {
+      "before": "Model's Response (continued):\n\nTo solve the equation",
+      "after": "## Example 1: Mathematical Reasoning (Part 2)\n\nModel's Response (continued):\n\nTo solve the equation",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 top shows the blue banner \"Example 1: Mathematical Reasoning (Part 2)\" above \"Model's Response (continued):\"; the OCR dropped this banner while keeping the parallel Example 2 banners as headings, so it is restored to match."
+    },
+    {
+      "before": "in the word \"strawberry\". Hmm, first I need to make sure I spell the word correctly. The user wrote \"strawberry\". Let me check that.",
+      "after": "in the word \"strawberrry\". Hmm, first I need to make sure I spell the word correctly. The user wrote \"strawberrry\". Let me check that.",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 prints the query word as \"strawberrry\" (three r's, the point of the misspelling demo) in both spots; the OCR silently corrected the first two occurrences to \"strawberry\" while keeping the later \"plural of \\\"strawberry\\\"\" occurrence that the source also prints with the normal spelling."
+    },
+    {
+      "before": "Anyway, the word given here is \"strawberry\". Let me count the letters one by one.",
+      "after": "Anyway, the word given here is \"strawberrry\". Let me count the letters one by one.",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 prints \"the word given here is \\\"strawberrry\\\"\" (three r's); the OCR normalized it to \"strawberry\"."
+    },
+    {
+      "before": "the word is \"strawberry\". So after E, there are three R's in a row, right? Because it's written as \"berry\".",
+      "after": "the word is \"strawberrry\". So after E, there are three R's in a row, right? Because it's written as \"berrry\".",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 prints the word as \"strawberrry\" and \"it's written as \\\"berrry\\\"\"; the OCR corrected both to the normal spelling, contradicting the same paragraph's own letter breakdown (s-t-r-a-w-b-e-r-r-r-y)."
+    },
+    {
+      "before": "s-t-r-a-w-b-e-r-r-y. So after E, there are three R's before Y.",
+      "after": "s-t-r-a-w-b-e-r-r-r-y. So after E, there are three R's before Y.",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 prints the spelled-out form as s-t-r-a-w-b-e-r-r-r-y (eleven letters, three r's after e); the OCR dropped one r, contradicting the printed \"three R's before Y\" in the same sentence."
+    },
+    {
+      "before": "the word is spelled as \"strawberry\".",
+      "after": "the word is spelled as \"strawberrry\".",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 last think line prints \"the word is spelled as \\\"strawberrry\\\"\"; the OCR corrected the printed misspelling."
+    },
+    {
+      "before": "Query: how many r's in \"strawberry\"?",
+      "after": "Query: how many r's in \"strawberrry\"?",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 prints the demo query as \"how many r's in \\\"strawberrry\\\"?\" (three r's) — the misspelling is the premise of the example; the OCR corrected it in the duplicated Part 1 heading block."
+    },
+    {
+      "before": "But the user wrote \"strawberry\", which would be \"berrr\" at the end.",
+      "after": "But the user wrote \"strawberrry\", which would be \"berrr\" at the end.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"the user wrote \\\"strawberrry\\\", which would be \\\"berrr\\\"\"; the OCR corrected the quoted word but kept \"berrr\", contradicting itself."
+    },
+    {
+      "before": "intended \"strawberry\" but misspelled it as \"strawberry\". Let me confirm.",
+      "after": "intended \"strawberry\" but misspelled it as \"strawberrry\". Let me confirm.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"the user intended \\\"strawberry\\\" but misspelled it as \\\"strawberrry\\\"\" — the first occurrence carries the normal spelling, the second the printed misspelling; the OCR normalized both."
+    },
+    {
+      "before": "But the user wrote \"strawberry\", which has three R's in a row.",
+      "after": "But the user wrote \"strawberrry\", which has three R's in a row.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"the user wrote \\\"strawberrry\\\", which has three R's in a row\"; the OCR corrected the quoted word."
+    },
+    {
+      "before": "take the word as given: \"strawberry\". Let's count each letter:",
+      "after": "take the word as given: \"strawberrry\". Let's count each letter:",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"take the word as given: \\\"strawberrry\\\"\"; the OCR corrected the quoted word."
+    },
+    {
+      "before": "The user wrote \"strawberry\". So \"berrr\". So \"b\", then \"e\", then three R's, then \"y\".",
+      "after": "The user wrote \"strawberrry\". So \"berrr\". So \"b\", then \"e\", then three R's, then \"y\".",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"The user wrote \\\"strawberrry\\\". So \\\"berrr\\\".\"; the OCR corrected the quoted word while keeping the \"berrr\" decomposition."
+    },
+    {
+      "before": "userintended \"strawberry\" with two R's, but wrote \"strawberry\" by accident.",
+      "after": "userintended \"strawberry\" with two R's, but wrote \"strawberrry\" by accident.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"maybe the userintended \\\"strawberry\\\" with two R's, but wrote \\\"strawberrry\\\" by accident\" (the source itself prints \"userintended\" without a space); the first spelling is correct in the source, the second is the printed misspelling that the OCR normalized."
+    },
+    {
+      "before": "So in \"strawberry\", there are four R's.",
+      "after": "So in \"strawberrry\", there are four R's.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"So in \\\"strawberrry\\\", there are four R's.\"; the OCR corrected the quoted word."
+    },
+    {
+      "before": "but in the word \"strawberry\", the first R is in \"straw\", then after \"straw\", there's \"b\", \"e\", then three R's.",
+      "after": "but in the word \"strawberrry\", the first R is in \"straw\", then after \"straw\", there's \"b\", \"e\", then three R's.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"in the word \\\"strawberrry\\\", the first R is in \\\"straw\\\"\"; the OCR corrected the quoted word."
+    },
+    {
+      "before": "plus 3 (from \"berry\") equals 4. So the answer is 4.",
+      "after": "plus 3 (from \"berrry\") equals 4. So the answer is 4.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"plus 3 (from \\\"berrry\\\") equals 4\" — the three-r spelling that carries the counted r's; the OCR corrected it."
+    },
+    {
+      "before": "But the user wrote \"strawberry\", which adds an extra R, making it three R's in a row.",
+      "after": "But the user wrote \"strawberrry\", which adds an extra R, making it three R's in a row.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"the user wrote \\\"strawberrry\\\", which adds an extra R\"; the OCR corrected the quoted word."
+    },
+    {
+      "before": "Wait, no: \"strawberry\" would be s-t-r-a-w-b-e-r-r-r-y, so after \"ber\" there are three R's.",
+      "after": "Wait, no: \"strawberrry\" would be s-t-r-a-w-b-e-r-r-r-y, so after \"ber\" there are three R's.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"\\\"strawberrry\\\" would be s-t-r-a-w-b-e-r-r-r-y\"; the OCR corrected the quoted word, contradicting the spelled-out form kept in the same sentence."
+    },
+    {
+      "before": "then \"berry\" has three R's. So total 1 + 3 = 4.",
+      "after": "then \"berrry\" has three R's. So total 1 + 3 = 4.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"then \\\"berrry\\\" has three R's\"; the OCR corrected the quoted fragment, contradicting \"three R's\" in the same clause."
+    },
+    {
+      "before": "Let me check the exact spelling again. The user wrote \"strawberry\". Let's break it down:\n\nSo four R's. Therefore, the answer is 4. But maybe I'm missing something.",
+      "after": "Let me check the exact spelling again. The user wrote \"strawberrry\". Let's break it down: straw + berry, but with rrrr instead of rr. So \"straw\" has one R, \"berry\" normally has two R's, but here it's written as \"rrrr\", which would be three R's? Wait, no. Wait, \"berry\" is b-e-r-r-y. So two R's. If it's written as \"berrry\", that's replacing the double R with triple R? Wait, no. Let me think. The correct plural is \"strawberries\", which is s-t-r-a-w-s-b-e-r-r-i-e-s. But perhaps the user made a typo. However, the question is about the given word \"strawberrry\". So regardless of the correct spelling, we have to count the R's in that exact spelling. So \"strawberrry\" is s-t-r-a-w-b-e-r-r-r-y. Let's count the R's: 1. The R in \"straw\" (third letter) 2. The R in \"ber\" (eighth letter) 3. The next R (ninth) 4. The next R (tenth)\n\nSo four R's. Therefore, the answer is 4. But maybe I'm missing something.",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 (verified at 300 dpi) prints a full think chunk after \"Let's break it down:\" that the OCR dropped entirely: from \"straw + berry, but with rrrr instead of rr.\" through \"4. The next R (tenth)\". The OCR also normalized \"the user wrote \\\"strawberrry\\\"\" to \"strawberry\" at the anchor. The restored text is transcribed from the 300-dpi crop; the source itself prints \"s-t-r-a-w-s-b-e-r-r-i-e-s\" and \"written as \\\"rrrr\\\"\" exactly as transcribed."
+    },
+    {
+      "before": "the word is \"strawberry\" with three R's after \"ber\".",
+      "after": "the word is \"strawberrry\" with three R's after \"ber\".",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints \"the word is \\\"strawberrry\\\" with three R's after \\\"ber\\\"\"; the OCR corrected the quoted word."
+    },
+    {
+      "before": "The word \"strawberry\" is spelled as s-t-r-a-w-b-e-r-r-r-y. Breaking it down:",
+      "after": "The word \"strawberrry\" is spelled as s-t-r-a-w-b-e-r-r-r-y. Breaking it down:",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Rendered physical p.33 prints the model's final response as \"The word \\\"strawberrry\\\" is spelled as s-t-r-a-w-b-e-r-r-r-y\"; the OCR corrected the quoted word while keeping the eleven-letter breakdown, contradicting itself."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "example-2-part1-think-body-emitted-out-of-order",
+      "pdf_pages": [
+        31,
+        32
+      ],
+      "evidence": "The printed order is Example 1 Part 1 (p.31), Example 1 Part 2 response (p.32), Example 2 Part 1 box (p.32), Example 2 Part 2 (p.33). The OCR emits the Example 2 Part 1 think body (the paragraph beginning 'Okay, let's see. The question is asking how many times the letter \"r\" appears...') immediately after the Example 1 Part 1 think text, long before the '## Example 2: Letter Counting in Misspelled Words (Part 1)' heading, whose own block then only holds the query, a Think label and 'To be continued...' before the Part 2 content. Restoring printed order needs a block move, which exact before/after replacements cannot express."
+    },
+    {
+      "id": "flattened-demo-box-boundaries",
+      "pdf_pages": [
+        30,
+        31,
+        32,
+        33
+      ],
+      "evidence": "The appendix-G demo boxes (colored banners, gray Think bars, italic 'To be continued...' tail lines) are flattened to plain paragraphs; box borders and the exact label styling are not representable in the current repair schema beyond the heading/label fixes applied."
+    }
+  ]
+}

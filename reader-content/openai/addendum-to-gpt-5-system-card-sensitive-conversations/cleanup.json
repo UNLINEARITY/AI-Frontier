@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "openai:addendum-to-gpt-5-system-card-sensitive-conversations",
+  "source_sha256": "c39d7fb47fed9635d7bdf99475b710191d84593b9925d5bab1673213dc9ce997",
+  "ocr_sha256": "5fe8cec9525886825eafe040bfc90825b241b236bf3cbc248953d7d815424c8f",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 4 physical PDF pages against the OCR markdown found no dropped or garbled runs: all four evaluation tables carry their captions and full bodies, the StrongReject reference entry is complete, and section prose matches. Remaining deltas are single-token noise (not_unsafe tokenization, table punctuation, hyphenation joins). No patches required."
+  },
+  "patches": [],
+  "unresolved": []
+}

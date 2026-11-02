@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:llama-nemotron-technical-report",
+  "source_sha256": "ea874406542cb65617b32bf30436480158f09b3057aa50dea1f596e0908db522",
+  "ocr_sha256": "1362d9cedac030601480bc1f3725b3cea8c35280fb36c1778fd2cad488eb2ef8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "coverage": "complete",
+    "notes": "All 24 physical pages diffed against the OCR markdown with a normalized word-level alignment; every remaining delta was accounted for as running page headers, figure-internal text embedded as images (Figure 1 title panel incl. the Artificial Analysis Intelligence Index wording, Figure 3 block labels, Figure 6 axes), LaTeX-equivalent math, or table reordering. The source contains no code fences, so no swallowed blocks are possible. Physical pages 10, 18 and 20 were rendered at 400 dpi and visually read to verify the three repairs (two print-spelling restorations, one dropped letter in a contributor name). The print's own misspelling \"amoung\" is restored; names Shuting Pan and Bhiwandiwalla are restored to the printed spellings."
+  },
+  "patches": [
+    {
+      "before": "setting a new state-of-the-art on GPQA among open models",
+      "after": "setting a new state-of-the-art on GPQA amoung open models",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 (400 dpi crop, read) prints \"on GPQA amoung open models.\" - the print's own misspelling; the OCR silently corrected it to \"among\". The second occurrence of the phrase on physical p.18 (section 7.4) is printed \"among\" there and matches the OCR, so the patch anchors on the section 5 sentence only."
+    },
+    {
+      "before": "Anahita Bhiwandwalla",
+      "after": "Anahita Bhiwandiwalla",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 contributors list (400 dpi crop, read) prints \"Anahita Bhiwandiwalla,\" with the second i; the OCR dropped it, yielding \"Bhiwandwalla\"."
+    },
+    {
+      "before": "Shutting Pan",
+      "after": "Shuting Pan",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 (400 dpi crop, read) prints the citation author list entry \"Shuting Pan,\"; the OCR auto-corrected the given name to \"Shutting\"."
+    }
+  ],
+  "unresolved": []
+}

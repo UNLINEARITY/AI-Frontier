@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "id": "anthropic:claude-3-5-haiku-and-upgraded-sonnet-model-card-addendum",
+  "source_sha256": "5425dde49b649916000e38fb86c4721cfe31a8bdfe30bbb98e875fa3d654804c",
+  "ocr_sha256": "b8cfb821ba715fed7e9431d2c631e1ea9f6410c0676fdb5bb68193fccc2fc4a1",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "No code fences in the OCR source; headings and tables are structurally intact, and the appendix computer-use examples are image embeds with their prompt text inside the images. Word-level diff of extracted text from all 14 physical pages against the OCR markdown; the PDF text layer carries U+200B instead of printed hyphens, so dropped-content transcription was done from 300 dpi renders (footnotes 1-3). Remaining diff lines are hyphenation artifacts, chart-internal labels of Figures 1-2 and page numbers. Tables 3-8 values spot-checked against the print; Table 8's i/ii footnote lines were already present. The print's own misspelling 'capabilites' is restored, not corrected."
+  },
+  "patches": [
+    {
+      "before": "and the new computer use capability.",
+      "after": "and the new computer use capability.\n\n$^{1}$ Our evaluation tables exclude OpenAI’s o1 model family [9] as they depend on extensive pre-response computation time, unlike the typical models. This fundamental difference in operation makes performance comparisons difficult and outside the scope of this report.",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 footnote (300 dpi) prints '1 Our evaluation tables exclude OpenAI's o1 model family [9] as they depend on extensive pre-response computation time, unlike the typical models. This fundamental difference in operation makes performance comparisons difficult and outside the scope of this report.'; the OCR kept the $^{1}$ marker after 'evaluation results' but dropped the footnote body."
+    },
+    {
+      "before": "We believe dedicated scaffolding and prompting can further improve the results.",
+      "after": "We believe dedicated scaffolding and prompting can further improve the results.\n\n$^{2}$ Compared to the current state-of-the-art score of 45.2% as reported on SWE-bench’s leaderboard as of October 22nd, 2024",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 footnote (300 dpi) prints '2 Compared to the current state-of-the-art score of 45.2% as reported on SWE-bench's leaderboard as of October 22nd, 2024' (no trailing period in the print); the OCR kept the $^{2}$ marker after '49.0%' but dropped the footnote body."
+    },
+    {
+      "before": "compared to a baseline of Claude 3.5 Sonnet. $^{3}$",
+      "after": "compared to a baseline of Claude 3.5 Sonnet. $^{3}$\n\n$^{3}$ Section 5.5 of the original Claude 3 Model Card [17] details our evaluation process, including an explanation of how win rates are calculated.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 footnote (300 dpi) prints '3 Section 5.5 of the original Claude 3 Model Card [17] details our evaluation process, including an explanation of how win rates are calculated.'; the OCR kept the $^{3}$ marker but dropped the footnote body."
+    },
+    {
+      "before": "Gemini 1.5 Proi[12, 13]",
+      "after": "Gemini 1.5 Pro $^{i}$ [12, 13]",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 Table 5 header prints 'Gemini 1.5 Pro' with a superscript i before the citation '[12, 13]' (300 dpi header crop; pdftext line '1.5 Proi[12, 13]' and footnote line 'i Numbers from September 2024 release reported at [13].'); the OCR glued the marker into the name as 'Proi'."
+    },
+    {
+      "before": "GPT-4 $o^i$ [11]",
+      "after": "GPT-4o$^{i}$ [11]",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 Table 7 header prints 'GPT-4o' with a superscript i before '[11]' (300 dpi header crop; pdftext 'GPT-4oi[11]'); the OCR split the model name into 'GPT-4' plus math '$o^i$', which renders as a separate 'o' with superscript."
+    },
+    {
+      "before": "Gemini 1.5  $Pro^ii$ [12, 13]",
+      "after": "Gemini 1.5 Pro $^{ii}$ [12, 13]",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 Table 7 header prints 'Gemini 1.5 Pro' with a superscript ii before '[12, 13]' (300 dpi header crop; pdftext '1.5 Proii[12, 13]'); the OCR wrote math '$Pro^ii$', which renders the name in math italics with a half-dropped marker."
+    },
+    {
+      "before": "The simple-evals MMLU implementation in OpenAI's simple-evals suite [26] uses 0-shot CoT. AIME results reported at [9].",
+      "after": "$^{i}$ The simple-evals MMLU implementation in OpenAI's simple-evals suite [26] uses 0-shot CoT. AIME results reported at [9].",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints Table 7's footnote block as 'i The simple-evals MMLU implementation in OpenAI's simple-evals suite [26] uses 0-shot CoT. AIME results reported at [9].' followed by 'ii Numbers from Gemini's September 2024 release reported at [13].'; the OCR kept the ii line but lost the i marker on the first line (the separate '$^{i}$ Numbers-from-September' line belongs to Table 5, where it is present)."
+    },
+    {
+      "before": "computer use capabilities, though",
+      "after": "computer use capabilites, though",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints the print's own misspelling 'We identified several potential risks associated with computer use capabilites, though none were deemed imminent' (300 dpi crop); OCR auto-corrected it to 'capabilities'."
+    },
+    {
+      "before": "GPQA (Diamond)Graduate level Q&amp;A",
+      "after": "GPQA (Diamond) Graduate level Q&amp;A",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 8 row label prints 'GPQA (Diamond)' and 'Graduate level Q&A' on two lines within the cell (300 dpi crop); the OCR glued them without the separating space."
+    },
+    {
+      "before": "MMLUGeneral reasoning",
+      "after": "MMLU General reasoning",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 8 row label prints 'MMLU' and 'General reasoning' on two lines within the cell; the OCR glued them without the separating space."
+    },
+    {
+      "before": "MMLU ProGeneral reasoning",
+      "after": "MMLU Pro General reasoning",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 8 row label prints 'MMLU Pro' and 'General reasoning' on two lines within the cell; the OCR glued them without the separating space."
+    },
+    {
+      "before": "HumanEvalPython coding tasks",
+      "after": "HumanEval Python coding tasks",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 8 row label prints 'HumanEval' and 'Python coding tasks' on two lines within the cell; the OCR glued them without the separating space."
+    },
+    {
+      "before": "IFEvalInstruction following",
+      "after": "IFEval Instruction following",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 Table 8 row label prints 'IFEval' and 'Instruction following' on two lines within the cell; the OCR glued them without the separating space."
+    }
+  ],
+  "unresolved": []
+}

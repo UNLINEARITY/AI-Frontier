@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "id": "meta:v-jepa-2-technical-report",
+  "source_sha256": "9cfcfde5fb0d9730637da5b9e7317825c3f3d09e91f3553e22eeba42c74d2226",
+  "ocr_sha256": "0eaf05ed1dce8ba0de82c72c37cb33c2f9c6fda29905f6afb19df3bc4d0d7efa",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "coverage": "complete",
+    "notes": "All 48 physical pages were scanned against the PDF text layer with a normalized word-n-gram droppage probe plus per-page targeted checks; fence structure is clean (no code fences); headings, figure captions and the two-column reference list (physical p.29-32) are complete. Footnote markers 1-5 survive inline while all five footnote bodies/URLs were dropped; each was transcribed from a 300-dpi render and is restored by insertion. Three OCR auto-corrections of the source's own misspellings (\"resoluton\" p.16, \"aligment\" p.45, missing letter in \"Ruize Gao\" p.31) were verified on renders; the print's own typos \"feed-froward\" (p.14), \"use use\" (p.38) and Table 10's \"Larning Rate\" (p.34) are correctly preserved by the OCR and left unchanged. Table cells were verified cell-by-cell only for Table 10; remaining tables matched the extracted values at probe level."
+  },
+  "patches": [
+    {
+      "before": "a horizon of 4 future actions.",
+      "after": "a horizon of 4 future actions.\n\n$^{1}$ In comparison, we train V-JEPA 2-AC on 23k trajectories from Droid, including successes and failures.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "The OCR markdown keeps the inline marker \"over 1M trajectories. $^{1}$\" but dropped the footnote body. Physical p.11 prints \"1 In comparison, we train V-JEPA 2-AC on 23k trajectories from Droid, including successes and failures.\" below the footnote rule (300-dpi render of p.11 visually verified); the body appears nowhere in the OCR markdown."
+    },
+    {
+      "before": "Although the Cosmos technical report (Agarwal et al., 2025)",
+      "after": "Although the Cosmos technical report (Agarwal et al., 2025)\n\n$^{2}$ https://github.com/nvidia-cosmos/cosmos-predict1",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "The OCR markdown keeps the inline marker \"action-conditioned fine-tuning code. $^{2}$\" but dropped the footnote URL. Physical p.11 prints \"2 https://github.com/nvidia-cosmos/cosmos-predict1\" below the footnote rule (300-dpi render of p.11 visually verified). The line is inserted at the end of the OCR paragraph chunk carrying the marker."
+    },
+    {
+      "before": "which splits videos into clips at scene transitions.",
+      "after": "which splits videos into clips at scene transitions.\n\n$^{3}$ https://github.com/Breakthrough/PySceneDetect",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "The OCR markdown keeps the inline marker \"PySceneDetect library, $^{3}$\" but dropped the footnote URL. Physical p.33 prints \"3 https://github.com/Breakthrough/PySceneDetect\" below the footnote rule (300-dpi render of p.33 visually verified)."
+    },
+    {
+      "before": "For PerceptionTest, we further train the model for 5 epochs on the training set.",
+      "after": "For PerceptionTest, we further train the model for 5 epochs on the training set.\n\n$^{4}$ https://github.com/LLaVA-VL/LLaVA-NeXT",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "The OCR markdown keeps the inline marker \"Llava-NEXT codebase, $^{4}$\" but dropped the footnote URL. Physical p.46 prints \"4 https://github.com/LLaVA-VL/LLaVA-NeXT\" below the footnote rule (300-dpi render of p.46 visually verified); the line is inserted at the end of the E.2 controlled-setup paragraph carrying the marker."
+    },
+    {
+      "before": "Details of the training hyperparams are provided in Table 22.",
+      "after": "Details of the training hyperparams are provided in Table 22.\n\n$^{5}$ https://github.com/facebookresearch/perception_models",
+      "count": 1,
+      "pdf_pages": [
+        47
+      ],
+      "evidence": "The OCR markdown keeps the inline marker \"Perception LM training code, $^{5}$\" but dropped the footnote URL. Physical p.47 prints \"5 https://github.com/facebookresearch/perception_models\" below the footnote rule (300-dpi render of p.47 visually verified)."
+    },
+    {
+      "before": "input resolution of 448px",
+      "after": "input resoluton of 448px",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Physical p.16 (Table 4 discussion) prints \"using an attentive probe and input resoluton of 448px (Bolya et al., 2025). We use an input resolution of 256px\" — the source's own misspelling \"resoluton\" only for the 448px mention (300-dpi render visually verified). The OCR auto-corrected it to \"resolution\"; the patch restores the printed spelling. The same sentence's \"resolution of 256px\" is correct in print and untouched."
+    },
+    {
+      "before": "use the full alignment dataset",
+      "after": "use the full aligment dataset",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Physical p.45 (Appendix E.3) prints \"V-JEPA 2 VITg384 and use the full aligment dataset\" — the source's own misspelling \"aligment\" (300-dpi render visually verified). The OCR auto-corrected it to \"alignment\"; the patch restores the printed spelling."
+    },
+    {
+      "before": "Ruiz Gao",
+      "after": "Ruize Gao",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Physical p.31 prints the Qwen2 author list \"...Ru Peng, Rui Men, Ruize Gao, Runji Lin, Shijie Wang...\" (300-dpi render visually verified). The OCR dropped the final letter and emitted \"Ruiz Gao\" in the References entry."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "paragraph-split-around-figure-8-panels",
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "evidence": "The sentence \"Although the Cosmos technical report (Agarwal et al., 2025) mentions using world models...\" is split in the OCR by the Figure 8 Start/Goal Frame image panels and caption; reading order matches the print, but the two paragraph halves sit on either side of the figure block."
+    },
+    {
+      "id": "table-cell-audit-spot-level",
+      "pdf_pages": [
+        5,
+        6,
+        10,
+        15,
+        16,
+        22,
+        26,
+        27,
+        33,
+        34,
+        35,
+        36,
+        40,
+        41,
+        42,
+        43,
+        44,
+        46,
+        47,
+        48
+      ],
+      "evidence": "Large result tables (Tables 1-9, 11-22) were checked via value-level probes and Table 10 cell-by-cell; a full cell-by-cell audit of every numeric table was not performed."
+    }
+  ]
+}

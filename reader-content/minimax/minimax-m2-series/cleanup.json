@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "minimax:minimax-m2-series",
+  "source_sha256": "866e92e58242b520f25a8a19107e5c54d73d9effcf9e11e02c6b651782dc6b08",
+  "ocr_sha256": "744d931d5d3972871dfdfb7bdbd153b1baf0860a8d1ffca756e128c8e1d75a61",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of the OCR markdown against extracted text from all 35 physical pages; physical pages 1, 8, 22, 25 and 26 were additionally inspected against rendered pages. The only dropped text is the physical p.1 footnote block (correspondence e-mail and the copyright line); the OCR keeps the 'MiniMax(1)' marker. All other missing tokens belong to diagram text inside the embedded figure images (Fig. 4 Forge RL system with the SWE-Scaling/Appdev pipeline banners on p.8, the Fig. 5 windowed-FIFO node labels on p.22, and the Fig. 6/7/8 panel banners on p.25-26), which remain visible in the embedded figures. No unbalanced code fences, no spaced-digit equation corruption, and the single 'MiniMax\\_AI' backslash-underscore escape renders to the underscore that the source URL actually prints."
+  },
+  "patches": [
+    {
+      "before": "MiniMax $^{1}$",
+      "after": "MiniMax $^{1}$\n\n$^{1}$Please send correspondence to model@minimax.io. © 2026 MiniMax. All rights reserved",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (300 dpi crop of the page bottom) prints a footnote under a rule: superscript 1 'Please send correspondence to model@minimax.io.' followed by a full-width rule and the line '(c) 2026 MiniMax. All rights reserved'; the OCR title block keeps 'MiniMax $^{1}$' but dropped both lines."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "html-table-structure-not-compared-cell-by-cell",
+      "pdf_pages": [
+        6,
+        7,
+        16,
+        17
+      ],
+      "evidence": "The review compared table body text at token level (no dropped table content found) but did not do a page-by-page structural comparison of the OCR HTML table cell boundaries against the rendered tables; flattened cells or lost <br> separators would not surface as missing tokens."
+    }
+  ]
+}

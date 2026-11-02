@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "openai:addendum-to-gpt-4o-system-card-native-image-generation",
+  "source_sha256": "8b420728f228fc4f56aa3ddbf33d7e29e44d7776a63731428767643400117f29",
+  "ocr_sha256": "918f99f730dbd424e9c91ca985aaaa0a1457270c43c8eb76ec88300dea15663e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 13 physical PDF pages against the OCR markdown; all bias-evaluation tables (class distributions, heterogeneous-output frequency, Shannon entropy), the red-teaming sections, contributor lines and the Shannon reference entry are present. The only drops were the three footnote bodies, restored after their marker paragraphs. Remaining deltas are hyphenation joins and the repeated 'ChatGPT' name splits on p.12 (contribution list), which the markdown carries correctly."
+  },
+  "patches": [
+    {
+      "before": "address them. $^{1}$\n\n",
+      "after": "address them. $^{1}$\n\n$^{1}$ Per our Preparedness Framework, the launch of 4o image generation did not trigger additional Preparedness evaluations beyond those originally conducted for GPT-4o.\n\n",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "The introduction's $^{1}$ marker survives but its footnote body was dropped; physical p.1 prints '1 Per our Preparedness Framework, the launch of 4o image generation did not trigger additional Preparedness evaluations beyond those originally conducted for GPT-4o.' under a rule at the page bottom."
+    },
+    {
+      "before": "trends towards. $^{3}$\n\n",
+      "after": "trends towards. $^{3}$\n\n$^{2}$ Because DALL·E 3 is called via a tool call, sometimes a user prompt may never cause a tool call. We normalize all numbers so they sum up to 100%.\n$^{3}$ Shannon entropy is a metric from information theory that quantifies uncertainty or unpredictability in a distribution. Low entropy (0) means the distribution is highly skewed — nearly all predictions fall into one class. High entropy (1) means the distribution is uniform — the model is equally likely to assign any class.\n\n",
+      "count": 1,
+      "pdf_pages": [
+        6,
+        7
+      ],
+      "evidence": "The bias-evaluation bullet list's $^{2}$ and $^{3}$ markers survive (OCR lines for 'Class distributions' and 'Skew') but both footnote bodies were dropped. Physical p.6 prints footnote 2 (including 'We normalize all numbers so they sum up to 100%.') and physical p.7 prints footnote 3 under rules at the page bottoms; texts taken from the PDF text layer verbatim including the em-dashes."
+    }
+  ],
+  "unresolved": []
+}

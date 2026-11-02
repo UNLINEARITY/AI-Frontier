@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:knowledge-insulating-vlas-technical-report",
+  "source_sha256": "105da140f08f71c2e896bfabe7a016e485e519c4f7ebdbfb29199831b37ea071",
+  "ocr_sha256": "1687b8f3f6e5cef94f71fd8957ac41107a4bc47aa27bcde83be5f6fb3a296514",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "All 18 physical pages compared against extracted PDF text; physical page 6 additionally rendered (110 dpi full page) and equations (4)-(6), the Figure 3 caption and Figure 3's internal task labels visually verified. Unmatched PDF n-grams are figure-internal labels (Figure 3 task names, Figures 4-10 chart ticks), LaTeX-equivalent math, the PDF text layer's broken words (e.g. 'tokeniza tion') and pi-subscript normalization. Table 1 (LIBERO) values match the PDF text exactly; sections 1-7, references and appendices A-C are complete. No fence or structure defects.",
+    "figures_verified": [
+      "physical p.6 110-dpi render (equations 4-6, Figure 3)"
+    ]
+  },
+  "patches": [],
+  "unresolved": []
+}

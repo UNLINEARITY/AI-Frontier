@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "zai:glm-tts-technical-report",
+  "source_sha256": "eaa9b6e355e05b755016e15f17522ec56c2a027576fa12a0bce27dec9b2fe9f2",
+  "ocr_sha256": "a3197cbf69b9e14458eb6ff8d392e03e1d1bb3188969a6efbaf1fd8e247a2593",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "Whole-document word-level diff of the OCR markdown against extracted text from all 14 physical PDF pages; the physical p.7/p.8 page-boundary sentence was rendered at 300 dpi. Code fences are absent, Tables 1-8 and their bodies are present, and the remaining diff gaps are page-number stamps, the arXiv side stamp, text-layer URL spacing artifacts, and figure-internal labels covered by embedded figure images. The OCR's conversion of two printed bullet glyphs to markdown dashes was left unchanged (bullet style is not a defect class)."
+  },
+  "patches": [
+    {
+      "before": "GLM-TTStokenizer",
+      "after": "GLM-TTS-tokenizer",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.7 bottom (300 dpi): the sentence starts \"As shown in Table 1, the GLM-TTS-\" and breaks across the page to p.8 \"tokenizer significantly outperforms the GLM-4-Voice tokenizer...\"; the hyphenated compound \"GLM-TTS-tokenizer\" is also printed in the same paragraph (\"We evaluate GLM-TTS-tokenizer across two English test sets\"). OCR joined the page-break halves without the hyphen or a space, producing \"GLM-TTStokenizer\"."
+    }
+  ],
+  "unresolved": [
+    "Physical p.1 author block: the PDF text layer prints two stray glyphs (section sign, question mark) that OCR sensibly dropped; left unchanged."
+  ]
+}

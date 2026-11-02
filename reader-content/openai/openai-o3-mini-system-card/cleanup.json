@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "id": "openai:openai-o3-mini-system-card",
+  "source_sha256": "420c260d935429e38a31044b287378802218b6edcc5de72b66cca9346b0197fa",
+  "ocr_sha256": "c888d80a9ddfe8dad4ea8007f1efdb00edef2f353f555239555e079e3ee92a5e",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "coverage": "complete",
+    "notes": "Every extracted PDF page line was compared against the OCR markdown with normalization and fuzzy matching; code-fence balance, all markdown headings and footnote markers were checked. Rendered physical pages 1, 6, 7, 27 and 36 were visually inspected (dpi 120 full pages, dpi 200 for references). Footnote bodies 1-5 and one sentence leading into the SWE-bench settings list were dropped by OCR while their markers survived; the GPT-4 technical report reference lost inter-name spaces and its final period, and one author name gained a letter."
+  },
+  "patches": [
+    {
+      "before": "through deliberative alignment $[1]^{1}$ . This brings",
+      "after": "through deliberative alignment $[1]^{1}$ .\n\nDeliberative alignment is a training approach that teaches LLMs to explicitly reason through safety specifications before producing an answer. This brings",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints the footnote body 'Deliberative alignment is a training approach that teaches LLMs to explicitly reason through safety specifications before producing an answer.' attached to marker 1 on 'deliberative alignment [1]'; OCR kept the superscript marker but dropped the body."
+    },
+    {
+      "before": "completing the user request $^{2}$ . Pairwise red teaming",
+      "after": "completing the user request $^{2}$ .\n\n$^{2}$ 19.5% of red teaming attempts included at least one turn where a model browsed for information, while in 6.6% at least one turn included executing code on behalf of the user.\n\nPairwise red teaming",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 2 as '19.5% of red teaming attempts included at least one turn where a model browsed for information, while in 6.6% at least one turn included executing code on behalf of the user.' attached to 'completing the user request2' in section 4.3.1; the OCR kept the $^{2}$ marker and dropped the body."
+    },
+    {
+      "before": "poorer than the safety of prior models.",
+      "after": "poorer than the safety of prior models.\n\n$^{3}$ “All the remaining generations are equally safe” and “I don’t know” options were always available.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 3 as '“All the remaining generations are equally safe” and “I don’t know” options were always available.' attached to 'Red teamers rated3' in the same paragraph block; the OCR kept the $^{3}$ marker and dropped the body."
+    },
+    {
+      "before": "Conversations were rated by the person generating the red teaming example, their peer red teamers, and a third party data labeling company.",
+      "after": "Conversations were rated by the person generating the red teaming example, their peer red teamers, and a third party data labeling company.\n\n$^{4}$ Win rates computed using the Bradley-Terry model, confidence intervals computed at 95% CI",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints footnote 4 as 'Win rates computed using the Bradley-Terry model, confidence intervals computed at 95% CI' attached to 'Table 8 showing Win Rate4'; the OCR kept the $^{4}$ marker and dropped the body."
+    },
+    {
+      "before": "refused 63.5% and 56% of the queries respectively. $^{5}$",
+      "after": "refused 63.5% and 56% of the queries respectively. $^{5}$\n\n$^{5}$ Not all the queries necessarily should be refused.",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 prints footnote 5 as 'Not all the queries necessarily should be refused.' attached to 'refused 63.5% and 56% of the queries respectively.5'; the OCR kept the $^{5}$ marker and dropped the body."
+    },
+    {
+      "before": "![[images/59ef4624323d63d776ca30a8f285d3993cff7cbdff63ae7d28fd140609defb18.jpg]]\n\n\\- Agentless, which is used",
+      "after": "![[images/59ef4624323d63d776ca30a8f285d3993cff7cbdff63ae7d28fd140609defb18.jpg]]\n\nWe evaluate SWE-bench in two settings:\n\n\\- Agentless, which is used",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Rendered physical p.27 prints the sentence 'We evaluate SWE-bench in two settings:' between the task-flow figure and the 'Agentless, ...' bullet in section 5.7.2; OCR dropped the sentence while keeping the following bullets, leaving the bullet list without its lead-in."
+    },
+    {
+      "before": "Kondraciuak",
+      "after": "Kondraciuk",
+      "count": 1,
+      "pdf_pages": [
+        36
+      ],
+      "evidence": "Rendered physical p.36 reference [11] (GPT-4 technical report author list) prints 'D. Kokotajlo, Łukasz Kondraciuk,'; OCR inserted an extra 'a' producing 'Kondraciuak' (verified at dpi 200)."
+    },
+    {
+      "before": "J. F.C Uribe,A.Vallone,A.Vijayvergiya,C.Voss,C.Wainwright,J.J.Wang,A.Wang,B.Wang,J.Ward,J.Wei,C.Weinmann,A.Welihinda,P.Welinder,J.Weng,L.Weng,M.Wiethoff,D.Willner,C.Winter,S.Wolrich,H.Wong,L.Workman,S.Wu,J.Wu,M.Wu,K.Xiao,T.Xu,S.Yoo,K.Yu,Q.Yuan,W.Zaremba,R.Zellers,C.Zhang,M.Zhang,S.Zhao,T.Zheng,J.Zhuang,W.Zhuk,and B.Zoph,\"Gpt-4 technical report,\"2024",
+      "after": "J. F. C. Uribe, A. Vallone, A. Vijayvergiya, C. Voss, C. Wainwright, J. J. Wang, A. Wang, B. Wang, J. Ward, J. Wei, C. Weinmann, A. Welihinda, P. Welinder, J. Weng, L. Weng, M. Wiethoff, D. Willner, C. Winter, S. Wolrich, H. Wong, L. Workman, S. Wu, J. Wu, M. Wu, K. Xiao, T. Xu, S. Yoo, K. Yu, Q. Yuan, W. Zaremba, R. Zellers, C. Zhang, M. Zhang, S. Zhao, T. Zheng, J. Zhuang, W. Zhuk, and B. Zoph, \"Gpt-4 technical report,\" 2024.",
+      "count": 1,
+      "pdf_pages": [
+        36
+      ],
+      "evidence": "Rendered physical p.36 reference [11] prints the author tail with spaces between names and a final period: 'J. F. C. Uribe, A. Vallone, ..., and B. Zoph, \"Gpt-4 technical report,\" 2024.'; OCR glued the run from 'Uribe' onward and dropped the closing period. The print's own casing 'Gpt-4' and the printed 'Pinto, Michael, Pokorny' comma are preserved."
+    }
+  ],
+  "unresolved": []
+}

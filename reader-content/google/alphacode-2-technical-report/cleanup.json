@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "google:alphacode-2-technical-report",
+  "source_sha256": "9685851543135291fb712aaa0023b9c03260518a453e0878c2f77ccabe4e2a9a",
+  "ocr_sha256": "eff6fa581523529201335b48e0350c12f9e3d414c4d4fa69da52dcfc35cb7759",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all 7 physical PDF pages against the OCR markdown; physical pages 1 and 6 were rendered and visually checked. The Contributions and Acknowledgments two-column layout was flattened with names scattered across the wrong role groups; the block is restored to the printed grouping. The p.1 corresponding-author line was missing. Remaining token deltas are figure-internal axis labels (Figure 3) and hyphenated names that the markdown joins correctly."
+  },
+  "patches": [
+    {
+      "before": "performed better than 85% of competition participants.\n\n## Introduction",
+      "after": "performed better than 85% of competition participants.\n\nCorresponding author(s): remileblond@google.com\n\n## Introduction",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 colophon line prints \"Corresponding author(s): remileblond@google.com\" below the abstract; the line was dropped entirely by OCR."
+    },
+    {
+      "before": "## Leads\n\nFelix Gimeno, technical lead\n\nContributors\n\nFlorent Altché, technical lead\n\nGrace Margand\n\nRémi Leblond, lead\n\nJacob Kelly\n\nJakub Sygnowski\n\nJames Keeling\n\nCore contributors\n\nJunyoung Chung\n\nAlaa Saade\n\nNate Kushman\n\nAnton Ruddock\n\nNikolay Savinov\n\nCorentin Tallec\n\nPetko Yotov\n\nGeorge Powell\n\nTobenna Peter Igwe\n\nJean-Bastien Grill\n\nWojciech Stokowiec\n\nMaciej Mikuła\n\nYujia Li\n\nMatthias Lochbrunner\n\nMichael Mathieu\n\nPaul Caron\n\nStrategic Advisors\n\nKoray Kavukcuoglu\n\nNando de Freitas\n\nContributors\n\nOriol Vinyals\n\nDisha Shrivastava\n\nEric Mitchell\n\nPushmeet Kohli\n\nSatinder Baveja",
+      "after": "## Leads\n\nFelix Gimeno, technical lead\n\nFlorent Altché, technical lead\n\nRémi Leblond, lead\n\nCore contributors\n\nAlaa Saade\n\nAnton Ruddock\n\nCorentin Tallec\n\nGeorge Powell\n\nJean-Bastien Grill\n\nMaciej Mikuła\n\nMatthias Lochbrunner\n\nMichael Mathieu\n\nPaul Caron\n\nContributors\n\nDisha Shrivastava\n\nEric Mitchell\n\nGrace Margand\n\nJacob Kelly\n\nJakub Sygnowski\n\nJames Keeling\n\nJunyoung Chung\n\nNate Kushman\n\nNikolay Savinov\n\nPetko Yotov\n\nTobenna Peter Igwe\n\nWojciech Stokowiec\n\nYujia Li\n\nStrategic Advisors\n\nKoray Kavukcuoglu\n\nNando de Freitas\n\nOriol Vinyals\n\nPushmeet Kohli\n\nSatinder Baveja",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 prints the Contributions and Acknowledgments section as two columns with four groups: Leads (Felix Gimeno, Florent Altché, Rémi Leblond), Core contributors (Alaa Saade, Anton Ruddock, Corentin Tallec, George Powell, Jean-Bastien Grill, Maciej Mikuła, Matthias Lochbrunner, Michael Mathieu, Paul Caron), Contributors (Disha Shrivastava, Eric Mitchell, Grace Margand, Jacob Kelly, Jakub Sygnowski, James Keeling, Junyoung Chung, Nate Kushman, Nikolay Savinov, Petko Yotov, Tobenna Peter Igwe, Wojciech Stokowiec, Yujia Li), and Strategic Advisors (Koray Kavukcuoglu, Nando de Freitas, Oriol Vinyals, Pushmeet Kohli, Satinder Baveja). OCR interleaved the columns, scattering names across the wrong groups; the patch restores the printed grouping with no names added or removed."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "copyright-colophon-line",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Physical p.1 also prints '© 2023 Google DeepMind. All rights reserved'; this copyright colophon is consistently omitted across the corpus's readers, so it was left unpatched here."
+    }
+  ]
+}

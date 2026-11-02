@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nemotron-h-technical-report",
+  "source_sha256": "14b26ba4fa89e51f884790e200d660d409e61fc86db5c8396c0627b6c0c8cd42",
+  "ocr_sha256": "c8c1656ce59ebd1fdcfcfda775fe6a7d63e4b6741cc1284ef8212b92d1f4cac8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "coverage": "complete",
+    "notes": "Full OCR read-through plus whole-document normalized word-level diff against extracted text of all 35 physical PDF pages; pages 4, 6, 8, 11, 12, 14, 16, 19 and 29 were additionally rendered and visually inspected. Table 4 numbers, empty DS-V3/Llama-3.1-405B cells and the running headers match the print. 'GQA with 8 kev-value heads' (physical p.4), 'AEGIS2. 0' (physical p.29) and the caption phrase 'turns that that refer to' reproduce typos printed by the PDF itself (verified at 400/260 dpi), so they were not patched. 'EPuB' (physical p.6) matches the PDF text layer. Text inside figure axes (e.g. 1e13 ticks) belongs to embedded figures. Remaining interleaving of the Table 4 block inside the evaluation list (table emitted after list item 1) is layout-level and was not restructured beyond restoring the split sentence."
+  },
+  "patches": [
+    {
+      "before": "mean and 12-norm aggregation functions",
+      "after": "mean and l2-norm aggregation functions",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 prints 'We use the mean and l2-norm aggregation functions along the batch and sequence dimensions' with a lowercase letter l before the 2 (visually verified); the PDF text layer also reads 'l2-norm'. OCR misread the letter l as the digit 1."
+    },
+    {
+      "before": "and 12-norm is",
+      "after": "and l2-norm is",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "Rendered physical p.16 prints 'and l2-norm is sqrt(sum S_i^2)' with the same lowercase letter l (visually verified); OCR misread it as the digit 1."
+    },
+    {
+      "before": "N-H56B-Base",
+      "after": "N-H 56B-Base",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 Table 4 header cells wrap over two lines (visually verified at 190 dpi): 'N-H/56B-Base', 'Qwen-2.5/72B-Base', 'Llama-3.1/70B-Base', 'DS-V3/671B-Base', 'Llama-3.1/405B-Base'; no hyphen is printed between the wrapped lines. The OCR flattened each two-line header cell into one glued token; the patch inserts the line-break separator as a space and changes no character."
+    },
+    {
+      "before": "N-H47B-Base",
+      "after": "N-H 47B-Base",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 Table 4 header cells wrap over two lines (visually verified at 190 dpi): 'N-H/56B-Base', 'Qwen-2.5/72B-Base', 'Llama-3.1/70B-Base', 'DS-V3/671B-Base', 'Llama-3.1/405B-Base'; no hyphen is printed between the wrapped lines. The OCR flattened each two-line header cell into one glued token; the patch inserts the line-break separator as a space and changes no character."
+    },
+    {
+      "before": "Qwen-2.572B-Base",
+      "after": "Qwen-2.5 72B-Base",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 Table 4 header cells wrap over two lines (visually verified at 190 dpi): 'N-H/56B-Base', 'Qwen-2.5/72B-Base', 'Llama-3.1/70B-Base', 'DS-V3/671B-Base', 'Llama-3.1/405B-Base'; no hyphen is printed between the wrapped lines. The OCR flattened each two-line header cell into one glued token; the patch inserts the line-break separator as a space and changes no character."
+    },
+    {
+      "before": "Llama-3.170B-Base",
+      "after": "Llama-3.1 70B-Base",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 Table 4 header cells wrap over two lines (visually verified at 190 dpi): 'N-H/56B-Base', 'Qwen-2.5/72B-Base', 'Llama-3.1/70B-Base', 'DS-V3/671B-Base', 'Llama-3.1/405B-Base'; no hyphen is printed between the wrapped lines. The OCR flattened each two-line header cell into one glued token; the patch inserts the line-break separator as a space and changes no character."
+    },
+    {
+      "before": "DS-V3671B-Base",
+      "after": "DS-V3 671B-Base",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 Table 4 header cells wrap over two lines (visually verified at 190 dpi): 'N-H/56B-Base', 'Qwen-2.5/72B-Base', 'Llama-3.1/70B-Base', 'DS-V3/671B-Base', 'Llama-3.1/405B-Base'; no hyphen is printed between the wrapped lines. The OCR flattened each two-line header cell into one glued token; the patch inserts the line-break separator as a space and changes no character."
+    },
+    {
+      "before": "Llama-3.1405B-Base",
+      "after": "Llama-3.1 405B-Base",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 Table 4 header cells wrap over two lines (visually verified at 190 dpi): 'N-H/56B-Base', 'Qwen-2.5/72B-Base', 'Llama-3.1/70B-Base', 'DS-V3/671B-Base', 'Llama-3.1/405B-Base'; no hyphen is printed between the wrapped lines. The OCR flattened each two-line header cell into one glued token; the patch inserts the line-break separator as a space and changes no character."
+    },
+    {
+      "before": "\ngenerated by DeepSeek-R1 (DeepSeek-AI, 2025b). Both Nemotron-H and the Qwen 2.5 models show significant improvement on the benchmark by simply changing the prompt.",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "evidence": "Rendered physical p.11 ends evaluation-list item 2 with '...where we provide few-shot examples' (visually verified) and physical p.12 continues it with 'generated by DeepSeek-R1 (DeepSeek-AI, 2025b). Both Nemotron-H ... changing the prompt.' before item 3. The OCR emitted that continuation after the Table 4 block and caption instead; this patch removes the misplaced copy (the following patch re-inserts it at the printed position)."
+    },
+    {
+      "before": "2. We also include a MATH-R1 version of the MATH task, where we provide few-shot examples",
+      "after": "2. We also include a MATH-R1 version of the MATH task, where we provide few-shot examples generated by DeepSeek-R1 (DeepSeek-AI, 2025b). Both Nemotron-H and the Qwen 2.5 models show significant improvement on the benchmark by simply changing the prompt.",
+      "count": 1,
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "evidence": "Restores evaluation-list item 2 to the printed sentence: physical p.11 '...where we provide few-shot examples' continues on physical p.12 with 'generated by DeepSeek-R1 (DeepSeek-AI, 2025b). Both Nemotron-H ... changing the prompt.' (both rendered and visually verified)."
+    },
+    {
+      "before": "the dataset (as Nemotron-CC $^{1}$ ) under the Common Crawl terms of use.",
+      "after": "the dataset (as Nemotron-CC $^{1}$ ) under the Common Crawl terms of use.\n\n$^{1}$ https://data.commoncrawl.org/contrib/Nemotron/Nemotron-CC/index.html.",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "All 13 footnote bodies are present in the printed PDF but absent from the OCR markdown (only the superscript markers survived). Bodies transcribed from the PDF text layer and visually verified on rendered pages: physical p.6 (footnote 1, 260 dpi crop), p.8 (2-4), p.11 (5-11, full-page render), p.14 (12), p.19 (13). Each body is re-inserted as a paragraph after the paragraph carrying its marker, matching the printed footnote text."
+    },
+    {
+      "before": "general knowledge) to the training corpus.",
+      "after": "general knowledge) to the training corpus.\n\n$^{2}$ https://artofproblemsolving.com.\n\n$^{3}$ https://huggingface.co/datasets/TigerResearch/tigerbot-kaggle-leetcodesolutions-en-2k.\n\n$^{4}$ https://huggingface.co/datasets/bigcode/the-stack-v2.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "All 13 footnote bodies are present in the printed PDF but absent from the OCR markdown (only the superscript markers survived). Bodies transcribed from the PDF text layer and visually verified on rendered pages: physical p.6 (footnote 1, 260 dpi crop), p.8 (2-4), p.11 (5-11, full-page render), p.14 (12), p.19 (13). Each body is re-inserted as a paragraph after the paragraph carrying its marker, matching the printed footnote text."
+    },
+    {
+      "before": "(Rajbhandari et al., 2020).",
+      "after": "(Rajbhandari et al., 2020).\n\n$^{5}$ https://github.com/nvidia/megatron-lm.\n\n$^{6}$ https://github.com/nvidia/transformerEngine.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "All 13 footnote bodies are present in the printed PDF but absent from the OCR markdown (only the superscript markers survived). Bodies transcribed from the PDF text layer and visually verified on rendered pages: physical p.6 (footnote 1, 260 dpi crop), p.8 (2-4), p.11 (5-11, full-page render), p.14 (12), p.19 (13). Each body is re-inserted as a paragraph after the paragraph carrying its marker, matching the printed footnote text."
+    },
+    {
+      "before": "between failures (MTBF) in our cluster.",
+      "after": "between failures (MTBF) in our cluster.\n\n$^{7}$ https://developer.nvidia.com/blog/ensuring-reliable-model-training-on-nvidia-dgx-cloud/.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "All 13 footnote bodies are present in the printed PDF but absent from the OCR markdown (only the superscript markers survived). Bodies transcribed from the PDF text layer and visually verified on rendered pages: physical p.6 (footnote 1, 260 dpi crop), p.8 (2-4), p.11 (5-11, full-page render), p.14 (12), p.19 (13). Each body is re-inserted as a paragraph after the paragraph carrying its marker, matching the printed footnote text."
+    },
+    {
+      "before": "runtime initialization and checkpoint loading).",
+      "after": "runtime initialization and checkpoint loading).\n\n$^{8}$ https://github.com/NVIDIA/nvidia-resiliency-ext.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "All 13 footnote bodies are present in the printed PDF but absent from the OCR markdown (only the superscript markers survived). Bodies transcribed from the PDF text layer and visually verified on rendered pages: physical p.6 (footnote 1, 260 dpi crop), p.8 (2-4), p.11 (5-11, full-page render), p.14 (12), p.19 (13). Each body is re-inserted as a paragraph after the paragraph carrying its marker, matching the printed footnote text."
+    },
+    {
+      "before": "with the following changes:",
+      "after": "with the following changes:\n\n$^{9}$ https://github.com/EleutherAI/lm-evaluation-harness.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "All 13 footnote bodies are present in the printed PDF but absent from the OCR markdown (only the superscript markers survived). Bodies transcribed from the PDF text layer and visually verified on rendered pages: physical p.6 (footnote 1, 260 dpi crop), p.8 (2-4), p.11 (5-11, full-page render), p.14 (12), p.19 (13). Each body is re-inserted as a paragraph after the paragraph carrying its marker, matching the printed footnote text."
+    },
+    {
+      "before": "to grade solutions.",
+      "after": "to grade solutions.\n\n$^{10}$ https://github.com/huggingface/math-verify.\n\n$^{11}$ https://github.com/NVIDIA/NeMo-Skills/blob/main/nemo_skills/code_execution/math_grader.py.",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "All 13 footnote bodies are present in the printed PDF but absent from the OCR markdown (only the superscript markers survived). Bodies transcribed from the PDF text layer and visually verified on rendered pages: physical p.6 (footnote 1, 260 dpi crop), p.8 (2-4), p.11 (5-11, full-page render), p.14 (12), p.19 (13). Each body is re-inserted as a paragraph after the paragraph carrying its marker, matching the printed footnote text."
+    },
+    {
+      "before": "output tokens per second per GPU).",
+      "after": "output tokens per second per GPU).\n\n$^{12}$ https://github.com/vllm-project/vllm/tree/v0.7.3.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "All 13 footnote bodies are present in the printed PDF but absent from the OCR markdown (only the superscript markers survived). Bodies transcribed from the PDF text layer and visually verified on rendered pages: physical p.6 (footnote 1, 260 dpi crop), p.8 (2-4), p.11 (5-11, full-page render), p.14 (12), p.19 (13). Each body is re-inserted as a paragraph after the paragraph carrying its marker, matching the printed footnote text."
+    },
+    {
+      "before": "including one thumbnail tile.",
+      "after": "including one thumbnail tile.\n\n$^{13}$ The predefined ratios are {a : b} = {1 : 1, 1 : 2, 1 : 3, 1 : 4, 1 : 5, 1 : 6, 1 : 7, 1 : 8, 1 : 9, 1 : 10, 1 : 11, 1 : 2, 2 : 1, 2 : 2, 2 : 3, 2 : 4, 2 : 5, 2 : 6, 3 : 1, 3 : 2, 3 : 3, 3 : 4, 4 : 1, 4 : 2, 4 : 3, 5 : 1, 5 : 2, 6 : 1, 6 : 2, 7 : 1, 8 : 1, 9 : 1, 10 : 1, 11 : 1, 12 : 1}.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "All 13 footnote bodies are present in the printed PDF but absent from the OCR markdown (only the superscript markers survived). Bodies transcribed from the PDF text layer and visually verified on rendered pages: physical p.6 (footnote 1, 260 dpi crop), p.8 (2-4), p.11 (5-11, full-page render), p.14 (12), p.19 (13). Each body is re-inserted as a paragraph after the paragraph carrying its marker, matching the printed footnote text."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "table4-block-inside-evaluation-list",
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "evidence": "The OCR emits the Table 4 HTML table and caption between list items 1 and 2 of section 2.5, mirroring the page break but not the printed reading order, where the table belongs to the surrounding prose. Only the split item-2 sentence was restored; moving the table block itself would be a larger structural change."
+    }
+  ]
+}

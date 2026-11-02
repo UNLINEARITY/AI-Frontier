@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-mt",
+  "source_sha256": "655b01cc87450c8fcf1ede41396a1b7f77e7aa9e62350af7d063e8239c5c5410",
+  "ocr_sha256": "e233cfc12d1754e2e08c24e56c0149b46621fcf4fc62297e1235a1ef344164a1",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "All 18 physical pages scanned with a 5-gram PDF-text-to-OCR word-coverage pass; remaining diffs are hyphenated contributor names (Federmann, Bjorn Karlsson etc. wrap inside the narrow contributors table) and CJK text, both faithful. The single code fence (Table 1 prompt templates, OCR lines 80-92) is balanced and its content was compared against the rendered Table 1 on physical p.4. Heading hierarchy matches the printed sections; the contributor roster and reference list have no dropped entries. Note: the PDF itself prints backslashes in the display DOI 10.1162/TACL\\_A\\_00730, so that OCR text is correct as-is."
+  },
+  "patches": [
+    {
+      "before": "paper\\_files",
+      "after": "paper_files",
+      "count": 2,
+      "pdf_pages": [
+        13,
+        18
+      ],
+      "evidence": "Rendered physical p.13 (Many-shot In-context Learning reference) and p.18 (MMLU-Pro reference) both print the typewriter URL http://papers.nips.cc/paper_files/paper/... with a real underscore (verified at 400-500 dpi); OCR inserted Markdown escapes at both occurrences."
+    },
+    {
+      "before": "tacl\\_a\\_00730",
+      "after": "tacl_a_00730",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 Salute-the-classic reference prints the typewriter URL https://doi.org/10.1162/tacl_a_00730 with a real underscore; OCR inserted escapes in the URL. The printed display DOI 10.1162/TACL\\_A\\_00730 in the same reference literally prints backslashes in the PDF, so the OCR transcription of the display DOI is kept unchanged."
+    },
+    {
+      "before": "Datasets\\_and\\_Benchmarks\\_Track",
+      "after": "Datasets_and_Benchmarks_Track",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 MMLU-Pro reference prints ...-Abstract-Datasets_and_Benchmarks_Track.html with real underscores at 500 dpi; OCR inserted Markdown escapes."
+    },
+    {
+      "before": "into<target_language>",
+      "after": "into <target_language>",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 Table 1 prints 'Translate the following segment into <target_language>, without additional explanation.' with a space after 'into'; OCR dropped the space. The Chinese ZH<=>XX template above was compared glyph-by-glyph and matches."
+    }
+  ],
+  "unresolved": []
+}

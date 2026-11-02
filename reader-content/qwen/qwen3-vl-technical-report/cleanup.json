@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen3-vl-technical-report",
+  "source_sha256": "ee075d08e67de1148d6437c6c1d481f7894183b8793905a2deb5f62664f49380",
+  "ocr_sha256": "e8006971a21d334e4c902db68097af551c0531f96050a0c5692cf8df4db1cd4d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "coverage": "complete",
+    "notes": "Whole-document PDF-text vs OCR diff over all 42 physical pages plus a code-fence balance scan (26 opens / 26 closes, none unpaired). All 26 code fences are balanced; the only missing body text in the whole document was the two p.20 footnotes (restored below). Missing tokens elsewhere are hyphenation splits and text inside embedded figures (p.25 chart axes '5min...1024k extrapolation', p.14/p.33 benchmark names in charts), which the embedded figure images show. Backslash-underscore escapes that match underscores printed by the source (OCRBench\\_v2, MMMUPro\\_Vision, ScreenSpot\\_Pro.pdf URL) resolve to the printed characters when the Markdown renders and were left unchanged; the two <...\\_image> tags sit outside any code fence and print the backslash literally, so they are repaired."
+  },
+  "patches": [
+    {
+      "before": "81,920 tokens to provide sufficient thinking space.\n\nTable 5: Comparison among Qwen3-VL-235B-A22B (Instruct)",
+      "after": "81,920 tokens to provide sufficient thinking space.\n\n1 For reproducibility of Arena-Hard v2, we report the win rates evaluated by GPT-4.1.\n2 For reproducibility of Creative Writing v3, we report the scores evaluated by Claude 3.7 Sonnet.\n\nTable 5: Comparison among Qwen3-VL-235B-A22B (Instruct)",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered physical p.20 bottom shows a footnote rule with two entries: superscript 1 'For reproducibility of Arena-Hard v2, we report the win rates evaluated by GPT-4.1.' and superscript 2 'For reproducibility of Creative Writing v3, we report the scores evaluated by Claude 3.7 Sonnet.' (visually verified at 200 dpi). The OCR kept the $^{1}$/$^{2}$ markers on the benchmark names but dropped both footnote bodies."
+    },
+    {
+      "before": "<reference\\_image>",
+      "after": "<reference_image>",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "PDF text layer on physical p.42 prints the Design2Code evaluation prompt tag '<reference_image>' with a plain underscore; the line sits outside any code fence, so the OCR backslash would render literally."
+    },
+    {
+      "before": "<generated\\_image>",
+      "after": "<generated_image>",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "PDF text layer on physical p.42 prints the Design2Code evaluation prompt tag '<generated_image>' with a plain underscore; the line sits outside any code fence, so the OCR backslash would render literally."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "stacked-table-header-labels-glued",
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "evidence": "Table 5/6 header cells print stacked labels (e.g. 'Qwen3-VL / 235B-A22B / Instruct', 'Deepseek V3 / 0324'); the OCR concatenates them without separators ('Qwen3-VL235B-A22BInstruct', 'Deepseek V30324'). The printed cells use line breaks, so any single-character repair would be an editorial choice; values and columns are otherwise correct."
+    },
+    {
+      "id": "prompt-box-banners-as-headings",
+      "pdf_pages": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "evidence": "Appendix B consistently renders printed prompt-box/label lines (e.g. 'MMMUPro_Vision', 'Question', benchmark group labels) as Markdown headings; the convention is uniform across B.1-B.11 and preserves all prompt text, so it was kept as the document's structure rather than patched piecemeal."
+    }
+  ]
+}

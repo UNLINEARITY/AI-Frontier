@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-dit",
+  "source_sha256": "417a55a94d3a903af4b8b047eaec7a896a78c37ac58fd2b14ee9cd6233002cc0",
+  "ocr_sha256": "600dc9304e0375adc640741f2f8f73ee482553767698c9797d9308e82bee94cd",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "coverage": "partial",
+    "notes": "Whole-document normalized word diff of the OCR against all 25 pages of extracted PDF text; targeted renders at 150-300 dpi of physical pages 1 (dropped author footnotes) and 8 (run-in heading 'Improving Training Stability'). No code fences exist in this OCR. All 21 figure captions, Tables 1-2 values (74.2/74.3/95.4/86.6/59.0 ... 63.3) and the reference list token set were verified against the text layer; the remaining tables and bilingual figure examples were only coarsely diffed."
+  },
+  "patches": [
+    {
+      "before": "Tencent Hunyuan\n\n## Abstract",
+      "after": "Tencent Hunyuan\n\n$^{*}$equal contribution\n\n$^{†}$corresponding author (Email: qinglinlu@tencent.com)\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote rule at 300 dpi prints two author footnotes: asterisk 'equal contribution' and dagger 'corresponding author (Email: qinglinlu@tencent.com)' (email set in monospace). The OCR kept the matching $^{*}$ and $^{†}$ markers on 'Zhimin Li*, Jianwei Zhang*' and 'Qinglin Lu$^{†}$' but dropped both footnote bodies; restored after the 'Tencent Hunyuan' affiliation line."
+    },
+    {
+      "before": "## Improving Training Stability To stabilize training, we present three techniques:",
+      "after": "Improving Training Stability To stabilize training, we present three techniques:",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 at 150 dpi: 'Improving Training Stability  To stabilize training, we present three techniques:' is a bold run-in paragraph lead inline with the following sentence, like the sibling run-ins 'Text Encoder', 'Effect of the Skip Module' and 'Rotary Position Encoding (RoPE)' that the OCR kept as plain paragraph text; the '##' promotion is spurious and splits the numbered technique list from its lead-in."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-recaption-examples",
+      "pdf_pages": [
+        10,
+        11
+      ],
+      "evidence": "Figures 8-10 recaptioning/multi-turn dialogue examples contain long bilingual prompt strings that exist only inside the figure images; the PDF text layer shows them but the OCR correctly leaves them to the embedded figures."
+    },
+    {
+      "id": "appendix-tables-coarse-check",
+      "pdf_pages": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "evidence": "Appendix A tables (Chinese element categories etc.) were covered only by the normalized word diff; cell-level proofreading not performed within this review's budget."
+    }
+  ]
+}

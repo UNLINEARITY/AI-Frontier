@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen3-tts-technical-report",
+  "source_sha256": "4a857188ba3478a410faacc0045cf00b40a00ecb0499617b4e9d70e7cf4b87c8",
+  "ocr_sha256": "67e64bb67b10f1f4e212d650ca60d8eae8189bf76fe4164ff0ea3fdd0d8a75c6",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "coverage": "complete",
+    "notes": "Automated line-level comparison of extracted text from all 14 physical PDF pages against the OCR Markdown, plus a code-fence balance scan (no fences present) and a heading scan (all headings match numbered sections; no figure banners or speaker labels promoted). Table header and body lines flagged on pages 5-7 and 10 are present inside OCR HTML tables (line-reflow false positives); the InstructTTSEval rows Qwen3TTS-12Hz-1.7B-CustomVoice and Qwen3TTS-12Hz-1.7B-VD match the PDF text layer. The PDF prints \"Contributors1 Yunfei\" without a colon on page 12, so the OCR matches the source there. Pages 1, 12 and 13 were rendered (150/300 dpi) to visually confirm all three patches."
+  },
+  "patches": [
+    {
+      "before": "# Qwen3-TTS Technical Report\n\nQwen Team",
+      "after": "# Qwen3-TTS Technical Report\n\n2026-01-23\n\nQwen Team",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 top (150 dpi) prints the date 2026-01-23 in the title-page header, right of the Qwen logo above the title; the OCR dropped the date line from the title block."
+    },
+    {
+      "before": "Jianwei Zhang, Guangdong Zhou, Jialong Zuo",
+      "after": "Jianwei Zhang, Guangdong Zhou, Jialong Zuo\n\n1 Alphabetical order. †Corresponding Authors.",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 bottom (300 dpi) prints the footnote \"1Alphabetical order. †Corresponding Authors.\" explaining the Contributors superscript 1 and the † marks on Jin Xu and Junyang Lin; the OCR kept the $^{1}$ and $^{†}$ markers in the Authors section but dropped the footnote body."
+    },
+    {
+      "before": "Guangzhou Liu, Yongmao Zhang",
+      "after": "Guanghou Liu, Yongmao Zhang",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 references (300 dpi) print \"Guanghou Liu, Yongmao Zhang, Yi Lei, Yunlin Chen, Rui Wang, Lei Xie, and Zhifei Li. Promptstyle: ...\"; the OCR inserted a spurious z, reading the author name as \"Guangzhou Liu\"."
+    }
+  ],
+  "unresolved": []
+}

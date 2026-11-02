@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:acereason-nemotron-technical-report",
+  "source_sha256": "29e0386797a739eea1c83300f71f02388f33fb9e6e39bacbdd254e2588509dca",
+  "ocr_sha256": "d3e1fe43183a7f64251af1ac6318625c7442f4aab021cd1827b3f2ae38189f9a",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "Full OCR read-through plus whole-document normalized word-level diff against extracted text of all 23 physical PDF pages; pages 3, 5, 8, 9, 11 and 20 were additionally rendered and visually inspected (plus a 400 dpi crop of the p.9 QWQ-32B bullet). The appendix code fences are balanced: the ```txt prompt boxes legitimately contain literal ```python lines, which cannot close an info-string fence and render as printed. The A.1 labels 'Math', 'No Starter Code (Python)' and 'Has Starter Code' print as bold display lines and were left as headings. 'QWQ-32B' in the p.9 bullet, 'Chip-Higher trick' in the Figure 3 caption, 'combinatory', 'BRUMO2025', 'LiveCodebench v5/v6' and reference list casings (Deepseek-R1, Qwq-32b) reproduce the print and were not patched; '<\\think>' and '``python[code]``' match the printed prompt text. Figure-internal legends (Clip-Higher, topic names, After Math/Code-RL improvements) belong to embedded figures."
+  },
+  "patches": [
+    {
+      "before": "## Specifically, we make the following contributions:",
+      "after": "Specifically, we make the following contributions:",
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 prints this sentence as a plain body paragraph introducing the contribution list (visually verified); it is not a section heading. The patch removes the OCR-promoted '## ' marker without changing the sentence text.",
+      "count": 1
+    },
+    {
+      "before": "## Reward functions:",
+      "after": "**Reward functions:**",
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 prints 'Reward functions:' as a bold run-in paragraph label before the verification bullets (visually verified); it is not a numbered section heading. The patch demotes the OCR heading to the printed bold paragraph.",
+      "count": 1
+    },
+    {
+      "before": "top\\_p=0.95",
+      "after": "top_p=0.95",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 caption prints 'top_p=0.95' with a plain underscore (visually verified); the backslash is an OCR-added Markdown escape that would render a visible backslash.",
+      "count": 1
+    },
+    {
+      "before": "HMMT2025avg@64",
+      "after": "HMMT2025 avg@64",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 header (visually verified at 125 dpi): cells wrap over two or three printed lines - 'MATH 500 avg@4', 'HMMT 2025 avg@64', 'BRUMO 2025 avg@64', 'AIME 2024/2025 avg@64', 'LiveCodeBench v5/v6 avg@8', 'Codeforces ELO pass@1', 'Percentile pass@1', 'EvalPlus avg@4'. The OCR flattened each header cell into one glued token; the patches insert the printed line breaks as spaces and change no character. Benchmark-year spellings follow the document body (MATH500, HMMT2025, BRUMO2025). The glued '2025avg@64' count is checked after the HMMT/BRUMO cells are repaired (replay is sequential).",
+      "count": 1
+    },
+    {
+      "before": "BRUMO2025avg@64",
+      "after": "BRUMO2025 avg@64",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 header (visually verified at 125 dpi): cells wrap over two or three printed lines - 'MATH 500 avg@4', 'HMMT 2025 avg@64', 'BRUMO 2025 avg@64', 'AIME 2024/2025 avg@64', 'LiveCodeBench v5/v6 avg@8', 'Codeforces ELO pass@1', 'Percentile pass@1', 'EvalPlus avg@4'. The OCR flattened each header cell into one glued token; the patches insert the printed line breaks as spaces and change no character. Benchmark-year spellings follow the document body (MATH500, HMMT2025, BRUMO2025). The glued '2025avg@64' count is checked after the HMMT/BRUMO cells are repaired (replay is sequential).",
+      "count": 1
+    },
+    {
+      "before": "2024avg@64",
+      "after": "2024 avg@64",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 header (visually verified at 125 dpi): cells wrap over two or three printed lines - 'MATH 500 avg@4', 'HMMT 2025 avg@64', 'BRUMO 2025 avg@64', 'AIME 2024/2025 avg@64', 'LiveCodeBench v5/v6 avg@8', 'Codeforces ELO pass@1', 'Percentile pass@1', 'EvalPlus avg@4'. The OCR flattened each header cell into one glued token; the patches insert the printed line breaks as spaces and change no character. Benchmark-year spellings follow the document body (MATH500, HMMT2025, BRUMO2025). The glued '2025avg@64' count is checked after the HMMT/BRUMO cells are repaired (replay is sequential).",
+      "count": 1
+    },
+    {
+      "before": "2025avg@64",
+      "after": "2025 avg@64",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 header (visually verified at 125 dpi): cells wrap over two or three printed lines - 'MATH 500 avg@4', 'HMMT 2025 avg@64', 'BRUMO 2025 avg@64', 'AIME 2024/2025 avg@64', 'LiveCodeBench v5/v6 avg@8', 'Codeforces ELO pass@1', 'Percentile pass@1', 'EvalPlus avg@4'. The OCR flattened each header cell into one glued token; the patches insert the printed line breaks as spaces and change no character. Benchmark-year spellings follow the document body (MATH500, HMMT2025, BRUMO2025). The glued '2025avg@64' count is checked after the HMMT/BRUMO cells are repaired (replay is sequential).",
+      "count": 1
+    },
+    {
+      "before": "MATH500avg@4",
+      "after": "MATH500 avg@4",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 header (visually verified at 125 dpi): cells wrap over two or three printed lines - 'MATH 500 avg@4', 'HMMT 2025 avg@64', 'BRUMO 2025 avg@64', 'AIME 2024/2025 avg@64', 'LiveCodeBench v5/v6 avg@8', 'Codeforces ELO pass@1', 'Percentile pass@1', 'EvalPlus avg@4'. The OCR flattened each header cell into one glued token; the patches insert the printed line breaks as spaces and change no character. Benchmark-year spellings follow the document body (MATH500, HMMT2025, BRUMO2025). The glued '2025avg@64' count is checked after the HMMT/BRUMO cells are repaired (replay is sequential).",
+      "count": 1
+    },
+    {
+      "before": "LiveCodeBenchv5avg@8",
+      "after": "LiveCodeBench v5 avg@8",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 header (visually verified at 125 dpi): cells wrap over two or three printed lines - 'MATH 500 avg@4', 'HMMT 2025 avg@64', 'BRUMO 2025 avg@64', 'AIME 2024/2025 avg@64', 'LiveCodeBench v5/v6 avg@8', 'Codeforces ELO pass@1', 'Percentile pass@1', 'EvalPlus avg@4'. The OCR flattened each header cell into one glued token; the patches insert the printed line breaks as spaces and change no character. Benchmark-year spellings follow the document body (MATH500, HMMT2025, BRUMO2025). The glued '2025avg@64' count is checked after the HMMT/BRUMO cells are repaired (replay is sequential).",
+      "count": 1
+    },
+    {
+      "before": "v6avg@8",
+      "after": "v6 avg@8",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 header (visually verified at 125 dpi): cells wrap over two or three printed lines - 'MATH 500 avg@4', 'HMMT 2025 avg@64', 'BRUMO 2025 avg@64', 'AIME 2024/2025 avg@64', 'LiveCodeBench v5/v6 avg@8', 'Codeforces ELO pass@1', 'Percentile pass@1', 'EvalPlus avg@4'. The OCR flattened each header cell into one glued token; the patches insert the printed line breaks as spaces and change no character. Benchmark-year spellings follow the document body (MATH500, HMMT2025, BRUMO2025). The glued '2025avg@64' count is checked after the HMMT/BRUMO cells are repaired (replay is sequential).",
+      "count": 1
+    },
+    {
+      "before": "CodeforcesELOpass@1",
+      "after": "Codeforces ELO pass@1",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 header (visually verified at 125 dpi): cells wrap over two or three printed lines - 'MATH 500 avg@4', 'HMMT 2025 avg@64', 'BRUMO 2025 avg@64', 'AIME 2024/2025 avg@64', 'LiveCodeBench v5/v6 avg@8', 'Codeforces ELO pass@1', 'Percentile pass@1', 'EvalPlus avg@4'. The OCR flattened each header cell into one glued token; the patches insert the printed line breaks as spaces and change no character. Benchmark-year spellings follow the document body (MATH500, HMMT2025, BRUMO2025). The glued '2025avg@64' count is checked after the HMMT/BRUMO cells are repaired (replay is sequential).",
+      "count": 1
+    },
+    {
+      "before": "Percentilepass@1",
+      "after": "Percentile pass@1",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 header (visually verified at 125 dpi): cells wrap over two or three printed lines - 'MATH 500 avg@4', 'HMMT 2025 avg@64', 'BRUMO 2025 avg@64', 'AIME 2024/2025 avg@64', 'LiveCodeBench v5/v6 avg@8', 'Codeforces ELO pass@1', 'Percentile pass@1', 'EvalPlus avg@4'. The OCR flattened each header cell into one glued token; the patches insert the printed line breaks as spaces and change no character. Benchmark-year spellings follow the document body (MATH500, HMMT2025, BRUMO2025). The glued '2025avg@64' count is checked after the HMMT/BRUMO cells are repaired (replay is sequential).",
+      "count": 1
+    },
+    {
+      "before": "EvalPlusavg@4",
+      "after": "EvalPlus avg@4",
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 Table 2 header (visually verified at 125 dpi): cells wrap over two or three printed lines - 'MATH 500 avg@4', 'HMMT 2025 avg@64', 'BRUMO 2025 avg@64', 'AIME 2024/2025 avg@64', 'LiveCodeBench v5/v6 avg@8', 'Codeforces ELO pass@1', 'Percentile pass@1', 'EvalPlus avg@4'. The OCR flattened each header cell into one glued token; the patches insert the printed line breaks as spaces and change no character. Benchmark-year spellings follow the document body (MATH500, HMMT2025, BRUMO2025). The glued '2025avg@64' count is checked after the HMMT/BRUMO cells are repaired (replay is sequential).",
+      "count": 1
+    },
+    {
+      "before": "</table>\n\nit only contains 2.2K prompts.",
+      "after": "</table>",
+      "pdf_pages": [
+        10,
+        11
+      ],
+      "evidence": "Rendered physical p.11 prints 'it only contains 2.2K prompts.' as the continuation of the section 4.3.2 sentence ending '...outperforms using Easy and Medium prompts, although' at the end of physical p.10 (visually verified). The OCR emitted the continuation after the Table 3 block; this patch removes the misplaced copy (the next patch re-inserts it at the printed position).",
+      "count": 1
+    },
+    {
+      "before": "outperforms using Easy and Medium prompts, although",
+      "after": "outperforms using Easy and Medium prompts, although it only contains 2.2K prompts.",
+      "pdf_pages": [
+        10,
+        11
+      ],
+      "evidence": "Restores the printed sentence across the p.10-p.11 break: '...outperforms using Easy and Medium prompts, although it only contains 2.2K prompts.' (both pages rendered and visually verified).",
+      "count": 1
+    },
+    {
+      "before": "numina\\_dataset.pdf",
+      "after": "numina_dataset.pdf",
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Reference [18] on physical p.17 prints the URL '.../report/numina_dataset.pdf' with a plain underscore; the PDF text layer contains no backslash (the same layer preserves printed backslashes elsewhere, e.g. '<\\think>' on p.5). The backslash is an OCR-added Markdown escape.",
+      "count": 1
+    }
+  ],
+  "unresolved": []
+}

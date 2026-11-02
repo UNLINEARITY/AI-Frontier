@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "google:codegemma-open-code-models-based-on-gemma",
+  "source_sha256": "c55186d8c7d7801b2b256fb448db202e4e89e58751ef1514f18d475914834f2e",
+  "ocr_sha256": "a55f30534c78c22c3307d34853c70952a48c925ce16d688875dbf1d993edf0a9",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "coverage": "complete",
+    "notes": "All 11 physical pages word-diffed against the OCR markdown; 4 code fences are balanced. The Figure 2 prompt box lost its <|fim_suffix|><|fim_middle|>, completion and second-file lines and misread the green carriage-return glyphs as periods; repaired from the 300 dpi render of physical page 3. Table 1 token cells and the instruction-format sentence lost angle-bracket tokens to HTML-tag consumption; restored as HTML entities per the established convention. Figure 2/4 captions misread or dropped the printed carriage-return glyph. Remaining diff blocks are figure-internal chart labels, watermark text and page furniture (headers, page numbers, copyright/arXiv stamp), which are intentionally not transcribed."
+  },
+  "patches": [
+    {
+      "before": "<|fim_prefix|>from typing import List.\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\"For a given list of input numbers, calculate Mean Absolute Deviation. around the mean of this dataset. \n    Mean Absolute Deviation is the average absolute difference between each. element and a centerpoint (mean in this case): \n    MAD = average | x - x_mean | \n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"",
+      "after": "<|fim_prefix|>from typing import List\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\"For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n<|fim_suffix|><|fim_middle|>    return sum(abs(x - mean) for x in numbers) / len(numbers)\n<|file_separator|>path/to/the/second/file.py\n<|fim_prefix|>...",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Figure 2 (300 dpi crop, visually verified) prints the full PSM sample: '<|fim_prefix|>from typing import List' followed by an empty carriage-return line, the unsplit docstring lines ending in green carriage returns, then '<|fim_suffix|><|fim_middle|>    return sum(abs(x - mean) for x in numbers) / len(numbers)', '<|file_separator|>path/to/the/second/file.py' and '<|fim_prefix|>...'. The OCR block dropped everything after the docstring, misread the green carriage returns after 'List', 'Deviation' and 'each' as periods, and joined the split docstring lines with those periods."
+    },
+    {
+      "before": "The green ↓ characters are part of the format, whereas uncolored ↓ is from the source.",
+      "after": "The green ↵ characters are part of the format, whereas uncolored ↵ is from the source.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Figure 2 caption (300 dpi crop, visually verified) prints a carriage-return glyph (↵) after 'green' and 'uncolored', not a downward arrow; OCR misread the glyph as ↓ in both positions."
+    },
+    {
+      "before": "Prompt in PSM mode. The carriage return is part of the format.",
+      "after": "Prompt in PSM mode. The carriage return ↵ is part of the format.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 Figure 4 caption (300 dpi crop, visually verified) prints 'The carriage return ↵ is part of the format.'; OCR dropped the glyph. The prompt-box lines above the caption match the OCR ```txt block exactly."
+    },
+    {
+      "before": "<tr><td>FIM prefix</td><td></td></tr><tr><td>FIM middle</td><td></td></tr><tr><td>FIM suffix</td><td></td></tr><tr><td>File separator</td><td></td></tr>",
+      "after": "<tr><td>FIM prefix</td><td>&lt;|fim_prefix|&gt;</td></tr><tr><td>FIM middle</td><td>&lt;|fim_middle|&gt;</td></tr><tr><td>FIM suffix</td><td>&lt;|fim_suffix|&gt;</td></tr><tr><td>File separator</td><td>&lt;|file_separator|&gt;</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 1 (300 dpi crop, visually verified) prints the Relevant Token column values as <|fim_prefix|>, <|fim_middle|>, <|fim_suffix|> and <|file_separator|> in blue monospace; the OCR table left all four cells empty because the angle-bracket tokens were consumed as HTML tags."
+    },
+    {
+      "before": "with <start\\_of\\_turn> and <end\\_of\\_turn> tokens",
+      "after": "with &lt;start_of_turn&gt; and &lt;end_of_turn&gt; tokens",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Physical p.5 sidebar text (text layer + render verified) reads 'The same formatting as Gemma, with <start_of_turn> and <end_of_turn> tokens, can also prompt the instruction-tuned model.'; the OCR backslash-escapes render the visible underscores but the raw angle brackets vanish as unknown HTML tags in the reader, so the tokens are restored as HTML entities per the established convention."
+    }
+  ],
+  "unresolved": []
+}

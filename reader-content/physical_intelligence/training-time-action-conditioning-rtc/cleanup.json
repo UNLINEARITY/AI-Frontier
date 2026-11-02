@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "physical_intelligence:training-time-action-conditioning-rtc",
+  "source_sha256": "02963d5ae4e060e2be3cc8299f5e63046cdeafcb72127242c79fcb3331fa0108",
+  "ocr_sha256": "680d3252865ee399497b3b66ee0c400566a159fe9a03d2fb2297ed550a538a78",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "coverage": "complete",
+    "notes": "All 6 physical pages' extracted text was block-compared against the OCR markdown after normalization, plus a whole-document numeric multiset check. All five figure captions (Fig. 1-5) are transcribed in the OCR next to their embedded figure images; the decimals flagged by the numeric check live inside the Fig. 3/5 plot images (axis ticks) and inside the Algorithm 1 code listing, both legitimate. The 'arXiv:2512.05964v2' string is the page-1 margin watermark, not body content. Pi-0.6 references are present as math spans. The Algorithm 1 listing (physical p.6) is inside a balanced ```python fence and its 40 lines match the PDF listing line-for-line; physical p.6 was rendered at 130 dpi and visually checked, confirming the printed for-loop body is indented one level deeper than the 'for' statement, which OCR flattened to the same indent, producing invalid Python. That single re-indentation is the only patch. Source-printed quirks kept: none observed."
+  },
+  "patches": [
+    {
+      "before": "    for _ in range(num_steps):\n    x_t = jnp.where(prefix_mask[:, :, None], action_prefix, x_t)\n    time_masked = jnp.where(prefix_mask, 1.0, time)\n    v_t = model(observation, x_t, time_masked)\n    x_t = x_t + dt * v_t\n    time = time + dt",
+      "after": "    for _ in range(num_steps):\n        x_t = jnp.where(prefix_mask[:, :, None], action_prefix, x_t)\n        time_masked = jnp.where(prefix_mask, 1.0, time)\n        v_t = model(observation, x_t, time_masked)\n        x_t = x_t + dt * v_t\n        time = time + dt",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 (viewed at 130 dpi) shows the Algorithm 1 sample_actions listing with the five loop-body lines indented one level (8 spaces at OCR's 4-space unit) beneath 'for _ in range(num_steps):'; OCR repeated the same 4-space indent for the body, which is syntactically invalid Python. Only whitespace changes; the code text is otherwise identical to the printed listing."
+    }
+  ],
+  "unresolved": []
+}

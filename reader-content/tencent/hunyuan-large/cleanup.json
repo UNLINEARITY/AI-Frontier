@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-large",
+  "source_sha256": "9b877b264b2aae23c08d9be68026b7bf20728eec079935a2c35bee60a935731b",
+  "ocr_sha256": "cb30619d652a97124eedc887f0b87c0e25a0c89d79793a0799ad61f7e7f31be6",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "coverage": "complete",
+    "notes": "All OCR lines compared against extracted text of all 18 physical PDF pages with a word-level coverage diff; physical pages 5 and 6 rendered, with the page-5 footnote and equations (1)-(2) re-verified at 300 dpi crops (equation (3) sits at the top of physical page 7 and was verified against the PDF text layer). The dropped page-5 footnote was restored; OCR spacing artifacts inside the display equations were repaired. Table 2 subscripts, the benchmark tables and the reference list (pages 15-18) match the source; bare numbers missing from the OCR are printed page numbers and figure-axis tokens."
+  },
+  "patches": [
+    {
+      "before": "employing the classical top-k routing strategy $^{1}$ .",
+      "after": "employing the classical top-k routing strategy $^{1}$ .\n\n$^{1}$ This mixed routing strategy was first introduced in our closed-source trillion-parameter model (training starts from November, 2023) concurrently to Deepseek v2.",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (300 dpi crop of the page bottom) prints the footnote '1 This mixed routing strategy was first introduced in our closed-source trillion-parameter model (training starts from November, 2023) concurrently to Deepseek v2.'; the OCR keeps the in-text marker '$^{1}$' after 'top-k routing strategy' but dropped the footnote body. Restored after the carrying sentence."
+    },
+    {
+      "before": "C \\approx 9. 5 9 N D + 2. 3 \\times 1 0 ^ {8} D.\\tag{2}",
+      "after": "C \\approx 9.59ND + 2.3 \\times 10^{8} D.\\tag{2}",
+      "count": 1,
+      "pdf_pages": [
+        6
+      ],
+      "evidence": "Rendered physical p.6 (300 dpi crop) prints equation (2) as C ≈ 9.59ND + 2.3 × 10^8 D.; the OCR spaced the digits ('9. 5 9', '2. 3', '1 0 ^ {8}'). Repaired spacing only; the digits and layout are unchanged."
+    },
+    {
+      "before": "\\epsilon_ {o p t} (B) = \\frac {2 \\epsilon_ {m a x}}{\\sqrt {\\frac {\\mathcal {B} _ {n o i s e}}{B}} + \\sqrt {\\frac {B}{\\mathcal {B} _ {n o i s e}}}}.\\tag{1}",
+      "after": "\\epsilon_{opt}(B) = \\frac {2 \\epsilon_{max}}{\\sqrt {\\frac {\\mathcal {B}_{noise}}{B}} + \\sqrt {\\frac {B}{\\mathcal {B}_{noise}}}}.\\tag{1}",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 (300 dpi crop) prints equation (1) with unspaced subscripts epsilon_opt, epsilon_max and script-B_noise; the OCR inserted spaces inside each subscript ('o p t', 'm a x', 'n o i s e'). Removes OCR spacing only; the characters match the source."
+    },
+    {
+      "before": "C _ {m i n} = \\frac {C}{1 + \\frac {B}{B _ {c r i t} (L)}}.\\tag{3}",
+      "after": "C_{min} = \\frac {C}{1 + \\frac {B}{B_{crit}(L)}}.\\tag{3}",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Equation (3) at the top of physical page 7 prints C_min = C/(1 + B/B_crit(L)) with unspaced subscripts (verified against the PDF text layer; the same equation style was visually confirmed on p.6 at 300 dpi). Removes OCR spacing inside the subscripts only."
+    }
+  ],
+  "unresolved": []
+}

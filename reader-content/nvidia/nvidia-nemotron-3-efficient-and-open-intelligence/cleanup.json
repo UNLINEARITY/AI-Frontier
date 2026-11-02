@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nvidia-nemotron-3-efficient-and-open-intelligence",
+  "source_sha256": "63f42ac8cf6f739ee91190322acb683d28f989d33589d5ff7a2c8badb234ac30",
+  "ocr_sha256": "3a388624bc96b27a588156f02ee14dae493ca15f93dd297c1822288af0a65666",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "coverage": "complete",
+    "notes": "All 13 physical pages compared against extracted PDF text; physical page 4 rendered with 300-dpi crops of Table 1 and visually verified. The recurring unmatched 'efficient and open intelligence' n-grams are the running page header, and the remaining unmatched fractions are figure-internal chart labels (Figures 2, 4-8 axis ticks, bf16/nvfp4 legends, context-length ticks) shown by the embedded figures. Figures 1-8 and Tables 1-3 all have captions in the OCR, and Tables 1-3 values were checked against the PDF text (MMLU-Pro 48.30/52.87, MMLU 70.06/71.26 row set, RULER 85.13/23.43 and 74.48/54.19 rows). Contributors and References sections are present. One defect class fixed: Table 1's printed two-line model-name cells ('Standard MoE' / '(8.09B active / 72.6B total)') were transcribed with the line break glued away.",
+    "figures_verified": [
+      "physical p.4 300-dpi crops of Table 1 (model-name cells and all eight accuracy values)"
+    ]
+  },
+  "patches": [
+    {
+      "before": "Standard MoE(8.09B active / 72.6B total)",
+      "after": "Standard MoE (8.09B active / 72.6B total)",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 Table 1 prints the row label on two lines inside the cell: 'Standard MoE' then '(8.09B active / 72.6B total)'; OCR joined the lines without the separating space."
+    },
+    {
+      "before": "LatentMoE(8.02B active / 72.8B total)",
+      "after": "LatentMoE (8.02B active / 72.8B total)",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 Table 1 prints the row label on two lines inside the cell: 'LatentMoE' then '(8.02B active / 72.8B total)'; OCR joined the lines without the separating space."
+    }
+  ],
+  "unresolved": []
+}

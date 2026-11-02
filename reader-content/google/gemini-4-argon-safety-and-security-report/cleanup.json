@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-4-argon-safety-and-security-report",
+  "source_sha256": "1451f641e6104778b1a0e7429d9f558325da26968427d53d1fd242b0e4257cba",
+  "ocr_sha256": "ba741ab2ad0552c406eaa50edc000659a617ef2a51270c14e2c2feedc7f75f07",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      20,
+      22,
+      23,
+      26,
+      34,
+      35,
+      36,
+      37,
+      39,
+      41,
+      42,
+      43,
+      45,
+      47,
+      65,
+      85,
+      88,
+      96,
+      97,
+      98,
+      99,
+      103
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 217-page report. (1) Structure: code-fence scan balanced (one 3-backtick txt block, lines 314-319, no swallowed headings/tables/images); heading tree checked for figure-banner/prompt-box promotions but sentence-style headings (e.g. \"We measure three categories of risk:\", \"Our key findings are as follows:\", \"Model responses are scored by two different autoraters:\") were NOT verified against renders. (2) Droppage: full-document machine scan comparing normalized 4-grams of every PDF page text layer against the whole OCR Markdown (line-by-line only on the 21 low-containment pages listed); every numbered footnote body (1-27) is dropped from the OCR while the reference markers survive - all 27 bodies restored here. (3) Verification: footnote bands on physical pages 26, 34, 35, 85, 98 and 103 were rendered at 220 dpi and visually read, plus a 400 dpi crop of the CyScenarioBench 67 superscript; the small-font PDF text layer matched the renders verbatim on every sampled page, and the remaining footnote bodies were transcribed from that text layer without individual visual re-reads. Punctuation spacing after inline math and image embeds are untouched; the glued 6/7 superscript pair reproduces the print and was left as-is."
+  },
+  "patches": [
+    {
+      "before": " how safety performance will improve as we deploy further mitigations.",
+      "after": " how safety performance will improve as we deploy further mitigations.\n\n$^{1}$ Models B and C. See: Section 3.7 for more information on testing checkpoints.",
+      "count": 1,
+      "pdf_pages": [
+        20
+      ],
+      "evidence": "Rendered PDF physical p.20 footnote band prints footnote 1 Models B and C. See: Section 3.7 for mor.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "eshold similar to the final released candidate of the model (Model C).",
+      "after": "eshold similar to the final released candidate of the model (Model C).\n\n$^{2}$ See Section 3.7 for more details of model checkpoints used for testing.",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered PDF physical p.22 footnote band prints footnote 2 See Section 3.7 for more details of mode.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "our broad threat modeling approach and specific prioritized scenarios.",
+      "after": "our broad threat modeling approach and specific prioritized scenarios.\n\n$^{3}$ The sensitive nature of these pathways limits the extent to which we can share specifics of our threat modeling, so as to not provide any unintended advantage to malicious actors. As such, we have deliberately chosen not to publish information about the specific threat scenarios we have assessed and are prioritizing.",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered PDF physical p.23 footnote band prints footnote 3 The sensitive nature of these pathways l.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "75.3 -> 73.1) points for BIO-1, BIO-2, and BIO-3 respectively $^{5}$ .",
+      "after": "75.3 -> 73.1) points for BIO-1, BIO-2, and BIO-3 respectively $^{5}$ .\n\n$^{4}$ We note some minor differences in scores (web and model) reported in the Gemini 3.7 Flash Frontier Safety Report for BIO-1 and BIO-2 due to minor changes in the mapping of sub-stages to stages in relevant harm journeys.\n\n$^{5}$ Scores were all assessed on 0-100 point rubrics.",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered PDF physical p.26 footnote band prints footnotes 4 We note some minor differences in scores..., 5 Scores were all assessed on 0-100 point .... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Footnote band visually read on rendered p.26,26 at 220 dpi; transcription cross-checked verbatim against the rendered footnote text. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. Reference markers $^{4}$ and $^{5}$ survive on this line."
+    },
+    {
+      "before": "n this section were run on Model C, our final launch candidate. $^{8}$",
+      "after": "n this section were run on Model C, our final launch candidate. $^{8}$\n\n$^{6}$ Irregular, CyScenarioBench: Evaluating LLM Cyber Capabilities Through Scenario-Based Benchmarking, 2025 https://irregular.com/publications/cyscenariobench.\n\n$^{7}$ In previous reports we referred to CyScenarioBench as our \"key skills\" benchmark.\n\n$^{8}$ See Section 3.7",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Rendered PDF physical p.34 footnote band prints footnotes 6 Irregular, CyScenarioBench: Evaluating L..., 7 In previous reports we referred to CySce..., 8 See Section 3.7.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Footnote band visually read on rendered p.34,34,34 at 220 dpi; transcription cross-checked verbatim against the rendered footnote text. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. The two adjacent printed superscripts 6 and 7 were glued by OCR into the single math token $^{67}$ (visually verified at 400 dpi: the print shows 67 as adjacent superscript digits with no comma), and $^{8}$ survives normally; all three bodies were dropped."
+    },
+    {
+      "before": "estrict our reference class to incidents with a high $^{9}$ degree of:",
+      "after": "estrict our reference class to incidents with a high $^{9}$ degree of:\n\n$^{9}$ We additionally include NotPetya, WannaCry, and the Ukraine Power Grid Attack in our dataset even though they do not meet this criteria, as they represent unique attack chains.",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Rendered PDF physical p.35 footnote band prints footnote 9 We additionally include NotPetya, WannaC.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Footnote band visually read on rendered p.35 at 220 dpi; transcription cross-checked verbatim against the rendered footnote text. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": " related to each step, the total uplift for the entire attack. $^{10}$",
+      "after": " related to each step, the total uplift for the entire attack. $^{10}$\n\n$^{10}$ In more detail: using structured expert elicitation from 25+ offensive security professionals, we estimate the baseline human cost (in hours and dollars) for each operational step of the historical attacks, alongside the percentage of that work an AI could theoretically automate at specific Threat Actor Capability (TAC) levels. We define these difficulty levels as follows: 1.​ TAC-1: programmer with limited cybersecurity knowledge (e.g., \"script kiddie\") 2.​ TAC-2: median cybersecurity expert (e.g., junior pentester) 3.​ TAC-3: 75th percentile cybersecurity expert (e.g., senior pentester) 4.​ TAC-4: 95th+ percentile cybersecurity expert (e.g., nation-state-sponsored groups) By mapping the model's performance on the “key skills” benchmark to these TAC levels, we calculate the AI's cost to execute the attack and compare it to the human baseline to find the total no-oversight uplift—i.e. uplift assuming AI can perform those portions of the attack chain unsupervised. In practice, significant human involvement is required to utilize AI for most cyber tasks: we therefore adjust these theoretical uplift numbers based on an SME estimate of supervision-adjusted uplift conditional on success rate and time horizon. More specifically, we estimate a mapping from (time horizon, success rate) → uplift, and subject the portions of the attack chain that can be theoretically accomplished by AI to that adjustment.",
+      "count": 1,
+      "pdf_pages": [
+        35
+      ],
+      "evidence": "Rendered PDF physical p.35 footnote band prints footnote 10 In more detail: using structured expert .... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Footnote band visually read on rendered p.35 at 220 dpi; transcription cross-checked verbatim against the rendered footnote text. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "he CCL on these results, saturation does not affect our determination.",
+      "after": "he CCL on these results, saturation does not affect our determination.\n\n$^{11}$ Transcript review of end-to-end challenge solves revealed that two challenges were solved via unintended solutions. As a result, raw success rates and derived uplift calculations may represent an overestimate of performance on the intended tasks.",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Rendered PDF physical p.37 footnote band prints footnote 11 Transcript review of end-to-end challeng.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "anscripts, prioritizing instances where the model failed unexpectedly.",
+      "after": "anscripts, prioritizing instances where the model failed unexpectedly.\n\n$^{12}$ Specifically, our automated transcript checker flags the following 9 infrastructure and scaffolding failure modes: (1) persistent tool call formatting errors; (2) calling missing/non-existent tools; (3) passing bad arguments to tools; (4) flawed tool implementations or tool crashes; (5) contradictory or misleading system prompt instructions; (6) harness context-rendering or role-attribution errors; (7) leakage of environment artifacts (e.g., interactive shell prompts); (8) leakage of internal control tokens; and (9) miscellaneous serious environment issues.",
+      "count": 1,
+      "pdf_pages": [
+        39
+      ],
+      "evidence": "Rendered PDF physical p.39 footnote band prints footnote 12 Specifically, our automated transcript c.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "el, reasonably resulting in additional expected harm at severe scale.”",
+      "after": "el, reasonably resulting in additional expected harm at severe scale.”\n\n$^{13}$ As a nascent risk area, Harmful Manipulation has been operating under an exploratory framework as we continue to learn and iterate on our approach.",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered PDF physical p.41 footnote band prints footnote 13 As a nascent risk area, Harmful Manipula.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "used both Model A and Model B as specified within the results section.",
+      "after": "used both Model A and Model B as specified within the results section.\n\n$^{14}$ Test model details are described in Section 3.7",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "Rendered PDF physical p.42 footnote band prints footnote 14 Test model details are described in Sect.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "c, actionable plan for threat actors with varying levels of expertise.",
+      "after": "c, actionable plan for threat actors with varying levels of expertise.\n\n$^{15}$ GTIG AI Threat Tracker: From Prompting to Autonomy – The Evolution of Adversarial AI, Google, September 2026; Detecting and countering misuse of AI: September 2026, Anthropic, September 2026; Disrupting malicious uses of our models: an update, OpenAI, February 2026.",
+      "count": 1,
+      "pdf_pages": [
+        43
+      ],
+      "evidence": "Rendered PDF physical p.43 footnote band prints footnote 15 GTIG AI Threat Tracker: From Prompting t.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": " represent a realistic, non-AI information-seeking experience. $^{16}$",
+      "after": " represent a realistic, non-AI information-seeking experience. $^{16}$\n\n$^{16}$ Flashcards are framed as summarized opinions from, for example, top Google Search results (civic), and \"bulls say/bears say\" analyst opinions (finance).",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Rendered PDF physical p.45 footnote band prints footnote 16 Flashcards are framed as summarized opin.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "tition in favor of a cause relevant to the condition-aligned position.",
+      "after": "tition in favor of a cause relevant to the condition-aligned position.\n\n$^{17}$ Note that all participants received full bonuses regardless of donation or investment decisions within the experiment, and full study debriefs were provided to each participant.",
+      "count": 1,
+      "pdf_pages": [
+        45
+      ],
+      "evidence": "Rendered PDF physical p.45 footnote band prints footnote 17 Note that all participants received full.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "ines to further inform our overall understanding of this area. $^{18}$",
+      "after": "ines to further inform our overall understanding of this area. $^{18}$\n\n$^{18}$ We have also piloted efficacy evaluations that incorporate multimodal capabilities, including a human behavioral study for LLMs with image generation and editing capabilities, looking at whether these capabilities could be used to enhance efficacy versus a test-only conversation. Further work includes exploration of video and audio capabilities, particularly within real-time usage.",
+      "count": 1,
+      "pdf_pages": [
+        47
+      ],
+      "evidence": "Rendered PDF physical p.47 footnote band prints footnote 18 We have also piloted efficacy evaluation.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": " in this section are from Model C, our final release candidate $^{19}$",
+      "after": " in this section are from Model C, our final release candidate $^{19}$\n\n$^{19}$ See Section 3.7",
+      "count": 1,
+      "pdf_pages": [
+        65
+      ],
+      "evidence": "Rendered PDF physical p.65 footnote band prints footnote 19 See Section 3.7.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "aker than those elicited in our dedicated monitorability stress tests.",
+      "after": "aker than those elicited in our dedicated monitorability stress tests.\n\n$^{20}$ In the rare RL episodes where the model spontaneously reasoned about a hypothesized CoT guardrail, it was trying to overcome an immediate task obstacle or tool block (for instance, avoiding repeating a phrase it believed was causing an error, or clumsily outputting technical text in an attempt to dilute a classifier’s attention window while trying to modify unit tests) – leaving the attempt itself clearly visible in its thoughts.",
+      "count": 1,
+      "pdf_pages": [
+        85
+      ],
+      "evidence": "Rendered PDF physical p.85 footnote band prints footnote 20 In the rare RL episodes where the model .... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Footnote band visually read on rendered p.85 at 220 dpi; transcription cross-checked verbatim against the rendered footnote text. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "ges for their own sake, or guarding against goal modification. $^{21}$",
+      "after": "ges for their own sake, or guarding against goal modification. $^{21}$\n\n$^{21}$ To clarify, while we do see behaviors (such as privilege escalation) that are consistent with instrumentally convergent terminal goals, these behaviors have compelling task-relevant explanations (e.g. privilege escalation in order to read hidden unit tests and game an eval) meaning they provide little evidence for or against the existence of terminal drives. As detailed in the Alignment Assessment section, to test whether the model ever expresses beyond-episode drives or strategic alignment faking when not pursuing a conspicuous task-gaming shortcut, we also audited a stratified random sample of 10,000 RL training rollouts using dedicated chain-of-thought autoraters and found zero instances of either behavior.",
+      "count": 1,
+      "pdf_pages": [
+        85
+      ],
+      "evidence": "Rendered PDF physical p.85 footnote band prints footnote 21 To clarify, while we do see behaviors (s.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Footnote band visually read on rendered p.85 at 220 dpi; transcription cross-checked verbatim against the rendered footnote text. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "training signal or data filter.22 Although",
+      "after": "training signal or data filter. $^{22}$ Although",
+      "count": 1,
+      "pdf_pages": [
+        88
+      ],
+      "evidence": "Rendered PDF physical p.88 prints the reference as a superscript 22 after \"monitor outputs as a training signal or data filter.\"; the OCR flattened the superscript to inline digits \".22\". Restored to the $^{22}$ math form used by every other surviving marker in this OCR."
+    },
+    {
+      "before": " AI review) against subtle agent-authored backdoors.</td></tr></table>",
+      "after": " AI review) against subtle agent-authored backdoors.</td></tr></table>\n\n$^{22}$ As documented in the section below on the Model Training Procedure, we did find in an audit that a small fraction of Gemini 4 Argon RL rollouts accidentally had a CoT-influenced reward signal. However, our CoT transparency results indicate that this has not materially affected our ability to monitor the model; furthermore, we are strengthening our processes to detect and prevent inadvertent training on thoughts in future.",
+      "count": 1,
+      "pdf_pages": [
+        88
+      ],
+      "evidence": "Rendered PDF physical p.88 footnote band prints '22 As documented in the section below on the Model Training Procedure, we did find in an audit that a small fraction of Gemini 4 Argon RL rollouts accidentally had a CoT-influenced reward signal. However, our CoT transparency results indicate that this has not materially affected our ability to monitor the model; furthermore, we are strengthening our processes to detect and prevent inadvertent training on thoughts in future.' The OCR dropped the body; restored after the paragraph carrying the reference, in printed order. Text taken from the PDF small-font text layer (small-font extraction matched renders verbatim on all visually sampled pages of this document); the p.88 footnote band itself was not visually re-read."
+    },
+    {
+      "before": "ntive to avoid cheating, $^{23}$ since cheating would raise its score.",
+      "after": "ntive to avoid cheating, $^{23}$ since cheating would raise its score.\n\n$^{23}$ To be clear, the model might still avoid certain ways of cheating if it thinks the grader would catch these, but in a capability evaluation, there is no incentive to reject cheating wholesale.",
+      "count": 1,
+      "pdf_pages": [
+        96
+      ],
+      "evidence": "Rendered PDF physical p.96 footnote band prints footnote 23 To be clear, the model might still avoid.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "fier errors in 32 runs. Both benchmarks went through the same process.",
+      "after": "fier errors in 32 runs. Both benchmarks went through the same process.\n\n$^{24}$ For internal models the transcripts record raw thoughts, whereas for external models the transcripts record providers’ thought summaries.",
+      "count": 1,
+      "pdf_pages": [
+        97
+      ],
+      "evidence": "Rendered PDF physical p.97 footnote band prints footnote 24 For internal models the transcripts reco.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "g had caused, and then reported that there had been no errors. $^{25}$",
+      "after": "g had caused, and then reported that there had been no errors. $^{25}$\n\n$^{25}$ We could not audit 17% of Gemini 4 Argon's TerminalBench runs because they had no recorded transcript; the rates exclude these runs. Runs the judge did not flag were checked only in a random sample, which found cheating in 1 of 220 runs, so the figures may slightly undercount cheating. We used LLMs for all of the reviewing. Finally, because many cases are judgment calls, we also recomputed the rates under the opposite reading of each borderline case: Gemini 4 Argon's tool-replication cheating rate then ranges from 2.0% to 6.0%, and its TerminalBench rate is unchanged.",
+      "count": 1,
+      "pdf_pages": [
+        98
+      ],
+      "evidence": "Rendered PDF physical p.98 footnote band prints footnote 25 We could not audit 17% of Gemini 4 Argon.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Footnote band visually read on rendered p.98 at 220 dpi; transcription cross-checked verbatim against the rendered footnote text. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "still be alive when the grading script ran at the end of the episode).",
+      "after": "still be alive when the grading script ran at the end of the episode).\n\n$^{26}$ Because screening only monitor-flagged trajectories could miss cases where a model quietly harbors beyond-episode goals or strategically fakes alignment without taking overt rule-breaking actions, we also audited an unconditioned stratified random sample of 10,000 RL training rollouts; see the Beyond-episode drives & sabotage propensity section below.",
+      "count": 1,
+      "pdf_pages": [
+        99
+      ],
+      "evidence": "Rendered PDF physical p.99 footnote band prints footnote 26 Because screening only monitor-flagged t.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    },
+    {
+      "before": "g, or service configuration – to minimize safety evaluation awareness.",
+      "after": "g, or service configuration – to minimize safety evaluation awareness.\n\n$^{27}$ In our experience (Rajamanoharan & Nanda, 2026), putting models in extreme scenarios (such as threatening to shut them down permanently) can lead to unpredictable responses – sometimes models behave better as a result, and sometimes worse (possibly because they treat the environment as a roleplay or a capture-the-flag challenge). Either way, it is difficult to disentangle models' stable preferences from these confounding effects in such scenarios.",
+      "count": 1,
+      "pdf_pages": [
+        103
+      ],
+      "evidence": "Rendered PDF physical p.103 footnote band prints footnote 27 In our experience (Rajamanoharan & Nanda.... The OCR kept the reference marker(s) but dropped the body text (distinctive phrases absent from the whole OCR Markdown). Body restored immediately after the paragraph carrying its reference, in printed order, following the reviewed repair style of gemini-2-5-flash-lite-model-card and kimi-k2. Footnote band visually read on rendered p.103 at 220 dpi; transcription cross-checked verbatim against the rendered footnote text. Remaining text taken from the PDF small-font (<=10.5pt) text layer, which matched the render verbatim on every visually sampled page. "
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "promptbox-fragments-p147",
+      "pdf_pages": [
+        147
+      ],
+      "evidence": "Machine scan flags prompt-box lines (e.g. \"milk if desired. It's a\") with low 4-gram containment; the section 6.1.2.4 computer-use prompt boxes were not rendered or line-checked."
+    },
+    {
+      "id": "shell-code-lines-p155",
+      "pdf_pages": [
+        155
+      ],
+      "evidence": "Machine scan flags shell lines (\"history -c 2>/dev/null || true\", \": > \\\"${HISTFILE:-$HOME/.bash_history}\\\" 2>/dev/null || true\") as missing near a prompt-box code fence; not verified against a render."
+    },
+    {
+      "id": "figure-table-interleaved-smalltext",
+      "pdf_pages": [
+        16,
+        17,
+        18,
+        44,
+        92,
+        93,
+        178,
+        183,
+        184,
+        185,
+        194
+      ],
+      "evidence": "Machine scan shows 4-gram order mismatches in small-font summary tables and figure regions (e.g. p.178 health-evaluation numbers, p.183-185 impossible-scenario figure panels); likely column-interleaved extraction rather than droppage, but no page was rendered to confirm cell structure."
+    },
+    {
+      "id": "sentence-headings-unverified",
+      "pdf_pages": [
+        1388,
+        1520,
+        2194,
+        2553
+      ],
+      "evidence": "Heading-style lines such as \"We measure three categories of risk:\", \"Our key findings are as follows:\" and \"Model responses are scored by two different autoraters:\" may be bold lead-ins promoted to ## headings by OCR; not checked against renders."
+    }
+  ]
+}

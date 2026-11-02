@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseekmath-v2-towards-self-verifiable-mathematical-reasoning",
+  "source_sha256": "2b6dcf9cfb435f678ca028daf9f6aab1e6bd64000ebf5309776d790655086a3e",
+  "ocr_sha256": "fc8f7b592e4822e90e92aea845e04bd67780845db5128b0dd0a6a9e9835a9668",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level diff of all 19 physical PDF pages against the OCR markdown plus code-fence pairing checked under both CommonMark and the exporter's pairing rule. Most diff hits are LaTeX-equivalent math, figure-internal axis labels and page furniture. Four real repairs: a dropped backtick in the printed nested fence opener of the A.1 prompt box, a spurious bare fence that turned the following '```markdown' opener into literal junk, the dropped title-page author-note footnotes and the dropped Putnam-score URL footnote (both with surviving markers), and one extra trailing '\\)' after '\\(0\\)' in the A.3 criteria box. The mid-sentence fence chunking of the long appendix boxes (A.2 pp.14-16, A.3 pp.15-17) was left as-is: every chunk renders literal monospace and no content is lost or rendered as headings."
+  },
+  "patches": [
+    {
+      "before": "\n``txt\nHere is the instruction to evaluate",
+      "after": "\n```txt\nHere is the instruction to evaluate",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "Rendered physical p.13 prints the nested evaluation-instruction opener inside the A.1 prompt box as three backtick glyphs followed by 'txt' (300 dpi crop); the OCR markdown transcribed only two backticks, leaving a visible '``txt' line inside the fenced prompt block. The patch restores the third backtick of the printed nested fence."
+    },
+    {
+      "before": "as a faithful evaluation of that solution.\n```\n\n```markdown\n- Only when you fail to locate any issues",
+      "after": "as a faithful evaluation of that solution.\n\n```markdown\n- Only when you fail to locate any issues",
+      "count": 1,
+      "pdf_pages": [
+        13,
+        14
+      ],
+      "evidence": "The A.1 prompt box is one printed box spanning physical pp.13-14 and prints only one nested fence pair (three backticks + txt ... three backticks). The OCR markdown inserted a spurious bare ``` line after the bullets '- A good final response ... faithful evaluation of that solution.', so under CommonMark the following '```markdown' line renders as literal junk inside that fenced block instead of opening it. The patch removes the spurious bare fence so '```markdown' opens the block holding the box continuation (bullets and the '## Solution / ## Self Evaluation' response template), which must stay literal to avoid becoming real headings. No printed text is added or removed."
+    },
+    {
+      "before": "zhihongshao@deepseek.com\n\nhttps://github.com/deepseek-ai/DeepSeek-Math-V2\n\n## Abstract",
+      "after": "zhihongshao@deepseek.com\n\nhttps://github.com/deepseek-ai/DeepSeek-Math-V2\n\n\\*Core contributors $^{\\dagger}$Work done during internship at DeepSeek-AI.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom prints a footnote rule followed by '*Core contributors †Work done during internship at DeepSeek-AI.' (visually verified). The author line in the OCR markdown keeps the matching $^{*}$ and $^{\\dagger}$ superscripts but dropped the footnote bodies; the patch restores them after the project link."
+    },
+    {
+      "before": "exceeding the highest score of $90^{1}$ obtained by human participants.",
+      "after": "exceeding the highest score of $90^{1}$ obtained by human participants.\n\n$^{1}$ https://kskedlaya.org/putnam-archive/putnam2024stats.html",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 bottom prints footnote '1https://kskedlaya.org/putnam-archive/putnam2024stats.html' (visually verified at 200 dpi), anchored to the surviving superscript marker in 'highest score of $90^{1}$' on the same page; the OCR markdown contains no trace of this URL. The patch restores the footnote body on the line after its anchoring paragraph."
+    },
+    {
+      "before": "rate it with \\(0\\)\\)",
+      "after": "rate it with \\(0\\)",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Rendered physical p.17 prints 'then you should rate it with \\(0\\)' with exactly one backslash-paren pair on each side of 0 (300 dpi crop); the OCR markdown added a trailing '\\)'."
+    }
+  ],
+  "unresolved": []
+}

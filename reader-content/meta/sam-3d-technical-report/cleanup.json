@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "meta:sam-3d-technical-report",
+  "source_sha256": "e0b8cf4668efa243227d28ebcf3e02adcce3a84d3d20eb42951e66cc084b82c4",
+  "ocr_sha256": "7eeb4d766b6c2b6e1ec55975984a777a5ce327f11a029c03e4f2cb1657311daa",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of all 44 physical PDF pages against the OCR markdown (case/punctuation-normalized, LaTeX math treated as equivalent), plus structural check: the three code fences (json/json/txt prompt examples) are balanced; headings match the printed section tree. Rendered physical pages 2, 7, 9, 31, 41 at 110-300 dpi. Page 2 confirms 'We summarize our contributions as follows:' is a plain body sentence, not a heading (patch 1). Page 9 confirms dropped footnote 1 (URL) and page 41 confirms dropped footnote 2 (MITL chance) - both anchors keep their superscript markers in the OCR while the bodies were absent everywhere. Page 31 shows the source prints 64^3 and 16^3 voxels with true superscripts, so the OCR LaTeX (64^{3}, 16^{3}) is faithful and the flattened text-layer '643'/'163' is not a defect. 'Inaccurate'/'Sampler'/'Methodology' on p.7 and axis ticks on p.36 live only inside Figure 5/figure plots; OCR correctly omits them. The PDF itself prints 'intial noise state' (sic, p.31) while the OCR normalized it to 'initial'; left unchanged per the no-author-typo-patches rule, and 'commonsense priors' (p.36, printed hyphenated across lines) kept as the OCR dehyphenation."
+  },
+  "patches": [
+    {
+      "before": "## We summarize our contributions as follows:",
+      "after": "We summarize our contributions as follows:",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2: the sentence 'We summarize our contributions as follows:' is a plain non-bold body paragraph introducing the contribution bullet list, at the same size/weight as surrounding prose; OCR promoted it to a level-2 heading between sections 1 and 2. Demoted to paragraph text."
+    },
+    {
+      "before": "Refer to Section D for details on evaluation sets.",
+      "after": "Refer to Section D for details on evaluation sets.\n\n1 https://ai.meta.com/datasets/sa-3dao-sam-3d-artist-objects",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom (verified at 300 dpi): footnote 1 reads '1 https://ai.meta.com/datasets/sa-3dao-sam-3d-artist-objects'. The OCR keeps the superscript marker ('SA-3DAO $^{1}$ , consisting of 1K 3D artist-created meshes') but the footnote body was absent from the whole document; body inserted after the citing Dataset paragraph."
+    },
+    {
+      "before": "Around 80% of the recovery data came from the DPO-as-reward model.",
+      "after": "Around 80% of the recovery data came from the DPO-as-reward model.\n\n2 While some of this may be from human error, we attribute most of this disagreement to random chance when the MITL suite returns multiple similar meshes, or when there is no clear winner due to meshes being better or worse in different parts.",
+      "count": 1,
+      "pdf_pages": [
+        41
+      ],
+      "evidence": "Rendered physical p.41 bottom (verified at 300 dpi): footnote 2 reads 'While some of this may be from human error, we attribute most of this disagreement to random chance when the MITL suite returns multiple similar meshes, or when there is no clear winner due to meshes being better or worse in different parts.' The OCR keeps the superscript marker ('agreed $<75\\%^{2}$ of the time') but the footnote body was absent from the whole document; body inserted after the citing paragraph."
+    }
+  ],
+  "unresolved": []
+}

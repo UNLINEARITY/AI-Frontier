@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "id": "moonshot:kimi-k2-open-agentic-intelligence",
+  "source_sha256": "035062b5e1ab865ffad9f90f81d6c8332f8af805063fac54cc6f2cca1fe608b5",
+  "ocr_sha256": "d6ce93892d840666cd89961718659cc1851934169f994657fb1806035758aa24",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ],
+    "coverage": "complete",
+    "notes": "All 32 physical pages diffed word-by-word (case/punctuation-normalized) against the OCR markdown; pages 1, 2, 10, 14, 15, 18, 23, 27, 29 rendered at 120 dpi and visually inspected. Code fences are balanced (6 openers, info strings, all closed). Remaining diff hits are figure-internal text (bar-chart and t-SNE axis labels/legends on pages 4, 7, 8, 10, 30), LaTeX math the OCR renders as LaTeX, and soft-hyphen splits the OCR joined correctly. The odd punctuation of reference [23] ('. In: URL ... ().') matches the PDF's own BibTeX output on physical p.21 and was left unchanged. Reference [23] also prints 'arxiv. org' with a space on p.21, but the URL host 'arxiv.org' reads correctly in the OCR; left unchanged."
+  },
+  "patches": [
+    {
+      "before": "facilitate future research and applications of agentic intelligence.",
+      "after": "facilitate future research and applications of agentic intelligence.\n\n$^{1}$https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote band prints '1 https://huggingface.co/moonshotai/Kimi-K2-Instruct' below the abstract; the OCR kept the superscript marker on 'model checkpoints $^{1}$' but dropped the footnote body ('huggingface' occurs in the OCR only inside unrelated reference URLs). Inserted after the abstract paragraph carrying the marker, following the reviewed repair style of kimi-k2.5/kimi-k3."
+    },
+    {
+      "before": "Figure 1: Kimi K2 main results. $^{2}$",
+      "after": "Figure 1: Kimi K2 main results. $^{2}$\n\n$^{2}$All models evaluated above are non-thinking models. For SWE-bench Multilingual, we evaluated only Claude 4 Sonnet because the cost of Claude 4 Opus was prohibitive.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote band prints footnote 2 as 'All models evaluated above are non-thinking models. For SWE-bench Multilingual, we evaluated only Claude 4 Sonnet because the cost of Claude 4 Opus was prohibitive.'; the OCR kept the marker on the Figure 1 caption but dropped the body."
+    },
+    {
+      "before": "On the LMSYS Arena leaderboard (July 17, 2025) $^{3}$ , Kimi K2 ranks as the top 1 open-source model and 5th overall based on over 3,000 user votes.",
+      "after": "On the LMSYS Arena leaderboard (July 17, 2025) $^{3}$ , Kimi K2 ranks as the top 1 open-source model and 5th overall based on over 3,000 user votes.\n\n$^{3}$https://lmarena.ai/leaderboard/text",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 footnote band prints '3 https://lmarena.ai/leaderboard/text'; the OCR kept the marker at 'July 17, 2025) $^{3}$ ,' but dropped the body. Inserted after the paragraph carrying the marker."
+    },
+    {
+      "before": "available on Github $^{4}$ .",
+      "after": "available on Github $^{4}$ .\n\n$^{4}$https://github.com/MoonshotAI/checkpoint-engine",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 footnote band prints '4 https://github.com/MoonshotAI/checkpoint-engine'; the OCR kept the marker on 'on Github $^{4}$ .' but dropped the body."
+    },
+    {
+      "before": "(as of 2024-11-25).",
+      "after": "(as of 2024-11-25).\n\n$^5$https://huggingface.co/datasets/openai/mrcr",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 footnote band prints '5 https://huggingface.co/datasets/openai/mrcr'; the OCR kept the marker as 'MRCR $^5$' (this document writes the 5 marker without braces) but dropped the body. Inserted after the Benchmarks paragraph carrying the marker, keeping the OCR's own '$^5$' spelling."
+    },
+    {
+      "before": "we can evaluate model in a scalable ways.",
+      "after": "we can evaluate model in a scalable ways.\n\n$^{6}$https://github.com/promptfoo/promptfoo",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Rendered physical p.18 footnote band prints '6 https://github.com/promptfoo/promptfoo'; the OCR kept the marker on 'Promptfoo $^{6}$' but dropped the body. (The sentence's grammar is the PDF's own wording.)"
+    },
+    {
+      "before": "follows the declared schema.",
+      "after": "follows the declared schema.\n\n$^{7}$https://github.com/noamgat/lm-format-enforcer",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Rendered physical p.27 footnote band prints '7 https://github.com/noamgat/lm-format-enforcer'; the OCR kept the marker on 'lm-format-enforcer $^{7}$ .' but dropped the body."
+    },
+    {
+      "before": "complementary perspective on practical model performance.",
+      "after": "complementary perspective on practical model performance.\n\n$^{8}$https://lmarena.ai/leaderboard/text",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Rendered physical p.29 footnote band prints '8 https://lmarena.ai/leaderboard/text'; the OCR kept the marker on 'LMSYS Arena leaderboard $^{8}$ ,' but dropped the body."
+    },
+    {
+      "before": "## Multi-turn Trajectory Generation. We simulate",
+      "after": "Multi-turn Trajectory Generation. We simulate",
+      "count": 1,
+      "pdf_pages": [
+        10
+      ],
+      "evidence": "Rendered physical p.10 prints 'Multi-turn Trajectory Generation.' as a bold paragraph lead-in with a following full sentence, typographically identical to the sibling lead-ins 'Domain Evolution and Tool Generation.', 'Agent Diversification.' and 'Rubric-Based Task Generation.', which the OCR kept as plain paragraphs; a section heading would also break the subsection numbering. Removed the spurious '## ' promotion."
+    },
+    {
+      "before": "<tool\\_call\\_section\\_begin|>",
+      "after": "<|tool_call_section_begin|>",
+      "count": 1,
+      "pdf_pages": [
+        27
+      ],
+      "evidence": "Rendered physical p.27 token-template box and the following paragraph print the token as <|tool_call_section_begin|> with literal underscores and a leading '|'; the OCR both added Markdown backslash escapes and dropped the leading '|' of the token name."
+    },
+    {
+      "before": "paper\\_files",
+      "after": "paper_files",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 reference [73] prints the URL proceedings.neurips.cc/paper_files/paper/... with literal underscores; the backslash escape is an OCR-added Markdown escape altering the visible URL."
+    },
+    {
+      "before": "https://huggingface.co/ vectara/hallucination\\_evaluation\\_model.",
+      "after": "https://huggingface.co/vectara/hallucination_evaluation_model.",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 reference [74] prints 'URL: https://huggingface.co/vectara/hallucination_evaluation_model.' wrapped across two lines after 'huggingface.co/'; the OCR kept the line-wrap space and added backslash escapes, both altering the visible URL."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-internal-axis-labels",
+      "pdf_pages": [
+        4,
+        7,
+        8,
+        10,
+        30
+      ],
+      "evidence": "Bar-chart tick labels and t-SNE legend/category words (e.g. 'databases image', 'cloud platforms calendar management cryptocurrency', axis tick sequences) are interleaved with captions in OCR order but are figure-internal text; no repair required."
+    },
+    {
+      "id": "reference-23-printed-punctuation",
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Reference [23] prints '... 2024a\". In: URL https://arxiv. org/abs/2411.07140 ().' including the trailing '()' and a space inside 'arxiv. org'; the OCR reproduces the same odd punctuation (with a correct 'arxiv.org'). Quirks originate in the PDF's own BibTeX output, so no patch."
+    }
+  ]
+}

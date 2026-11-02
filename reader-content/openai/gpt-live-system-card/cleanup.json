@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "openai:gpt-live-system-card",
+  "source_sha256": "8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d",
+  "ocr_sha256": "64b43e5c5ca48edd2252b199327d02402b5312fcea011cccff51d1f983f2c77d",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "Full read of all OCR lines against extracted text from all 7 physical PDF pages plus structure check (no code fences; heading set matches the printed card). Dropped content found and restored: the 'OpenAI' wordmark line of the cover (the 'GPT-Live' wordmark itself is the embedded image), the entire body of footnote 1 on physical p.3 (its inline $^{1}$ marker survives in the OCR), and the 'OpenAI' line itself. Tables 1, 2 and 4 were compared value by value against the PDF text layer and all values match; the appendix tables were additionally verified on the rendered physical p.7 at 300 dpi, which also confirmed that Table 3's last two header cells are mis-split in the OCR ('GPT-Live-1 mini GPT-Live-1 mini Previously reported' / 'Corrected' instead of 'GPT-Live-1 mini Previously reported' / 'GPT-Live-1 mini Corrected'). No other numeric discrepancies."
+  },
+  "patches": [
+    {
+      "before": "![[images/f6c169c4505a6cbd2ba543ce69177a4c253484470d2c4b34410f619a16e8023d.jpg]]\n\nSystem Card",
+      "after": "OpenAI\n\n![[images/f6c169c4505a6cbd2ba543ce69177a4c253484470d2c4b34410f619a16e8023d.jpg]]\n\nSystem Card",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 cover prints four lines: 'OpenAI' wordmark, the 'GPT-Live' wordmark (which is the embedded image), 'System Card', and '2026-07-08' (visually verified at 110 dpi). OCR kept the image, 'System Card' and the date but dropped the 'OpenAI' wordmark line; the patch restores it above the wordmark image in printed order."
+    },
+    {
+      "before": "Note that comparison values from previously launched models are from the latest versions of those models, so may vary slightly from values published at launch for those models. $^{1}$",
+      "after": "Note that comparison values from previously launched models are from the latest versions of those models, so may vary slightly from values published at launch for those models. $^{1}$\n\n$^{1}$ GPT-Live-1 and GPT-Live-1 mini are intended to be used in accordance with OpenAI's Usage Policies, Service Terms, and Terms of Use. These policies apply universally to OpenAI services and are designed to ensure safe and responsible usage of AI technology. You can review OpenAI's Usage Policies at openai.com/policies/usage-policies/. If you need assistance with respect to GPT-Live-1 and GPT-Live-1 mini, you can find further information on OpenAI's website (openai.com), or you can contact OpenAI Support by opening the chat bubble icon displayed at the bottom-right of help.openai.com. A list of the languages that ChatGPT currently supports can be found here.",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Physical p.3 prints the full footnote 1 at the bottom of the page ('1 GPT-Live-1 and GPT-Live-1 mini are intended to be used in accordance with OpenAI's Usage Policies, Service Terms, and Terms of Use. ... can be found here.'); OCR kept the inline $^{1}$ marker after '...published at launch for those models.' but dropped the whole footnote body. The patch restores it directly after the marked sentence, before the printed '3 Model Safety' heading; the printed line-break inside 'usage-policies/' is joined."
+    },
+    {
+      "before": "<td>GPT-Live-1 mini GPT-Live-1 mini Previously reported</td><td>Corrected</td>",
+      "after": "<td>GPT-Live-1 mini Previously reported</td><td>GPT-Live-1 mini Corrected</td>",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Rendered physical p.7 (300 dpi) shows the Table 3 header as six labelled columns: 'GPT-Live-1 Previously reported', 'GPT-Live-1 Corrected', 'GPT-Live-1 mini Previously reported', 'GPT-Live-1 mini Corrected' (matching Table 4's header, which OCR transcribed correctly). OCR duplicated 'GPT-Live-1 mini' into the fifth header cell and dropped it from the sixth. All Table 3 body values were visually verified against the same render and match the OCR."
+    }
+  ],
+  "unresolved": []
+}

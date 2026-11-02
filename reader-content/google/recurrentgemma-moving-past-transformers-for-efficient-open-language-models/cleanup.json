@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "google:recurrentgemma-moving-past-transformers-for-efficient-open-language-models",
+  "source_sha256": "02e4ebe3e8aaee3c00568cf44638c1e3d352df1f4e716d7aec4d2809aa247f5f",
+  "ocr_sha256": "4c6420d1fd655243e929f186b21aa6f625cbf5c7bfc24d854f372a15cc2ff4e2",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "coverage": "complete",
+    "notes": "All 6 physical pages word-diffed against the OCR markdown; no code fences in this source. Table 3/4 control tokens (rendered blue monospace on physical pages 2-3) were eaten as HTML tags by OCR; restored as HTML entities following the established escaping convention inside tables. Restored the dropped corresponding-authors footnote from physical page 1 and rejoined a page-break-split sentence around Table 4. The printed misspelling 'beforing continuing training' on physical page 2 is the PDF's own text (300 dpi crop verified) and was kept. Page footers, page numbers and the copyright line are intentionally absent from the OCR markdown."
+  },
+  "patches": [
+    {
+      "before": "<tr><td>Start of conversation turn</td><td></td></tr><tr><td>End of conversation turn</td><td></td></tr>",
+      "after": "<tr><td>Start of conversation turn</td><td>&lt;start_of_turn&gt;</td></tr><tr><td>End of conversation turn</td><td>&lt;end_of_turn&gt;</td></tr>",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "Rendered physical p.2 Table 3 (300 dpi crop, visually verified) prints the Relevant Token column values as '<start_of_turn>' and '<end_of_turn>' in blue monospace; the OCR table left both cells empty because the angle-bracket tokens were consumed as HTML tags."
+    },
+    {
+      "before": "$^{1}$ Google DeepMind. Please see contributors and acknowledgements section for full author list.",
+      "after": "$^{1}$ Google DeepMind. Please see contributors and acknowledgements section for full author list.\n\nCorresponding author(s): [botev, slsmith, sohamde, anushanf]@google.com",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Extracted text of physical p.1 ends with the footnote 'Corresponding author(s): [botev, slsmith, sohamde, anushanf]@google.com' above the copyright line; the OCR markdown dropped this footnote line entirely."
+    },
+    {
+      "before": "using a combination of auto-\n\nTable 4 | Example dialogue with control tokens.",
+      "after": "using a combination of automated benchmarks and human evaluation.\n\nTable 4 | Example dialogue with control tokens.",
+      "count": 1,
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "evidence": "Physical p.2 ends mid-sentence with 'using a combination of auto-' and physical p.3 continues 'mated benchmarks and human evaluation.' before Table 4 (rendered p.3 crop verified); the OCR interleaved the sentence completion after the table and kept the hyphen split."
+    },
+    {
+      "before": "mated benchmarks and human evaluation.\n\n## Automated Benchmarks",
+      "after": "## Automated Benchmarks",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Companion patch for the page-break split: after the sentence is restored before Table 4, this orphaned 'mated benchmarks and human evaluation.' fragment (physical p.3, rendered crop verified) must be removed."
+    },
+    {
+      "before": "<td>userKnock knock.</td>",
+      "after": "<td>&lt;start_of_turn&gt;user Knock knock.&lt;end_of_turn&gt;</td>",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 4 (300 dpi crop, visually verified) prints the first user turn as '<start_of_turn>user' newline 'Knock knock.<end_of_turn>'; the OCR cell read 'userKnock knock.' because the angle-bracket tokens were consumed as HTML tags. Printed line breaks are flattened to spaces."
+    },
+    {
+      "before": "<td>model</td></tr><tr><td>Model:</td><td>Who&#x27;s there?</td>",
+      "after": "<td>&lt;start_of_turn&gt;model</td></tr><tr><td>Model:</td><td>Who&#x27;s there?&lt;end_of_turn&gt;</td>",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 4 (300 dpi crop, visually verified) prints '<start_of_turn>model' after the first user turn and 'Who's there?<end_of_turn>' on the model reply; both angle-bracket tokens were eaten by OCR in the corresponding cells."
+    },
+    {
+      "before": "<td>userGemma.</td>",
+      "after": "<td>&lt;start_of_turn&gt;user Gemma.&lt;end_of_turn&gt;</td>",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 4 (300 dpi crop, visually verified) prints the second user turn as '<start_of_turn>user' newline 'Gemma.<end_of_turn>'; the OCR cell read 'userGemma.' because the angle-bracket tokens were consumed as HTML tags."
+    },
+    {
+      "before": "<td>model</td></tr><tr><td>Model:</td><td>Gemma who?</td>",
+      "after": "<td>&lt;start_of_turn&gt;model</td></tr><tr><td>Model:</td><td>Gemma who?&lt;end_of_turn&gt;</td>",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 Table 4 (300 dpi crop, visually verified) prints '<start_of_turn>model' after the second user turn and 'Gemma who?<end_of_turn>' on the final model reply; both angle-bracket tokens were eaten by OCR in the corresponding cells."
+    }
+  ],
+  "unresolved": []
+}

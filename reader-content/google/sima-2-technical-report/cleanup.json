@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "id": "google:sima-2-technical-report",
+  "source_sha256": "a12ecfd60003a02d1039d2f137cb43b5d829a491c8c451fd2651b3fad3226cd2",
+  "ocr_sha256": "2749bf4ab16dcfecb5ef5a21528e962c1160dd997cdb14dc33eba12e817a0046",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      8,
+      12,
+      19,
+      22,
+      24,
+      25,
+      26,
+      28,
+      29,
+      30,
+      31,
+      32,
+      35,
+      36,
+      38,
+      39
+    ],
+    "coverage": "complete",
+    "notes": "Structure check found no code fences in the document; heading outline, figure embeds and captions were checked against the PDF text layer and rendered pages (p1, p22, p28). Full-document normalized word diff of extracted PDF text against the OCR markdown was screened for droppage; every remaining gap is figure-internal transcript text, rotated arXiv stamp, or the PDF's soft-hyphen line breaks. The title-page footnote, the closing brace and line structure of the printed BibTeX entry, one mid-reference paragraph split, one hyphenation-glued author name and two URL underscore escapes were verified on 300-400 dpi renders (p1, p28, p29, p32). 'Z. Gharamani' (Genie 3 entry, p29), 'claude 3 model family: Opus, sonnet, haiku' (Anthropic entry, p28) and '40(396):105' (Lynch & Sermanet entry, p32) are printed verbatim by the PDF and were left unchanged."
+  },
+  "patches": [
+    {
+      "before": "self-improving in previously unseen environments.\n\n## 1. Introduction",
+      "after": "self-improving in previously unseen environments.\n\n$^{1}$Please cite as SIMA Team, 2025\n\nCorrespondence to: sima2-contact@google.com\n\n© 2025 Google. All rights reserved\n\n## 1. Introduction",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 bottom prints the superscript-1 footnote block '1Please cite as SIMA Team, 2025', 'Correspondence to: sima2-contact@google.com' and, under a rule, '© 2025 Google. All rights reserved' (visually verified at 200 dpi). The OCR dropped the whole block while keeping the superscript 1 on the byline 'SIMA Team, Google DeepMind $^{1}$', so the footnote text is restored after the Figure 1 caption, at the end of the page-1 content."
+    },
+    {
+      "before": "@article{simateam2025sima2,\n\ntitle={SIMA 2: A Generalist Embodied Agent for Virtual Worlds}, author={{SIMA Team}},\n\nyear={2025}",
+      "after": "@article{simateam2025sima2,\ntitle={SIMA 2: A Generalist Embodied Agent for Virtual Worlds},\nauthor={{SIMA Team}},\nyear={2025}\n}",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Rendered physical p.28 prints the BibTeX entry as five lines with the closing '}' on its own line (visually verified at 300 dpi). The OCR dropped the closing brace, glued author={{SIMA Team}}, onto the title line and inserted blank lines inside the entry."
+    },
+    {
+      "before": "## Alphabetical by first name.",
+      "after": "Alphabetical by first name.",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Rendered physical p.28 prints 'Alphabetical by first name.' as a plain note line under the 'SIMA 2 Team' heading, not as a section heading (visually verified together with the p28 team block). The OCR promoted it to a level-2 heading, which pollutes the reader outline."
+    },
+    {
+      "before": "## Please cite as:",
+      "after": "Please cite as:",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Rendered physical p.28 prints 'Please cite as:' as an italic lead-in sentence above the BibTeX entry, not as a section heading (visually verified at 300 dpi). The OCR promoted it to a level-2 heading."
+    },
+    {
+      "before": "T. Salimans,\n\nM. Sanchez,",
+      "after": "T. Salimans, M. Sanchez,",
+      "count": 1,
+      "pdf_pages": [
+        28,
+        29
+      ],
+      "evidence": "The Ball et al. (Genie 3) author list is one continuous reference running from physical p.28 ('... H. Ran, T. Salimans,') onto physical p.29 ('M. Sanchez, I. Saprykin, ...', verified at 300 dpi). The OCR turned the page break into a paragraph break, splitting the reference in two."
+    },
+    {
+      "before": "and A. Anand-kumar. Eureka",
+      "after": "and A. Anandkumar. Eureka",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Rendered physical p.32 line-breaks the Eureka reference as 'A. Anand-' / 'kumar.' (visually verified at 400 dpi); the same author is printed 'A. Anandkumar' in the Minedojo (p.30) and Voyager (p.35) references. The OCR glued the line-break hyphen into the surname."
+    },
+    {
+      "before": "Model\\_Card\\_Claude\\_3.pdf",
+      "after": "Model_Card_Claude_3.pdf",
+      "count": 1,
+      "pdf_pages": [
+        28
+      ],
+      "evidence": "Rendered physical p.28 Anthropic reference prints the URL ending 'Model_Card_Claude_3.pdf' with plain underscores (visually verified at 300 dpi); the backslash-underscore sequences are OCR Markdown escapes that alter the visible URL."
+    },
+    {
+      "before": "gemini\\_plays\\_pokemon",
+      "after": "gemini_plays_pokemon",
+      "count": 1,
+      "pdf_pages": [
+        36
+      ],
+      "evidence": "The J. Zhang 'Gemini Plays Pokemon' Twitch URL is printed with plain underscores (PDF text layer p.36; same escape class as the p.28 Anthropic URL verified at 300 dpi). The backslash-underscore sequences are OCR Markdown escapes that alter the visible URL."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-3-1-flash-image-model-card",
+  "source_sha256": "b1362bcf91c38dedd16332975c27e619122e95538b065487ed6762d70240a8b0",
+  "ocr_sha256": "c36f30d97e53a6cb3095ddc7c4ba2aa3166da6282aea28f0bc447ec7806aa272",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage": "complete",
+    "notes": "All 7 physical pages diffed against extracted PDF text; rendered 300 dpi to verify the flagged spots: p2 'Architecture:' line, p4 Approach bullets, p5 both evaluation tables. The PDF text layer is partly damaged (it prints 'Architecture::' with a doubled colon while the rendered page shows the OCR's single colon), so the render was treated as authoritative. The Editing table header genuinely ends 'Image Search' without a closing parenthesis in the printed source, matching OCR, so it was left unchanged. 'localisation' and 'that that' are printed by the source; no footnote markers exist in this card."
+  },
+  "patches": [
+    {
+      "before": "\\- T2l: General Text-to-Image, Text Rendering, Visual Design.",
+      "after": "\\- T2I: General Text-to-Image, Text Rendering, Visual Design.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints 'T2I: General Text-to-Image, Text Rendering, Visual Design.' with a capital I; OCR misread the I as a lowercase l. The same sub-item list already uses 'T2I' correctly in the sibling bullets."
+    },
+    {
+      "before": "## • Capabilities / Benchmarks:",
+      "after": "• Capabilities / Benchmarks:",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 shows 'Capabilities / Benchmarks:' as a bold bullet inside the Approach list (same level as 'Human evaluations' and 'Eval Methodology'), not a section heading; OCR wrongly promoted it to an H2. Only the '## ' prefix is removed so the line stays a list item like its siblings."
+    },
+    {
+      "before": "## - Eval Methodology",
+      "after": "- Eval Methodology",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 shows 'Eval Methodology' as a bold bullet inside the Approach list with three sub-items, not a section heading; OCR wrongly promoted it to an H2. Only the '## ' prefix is removed."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "stepfun:step-audio-2-5",
+  "source_sha256": "86a0dc9dcf1520c323ed11f1343d4a4a265c832d1961c67edee8b978889fec59",
+  "ocr_sha256": "a37e1006824a7b6b01364bbffa87bea21dd165fc5996d64d4fceaa676c7a6e1c",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      7,
+      8,
+      9,
+      11
+    ],
+    "coverage": "partial",
+    "notes": "No code fences exist in the OCR markdown; the heading tree matches the printed sections with no spurious headings. Automated per-page droppage scan of all 19 physical pages (normalized 5-word window containment) triaged every flag: the p.1 flag is the arXiv margin stamp; the p.7 flags are equation lines present in the OCR as LaTeX (L_t = CE(p_t, x_{t+1}) + ...); the p.9 flag is the glued PDF text-layer header of Table 1, whose cells are all present in the OCR table (which is also structurally consistent: rowspan category cells explain the 7-cell continuation rows). Real defects are two dropped page-bottom footnote bodies (both numbered 1, on pp.8 and 11) whose superscript markers survive; both were restored after visually reading rendered pages 8 and 11 at 120 dpi. All 40 reference entries match the PDF count. The three tables have consistent column grids. Remaining prose pages passed the machine scan only."
+  },
+  "patches": [
+    {
+      "before": "WenetSpeech testnet long $^{1}$ .",
+      "after": "WenetSpeech testnet long $^{1}$ .\n\n1 WenetSpeech testnet long is constructed by merging adjacent WenetSpeech testnet segments into extended recordings. We release https://github.com/lawlict/wenetspeech-testnet-long.git for corpus generation.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 bottom shows footnote 1 'WenetSpeech testnet long is constructed by merging adjacent WenetSpeech testnet segments into extended recordings. We release https://github.com/lawlict/wenetspeech-testnet-long.git for corpus generation.' attached to 'WenetSpeech testnet long^1' at the end of the Evaluation paragraph; OCR kept the $^{1}$ marker but dropped the body."
+    },
+    {
+      "before": "inline expression descriptions for local text spans.",
+      "after": "inline expression descriptions for local text spans.\n\n1 https://huggingface.co/Insects/Emotional-Context-Speech",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Rendered physical p.11 bottom shows footnote 1 'https://huggingface.co/Insects/Emotional-Context-Speech' attached to 'Emotional-Context-Speech^1' in the paragraph that ends with this sentence; OCR kept the $^{1}$ marker but dropped the body."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "prose-pages-machine-scan-only",
+      "pdf_pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "evidence": "These pages passed the automated droppage scan and the fence/heading/table-structure scans but were not read line by line against a rendering within this review's coverage."
+    }
+  ]
+}

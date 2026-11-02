@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "id": "deepseek:deepseek-v3-2-pushing-the-frontier-of-open-large-language-models",
+  "source_sha256": "2bec0671778769c159ec389412727d1f3d4889fe1c71564b61edaa24705bd17b",
+  "ocr_sha256": "95c1d5d202c26c9bfa1fe7b2bf856bf11af37ba7c815d6dfe312d7e0ea5cffec",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "Fence inventory is balanced (one 3-backtick pair, the printed result-format block). Full window diff of extracted PDF text for all 23 pages against the OCR Markdown; every unmatched window was inspected and classified. All 9 table captions, all 7 figure captions, the references (pages 18-20), the Appendix E author lists and the appendix tables are present in the OCR; remaining unmatched windows are LaTeX-equivalent math, figure-internal axis text, PDF-side URL line breaks and soft hyphenation that the OCR joined correctly. Pages 3, 5, 12, 14, 21, 23 were additionally rendered and visually verified (footnote bodies, the printed JSON example, Table 8 cells, the author name). All five page-bottom footnote bodies were dropped by OCR while the $^{N}$ markers survive; they are restored after the paragraphs carrying the markers. The source itself prints 'cite_name' and 'DeepSeek-V32-Exp' (verified at 300 dpi), so those OCR strings match the print and were left unchanged. Punctuation spacing after inline math is handled by the shared OCR normalizer."
+  },
+  "patches": [
+    {
+      "before": "We also provide an open-source implementation of DeepSeek-V3.2 $^{2}$ to specify the details unambiguously.",
+      "after": "We also provide an open-source implementation of DeepSeek-V3.2 $^{2}$ to specify the details unambiguously.\n\n$^{1}$ We illustrate the difference between the MQA and MHA modes of MLA in Appendix A.\n\n$^{2}$ https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp/tree/main/inference",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 bottom at 300 dpi: page-bottom footnotes 1 and 2 read verbatim '1We illustrate the difference between the MQA and MHA modes of MLA in Appendix A.' and '2https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp/tree/main/inference'. Both bodies were dropped by OCR while the markers $^{1}$/$^{2}$ survive in the paragraph; inserted after that paragraph following the established footnote-restoration pattern."
+    },
+    {
+      "before": "This evidence indicates the base checkpoint of DeepSeek-V3.2-Exp does not regress on long context tasks.",
+      "after": "This evidence indicates the base checkpoint of DeepSeek-V3.2-Exp does not regress on long context tasks.\n\n$^{3}$ https://artificialanalysis.ai/evaluations/artificial-analysis-long-context-reasoning\n\n$^{4}$ https://fiction.live/stories/Fiction-liveBench-April-6-2025/oQdzQvKHw8JyXbN87",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Rendered physical p.5 bottom at 300 dpi: footnotes 3 and 4 are URLs; footnote 3 is printed broken as '...long-context-reasoni / ng' with no hyphen, joining to artificial-analysis-long-context-reasoning, and footnote 4 reads 'https://fiction.live/stories/Fiction-liveBench-April-6-2025/oQdzQvKHw8JyXbN87'. Both bodies were dropped by OCR while $^{3}$/$^{4}$ survive in the preceding paragraph."
+    },
+    {
+      "before": "Detailed evaluation protocols are provided in Appendix D.",
+      "after": "Detailed evaluation protocols are provided in Appendix D.\n\n$^{5}$ We evaluated the English version of CMO 2025. The IMO 2025 and CMO 2025 problems, together with the inference code, can be found at: https://github.com/deepseek-ai/DeepSeek-Math-V2.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 bottom at 300 dpi: page-bottom footnote 5 reads '5We evaluated the English version of CMO 2025. The IMO 2025 and CMO 2025 problems, together with the inference code, can be found at: https://github.com/deepseek-ai/DeepSeek-Math-V2.' The body was dropped by OCR while the marker $^{5}$ survives after '(CMO)' in the paragraph."
+    },
+    {
+      "before": "[ \"time\": \"2025-10-01\"",
+      "after": "[\n{ \"time\": \"2025-10-01\"",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 result-format block at 300 dpi: the printed array opens with '[' on its own line and the first object begins '{ \"time\": \"2025-10-01\"'. OCR dropped the first object's '{' and glued it to the '['; the two later objects keep their braces in the OCR. Only the brace is restored."
+    },
+    {
+      "before": "\"afternoon attraction\": \"attraction_name\"",
+      "after": "\"afternoon_attraction\": \"attraction_name\"",
+      "count": 3,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12 result-format block at 300 dpi: all three objects print the key as \"afternoon_attraction\" with an underscore; OCR spaced it in all three objects (the neighbouring keys afternoon_restaurant/evening_restaurant keep underscores)."
+    },
+    {
+      "before": "<td>ReasoningRequiredAgentSystemPrompt</td>",
+      "after": "<td>Reasoning Required Agent System Prompt</td>",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 Table 8 at 300 dpi: the first cell prints its title on five lines 'Reasoning / Required / Agent / System / Prompt'; OCR concatenated the wrapped cell title without spaces (the known glued-cell pattern; Table 7's spaced 'Agent System Prompt' shows the intended form)."
+    },
+    {
+      "before": "<td>AgentResponsewithThinking</td>",
+      "after": "<td>Agent Response with Thinking</td>",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 Table 8 at 300 dpi: the response cell title prints as 'Agent Response with Thinking' over three lines; OCR glued it without spaces (Table 7's counterpart cell is 'Agent Response', spaced, in the OCR)."
+    },
+    {
+      "before": "a.k.a in, with a maximum of 20 code executions.",
+      "after": "a.k.a in &lt;think&gt;&lt;/think&gt;, with a maximum of 20 code executions.",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 Table 8 body at 300 dpi: the second bullet reads '- You may use the Python tool **multiple times** during your reasoning, a.k.a in <think></think>, with a maximum of 20 code executions.' OCR dropped the printed <think></think> tags inside the table cell; restored escaped like the surviving tags in the Table 6 cell."
+    },
+    {
+      "before": "Shutting Pan",
+      "after": "Shuting Pan",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 Appendix E author list at 300 dpi: the Research & Engineering list prints 'Shuting Pan' (single t) between 'Shunfeng Zhou' and 'Songyang Zhou'; OCR misread the name as 'Shutting Pan'."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "prompt-box-titles-as-headings",
+      "pdf_pages": [
+        11,
+        12
+      ],
+      "evidence": "'An Example of Synthesized Task: Trip Planning', 'Submit Result Format' and 'Tool Set for Trip Planning' are transcribed as section headings. The render shows them as titles of printed prompt boxes (dark banner for the tool-set table), i.e. real page text rather than figure-internal labels; the heading level was kept because the box bodies are transcribed inline as body text and the shared structure checker treats printed prompt-box titles as legitimate."
+    },
+    {
+      "id": "equation-punctuation-from-unicode-math",
+      "pdf_pages": [
+        3,
+        4,
+        7,
+        8,
+        20
+      ],
+      "evidence": "Equations (1)-(12) and the appendix tensor diagram are extracted by PyMuPDF as bold-italic Unicode runs; OCR renders LaTeX-equivalent math, so the window diff cannot certify spacing inside every equation. Digit-level greps found no spaced digits and no count mismatches for the printed constants (10^-3, 7.3x10^-6, 2048, 15000, 943.7B, 2.1B, 128K, 1,800, 85,000), but per-token equation proofing was not done."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "google:rt-1-technical-report",
+  "source_sha256": "81efe669c8fa50ffc7097886dc78a442fa7a8f7f2451684b93069cb9fbeda767",
+  "ocr_sha256": "b41f31ead105a6d1bda4d7631e38ec495cdc2d1370de0f6819c4dfb7e3920a20",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "coverage": "partial",
+    "notes": "Structural scan: 0 code fences, numbered headings clean. Automated normalized 4-gram page-containment diff of all 31 PDF pages: all pages >=0.90 except p25 (0.82) and p30 (0.81), line-checked: p25's missing runs are the 53-instruction body of Table 8, which the OCR preserved as a complete embedded table image (image content compared against the PDF text layer instruction list - all 53 rows match), and p30's are Table 13's HTML-table cell reordering (spot-checked '85 (-12)', 'BC-Z XL', 'RT-1 w/o Transformer' present). p31's runs are attention-head figure labels (figure-internal). One dropped footnote body on p1 found and restored after visual verification. arXiv stamp omitted per corpus convention; references complete; body prose machine-scanned rather than read word by word."
+  },
+  "patches": [
+    {
+      "before": "\\*Robotics at Google, †Everyday Robots, ‡Google Research, Brain Team",
+      "after": "\\*Robotics at Google, †Everyday Robots, ‡Google Research, Brain Team\n\n$^{1}$ Authors listed in alphabetical order. Contributions in Appendix A. Corresponding emails: {keerthanapg, kanishkarao, karolhausman}@google.com.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (110 dpi, visually inspected) prints the footnote marker 1 as a superscript at the start of the author block and the footnote body at the page bottom: '1Authors listed in alphabetical order. Contributions in Appendix A.' / 'Corresponding emails: {keerthanapg, kanishkarao, karolhausman}@google.com.'; the body text matches the PDF text layer verbatim. The OCR kept the marker on the author block but dropped the footnote body; restored after the affiliation line per the corpus footnote pattern."
+    }
+  ],
+  "unresolved": []
+}

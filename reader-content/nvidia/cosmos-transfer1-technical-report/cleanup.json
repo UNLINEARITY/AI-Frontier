@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:cosmos-transfer1-technical-report",
+  "source_sha256": "c9d0256d1a066ed7a165cb1f62b1fee097f15e776a7f792d1998379c6fb0a6d9",
+  "ocr_sha256": "c9e1257d8d06af4ff9782962fa19c6ed208a572db0f0e525b8da914a4d8124fb",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level diff of all 28 physical PDF pages against the OCR markdown plus a fence/heading structure scan; pages 10, 11, 13, 14, 19, 21 and footnote crops of pages 1, 4, 9 were rendered and visually inspected. No code fences exist in the source. Footnote markers 1 and 2 survive in the OCR while their bodies were dropped; footnote 3 lost both marker and body; all three bodies were restored verbatim from the rendered pages. The print's own misspelling 'thr realisim' (physical p.19, RetinaGAN sentence) had been auto-corrected by OCR and was restored. Apparent droppages in the diff were resolved as figure reading-order interleaves (Figures 6-9 with Tables 1-2); the continuation sentence 'background. Since vis and edge modalities...' exists at its shuffled position in the markdown."
+  },
+  "patches": [
+    {
+      "before": "NVIDIA $^{1}$\n\n## Abstract",
+      "after": "NVIDIA $^{1}$\n\n$^{1}$ A detailed list of contributors and acknowledgments can be found in App. B of this paper.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 footnote line prints '1 A detailed list of contributors and acknowledgments can be found in App. B of this paper.' attached to the NVIDIA author block (marker superscript verified at the author line); the OCR kept the marker but dropped the footnote body (visually verified at 300 dpi)."
+    },
+    {
+      "before": "56K tokens $^{2}$ predicted by the model.",
+      "after": "56K tokens $^{2}$ predicted by the model.\n\n$^{2}$ We use Cosmos-Tokenize1-CV8x8x8-720p, which is a causal video tokenizer with 8x8x8 compression rate across t-axis, x-axis, and y-axis (NVIDIA, 2025). 56,320 tokens is computed as: 1280 (width) ÷ 8 (tokenize) ÷ 2 (patchify) × 704 (height) ÷ 8 (tokenize) ÷ 2 (patchify) × [(121 − 1) ÷ 8 + 1] (tokenized frames).",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 footnote prints '2 We use Cosmos-Tokenize1-CV8x8x8-720p, which is a causal video tokenizer with 8x8x8 compression rate across t-axis, x-axis, and y-axis (NVIDIA, 2025). 56,320 tokens is computed as: 1280 (width) ÷ 8 (tokenize) ÷ 2 (patchify) × 704 (height) ÷ 8 (tokenize) ÷ 2 (patchify) × [(121 − 1) ÷ 8 + 1] (tokenized frames).' with the marker on '56K tokens' in the main text; the OCR kept the marker but dropped the body (visually verified at 300 dpi)."
+    },
+    {
+      "before": "and a weight of 0.5 to depth and segmentation respectively in the background. While a multitude of heuristics could be used",
+      "after": "and a weight of 0.5 to depth and segmentation respectively in the background.\n\n$^{3}$ The Edge F1 score is a very strict metric that requires pixel-level alignment of the extracted thin canny edges. This strictness contributes to relatively low F1 scores for all methods.\n\nWhile a multitude of heuristics could be used",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 footnote prints '3 The Edge F1 score is a very strict metric that requires pixel-level alignment of the extracted thin canny edges. This strictness contributes to relatively low F1 scores for all methods.' with the superscript 3 attached at '...respectively in the foreground,' in the section 4 composition paragraph; OCR dropped both marker and body (visually verified at 300 dpi). The body is placed after the paragraph sentence carrying the marker."
+    },
+    {
+      "before": "enhances thr realism of simulated scenes",
+      "after": "enhances thr realisim of simulated scenes",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Rendered physical p.19 prints the paper's own misspelling 'enhances thr realisim of simulated scenes' in the RetinaGAN sentence of section 7; the OCR silently auto-corrected 'realisim' to 'realism' (visually verified at 300 dpi). 'thr' was already preserved."
+    },
+    {
+      "before": "## We introduce the following modalities in the paper:",
+      "after": "We introduce the following modalities in the paper:",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "PDF text layer places this introductory prose sentence opening the modality list in section 4 on physical p.4; it is a body sentence, not a section heading (same list style as the sibling 'We introduce the following modalities' paragraph of section 5.2)."
+    },
+    {
+      "before": "## following figure.",
+      "after": "following figure.",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "Rendered physical p.14 shows 'following figure.' as the plain body-text continuation of the sentence that starts on p.13 ('These statistical findings are further illustrated in the following figure.'), printed in regular weight below the Figure 9 caption; not a heading."
+    },
+    {
+      "before": "## EXAMPLE OUTPUT FROM UPSAMPLER THAT TAKES IN SHORT PROMPT AND DEPTH, AND TRANSFORM INTO LONGER PROMPTS WITH DETAILS.",
+      "after": "EXAMPLE OUTPUT FROM UPSAMPLER THAT TAKES IN SHORT PROMPT AND DEPTH, AND TRANSFORM INTO LONGER PROMPTS WITH DETAILS.",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Rendered physical p.21-22 show the upsampler example blocks as green figure panels whose banner text exists only inside the panel image ('EXAMPLE OUTPUT...' is not in the PDF text layer); the sibling seg-map example banner is already plain text in the OCR, so the heading must not stay a heading either."
+    },
+    {
+      "before": "## OUTPUT\n",
+      "after": "OUTPUT\n",
+      "count": 2,
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "evidence": "Rendered physical p.21 and p.22 show 'OUTPUT' as a monospace label inside the green upsampler example panels (figure-internal text, absent from the PDF text layer); the two identical OCR heading lines are demoted to plain text matching the panel labels."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure-table-reading-order-interleave",
+      "pdf_pages": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "evidence": "The section 4 composition paragraph, Figures 6-7 and Tables 1-2 content are interleaved in OCR reading order (the paragraph continuation 'background. Since vis and edge modalities...' appears after the tables); content is complete and verbatim, only the order differs from the print."
+    },
+    {
+      "id": "upsampler-panel-text-inline",
+      "pdf_pages": [
+        21,
+        22
+      ],
+      "evidence": "The Appendix A example panels' internal monospace text (banners, short prompts, OUTPUT paragraphs) is transcribed as body text around the embedded panel images; the text exists only inside the panel images, so full removal would lose transcribed content and was left beyond a minimal heading repair."
+    }
+  ]
+}

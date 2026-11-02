@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:dreamgen-technical-report",
+  "source_sha256": "e4e2c5c9e664d9331adb49c230053a76cf5bb4c3501341f4d9b372ecc585684c",
+  "ocr_sha256": "37958ebdb7c3bcd61729207f7bc12d51a8a039da71378f7e4428c8f52463da89",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "coverage": "complete",
+    "notes": "All 23 physical pages compared against extracted PDF text; physical page 21 (Table 8) rendered at 110 dpi and visually verified against the printed criteria values and group headers. Tables 1-7, the reference list (physical p.1 arXiv stamp aside) and Figures 1-12 captions are present; the large unmatched fractions on physical pages 8, 15, 17 and 19 come from tables whose PDF text layer prints one value per line, and from figure-internal labels; the corresponding md tables (Dataset Statistics, LAPA dataset, RoboCasa Table 4, GR1/Franka/SO-100 results, IF correlation Tables 6-7) were spot-checked value-by-value against the text layer and match. One defect class fixed on physical page 21: Table 8's printed multi-line criteria cells were emitted with glued score boundaries (e.g. 'grasp handle0.66'), and the printed group headers 'Seen Environments, Novel Behaviors' and 'Novel Environments' were missing.",
+    "figures_verified": [
+      "physical p.21 110-dpi render (Table 8 criteria and group headers)"
+    ]
+  },
+  "patches": [
+    {
+      "before": "<table><tr><td>Task</td><td>Criteria</td></tr><tr><td>Open Microwave</td><td>0.33 grasp handle0.66 do closing motion1.0 close microwave</td></tr><tr><td>Open Macbook</td><td>0.5 opening motion1.0 open laptop</td></tr><tr><td>Close Lunchbox</td><td>0.5 contact lid1.0 close lunchbox</td></tr><tr><td>Hit Tambourine</td><td>0.5 grab tambourine1.0 hit with left hand</td></tr><tr><td>Hit Keyboard</td><td>0.5 going to keyboard1.0 pressing</td></tr><tr><td>Grab Button</td><td>0.5 go to button1.0 grab button</td></tr><tr><td>Pour Water</td><td>0.5 picking up1.0 pouring</td></tr><tr><td>Water Flowers</td><td>0.5 grasp pink bottle1.0 pour</td></tr><tr><td>Light Candle</td><td>0.5 grasp lighter1.0 approach candle</td></tr><tr><td>Use Vacuum</td><td>0.5 pick up vacuum1.0 do sweeping motion</td></tr><tr><td>Iron Shirt</td><td>0.5 grasp iron1.0 press shirt</td></tr><tr><td>Take Spoon Out</td><td>0.33 grasp spoon0.66 pick up spoon1.0 place spoon</td></tr><tr><td>Unroll Mat</td><td>0.5 go to mat1.0 unroll</td></tr><tr><td>Move Mouse</td><td>0.5 grab the mouse1.0 move it around</td></tr></table>",
+      "after": "<table><tr><td colspan=\"2\">Seen Environments, Novel Behaviors</td></tr><tr><td>Task</td><td>Criteria</td></tr><tr><td>Open Microwave</td><td>0.33 grasp handle; 0.66 do closing motion; 1.0 close microwave</td></tr><tr><td>Open Macbook</td><td>0.5 opening motion; 1.0 open laptop</td></tr><tr><td>Close Lunchbox</td><td>0.5 contact lid; 1.0 close lunchbox</td></tr><tr><td>Hit Tambourine</td><td>0.5 grab tambourine; 1.0 hit with left hand</td></tr><tr><td>Hit Keyboard</td><td>0.5 going to keyboard; 1.0 pressing</td></tr><tr><td>Grab Button</td><td>0.5 go to button; 1.0 grab button</td></tr><tr><td>Pour Water</td><td>0.5 picking up; 1.0 pouring</td></tr><tr><td>Water Flowers</td><td>0.5 grasp pink bottle; 1.0 pour</td></tr><tr><td>Light Candle</td><td>0.5 grasp lighter; 1.0 approach candle</td></tr><tr><td>Use Vacuum</td><td>0.5 pick up vacuum; 1.0 do sweeping motion</td></tr><tr><td>Iron Shirt</td><td>0.5 grasp iron; 1.0 press shirt</td></tr><tr><td>Take Spoon Out</td><td>0.33 grasp spoon; 0.66 pick up spoon; 1.0 place spoon</td></tr><tr><td>Unroll Mat</td><td>0.5 go to mat; 1.0 unroll</td></tr><tr><td>Move Mouse</td><td>0.5 grab the mouse; 1.0 move it around</td></tr></table>",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 prints the left Table 8 panel under the group header 'Seen Environments, Novel Behaviors' with each criterion on its own line inside the cell (e.g. '0.33 grasp handle / 0.66 do closing motion / 1.0 close microwave'); OCR glued the line breaks and dropped the group header. The patch inserts '; ' at the printed line boundaries and restores the header; all task names and printed values are unchanged."
+    },
+    {
+      "before": "<table><tr><td colspan=\"2\">Seen Behaviors</td></tr><tr><td>Task</td><td>Criteria</td></tr><tr><td>Pick up Tangerine</td><td>0.5 pick up1.0 place in bowl</td></tr><tr><td>Box Sandwich</td><td>0.5 grab the sandwich1.0 place in box</td></tr><tr><td>Weigh the Orange</td><td>0.5 pick up1.0 place on scale</td></tr><tr><td>Put Cup in Trash</td><td>0.5 grab cup1.0 throw it away</td></tr><tr><td>Put Pear in Basket</td><td>0.5 grab pear1.0 put in bucket</td></tr><tr><td>Put Sauce on Tray</td><td>0.5 grab bottle1.0 place bottle on tray</td></tr><tr><td colspan=\"2\">Novel Behaviors</td></tr><tr><td>Task</td><td>Criteria</td></tr><tr><td>Water Flowers</td><td>0.5 pick up pitcher1.0 water the plants</td></tr><tr><td>Lift Basket</td><td>0.5 grab handle1.0 lift bucket</td></tr><tr><td>Swirl Around Spoon</td><td>0.5 grab spoon1.0 scoop to plate</td></tr><tr><td>Use Whisk</td><td>0.5 grab whisk1.0 mix</td></tr><tr><td>Close Soup Container</td><td>0.5 use handle1.0 close</td></tr><tr><td>Uncover Pot</td><td>0.5 grab cover1.0 uncover pot</td></tr><tr><td>Cover Pot</td><td>0.5 grab cover1.0 cover pot</td></tr></table>",
+      "after": "<table><tr><td colspan=\"2\">Novel Environments</td></tr><tr><td colspan=\"2\">Seen Behaviors</td></tr><tr><td>Task</td><td>Criteria</td></tr><tr><td>Pick up Tangerine</td><td>0.5 pick up; 1.0 place in bowl</td></tr><tr><td>Box Sandwich</td><td>0.5 grab the sandwich; 1.0 place in box</td></tr><tr><td>Weigh the Orange</td><td>0.5 pick up; 1.0 place on scale</td></tr><tr><td>Put Cup in Trash</td><td>0.5 grab cup; 1.0 throw it away</td></tr><tr><td>Put Pear in Basket</td><td>0.5 grab pear; 1.0 put in bucket</td></tr><tr><td>Put Sauce on Tray</td><td>0.5 grab bottle; 1.0 place bottle on tray</td></tr><tr><td colspan=\"2\">Novel Behaviors</td></tr><tr><td>Task</td><td>Criteria</td></tr><tr><td>Water Flowers</td><td>0.5 pick up pitcher; 1.0 water the plants</td></tr><tr><td>Lift Basket</td><td>0.5 grab handle; 1.0 lift bucket</td></tr><tr><td>Swirl Around Spoon</td><td>0.5 grab spoon; 1.0 scoop to plate</td></tr><tr><td>Use Whisk</td><td>0.5 grab whisk; 1.0 mix</td></tr><tr><td>Close Soup Container</td><td>0.5 use handle; 1.0 close</td></tr><tr><td>Uncover Pot</td><td>0.5 grab cover; 1.0 uncover pot</td></tr><tr><td>Cover Pot</td><td>0.5 grab cover; 1.0 cover pot</td></tr></table>",
+      "count": 1,
+      "pdf_pages": [
+        21
+      ],
+      "evidence": "Rendered physical p.21 prints the right Table 8 panels under the spanning header 'Novel Environments' with sub-panels 'Seen Behaviors' and 'Novel Behaviors', each criterion on its own line inside the cell (e.g. '0.5 pick up / 1.0 place in bowl'); OCR glued the line breaks and dropped the 'Novel Environments' spanning header. The patch inserts '; ' at the printed line boundaries and restores the header; all task names and printed values are unchanged."
+    }
+  ],
+  "unresolved": []
+}

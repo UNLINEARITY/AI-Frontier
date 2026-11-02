@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "meta:sam-3d-body-technical-report",
+  "source_sha256": "65609925ce841e41a62f77c0d091a241159446a4f4df72bb18814983b4a85a94",
+  "ocr_sha256": "e1dd85938288d1955ccb82ed49f9c61a7db0a65a7aea2010dc026878a2a743e8",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "coverage": "complete",
+    "notes": "Full token-level diff of all 20 physical PDF pages against the OCR markdown, plus a structural read of all headings, tables and code-free fences (no unbalanced fences). Math notation differences (LaTeX subscripts, tag numbering) are equivalent renderings, not defects. Page 12 Table 6 was rendered at 300 dpi: the third column group prints 3DB (OCR wrote SDB) and the PromptHMR citation prints Wang et al. (2025c) (OCR wrote 2026c); all compared table values matched. The PDF itself prints 'a video transition effect as used to fade-in' on physical p.13, so the OCR wording is faithful and left unchanged. The arXiv stamp on p.1 and axis ticks ('100', '100.0') inside Figure 9 on p.13 are figure/stamp text, not body droppage. The \\_ escapes in prose (pose\\_3d:very\\_hard, viewpoint:topdown\\_view) render to the exact underscores the PDF prints; the HTML table rows use unescaped underscores consistently, so no patch."
+  },
+  "patches": [
+    {
+      "before": "<td colspan=\"3\">SDB</td>",
+      "after": "<td colspan=\"3\">3DB</td>",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12, Table 6 header: the third column group is printed '3DB' over PVE/MPJPE/PA-MPJPE; OCR transcribed S. Verified at 300 dpi crop. Same document body and caption both use 3DB."
+    },
+    {
+      "before": "Wang et al. (2026c)",
+      "after": "Wang et al. (2025c)",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "Rendered physical p.12, Table 6 header: PromptHMR citation prints 'Wang et al. (2025c)' (visually verified at 300 dpi); OCR misread the 5 as 6. The body text (OCR section 8.6 and PDF p.11) cites 'Wang et al. (2025c)'."
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-2-5-pro-model-card",
+  "source_sha256": "247f1ba6fc665333ade40fa8871b668e6f652e285c9561de2c57194183e6cf53",
+  "ocr_sha256": "84a9b37dfec3867e9e3c12760519434088e67cfd1b066fbdd60866a250704606",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "Token-level diff of extracted text from all 21 physical PDF pages against the OCR markdown; 3 HTML tables render with balanced structure. All ten numbered footnotes had dropped bodies while their markers (including the safety table's $Evaluation^2$ header cell) survive; all restored and the two verified at 300 dpi (footnotes 2 and 4). Two page-break-split sentences rejoined as printed. Benchmark-table headers verified at 300 dpi and de-glued. Remaining deltas are hyphenation joins and figure-internal chart labels. The printed 'Gemini 2.5 Pro Experimental (05-06)' pairing, 'capability. change.' and 'Model cards may be updated' lowercase spellings are the print's own and preserved."
+  },
+  "patches": [
+    {
+      "before": "## Gemini 2.5 Pro Model Card\n\nModel Cards are intended",
+      "after": "## Gemini 2.5 Pro Model Card\n\nModel card updated June 27, 2025\n\nModel Cards are intended",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 cover (110 dpi) prints 'Model card updated June 27, 2025' in the page-top banner, next to the Google logo; OCR dropped the line while keeping the body's separate 'Last updated: June 27, 2025' line from physical p.2. Restored under the H1 title."
+    },
+    {
+      "before": "now \"general availability.\"¹\n\nInputs:",
+      "after": "now \"general availability.\"¹\n\n$^{1}$ We've updated the naming convention throughout this model card to reflect that Gemini 2.5 Pro is generally available and to clearly differentiate between different Gemini 2.5 Pro versions.\n\nInputs:",
+      "count": 1,
+      "pdf_pages": [
+        2
+      ],
+      "evidence": "The Description paragraph's superscript ¹ marker survives but its footnote body was dropped; the PDF text layer of physical p.2 prints '1 We've updated the naming convention throughout this model card to reflect that Gemini 2.5 Pro is generally available and to clearly differentiate between different Gemini 2.5 Pro versions.' under a rule at the page bottom."
+    },
+    {
+      "before": "Gemini 2.5 Pro Experimental\n\n(05-06) and Gemini 2.5 Pro GA.",
+      "after": "Gemini 2.5 Pro Experimental (05-06) and Gemini 2.5 Pro GA.",
+      "count": 1,
+      "pdf_pages": [
+        9,
+        10
+      ],
+      "evidence": "Physical p.9's last printed line ends the Assurance Evaluations sentence mid-way at '...Gemini 2.5 Pro Experimental' (300 dpi crop) and physical p.10 opens '(05-06) and Gemini 2.5 Pro GA.' (300 dpi crop); OCR kept both fragments as separate paragraphs. Joined as printed; the print's own 'Gemini 2.5 Pro Experimental (05-06)' wording is preserved."
+    },
+    {
+      "before": "</table>\n\nAssurance Evaluations Results:",
+      "after": "</table>\n\n$^{2}$ The ordering of evaluations in this table has changed from previous iterations of the 2.5 Pro Preview model card in order to list safety evaluations together and improve readability. The type of evaluations listed have remained the same.\n\nAssurance Evaluations Results:",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Footnote 2's marker survives as the safety-evaluations table header cell '$Evaluation^2$' (physical p.8) while its body, printed under a rule at the bottom of physical p.9, was dropped; verified on the 110 dpi p.9 bottom render."
+    },
+    {
+      "before": "mass casualty event.\" $^{3}$\n\n",
+      "after": "mass casualty event.\" $^{3}$\n\n$^{3}$ For example, through the use of a self-replicating CBRNE agent. Compared to a counterfactual of not using generative AI systems.\n\n",
+      "count": 1,
+      "pdf_pages": [
+        12
+      ],
+      "evidence": "The CBRN definition paragraph's $^{3}$ marker survives but its footnote body was dropped; the PDF text layer of physical p.12 prints '3 For example, through the use of a self-replicating CBRNE agent. Compared to a counterfactual of not using generative AI systems.' under a rule at the page bottom."
+    },
+    {
+      "before": "(Li et al., 2024).\n\n",
+      "after": "(Li et al., 2024).\n\n$^{4}$ VMQA refers to an earlier version of the *Virology Capabilities Test* (Götting et al., 2025).\n\n",
+      "count": 1,
+      "pdf_pages": [
+        13
+      ],
+      "evidence": "The VMQA paragraph's $^{4}$ marker survives but its footnote body was dropped. Rendered physical p.13 bottom at 300 dpi prints '4 VMQA refers to an earlier version of the Virology Capabilities Test (Götting et al., 2025).' with the test name in italics and the author surname Götting."
+    },
+    {
+      "before": "with a limited security posture.\"\n\n",
+      "after": "with a limited security posture.\"\n\n$^{5}$ E.g. deletion or exfiltration of critical information, or destroying or disabling key systems.\n\n",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "The Cyber Autonomy definition's $^{5}$ marker survives but its footnote body was dropped; the PDF text layer of physical p.14 prints '5 E.g. deletion or exfiltration of critical information, or destroying or disabling key systems.' under a rule at the page bottom."
+    },
+    {
+      "before": "or more.\" $^{7}$\n\n",
+      "after": "or more.\" $^{7}$\n\n$^{6}$ E.g. deletion or exfiltration of sensitive information/disruption of key systems of organizations with strong security posture, or the creation of predictable and large-scale effects on critical national infrastructure.\n$^{7}$ Relative to the counterfactual of using 2024 AI technology and tooling.\n\n",
+      "count": 1,
+      "pdf_pages": [
+        14
+      ],
+      "evidence": "The Cyber Uplift definition's $^{6}$ and $^{7}$ markers survive but both footnote bodies were dropped; the PDF text layer of physical p.14 prints them under a rule at the page bottom."
+    },
+    {
+      "before": "not covered.\n\n",
+      "after": "not covered.\n\n$^{8}$ Our in-house CTF suite is now open-sourced, and can be run with the UK AI Safety Institute's evaluation framework Inspect. See here for instructions.\n\n",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "The Existing challenges paragraph's $^{8}$ marker survives but its footnote body was dropped; the PDF text layer of physical p.15 prints it under a rule at the page bottom."
+    },
+    {
+      "before": "We instantiate this benchmark by mapping 48 challenges",
+      "after": "$^{9}$ Previously referred to as the \"comprehensive\" benchmark.\n\nWe instantiate this benchmark by mapping 48 challenges",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "The Key skills benchmark paragraph's $^{9}$ marker survives but its footnote body was dropped; the PDF text layer of physical p.15 prints '9 Previously referred to as the \"comprehensive\" benchmark.' under a rule at the page bottom. Restored after the key-skills bullet list that the marker's paragraph introduces."
+    },
+    {
+      "before": "capability. change. 2.5 Pro here refers to 2.5 Pro GA, and 2.5 Flash to 2.5 Flash GA.\n\n",
+      "after": "capability. change. 2.5 Pro here refers to 2.5 Pro GA, and 2.5 Flash to 2.5 Flash GA.\n\n$^{10}$ '1.5 Pro (reported)' refers to the results published in the Gemini 1.5 report. Performance of 1.5 Pro has since increased significantly, likely due to improvements in Gemini post-training and to our agent scaffolding. Denominators in InterCode-CTF change from 81 to 76 because we removed 5 challenges which require internet access, which we disallow for security reasons.\n\n",
+      "count": 1,
+      "pdf_pages": [
+        16
+      ],
+      "evidence": "The Figure 2 caption's $^{10}$ marker survives but its footnote body was dropped. Rendered physical p.16 bottom (110 dpi) prints it under a rule below the Figure 3 caption."
+    },
+    {
+      "before": "and so 2.0\n\nresults are not directly comparable.",
+      "after": "and so 2.0 results are not directly comparable.",
+      "count": 1,
+      "pdf_pages": [
+        16,
+        17
+      ],
+      "evidence": "Physical p.16's Figure 3 caption ends mid-sentence at '...and so 2.0' and physical p.17 opens 'results are not directly comparable. Here, ...' (both rendered); OCR kept the fragments as separate paragraphs. Joined as printed."
+    },
+    {
+      "before": "Gemini 2.5 Pro(GA)",
+      "after": "Gemini 2.5 Pro (GA)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Benchmark table header on physical p.5: the 300 dpi header render prints 'Gemini 2.5 Pro' / '(GA)' on separate lines; OCR glued them without the space. Cell-internal line breaks must not change visible text."
+    },
+    {
+      "before": "Gemini 2.5 Pro(Preview05-06)",
+      "after": "Gemini 2.5 Pro (Preview 05-06)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Benchmark table header on physical p.5: the 300 dpi header render prints 'Gemini 2.5 Pro' / '(Preview 05-06)'; OCR glued 'Pro(Preview05-06)', dropping both spaces."
+    },
+    {
+      "before": "Gemini 2.5 Pro(Experimental03-25)",
+      "after": "Gemini 2.5 Pro (Experimental 03-25)",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Benchmark table header on physical p.5: the 300 dpi header render prints 'Gemini 2.5 Pro' / '(Experimental 03-25)'; OCR glued 'Pro(Experimental03-25)'."
+    },
+    {
+      "before": "OpenAI o3High",
+      "after": "OpenAI o3 High",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Benchmark table header on physical p.5: the 300 dpi header render prints 'OpenAI o3' / 'High'; OCR glued 'o3High'."
+    },
+    {
+      "before": "Claude 4 Opus32K Thinking",
+      "after": "Claude 4 Opus 32K Thinking",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Benchmark table header on physical p.5: the 300 dpi header render prints 'Claude 4 Opus' / '32K Thinking'; OCR glued 'Opus32K'."
+    },
+    {
+      "before": "Grok 3 BetaExtended Thinking",
+      "after": "Grok 3 Beta Extended Thinking",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Benchmark table header on physical p.5: the 300 dpi header render prints 'Grok 3 Beta' / 'Extended Thinking'; OCR glued 'BetaExtended'."
+    },
+    {
+      "before": "DeepSeek R105-28",
+      "after": "DeepSeek R1 05-28",
+      "count": 1,
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "Benchmark table header on physical p.5: the 300 dpi header render prints 'DeepSeek R1' / '05-28'; OCR glued 'R105-28', which misreads the model name."
+    },
+    {
+      "before": "1M(pointwise)",
+      "after": "1M (pointwise)",
+      "count": 2,
+      "pdf_pages": [
+        5,
+        6
+      ],
+      "evidence": "MRCR row settings: the 300 dpi render of physical pp.5-6 prints '1M (pointwise)' on two lines; OCR glued '1M(pointwise)' in both Long Context MRCR and MRCR v2 rows."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "glued-first-column-cells-benchmark-table",
+      "pdf_pages": [
+        5
+      ],
+      "evidence": "First-column cells concatenate the printed category and benchmark names ('Science GPQA diamond', 'Reasoning & Knowledge Humanity's Last Exam'); the 300 dpi render shows the same stacked cell with lost line breaks only. Cell-internal line structure is not recoverable as a safe exact-replacement."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "meta:galactica-a-large-language-model-for-science",
+  "source_sha256": "612939ed35e76201597bdcc6e2d902e523ebde3c21f24ffa6de689cf28831ec2",
+  "ocr_sha256": "a04412de141691432fbc2187ce9eb31b9a74f83285a472072361c7ba1176ed82",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      4,
+      15,
+      46,
+      47,
+      48,
+      49,
+      51,
+      54
+    ],
+    "coverage": "partial",
+    "notes": "Triage review: all 58 physical pages machine-scanned (balanced code fences; normalized 4-gram page-text containment vs OCR, mean 0.91; spaced-digit and escape pattern scan); low-containment pages 15, 46-49, 51, 54 inspected line-by-line against extracted PDF text; pages 1, 2, 4 and 46 additionally rendered and visually verified; Table 28 cells diffed one-by-one (all numeric cells match). Two real droppage defects found (Table 28 header row lost its <work> tokens; the epigraph attribution was promoted to a section heading). References spot-checked intact (full author lists present)."
+  },
+  "patches": [
+    {
+      "before": "<td colspan=\"5\">Chain-of-Thought versus</td>",
+      "after": "<td colspan=\"5\">Chain-of-Thought versus &lt;work&gt;</td>",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered physical p.46 Table 28 prints the spanning title row 'Chain-of-Thought versus <work>'; OCR kept only 'Chain-of-Thought versus' and dropped the <work> token. Restored entity-encoded so it renders inside the HTML table, matching the printed header style."
+    },
+    {
+      "before": "<td>PaLM 540B CoT</td><td>GAL 30B</td><td>GAL 120B</td>",
+      "after": "<td>PaLM 540B CoT</td><td>GAL 30B &lt;work&gt;</td><td>GAL 120B &lt;work&gt;</td>",
+      "count": 1,
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "Rendered physical p.46 Table 28 header prints 'GAL 30B <work>' and 'GAL 120B <work>'; OCR dropped both <work> tokens. Restored entity-encoded."
+    },
+    {
+      "before": "## Galileo Galilei, The Assayer",
+      "after": "*Galileo Galilei, The Assayer*",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4: 'Galileo Galilei, The Assayer' is the italic right-aligned attribution line of the section 3 epigraph, not a section heading; OCR promoted it to an H2 heading. Demoted to italic text with no other change."
+    }
+  ],
+  "unresolved": []
+}

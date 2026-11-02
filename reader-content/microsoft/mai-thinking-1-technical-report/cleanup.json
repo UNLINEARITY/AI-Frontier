@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "id": "microsoft:mai-thinking-1-technical-report",
+  "source_sha256": "7d4f13dd88ff98d0480645e96b751f0abea00fd99122cabf7626598b29bef26f",
+  "ocr_sha256": "7aa2cd2e22da7c3af091d584faceb01e97f3c2f3c0562396d283eba395cf2721",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      9,
+      23,
+      43,
+      47,
+      48,
+      59,
+      89,
+      95,
+      100,
+      104
+    ],
+    "coverage": "partial",
+    "notes": "Triage review of the 109-page report within a fixed time budget. Structure: whole OCR markdown scanned programmatically - all 20 code-fence pairs are balanced, no fence swallows headings/tables/images, no duplicated title lines, and no speaker-label or figure-banner headings (the 'Weak/Strong model excerpt' labels in Appendix C are printed text in the PDF, not figure-internal). Droppage: automated normalized 5-gram containment of every PDF page's text against the OCR markdown flagged 40 low-hit pages; each flagged page was inspected - flags resolved into figure-internal vector text (axis labels/legends on pp. 5, 16, 18-24, 29-33, 37-38, 47-50, 53-58, 88, 98-99, 102, 105, 108), LaTeX-equivalent equation wording (pp. 7-10, 31-36, 39, 44-45, 102), intact HTML tables (pp. 10, 20-21, 23, 47, 53-54, 98-99, 102, 105), and the genuine drops patched below. Pages 1, 9, 23, 43, 47, 48, 59, 89, 95, 100, 104 were additionally rendered and visually checked line-by-line; the remaining pages were machine-scanned only. All inserted footnote strings were extracted byte-exact from the PDF text layer and checked against renders; the fn9 space after the ≥ sign was confirmed at 300 dpi. Punctuation spacing after inline math is repaired by the shared OCR normalizer rather than document patches."
+  },
+  "patches": [
+    {
+      "before": "investment.\n\nMAI-Thinking-1 required a cluster environment",
+      "after": "investment.\n\n## 6 Cluster Environment\n\nMAI-Thinking-1 required a cluster environment",
+      "count": 1,
+      "pdf_pages": [
+        59
+      ],
+      "evidence": "Rendered physical p.59: the chapter heading \"6 Cluster Environment\" is printed between the end of Sec. 5.2 and the \"MAI-Thinking-1 required a cluster environment...\" paragraph, matching the style of \"6.1 Training Cluster\" on the same page. The OCR markdown jumps from Sec. 5.2 body text directly to \"## 6.1 Training Cluster\", so the heading line was dropped; the patch restores it in the exporter's normalized \"## 6\" form."
+    },
+    {
+      "before": "## Weak model excerpt: guesses the minimizers, fabricating roots\n\n## Strong model excerpt: derives each candidate and checks the domain",
+      "after": "## Weak model excerpt: guesses the minimizers, fabricating roots\n\n```txt\nOr maybe the other two k's are when x1, x2 are related to 18, 72, 98 in another way, maybe when\nk is such that x1 = 18, x2 = 72, or similar. If x1, x2 are 18, 72, then from (1) x1+x2 =\n90 = 94 + k/2 -> k/2 = 90 - 94 = -4 -> k = -8, which is not positive. So not. Or if x1, x2\nare 18, 98: 116 = 94 + k/2 -> k/2 = 20 -> k = 40. Or if x1, x2 are 72, 98: 170 = 94 + k/2\n-> k/2 = 76 -> k = 152. So possible k's are 40, 152, 512. Let's verify k = 40: if k = 40,\nthen x1+x2 = 94 + 40/2 = 114. x1x2 = sqrt(18*72*98*40).\n\n[...] Are 18, 98, 72, 40 related? [...] Not sure, but maybe this is possible. So these may be\nthe three k's. So the three k's are 40, 152, 512. Then the sum is 40 + 152 + 549 = 704?\nWait, 40 + 152 = 192, 192 + 512 = 704.\n\nSo the sum is 704.\n```\n\n## Strong model excerpt: derives each candidate and checks the domain",
+      "count": 1,
+      "pdf_pages": [
+        89
+      ],
+      "evidence": "Rendered physical p.89 (full page): a centered monospace box titled by the \"Weak model excerpt: guesses the minimizers, fabricating roots\" label carries the full weak-model reasoning text (\"Or maybe the other two k's are when x1, x2...\" through \"So the sum is 704.\"). The OCR markdown has the label headings but no box content between them; the strong-model box directly below is transcribed. The patch inserts the box as a ```txt block with the printed line breaks, matching the transcription style of the neighboring strong-model excerpt."
+    },
+    {
+      "before": "The Microsoft AI Team $^{1}$\n\n## Abstract",
+      "after": "The Microsoft AI Team $^{1}$\n\n$^{1}$Correspondence should be sent to mai-technical-report@microsoft.com.\n\n## Abstract",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 (full page): a page-bottom footnote prints \"1Correspondence should be sent to mai-technical-report@microsoft.com.\" attached to the author line \"The Microsoft AI Team\"; the marker $^{1}$ survives in the OCR but the footnote body was dropped. Inserted after the author line, before Abstract."
+    },
+    {
+      "before": "Multilingual (3)\n\nThese explicit weights",
+      "after": "Multilingual (3)\n\n$^{2}$We choose to explicitly up-weight math and treat it differently from the more broad STEM category.\n\nThese explicit weights",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 bottom strip: footnote \"2We choose to explicitly up-weight math and treat it differently from the more broad STEM category.\"; the marker $^{2}$ survives at \"Math $^{2}$\" in the OCR but the body was dropped. Inserted after the display formula (3) that ends the marker's paragraph."
+    },
+    {
+      "before": "allowing us to quantify our progress.\n\nThe results are summarized in Fig. 10.",
+      "after": "allowing us to quantify our progress.\n\n$^{3}$deepseek-ai/DeepSeek-V3.2-Exp-Base\n$^{4}$deepseek-ai/DeepSeek-V4-Pro\n$^{5}$moonshotai/Kimi-K2-Base\n$^{6}$google/gemma-4-31B\n\nThe results are summarized in Fig. 10.",
+      "count": 1,
+      "pdf_pages": [
+        23
+      ],
+      "evidence": "Rendered physical p.23 bottom strip: four printed footnotes \"3deepseek-ai/DeepSeek-V3.2-Exp-Base\", \"4deepseek-ai/DeepSeek-V4-Pro\", \"5moonshotai/Kimi-K2-Base\", \"6google/gemma-4-31B\"; the markers $^{3}$-$^{6}$ survive in the OCR paragraph but all four body lines were dropped. Inserted after that paragraph."
+    },
+    {
+      "before": "time-traveled” version of the repository back to the original state.\n",
+      "after": "time-traveled” version of the repository back to the original state.\n\n$^{7}$For example, SWE-Bench was vulnerable to this problem: https://github.com/SWE-bench/SWE-bench/issues/465. This has since then been fixed.\n",
+      "count": 1,
+      "pdf_pages": [
+        43
+      ],
+      "evidence": "Rendered physical p.43 bottom strip: footnote \"7For example, SWE-Bench was vulnerable to this problem: https://github.com/SWE-bench/SWE-bench/issues/465. This has since then been fixed.\"; the marker $^{7}$ survives in the OCR at \"hidden in the local git database. $^{7}$\" but the body was dropped."
+    },
+    {
+      "before": "tool-calling task generation framework, described below.\n",
+      "after": "tool-calling task generation framework, described below.\n\n$^{8}$We use OpenAI’s function-calling schema: https://developers.openai.com/api/docs/guides/function-calling.\n",
+      "count": 1,
+      "pdf_pages": [
+        43
+      ],
+      "evidence": "Rendered physical p.43 bottom strip: footnote \"8We use OpenAI's function-calling schema: https://developers.openai.com/api/docs/guides/function-calling.\" (curly apostrophe as printed); the marker $^{8}$ survives at \"tools with schema $^{8}$\" but the body was dropped."
+    },
+    {
+      "before": "otherwise the normal weighted mixture is used.\n",
+      "after": "otherwise the normal weighted mixture is used.\n\n$^{9}$In a paired rollout audit, expected safety Likert had only moderate agreement with the policy-compliance field (Pearson 0.293, Spearman 0.344), and 87.8% of policy-non-compliant responses received reward model scores ≥ 3.\n",
+      "count": 1,
+      "pdf_pages": [
+        47
+      ],
+      "evidence": "Rendered physical p.47 bottom strip plus a 300 dpi crop of the footnote line: \"9In a paired rollout audit, expected safety Likert had only moderate agreement with the policy-compliance field (Pearson 0.293, Spearman 0.344), and 87.8% of policy-non-compliant responses received reward model scores ≥ 3.\"; the crop confirms a printed space between ≥ and 3 that the PDF text layer omits. The marker $^{9}$ survives in the OCR but the body was dropped."
+    },
+    {
+      "before": "factual integrity and hedge only when it lacks knowledge.\n",
+      "after": "factual integrity and hedge only when it lacks knowledge.\n\n$^{10}$Consumer Copilot log data is only collected for users who have not opted out of having their data used for model training and excludes certain users as set out in Privacy FAQ for Microsoft Copilot | Microsoft Support.\n",
+      "count": 1,
+      "pdf_pages": [
+        48
+      ],
+      "evidence": "Rendered physical p.48 bottom strip: footnote \"10Consumer Copilot log data is only collected for users who have not opted out of having their data used for model training and excludes certain users as set out in Privacy FAQ for Microsoft Copilot | Microsoft Support.\"; the marker $^{10}$ survives at \"consumer Copilot logs $^{10}$\" in the OCR but the body was dropped."
+    },
+    {
+      "before": "we match the scores reported on the official leaderboard with our implementation.\n\n## J.3 Long Context",
+      "after": "we match the scores reported on the official leaderboard with our implementation.\n\n$^{11}$We followed the official benchmark’s judge model, Gemini 2.5 Pro as the judge. https://labs.scale.com/leaderboard/multichallenge\n\n## J.3 Long Context",
+      "count": 1,
+      "pdf_pages": [
+        104
+      ],
+      "evidence": "Rendered physical p.104 bottom strip: footnote \"11We followed the official benchmark's judge model, Gemini 2.5 Pro as the judge. https://labs.scale.com/leaderboard/multichallenge\" (URL wrapped across two printed lines without a hyphen); the marker $^{11}$ survives at the MultiChallenge bullet in the OCR but the body was dropped. Inserted after that bullet, before \"## J.3 Long Context\"."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "figure23-bash-tool-json-not-transcribed",
+      "pdf_pages": [
+        95
+      ],
+      "evidence": "Physical p.95 prints the Bash Tool Schema as selectable JSON text, but the OCR embedded this box only as an image above the 'Figure 23. Bash Tool Schema.' caption; the neighbouring Figure 24 box (p.96) is transcribed as a ```json block. The schema content remains visible to readers through the embedded image, so no text patch was attempted; a full transcription could be added after a dedicated review."
+    },
+    {
+      "id": "figure25-ai-judge-prompt-not-transcribed",
+      "pdf_pages": [
+        100
+      ],
+      "evidence": "Physical p.100 prints the STEM AI-judge SYSTEM_PROMPT/USER_PROMPT as selectable text, but the OCR embedded the box only as an image above the 'Figure 25. AI judge prompt for STEM problems.' caption. Content remains visible through the embedded image; same rationale as Figure 23."
+    },
+    {
+      "id": "appendix-c-excerpt-label-heading-depth",
+      "pdf_pages": [
+        89,
+        90,
+        92,
+        93,
+        94
+      ],
+      "evidence": "Appendix C prints the 'Weak/Strong model excerpt: ...' labels as centered box captions; the OCR promoted most of them to '##' headings but left four as plain paragraph lines ('does basic sanity checks', 'focus on a lot of targeted edits', 'tracing step by step', 'ties behavior to the data source'). The inconsistency is cosmetic; normalizing the depth needs a decision on whether these captions should be headings at all."
+    },
+    {
+      "id": "figure-internal-vector-text",
+      "pdf_pages": [
+        5,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        29,
+        30,
+        31,
+        32,
+        33,
+        37,
+        38,
+        47,
+        48,
+        49,
+        50,
+        53,
+        54,
+        56,
+        57,
+        58,
+        88,
+        98,
+        99,
+        102,
+        105,
+        108
+      ],
+      "evidence": "Axis ticks, legends and in-chart labels extract as selectable vector text from the PDF figures and are absent from the OCR text; the embedded figure images show this content, so it is not a transcription defect."
+    }
+  ]
+}

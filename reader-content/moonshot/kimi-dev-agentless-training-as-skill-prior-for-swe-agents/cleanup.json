@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "moonshot:kimi-dev-agentless-training-as-skill-prior-for-swe-agents",
+  "source_sha256": "b016395c922324fb6777a2908d2b55d014bf2877b00e80b1641eed00e8c57278",
+  "ocr_sha256": "99e806276536aaa920a43d2389c7fe3a6d234ba0d76a05884ef2c5e625e407d3",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      19,
+      20,
+      21,
+      22,
+      23,
+      31,
+      59,
+      67,
+      68
+    ],
+    "coverage": "partial",
+    "notes": "Triage pass under a hard time budget. (a) Structure: automated whole-file fence scan plus exporter-pairing simulation (toggle by fence character, as in scripts/textfold_sources.py normalize_ocr_markdown) found one swallowed block: the phantom fence pair around OCR lines 678-743 turns Appendix B/C/C.1/C.2/D/E/E.1 headings, Table 3 and three images into code. The root cause was traced line-by-line and visually verified at 120 dpi page renders plus 300 dpi crops of physical pages 19-22 (Listing 5's printed prompt box), but the confirmed repair cannot ship alone: the document-wide pairing currently relies on the phantom opener, so fixing Listing 5 without also repairing the transcript Listings 6-21 flips parity and re-swallows five later regions plus the document tail (details in unresolved). No verified repair is therefore staged in this pass. (b) Droppage: all 68 pages machine-scanned by normalized 4-gram containment of PDF page text against the OCR markdown; the 9 low-hit pages (1, 5, 6, 7, 8, 22, 23, 31, 68) were inspected by per-line PDF-text diff and all misses resolved as hyphenation line-wrap artifacts, math reformatting, or figure-internal text - no dropped prose, footnote bodies, table bodies, reference entries or author-list content found. Author block with affiliation daggers, Table 1 rows (incl. Devstral-Small-2507), the TestWriter score formula FP/PP(i,j) and Figure 10-12 subcaptions are all present. Not covered line-by-line by a human read: the prompt-box interiors outside Listing 5 and the case-study transcripts (Listings 6-21)."
+  },
+  "patches": [],
+  "unresolved": [
+    {
+      "id": "listing5-printed-fence-lines-misassembled",
+      "pdf_pages": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "evidence": "Listing 5's printed gray prompt box (physical pp.19-22) contains six literal ``` lines printed inside the prompt. Verified at 300 dpi: a fence follows each 'Assuming a call is shown as follows:' (str_replace example and insert example), one follows the lone 'c' line, one follows 'assert add(1, 2) == 3', one follows 'An example for a full output:' (before full_path_to_file1.py), and one follows full_path_to_file2.py (printed as plain ```, OCR emitted it with a bogus 'python' info string). The box itself prints NO opening or closing fence: it starts directly with 'Your job is to look through...' (p.19) and ends after the literal '###' line (p.22) before the 'Listing 5:' caption. OCR damage (OCR lines): spurious fence markers not printed at that spot at 549+551, 599+601, 667+669 (667 also unprinted: p.21 ends at full_path_to_file1.py with no fence); printed ``` misread as '...' at 603, 610, 634, 638, 665; '```python' at 671 should be the plain literal ```. Verified local repair (7 exact replacements, each count=1, apply in this order): (1) '    Moves the window to show the specified line number.\\n```\\n\\n```txt\\nArgs:' -> '    Moves the window to show the specified line number.\\nArgs:'; (2) 'Example:\\n```\\n\\n```txt\\nAssuming a call is shown as follows:\\n...\\nstr_replace(' -> 'Example:\\nAssuming a call is shown as follows:\\n\\`\\`\\`\\nstr_replace('; (3) 'new_str=    b\\n\\nc\\n...\\nThen it will function as replacing' -> 'new_str=    b\\n\\nc\\n\\`\\`\\`\\nThen it will function as replacing'; (4) 'Example:\\n    Assuming a call is shown as follows:\\n...\\ninsert(\"test_filename.py\", 5, new_str)' -> 'Example:\\n    Assuming a call is shown as follows:\\n\\`\\`\\`\\ninsert(\"test_filename.py\", 5, new_str)'; (5) '    assert add(1, 2) == 3\\n...\\nThen it will function as inserting' -> '    assert add(1, 2) == 3\\n\\`\\`\\`\\nThen it will function as inserting'; (6) 'An example for a full output:\\n...\\nfull_path_to_file1.py\\n```\\n\\n```txt\\nfull_path_to_file2.py' -> 'An example for a full output:\\n\\`\\`\\`\\nfull_path_to_file1.py\\nfull_path_to_file2.py'; (7) 'full_path_to_file2.py\\n```python\\nNow Let\\'s start!' -> 'full_path_to_file2.py\\n\\`\\`\\`\\nNow Let\\'s start!'. DO NOT APPLY IN ISOLATION: the exporter pairs fences by a naive toggle, and the current downstream pairing depends on the phantom fence at OCR 678 acting as an opener; applying only these patches flips document-wide parity and converts one swallowed region into six (see next entry). Ship together with the transcript chain repair."
+    },
+    {
+      "id": "transcript-fence-parity-listings-6-21",
+      "pdf_pages": [
+        23,
+        24,
+        28,
+        31,
+        50,
+        53,
+        57,
+        59,
+        67,
+        68
+      ],
+      "evidence": "The case-study transcripts (Listings 6-21, OCR lines ~743-3126) contain printed SEARCH/REPLACE answer blocks fenced with ```python plus literal ``` inside prompt text; OCR emitted several damaged fence lines (e.g. '```\"' at OCR 2503, '```END FILE ---' at 2049, a lone '``' closer at 2189, prose lines 'Answer N:' absorbed into fence blocks), so section headings currently survive only because the phantom fence at OCR 678 compensates the parity. Simulation of the exporter pairing after the Listing 5 repair shows five regions that would swallow real content: OCR 927-938 ('## E.2 TESTWRITER FALSE POSITIVE CASES', physical p.28), OCR 1104-1116 ('## F EMERGENT PARALLEL SCALING' + image, physical p.31), OCR 2233-2243 ('## G ANALYSIS FOR SWE-AGENTS' + '## G.1', physical p.50), OCR 2325-2337 ('## G.2 COMPARATIVE STUDY', physical p.53), OCR 2532-2546 ('## G.3 PATTERN COMPARISON', physical p.57), and an unclosed fence from OCR 3126 (Listing 21 tail, physical pp.59/67) that would swallow through '## H USE OF LARGE LANGUAGE MODELS' (p.68). Each region marks one transcript box with an odd count of literal printed fences; repair requires rendering and checking Listings 6-21 (physical pp.23-45, 50-59) box by box before the Listing 5 patch set can be applied."
+    }
+  ]
+}

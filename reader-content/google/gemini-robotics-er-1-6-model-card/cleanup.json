@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-robotics-er-1-6-model-card",
+  "source_sha256": "a8e5bd114c0fee3cd25d518a3168579c9e649a39b4f8fe348fb01e82abc29b43",
+  "ocr_sha256": "7f13993b7f2eee2d7f01a374a33f349480f3a73d17a24112be7e49532fceb9c3",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "coverage": "complete",
+    "notes": "All four physical PDF pages were extracted and diffed against the 50-line OCR markdown with a normalized case/punctuation-insensitive comparison (zero unmatched body lines), and physical pages 1, 2 and 3 were rendered at 120 dpi and visually inspected. The cover prints 'Gemini Robotics ER 1.6 Model Card' (no hyphen) and physical p.2 prints the running document header 'Gemini Robotics-ER 1.6 - Model Card', which OCR promoted to a second title heading. No code fences exist; no content is dropped; the PDF itself prints the glued 'Architecture: Architecture:', 'Figure1', and 'Gemini Robotics-ER1.6' forms, so the OCR faithfully keeps them. The card contains no figures and no tables."
+  },
+  "patches": [
+    {
+      "before": "## Gemini Robotics ER 1.6 Model Card\n\n# Gemini Robotics-ER 1.6 - Model Card\n\nModel Cards are intended",
+      "after": "## Gemini Robotics ER 1.6 Model Card\n\nModel Cards are intended",
+      "count": 1,
+      "pdf_pages": [
+        1,
+        2
+      ],
+      "evidence": "Rendered physical p.1 is the cover printing the document title 'Gemini Robotics ER 1.6 Model Card', which OCR line 1 already carries; rendered physical p.2 repeats the same title as running page furniture ('Gemini Robotics-ER 1.6 - Model Card') directly above the intro paragraph. OCR promoted that second occurrence into a competing title heading, so the reader opened with two titles. The cover title is kept and the duplicated page-furniture heading is removed (the heading text remains in the document via the cover title)."
+    },
+    {
+      "before": "# Implementation and Sustainability",
+      "after": "## Implementation and Sustainability",
+      "count": 1,
+      "pdf_pages": [
+        3
+      ],
+      "evidence": "Rendered physical p.3 shows 'Implementation and Sustainability' in the same centered heading style and size as its siblings 'Model Information', 'Model Data', 'Evaluation', 'Intended Usage and Limitations' and 'Ethics and Safety' (all ## in the OCR); only this section was promoted to a top-level # heading, breaking the section level."
+    }
+  ],
+  "unresolved": []
+}

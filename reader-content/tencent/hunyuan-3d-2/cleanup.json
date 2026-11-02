@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "tencent:hunyuan-3d-2",
+  "source_sha256": "2e0d07894105eb2346fe86567be5027f52d971edefc0aa9af0fab7e7058b73c7",
+  "ocr_sha256": "004d33c83f150989e92b561c2d60ae0427fa751b104f068a0070093fa6104b54",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of the OCR lines against extracted text from all 28 physical PDF pages, plus code-fence and heading-structure checks (no fence markers; structure clean). Large delete/replace runs against the text layer resolved to figure-internal labels of embedded figures (Figures 1-4, 6-8, 10) and the transposed HTML layout of Tables 1-4, whose bodies and captions are all present. Physical pages 1 and 4 were rendered to confirm the two dropped footnote lines restored by patches. The print's own wording was preserved: p.5 prints \"Sign Distance Function\" while p.4 prints \"Signed Distance Function\" (paper's own inconsistency, not an OCR defect)."
+  },
+  "patches": [
+    {
+      "before": "— Hunyuan3D Team \\*",
+      "after": "— Hunyuan3D Team \\*\n\n∗ Hunyuan3D team contributors are listed in the end of report.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints \"∗ Hunyuan3D team contributors are listed in the end of report.\" at the bottom of the title page (visually verified at 300 dpi), tied to the ∗ after the epigraph attribution \"Hunyuan3D Team\". The OCR kept the attribution with its ∗ mark but dropped the explaining line; the patch restores it after the attribution."
+    },
+    {
+      "before": "which provides more complete information for describing complex regions.",
+      "after": "which provides more complete information for describing complex regions.\n\n∗ Concurrent work [11] also proposes similar importance sampling to improve the VAE reconstruction performance based on similar observations.",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Rendered physical p.4 prints footnote \"∗ Concurrent work [11] also proposes similar importance sampling to improve the VAE reconstruction performance based on similar observations.\" below the rule of the right column (visually verified at 220-300 dpi). The OCR kept the ∗ marker after \"importance sampling method\" but dropped the footnote body; the patch restores it after the anchoring sentence."
+    }
+  ],
+  "unresolved": []
+}

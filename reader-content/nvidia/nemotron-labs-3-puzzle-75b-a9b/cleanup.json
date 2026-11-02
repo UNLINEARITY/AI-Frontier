@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nemotron-labs-3-puzzle-75b-a9b",
+  "source_sha256": "3a016dbf7fa0d33cb1d356bbdba165c7b107586f400f5be1265ebd64633f0ef5",
+  "ocr_sha256": "c4f3866042ba6a9f83caa365f680f678722878491c1983604063a274f1b4beac",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "coverage": "complete",
+    "notes": "All 25 physical pages' extracted text was diffed line-wise against the OCR Markdown (case/punctuation normalized) plus a fence/heading structure scan (no code fences; heading tree matches the printed section numbering). Rendered verification at 300 dpi on physical page 1. Chart-axis text and legend entries reported by the diff on pages 2, 7, 11, 13, 19, 20, 21 belong to figures embedded as images, so their absence from OCR text is correct. MTP recurrence math (pages 7-8), Table 9 FP8 values (page 25), appendix latent-dimension math (pages 22-24) and the reference list all match the print. The author-list spacing 'Itay Levy ,' on page 1 is printed that way in the PDF itself and was left unchanged."
+  },
+  "patches": [
+    {
+      "before": "publicly available on Hugging Face $^{1}$ .",
+      "after": "publicly available on Hugging Face $^{1}$ .\n\n$^{1}$ The models are available at: NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-BF16, NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-NVFP4, and NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-FP8.",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints footnote 1 at the page bottom: '1 The models are available at: NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-BF16, NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-NVFP4, and NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-FP8.' The OCR kept the in-text marker '$^{1}$' but dropped the whole footnote body (the three Hugging Face model names appear nowhere else in the OCR); the patch restores the printed footnote text after the sentence that cites it. Verified at 300 dpi."
+    }
+  ],
+  "unresolved": []
+}

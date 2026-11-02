@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "minimax:minimax-speech",
+  "source_sha256": "534ca76f15fab472059e265cf24162513fa685eda53fc53d3a975373a6591a76",
+  "ocr_sha256": "a8262bd7dd779791e1c6f82bd8efafae1ccd0b05a5ebbceb8cbc9629a6816242",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "coverage": "complete",
+    "notes": "Structure pass over all 20 physical pages found no code fences; all six figure captions, Tables 1-6 bodies, section headings, the (Author, Year) reference list and the contributor list are present. Normalized PDF-text-vs-Markdown comparison over every page; flagged windows were resolved as running headers, printed page numbers, figure-internal diagram labels (Figures 1-3, 5-7), LaTeX-equivalent math (equations 1-9), HTML-table tag noise, reference entries crossing page breaks, and the four dropped footnote bodies restored below (footnote markers $^{1}$-$^{4}$ all survive in the Markdown). Rendered verification at 200-250 dpi of the printed footnote blocks on physical pages 1, 8 and 9 confirms the restored text and URLs character-for-character. The Markdown escape '\\_' inside the project-page URL renders as the printed underscore and is not a defect. Image embeds unchanged by all patches."
+  },
+  "patches": [
+    {
+      "before": "MiniMax $^{1}$\n",
+      "after": "MiniMax $^{1}$\n\n$^{1}$ Please send correspondence to model@minimax.io. © 2025 MiniMax. All rights reserved.\n",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Rendered physical p.1 prints the footnote '1Please send correspondence to model@minimax.io.' directly under the author byline, followed by the page-bottom line '© 2025 MiniMax. All rights reserved' (200-dpi crop visually verified). The OCR kept the byline marker $^{1}$ but dropped both lines; they are restored after the byline paragraph following the repository's footnote-restoration convention."
+    },
+    {
+      "before": "presents a significant challenge in achieving SOTA quality.",
+      "after": "presents a significant challenge in achieving SOTA quality.\n\n$^{2}$ Artificial Arena: https://artificialanalysis.ai/text-to-speech/arena?tab=leaderboard",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints footnote 2 '2Artificial Arena: https://artificialanalysis.ai/text-to-speech/arena?tab=leaderboard' at the page bottom (200-dpi crop visually verified); the marker $^{2}$ survives on the 'Artificial Arena' anchor sentence in the Markdown but the body with the URL was dropped."
+    },
+    {
+      "before": "superior naturalness and heightened expressiveness.",
+      "after": "superior naturalness and heightened expressiveness.\n\n$^{3}$ The MiniMax-Speech model described in this paper corresponds to the Speech-02-HD model in Artificial Arena. The Speech-02-Turbo model, which also participated in the evaluation, employs a different model architecture primarily to enhance inference speed and reduce operational costs. The T2A-01-HD model is an older version of our model.",
+      "count": 1,
+      "pdf_pages": [
+        8
+      ],
+      "evidence": "Rendered physical p.8 prints footnote 3 ('3The MiniMax-Speech model described in this paper corresponds to the Speech-02-HD model in Artificial Arena. The Speech-02-Turbo model, ... The T2A-01-HD model is an older version of our model.') at the page bottom (200-dpi crop visually verified); the marker $^{3}$ survives on 'Speech-02-HD' in the Markdown but the body was dropped."
+    },
+    {
+      "before": "the Whisper-large-v3 model was used for text recognition.",
+      "after": "the Whisper-large-v3 model was used for text recognition.\n\n$^{4}$ https://huggingface.co/datasets/MiniMaxAI/TTS-Multilingual-Test-Set",
+      "count": 1,
+      "pdf_pages": [
+        9
+      ],
+      "evidence": "Rendered physical p.9 prints footnote 4 '4https://huggingface.co/datasets/MiniMaxAI/TTS-Multilingual-Test-Set' at the page bottom (250-dpi crop visually verified, URL character-for-character); the marker $^{4}$ survives on '24 languages' in the Markdown but the body URL was dropped."
+    }
+  ],
+  "unresolved": []
+}

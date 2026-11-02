@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "bytedance:gr-2-generative-video-language-action-model",
+  "source_sha256": "8b9bf7c3de182ce263ca65d103fc3a84aa0c70d13aa88f6b8dd5cdf5df2f5f3a",
+  "ocr_sha256": "2f19bf7f3a51b7093f37e81662c85a2e9be3222ccb043ff7e108342a4cb45e13",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "coverage": "complete",
+    "notes": "All 21 physical pages' extracted text was swept with 5-gram shingle comparison against the OCR markdown (normalized: math spanned to placeholders, hyphenated line breaks joined). No code fences exist; the heading tree (1-5, subsections 2.1-2.2, 3.1-3.5, Contributions & Acknowledgements, References) is complete; the print has no tables and the OCR has none to lose. All figure captions (Figures 1-15, including Figure 9's bin-picking success-rate caption) are present; results numbers in prose (e.g. 33.3% to 79.0%, 38 million videos, over 100 tasks/objects) match the print. Reference entries [1]-[71] match the print including Turkish diacritics in ref [33] (OCR 'Yağmurlu' matches the rendered print; the PDF text layer's 'Ya˘gmurlu' is an extraction artifact). Contributions bullets and the acknowledgements paragraph are complete across the p.17-p.18 break. Remaining shingle gaps all resolve to figure-internal content shown by the 29 embedded figures: video-text training-sample caption strips inside Figure 1, GT/Pred frame labels of Figures 11-15, chart contents of Figures 9-10, and scaling-chart curves; the OCR even preserves the print's own typo 'undegoes' in the Figure 1 caption. No repairs needed."
+  },
+  "patches": [],
+  "unresolved": []
+}

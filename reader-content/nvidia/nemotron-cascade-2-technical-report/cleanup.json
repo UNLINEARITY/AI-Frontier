@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "id": "nvidia:nemotron-cascade-2-technical-report",
+  "source_sha256": "4e4b4720a4d6e955ee2c04306af9a185f61458e8c55dcd0fcc6ae8ad6be687fb",
+  "ocr_sha256": "01fecab9a38dd7e2ffebcc31de292d5a0f2e51a58ff7a72692cf8adb7eaf562a",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ],
+    "coverage": "complete",
+    "notes": "Automated line-level diff of extracted text from all 63 physical PDF pages against the OCR Markdown (case/punctuation/LaTeX-equivalent math normalized), followed by targeted verification of every flagged page. Pages 10, 51 and 56 were additionally rendered and visually inspected. All 145 distinct numeric values on the Codeforces table pages 27-29 are present in the OCR HTML tables with equal or greater multiplicity; all 12 tables have balanced tr/td tags; the six code fences are balanced printed prompt templates in Appendix C. Running page headers (report title, 'IMO 2025 Model Proofs'), the p.1 copyright/arXiv lines, and figure-internal prompt text on p.7 (Figure 2 embeds it) are absent from the OCR and were treated as non-defects. The PDF's own typo 'intergrated' (p.4) was silently corrected to 'integrated' by the OCR and left as printed-correction. Math-heavy proof pages 30-56 differ from the PDF text layer mainly by LaTeX-versus-Unicode-math rendering and margin anchors (A2, C6, ...), which the anchors confirmed are present."
+  },
+  "patches": [
+    {
+      "before": "\\- Bazza has a winning strategy iff $\\lambda < \\frac{\\sqrt{2}}{2}$ .\n\n## References",
+      "after": "\\- Bazza has a winning strategy iff $\\lambda < \\frac{\\sqrt{2}}{2}$ .\n\n\\- For $\\lambda = \\frac{\\sqrt{2}}{2}$ neither player can force a win; the game can be drawn.\n\nHUMAN EXPERT COMMENT\n\nSome parts of the proof read like a thinking process. It feels like it realizes that c has not been proved, then decides that proving c is not actually necessary. The proof seems finished, but then it starts thinking again.\n\n7/7\n\n## References",
+      "count": 1,
+      "pdf_pages": [
+        56
+      ],
+      "evidence": "Rendered physical p.56 (viewed at 130 dpi) ends Problem 5's final-answer list with a third bullet 'For λ = √2/2 neither player can force a win; the game can be drawn.' followed by a 'Human Expert Comment' box reading 'Some parts of the proof read like a thinking process. It feels like it realizes that c has not been proved, then decides that proving c is not actually necessary. The proof seems finished, but then it starts thinking again.' with a 7/7 score badge; both the bullet and the whole box are absent from the OCR. Wording, the surviving-box style (HUMAN EXPERT COMMENT heading plus badge lines, cf. the Problem 1 box in the OCR) and the $...$ math style of the neighboring bullets were matched to the existing document. The anchor string occurs exactly once."
+    },
+    {
+      "before": "## Problem 5",
+      "after": "HUMAN EXPERT COMMENT\n\n7/7\n\n## Problem 5",
+      "count": 1,
+      "pdf_pages": [
+        51
+      ],
+      "evidence": "Rendered physical p.51 (viewed at 120 dpi) closes Problem 4 with 'Equivalently, a1 = 2^(2k+1) · 3^(k+1) · d with d odd and not divisible by 5.' followed by a 'Human Expert Comment' box containing only the 7/7 score badge (PDF text layer confirms no comment body, matching the box style of physical p.33 and p.46). The OCR lacks the entire box; the anchor '## Problem 5' occurs exactly once and the box belongs at the end of the Problem 4 section."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "problem-4-final-answer-damaged-p51",
+      "pdf_pages": [
+        50,
+        51
+      ],
+      "evidence": "The tail of the Problem 4 proof is abbreviated and garbled in the OCR: the PDF prints 'Thus, the only way to avoid contradictions is that d is odd and 5∤d', section '6. Final answer' with the boxed formula a1 = 6·12^k·d (k ∈ N0, d odd, 5∤d) and the closing sentence 'Equivalently, a1 = 2^(2k+1)·3^(k+1)·d with d odd and not divisible by 5.', while the OCR ends mid-derivation at 'M_{k+1} = 13^k·d' and contains no 'Equivalently' sentence. Restoring this multi-line chunk needs a full page-by-page reconstruction of pages 50-51 and was beyond exact-string repair."
+    },
+    {
+      "id": "problem-3-expert-comment-captured-as-image",
+      "pdf_pages": [
+        46
+      ],
+      "evidence": "The Problem 3 'Human Expert Comment' box (7/7) survived only as an embedded screenshot image, so its content is not selectable text like the Problem 1 box; acceptable as-is, listed for awareness."
+    }
+  ]
+}

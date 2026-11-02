@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "id": "qwen:qwen-image-2-0",
+  "source_sha256": "bd8d717994f6aafe8d566046f3712b3c2176c4d6667a19838cf7b084bd66aca6",
+  "ocr_sha256": "2cc1224d208cc309797cf30120a713d9bd89ec66ff9bfc57f89674a70a8a86bd",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "coverage": "complete",
+    "notes": "Full read-through of all OCR lines against extracted text from all 30 physical PDF pages; pages 15, 25 and 26 were additionally rendered and visually inspected. Structural repair dominates this document: OCR promoted Figure 10 grid column headers (physical p.15, rendered and confirmed as repeated per-row-block column labels, not sections) and all ten generated-slide titles of the Figure 19 gallery (physical p.26, rendered and confirmed to exist only inside the slide images) to '##' headings, which would inject about sixteen bogus sections into the reader outline; all are demoted to plain text with content preserved. The Figure 19 caption prints at the bottom of p.26 below the slide grid, but OCR placed it mid-gallery before the last slide block; two patches move the caption text after the final slide transcription without touching any image embed. Reference URL escape seedream5\\_0\\_lite verified against the p.29 text layer. Figure-internal diagram labels on p.8 (pipeline stage boxes such as '[S1 256p] ... Filter') exist only inside the Figure 6 vector diagram and are correctly absent from OCR prose. The notation tokens Pfine/Pshort/sfake/sreal flagged by word-diffusion are present in OCR as $P_{fine}$, $s_{\\mathrm{fake}}$ math; section 4.3 including equations (4)-(5) is complete. Reference list balance checked (27 OCR entries vs 26 PDF entries with arXiv lines; one printed entry cites without arXiv). No spaced-digit or dropped-sentence defects found in the prose or tables."
+  },
+  "patches": [
+    {
+      "before": "## Qwen-Image-2.0-Base",
+      "after": "Qwen-Image-2.0-Base",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Rendered physical p.15 shows Figure 10 as an image grid whose 'Qwen-Image-2.0-Base' / 'Qwen-Image-2.0-RL' labels are bold column headers repeated above each row block, not document sections; OCR promoted the first pair to '##' headings (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Qwen-Image-2.0-RL",
+      "after": "Qwen-Image-2.0-RL",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Same rendered Figure 10 grid on physical p.15; the label is a column header of the comparison grid, demoted to plain text (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## When the Sun Sets, The Wild Wakes Up",
+      "after": "When the Sun Sets, The Wild Wakes Up",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered physical p.26 shows the ten Figure 19 slides; the title text exists only inside the top-left slide image, so the OCR '##' heading is a figure banner promoted to a heading (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Evening shifts reveal wild life",
+      "after": "Evening shifts reveal wild life",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Slide title printed only inside the top-right slide image on rendered physical p.26; demoted from heading to plain text (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Soft Light Awakens Wildlife",
+      "after": "Soft Light Awakens Wildlife",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Slide title printed only inside the second-row-left slide image on rendered physical p.26; demoted from heading to plain text (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Bounce warm light upward",
+      "after": "Bounce warm light upward",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Bold sub-caption inside the 'Soft Light Awakens Wildlife' slide image on rendered physical p.26; not a document heading (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Safe paths guide night walks",
+      "after": "Safe paths guide night walks",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Slide title printed only inside the second-row-right slide image on rendered physical p.26; demoted from heading to plain text (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Gentle Lights Honor Rhythms",
+      "after": "Gentle Lights Honor Rhythms",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Slide title printed only inside the third-row-left slide image on rendered physical p.26; demoted from heading to plain text (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Nature Meets Safety Up Close",
+      "after": "Nature Meets Safety Up Close",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Slide title printed only inside the third-row-right slide image on rendered physical p.26; demoted from heading to plain text (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Respectful viewing zones",
+      "after": "Respectful viewing zones",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Bold sub-caption inside the 'Nature Meets Safety Up Close' slide image on rendered physical p.26; not a document heading (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Stories shape family bonds",
+      "after": "Stories shape family bonds",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Slide title printed only inside the fourth-row-left slide image on rendered physical p.26; demoted from heading to plain text (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Evening meals slow the pace",
+      "after": "Evening meals slow the pace",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Bold sub-caption inside the 'Stories shape family bonds' slide image on rendered physical p.26; not a document heading (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Breeding saves night species.",
+      "after": "Breeding saves night species.",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Slide title printed only inside the fourth-row-right slide image on rendered physical p.26; demoted from heading to plain text (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Smart prep ensures comfort.",
+      "after": "Smart prep ensures comfort.",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Slide title printed only inside the bottom-left slide image on rendered physical p.26; demoted from heading to plain text (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Arrive early to catch twilight.",
+      "after": "Arrive early to catch twilight.",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Bold sub-caption inside the 'Smart prep ensures comfort.' slide image on rendered physical p.26; not a document heading (visually verified at 130 dpi)."
+    },
+    {
+      "before": "## Night visits spark respect",
+      "after": "Night visits spark respect",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Slide title printed only inside the bottom-right slide image on rendered physical p.26; demoted from heading to plain text (visually verified at 130 dpi)."
+    },
+    {
+      "before": "Figure 19: Visualization of slide generation by Qwen-Image-2.0.\n\n",
+      "after": "",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Rendered physical p.26 prints the Figure 19 caption at the bottom of the page below the complete ten-slide grid; OCR inserted it mid-gallery between the 'Night visits spark respect' slide and the final slide block. First half of the caption move: remove it from the mid-gallery position (visually verified at 130 dpi)."
+    },
+    {
+      "before": "Simple choices reduce light pollution. Wonder becomes advocacy.\n",
+      "after": "Simple choices reduce light pollution. Wonder becomes advocacy.\n\nFigure 19: Visualization of slide generation by Qwen-Image-2.0.\n",
+      "count": 1,
+      "pdf_pages": [
+        26
+      ],
+      "evidence": "Second half of the caption move: re-insert the Figure 19 caption after the transcription of the final slide block, matching the printed order where the caption closes the gallery at the bottom of physical p.26 (visually verified at 130 dpi)."
+    },
+    {
+      "before": "seedream5\\_0\\_lite",
+      "after": "seedream5_0_lite",
+      "count": 1,
+      "pdf_pages": [
+        29
+      ],
+      "evidence": "Physical p.29 reference prints the URL 'https://seed.bytedance.com/en/seedream5_0_lite' with bare underscores (text layer); the OCR backslashes are Markdown escape artifacts that alter the URL text."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "poster-palette-hex-misreads",
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "The tea-set poster row of Figure 10 shows a small color palette inside the image; OCR transcribed its hex labels as '#002B96 #2ESA9C #FFD700 #8B4513 #FSFSF5 ...' where '#2ESA9C' and '#FSFSF5' are likely misreads of hex values (e.g. 2E8A9C, F5F5F5). The codes are figure-internal, tiny, and partially unreadable at review resolution, so they are kept unchanged."
+    },
+    {
+      "id": "slide-images-coverage",
+      "pdf_pages": [
+        25,
+        26
+      ],
+      "evidence": "Figure 19 prints ten slides on physical p.26 while the OCR gallery region embeds fewer slide images; image embed sets are protected and cannot be added by text cleanup. Slide text transcriptions themselves are present."
+    }
+  ]
+}

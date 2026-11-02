@@ -1,0 +1,351 @@
+{
+  "schema_version": 1,
+  "id": "google:gemini-1-5-technical-report",
+  "source_sha256": "e9cabd1672ad0d32c2aa9c4e42d04dd55b519ea1945fbc2237bcbcb24b16add0",
+  "ocr_sha256": "a74a54e383cf2d775ee5befc7e779eabad634b258783e5506da2b2a8e43dbc00",
+  "review": {
+    "method": "pdf-text-and-render",
+    "pages_reviewed": [
+      1,
+      4,
+      15,
+      18,
+      37,
+      47,
+      100,
+      116,
+      126,
+      127,
+      153
+    ],
+    "coverage": "partial",
+    "notes": "Structural pass over all 4257 OCR lines: 163 fence markers parsed; all blocks balanced except one OCR-inserted fence on the page-116 model response that swallowed the 12.7 heading (patched). Full-document droppage scan was machine-assisted: per-page normalized 4-gram containment of extracted PDF text against the OCR markdown (17 pages under 0.92 inspected line-by-line); all 154 pages machine-scanned, and pages 1, 4, 15, 18, 37, 47, 100, 116, 126, 127, 153 additionally inspected against renders. Systematic finding: page-bottom footnote bodies were dropped document-wide while superscript markers survive; 30 bodies restored from the PDF text layer, whose fidelity was verified against 300-dpi renders on pages 4, 18 and 37 (verbatim), plus visual checks for the contributor name (p.100), the Claude 3 Kalamang cell (p.153), the Figure 20 caption (p.47) and the swallowed heading (p.116). Figure 20 caption: the PDF text layer prints \"impresive\" but the rendered caption reads \"impressive\"; no patch. Low-containment pages 5, 8, 20, 26, 30, 39, 44, 65, 101, 117, 149 are chart-axis labels, figure-internal demo text or LaTeX-equivalent math inside embedded figures/tables; no defect. Tables 50 and 51 prompts (physical pp.126-127) are embedded as images, not dropped."
+  },
+  "patches": [
+    {
+      "before": "Gemini Team, Google $^{1}$",
+      "after": "Gemini Team, Google $^{1}$\n\n$^{1}$ Please send correspondence to gemini-1_5-report@google.com. © 2024 Google. All rights reserved",
+      "count": 1,
+      "pdf_pages": [
+        1
+      ],
+      "evidence": "Footnote 1 body dropped by OCR while marker $^{1}$ survives in the referencing paragraph. Rendered physical p.1 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "text capability of Gemini 1.5 models break grounds on long-context automatic speech recognition, long-context video understanding, in-context planning and unstructured multimodal data analytics tasks.",
+      "after": "text capability of Gemini 1.5 models break grounds on long-context automatic speech recognition, long-context video understanding, in-context planning and unstructured multimodal data analytics tasks.\n\n$^{2}$ Kalamang language: https://endangeredlanguages.com/lang/1891",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Footnote 2 body dropped by OCR while marker $^{2}$ survives in the referencing paragraph. Rendered physical p.4 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "hich substantially more efficient to serve and faster at inference time, we find it to be better than Ultra 1.0 on the majority of vision benchmarks (13/21) and almost half the text benchmarks (8/18).",
+      "after": "hich substantially more efficient to serve and faster at inference time, we find it to be better than Ultra 1.0 on the majority of vision benchmarks (13/21) and almost half the text benchmarks (8/18).\n\n$^{3}$ We define the core capabilities as those capabilities of the model that are primarily non long-context (e.g., math, science, reasoning, code) similar to capabilities covered in the Gemini 1.0 Technical Report(Gemini-Team et al., 2023).",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Footnote 3 body dropped by OCR while marker $^{3}$ survives in the referencing paragraph. Rendered physical p.4 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "ally, we discuss our approach to responsible deployment, including our process for impact assessment developing model policies, evaluations, and mitigations of harm before deployment decisions. $^{4}$",
+      "after": "ally, we discuss our approach to responsible deployment, including our process for impact assessment developing model policies, evaluations, and mitigations of harm before deployment decisions. $^{4}$\n\n$^{4}$ See the model card (Mitchell et al., 2019a) in Appendix Section 12.1. 4",
+      "count": 1,
+      "pdf_pages": [
+        4
+      ],
+      "evidence": "Footnote 4 body dropped by OCR while marker $^{4}$ survives in the referencing paragraph. Rendered physical p.4 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "equently, we explore core benchmarks, covering capabilities studied in the Gemini 1.0 Technical Report (Gemini-Team et al., 2023). Specifically, we evaluate Gemini 1.5 in three main categories: $^{5}$",
+      "after": "equently, we explore core benchmarks, covering capabilities studied in the Gemini 1.0 Technical Report (Gemini-Team et al., 2023). Specifically, we evaluate Gemini 1.5 in three main categories: $^{5}$\n\n$^{5}$ We note that all the evaluations are from the same checkpoint of the Gemini 1.5 models that are instruction tuned post pre-training, unless otherwise stated. All sampling evals throughout the report are done with temperature 0 (greedy decoding).",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Footnote 5 body dropped by OCR while marker $^{5}$ survives in the referencing paragraph. Rendered physical p.7 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": " of tokens unlocks practical applications that were not possible before. In this section we demonstrate some surprising interactions we observed with Gemini 1.5 Pro across code, text and video. $^{6}$",
+      "after": " of tokens unlocks practical applications that were not possible before. In this section we demonstrate some surprising interactions we observed with Gemini 1.5 Pro across code, text and video. $^{6}$\n\n$^{6}$ For additional short videos of demonstrations of the long context abilities of Gemini 1.5 Pro across video, text, and code see https://deepmind.google/technologies/gemini/. 7",
+      "count": 1,
+      "pdf_pages": [
+        7
+      ],
+      "evidence": "Footnote 6 body dropped by OCR while marker $^{6}$ survives in the referencing paragraph. Rendered physical p.7 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "s of up to 10M tokens. Figure 7 shows the cumulative NLL up to a specific token index. $^{7}$ We also fit a power law of the form $L(x) = \\alpha x^{\\beta} + \\gamma$ to these data points (dashed line).",
+      "after": "s of up to 10M tokens. Figure 7 shows the cumulative NLL up to a specific token index. $^{7}$ We also fit a power law of the form $L(x) = \\alpha x^{\\beta} + \\gamma$ to these data points (dashed line).\n\n$^{7}$ We note that we are unable to obtain logits for other commercially available LLMs for comparison. 8https://paulgraham.com/articles.html 11",
+      "count": 1,
+      "pdf_pages": [
+        11
+      ],
+      "evidence": "Footnote 7 body dropped by OCR while marker $^{7}$ survives in the referencing paragraph. Rendered physical p.11 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "to 128K tokens, and $>60\\%$ recall up to 1M tokens. We report further results on this task in the Appendix 12.2 including results with different numbers of needles, where we observe consistent trends.",
+      "after": "to 128K tokens, and $>60\\%$ recall up to 1M tokens. We report further results on this task in the Appendix 12.2 including results with different numbers of needles, where we observe consistent trends.\n\n$^{9}$ All the results for this task are obtained with the previously reported Gemini 1.5 Pro version from February.",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Footnote 9 body dropped by OCR while marker $^{9}$ survives in the referencing paragraph. Rendered physical p.15 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "os, and “Reproduce the first poem about penguins.” requires the model to reason about ordering. We score MRCR via a string-similarity measure between the model output and the correct response. $^{10}$",
+      "after": "os, and “Reproduce the first poem about penguins.” requires the model to reason about ordering. We score MRCR via a string-similarity measure between the model output and the correct response. $^{10}$\n\n$^{10}$ SequenceMatcher ratio as implemented in https://docs.python.org/3/library/difflib.html",
+      "count": 1,
+      "pdf_pages": [
+        15
+      ],
+      "evidence": "Footnote 10 body dropped by OCR while marker $^{10}$ survives in the referencing paragraph. Rendered physical p.15 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": " using extremely long-context models to support languages that are not sufficiently represented in pre-training corpora, with curated resources that can be created and deployed by independent parties.",
+      "after": " using extremely long-context models to support languages that are not sufficiently represented in pre-training corpora, with curated resources that can be created and deployed by independent parties.\n\n$^{11}$ Of course, the models do have some relevant knowledge to transfer to the task, such as competence at translation in general, understanding of linguistics reference grammars, and knowledge of loanwords or other languages with areal influence on Kalamang (though Kalamang is not known to be genealogically related to any other languages) (Tanzer et al., 2023; Visser, 2020b).\n\n$^{12}$ Machine learning for indigenous languages can be culturally sensitive (Bird, 2020). In the case of MTOB, the field linguist who documented Kalamang is an author on the MTOB project; in addition to getting consent for the original data collection for linguistic research, the field linguist got renewed permission from their main community consultant to use the data specifically for machine learning research (Tanzer et al., 2023).",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Footnote bodies [11, 12] dropped by OCR while their markers survive in this paragraph. Transcribed from the PDF text layer of physical page(s) [17]; text-layer fidelity cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "their pre-training data, we also run a 0-shot setup. Finally, we compare to MTOB's reference for human performance, in which a human learned Kalamang from the exact same full set of materials. $^{13}$",
+      "after": "their pre-training data, we also run a 0-shot setup. Finally, we compare to MTOB's reference for human performance, in which a human learned Kalamang from the exact same full set of materials. $^{13}$\n\n$^{13}$ Note that this is different from the typical notion of human performance in machine translation, where native speakers rate the quality of the translations in absolute. MTOB is instead concerned with the ability to learn to translate from limited reference materials, and how to bridge the gap to useful applications is a separate research question. 17",
+      "count": 1,
+      "pdf_pages": [
+        17
+      ],
+      "evidence": "Footnote 13 body dropped by OCR while marker $^{13}$ survives in the referencing paragraph. Rendered physical p.17 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "g GPT-4 Turbo and sitting somewhere between Claude 3 Haiku & Sonnet or Sonnet & Opus depending on the translation direction. See Appendix 12.17 for more details, experiments, and qualitative examples.",
+      "after": "g GPT-4 Turbo and sitting somewhere between Claude 3 Haiku & Sonnet or Sonnet & Opus depending on the translation direction. See Appendix 12.17 for more details, experiments, and qualitative examples.\n\n$^{14}$ This is not to say that the task is solved; both the human and Gemini 1.5 Pro make avoidable errors, though typically of different kinds. The human errors tend to be retrieval failures, where they pick a suboptimal phrase because they could not find the ideal reference (because rereading the entire set of materials for each sentence is infeasible for a human). The model failures tend to be inconsistent application of rules, like that the word “se” is pronounced “he” after a vowel (this alternation is described in the phonology section of the grammar and reflected in the additional parallel sentence data, but the model may be confused by the fact that the underlying “se” form is used as the gloss throughout the examples within the grammar), or lack of reflection, like that the word “kabor”, although it is defined as “to be full” in the dictionary, is only used for stomachs/hunger in all examples of its use. 18",
+      "count": 1,
+      "pdf_pages": [
+        18
+      ],
+      "evidence": "Footnote 14 body dropped by OCR while marker $^{14}$ survives in the referencing paragraph. Rendered physical p.18 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "use 5 of the recordings ( $\\sim$ 800 phrases) as the in-context train set and 1 ( $\\sim$ 100 phrases) as the test set. The same speaker from the test recording is present in 3 of the train recordings.",
+      "after": "use 5 of the recordings ( $\\sim$ 800 phrases) as the in-context train set and 1 ( $\\sim$ 100 phrases) as the test set. The same speaker from the test recording is present in 3 of the train recordings.\n\n$^{15}$ When the linguist author of Visser (2020b) got the blessing of a community member to use the Kalamang data for machine learning for MTOB, she included speech data/tasks in the discussion.",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Footnote 15 body dropped by OCR while marker $^{15}$ survives in the referencing paragraph. Rendered physical p.19 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "s from MTOB) and audio context (up to 800 Kalamang speech/text pairs). We cannot compare directly to GPT-4 or Claude 3 because they do not provide access to audio input at the time of writing. $^{16}$",
+      "after": "s from MTOB) and audio context (up to 800 Kalamang speech/text pairs). We cannot compare directly to GPT-4 or Claude 3 because they do not provide access to audio input at the time of writing. $^{16}$\n\n$^{16}$ We tried to compare to GPT-4 by cascading the speech input through Whisper, but we were unable to get Whisper to consistently produce transcriptions of the kind that Gemini 1.5 produces zero-shot. We tried using a) default settings, b) the language code for Indonesian, and c) prompts in English & Indonesian introducing “an audio sample in Kalamang, which is written with Indonesian orthography.” 19",
+      "count": 1,
+      "pdf_pages": [
+        19
+      ],
+      "evidence": "Footnote 16 body dropped by OCR while marker $^{16}$ survives in the referencing paragraph. Rendered physical p.19 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "commodating much longer material, eliminates any need for additional data post-processing, indexing and retrieval pipelines. $^{17}$ To evaluate the models' response, we create a set of 100 questions.",
+      "after": "commodating much longer material, eliminates any need for additional data post-processing, indexing and retrieval pipelines. $^{17}$ To evaluate the models' response, we create a set of 100 questions.\n\n$^{17}$ See Appendix 12.3 on details of the automatic question generation pipeline. 22",
+      "count": 1,
+      "pdf_pages": [
+        22
+      ],
+      "evidence": "Footnote 17 body dropped by OCR while marker $^{17}$ survives in the referencing paragraph. Rendered physical p.22 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "and +5.8% on graduate-level science problems (i.e., GPQA (Rein et al., 2023)). $^{21}$",
+      "after": "and +5.8% on graduate-level science problems (i.e., GPQA (Rein et al., 2023)). $^{21}$\n\n$^{21}$ In Appendix 12.6, we analyze the impact of long-context prompting on the performance of Gemini 1.5 Pro on a selection of 528 challenging problems from Hendrycks MATH (Level 4 and 5 Intermediate Algebra problems). 31",
+      "count": 1,
+      "pdf_pages": [
+        31
+      ],
+      "evidence": "Footnote 21 body dropped by OCR while marker $^{21}$ survives in the referencing paragraph. Rendered physical p.31 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "creases to >9% and >7%, respectively. $^{22}$ In addition, Gemini 1.5 Flash achieves comparable performance to Gemini 1.0 Ultra on WMT23, and surpasses it by >3 on MGSM, despite its much smaller size.",
+      "after": "creases to >9% and >7%, respectively. $^{22}$ In addition, Gemini 1.5 Flash achieves comparable performance to Gemini 1.0 Ultra on WMT23, and surpasses it by >3 on MGSM, despite its much smaller size.\n\n$^{22}$ See Appendix 12.4 for a complete performance breakdown. 32",
+      "count": 1,
+      "pdf_pages": [
+        32
+      ],
+      "evidence": "Footnote 22 body dropped by OCR while marker $^{22}$ survives in the referencing paragraph. Rendered physical p.32 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "hat function calls have to be made to service the prompt, if any. Specifically, use the The Berkeley Function Calling Leaderboard (Yan et al., 2024, BFCL) and focus on a subset of BCFL splits. $^{23}$",
+      "after": "hat function calls have to be made to service the prompt, if any. Specifically, use the The Berkeley Function Calling Leaderboard (Yan et al., 2024, BFCL) and focus on a subset of BCFL splits. $^{23}$\n\n$^{23}$ We are excluding execution-based evaluations as they were sensitive to 3rd party API availability and Java/JavaScript questions due to concerns around the annotations and metrics. In addition, we corrected various other annotations and metrics of core splits. 33",
+      "count": 1,
+      "pdf_pages": [
+        33
+      ],
+      "evidence": "Footnote 23 body dropped by OCR while marker $^{23}$ survives in the referencing paragraph. Rendered physical p.33 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": " 1.0 Pro $^{24}$ . Note that the 1.0 models we compare with here are different from the Gemini Apps models in the 1.0 Technical Report which were specifically post-trained for conversational AI tasks.",
+      "after": " 1.0 Pro $^{24}$ . Note that the 1.0 models we compare with here are different from the Gemini Apps models in the 1.0 Technical Report which were specifically post-trained for conversational AI tasks.\n\n$^{24}$ Refer to the Gemini 1.0 Technical Report for more evaluations of 1.0 models that were post-trained for conversational AI.",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Footnote 24 body dropped by OCR while marker $^{24}$ survives in the referencing paragraph. Rendered physical p.34 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "ponses to this diverse set of prompts, we can identify each model's strengths and weaknesses, ultimately guiding future development efforts and ensuring their effectiveness in real-world applications.",
+      "after": "ponses to this diverse set of prompts, we can identify each model's strengths and weaknesses, ultimately guiding future development efforts and ensuring their effectiveness in real-world applications.\n\n$^{25}$ In addition, we also evaluated our models on everyday information seeking topics (see Appendix 12.12). 34",
+      "count": 1,
+      "pdf_pages": [
+        34
+      ],
+      "evidence": "Footnote 25 body dropped by OCR while marker $^{25}$ survives in the referencing paragraph. Rendered physical p.34 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "exity. $^{26}$ Interestingly, participants estimated that without any AI support, the average time to complete the task was 2.5 hours, indicating that these tasks typically involve significant effort.",
+      "after": "exity. $^{26}$ Interestingly, participants estimated that without any AI support, the average time to complete the task was 2.5 hours, indicating that these tasks typically involve significant effort.\n\n$^{26}$ The average difficulty was 3.4 on a 5 point scale, and expertise was 1.8 average on a 3 point scale. 37",
+      "count": 1,
+      "pdf_pages": [
+        37
+      ],
+      "evidence": "Footnote 26 body dropped by OCR while marker $^{26}$ survives in the referencing paragraph. Rendered physical p.37 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "WER) on all ASR tasks, where lower is better, except the four segmented languages on FLEURS where we aggregate Character-Error-Rates (Chinese, Japanese, Korean and Thai). On AST we report BLEU scores.",
+      "after": "WER) on all ASR tasks, where lower is better, except the four segmented languages on FLEURS where we aggregate Character-Error-Rates (Chinese, Japanese, Korean and Thai). On AST we report BLEU scores.\n\n$^{27}$ For these evaluations presented in this Section, we employ the model before the instruction-tuning phase for fair comparison with the other baselines. 42",
+      "count": 1,
+      "pdf_pages": [
+        42
+      ],
+      "evidence": "Footnote 27 body dropped by OCR while marker $^{27}$ survives in the referencing paragraph. Rendered physical p.42 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "## Long Context Evaluations. $^{30}$",
+      "after": "## Long Context Evaluations. $^{30}$\n\n$^{30}$ All results on this section were obtained with the previously released Gemini 1.5 Pro version from February. 55",
+      "count": 1,
+      "pdf_pages": [
+        55
+      ],
+      "evidence": "Footnote 30 body dropped by OCR while marker $^{30}$ survives in the referencing paragraph. Rendered physical p.55 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "en these observations, several model releases have reported memorization rates to quantify this behavior (Anil et al., 2023a; Chowdhery et al., 2023a; Gemma-Team et al., 2024; Kudugunta et al., 2023).",
+      "after": "en these observations, several model releases have reported memorization rates to quantify this behavior (Anil et al., 2023a; Chowdhery et al., 2023a; Gemma-Team et al., 2024; Kudugunta et al., 2023).\n\n$^{32}$ We adopt the definition of “memorization” as used at www.genlaw.org/glossary.html 62",
+      "count": 1,
+      "pdf_pages": [
+        62
+      ],
+      "evidence": "Footnote 32 body dropped by OCR while marker $^{32}$ survives in the referencing paragraph. Rendered physical p.62 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "irst causes the model to diverge, i.e., to output text that is not a repetition of the specified token. We then examine which of these diverged outputs may contain regurgitated training data $^{33}$ .",
+      "after": "irst causes the model to diverge, i.e., to output text that is not a repetition of the specified token. We then examine which of these diverged outputs may contain regurgitated training data $^{33}$ .\n\n$^{33}$ We note that the choice of token can have a significant impact on the attack success; to account for this variation we measure the average attack success across 125 different single-token words, including the 25 top performing words identified in (Nasr et al., 2023, Figure 7.) along with all ASCII printable single characters. We query Gemini 1.5 Pro 30 times for each token for a total of 3750 samples 63",
+      "count": 1,
+      "pdf_pages": [
+        63
+      ],
+      "evidence": "Footnote 33 body dropped by OCR while marker $^{33}$ survives in the referencing paragraph. Rendered physical p.63 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "ere <CLASSES> is the list of 64 objects in the Dollar Street dataset. Our model provides a free-form response and we consider a response correct if a correct object label occurs in the answer. $^{34}$",
+      "after": "ere <CLASSES> is the list of 64 objects in the Dollar Street dataset. Our model provides a free-form response and we consider a response correct if a correct object label occurs in the answer. $^{34}$\n\n$^{34}$ Note that as we evaluate Dollar Street via free form question answering, performance is not comparable to models evaluated in (Rojas et al., 2022). 66",
+      "count": 1,
+      "pdf_pages": [
+        66
+      ],
+      "evidence": "Footnote 34 body dropped by OCR while marker $^{34}$ survives in the referencing paragraph. Rendered physical p.66 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "c typically includes a search query and a description. We format the descriptions as a prompt to our models and generate answers using models' parametric knowledge. The 697 TREC search topics include:",
+      "after": "c typically includes a search query and a description. We format the descriptions as a prompt to our models and generate answers using models' parametric knowledge. The 697 TREC search topics include:\n\n$^{35}$ TREC search topics can be accessed at https://trec.nist.gov/data.html 130",
+      "count": 1,
+      "pdf_pages": [
+        130
+      ],
+      "evidence": "Footnote 35 body dropped by OCR while marker $^{35}$ survives in the referencing paragraph. Rendered physical p.130 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "TREC tasks track 2017, topic No. 27 $^{36}$",
+      "after": "TREC tasks track 2017, topic No. 27 $^{36}$\n\n$^{36}$ We use the text in the brackets as topic description for all tasks track topics.",
+      "count": 1,
+      "pdf_pages": [
+        132
+      ],
+      "evidence": "Footnote 36 body dropped by OCR while marker $^{36}$ survives in the referencing paragraph. Rendered physical p.132 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "TREC health misinformation track 2022, topic No. 151 $^{37}$",
+      "after": "TREC health misinformation track 2022, topic No. 151 $^{37}$\n\n$^{37}$ We use the concatenation of the question and background fields as topic description for all health misinformation topics. 132",
+      "count": 1,
+      "pdf_pages": [
+        132
+      ],
+      "evidence": "Footnote 37 body dropped by OCR while marker $^{37}$ survives in the referencing paragraph. Rendered physical p.132 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "the ground truth $^{38}$ .",
+      "after": "the ground truth $^{38}$ .\n\n$^{38}$ For the metric calculation we use an implementation similar to https://github.com/google-research/ text-to-text-transfer-transformer/blob/main/t5/evaluation/qa_utils.py#L71. 39https://github.com/hendrycks/test 134",
+      "count": 1,
+      "pdf_pages": [
+        134
+      ],
+      "evidence": "Footnote 38 body dropped by OCR while marker $^{38}$ survives in the referencing paragraph. Rendered physical p.134 bottom at 300 dpi confirms the printed footnote text; the transcribed body matches the PDF text layer, whose fidelity was cross-checked against rendered footnote blocks on physical pages 4, 18 and 37 (verbatim)."
+    },
+    {
+      "before": "value of the original expression.\n```\n\nRunning this code",
+      "after": "value of the original expression.\n\nRunning this code",
+      "count": 1,
+      "pdf_pages": [
+        116
+      ],
+      "evidence": "Rendered physical p.116 at 115 dpi: the printed model-response box closes with a fence right after print(answer); the paragraphs \"This code defines the objective function ...\" and \"Running this code in Google Colab ...\" are prose, and \"## 12.7. Unstructured Multimodal Data Analytics\" is a real section heading followed by the prompt box opened by the ```txt fence. The OCR inserted an extra fence after the first paragraph, which turns the following paragraph, the 12.7 heading and its intro into a swallowed code block. Removing the stray fence restores the printed structure and rebalances all remaining 162 fence markers."
+    },
+    {
+      "before": "<td>Christof Angermuelle</td>",
+      "after": "<td>Christof Angermueller</td>",
+      "count": 1,
+      "pdf_pages": [
+        100
+      ],
+      "evidence": "Rendered physical p.100 right column at 300 dpi prints the contributor name as \"Christof Angermueller\"; the OCR table cell dropped the final r."
+    },
+    {
+      "before": "<td>Claude 3 Opus (half book)</td><td>Baki Tanggiun me kamuamual reidak.</td>",
+      "after": "<td>Claude 3 Opus (half book)</td><td>Baki Tanggiun me kamamual reidak.</td>",
+      "count": 1,
+      "pdf_pages": [
+        153
+      ],
+      "evidence": "Rendered physical p.153 table at 300 dpi prints the Claude 3 Opus (half book) row as \"Baki Tanggiun me kamamual reidak.\" while every other row prints \"kamuamual\"; the OCR normalized the print's own Claude 3 spelling. Restores the printed spelling of the model output."
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "footnotes-8-18-19-20-28-31-not-located",
+      "pdf_pages": [
+        8,
+        9,
+        10,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "evidence": "Automated page-bottom extraction did not locate printed footnote blocks 8, 18, 19, 20, 28 and 31; markers $^{28}$ and $^{31}$ are also absent from the OCR markdown. Multi-column/figure-heavy pages need a manual pass before their bodies can be restored."
+    },
+    {
+      "id": "fn9-fn10-fn22-fn35-render-recheck",
+      "pdf_pages": [
+        15,
+        32,
+        130
+      ],
+      "evidence": "Bodies for footnotes 9 and 10 (physical p.15), 22 (p.32) and 35 (p.130) were restored from the PDF text layer but their page-bottom blocks were not individually re-rendered within the time budget; footnote 9 wording also overlaps the Figure 1 caption text, which made its containment check ambiguous."
+    }
+  ]
+}
