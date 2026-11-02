@@ -2,12 +2,14 @@
 import hashlib
 import html
 import json
+import re
 import os
 import shutil
 import subprocess
 from pathlib import Path
 from urllib.parse import quote
 
+from archive_reports import DOCUMENT_TYPES, VENDORS
 from model_groups import CATEGORY_GROUPS
 
 from PIL import Image
@@ -41,6 +43,40 @@ def inject_reader_meta(body, meta, chinese):
     return body.replace('</h1>', '</h1>\n' + line, 1)
 
 
+ROOT = Path(__file__).resolve().parents[1]
+TYPE_LABELS_CN = {'technical_report': '技术报告', 'model_card': '模型卡', 'system_card': '系统卡'}
+SOURCE_LINE = re.compile(r'^\s*<h1[^>]*>.*?</h1>\s*(?:<p>\s*<a [^>]*>[^<]*</a>\s*</p>\s*)?', re.S)
+
+
+def reader_header(report, row, meta, home, prefix, chinese):
+    """Title first, then the facts a reader looks for: who published it, what it is, when."""
+    t = lambda en, cn: cn if chinese else en
+    vendor = report.get('vendor') or report['id'].split(':', 1)[0]
+    publisher = 'Z.ai / Zhipu AI' if vendor == 'zai' and not chinese else VENDORS.get(vendor, vendor)
+    mark = {'qwen': 'alibaba', 'amazon': 'aws'}.get(vendor, vendor)
+    logo = (f'<img class="reader-mark" src="{escape(prefix)}assets/vendors/{mark}.svg" alt="" width="28" height="28">'
+            if (ROOT / f'assets/vendors/{mark}.svg').is_file() else '')
+    kind = (row or {}).get('document_type') or report.get('document_type')
+    kind_label = (TYPE_LABELS_CN.get(kind) if chinese else DOCUMENT_TYPES.get(kind, ('',))[0]) if kind else t('Official web page', '官方网页')
+    facts = [(t('Publisher', '厂商'), f'{logo}<span>{escape(publisher)}</span>'), (t('Document', '文档类型'), escape(kind_label))]
+    released, published = (meta or {}).get('date'), (row or {}).get('published_date')
+    if released:
+        facts.append((t('Model released', '模型发布'), f'<time datetime="{released}">{released}</time>'))
+    if published and published != released:
+        facts.append((t('Report date', '报告日期'), f'<time datetime="{published}">{published}</time>'))
+    if (meta or {}).get('groups'):
+        facts.append((t('Category', '分类'), '<span>' + escape(' / '.join(CATEGORY_GROUPS[g][1 if chinese else 0] for g in meta['groups'])) + '</span>'))
+    if (row or {}).get('pages'):
+        facts.append((t('Length', '篇幅'), escape(f'{row["pages"]} ' + t('pages', '页'))))
+    version = (row or {}).get('version', '')
+    if version.startswith('arxiv-'):
+        facts.append((t('Version', '版本'), escape(version.replace('arxiv-', 'arXiv '))))
+    items = ''.join(f'<div><dt>{label}</dt><dd>{value}</dd></div>' for label, value in facts)
+    return (f'<div class="reader-head" id="document-header">'
+            f'<h1>{escape(report["title"])}</h1>'
+            f'<dl class="reader-facts">{items}</dl></div>')
+
+
 def reader_navigation(nav, prefix, chinese):
     """Build-time previous/next links along the release timeline, with wrap-around."""
     if not nav:
@@ -52,14 +88,6 @@ def reader_navigation(nav, prefix, chinese):
 
     def keys(relation):
         return 'ArrowLeft' if relation == 'prev' else 'ArrowRight'
-
-    def step(entry, relation):
-        label = t('Previous report', '上一份报告') if relation == 'prev' else t('Next report', '下一份报告')
-        hint = escape(f'{label}: {entry["model"]}')
-        rotation = 'M15 5l-7 7 7 7' if relation == 'prev' else 'M9 5l7 7-7 7'
-        return (f'<a class="reader-step reader-step--{relation}" href="{escape(target(entry))}" rel="{relation}" '
-                f'aria-label="{hint}" title="{hint}" aria-keyshortcuts="{keys(relation)}">'
-                f'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="{rotation}"/></svg></a>')
 
     def link(entry, relation):
         label = t('Previous', '上一份') if relation == 'prev' else t('Next', '下一份')
@@ -75,9 +103,57 @@ def reader_navigation(nav, prefix, chinese):
 
     label = escape(t('Timeline navigation', '时间线浏览'))
     return (f'<nav class="reader-pager" aria-label="{label}">'
-            + step(nav['prev'], 'prev') + step(nav['next'], 'next')
             + '<div class="reader-pager-links">' + link(nav['prev'], 'prev') + link(nav['next'], 'next') + '</div>'
             + '</nav>')
+
+
+ICONS = {
+    'prev': '<path d="M15 5l-7 7 7 7"/>', 'next': '<path d="M9 5l7 7-7 7"/>',
+    'home': '<path d="M4 11.5 12 5l8 6.5"/><path d="M6.5 10v9h11v-9"/>',
+    'source': '<path d="M14 5h5v5"/><path d="M19 5l-8 8"/><path d="M17 14v5H5V7h5"/>',
+    'github': '<path d="M9 19c-4 1.3-4-2-6-2.5m12 4.5v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.5 2.6 5.5 2.9 5.5 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.3c0 4.6 2.8 5.7 5.5 6a3 3 0 0 0-.8 2.3V21"/>',
+    'star': '<path d="m12 3 2.8 5.6 6.2.9-4.5 4.4 1 6.2-5.5-2.9-5.5 2.9 1-6.2L3 9.5l6.2-.9Z"/>',
+}
+
+
+# Must match the local level names in site/vendor/textfold/reader.js (full text first).
+FOLD_LEVELS = {'en': ('Full', 'Lead', 'Gist', 'Skim', 'Peek'), 'zh': ('全文', '首句', '重点', '速读', '关键词')}
+
+
+def reader_toolbar(nav, report, source_url, prefix, home, chinese, fulltext=False):
+    """A bottom toolbar, symmetric around the full-text detail control:
+    previous, home and official source on the left; this page on GitHub, star and next on the right."""
+    t = lambda en, cn: cn if chinese else en
+
+    def tool(kind, href, label, extra=''):
+        external = ' target="_blank" rel="noopener"' if href.startswith('https://') else ''
+        return (f'<a class="reader-tool reader-tool--{kind}" href="{escape(href)}"{external}{extra} aria-label="{escape(label)}" title="{escape(label)}">'
+                f'<svg viewBox="0 0 24 24" aria-hidden="true">{ICONS[kind]}</svg><span class="reader-tool-label">{escape(label)}</span></a>')
+
+    def step(relation):
+        if not nav or not nav.get(relation):
+            return ''
+        entry = nav[relation]
+        label = t('Previous report', '上一份报告') if relation == 'prev' else t('Next report', '下一份报告')
+        href = prefix + ('cn/' if chinese else '') + entry['path']
+        keys = 'ArrowLeft' if relation == 'prev' else 'ArrowRight'
+        return (f'<a class="reader-tool reader-tool--step reader-tool--{relation}" href="{escape(href)}" rel="{relation}" '
+                f'aria-label="{escape(label + ": " + entry["model"])}" title="{escape(label + ": " + entry["model"])}" aria-keyshortcuts="{keys}">'
+                f'<svg viewBox="0 0 24 24" aria-hidden="true">{ICONS[relation]}</svg></a>')
+
+    start = step('prev') + tool('home', home, t('Home', '首页'), ' data-reader-home')
+    if source_url:
+        start += tool('source', source_url, t('Official source', '官方来源'))
+    end = (tool('github', f'{REPOSITORY}/blob/main/{quote(report["markdown_path"])}', t('View on GitHub', '在 GitHub 查看本页'))
+           + tool('star', REPOSITORY, t('Star', '点个 Star')) + step('next'))
+    labels = FOLD_LEVELS['zh' if chinese else 'en']
+    ghost = '<span class="on">' + escape(labels[0]) + '</span>' + ''.join(f'<span>{escape(label)}</span>' for label in labels[1:])
+    return (f'<nav class="reader-toolbar" aria-label="{escape(t("Reading tools", "阅读工具栏"))}"><div class="reader-toolbar-bar">'
+            f'<div class="reader-tools reader-tools--start">{start}</div>'
+            '<div class="reader-fold-slot" aria-hidden="true">'
+            # A still copy of the detail control holds its place until TextFold draws the live one on top.
+            + (f'<div class="reader-fold-ghost">{ghost}</div>' if fulltext else '') + '</div>'
+            f'<div class="reader-tools reader-tools--end">{end}</div></div></nav>')
 
 
 def build_readers(root, output, summaries, figure_reports, catalog, reader_meta=None, reader_nav=None):
@@ -173,15 +249,18 @@ def build_readers(root, output, summaries, figure_reports, catalog, reader_meta=
                 'switch_label': t('Switch to 中文', '切换至 English'), 'name': 'AI Frontier', 'repository': REPOSITORY,
                 'switch_compact': t('EN → 中', '中 → EN'),
                 'title': escape(report['title']), 'description': escape(report['title']),
-                'body': inject_reader_meta(
-                    (f'<h1>{escape(report["title"])}</h1>'
-                     f'<p><a href="{escape(fulltext["source_url"])}">{t("Official source", "官方来源")}</a></p>')
-                    if fulltext else body.replace('{{asset_prefix}}', prefix),
-                    meta, chinese),
-                'body_id': 'document-header' if fulltext else 'summary', 'vendor': vendor,
+                'reader_head': reader_header(report,
+                                             by_pdf.get(report.get('source_pdf')), meta, home, prefix, chinese),
+                # The summary keeps its own passage; its title and source line now live in the header.
+                'reader_body': '' if fulltext else
+                    f'<article class="markdown-body" id="summary">{SOURCE_LINE.sub("", body.replace("{{asset_prefix}}", prefix), count=1)}</article>',
+                'vendor': vendor,
                 'reader_class': ' reader--fulltext' if fulltext else '',
                 'reader_contents': contents, 'fulltext_section': fulltext_section,
                 'reader_nav': reader_navigation(reader_nav.get(report['id']) if reader_nav else None, prefix, chinese),
+                'reader_toolbar': reader_toolbar(reader_nav.get(report['id']) if reader_nav else None, report,
+                                                 (fulltext or report).get('source_url') or report.get('source_url'), prefix, home, chinese,
+                                                 bool(fulltext)),
                 'back': t('Back', '返回'), 'zoom': t('Figure', '图片'), 'close': t('Close', '关闭'),
                 'theme_label': t('Appearance', '外观'), 'light_theme': t('Light', '浅色'),
                 'dark_theme': t('Dark', '深色'), 'system_theme': t('System', '跟随系统'),

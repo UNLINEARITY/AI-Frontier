@@ -445,20 +445,13 @@
     document.querySelector('.tagline').textContent = t.tagline;
     langBtn.innerHTML = `${esc(I18N.NATIVE[lang])}${STALE.has(lang) ? ` <em class="stale">${esc(t.stale)}</em>` : ''} <span class="caret">▾</span>`;
     langBtn.title = t.language;
+    // AI Frontier: one short reading name per level, from the folded end to the full text.
+    const LOCAL_LEVELS = ui === 'zh' ? ['关键词', '速读', '重点', '首句', '全文'] : ['Peek', 'Skim', 'Gist', 'Lead', 'Full'];
     bar.querySelectorAll('button').forEach((b) => {
-      const L = +b.dataset.l, label = t.levels[L];
+      const L = +b.dataset.l, label = D.meta.local ? LOCAL_LEVELS[L] : t.levels[L];
       b.textContent = label;
       b.setAttribute('aria-label', label);
       b.title = `${label} (${5 - L})`;
-      if (D.meta.local) {
-        const short = (ui === 'zh'
-          ? ['前三词', '前14词', '首句+14词', '首句', '全文']
-          : ['3 words', '14 words', 'Sentence +14', 'Sentence', 'Full'])[L];
-        const fullLabel = h('span', 'zoom-label'); fullLabel.textContent = label;
-        const shortLabel = h('span', 'zoom-short'); shortLabel.textContent = short;
-        shortLabel.setAttribute('aria-hidden', 'true');
-        b.replaceChildren(fullLabel, shortLabel);
-      }
     });
     requestAnimationFrame(() => { geom = null; placeThumb(); });
     legend.replaceChildren();

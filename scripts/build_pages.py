@@ -336,18 +336,28 @@ def build(output):
     figure_file = ROOT / 'figures/index.json'
     figure_reports = {r['id']: r for r in json.loads(figure_file.read_text())['reports']} if figure_file.exists() else {}
     reader_meta = {}
-    for record in history.get('models', []) + coverage['models']:
+    def attach(slug, record):
         tag_groups = {TAG_TO_GROUP.get(t, t) for t in record.get('groups', [])
                       + record.get('latest_categories', []) + record.get('frontier_categories', [])}
-        groups = [g for g in CATEGORY_GROUPS if g in tag_groups]
         released = record.get('release_date', '')
+        slot = reader_meta.setdefault(slug, {'date': '', 'groups': []})
+        if released and (not slot['date'] or released < slot['date']):
+            slot['date'] = released
+        for group in CATEGORY_GROUPS:
+            if group in tag_groups and group not in slot['groups']:
+                slot['groups'].append(group)
+    records = history.get('models', []) + coverage['models']
+    for record in records:
         for slug in record.get('report_slugs', []):
-            slot = reader_meta.setdefault(slug, {'date': '', 'groups': []})
-            if released and (not slot['date'] or released < slot['date']):
-                slot['date'] = released
-            for group in groups:
-                if group not in slot['groups']:
-                    slot['groups'].append(group)
+            attach(slug, record)
+    # Official web pages name their models rather than a report slug.
+    by_model = {(record['vendor'], record['model']): record for record in records}
+    for reader in readers.values():
+        slug = reader['id'].split(':', 1)[1]
+        if reader.get('source_kind') == 'html' and slug not in reader_meta:
+            for name in reader.get('models') or []:
+                if (reader['vendor'], name) in by_model:
+                    attach(slug, by_model[(reader['vendor'], name)])
     reader_count, preview_count = build_readers(ROOT, output, readers, figure_reports, reports, reader_meta, reader_nav)
     brand = json.loads((ROOT / '.github/brand.json').read_text())
     models = [m for m in coverage['models'] if m.get('lifecycle', 'active') == 'active'
@@ -369,10 +379,10 @@ def build(output):
             break
     if showcase_reader is None:
         raise ValueError('No reading page with a figure is available for the showcase section')
-    template = (ROOT / 'site/template.html').read_text()
+    timeline_template = (ROOT / 'site/timeline.html').read_text()
+    template = (ROOT / 'site/template.html').read_text().replace('{{model_timeline}}', timeline_template)
     directory_template = (ROOT / 'site/models.html').read_text()
     reports_template = (ROOT / 'site/reports.html').read_text()
-    timeline_template = (ROOT / 'site/timeline.html').read_text()
     for chinese in (False, True):
         labels = dict(VENDORS)
         if not chinese:
@@ -411,7 +421,7 @@ def build(output):
             'timeline_title': '模型时间线' if chinese else 'Model timeline',
             'timeline_search': '搜索时间线中的模型或厂商' if chinese else 'Find a model or publisher on the timeline',
             'timeline_pan': '拖动浏览时间线' if chinese else 'Drag to explore the timeline',
-            'timeline_gesture': '真实时间间隔 · 拖动浏览 · 双击或双指缩放' if chinese else 'True time intervals · Drag to explore · Double-click or pinch to zoom',
+            'timeline_gesture': '按真实时间间隔排布 · 拖动平移 · 双击或双指缩放 · 悬停查看同一厂商' if chinese else 'Spaced by real time · Drag to pan · Double-click or pinch to zoom · Hover to trace a publisher',
             'timeline_zoom_in': '放大时间线' if chinese else 'Zoom in',
             'timeline_zoom_out': '缩小时间线' if chinese else 'Zoom out',
             'timeline_fit': '全览' if chinese else 'Fit all',
@@ -421,12 +431,20 @@ def build(output):
             'timeline_end_label': '结束日期' if chinese else 'End date',
             'timeline_overview_help': '拖动选区平移，拖动两端缩放；方向键调整，双击全览。' if chinese else 'Drag the window to pan or its ends to zoom. Use arrow keys to adjust; double-click to fit all.',
             'timeline_latest': '最新' if chinese else 'Latest',
+            'timeline_span_label': '时间范围' if chinese else 'Time span',
+            'timeline_span_all': '全部' if chinese else 'All',
+            'timeline_span_2y': '2 年' if chinese else '2Y',
+            'timeline_span_1y': '1 年' if chinese else '1Y',
+            'timeline_span_6m': '6 个月' if chinese else '6M',
+            'timeline_span_3m': '3 个月' if chinese else '3M',
+            'timeline_kin_label': '个模型' if chinese else 'models',
             'timeline_undated': '日期待确认' if chinese else 'Date unconfirmed',
             'timeline_empty': '当前范围内没有已确认日期的模型' if chinese else 'No dated models in this view',
             'timeline_count_label': '个模型' if chinese else 'models',
             'timeline_count': str(len(timeline)),
             'undated_scope_option': ('<option value="undated">' + ('日期待确认' if chinese else 'Date unconfirmed') + '</option>') if any(not model['release_date'] for model in timeline) else '',
             'model_list_label': '模型列表' if chinese else 'Model list',
+            'timeline_list_href': 'models.html', 'timeline_list_attrs': ' data-model-entry', 'timeline_list_arrow': '→',
             'all_models_link': f'浏览全部 {len(timeline)} 个模型' if chinese else f'Browse all {len(timeline)} models',
             'cards': '\n'.join(cards), 'empty': '未找到匹配结果，请调整搜索或筛选条件。' if chinese else 'No matches. Try a different search or filter.',
             'footer': '从原始报告走向技术洞察。' if chinese else 'From original reports to technical insight.',
@@ -457,7 +475,7 @@ def build(output):
             'nav_labs': '厂商' if chinese else 'Publishers',
             'nav_models': '模型' if chinese else 'Models',
             'nav_label': '主导航' if chinese else 'Main navigation',
-            'nav_publishers_href': '#publishers', 'nav_timeline_href': 'models.html#timeline', 'nav_reports_href': 'reports.html',
+            'nav_publishers_href': '#publishers', 'nav_timeline_href': '#timeline', 'nav_reports_href': 'reports.html',
             'nav_home': '首页' if chinese else 'Home', 'skip_href': '#publishers',
             'report_return_hint': '在顶部继续向上滑，返回刚才的首页位置。' if chinese else 'Scroll up past the top to return to where you left the home page.',
             'publisher_tiles': publisher_tiles(timeline, reports, labels, chinese, prefix),
@@ -511,14 +529,13 @@ def build(output):
                                 directory_search='搜索模型或厂商' if chinese else 'Search models or publishers',
                                 directory_scope='模型范围' if chinese else 'Model scope',
                                 all_models='全部模型' if chinese else 'All models', model_cards=model_cards,
-                                nav_publishers_href='index.html#publishers', nav_timeline_href='#timeline',
+                                nav_publishers_href='index.html#publishers', nav_timeline_href='#timeline', timeline_list_href='#model-list', timeline_list_attrs='', timeline_list_arrow='↓',
                                 nav_reports_href='reports.html', skip_href='#collection')
         header = template.split('<main>', 1)[0].replace('data-page="home"', 'data-page="models"')
         group_data = json.dumps({'tagToGroup': TAG_TO_GROUP}, ensure_ascii=False).replace('<', '\\u003c')
         header = header.replace('src="{{prefix}}app.js"', 'src="{{prefix}}models.js"').replace(
             '<script src="{{prefix}}models.js" defer>',
-            f'<script type="application/json" id="group-data">{group_data}</script><script src="{{{{prefix}}}}models.js" defer>').replace(
-            '<script src="{{prefix}}navigation.js" defer>', '<script src="{{prefix}}timeline-layout.js" defer></script><script src="{{prefix}}timeline.js" defer></script><script src="{{prefix}}navigation.js" defer>')
+            f'<script type="application/json" id="group-data">{group_data}</script><script src="{{{{prefix}}}}models.js" defer>')
         footer = template[template.index('<footer>'):]
         directory_page = directory_template.replace('{{page_header}}', header).replace('{{page_footer}}', footer).replace('{{model_timeline}}', timeline_template)
         for key, value in directory_values.items():
@@ -531,7 +548,8 @@ def build(output):
                              nav_publishers_href='index.html#publishers', nav_timeline_href='models.html#timeline',
                              nav_reports_href='reports.html', skip_href='#collection')
         report_header = template.split('<main>', 1)[0].replace('data-page="home"', 'data-page="reports"')
-        report_header = report_header.replace('src="{{prefix}}app.js"', 'src="{{prefix}}reports.js"').replace('<script src="{{prefix}}timeline.js" defer></script>', '')
+        report_header = report_header.replace('src="{{prefix}}app.js"', 'src="{{prefix}}reports.js"').replace(
+            '<script src="{{prefix}}timeline-layout.js" defer></script><script src="{{prefix}}timeline.js" defer></script>', '')
         report_page = reports_template.replace('{{page_header}}', report_header).replace('{{page_footer}}', footer)
         for key, value in report_values.items():
             report_page = report_page.replace('{{' + key + '}}', value)

@@ -37,12 +37,13 @@ function scrollFeedback() {
   requestAnimationFrame(() => {
     const height = document.documentElement.scrollHeight - innerHeight;
     document.querySelector('.reading-progress').style.transform = `scaleX(${height > 0 ? scrollY / height : 0})`;
-    document.querySelector('#back-top').hidden = scrollY < 700;
+    document.querySelector('#back-top').toggleAttribute('data-visible', scrollY >= 700);
     document.querySelector('header').classList.toggle('scrolled', scrollY > 20);
     scheduled = false;
   });
 }
 addEventListener('scroll', scrollFeedback, {passive: true});
+document.querySelector('#back-top').hidden = false;
 document.querySelector('#back-top').addEventListener('click', () => scrollTo({top: 0, behavior: reducedMotion.matches ? 'instant' : 'smooth'}));
 
 scrollFeedback();

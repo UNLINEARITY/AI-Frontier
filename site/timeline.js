@@ -8,7 +8,8 @@
   const svg = document.querySelector('#timeline-plot'), frame = document.querySelector('.timeline-frame');
   const stems = document.querySelector('#timeline-stems');
   const plot = document.querySelector('#timeline-points'), ticks = document.querySelector('#timeline-ticks');
-  const explorer = window.frontierModels;
+  // Models supplies the shared filter state; elsewhere (home) the timeline shows every model and keeps no URL state.
+  const explorer = window.frontierModels || {matches: () => true, searchText: () => '', publisher: () => '', persistWindow() {}, setWindow() {}};
   const tooltip = document.querySelector('#timeline-tooltip'), guide = document.querySelector('#timeline-guide');
   const layout = window.frontierTimelineLayout;
   const measureContext = document.createElement('canvas').getContext('2d');
@@ -91,7 +92,8 @@
   function showTooltip(item) {
     activeNode?.link.removeAttribute('aria-describedby'); activeNode?.stem.classList.remove('is-active'); activeNode = item;
     item.stem.classList.add('is-active'); section.dataset.active = 'true';
-    document.querySelector('#timeline-tooltip-publisher').textContent = label(item.model);
+    traceKin(item.model.vendor);
+    document.querySelector('#timeline-tooltip-publisher').textContent = `${label(item.model)} · ${vendorTotals.get(item.model.vendor)} ${section.dataset.kinLabel}`;
     document.querySelector('#timeline-tooltip-model').textContent = item.model.model;
     const time = document.querySelector('#timeline-tooltip-date');
     time.textContent = item.model.release_date; time.dateTime = item.model.release_date;
@@ -100,7 +102,7 @@
     tooltip.hidden = false; item.link.setAttribute('aria-describedby', 'timeline-tooltip');
     showGuide(item.model.time); positionTooltip();
   }
-  function hideTooltip() {activeNode?.link.removeAttribute('aria-describedby'); activeNode?.stem.classList.remove('is-active'); activeNode = null; delete section.dataset.active; tooltip.hidden = true; hideGuide();}
+  function hideTooltip() {activeNode?.link.removeAttribute('aria-describedby'); activeNode?.stem.classList.remove('is-active'); activeNode = null; delete section.dataset.active; tooltip.hidden = true; hideGuide(); traceKin('');}
   function positionTooltip() {
     if (!activeNode) return;
     tooltip.style.left = `${Math.max(8, Math.min(width - tooltip.offsetWidth - 8, activeNode.x + 14))}px`;
@@ -116,6 +118,7 @@
     const dot = element('circle', {class: 'timeline-dot', r: 4.5}), name = element('text', {class: 'timeline-model-label'});
     for (const line of lines) name.append(element('tspan', {}, line));
     stems.append(stem); link.append(hit, dot, name); plot.append(link);
+    link.style.setProperty('--t', ((model.time - full[0]) / fullSpan).toFixed(3));
     const item = {model, link, stem, hit, name, x: 0, y: 0, time: model.time, lines, textWidth: Math.max(...lines.map(measure))};
     link.timelineItem = item;
     link.addEventListener('pointerenter', () => {if (!gesture) showTooltip(item);});
@@ -129,6 +132,18 @@
     link.addEventListener('blur', hideTooltip);
     return item;
   });
+  const kin = new Map();
+  for (const item of nodes) {if (!kin.has(item.model.vendor)) kin.set(item.model.vendor, []); kin.get(item.model.vendor).push(item);}
+  const vendorTotals = new Map();
+  for (const model of data) vendorTotals.set(model.vendor, (vendorTotals.get(model.vendor) || 0) + 1);
+  let kinVendor = '';
+  function traceKin(vendor) {
+    if (vendor === kinVendor) return;
+    for (const item of kin.get(kinVendor) || []) item.link.classList.remove('is-kin');
+    kinVendor = vendor;
+    for (const item of kin.get(vendor) || []) item.link.classList.add('is-kin');
+    if (vendor) section.dataset.kin = vendor; else delete section.dataset.kin;
+  }
   function refreshScope() {
     const context = phase === 'overview' || phase === 'highlight';
     const key = `${context}:${filterVersion}:${width.toFixed(2)}`;
@@ -149,6 +164,7 @@
     svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
     const clip = document.querySelector('#timeline-clip-rect'); clip.setAttribute('width', width); clip.setAttribute('height', height);
     document.querySelector('#timeline-axis').setAttribute('d', `M${padding} ${axis}H${width - padding}`);
+    document.querySelector('#timeline-baseline').setAttribute('d', `M${padding} ${axis}H${width - padding}`);
     const onScreen = new Set(arrangement.items.map(item => item.link));
     for (const item of nodes) item.link.style.display = item.stem.style.display = onScreen.has(item.link) ? '' : 'none';
     const names = section.dataset.moving ? new Map() : layout.labelPositions(arrangement.items, width, height);
@@ -169,9 +185,17 @@
   const formats = {
     year: new Intl.DateTimeFormat(chinese ? 'zh-CN' : 'en', {timeZone: 'UTC', year: 'numeric'}),
     month: new Intl.DateTimeFormat(chinese ? 'zh-CN' : 'en', {timeZone: 'UTC', month: 'short'}),
-    day: new Intl.DateTimeFormat(chinese ? 'zh-CN' : 'en', {timeZone: 'UTC', month: 'short', day: 'numeric'})
+    day: new Intl.DateTimeFormat(chinese ? 'zh-CN' : 'en', {timeZone: 'UTC', month: 'short', day: 'numeric'}),
+    range: new Intl.DateTimeFormat(chinese ? 'zh-CN' : 'en', {timeZone: 'UTC', year: 'numeric', month: 'short', day: 'numeric'})
   };
+  const bands = document.querySelector('#timeline-bands');
   function drawCalendar() {
+    bands.replaceChildren();
+    for (let year = new Date(view[0]).getUTCFullYear(); year <= new Date(view[1]).getUTCFullYear(); year++) {
+      if (year % 2) continue;
+      const left = Math.max(0, x(Date.UTC(year, 0, 1))), right = Math.min(width, x(Date.UTC(year + 1, 0, 1)));
+      if (right > left) bands.append(element('rect', {x: left, y: 0, width: right - left, height, class: 'timeline-band'}));
+    }
     ticks.replaceChildren();
     const calendar = layout.calendarTicks(view, width - 2 * padding);
     for (const time of calendar.dates) {
@@ -196,8 +220,10 @@
   const brushWindow = document.querySelector('#timeline-overview-window');
   const brushHit = document.querySelector('#timeline-overview-window-hit');
   const brushStart = document.querySelector('#timeline-overview-start'), brushEnd = document.querySelector('#timeline-overview-end');
+  const shadeStart = document.querySelector('#timeline-overview-shade-start'), shadeEnd = document.querySelector('#timeline-overview-shade-end');
   const miniNodes = nodes.map(item => {
     const dot = element('circle', {r: 1.6, 'data-model': item.model.model, 'data-vendor': item.model.vendor, 'data-date': item.model.release_date});
+    dot.style.setProperty('--t', item.link.style.getPropertyValue('--t'));
     overviewPoints.append(dot); return {item, dot};
   });
   let miniKey = '', miniGesture = null;
@@ -229,6 +255,8 @@
     }
     const start = overviewX(view[0]), end = overviewX(view[1]);
     brushWindow.setAttribute('x', start); brushWindow.setAttribute('width', Math.max(.5, end - start));
+    shadeStart.setAttribute('x', 0); shadeStart.setAttribute('width', Math.max(0, start));
+    shadeEnd.setAttribute('x', end); shadeEnd.setAttribute('width', Math.max(0, width - end));
     const middle = (start + end) / 2, narrow = end - start < 24;
     brushHit.setAttribute('x', narrow ? middle - 12 : start); brushHit.setAttribute('width', Math.max(24, end - start));
     for (const [handle, position, value] of [[brushStart, narrow ? middle - 12 : start, view[0]], [brushEnd, narrow ? middle + 12 : end, view[1]]]) {
@@ -312,7 +340,8 @@
     const empty = document.querySelector('#timeline-empty'); empty.toggleAttribute('hidden', visible !== 0);
     empty.setAttribute('x', width / 2); empty.setAttribute('y', axis - 24);
     document.querySelector('#timeline-visible-count').textContent = `${visible} / ${matching.length} ${section.dataset.countLabel}`;
-    document.querySelector('#timeline-range').textContent = dated.length ? `${dateText(view[0])} – ${dateText(view[1])}` : '';
+    document.querySelector('#timeline-range').textContent = dated.length ? `${formats.range.format(view[0])} – ${formats.range.format(view[1])}` : '';
+    syncSpans();
     const scale = fullSpan / (view[1] - view[0]);
     document.querySelector('#timeline-zoom').textContent = `${scale < 10 ? scale.toFixed(1).replace(/\.0$/, '') : Math.round(scale)}×`;
     document.querySelector('#timeline-out').disabled = view[1] - view[0] >= maximumSpan() * .999;
@@ -353,14 +382,30 @@
       }, 340);
     }, 180);
   }
-  for (const control of document.querySelectorAll('.timeline-controls button')) control.addEventListener('click', interrupt);
+  for (const control of document.querySelectorAll('.timeline-tools button')) control.addEventListener('click', interrupt);
   document.querySelector('#timeline-in').addEventListener('click', () => zoom(2));
   document.querySelector('#timeline-out').addEventListener('click', () => zoom(.5));
-  document.querySelector('#timeline-fit').addEventListener('click', () => setWindow(...fittedRange(), true));
-  document.querySelector('#timeline-latest').addEventListener('click', () => {
-    const found = dated.filter(matches), latest = found.length ? Math.max(...found.map(model => model.time)) : full[1];
-    setWindow(latest - Math.min(120 * day, maximumSpan()), latest, true);
-  });
+  // Spans end at the newest matching release; "All" fits every matching release.
+  const spans = [...section.querySelectorAll('[data-span]')];
+  let presetKey = '', presets = new Map();
+  function presetRange(span) {
+    const key = `${filterVersion}:${width.toFixed(0)}`;
+    if (presetKey !== key) {
+      presetKey = key; presets = new Map();
+      const found = dated.filter(matches), latest = found.length ? Math.max(...found.map(model => model.time)) : full[1];
+      const end = Math.min(full[1], latest + 2 * day);
+      presets.set('all', fittedRange());
+      for (const button of spans) if (button.dataset.span !== 'all') presets.set(button.dataset.span, constrain(end - Number(button.dataset.span) * day, end));
+    }
+    return presets.get(span);
+  }
+  function syncSpans() {
+    for (const button of spans) {
+      const range = presetRange(button.dataset.span);
+      button.setAttribute('aria-pressed', String(Math.abs(range[0] - target[0]) < day && Math.abs(range[1] - target[1]) < day));
+    }
+  }
+  for (const button of spans) button.addEventListener('click', () => setWindow(...presetRange(button.dataset.span), true, 560));
   document.addEventListener('frontier:filters', event => {
     filterVersion++;
     if (event.detail.fit) focusPublisher(event.detail.publisherChanged);

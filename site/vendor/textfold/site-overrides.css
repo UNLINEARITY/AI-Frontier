@@ -26,11 +26,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI"
 .reader-error { max-width: var(--col); margin: 12px auto; padding: 0 24px; color: var(--muted); }
 .static .chatbtn, .static .chat, .static .np-acts [data-act="ask"],
 .static .np-ask, .static .np-send, .static .np-stop { display: none !important; }
-.zoom-short { display: none; }
 @media (max-width: 600px) {
-  .zoombar button { white-space: nowrap; padding: 7px 8px; font-size: 12px; }
-  .zoombar .zoom-label { display: none; }
-  .zoombar .zoom-short { display: inline; }
+  .zoombar button { white-space: nowrap; padding: 0 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }

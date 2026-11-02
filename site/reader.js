@@ -43,7 +43,7 @@ function follow(direction) {
   location.href = link.href;
 }
 
-for (const link of document.querySelectorAll('.reader-step, .reader-pager-link')) {
+for (const link of document.querySelectorAll('.reader-tool--step, .reader-pager-link')) {
   link.addEventListener('click', event => {
     if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     remember(link.rel === 'prev' ? 'prev' : 'next', link.href);
@@ -103,3 +103,47 @@ addEventListener('wheel', event => {
     follow(direction);
   }
 }, {passive: true});
+
+// "Home" is always the unfiltered home page. Coming straight from it, step back so
+// the reader lands where they left; from anywhere else, open the home page itself.
+for (const homeLink of document.querySelectorAll('[data-reader-home]')) homeLink.addEventListener('click', event => {
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  try {
+    const from = new URL(document.referrer), home = new URL(homeLink.href);
+    const page = url => url.pathname.replace(/index\.html$/, '');
+    if (from.origin === home.origin && page(from) === page(home) && !from.search && history.length > 1) {
+      event.preventDefault();
+      history.back();
+    }
+  } catch { /* No usable referrer: follow the link. */ }
+});
+
+// One bottom bar: TextFold's detail control is drawn in a fixed layer above this bar,
+// so the bar leaves a slot of its width in the middle. Use the first layout that fits:
+// one row, then two rows inside the same bar (control on top).
+const toolbar = document.querySelector('.reader-toolbar');
+if (toolbar) {
+  const bar = toolbar.querySelector('.reader-toolbar-bar');
+  const foldBar = () => document.querySelector('[data-textfold-inline]')?.shadowRoot?.querySelector('.zoombar');
+  let frame = 0;
+  function fitToolbar() {
+    frame = 0;
+    // The slot already has the control's width: a still copy holds it from the first frame.
+    const room = document.documentElement.clientWidth - 24;
+    for (const mode of ['row', 'stacked']) {
+      toolbar.dataset.mode = mode;
+      if (mode === 'stacked' || bar.getBoundingClientRect().width <= room) break;
+    }
+    // Stacked: the control rises by one row (36px) plus the row gap (2px) to sit in the top row.
+    document.documentElement.style.setProperty('--reader-toolbar-lift', toolbar.dataset.mode === 'stacked' ? '38px' : '0px');
+  }
+  const schedule = () => {if (!frame) frame = requestAnimationFrame(fitToolbar);};
+  addEventListener('resize', schedule);
+  addEventListener('ai-frontier-reader-ready', () => {
+    toolbar.dataset.foldReady = '';
+    schedule();
+    const fold = foldBar();
+    if (fold) new ResizeObserver(schedule).observe(fold);
+  });
+  fitToolbar();
+}

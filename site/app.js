@@ -1,11 +1,10 @@
 /* The lab index is a set of direct entrances; the complete explorer lives on Models. */
 (() => {
   const params = new URLSearchParams(location.search);
-  if (params.get('view') === 'models' || params.has('model') || params.has('from') || location.hash === '#timeline') {
+  if (params.get('view') === 'models' || params.has('model') || params.has('from')) {
     const destination = new URL('models.html', location.href);
     destination.search = params.toString(); destination.searchParams.delete('view');
     if (params.get('view') === 'models') destination.searchParams.set('scope', 'frontier');
-    destination.hash = location.hash === '#timeline' ? 'timeline' : '';
     location.replace(destination);
   } else if (params.has('q') || params.has('type') || params.has('sort') || location.hash === '#collection') {
     const destination = new URL('reports.html', location.href);
